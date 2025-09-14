@@ -19,7 +19,7 @@ export default function InsightPage() {
           <li>Architecture: ingestion → retrieval → reasoning → evaluation.</li>
           <li>Ops: observability, rollback, SLOs, security.</li>
         </ul>
-        <p className="mt-6">More at <a className="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">ziontechgroup.com</a>.</p>
+        <p className="mt-6">More at <a className="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">ziontechgroup.com</a>.</p>
       </main>
     </div>
   );

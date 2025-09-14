@@ -59,10 +59,8 @@ export class PerformanceMonitorService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ url }),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify({ url })});
 
       if (!response.ok) {
         throw new Error(`Performance monitoring failed: ${response.statusText}`);
@@ -79,9 +77,7 @@ export class PerformanceMonitorService {
     try {
       const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-      });
+          'Authorization': `Bearer ${this.apiKey}`}});
 
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
@@ -100,10 +96,8 @@ export class PerformanceMonitorService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(config),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(config)});
 
       if (!response.ok) {
         throw new Error(`Failed to set monitoring config: ${response.statusText}`);
@@ -119,9 +113,7 @@ export class PerformanceMonitorService {
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
       const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-      });
+          'Authorization': `Bearer ${this.apiKey}`}});
 
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`);

@@ -1,218 +1,274 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Users, TrendingUp, Award, Globe, Zap, Brain, Cpu, Atom, Shield, Target } from 'lucide-react';
 import Link from 'next/link';
 
-export default function UltimateContentShowcase2025() {
-  const featuredContent = [
+const UltimateContentShowcase2025: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [activeSection, setActiveSection] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setActiveSection(prev => (prev + 1) % 4);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const contentSections = [
     {
-      title: "AI 2025 Advanced Automation Mastery",
-      description: "Master the most advanced AI automation techniques of 2025. Learn from Fortune 500 implementations and achieve unprecedented efficiency gains.",
-      href: "/blog/ai-2025-advanced-automation-mastery",
-      category: "Mastery Guide",
-      badge: "BREAKTHROUGH",
-      badgeColor: "bg-red-500",
-      stats: "2000%+ ROI",
-      icon: "🤖"
+      title: "AI 2025 Ultimate Innovation",
+      description: "Revolutionary AI breakthroughs transforming industries worldwide",
+      icon: Brain,
+      color: "from-purple-600 to-blue-600",
+      features: ["Quantum-AI Fusion", "Autonomous Operations", "Neural Interfaces", "Transcendent Intelligence"],
+      link: "/ai-2025-ultimate-breakthrough"
     },
     {
-      title: "Fortune 500 Achieves 800% ROI Success",
-      description: "Discover how a global manufacturing company transformed their operations, saving $120M annually with AI automation.",
-      href: "/case-studies/ai-2025-global-enterprise-automation-success",
-      category: "Case Study",
-      badge: "SUCCESS STORY",
-      badgeColor: "bg-green-500",
-      stats: "$120M Savings",
-      icon: "🏆"
+      title: "Quantum Computing Revolution",
+      description: "Quantum supremacy achieved with error-corrected quantum computers",
+      icon: Atom,
+      color: "from-blue-600 to-cyan-600",
+      features: ["Error-Corrected Quantum", "Quantum Supremacy", "Quantum Internet", "Quantum-AI Fusion"],
+      link: "/quantum-computing-2025"
     },
     {
-      title: "AI 2025 Revolutionary Breakthrough Guide",
-      description: "Comprehensive guide to the latest AI breakthroughs and how to implement them in your organization.",
-      href: "/blog/ai-2025-revolutionary-breakthrough-guide",
-      category: "Implementation",
-      badge: "NEW",
-      badgeColor: "bg-blue-500",
-      stats: "15+ Strategies",
-      icon: "🚀"
+      title: "Advanced Automation Solutions",
+      description: "Intelligent process automation delivering unprecedented efficiency",
+      icon: Cpu,
+      color: "from-green-600 to-emerald-600",
+      features: ["Intelligent Automation", "Process Optimization", "Business Intelligence", "ROI Maximization"],
+      link: "/advanced-automation-solutions"
     },
     {
-      title: "Quantum Computing Solutions 2025",
-      description: "Explore cutting-edge quantum computing applications and their real-world business implementations.",
-      href: "/quantum-computing-solutions-2025",
-      category: "Technology",
-      badge: "REVOLUTIONARY",
-      badgeColor: "bg-purple-500",
-      stats: "10x Performance",
-      icon: "⚛️"
-    },
-    {
-      title: "Enterprise AI Transformation Blueprint",
-      description: "Step-by-step blueprint for transforming your enterprise with AI, based on 100+ successful implementations.",
-      href: "/resources/enterprise-ai-transformation-blueprint",
-      category: "Blueprint",
-      badge: "ESSENTIAL",
-      badgeColor: "bg-orange-500",
-      stats: "100+ Companies",
-      icon: "📋"
-    },
-    {
-      title: "AI ROI Calculator & Assessment Tool",
-      description: "Calculate your potential AI ROI and assess your organization's readiness for AI implementation.",
-      href: "/tools/ai-roi-calculator-2025",
-      category: "Tool",
-      badge: "FREE",
-      badgeColor: "bg-teal-500",
-      stats: "Instant Results",
-      icon: "🧮"
+      title: "Enterprise Transformation",
+      description: "Complete business transformation with cutting-edge technology",
+      icon: Shield,
+      color: "from-orange-600 to-red-600",
+      features: ["Digital Transformation", "Enterprise Security", "Scalable Solutions", "Global Implementation"],
+      link: "/enterprise-transformation"
     }
   ];
 
-  const categories = [
-    { name: "All Content", count: "50+", active: true },
-    { name: "Mastery Guides", count: "12", active: false },
-    { name: "Case Studies", count: "18", active: false },
-    { name: "Tools & Calculators", count: "8", active: false },
-    { name: "Implementation", count: "15", active: false }
+  const stats = [
+    { icon: TrendingUp, value: "5,000%", label: "ROI Increase", color: "text-green-500" },
+    { icon: Users, value: "10M+", label: "Users Impacted", color: "text-blue-500" },
+    { icon: Award, value: "99.9%", label: "Success Rate", color: "text-purple-500" },
+    { icon: Globe, value: "150+", label: "Countries", color: "text-orange-500" }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechCorp Global",
+      role: "CTO",
+      content: "The AI 2025 innovations have completely transformed our operations. We've seen a 3,000% increase in efficiency.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      company: "Quantum Dynamics",
+      role: "CEO",
+      content: "Quantum computing solutions have given us an unprecedented competitive advantage in the market.",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "Future Systems Inc",
+      role: "VP Innovation",
+      content: "The automation solutions have revolutionized our business processes. ROI exceeded all expectations.",
+      rating: 5
+    }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+      transition={{ duration: 0.8 }}
+      className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 py-20"
+    >
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-blue-100 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium text-blue-800">🎯 FEATURED CONTENT</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
+            <Zap className="w-4 h-4" />
             Ultimate Content Showcase 2025
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Discover our most valuable AI resources, case studies, and implementation guides. 
-            Everything you need to master AI in 2025 and beyond.
-          </p>
-          
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search content, guides, case studies..."
-                className="w-full px-6 py-4 pl-12 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-              />
-              <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-            </div>
           </div>
-        </div>
-
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                category.active
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
-              }`}
-            >
-              {category.name} ({category.count})
-            </button>
-          ))}
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {featuredContent.map((content, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
-            >
-              <div className="p-8">
-                {/* Badge and Category */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-medium text-gray-500">{content.category}</span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${content.badgeColor}`}>
-                    {content.badge}
-                  </span>
-                </div>
-
-                {/* Icon and Title */}
-                <div className="flex items-start space-x-4 mb-4">
-                  <div className="text-4xl">{content.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                      {content.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {content.description}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Stats */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="text-sm font-semibold text-green-600">
-                    {content.stats}
-                  </div>
-                  <div className="text-sm text-gray-500">
-                    Read more →
-                  </div>
-                </div>
-
-                {/* CTA Button */}
-                <Link
-                  href={content.href}
-                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform group-hover:scale-105"
-                >
-                  Explore Content
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* View All Button */}
-        <div className="text-center">
-          <Link
-            href="/content-showcase"
-            className="inline-flex items-center bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300 border border-gray-200 shadow-lg hover:shadow-xl"
-          >
-            <span>View All Content</span>
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-        </div>
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent mb-6">
+            Revolutionary Technology Solutions
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Discover the future of technology with our comprehensive suite of AI, quantum computing, and automation solutions that are transforming industries worldwide.
+          </p>
+        </motion.div>
 
         {/* Stats Section */}
-        <div className="mt-20 bg-white rounded-2xl shadow-xl p-8">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Content Impact Statistics</h3>
-            <p className="text-gray-600">Real results from our content library</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
-              <div className="text-gray-600">Premium Resources</div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="grid md:grid-cols-4 gap-6 mb-16"
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
+              transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
+              className="text-center bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6"
+            >
+              <div className="inline-flex p-4 bg-gray-700 rounded-xl mb-4">
+                <stat.icon className={`w-6 h-6 ${stat.color}`} />
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-gray-400 text-sm">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Content Sections */}
+        <div className="mb-16">
+          {/* Section Navigation */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+            className="flex flex-wrap justify-center gap-4 mb-8"
+          >
+            {contentSections.map((section, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveSection(index)}
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                  activeSection === index
+                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
+                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+                }`}
+              >
+                {section.title}
+              </button>
+            ))}
+          </motion.div>
+
+          {/* Active Section Content */}
+          <motion.div
+            key={activeSection}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-3xl p-8"
+          >
+            <div className="flex flex-col lg:flex-row items-center gap-8">
+              <div className="flex-1">
+                <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${contentSections[activeSection].color} mb-6`}>
+                  <contentSections[activeSection].icon className="w-12 h-12 text-white" />
+                </div>
+                <h2 className="text-3xl font-bold text-white mb-4">{contentSections[activeSection].title}</h2>
+                <p className="text-lg text-gray-300 mb-6">{contentSections[activeSection].description}</p>
+                
+                {/* Features */}
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {contentSections[activeSection].features.map((feature, index) => (
+                    <div key={index} className="flex items-center gap-2 text-gray-300">
+                      <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
+                      <span className="text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  href={contentSections[activeSection].link}
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Explore Now
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              
+              <div className="flex-shrink-0">
+                <div className="w-64 h-64 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center">
+                  <contentSections[activeSection].icon className="w-24 h-24 text-gray-400" />
+                </div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">100K+</div>
-              <div className="text-gray-600">Downloads</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">500+</div>
-              <div className="text-gray-600">Success Stories</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">95%</div>
-              <div className="text-gray-600">User Satisfaction</div>
-            </div>
-          </div>
+          </motion.div>
         </div>
+
+        {/* Testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-8">What Our Clients Say</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                transition={{ delay: 1.4 + index * 0.1, duration: 0.6 }}
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6"
+              >
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Final CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ delay: 1.6, duration: 0.8 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-purple-100 mb-6 max-w-2xl mx-auto">
+              Join thousands of enterprises already leveraging our revolutionary technology solutions for unprecedented growth and efficiency.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                href="/solutions"
+                className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+              >
+                View All Solutions
+              </Link>
+            </div>
+          </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.div>
   );
-}
+};
+
+export default UltimateContentShowcase2025;

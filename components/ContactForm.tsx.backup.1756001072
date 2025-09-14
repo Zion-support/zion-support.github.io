@@ -91,6 +91,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
       }
     });
 
+<<<<<<< HEAD
+=======
   const handleInputChange = (name: string, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }));
     
@@ -117,6 +119,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
       }
     });
     
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     setErrors(newErrors);
     return isValid;
   }, [formData, validateField]);

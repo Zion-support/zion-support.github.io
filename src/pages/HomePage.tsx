@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import AnimatedSection from '../components/AnimatedSection';
+import { NeuralArchitectureFeatureGrid } from '../components/NeuralArchitecture2026PromotionBanner';
+import ContentShowcase from '../components/ContentShowcase';
+import LatestContentBanner from '../components/LatestContentBanner';
 import './HomePage.css';
 
 const HomePage: React.FC = () => {
@@ -104,6 +107,15 @@ const HomePage: React.FC = () => {
             </div>
           </section>
         </AnimatedSection>
+
+        {/* Latest Content Banner */}
+        <LatestContentBanner />
+
+        {/* Neural Architecture 2026 Feature Grid */}
+        <NeuralArchitectureFeatureGrid />
+
+        {/* Content Showcase */}
+        <ContentShowcase />
 
         <AnimatedSection animation="slideUp" delay={200}>
           <section className="services-preview">

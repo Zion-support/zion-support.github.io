@@ -1,59 +1,62 @@
-import type { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const baseUrl = 'https://zion.tech';
-
-	// Manually list key routes; Next can be extended to fetch dynamic content
-	const routes: string[] = [
-		'/',
-		'/blog',
-		'/blog/ai-2025-comprehensive-business-transformation',
-		'/blog/ai-cost-optimization-2025',
-		'/blog/ai-2026-revolutionary-trends',
-		'/blog/ai-2026-quantum-machine-learning-revolution',
-		'/blog/ai-2026-neural-interface-breakthrough',
-		'/blog/ai-2026-enterprise-automation-mastery',
-		'/blog/ai-2025-comprehensive-trends-analysis',
-		'/blog/ai-2026-breakthrough-innovations',
-		'/blog/ai-2025-enterprise-automation-revolution',
-		'/blog/ai-2025-ultimate-breakthrough-announcement',
-		'/case-studies',
-		'/case-studies/ai-2025-global-retail-transformation-success',
-		'/case-studies/ai-2025-energy-sector-transformation-breakthrough',
-		'/case-studies/ai-transformation-global-financial-services-2025',
-		'/case-studies/ai-transformation-global-retail-giant-2026',
-		'/case-studies/ai-transformation-fortune-500-breakthrough-2025',
-		'/case-studies/ai-2026-fortune-500-transformation-breakthrough',
-		'/case-studies/ai-2026-global-tech-giant-transformation',
-		'/case-studies/ai-2025-global-transformation-breakthrough',
-		'/resources',
-		'/resources/ai-2025-comprehensive-implementation-playbook',
-		'/resources/ai-2026-implementation-master-guide',
-		'/resources/ai-2026-implementation-toolkit-ultimate',
-		'/resources/ai-2026-comprehensive-implementation-master-guide',
-		'/resources/ai-2025-ultimate-implementation-toolkit',
-		'/resources/ai-2025-revolutionary-implementation-guide',
-		'/tools',
-		'/tools/ai-roi-calculator-2026',
-		'/tools/ai-2025-roi-calculator',
-		'/tools/ai-readiness-assessment',
-		'/ai-2026-technology-showcase',
-		'/ai-trends-2026-predictions',
-		'/content-showcase',
-		'/mega-content-showcase-2026',
-		'/ai-2025-ultimate-content-revolution',
-		'/revolutionary-tech-2025',
-		'/services',
-		'/contact',
-	];
-
-	const now = new Date();
-
-	return routes.map<MetadataRoute.Sitemap[number]>((path) => ({
-		url: `${baseUrl}${path}`,
-		lastModified: now,
-		changeFrequency: 'weekly',
-		priority: path === '/' ? 1.0 : 0.7,
-	}));
+  const baseUrl = 'https://ziontechgroup.com'
+  
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/ai-automation-services`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cybersecurity-solutions`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/resources`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    }
+  ]
 }
-

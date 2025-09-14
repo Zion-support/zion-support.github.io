@@ -1,9 +1,10 @@
 module.exports = {
   apps: [
     {
-      name: 'ziontechgroup-web',
+<<<<<<< HEAD
+      name: 'ci-cd-pipeline',
       script: 'npm',
-      args: 'start',
+      args: 'run build',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
@@ -11,160 +12,183 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
       },
-      env_development: {
-        NODE_ENV: 'development',
-        PORT: 3000
-      },
-      log_file: './logs/web.log',
-      out_file: './logs/web-out.log',
-      error_file: './logs/web-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-    {
-      name: 'automation-health-check',
-      script: 'node',
-      args: 'automation/health-check.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '*/5 * * * *', // Restart every 5 minutes
-      env: {
-        NODE_ENV: 'production'
-      },
-      log_file: './logs/health-check.log',
-      out_file: './logs/health-check-out.log',
-      error_file: './logs/health-check-error.log'
-    },
-    {
-      name: 'automation-security-scanner',
-      script: 'node',
-      args: 'automation/security-scanner.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      env: {
-        NODE_ENV: 'production'
-      },
-      log_file: './logs/security-scanner.log',
-      out_file: './logs/security-scanner-out.log',
-      error_file: './logs/security-scanner-error.log'
-    },
-    {
-      name: 'automation-performance-monitor',
-      script: 'node',
-      args: 'scripts/performance-monitor.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */2 * * *', // Restart every 2 hours
-      env: {
-        NODE_ENV: 'production'
-      },
-      log_file: './logs/performance-monitor.log',
-      out_file: './logs/performance-monitor-out.log',
-      error_file: './logs/performance-monitor-error.log'
-    },
-    {
-      name: 'automation-ci-cd',
-      script: 'node',
-      args: 'scripts/automation-orchestrator.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      cron_restart: '0 */1 * * *', // Restart every hour
-      env: {
-        NODE_ENV: 'production'
-      },
-      log_file: './logs/ci-cd.log',
+      cron_restart: '0 0 * * *', // Daily restart
+      error_file: './logs/ci-cd-error.log',
       out_file: './logs/ci-cd-out.log',
-      error_file: './logs/ci-cd-error.log'
+      log_file: './logs/ci-cd-combined.log',
+      time: true,
     },
     {
-      name: 'automation-continuous',
+      name: 'continuous-automation',
       script: 'node',
-      args: 'scripts/master-automation-orchestrator.cjs',
+      args: 'scripts/automation/automation-orchestrator.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
-      log_file: './logs/continuous.log',
-      out_file: './logs/continuous-out.log',
-      error_file: './logs/continuous-error.log'
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/automation-error.log',
+      out_file: './logs/automation-out.log',
+      log_file: './logs/automation-combined.log',
+      time: true,
     },
     {
-      name: 'automation-dependency-updater',
+      name: 'comprehensive-automation',
       script: 'node',
-      args: 'scripts/dependency-updater.cjs',
+      args: 'scripts/automation/comprehensive-continuous-automation.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */12 * * *', // Restart every 12 hours
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
-      log_file: './logs/dependency-updater.log',
-      out_file: './logs/dependency-updater-out.log',
-      error_file: './logs/dependency-updater-error.log'
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/comprehensive-automation-error.log',
+      out_file: './logs/comprehensive-automation-out.log',
+      log_file: './logs/comprehensive-automation-combined.log',
+      time: true,
     },
     {
-      name: 'automation-code-quality',
+      name: 'marketing-automation',
       script: 'node',
-      args: 'scripts/code-quality-monitor.cjs',
+      args: 'scripts/linkedin_automation.js',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
-      log_file: './logs/code-quality.log',
-      out_file: './logs/code-quality-out.log',
-      error_file: './logs/code-quality-error.log'
+      cron_restart: '0 */12 * * *', // Every 12 hours
+      error_file: './logs/marketing-automation-error.log',
+      out_file: './logs/marketing-automation-out.log',
+      log_file: './logs/marketing-automation-combined.log',
+      time: true,
     },
     {
-      name: 'automation-build-test',
-      script: 'node',
-      args: 'scripts/comprehensive-test-runner.cjs',
+      name: 'security-audit',
+      script: 'npm',
+      args: 'audit',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
-      log_file: './logs/build-test.log',
-      out_file: './logs/build-test-out.log',
-      error_file: './logs/build-test-error.log'
+      cron_restart: '0 2 * * *', // Daily at 2 AM
+      error_file: './logs/security-audit-error.log',
+      out_file: './logs/security-audit-out.log',
+      log_file: './logs/security-audit-combined.log',
+      time: true,
     },
     {
-      name: 'automation-sitemap',
-      script: 'node',
-      args: 'scripts/generate-sitemap.mjs',
+      name: 'test-runner',
+      script: 'npm',
+      args: 'test',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
-      log_file: './logs/sitemap.log',
-      out_file: './logs/sitemap-out.log',
-      error_file: './logs/sitemap-error.log'
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      error_file: './logs/test-runner-error.log',
+      out_file: './logs/test-runner-out.log',
+      log_file: './logs/test-runner-combined.log',
+      time: true,
+    },
+    {
+      name: 'lint-checker',
+      script: 'npm',
+      args: 'run lint',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '500M',
+      env: {
+        NODE_ENV: 'production',
+      },
+      cron_restart: '0 */2 * * *', // Every 2 hours
+      error_file: './logs/lint-checker-error.log',
+      out_file: './logs/lint-checker-out.log',
+      log_file: './logs/lint-checker-combined.log',
+<<<<<<< HEAD
+      time: true,
+    },
+  ],
+};
+=======
+=======
+      name: "zion-app",
+      script: "npm",
+      args: "start",
+      interpreter: "none",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 10,
+      exp_backoff_restart_delay: 500,
+      env: {
+        NODE_ENV: "production",
+        PORT: process.env.PORT || 3000
+      },
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/zion-app-error.log",
+      out_file: "automation/logs/zion-app-out.log",
+      time: true
+    },
+    {
+      name: "zion-auto-sync",
+      script: "automation/pm2-auto-sync.js",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 10,
+      exp_backoff_restart_delay: 500,
+      env: {
+        NODE_ENV: "production",
+        AUTO_SYNC_REMOTE: process.env.AUTO_SYNC_REMOTE || "origin",
+        AUTO_SYNC_BRANCH: process.env.AUTO_SYNC_BRANCH || "main",
+        AUTO_SYNC_STRATEGY: process.env.AUTO_SYNC_STRATEGY || "hardreset",
+        AUTO_SYNC_CLEAN: process.env.AUTO_SYNC_CLEAN || "1",
+        AUTO_SYNC_GC: process.env.AUTO_SYNC_GC || "0"
+      },
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/zion-auto-sync-error.log",
+      out_file: "automation/logs/zion-auto-sync-out.log",
+      time: true
+    },
+    {
+      name: "zion-build-monitor",
+      script: "automation/continuous-build-monitor.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/build-monitor-error.log",
+      out_file: "automation/logs/build-monitor-out.log",
+>>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
+      time: true
     }
   ]
 };
+>>>>>>> cursor/automate-test-improve-and-merge-code-85f4

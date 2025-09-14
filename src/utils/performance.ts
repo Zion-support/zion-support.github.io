@@ -1,2 +1,3 @@
-// TypeScript file;
-export const placeholder = 'placeholder';
+};
+          observer.unobserve(image)};
+      };

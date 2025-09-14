@@ -3,116 +3,103 @@ import Link from 'next/link';
 
 export default function NewContentShowcaseBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-12">
-      {/* Animated background elements */}
+    <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-12 px-4 relative overflow-hidden">
+      {/* Background animation */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-blue-600/50 animate-pulse"></div>
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
-        <div className="absolute top-6 left-6 w-3 h-3 bg-white rounded-full animate-bounce"></div>
-        <div className="absolute top-12 right-12 w-2 h-2 bg-white rounded-full animate-bounce delay-1000"></div>
-        <div className="absolute bottom-6 left-1/3 w-2.5 h-2.5 bg-white rounded-full animate-bounce delay-500"></div>
-        <div className="absolute bottom-12 right-1/4 w-2 h-2 bg-white rounded-full animate-bounce delay-1500"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          {/* Main announcement */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 border border-white/30 mb-6">
-            <span className="text-white text-sm font-semibold animate-pulse">✨ NEW CONTENT RELEASE</span>
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Revolutionary AI 2025 Content
-            <span className="block bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
-              Now Available
-            </span>
-          </h2>
-          
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto">
-            Explore our latest breakthrough content featuring cutting-edge AI technologies, 
-            <span className="text-yellow-300 font-bold"> proven success stories</span>, and 
-            <span className="text-pink-300 font-bold"> future predictions</span> that will transform your business.
-          </p>
+      <div className="relative max-w-7xl mx-auto text-center">
+        <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-sm font-bold mb-6 animate-bounce">
+          🚀 NEW REVOLUTIONARY CONTENT
+        </div>
+        
+        <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Experience the Future of AI
+        </h2>
+        
+        <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90">
+          Discover our latest revolutionary AI breakthroughs delivering unprecedented ROI and transforming industries worldwide.
+        </p>
 
-          {/* Content highlights */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
-            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">🚀</div>
-              <h3 className="text-xl font-bold text-white mb-2">Ultimate Breakthrough Revolution</h3>
-              <p className="text-white/80 text-sm mb-4">Discover the most revolutionary AI technologies of 2025</p>
-              <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-2">
-                <div className="text-green-400 font-bold text-sm">2,500-5,000% ROI</div>
-              </div>
-            </div>
-
-            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">🏆</div>
-              <h3 className="text-xl font-bold text-white mb-2">Global Transformation Success</h3>
-              <p className="text-white/80 text-sm mb-4">Fortune 500 case study with 10,000% ROI achievement</p>
-              <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-2">
-                <div className="text-green-400 font-bold text-sm">10,000% ROI</div>
-              </div>
-            </div>
-
-            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">🔮</div>
-              <h3 className="text-xl font-bold text-white mb-2">Revolutionary Trends & Predictions</h3>
-              <p className="text-white/80 text-sm mb-4">Comprehensive analysis of AI 2025 market opportunities</p>
-              <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-2">
-                <div className="text-green-400 font-bold text-sm">$2.5T Market</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Call to action buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="text-3xl mb-3">🚀</div>
+            <h3 className="text-xl font-bold mb-2">AI 2025 Ultimate Revolution</h3>
+            <p className="text-sm opacity-90 mb-4">Breakthrough technologies delivering 2,500-10,000% ROI</p>
             <Link 
               href="/ai-2025-ultimate-breakthrough-revolution"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold text-sm transition-colors"
             >
-              Explore Breakthroughs
-            </Link>
-            <Link 
-              href="/case-studies/ai-2025-global-transformation-breakthrough"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 shadow-lg"
-            >
-              Read Case Study
-            </Link>
-            <Link 
-              href="/blog/ai-2025-revolutionary-trends-predictions"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 shadow-lg"
-            >
-              View Predictions
+              Explore Now
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </Link>
           </div>
 
-          {/* Additional content links */}
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="text-3xl mb-3">🌌</div>
+            <h3 className="text-xl font-bold mb-2">Quantum-Neural Fusion</h3>
+            <p className="text-sm opacity-90 mb-4">Revolutionary convergence delivering 15,000% ROI</p>
             <Link 
-              href="/blog/ai-2025-comprehensive-trends-analysis"
-              className="text-white/80 hover:text-white text-sm transition-colors"
+              href="/ai-2026-quantum-neural-fusion-breakthrough"
+              className="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold text-sm transition-colors"
             >
-              📊 Trends Analysis
+              Explore Now
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </Link>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="text-3xl mb-3">🧠</div>
+            <h3 className="text-xl font-bold mb-2">Transcendent Intelligence</h3>
+            <p className="text-sm opacity-90 mb-4">Consciousness-level AI with infinite scalability</p>
             <Link 
-              href="/resources/ai-2025-revolutionary-implementation-guide"
-              className="text-white/80 hover:text-white text-sm transition-colors"
+              href="/ai-2030-transcendent-intelligence"
+              className="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold text-sm transition-colors"
             >
-              📚 Implementation Guide
-            </Link>
-            <Link 
-              href="/tools/ai-2025-roi-calculator"
-              className="text-white/80 hover:text-white text-sm transition-colors"
-            >
-              🧮 ROI Calculator
-            </Link>
-            <Link 
-              href="/webinars/ai-2025-revolutionary-breakthroughs"
-              className="text-white/80 hover:text-white text-sm transition-colors"
-            >
-              🔥 Webinar Series
+              Explore Now
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </Link>
           </div>
         </div>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Link 
+            href="/content-showcase" 
+            className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            View All Content
+          </Link>
+          <Link 
+            href="/contact" 
+            className="px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-white hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105"
+          >
+            Get Started Today
+          </Link>
+        </div>
+      </div>
+
+      {/* Floating elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-2 h-2 bg-white/20 rounded-full animate-ping"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 4}s`,
+              animationDuration: `${3 + Math.random() * 2}s`
+            }}
+          />
+        ))}
       </div>
     </div>
   );

@@ -17,9 +17,9 @@ const NewContentShowcase = () => {
     {
       id: 1,
       type: 'blog',
-      title: 'AI Autonomous Operations 2025',
-      description: 'Transform your business with 500% revenue growth through AI autonomous operations',
-      link: '/blog/ai-autonomous-business-operations-2025',
+      title: 'Next-Generation Neural Architectures',
+      description: 'Revolutionary neural architectures transforming AI in 2025 with quantum-enhanced capabilities',
+      link: '/blog/ai-2025-next-generation-neural-architectures-revolution',
       icon: <TrendingUp className="w-8 h-8" />,
       gradient: 'from-purple-500 to-indigo-600',
       badge: 'New Blog Post'
@@ -27,19 +27,19 @@ const NewContentShowcase = () => {
     {
       id: 2,
       type: 'blog',
-      title: 'Quantum Neural Networks',
-      description: '10,000x performance improvement over classical AI systems',
-      link: '/blog/quantum-neural-networks-2025-breakthrough',
+      title: 'Quantum AI Autonomous Operations',
+      description: 'Discover how quantum AI fusion enables completely autonomous business operations',
+      link: '/blog/quantum-ai-fusion-2025-autonomous-business-operations',
       icon: <Zap className="w-8 h-8" />,
       gradient: 'from-cyan-500 to-blue-600',
-      badge: 'Breakthrough'
+      badge: 'Featured'
     },
     {
       id: 3,
       type: 'case-study',
-      title: 'Enterprise AI Success',
-      description: 'How a Fortune 500 company achieved 500% revenue growth',
-      link: '/case-studies/enterprise-ai-transformation-2025-success',
+      title: '$2 Billion ROI Transformation',
+      description: 'How a Fortune 500 company achieved $2 billion ROI through quantum AI autonomous transformation',
+      link: '/case-studies/global-enterprise-quantum-ai-autonomous-transformation-2025-2-billion-roi',
       icon: <Star className="w-8 h-8" />,
       gradient: 'from-green-500 to-emerald-600',
       badge: 'Success Story'
@@ -47,9 +47,9 @@ const NewContentShowcase = () => {
     {
       id: 4,
       type: 'resource',
-      title: 'AI Implementation Guide',
-      description: 'Complete roadmap to enterprise AI success',
-      link: '/resources/ai-implementation-master-guide-2025',
+      title: 'Quantum AI Implementation Guide',
+      description: 'Complete guide to implementing quantum AI autonomous operations in your organization',
+      link: '/resources/quantum-ai-autonomous-operations-implementation-guide-2025',
       icon: <BookOpen className="w-8 h-8" />,
       gradient: 'from-orange-500 to-red-600',
       badge: 'Free Guide'
@@ -94,10 +94,10 @@ const NewContentShowcase = () => {
             <span>Latest Content - January 2025</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            New AI Content & Resources
+            Revolutionary AI Content & Resources
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Discover our latest insights, breakthrough research, and proven strategies for AI transformation success.
+            Discover groundbreaking quantum AI insights, next-generation neural architectures, and proven strategies for autonomous business transformation.
           </p>
         </motion.div>
 

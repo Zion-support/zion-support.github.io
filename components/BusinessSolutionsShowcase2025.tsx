@@ -1,118 +1,141 @@
-"use client";
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Building2, 
   TrendingUp, 
   Users, 
+  DollarSign, 
   Shield, 
-  Zap, 
-  Globe,
+  Zap,
   ArrowRight,
   CheckCircle,
   Star,
-  Clock,
   Target,
-  BarChart3
+  BarChart3,
+  Clock,
+  Award,
+  Lightbulb,
+  Globe,
+  Smartphone
 } from 'lucide-react';
 
-const BusinessSolutionsShowcase2025: React.FC = () => {
-  const solutions = [
+const BusinessSolutionsShowcase2025 = () => {
+  const [activeCategory, setActiveCategory] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const categories = [
     {
-      id: 'enterprise-automation',
-      title: 'Enterprise Automation Suite',
-      description: 'Complete automation platform that streamlines operations, reduces costs by 60%, and increases productivity by 300%.',
-      icon: Building2,
-      color: 'from-blue-500 to-indigo-600',
-      href: '/solutions/enterprise-automation',
-      category: 'Automation',
-      benefits: ['60% Cost Reduction', '300% Productivity', '99.9% Uptime'],
-      price: 'Custom Pricing',
-      rating: 4.9,
-      clients: '500+',
-      featured: true
-    },
-    {
-      id: 'ai-analytics-platform',
-      title: 'AI-Powered Analytics Platform',
-      description: 'Advanced analytics platform that provides real-time insights, predictive modeling, and automated reporting.',
-      icon: BarChart3,
-      color: 'from-purple-500 to-pink-600',
-      href: '/solutions/ai-analytics-platform',
-      category: 'Analytics',
-      benefits: ['Real-time Insights', 'Predictive Modeling', 'Auto Reporting'],
-      price: 'Starting at $5K/month',
-      rating: 4.8,
-      clients: '300+'
-    },
-    {
-      id: 'customer-intelligence',
-      title: 'Customer Intelligence Hub',
-      description: 'Comprehensive customer data platform that personalizes experiences and increases conversion rates by 250%.',
-      icon: Users,
-      color: 'from-emerald-500 to-teal-600',
-      href: '/solutions/customer-intelligence',
-      category: 'Customer Experience',
-      benefits: ['250% Conversion', '360° View', 'AI Personalization'],
-      price: 'Starting at $3K/month',
-      rating: 4.9,
-      clients: '400+'
-    },
-    {
-      id: 'security-framework',
-      title: 'Advanced Security Framework',
-      description: 'Enterprise-grade security solution protecting against cyber threats with 99.99% threat detection accuracy.',
-      icon: Shield,
-      color: 'from-red-500 to-orange-600',
-      href: '/solutions/security-framework',
-      category: 'Security',
-      benefits: ['99.99% Detection', 'Zero Breaches', '24/7 Monitoring'],
-      price: 'Starting at $2K/month',
-      rating: 4.9,
-      clients: '600+'
-    },
-    {
-      id: 'global-deployment',
-      title: 'Global Deployment Platform',
-      description: 'Scalable cloud infrastructure that enables worldwide deployment with sub-100ms latency across all regions.',
-      icon: Globe,
-      color: 'from-cyan-500 to-blue-600',
-      href: '/solutions/global-deployment',
-      category: 'Infrastructure',
-      benefits: ['Sub-100ms Latency', 'Global Scale', 'Auto Scaling'],
-      price: 'Pay-as-you-scale',
-      rating: 4.8,
-      clients: '200+'
-    },
-    {
-      id: 'performance-optimization',
-      title: 'Performance Optimization Suite',
-      description: 'AI-driven optimization that improves application performance by 500% and reduces infrastructure costs by 40%.',
+      id: 'automation',
+      title: 'Business Automation',
       icon: Zap,
-      color: 'from-yellow-500 to-orange-600',
-      href: '/solutions/performance-optimization',
-      category: 'Performance',
-      benefits: ['500% Performance', '40% Cost Savings', 'Auto Tuning'],
-      price: 'Starting at $1K/month',
-      rating: 4.7,
-      clients: '350+'
+      color: 'from-blue-500 to-cyan-500',
+      solutions: [
+        {
+          title: 'Workflow Automation',
+          description: 'Streamline your business processes with intelligent automation.',
+          features: ['Process Optimization', 'Error Reduction', 'Time Savings'],
+          roi: '300%',
+          timeToValue: '30 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Document Processing',
+          description: 'Automate document handling and data extraction.',
+          features: ['OCR Technology', 'Smart Classification', 'Data Validation'],
+          roi: '250%',
+          timeToValue: '14 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Customer Service AI',
+          description: 'Enhance customer support with AI-powered chatbots.',
+          features: ['24/7 Support', 'Natural Language', 'Multi-language'],
+          roi: '400%',
+          timeToValue: '21 days',
+          image: '/api/placeholder/400/300'
+        }
+      ]
+    },
+    {
+      id: 'analytics',
+      title: 'Advanced Analytics',
+      icon: BarChart3,
+      color: 'from-purple-500 to-pink-500',
+      solutions: [
+        {
+          title: 'Predictive Analytics',
+          description: 'Forecast trends and make data-driven decisions.',
+          features: ['Machine Learning', 'Real-time Insights', 'Custom Dashboards'],
+          roi: '500%',
+          timeToValue: '45 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Business Intelligence',
+          description: 'Transform data into actionable business insights.',
+          features: ['Data Visualization', 'KPI Tracking', 'Automated Reports'],
+          roi: '350%',
+          timeToValue: '28 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Customer Analytics',
+          description: 'Understand customer behavior and preferences.',
+          features: ['Segmentation', 'Churn Prediction', 'Personalization'],
+          roi: '450%',
+          timeToValue: '35 days',
+          image: '/api/placeholder/400/300'
+        }
+      ]
+    },
+    {
+      id: 'security',
+      title: 'Security & Compliance',
+      icon: Shield,
+      color: 'from-green-500 to-emerald-500',
+      solutions: [
+        {
+          title: 'Cybersecurity Suite',
+          description: 'Protect your business from cyber threats.',
+          features: ['Threat Detection', 'Real-time Monitoring', 'Incident Response'],
+          roi: '200%',
+          timeToValue: '7 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Compliance Management',
+          description: 'Ensure regulatory compliance across all operations.',
+          features: ['GDPR Compliance', 'Audit Trails', 'Risk Assessment'],
+          roi: '180%',
+          timeToValue: '14 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Data Protection',
+          description: 'Secure sensitive data with advanced encryption.',
+          features: ['End-to-End Encryption', 'Access Control', 'Data Backup'],
+          roi: '220%',
+          timeToValue: '10 days',
+          image: '/api/placeholder/400/300'
+        }
+      ]
     }
   ];
 
-  const stats = [
-    { label: 'Enterprise Clients', value: '2,500+', icon: Building2 },
-    { label: 'Average ROI', value: '340%', icon: TrendingUp },
-    { label: 'Uptime Guarantee', value: '99.9%', icon: Shield },
-    { label: 'Countries Served', value: '50+', icon: Globe }
-  ];
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
+      y: 0,
       transition: {
-        staggerChildren: 0.1
+        duration: 0.8,
+        staggerChildren: 0.2
       }
     }
   };
@@ -122,172 +145,176 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6
-      }
+      transition: { duration: 0.6 }
     }
   };
 
+  const currentCategory = categories[activeCategory];
+
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <motion.section
+      className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50"
+      variants={containerVariants}
+      initial="hidden"
+      animate={isVisible ? "visible" : "hidden"}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div 
-          className="text-center mb-20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 rounded-full px-6 py-3 mb-8">
-            <Target className="w-5 h-5 mr-2" />
-            <span className="text-sm font-semibold">💼 BUSINESS SOLUTIONS 2025</span>
-          </div>
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent mb-8">
-            Enterprise-Grade Solutions
+        <motion.div className="text-center mb-16" variants={itemVariants}>
+          <motion.div
+            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 text-sm font-medium mb-4"
+            whileHover={{ scale: 1.05 }}
+          >
+            <Building2 className="w-4 h-4 mr-2" />
+            Business Solutions 2025
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Transform Your Business Operations
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-            Transform your business with our comprehensive suite of AI-powered solutions. 
-            Trusted by Fortune 500 companies worldwide to drive innovation, efficiency, and growth.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover comprehensive business solutions that drive growth, efficiency, and innovation 
+            across every aspect of your organization.
           </p>
         </motion.div>
 
-        {/* Stats */}
-        <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          {stats.map((stat, index) => {
-            const IconComponent = stat.icon;
-            return (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl mb-4">
-                  <IconComponent className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            );
-          })}
+        {/* Category Navigation */}
+        <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
+          <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
+            {categories.map((category, index) => {
+              const Icon = category.icon;
+              return (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(index)}
+                  className={`flex items-center px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                    activeCategory === index
+                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  }`}
+                >
+                  <Icon className="w-5 h-5 mr-2" />
+                  {category.title}
+                </button>
+              );
+            })}
+          </div>
         </motion.div>
 
         {/* Solutions Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {solutions.map((solution, index) => {
-            const IconComponent = solution.icon;
-            return (
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {currentCategory.solutions.map((solution, index) => (
               <motion.div
-                key={solution.id}
+                key={index}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group"
+                whileHover={{ y: -5, scale: 1.02 }}
                 variants={itemVariants}
-                className="group"
               >
-                <Link href={solution.href}>
-                  <article className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden group-hover:scale-105 h-full">
-                    {/* Header */}
-                    <div className={`aspect-video bg-gradient-to-br ${solution.color} flex items-center justify-center relative overflow-hidden`}>
-                      <IconComponent className="w-16 h-16 text-white" />
-                      {solution.featured && (
-                        <div className="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                          ⭐ FEATURED
-                        </div>
-                      )}
-                      <div className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-3 py-1">
-                        <div className="flex items-center gap-1">
-                          <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                          <span className="text-sm font-semibold text-white">{solution.rating}</span>
-                        </div>
-                      </div>
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300" />
-                    </div>
+                {/* Header */}
+                <div className="mb-6">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${currentCategory.color} flex items-center justify-center mb-4`}>
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                    {solution.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {solution.description}
+                  </p>
+                </div>
 
-                    {/* Content */}
-                    <div className="p-8 flex flex-col h-full">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className={`bg-gradient-to-r ${solution.color} text-white text-xs font-semibold px-3 py-1 rounded-full`}>
-                          {solution.category}
-                        </span>
-                        <span className="text-sm text-gray-500">{solution.clients} clients</span>
+                {/* Features */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Features</h4>
+                  <div className="space-y-2">
+                    {solution.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <span className="text-sm text-gray-600">{feature}</span>
                       </div>
+                    ))}
+                  </div>
+                </div>
 
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors leading-tight">
-                        {solution.title}
-                      </h3>
-                      
-                      <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
-                        {solution.description}
-                      </p>
+                {/* Metrics */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="text-center p-3 bg-gray-50 rounded-lg">
+                    <div className="text-2xl font-bold text-green-600 mb-1">{solution.roi}</div>
+                    <div className="text-xs text-gray-500">ROI</div>
+                  </div>
+                  <div className="text-center p-3 bg-gray-50 rounded-lg">
+                    <div className="text-2xl font-bold text-blue-600 mb-1">{solution.timeToValue}</div>
+                    <div className="text-xs text-gray-500">Time to Value</div>
+                  </div>
+                </div>
 
-                      {/* Benefits */}
-                      <div className="mb-6">
-                        <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Benefits:</h4>
-                        <div className="space-y-2">
-                          {solution.benefits.map((benefit, idx) => (
-                            <div key={idx} className="flex items-center gap-2">
-                              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                              <span className="text-sm text-gray-600">{benefit}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Footer */}
-                      <div className="mt-auto">
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="text-2xl font-bold text-gray-900">{solution.price}</div>
-                          <div className="flex items-center gap-1 text-yellow-500">
-                            <Star className="w-4 h-4 fill-current" />
-                            <span className="text-sm font-medium text-gray-700">{solution.rating}</span>
-                          </div>
-                        </div>
-                        <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
-                          Learn More
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </Link>
+                {/* Action Button */}
+                <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center group">
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
               </motion.div>
-            );
-          })}
+            ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Success Stories */}
+        <motion.div className="mt-20" variants={itemVariants}>
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4">Proven Results</h3>
+              <p className="text-lg opacity-90">
+                Join thousands of businesses that have transformed their operations
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">10,000+</div>
+                <div className="text-sm opacity-80">Companies Transformed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">$2.5B+</div>
+                <div className="text-sm opacity-80">Cost Savings Generated</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2">98%</div>
+                <div className="text-sm opacity-80">Customer Satisfaction</div>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Call to Action */}
-        <motion.div 
-          className="text-center mt-20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-white">
-            <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
-            <p className="text-xl mb-8 opacity-90">
-              Join thousands of companies already leveraging our enterprise solutions
+        <motion.div className="text-center mt-16" variants={itemVariants}>
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-lg text-gray-600 mb-6">
+              Get started with our comprehensive business solutions today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Custom Quote
-              </Link>
-              <Link 
-                href="/demo"
-                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
+              <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-indigo-600 hover:to-purple-600 transition-colors flex items-center justify-center">
+                <Lightbulb className="w-5 h-5 mr-2" />
+                Start Free Trial
+              </button>
+              <button className="border-2 border-indigo-500 text-indigo-600 px-8 py-3 rounded-xl font-semibold hover:bg-indigo-50 transition-colors flex items-center justify-center">
+                <Globe className="w-5 h-5 mr-2" />
                 Schedule Demo
-              </Link>
+              </button>
             </div>
           </div>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

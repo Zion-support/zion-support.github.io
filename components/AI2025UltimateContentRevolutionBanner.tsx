@@ -1,125 +1,80 @@
 import React from 'react';
 import Link from 'next/link';
+import { ArrowRight, Sparkles, Brain, Zap } from 'lucide-react';
 
 export default function AI2025UltimateContentRevolutionBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-red-900 via-purple-900 to-pink-900">
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-16 left-16 w-24 h-24 bg-yellow-400/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-24 w-20 h-20 bg-red-400/20 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-24 left-1/3 w-16 h-16 bg-pink-400/20 rounded-full animate-ping"></div>
-        <div className="absolute bottom-40 right-1/4 w-28 h-28 bg-orange-400/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500/20 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500/20 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-purple-400/20 rounded-full animate-pulse delay-500"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-400 to-red-500 text-black text-sm font-bold mb-8 animate-pulse">
-            🔥 ULTIMATE CONTENT REVOLUTION 2025
+          {/* Main heading with gradient text */}
+          <div className="flex items-center justify-center mb-6">
+            <Sparkles className="h-8 w-8 text-yellow-400 mr-3 animate-spin" />
+            <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              🚀 AI 2025 Ultimate Content Revolution
+            </h2>
+            <Sparkles className="h-8 w-8 text-yellow-400 ml-3 animate-spin" />
           </div>
-
-          {/* Main heading */}
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            AI 2025 Ultimate
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              Content Revolution
-            </span>
-          </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the most comprehensive collection of AI 2025 breakthrough content. 
-            Revolutionary insights, predictions, and implementation guides delivering 
-            unprecedented 10,000% ROI and transforming businesses worldwide.
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Discover the most comprehensive collection of AI insights, breakthrough technologies, and revolutionary content that will transform your understanding of artificial intelligence.
           </p>
 
-          {/* Content highlights */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-3xl mb-3">🚀</div>
-              <h3 className="text-lg font-bold text-white mb-2">Breakthrough Predictions</h3>
-              <p className="text-yellow-200 text-sm">2025-2030 AI trends</p>
+          {/* Feature highlights */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div className="flex items-center justify-center space-x-2">
+              <Brain className="h-6 w-6 text-purple-400" />
+              <span className="text-sm font-semibold">Neural Intelligence</span>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-3xl mb-3">🏆</div>
-              <h3 className="text-lg font-bold text-white mb-2">Success Stories</h3>
-              <p className="text-red-200 text-sm">10,000% ROI cases</p>
+            <div className="flex items-center justify-center space-x-2">
+              <Zap className="h-6 w-6 text-blue-400" />
+              <span className="text-sm font-semibold">Quantum Computing</span>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-3xl mb-3">📚</div>
-              <h3 className="text-lg font-bold text-white mb-2">Implementation Guides</h3>
-              <p className="text-pink-200 text-sm">Step-by-step tutorials</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-3xl mb-3">⚡</div>
-              <h3 className="text-lg font-bold text-white mb-2">Revolutionary Tools</h3>
-              <p className="text-orange-200 text-sm">ROI calculators & more</p>
+            <div className="flex items-center justify-center space-x-2">
+              <ArrowRight className="h-6 w-6 text-green-400" />
+              <span className="text-sm font-semibold">Future Predictions</span>
             </div>
           </div>
 
-          {/* CTA buttons */}
+          {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/ai-2025-ultimate-breakthrough-revolution"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-lg rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            <Link 
+              href="/ai-2025-ultimate-content-revolution"
+              className="group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
             >
-              Explore Revolution
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
+              <Sparkles className="h-5 w-5 mr-2 group-hover:animate-pulse" />
+              Explore Revolutionary Content
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link
-              href="/case-studies/ai-2025-global-transformation-breakthrough"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-lg hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm"
+            
+            <Link 
+              href="/blog"
+              className="group border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center"
             >
-              View 10,000% ROI Success
+              <Brain className="h-5 w-5 mr-2 group-hover:animate-pulse" />
+              Browse All Content
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
-          {/* Content stats */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">50+</div>
-              <div className="text-gray-300 text-sm">Revolutionary Articles</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-red-400 mb-2">25+</div>
-              <div className="text-gray-300 text-sm">Success Stories</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400 mb-2">15+</div>
-              <div className="text-gray-300 text-sm">Implementation Guides</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-400 mb-2">10+</div>
-              <div className="text-gray-300 text-sm">ROI Calculators</div>
-            </div>
-          </div>
-
-          {/* Trust indicators */}
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-gray-300">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-              <span className="text-sm">10,000% ROI Guaranteed</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-              <span className="text-sm">Fortune 500 Verified</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
-              <span className="text-sm">Revolutionary Content</span>
-            </div>
+          {/* Additional info */}
+          <div className="mt-8 text-sm text-gray-400">
+            <p>✨ 500+ Articles • 🎯 200+ Case Studies • 🚀 Future-Ready Insights</p>
           </div>
         </div>
       </div>
 
-      {/* Floating elements */}
-      <div className="absolute top-1/4 left-12 w-4 h-4 bg-yellow-400/30 rounded-full animate-bounce"></div>
-      <div className="absolute top-1/3 right-16 w-6 h-6 bg-red-400/30 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-1/4 left-20 w-3 h-3 bg-pink-400/30 rounded-full animate-ping"></div>
-      <div className="absolute bottom-1/3 right-12 w-5 h-5 bg-orange-400/30 rounded-full animate-bounce"></div>
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/20 to-transparent"></div>
     </div>
   );
 }
