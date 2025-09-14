@@ -1,8 +1,24 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 6
+  total_content_pieces: 9
   
   new_2025_content:
+    - id: "cybersecurity-revolution"
+      type: "blog"
+      title: "AI 2025: The Cybersecurity Revolution - Protecting Enterprises in the Age of Intelligent Threats"
+      file_path: "/content/blog/ai-2025-cybersecurity-revolution.md"
+      url: "/blog/ai-2025-cybersecurity-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Cybersecurity", "Enterprise Security", "Threat Detection", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        accuracy: "99.7%"
+        reduction: "85%"
+        savings: "$4.45M"
+        uptime: "99.7%"
+        
     - id: "autonomous-systems-revolution"
       type: "blog"
       title: "AI 2025: The Next Generation Autonomous Systems Revolution"
@@ -14,6 +30,22 @@ content_index:
       featured: true
       is_new: true
       
+    - id: "healthcare-ai-transformation"
+      type: "case-study"
+      title: "Healthcare AI Transformation 2025: How a Regional Hospital System Achieved 340% ROI and Saved $15M Annually"
+      file_path: "/content/case-studies/healthcare-ai-transformation-2025-success.md"
+      url: "/case-studies/healthcare-ai-transformation-2025-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Healthcare", "AI Transformation", "ROI", "Cost Savings", "Patient Care"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        savings: "$15.2M"
+        satisfaction: "94%"
+        accuracy: "89%"
+        
     - id: "global-enterprise-success"
       type: "case-study"
       title: "Global Enterprise AI Transformation: $2.8B Ultimate Success Story"
@@ -25,6 +57,22 @@ content_index:
       featured: true
       is_new: true
       
+    - id: "ai-implementation-master-guide-2025"
+      type: "resource"
+      title: "AI Implementation Master Guide 2025: From Strategy to 400% ROI in 12 Months"
+      file_path: "/content/resources/ai-implementation-master-guide-2025.md"
+      url: "/resources/ai-implementation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2025", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "400%"
+        timeframe: "12 months"
+        success: "98%"
+        projects: "500+"
+        
     - id: "autonomous-systems-guide"
       type: "resource"
       title: "AI 2025 Autonomous Systems Implementation Master Guide"
@@ -120,7 +168,7 @@ content_index:
 
   promotion_components:
     - name: "NewContent2025PromotionBanner"
-      file_path: "/src/components/NewContent2025PromotionBanner.tsx"
+      file_path: "/app/components/NewContent2025PromotionBanner.tsx"
       status: "active"
       features:
         - "Auto-rotating content showcase"
@@ -128,6 +176,16 @@ content_index:
         - "Animated background elements"
         - "Success metrics display"
         - "Progress indicators"
+        
+    - name: "UltimateContentShowcase2025"
+      file_path: "/app/components/UltimateContentShowcase2025.tsx"
+      status: "active"
+      features:
+        - "Interactive content carousel"
+        - "Real-time metrics display"
+        - "Call-to-action integration"
+        - "Responsive design"
+        - "Success statistics showcase"
         
     - name: "NewContent2025ShowcaseSection"
       file_path: "/src/components/NewContent2025PromotionBanner.tsx"
