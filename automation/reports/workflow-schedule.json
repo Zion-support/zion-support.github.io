@@ -275,6 +275,25 @@
         "workflow_dispatch"
       ],
       "resourceScore": 131
+    },
+    {
+      "name": "dependency-maintenance.yml",
+      "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/dependency-maintenance.yml",
+      "priority": "high",
+      "resourceIntensity": "medium",
+      "estimatedDuration": 45,
+      "concurrentJobs": 12,
+      "runnerRequirements": {
+        "runner": "ubuntu-latest",
+        "size": "standard",
+        "special": []
+      },
+      "dependencies": [],
+      "triggers": [
+        "workflow_dispatch {}",
+        "schedule"
+      ],
+      "resourceScore": 115
     }
   ],
   "medium": [
