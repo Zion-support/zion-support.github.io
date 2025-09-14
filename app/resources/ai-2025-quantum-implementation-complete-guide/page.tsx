@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Tag, Download, BookOpen,  Zap, CheckCircle, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Clock,  Download, BookOpen,  Zap, CheckCircle, TrendingUp } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
