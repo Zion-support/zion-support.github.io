@@ -60,22 +60,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // New 2025 Content
     {
-      url: `${baseUrl}/blog/ai-2025-machine-learning-revolution-enterprise-success`,
+      url: `${baseUrl}/blog/ai-2025-enterprise-integration-revolution`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/blog/ai-2025-cloud-computing-revolution-ultimate-guide`,
+      url: `${baseUrl}/blog/ai-2025-smart-automation-breakthrough`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/case-studies/ai-transformation-2025-ultimate-success-story-enterprise`,
+      url: `${baseUrl}/blog/ai-2025-data-intelligence-revolution`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/global-manufacturing-ai-transformation`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/financial-services-ai-revolution`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/resources/ai-implementation-guide-2025`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
     }
   ]
 }
