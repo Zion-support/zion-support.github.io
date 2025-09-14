@@ -26,6 +26,8 @@ const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics')
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 // Import key promotional components
+import UltimateDigitalTransformationBanner from '../components/UltimateDigitalTransformationBanner';
+import UltimateDigitalTransformationShowcase from '../components/UltimateDigitalTransformationShowcase';
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
@@ -74,6 +76,9 @@ export default function HomePage() {
         />
         
         <div className='min-h-screen bg-white'>
+        {/* Ultimate Digital Transformation Banner */}
+        <UltimateDigitalTransformationBanner />
+        
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         
@@ -194,6 +199,7 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <UltimateDigitalTransformationShowcase />
         <NewContent2026PromotionBanner />
         <QuantumAI2026BreakthroughBanner />
         <NewContentShowcase2026 />
