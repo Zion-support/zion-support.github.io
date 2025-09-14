@@ -3,72 +3,79 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Settings, 
-  Zap, 
-  Brain, 
-  Rocket, 
+  TrendingUp, 
+  Users, 
+  Award, 
+  DollarSign, 
+  Clock, 
+  Target,
   ArrowRight,
   X,
   ChevronRight,
-  Award,
-  Users,
-  Clock,
-  TrendingUp,
+  Star,
+  Quote,
+  BarChart3,
+  Zap,
+  Brain,
+  Rocket,
   CheckCircle,
-  BarChart3
+  Play
 } from 'lucide-react';
 
-const InteractiveTechDemo2027PromotionBanner = () => {
+const BusinessSuccessStories2027PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
-  const [currentDemo, setCurrentDemo] = useState(0);
+  const [currentStory, setCurrentStory] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const demos = [
+  const stories = [
     {
-      icon: Brain,
-      title: 'AI Quantum Processing',
-      description: '1.2M ops/sec',
-      color: 'from-purple-500 to-blue-500'
+      company: 'TechCorp Global',
+      industry: 'Technology',
+      logo: 'TC',
+      color: 'from-blue-500 to-purple-500',
+      roi: '850%',
+      savings: '$2.3M'
     },
     {
-      icon: Zap,
-      title: 'Autonomous Automation',
-      description: '847 tasks automated',
-      color: 'from-green-500 to-teal-500'
+      company: 'InnovateLabs',
+      industry: 'R&D',
+      logo: 'IL',
+      color: 'from-green-500 to-teal-500',
+      roi: '720%',
+      savings: '$1.8M'
     },
     {
-      icon: Rocket,
-      title: 'Neural Interface',
-      description: '12ms response time',
-      color: 'from-orange-500 to-red-500'
+      company: 'FutureTech Industries',
+      industry: 'Manufacturing',
+      logo: 'FT',
+      color: 'from-orange-500 to-red-500',
+      roi: '920%',
+      savings: '$3.1M'
     }
   ];
 
   const features = [
-    'Real-time Processing',
-    'Interactive Controls',
-    'Live Metrics',
-    'Step-by-step Guide'
+    'Real Success Stories',
+    'Proven ROI Results',
+    'Industry Leaders',
+    'Detailed Case Studies'
   ];
 
   const stats = [
-    { value: '99.97%', label: 'Accuracy' },
-    { value: '2.3k hrs', label: 'Time Saved' },
-    { value: '0.02%', label: 'Error Rate' },
-    { value: '$1.2M', label: 'Cost Saved' }
+    { value: '850%', label: 'Avg ROI' },
+    { value: '$2.4M', label: 'Avg Savings' },
+    { value: '99.8%', label: 'Success Rate' },
+    { value: '15k+', label: 'Hours Saved' }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }, 2500);
+      setCurrentStory((prev) => (prev + 1) % stories.length);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -96,7 +103,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {
                   'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
                 ]
               }}
-              transition={{ duration: 6, repeat: Infinity }}
+              transition={{ duration: 8, repeat: Infinity }}
             />
           </div>
 
@@ -106,46 +113,47 @@ const InteractiveTechDemo2027PromotionBanner = () => {
               <div className="flex-1 text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
                   <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30">
-                    <Play className="w-4 h-4 text-purple-400" />
-                    <span className="text-purple-300 text-sm font-medium">INTERACTIVE DEMO</span>
+                    <Award className="w-4 h-4 text-purple-400" />
+                    <span className="text-purple-300 text-sm font-medium">SUCCESS STORIES</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                    <span className="text-green-400 text-xs font-medium">LIVE</span>
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    ))}
                   </div>
                 </div>
 
                 <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
-                  🎮 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                    Interactive Tech Demo 2027
+                  🏆 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                    Business Success Stories 2027
                   </span>
                 </h2>
                 
                 <p className="text-gray-300 text-sm lg:text-base mb-4 max-w-2xl">
-                  Experience our cutting-edge technology in action! Watch real-time demonstrations 
-                  of AI processing, automation, and neural interfaces with interactive controls.
+                  Discover how leading companies achieved extraordinary results with our AI solutions. 
+                  Real stories, proven ROI, and detailed case studies from industry leaders.
                 </p>
 
-                {/* Rotating Demo Features */}
+                {/* Rotating Success Stories */}
                 <div className="flex items-center gap-4 mb-4">
                   <AnimatePresence mode="wait">
                     <motion.div
-                      key={currentDemo}
+                      key={currentStory}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -20 }}
                       transition={{ duration: 0.5 }}
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-3"
                     >
-                      <div className={`p-2 rounded-lg bg-gradient-to-r ${demos[currentDemo].color}`}>
-                        <demos[currentDemo].icon className="w-4 h-4 text-white" />
+                      <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${stories[currentStory].color} flex items-center justify-center text-white font-bold text-sm`}>
+                        {stories[currentStory].logo}
                       </div>
                       <div>
                         <div className="text-white font-semibold text-sm">
-                          {demos[currentDemo].title}
+                          {stories[currentStory].company}
                         </div>
                         <div className="text-gray-400 text-xs">
-                          {demos[currentDemo].description}
+                          {stories[currentStory].industry} • {stories[currentStory].roi} ROI • {stories[currentStory].savings} saved
                         </div>
                       </div>
                     </motion.div>
@@ -163,21 +171,21 @@ const InteractiveTechDemo2027PromotionBanner = () => {
                 </div>
               </div>
 
-              {/* Center - Live Stats */}
+              {/* Center - Success Stats */}
               <div className="hidden lg:flex items-center gap-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white mb-1">99.97%</div>
-                  <div className="text-xs text-gray-400">Accuracy</div>
+                  <div className="text-2xl font-bold text-white mb-1">850%</div>
+                  <div className="text-xs text-gray-400">Avg ROI</div>
                 </div>
                 <div className="w-px h-12 bg-white/20" />
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white mb-1">2.3k</div>
-                  <div className="text-xs text-gray-400">Hours Saved</div>
+                  <div className="text-2xl font-bold text-white mb-1">$2.4M</div>
+                  <div className="text-xs text-gray-400">Avg Savings</div>
                 </div>
                 <div className="w-px h-12 bg-white/20" />
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white mb-1">$1.2M</div>
-                  <div className="text-xs text-gray-400">Cost Saved</div>
+                  <div className="text-2xl font-bold text-white mb-1">99.8%</div>
+                  <div className="text-xs text-gray-400">Success Rate</div>
                 </div>
               </div>
 
@@ -185,13 +193,13 @@ const InteractiveTechDemo2027PromotionBanner = () => {
               <div className="flex flex-col sm:flex-row items-center gap-3">
                 <button className="group px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
                   <Play className="w-4 h-4" />
-                  <span>Start Demo</span>
+                  <span>View Stories</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
                 
                 <button className="px-6 py-3 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center gap-2">
-                  <Settings className="w-4 h-4" />
-                  <span>Schedule Demo</span>
+                  <BarChart3 className="w-4 h-4" />
+                  <span>See ROI Calculator</span>
                 </button>
               </div>
 
@@ -223,4 +231,4 @@ const InteractiveTechDemo2027PromotionBanner = () => {
   );
 };
 
-export default InteractiveTechDemo2027PromotionBanner;
+export default BusinessSuccessStories2027PromotionBanner;
