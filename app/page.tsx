@@ -186,6 +186,10 @@ import UltimateAI2026FutureBanner from '../components/UltimateAI2026FutureBanner
 import InteractiveAIConsciousnessDemo2025 from '../components/InteractiveAIConsciousnessDemo2025';
 import UltimateAIRevolutionShowcase2025 from '../components/UltimateAIRevolutionShowcase2025';
 
+// Import new Transcendent AI 2026 components
+import TranscendentAI2026Banner from '../components/TranscendentAI2026Banner';
+import UltimateROICalculator2026 from '../components/UltimateROICalculator2026';
+
 // Import new AI Business Intelligence 2025 promotional components
 import AIBusinessIntelligence2025Banner from '../components/AIBusinessIntelligence2025Banner';
 import AIBusinessIntelligenceShowcase2025 from '../components/AIBusinessIntelligenceShowcase2025';
@@ -285,6 +289,9 @@ export default function HomePage() {
         />
         
         <div className='min-h-screen bg-white'>
+        {/* TRANSCENDENT AI 2026 BANNER - NEWEST BREAKTHROUGH */}
+        <TranscendentAI2026Banner />
+        
         {/* NEURAL CONSCIOUSNESS AI 2025 REVOLUTION BANNER - NEWEST BREAKTHROUGH */}
         <NeuralConsciousnessAI2025RevolutionBanner />
         
@@ -447,6 +454,9 @@ export default function HomePage() {
         
         {/* ULTIMATE AI REVOLUTION SHOWCASE 2025 - NEWEST FEATURED */}
         <UltimateAIRevolutionShowcase2025 />
+        
+        {/* ULTIMATE ROI CALCULATOR 2026 - NEWEST INTERACTIVE */}
+        <UltimateROICalculator2026 />
         
         {/* INTERACTIVE CONTENT DISCOVERY 2025 - NEWEST FEATURED */}
         <InteractiveContentDiscovery2025 />
