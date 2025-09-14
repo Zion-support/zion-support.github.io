@@ -3,102 +3,13 @@ import Link from 'next/link';
 import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
-<<<<<<< HEAD
-import PerformanceMonitor from '../components/PerformanceMonitor';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
-import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
-import NewContentBanner from '../components/NewContentBanner';
-import NewContentShowcase from '../components/NewContentShowcase';
-import NewContentShowcase2025 from '../components/NewContentShowcase2025';
-import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
-import NewContentPromoBanner from '../components/NewContentPromoBanner';
-import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
-import UltraContentPromotionBanner2025 from '../components/UltraContentPromotionBanner2025';
-import UltraContentPromotionBanner2026 from '../components/UltraContentPromotionBanner2026';
-import UltraContentPromotionBanner2025 from '../components/UltraContentPromotionBanner2025';
-import EnhancedContentShowcase2025 from '../components/EnhancedContentShowcase2025';
-import AI2030ContentPromotionBanner from '../components/AI2030ContentPromotionBanner';
-import AI2030ContentShowcase from '../components/AI2030ContentShowcase';
-import AI2031ContentPromotionBanner from '../components/AI2031ContentPromotionBanner';
-import AI2031ContentShowcase from '../components/AI2031ContentShowcase';
-import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
-import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
-import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
-import NewContent2025Showcase from '../components/NewContent2025Showcase';
-import AI2026BreakthroughPromotionBanner from '../components/AI2026BreakthroughPromotionBanner';
-import AI2026BreakthroughContentShowcase from '../components/AI2026BreakthroughContentShowcase';
-import AI2026ContentDiscoveryWidget from '../components/AI2026ContentDiscoveryWidget';
-import AI2026ContentPromotionBanner from '../components/AI2026ContentPromotionBanner';
-import AI2026ContentShowcase from '../components/AI2026ContentShowcase';
-import AI2026BreakthroughContentPromotionBanner from '../components/AI2026BreakthroughContentPromotionBanner';
-import AI2026QuantumNeuralPromotionBanner from '../components/AI2026QuantumNeuralPromotionBanner';
-import AI2026QuantumNeuralContentShowcase from '../components/AI2026QuantumNeuralContentShowcase';
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
-import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
-import AI2035BreakthroughPromotionBanner from '../components/AI2035BreakthroughPromotionBanner';
-import AI2035BreakthroughContentShowcase from '../components/AI2035BreakthroughContentShowcase';
-import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
-import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
-import DynamicContentCarousel from '../components/DynamicContentCarousel';
-import DynamicContentCarousel2025 from '../components/DynamicContentCarousel2025';
-import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
-import ContentDiscoveryWidget2025 from '../components/ContentDiscoveryWidget2025';
-import DynamicContentCarousel2026 from '../components/DynamicContentCarousel2026';
-import ContentDiscoverySection from '../components/ContentDiscoverySection';
-import NewContentDiscovery from '../components/NewContentDiscovery';
-import EnhancedContentDiscovery2026 from '../components/EnhancedContentDiscovery2026';
-import EnhancedNewsletter from '../components/EnhancedNewsletter';
-import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
-import RevolutionaryBreakthroughPromotionBanner from '../components/RevolutionaryBreakthroughPromotionBanner';
-import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery';
-import DynamicContentCarousel from '../components/DynamicContentCarousel';
-import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
-import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
-import NewContentDiscoveryWidget2025 from '../components/NewContentDiscoveryWidget2025';
-import Card from '../components/ui/Card';
-import FeatureCard from '../components/FeatureCard';
-import TestimonialCard from '../components/TestimonialCard';
-import PerformanceMetrics from '../components/PerformanceMetrics';
-import TechnologyStack from '../components/TechnologyStack';
-import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
-import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
-import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
-import RevolutionaryTechShowcase2025 from '../components/RevolutionaryTechShowcase2025';
-import EnterpriseSuccessBanner from '../components/EnterpriseSuccessBanner';
-import FutureTechPreviewBanner from '../components/FutureTechPreviewBanner';
-import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
-import NewContent2025UltimateBreakthroughShowcase from '../components/NewContent2025UltimateBreakthroughShowcase';
-import UltimateAIBreakthrough2025Banner from '../components/UltimateAIBreakthrough2025Banner';
-import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
-import UltimateContentShowcase2025Banner from '../components/UltimateContentShowcase2025Banner';
-// Import new Advanced Neural Architectures 2026 components
-import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
-import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
+// Import new AI Revolution 2025-2026 components
+import AIRevolution2025Banner from '../components/AIRevolution2025Banner';
+import AIRevolutionContentShowcase from '../components/AIRevolutionContentShowcase';
 
-// Import new Revolutionary AI Automation 2025 components
-import RevolutionaryAIAutomationBanner2025 from '../components/RevolutionaryAIAutomationBanner2025';
-import RevolutionaryAIAutomationShowcase2025 from '../components/RevolutionaryAIAutomationShowcase2025';
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-// Import new AI 2025-2026 Ultimate Business Intelligence components
-import AI2025_2026UltimateBusinessIntelligenceRevolutionBanner from '../components/AI2025_2026UltimateBusinessIntelligenceRevolutionBanner';
-import AI2025_2026UltimateBusinessIntelligenceShowcase from '../components/AI2025_2026UltimateBusinessIntelligenceShowcase';
-
->>>>>>> ac1100fcbe5d7ac3eb3b9e5591ca6b6fd179f992
-// Import new Ultimate Content 2025 components
-import UltimateContent2025Banner from '../components/UltimateContent2025Banner';
-import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
-import NewContentShowcase2025 from '../components/NewContentShowcase2025';
-import ContentNavigation2025 from '../components/ContentNavigation2025';
-=======
 // Import new Ultimate Content 2025 Revolutionary components
 import UltimateContent2025RevolutionaryBanner from '../components/UltimateContent2025RevolutionaryBanner';
 import UltimateContent2025Showcase from '../components/UltimateContent2025Showcase';
->>>>>>> cursor/create-and-deploy-new-content-4974
 
 // Import new Ultimate Business Transformation 2025 components
 import UltimateBusinessTransformation2025Banner from '../components/UltimateBusinessTransformation2025Banner';
@@ -107,8 +18,6 @@ import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent
 // Import new Ultimate Autonomous Enterprise 2025 components
 import UltimateAutonomousEnterpriseBanner2025 from '../components/UltimateAutonomousEnterpriseBanner2025';
 import UltimateAutonomousEnterpriseShowcase2025 from '../components/UltimateAutonomousEnterpriseShowcase2025';
-=======
->>>>>>> c4be59f6af21a5c50660770de2e2a18be37d6af9
 
 // Import new advanced AI components
 import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
@@ -284,12 +193,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Revolutionary AI Automation Banner 2025 - NEW ULTIMATE FEATURED */}
-        <RevolutionaryAIAutomationBanner2025 />
+        {/* AI Revolution 2025-2026 Banner - NEWEST ULTIMATE FEATURED */}
+        <AIRevolution2025Banner />
         
-        {/* NEW 2025 ULTIMATE CONTENT BANNERS - TOP PRIORITY FEATURED */}
-        <NewContent2025UltimateBanner />
-        <RevolutionaryContent2025Banner />
+        {/* AI Revolution Content Showcase - NEWEST FEATURED */}
+        <AIRevolutionContentShowcase />
         
         {/* Ultimate Content 2025 Revolutionary Banner - NEW ULTIMATE FEATURED */}
         <UltimateContent2025RevolutionaryBanner />
