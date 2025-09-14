@@ -11,9 +11,9 @@ import AIRevolutionContentShowcase from '../components/AIRevolutionContentShowca
 import RevolutionaryAIAutomationBanner2025 from '../components/RevolutionaryAIAutomationBanner2025';
 import RevolutionaryAIAutomationShowcase2025 from '../components/RevolutionaryAIAutomationShowcase2025';
 
-// Import new Ultimate Enterprise Transformation 2025 components
-import UltimateEnterpriseTransformation2025Banner from '../components/UltimateEnterpriseTransformation2025Banner';
-import UltimateEnterpriseTransformationShowcase from '../components/UltimateEnterpriseTransformationShowcase';
+// Import new Ultimate Business Intelligence 2025 components
+import UltimateBusinessIntelligence2025Banner from '../components/UltimateBusinessIntelligence2025Banner';
+import UltimateBusinessIntelligenceShowcase2025 from '../components/UltimateBusinessIntelligenceShowcase2025';
 
 // Import new AI 2025-2026 Ultimate Business Intelligence components
 import AI2025_2026UltimateBusinessIntelligenceRevolutionBanner from '../components/AI2025_2026UltimateBusinessIntelligenceRevolutionBanner';
@@ -228,6 +228,9 @@ export default function HomePage() {
         {/* Synthetic Intelligence 2030 Promotion Banner - NEWEST FEATURED */}
         <SyntheticIntelligence2030PromotionBanner />
         
+        {/* Ultimate Business Intelligence 2025 Banner - NEW ULTIMATE FEATURED */}
+        <UltimateBusinessIntelligence2025Banner />
+        
         {/* Ultimate Enterprise Transformation 2025 Banner - NEW ULTIMATE FEATURED */}
         <UltimateEnterpriseTransformation2025Banner />
         
@@ -265,6 +268,9 @@ export default function HomePage() {
         
         {/* AI 2026 BREAKTHROUGH REVOLUTION BANNER - NEWEST FEATURED */}
         <AI2026BreakthroughRevolutionBanner />
+        
+        {/* Ultimate Business Intelligence Showcase 2025 - NEW ULTIMATE FEATURED */}
+        <UltimateBusinessIntelligenceShowcase2025 />
         
         {/* Revolutionary AI Automation Showcase 2025 - NEW FEATURED */}
         <RevolutionaryAIAutomationShowcase2025 />
@@ -486,7 +492,6 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
-        <UltimateEnterpriseTransformationShowcase />
         <RevolutionaryContent2026Banner />
         <UltimateContentShowcase2026 />
         <QuantumAIContentShowcase2026 />
