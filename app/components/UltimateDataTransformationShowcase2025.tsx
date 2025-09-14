@@ -252,7 +252,7 @@ const UltimateDataTransformationShowcase2025 = () => {
                   </div>
                 </div>
 
-                {/* Tags */}
+                {/* Users */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.slice(0, 3).map((tag) => (
                     <span
@@ -291,7 +291,7 @@ const UltimateDataTransformationShowcase2025 = () => {
                 href="/contact"
                 className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
-                <Target className="w-5 h-5 mr-2" />
+                <CheckCircle className="w-5 h-5 mr-2" />
                 Get Free Consultation
               </Link>
               <Link

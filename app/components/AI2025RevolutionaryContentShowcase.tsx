@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Clock, Users, Target, Award, Zap } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Clock, Users, CheckCircle, Award, Zap } from 'lucide-react';
 
 const AI2025RevolutionaryContentShowcase = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -134,7 +134,7 @@ const AI2025RevolutionaryContentShowcase = () => {
     switch (type) {
       case 'blog': return <TrendingUp className="w-4 h-4" />;
       case 'case-study': return <Award className="w-4 h-4" />;
-      case 'resource': return <Target className="w-4 h-4" />;
+      case 'resource': return <CheckCircle className="w-4 h-4" />;
       default: return <Star className="w-4 h-4" />;
     }
   };
@@ -266,7 +266,7 @@ const AI2025RevolutionaryContentShowcase = () => {
                   ))}
                 </div>
 
-                {/* Tags */}
+                {/* Users */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {item.tags.map((tag) => (
                     <span

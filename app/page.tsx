@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
-import ErrorBoundary from '../components/ErrorBoundary';
+
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
@@ -38,17 +38,21 @@ import RevolutionaryContent2025Banner from '../components/RevolutionaryContent20
 // Import new promotional banners for latest content
 import AI2025UltimateBusinessTransformationPromotionBanner from '../components/AI2025UltimateBusinessTransformationPromotionBanner';
 import QuantumAI2026BreakthroughPromotionBanner from '../components/QuantumAI2026BreakthroughPromotionBanner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+// import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 
 // Import new 2025 ultimate promotional components
-import UltimateContent2025PromotionBanner from '../components/UltimateContent2025PromotionBanner';
+// import UltimateContent2025PromotionBanner from '../components/UltimateContent2025PromotionBanner';
 
 // Import new 2026 promotional components
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-import AI2026RevolutionaryBanner from '../components/AI2026RevolutionaryBanner';
+// import AI2026RevolutionaryBanner from '../components/AI2026RevolutionaryBanner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
+
+// Import new 2025 ultimate promotional components
+// import UltimateContent2025RevolutionaryBanner from '../components/UltimateContent2025RevolutionaryBanner';
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
@@ -56,7 +60,7 @@ import RevolutionaryContent2026Banner from '../components/RevolutionaryContent20
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
-import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
+// import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -66,7 +70,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
         description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
@@ -76,16 +80,17 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT PROMOTION BANNERS - LATEST */}
+        {/* <UltimateContent2025RevolutionaryBanner /> */}
         <AI2025UltimateBusinessTransformationPromotionBanner />
         <QuantumAI2026BreakthroughPromotionBanner />
         {/* Ultimate Content 2025 Promotion Banner - NEW FEATURED */}
-        <UltimateContent2025PromotionBanner />
+        {/* <UltimateContent2025PromotionBanner /> */}
         
         {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
-        <UltimateContentShowcase2025 />
+        {/* <UltimateContentShowcase2025 /> */}
         
         {/* AI 2026 Revolutionary Banner */}
-        <AI2026RevolutionaryBanner />
+        {/* <AI2026RevolutionaryBanner /> */}
         
         {/* New Content 2026 Showcase Banner */}
         <NewContent2026ShowcaseBanner />
@@ -103,7 +108,7 @@ export default function HomePage() {
         <NewContent2025ShowcaseBanner />
         
         {/* Revolutionary AI Content Banner */}
-        <RevolutionaryAIContentBanner />
+        {/* <RevolutionaryAIContentBanner /> */}
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -204,6 +209,7 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <NewContent2025UltimateShowcase />
         <UltimateContentShowcase2025 />
         <NewContent2025PromotionBanner />
         <LatestContentShowcase2025 />
@@ -259,6 +265,6 @@ export default function HomePage() {
           />
         </Suspense>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+
 
 export const metadata = {
   title: 'AI 2025 Ultimate Business Transformation Guide',
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function AI2025UltimateBusinessTransformationPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2025 Ultimate Business Transformation Guide"
         description="Discover the revolutionary AI technologies and strategies that will transform your business in 2025. Comprehensive guide to AI implementation, ROI optimization, and competitive advantage."
@@ -245,6 +245,6 @@ export default function AI2025UltimateBusinessTransformationPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

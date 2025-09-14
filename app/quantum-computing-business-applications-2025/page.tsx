@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+
 
 export const metadata = {
   title: 'Quantum Computing Business Applications 2025: Ultimate Guide',
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function QuantumComputingBusinessPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Quantum Computing Business Applications 2025: Ultimate Guide"
         description="Explore how quantum computing is revolutionizing business operations in 2025. Learn about practical applications, implementation strategies, and real-world success stories."
@@ -290,6 +290,6 @@ export default function QuantumComputingBusinessPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

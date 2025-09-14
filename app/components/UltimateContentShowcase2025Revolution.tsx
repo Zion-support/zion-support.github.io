@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Users, Zap, Clock, Award, Target } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Users, Zap, Clock, Award, CheckCircle } from 'lucide-react';
 
 const UltimateContentShowcase2025Revolution: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -75,7 +75,7 @@ const UltimateContentShowcase2025Revolution: React.FC = () => {
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'case-study': return <Award className="w-5 h-5" />;
-      case 'resource': return <Target className="w-5 h-5" />;
+      case 'resource': return <CheckCircle className="w-5 h-5" />;
       default: return <Zap className="w-5 h-5" />;
     }
   };
@@ -169,7 +169,7 @@ const UltimateContentShowcase2025Revolution: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Tags */}
+                {/* Users */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.slice(0, 3).map((tag, index) => (
                     <span

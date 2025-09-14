@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+
 import BlogPostLayout from '../../components/BlogPostLayout';
 import ContentPromotionBanner from '../../components/ContentPromotionBanner';
 import RelatedContentWidget from '../../components/RelatedContentWidget';
@@ -164,7 +164,7 @@ const relatedPosts = [
 
 export default function QuantumAI2026BusinessTransformationPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title={blogPost.title}
         description={blogPost.description}
@@ -226,6 +226,6 @@ export default function QuantumAI2026BusinessTransformationPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

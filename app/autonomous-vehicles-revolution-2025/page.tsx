@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+
 
 export const metadata = {
   title: 'Autonomous Vehicles Revolution 2025 - Zion Tech Group',
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function AutonomousVehiclesRevolution2025Page() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Autonomous Vehicles Revolution 2025 - Zion Tech Group"
         description="Explore the revolutionary advances in autonomous vehicle technology in 2025. Discover how AI is transforming transportation, safety, and mobility across industries."
@@ -225,6 +225,6 @@ export default function AutonomousVehiclesRevolution2025Page() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

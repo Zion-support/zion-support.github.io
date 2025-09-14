@@ -12,7 +12,7 @@ import {
   Star,
   CheckCircle,
   Zap,
-  Target,
+  CheckCircle,
   Award,
   BookOpen,
   FileText,

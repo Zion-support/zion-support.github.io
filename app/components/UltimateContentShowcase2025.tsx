@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { BookOpen, FileText, BarChart3, TrendingUp, Clock, Star, ArrowRight, Users, Award, CheckCircle, Zap, Target } from 'lucide-react';
+import { BookOpen, FileText, BarChart3, TrendingUp, Clock, Star, ArrowRight, Users, Award, CheckCircle, Zap, CheckCircle } from 'lucide-react';
 
 const UltimateContentShowcase2025 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -168,7 +168,7 @@ const UltimateContentShowcase2025 = () => {
                     </div>
                   </div>
                   
-                  {/* Tags */}
+                  {/* Users */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {item.tags.slice(0, 3).map((tag, index) => (
                       <span

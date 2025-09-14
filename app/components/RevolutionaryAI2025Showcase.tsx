@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, DollarSign, Clock, CheckCircle, Star, Users, Target } from 'lucide-react';
+import { ArrowRight, TrendingUp, DollarSign, Clock, CheckCircle, Star, Users, CheckCircle } from 'lucide-react';
 
 const RevolutionaryAI2025Showcase = () => {
   const [activeCategory, setActiveCategory] = useState('all');

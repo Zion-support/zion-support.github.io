@@ -12,7 +12,7 @@ import {
   Star,
   CheckCircle,
   Clock,
-  Target,
+  CheckCircle,
   Zap,
   X,
   ChevronRight,
@@ -96,7 +96,7 @@ const RevolutionaryAIContentBanner: React.FC = () => {
 
   const stats = [
     { label: 'Average ROI', value: '340%', icon: TrendingUp },
-    { label: 'Success Rate', value: '89%', icon: Target },
+    { label: 'Success Rate', value: '89%', icon: CheckCircle },
     { label: 'Cost Reduction', value: '67%', icon: Shield },
     { label: 'Projects Delivered', value: '500+', icon: Users }
   ];

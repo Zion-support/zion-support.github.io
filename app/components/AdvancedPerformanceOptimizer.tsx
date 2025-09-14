@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Zap, TrendingUp, Clock, Cpu, Database, Globe, 
   Shield, CheckCircle, AlertCircle, Loader,
-  BarChart3, Activity, Gauge, Target
+  BarChart3, Activity, Gauge, CheckCircle
 } from 'lucide-react';
 
 interface PerformanceMetric {
@@ -171,7 +171,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
               </div>
               
               <div className="text-sm text-gray-600">
-                Target: {metric.target}{metric.unit}
+                CheckCircle: {metric.target}{metric.unit}
               </div>
               
               {/* Progress Bar */}
@@ -328,7 +328,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           
           <div className="text-center">
             <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Target className="w-8 h-8 text-orange-600" />
+              <CheckCircle className="w-8 h-8 text-orange-600" />
             </div>
             <h4 className="text-lg font-semibold text-gray-900 mb-2">Goal Oriented</h4>
             <p className="text-gray-600 text-sm">Optimization aligned with business objectives</p>

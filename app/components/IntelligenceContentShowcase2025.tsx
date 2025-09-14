@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { TrendingUp, Users, Target, Zap, ArrowRight, Clock, Star, CheckCircle } from 'lucide-react';
+import { TrendingUp, Users, CheckCircle, Zap, ArrowRight, Clock, Star, CheckCircle } from 'lucide-react';
 
 interface ContentItem {
   id: string;
@@ -117,7 +117,7 @@ const IntelligenceContentShowcase2025: React.FC = () => {
     switch (type) {
       case 'blog': return <TrendingUp className="w-4 h-4" />;
       case 'case-study': return <Users className="w-4 h-4" />;
-      case 'resource': return <Target className="w-4 h-4" />;
+      case 'resource': return <CheckCircle className="w-4 h-4" />;
       default: return <Zap className="w-4 h-4" />;
     }
   };
@@ -247,7 +247,7 @@ const IntelligenceContentShowcase2025: React.FC = () => {
                   )}
                 </div>
 
-                {/* Tags */}
+                {/* Users */}
                 {item.tags && (
                   <div className="flex flex-wrap gap-2 mb-6">
                     {item.tags.slice(0, 3).map((tag, tagIndex) => (
@@ -301,7 +301,7 @@ const IntelligenceContentShowcase2025: React.FC = () => {
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mx-auto mb-4">
-                <Target className="w-8 h-8 text-purple-600" />
+                <CheckCircle className="w-8 h-8 text-purple-600" />
               </div>
               <div className="text-3xl font-bold text-purple-700 mb-2">$4.2M+</div>
               <div className="text-sm text-gray-600">Average Savings</div>

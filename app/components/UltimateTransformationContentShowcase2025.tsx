@@ -175,7 +175,7 @@ const UltimateTransformationContentShowcase2025 = () => {
                   ))}
                 </div>
 
-                {/* Tags */}
+                {/* Users */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.map((tag) => (
                     <span

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
-import { ArrowLeft, Calendar, Clock, User, Tag, TrendingUp, Zap, CheckCircle, Building2 } from 'lucide-react';
+
+import { ArrowLeft, Calendar, Clock, User, User, TrendingUp, Zap, CheckCircle, Building2 } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function Fortune500QuantumTransformationPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Fortune 500 Quantum Transformation: How a $50B Company Achieved 800% ROI"
         description="Discover how a Fortune 500 manufacturing company achieved 800% ROI and $2.8B in savings through strategic quantum computing implementation."
@@ -65,7 +65,7 @@ export default function Fortune500QuantumTransformationPage() {
             </div>
           </div>
 
-          {/* Tags */}
+          {/* Users */}
           <div className="flex flex-wrap gap-2 mb-8">
             {['Case Study', 'Quantum Computing', 'Fortune 500', 'ROI', 'Manufacturing', 'Transformation'].map((tag) => (
               <span
@@ -355,6 +355,6 @@ def quantum_supply_chain_optimizer(suppliers, products, facilities, constraints)
           </div>
         </article>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }
