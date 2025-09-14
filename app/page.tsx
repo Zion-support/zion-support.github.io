@@ -39,10 +39,10 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
@@ -185,17 +185,14 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
-<<<<<<< HEAD
+        <RevolutionaryContent2026Banner />
+        <UltimateContentShowcase2026 />
         <QuantumAIContentShowcase2026 />
-=======
-        <RevolutionaryContentBanner2025 />
->>>>>>> a551535a45ef2ec943e20626b7759c53321b2f79
         <UltimateContentShowcase2025 />
         <NewContent2025PromotionBanner />
         <LatestContentShowcase2025 />
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
-        <RevolutionaryContent2026Banner />
         <FeaturedContentShowcase2026 />
         <NewContent2026PromotionBanner />
         <NewContentPromotionBanner />
