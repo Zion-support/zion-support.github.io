@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'AI 2025 Implementation Complete Roadmap: Your Step-by-Step Guide to AI Transformation',
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function ImplementationRoadmapPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2025 Implementation Complete Roadmap: Your Step-by-Step Guide to AI Transformation"
         description="Comprehensive roadmap for implementing AI solutions in 2025. Complete guide covering strategy, technology selection, implementation phases, and success metrics."
@@ -388,6 +387,6 @@ export default function ImplementationRoadmapPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }
