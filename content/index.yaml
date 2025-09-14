@@ -620,11 +620,11 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   new_content_january_2025:
-    - id: "ultimate-business-transformation-revolution"
+    - id: "ultimate-business-transformation-revolution-complete-guide"
       type: "blog"
       title: "AI 2025: The Ultimate Business Transformation Revolution - Complete Guide"
-      file_path: "/content/blog/ai-2025-ultimate-business-transformation-revolution.md"
-      url: "/blog/ai-2025-ultimate-business-transformation-revolution"
+      file_path: "/content/blog/ai-2025-ultimate-business-transformation-revolution-complete-guide.md"
+      url: "/blog/ai-2025-ultimate-business-transformation-revolution-complete-guide"
       status: "published"
       created: "2025-01-17"
       tags: ["AI Transformation", "Business Revolution", "ROI", "Enterprise", "2025", "Complete Guide"]
@@ -633,9 +633,9 @@ content_index:
       metrics:
         roi: "500%+"
         savings: "$2.8B"
-        efficiency: "78%"
+        efficiency: "340%"
         satisfaction: "98%"
-      reading_time: "15 min read"
+      reading_time: "25 min read"
       
     - id: "ai-transformation-1000-percent-roi-success"
       type: "case-study"
@@ -653,6 +653,23 @@ content_index:
         timeline: "18 months"
         revenue: "$1.2B"
       reading_time: "12 min read"
+      
+    - id: "ai-2025-implementation-master-guide-ultimate-success"
+      type: "resource"
+      title: "AI 2025 Implementation Master Guide: Ultimate Success Framework"
+      file_path: "/content/resources/ai-2025-implementation-master-guide-ultimate-success.md"
+      url: "/resources/ai-2025-implementation-master-guide-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Framework", "2025", "Ultimate Success"]
+      featured: true
+      is_new: true
+      metrics:
+        success_rate: "94%"
+        average_roi: "340%"
+        implementation_time: "18 months"
+        projects: "500+ Success Stories"
+      reading_time: "25 min read"
       
     - id: "ai-2025-implementation-master-guide-ultimate"
       type: "resource"
