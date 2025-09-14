@@ -142,17 +142,16 @@ import NewContent2026RevolutionaryBanner from '../components/NewContent2026Revol
 import UltimateContentShowcase2026Banner from '../components/UltimateContentShowcase2026Banner';
 import RevolutionaryContent2026UltimateBanner from '../components/RevolutionaryContent2026UltimateBanner';
 
+// Import new multimodal AI 2025 promotional banner
+import MultimodalAI2025RevolutionBanner from '../components/MultimodalAI2025RevolutionBanner';
+
+// Import predictive analytics banner
+import PredictiveAnalytics2025BreakthroughBanner from '../components/PredictiveAnalytics2025BreakthroughBanner';
+
 // Import new Ultimate Content 2026 components
 import AI2026BreakthroughRevolutionBanner from '../components/AI2026BreakthroughRevolutionBanner';
 import NeuralInterfaceRevolution2026Banner from '../components/NeuralInterfaceRevolution2026Banner';
 
-// Import new AI 2026 Ultimate components
-import AI2026UltimateBreakthroughBanner from '../components/AI2026UltimateBreakthroughBanner';
-import QuantumAI2026RevolutionBanner from '../components/QuantumAI2026RevolutionBanner';
-import NeuralInterface2026Banner from '../components/NeuralInterface2026Banner';
-import SyntheticIntelligence2026Banner from '../components/SyntheticIntelligence2026Banner';
-import AutonomousSystems2026Banner from '../components/AutonomousSystems2026Banner';
-import UltimateAI2026Showcase from '../components/UltimateAI2026Showcase';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -171,6 +170,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Multimodal AI 2025 Revolution Banner - NEWEST FEATURED */}
+        <MultimodalAI2025RevolutionBanner />
+        
         {/* AI 2026 Ultimate Breakthrough Banner - NEWEST ULTIMATE FEATURED */}
         <AI2026UltimateBreakthroughBanner />
         
@@ -242,14 +244,12 @@ export default function HomePage() {
         <UltimateBusinessTransformation2025Banner />
         
         {/* Revolutionary Content 2025 Ultimate Showcase - NEW FEATURED */}
-        <RevolutionaryContent2025UltimateShowcase />
+        {/* <RevolutionaryContent2025UltimateShowcase /> */}
         
         {/* Predictive Analytics 2025 Breakthrough Banner - LATEST */}
         <PredictiveAnalytics2025BreakthroughBanner />
         {/* Revolutionary Content 2025 Showcase - NEW FEATURED */}
         <RevolutionaryContent2025Showcase />
-        
->>>>>>> origin/cursor/create-and-deploy-new-content-5285
         {/* AI 2025-2026 Ultimate Business Transformation Revolution Banner - NEWEST FEATURED */}
         <AI2025_2026UltimateBusinessTransformationRevolutionBanner />
         
@@ -272,7 +272,7 @@ export default function HomePage() {
         <RevolutionaryContent2025UltimateBanner />
         
         {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
-        <UltimateContentShowcase2025 />
+        {/* <UltimateContentShowcase2025 /> */}
         
         {/* Neural Interface Revolution Banner 2025 - NEW */}
         <NeuralInterfaceRevolutionBanner2025 />
