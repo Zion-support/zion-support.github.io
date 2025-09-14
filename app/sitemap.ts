@@ -58,22 +58,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-    // New blog posts
+    // New blog posts - AI 2026 Series
     {
-      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
+      url: `${baseUrl}/blog/ai-2026-enterprise-autonomous-systems-revolution`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/blog/quantum-ai-2026-business-revolution`,
+      url: `${baseUrl}/blog/quantum-ai-2026-business-transformation-guide`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2026-cybersecurity-revolution-ultimate-guide`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    // New case studies
+    {
+      url: `${baseUrl}/case-studies/ai-transformation-success-story-2026`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
     // New resources
     {
-      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
+      url: `${baseUrl}/resources/ai-2026-revolutionary-content-suite`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
