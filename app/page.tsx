@@ -65,6 +65,10 @@ import AI2025AutonomousSystemsRevolutionBanner from '../components/AI2025Autonom
 import AI2026QuantumConsciousnessBreakthroughBanner from '../components/AI2026QuantumConsciousnessBreakthroughBanner';
 import AI2030SingularityPredictionsBanner from '../components/AI2030SingularityPredictionsBanner';
 
+// Import new autonomous operations promotional components
+import AutonomousOperationsRevolutionBanner2025 from '../components/AutonomousOperationsRevolutionBanner2025';
+import AutonomousOperationsShowcase2025 from '../components/AutonomousOperationsShowcase2025';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -82,10 +86,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-        {/* New Content 2025 Ultimate Banner - LATEST */}
-        <NewContent2025UltimateBanner />
-=======
+        {/* Autonomous Operations Revolution Banner - NEW FEATURED */}
+        <AutonomousOperationsRevolutionBanner2025 />
+        
         {/* AI 2030 Singularity Predictions Banner - ULTIMATE FEATURED */}
         <AI2030SingularityPredictionsBanner />
         
@@ -97,7 +100,9 @@ export default function HomePage() {
         
         {/* Revolutionary Content 2025 Banner - NEW FEATURED */}
         <RevolutionaryContent2025Banner />
->>>>>>> cursor/create-and-deploy-new-content-41b2
+        
+        {/* New Content 2025 Ultimate Banner - LATEST */}
+        <NewContent2025UltimateBanner />
         
         {/* Ultimate Content Showcase 2025 */}
         <UltimateContentShowcase2025 />
@@ -232,6 +237,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Autonomous Operations Showcase - NEW FEATURED */}
+        <AutonomousOperationsShowcase2025 />
 
         {/* Content Promotion Banners */}
         <RevolutionaryContent2026Banner />
