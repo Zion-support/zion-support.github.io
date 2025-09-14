@@ -158,6 +158,54 @@ content_index:
     - id: "cybersecurity-revolution"
 
   new_2025_content_latest:
+    - id: "ai-machine-learning-revolution"
+      type: "blog"
+      title: "AI 2025: The Machine Learning Revolution Transforming Enterprise Success"
+      file_path: "/content/blog/ai-2025-machine-learning-revolution-enterprise-success.md"
+      url: "/blog/ai-2025-machine-learning-revolution-enterprise-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Machine Learning", "Enterprise", "ROI", "Business Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%+"
+        savings: "$2.8B"
+        accuracy: "94%"
+        projects: "500+"
+        
+    - id: "ai-cloud-computing-revolution"
+      type: "blog"
+      title: "AI 2025: The Cloud Computing Revolution - Ultimate Enterprise Guide"
+      file_path: "/content/blog/ai-2025-cloud-computing-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-cloud-computing-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Cloud Computing", "Enterprise", "ROI", "Digital Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "400%+"
+        savings: "$1.2T"
+        efficiency: "89%"
+        agility: "94%"
+        
+    - id: "ai-transformation-ultimate-success"
+      type: "case-study"
+      title: "AI Transformation 2025: Ultimate Enterprise Success Story - $2.8B ROI Achievement"
+      file_path: "/content/case-studies/ai-transformation-2025-ultimate-success-story-enterprise.md"
+      url: "/case-studies/ai-transformation-2025-ultimate-success-story-enterprise"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "AI Transformation", "Enterprise", "ROI", "Success Story", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$2.8B"
+        efficiency: "89%"
+        satisfaction: "94%"
+        
     - id: "ai-cybersecurity-revolution"
       type: "blog"
       title: "AI 2025: The Cybersecurity Revolution - How AI is Transforming Digital Defense"

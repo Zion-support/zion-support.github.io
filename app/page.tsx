@@ -39,6 +39,10 @@ import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner20
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
 
+// Import new 2025 content promotional components
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import NewContent2025Banner from '../components/NewContent2025Banner';
+
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
@@ -64,6 +68,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Content 2025 Banner */}
+        <NewContent2025Banner />
+        
+        {/* Ultimate Content Showcase 2025 */}
+        <UltimateContentShowcase2025 />
+        
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
         
