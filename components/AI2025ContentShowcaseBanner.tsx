@@ -21,7 +21,7 @@ export default function AI2025ContentShowcaseBanner() {
               AI 2025 Ultimate Content Showcase
             </h3>
             <p className="text-sm md:text-base text-purple-100">
-              Revolutionary breakthroughs, 10,000% ROI success stories, and implementation guides
+              Revolutionary breakthroughs10,000% ROI success storiesand implementation guides
             </p>
           </div>
         </div>

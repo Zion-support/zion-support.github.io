@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Clock, TrendingUp, CheckCircle } from 'lucide-react';
+ArrowRightBrainZapClockTrendingUpCheckCircle
 
 export default function AITrends2025UltimatePredictionsBanner() {
   return (

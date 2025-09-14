@@ -5,14 +5,14 @@ import { ReviewCard } from "./ReviewCard";
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
-  onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
+  onReportReview: (reviewId: stringreason: string) => Promise<boolean>;
 }
 
-export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListProps) {
+export function ReviewsList({ reviewsisLoadingonReportReview }: ReviewsListProps) {
   if (isLoading) {
     return (
       <div className="space-y-4">
-        {Array(3).fill(0).map((_, i) => (
+        {Array(3).fill(0).map((_i) => (
           <div key={i} className="border rounded-lg p-4 bg-card animate-pulse">
             <div className="flex items-center gap-3 mb-3">
               <div className="h-10 w-10 rounded-full bg-muted"></div>
@@ -37,7 +37,7 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
       <div className="text-center py-8 border rounded-lg bg-muted/20">
         <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>
         <p className="text-muted-foreground">
-          Once reviews are submitted and approved, they will appear here.
+          Once reviews are submitted and approvedthey will appear here.
         </p>
       </div>
     );

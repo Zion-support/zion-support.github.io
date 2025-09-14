@@ -1,11 +1,11 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Zap, Brain, Cpu, Globe, Shield, Rocket } from 'lucide-react';
+ArrowRightTrendingUpZapBrainCpuGlobeShieldRocket
 
 const RevolutionaryTechTrends2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentTrend, setCurrentTrend] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentTrendsetCurrentTrend] = useState(0);
 
   const trends = [
     {
@@ -38,9 +38,9 @@ const RevolutionaryTechTrends2026PromotionBanner = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentTrend((prev) => (prev + 1) % trends.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentTrendData = trends[currentTrend];
   const IconComponent = currentTrendData.icon;
@@ -53,7 +53,7 @@ const RevolutionaryTechTrends2026PromotionBanner = () => {
       
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map((_i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-blue-400/40 rounded-full animate-pulse"
@@ -101,7 +101,7 @@ const RevolutionaryTechTrends2026PromotionBanner = () => {
                   {currentTrendData.description}
                 </p>
                 <div className="flex gap-2">
-                  {trends.map((_, index) => (
+                  {trends.map((_index) => (
                     <div
                       key={index}
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${
@@ -115,7 +115,7 @@ const RevolutionaryTechTrends2026PromotionBanner = () => {
 
             {/* Trend List */}
             <div className="space-y-4">
-              {trends.map((trend, index) => {
+              {trends.map((trendindex) => {
                 const IconComponent = trend.icon;
                 return (
                   <div

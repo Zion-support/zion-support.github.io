@@ -1,7 +1,7 @@
 'use client';
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import React{ ComponentErrorInfoReactNode } from 'react';
+AlertTriangleRefreshCwHome
 
 interface Props {
   children: ReactNode;
@@ -14,26 +14,26 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-class ErrorBoundary extends React.Component<Props, State> {
+class ErrorBoundary extends React.Component<PropsState> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: truerror };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:'errorInfo);
     this.setState({
       error,
       errorInfo
     });
 
-    // Log error to external service (e.g., Sentry)
+    // Log error to external service (e.g.Sentry)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
-      (window as any).Sentry.captureException(error, { extra: errorInfo });
+      (window as any).Sentry.captureException(error{ extra: errorInfo });
     }
   }
 
@@ -63,7 +63,7 @@ class ErrorBoundary extends React.Component<Props, State> {
             </h1>
             
             <p className="text-lg text-white/70 mb-8 leading-relaxed">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              We're sorrybut something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -110,7 +110,7 @@ class ErrorBoundary extends React.Component<Props, State> {
 
             <div className="mt-8 pt-8 border-t border-white/10">
               <p className="text-white/50 text-sm">
-                If this problem persists, please contact our support team at{' '}
+                If this problem persistsplease contact our support team at{' '}
                 <a 
                   href="mailto:support@ziontechgroup.com" 
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"

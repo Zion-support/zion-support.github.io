@@ -52,7 +52,7 @@ export default function QuantumAIFusion2026PromotionBanner() {
           
           {/* Description */}
           <p className="text-lg text-cyan-200 mb-10 max-w-3xl mx-auto">
-            The world's first successful integration of quantum computing with artificial intelligence, 
+            The world's first successful integration of quantum computing with artificial intelligence
             delivering unprecedented processing power and business transformation results that exceed all expectations.
           </p>
           

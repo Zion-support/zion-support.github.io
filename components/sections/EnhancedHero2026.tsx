@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle } from 'lucide-react';
+ArrowRightStarTrendingUpZapShieldGlobeBrainRocketCheckCircle
 import Button from '../ui/Button';
 
 interface EnhancedHero2026Props {
@@ -20,7 +20,7 @@ interface EnhancedHero2026Props {
   };
 }
 
-export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
+export default function EnhancedHero2026({ contactInfoserviceStats }: EnhancedHero2026Props) {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,7 +32,7 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 30opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -44,7 +44,7 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
   };
 
   const statsVariants = {
-    hidden: { scale: 0.8, opacity: 0 },
+    hidden: { scale: 0.8opacity: 0 },
     visible: {
       scale: 1,
       opacity: 1,
@@ -64,7 +64,7 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
       
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {Array.from({ length: 20 }).map((_, i) => (
+        {Array.from({ length: 20 }).map((_i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
@@ -72,9 +72,9 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`}}
             animate={{
-              y: [0, -30, 0],
-              opacity: [0.3, 0.8, 0.3],
-              scale: [1, 1.5, 1]
+              y: [0-30],
+              opacity: [0.30.80.3],
+              scale: [1.51]
             }}
             transition={{
               duration: 3 + Math.random() * 2,
@@ -112,7 +112,7 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
             </h1>
             
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with our revolutionary AI, Quantum, and IT infrastructure services. 
+              Transform your business with our revolutionary AIQuantumand IT infrastructure services. 
               <span className="text-cyan-400 font-semibold"> 1000+ cutting-edge solutions</span> delivering unprecedented ROI.
             </p>
           </motion.div>
@@ -123,17 +123,17 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto"
           >
             {[
-              { label: 'Total Services', value: serviceStats.totalServices, icon: Rocket, color: 'from-blue-500 to-cyan-500' },
-              { label: 'AI Solutions', value: serviceStats.aiServices, icon: Brain, color: 'from-purple-500 to-pink-500' },
-              { label: 'Emerging Tech', value: serviceStats.emergingTech, icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
-              { label: 'IT Infrastructure', value: serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' },
-              { label: 'Micro SaaS', value: serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' },
-              { label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
-            ].map((stat, index) => (
+              { label: 'Total Services'value: serviceStats.totalServicesicon: Rocketcolor: 'from-blue-500 to-cyan-500' },
+              { label: 'AI Solutions'value: serviceStats.aiServicesicon: Braincolor: 'from-purple-500 to-pink-500' },
+              { label: 'Emerging Tech'value: serviceStats.emergingTechicon: TrendingUpcolor: 'from-green-500 to-emerald-500' },
+              { label: 'IT Infrastructure'value: serviceStats.itSolutionsicon: Globecolor: 'from-orange-500 to-red-500' },
+              { label: 'Micro SaaS'value: serviceStats.microSaasicon: Zapcolor: 'from-yellow-500 to-orange-500' },
+              { label: 'Revolutionary'value: serviceStats.revolutionaryServicesicon: Starcolor: 'from-pink-500 to-purple-500' }
+            ].map((statindex) => (
               <motion.div
                 key={stat.label}
                 variants={statsVariants}
-                whileHover={{ scale: 1.05, y: -5 }}
+                whileHover={{ scale: 1.05y: -5 }}
                 className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>

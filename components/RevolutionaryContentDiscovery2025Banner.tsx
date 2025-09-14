@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Shield, Globe, TrendingUp, Star, Users } from 'lucide-react';
+ArrowRightBrainZapShieldGlobeTrendingUpStarUsers
 
 export default function RevolutionaryContentDiscovery2025Banner() {
   return (
@@ -31,7 +31,7 @@ export default function RevolutionaryContentDiscovery2025Banner() {
 
           {/* Subheading */}
           <p className="text-2xl text-white/80 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge AI technologies, breakthrough case studies, and transformative strategies that are reshaping the business landscape.
+            Discover cutting-edge AI technologiesbreakthrough case studiesand transformative strategies that are reshaping the business landscape.
           </p>
 
           {/* Feature Grid */}
@@ -70,7 +70,7 @@ export default function RevolutionaryContentDiscovery2025Banner() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Autonomous Systems</h3>
               <p className="text-white/70 mb-6">
-                Self-managing business operations that adapt, learn, and optimize in real-time for maximum efficiency.
+                Self-managing business operations that adaptlearnand optimize in real-time for maximum efficiency.
               </p>
               <div className="flex items-center justify-center text-green-300 font-semibold">
                 <span>Discover Solutions</span>

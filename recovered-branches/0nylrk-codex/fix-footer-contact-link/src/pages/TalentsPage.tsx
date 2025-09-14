@@ -10,7 +10,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     category: "Engineering",
     price: 150,
     currency: "$",
-    tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],
+    tags: ["Machine Learning"TensorFlow"Python"Computer Vision"],
     author: {
       name: "Alexandra Chen",
       id: "alexandra-chen",
@@ -23,11 +23,11 @@ const TALENT_LISTINGS: ProductListing[] = [
   {
     id: "talent-2",
     title: "DevOps Specialist",
-    description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.",
+    description: "Infrastructure automation expert specializing in containerizationCI/CD pipelinesand cloud-native architectures.",
     category: "DevOps",
     price: 135,
     currency: "$",
-    tags: ["Kubernetes", "Docker", "AWS", "Terraform"],
+    tags: ["Kubernetes"Docker"AWS"Terraform"],
     author: {
       name: "Michael Reynolds",
       id: "michael-reynolds",
@@ -40,11 +40,11 @@ const TALENT_LISTINGS: ProductListing[] = [
   {
     id: "talent-3",
     title: "Data Scientist",
-    description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.",
+    description: "PhD in Statistics with extensive experience in predictive modelingdata visualizationand business intelligence solutions.",
     category: "Data Science",
     price: 145,
     currency: "$",
-    tags: ["Statistical Analysis", "Python", "R", "Tableau"],
+    tags: ["Statistical Analysis"Python"R"Tableau"],
     author: {
       name: "Priya Sharma",
       id: "priya-sharma"},
@@ -56,11 +56,11 @@ const TALENT_LISTINGS: ProductListing[] = [
   {
     id: "talent-4",
     title: "Cybersecurity Expert",
-    description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.",
+    description: "Certified security professional with 10+ years experience in threat detectionincident responseand security architecture.",
     category: "Security",
     price: 165,
     currency: "$",
-    tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"],
+    tags: ["Penetration Testing"Security Analysis"CISSP"Risk Management"],
     author: {
       name: "James Wilson",
       id: "james-wilson",
@@ -77,7 +77,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     category: "Development",
     price: 125,
     currency: "$",
-    tags: ["React", "Node.js", "TypeScript", "MongoDB"],
+    tags: ["React"Node.js"TypeScript"MongoDB"],
     author: {
       name: "David Martinez",
       id: "david-martinez"},
@@ -89,11 +89,11 @@ const TALENT_LISTINGS: ProductListing[] = [
   {
     id: "talent-6",
     title: "AI Ethics Consultant",
-    description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.",
+    description: "Specialized in ensuring AI systems are developed and deployed in an ethicaltransparent and fair manner.",
     category: "Consulting",
     price: 180,
     currency: "$",
-    tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"],
+    tags: ["AI Ethics"Governance"Responsible AI"Policy"],
     author: {
       name: "Sarah Johnson",
       id: "sarah-johnson",
@@ -106,22 +106,22 @@ const TALENT_LISTINGS: ProductListing[] = [
 
 // Filter options specific to talents
 const TALENT_FILTERS = [
-  { label: 'Engineering', value: 'engineering' },
-  { label: 'Data Science', value: 'data-science' },
-  { label: 'DevOps', value: 'devops' },
-  { label: 'Security', value: 'security' },
-  { label: 'Development', value: 'development' },
-  { label: 'Consulting', value: 'consulting' }];
+  { label: 'Engineering'value: 'engineering' },
+  { label: 'Data Science'value: 'data-science' },
+  { label: 'DevOps'value: 'devops' },
+  { label: 'Security'value: 'security' },
+  { label: 'Development'value: 'development' },
+  { label: 'Consulting'value: 'consulting' }];
 
 export default function TalentsPage() {
   return (
     <DynamicListingPage 
       title="AI & Tech Talent"
-      description="Connect with highly skilled professionals in AI, software development, data science, and more."
+      description="Connect with highly skilled professionals in AIsoftware developmentdata scienceand more."
       categorySlug="talents"
       listings={TALENT_LISTINGS}
       categoryFilters={TALENT_FILTERS}
-      initialPrice={{ min: 100, max: 200 }}
+      initialPrice={{ min: 100max: 200 }}
     />
   );
 }

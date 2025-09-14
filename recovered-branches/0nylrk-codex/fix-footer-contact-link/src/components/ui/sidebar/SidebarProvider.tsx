@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useState } from "react";
+import React{ createContextuseContextuseState } from "react";
 
 interface SidebarContextType {
   isOpen: boolean;
@@ -22,17 +22,17 @@ interface SidebarProviderProps {
 }
 
 export function SidebarProvider({ 
-  children, 
+  children
   defaultOpen = true 
 }: SidebarProviderProps) {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const [isOpensetIsOpen] = useState(defaultOpen);
 
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
 
   return (
-    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
+    <SidebarContext.Provider value={{ isOpentoggleopenclose }}>
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
         {children}
       </div>

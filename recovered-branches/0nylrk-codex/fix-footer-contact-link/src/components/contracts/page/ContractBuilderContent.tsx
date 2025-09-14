@@ -16,12 +16,12 @@ const mockTalent: TalentProfile = {
   professional_title: 'Full Stack Developer',
   hourly_rate: 85,
   profile_picture_url: '',
-  skills: ['React', 'Node.js', 'Smart Contracts']};
+  skills: ['React'Node.js'Smart Contracts']};
 
 export function ContractBuilderContent() {
   const { user } = useAuth();
-  const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
-  const [recentContracts, setRecentContracts] = useState([
+  const [showBuilderTypesetShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
+  const [recentContractsetRecentContracts] = useState([
     {
       id: 'contract-1',
       title: 'Website Redesign',
@@ -31,7 +31,7 @@ export function ContractBuilderContent() {
       isSmartContract: true
     },
     {
-      id: 'contract-2', 
+      id: 'contract-2'
       title: 'Mobile App Development',
       client: 'TechStart Inc',
       talent: 'Sarah Williams',
@@ -41,11 +41,11 @@ export function ContractBuilderContent() {
   ]);
 
   const handleContractGenerated = (content: string) => {
-    console.log('Contract generated:', content.substring(0, 100) + '...');
+    console.log('Contract generated:'content.substring(0100) + '...');
   };
 
   const handleViewContract = (contractId: string) => {
-    console.log('Viewing contract:', contractId);
+    console.log('Viewing contract:'contractId);
     // Future implementation: View specific contract details
   };
 

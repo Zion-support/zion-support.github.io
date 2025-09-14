@@ -6,25 +6,25 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { SelectContentSelectItemSelectTriggerSelectValue } from '@/components/ui/select';
+import { FormControlFormFieldFormItemFormLabelFormMessage } from '@/components/ui/form';
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from '@/components/ui/card';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 
 // Form schema
 const formSchema = z.object({
-  brand_name: z.string().min(2, { message: 'Brand name must be at least 2 characters' }),
+  brand_name: z.string().min(2{ message: 'Brand name must be at least 2 characters' }),
   subdomain: z.string()
-    .min(3, { message: 'Subdomain must be at least 3 characters' })
-    .max(20, { message: 'Subdomain must be at most 20 characters' })
-    .regex(/^[a-z0-9-]+$/, { message: 'Subdomain can only contain lowercase letters, numbers, and hyphens' }),
+    .min(3{ message: 'Subdomain must be at least 3 characters' })
+    .max(20{ message: 'Subdomain must be at most 20 characters' })
+    .regex(/^[a-z0-9-]+$/{ message: 'Subdomain can only contain lowercase lettersnumbersand hyphens' }),
   custom_domain: z.string().optional(),
-  primary_color: z.string().regex(/^#([0-9A-F]{6})$/i, { message: 'Must be a valid hex color' }),
-  theme_preset: z.enum(['light', 'dark', 'neon', 'corporate', 'startup']),
-  headline: z.string().min(5, { message: 'Headline must be at least 5 characters' }),
-  subtitle: z.string().min(5, { message: 'Subtitle must be at least 5 characters' }),
-  cta: z.string().min(2, { message: 'CTA text must be at least 2 characters' })});
+  primary_color: z.string().regex(/^#([0-9A-F]{6})$/i{ message: 'Must be a valid hex color' }),
+  theme_preset: z.enum(['light'dark'neon'corporate'startup']),
+  headline: z.string().min(5{ message: 'Headline must be at least 5 characters' }),
+  subtitle: z.string().min(5{ message: 'Subtitle must be at least 5 characters' }),
+  cta: z.string().min(2{ message: 'CTA text must be at least 2 characters' })});
 
 type FormValues = z.infer<typeof formSchema>;
 
@@ -57,7 +57,7 @@ export function WhitelabelRequestForm() {
       };
       
       // Submit to Supabase
-      const { data, error } = await supabase
+      const { dataerror } = await supabase
         .from('whitelabel_tenants')
         .insert(tenantData)
         .select()
@@ -233,7 +233,7 @@ export function WhitelabelRequestForm() {
       </CardContent>
       <CardFooter className="bg-muted/50 text-xs text-muted-foreground">
         <p>
-          After creating the tenant, you must upload a logo via the tenant management dashboard.
+          After creating the tenantyou must upload a logo via the tenant management dashboard.
           DNS verification for custom domains must be completed before they can be used.
         </p>
       </CardFooter>

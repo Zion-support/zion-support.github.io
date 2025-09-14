@@ -13,8 +13,8 @@ export default function AI2026FuturePredictionsBanner() {
             AI 2026 Future Predictions
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Explore groundbreaking AI predictions for 2026, including quantum neural interfaces, 
-            synthetic intelligence, and autonomous business ecosystems that will reshape our world.
+            Explore groundbreaking AI predictions for 2026including quantum neural interfaces
+            synthetic intelligenceand autonomous business ecosystems that will reshape our world.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link

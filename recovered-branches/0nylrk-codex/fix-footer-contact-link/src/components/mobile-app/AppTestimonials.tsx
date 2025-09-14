@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Star } from "lucide-react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { CardContentCardFooter } from "@/components/ui/card";
 
 const testimonials = [
   {
@@ -14,7 +14,7 @@ const testimonials = [
   {
     name: "Sarah Williams",
     role: "Tech Recruiter",
-    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
+    text: "As a recruiterthis app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
     rating: 5,
     avatar: "/placeholder.svg"
   },
@@ -39,11 +39,11 @@ export const AppTestimonials: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonialindex) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
               <CardContent className="pt-6">
                 <div className="flex mb-4">
-                  {Array.from({ length: 5 }).map((_, i) => (
+                  {Array.from({ length: 5 }).map((_i) => (
                     <Star 
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}

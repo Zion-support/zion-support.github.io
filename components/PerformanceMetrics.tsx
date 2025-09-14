@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { Zap, Clock, TrendingUp } from 'lucide-react';
+import React{ useEffectuseState } from 'react';
+ZapClockTrendingUp
 
 const PerformanceMetrics = () => {
-  const [metrics, setMetrics] = useState({
+  const [metricsetMetrics] = useState({
     loadTime: 0,
     firstContentfulPaint: 0,
     performanceScore: 0
@@ -29,10 +29,10 @@ const PerformanceMetrics = () => {
       setMetrics({
         loadTime,
         firstContentfulPaint: fcpTime,
-        performanceScore: Math.max(0, score)
+        performanceScore: Math.max(0score)
       });
     }
-  }, []);
+  }[]);
 
   return (
     <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">

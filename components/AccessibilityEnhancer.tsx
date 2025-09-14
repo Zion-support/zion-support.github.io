@@ -1,20 +1,20 @@
 "use client";
 'use client';
 
-import React, { useEffect } from 'react';
+import React{ useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add ARIA live region for announcements
     const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.setAttribute('aria-live'polite');
+    liveRegion.setAttribute('aria-atomic'true');
     liveRegion.className = 'sr-only';
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
 
     // Add focus management
-    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    const focusableElements = 'button[href]inputselectextarea[tabindex]:not([tabindex="-1"])';
     
     const trapFocus = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
@@ -48,8 +48,8 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('keydown', trapFocus);
+    document.addEventListener('keydown'handleKeyDown);
+    document.addEventListener('keydown'trapFocus);
 
     // Announce page changes
     const announcePageChange = () => {
@@ -64,22 +64,22 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       announcePageChange();
     });
 
-    observer.observe(document.body, {
+    observer.observe(document.body{
       childList: true,
       subtree: true,
     });
 
     // Cleanup
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('keydown', trapFocus);
+      document.removeEventListener('keydown'handleKeyDown);
+      document.removeEventListener('keydown'trapFocus);
       observer.disconnect();
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
         liveRegion.remove();
       }
     };
-  }, []);
+  }[]);
 
   return <>{children}</>;
 };

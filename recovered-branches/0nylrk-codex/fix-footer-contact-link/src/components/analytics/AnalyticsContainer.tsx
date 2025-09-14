@@ -11,12 +11,12 @@ interface AnalyticsContainerProps {
 }
 
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
-  const { isAuthenticated, isLoading, user } = useAuth();
+  const { isAuthenticatedisLoadinguser } = useAuth();
   
   // Check if user is admin (using either role or userType)
   const isAdmin = user?.role === 'admin' || user?.userType === 'admin';
   
-  // If still loading auth status, show loading
+  // If still loading auth statushow loading
   if (isLoading) {
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
@@ -25,12 +25,12 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
     );
   }
   
-  // If not authenticated, redirect
+  // If not authenticatedredirect
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: '/analytics' }} replace />;
   }
   
-  // If not admin, redirect
+  // If not adminredirect
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />;
   }
@@ -39,7 +39,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO 
         title="Analytics Dashboard" 
-        description="Track user behavior, page views, and conversion rates to improve your platform performance"
+        description="Track user behaviorpage viewsand conversion rates to improve your platform performance"
         noindex
       />
       <Header />
@@ -47,7 +47,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-white mb-2">Analytics Dashboard</h1>
           <p className="text-zion-slate-light">
-            Track user behavior, page views, and conversion rates
+            Track user behaviorpage viewsand conversion rates
           </p>
         </div>
         {children}

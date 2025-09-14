@@ -76,7 +76,7 @@ const AI2025_2026UltimateBreakthroughBanner: React.FC = () => {
             <div className="text-4xl mb-4">🤖</div>
             <h3 className="text-xl font-bold mb-3">Autonomous Enterprise Systems</h3>
             <p className="text-sm opacity-90 mb-4">
-              Self-managing business ecosystems with 99.97% uptime, 85% cost reduction, and 340% efficiency improvements.
+              Self-managing business ecosystems with 99.97% uptime85% cost reductionand 340% efficiency improvements.
             </p>
             <Link 
               href="/case-studies/ai-2025-2026-revolutionary-transformation-2500-roi-success"

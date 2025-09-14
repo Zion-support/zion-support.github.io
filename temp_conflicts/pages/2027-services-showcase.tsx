@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Search, Star, Users, TrendingUp, DollarSign, Clock, 
-  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, 
-  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud, 
-  Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin
+  SearchStarUsersTrendingUpDollarSignClock
+  CheckCircleArrowRightRocketBrainAtomGlobe
+  ZapSparklesShieldTargetCpuDatabaseCloud
+  LockShieldCheckEyeHeartShare2DownloadPhoneMailMapPin
 } from 'lucide-react';
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
@@ -14,16 +14,16 @@ import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticN
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 
 export default function ServicesShowcase2027() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
+  const [selectedPriceRangesetSelectedPriceRange] = useState<string>('all');
+  const [sortBysetSortBy] = useState<string>('name');
 
   // Sort options
   const sortOptions = [
-    { value: 'name', label: 'Sort by Name' },
-    { value: 'price', label: 'Sort by Price' },
-    { value: 'roi', label: 'Sort by ROI' }
+    { value: 'name'label: 'Sort by Name' },
+    { value: 'price'label: 'Sort by Price' },
+    { value: 'roi'label: 'Sort by ROI' }
   ];
 
   const allServices = [
@@ -40,46 +40,46 @@ export default function ServicesShowcase2027() {
     const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
     
     const matchesPrice = selectedPriceRange === 'all' || 
-                        (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
-                        (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) ||
-                        (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
+                        (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g'')) < 1000) ||
+                        (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g'')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g'')) < 10000) ||
+                        (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g'')) >= 10000);
 
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
   // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort((ab) => {
     switch (sortBy) {
       case 'name':
         return a.name.localeCompare(b.name);
       case 'price':
-        return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+        return parseInt(a.price.replace(/[^0-9]/g'')) - parseInt(b.price.replace(/[^0-9]/g''));
       case 'roi':
-        return parseInt(a.roi.replace(/[^0-9]/g, '')) - parseInt(b.roi.replace(/[^0-9]/g, ''));
+        return parseInt(a.roi.replace(/[^0-9]/g'')) - parseInt(b.roi.replace(/[^0-9]/g''));
       default:
         return 0;
     }
   });
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'AI Consciousness Evolution', name: 'AI Consciousness', icon: '🧠', count: allServices.filter(s => s.category.includes('AI Consciousness')).length },
-    { id: 'Quantum Consciousness', name: 'Quantum Consciousness', icon: '⚛️', count: allServices.filter(s => s.category.includes('Quantum Consciousness')).length },
-    { id: 'AI Civilization', name: 'AI Civilization', icon: '🏛️', count: allServices.filter(s => s.category.includes('AI Civilization')).length },
-    { id: 'Quantum Time', name: 'Quantum Time', icon: '⏰', count: allServices.filter(s => s.category.includes('Quantum Time')).length },
-    { id: 'AI Multiverse', name: 'AI Multiverse', icon: '🌌', count: allServices.filter(s => s.category.includes('AI Multiverse')).length },
-    { id: 'Customer Success Automation', name: 'Customer Success', icon: '🎯', count: allServices.filter(s => s.category.includes('Customer Success')).length },
-    { id: 'Content Marketing Automation', name: 'Content Marketing', icon: '📝', count: allServices.filter(s => s.category.includes('Content Marketing')).length },
-    { id: 'Inventory Management', name: 'Inventory Management', icon: '📦', count: allServices.filter(s => s.category.includes('Inventory Management')).length },
-    { id: 'HR Automation', name: 'HR Automation', icon: '👥', count: allServices.filter(s => s.category.includes('HR Automation')).length },
-    { id: 'Financial Automation', name: 'Financial Automation', icon: '💰', count: allServices.filter(s => s.category.includes('Financial Automation')).length }
+    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length },
+    { id: 'AI Consciousness Evolution'name: 'AI Consciousness'icon: '🧠'count: allServices.filter(s => s.category.includes('AI Consciousness')).length },
+    { id: 'Quantum Consciousness'name: 'Quantum Consciousness'icon: '⚛️'count: allServices.filter(s => s.category.includes('Quantum Consciousness')).length },
+    { id: 'AI Civilization'name: 'AI Civilization'icon: '🏛️'count: allServices.filter(s => s.category.includes('AI Civilization')).length },
+    { id: 'Quantum Time'name: 'Quantum Time'icon: '⏰'count: allServices.filter(s => s.category.includes('Quantum Time')).length },
+    { id: 'AI Multiverse'name: 'AI Multiverse'icon: '🌌'count: allServices.filter(s => s.category.includes('AI Multiverse')).length },
+    { id: 'Customer Success Automation'name: 'Customer Success'icon: '🎯'count: allServices.filter(s => s.category.includes('Customer Success')).length },
+    { id: 'Content Marketing Automation'name: 'Content Marketing'icon: '📝'count: allServices.filter(s => s.category.includes('Content Marketing')).length },
+    { id: 'Inventory Management'name: 'Inventory Management'icon: '📦'count: allServices.filter(s => s.category.includes('Inventory Management')).length },
+    { id: 'HR Automation'name: 'HR Automation'icon: '👥'count: allServices.filter(s => s.category.includes('HR Automation')).length },
+    { id: 'Financial Automation'name: 'Financial Automation'icon: '💰'count: allServices.filter(s => s.category.includes('Financial Automation')).length }
   ];
 
   const priceRanges = [
-    { id: 'all', name: 'All Prices', count: allServices.length },
-    { id: 'low', name: 'Under $1K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000).length },
-    { id: 'medium', name: '$1K - $10K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(s.price.replace(/[^0-9]/g, '')) < 10000).length },
-    { id: 'high', name: '$10K+/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000).length }
+    { id: 'all'name: 'All Prices'count: allServices.length },
+    { id: 'low'name: 'Under $1K/month'count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g'')) < 1000).length },
+    { id: 'medium'name: '$1K - $10K/month'count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g'')) >= 1000 && parseInt(s.price.replace(/[^0-9]/g'')) < 10000).length },
+    { id: 'high'name: '$10K+/month'count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g'')) >= 10000).length }
   ];
 
   const contactInfo = {
@@ -93,20 +93,20 @@ export default function ServicesShowcase2027() {
     <UltraFuturisticMatrixBackground2027>
       <Head>
         <title>2027 Services Showcase - Zion Tech Group | Cutting-Edge Innovations & Micro SAAS</title>
-        <meta name="description" content="Explore Zion Tech Group's revolutionary 2027 services showcase featuring cutting-edge AI consciousness evolution, quantum computing, autonomous AI civilizations, and practical micro SAAS solutions for businesses." />
-        <meta name="keywords" content="2027 services, AI consciousness evolution, quantum computing, autonomous AI civilizations, micro SAAS, business automation, Zion Tech Group" />
+        <meta name="description" content="Explore Zion Tech Group's revolutionary 2027 services showcase featuring cutting-edge AI consciousness evolutionquantum computingautonomous AI civilizationsand practical micro SAAS solutions for businesses." />
+        <meta name="keywords" content="2027 servicesAI consciousness evolutionquantum computingautonomous AI civilizationsmicro SAASbusiness automationZion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/2027-services-showcase/" />
         
         {/* Open Graph */}
         <meta property="og:title" content="2027 Services Showcase - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />
+        <meta property="og:description" content="Revolutionary 2027 services featuring AI consciousness evolutionquantum computingand practical micro SAAS solutions." />
         <meta property="og:url" content="https://ziontechgroup.com/2027-services-showcase" />
         <meta property="og:type" content="website" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2027 Services Showcase - Zion Tech Group" />
-        <meta name="twitter:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />
+        <meta name="twitter:description" content="Revolutionary 2027 services featuring AI consciousness evolutionquantum computingand practical micro SAAS solutions." />
       </Head>
 
       <UltraFuturisticNavigation2027 />
@@ -115,8 +115,8 @@ export default function ServicesShowcase2027() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -242,13 +242,13 @@ export default function ServicesShowcase2027() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              {sortedServices.map((service, index) => (
+              {sortedServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  exit={{ opacity: 0, y: -30, scale: 0.9 }} className="group">
+                  initial={{ opacity: 0y: 30scale: 0.9 }}
+                  animate={{ opacity: 1y: 0scale: 1 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
+                  exit={{ opacity: 0y: -30scale: 0.9 }} className="group">
                   <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/20">
                     {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">
@@ -280,7 +280,7 @@ export default function ServicesShowcase2027() {
                     <div className="mb-6">
                       <h4 className="text-cyan-400 font-semibold mb-3">Key Features:</h4>
                       <div className="space-y-2">
-                        {service.features.slice(0, 3).map((feature, idx) => (
+                        {service.features.slice(03).map((featureidx) => (
                           <div key={idx} className="flex items-center space-x-2">
                             <CheckCircle className="w-4 h-4 text-green-400" />
                             <span className="text-gray-300 text-sm">{feature}</span>

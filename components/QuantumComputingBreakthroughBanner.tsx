@@ -23,8 +23,8 @@ export default function QuantumComputingBreakthroughBanner() {
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Experience the most revolutionary quantum computing breakthroughs in history. 
-            <span className="text-cyan-400 font-bold"> 10,000x faster processing</span>, 
-            <span className="text-purple-400 font-bold"> error-corrected quantum computers</span>, and 
+            <span className="text-cyan-400 font-bold"> 10,000x faster processing</span>
+            <span className="text-purple-400 font-bold"> error-corrected quantum computers</span>and 
             <span className="text-yellow-400 font-bold"> quantum supremacy</span> achievements.
           </p>
           
@@ -33,12 +33,12 @@ export default function QuantumComputingBreakthroughBanner() {
             <div className="bg-gradient-to-br from-cyan-800/30 to-blue-800/30 p-6 rounded-xl border border-cyan-500/20">
               <div className="text-3xl mb-3">⚛️</div>
               <h3 className="text-lg font-bold mb-2">Error-Corrected Quantum</h3>
-              <p className="text-sm text-gray-300">99.9% accuracy, 10,000x faster</p>
+              <p className="text-sm text-gray-300">99.9% accuracy10,000x faster</p>
             </div>
             <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 p-6 rounded-xl border border-purple-500/20">
               <div className="text-3xl mb-3">🌐</div>
               <h3 className="text-lg font-bold mb-2">Quantum Internet</h3>
-              <p className="text-sm text-gray-300">Perfect security, instant communication</p>
+              <p className="text-sm text-gray-300">Perfect securityinstant communication</p>
             </div>
             <div className="bg-gradient-to-br from-green-800/30 to-emerald-800/30 p-6 rounded-xl border border-green-500/20">
               <div className="text-3xl mb-3">🧠</div>

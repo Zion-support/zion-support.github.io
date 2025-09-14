@@ -1,5 +1,5 @@
 
-import React, { forwardRef } from "react";
+import React{ forwardRef } from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
 
@@ -9,8 +9,8 @@ interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
   asChild?: boolean;
 }
 
-export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButtonProps>(
-  ({ className, children, asChild = false, ...props }, ref) => {
+export const SidebarMenuButton = forwardRef<HTMLButtonElementSidebarMenuButtonProps>(
+  ({ classNamechildrenasChild = false...props }ref) => {
     const Comp = asChild ? Slot : "button";
     return (
       <Comp

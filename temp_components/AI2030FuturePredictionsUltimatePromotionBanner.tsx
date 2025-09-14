@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  ArrowRight, 
-  Star, 
+  Brain
+  Zap
+  ArrowRight
+  Star
   Sparkles,
   TrendingUp,
   Clock,
@@ -17,11 +17,11 @@ import {
 } from 'lucide-react';
 
 const AI2030FuturePredictionsUltimatePromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const predictions = [
     "Artificial General Intelligence (AGI)",
@@ -31,19 +31,19 @@ const AI2030FuturePredictionsUltimatePromotionBanner = () => {
   ];
 
   const timeline = [
-    { year: "2025", event: "Quantum AI Integration" },
-    { year: "2026", event: "Neural Interface Breakthrough" },
-    { year: "2027", event: "Autonomous Everything" },
-    { year: "2028", event: "AGI Development" },
-    { year: "2029", event: "Consciousness Upload" },
-    { year: "2030", event: "AI-Human Hybrid Society" }
+    { year: "2025"event: "Quantum AI Integration" },
+    { year: "2026"event: "Neural Interface Breakthrough" },
+    { year: "2027"event: "Autonomous Everything" },
+    { year: "2028"event: "AGI Development" },
+    { year: "2029"event: "Consciousness Upload" },
+    { year: "2030"event: "AI-Human Hybrid Society" }
   ];
 
   return (
     <motion.div
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-indigo-900 py-20 px-4"
-      initial={{ opacity: 0, y: 50 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      initial={{ opacity: 0y: 50 }}
+      animate={isVisible ? { opacity: 1y: 0 } : { opacity: 0y: 50 }}
       transition={{ duration: 0.8 }}
     >
       {/* Background Effects */}
@@ -60,9 +60,9 @@ const AI2030FuturePredictionsUltimatePromotionBanner = () => {
           {/* Left Content */}
           <motion.div
             className="space-y-8"
-            initial={{ opacity: 0, x: -50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0x: -50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: -50 }}
+            transition={{ duration: 0.8delay: 0.2 }}
           >
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
               <Star className="w-4 h-4" />
@@ -81,19 +81,19 @@ const AI2030FuturePredictionsUltimatePromotionBanner = () => {
             </h1>
 
             <p className="text-xl text-gray-300 leading-relaxed">
-              Explore our comprehensive predictions for the next decade of AI development, 
+              Explore our comprehensive predictions for the next decade of AI development
               from artificial general intelligence to consciousness upload and beyond. 
               Discover what the future holds for humanity and technology.
             </p>
 
             <div className="space-y-4">
-              {predictions.map((prediction, index) => (
+              {predictions.map((predictionindex) => (
                 <motion.div
                   key={index}
                   className="flex items-center gap-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: -20 }}
+                  transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                 >
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{prediction}</span>
@@ -134,20 +134,20 @@ const AI2030FuturePredictionsUltimatePromotionBanner = () => {
           {/* Right Content - Timeline Visual */}
           <motion.div
             className="relative"
-            initial={{ opacity: 0, x: 50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: 50 }}
+            transition={{ duration: 0.8delay: 0.4 }}
           >
             <div className="relative">
               {/* Timeline */}
               <div className="space-y-6">
-                {timeline.map((item, index) => (
+                {timeline.map((itemindex) => (
                   <motion.div
                     key={index}
                     className="flex items-center gap-4"
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-                    transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                    initial={{ opacity: 0x: 50 }}
+                    animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: 50 }}
+                    transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
                   >
                     <div className="flex-shrink-0">
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center">
@@ -170,8 +170,8 @@ const AI2030FuturePredictionsUltimatePromotionBanner = () => {
               <motion.div
                 className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-60"
                 animate={{
-                  y: [0, -20, 0],
-                  scale: [1, 1.1, 1],
+                  y: [0-20],
+                  scale: [1.1],
                 }}
                 transition={{
                   duration: 4,
@@ -182,8 +182,8 @@ const AI2030FuturePredictionsUltimatePromotionBanner = () => {
               <motion.div
                 className="absolute -bottom-8 -left-8 w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-xl opacity-60"
                 animate={{
-                  y: [0, 20, 0],
-                  scale: [1, 1.2, 1],
+                  y: [020],
+                  scale: [1.21],
                 }}
                 transition={{
                   duration: 3,
@@ -195,8 +195,8 @@ const AI2030FuturePredictionsUltimatePromotionBanner = () => {
               <motion.div
                 className="absolute top-1/2 -right-4 w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full blur-xl opacity-60"
                 animate={{
-                  x: [0, 20, 0],
-                  scale: [1, 1.1, 1],
+                  x: [020],
+                  scale: [1.1],
                 }}
                 transition={{
                   duration: 5,
@@ -212,22 +212,22 @@ const AI2030FuturePredictionsUltimatePromotionBanner = () => {
         {/* Bottom Stats */}
         <motion.div
           className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8"
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={{ opacity: 0y: 50 }}
+          animate={isVisible ? { opacity: 1y: 0 } : { opacity: 0y: 50 }}
+          transition={{ duration: 0.8delay: 0.8 }}
         >
           {[
-            { icon: Brain, label: "AGI Development", value: "85%" },
-            { icon: Cpu, label: "Quantum AI", value: "90%" },
-            { icon: Zap, label: "Neural Interface", value: "75%" },
-            { icon: Globe, label: "Global Impact", value: "100%" }
-          ].map((stat, index) => (
+            { icon: Brainlabel: "AGI Development"value: "85%" },
+            { icon: Cpulabel: "Quantum AI"value: "90%" },
+            { icon: Zaplabel: "Neural Interface"value: "75%" },
+            { icon: Globelabel: "Global Impact"value: "100%" }
+          ].map((statindex) => (
             <motion.div
               key={index}
               className="text-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
+              initial={{ opacity: 0scale: 0.8 }}
+              animate={isVisible ? { opacity: 1scale: 1 } : { opacity: 0scale: 0.8 }}
+              transition={{ duration: 0.6delay: 1 + index * 0.1 }}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <stat.icon className="w-8 h-8 text-white" />

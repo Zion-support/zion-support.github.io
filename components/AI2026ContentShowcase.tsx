@@ -1,23 +1,23 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const AI2026ContentShowcase = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [isVisiblesetIsVisible] = useState(false);
+  const [activeCategorysetActiveCategory] = useState('all');
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: '🌟' },
-    { id: 'automation', name: 'Automation', icon: '🤖' },
-    { id: 'neural', name: 'Neural Tech', icon: '🧠' },
-    { id: 'quantum', name: 'Quantum AI', icon: '⚡' },
-    { id: 'predictions', name: 'Predictions', icon: '🔮' }
+    { id: 'all'name: 'All Content'icon: '🌟' },
+    { id: 'automation'name: 'Automation'icon: '🤖' },
+    { id: 'neural'name: 'Neural Tech'icon: '🧠' },
+    { id: 'quantum'name: 'Quantum AI'icon: '⚡' },
+    { id: 'predictions'name: 'Predictions'icon: '🔮' }
   ];
 
   const contentItems = [
@@ -30,7 +30,7 @@ const AI2026ContentShowcase = () => {
       link: "/ai-2026-neural-interface-revolution",
       featured: true,
       roi: "12,000%",
-      tags: ["Neural Interface", "BCI", "Revolutionary"]
+      tags: ["Neural Interface"BCI"Revolutionary"]
     },
     {
       id: 2,
@@ -41,7 +41,7 @@ const AI2026ContentShowcase = () => {
       link: "/ai-2026-quantum-neural-fusion-revolution",
       featured: true,
       roi: "15,000%",
-      tags: ["Quantum AI", "Fusion", "Breakthrough"]
+      tags: ["Quantum AI"Fusion"Breakthrough"]
     },
     {
       id: 3,
@@ -52,7 +52,7 @@ const AI2026ContentShowcase = () => {
       link: "/ai-2026-next-generation-business-automation",
       featured: false,
       roi: "10,000%",
-      tags: ["Automation", "Business", "AI"]
+      tags: ["Automation"Business"AI"]
     },
     {
       id: 4,
@@ -63,7 +63,7 @@ const AI2026ContentShowcase = () => {
       link: "/ai-2026-future-predictions-breakthrough",
       featured: true,
       roi: "18,000%",
-      tags: ["Predictions", "Forecasting", "Future"]
+      tags: ["Predictions"Forecasting"Future"]
     },
     {
       id: 5,
@@ -74,7 +74,7 @@ const AI2026ContentShowcase = () => {
       link: "/ai-2030-advanced-neural-synthesis",
       featured: false,
       roi: "20,000%",
-      tags: ["Neural", "Synthesis", "Cognitive"]
+      tags: ["Neural"Synthesis"Cognitive"]
     },
     {
       id: 6,
@@ -85,7 +85,7 @@ const AI2026ContentShowcase = () => {
       link: "/quantum-computing-solutions-breakthrough-2030",
       featured: false,
       roi: "25,000%",
-      tags: ["Quantum", "Computing", "Enterprise"]
+      tags: ["Quantum"Computing"Enterprise"]
     }
   ];
 
@@ -108,8 +108,8 @@ const AI2026ContentShowcase = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive collection of AI breakthrough content, 
-            revolutionary technologies, and future-ready solutions
+            Explore our comprehensive collection of AI breakthrough content
+            revolutionary technologiesand future-ready solutions
           </p>
         </div>
 
@@ -158,7 +158,7 @@ const AI2026ContentShowcase = () => {
                 </p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.map((tag, index) => (
+                  {item.tags.map((tagindex) => (
                     <span
                       key={index}
                       className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full"

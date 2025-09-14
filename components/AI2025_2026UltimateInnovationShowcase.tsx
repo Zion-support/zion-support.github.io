@@ -1,16 +1,16 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Cpu, 
-  Database, 
-  Shield, 
-  Globe, 
-  Rocket, 
+  Brain
+  Zap
+  Cpu
+  Database
+  Shield
+  Globe
+  Rocket
   Target,
   TrendingUp,
   Users,
@@ -24,14 +24,14 @@ import {
 } from 'lucide-react';
 
 const AI2025_2026UltimateInnovationShowcase = () => {
-  const [activeTab, setActiveTab] = useState('breakthroughs');
-  const [currentInnovation, setCurrentInnovation] = useState(0);
+  const [activeTabsetActiveTab] = useState('breakthroughs');
+  const [currentInnovationsetCurrentInnovation] = useState(0);
 
   const innovations = [
     {
       id: 'quantum-ai',
       title: 'Quantum-AI Fusion Technology',
-      description: 'Revolutionary fusion of quantum computing with artificial intelligence, delivering unprecedented processing power and problem-solving capabilities.',
+      description: 'Revolutionary fusion of quantum computing with artificial intelligencedelivering unprecedented processing power and problem-solving capabilities.',
       features: [
         '1000x faster computation speeds',
         'Quantum neural networks',
@@ -45,7 +45,7 @@ const AI2025_2026UltimateInnovationShowcase = () => {
     {
       id: 'neural-consensus',
       title: 'Neural Consensus Revolution',
-      description: 'Advanced AI systems that achieve consensus across distributed networks, enabling unprecedented coordination and decision-making.',
+      description: 'Advanced AI systems that achieve consensus across distributed networksenabling unprecedented coordination and decision-making.',
       features: [
         'Distributed intelligence networks',
         'Consensus-driven automation',
@@ -73,7 +73,7 @@ const AI2025_2026UltimateInnovationShowcase = () => {
     {
       id: 'omniversal-computing',
       title: 'Omniversal Computing Architecture',
-      description: 'Next-generation computing that operates across multiple dimensions and realities, enabling solutions to previously impossible problems.',
+      description: 'Next-generation computing that operates across multiple dimensions and realitiesenabling solutions to previously impossible problems.',
       features: [
         'Multi-dimensional processing',
         'Reality simulation capabilities',
@@ -87,10 +87,10 @@ const AI2025_2026UltimateInnovationShowcase = () => {
   ];
 
   const breakthroughStats = [
-    { label: 'Processing Speed Increase', value: '10,000x', icon: Zap },
-    { label: 'Problem-Solving Accuracy', value: '99.9%', icon: Target },
-    { label: 'Energy Efficiency', value: '95%', icon: Shield },
-    { label: 'Global Adoption Rate', value: '87%', icon: Users }
+    { label: 'Processing Speed Increase'value: '10,000x'icon: Zap },
+    { label: 'Problem-Solving Accuracy'value: '99.9%'icon: Target },
+    { label: 'Energy Efficiency'value: '95%'icon: Shield },
+    { label: 'Global Adoption Rate'value: '87%'icon: Users }
   ];
 
   const useCases = [
@@ -98,34 +98,34 @@ const AI2025_2026UltimateInnovationShowcase = () => {
       category: 'Healthcare',
       title: 'AI-Powered Medical Breakthroughs',
       description: 'Revolutionary medical AI that can diagnose diseases with 99.9% accuracy and develop personalized treatment plans.',
-      benefits: ['Early disease detection', 'Personalized medicine', 'Drug discovery acceleration', 'Surgical precision enhancement']
+      benefits: ['Early disease detection'Personalized medicine'Drug discovery acceleration'Surgical precision enhancement']
     },
     {
       category: 'Climate',
       title: 'Climate Crisis Solutions',
-      description: 'Advanced AI systems that can model and solve complex climate challenges, from carbon capture to renewable energy optimization.',
-      benefits: ['Carbon footprint reduction', 'Renewable energy optimization', 'Climate modeling accuracy', 'Sustainable solutions']
+      description: 'Advanced AI systems that can model and solve complex climate challengesfrom carbon capture to renewable energy optimization.',
+      benefits: ['Carbon footprint reduction'Renewable energy optimization'Climate modeling accuracy'Sustainable solutions']
     },
     {
       category: 'Space',
       title: 'Space Exploration Revolution',
-      description: 'AI-powered space exploration that can autonomously navigate, discover, and colonize new worlds.',
-      benefits: ['Autonomous space missions', 'Planetary discovery', 'Resource optimization', 'Interstellar communication']
+      description: 'AI-powered space exploration that can autonomously navigatediscoverand colonize new worlds.',
+      benefits: ['Autonomous space missions'Planetary discovery'Resource optimization'Interstellar communication']
     },
     {
       category: 'Education',
       title: 'Personalized Learning Revolution',
-      description: 'AI tutors that adapt to individual learning styles and pace, making education accessible to everyone globally.',
-      benefits: ['Personalized curriculum', 'Adaptive learning', 'Global accessibility', 'Real-time assessment']
+      description: 'AI tutors that adapt to individual learning styles and pacemaking education accessible to everyone globally.',
+      benefits: ['Personalized curriculum'Adaptive learning'Global accessibility'Real-time assessment']
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentInnovation((prev) => (prev + 1) % innovations.length);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -134,8 +134,8 @@ const AI2025_2026UltimateInnovationShowcase = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -174,8 +174,8 @@ const AI2025_2026UltimateInnovationShowcase = () => {
       {/* Innovation Showcase */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -189,12 +189,12 @@ const AI2025_2026UltimateInnovationShowcase = () => {
 
         {/* Innovation Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {innovations.map((innovation, index) => (
+          {innovations.map((innovationindex) => (
             <motion.div
               key={innovation.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               className={`relative bg-gradient-to-br ${innovation.color} p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 group`}
             >
               <div className="absolute inset-0 bg-black/20 rounded-2xl" />
@@ -205,7 +205,7 @@ const AI2025_2026UltimateInnovationShowcase = () => {
                 </div>
                 <p className="text-white/90 mb-6 text-lg">{innovation.description}</p>
                 <div className="space-y-2 mb-6">
-                  {innovation.features.map((feature, idx) => (
+                  {innovation.features.map((featureidx) => (
                     <div key={idx} className="flex items-center text-white/80">
                       <CheckCircle className="w-4 h-4 text-green-300 mr-2" />
                       <span>{feature}</span>
@@ -222,19 +222,19 @@ const AI2025_2026UltimateInnovationShowcase = () => {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-8 mb-16"
         >
           <h3 className="text-3xl font-bold text-center mb-8">Breakthrough Performance Metrics</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {breakthroughStats.map((stat, index) => (
+            {breakthroughStats.map((statindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                whileInView={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
                 <stat.icon className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
@@ -247,19 +247,19 @@ const AI2025_2026UltimateInnovationShowcase = () => {
 
         {/* Use Cases Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
           <h3 className="text-4xl font-bold text-center mb-12">Real-World Applications</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCaseindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
@@ -271,7 +271,7 @@ const AI2025_2026UltimateInnovationShowcase = () => {
                 <h4 className="text-xl font-bold text-white mb-3">{useCase.title}</h4>
                 <p className="text-gray-300 mb-4">{useCase.description}</p>
                 <div className="space-y-2">
-                  {useCase.benefits.map((benefit, idx) => (
+                  {useCase.benefits.map((benefitidx) => (
                     <div key={idx} className="flex items-center text-gray-300">
                       <Star className="w-4 h-4 text-yellow-400 mr-2" />
                       <span className="text-sm">{benefit}</span>
@@ -285,8 +285,8 @@ const AI2025_2026UltimateInnovationShowcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
         >

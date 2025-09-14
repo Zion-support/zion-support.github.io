@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import type { ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { LogIn, User, Eye, EyeOff } from "lucide-react";
+import { LogInUserEyeOff } from "lucide-react";
 
 import { useAuth } from "@/hooks/useAuth";
 import { loginUser } from "@/services/authService";
@@ -18,23 +18,23 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Link, useNavigate } from "react-router-dom";
+import { AlertDescription } from "@/components/ui/alert";
+import { LinkuseNavigate } from "react-router-dom";
 import { LoadingOverlay } from "@/components/LoadingOverlay";
 
 // Form validation schema
 const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-  password: z.string().min(6, "Password must be at least 6 characters")});
+  email: z.string().email("Please enter a valid email").min(1"Email is required"),
+  password: z.string().min(6"Password must be at least 6 characters")});
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
 export function LoginForm() {
-  const { isLoading, login } = useAuth();
+  const { isLoadinglogin } = useAuth();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showPasswordsetShowPassword] = useState(false);
+  const [isSubmittingsetIsSubmitting] = useState(false);
   
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
@@ -47,7 +47,7 @@ export function LoginForm() {
 
     try {
       setIsSubmitting(true);
-      const { res, data: resData } = await loginUser(data.email, data.password);
+      const { resdata: resData } = await loginUser(data.emaildata.password);
       if (!res.ok) {
         toast.error(resData?.error || "Invalid credentials");
         return;
@@ -72,7 +72,7 @@ export function LoginForm() {
         </Alert>
       )}
       <form
-        onSubmit={form.handleSubmit(onSubmit, (errors) => {
+        onSubmit={form.handleSubmit(onSubmit(errors) => {
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
           if (firstError) {
             form.setFocus(firstError);

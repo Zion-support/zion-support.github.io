@@ -7,14 +7,14 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection";
 import { ProfileSetup } from "@/components/onboarding/ProfileSetup";
-import { Steps, Step } from "@/components/ui/steps";
+import { StepsStep } from "@/components/ui/steps";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 
 export default function Onboarding() {
-  const { user, updateProfile, isLoading } = useAuth();
-  const [currentStep, setCurrentStep] = useState(0);
-  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
+  const { userupdateProfileisLoading } = useAuth();
+  const [currentStepsetCurrentStep] = useState(0);
+  const [userTypesetUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
 
   // Convert our user types to match what's expected in the database
@@ -47,7 +47,7 @@ export default function Onboarding() {
     setCurrentStep(1);
   };
 
-  const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
+  const handleProfileComplete = async (data: { displayName: stringbio: stringheadline: string }) => {
     if (!user || !userType) {
       toast({
         title: "Authentication Error",
@@ -63,14 +63,14 @@ export default function Onboarding() {
       await updateProfile({ 
         id: user.id,
         displayName: data.displayName,
-        bio: data.bio, // This is now valid since we added bio to UserDetails
+        bio: data.bio// This is now valid since we added bio to UserDetails
         userType: dbUserType,
         headline: data.headline,
         profileComplete: true
       });
       
       // Update onboarding milestone
-      await supabase.rpc('update_onboarding_milestone', {
+      await supabase.rpc('update_onboarding_milestone'{
         _user_id: user.id,
         _milestone: 'profile_completed',
         _status: true
@@ -89,7 +89,7 @@ export default function Onboarding() {
       navigate(dashboardRoute);
       
     } catch (error) {
-      console.error('Error updating profile:', error);
+      console.error('Error updating profile:'error);
       toast({
         title: 'Error',
         description: 'There was a problem updating your profile. Please try again.',
@@ -98,8 +98,8 @@ export default function Onboarding() {
   };
 
   const steps = [
-    { label: "Select Role", description: "Choose how you'll use the platform" },
-    { label: "Create Profile", description: "Tell us about yourself" }];
+    { label: "Select Role"description: "Choose how you'll use the platform" },
+    { label: "Create Profile"description: "Tell us about yourself" }];
 
   if (!user) {
     navigate('/login');
@@ -122,7 +122,7 @@ export default function Onboarding() {
 
           <div className="mb-12">
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">
-              {steps.map((step, index) => (
+              {steps.map((stepindex) => (
                 <Step
                   key={index}
                   status={

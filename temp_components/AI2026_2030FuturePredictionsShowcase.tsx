@@ -77,7 +77,7 @@ const AI2026_2030FuturePredictionsShowcase = () => {
             <div className="text-4xl mb-4">🌌</div>
             <h3 className="text-2xl font-bold mb-4">AI 2028: Consciousness Upload</h3>
             <p className="text-gray-300 mb-4">
-              First successful human consciousness transfer to AI systems, achieving digital immortality.
+              First successful human consciousness transfer to AI systemsachieving digital immortality.
             </p>
             <div className="space-y-2 mb-4">
               <div className="bg-green-500 text-black px-3 py-1 rounded-full text-sm font-bold">
@@ -123,7 +123,7 @@ const AI2026_2030FuturePredictionsShowcase = () => {
             <div className="text-4xl mb-4">🌟</div>
             <h3 className="text-2xl font-bold mb-4">AI 2030: Transcendent Intelligence</h3>
             <p className="text-gray-300 mb-4">
-              AI systems achieving intelligence beyond human comprehension, solving all major global challenges.
+              AI systems achieving intelligence beyond human comprehensionsolving all major global challenges.
             </p>
             <div className="space-y-2 mb-4">
               <div className="bg-green-500 text-black px-3 py-1 rounded-full text-sm font-bold">

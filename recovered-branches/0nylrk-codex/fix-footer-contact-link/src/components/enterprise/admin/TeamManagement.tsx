@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import {
   Table,
   TableBody,
@@ -19,12 +19,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react";
+import { PlusCircleTrashMailUserPlus } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 export function TeamManagement() {
-  const [isAddingMember, setIsAddingMember] = useState(false);
-  const [newMemberEmail, setNewMemberEmail] = useState("");
+  const [isAddingMembersetIsAddingMember] = useState(false);
+  const [newMemberEmailsetNewMemberEmail] = useState("");
 
   // Mock team members data
   const teamMembers = [
@@ -58,7 +58,7 @@ export function TeamManagement() {
       lastActive: "3 days ago"}];
 
   const handleAddMember = () => {
-    // In a real app, this would make an API call to add the member
+    // In a real appthis would make an API call to add the member
     if (!newMemberEmail) {
       toast({
         title: "Email required",
@@ -76,14 +76,14 @@ export function TeamManagement() {
   };
 
   const handleRemoveMember = (memberId: number) => {
-    // In a real app, this would make an API call to remove the member
+    // In a real appthis would make an API call to remove the member
     toast({
       title: "Team member removed",
       description: "The team member has been removed from your workspace."});
   };
 
   const handleResendInvite = (memberEmail: string) => {
-    // In a real app, this would make an API call to resend the invitation
+    // In a real appthis would make an API call to resend the invitation
     toast({
       title: "Invitation resent",
       description: `A new invitation has been sent to ${memberEmail}`});

@@ -25,7 +25,7 @@ const UltimateContent2026PromotionBanner = () => {
           </h1>
           
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Explore the most comprehensive collection of AI technologies, breakthrough innovations, 
+            Explore the most comprehensive collection of AI technologiesbreakthrough innovations
             and revolutionary solutions that will define 2026 and beyond.
           </p>
           

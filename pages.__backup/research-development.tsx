@@ -12,7 +12,7 @@ export default function ResearchDevelopmentPage() {
 			<main className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
 				<div className="container mx-auto px-6 py-16">
 					<h1 className="text-4xl font-bold mb-4">Research & Development</h1>
-					<p className="text-white/80 max-w-2xl">Exploring AI, quantum, and autonomous systems.</p>
+					<p className="text-white/80 max-w-2xl">Exploring AIquantumand autonomous systems.</p>
 				</div>
 			</main>
 		</>

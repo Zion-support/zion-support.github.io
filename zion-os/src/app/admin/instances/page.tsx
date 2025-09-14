@@ -24,7 +24,7 @@ interface InstanceWithCounts {;
 }
 ;
 export default function InstancesPage() {;
-  const instances: any[] = [], // Temporary empty array;
+  const instances: any[] = []// Temporary empty array;
   const error: string | null = null,;
 
 
@@ -57,7 +57,7 @@ export default /**
  * InstancesPage - Function description
  */
 function InstancesPage() {
-  const instances: any[] = [], // Temporary empty array;
+  const instances: any[] = []// Temporary empty array;
   const error: string | null = null,
   return (
     <div className="min - h-screen py - 8 px - 4 sm:px - 6 lg:px - 8">;
@@ -86,7 +86,7 @@ interface InstanceWithCounts {;
 }
 ;
 export default function InstancesPage() {;
-  const instances: any[] = [], // Temporary empty array;
+  const instances: any[] = []// Temporary empty array;
   const error: string | null = null,;
   return (;
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
@@ -95,7 +95,7 @@ export default function InstancesPage() {;
         <div className="text - center mb - 12">;
           <h1 className="text - 4xl font - bold mb - 4">📊 Manage Your Instances</h1>;
           <p className="text - xl text - white / 70 max - w-2xl mx - auto">;
-            Monitor and manage your deployed digital economies, track performance, and access configuration settings.;
+            Monitor and manage your deployed digital economiestrack performanceand access configuration settings.;
           </p>;
         </div>;
         {/* Error State */}
@@ -126,13 +126,13 @@ export default function InstancesPage() {;
           </div>;
           <div className="glass - effect rounded - xl p - 6 text - center">;
             <div className="text - 3xl font - bold text - purple - 400 mb - 2">;
-              {instances.reduce ((sum, i) => sum + i._count.deployments, 0)}
+              {instances.reduce ((sumi) => sum + i._count.deployments0)}
             </div>;
             <div className="text - white / 70">Total Deployments</div>;
           </div>;
           <div className="glass - effect rounded - xl p - 6 text - center">;
             <div className="text - 3xl font - bold text - orange - 400 mb - 2">;
-              {instances.reduce ((sum, i) => sum + i._count.features, 0)}
+              {instances.reduce ((sumi) => sum + i._count.features0)}
             </div>;
             <div className="text - white / 70">Active Features</div>;
           </div>;
@@ -179,7 +179,7 @@ export default function InstancesPage() {;
                   {inst.region && (
                     <div className="flex items - center gap - 2 text - sm text - white / 70">;
                       <span className="w - 4 h - 4">📍</span>;
-                      <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
+                      <span>{inst.region}{inst.country ? `${inst.country}` : ''}</span>;
 
 
 ;
@@ -283,7 +283,7 @@ export default function InstancesPage() {;
         </div>;
         <div className="card text - center">;
           <div className="text - 3xl font - bold text - orange - 400 mb - 2">;
-            {instances.reduce ((acc, i) => acc + i._count.deployments, 0)}
+            {instances.reduce ((acci) => acc + i._count.deployments0)}
           </div>;
           <div className="text - white / 60 text - sm">Total Deployments</div>;
         </div>;
@@ -364,7 +364,7 @@ export default function InstancesPage() {;
                 {inst.region && (
                   <div className="flex items - center space - x-2 text - sm text - white / 70">;
                     <span>📍</span>;
-                    <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
+                    <span>{inst.region}{inst.country ? `${inst.country}` : ''}</span>;
 
 
 ;

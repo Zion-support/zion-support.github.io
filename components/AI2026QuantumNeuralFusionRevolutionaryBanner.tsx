@@ -27,8 +27,8 @@ export default function AI2026QuantumNeuralFusionRevolutionaryBanner() {
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             The convergence of quantum computing and neural networks: 
-            <strong className="text-cyan-400"> 15,000% ROI</strong>, 
-            <strong className="text-purple-400"> 99.7% accuracy</strong>, and 
+            <strong className="text-cyan-400"> 15,000% ROI</strong>
+            <strong className="text-purple-400"> 99.7% accuracy</strong>and 
             <strong className="text-pink-400"> consciousness-level intelligence</strong>
           </p>
           

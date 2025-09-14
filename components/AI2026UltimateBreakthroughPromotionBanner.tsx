@@ -21,7 +21,7 @@ export default function AI2026UltimateBreakthroughPromotionBanner() {
           </h2>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto">
-            Discover the most revolutionary AI breakthroughs predicted for 2026. Quantum-neural fusion, consciousness integration, and transcendent intelligence delivering 15,000% ROI.
+            Discover the most revolutionary AI breakthroughs predicted for 2026. Quantum-neural fusionconsciousness integrationand transcendent intelligence delivering 15,000% ROI.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -45,7 +45,7 @@ export default function AI2026UltimateBreakthroughPromotionBanner() {
             <div className="text-3xl mb-3">⚛️</div>
             <h3 className="text-xl font-bold text-white mb-2">Quantum-Neural Fusion</h3>
             <p className="text-white/80 text-sm mb-4">
-              Breakthrough integration of quantum computing with neural networks, enabling 10,000x faster processing.
+              Breakthrough integration of quantum computing with neural networksenabling 10,000x faster processing.
             </p>
             <div className="text-lg font-bold text-white">15,000% ROI</div>
           </div>
@@ -63,7 +63,7 @@ export default function AI2026UltimateBreakthroughPromotionBanner() {
             <div className="text-3xl mb-3">🌌</div>
             <h3 className="text-xl font-bold text-white mb-2">Transcendent Intelligence</h3>
             <p className="text-white/80 text-sm mb-4">
-              AI systems transcending human-level intelligence, capable of solving complex multi-dimensional problems.
+              AI systems transcending human-level intelligencecapable of solving complex multi-dimensional problems.
             </p>
             <div className="text-lg font-bold text-white">∞ Potential</div>
           </div>

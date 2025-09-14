@@ -2,28 +2,28 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
+ShieldCheckCircleLockActivity
 
 export default function CybersecurityPage() {
   const features = [
     'Zero Trust architectures and identity-first segmentation',
-    'Cloud posture hardening, secrets management, and key rotation',
-    'Threat detection, incident response playbooks, and tabletop exercises',
-    'Compliance readiness: SOC 2, ISO 27001, HIPAA, GDPR',
+    'Cloud posture hardeningsecrets managementand key rotation',
+    'Threat detectionincident response playbooksand tabletop exercises',
+    'Compliance readiness: SOC 2ISO 27001HIPAAGDPR',
   ];
 
   const solutions = [
-    { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
-    { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
-    { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' },
-    { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' },
+    { name: 'Zero Trust Architecture'href: '/zero-trust-network-architecture' },
+    { name: 'Domain & TLS Monitoring'href: '/domain-dns-monitor' },
+    { name: 'Email Security (DMARC)'href: '/email-dmarc-analyzer' },
+    { name: 'Vendor Risk Automation'href: '/vendor-risk-automation' },
   ];
 
   return (
     <Layout>
       <Head>
         <title>Cybersecurity | Zion Tech Group</title>
-        <meta name="description" content="Zero Trust designs, cloud posture hardening, incident response, and compliance readiness." />
+        <meta name="description" content="Zero Trust designscloud posture hardeningincident responseand compliance readiness." />
         <link rel="canonical" href="https://ziontechgroup.com/cybersecurity" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -33,7 +33,7 @@ export default function CybersecurityPage() {
               <Shield className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Cybersecurity</h1>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">From strategy to operations: identity, data, networks, and workloads secured by design.</p>
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto">From strategy to operations: identitydatanetworksand workloads secured by design.</p>
             <div className="mt-2 text-sm text-gray-400">New: VAPT and MDM offerings below.</div>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="/contact" className="px-8 py-4">Security Assessment</a>

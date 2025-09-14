@@ -16,7 +16,7 @@ interface BlogPostLayoutProps {
   content: string;
 }
 
-export default function BlogPostLayout({ post, content }: BlogPostLayoutProps) {
+export default function BlogPostLayout({ postcontent }: BlogPostLayoutProps) {
   return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Header */}
@@ -63,7 +63,7 @@ export default function BlogPostLayout({ post, content }: BlogPostLayoutProps) {
       {/* Content */}
       <div 
         className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-purple-600 prose-strong:text-gray-900"
-        dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }}
+        dangerouslySetInnerHTML={{ __html: content.replace(/\n/g'<br />') }}
       />
     </article>
   );

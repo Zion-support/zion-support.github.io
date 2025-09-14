@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Search, Filter, TrendingUp, Star } from 'lucide-react';
+ArrowRightSearchFilterTrendingUpStar
 
 const SEOOptimizedContentHub = () => {
   const contentCategories = [
@@ -9,28 +9,28 @@ const SEOOptimizedContentHub = () => {
       description: "Cutting-edge AI technologies and breakthrough innovations",
       icon: "🤖",
       link: "/ai-innovation-hub-2025",
-      keywords: ["AI innovation", "artificial intelligence", "machine learning", "2025", "2030"]
+      keywords: ["AI innovation"artificial intelligence"machine learning"2025"2030"]
     },
     {
       title: "Quantum Computing Solutions",
       description: "Revolutionary quantum computing breakthroughs and applications",
       icon: "⚛️",
       link: "/quantum-computing-solutions-2025",
-      keywords: ["quantum computing", "quantum supremacy", "quantum algorithms", "2025"]
+      keywords: ["quantum computing"quantum supremacy"quantum algorithms"2025"]
     },
     {
       title: "Autonomous Business Operations",
       description: "Complete automation solutions for enterprise transformation",
       icon: "🚀",
       link: "/autonomous-business-operations-2025",
-      keywords: ["business automation", "autonomous operations", "enterprise AI", "ROI"]
+      keywords: ["business automation"autonomous operations"enterprise AI"ROI"]
     },
     {
       title: "Revolutionary Tech Showcase",
       description: "Latest technological breakthroughs and future predictions",
       icon: "✨",
       link: "/revolutionary-tech-showcase-2025",
-      keywords: ["technology trends", "future tech", "innovation", "breakthrough"]
+      keywords: ["technology trends"future tech"innovation"breakthrough"]
     }
   ];
 
@@ -70,7 +70,7 @@ const SEOOptimizedContentHub = () => {
             Ultimate Content Discovery Hub
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive collection of AI insights, case studies, and revolutionary technology showcases.
+            Explore our comprehensive collection of AI insightscase studiesand revolutionary technology showcases.
             Find exactly what you need to transform your business.
           </p>
         </div>
@@ -82,7 +82,7 @@ const SEOOptimizedContentHub = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search content, case studies, or technologies..."
+                placeholder="Search contentcase studiesor technologies..."
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
@@ -109,7 +109,7 @@ const SEOOptimizedContentHub = () => {
 
         {/* Content Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {contentCategories.map((category, index) => (
+          {contentCategories.map((categoryindex) => (
             <Link
               key={index}
               href={category.link}
@@ -149,7 +149,7 @@ const SEOOptimizedContentHub = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredContent.map((content, index) => (
+            {featuredContent.map((contentindex) => (
               <Link
                 key={index}
                 href={content.link}

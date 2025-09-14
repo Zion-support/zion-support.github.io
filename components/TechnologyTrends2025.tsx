@@ -8,7 +8,7 @@ const TechnologyTrends2025 = () => {
       description: "Breakthrough in artificial consciousness that enables AI systems to develop self-awareness and emotional intelligence.",
       impact: "Revolutionary",
       timeline: "2025",
-      applications: ["Autonomous decision making", "Emotional AI assistants", "Self-healing systems"],
+      applications: ["Autonomous decision making"Emotional AI assistants"Self-healing systems"],
       icon: "🧠",
       color: "from-purple-500 to-pink-500"
     },
@@ -17,16 +17,16 @@ const TechnologyTrends2025 = () => {
       description: "Fusion of quantum computing and neural networks for unprecedented computational power and problem-solving capabilities.",
       impact: "Transformational",
       timeline: "2025-2026",
-      applications: ["Drug discovery", "Climate modeling", "Financial optimization"],
+      applications: ["Drug discovery"Climate modeling"Financial optimization"],
       icon: "⚛️",
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Autonomous Business Ecosystems",
-      description: "Self-managing business systems that can adapt, optimize, and evolve without human intervention.",
+      description: "Self-managing business systems that can adaptoptimizeand evolve without human intervention.",
       impact: "Disruptive",
       timeline: "2025",
-      applications: ["Self-optimizing supply chains", "Autonomous customer service", "Self-healing infrastructure"],
+      applications: ["Self-optimizing supply chains"Autonomous customer service"Self-healing infrastructure"],
       icon: "🔄",
       color: "from-green-500 to-emerald-500"
     },
@@ -35,7 +35,7 @@ const TechnologyTrends2025 = () => {
       description: "Next-generation AI that can synthesize new knowledge and create innovative solutions autonomously.",
       impact: "Game-changing",
       timeline: "2025-2027",
-      applications: ["Innovation acceleration", "Creative problem solving", "Scientific discovery"],
+      applications: ["Innovation acceleration"Creative problem solving"Scientific discovery"],
       icon: "🔮",
       color: "from-indigo-500 to-purple-500"
     },
@@ -44,7 +44,7 @@ const TechnologyTrends2025 = () => {
       description: "Direct brain-computer interfaces that enable seamless human-AI collaboration and cognitive enhancement.",
       impact: "Revolutionary",
       timeline: "2025-2026",
-      applications: ["Enhanced learning", "Telepathic communication", "Cognitive augmentation"],
+      applications: ["Enhanced learning"Telepathic communication"Cognitive augmentation"],
       icon: "🧬",
       color: "from-orange-500 to-red-500"
     },
@@ -53,7 +53,7 @@ const TechnologyTrends2025 = () => {
       description: "Interconnected data networks that span multiple dimensions and realities for ultimate knowledge synthesis.",
       impact: "Transcendent",
       timeline: "2025-2030",
-      applications: ["Universal knowledge access", "Reality simulation", "Dimensional analytics"],
+      applications: ["Universal knowledge access"Reality simulation"Dimensional analytics"],
       icon: "🌌",
       color: "from-violet-500 to-purple-500"
     }
@@ -75,7 +75,7 @@ const TechnologyTrends2025 = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {trends.map((trend, index) => (
+          {trends.map((trendindex) => (
             <div key={index} className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
               <div className="text-4xl mb-4">{trend.icon}</div>
               
@@ -91,7 +91,7 @@ const TechnologyTrends2025 = () => {
 
               <div className="space-y-2">
                 <h4 className="font-semibold text-white mb-2">Key Applications:</h4>
-                {trend.applications.map((app, appIndex) => (
+                {trend.applications.map((appIndex) => (
                   <div key={appIndex} className="flex items-center text-sm text-gray-300">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                     {app}

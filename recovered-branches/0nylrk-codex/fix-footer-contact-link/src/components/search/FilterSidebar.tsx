@@ -2,7 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Filter, X, Star } from "lucide-react";
+import { FilterXStar } from "lucide-react";
 import { FilterOptions } from "@/types/search";
 
 interface FilterSidebarProps {
@@ -13,7 +13,7 @@ interface FilterSidebarProps {
     selectedRating: number | null;
   };
   filterOptions: FilterOptions;
-  onFilterChange: (filterType: string, value: string) => void;
+  onFilterChange: (filterType: stringvalue: string) => void;
   onRatingChange: (rating: number | null) => void;
   onClearFilters: () => void;
 }
@@ -52,7 +52,7 @@ export function FilterSidebar({
               <Checkbox 
                 id={`type-${type.value}`} 
                 checked={filters.selectedProductTypes.includes(type.value)}
-                onCheckedChange={() => onFilterChange('productTypes', type.value)}
+                onCheckedChange={() => onFilterChange('productTypes'type.value)}
                 className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label 
@@ -77,7 +77,7 @@ export function FilterSidebar({
               <Checkbox 
                 id={`location-${location.value}`} 
                 checked={filters.selectedLocations.includes(location.value)}
-                onCheckedChange={() => onFilterChange('locations', location.value)}
+                onCheckedChange={() => onFilterChange('locations'location.value)}
                 className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label 
@@ -102,7 +102,7 @@ export function FilterSidebar({
               <Checkbox 
                 id={`availability-${availability.value}`} 
                 checked={filters.selectedAvailability.includes(availability.value)}
-                onCheckedChange={() => onFilterChange('availability', availability.value)}
+                onCheckedChange={() => onFilterChange('availability'availability.value)}
                 className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label 
@@ -122,7 +122,7 @@ export function FilterSidebar({
           Minimum Rating
         </label>
         <div className="flex flex-wrap gap-2">
-          {[null, ...filterOptions.ratingOptions].map((rating) => (
+          {[null...filterOptions.ratingOptions].map((rating) => (
             <Button
               key={rating === null ? 'any' : rating}
               variant="outline"
@@ -138,7 +138,7 @@ export function FilterSidebar({
                 "Any"
               ) : (
                 <div className="flex items-center">
-                  {[...Array(rating)].map((_, i) => (
+                  {[...Array(rating)].map((_i) => (
                     <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />
                   ))}
                   <span className="ml-1">& Up</span>

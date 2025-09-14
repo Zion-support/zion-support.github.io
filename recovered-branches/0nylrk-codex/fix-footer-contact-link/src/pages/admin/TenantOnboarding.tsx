@@ -1,25 +1,25 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Switch } from "@/components/ui/switch";
 
 export default function TenantOnboarding() {
   const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
+  const [activeTabsetActiveTab] = useState("company");
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [formDatasetFormData] = useState({
     brand_name: "",
     subdomain: "",
     logo_url: "",
@@ -39,16 +39,16 @@ export default function TenantOnboarding() {
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { namevalue } = e.target;
+    setFormData(prev => ({ ...prev[name]: value }));
   };
   
-  const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value }));
+  const handleSelectChange = (name: stringvalue: string) => {
+    setFormData(prev => ({ ...prev[name]: value }));
   };
   
-  const handleSwitchChange = (name: string, checked: boolean) => {
-    setFormData(prev => ({ ...prev, [name]: checked }));
+  const handleSwitchChange = (name: stringchecked: boolean) => {
+    setFormData(prev => ({ ...prev[name]: checked }));
   };
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -57,7 +57,7 @@ export default function TenantOnboarding() {
     
     try {
       // Generate subdomain if not provided
-      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g'');
       
       // Create landing page copy
       const landingPageCopy = {
@@ -67,7 +67,7 @@ export default function TenantOnboarding() {
       };
       
       // Submit to Supabase
-      const { data, error } = await supabase
+      const { dataerror } = await supabase
         .from('whitelabel_tenants')
         .insert({
           brand_name: formData.brand_name,
@@ -82,12 +82,12 @@ export default function TenantOnboarding() {
           dns_verified: false,
           email_template_override: null
         })
-        .select('id, brand_name, subdomain')
+        .select('idbrand_namesubdomain')
         .single();
       
       if (error) throw error;
       
-      toast.success("Tenant created successfully!", {
+      toast.success("Tenant created successfully!"{
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
       });
       
@@ -105,8 +105,8 @@ export default function TenantOnboarding() {
       });
       
     } catch (error: any) {
-      console.error("Error creating tenant:", error);
-      toast.error("Failed to create tenant", { 
+      console.error("Error creating tenant:"error);
+      toast.error("Failed to create tenant"{ 
         description: error.message 
       });
     } finally {
@@ -164,7 +164,7 @@ export default function TenantOnboarding() {
                       <Select 
                         name="industry" 
                         value={formData.industry} 
-                        onValueChange={(value) => handleSelectChange("industry", value)}
+                        onValueChange={(value) => handleSelectChange("industry"value)}
                       >
                         <SelectTrigger>
                           <SelectValue placeholder="Select industry" />
@@ -187,7 +187,7 @@ export default function TenantOnboarding() {
                       <Select 
                         name="company_size" 
                         value={formData.company_size} 
-                        onValueChange={(value) => handleSelectChange("company_size", value)}
+                        onValueChange={(value) => handleSelectChange("company_size"value)}
                       >
                         <SelectTrigger>
                           <SelectValue placeholder="Select company size" />
@@ -244,7 +244,7 @@ export default function TenantOnboarding() {
                       <Select 
                         name="theme_preset" 
                         value={formData.theme_preset} 
-                        onValueChange={(value) => handleSelectChange("theme_preset", value)}
+                        onValueChange={(value) => handleSelectChange("theme_preset"value)}
                       >
                         <SelectTrigger>
                           <SelectValue placeholder="Select theme" />
@@ -269,7 +269,7 @@ export default function TenantOnboarding() {
                       <Switch
                         id="is_co_branded"
                         checked={formData.is_co_branded}
-                        onCheckedChange={(checked) => handleSwitchChange("is_co_branded", checked)}
+                        onCheckedChange={(checked) => handleSwitchChange("is_co_branded"checked)}
                       />
                     </div>
                   </TabsContent>
@@ -283,7 +283,7 @@ export default function TenantOnboarding() {
                           name="subdomain"
                           value={formData.subdomain}
                           onChange={handleInputChange}
-                          placeholder={formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '') : "company"}
+                          placeholder={formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g'') : "company"}
                           className="rounded-r-none"
                         />
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
@@ -305,7 +305,7 @@ export default function TenantOnboarding() {
                         placeholder="hire.yourcompany.com"
                       />
                       <p className="text-xs text-muted-foreground">
-                        If you want to use your own domain, enter it here. You'll need to configure DNS records.
+                        If you want to use your own domainenter it here. You'll need to configure DNS records.
                       </p>
                     </div>
                   </TabsContent>

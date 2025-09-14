@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
-  CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
+  BrainShieldRocketCpuDatabaseAtomUsers
+  CheckCircleTrendingUpClockStarFilterChevronDown
 } from 'lucide-react';
 
 interface Service {
@@ -27,8 +27,8 @@ interface Service {
 }
 
 const EnhancedServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
+  const [searchTermsetSearchTerm] = useState('');
 
   const services: Service[] = [
     {
@@ -51,13 +51,13 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Improved operational efficiency',
         'Data-driven insights'
       ],
-      technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'Hugging Face', 'AWS SageMaker'],
+      technologies: ['TensorFlow'PyTorch'OpenAI'Hugging Face'AWS SageMaker'],
       href: '/services/ai'
     },
     {
       id: 'cloud',
       title: 'Cloud Infrastructure',
-      description: 'Scalable, secure, and reliable cloud solutions tailored to your business needs.',
+      description: 'Scalablesecureand reliable cloud solutions tailored to your business needs.',
       icon: <Cloud className="w-8 h-8 text-white" />,
       gradient: 'from-blue-500 to-cyan-500',
       features: [
@@ -74,7 +74,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Reduced operational costs',
         'Enhanced security'
       ],
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker'],
+      technologies: ['AWS'Azure'Google Cloud'Kubernetes'Docker'],
       href: '/services/cloud'
     },
     {
@@ -97,7 +97,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         '24/7 threat monitoring',
         'Reduced security risks'
       ],
-      technologies: ['SIEM', 'SOAR', 'EDR', 'XDR', 'Zero Trust'],
+      technologies: ['SIEM'SOAR'EDR'XDR'Zero Trust'],
       href: '/services/security'
     },
     {
@@ -120,16 +120,16 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Future-ready technology',
         'Competitive advantage'
       ],
-      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'IBM Quantum', 'Google Quantum'],
+      technologies: ['Qiskit'Cirq'PennyLane'IBM Quantum'Google Quantum'],
       href: '/services/quantum'
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Delivered' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '50+', label: 'Expert Engineers' },
-    { number: '24/7', label: 'Support Available' }
+    { number: '500+'label: 'Projects Delivered' },
+    { number: '99.9%'label: 'Uptime Guarantee' },
+    { number: '50+'label: 'Expert Engineers' },
+    { number: '24/7'label: 'Support Available' }
   ];
 
   return (
@@ -137,8 +137,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -184,7 +184,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service, index) => (
+          {filteredServices.map((serviceindex) => (
             <div
               key={service.id}
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
@@ -232,7 +232,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                     <div>
                       <h4 className="text-xl font-semibold text-white mb-4">Key Features</h4>
                       <ul className="space-y-2">
-                        {services[activeService].features.map((feature, index) => (
+                        {services[activeService].features.map((featureindex) => (
                           <li key={index} className="flex items-center space-x-3 text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400" />
                             <span>{feature}</span>
@@ -244,7 +244,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                     <div>
                       <h4 className="text-xl font-semibold text-white mb-4">Benefits</h4>
                       <ul className="space-y-2">
-                        {services[activeService].benefits.map((benefit, index) => (
+                        {services[activeService].benefits.map((benefitindex) => (
                           <li key={index} className="flex items-center space-x-3 text-gray-300">
                             <ArrowRight className="w-5 h-5 text-blue-400" />
                             <span>{benefit}</span>
@@ -259,7 +259,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
                   <div className="space-y-2">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(03).map((featureidx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
                         <CheckCircle className="w-3 h-3 text-green-400" />
                         {feature}
@@ -271,7 +271,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-3">Key Benefits:</h4>
                   <div className="space-y-2">
-                    {service.benefits.slice(0, 2).map((benefit, idx) => (
+                    {service.benefits.slice(02).map((benefitidx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
                         <TrendingUp className="w-3 h-3 text-blue-400" />
                         {benefit}
@@ -311,12 +311,12 @@ const EnhancedServicesShowcase: React.FC = () => {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
         >
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
                 {stat.number}

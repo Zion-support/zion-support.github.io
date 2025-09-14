@@ -23,7 +23,7 @@ const AI2025UltimateBusinessAutomationRevolutionShowcase = () => {
     },
     {
       title: "AI 2025 Implementation Ultimate Master Guide: 2,500% ROI Framework",
-      description: "The definitive guide to implementing AI automation in 2025. Complete framework, tools, and strategies to achieve exceptional ROI through intelligent automation.",
+      description: "The definitive guide to implementing AI automation in 2025. Complete frameworktoolsand strategies to achieve exceptional ROI through intelligent automation.",
       href: "/resources/ai-2025-implementation-ultimate-master-guide-2500-roi",
       type: "Implementation Guide",
       readTime: "25 min read",
@@ -33,10 +33,10 @@ const AI2025UltimateBusinessAutomationRevolutionShowcase = () => {
   ];
 
   const keyStats = [
-    { label: "Average ROI", value: "2,500%", icon: "📈" },
-    { label: "Efficiency Gain", value: "340%", icon: "⚡" },
-    { label: "Cost Reduction", value: "45%", icon: "💰" },
-    { label: "Implementation Time", value: "18 months", icon: "⏱️" }
+    { label: "Average ROI"value: "2,500%"icon: "📈" },
+    { label: "Efficiency Gain"value: "340%"icon: "⚡" },
+    { label: "Cost Reduction"value: "45%"icon: "💰" },
+    { label: "Implementation Time"value: "18 months"icon: "⏱️" }
   ];
 
   return (
@@ -48,14 +48,14 @@ const AI2025UltimateBusinessAutomationRevolutionShowcase = () => {
             AI 2025 Ultimate Business Automation Revolution
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Explore our comprehensive collection of resources, case studies, and implementation guides 
+            Explore our comprehensive collection of resourcescase studiesand implementation guides 
             designed to help you achieve unprecedented success with AI automation.
           </p>
         </div>
 
         {/* Key Statistics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {keyStats.map((stat, index) => (
+          {keyStats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="text-4xl mb-4">{stat.icon}</div>
               <div className="text-3xl font-bold text-purple-600 mb-2">{stat.value}</div>
@@ -66,7 +66,7 @@ const AI2025UltimateBusinessAutomationRevolutionShowcase = () => {
 
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {featuredContent.map((content, index) => (
+          {featuredContent.map((contentindex) => (
             <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-purple-500 to-blue-600">
                 <div className="flex items-center justify-center text-white text-6xl">
@@ -144,22 +144,22 @@ const AI2025UltimateBusinessAutomationRevolutionShowcase = () => {
             <div className="text-center">
               <div className="text-3xl mb-2">🤖</div>
               <h4 className="font-bold">Machine Learning</h4>
-              <p className="text-sm opacity-90">TensorFlow, PyTorch</p>
+              <p className="text-sm opacity-90">TensorFlowPyTorch</p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">👁️</div>
               <h4 className="font-bold">Computer Vision</h4>
-              <p className="text-sm opacity-90">OpenCV, YOLO</p>
+              <p className="text-sm opacity-90">OpenCVYOLO</p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">💬</div>
               <h4 className="font-bold">NLP</h4>
-              <p className="text-sm opacity-90">GPT-4, BERT</p>
+              <p className="text-sm opacity-90">GPT-4BERT</p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">☁️</div>
               <h4 className="font-bold">Cloud Platform</h4>
-              <p className="text-sm opacity-90">AWS, Azure, GCP</p>
+              <p className="text-sm opacity-90">AWSAzureGCP</p>
             </div>
           </div>
         </div>

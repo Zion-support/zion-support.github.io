@@ -13,7 +13,7 @@ const UltimateContentShowcase2026Banner = () => {
             The Ultimate AI & Technology Content Collection
           </h2>
           <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Comprehensive insights, case studies, and strategies for the AI revolution of 2026. Everything you need to transform your business.
+            Comprehensive insightscase studiesand strategies for the AI revolution of 2026. Everything you need to transform your business.
           </p>
         </div>
 

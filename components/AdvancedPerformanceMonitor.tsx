@@ -1,9 +1,9 @@
 "use client";
-import React, { useEffect, useState } from 'react';
-import { Zap, Clock, TrendingUp, Shield, Globe, Activity } from 'lucide-react';
+import React{ useEffectuseState } from 'react';
+ZapClockTrendingUpShieldGlobeActivity
 
 const AdvancedPerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState({
+  const [metricsetMetrics] = useState({
     loadTime: 0,
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
@@ -13,7 +13,7 @@ const AdvancedPerformanceMonitor = () => {
     performanceScore: 0
   });
 
-  const [optimizations, setOptimizations] = useState([
+  const [optimizationsetOptimizations] = useState([
     {
       id: 'lazy-loading',
       name: 'Lazy Loading',
@@ -85,7 +85,7 @@ const AdvancedPerformanceMonitor = () => {
           cumulativeLayoutShift: 0,
           firstInputDelay: 0,
           interactionToNextPaint: 0,
-          performanceScore: Math.max(0, score)
+          performanceScore: Math.max(0score)
         });
       }
     };
@@ -93,13 +93,13 @@ const AdvancedPerformanceMonitor = () => {
     if (document.readyState === 'complete') {
       collectMetrics();
     } else {
-      window.addEventListener('load', collectMetrics);
+      window.addEventListener('load'collectMetrics);
     }
 
     return () => {
-      window.removeEventListener('load', collectMetrics);
+      window.removeEventListener('load'collectMetrics);
     };
-  }, []);
+  }[]);
 
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-500';

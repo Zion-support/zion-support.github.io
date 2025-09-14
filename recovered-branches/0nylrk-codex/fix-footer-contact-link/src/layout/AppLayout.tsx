@@ -8,7 +8,7 @@ interface AppLayoutProps {
   hideFooter?: boolean;
 }
 
-export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
+export function AppLayout({ childrenhideFooter = false }: AppLayoutProps) {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />

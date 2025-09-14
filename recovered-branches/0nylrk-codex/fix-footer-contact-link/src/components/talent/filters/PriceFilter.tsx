@@ -1,11 +1,11 @@
 
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDownChevronUp } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { PriceFilterProps } from "@/types/filters";
 
-export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
+export function PriceFilter({ priceRangesetPriceRangexpandedtoggleSectionisMobileFilterOpen }: PriceFilterProps) {
   const handleChange = (values: number[]) => {
-    setPriceRange([values[0], values[1]]);
+    setPriceRange([values[0]values[1]]);
   };
 
   return (
@@ -29,7 +29,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             <span>${priceRange[1]}/hr</span>
           </div>
           <Slider 
-            value={[priceRange[0], priceRange[1]]}
+            value={[priceRange[0]priceRange[1]]}
             min={50}
             max={200}
             step={5}

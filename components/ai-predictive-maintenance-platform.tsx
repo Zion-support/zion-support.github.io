@@ -5,7 +5,7 @@ export default function AIPredictiveMaintenancePlatform() {
 	return (
 		<ServiceLanding
 			title="AI Predictive Maintenance Platform"
-			description="Predict equipment failures, schedule maintenance proactively, and reduce downtime with sensor analytics and AI models."
+			description="Predict equipment failureschedule maintenance proactivelyand reduce downtime with sensor analytics and AI models."
 			subtitle="Reliability at lower cost"
 			pricePerMonthUSD={499}
 			implementationWeeks="2-4 weeks"
@@ -20,7 +20,7 @@ export default function AIPredictiveMaintenancePlatform() {
 				"Visualizations and alerting",
 				"APIs and event webhooks"
 			]}
-			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
+			industries={["Manufacturing"Utilities"Oil & Gas"Transportation"]}
 			canonical="https://ziontechgroup.com/ai-predictive-maintenance-platform"
 		/>
 	);

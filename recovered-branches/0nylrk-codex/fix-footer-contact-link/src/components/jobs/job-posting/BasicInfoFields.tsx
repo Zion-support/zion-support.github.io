@@ -1,25 +1,25 @@
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Control } from "react-hook-form";
 import { 
-  FormField, 
-  FormItem, 
-  FormLabel, 
-  FormControl, 
+  FormField
+  FormItem
+  FormLabel
+  FormControl
   FormMessage 
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 
 interface BasicInfoFieldsProps {
   control: Control<any>;
 }
 
 export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
-  const [minBudget, setMinBudget] = useState<string>("");
-  const [maxBudget, setMaxBudget] = useState<string>("");
+  const [minBudgetsetMinBudget] = useState<string>("");
+  const [maxBudgetsetMaxBudget] = useState<string>("");
 
-  const handleSuggestionApplied = (min: number, max: number) => {
+  const handleSuggestionApplied = (min: numbermax: number) => {
     setMinBudget(min.toString());
     setMaxBudget(max.toString());
   };
@@ -84,7 +84,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         <FormField
           control={control}
           name="budgetMin"
-          render={({ field: { onChange, ...rest } }) => (
+          render={({ field: { onChange...rest } }) => (
             <FormItem>
               <FormLabel>Budget (Min)</FormLabel>
               <FormControl>
@@ -107,7 +107,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
         <FormField
           control={control}
           name="budgetMax"
-          render={({ field: { onChange, ...rest } }) => (
+          render={({ field: { onChange...rest } }) => (
             <FormItem>
               <FormLabel>Budget (Max)</FormLabel>
               <FormControl>
@@ -146,7 +146,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
-              <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />
+              <Input placeholder="e.g. RemoteSan Franciscoetc." {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>

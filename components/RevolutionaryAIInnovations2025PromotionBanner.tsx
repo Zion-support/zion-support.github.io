@@ -1,15 +1,15 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Sparkles, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Brain, 
+  Sparkles
+  ArrowRight
+  Star
+  Zap
+  Brain
   TrendingUp,
   X,
   Play,
@@ -21,30 +21,30 @@ import {
 } from 'lucide-react';
 
 const RevolutionaryAIInnovations2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentInnovation, setCurrentInnovation] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentInnovationsetCurrentInnovation] = useState(0);
 
   const innovations = [
-    { icon: Brain, title: "Quantum-Neural Fusion", impact: "10,000x Faster" },
-    { icon: Target, title: "Autonomous Intelligence", impact: "99.9% Accuracy" },
-    { icon: TrendingUp, title: "Predictive Analytics", impact: "6 Month Forecast" },
-    { icon: Users, title: "Neural Interfaces", impact: "Direct Interface" },
-    { icon: Shield, title: "Quantum Security", impact: "Unbreakable" },
-    { icon: Rocket, title: "Space Technology", impact: "Space-Ready" }
+    { icon: Braintitle: "Quantum-Neural Fusion"impact: "10,000x Faster" },
+    { icon: Targetitle: "Autonomous Intelligence"impact: "99.9% Accuracy" },
+    { icon: TrendingUptitle: "Predictive Analytics"impact: "6 Month Forecast" },
+    { icon: Userstitle: "Neural Interfaces"impact: "Direct Interface" },
+    { icon: Shieldtitle: "Quantum Security"impact: "Unbreakable" },
+    { icon: Rocketitle: "Space Technology"impact: "Space-Ready" }
   ];
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1500);
+    const timer = setTimeout(() => setIsVisible(true)1500);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentInnovation((prev) => (prev + 1) % innovations.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
@@ -56,38 +56,38 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -100 }}
+      initial={{ opacity: 0y: -100 }}
       animate={{ 
-        opacity: isVisible ? 1 : 0, 
+        opacity: isVisible ? 1 : 0
         y: isVisible ? 0 : -100 
       }}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: 1ease: "easeOut" }}
       className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           animate={{ 
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-            rotate: [0, 180, 360]
+            x: [0100],
+            y: [0-50],
+            rotate: [0180360]
           }}
           transition={{ 
-            duration: 20, 
-            repeat: Infinity, 
+            duration: 20
+            repeat: Infinity
             ease: "linear" 
           }}
           className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 blur-3xl"
         />
         <motion.div
           animate={{ 
-            x: [0, -100, 0],
-            y: [0, 50, 0],
-            rotate: [360, 180, 0]
+            x: [0-100],
+            y: [050],
+            rotate: [360180]
           }}
           transition={{ 
-            duration: 25, 
-            repeat: Infinity, 
+            duration: 25
+            repeat: Infinity
             ease: "linear" 
           }}
           className="absolute -bottom-20 -left-20 w-96 h-96 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full opacity-20 blur-3xl"
@@ -96,18 +96,18 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
 
       {/* Floating Innovation Icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {innovations.map((innovation, index) => (
+        {innovations.map((innovationindex) => (
           <motion.div
             key={index}
             animate={{ 
-              x: [0, Math.random() * 100 - 50, 0],
-              y: [0, Math.random() * 100 - 50, 0],
-              rotate: [0, 360, 0],
-              opacity: [0.1, 0.3, 0.1]
+              x: [0Math.random() * 100 - 50],
+              y: [0Math.random() * 100 - 50],
+              rotate: [0360],
+              opacity: [0.10.30.1]
             }}
             transition={{ 
-              duration: 15 + index * 2, 
-              repeat: Infinity, 
+              duration: 15 + index * 2
+              repeat: Infinity
               ease: "easeInOut",
               delay: index * 2
             }}
@@ -127,9 +127,9 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ delay: 0.3duration: 0.8 }}
               className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-medium mb-6"
             >
               <Sparkles className="w-6 h-6 mr-3 animate-pulse" />
@@ -137,18 +137,18 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
             </motion.div>
 
             <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ delay: 0.5duration: 0.8 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
             >
               The Future is Here
             </motion.h2>
 
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ delay: 0.7duration: 0.8 }}
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl"
             >
               Experience breakthrough AI innovations that are transforming industries and reshaping the future of technology
@@ -157,8 +157,8 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
             {/* Current Innovation Highlight */}
             <motion.div
               key={currentInnovation}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0scale: 0.9 }}
+              animate={{ opacity: 1scale: 1 }}
               transition={{ duration: 0.5 }}
               className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white border-opacity-20"
             >
@@ -182,7 +182,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
 
             {/* Innovation Dots */}
             <div className="flex justify-center lg:justify-start space-x-2 mb-8">
-              {innovations.map((_, index) => (
+              {innovations.map((_index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentInnovation(index)}
@@ -197,9 +197,9 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
 
             {/* Action Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.8 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ delay: 1duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <Link
@@ -222,9 +222,9 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
 
           {/* Right Content - Visual Showcase */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 1 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={{ opacity: 1x: 0 }}
+            transition={{ delay: 0.4duration: 1 }}
             className="flex-shrink-0 lg:ml-8"
           >
             <div className="relative">
@@ -233,13 +233,13 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                 {/* Animated Background Elements */}
                 <motion.div
                   animate={{ 
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 180, 360],
-                    opacity: [0.3, 0.6, 0.3]
+                    scale: [1.21],
+                    rotate: [0180360],
+                    opacity: [0.30.60.3]
                   }}
                   transition={{ 
-                    duration: 8, 
-                    repeat: Infinity, 
+                    duration: 8
+                    repeat: Infinity
                     ease: "easeInOut" 
                   }}
                   className="absolute inset-4 bg-white bg-opacity-20 rounded-2xl"
@@ -247,12 +247,12 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                 
                 <motion.div
                   animate={{ 
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 5, -5, 0]
+                    scale: [1.1],
+                    rotate: [05-50]
                   }}
                   transition={{ 
-                    duration: 4, 
-                    repeat: Infinity, 
+                    duration: 4
+                    repeat: Infinity
                     ease: "easeInOut" 
                   }}
                   className="w-32 h-32 bg-white bg-opacity-30 rounded-full flex items-center justify-center relative z-10"
@@ -263,8 +263,8 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
                 {/* Innovation Stats */}
                 <motion.div
                   key={currentInnovation}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0y: 20 }}
+                  animate={{ opacity: 1y: 0 }}
                   transition={{ duration: 0.5 }}
                   className="absolute bottom-4 left-4 right-4 bg-white bg-opacity-90 rounded-xl p-4"
                 >
@@ -280,17 +280,17 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {
               </div>
 
               {/* Floating Innovation Icons */}
-              {innovations.slice(0, 4).map((innovation, index) => (
+              {innovations.slice(04).map((innovationindex) => (
                 <motion.div
                   key={index}
                   animate={{ 
-                    y: [0, -20, 0],
-                    rotate: [0, 10, 0],
-                    opacity: [0.7, 1, 0.7]
+                    y: [0-20],
+                    rotate: [010],
+                    opacity: [0.710.7]
                   }}
                   transition={{ 
-                    duration: 3 + index * 0.5, 
-                    repeat: Infinity, 
+                    duration: 3 + index * 0.5
+                    repeat: Infinity
                     ease: "easeInOut",
                     delay: index * 0.5
                   }}

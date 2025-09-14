@@ -34,8 +34,8 @@ export default function AI2025UltimateBreakthroughAnnouncementBanner() {
           
           {/* Description */}
           <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
-            The most advanced AI technology ever created, combining synthetic intelligence, 
-            quantum computing fusion, and autonomous operations to deliver unprecedented 
+            The most advanced AI technology ever createdcombining synthetic intelligence
+            quantum computing fusionand autonomous operations to deliver unprecedented 
             business transformation and ROI.
           </p>
           

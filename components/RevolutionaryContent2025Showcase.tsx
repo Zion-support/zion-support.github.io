@@ -24,7 +24,7 @@ const RevolutionaryContent2025Showcase = () => {
           </h2>
           
           <p className="text-2xl md:text-3xl text-blue-100 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Experience the future of business with our groundbreaking content covering AI breakthroughs, quantum computing, and Fortune 500 success stories.
+            Experience the future of business with our groundbreaking content covering AI breakthroughsquantum computingand Fortune 500 success stories.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ const RevolutionaryContent2025Showcase = () => {
               </h3>
               
               <p className="text-blue-100 mb-8 text-lg leading-relaxed">
-                Discover how Fortune 500 companies achieved 300%+ ROI with AI automation. Real case studies, implementation strategies, and proven results that will transform your business.
+                Discover how Fortune 500 companies achieved 300%+ ROI with AI automation. Real case studiesimplementation strategiesand proven results that will transform your business.
               </p>
               
               <div className="flex items-center justify-between mb-6">
@@ -120,7 +120,7 @@ const RevolutionaryContent2025Showcase = () => {
               </h3>
               
               <p className="text-blue-100 mb-8 text-lg leading-relaxed">
-                Complete transformation story: 400% ROI, $335M in savings, and market leadership through comprehensive AI implementation. Real results from a real company.
+                Complete transformation story: 400% ROI$335M in savingsand market leadership through comprehensive AI implementation. Real results from a real company.
               </p>
               
               {/* Results Grid */}

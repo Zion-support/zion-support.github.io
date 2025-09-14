@@ -1,11 +1,11 @@
 
 import { useWallet } from '@/hooks/useWallet';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { BadgeDollarSign } from 'lucide-react';
+import { CardContentCardHeaderCardTitleCardDescription } from '@/components/ui/card';
+import { TabsListTabsTriggerTabsContent } from '@/components/ui/tabs';
+BadgeDollarSign
 
 export default function WalletPage() {
-  const { wallet, transactions, loading } = useWallet();
+  const { walletransactionsloading } = useWallet();
 
   return (
     <div className="container max-w-4xl py-10">

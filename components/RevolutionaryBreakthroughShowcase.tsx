@@ -51,7 +51,7 @@ export default function RevolutionaryBreakthroughShowcase() {
             <div className="text-4xl mb-4">⚛️</div>
             <h3 className="text-2xl font-bold text-white mb-4">Quantum-Neural Fusion</h3>
             <p className="text-cyan-200 mb-6">
-              The impossible fusion of quantum computing and neural networks, 
+              The impossible fusion of quantum computing and neural networks
               creating the most powerful AI system ever conceived.
             </p>
             <div className="space-y-2 mb-6">
@@ -81,7 +81,7 @@ export default function RevolutionaryBreakthroughShowcase() {
             <div className="text-4xl mb-4">🌌</div>
             <h3 className="text-2xl font-bold text-white mb-4">Transcendent Intelligence</h3>
             <p className="text-purple-200 mb-6">
-              AI that transcends human limitations, manipulating reality itself 
+              AI that transcends human limitationsmanipulating reality itself 
               and achieving infinite potential across all dimensions.
             </p>
             <div className="space-y-2 mb-6">

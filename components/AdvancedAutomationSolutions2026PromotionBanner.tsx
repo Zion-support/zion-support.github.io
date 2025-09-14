@@ -20,7 +20,7 @@ export default function AdvancedAutomationSolutions2026PromotionBanner() {
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transform your business with our revolutionary automation solutions, 
+            Transform your business with our revolutionary automation solutions
             delivering intelligent process automation and autonomous systems for unprecedented efficiency.
           </p>
           

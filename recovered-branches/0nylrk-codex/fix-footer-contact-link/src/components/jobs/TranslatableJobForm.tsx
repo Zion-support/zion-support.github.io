@@ -1,14 +1,14 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent } from "@/components/ui/card";
-import { Loader2, Globe } from "lucide-react";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
+import { CardContent } from "@/components/ui/card";
+import { Loader2Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useTranslationService } from "@/hooks/useTranslationService";
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+import { useLanguageSupportedLanguage } from "@/context/LanguageContext";
 import { toast } from "@/components/ui/use-toast";
 
 interface TranslatableJobFormProps {
@@ -16,46 +16,46 @@ interface TranslatableJobFormProps {
   isSubmitting?: boolean;
 }
 
-export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
+export function TranslatableJobForm({ onSubmitisSubmitting = false }: TranslatableJobFormProps) {
   const { t } = useTranslation();
-  const { translateContent, isTranslating } = useTranslationService();
-  const { supportedLanguages, currentLanguage } = useLanguage();
+  const { translateContentisTranslating } = useTranslationService();
+  const { supportedLanguagescurrentLanguage } = useLanguage();
   
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage);
+  const [activeTabsetActiveTab] = useState<SupportedLanguage>(currentLanguage);
   
   // Form fields with translations
-  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
+  const [titlesetTitle] = useState<Record<SupportedLanguagestring>>({
     en: "",
     es: "",
     pt: "",
     ar: ""});
   
-  const [description, setDescription] = useState<Record<SupportedLanguage, string>>({
+  const [descriptionsetDescription] = useState<Record<SupportedLanguagestring>>({
     en: "",
     es: "",
     pt: "",
     ar: ""});
   
-  const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({
+  const [requirementsetRequirements] = useState<Record<SupportedLanguagestring>>({
     en: "",
     es: "",
     pt: "",
     ar: ""});
   
-  const [budget, setBudget] = useState("");
-  const [deadline, setDeadline] = useState("");
+  const [budgetsetBudget] = useState("");
+  const [deadlinesetDeadline] = useState("");
   
   // Handle text changes
   const handleTitleChange = (value: string) => {
-    setTitle({ ...title, [activeTab]: value });
+    setTitle({ ...title[activeTab]: value });
   };
   
   const handleDescriptionChange = (value: string) => {
-    setDescription({ ...description, [activeTab]: value });
+    setDescription({ ...description[activeTab]: value });
   };
   
   const handleRequirementsChange = (value: string) => {
-    setRequirements({ ...requirements, [activeTab]: value });
+    setRequirements({ ...requirements[activeTab]: value });
   };
   
   // Handle form submission
@@ -111,7 +111,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     }
     
     try {
-      const { translations, error } = await translateContent(content, 'job', sourceLanguage);
+      const { translationserror } = await translateContent(content'job'sourceLanguage);
       
       if (error) {
         toast({
@@ -133,7 +133,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         title: t('translation.translation_success'),
         description: t('translation.content_translated')});
     } catch (error) {
-      console.error(`Error translating ${field}:`, error);
+      console.error(`Error translating ${field}:`error);
       toast({
         title: t('translation.translation_failed'),
         description: error instanceof Error ? error.message : t('translation.unknown_error'),

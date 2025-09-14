@@ -36,34 +36,34 @@ export default function EnhancedAnalytics() {
       }
       window.gtag = gtag;
 
-      gtag('js', new Date());
-      gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+      gtag('js'new Date());
+      gtag('config'process.env.NEXT_PUBLIC_GA_ID{
         page_title: document.title,
         page_location: window.location.href,
       });
     }
-  }, []);
+  }[]);
 
   useEffect(() => {
     // Track page views
     if (typeof window !== 'undefined' && window.gtag) {
       const handleRouteChange = (url: string) => {
-        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+        window.gtag('config'process.env.NEXT_PUBLIC_GA_ID{
           page_path: url,
         });
       };
 
-      router.events.on('routeChangeComplete', handleRouteChange);
+      router.events.on('routeChangeComplete'handleRouteChange);
       return () => {
-        router.events.off('routeChangeComplete', handleRouteChange);
+        router.events.off('routeChangeComplete'handleRouteChange);
       };
     }
-  }, [router.events]);
+  }[router.events]);
 
   // Track custom events
   const trackEvent = (event: AnalyticsEvent) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', event.action, {
+      window.gtag('event'event.action{
         event_category: event.category,
         event_label: event.label,
         value: event.value,
@@ -113,9 +113,9 @@ export default function EnhancedAnalytics() {
       }
     };
 
-    window.addEventListener('scroll', trackScrollDepth, { passive: true });
-    return () => window.removeEventListener('scroll', trackScrollDepth);
-  }, []);
+    window.addEventListener('scroll'trackScrollDepth{ passive: true });
+    return () => window.removeEventListener('scroll'trackScrollDepth);
+  }[]);
 
   // Track time on page
   useEffect(() => {
@@ -148,9 +148,9 @@ export default function EnhancedAnalytics() {
       }
     };
 
-    const interval = setInterval(trackTimeOnPage, 30000); // Check every 30 seconds
+    const interval = setInterval(trackTimeOnPage30000); // Check every 30 seconds
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   // Track clicks on important elements
   useEffect(() => {
@@ -160,7 +160,7 @@ export default function EnhancedAnalytics() {
       const target = event.target as HTMLElement;
       
       // Track CTA button clicks
-      if (target.matches('a[href*="/contact"], button[data-cta]')) {
+      if (target.matches('a[href*="/contact"]button[data-cta]')) {
         trackEvent({
           action: 'cta_click',
           category: 'Conversion',
@@ -187,9 +187,9 @@ export default function EnhancedAnalytics() {
       }
     };
 
-    document.addEventListener('click', trackClicks);
-    return () => document.removeEventListener('click', trackClicks);
-  }, []);
+    document.addEventListener('click'trackClicks);
+    return () => document.removeEventListener('click'trackClicks);
+  }[]);
 
   // Track form submissions
   useEffect(() => {
@@ -206,9 +206,9 @@ export default function EnhancedAnalytics() {
       }
     };
 
-    document.addEventListener('submit', trackFormSubmissions);
-    return () => document.removeEventListener('submit', trackFormSubmissions);
-  }, []);
+    document.addEventListener('submit'trackFormSubmissions);
+    return () => document.removeEventListener('submit'trackFormSubmissions);
+  }[]);
 
   return null; // This component doesn't render anything
 }
@@ -216,7 +216,7 @@ export default function EnhancedAnalytics() {
 // Export utility functions for manual event tracking
 export const trackCustomEvent = (event: AnalyticsEvent) => {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', event.action, {
+    window.gtag('event'event.action{
       event_category: event.category,
       event_label: event.label,
       value: event.value,
@@ -224,9 +224,9 @@ export const trackCustomEvent = (event: AnalyticsEvent) => {
   }
 };
 
-export const trackPageView = (pagePath: string, pageTitle?: string) => {
+export const trackPageView = (pagePath: stringpageTitle?: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+    window.gtag('config'process.env.NEXT_PUBLIC_GA_ID{
       page_path: pagePath,
       page_title: pageTitle,
     });
