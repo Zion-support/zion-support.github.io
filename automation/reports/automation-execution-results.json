@@ -3,7 +3,7 @@
   "systems": {
     "workflow-health": {
       "success": true,
-      "duration": 90,
+      "duration": 89,
       "error": null
     },
     "dependency-health": {
