@@ -3,6 +3,9 @@ import Link from 'next/link';
 import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import AnalyticsTracker from '../components/AnalyticsTracker';
+import PerformanceMonitor from '../components/PerformanceMonitor';
 
 // Import new advanced AI components
 import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
@@ -60,14 +63,17 @@ export const metadata = {
 export default function HomePage() {
   return (
     <ErrorBoundary>
-      <SEO
-        title="Zion Tech Group - AI & Technology Solutions"
-        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
-        keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
-        url="/"
-      />
-      
-      <div className='min-h-screen bg-white'>
+      <PerformanceOptimizer>
+        <AnalyticsTracker />
+        <PerformanceMonitor />
+        <SEO
+          title="Zion Tech Group - AI & Technology Solutions | 400% ROI Guaranteed"
+          description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services with proven 400% ROI results."
+          keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation, AI ROI, quantum AI, AI implementation, business automation, AI consulting"
+          url="/"
+        />
+        
+        <div className='min-h-screen bg-white'>
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         
@@ -245,7 +251,8 @@ export default function HomePage() {
             }} 
           />
         </Suspense>
-      </div>
+        </div>
+      </PerformanceOptimizer>
     </ErrorBoundary>
   );
 }
