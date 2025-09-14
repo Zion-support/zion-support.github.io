@@ -3,28 +3,31 @@ import ContentCard from './ContentCard';
 
 const featuredContent = [
   {
-    title: "AI 2025: The Enterprise Automation Revolution",
-    description: "Discover how AI is transforming enterprise operations in 2025 with intelligent automation, predictive analytics, and autonomous decision-making systems.",
+    title: "🚀 AI 2025: Enterprise Automation Breakthrough - Ultimate Guide",
+    description: "The definitive guide to AI automation in 2025. Discover breakthrough technologies, implementation strategies, and real-world success stories transforming businesses worldwide.",
     category: "AI & Automation",
-    date: "Jan 14, 2025",
-    href: "/blog/ai-2025-enterprise-automation-revolution",
-    featured: true
+    date: "Jan 15, 2025",
+    href: "/blog/ai-2025-enterprise-automation-breakthrough-ultimate-guide",
+    featured: true,
+    badge: "NEW"
   },
   {
-    title: "AI 2025: Next-Generation Cybersecurity Revolution",
-    description: "Explore how AI is revolutionizing cybersecurity in 2025 with advanced threat detection, autonomous response systems, and predictive security analytics.",
-    category: "Cybersecurity",
-    date: "Jan 14, 2025",
-    href: "/blog/ai-2025-cybersecurity-revolution-next-generation-threat-protection",
-    featured: true
-  },
-  {
-    title: "Global Enterprise AI Transformation: Ultimate Success Story",
-    description: "Discover how a Fortune 500 company achieved 340% ROI through comprehensive AI transformation, reducing costs by 67% while increasing efficiency by 89%.",
+    title: "💰 Global Retail Giant: 450% ROI with AI Transformation",
+    description: "Exclusive case study: How a global retail chain achieved 450% ROI, 60% cost reduction, and 200% increase in customer satisfaction with comprehensive AI transformation.",
     category: "Case Study",
-    date: "Jan 14, 2025",
-    href: "/case-studies/global-enterprise-ai-transformation-2025-ultimate-success",
-    featured: true
+    date: "Jan 15, 2025",
+    href: "/case-studies/global-retail-ai-transformation-2025-ultimate-success",
+    featured: true,
+    badge: "FEATURED"
+  },
+  {
+    title: "📋 AI Implementation Roadmap 2025: Complete Enterprise Guide",
+    description: "The ultimate step-by-step roadmap for implementing AI in your enterprise. Includes timelines, checklists, and best practices for successful AI transformation.",
+    category: "Implementation Guide",
+    date: "Jan 15, 2025",
+    href: "/resources/ai-implementation-roadmap-2025-complete-guide",
+    featured: true,
+    badge: "GUIDE"
   }
 ];
 
@@ -51,6 +54,7 @@ export default function FeaturedContent() {
               date={content.date}
               href={content.href}
               featured={content.featured}
+              badge={content.badge}
             />
           ))}
         </div>

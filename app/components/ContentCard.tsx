@@ -9,6 +9,7 @@ interface ContentCardProps {
   image?: string;
   href: string;
   featured?: boolean;
+  badge?: string;
 }
 
 export default function ContentCard({ 
@@ -18,7 +19,8 @@ export default function ContentCard({
   date, 
   image, 
   href, 
-  featured = false 
+  featured = false,
+  badge 
 }: ContentCardProps) {
   return (
     <div className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ${featured ? 'ring-2 ring-purple-500' : ''}`}>
@@ -29,9 +31,21 @@ export default function ContentCard({
       )}
       <div className="p-6">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-medium text-purple-600 bg-purple-100 px-3 py-1 rounded-full">
-            {category}
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium text-purple-600 bg-purple-100 px-3 py-1 rounded-full">
+              {category}
+            </span>
+            {badge && (
+              <span className={`text-xs font-bold px-2 py-1 rounded-full ${
+                badge === 'NEW' ? 'bg-green-100 text-green-800' :
+                badge === 'FEATURED' ? 'bg-orange-100 text-orange-800' :
+                badge === 'GUIDE' ? 'bg-blue-100 text-blue-800' :
+                'bg-gray-100 text-gray-800'
+              }`}>
+                {badge}
+              </span>
+            )}
+          </div>
           <span className="text-sm text-gray-500">{date}</span>
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">

@@ -38,6 +38,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Content Promotion Banner */}
+      <section className="py-12 bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+              <span className="text-sm font-medium">🆕 NEW CONTENT RELEASE</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              AI 2025: The Ultimate Transformation Guide
+            </h2>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+              Get exclusive access to our latest AI implementation roadmap, breakthrough case studies, and proven strategies that are transforming enterprises worldwide.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/blog/ai-2025-enterprise-automation-breakthrough-ultimate-guide"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Read the Ultimate Guide
+              </Link>
+              <Link
+                href="/case-studies/global-retail-ai-transformation-2025-ultimate-success"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                View Success Stories
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Key Statistics */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
