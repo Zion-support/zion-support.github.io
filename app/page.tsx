@@ -76,6 +76,11 @@ import UltimateContentShowcase2025Banner from '../components/UltimateContentShow
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
 
+// Import new 2025 Automation Revolution components
+import NewContent2025AutomationRevolutionBanner from '../components/NewContent2025AutomationRevolutionBanner';
+import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
+import FeaturedContent2025Showcase from '../components/FeaturedContent2025Showcase';
+
 // Import new Ultimate Content 2025 Revolution components
 import UltimateContent2025RevolutionBanner from '../components/UltimateContent2025RevolutionBanner';
 import UltimateContent2025RevolutionShowcase from '../components/UltimateContent2025RevolutionShowcase';
@@ -273,6 +278,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 AUTOMATION REVOLUTION BANNER - LATEST FEATURED */}
+        <NewContent2025AutomationRevolutionBanner />
+        
+        {/* REVOLUTIONARY CONTENT 2025 SHOWCASE - NEW FEATURED */}
+        <RevolutionaryContent2025Showcase />
+        
+        {/* FEATURED CONTENT 2025 SHOWCASE - NEW FEATURED */}
+        <FeaturedContent2025Showcase />
+        
         {/* NEW CONTENT 2025 ULTIMATE SHOWCASE BANNER - LATEST FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         
