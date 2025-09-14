@@ -77,6 +77,14 @@ import QuantumComputingPromotionBanner from '../components/QuantumComputingPromo
 import Fortune500CaseStudyBanner from '../components/Fortune500CaseStudyBanner';
 import NewContent2026ComprehensiveShowcase from '../components/NewContent2026ComprehensiveShowcase';
 
+// Additional imports from the other branch
+import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
+import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
+import RevolutionaryAI2026Banner from '../components/RevolutionaryAI2026Banner';
+import AI2026RevolutionaryBanner from '../components/AI2026RevolutionaryBanner';
+import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -127,9 +135,6 @@ export default function HomePage() {
         {/* New Content 2025 Ultimate Breakthrough Showcase - NEW FEATURED */}
         <NewContent2025UltimateBreakthroughShowcase />
         
-        {/* New Content 2025 Multimodal Banner - NEW FEATURED */}
-        <NewContent2025MultimodalBanner />
-        
         {/* AI 2025 Business Intelligence Banner - NEW FEATURED */}
         <AI2025BusinessIntelligenceBanner />
         
@@ -147,6 +152,12 @@ export default function HomePage() {
         
         {/* AI 2026 Ultimate Showcase Banner */}
         <AI2026UltimateShowcaseBanner />
+        
+        {/* New Content 2025 Ultimate Banner */}
+        <NewContent2025UltimateBanner />
+        
+        {/* Ultimate Promotion Banner */}
+        <UltimatePromotionBanner2026 />
         
         {/* Quantum AI 2026 Breakthrough Banner */}
         <QuantumAI2026BreakthroughBanner />
@@ -271,6 +282,15 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <NewContent2026PromotionBanner />
+        <QuantumAI2026BreakthroughBanner />
+        <NewContentShowcase2026 />
+        <QuantumAIContentShowcase2026 />
+        <AI2026ContentShowcaseBanner />
+        <RevolutionaryAI2026Banner />
+        <AI2026RevolutionaryBanner />
+        <RevolutionaryTechBanner2026 />
+        <UltimateContentShowcase2025 />
         <RevolutionaryContent2026Banner />
         <UltimateContentShowcase2026 />
         <QuantumAIContentShowcase2026 />
