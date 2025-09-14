@@ -10,6 +10,11 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import InteractiveROICalculatorAdvanced from '../components/InteractiveROICalculatorAdvanced';
 import RevolutionaryNewsletterSignup2025 from '../components/RevolutionaryNewsletterSignup2025';
 
+// Import new AI 2025-2026 Ultimate Transformation components - LATEST FEATURED
+import AI2025_2026UltimateTransformation50000ROIPromotionBanner from '../components/AI2025_2026UltimateTransformation50000ROIPromotionBanner';
+import UltimateContentShowcase2025_2026 from '../components/UltimateContentShowcase2025_2026';
+import InteractiveROICalculator2025_2026 from '../components/InteractiveROICalculator2025_2026';
+
 // Import neural superintelligence components - TOP PRIORITY
 import NeuralSuperintelligence2025Banner from '../components/NeuralSuperintelligence2025Banner';
 import UltimateNeuralSuperintelligenceShowcase from '../components/UltimateNeuralSuperintelligenceShowcase';
@@ -362,11 +367,23 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025-2026 ULTIMATE TRANSFORMATION 50,000% ROI PROMOTION BANNER - LATEST FEATURED */}
+        <AI2025_2026UltimateTransformation50000ROIPromotionBanner />
+        
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
         <UltimateContentPromotionBanner2025 />
         
+        {/* NEW CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
+        <NewContentPromotionBanner2025 />
+        
         {/* AI 2025 ULTIMATE CONTENT REVOLUTION 50,000% ROI BANNER - NEWEST FEATURED */}
         <AI2025UltimateContentRevolution50000ROIBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025-2026 - LATEST FEATURED */}
+        <UltimateContentShowcase2025_2026 />
+        
+        {/* INTERACTIVE ROI CALCULATOR 2025-2026 - LATEST FEATURED */}
+        <InteractiveROICalculator2025_2026 />
         
         {/* ULTIMATE SUCCESS STORIES SHOWCASE 2025 - NEWEST FEATURED */}
         <UltimateSuccessStoriesShowcase2025 />
