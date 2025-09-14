@@ -31,6 +31,7 @@ import EnhancedContentPromotionBanner from '../components/EnhancedContentPromoti
 import NewContent2026Showcase from '../components/NewContent2026Showcase';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
+import NewContent2025Showcase from '../components/NewContent2025Showcase';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -148,6 +149,7 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <NewContent2025Showcase />
         <RevolutionaryContent2026Banner />
         <FeaturedContentShowcase2026 />
         <NewContentPromotionBanner />
