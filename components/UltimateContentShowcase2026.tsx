@@ -183,6 +183,8 @@ const UltimateContentShowcase2026 = () => {
 
   const currentSection = contentSections[activeTab];
 
+  const currentSection = contentSections[activeTab];
+
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -343,6 +345,7 @@ const UltimateContentShowcase2026 = () => {
             <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already using our revolutionary AI solutions to achieve unprecedented growth and efficiency.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-purple-50 transition-colors flex items-center gap-2">
                 <Rocket className="w-5 h-5" />

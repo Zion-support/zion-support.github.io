@@ -141,6 +141,4 @@ const UltimateContentPromotionBanner = () => {
       </div>
     </div>
   );
-};
-
-export default UltimateContentPromotionBanner;
+}
