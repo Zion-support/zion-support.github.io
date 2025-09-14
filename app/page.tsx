@@ -53,6 +53,7 @@ import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBa
 import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
 import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
 import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
+<<<<<<< HEAD
 
 // Import new 2025 content promotional components
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
@@ -62,6 +63,12 @@ import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryC
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
 import InteractiveROICalculator from '../components/InteractiveROICalculator';
 import ComprehensiveContentShowcase2025 from '../components/ComprehensiveContentShowcase2025';
+=======
+import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
+import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
+import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
+import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+>>>>>>> cursor/create-and-deploy-new-content-b2c8
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -80,11 +87,8 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* New Content 2025 Ultimate Showcase */}
-        <NewContent2025UltimateShowcase />
-        
-        {/* Revolutionary Content 2025 Ultimate Banner */}
-        <RevolutionaryContent2025UltimateBanner />
+        {/* New Content 2025 Ultimate Showcase Banner */}
+        <NewContent2025UltimateShowcaseBanner />
         
         {/* AI 2026 Ultimate Showcase Banner */}
         <AI2026UltimateShowcaseBanner />
