@@ -23,7 +23,7 @@
     },
     "retry-system": {
       "success": true,
-      "duration": 81,
+      "duration": 80,
       "error": null
     }
   },

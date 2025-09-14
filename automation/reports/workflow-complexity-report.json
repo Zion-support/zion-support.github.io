@@ -2843,7 +2843,7 @@
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/netlify-config.yml"
     },
     "netlify-functions-trigger.yml": {
-      "complexityScore": 0,
+      "complexityScore": 20,
       "complexityLevel": "low",
       "metrics": {
         "totalLines": 37,
