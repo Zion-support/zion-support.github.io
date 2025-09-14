@@ -34,7 +34,7 @@ try {
   
   console.log('🔨 Building application...');
   execSync('npm run prebuild:netlify', { stdio: 'inherit' });
-  execSync('npm run build', { stdio: 'inherit' });
+  execSync('npx vite build', { stdio: 'inherit' });
   
   // Check if build output exists
   const distPath = path.join(process.cwd(), 'dist');
