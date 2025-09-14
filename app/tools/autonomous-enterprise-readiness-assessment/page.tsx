@@ -1,6 +1,7 @@
+'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export default function AutonomousEnterpriseReadinessAssessment() {
   const [answers, setAnswers] = useState<{ [key: string]: number }>({});

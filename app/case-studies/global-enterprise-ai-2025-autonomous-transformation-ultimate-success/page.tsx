@@ -1,7 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import ErrorBoundary from '../../components/ErrorBoundary';
-import SEO from '../../components/SEO';
+import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'Global Enterprise AI 2025 Transformation: $2.8B Value Creation Success Story | Zion Tech Group',
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function GlobalEnterpriseCaseStudyPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Global Enterprise AI 2025 Autonomous Transformation: $2.8B Value Creation Success Story"
         description="Discover how a Fortune 500 company achieved $2.8B in business value through AI 2025 autonomous systems. Learn about the implementation process, challenges overcome, and remarkable results achieved."
@@ -397,6 +396,6 @@ class AutonomousProcessOptimizer:
           </div>
         </article>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

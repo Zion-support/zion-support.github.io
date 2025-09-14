@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Atom, Cpu, Zap, Target, TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, BarChart3, Award } from 'lucide-react';
+import { Atom,  Zap,  TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, BarChart3, Award } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 export const metadata = {
@@ -187,7 +187,7 @@ export default function QuantumAITransformationPage() {
               <div className="space-y-6">
                 <div className="bg-white p-6 rounded-xl shadow-sm">
                   <h4 className="text-xl font-bold text-gray-700 mb-3 flex items-center">
-                    <Target className="w-5 h-5 text-green-600 mr-3" />
+                    <Award className="w-5 h-5 text-green-600 mr-3" />
                     Phase 1: Quantum Readiness (Months 1-2)
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -214,7 +214,7 @@ export default function QuantumAITransformationPage() {
 
                 <div className="bg-white p-6 rounded-xl shadow-sm">
                   <h4 className="text-xl font-bold text-gray-700 mb-3 flex items-center">
-                    <Cpu className="w-5 h-5 text-blue-600 mr-3" />
+                    <Brain className="w-5 h-5 text-blue-600 mr-3" />
                     Phase 2: Quantum Development (Months 3-4)
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

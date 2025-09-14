@@ -1,8 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'Global Manufacturing Giant Achieves 340% ROI with AI Transformation',
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function GlobalManufacturingAITransformationPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Global Manufacturing Giant Achieves 340% ROI with AI Transformation"
         description="How a Fortune 500 manufacturing company transformed operations with AI, achieving unprecedented efficiency and cost savings."
@@ -265,6 +264,6 @@ export default function GlobalManufacturingAITransformationPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'Quantum AI Implementation Guide 2026: From Strategy to 567% ROI',
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function QuantumAIImplementationGuidePage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Quantum AI Implementation Guide 2026: From Strategy to 567% ROI"
         description="Comprehensive guide for implementing Quantum AI solutions that achieve 567% ROI improvement within 6 months. Proven framework based on Fortune 500 transformations."
@@ -376,6 +375,6 @@ export default function QuantumAIImplementationGuidePage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }
