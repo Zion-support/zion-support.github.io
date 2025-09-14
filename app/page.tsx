@@ -67,6 +67,11 @@ import UltimateAIBreakthrough2025Banner from './components/UltimateAIBreakthroug
 import UltimateContentShowcase2025Banner from './components/UltimateContentShowcase2025Banner';
 import AI2025UltimateBreakthroughContentBanner from '../components/AI2025UltimateBreakthroughContentBanner';
 
+// Import new 2026 content promotional components
+import SyntheticIntelligence2026RevolutionBanner from './components/SyntheticIntelligence2026RevolutionBanner';
+import QuantumComputing2026UltimateBanner from './components/QuantumComputing2026UltimateBanner';
+import UltimateContent2026Showcase from './components/UltimateContent2026Showcase';
+
 // Import new autonomous enterprise components
 import UltimateAutonomousEnterpriseBanner2025 from '../components/UltimateAutonomousEnterpriseBanner2025';
 import RevolutionaryContent2026UltimateShowcase from '../components/RevolutionaryContent2026UltimateShowcase';
@@ -146,11 +151,14 @@ export default function HomePage() {
         {/* NEW ULTIMATE CONTENT 2026 - TOP PRIORITY FEATURED */}
         <UltimateContent2026Showcase />
         
-        {/* AI 2026 BREAKTHROUGH REVOLUTION BANNER - NEWEST FEATURED */}
-        <AI2026BreakthroughRevolutionBanner />
+        {/* SYNTHETIC INTELLIGENCE 2026 REVOLUTION BANNER - NEWEST FEATURED */}
+        <SyntheticIntelligence2026RevolutionBanner />
         
         {/* QUANTUM COMPUTING 2026 ULTIMATE BANNER - NEWEST FEATURED */}
         <QuantumComputing2026UltimateBanner />
+        
+        {/* AI 2026 BREAKTHROUGH REVOLUTION BANNER - NEWEST FEATURED */}
+        <AI2026BreakthroughRevolutionBanner />
         
         {/* NEURAL INTERFACE REVOLUTION 2026 BANNER - NEWEST FEATURED */}
         <NeuralInterfaceRevolution2026Banner />
