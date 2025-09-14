@@ -76,6 +76,10 @@ import UltimateContentShowcase2025Banner from '../components/UltimateContentShow
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
 
+// Import new Ultimate Business Transformation 2025 components
+import UltimateBusinessTransformation2025Banner from '../components/UltimateBusinessTransformation2025Banner';
+import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
+
 // Import new advanced AI components
 import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
 import RealTimePerformanceDashboard from '../components/RealTimePerformanceDashboard';
@@ -248,6 +252,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Business Transformation 2025 Banner - NEW ULTIMATE BREAKTHROUGH */}
+        <UltimateBusinessTransformation2025Banner />
+        
+        {/* Revolutionary Content 2025 Showcase - NEW FEATURED */}
+        <RevolutionaryContent2025Showcase />
+        
         {/* Ultimate Autonomous Enterprise Banner 2025 - LATEST FEATURED */}
         <UltimateAutonomousEnterpriseBanner2025 />
         
