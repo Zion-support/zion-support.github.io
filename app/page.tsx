@@ -211,6 +211,8 @@ import NewContent2025PromotionalBanner from '../components/NewContent2025Promoti
 import InteractiveROICalculator from '../components/InteractiveROICalculator';
 import TestimonialShowcase from '../components/TestimonialShowcase';
 import NewsletterSignup2025 from '../components/NewsletterSignup2025';
+import UltimateContentShowcaseBanner2025 from '../components/UltimateContentShowcaseBanner2025';
+import RevolutionaryContent2025PromotionBanner from '../components/RevolutionaryContent2025PromotionBanner';
 
 // Import new Advanced Neural Architectures 2026 components
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
@@ -254,6 +256,12 @@ export default function HomePage() {
         />
         
         <div className='min-h-screen bg-white'>
+          {/* ULTIMATE CONTENT SHOWCASE BANNER 2025 - NEWEST BREAKTHROUGH CONTENT */}
+          <UltimateContentShowcaseBanner2025 />
+          
+          {/* REVOLUTIONARY CONTENT 2025 PROMOTION BANNER - NEWEST FEATURED */}
+          <RevolutionaryContent2025PromotionBanner />
+          
           {/* ULTIMATE AUTOMATION REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
           <UltimateAutomationRevolution50000ROIBanner />
           
