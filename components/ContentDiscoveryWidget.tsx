@@ -1,291 +1,203 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function ContentDiscoveryWidget() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const [recommendations, setRecommendations] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const tags = [
-    { id: 'breakthrough', name: 'Breakthrough', color: 'from-red-500 to-pink-500' },
-    { id: 'roi', name: 'High ROI', color: 'from-green-500 to-emerald-500' },
-    { id: 'quantum', name: 'Quantum', color: 'from-indigo-500 to-purple-500' },
-    { id: 'automation', name: 'Automation', color: 'from-blue-500 to-cyan-500' },
-    { id: 'case-study', name: 'Case Study', color: 'from-orange-500 to-red-500' },
-    { id: 'implementation', name: 'Implementation', color: 'from-teal-500 to-green-500' },
-    { id: 'predictions', name: 'Predictions', color: 'from-purple-500 to-pink-500' },
-    { id: 'revolutionary', name: 'Revolutionary', color: 'from-yellow-500 to-orange-500' }
-  ];
-
-  const contentDatabase = [
+  const contentItems = [
     {
       id: 1,
-      title: "AI 2025 Ultimate Breakthrough Revolution",
-      description: "Revolutionary AI breakthrough delivering 10,000% ROI with 99.9% accuracy",
-      link: "/ai-2025-ultimate-breakthrough-revolution",
-      tags: ['breakthrough', 'roi', 'revolutionary'],
-      category: 'breakthrough',
-      icon: '🚀',
-      metrics: { roi: '10,000%', accuracy: '99.9%' }
+      title: "AI 2025 Revolutionary Breakthrough Ultimate",
+      description: "The most advanced AI technology ever created, delivering 15,000% ROI through quantum-neural fusion.",
+      category: "ai-2025",
+      type: "breakthrough",
+      roi: "15,000%",
+      accuracy: "99.9%",
+      link: "/ai-2025-revolutionary-breakthrough-ultimate",
+      image: "🚀",
+      badge: "BREAKTHROUGH",
+      color: "from-purple-600 to-pink-600"
     },
     {
       id: 2,
-      title: "Global Transformation Success Story",
-      description: "Fortune 500 company achieves unprecedented ROI through AI implementation",
-      link: "/case-studies/ai-2025-global-transformation-breakthrough",
-      tags: ['case-study', 'roi', 'breakthrough'],
-      category: 'case-studies',
-      icon: '🏆',
-      metrics: { roi: '10,000%', efficiency: '500%' }
+      title: "Quantum Computing Breakthroughs 2030",
+      description: "Revolutionary quantum technology with infinite processing power and perfect security.",
+      category: "quantum",
+      type: "technology",
+      roi: "∞",
+      accuracy: "99.99%",
+      link: "/quantum-computing-breakthroughs-2030",
+      image: "⚛️",
+      badge: "REVOLUTIONARY",
+      color: "from-cyan-600 to-blue-600"
     },
     {
       id: 3,
-      title: "Quantum-Neural Fusion Breakthrough",
-      description: "Revolutionary integration of quantum computing with neural networks",
-      link: "/blog/quantum-neural-fusion-2026",
-      tags: ['quantum', 'breakthrough', 'revolutionary'],
-      category: 'blog',
-      icon: '⚛️',
-      metrics: { speed: '10,000x', accuracy: '99.9%' }
+      title: "Neural Interface Revolution 2030",
+      description: "Direct brain-computer interface technology achieving 95% patient recovery rates.",
+      category: "neural",
+      type: "medical",
+      roi: "5,000%",
+      accuracy: "95%",
+      link: "/neural-interface-revolution-2030",
+      image: "🧠",
+      badge: "FUTURE",
+      color: "from-green-600 to-emerald-600"
     },
     {
       id: 4,
-      title: "Revolutionary Implementation Guide",
-      description: "Complete step-by-step guide for AI 2025 breakthrough implementation",
-      link: "/resources/ai-2025-revolutionary-implementation-guide",
-      tags: ['implementation', 'roi', 'revolutionary'],
-      category: 'resources',
-      icon: '📚',
-      metrics: { phases: '4', success: '99%' }
+      title: "Advanced Automation Solutions 2025",
+      description: "Fully autonomous operations delivering 8,500% ROI with zero human intervention.",
+      category: "automation",
+      type: "business",
+      roi: "8,500%",
+      accuracy: "100%",
+      link: "/advanced-automation-solutions-2025",
+      image: "🤖",
+      badge: "AUTOMATION",
+      color: "from-orange-600 to-red-600"
     },
     {
       id: 5,
-      title: "Autonomous Manufacturing Revolution",
-      description: "8,500% ROI achieved through autonomous manufacturing systems",
-      link: "/case-studies/ai-2026-autonomous-manufacturing-revolution",
-      tags: ['automation', 'roi', 'case-study'],
-      category: 'case-studies',
-      icon: '🏭',
-      metrics: { roi: '8,500%', efficiency: '300%' }
+      title: "AI 2026 Future Predictions",
+      description: "Comprehensive predictions for AI development and breakthrough technologies in 2026.",
+      category: "ai-2026",
+      type: "predictions",
+      roi: "2,500%",
+      accuracy: "92%",
+      link: "/ai-2026-future-predictions-breakthrough",
+      image: "🔮",
+      badge: "PREDICTIONS",
+      color: "from-purple-600 to-indigo-600"
     },
     {
       id: 6,
-      title: "Future Technology Predictions",
-      description: "Comprehensive analysis of AI trends and future technology developments",
-      link: "/blog/ai-2026-future-predictions-breakthrough",
-      tags: ['predictions', 'revolutionary', 'breakthrough'],
-      category: 'blog',
-      icon: '🔮',
-      metrics: { probability: '95%', impact: 'Transformative' }
+      title: "Quantum-AI Fusion Technology",
+      description: "The ultimate combination of quantum computing and AI delivering infinite capabilities.",
+      category: "quantum",
+      type: "fusion",
+      roi: "∞",
+      accuracy: "99.99%",
+      link: "/quantum-ai-fusion-technology",
+      image: "⚛️🧠",
+      badge: "FUSION",
+      color: "from-pink-600 to-purple-600"
     }
   ];
 
-  useEffect(() => {
-    if (searchQuery || selectedTags.length > 0) {
-      setIsLoading(true);
-      // Simulate search delay
-      setTimeout(() => {
-        const filtered = contentDatabase.filter(item => {
-          const matchesSearch = searchQuery === '' || 
-            item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.description.toLowerCase().includes(searchQuery.toLowerCase());
-          
-          const matchesTags = selectedTags.length === 0 || 
-            selectedTags.some(tag => item.tags.includes(tag));
-          
-          return matchesSearch && matchesTags;
-        });
-        
-        setRecommendations(filtered);
-        setIsLoading(false);
-      }, 500);
-    } else {
-      setRecommendations([]);
-    }
-  }, [searchQuery, selectedTags]);
+  const categories = [
+    { id: 'all', name: 'All Content', count: contentItems.length },
+    { id: 'ai-2025', name: 'AI 2025', count: contentItems.filter(item => item.category === 'ai-2025').length },
+    { id: 'quantum', name: 'Quantum', count: contentItems.filter(item => item.category === 'quantum').length },
+    { id: 'neural', name: 'Neural', count: contentItems.filter(item => item.category === 'neural').length },
+    { id: 'automation', name: 'Automation', count: contentItems.filter(item => item.category === 'automation').length },
+    { id: 'ai-2026', name: 'AI 2026', count: contentItems.filter(item => item.category === 'ai-2026').length }
+  ];
 
-  const toggleTag = (tagId: string) => {
-    setSelectedTags(prev => 
-      prev.includes(tagId) 
-        ? prev.filter(id => id !== tagId)
-        : [...prev, tagId]
-    );
-  };
-
-  const clearFilters = () => {
-    setSearchQuery('');
-    setSelectedTags([]);
-    setRecommendations([]);
-  };
+  const filteredContent = selectedCategory === 'all' 
+    ? contentItems 
+    : contentItems.filter(item => item.category === selectedCategory);
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-8">
-      <div className="text-center mb-8">
-        <h3 className="text-3xl font-bold text-gray-900 mb-4">
-          Content Discovery Widget
-        </h3>
-        <p className="text-gray-600">
-          Discover the perfect AI content for your needs using our intelligent search and recommendation system
-        </p>
-      </div>
-
-      {/* Search Bar */}
-      <div className="mb-8">
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search for AI content, breakthroughs, case studies..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-6 py-4 pr-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-          />
-          <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-            <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </div>
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            Revolutionary Content Discovery
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore our breakthrough content library featuring the most advanced AI, quantum computing, 
+            and automation technologies that are transforming industries worldwide.
+          </p>
         </div>
-      </div>
 
-      {/* Tags Filter */}
-      <div className="mb-8">
-        <h4 className="text-lg font-semibold text-gray-900 mb-4">Filter by Tags</h4>
-        <div className="flex flex-wrap gap-3">
-          {tags.map((tag) => (
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
             <button
-              key={tag.id}
-              onClick={() => toggleTag(tag.id)}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                selectedTags.includes(tag.id)
-                  ? `bg-gradient-to-r ${tag.color} text-white shadow-lg transform scale-105`
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+                selectedCategory === category.id
+                  ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
+                  : 'bg-white bg-opacity-10 text-gray-300 hover:bg-opacity-20'
               }`}
             >
-              {tag.name}
+              {category.name} ({category.count})
             </button>
           ))}
         </div>
-        {(searchQuery || selectedTags.length > 0) && (
-          <button
-            onClick={clearFilters}
-            className="mt-4 text-blue-600 hover:text-blue-800 font-semibold"
-          >
-            Clear all filters
-          </button>
-        )}
-      </div>
 
-      {/* Results */}
-      <div className="min-h-[400px]">
-        {isLoading ? (
-          <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-            <span className="ml-4 text-gray-600">Searching content...</span>
-          </div>
-        ) : recommendations.length > 0 ? (
-          <div className="space-y-6">
-            <div className="flex items-center justify-between">
-              <h4 className="text-lg font-semibold text-gray-900">
-                Found {recommendations.length} content items
-              </h4>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {recommendations.map((item) => (
-                <div
-                  key={item.id}
-                  className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="text-3xl">{item.icon}</div>
-                    <div className="flex-1">
-                      <h5 className="text-lg font-semibold text-gray-900 mb-2">
-                        {item.title}
-                      </h5>
-                      <p className="text-gray-600 mb-4 line-clamp-2">
-                        {item.description}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex space-x-2">
-                          {item.tags.slice(0, 2).map((tag) => (
-                            <span
-                              key={tag}
-                              className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
-                            >
-                              {tags.find(t => t.id === tag)?.name}
-                            </span>
-                          ))}
-                        </div>
-                        <Link
-                          href={item.link}
-                          className="text-blue-600 hover:text-blue-800 font-semibold"
-                        >
-                          Read More →
-                        </Link>
-                      </div>
-                    </div>
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredContent.map((item) => (
+            <Link
+              key={item.id}
+              href={item.link}
+              className="group bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 border border-white border-opacity-20"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="text-4xl group-hover:scale-110 transition-transform">
+                  {item.image}
+                </div>
+                <span className={`px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${item.color}`}>
+                  {item.badge}
+                </span>
+              </div>
+              
+              <h3 className="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">
+                {item.title}
+              </h3>
+              
+              <p className="text-gray-300 mb-4 text-sm">
+                {item.description}
+              </p>
+              
+              <div className="flex items-center justify-between text-sm">
+                <div className="flex items-center space-x-4">
+                  <div className="flex items-center">
+                    <span className="text-green-400 font-bold">{item.roi}</span>
+                    <span className="text-gray-400 ml-1">ROI</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-blue-400 font-bold">{item.accuracy}</span>
+                    <span className="text-gray-400 ml-1">Accuracy</span>
                   </div>
                 </div>
-              ))}
+                <div className="text-cyan-400 group-hover:text-white transition-colors">
+                  Explore →
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 p-8 rounded-2xl max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-xl mb-6 opacity-90">
+              Discover how our revolutionary technologies can deliver unprecedented results 
+              for your organization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-cyan-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                href="/resources"
+                className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-cyan-600 transition-colors"
+              >
+                View All Resources
+              </Link>
             </div>
           </div>
-        ) : searchQuery || selectedTags.length > 0 ? (
-          <div className="text-center py-12">
-            <div className="text-6xl mb-4">🔍</div>
-            <h4 className="text-xl font-semibold text-gray-900 mb-2">No content found</h4>
-            <p className="text-gray-600 mb-4">
-              Try adjusting your search terms or filters
-            </p>
-            <button
-              onClick={clearFilters}
-              className="text-blue-600 hover:text-blue-800 font-semibold"
-            >
-              Clear filters and start over
-            </button>
-          </div>
-        ) : (
-          <div className="text-center py-12">
-            <div className="text-6xl mb-4">🌟</div>
-            <h4 className="text-xl font-semibold text-gray-900 mb-2">Discover Amazing Content</h4>
-            <p className="text-gray-600">
-              Use the search bar or tags above to find the perfect AI content for your needs
-            </p>
-          </div>
-        )}
-      </div>
-
-      {/* Quick Access */}
-      <div className="mt-8 pt-8 border-t border-gray-200">
-        <h4 className="text-lg font-semibold text-gray-900 mb-4">Quick Access</h4>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <Link
-            href="/ai-2025-ultimate-breakthrough-revolution"
-            className="bg-gradient-to-r from-red-50 to-pink-50 border border-red-200 rounded-lg p-4 text-center hover:shadow-md transition-shadow duration-300"
-          >
-            <div className="text-2xl mb-2">🚀</div>
-            <div className="text-sm font-semibold text-gray-900">Breakthrough</div>
-          </Link>
-          <Link
-            href="/case-studies"
-            className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg p-4 text-center hover:shadow-md transition-shadow duration-300"
-          >
-            <div className="text-2xl mb-2">🏆</div>
-            <div className="text-sm font-semibold text-gray-900">Case Studies</div>
-          </Link>
-          <Link
-            href="/blog"
-            className="bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 rounded-lg p-4 text-center hover:shadow-md transition-shadow duration-300"
-          >
-            <div className="text-2xl mb-2">📝</div>
-            <div className="text-sm font-semibold text-gray-900">Blog Posts</div>
-          </Link>
-          <Link
-            href="/resources"
-            className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-4 text-center hover:shadow-md transition-shadow duration-300"
-          >
-            <div className="text-2xl mb-2">📚</div>
-            <div className="text-sm font-semibold text-gray-900">Resources</div>
-          </Link>
         </div>
       </div>
     </div>

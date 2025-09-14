@@ -576,16 +576,6 @@ export default function AIImplementationMasterGuide2025() {
           </div>
         </div>
       </div>
-=======
-            <span className="text-sm text-gray-600">January 28, 2025</span>
-          </div>
-          
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium">📚 FREE RESOURCE</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            AI Implementation Master Guide 2025: Complete Step-by-Step Resource
           </h1>
           
           <p className="text-xl text-gray-600 leading-relaxed mb-8">
@@ -1039,7 +1029,6 @@ export default function AIImplementationMasterGuide2025() {
           </div>
         </section>
       </article>
->>>>>>> cursor/create-and-deploy-new-content-fa2c
     </div>
   );
 }

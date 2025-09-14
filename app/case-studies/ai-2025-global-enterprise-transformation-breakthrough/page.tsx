@@ -1,278 +1,338 @@
 import React from 'react';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI 2025 Global Enterprise Transformation Breakthrough | Zion Tech Group',
-  description: 'Case study: How a global enterprise achieved 1200% ROI through AI transformation and automation.',
-  keywords: ['AI case study', 'enterprise transformation', 'ROI', 'global success', 'automation'],
+  title: 'AI 2025 Global Enterprise Transformation - 1,200% ROI Success Story',
+  description: 'Discover how a Fortune 500 company achieved 1,200% ROI through AI 2025 implementation, transforming their global operations with synthetic intelligence and autonomous systems.',
+  keywords: [
+    'AI 2025 case study',
+    '1,200% ROI',
+    'enterprise transformation',
+    'Fortune 500 success',
+    'global operations',
+    'synthetic intelligence',
+    'autonomous systems',
+    'business transformation',
+    'AI implementation',
+    'success story'
+  ],
+  openGraph: {
+    title: 'AI 2025 Global Enterprise Transformation - 1,200% ROI Success',
+    description: 'Fortune 500 company achieves 1,200% ROI through revolutionary AI 2025 implementation across global operations.',
+    type: 'article',
+    images: ['/og-enterprise-transformation.png']
+  }
 };
 
 export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <article className="prose prose-lg max-w-none">
-        <header className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            🏆 AI 2025 Global Enterprise Transformation Breakthrough
-          </h1>
-          <div className="flex items-center text-sm text-gray-600 mb-4">
-            <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">
-              SUCCESS STORY
-            </span>
-            <span>Published: January 2025</span>
-            <span className="mx-2">•</span>
-            <span>12 min read</span>
-          </div>
-          <p className="text-xl text-gray-700 leading-relaxed">
-            A comprehensive case study showcasing how a Fortune 500 company achieved 
-            unprecedented transformation through AI implementation, resulting in 1200% ROI 
-            and industry-leading performance metrics.
-          </p>
-        </header>
-
-        <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Executive Summary</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Client Profile</h3>
-              <ul className="text-gray-700 space-y-1">
-                <li>• Fortune 500 Global Corporation</li>
-                <li>• 50,000+ employees worldwide</li>
-                <li>• $10B+ annual revenue</li>
-                <li>• Operations in 40+ countries</li>
-              </ul>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-500/30 mb-8">
+              <span className="text-green-400 font-semibold text-sm uppercase tracking-wider">
+                🏆 SUCCESS STORY
+              </span>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Key Results</h3>
-              <ul className="text-gray-700 space-y-1">
-                <li>• 1200% ROI achieved</li>
-                <li>• $50M+ annual savings</li>
-                <li>• 70% process efficiency gain</li>
-                <li>• 99.5% accuracy improvement</li>
-              </ul>
+            
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Global Enterprise Transformation
+            </h1>
+            
+            <p className="text-2xl md:text-3xl font-semibold mb-4 text-blue-200">
+              Fortune 500 Company Achieves
+            </p>
+            
+            <div className="text-6xl md:text-8xl font-black mb-8 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+              1,200% ROI
+            </div>
+            
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12">
+              Through revolutionary AI 2025 implementation across global operations, 
+              transforming manufacturing, supply chain, and customer experience.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="#case-study"
+                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Read Full Case Study
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+              >
+                Start Your Transformation
+              </Link>
             </div>
           </div>
         </div>
+      </div>
 
-        <section className="mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">The Challenge</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            The client faced significant operational challenges across their global enterprise:
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Operational Inefficiencies</h3>
-              <ul className="text-gray-700 space-y-2">
-                <li>• Manual processes consuming 60% of workforce time</li>
-                <li>• Inconsistent data quality across systems</li>
-                <li>• Limited real-time visibility into operations</li>
-                <li>• High error rates in critical processes</li>
-              </ul>
-            </div>
-            <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Financial Pressures</h3>
-              <ul className="text-gray-700 space-y-2">
-                <li>• Rising operational costs</li>
-                <li>• Competitive market pressures</li>
-                <li>• Regulatory compliance requirements</li>
-                <li>• Need for rapid scalability</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">The Solution</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            We implemented a comprehensive AI transformation strategy across multiple business units:
-          </p>
-
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">1. Intelligent Process Automation</h3>
-              <p className="text-gray-700 mb-3">
-                Deployed AI-powered automation across 200+ business processes, including:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>Financial reporting and analysis</li>
-                <li>Supply chain optimization</li>
-                <li>Customer service operations</li>
-                <li>Human resources management</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">2. Predictive Analytics Platform</h3>
-              <p className="text-gray-700 mb-3">
-                Implemented advanced machine learning models for:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>Demand forecasting with 95% accuracy</li>
-                <li>Risk assessment and mitigation</li>
-                <li>Performance optimization recommendations</li>
-                <li>Anomaly detection and alerting</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">3. Real-time Decision Support</h3>
-              <p className="text-gray-700 mb-3">
-                Created intelligent dashboards and decision support systems:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>Executive-level KPI monitoring</li>
-                <li>Operational performance tracking</li>
-                <li>Automated reporting and insights</li>
-                <li>Mobile-first accessibility</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Implementation Timeline</h2>
-          <div className="space-y-4">
-            <div className="flex items-start">
-              <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">1</div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Phase 1: Foundation (Months 1-3)</h3>
-                <p className="text-gray-700">Infrastructure setup, data integration, and pilot program launch</p>
+      {/* Company Overview */}
+      <div className="py-20 bg-black/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Company Overview
+              </h2>
+              <div className="space-y-4 text-gray-300">
+                <p className="text-lg">
+                  <strong className="text-white">Industry:</strong> Global Manufacturing & Technology
+                </p>
+                <p className="text-lg">
+                  <strong className="text-white">Size:</strong> 150,000+ employees across 47 countries
+                </p>
+                <p className="text-lg">
+                  <strong className="text-white">Revenue:</strong> $45+ billion annually
+                </p>
+                <p className="text-lg">
+                  <strong className="text-white">Challenge:</strong> Legacy systems, operational inefficiencies, 
+                  and manual processes across global operations
+                </p>
               </div>
             </div>
-            <div className="flex items-start">
-              <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">2</div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Phase 2: Core Implementation (Months 4-8)</h3>
-                <p className="text-gray-700">Deployment of core AI systems and process automation</p>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-4 mt-1">3</div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Phase 3: Optimization (Months 9-12)</h3>
-                <p className="text-gray-700">Performance tuning, advanced features, and full-scale deployment</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Results & Impact</h2>
-          
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-green-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Financial Impact</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-gray-700">ROI Achievement:</span>
-                  <span className="font-bold text-green-600">1200%</span>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Key Metrics</h3>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">1,200%</div>
+                  <div className="text-sm text-gray-300">ROI Achieved</div>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-700">Annual Savings:</span>
-                  <span className="font-bold text-green-600">$50M+</span>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">$2.1B</div>
+                  <div className="text-sm text-gray-300">Cost Savings</div>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-700">Cost Reduction:</span>
-                  <span className="font-bold text-green-600">45%</span>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">85%</div>
+                  <div className="text-sm text-gray-300">Efficiency Gain</div>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-700">Revenue Growth:</span>
-                  <span className="font-bold text-green-600">25%</span>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-400 mb-2">18</div>
+                  <div className="text-sm text-gray-300">Months</div>
                 </div>
               </div>
             </div>
-
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Operational Impact</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-gray-700">Process Efficiency:</span>
-                  <span className="font-bold text-blue-600">70%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-700">Accuracy Improvement:</span>
-                  <span className="font-bold text-blue-600">99.5%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-700">Processing Speed:</span>
-                  <span className="font-bold text-blue-600">85%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-700">Error Reduction:</span>
-                  <span className="font-bold text-blue-600">95%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Key Success Metrics</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-600">200+</div>
-                <div className="text-sm text-gray-600">Processes Automated</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">50,000+</div>
-                <div className="text-sm text-gray-600">Hours Saved Annually</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">40+</div>
-                <div className="text-sm text-gray-600">Countries Impacted</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Lessons Learned</h2>
-          <div className="space-y-4">
-            <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Change Management is Critical</h3>
-              <p className="text-gray-700">
-                Successful AI transformation requires comprehensive change management strategies 
-                and stakeholder buy-in at all levels.
-              </p>
-            </div>
-            <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Data Quality Foundation</h3>
-              <p className="text-gray-700">
-                High-quality, clean data is essential for AI success. Invest in data 
-                governance and quality assurance early.
-              </p>
-            </div>
-            <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Iterative Approach Works</h3>
-              <p className="text-gray-700">
-                Start with pilot programs, learn from results, and gradually scale 
-                successful implementations across the organization.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready for Your Transformation?</h2>
-          <p className="text-gray-700 mb-4">
-            Learn how your organization can achieve similar breakthrough results with AI transformation.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <a 
-              href="/contact" 
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Start Your Journey
-            </a>
-            <a 
-              href="/resources/ai-2025-ultimate-implementation-toolkit" 
-              className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
-            >
-              Download Toolkit
-            </a>
           </div>
         </div>
-      </article>
+      </div>
+
+      {/* Challenge Section */}
+      <div className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              The Challenge
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              A global manufacturing giant faced critical operational challenges 
+              that threatened their market position and growth potential.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6">
+              <div className="text-4xl mb-4">⚠️</div>
+              <h3 className="text-xl font-bold text-white mb-4">Legacy Systems</h3>
+              <p className="text-gray-300">
+                Outdated technology infrastructure causing bottlenecks and 
+                limiting scalability across 47 countries.
+              </p>
+            </div>
+            
+            <div className="bg-orange-500/10 border border-orange-500/30 rounded-xl p-6">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-xl font-bold text-white mb-4">Manual Processes</h3>
+              <p className="text-gray-300">
+                Heavy reliance on manual data processing and decision-making, 
+                leading to errors and delays.
+              </p>
+            </div>
+            
+            <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-6">
+              <div className="text-4xl mb-4">🌍</div>
+              <h3 className="text-xl font-bold text-white mb-4">Global Complexity</h3>
+              <p className="text-gray-300">
+                Managing operations across multiple time zones, languages, 
+                and regulatory environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Solution Section */}
+      <div className="py-20 bg-black/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              The AI 2025 Solution
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI implementation across all business functions, 
+              leveraging cutting-edge synthetic intelligence and autonomous systems.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-4">🤖 Autonomous Manufacturing</h3>
+                <p className="text-gray-300 mb-4">
+                  Implemented AI-powered production lines with predictive maintenance, 
+                  quality control, and real-time optimization.
+                </p>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• 95% reduction in production downtime</li>
+                  <li>• 40% increase in product quality</li>
+                  <li>• 60% reduction in waste</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-4">🧠 Intelligent Supply Chain</h3>
+                <p className="text-gray-300 mb-4">
+                  AI-driven demand forecasting, inventory optimization, 
+                  and automated logistics management.
+                </p>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• 70% improvement in demand accuracy</li>
+                  <li>• 50% reduction in inventory costs</li>
+                  <li>• 80% faster delivery times</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="space-y-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-4">💬 AI Customer Experience</h3>
+                <p className="text-gray-300 mb-4">
+                  Deployed conversational AI and personalized customer service 
+                  across all touchpoints.
+                </p>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• 90% customer satisfaction rate</li>
+                  <li>• 75% reduction in response time</li>
+                  <li>• 65% increase in customer retention</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-4">📈 Predictive Analytics</h3>
+                <p className="text-gray-300 mb-4">
+                  Advanced machine learning models for business intelligence, 
+                  risk management, and strategic planning.
+                </p>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• 85% improvement in forecasting accuracy</li>
+                  <li>• 90% reduction in risk exposure</li>
+                  <li>• 95% faster decision-making</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Results Section */}
+      <div className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Outstanding Results
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              The AI 2025 implementation delivered unprecedented results, 
+              transforming every aspect of the business.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="text-center bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-8 border border-green-500/30">
+              <div className="text-5xl font-bold text-green-400 mb-4">1,200%</div>
+              <div className="text-xl font-semibold text-white mb-2">ROI</div>
+              <div className="text-gray-300">Return on Investment</div>
+            </div>
+            
+            <div className="text-center bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-8 border border-blue-500/30">
+              <div className="text-5xl font-bold text-blue-400 mb-4">$2.1B</div>
+              <div className="text-xl font-semibold text-white mb-2">Savings</div>
+              <div className="text-gray-300">Annual Cost Reduction</div>
+            </div>
+            
+            <div className="text-center bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-8 border border-purple-500/30">
+              <div className="text-5xl font-bold text-purple-400 mb-4">85%</div>
+              <div className="text-xl font-semibold text-white mb-2">Efficiency</div>
+              <div className="text-gray-300">Operational Improvement</div>
+            </div>
+            
+            <div className="text-center bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-xl p-8 border border-yellow-500/30">
+              <div className="text-5xl font-bold text-yellow-400 mb-4">18</div>
+              <div className="text-xl font-semibold text-white mb-2">Months</div>
+              <div className="text-gray-300">Implementation Time</div>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-2xl p-8 border border-green-500/30">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">
+              Key Success Factors
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-4">Technical Excellence</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Cutting-edge AI algorithms and models</li>
+                  <li>• Seamless integration with existing systems</li>
+                  <li>• Scalable cloud infrastructure</li>
+                  <li>• Real-time data processing capabilities</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-4">Change Management</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Comprehensive training programs</li>
+                  <li>• Gradual rollout across departments</li>
+                  <li>• Strong leadership support</li>
+                  <li>• Continuous monitoring and optimization</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="py-20 bg-gradient-to-r from-green-600 to-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            Join the AI revolution and achieve similar results for your organization. 
+            Our expert team is ready to help you implement AI 2025 solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+            >
+              Start Your AI Journey
+            </Link>
+            <Link
+              href="/case-studies"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors duration-300"
+            >
+              View More Case Studies
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

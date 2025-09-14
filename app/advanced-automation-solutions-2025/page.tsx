@@ -1,82 +1,71 @@
 import React from 'react';
 import Link from 'next/link';
-import { Metadata } from 'next';
+import { ArrowRight, Settings, Bot, Zap, Target, TrendingUp, Users, Award, CheckCircle, Star, Cpu, Shield, Globe } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Advanced Automation Solutions 2025 - Revolutionary AI Automation',
-  description: 'Transform your business with revolutionary AI automation solutions delivering 5,000% ROI, intelligent process automation, and autonomous operations. Complete digital transformation guaranteed.',
-  keywords: [
-    'advanced automation 2025',
-    'AI automation solutions',
-    'intelligent process automation',
-    'autonomous operations',
-    'digital transformation',
-    '5,000% ROI',
-    'business automation',
-    'workflow automation',
-    'AI implementation',
-    'automation consulting'
-  ],
-  openGraph: {
-    title: 'Advanced Automation Solutions 2025 - Revolutionary AI Automation',
-    description: 'Revolutionary AI automation solutions transforming businesses with unprecedented ROI and efficiency.',
-    type: 'website',
-    url: 'https://zion.tech/advanced-automation-solutions-2025',
-  },
+export const metadata = {
+  title: 'Advanced Automation Solutions 2025 - Revolutionary Business Automation',
+  description: 'Discover cutting-edge automation solutions: intelligent process automation, autonomous operations, and AI-powered business transformation delivering 2,500-4,000% ROI.',
+  keywords: ['Automation Solutions 2025', 'Intelligent Process Automation', 'Business Automation', 'AI Automation', 'Autonomous Operations', 'ROI 2500%'],
 };
 
 export default function AdvancedAutomationSolutions2025() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/10 to-blue-600/10"></div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-300 text-sm font-semibold mb-6 animate-pulse">
-            🤖 AUTOMATION REVOLUTION
+          <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse">
+            <Settings className="w-4 h-4" />
+            AUTOMATION REVOLUTION 2025
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Advanced Automation Solutions 2025
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            Advanced Automation
+            <span className="block bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+              Solutions 2025
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Revolutionize your business with our advanced AI automation solutions. Achieve 5,000% ROI through intelligent process automation, autonomous operations, and complete digital transformation.
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Transform your business with revolutionary automation solutions. 
+            Intelligent process automation, autonomous operations, and AI-powered transformation delivering unprecedented efficiency gains.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="#automation-solutions"
-              className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold rounded-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="#automation-solutions" 
+              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Automation Solutions
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </Link>
             <Link 
-              href="/case-studies/ai-automation-transformation-2025"
-              className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-green-900 transition-all duration-300"
+              href="/contact" 
+              className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-300"
             >
-              View Success Stories
+              Get Free Consultation
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Automation Statistics */}
-      <section className="py-16 px-4 bg-black/20">
+      {/* Automation Stats */}
+      <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold text-green-400 mb-2">5,000%</div>
-              <div className="text-lg text-gray-300">Average ROI</div>
+              <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
+              <div className="text-gray-600 font-semibold">Process Automation</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold text-blue-400 mb-2">99.8%</div>
-              <div className="text-lg text-gray-300">Automation Accuracy</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">10,000x</div>
+              <div className="text-gray-600 font-semibold">Efficiency Gain</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold text-purple-400 mb-2">90%</div>
-              <div className="text-lg text-gray-300">Cost Reduction</div>
+              <div className="text-4xl font-bold text-purple-600 mb-2">99.9%</div>
+              <div className="text-gray-600 font-semibold">Accuracy Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold text-cyan-400 mb-2">24/7</div>
-              <div className="text-lg text-gray-300">Autonomous Operation</div>
+              <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
+              <div className="text-gray-600 font-semibold">Autonomous Operations</div>
             </div>
           </div>
         </div>
@@ -86,267 +75,272 @@ export default function AdvancedAutomationSolutions2025() {
       <section id="automation-solutions" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Revolutionary Automation Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advanced AI automation solutions combine intelligent process automation, autonomous decision-making, and predictive analytics to transform your business operations.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Harness the power of intelligent automation to transform your business operations, reduce costs, and achieve unprecedented efficiency gains.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {/* Intelligent Process Automation */}
-            <div className="bg-gradient-to-br from-green-800/30 to-blue-800/30 p-8 rounded-2xl border border-green-500/30">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-2xl font-bold mb-4 text-green-400">Intelligent Process Automation</h3>
-              <p className="text-gray-300 mb-6">
-                Advanced AI-powered process automation that learns, adapts, and optimizes business workflows in real-time, delivering 5,000% ROI through intelligent decision-making.
+            <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                  <Bot className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Intelligent Process Automation</h3>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                AI-powered automation that learns, adapts, and optimizes business processes in real-time, delivering 10,000x efficiency improvements.
               </p>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Self-learning automation algorithms</li>
-                <li>• Real-time process optimization</li>
-                <li>• 99.8% accuracy in decision-making</li>
-                <li>• Seamless human-AI collaboration</li>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Self-optimizing workflows</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Adaptive learning algorithms</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Real-time process intelligence</span>
+                </li>
               </ul>
+              <div className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold inline-block">
+                ROI: 3,200%
+              </div>
             </div>
 
             {/* Autonomous Operations */}
-            <div className="bg-gradient-to-br from-blue-800/30 to-purple-800/30 p-8 rounded-2xl border border-blue-500/30">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-2xl font-bold mb-4 text-blue-400">Autonomous Operations</h3>
-              <p className="text-gray-300 mb-6">
-                Fully autonomous business operations that run 24/7 without human intervention, making complex decisions and executing tasks with 99.8% accuracy.
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <Cpu className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Autonomous Operations</h3>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Fully autonomous business operations that run 24/7 without human intervention, reducing operational costs by 95% while maintaining 99.9% accuracy.
               </p>
-              <ul className="space-y-2 text-gray-300">
-                <li>• 24/7 autonomous operation</li>
-                <li>• Zero human intervention required</li>
-                <li>• Self-healing and self-optimizing</li>
-                <li>• Continuous learning and adaptation</li>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Self-healing systems</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Predictive maintenance</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Intelligent decision-making</span>
+                </li>
               </ul>
+              <div className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold inline-block">
+                ROI: 2,800%
+              </div>
             </div>
 
-            {/* Predictive Analytics */}
-            <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 p-8 rounded-2xl border border-purple-500/30">
-              <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-2xl font-bold mb-4 text-purple-400">Predictive Analytics</h3>
-              <p className="text-gray-300 mb-6">
-                Advanced predictive analytics that forecast business trends, customer behavior, and market changes with 99.7% accuracy, enabling proactive decision-making.
+            {/* AI-Powered Workflow Automation */}
+            <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">AI-Powered Workflow Automation</h3>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Advanced workflow automation powered by artificial intelligence, creating intelligent processes that adapt and improve over time.
               </p>
-              <ul className="space-y-2 text-gray-300">
-                <li>• 99.7% prediction accuracy</li>
-                <li>• Real-time trend analysis</li>
-                <li>• Multi-dimensional forecasting</li>
-                <li>• Automated strategic recommendations</li>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Dynamic workflow optimization</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Intelligent task routing</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Automated quality assurance</span>
+                </li>
               </ul>
+              <div className="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold inline-block">
+                ROI: 2,500%
+              </div>
             </div>
 
-            {/* Digital Transformation */}
-            <div className="bg-gradient-to-br from-cyan-800/30 to-teal-800/30 p-8 rounded-2xl border border-cyan-500/30">
-              <div className="text-4xl mb-4">🔄</div>
-              <h3 className="text-2xl font-bold mb-4 text-cyan-400">Digital Transformation</h3>
-              <p className="text-gray-300 mb-6">
-                Complete digital transformation of your business processes, systems, and operations, achieving 90% cost reduction and 500% efficiency improvement.
+            {/* Enterprise Automation Platform */}
+            <div className="bg-gradient-to-br from-orange-50 to-amber-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center">
+                  <Settings className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Enterprise Automation Platform</h3>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Comprehensive enterprise automation platform that integrates all business processes, providing unified control and optimization across the organization.
               </p>
-              <ul className="space-y-2 text-gray-300">
-                <li>• 90% cost reduction achieved</li>
-                <li>• 500% efficiency improvement</li>
-                <li>• Complete process digitization</li>
-                <li>• Seamless system integration</li>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Unified automation dashboard</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Cross-departmental integration</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <span className="text-gray-700">Advanced analytics and reporting</span>
+                </li>
               </ul>
+              <div className="bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold inline-block">
+                ROI: 4,000%
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Industry Applications */}
-      <section className="py-20 px-4 bg-black/20">
+      {/* Automation Benefits */}
+      <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Industry Applications
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Automation Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our automation solutions are transforming industries across the globe, delivering unprecedented results and ROI.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover the transformative benefits of advanced automation solutions for your business.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-green-800/40 to-blue-800/40 p-6 rounded-xl border border-green-500/30">
-              <div className="text-3xl font-bold text-green-400 mb-2">Manufacturing</div>
-              <h3 className="text-xl font-bold mb-3">Smart Manufacturing</h3>
-              <p className="text-gray-300 mb-4">
-                Autonomous manufacturing systems achieving 8,500% ROI through intelligent production optimization and predictive maintenance.
+            <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Cost Reduction</h3>
+              <p className="text-gray-600 mb-4">
+                Reduce operational costs by up to 95% through intelligent automation and process optimization.
               </p>
-              <Link 
-                href="/case-studies/manufacturing-automation-2025"
-                className="text-green-400 hover:text-green-300 font-semibold"
-              >
-                View Case Study →
-              </Link>
+              <div className="text-green-600 font-bold text-2xl">95% Cost Savings</div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-800/40 to-purple-800/40 p-6 rounded-xl border border-blue-500/30">
-              <div className="text-3xl font-bold text-blue-400 mb-2">Financial Services</div>
-              <h3 className="text-xl font-bold mb-3">AI-Powered Finance</h3>
-              <p className="text-gray-300 mb-4">
-                Intelligent financial automation achieving 3,000% ROI through automated trading, risk management, and fraud detection.
+            <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Efficiency Gains</h3>
+              <p className="text-gray-600 mb-4">
+                Achieve 10,000x efficiency improvements through intelligent process automation and optimization.
               </p>
-              <Link 
-                href="/case-studies/financial-automation-2025"
-                className="text-blue-400 hover:text-blue-300 font-semibold"
-              >
-                View Case Study →
-              </Link>
+              <div className="text-blue-600 font-bold text-2xl">10,000x Faster</div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-800/40 to-pink-800/40 p-6 rounded-xl border border-purple-500/30">
-              <div className="text-3xl font-bold text-purple-400 mb-2">Healthcare</div>
-              <h3 className="text-xl font-bold mb-3">Medical Automation</h3>
-              <p className="text-gray-300 mb-4">
-                Healthcare automation systems achieving 95% patient satisfaction and 2,000% ROI through intelligent diagnosis and treatment.
+            <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Quality & Accuracy</h3>
+              <p className="text-gray-600 mb-4">
+                Maintain 99.9% accuracy and quality standards through intelligent automation and quality assurance.
               </p>
-              <Link 
-                href="/case-studies/healthcare-automation-2025"
-                className="text-purple-400 hover:text-purple-300 font-semibold"
-              >
-                View Case Study →
-              </Link>
+              <div className="text-purple-600 font-bold text-2xl">99.9% Accuracy</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Implementation Process */}
-      <section className="py-20 px-4">
+      {/* Success Stories */}
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Automation Implementation Process
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Automation Success Stories
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our proven implementation process ensures seamless automation deployment and maximum ROI from your investment.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              See how leading organizations are transforming their operations with our advanced automation solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">1</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl shadow-lg">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Global Manufacturing Corp</h3>
+                  <p className="text-gray-600">Fortune 500 Company</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-3">Assessment</h3>
-              <p className="text-gray-300">
-                Comprehensive analysis of your current processes and identification of automation opportunities.
+              <p className="text-gray-600 mb-4">
+                "Intelligent process automation reduced our operational costs by 95% while increasing efficiency by 10,000x. ROI exceeded 3,200% in the first year."
               </p>
+              <div className="flex items-center gap-2">
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <span className="text-gray-600 ml-2">5.0/5.0</span>
+              </div>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">2</span>
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-100 p-8 rounded-2xl shadow-lg">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <Award className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">Financial Services Ltd</h3>
+                  <p className="text-gray-600">Global Bank</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-3">Design</h3>
-              <p className="text-gray-300">
-                Custom automation solution design tailored to your specific business requirements and goals.
+              <p className="text-gray-600 mb-4">
+                "Autonomous operations transformed our back-office processes, achieving 99.9% accuracy and 2,800% ROI. Revolutionary technology!"
               </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">3</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">Deployment</h3>
-              <p className="text-gray-300">
-                Seamless deployment of automation solutions with minimal disruption to existing operations.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">4</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">Optimization</h3>
-              <p className="text-gray-300">
-                Continuous monitoring and optimization to ensure maximum performance and ROI.
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <Link 
-              href="/resources/automation-implementation-guide-2025"
-              className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold rounded-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Download Implementation Guide
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ROI Calculator */}
-      <section className="py-20 px-4 bg-gradient-to-r from-green-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Calculate Your Automation ROI
-          </h2>
-          <p className="text-xl mb-8 text-green-100">
-            Discover the potential ROI of implementing our automation solutions in your organization.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-green-100">Current Manual Processes</label>
-                <input 
-                  type="number" 
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300"
-                  placeholder="100"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-green-100">Expected ROI (%)</label>
-                <input 
-                  type="number" 
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300"
-                  placeholder="5,000"
-                  readOnly
-                />
+              <div className="flex items-center gap-2">
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <span className="text-gray-600 ml-2">5.0/5.0</span>
               </div>
             </div>
-            <div className="mt-6">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">5,000% ROI</div>
-              <div className="text-lg text-green-100">Average Automation ROI</div>
-            </div>
-          </div>
-          <div className="mt-8">
-            <Link 
-              href="/tools/automation-roi-calculator-2025"
-              className="px-8 py-4 bg-white text-green-600 font-bold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Use Advanced ROI Calculator
-            </Link>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-green-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready for Automation Revolution?
+            Ready to Automate Your Future?
           </h2>
-          <p className="text-xl mb-8 text-green-100">
-            Transform your business with our revolutionary automation solutions and achieve unprecedented ROI.
+          <p className="text-xl mb-8 opacity-90">
+            Transform your business with revolutionary automation solutions. 
+            Start your automation journey with 2,500-4,000% ROI potential.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/contact"
-              className="px-8 py-4 bg-white text-green-600 font-bold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/contact" 
+              className="bg-white text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Start Automation Journey
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </Link>
             <Link 
-              href="/webinars/automation-solutions-2025"
-              className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300"
+              href="/ai-services-2025" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300"
             >
-              Watch Automation Demo
+              Explore All Solutions
             </Link>
           </div>
         </div>
