@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 6
+  total_content_pieces: 9
   
   new_2025_content:
     - id: "autonomous-systems-revolution"
@@ -117,6 +117,54 @@ content_index:
         success_rate: "98%"
         implementation_time: "67% Faster"
         projects: "500+ Success Stories"
+        
+    - id: "ai-enterprise-automation-revolution"
+      type: "blog"
+      title: "AI 2025: The Enterprise Automation Revolution - How Companies Are Achieving 500% ROI"
+      file_path: "/content/blog/ai-2025-enterprise-automation-revolution.md"
+      url: "/blog/ai-2025-enterprise-automation-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$200M"
+        efficiency: "400%"
+        companies: "500+"
+        
+    - id: "ai-transformation-500-roi-success"
+      type: "case-study"
+      title: "AI Transformation Success: How a $2B Company Achieved 500% ROI in 12 Months"
+      file_path: "/content/case-studies/ai-transformation-500-roi-success-story.md"
+      url: "/case-studies/ai-transformation-500-roi-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "AI Transformation", "ROI", "Enterprise", "Success Story", "500% ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$200M"
+        efficiency: "400%"
+        satisfaction: "99.8%"
+        
+    - id: "ai-implementation-master-guide-2025"
+      type: "resource"
+      title: "AI Implementation Master Guide 2025: From Strategy to 500% ROI"
+      file_path: "/content/resources/ai-implementation-master-guide-2025.md"
+      url: "/resources/ai-implementation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2025", "Master Guide"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        success: "95%"
+        companies: "500+"
+        time: "6-12 months"
 
   promotion_components:
     - name: "NewContent2025PromotionBanner"
