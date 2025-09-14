@@ -39,11 +39,12 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+// Import new 2025 ultimate content components
+import UltimateContentShowcase2025Banner from '../components/UltimateContentShowcase2025Banner';
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
@@ -74,6 +75,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW 2025 Ultimate Content Showcase Banner - FEATURED */}
+        <UltimateContentShowcase2025Banner />
+        
         {/* AI 2026 Ultimate Showcase Banner */}
         <AI2026UltimateShowcaseBanner />
         
@@ -89,10 +93,7 @@ export default function HomePage() {
         {/* AI 2026 Autonomous Systems Banner */}
         <AI2026AutonomousSystemsBanner />
         
-        {/* Revolutionary Content 2025 Banner - NEW CONTENT */}
-=======
         {/* Revolutionary Content 2025 Banner */}
->>>>>>> cursor/create-and-deploy-new-content-a121
         <RevolutionaryContent2025Banner />
         
         {/* New Content 2025 Showcase Banner - FEATURED */}
@@ -205,6 +206,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* NEW 2025 Ultimate Content Showcase - FEATURED */}
+        <NewContent2025UltimateShowcase />
+        
         {/* Content Promotion Banners */}
         <RevolutionaryContent2026Banner />
         <UltimateContentShowcase2026 />
