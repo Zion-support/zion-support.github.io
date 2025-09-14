@@ -3,6 +3,54 @@ content_index:
   total_content_pieces: 6
   
   new_2025_content:
+    - id: "ai-enterprise-automation-revolution"
+      type: "blog"
+      title: "AI 2025: The Enterprise Automation Revolution - How Companies Are Achieving 500% ROI"
+      file_path: "/content/blog/ai-2025-enterprise-automation-revolution.md"
+      url: "/blog/ai-2025-enterprise-automation-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        cost_reduction: "60%"
+        productivity: "340%"
+        companies: "500+"
+      
+    - id: "ai-transformation-500-roi-success"
+      type: "case-study"
+      title: "AI Transformation Success: How a $2B Company Achieved 500% ROI in 12 Months"
+      file_path: "/content/case-studies/ai-transformation-500-roi-success-story.md"
+      url: "/case-studies/ai-transformation-500-roi-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "AI Transformation", "ROI", "Enterprise", "Success Story", "500% ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$200M"
+        productivity: "400%"
+        satisfaction: "99.8%"
+      
+    - id: "ai-implementation-ultimate-guide-2025"
+      type: "resource"
+      title: "The Ultimate AI Implementation Guide 2025: From Strategy to 500% ROI"
+      file_path: "/content/resources/ai-implementation-ultimate-guide-2025.md"
+      url: "/resources/ai-implementation-ultimate-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2025", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        companies: "500+"
+        average_roi: "340%"
+        success_rate: "98%"
+        framework: "Proven"
+      
     - id: "autonomous-systems-revolution"
       type: "blog"
       title: "AI 2025: The Next Generation Autonomous Systems Revolution"
@@ -12,7 +60,7 @@ content_index:
       created: "2025-01-17"
       tags: ["AI", "Autonomous Systems", "Business Transformation", "ROI"]
       featured: true
-      is_new: true
+      is_new: false
       
     - id: "global-enterprise-success"
       type: "case-study"
@@ -148,9 +196,12 @@ content_index:
       - "Updated layout to include promotional content"
 
   metrics:
-    expected_roi_mentions: 12
-    success_stories: 2
-    implementation_guides: 2
-    blog_posts: 2
-    total_word_count: "~25,000 words"
-    estimated_reading_time: "~100 minutes"
+    expected_roi_mentions: 25
+    success_stories: 4
+    implementation_guides: 3
+    blog_posts: 4
+    total_word_count: "~50,000 words"
+    estimated_reading_time: "~200 minutes"
+    total_content_pieces: 9
+    new_content_2025: 3
+    featured_content: 6
