@@ -11,9 +11,20 @@ rm -rf node_modules
 echo "Cleaning yarn cache..."
 yarn cache clean
 
+# Set environment variables to handle file system conflicts
+export YARN_CACHE_FOLDER="/opt/buildhome/.yarn_cache"
+export YARN_ENABLE_IMMUTABLE_INSTALLS="false"
+
 # Install dependencies with specific flags to handle EEXIST errors
 echo "Installing dependencies..."
-yarn install --frozen-lockfile --network-timeout 1000000 --ignore-engines
+yarn install --frozen-lockfile --network-timeout 1000000 --ignore-engines --prefer-offline --no-optional
+
+# If the first install fails, try with different flags
+if [ $? -ne 0 ]; then
+    echo "First install failed, trying alternative approach..."
+    rm -rf node_modules
+    yarn install --network-timeout 1000000 --ignore-engines --no-frozen-lockfile --prefer-offline
+fi
 
 # Build the application
 echo "Building application..."
