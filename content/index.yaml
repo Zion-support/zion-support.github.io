@@ -620,6 +620,57 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   new_content_january_2025:
+    - id: "ai-2025-advanced-neural-architectures-revolution"
+      type: "blog"
+      title: "AI 2025: Advanced Neural Architectures Revolution - The Future of Enterprise Intelligence"
+      file_path: "/content/blog/ai-2025-advanced-neural-architectures-revolution.md"
+      url: "/blog/ai-2025-advanced-neural-architectures-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Neural Architectures", "Enterprise AI", "ROI", "Machine Learning", "2025", "Advanced AI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        accuracy: "99.7%"
+        savings: "$2.8M"
+        efficiency: "1,200%"
+      reading_time: "18 min read"
+      
+    - id: "ai-2025-enterprise-transformation-ultimate-success-story"
+      type: "case-study"
+      title: "AI 2025 Enterprise Transformation: $2.8B Company Achieves 1,200% ROI - Ultimate Success Story"
+      file_path: "/content/case-studies/ai-2025-enterprise-transformation-ultimate-success-story.md"
+      url: "/case-studies/ai-2025-enterprise-transformation-ultimate-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Transformation", "Fortune 100", "ROI", "Case Study", "Success Story", "Enterprise AI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,200%"
+        savings: "$2.8B"
+        satisfaction: "98%"
+        timeline: "24 months"
+      reading_time: "15 min read"
+      
+    - id: "ai-2025-implementation-ultimate-success-framework"
+      type: "resource"
+      title: "AI 2025 Implementation Ultimate Success Framework: Complete Roadmap to 1,000%+ ROI"
+      file_path: "/content/resources/ai-2025-implementation-ultimate-success-framework.md"
+      url: "/resources/ai-2025-implementation-ultimate-success-framework"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Implementation", "Framework", "ROI", "Success Strategy", "2025", "Enterprise AI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,000%+"
+        success_rate: "94%"
+        implementation_time: "67% faster"
+        projects: "500+ Success Stories"
+      reading_time: "25 min read"
+      
     - id: "ai-2025-enterprise-ai-transformation-ultimate-guide"
       type: "blog"
       title: "AI 2025: The Ultimate Enterprise AI Transformation Guide - 500% ROI Blueprint"
