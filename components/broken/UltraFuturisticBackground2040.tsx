@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+"use client";
+import React{ useEffectuseRef } from 'react';
 import { motion } from 'framer-motion';
 
 const UltraFuturisticBackground2040: React.FC = () => {
@@ -36,7 +37,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 2 + 1,
-        color: ['#06b6d4', '#3b82f6', '#8b5cf6', '#ec4899'][Math.floor(Math.random() * 4)],
+        color: ['#06b6d4'#3b82f6'#8b5cf6'#ec4899'][Math.floor(Math.random() * 4)],
         opacity: Math.random() * 0.5 + 0.1
       });
     }
@@ -45,11 +46,11 @@ const UltraFuturisticBackground2040: React.FC = () => {
       time += 0.01;
       
       // Clear canvas with fade effect
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(00.05)';
+      ctx.fillRect(0canvas.widthcanvas.height);
 
       // Update and draw particles
-      particles.forEach((particle, index) => {
+      particles.forEach((particleindex) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
@@ -68,7 +69,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
         ctx.shadowBlur = 10;
         
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.arc(particle.xparticle.yparticle.size0Math.PI * 2);
         ctx.fillStyle = particle.color;
         ctx.fill();
         
@@ -76,7 +77,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
       });
 
       // Draw connecting lines between nearby particles
-      ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
+      ctx.strokeStyle = 'rgba(6182120.1)';
       ctx.lineWidth = 0.5;
       
       for (let i = 0; i < particles.length; i++) {
@@ -87,15 +88,15 @@ const UltraFuturisticBackground2040: React.FC = () => {
           
           if (distance < 100) {
             ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.moveTo(particles[i].xparticles[i].y);
+            ctx.lineTo(particles[j].xparticles[j].y);
             ctx.stroke();
           }
         }
       }
 
       // Draw animated grid
-      ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
+      ctx.strokeStyle = 'rgba(6182120.05)';
       ctx.lineWidth = 0.5;
       
       const gridSize = 50;
@@ -103,47 +104,47 @@ const UltraFuturisticBackground2040: React.FC = () => {
       
       for (let x = offset; x < canvas.width; x += gridSize) {
         ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
+        ctx.moveTo(x0);
+        ctx.lineTo(xcanvas.height);
         ctx.stroke();
       }
       
       for (let y = offset; y < canvas.height; y += gridSize) {
         ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
+        ctx.moveTo(0y);
+        ctx.lineTo(canvas.widthy);
         ctx.stroke();
       }
 
       // Draw floating geometric shapes
       const shapes = [
-        { x: canvas.width * 0.2, y: canvas.height * 0.3, size: 60, rotation: time * 0.5 },
-        { x: canvas.width * 0.8, y: canvas.height * 0.7, size: 40, rotation: time * -0.3 },
-        { x: canvas.width * 0.6, y: canvas.height * 0.2, size: 50, rotation: time * 0.7 }
+        { x: canvas.width * 0.2y: canvas.height * 0.3size: 60rotation: time * 0.5 },
+        { x: canvas.width * 0.8y: canvas.height * 0.7size: 40rotation: time * -0.3 },
+        { x: canvas.width * 0.6y: canvas.height * 0.2size: 50rotation: time * 0.7 }
       ];
 
-      shapes.forEach((shape, index) => {
+      shapes.forEach((shapeindex) => {
         ctx.save();
-        ctx.translate(shape.x, shape.y);
+        ctx.translate(shape.xshape.y);
         ctx.rotate(shape.rotation);
         
-        ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
+        ctx.strokeStyle = `rgba(139246${0.1 + Math.sin(time + index) * 0.05})`;
         ctx.lineWidth = 2;
         
         if (index === 0) {
           // Square
-          ctx.strokeRect(-shape.size/2, -shape.size/2, shape.size, shape.size);
+          ctx.strokeRect(-shape.size/2shape.size);
         } else if (index === 1) {
           // Circle
           ctx.beginPath();
-          ctx.arc(0, 0, shape.size/2, 0, Math.PI * 2);
+          ctx.arc(0shape.size/20Math.PI * 2);
           ctx.stroke();
         } else {
           // Triangle
           ctx.beginPath();
-          ctx.moveTo(0, -shape.size/2);
-          ctx.lineTo(shape.size/2, shape.size/2);
-          ctx.lineTo(-shape.size/2, shape.size/2);
+          ctx.moveTo(0-shape.size/2);
+          ctx.lineTo(shape.size/2);
+          ctx.lineTo(-shape.size/2);
           ctx.closePath();
           ctx.stroke();
         }
@@ -157,16 +158,16 @@ const UltraFuturisticBackground2040: React.FC = () => {
         const waveOffset = (time * 100 + i * 200) % (canvas.width + 200);
         const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50;
         
-        ctx.strokeStyle = `rgba(236, 72, 153, ${0.1 + Math.sin(time + i) * 0.05})`;
+        ctx.strokeStyle = `rgba(23672153${0.1 + Math.sin(time + i) * 0.05})`;
         ctx.lineWidth = 3;
         
         ctx.beginPath();
         for (let x = -100; x < canvas.width + 100; x += 5) {
           const y = waveY + Math.sin((x + waveOffset) * 0.02) * 20;
           if (x === -100) {
-            ctx.moveTo(x, y);
+            ctx.moveTo(xy);
           } else {
-            ctx.lineTo(x, y);
+            ctx.lineTo(xy);
           }
         }
         ctx.stroke();
@@ -182,13 +183,13 @@ const UltraFuturisticBackground2040: React.FC = () => {
       canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize'handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize'handleResize);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }[]);
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
@@ -209,8 +210,8 @@ const UltraFuturisticBackground2040: React.FC = () => {
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-full h-full" style={{
             backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6182120.1) 1pxtransparent 1px),
+              linear-gradient(90degrgba(6182120.1) 1pxtransparent 1px)
             `,
             backgroundSize: '50px 50px',
             animation: 'gridMove 20s linear infinite'
@@ -221,9 +222,9 @@ const UltraFuturisticBackground2040: React.FC = () => {
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
           animate={{
-            rotate: [0, 360],
-            scale: [1, 1.1, 1],
-            opacity: [0.2, 0.4, 0.2]
+            rotate: [0360],
+            scale: [1.1],
+            opacity: [0.20.40.2]
           }}
           transition={{
             duration: 8,
@@ -235,9 +236,9 @@ const UltraFuturisticBackground2040: React.FC = () => {
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
           animate={{
-            rotate: [360, 0],
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.5, 0.2]
+            rotate: [360],
+            scale: [1.21],
+            opacity: [0.20.50.2]
           }}
           transition={{
             duration: 10,
@@ -249,9 +250,9 @@ const UltraFuturisticBackground2040: React.FC = () => {
         <motion.div
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
           animate={{
-            rotate: [45, 405],
-            scale: [1, 1.15, 1],
-            opacity: [0.2, 0.3, 0.2]
+            rotate: [45405],
+            scale: [1.151],
+            opacity: [0.20.30.2]
           }}
           transition={{
             duration: 12,
@@ -264,9 +265,9 @@ const UltraFuturisticBackground2040: React.FC = () => {
         <motion.div
           className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
           animate={{
-            rotate: [12, 372],
-            scale: [1, 1.1, 1],
-            opacity: [0.15, 0.25, 0.15]
+            rotate: [12372],
+            scale: [1.1],
+            opacity: [0.150.250.15]
           }}
           transition={{
             duration: 15,
@@ -278,9 +279,9 @@ const UltraFuturisticBackground2040: React.FC = () => {
         <motion.div
           className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
           animate={{
-            rotate: [0, 360],
-            scale: [1, 1.2, 1],
-            opacity: [0.15, 0.3, 0.15]
+            rotate: [0360],
+            scale: [1.21],
+            opacity: [0.150.30.15]
           }}
           transition={{
             duration: 18,
@@ -293,8 +294,8 @@ const UltraFuturisticBackground2040: React.FC = () => {
         <motion.div
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
           animate={{
-            y: [0, -20, 0],
-            opacity: [0.4, 0.8, 0.4]
+            y: [0-20],
+            opacity: [0.40.80.4]
           }}
           transition={{
             duration: 3,
@@ -306,8 +307,8 @@ const UltraFuturisticBackground2040: React.FC = () => {
         <motion.div
           className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full"
           animate={{
-            y: [0, -15, 0],
-            opacity: [0.4, 0.7, 0.4]
+            y: [0-150],
+            opacity: [0.40.70.4]
           }}
           transition={{
             duration: 4,
@@ -320,8 +321,8 @@ const UltraFuturisticBackground2040: React.FC = () => {
         <motion.div
           className="absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-pink-400/40 rounded-full"
           animate={{
-            y: [0, -25, 0],
-            opacity: [0.4, 0.9, 0.4]
+            y: [0-250],
+            opacity: [0.40.90.4]
           }}
           transition={{
             duration: 5,
@@ -336,15 +337,15 @@ const UltraFuturisticBackground2040: React.FC = () => {
       <style jsx>{`
         @keyframes gridMove {
           0% {
-            transform: translate(0, 0);
+            transform: translate(0);
           }
           100% {
-            transform: translate(50px, 50px);
+            transform: translate(50px);
           }
         }
         
         @keyframes float {
-          0%, 100% {
+          0%100% {
             transform: translateY(0px);
           }
           50% {
@@ -353,7 +354,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
         }
         
         @keyframes pulse {
-          0%, 100% {
+          0%100% {
             opacity: 0.2;
           }
           50% {

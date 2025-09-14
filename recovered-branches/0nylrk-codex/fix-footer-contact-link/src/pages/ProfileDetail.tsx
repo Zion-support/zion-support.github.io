@@ -1,20 +1,20 @@
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
-  MapPin, 
-  Clock, 
-  Link as LinkIcon, 
-  Github, 
-  Twitter, 
+  MapPin
+  Clock
+  Link as LinkIcon
+  Github
+  Twitter
   Linkedin,
   CheckCircle2,
   Mail,
@@ -25,11 +25,11 @@ import { HireNowCTA } from "@/components/profile/HireNowCTA";
 
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
+  // definitionso avoid passing a type argument to prevent TS2347.
   const { profileId } = useParams();
-  const [profileData, setProfileData] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [profileDatasetProfileData] = useState<any>(null);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [errorsetError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -41,10 +41,10 @@ export default function ProfileDetail() {
           return;
         }
 
-        const { data, error } = await supabase
+        const { dataerror } = await supabase
           .from("talent_profiles")
           .select("*")
-          .eq("id", profileId)
+          .eq("id"profileId)
           .single();
 
         if (error) {
@@ -69,7 +69,7 @@ export default function ProfileDetail() {
     };
 
     fetchProfile();
-  }, [profileId]);
+  }[profileId]);
 
   if (isLoading) {
     return (
@@ -169,7 +169,7 @@ export default function ProfileDetail() {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {profileData.skills?.map((skill: string, index: number) => (
+                  {profileData.skills?.map((skill: stringindex: number) => (
                     <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>
                   )) || <p className="text-zion-slate-light">No skills provided.</p>}
                 </div>
@@ -183,7 +183,7 @@ export default function ProfileDetail() {
               </CardHeader>
               <CardContent>
                 {profileData.experience ? (
-                  profileData.experience.map((exp: any, index: number) => (
+                  profileData.experience.map((exp: anyindex: number) => (
                     <div key={index} className="mb-4">
                       <h4 className="font-bold text-white">{exp.title}</h4>
                       <p className="text-zion-cyan">{exp.company}</p>
@@ -205,7 +205,7 @@ export default function ProfileDetail() {
               <CardContent>
                 {profileData.portfolio_links ? (
                   <div className="flex flex-col gap-3">
-                    {profileData.portfolio_links.map((link: any, index: number) => (
+                    {profileData.portfolio_links.map((link: anyindex: number) => (
                       <a
                         key={index}
                         href={link.url}

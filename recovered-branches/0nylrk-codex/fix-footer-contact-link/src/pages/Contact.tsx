@@ -10,22 +10,22 @@ import { Card } from "@/components/ui/card";
 import { toast } from "@/components/ui/use-toast";
 import z from "zod";
 import { ChatAssistant } from "@/components/ChatAssistant";
-import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
+import { MailMessageSquareMapPinPhone } from "lucide-react";
 import { AppLayout } from "@/layout/AppLayout";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const [formDatasetFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: ""
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [isChatOpensetIsChatOpen] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { namevalue } = e.target;
+    setFormData(prev => ({ ...prev[name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -34,10 +34,10 @@ export default function Contact() {
     try {
       // Basic validation with Zod
       const schema = z.object({
-        name: z.string().min(2, "Name must be at least 2 characters"),
+        name: z.string().min(2"Name must be at least 2 characters"),
         email: z.string().email("Invalid email address"),
-        subject: z.string().min(2, "Subject must be at least 2 characters"),
-        message: z.string().min(10, "Message must be at least 10 characters")
+        subject: z.string().min(2"Subject must be at least 2 characters"),
+        message: z.string().min(10"Message must be at least 10 characters")
       });
       
       schema.parse(formData);
@@ -58,7 +58,7 @@ export default function Contact() {
           subject: "",
           message: ""
         });
-      }, 1500);
+      }1500);
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast({
@@ -79,12 +79,12 @@ export default function Contact() {
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat"{
         method: "POST",
         headers: {
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
-          messages: [{ role: "user", content: message }] 
+          messages: [{ role: "user"content: message }] 
         })});
       
       if (!response.ok) {
@@ -93,7 +93,7 @@ export default function Contact() {
       
       return Promise.resolve();
     } catch (error) {
-      console.error("Error in AI chat:", error);
+      console.error("Error in AI chat:"error);
       toast({
         title: "Chat Error",
         description: "There was an error communicating with our AI assistant. Please try again.",
@@ -106,14 +106,14 @@ export default function Contact() {
   const offices = [
     {
       name: "Headquarters",
-      address: "123 Tech Avenue, San Francisco, CA 94105",
+      address: "123 Tech AvenueSan FranciscoCA 94105",
       phone: "+1 302 464 0950",
       email: "commercial@ziontechgroup.com"
     },
     {
       name: "East Coast Office",
-      address: "456 Innovation Street, New York, NY 10001",
-      phone: "+1 302 464 0950", 
+      address: "456 Innovation StreetNew YorkNY 10001",
+      phone: "+1 302 464 0950"
       email: "commercial@ziontechgroup.com"
     }
   ];
@@ -123,7 +123,7 @@ export default function Contact() {
       <SEO 
         title="Contact Zion - Get in Touch" 
         description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
-        keywords="contact Zion, AI marketplace support, tech platform contact"
+        keywords="contact ZionAI marketplace supportech platform contact"
         canonical="https://app.ziontechgroup.com/contact"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -139,7 +139,7 @@ export default function Contact() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
               <p className="text-zion-slate-light text-lg mb-8">
-                Whether you have a question about our platform, pricing, or anything else, 
+                Whether you have a question about our platformpricingor anything else
                 our team is ready to answer all your questions.
               </p>
               
@@ -211,7 +211,7 @@ export default function Contact() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
               <div className="grid grid-cols-1 gap-6">
-                {offices.map((office, index) => (
+                {offices.map((officeindex) => (
                   <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light p-6">
                     <h3 className="text-xl font-bold text-white mb-3">{office.name}</h3>
                     <div className="space-y-3">

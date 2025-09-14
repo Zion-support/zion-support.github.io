@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { HELP_CATEGORIES } from "./help-content";
 
 interface HelpArticleListProps {
@@ -9,7 +9,7 @@ interface HelpArticleListProps {
   searchQuery: string;
 }
 
-export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {
+export function HelpArticleList({ categoryIdonArticleSelectsearchQuery }: HelpArticleListProps) {
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
   
   if (!category) {
@@ -55,7 +55,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-zion-slate-light truncate">
-                  {article.content.substring(0, 120)}...
+                  {article.content.substring(0120)}...
                 </p>
               </CardContent>
             </Card>
@@ -67,7 +67,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
 }
 
 function formatDate(date: string): string {
-  return new Date(date).toLocaleDateString("en-US", {
+  return new Date(date).toLocaleDateString("en-US"{
     year: "numeric",
     month: "long",
     day: "numeric"

@@ -1,5 +1,5 @@
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Referral, ReferralStatus } from "@/types/referrals";
+import { TableBodyTableCellTableHeaderTableRow } from "@/components/ui/table";
+import { ReferralStatus } from "@/types/referrals";
 import { Badge } from "@/components/ui/badge";
 import { formatDate } from "@/utils/referralUtils";
 
@@ -8,7 +8,7 @@ interface ReferralTableProps {
   isLoading: boolean;
 }
 
-export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
+export function ReferralTable({ referralsisLoading }: ReferralTableProps) {
   // Helper function to render status badges
   const renderStatusBadge = (status: ReferralStatus) => {
     switch (status) {

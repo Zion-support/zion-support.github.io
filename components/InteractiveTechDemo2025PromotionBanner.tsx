@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Settings, 
-  Zap, 
-  Brain, 
-  Cpu, 
+  Play
+  Pause
+  RotateCcw
+  Settings
+  Zap
+  Brain
+  Cpu
   Database,
   Cloud,
   Smartphone,
@@ -42,10 +43,10 @@ import {
 } from 'lucide-react';
 
 const InteractiveTechDemo2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentDemo, setCurrentDemo] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [isPlayingsetIsPlaying] = useState(false);
+  const [currentDemosetCurrentDemo] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -53,10 +54,10 @@ const InteractiveTechDemo2025PromotionBanner = () => {
     // Auto-advance demos
     const interval = setInterval(() => {
       setCurrentDemo((prev) => (prev + 1) % 4);
-    }, 3000);
+    }3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const demos = [
     {
@@ -70,7 +71,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
     {
       title: "Quantum Neural Fusion",
       subtitle: "Witness Quantum Computing Power",
-      description: "See the first successful integration of quantum computing with neural networks, achieving 1000x processing speed.",
+      description: "See the first successful integration of quantum computing with neural networksachieving 1000x processing speed.",
       icon: Atom,
       color: "from-indigo-500 to-purple-500",
       metrics: "1000x Speed • 99.8% Qubit Coherence"
@@ -94,12 +95,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
   ];
 
   const features = [
-    { icon: Play, text: "Interactive Demos" },
-    { icon: Brain, text: "AI Technologies" },
-    { icon: Atom, text: "Quantum Computing" },
-    { icon: Cpu, text: "Neural Interfaces" },
-    { icon: Network, text: "Edge Processing" },
-    { icon: Rocket, text: "Future Tech" }
+    { icon: Playtext: "Interactive Demos" },
+    { icon: Braintext: "AI Technologies" },
+    { icon: Atomtext: "Quantum Computing" },
+    { icon: Cputext: "Neural Interfaces" },
+    { icon: Networktext: "Edge Processing" },
+    { icon: Rocketext: "Future Tech" }
   ];
 
   if (isDismissed) return null;
@@ -108,10 +109,10 @@ const InteractiveTechDemo2025PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0y: -100 }}
+          animate={{ opacity: 1y: 0 }}
+          exit={{ opacity: 0y: -100 }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/20 overflow-hidden"
         >
           {/* Background Pattern */}
@@ -126,8 +127,8 @@ const InteractiveTechDemo2025PromotionBanner = () => {
               <div className="flex-1 pr-8">
                 <motion.div
                   key={currentDemo}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0x: 20 }}
+                  animate={{ opacity: 1x: 0 }}
                   transition={{ duration: 0.5 }}
                   className="space-y-4"
                 >
@@ -160,7 +161,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
 
                   {/* Features */}
                   <div className="flex flex-wrap gap-3 mt-4">
-                    {features.slice(0, 3).map((feature, index) => {
+                    {features.slice(03).map((featureindex) => {
                       const Icon = feature.icon;
                       return (
                         <div key={index} className="flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-sm">
@@ -193,8 +194,8 @@ const InteractiveTechDemo2025PromotionBanner = () => {
               <div className="hidden lg:block flex-shrink-0">
                 <motion.div
                   key={currentDemo}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
                   transition={{ duration: 0.5 }}
                   className="relative w-80 h-48"
                 >
@@ -202,7 +203,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-6">
                     <div className="flex items-center mb-4">
                       <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${demos[currentDemo].color} flex items-center justify-center`}>
-                        {React.createElement(demos[currentDemo].icon, { className: "w-6 h-6 text-white" })}
+                        {React.createElement(demos[currentDemo].icon{ className: "w-6 h-6 text-white" })}
                       </div>
                       <div className="ml-4">
                         <h3 className="text-white font-bold text-lg">Live Demo</h3>
@@ -216,12 +217,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                       <div className="absolute inset-0 flex items-center justify-center">
                         {demos[currentDemo].title.includes('AI Consciousness') && (
                           <div className="grid grid-cols-4 gap-2">
-                            {[...Array(8)].map((_, i) => (
+                            {[...Array(8)].map((_i) => (
                               <motion.div
                                 key={i}
                                 animate={{
-                                  scale: isPlaying ? [1, 1.2, 1] : 1,
-                                  opacity: isPlaying ? [0.5, 1, 0.5] : 0.7
+                                  scale: isPlaying ? [1.21] : 1,
+                                  opacity: isPlaying ? [0.510.5] : 0.7
                                 }}
                                 transition={{
                                   duration: 2,
@@ -236,12 +237,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         
                         {demos[currentDemo].title.includes('Quantum') && (
                           <div className="relative">
-                            {[...Array(4)].map((_, i) => (
+                            {[...Array(4)].map((_i) => (
                               <motion.div
                                 key={i}
                                 animate={{
                                   rotate: isPlaying ? 360 : 0,
-                                  scale: isPlaying ? [1, 1.1, 1] : 1
+                                  scale: isPlaying ? [1.1] : 1
                                 }}
                                 transition={{
                                   duration: 3,
@@ -260,12 +261,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         
                         {demos[currentDemo].title.includes('Brain-Computer') && (
                           <div className="w-full h-16 relative">
-                            {[...Array(3)].map((_, i) => (
+                            {[...Array(3)].map((_i) => (
                               <motion.div
                                 key={i}
                                 animate={{
-                                  scaleY: isPlaying ? [1, 2, 1] : 1,
-                                  opacity: isPlaying ? [0.5, 1, 0.5] : 0.7
+                                  scaleY: isPlaying ? [121] : 1,
+                                  opacity: isPlaying ? [0.510.5] : 0.7
                                 }}
                                 transition={{
                                   duration: 1.5,
@@ -284,12 +285,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         
                         {demos[currentDemo].title.includes('Edge AI') && (
                           <div className="grid grid-cols-3 gap-2">
-                            {[...Array(6)].map((_, i) => (
+                            {[...Array(6)].map((_i) => (
                               <motion.div
                                 key={i}
                                 animate={{
-                                  scale: isPlaying ? [1, 1.3, 1] : 1,
-                                  opacity: isPlaying ? [0.6, 1, 0.6] : 0.8
+                                  scale: isPlaying ? [1.31] : 1,
+                                  opacity: isPlaying ? [0.610.6] : 0.8
                                 }}
                                 transition={{
                                   duration: 2,
@@ -323,16 +324,16 @@ const InteractiveTechDemo2025PromotionBanner = () => {
 
                   {/* Floating Elements */}
                   <motion.div
-                    animate={{ y: [0, -10, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    animate={{ y: [0-10] }}
+                    transition={{ duration: 2repeat: Infinityease: "easeInOut" }}
                     className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center"
                   >
                     <Eye className="w-6 h-6 text-white" />
                   </motion.div>
 
                   <motion.div
-                    animate={{ y: [0, 10, 0] }}
-                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                    animate={{ y: [010] }}
+                    transition={{ duration: 2.5repeat: Infinityease: "easeInOut" }}
                     className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center"
                   >
                     <MousePointer className="w-5 h-5 text-white" />
@@ -343,7 +344,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
 
             {/* Demo Indicators */}
             <div className="flex justify-center mt-6 space-x-2">
-              {demos.map((_, index) => (
+              {demos.map((_index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentDemo(index)}

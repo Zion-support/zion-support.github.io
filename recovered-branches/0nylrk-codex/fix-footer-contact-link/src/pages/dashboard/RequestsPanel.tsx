@@ -1,13 +1,13 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useTalentQuotes } from "@/hooks/useTalentQuotes";
 import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import { 
-  RequestsHeader, 
+  RequestsHeader
   QuoteRequestsList 
 } from "@/components/quotes";
 import type { QuoteRequest } from "@/types/quotes";
@@ -17,8 +17,8 @@ export default function RequestsPanel() {
   const { user } = useAuth();
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
   
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
+  const [selectedQuotesetSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetailsetShowDetails] = useState(false);
 
   const {
     quotes,
@@ -37,7 +37,7 @@ export default function RequestsPanel() {
     setSelectedQuote(quote);
     setShowDetails(true);
     
-    // If status is new, mark as viewed
+    // If status is newmark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id);
     }

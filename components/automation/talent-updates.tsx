@@ -5,20 +5,20 @@ import { TALENT_PROFILES } from '../../data/talent';
 type TalentSummary = { slug: string; summary: string };
 
 export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'data', 'talent_ai.json');
+  const file = path.join(process.cwd()'data'talent_ai.json');
   let generatedAt = '';
   let summaries: TalentSummary[] = [];
   try {
-    const raw = fs.readFileSync(file, 'utf-8');
+    const raw = fs.readFileSync(file'utf-8');
     const json = JSON.parse(raw);
     generatedAt = json.generatedAt || '';
     summaries = json.summaries || [];
   } catch {}
-  return { props: { generatedAt, summaries } };
+  return { props: { generatedAtsummaries } };
 }
 
-export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string; summaries: TalentSummary[] }) {
-  const map = new Map(summaries.map(s => [s.slug, s.summary]));
+export default function TalentUpdatesPage({ generatedAtsummaries }: { generatedAt: string; summaries: TalentSummary[] }) {
+  const map = new Map(summaries.map(s => [s.slugs.summary]));
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>

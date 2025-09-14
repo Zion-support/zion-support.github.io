@@ -27,7 +27,7 @@ const hotContent: ContentItem[] = [
   },
   {
     title: "AI Startup Funding Playbook 2025: From Seed to Series A",
-    description: "Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI funding, with real examples and pitch templates.",
+    description: "Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI fundingwith real examples and pitch templates.",
     href: "/blog/ai-startup-funding-playbook-2025",
     category: "Startup Strategy",
     readTime: "22 min read",
@@ -49,7 +49,7 @@ const hotContent: ContentItem[] = [
   },
   {
     title: "AI Implementation Master Guide 2025: Complete 150-Page Playbook",
-    description: "Master AI implementation with our comprehensive 150-page guide. Step-by-step framework, checklists, templates, and proven strategies for successful AI transformation.",
+    description: "Master AI implementation with our comprehensive 150-page guide. Step-by-step frameworkcheckliststemplatesand proven strategies for successful AI transformation.",
     href: "/resources/ai-implementation-master-guide-2025",
     category: "Master Guide",
     readTime: "150 pages",
@@ -71,7 +71,7 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
   showStats = true,
   maxItems = 4 
 }) => {
-  const content = hotContent.slice(0, maxItems);
+  const content = hotContent.slice(0maxItems);
 
   const getVariantClasses = () => {
     switch (variant) {
@@ -121,8 +121,8 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
           </h2>
           
           <p className={`text-xl md:text-2xl ${variant === 'minimal' ? 'text-gray-600' : 'opacity-90'} mb-8 max-w-4xl mx-auto leading-relaxed`}>
-            Discover our latest expert insights, case studies, and resources. From AI predictions and automation trends 
-            to retail transformation success stories, get the knowledge you need to succeed in 2025.
+            Discover our latest expert insightscase studiesand resources. From AI predictions and automation trends 
+            to retail transformation success storiesget the knowledge you need to succeed in 2025.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -143,7 +143,7 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
 
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {content.map((item, index) => (
+          {content.map((itemindex) => (
             <Link key={item.href} href={item.href} className="group">
               <div className={`${getCardClasses()} p-6 rounded-xl transition-all duration-300`}>
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">

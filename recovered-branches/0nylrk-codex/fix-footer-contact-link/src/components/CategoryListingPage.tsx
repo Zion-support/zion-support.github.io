@@ -5,8 +5,8 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react";
+import { SelectTriggerSelectContentSelectItem } from "@/components/ui/select";
+import { SearchFilterArrowDownAZArrowUpZA } from "lucide-react";
 
 // Example listing type
 interface Listing {
@@ -35,24 +35,24 @@ interface CategoryListingPageProps {
 }
 
 export function CategoryListingPage({ 
-  title, 
+  title
   description,
   listings: initialListings,
   sortOptions = [
-    { label: 'Newest First', value: 'newest' },
-    { label: 'Oldest First', value: 'oldest' },
-    { label: 'Highest Rating', value: 'rating-high' },
-    { label: 'Highest AI Match', value: 'ai-match' },
-    { label: 'A-Z', value: 'a-z' },
-    { label: 'Z-A', value: 'z-a' }],
+    { label: 'Newest First'value: 'newest' },
+    { label: 'Oldest First'value: 'oldest' },
+    { label: 'Highest Rating'value: 'rating-high' },
+    { label: 'Highest AI Match'value: 'ai-match' },
+    { label: 'A-Z'value: 'a-z' },
+    { label: 'Z-A'value: 'z-a' }],
   filterOptions = [
-    { label: 'All', value: 'all' },
-    { label: 'Highly Rated', value: 'high-rating' },
-    { label: 'Best AI Match', value: 'best-match' }]
+    { label: 'All'value: 'all' },
+    { label: 'Highly Rated'value: 'high-rating' },
+    { label: 'Best AI Match'value: 'best-match' }]
 }: CategoryListingPageProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedSort, setSelectedSort] = useState(sortOptions[0].value);
-  const [selectedFilter, setSelectedFilter] = useState(filterOptions[0].value);
+  const [searchQuerysetSearchQuery] = useState("");
+  const [selectedSortsetSelectedSort] = useState(sortOptions[0].value);
+  const [selectedFiltersetSelectedFilter] = useState(filterOptions[0].value);
   
   // Process listings based on filters and search
   const processedListings = initialListings
@@ -72,7 +72,7 @@ export function CategoryListingPage({
       
       return matchesSearch;
     })
-    .sort((a, b) => {
+    .sort((ab) => {
       // Apply sorting
       switch (selectedSort) {
         case 'newest':

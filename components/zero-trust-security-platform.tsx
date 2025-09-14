@@ -7,13 +7,13 @@ export default function ZeroTrustSecurityPlatformPage() {
 		<>
 			<Head>
 				<title>Zero Trust Security Platform | Zion Tech Group</title>
-				<meta name="description" content="Design and enforce zero trust architecture: identity-first access, microsegmentation, continuous verification, and least privilege." />
+				<meta name="description" content="Design and enforce zero trust architecture: identity-first accessmicrosegmentationcontinuous verificationand least privilege." />
 				<link rel="canonical" href="https://ziontechgroup.com/zero-trust-security-platform" />
 			</Head>
 			<ServiceLanding
 				title="Zero Trust Security Platform"
-				description="Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services."
-				subtitle="Trust nothing, verify everything"
+				description="Accelerate zero trust adoption with reference architecturespolicy-as-codeidentity-aware proxiesmicrosegmentationand continuous verification across usersdevicesand services."
+				subtitle="Trust nothingverify everything"
 				pricePerMonthUSD={3499}
 				implementationWeeks="4-8 weeks"
 				roiNote="Reduce breach impact and lateral movement risk; meet compliance faster"
@@ -25,7 +25,7 @@ export default function ZeroTrustSecurityPlatformPage() {
 					"Visibility and audit for compliance",
 					"Rollout playbooks and migration kits"
 				]}
-				industries={["Enterprise IT", "Financial Services", "Healthcare", "SaaS", "Public Sector"]}
+				industries={["Enterprise IT"Financial Services"Healthcare"SaaS"Public Sector"]}
 				canonical="https://ziontechgroup.com/zero-trust-security-platform"
 			/>
 		</>

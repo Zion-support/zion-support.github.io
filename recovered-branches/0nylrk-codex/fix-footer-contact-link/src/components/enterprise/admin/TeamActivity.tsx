@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { CalendarIcon, Search } from "lucide-react";
+import { CalendarIconSearch } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -78,7 +78,7 @@ export function TeamActivity() {
   };
 
   const getCategoryBadge = (category: string) => {
-    const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
+    const categoryStyles: Record<string{ variant: "default" | "outline" | "secondary" | "destructive" }> = {
       jobs: { variant: "default" },
       candidates: { variant: "outline" },
       team: { variant: "secondary" },

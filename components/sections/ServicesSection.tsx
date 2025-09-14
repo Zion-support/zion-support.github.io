@@ -4,11 +4,11 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Cloud, 
-  RefreshCw, 
-  Wifi, 
-  Shield, 
+  Brain
+  Cloud
+  RefreshCw
+  Wifi
+  Shield
   BarChart3,
   ArrowRight,
   Zap
@@ -20,7 +20,7 @@ const ServicesSection: React.FC = () => {
       icon: Brain,
       title: 'AI Development',
       description: 'Custom AI solutions and machine learning models tailored to your business needs.',
-      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      features: ['Machine Learning Models'Natural Language Processing'Computer Vision'Predictive Analytics'],
       color: 'from-blue-500 to-cyan-500',
       href: '/services/ai-development'
     },
@@ -28,7 +28,7 @@ const ServicesSection: React.FC = () => {
       icon: Cloud,
       title: 'Cloud Architecture',
       description: 'Scalable cloud solutions and infrastructure design for modern applications.',
-      features: ['AWS/Azure/GCP', 'Microservices', 'Serverless Architecture', 'DevOps Automation'],
+      features: ['AWS/Azure/GCP'Microservices'Serverless Architecture'DevOps Automation'],
       color: 'from-purple-500 to-pink-500',
       href: '/services/cloud-architecture'
     },
@@ -36,7 +36,7 @@ const ServicesSection: React.FC = () => {
       icon: RefreshCw,
       title: 'Digital Transformation',
       description: 'End-to-end digital transformation services to modernize your business.',
-      features: ['Process Automation', 'Legacy System Migration', 'Change Management', 'Digital Strategy'],
+      features: ['Process Automation'Legacy System Migration'Change Management'Digital Strategy'],
       color: 'from-green-500 to-emerald-500',
       href: '/services/digital-transformation'
     },
@@ -44,7 +44,7 @@ const ServicesSection: React.FC = () => {
       icon: Wifi,
       title: 'IoT Platforms',
       description: 'Connected device solutions and IoT platform development.',
-      features: ['Sensor Networks', 'Real-time Monitoring', 'Data Analytics', 'Edge Computing'],
+      features: ['Sensor Networks'Real-time Monitoring'Data Analytics'Edge Computing'],
       color: 'from-orange-500 to-red-500',
       href: '/services/iot-platforms'
     },
@@ -52,7 +52,7 @@ const ServicesSection: React.FC = () => {
       icon: Shield,
       title: 'Blockchain Solutions',
       description: 'Decentralized technology platforms and smart contract development.',
-      features: ['Smart Contracts', 'DeFi Applications', 'NFT Platforms', 'Supply Chain Solutions'],
+      features: ['Smart Contracts'DeFi Applications'NFT Platforms'Supply Chain Solutions'],
       color: 'from-indigo-500 to-purple-500',
       href: '/services/blockchain-solutions'
     },
@@ -60,7 +60,7 @@ const ServicesSection: React.FC = () => {
       icon: BarChart3,
       title: 'Data Analytics',
       description: 'Advanced analytics and business intelligence solutions.',
-      features: ['Big Data Processing', 'Real-time Dashboards', 'Predictive Modeling', 'Data Visualization'],
+      features: ['Big Data Processing'Real-time Dashboards'Predictive Modeling'Data Visualization'],
       color: 'from-teal-500 to-blue-500',
       href: '/services/data-analytics'
     }
@@ -77,8 +77,8 @@ const ServicesSection: React.FC = () => {
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+    hidden: { opacity: 0y: 20 },
+    visible: { opacity: 1y: 0 }
   };
 
   return (
@@ -92,16 +92,16 @@ const ServicesSection: React.FC = () => {
       <div className="relative container mx-auto px-4">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0scale: 0.8 }}
+            whileInView={{ opacity: 1scale: 1 }}
+            transition={{ duration: 0.6delay: 0.2 }}
             viewport={{ once: true }}
             className="inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6"
           >
@@ -117,7 +117,7 @@ const ServicesSection: React.FC = () => {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth 
+            We deliver cutting-edge technology solutions that drive innovationefficiencyand growth 
             for businesses across all industries.
           </p>
         </motion.div>
@@ -130,7 +130,7 @@ const ServicesSection: React.FC = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {services.map((service, index) => (
+          {services.map((serviceindex) => (
             <motion.div
               key={service.title}
               variants={cardVariants}
@@ -183,9 +183,9 @@ const ServicesSection: React.FC = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           viewport={{ once: true }}
           className="text-center"
         >

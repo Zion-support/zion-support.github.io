@@ -9,7 +9,7 @@ interface ActiveFiltersBarProps {
   selectedAvailability: string[];
   selectedRating: number | null;
   searchQuery: string;
-  onRemoveFilter: (filterType: string, value: string) => void;
+  onRemoveFilter: (filterType: stringvalue: string) => void;
   onRemoveRating: () => void;
   onClearSearch: () => void;
 }
@@ -51,7 +51,7 @@ export function ActiveFiltersBar({
         <ClickableBadge 
           key={`type-${type}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => onRemoveFilter('productTypes', type)}
+          onClick={() => onRemoveFilter('productTypes'type)}
         >
           {type}
           <X className="h-3 w-3" />
@@ -62,7 +62,7 @@ export function ActiveFiltersBar({
         <ClickableBadge 
           key={`location-${location}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => onRemoveFilter('locations', location)}
+          onClick={() => onRemoveFilter('locations'location)}
         >
           {location}
           <X className="h-3 w-3" />
@@ -73,7 +73,7 @@ export function ActiveFiltersBar({
         <ClickableBadge 
           key={`availability-${availability}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => onRemoveFilter('availability', availability)}
+          onClick={() => onRemoveFilter('availability'availability)}
         >
           {availability}
           <X className="h-3 w-3" />

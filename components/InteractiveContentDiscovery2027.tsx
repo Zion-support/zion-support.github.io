@@ -1,28 +1,29 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 export default function InteractiveContentDiscovery2027() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [searchQuerysetSearchQuery] = useState('');
 
   const contentCategories = [
-    { id: 'all', label: 'All Content', icon: '📚' },
-    { id: 'ai-2026', label: 'AI 2026', icon: '🚀' },
-    { id: 'ai-2027', label: 'AI 2027', icon: '🔮' },
-    { id: 'quantum', label: 'Quantum Computing', icon: '⚛️' },
-    { id: 'neural', label: 'Neural Interfaces', icon: '🧠' },
-    { id: 'automation', label: 'Automation', icon: '🤖' },
-    { id: 'case-studies', label: 'Case Studies', icon: '📊' },
-    { id: 'predictions', label: 'Predictions', icon: '🔮' }
+    { id: 'all'label: 'All Content'icon: '📚' },
+    { id: 'ai-2026'label: 'AI 2026'icon: '🚀' },
+    { id: 'ai-2027'label: 'AI 2027'icon: '🔮' },
+    { id: 'quantum'label: 'Quantum Computing'icon: '⚛️' },
+    { id: 'neural'label: 'Neural Interfaces'icon: '🧠' },
+    { id: 'automation'label: 'Automation'icon: '🤖' },
+    { id: 'case-studies'label: 'Case Studies'icon: '📊' },
+    { id: 'predictions'label: 'Predictions'icon: '🔮' }
   ];
 
   const contentItems = [
     {
       id: 1,
       title: 'AI 2026 Quantum Neural Fusion Breakthrough',
-      description: 'Revolutionary breakthrough combining quantum computing with neural networks, achieving 15,000% ROI.',
+      description: 'Revolutionary breakthrough combining quantum computing with neural networksachieving 15,000% ROI.',
       category: 'ai-2026',
-      tags: ['quantum', 'neural', 'breakthrough'],
+      tags: ['quantum'neural'breakthrough'],
       roi: '15,000%',
       accuracy: '99.7%',
       type: 'blog',
@@ -34,7 +35,7 @@ export default function InteractiveContentDiscovery2027() {
       title: 'AI 2027 Neural Synthesis Predictions',
       description: 'Comprehensive analysis of neural synthesis technology predictions for 2027.',
       category: 'ai-2027',
-      tags: ['neural', 'predictions', 'synthesis'],
+      tags: ['neural'predictions'synthesis'],
       roi: '8,000%',
       accuracy: '99.7%',
       type: 'blog',
@@ -46,7 +47,7 @@ export default function InteractiveContentDiscovery2027() {
       title: 'Quantum Computing Solutions 2026',
       description: 'Advanced quantum computing solutions achieving 10,000x faster processing speeds.',
       category: 'quantum',
-      tags: ['quantum', 'computing', 'breakthrough'],
+      tags: ['quantum'computing'breakthrough'],
       roi: '12,000%',
       accuracy: '99.9%',
       type: 'services',
@@ -58,7 +59,7 @@ export default function InteractiveContentDiscovery2027() {
       title: 'Neural Interface Healthcare Success',
       description: '95% patient recovery rates achieved through neural interface technology.',
       category: 'neural',
-      tags: ['neural', 'healthcare', 'success'],
+      tags: ['neural'healthcare'success'],
       roi: '3,000%',
       accuracy: '95%',
       type: 'case-study',
@@ -70,7 +71,7 @@ export default function InteractiveContentDiscovery2027() {
       title: 'Autonomous Manufacturing Revolution',
       description: 'Fully autonomous manufacturing systems achieving 8,500% ROI and 99.9% efficiency.',
       category: 'automation',
-      tags: ['automation', 'manufacturing', 'autonomous'],
+      tags: ['automation'manufacturing'autonomous'],
       roi: '8,500%',
       accuracy: '99.9%',
       type: 'case-study',
@@ -82,7 +83,7 @@ export default function InteractiveContentDiscovery2027() {
       title: 'AI 2027 Future Predictions Analysis',
       description: 'Comprehensive analysis of AI trends and breakthrough predictions for 2027.',
       category: 'predictions',
-      tags: ['predictions', 'future', 'analysis'],
+      tags: ['predictions'future'analysis'],
       roi: 'N/A',
       accuracy: '95%',
       type: 'blog',
@@ -111,7 +112,7 @@ export default function InteractiveContentDiscovery2027() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover the most relevant AI content tailored to your interests. 
-            Filter by category, search by keywords, and explore breakthrough technologies.
+            Filter by categorysearch by keywordsand explore breakthrough technologies.
           </p>
         </div>
 

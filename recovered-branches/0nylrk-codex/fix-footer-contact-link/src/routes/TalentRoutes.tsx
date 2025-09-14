@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
 import TalentDirectory from "../pages/TalentDirectory";
 import TalentsPage from "../pages/TalentsPage";

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain } from 'lucide-react';
+MailPhoneMapPinShieldCheckRocketSparklesGlobeCpuBrain
 
 export default function AboutPage() {
 	const contactInfo = {
@@ -14,17 +14,17 @@ export default function AboutPage() {
 	};
 
 	const pillars = [
-		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' },
-		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' },
-		{ title: 'Quantum R&D', icon: <Cpu className="w-6 h-6" />, desc: 'Exploratory quantum workloads with pragmatic business outcomes.' },
-		{ title: 'Global Delivery', icon: <Globe className="w-6 h-6" />, desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.' }
+		{ title: 'AI-first Engineering'icon: <Brain className="w-6 h-6" />desc: 'LLM appsRAGguardrailsevals and AI observability from day one.' },
+		{ title: 'Platform and SRE'icon: <ShieldCheck className="w-6 h-6" />desc: 'GitOpsIaCSLOsincident automationcost and compliance by default.' },
+		{ title: 'Quantum R&D'icon: <Cpu className="w-6 h-6" />desc: 'Exploratory quantum workloads with pragmatic business outcomes.' },
+		{ title: 'Global Delivery'icon: <Globe className="w-6 h-6" />desc: 'Secureliable delivery with 24/7 support and 99.99% uptime.' }
 	];
 
 	return (
 		<UltraFuturisticBackground variant="holographic" intensity="high">
 			<Head>
 				<title>About Us - Zion Tech Group</title>
-				<meta name="description" content="Zion Tech Group builds outcome-driven AI, micro SaaS, and platform engineering solutions with transparent pricing and 24/7 support." />
+				<meta name="description" content="Zion Tech Group builds outcome-driven AImicro SaaSand platform engineering solutions with transparent pricing and 24/7 support." />
 			</Head>
 			<section className="relative py-24 px-4">
 				<div className="max-w-6xl mx-auto">
@@ -33,7 +33,7 @@ export default function AboutPage() {
 							We build practical AI and platform solutions
 						</h1>
 						<p className="mt-4 text-gray-300 max-w-3xl mx-auto">
-							From micro SaaS accelerators to enterprise AI services, we focus on measurable outcomes: faster delivery, higher reliability, and lower cost.
+							From micro SaaS accelerators to enterprise AI serviceswe focus on measurable outcomes: faster deliveryhigher reliabilityand lower cost.
 						</p>
 					</div>
 
@@ -54,7 +54,7 @@ export default function AboutPage() {
 							</div>
 							<ul className="list-disc list-inside text-gray-300 space-y-2">
 								<li>Productized service tiers with clear SLAs</li>
-								<li>Security, compliance, and FinOps baked in</li>
+								<li>Securitycomplianceand FinOps baked in</li>
 								<li>Build-operate-transfer options for in-house teams</li>
 								<li>Transparent pricing and usage-based add-ons</li>
 							</ul>
@@ -74,7 +74,7 @@ export default function AboutPage() {
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 							<div className="flex items-center gap-3 text-cyan-400">
 								<Phone className="w-5 h-5" />
-								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">{contactInfo.mobile}</a>
+								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g'')}`} className="hover:text-white">{contactInfo.mobile}</a>
 							</div>
 							<div className="flex items-center gap-3 text-purple-400">
 								<Mail className="w-5 h-5" />
@@ -126,22 +126,22 @@ export default function AboutPage() {
   const services = [
     {
       title: 'AI Development',
-      description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.',
+      description: 'Advanced machine learning modelsnatural language processingcomputer vision systemsand autonomous decision making.',
       icon: '🧠',
       color: 'text-cyan-400',
       gradient: 'from-cyan-400 to-blue-500'},
     {
       title: 'Automation Systems',
-      description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.',
+      description: 'Cloud infrastructure automationCI/CD pipeline optimizationself-healing applicationsand performance monitoring.',
       icon: '⚙️',
       color: 'text-fuchsia-400',
       gradient: 'from-fuchsia-400 to-purple-500'}];
 
   const achievements = [
-    { number: '600+', label: 'Services', color: 'text-cyan-400' },
-    { number: '1000%', label: 'ROI', color: 'text-fuchsia-400' },
-    { number: '24/7', label: 'Support', color: 'text-green-400' },
-    { number: '99.9%', label: 'SLA', color: 'text-blue-400' }];
+    { number: '600+'label: 'Services'color: 'text-cyan-400' },
+    { number: '1000%'label: 'ROI'color: 'text-fuchsia-400' },
+    { number: '24/7'label: 'Support'color: 'text-green-400' },
+    { number: '99.9%'label: 'SLA'color: 'text-blue-400' }];
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -186,16 +186,16 @@ export default function AboutPage() {
             <Card className="card-hover group border-gradient-blue hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/20">
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Our Mission</h2>
               <p className="text-lg text-gray-300 mb-4 leading-relaxed">
-                To create a world where technology operates autonomously, continuously improving and innovating without human intervention.
+                To create a world where technology operates autonomouslycontinuously improving and innovating without human intervention.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                We believe in the power of AI to solve complex problems, automate routine tasks, and unlock new possibilities for humanity.
+                We believe in the power of AI to solve complex problemsautomate routine tasksand unlock new possibilities for humanity.
               </p>
             </Card>
             <Card className="card-hover group border-gradient-purple hover:border-fuchsia-400/40 hover:shadow-2xl hover:shadow-fuchsia-400/20">
               <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Our Vision</h2>
               <p className="text-lg text-gray-300 mb-4 leading-relaxed">
-                To be the leading force in autonomous technology, creating systems that think, learn, and evolve independently.
+                To be the leading force in autonomous technologycreating systems that thinklearnand evolve independently.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 We envision a future where AI and automation work seamlessly together to enhance human capabilities and drive progress.
@@ -214,7 +214,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
+            {values.map((valueindex) => (
               <Card key={index} className="card-hover text-center group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="relative">
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
@@ -238,7 +238,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {services.map((service, index) => (
+            {services.map((serviceindex) => (
               <Card key={index} className="card-hover group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="flex items-start space-x-6">
                   <div className="relative">
@@ -260,7 +260,7 @@ export default function AboutPage() {
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
+            {achievements.map((achievementindex) => (
               <div key={index} className="text-center group">
                 <div className={`text-4xl md:text-5xl font-bold mb-3 ${achievement.color} group-hover:scale-110 transition-transform duration-300`}>{achievement.number}</div>
                 <div className="text-gray-400 text-sm md:text-base font-medium">{achievement.label}</div>

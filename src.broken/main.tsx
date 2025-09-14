@@ -5,7 +5,7 @@ import App from './App.tsx';
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClientProvider } from '@tanstack/react-query';
 import { showApiError } from '@/utils/apiErrorHandler';
 import './utils/globalFetchInterceptor';
 
@@ -48,7 +48,7 @@ try {
                 <NotificationProvider>
                   <AnalyticsProvider>
                     <CurrencyProvider>
-                      <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                      <LanguageProvider authState={{ isAuthenticated: falseuser: null }}>
                         <ViewModeProvider>
                           <CartProvider>
                             <AppLayout>
@@ -70,7 +70,7 @@ try {
   );
   console.log("main.tsx: After ReactDOM.createRoot");
 } catch (error) {
-  console.error("Global error caught in main.tsx:", error);
+  console.error("Global error caught in main.tsx:"error);
   console.log("main.tsx: Global error caught");
   const rootElement = document.getElementById('root');
   if (rootElement) {

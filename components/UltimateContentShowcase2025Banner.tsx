@@ -1,189 +1,176 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
-  TrendingUp, 
-  Users, 
-  Award,
-  ChevronRight,
-  Play,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  Globe,
-  Shield,
-  Target,
-  X
-} from 'lucide-react';
+import React{ useStateuseEffect } from 'react';
+import Link from 'next/link';
 
 const UltimateContentShowcase2025Banner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [currentContentsetCurrentContent] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [dismissedsetDismissed] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-    
-    // Auto-rotate features
+    // Check if banner was dismissed
+    const dismissedBanner = localStorage.getItem('ultimate-content-showcase-banner-dismissed');
+    if (dismissedBanner) {
+      setDismissed(true);
+      setIsVisible(false);
+    }
+
+    // Auto-rotate content every 6 seconds
     const interval = setInterval(() => {
-      setCurrentFeature(prev => (prev + 1) % features.length);
-    }, 3000);
+      setCurrentContent((prev) => (prev + 1) % contentItems.length);
+    }6000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
-  const features = [
+  const handleDismiss = () => {
+    localStorage.setItem('ultimate-content-showcase-banner-dismissed'true');
+    setDismissed(true);
+    setIsVisible(false);
+  };
+
+  const contentItems = [
     {
-      icon: Brain,
-      title: 'Neural AI Revolution',
-      description: 'Direct brain-computer interfaces',
-      color: 'from-purple-500 to-pink-500'
+      id: 'synthetic-intelligence-revolution',
+      title: 'Synthetic Intelligence Revolution',
+      description: '2,500% ROI through AI systems that combine multiple technologies',
+      metrics: '2,500% ROI • $8.2B+ Savings • 99.7% Accuracy',
+      url: '/blog/ai-2025-synthetic-intelligence-revolution-ultimate-breakthrough',
+      type: 'blog',
+      badge: 'Ultimate Breakthrough',
+      category: 'AI Innovation'
     },
     {
-      icon: Zap,
-      title: 'Quantum Computing',
-      description: '1000x faster processing power',
-      color: 'from-blue-500 to-cyan-500'
+      id: 'advanced-automation-mastery',
+      title: 'Advanced Automation Mastery',
+      description: '3,500% ROI through intelligent process orchestration',
+      metrics: '3,500% ROI • $12.8B+ Savings • 99.8% Accuracy',
+      url: '/blog/ai-2025-advanced-automation-mastery-ultimate-breakthrough-2025',
+      type: 'blog',
+      badge: 'Ultimate Breakthrough',
+      category: 'Automation'
     },
     {
-      icon: Rocket,
-      title: 'Autonomous Systems',
-      description: 'Self-managing business processes',
-      color: 'from-green-500 to-emerald-500'
+      id: 'fortune-500-success-story',
+      title: 'Fortune 500 Success Stories',
+      description: 'Real results from enterprise AI transformations',
+      metrics: '2,500% ROI • $8.2B Savings • 18 Months',
+      url: '/case-studies/synthetic-intelligence-fortune-500-2500-roi-success-story',
+      type: 'case-study',
+      badge: 'Success Story',
+      category: 'Case Study'
     },
     {
-      icon: Shield,
-      title: 'Quantum Security',
-      description: 'Unbreakable encryption technology',
-      color: 'from-red-500 to-orange-500'
+      id: 'implementation-guides',
+      title: 'Implementation Guides',
+      description: 'Complete roadmaps to achieve breakthrough ROI',
+      metrics: '94% Success Rate • 1,000+ Deployments • Proven Results',
+      url: '/resources/synthetic-intelligence-implementation-ultimate-guide-2025',
+      type: 'resource',
+      badge: 'Implementation Guide',
+      category: 'Resources'
     }
   ];
 
-  const stats = [
-    { label: 'AI Models', value: '10,000+', icon: Brain },
-    { label: 'Businesses', value: '5,000+', icon: Users },
-    { label: 'Savings', value: '$2.5B+', icon: TrendingUp },
-    { label: 'Success Rate', value: '99.8%', icon: Award }
-  ];
+  if (dismissed || !isVisible) {
+    return null;
+  }
 
-  if (isDismissed) return null;
+  const currentItem = contentItems[currentContent];
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20"
-        >
-          {/* Animated Background */}
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/10 via-pink-600/10 to-blue-600/10 animate-pulse"></div>
-          </div>
+    <div className="relative bg-gradient-to-r from-violet-900 via-purple-900 to-fuchsia-900 text-white overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-violet-600/20 via-transparent to-fuchsia-600/20"></div>
+        <div className="absolute top-12 left-12 w-28 h-28 bg-violet-500/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-24 right-20 w-24 h-24 bg-purple-500/10 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-36 w-20 h-20 bg-fuchsia-500/10 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute top-20 right-40 w-16 h-16 bg-violet-400/10 rounded-full animate-pulse delay-3000"></div>
+      </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="flex items-center justify-between">
-              {/* Left Content */}
-              <div className="flex-1">
-                <div className="flex items-center space-x-4">
-                  {/* Feature Rotator */}
-                  <div className="relative w-16 h-16">
-                    <AnimatePresence mode="wait">
-                      <motion.div
-                        key={currentFeature}
-                        initial={{ opacity: 0, scale: 0.8, rotate: -180 }}
-                        animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                        exit={{ opacity: 0, scale: 0.8, rotate: 180 }}
-                        transition={{ duration: 0.5 }}
-                        className={`absolute inset-0 rounded-full bg-gradient-to-r ${features[currentFeature].color} flex items-center justify-center`}
-                      >
-                        <features[currentFeature].icon className="w-8 h-8 text-white" />
-                      </motion.div>
-                    </AnimatePresence>
-                  </div>
-
-                  <div>
-                    <div className="flex items-center space-x-2 mb-1">
-                      <Sparkles className="w-4 h-4 text-purple-400" />
-                      <span className="text-purple-400 text-sm font-medium">NEW</span>
-                      <span className="text-gray-400 text-sm">•</span>
-                      <span className="text-gray-300 text-sm">2025 Technology Showcase</span>
-                    </div>
-                    <h2 className="text-2xl font-bold text-white">
-                      {features[currentFeature].title}
-                    </h2>
-                    <p className="text-gray-300 text-sm">
-                      {features[currentFeature].description}
-                    </p>
-                  </div>
-                </div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex items-center justify-between">
+          {/* Content */}
+          <div className="flex-1">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="bg-gradient-to-r from-violet-500 to-fuchsia-500 px-3 py-1 rounded-full text-sm font-semibold">
+                {currentItem.badge}
               </div>
-
-              {/* Center Stats */}
-              <div className="hidden lg:flex items-center space-x-8">
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="text-center"
-                  >
-                    <div className="text-2xl font-bold text-white">{stat.value}</div>
-                    <div className="text-gray-400 text-xs">{stat.label}</div>
-                  </motion.div>
-                ))}
+              <div className="bg-violet-500/20 px-2 py-1 rounded text-xs font-medium">
+                {currentItem.category}
               </div>
-
-              {/* Right Actions */}
-              <div className="flex items-center space-x-4">
-                <button className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center">
-                  <Play className="w-4 h-4 mr-2" />
-                  Watch Demo
-                </button>
-                <button className="px-6 py-2 bg-transparent border border-purple-400 text-purple-400 rounded-full font-medium hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-                <button
-                  onClick={() => setIsDismissed(true)}
-                  className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+              <div className="bg-gradient-to-r from-purple-500 to-pink-500 px-2 py-1 rounded text-xs font-medium">
+                FEATURED
               </div>
             </div>
 
-            {/* Mobile Stats */}
-            <div className="lg:hidden mt-4 grid grid-cols-4 gap-4">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-lg font-bold text-white">{stat.value}</div>
-                  <div className="text-gray-400 text-xs">{stat.label}</div>
-                </motion.div>
-              ))}
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
+              {currentItem.title}
+            </h2>
+
+            <p className="text-lg text-violet-100 mb-4 max-w-2xl">
+              {currentItem.description}
+            </p>
+
+            <div className="flex items-center space-x-6 mb-6">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-sm font-semibold text-green-300">
+                  {currentItem.metrics}
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-4">
+              <Link
+                href={currentItem.url}
+                className="bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg"
+              >
+                {currentItem.type === 'blog' ? 'Read Article' : currentItem.type === 'case-study' ? 'Read Case Study' : 'Read Guide'}
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white hover:bg-white hover:text-violet-900 px-6 py-3 rounded-lg font-semibold transition-all duration-200"
+              >
+                Get Implementation Help
+              </Link>
             </div>
           </div>
 
-          {/* Progress Bar */}
-          <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-600 to-pink-600 animate-pulse"></div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+          {/* Progress indicators */}
+          <div className="hidden md:flex flex-col items-center space-y-2 ml-8">
+            {contentItems.map((_index) => (
+              <div
+                key={index}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentContent
+                    ? 'bg-white scale-125'
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Progress bar */}
+        <div className="mt-6 bg-white/20 rounded-full h-1 overflow-hidden">
+          <div className="bg-gradient-to-r from-violet-400 to-fuchsia-400 h-full rounded-full animate-pulse"></div>
+        </div>
+      </div>
+
+      {/* Dismiss button */}
+      <button
+        onClick={handleDismiss}
+        className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors duration-200"
+        aria-label="Dismiss banner"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
   );
 };
 

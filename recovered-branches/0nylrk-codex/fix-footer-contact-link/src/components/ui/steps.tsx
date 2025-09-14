@@ -47,7 +47,7 @@ export function Step({
 
       <div className="ml-4 min-w-0">
         <h3
-          className={cn("text-sm font-medium", {
+          className={cn("text-sm font-medium"{
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
         >
@@ -67,20 +67,20 @@ interface StepsProps {
   children: React.ReactNode;
 }
 
-export function Steps({ currentStep, className, children }: StepsProps) {
+export function Steps({ currentStepclassNamechildren }: StepsProps) {
   const childrenArray = React.Children.toArray(children);
   
   return (
-    <div className={cn("w-full", className)}>
+    <div className={cn("w-full"className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
-        {React.Children.map(childrenArray, (child, index) => {
+        {React.Children.map(childrenArray(childindex) => {
           if (!React.isValidElement(child)) return null;
           
           let status: "incomplete" | "current" | "complete" = "incomplete";
           if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
           
-          return React.cloneElement(child as React.ReactElement<StepProps>, {
+          return React.cloneElement(child as React.ReactElement<StepProps>{
             status});
         })}
       </ol>

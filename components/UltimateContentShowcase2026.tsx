@@ -1,195 +1,190 @@
 import React from 'react';
 import Link from 'next/link';
-import { BookOpen, FileText, Users, TrendingUp, Star, ArrowRight, CheckCircle, Zap } from 'lucide-react';
 
 const UltimateContentShowcase2026 = () => {
-  const contentItems = [
+  const contentCategories = [
     {
-      title: "AI 2026 Revolutionary Breakthrough Guide",
-      description: "Complete guide to the revolutionary AI breakthroughs of 2026 that are transforming industries worldwide.",
-      type: "Blog Post",
-      readTime: "15 min read",
-      href: "/blog/ai-2026-revolutionary-breakthrough-complete-guide",
-      icon: BookOpen,
-      color: "from-purple-500 to-pink-500",
-      featured: true
+      title: "Quantum AI Revolution",
+      description: "The next frontier in artificial intelligence",
+      articles: [
+        {
+          title: "Quantum Neural Networks: The Future of AI",
+          excerpt: "Discover how quantum computing is revolutionizing neural network architectures",
+          readTime: "12 min",
+          category: "Quantum Computing",
+          featured: true
+        },
+        {
+          title: "Quantum Machine Learning Algorithms",
+          excerpt: "Advanced algorithms that leverage quantum properties for superior performance",
+          readTime: "15 min",
+          category: "Machine Learning",
+          featured: false
+        }
+      ],
+      color: "from-purple-500 to-indigo-500"
     },
     {
-      title: "AI 2026 Transformation Success Story",
-      description: "How a Fortune 500 company achieved 500% ROI through comprehensive AI transformation in 2026.",
-      type: "Case Study",
-      readTime: "12 min read",
-      href: "/case-studies/ai-2026-transformation-ultimate-success-story",
-      icon: Users,
-      color: "from-green-500 to-teal-500",
-      featured: true
+      title: "Autonomous Systems",
+      description: "Self-managing AI that runs your business",
+      articles: [
+        {
+          title: "Autonomous Business Operations: A Complete Guide",
+          excerpt: "How AI can manage entire business processes without human intervention",
+          readTime: "20 min",
+          category: "Business Automation",
+          featured: true
+        },
+        {
+          title: "Self-Healing AI Systems",
+          excerpt: "AI that detects and fixes its own problems automatically",
+          readTime: "10 min",
+          category: "System Design",
+          featured: false
+        }
+      ],
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "AI 2026 Implementation Master Guide",
-      description: "The definitive guide to implementing AI technologies in 2026 with complete roadmap and best practices.",
-      type: "Resource",
-      readTime: "20 min read",
-      href: "/resources/ai-2026-implementation-ultimate-master-guide",
-      icon: FileText,
-      color: "from-blue-500 to-cyan-500",
-      featured: true
+      title: "Neural Interfaces",
+      description: "Direct brain-computer communication",
+      articles: [
+        {
+          title: "Brain-Computer Interfaces: The Next Evolution",
+          excerpt: "Revolutionary technology that connects human minds directly to AI systems",
+          readTime: "18 min",
+          category: "Neural Technology",
+          featured: true
+        },
+        {
+          title: "Thought-Controlled AI Systems",
+          excerpt: "Control AI systems using only your thoughts and intentions",
+          readTime: "14 min",
+          category: "Human-AI Interaction",
+          featured: false
+        }
+      ],
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Synthetic Intelligence",
+      description: "AI that creates and manages its own data",
+      articles: [
+        {
+          title: "Synthetic Data Generation at Scale",
+          excerpt: "How AI creates realistic data for training and testing purposes",
+          readTime: "16 min",
+          category: "Data Science",
+          featured: true
+        },
+        {
+          title: "Self-Improving AI Systems",
+          excerpt: "AI that continuously improves its own capabilities",
+          readTime: "13 min",
+          category: "AI Development",
+          featured: false
+        }
+      ],
+      color: "from-orange-500 to-red-500"
     }
   ];
 
-  const benefits = [
-    "500% Average ROI Achievement",
-    "95% Quality Improvement",
-    "40% Cost Reduction",
-    "99.7% Accuracy Rate",
-    "Revolutionary AI Technologies",
-    "Proven Implementation Methods"
-  ];
-
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-6">
-            <Star className="w-4 h-4 mr-2 fill-current" />
-            ULTIMATE AI 2026 CONTENT SHOWCASE
+          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
+            <span className="text-sm font-medium text-cyan-300">🌟 ULTIMATE CONTENT 2026</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Revolutionary AI Content
-            <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              That Drives Results
-            </span>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-300 via-white to-purple-300 bg-clip-text text-transparent">
+            Ultimate Content Showcase
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive collection of AI 2026 content featuring breakthrough technologies, 
-            real success stories, and proven implementation strategies that deliver measurable results.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Explore the most comprehensive collection of AI contentinsightsand technologies 
+            that are shaping the future of business and technology.
           </p>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {contentItems.map((item, index) => {
-            const IconComponent = item.icon;
-            return (
-              <div
-                key={index}
-                className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
-                  item.featured ? 'ring-2 ring-purple-500 ring-opacity-50' : ''
-                }`}
-              >
-                {item.featured && (
-                  <div className="absolute -top-3 left-6 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-1 rounded-full text-xs font-bold">
-                    FEATURED
-                  </div>
-                )}
-                
-                <div className="p-8">
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${item.color} text-white mb-6`}>
-                    <IconComponent className="w-6 h-6" />
-                  </div>
-                  
-                  <div className="flex items-center mb-4">
-                    <span className="text-sm font-semibold text-purple-600 bg-purple-100 px-3 py-1 rounded-full">
-                      {item.type}
-                    </span>
-                    <span className="text-sm text-gray-500 ml-3">
-                      {item.readTime}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
-                    {item.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {item.description}
-                  </p>
-                  
-                  <Link
-                    href={item.href}
-                    className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors group-hover:translate-x-1"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {contentCategories.map((categoryIndex) => (
+            <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div className="mb-8">
+                <div className={`inline-block bg-gradient-to-r ${category.color} text-white px-4 py-2 rounded-full text-sm font-bold mb-4`}>
+                  {category.title}
                 </div>
+                <h3 className="text-2xl font-bold mb-4">{category.title}</h3>
+                <p className="text-gray-300 text-lg">{category.description}</p>
               </div>
-            );
-          })}
-        </div>
 
-        {/* Benefits Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
-            Why Our AI 2026 Content Delivers Results
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                <span className="text-gray-700 font-medium">{benefit}</span>
+              <div className="space-y-6">
+                {category.articles.map((articleIndex) => (
+                  <div key={articleIndex} className={`p-6 rounded-xl border ${
+                    article.featured 
+                      ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border-cyan-500/30' 
+                      : 'bg-white/5 border-white/10'
+                  }`}>
+                    {article.featured && (
+                      <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
+                        FEATURED
+                      </div>
+                    )}
+                    
+                    <h4 className="text-xl font-bold mb-3 text-white">{article.title}</h4>
+                    <p className="text-gray-300 mb-4 leading-relaxed">{article.excerpt}</p>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <span className="bg-white/10 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                          {article.category}
+                        </span>
+                        <span className="text-gray-400 text-sm">{article.readTime}</span>
+                      </div>
+                      <Link
+                        href={`/content/${category.title.toLowerCase().replace(/\s+/g'-')}/${article.title.toLowerCase().replace(/\s+/g'-')}`}
+                        className="text-cyan-400 font-semibold hover:text-cyan-300 transition-colors"
+                      >
+                        Read More →
+                      </Link>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+
+              <div className="mt-8 text-center">
+                <Link
+                  href={`/category/${category.title.toLowerCase().replace(/\s+/g'-')}`}
+                  className={`bg-gradient-to-r ${category.color} text-white px-6 py-3 rounded-lg font-bold hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
+                >
+                  View All {category.title} Content
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Success Metrics */}
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white mb-16">
-          <h3 className="text-2xl font-bold text-center mb-8">
-            Proven Results from Our AI 2026 Content
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-400 mb-2">500%</div>
-              <div className="text-sm opacity-90">Average ROI</div>
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
+            <h3 className="text-3xl font-bold mb-4 text-white">Ready to Explore the Future?</h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join thousands of professionals who are already using these cutting-edge AI technologies 
+              to transform their businesses and accelerate their success.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/all-content"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+              >
+                Browse All Content
+              </Link>
+              <Link
+                href="/newsletter"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl font-bold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+              >
+                Subscribe to Updates
+              </Link>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">95%</div>
-              <div className="text-sm opacity-90">Quality Improvement</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">40%</div>
-              <div className="text-sm opacity-90">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">99.7%</div>
-              <div className="text-sm opacity-90">Accuracy Rate</div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Transform Your Business with AI 2026?
-          </h3>
-          
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join thousands of organizations already achieving breakthrough results with our proven AI strategies and implementation guides.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog/ai-2026-revolutionary-breakthrough-complete-guide"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
-            >
-              <BookOpen className="w-5 h-5 mr-2" />
-              Start with Complete Guide
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            
-            <Link
-              href="/contact"
-              className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-600 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-            >
-              <Zap className="w-5 h-5 mr-2" />
-              Get Expert Consultation
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
           </div>
         </div>
       </div>

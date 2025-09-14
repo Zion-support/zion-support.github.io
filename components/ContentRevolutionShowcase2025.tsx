@@ -21,7 +21,7 @@ export default function ContentRevolutionShowcase2025() {
     },
     {
       title: "Content Mastery Toolkit",
-      description: "Complete implementation guide with templates, frameworks, and optimization tools.",
+      description: "Complete implementation guide with templatesframeworksand optimization tools.",
       href: "/resources/ai-2025-content-mastery-toolkit",
       type: "Toolkit",
       roi: "5,000%",
@@ -47,7 +47,7 @@ export default function ContentRevolutionShowcase2025() {
       </div>
 
       <div className="grid md:grid-cols-3 gap-8 mb-12">
-        {contentItems.map((item, index) => (
+        {contentItems.map((itemindex) => (
           <div 
             key={index}
             className="group relative bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"

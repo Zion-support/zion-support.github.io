@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
+import { JobApplicationStatus } from "@/types/jobs";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import {
   ApplicationsTable,
@@ -16,23 +16,23 @@ interface JobApplicationsTableProps {
 
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const { 
-    applications, 
-    isLoading, 
-    error, 
-    updateApplicationStatus, 
+    applications
+    isLoading
+    error
+    updateApplicationStatus
     markApplicationAsViewed,
     refetch
   } = useJobApplications(jobId);
 
-  const [processingId, setProcessingId] = useState<string | null>(null);
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
-  const [showScoreDialog, setShowScoreDialog] = useState(false);
+  const [processingIdsetProcessingId] = useState<string | null>(null);
+  const [selectedApplicationsetSelectedApplication] = useState<JobApplication | null>(null);
+  const [showScoreDialogsetShowScoreDialog] = useState(false);
   
-  const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {
+  const handleStatusChange = async (applicationId: stringnewStatus: ApplicationStatus) => {
     setProcessingId(applicationId);
     try {
-      await updateApplicationStatus(applicationId, newStatus);
-      // If it's not already viewed, mark it as viewed
+      await updateApplicationStatus(applicationIdnewStatus);
+      // If it's not already viewedmark it as viewed
       const application = applications.find(app => app.id === applicationId);
       if (application && !application.viewed_at) {
         await markApplicationAsViewed(applicationId);

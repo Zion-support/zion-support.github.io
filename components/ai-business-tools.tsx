@@ -1,15 +1,16 @@
+"use client";
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-  Brain, 
-  MessageSquare, 
-  Image, 
-  Video, 
-  FileText, 
-  BarChart3, 
-  Users, 
+  Brain
+  MessageSquare
+  Image
+  Video
+  FileText
+  BarChart3
+  Users
   Zap,
   ArrowRight,
   Star,
@@ -24,7 +25,7 @@ export default function AIBusinessToolsPage() {
   const aiTools = [
     {
       name: 'ChatGPT',
-      description: 'Advanced AI language model that can help with writing, analysis, coding, and creative tasks. Perfect for content creation and problem-solving.',
+      description: 'Advanced AI language model that can help with writinganalysiscodingand creative tasks. Perfect for content creation and problem-solving.',
       category: 'AI Assistant',
       pricing: 'Free - $20/month',
       rating: 4.8,
@@ -40,14 +41,14 @@ export default function AIBusinessToolsPage() {
         'Multi-language support'
       ],
       website: 'https://chat.openai.com',
-      useCase: 'Ideal for writers, developers, researchers, and anyone who needs AI assistance with complex tasks.',
-      pros: ['Powerful capabilities', 'Easy to use', 'Regular updates', 'Good free tier'],
-      cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns'],
-      bestFor: 'Content creators, developers, researchers'
+      useCase: 'Ideal for writersdevelopersresearchersand anyone who needs AI assistance with complex tasks.',
+      pros: ['Powerful capabilities'Easy to use'Regular updates'Good free tier'],
+      cons: ['Sometimes inaccurate'Limited context'Privacy concerns'],
+      bestFor: 'Content creatorsdevelopersresearchers'
     },
     {
       name: 'Midjourney',
-      description: 'AI-powered image generation tool that creates stunning artwork, illustrations, and designs from text descriptions.',
+      description: 'AI-powered image generation tool that creates stunning artworkillustrationsand designs from text descriptions.',
       category: 'AI Art',
       pricing: '$10 - $30/month',
       rating: 4.7,
@@ -63,14 +64,14 @@ export default function AIBusinessToolsPage() {
         'Discord integration'
       ],
       website: 'https://midjourney.com',
-      useCase: 'Perfect for designers, marketers, content creators, and businesses needing custom visual content.',
-      pros: ['High-quality output', 'Creative control', 'Commercial rights', 'Active community'],
-      cons: ['Discord-only interface', 'Limited customization', 'Monthly subscription'],
-      bestFor: 'Designers, marketers, content creators'
+      useCase: 'Perfect for designersmarketerscontent creatorsand businesses needing custom visual content.',
+      pros: ['High-quality output'Creative control'Commercial rights'Active community'],
+      cons: ['Discord-only interface'Limited customization'Monthly subscription'],
+      bestFor: 'Designersmarketerscontent creators'
     },
     {
       name: 'Jasper',
-      description: 'AI writing assistant that helps create marketing copy, blog posts, social media content, and more.',
+      description: 'AI writing assistant that helps create marketing copyblog postsocial media contentand more.',
       category: 'AI Writing',
       pricing: '$39 - $125/month',
       rating: 4.6,
@@ -86,10 +87,10 @@ export default function AIBusinessToolsPage() {
         'Team collaboration'
       ],
       website: 'https://jasper.ai',
-      useCase: 'Essential for marketing teams, content creators, and businesses that need high-quality written content at scale.',
-      pros: ['Specialized for marketing', 'Brand voice training', 'SEO optimization', 'Team features'],
-      cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],
-      bestFor: 'Marketing teams, content creators, businesses'
+      useCase: 'Essential for marketing teamscontent creatorsand businesses that need high-quality written content at scale.',
+      pros: ['Specialized for marketing'Brand voice training'SEO optimization'Team features'],
+      cons: ['Expensive'Limited free trial'Can be repetitive'],
+      bestFor: 'Marketing teamscontent creatorsbusinesses'
     },
     {
       name: 'Synthesia',
@@ -109,14 +110,14 @@ export default function AIBusinessToolsPage() {
         'API access'
       ],
       website: 'https://synthesia.io',
-      useCase: 'Perfect for creating training videos, marketing content, and presentations without hiring actors or video crews.',
-      pros: ['Professional quality', 'Multiple languages', 'Custom avatars', 'Easy to use'],
-      cons: ['Limited avatar options', 'Expensive', 'Subscription required'],
-      bestFor: 'Training departments, marketers, educators'
+      useCase: 'Perfect for creating training videosmarketing contentand presentations without hiring actors or video crews.',
+      pros: ['Professional quality'Multiple languages'Custom avatars'Easy to use'],
+      cons: ['Limited avatar options'Expensive'Subscription required'],
+      bestFor: 'Training departmentsmarketerseducators'
     },
     {
       name: 'Copy.ai',
-      description: 'AI copywriting tool that generates marketing copy, product descriptions, and creative content for businesses.',
+      description: 'AI copywriting tool that generates marketing copyproduct descriptionsand creative content for businesses.',
       category: 'AI Copywriting',
       pricing: 'Free - $49/month',
       rating: 4.4,
@@ -132,14 +133,14 @@ export default function AIBusinessToolsPage() {
         'Free tier available'
       ],
       website: 'https://copy.ai',
-      useCase: 'Great for small businesses, entrepreneurs, and marketers who need quality copy without hiring writers.',
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
-      cons: ['Limited customization', 'Quality varies', 'Basic features'],
-      bestFor: 'Small businesses, entrepreneurs, marketers'
+      useCase: 'Great for small businessesentrepreneursand marketers who need quality copy without hiring writers.',
+      pros: ['Free tier'Easy to use'Good templates'Affordable'],
+      cons: ['Limited customization'Quality varies'Basic features'],
+      bestFor: 'Small businessesentrepreneursmarketers'
     },
     {
       name: 'Grammarly',
-      description: 'AI-powered writing assistant that checks grammar, spelling, tone, and style to improve your writing.',
+      description: 'AI-powered writing assistant that checks grammarspellingtoneand style to improve your writing.',
       category: 'AI Writing',
       pricing: 'Free - $12/month',
       rating: 4.7,
@@ -155,10 +156,10 @@ export default function AIBusinessToolsPage() {
         'Mobile apps'
       ],
       website: 'https://grammarly.com',
-      useCase: 'Essential for anyone who writes professionally, including students, professionals, and content creators.',
-      pros: ['Excellent accuracy', 'Multiple platforms', 'Free tier', 'User-friendly'],
-      cons: ['Limited free features', 'Privacy concerns', 'Can be overzealous'],
-      bestFor: 'Students, professionals, content creators'
+      useCase: 'Essential for anyone who writes professionallyincluding studentsprofessionalsand content creators.',
+      pros: ['Excellent accuracy'Multiple platforms'Free tier'User-friendly'],
+      cons: ['Limited free features'Privacy concerns'Can be overzealous'],
+      bestFor: 'Studentsprofessionalscontent creators'
     },
     {
       name: 'Lumen5',
@@ -178,10 +179,10 @@ export default function AIBusinessToolsPage() {
         'Free tier available'
       ],
       website: 'https://lumen5.com',
-      useCase: 'Perfect for marketers, social media managers, and businesses that want to create video content from existing text.',
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
-      cons: ['Limited customization', 'Basic features', 'Watermark on free'],
-      bestFor: 'Marketers, social media managers, small businesses'
+      useCase: 'Perfect for marketersocial media managersand businesses that want to create video content from existing text.',
+      pros: ['Free tier'Easy to use'Good templates'Affordable'],
+      cons: ['Limited customization'Basic features'Watermark on free'],
+      bestFor: 'Marketersocial media managersmall businesses'
     },
     {
       name: 'Surfer SEO',
@@ -201,15 +202,15 @@ export default function AIBusinessToolsPage() {
         'Rank tracking'
       ],
       website: 'https://surferseo.com',
-      useCase: 'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.',
-      pros: ['Data-driven insights', 'Content optimization', 'Competitor analysis', 'Good support'],
-      cons: ['Expensive', 'Complex interface', 'Steep learning curve'],
-      bestFor: 'SEO specialists, content marketers, businesses'
+      useCase: 'Essential for content marketersSEO specialistsand businesses that want to improve their search rankings.',
+      pros: ['Data-driven insights'Content optimization'Competitor analysis'Good support'],
+      cons: ['Expensive'Complex interface'Steep learning curve'],
+      bestFor: 'SEO specialistscontent marketersbusinesses'
     }
   ];
 
-  const categories = ['All', 'AI Assistant', 'AI Art', 'AI Writing', 'AI Video', 'AI Copywriting', 'AI SEO'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const categories = ['All'AI Assistant'AI Art'AI Writing'AI Video'AI Copywriting'AI SEO'];
+  const [selectedCategorysetSelectedCategory] = React.useState('All');
 
   const filteredTools = selectedCategory === 'All' 
     ? aiTools 
@@ -219,7 +220,7 @@ export default function AIBusinessToolsPage() {
     <>
       <Head>
         <title>AI Business Tools - Zion Tech Group</title>
-        <meta name="description" content="Discover the best AI-powered business tools for automation, content creation, and productivity. Expert-curated selection of AI SaaS services." />
+        <meta name="description" content="Discover the best AI-powered business tools for automationcontent creationand productivity. Expert-curated selection of AI SaaS services." />
         <meta property="og:title" content="AI Business Tools - Zion Tech Group" />
         <meta property="og:description" content="Expert-curated selection of AI-powered business tools and SaaS services." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -341,7 +342,7 @@ export default function AIBusinessToolsPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredTools.map((tool, index) => (
+            {filteredTools.map((toolindex) => (
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
@@ -377,7 +378,7 @@ export default function AIBusinessToolsPage() {
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                       <div className="grid grid-cols-2 gap-2">
-                        {tool.features.slice(0, 4).map((feature, featureIndex) => (
+                        {tool.features.slice(04).map((featureIndex) => (
                           <div key={featureIndex} className="flex items-center text-sm text-gray-400">
                             <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                             {feature}
@@ -423,7 +424,7 @@ export default function AIBusinessToolsPage() {
               Why Choose AI Tools?
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              AI-powered tools are revolutionizing how businesses operate, create content, and serve customers.
+              AI-powered tools are revolutionizing how businesses operatecreate contentand serve customers.
             </p>
           </div>
 
@@ -434,7 +435,7 @@ export default function AIBusinessToolsPage() {
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">10x Productivity</h3>
               <p className="text-gray-400">
-                AI tools can automate repetitive tasks, generate content, and provide insights that would take humans hours or days to complete.
+                AI tools can automate repetitive tasksgenerate contentand provide insights that would take humans hours or days to complete.
               </p>
             </Card>
 
@@ -444,7 +445,7 @@ export default function AIBusinessToolsPage() {
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">Data-Driven Decisions</h3>
               <p className="text-gray-400">
-                AI analytics provide deep insights into customer behavior, market trends, and business performance for better decision-making.
+                AI analytics provide deep insights into customer behaviormarket trendsand business performance for better decision-making.
               </p>
             </Card>
 
@@ -454,7 +455,7 @@ export default function AIBusinessToolsPage() {
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">Enhanced Customer Experience</h3>
               <p className="text-gray-400">
-                AI-powered chatbots, personalization, and automation create seamless, personalized experiences for your customers.
+                AI-powered chatbotspersonalizationand automation create seamlesspersonalized experiences for your customers.
               </p>
             </Card>
           </div>
@@ -469,7 +470,7 @@ export default function AIBusinessToolsPage() {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Our AI experts can help you identify the right tools, implement them effectively, and maximize their impact on your business.
+            Our AI experts can help you identify the right toolsimplement them effectivelyand maximize their impact on your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button

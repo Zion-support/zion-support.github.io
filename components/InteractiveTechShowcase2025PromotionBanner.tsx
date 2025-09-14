@@ -1,12 +1,13 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Play, 
-  ArrowRight, 
-  Star, 
-  Zap, 
+  Play
+  ArrowRight
+  Star
+  Zap
   TrendingUp,
   Users,
   Award,
@@ -25,24 +26,24 @@ import {
 } from 'lucide-react';
 
 const InteractiveTechShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const features = [
-    { icon: Brain, text: 'AI Automation', color: 'from-blue-500 to-purple-500' },
-    { icon: Shield, text: 'Cybersecurity', color: 'from-red-500 to-orange-500' },
-    { icon: Cloud, text: 'Cloud Solutions', color: 'from-green-500 to-teal-500' },
-    { icon: BarChart3, text: 'Data Analytics', color: 'from-purple-500 to-pink-500' }
+    { icon: Braintext: 'AI Automation'color: 'from-blue-500 to-purple-500' },
+    { icon: Shieldtext: 'Cybersecurity'color: 'from-red-500 to-orange-500' },
+    { icon: Cloudtext: 'Cloud Solutions'color: 'from-green-500 to-teal-500' },
+    { icon: BarChart3text: 'Data Analytics'color: 'from-purple-500 to-pink-500' }
   ];
 
   const stats = [
-    { value: '10x', label: 'Performance Gain' },
-    { value: '99.7%', label: 'Accuracy Rate' },
-    { value: '<2s', label: 'Response Time' },
-    { value: '500+', label: 'Live Demos' }
+    { value: '10x'label: 'Performance Gain' },
+    { value: '99.7%'label: 'Accuracy Rate' },
+    { value: '<2s'label: 'Response Time' },
+    { value: '500+'label: 'Live Demos' }
   ];
 
   const demoSteps = [
@@ -65,8 +66,8 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-6"
           >
@@ -75,9 +76,9 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
           </motion.div>
 
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
             Watch Our Technology
@@ -87,20 +88,20 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.4 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed"
           >
             Experience our revolutionary AI systems live in action. See how our technology 
-            processes data, optimizes processes, and delivers results in real-time.
+            processes dataoptimizes processesand delivers results in real-time.
           </motion.p>
 
           {/* Interactive Demo Preview */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.6 }}
             className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto mb-8"
           >
             <div className="flex items-center justify-between mb-6">
@@ -135,7 +136,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4">
-                  {stats.map((stat, index) => (
+                  {stats.map((statindex) => (
                     <div key={index} className="bg-white/5 rounded-lg p-3 text-center">
                       <div className="text-2xl font-bold text-white">{stat.value}</div>
                       <div className="text-sm text-gray-400">{stat.label}</div>
@@ -147,11 +148,11 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
               <div className="space-y-4">
                 <h4 className="text-lg font-semibold text-white mb-4">Demo Features:</h4>
                 <div className="space-y-3">
-                  {demoSteps.map((step, index) => (
+                  {demoSteps.map((stepindex) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
+                      initial={{ opacity: 0x: -20 }}
+                      animate={{ opacity: 1x: 0 }}
                       transition={{ delay: index * 0.1 }}
                       className="flex items-center gap-3"
                     >
@@ -168,18 +169,18 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
 
           {/* Feature Icons */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.8 }}
             className="flex flex-wrap justify-center gap-8 mb-12"
           >
-            {features.map((feature, index) => {
+            {features.map((featureindex) => {
               const Icon = feature.icon;
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
                   transition={{ delay: 0.9 + index * 0.1 }}
                   className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
@@ -194,9 +195,9 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 1.0 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 group shadow-lg hover:shadow-xl transform hover:scale-105">

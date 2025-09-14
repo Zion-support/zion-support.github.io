@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Cpu, Brain, Zap, Shield, TrendingUp, Users, Activity } from 'lucide-react';
+ArrowRightCpuBrainZapShieldTrendingUpUsersActivity
 
 export default function AutonomousEnterpriseBanner() {
   return (
@@ -14,7 +14,7 @@ export default function AutonomousEnterpriseBanner() {
             The Future of Business Operations is Autonomous
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover how autonomous AI systems are revolutionizing enterprise operations, creating self-managing businesses that adapt, learn, and optimize without human intervention.
+            Discover how autonomous AI systems are revolutionizing enterprise operationscreating self-managing businesses that adaptlearnand optimize without human intervention.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function AutonomousEnterpriseBanner() {
             <div>
               <h3 className="text-2xl font-bold mb-4">Featured: Autonomous Enterprise Systems Guide</h3>
               <p className="text-lg opacity-90 mb-6">
-                Learn how autonomous AI systems are revolutionizing enterprise operations in 2025, creating self-managing businesses that adapt, learn, and optimize without human intervention.
+                Learn how autonomous AI systems are revolutionizing enterprise operations in 2025creating self-managing businesses that adaptlearnand optimize without human intervention.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -109,7 +109,7 @@ export default function AutonomousEnterpriseBanner() {
               <li>• Supply chain optimization</li>
             </ul>
             <div className="text-xs opacity-75">
-              <strong>Results:</strong> 60% downtime reduction, 45% quality improvement
+              <strong>Results:</strong> 60% downtime reduction45% quality improvement
             </div>
           </div>
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
@@ -120,7 +120,7 @@ export default function AutonomousEnterpriseBanner() {
               <li>• Investment management</li>
             </ul>
             <div className="text-xs opacity-75">
-              <strong>Results:</strong> 80% faster processing, 99.9% fraud accuracy
+              <strong>Results:</strong> 80% faster processing99.9% fraud accuracy
             </div>
           </div>
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
@@ -131,7 +131,7 @@ export default function AutonomousEnterpriseBanner() {
               <li>• Resource management</li>
             </ul>
             <div className="text-xs opacity-75">
-              <strong>Results:</strong> 30% better outcomes, 50% fewer readmissions
+              <strong>Results:</strong> 30% better outcomes50% fewer readmissions
             </div>
           </div>
         </div>
@@ -145,21 +145,21 @@ export default function AutonomousEnterpriseBanner() {
                 <span className="text-white font-bold">1</span>
               </div>
               <h4 className="text-lg font-bold mb-2">Foundation</h4>
-              <p className="text-sm opacity-90">Assessment, infrastructure, pilot programs, team training</p>
+              <p className="text-sm opacity-90">Assessmentinfrastructurepilot programsteam training</p>
             </div>
             <div className="text-center">
               <div className="bg-green-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold">2</span>
               </div>
               <h4 className="text-lg font-bold mb-2">Expansion</h4>
-              <p className="text-sm opacity-90">Process automation, data integration, learning systems</p>
+              <p className="text-sm opacity-90">Process automationdata integrationlearning systems</p>
             </div>
             <div className="text-center">
               <div className="bg-purple-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold">3</span>
               </div>
               <h4 className="text-lg font-bold mb-2">Optimization</h4>
-              <p className="text-sm opacity-90">Advanced analytics, self-healing, continuous learning</p>
+              <p className="text-sm opacity-90">Advanced analyticself-healingcontinuous learning</p>
             </div>
           </div>
         </div>

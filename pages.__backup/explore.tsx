@@ -8,28 +8,28 @@ export default function ExplorePage() {
       title: "AI Automation",
       description: "Discover how artificial intelligence is revolutionizing automation across industries",
       icon: "🤖",
-      features: ["Machine Learning", "Neural Networks", "Predictive Analytics"],
+      features: ["Machine Learning"Neural Networks"Predictive Analytics"],
       link: "/explore/ai-automation"
     },
     {
       title: "Cloud Computing",
       description: "Explore the latest in cloud infrastructure and autonomous management",
       icon: "☁️",
-      features: ["Auto-scaling", "Load Balancing", "Cost Optimization"],
+      features: ["Auto-scaling"Load Balancing"Cost Optimization"],
       link: "/explore/cloud-computing"
     },
     {
       title: "DevOps & CI/CD",
       description: "Learn about autonomous development and deployment pipelines",
       icon: "🔄",
-      features: ["Auto-deployment", "Testing", "Monitoring"],
+      features: ["Auto-deployment"Testing"Monitoring"],
       link: "/explore/devops"
     },
     {
       title: "Content Generation",
       description: "See how AI creates and optimizes content automatically",
       icon: "✍️",
-      features: ["SEO Optimization", "Brand Consistency", "Multi-language"],
+      features: ["SEO Optimization"Brand Consistency"Multi-language"],
       link: "/explore/content-generation"
     }
   ];
@@ -47,7 +47,7 @@ export default function ExplorePage() {
     <>
       <Head>
         <title>Explore | Zion - Discover AI & Automation</title>
-        <meta name="description" content="Explore the latest trends and technologies in AI automation, cloud computing, and autonomous systems." />
+        <meta name="description" content="Explore the latest trends and technologies in AI automationcloud computingand autonomous systems." />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
@@ -69,7 +69,7 @@ export default function ExplorePage() {
             <div className="flex items-center space-x-4">
               <input
                 type="text"
-                placeholder="Search for topics, technologies, or concepts..."
+                placeholder="Search for topicstechnologiesor concepts..."
                 className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
@@ -83,7 +83,7 @@ export default function ExplorePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Explore by Category</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {explorationCategories.map((category, index) => (
+            {explorationCategories.map((categoryindex) => (
               <Link 
                 key={index}
                 href={category.link}
@@ -93,7 +93,7 @@ export default function ExplorePage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{category.title}</h3>
                 <p className="text-gray-600 mb-6">{category.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {category.features.map((feature, featureIndex) => (
+                  {category.features.map((featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-700">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                       {feature}
@@ -113,7 +113,7 @@ export default function ExplorePage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Trending Topics</h2>
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <div className="flex flex-wrap gap-3 justify-center">
-              {trendingTopics.map((topic, index) => (
+              {trendingTopics.map((topicindex) => (
                 <span
                   key={index}
                   className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors cursor-pointer"

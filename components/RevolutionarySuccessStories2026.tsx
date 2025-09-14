@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
-  Award, 
+  TrendingUp
+  Users
+  DollarSign
+  Clock
+  Award
   Star,
   ArrowRight,
   Quote,
@@ -18,12 +19,12 @@ import {
 } from 'lucide-react';
 
 const RevolutionarySuccessStories2026 = () => {
-  const [activeStory, setActiveStory] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeStorysetActiveStory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const successStories = [
     {
@@ -42,14 +43,14 @@ const RevolutionarySuccessStories2026 = () => {
       testimonial: {
         text: "Zion Tech Group's AI solutions transformed our entire operation. We achieved 300% efficiency gains in just 3 months.",
         author: "Sarah Chen",
-        position: "CEO, TechCorp Global",
+        position: "CEOTechCorp Global",
         avatar: "👩‍💼"
       },
       timeline: [
-        { month: 'Month 1', achievement: 'AI system deployment', status: 'completed' },
-        { month: 'Month 2', achievement: '300% efficiency gain', status: 'completed' },
-        { month: 'Month 3', achievement: '500% ROI achieved', status: 'completed' },
-        { month: 'Month 6', achievement: 'Global expansion', status: 'in-progress' }
+        { month: 'Month 1'achievement: 'AI system deployment'status: 'completed' },
+        { month: 'Month 2'achievement: '300% efficiency gain'status: 'completed' },
+        { month: 'Month 3'achievement: '500% ROI achieved'status: 'completed' },
+        { month: 'Month 6'achievement: 'Global expansion'status: 'in-progress' }
       ]
     },
     {
@@ -68,14 +69,14 @@ const RevolutionarySuccessStories2026 = () => {
       testimonial: {
         text: "The AI diagnostic system has revolutionized our patient care. We can now process complex cases in minutes instead of hours.",
         author: "Dr. Michael Rodriguez",
-        position: "Chief Medical Officer, HealthPlus",
+        position: "Chief Medical OfficerHealthPlus",
         avatar: "👨‍⚕️"
       },
       timeline: [
-        { month: 'Week 1', achievement: 'System integration', status: 'completed' },
-        { month: 'Week 2', achievement: 'Staff training', status: 'completed' },
-        { month: 'Month 1', achievement: '400% efficiency gain', status: 'completed' },
-        { month: 'Month 2', achievement: 'FDA approval', status: 'completed' }
+        { month: 'Week 1'achievement: 'System integration'status: 'completed' },
+        { month: 'Week 2'achievement: 'Staff training'status: 'completed' },
+        { month: 'Month 1'achievement: '400% efficiency gain'status: 'completed' },
+        { month: 'Month 2'achievement: 'FDA approval'status: 'completed' }
       ]
     },
     {
@@ -94,14 +95,14 @@ const RevolutionarySuccessStories2026 = () => {
       testimonial: {
         text: "Our fraud detection accuracy increased to 99.9% while reducing processing time by 80%. Incredible results!",
         author: "Jennifer Walsh",
-        position: "CTO, FinancePro Solutions",
+        position: "CTOFinancePro Solutions",
         avatar: "👩‍💻"
       },
       timeline: [
-        { month: 'Week 1', achievement: 'AI model training', status: 'completed' },
-        { month: 'Week 3', achievement: 'System deployment', status: 'completed' },
-        { month: 'Month 1', achievement: '99.9% accuracy', status: 'completed' },
-        { month: 'Month 3', achievement: '600% ROI', status: 'completed' }
+        { month: 'Week 1'achievement: 'AI model training'status: 'completed' },
+        { month: 'Week 3'achievement: 'System deployment'status: 'completed' },
+        { month: 'Month 1'achievement: '99.9% accuracy'status: 'completed' },
+        { month: 'Month 3'achievement: '600% ROI'status: 'completed' }
       ]
     },
     {
@@ -120,23 +121,23 @@ const RevolutionarySuccessStories2026 = () => {
       testimonial: {
         text: "Our inventory accuracy improved to 99.5% and we reduced waste by 65%. The AI predictions are incredibly accurate.",
         author: "David Kim",
-        position: "Operations Director, RetailMax",
+        position: "Operations DirectorRetailMax",
         avatar: "👨‍💼"
       },
       timeline: [
-        { month: 'Week 1', achievement: 'Data integration', status: 'completed' },
-        { month: 'Week 2', achievement: 'AI model training', status: 'completed' },
-        { month: 'Month 1', achievement: '99.5% accuracy', status: 'completed' },
-        { month: 'Month 2', achievement: '450% ROI', status: 'completed' }
+        { month: 'Week 1'achievement: 'Data integration'status: 'completed' },
+        { month: 'Week 2'achievement: 'AI model training'status: 'completed' },
+        { month: 'Month 1'achievement: '99.5% accuracy'status: 'completed' },
+        { month: 'Month 2'achievement: '450% ROI'status: 'completed' }
       ]
     }
   ];
 
   const overallStats = [
-    { label: 'Companies Transformed', value: '500+', icon: Users },
-    { label: 'Average ROI', value: '475%', icon: TrendingUp },
-    { label: 'Time Saved', value: '50K+ hours', icon: Clock },
-    { label: 'Cost Reduction', value: '70%', icon: DollarSign }
+    { label: 'Companies Transformed'value: '500+'icon: Users },
+    { label: 'Average ROI'value: '475%'icon: TrendingUp },
+    { label: 'Time Saved'value: '50K+ hours'icon: Clock },
+    { label: 'Cost Reduction'value: '70%'icon: DollarSign }
   ];
 
   return (
@@ -149,8 +150,8 @@ const RevolutionarySuccessStories2026 = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -177,12 +178,12 @@ const RevolutionarySuccessStories2026 = () => {
 
         {/* Overall Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
-          {overallStats.map((stat, index) => (
+          {overallStats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-4">
                 <stat.icon className="w-8 h-8 text-blue-400" />
@@ -195,13 +196,13 @@ const RevolutionarySuccessStories2026 = () => {
 
         {/* Success Stories Navigation */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {successStories.map((story, index) => (
+            {successStories.map((storyindex) => (
               <button
                 key={story.id}
                 onClick={() => setActiveStory(index)}
@@ -223,9 +224,9 @@ const RevolutionarySuccessStories2026 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeStory}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0x: 20 }}
+              animate={{ opacity: 1x: 0 }}
+              exit={{ opacity: 0x: -20 }}
               transition={{ duration: 0.3 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
@@ -264,11 +265,11 @@ const RevolutionarySuccessStories2026 = () => {
                         Results
                       </h4>
                       <div className="grid grid-cols-2 gap-4">
-                        {Object.entries(successStories[activeStory].results).map(([key, value]) => (
+                        {Object.entries(successStories[activeStory].results).map(([keyvalue]) => (
                           <div key={key} className="bg-white/5 rounded-lg p-4 text-center">
                             <div className="text-2xl font-bold text-green-400 mb-1">{value}</div>
                             <div className="text-sm text-gray-400 capitalize">
-                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                              {key.replace(/([A-Z])/g' $1').trim()}
                             </div>
                           </div>
                         ))}
@@ -301,7 +302,7 @@ const RevolutionarySuccessStories2026 = () => {
                       Implementation Timeline
                     </h4>
                     <div className="space-y-3">
-                      {successStories[activeStory].timeline.map((item, index) => (
+                      {successStories[activeStory].timeline.map((itemindex) => (
                         <div key={index} className="flex items-center space-x-3">
                           <div className={`w-3 h-3 rounded-full ${
                             item.status === 'completed' ? 'bg-green-400' : 'bg-yellow-400'
@@ -325,9 +326,9 @@ const RevolutionarySuccessStories2026 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-blue-500/30">

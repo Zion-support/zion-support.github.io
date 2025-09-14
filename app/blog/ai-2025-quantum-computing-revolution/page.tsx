@@ -1,9 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, Brain } from 'lucide-react';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'AI 2025: The Quantum Computing Revolution That\'s Reshaping Enterprise',
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function QuantumComputingRevolutionPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2025: The Quantum Computing Revolution That's Reshaping Enterprise"
         description="Discover how quantum computing is revolutionizing AI capabilities in 2025, delivering unprecedented processing power and solving previously impossible enterprise challenges."
@@ -72,7 +71,7 @@ export default function QuantumComputingRevolutionPage() {
             <div className="flex flex-wrap gap-2">
               {['quantum computing', 'AI 2025', 'enterprise transformation', 'quantum AI', 'breakthrough technology'].map((tag) => (
                 <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">
-                  <Tag className="w-3 h-3 mr-1" />
+                  <Brain className="w-3 h-3 mr-1" />
                   {tag}
                 </span>
               ))}
@@ -182,6 +181,6 @@ export default function QuantumComputingRevolutionPage() {
           </div>
         </article>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

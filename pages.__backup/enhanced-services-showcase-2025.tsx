@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Search, Star, Users, TrendingUp, 
-  DollarSign, Clock, CheckCircle, ArrowRight,
-  Rocket, Monitor, Cpu, 
-  Zap, Database, Cloud, Lock, Code,
-  Sparkles, Target, Award, Lightbulb
+  SearchStarUsersTrendingUp
+  DollarSignClockCheckCircleArrowRight,
+  RocketMonitorCpu
+  ZapDatabaseCloudLockCode,
+  SparklesTargetAwardLightbulb
 } from 'lucide-react';
 import { innovativeRealMicroSaasServices2025 as allData } from '../data/2025-innovative-real-micro-saas-services';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 
 export default function EnhancedServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState<string>('all');
+  const [selectedPriceRangesetSelectedPriceRange] = useState<string>('all');
+  const [sortBysetSortBy] = useState<string>('name');
 
   const allServices = allData;
 
@@ -28,29 +28,29 @@ export default function EnhancedServicesShowcase2025() {
   const cybersecurityCount = allServices.filter(service => service.category.includes('Security') || service.category.includes('Cybersecurity')).length;
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
-    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️', count: quantumCount },
-    { id: 'blockchain', name: 'Blockchain & Web3', icon: '⛓️', count: blockchainCount },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount },
-    { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },
-    { id: 'security', name: 'Cybersecurity', icon: '🔒', count: cybersecurityCount }
+    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length },
+    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: aiCount },
+    { id: 'quantum'name: 'Quantum Computing'icon: '⚛️'count: quantumCount },
+    { id: 'blockchain'name: 'Blockchain & Web3'icon: '⛓️'count: blockchainCount },
+    { id: 'iot'name: 'IoT & Edge Computing'icon: '🌐'count: iotCount },
+    { id: 'space'name: 'Space Technology'icon: '🚀'count: spaceCount },
+    { id: 'security'name: 'Cybersecurity'icon: '🔒'count: cybersecurityCount }
   ];
 
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'low', name: 'Under $2K/month', range: 'Under $2K' },
-    { id: 'medium', name: '$2K - $8K/month', range: '$2K - $8K' },
-    { id: 'high', name: '$8K - $20K/month', range: '$8K - $20K' },
-    { id: 'premium', name: '$20K+/month', range: '$20K+' }
+    { id: 'all'name: 'All Prices'range: 'All' },
+    { id: 'low'name: 'Under $2K/month'range: 'Under $2K' },
+    { id: 'medium'name: '$2K - $8K/month'range: '$2K - $8K' },
+    { id: 'high'name: '$8K - $20K/month'range: '$8K - $20K' },
+    { id: 'premium'name: '$20K+/month'range: '$20K+' }
   ];
 
   const sortOptions = [
-    { id: 'name', name: 'Name A-Z' },
-    { id: 'price-low', name: 'Price Low to High' },
-    { id: 'price-high', name: 'Price High to Low' },
-    { id: 'rating', name: 'Rating' },
-    { id: 'customers', name: 'Customer Count' }
+    { id: 'name'name: 'Name A-Z' },
+    { id: 'price-low'name: 'Price Low to High' },
+    { id: 'price-high'name: 'Price High to Low' },
+    { id: 'rating'name: 'Rating' },
+    { id: 'customers'name: 'Customer Count' }
   ];
 
   // Filter and sort services
@@ -58,7 +58,7 @@ export default function EnhancedServicesShowcase2025() {
     const parsePriceToNumber = (price: string | number): number => {
       if (typeof price === 'number') return price;
       if (typeof price === 'string') {
-        const match = price.replace(/[^0-9.]/g, '');
+        const match = price.replace(/[^0-9.]/g'');
         const parsed = parseFloat(match || '0');
         return isNaN(parsed) ? 0 : parsed;
       }
@@ -90,23 +90,23 @@ export default function EnhancedServicesShowcase2025() {
     // Sort services
     switch (sortBy) {
       case 'price-low':
-        filtered.sort((a, b) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price));
+        filtered.sort((ab) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price));
         break;
       case 'price-high':
-        filtered.sort((a, b) => parsePriceToNumber(b.price) - parsePriceToNumber(a.price));
+        filtered.sort((ab) => parsePriceToNumber(b.price) - parsePriceToNumber(a.price));
         break;
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
+        filtered.sort((ab) => b.rating - a.rating);
         break;
       case 'customers':
-        filtered.sort((a, b) => b.customers - a.customers);
+        filtered.sort((ab) => b.customers - a.customers);
         break;
       default:
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
+        filtered.sort((ab) => a.name.localeCompare(b.name));
     }
 
     return filtered;
-  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, allServices]);
+  }[searchTermselectedCategoryselectedPriceRangesortByallServices]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -119,7 +119,7 @@ export default function EnhancedServicesShowcase2025() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -138,12 +138,12 @@ export default function EnhancedServicesShowcase2025() {
     >
       <div className="min-h-screen">
         <Head>
-          <title>2025 Innovative Services Showcase - Zion Tech Group | Revolutionary AI, Quantum & Emerging Tech</title>
-          <meta name="description" content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting-edge emerging technologies. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="AI services 2025, quantum computing, blockchain, IoT, edge computing, 5G, cybersecurity, metaverse, space technology, Zion Tech Group" />
+          <title>2025 Innovative Services Showcase - Zion Tech Group | Revolutionary AIQuantum & Emerging Tech</title>
+          <meta name="description" content="Explore Zion Tech Group's revolutionary 2025 services: AI platformsquantum computingblockchain infrastructureIoT solutionsand cutting-edge emerging technologies. Contact: +1 302 464 0950" />
+          <meta name="keywords" content="AI services 2025quantum computingblockchainIoTedge computing5Gcybersecuritymetaversespace technologyZion Tech Group" />
           <meta name="author" content="Zion Tech Group" />
           <meta property="og:title" content="2025 Innovative Services Showcase - Zion Tech Group" />
-          <meta property="og:description" content="Revolutionary AI, quantum computing, and emerging technology services for 2025. Contact: +1 302 464 0950" />
+          <meta property="og:description" content="Revolutionary AIquantum computingand emerging technology services for 2025. Contact: +1 302 464 0950" />
           <meta property="og:url" content="https://ziontechgroup.com/enhanced-services-showcase-2025" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/enhanced-services-showcase-2025" />
@@ -153,8 +153,8 @@ export default function EnhancedServicesShowcase2025() {
         <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center justify-center mb-6">
@@ -165,7 +165,7 @@ export default function EnhancedServicesShowcase2025() {
                 <Sparkles className="w-12 h-12 text-pink-400 ml-4" />
               </div>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Revolutionary AI, Quantum Computing & Emerging Technology Services
+                Revolutionary AIQuantum Computing & Emerging Technology Services
               </p>
               <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
                 Discover our cutting-edge solutions that are transforming industries and driving the future of technology
@@ -294,7 +294,7 @@ export default function EnhancedServicesShowcase2025() {
                     <div className="mb-6">
                       <div className="text-sm text-gray-400 mb-2">Key Features:</div>
                       <ul className="space-y-1">
-                        {service.features.slice(0, 3).map((feature, index) => (
+                        {service.features.slice(03).map((featureindex) => (
                           <li key={index} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             <span className="line-clamp-1">{feature}</span>
@@ -369,8 +369,8 @@ export default function EnhancedServicesShowcase2025() {
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

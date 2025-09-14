@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Check, X } from "lucide-react";
+import { CheckX } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -21,15 +21,15 @@ export function EnterprisePricingTable() {
       users: "Up to 10 users",
       popular: false,
       features: [
-        { name: "Private hiring portal", included: true },
-        { name: "Dedicated talent pool", included: true },
-        { name: "Standard SLA (24h)", included: true },
-        { name: "Basic branding", included: true },
-        { name: "Admin dashboard", included: true },
-        { name: "Team collaboration", included: true },
-        { name: "API access", included: false },
-        { name: "Custom integrations", included: false },
-        { name: "Dedicated success manager", included: false }]},
+        { name: "Private hiring portal"included: true },
+        { name: "Dedicated talent pool"included: true },
+        { name: "Standard SLA (24h)"included: true },
+        { name: "Basic branding"included: true },
+        { name: "Admin dashboard"included: true },
+        { name: "Team collaboration"included: true },
+        { name: "API access"included: false },
+        { name: "Custom integrations"included: false },
+        { name: "Dedicated success manager"included: false }]},
     {
       name: "Business",
       price: "$1,999",
@@ -38,15 +38,15 @@ export function EnterprisePricingTable() {
       users: "Up to 50 users",
       popular: true,
       features: [
-        { name: "Private hiring portal", included: true },
-        { name: "Dedicated talent pool", included: true },
-        { name: "Enhanced SLA (8h)", included: true },
-        { name: "Advanced branding", included: true },
-        { name: "Admin dashboard", included: true },
-        { name: "Team collaboration", included: true },
-        { name: "API access", included: true },
-        { name: "Custom integrations", included: false },
-        { name: "Dedicated success manager", included: false }]},
+        { name: "Private hiring portal"included: true },
+        { name: "Dedicated talent pool"included: true },
+        { name: "Enhanced SLA (8h)"included: true },
+        { name: "Advanced branding"included: true },
+        { name: "Admin dashboard"included: true },
+        { name: "Team collaboration"included: true },
+        { name: "API access"included: true },
+        { name: "Custom integrations"included: false },
+        { name: "Dedicated success manager"included: false }]},
     {
       name: "Enterprise",
       price: "Custom",
@@ -55,15 +55,15 @@ export function EnterprisePricingTable() {
       users: "Unlimited users",
       popular: false,
       features: [
-        { name: "Private hiring portal", included: true },
-        { name: "Dedicated talent pool", included: true },
-        { name: "Premium SLA (1h)", included: true },
-        { name: "Full white labeling", included: true },
-        { name: "Admin dashboard", included: true },
-        { name: "Team collaboration", included: true },
-        { name: "API access", included: true },
-        { name: "Custom integrations", included: true },
-        { name: "Dedicated success manager", included: true }]}];
+        { name: "Private hiring portal"included: true },
+        { name: "Dedicated talent pool"included: true },
+        { name: "Premium SLA (1h)"included: true },
+        { name: "Full white labeling"included: true },
+        { name: "Admin dashboard"included: true },
+        { name: "Team collaboration"included: true },
+        { name: "API access"included: true },
+        { name: "Custom integrations"included: true },
+        { name: "Dedicated success manager"included: true }]}];
 
   return (
     <section id="pricing" className="py-20 px-4 md:px-6">
@@ -109,7 +109,7 @@ export function EnterprisePricingTable() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {plans[0].features.map((feature, index) => (
+              {plans[0].features.map((featureindex) => (
                 <TableRow key={feature.name}>
                   <TableCell className="font-medium">{feature.name}</TableCell>
                   {plans.map((plan) => (
@@ -128,7 +128,7 @@ export function EnterprisePricingTable() {
         </div>
 
         <div className="mt-8 text-center text-sm text-muted-foreground">
-          All plans include SSL security, 99.9% uptime SLA, and dedicated support
+          All plans include SSL security99.9% uptime SLAand dedicated support
         </div>
       </div>
     </section>

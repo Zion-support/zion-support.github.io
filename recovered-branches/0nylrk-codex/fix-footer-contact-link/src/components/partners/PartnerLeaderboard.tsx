@@ -1,8 +1,8 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Crown, Medal, Trophy } from "lucide-react";
+import { CrownMedalTrophy } from "lucide-react";
 
 interface LeaderboardEntry {
   id: string;
@@ -21,10 +21,10 @@ export function PartnerLeaderboard() {
       id: "1",
       rank: 1,
       name: "AI Tech Guru",
-      avatar: "", // URL would be here
+      avatar: ""// URL would be here
       referrals: 178,
       earnings: 4500,
-      badges: ["gold", "trending"]
+      badges: ["gold"trending"]
     },
     {
       id: "2",
@@ -106,7 +106,7 @@ export function PartnerLeaderboard() {
                     <Avatar className="h-10 w-10 border border-zion-blue-light">
                       <AvatarImage src={entry.avatar} />
                       <AvatarFallback className="bg-zion-blue text-zion-cyan">
-                        {entry.name.substring(0, 2).toUpperCase()}
+                        {entry.name.substring(02).toUpperCase()}
                       </AvatarFallback>
                     </Avatar>
                     <div>

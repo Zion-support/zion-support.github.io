@@ -3,8 +3,8 @@
 ,
 const SEOHead: React.FC<SEOHeadProps> = ({,
   title = 'Zion Tech Group - Technology Solutions',
-  description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
-  keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',
+  description = 'Leading provider of AI servicesIT solutionsand micro SaaS development. Transform your business with cutting-edge technology solutions.',
+  keywords = 'AI servicesIT solutionsmicro SaaStechnology consultingcloud migrationcybersecurityblockchainweb development',
   canonicalUrl,
   ogImage = '/og-image.jpg',
   ogType = 'website',
@@ -22,7 +22,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
     name: 'Zion Tech Group',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
-    description: 'Leading provider of AI services, IT solutions, and micro SaaS development',
+    description: 'Leading provider of AI servicesIT solutionsand micro SaaS development',
     address: {,
       '@type': 'PostalAddress',
       addressCountry: 'US'
@@ -46,9 +46,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta name="description" content={description} />,
       <meta name="keywords" content={keywords} />,
       <meta name="author" content="Zion Tech Group" />,
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />,
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />,
-      <meta httpEquiv="Content-Type" content="text/html, charset=utf-8" />,
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}${nofollow ? 'nofollow' : 'follow'}`} />,
+      <meta name="viewport" content="width=device-widthinitial-scale=1.0" />,
+      <meta httpEquiv="Content-Type" content="text/htmlcharset=utf-8" />,
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />,
       {/* Canonical URL */};
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />};
@@ -107,7 +107,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       {/* Security Headers */};
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />,
       <meta httpEquiv="X-Frame-Options" content="DENY" />,
-      <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />,
+      <meta httpEquiv="X-XSS-Protection" content="1mode=block" />,
     </Head>,
   )
 import React from 'react';
@@ -115,11 +115,11 @@ import Head from 'next/head';
 import { SEOProps } from '../types';
 
 const SEOHead: React.FC<SEOProps> = ({ 
-  title, 
-  description, 
-  keywords, 
-  image, 
-  url, 
+  title
+  description
+  keywords
+  image
+  url
   type = 'website' 
 }) => {
   const siteUrl = 'https://ziontechgroup.com';
@@ -154,9 +154,9 @@ const SEOHead: React.FC<SEOProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content="indexfollow" />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="viewport" content="width=device-widthinitial-scale=1" />
       
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />

@@ -14,7 +14,7 @@ interface PreviewResumeProps {
   onBack: () => void;
 }
 
-export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
+export function PreviewResume({ resumeonBack }: PreviewResumeProps) {
   return (
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />

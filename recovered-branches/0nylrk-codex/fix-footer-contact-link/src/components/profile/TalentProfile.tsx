@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Handshake, MessageSquare, Star } from "lucide-react";
+import { HandshakeMessageSquareStar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import { HireNowCTA } from "./HireNowCTA";
@@ -22,7 +22,7 @@ interface TalentProfileProps {
 }
 
 export function TalentProfile({ 
-  profile, 
+  profile
   onRequestHire,
   onMessageTalent
 }: TalentProfileProps) {
@@ -42,7 +42,7 @@ export function TalentProfile({
   })) || [];
   
   // Create proper projects array for ProfileProjects component
-  const projectsArray = profile.key_projects?.map((proj, i) => ({
+  const projectsArray = profile.key_projects?.map((proji) => ({
     id: `project-${i}`,
     title: proj.title,
     description: proj.description,

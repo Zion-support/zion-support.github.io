@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
-  BookOpen, MessageCircle, Star, TrendingUp, Target,
-  Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
-  Earth, Factory, Car, Building, GraduationCap, Scale,
-  Palette, Camera, Video, Music, Gamepad2, Heart,
-  Leaf, Sun, Moon, Wind, Droplets, Mountain,
-  Code, Wrench, Smartphone, BarChart3, Eye,
-  Network, Server, HardDrive, Monitor,
-  Laptop, Watch, Headphones, Speaker, Mic, 
-  Keyboard, Mouse, CpuIcon, DatabaseIcon, 
-  CloudIcon, LockIcon, ShieldIcon, GlobeIcon,
-  ZapIcon, SparklesIcon, BrainIcon, AtomIcon,
-  MenuIcon, CloseIcon, ChevronRightIcon
+  MenuXChevronDownSearchPhoneMailMapPin
+  RocketBrainAtomGlobeZapSparklesShield
+  MicroscopeDollarSignHomeUsersBriefcase
+  BookOpenMessageCircleStarTrendingUpTarget,
+  LayersCpuDatabaseCloudLockShieldCheck,
+  EarthFactoryCarBuildingGraduationCapScale,
+  PaletteCameraVideoMusicGamepad2Heart,
+  LeafSunMoonWindDropletsMountain,
+  CodeWrenchSmartphoneBarChart3Eye,
+  NetworkServerHardDriveMonitor,
+  LaptopWatchHeadphonesSpeakerMic
+  KeyboardMouseCpuIconDatabaseIcon
+  CloudIconLockIconShieldIconGlobeIcon,
+  ZapIconSparklesIconBrainIconAtomIcon,
+  MenuIconCloseIconChevronRightIcon
 } from 'lucide-react';
 
 const contactInfo = {
@@ -33,10 +34,10 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     description: 'Next-generation AI consciousness and emotional intelligence',
     services: [
-      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' },
-      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' },
-      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' },
-      { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/month' }
+      { name: 'AI Consciousness Evolution Platform'href: '/ai-consciousness-evolution-platform'description: 'Develop genuine AI consciousness'price: '$19,999/month' },
+      { name: 'AI Emotional Intelligence Platform'href: '/ai-emotional-intelligence-platform'description: 'Real-time emotion analysis and response'price: '$3,999/month' },
+      { name: 'AI Creativity Orchestrator'href: '/ai-creativity-orchestrator'description: 'Multi-model creativity fusion'price: '$5,999/month' },
+      { name: 'AI Autonomous Business Manager'href: '/ai-autonomous-business-manager'description: 'Fully autonomous business operations'price: '$12,999/month' }
     ]
   },
   {
@@ -45,10 +46,10 @@ const serviceCategories = [
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     description: 'Quantum computing and beyond',
     services: [
-      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/month' },
-      { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$25,999/month' },
-      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: '$899/month' },
-      { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' }
+      { name: 'Quantum Internet Security Gateway'href: '/quantum-internet-security-gateway'description: 'Unbreakable quantum encryption'price: '$15,999/month' },
+      { name: 'Biotech DNA Computing Platform'href: '/biotech-dna-computing-platform'description: 'DNA-based computation'price: '$25,999/month' },
+      { name: 'Neuromorphic Computing Platform'href: '/neuromorphic-computing-platform'description: 'Brain-inspired computing'price: '$899/month' },
+      { name: 'Photonic Computing Infrastructure'href: '/photonic-computing-infrastructure'description: 'Light-speed computing'price: '$699/month' }
     ]
   },
   {
@@ -57,10 +58,10 @@ const serviceCategories = [
     color: 'from-teal-600 via-emerald-600 to-green-600',
     description: 'Space exploration and digital reality',
     services: [
-      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' },
-      { name: 'Metaverse Development Platform', href: '/metaverse-development-platform', description: 'Build immersive virtual worlds', price: '$499/month' },
-      { name: 'Virtual Event Hologram Platform', href: '/virtual-event-hologram-platform', description: 'Immersive holographic events', price: '$799/month' },
-      { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$7,999/month' }
+      { name: 'Space Mining Automation Platform'href: '/space-mining-automation-platform'description: 'Automated asteroid mining'price: '$45,999/month' },
+      { name: 'Metaverse Development Platform'href: '/metaverse-development-platform'description: 'Build immersive virtual worlds'price: '$499/month' },
+      { name: 'Virtual Event Hologram Platform'href: '/virtual-event-hologram-platform'description: 'Immersive holographic events'price: '$799/month' },
+      { name: 'AI Predictive Health Analytics'href: '/ai-predictive-health-analytics'description: 'Predictive health outcomes'price: '$7,999/month' }
     ]
   },
   {
@@ -69,10 +70,10 @@ const serviceCategories = [
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     description: 'Autonomous enterprise infrastructure',
     services: [
-      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$799/month' },
-      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: '$599/month' },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: '$449/month' },
-      { name: 'AI-Powered IT Operations Center', href: '/ai-it-operations-center', description: 'Intelligent IT operations', price: '$699/month' }
+      { name: 'Autonomous DevOps Platform'href: '/autonomous-devops-platform'description: 'Fully autonomous DevOps'price: '$799/month' },
+      { name: 'Zero Trust Network Architecture'href: '/zero-trust-network-architecture'description: 'Never trustalways verify'price: '$599/month' },
+      { name: 'Edge Computing Orchestration'href: '/edge-computing-orchestration'description: 'Distributed edge computing'price: '$449/month' },
+      { name: 'AI-Powered IT Operations Center'href: '/ai-it-operations-center'description: 'Intelligent IT operations'price: '$699/month' }
     ]
   },
   {
@@ -81,10 +82,10 @@ const serviceCategories = [
     color: 'from-green-600 via-yellow-600 to-orange-600',
     description: 'Practical business solutions with AI',
     services: [
-      { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' },
-      { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success', price: '$199/month' },
-      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end traceability', price: '$399/month' },
-      { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber-pro', description: 'Professional transcription', price: '$149/month' }
+      { name: 'AI Business Intelligence Suite'href: '/ai-business-intelligence-suite'description: 'Intelligent business insights'price: '$299/month' },
+      { name: 'AI Customer Success Automation'href: '/ai-customer-success-automation'description: 'Automate customer success'price: '$199/month' },
+      { name: 'Blockchain Supply Chain Transparency'href: '/blockchain-supply-chain-transparency'description: 'End-to-end traceability'price: '$399/month' },
+      { name: 'AI Meeting Transcriber Pro'href: '/ai-meeting-transcriber-pro'description: 'Professional transcription'price: '$149/month' }
     ]
   },
   {
@@ -93,46 +94,46 @@ const serviceCategories = [
     color: 'from-orange-600 via-red-600 to-pink-600',
     description: 'Breakthrough research solutions',
     services: [
-      { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' },
-      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Direct neural interface', price: '$1,299/month' },
-      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum-enhanced ML', price: '$2,999/month' },
-      { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
+      { name: 'Swarm Robotics Orchestration'href: '/swarm-robotics-orchestration'description: 'Coordinate robot swarms'price: '$449/month' },
+      { name: 'Brain-Computer Interface Platform'href: '/brain-computer-interface-platform'description: 'Direct neural interface'price: '$1,299/month' },
+      { name: 'Quantum Machine Learning Platform'href: '/quantum-machine-learning-platform'description: 'Quantum-enhanced ML'price: '$2,999/month' },
+      { name: 'Synthetic Biology Automation Platform'href: '/synthetic-biology-automation-platform'description: 'Automate biology research'price: '$3,999/month' }
     ]
   }
 ];
 
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'Solutions', href: '/solutions', icon: Layers },
-  { name: 'Pricing', href: '/pricing', icon: DollarSign },
-  { name: 'Resources', href: '/resources', icon: BookOpen },
-  { name: 'Case Studies', href: '/case-studies', icon: TrendingUp },
-  { name: 'Blog', href: '/blog', icon: MessageCircle },
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
+  { name: 'Home'href: '/'icon: Home },
+  { name: 'Services'href: '/services'icon: Briefcase },
+  { name: 'Solutions'href: '/solutions'icon: Layers },
+  { name: 'Pricing'href: '/pricing'icon: DollarSign },
+  { name: 'Resources'href: '/resources'icon: BookOpen },
+  { name: 'Case Studies'href: '/case-studies'icon: TrendingUp },
+  { name: 'Blog'href: '/blog'icon: MessageCircle },
+  { name: 'Contact'href: '/contact'icon: MessageCircle }
 ];
 
 const companyLinks = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News', href: '/news' },
-  { name: 'Partners', href: '/partners' },
-  { name: 'Support', href: '/support' },
-  { name: 'Status', href: '/status' }
+  { name: 'About Us'href: '/about' },
+  { name: 'Careers'href: '/careers' },
+  { name: 'News'href: '/news' },
+  { name: 'Partners'href: '/partners' },
+  { name: 'Support'href: '/support' },
+  { name: 'Status'href: '/status' }
 ];
 
 export default function UltraFuturisticNavigation2032() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<number | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpensetIsOpen] = useState(false);
+  const [activeCategorysetActiveCategory] = useState<number | null>(null);
+  const [isScrolledsetIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll'handleScroll);
+    return () => window.removeEventListener('scroll'handleScroll);
+  }[]);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -219,7 +220,7 @@ export default function UltraFuturisticNavigation2032() {
                 <div className="absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
                   <div className="bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20">
                     <div className="grid grid-cols-2 gap-8">
-                      {serviceCategories.map((category, index) => (
+                      {serviceCategories.map((categoryindex) => (
                         <div key={index} className="space-y-4">
                           <div className="flex items-center space-x-3">
                             <div className={`w-10 h-10 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
@@ -231,7 +232,7 @@ export default function UltraFuturisticNavigation2032() {
                             </div>
                           </div>
                           <div className="space-y-2">
-                            {category.services.map((service, serviceIndex) => (
+                            {category.services.map((serviceIndex) => (
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
@@ -281,9 +282,9 @@ export default function UltraFuturisticNavigation2032() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            initial={{ opacity: 0x: '100%' }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: '100%' }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-50 lg:hidden"
           >
@@ -335,10 +336,10 @@ export default function UltraFuturisticNavigation2032() {
                     
                     {activeCategory === 0 && (
                       <div className="pl-8 space-y-2">
-                        {serviceCategories.map((category, index) => (
+                        {serviceCategories.map((categoryindex) => (
                           <div key={index} className="space-y-2">
                             <div className="text-sm font-medium text-cyan-400 py-2">{category.title}</div>
-                            {category.services.map((service, serviceIndex) => (
+                            {category.services.map((serviceIndex) => (
                               <Link
                                 key={serviceIndex}
                                 href={service.href}

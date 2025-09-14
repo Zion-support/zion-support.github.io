@@ -8,7 +8,7 @@ import type { SafeRef } from "../sidebar.types"
 export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>,
   React.ComponentProps<typeof Input>
->((props, ref) => {
+>((propsref) => {
   return (
     <Input
       ref={ref}
@@ -26,12 +26,12 @@ SidebarInput.displayName = "SidebarInput"
 export const SidebarHeader = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div">
->((props, ref) => {
+>((propsref) => {
   return (
     <div
       ref={ref as SafeRef<HTMLDivElement>}
       data-sidebar="header"
-      className={cn("flex flex-col gap-2 p-2", props.className)}
+      className={cn("flex flex-col gap-2 p-2"props.className)}
       {...props}
     />
   )
@@ -41,12 +41,12 @@ SidebarHeader.displayName = "SidebarHeader"
 export const SidebarFooter = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div">
->((props, ref) => {
+>((propsref) => {
   return (
     <div
       ref={ref as SafeRef<HTMLDivElement>}
       data-sidebar="footer"
-      className={cn("flex flex-col gap-2 p-2", props.className)}
+      className={cn("flex flex-col gap-2 p-2"props.className)}
       {...props}
     />
   )
@@ -56,12 +56,12 @@ SidebarFooter.displayName = "SidebarFooter"
 export const SidebarSeparator = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<typeof Separator>
->((props, ref) => {
+>((propsref) => {
   return (
     <Separator
       ref={ref}
       data-sidebar="separator"
-      className={cn("mx-2 w-auto bg-sidebar-border", props.className)}
+      className={cn("mx-2 w-auto bg-sidebar-border"props.className)}
       {...props}
     />
   )
@@ -71,7 +71,7 @@ SidebarSeparator.displayName = "SidebarSeparator"
 export const SidebarContent = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div">
->((props, ref) => {
+>((propsref) => {
   return (
     <div
       ref={ref}
@@ -89,12 +89,12 @@ SidebarContent.displayName = "SidebarContent"
 export const SidebarGroup = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div">
->((props, ref) => {
+>((propsref) => {
   return (
     <div
       ref={ref}
       data-sidebar="group"
-      className={cn("relative flex w-full min-w-0 flex-col p-2", props.className)}
+      className={cn("relative flex w-full min-w-0 flex-col p-2"props.className)}
       {...props}
     />
   )

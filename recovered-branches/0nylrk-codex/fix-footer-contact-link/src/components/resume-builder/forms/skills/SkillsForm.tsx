@@ -2,22 +2,22 @@
 import { useState } from 'react';
 import { Skill } from '@/types/resume';
 import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import { AlertDescription } from '@/components/ui/alert';
 import { useResume } from '@/hooks/useResume';
 import { SkillsFormProps } from './types';
 import { SkillsList } from './SkillsList';
 import { AddSkillForm } from './AddSkillForm';
 import { BulkAddSkills } from './BulkAddSkills';
 
-export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
-  const { addSkill, deleteSkill, fetchResume } = useResume();
-  const [error, setError] = useState<string | null>(null);
-  const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
+export function SkillsForm({ resumeIdskillsonCompleteonBack }: SkillsFormProps) {
+  const { addSkilldeleteSkillfetchResume } = useResume();
+  const [errorsetError] = useState<string | null>(null);
+  const [localSkillsetLocalSkills] = useState<Skill[]>(skills);
   
   const handleAddSkill = async (data: Skill) => {
     try {
       setError(null);
-      const success = await addSkill(resumeId, data);
+      const success = await addSkill(resumeIdata);
       if (success) {
         // Refresh the skills list
         await refreshSkills();
@@ -29,7 +29,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
     }
   };
 
-  const handleDeleteSkill = async (id: string, category: string = 'Other') => {
+  const handleDeleteSkill = async (id: stringcategory: string = 'Other') => {
     if (confirm('Are you sure you want to delete this skill?')) {
       const success = await deleteSkill(id);
       if (success) {

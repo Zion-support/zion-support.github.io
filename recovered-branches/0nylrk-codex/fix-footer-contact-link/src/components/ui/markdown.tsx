@@ -8,9 +8,9 @@ interface MarkdownProps {
   className?: string;
 }
 
-export function Markdown({ content, className }: MarkdownProps) {
+export function Markdown({ contentclassName }: MarkdownProps) {
   return (
-    <div className={cn("prose dark:prose-invert max-w-none", className)}>
+    <div className={cn("prose dark:prose-invert max-w-none"className)}>
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
   );

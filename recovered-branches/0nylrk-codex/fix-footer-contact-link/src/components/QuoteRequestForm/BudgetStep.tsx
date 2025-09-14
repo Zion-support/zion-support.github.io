@@ -7,7 +7,7 @@ interface BudgetStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 
-export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
+export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
   const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {
     if (type === "range" && !formData.budget.maxAmount) {
       updateFormData({
@@ -28,7 +28,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
   };
 
   const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-US'{
       style: 'currency',
       currency: 'USD',
       maximumFractionDigits: 0
@@ -89,7 +89,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                 max={50000}
                 step={500}
                 onValueChange={(value) => updateFormData({
-                  budget: { ...formData.budget, amount: value[0] }
+                  budget: { ...formData.budgetamount: value[0] }
                 })}
                 className="py-4"
               />
@@ -110,7 +110,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                 max={500}
                 step={5}
                 onValueChange={(value) => updateFormData({
-                  budget: { ...formData.budget, amount: value[0] }
+                  budget: { ...formData.budgetamount: value[0] }
                 })}
                 className="py-4"
               />
@@ -137,7 +137,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                     
                     updateFormData({
                       budget: { 
-                        ...formData.budget, 
+                        ...formData.budget
                         amount: newAmount,
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount
                       }
@@ -161,7 +161,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                   max={100000}
                   step={500}
                   onValueChange={(value) => updateFormData({
-                    budget: { ...formData.budget, maxAmount: value[0] }
+                    budget: { ...formData.budgetmaxAmount: value[0] }
                   })}
                   className="py-4"
                 />

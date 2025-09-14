@@ -1,24 +1,24 @@
 
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
-import { Job, JobStatus } from "@/types/jobs";
+import { JobStatus } from "@/types/jobs";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, Edit, X, Eye } from "lucide-react";
+import { Loader2EditXEye } from "lucide-react";
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
 
 interface JobsListProps {
   filter?: JobStatus;
-  onSelectJob?: (jobId: string, jobTitle: string) => void;
+  onSelectJob?: (jobId: stringjobTitle: string) => void;
 }
 
-export function JobsList({ filter, onSelectJob }: JobsListProps) {
+export function JobsList({ filteronSelectJob }: JobsListProps) {
   const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [jobsetJobs] = useState<Job[]>([]);
+  const [isLoadingsetIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -28,26 +28,26 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         let query = supabase
           .from("jobs")
           .select("*")
-          .eq("client_id", user.id)
-          .order("created_at", { ascending: false });
+          .eq("client_id"user.id)
+          .order("created_at"{ ascending: false });
 
         if (filter) {
-          query = query.eq("status", filter);
+          query = query.eq("status"filter);
         }
 
-        const { data, error } = await query;
+        const { dataerror } = await query;
 
         if (error) throw error;
         setJobs(data as Job[]);
       } catch (error) {
-        console.error("Error fetching jobs:", error);
+        console.error("Error fetching jobs:"error);
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchJobs();
-  }, [user, filter]);
+  }[userfilter]);
 
   if (isLoading) {
     return (
@@ -96,18 +96,18 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
-          onClick={() => onSelectJob?.(job.id, job.title)}
+          onClick={() => onSelectJob?.(job.idjob.title)}
         >
           <CardHeader className="p-4">
             <div className="flex justify-between items-start">
               <div>
                 <CardTitle className="text-xl">{job.title}</CardTitle>
                 <CardDescription className="mt-1">
-                  Posted {format(new Date(job.created_at), "PPP")}
+                  Posted {format(new Date(job.created_at)"PPP")}
                 </CardDescription>
               </div>
               <Badge className={getStatusColor(job.status)}>
-                {job.status.replace("_", " ").toUpperCase()}
+                {job.status.replace("_" ").toUpperCase()}
               </Badge>
             </div>
           </CardHeader>
@@ -116,7 +116,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
               {job.description}
             </p>
             <div className="flex flex-wrap gap-1 mt-2">
-              {job.skills.slice(0, 3).map((skill, index) => (
+              {job.skills.slice(03).map((skillindex) => (
                 <Badge key={index} variant="outline" className="text-xs">
                   {skill}
                 </Badge>
@@ -131,7 +131,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
               <span className="font-medium">Budget:</span> ${job.budget.min} - ${job.budget.max}
             </div>
             <div className="mt-1 text-sm">
-              <span className="font-medium">Deadline:</span> {format(new Date(job.deadline), "PPP")}
+              <span className="font-medium">Deadline:</span> {format(new Date(job.deadline)"PPP")}
             </div>
           </CardContent>
           <CardFooter className="flex justify-between p-4 pt-0 gap-2">

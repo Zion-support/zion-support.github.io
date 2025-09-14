@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 import { useNotifications } from "@/context/notifications/NotificationContext";
@@ -9,33 +9,33 @@ import {
 } from "@/context/notifications";
 import { formatDistanceToNow } from "date-fns";
 import { 
-  Bell, Check, Trash2, ChevronRight, CheckCircle, 
-  AlertCircle, MessageCircle, Briefcase, UserCheck, Settings
+  BellCheckTrash2ChevronRightCheckCircle
+  AlertCircleMessageCircleBriefcaseUserCheckSettings
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { TabsListTabsTriggerTabsContent } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { SEO } from "@/components/SEO";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
-const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
+const getNotificationIcon = (type: NotificationTypeclassName: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
-      return <MessageCircle className={cn(className, "text-blue-500")} />;
+      return <MessageCircle className={cn(className"text-blue-500")} />;
     case 'quote_request':
-      return <Briefcase className={cn(className, "text-purple-500")} />;
+      return <Briefcase className={cn(className"text-purple-500")} />;
     case 'booking_confirmation':
-      return <CheckCircle className={cn(className, "text-green-500")} />;
+      return <CheckCircle className={cn(className"text-green-500")} />;
     case 'hire_request':
-      return <UserCheck className={cn(className, "text-zion-purple")} />;
+      return <UserCheck className={cn(className"text-zion-purple")} />;
     case 'onboarding':
-      return <Settings className={cn(className, "text-zion-cyan")} />;
+      return <Settings className={cn(className"text-zion-cyan")} />;
     case 'system':
-      return <AlertCircle className={cn(className, "text-yellow-500")} />;
+      return <AlertCircle className={cn(className"text-yellow-500")} />;
     default:
-      return <Bell className={cn(className, "text-gray-500")} />;
+      return <Bell className={cn(className"text-gray-500")} />;
   }
 };
 
@@ -71,7 +71,7 @@ const NotificationCard: React.FC<{
   };
   onMarkAsRead: (id: string) => Promise<void>;
   onDismiss: (id: string) => Promise<void>;
-}> = ({ notification, onMarkAsRead, onDismiss }) => {
+}> = ({ notificationMarkAsReadonDismiss }) => {
   const navigate = useNavigate();
   
   const handleAction = () => {
@@ -91,7 +91,7 @@ const NotificationCard: React.FC<{
     )}>
       <div className="flex items-start gap-4">
         <div className="mt-1">
-          {getNotificationIcon(notification.type, "h-6 w-6")}
+          {getNotificationIcon(notification.type"h-6 w-6")}
         </div>
         <div className="flex-1">
           <div className="flex justify-between">
@@ -100,7 +100,7 @@ const NotificationCard: React.FC<{
               <div className="flex items-center gap-2 mb-2">
                 {getNotificationTypeBadge(notification.type)}
                 <span className="text-xs text-zion-slate-light">
-                  {formatDistanceToNow(new Date(notification.created_at), { addSuffix: true })}
+                  {formatDistanceToNow(new Date(notification.created_at){ addSuffix: true })}
                 </span>
                 {!notification.read && (
                   <Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>

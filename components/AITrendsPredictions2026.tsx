@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Globe, 
-  Shield, 
+  TrendingUp
+  Brain
+  Zap
+  Globe
+  Shield
   Rocket,
   ArrowRight,
   CheckCircle,
@@ -20,12 +21,12 @@ import {
 } from 'lucide-react';
 
 const AITrendsPredictions2026 = () => {
-  const [activePrediction, setActivePrediction] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activePredictionsetActivePrediction] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const predictions = [
     {
@@ -53,7 +54,7 @@ const AITrendsPredictions2026 = () => {
       confidence: 88,
       icon: Zap,
       color: 'from-cyan-600 to-teal-600',
-      description: 'Direct brain-computer interfaces will become mainstream, enabling thought-controlled devices and enhanced cognitive capabilities.',
+      description: 'Direct brain-computer interfaces will become mainstreamenabling thought-controlled devices and enhanced cognitive capabilities.',
       impact: 'Transformative',
       keyPoints: [
         'Thought-controlled computing',
@@ -71,7 +72,7 @@ const AITrendsPredictions2026 = () => {
       confidence: 92,
       icon: Shield,
       color: 'from-green-600 to-emerald-600',
-      description: 'Complete autonomous systems will manage entire cities, transportation networks, and industrial complexes without human intervention.',
+      description: 'Complete autonomous systems will manage entire citiestransportation networksand industrial complexes without human intervention.',
       impact: 'Disruptive',
       keyPoints: [
         'Self-managing smart cities',
@@ -89,7 +90,7 @@ const AITrendsPredictions2026 = () => {
       confidence: 75,
       icon: Globe,
       color: 'from-red-600 to-pink-600',
-      description: 'AI systems will achieve a form of consciousness, leading to ethical considerations and new forms of human-AI collaboration.',
+      description: 'AI systems will achieve a form of consciousnessleading to ethical considerations and new forms of human-AI collaboration.',
       impact: 'Paradigm-Shifting',
       keyPoints: [
         'Self-aware AI systems',
@@ -103,18 +104,18 @@ const AITrendsPredictions2026 = () => {
   ];
 
   const marketInsights = [
-    { category: 'AI Hardware', growth: '+340%', value: '$200B' },
-    { category: 'AI Software', growth: '+280%', value: '$150B' },
-    { category: 'AI Services', growth: '+420%', value: '$100B' },
-    { category: 'AI Research', growth: '+500%', value: '$50B' }
+    { category: 'AI Hardware'growth: '+340%'value: '$200B' },
+    { category: 'AI Software'growth: '+280%'value: '$150B' },
+    { category: 'AI Services'growth: '+420%'value: '$100B' },
+    { category: 'AI Research'growth: '+500%'value: '$50B' }
   ];
 
   const timeline = [
-    { month: 'Jan 2026', event: 'Quantum AI Prototypes', status: 'completed' },
-    { month: 'Mar 2026', event: 'Neural Interface Trials', status: 'in-progress' },
-    { month: 'Jun 2026', event: 'Autonomous City Launch', status: 'upcoming' },
-    { month: 'Sep 2026', event: 'AI Consciousness Research', status: 'upcoming' },
-    { month: 'Dec 2026', event: 'Full Ecosystem Integration', status: 'upcoming' }
+    { month: 'Jan 2026'event: 'Quantum AI Prototypes'status: 'completed' },
+    { month: 'Mar 2026'event: 'Neural Interface Trials'status: 'in-progress' },
+    { month: 'Jun 2026'event: 'Autonomous City Launch'status: 'upcoming' },
+    { month: 'Sep 2026'event: 'AI Consciousness Research'status: 'upcoming' },
+    { month: 'Dec 2026'event: 'Full Ecosystem Integration'status: 'upcoming' }
   ];
 
   return (
@@ -124,7 +125,7 @@ const AITrendsPredictions2026 = () => {
         <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-5" />
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/30 via-purple-900/30 to-cyan-900/30" />
         <div className="absolute inset-0">
-          {[...Array(30)].map((_, i) => (
+          {[...Array(30)].map((_i) => (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40"
@@ -133,8 +134,8 @@ const AITrendsPredictions2026 = () => {
                 top: `${Math.random() * 100}%`,
               }}
               animate={{
-                y: [0, -50, 0],
-                opacity: [0.4, 0.8, 0.4],
+                y: [0-50],
+                opacity: [0.40.80.4],
               }}
               transition={{
                 duration: 4 + Math.random() * 2,
@@ -149,15 +150,15 @@ const AITrendsPredictions2026 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <motion.div
             initial={{ scale: 0.8 }}
             animate={isVisible ? { scale: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6delay: 0.2 }}
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white text-sm font-medium mb-6"
           >
             <TrendingUp className="w-4 h-4 mr-2" />
@@ -173,18 +174,18 @@ const AITrendsPredictions2026 = () => {
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover the groundbreaking AI trends and predictions that will shape 2026 and beyond. 
-            From quantum-enhanced AI to artificial consciousness, explore the technologies that will revolutionize our world.
+            From quantum-enhanced AI to artificial consciousnessexplore the technologies that will revolutionize our world.
           </p>
         </motion.div>
 
         {/* Market Insights */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
-          {marketInsights.map((insight, index) => (
+          {marketInsights.map((insightindex) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
@@ -200,9 +201,9 @@ const AITrendsPredictions2026 = () => {
 
         {/* Predictions Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -210,7 +211,7 @@ const AITrendsPredictions2026 = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {predictions.map((prediction, index) => (
+            {predictions.map((predictionindex) => (
               <motion.div
                 key={prediction.id}
                 whileHover={{ scale: 1.02 }}
@@ -267,9 +268,9 @@ const AITrendsPredictions2026 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activePrediction}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -30 }}
             transition={{ duration: 0.5 }}
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-16"
           >
@@ -293,7 +294,7 @@ const AITrendsPredictions2026 = () => {
                 </p>
                 
                 <div className="space-y-3">
-                  {predictions[activePrediction].keyPoints.map((point, index) => (
+                  {predictions[activePrediction].keyPoints.map((pointindex) => (
                     <div key={index} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                       {point}
@@ -316,9 +317,9 @@ const AITrendsPredictions2026 = () => {
 
         {/* Timeline */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -329,12 +330,12 @@ const AITrendsPredictions2026 = () => {
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-400"></div>
             
             <div className="space-y-8">
-              {timeline.map((item, index) => (
+              {timeline.map((itemindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  animate={isVisible ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 1.0 + index * 0.2 }}
+                  initial={{ opacity: 0x: index % 2 === 0 ? -50 : 50 }}
+                  animate={isVisible ? { opacity: 1x: 0 } : {}}
+                  transition={{ duration: 0.6delay: 1.0 + index * 0.2 }}
                   className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                 >
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
@@ -369,9 +370,9 @@ const AITrendsPredictions2026 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.2 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 1.2 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl p-12">
@@ -379,7 +380,7 @@ const AITrendsPredictions2026 = () => {
               Stay Ahead of the AI Revolution
             </h2>
             <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-              Get exclusive insights, early access to new technologies, and expert analysis of AI trends.
+              Get exclusive insightsearly access to new technologiesand expert analysis of AI trends.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-white text-cyan-600 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center">

@@ -8,7 +8,7 @@ interface TalentCardSkillsProps {
 
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
   // Get top skills (limit to 4)
-  const topSkills = skills.slice(0, 4) || [];
+  const topSkills = skills.slice(04) || [];
 
   return (
     <div className="flex flex-wrap gap-1 mb-5">

@@ -1,19 +1,19 @@
 
 import { UseFormReturn } from "react-hook-form";
 import { 
-  FormField, 
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormDescription, 
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
   FormMessage 
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { 
-  Select, 
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
   SelectValue 
 } from "@/components/ui/select";
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions";
@@ -28,7 +28,7 @@ interface PaymentTermsFieldsProps {
 }
 
 export function PaymentTermsFields({ 
-  form, 
+  form
   talent,
   handleMilestonesGenerated 
 }: PaymentTermsFieldsProps) {

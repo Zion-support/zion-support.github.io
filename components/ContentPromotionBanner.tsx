@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -69,16 +70,16 @@ const contentItems: ContentItem[] = [
 ];
 
 export default function ContentPromotionBanner() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentIndexsetCurrentIndex] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentContent = contentItems[currentIndex];
 
@@ -145,7 +146,7 @@ export default function ContentPromotionBanner() {
 
         {/* Progress Indicators */}
         <div className="flex justify-center space-x-2 mt-3">
-          {contentItems.map((_, index) => (
+          {contentItems.map((_index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}

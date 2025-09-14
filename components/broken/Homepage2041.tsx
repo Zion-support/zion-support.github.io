@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
+  ArrowRight
+  Star
   Search,
   Shield,
   Globe,
@@ -30,7 +31,7 @@ import { innovative2041ITServices } from '../data/innovative-2041-it-services';
 import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
 
 const Homepage2041: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuerysetSearchQuery] = useState('');
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,15 +41,15 @@ const Homepage2041: React.FC = () => {
   };
 
   const featuredServices = [
-    ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3),
-    ...innovative2041ITServices.filter(s => s.popular).slice(0, 2),
-    ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
+    ...innovative2041MicroSaasServices.filter(s => s.popular).slice(03),
+    ...innovative2041ITServices.filter(s => s.popular).slice(02),
+    ...innovative2041AIServices.filter(s => s.popular).slice(01)
   ];
 
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
-      role: "Chief AI Officer, FutureTech Inc.",
+      role: "Chief AI OfficerFutureTech Inc.",
       company: "FutureTech Inc.",
       content: "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",
       rating: 5,
@@ -56,7 +57,7 @@ const Homepage2041: React.FC = () => {
     },
     {
       name: "Marcus Rodriguez",
-      role: "VP Quantum Computing, QuantumCorp",
+      role: "VP Quantum ComputingQuantumCorp",
       company: "QuantumCorp",
       content: "Their quantum bio-computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.",
       rating: 5,
@@ -64,7 +65,7 @@ const Homepage2041: React.FC = () => {
     },
     {
       name: "Dr. Emily Watson",
-      role: "Research Director, SpaceLabs",
+      role: "Research DirectorSpaceLabs",
       company: "SpaceLabs",
       content: "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.",
       rating: 5,
@@ -73,10 +74,10 @@ const Homepage2041: React.FC = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "Revolutionary Services", icon: Rocket },
-    { number: "50+", label: "Quantum Solutions", icon: Atom },
-    { number: "1000x", label: "Performance Boost", icon: Zap },
-    { number: "24/7", label: "AI Operations", icon: Brain }
+    { number: "500+"label: "Revolutionary Services"icon: Rocket },
+    { number: "50+"label: "Quantum Solutions"icon: Atom },
+    { number: "1000x"label: "Performance Boost"icon: Zap },
+    { number: "24/7"label: "AI Operations"icon: Brain }
   ];
 
   return (
@@ -96,15 +97,15 @@ const Homepage2041: React.FC = () => {
             
             {/* Enhanced particle system */}
             <div className="absolute inset-0">
-              {[...Array(12)].map((_, i) => (
+              {[...Array(12)].map((_i) => (
                 <motion.div
                   key={i}
                   className="absolute w-2 h-2 bg-cyan-400/40 rounded-full"
                   animate={{
-                    x: [0, 60, 0],
-                    y: [0, -60, 0],
-                    opacity: [0, 0.7, 0],
-                    scale: [0.5, 1, 0.5]}}
+                    x: [060],
+                    y: [0-60],
+                    opacity: [0.70],
+                    scale: [0.510.5]}}
                   transition={{
                     duration: 5 + i * 0.3,
                     repeat: Infinity,
@@ -122,8 +123,8 @@ const Homepage2041: React.FC = () => {
           {/* Hero Content */}
           <div className="text-center max-w-7xl mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 50 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 
@@ -141,15 +142,15 @@ const Homepage2041: React.FC = () => {
               
               <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
                 Experience the revolution of technology with our cutting-edge 2041 services. 
-                From AI consciousness evolution to quantum space mining, we're redefining what's possible.
+                From AI consciousness evolution to quantum space miningwe're redefining what's possible.
               </p>
 
               {/* Search Bar */}
               <motion.div 
                 className="max-w-3xl mx-auto mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: 0.2 }}
               >
                 <form onSubmit={handleSearch} className="relative">
                   <input
@@ -171,9 +172,9 @@ const Homepage2041: React.FC = () => {
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: 0.4 }}
               >
                 <Link
                   href="/2041-futuristic-services-showcase"
@@ -201,18 +202,18 @@ const Homepage2041: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="grid grid-cols-2 md:grid-cols-4 gap-8"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <motion.div
                   key={stat.label}
                   className="text-center"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -231,8 +232,8 @@ const Homepage2041: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -246,17 +247,17 @@ const Homepage2041: React.FC = () => {
 
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.2 }}
               viewport={{ once: true }}
             >
-              {featuredServices.map((service, index) => (
+              {featuredServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: 0.4 + index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <UltraFuturisticServiceCard2026 service={service} />
@@ -266,9 +267,9 @@ const Homepage2041: React.FC = () => {
 
             <motion.div 
               className="text-center mt-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.6 }}
               viewport={{ once: true }}
             >
               <Link
@@ -288,8 +289,8 @@ const Homepage2041: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -303,24 +304,24 @@ const Homepage2041: React.FC = () => {
 
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.2 }}
               viewport={{ once: true }}
             >
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonialindex) => (
                 <motion.div
                   key={testimonial.name}
                   className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: 0.4 + index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <div className="text-4xl mb-4">{testimonial.avatar}</div>
                   <p className="text-gray-300 mb-6 leading-relaxed">{testimonial.content}</p>
                   <div className="flex items-center gap-2 mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map((_i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -338,8 +339,8 @@ const Homepage2041: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div 
               className="bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -348,7 +349,7 @@ const Homepage2041: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
                 Join the technological revolution with our cutting-edge 2041 services. 
-                Transform your business, accelerate innovation, and lead the future of technology.
+                Transform your businessaccelerate innovationand lead the future of technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link

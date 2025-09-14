@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, Tag, Star, Sparkles } from 'lucide-react';
+ArrowRightClockTagStarSparkles
 
 interface BannerItem {
   title: string;
@@ -123,7 +123,7 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
 
           {/* Content Items */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {items.map((item, index) => (
+            {items.map((itemindex) => (
               <Link
                 key={index}
                 href={item.href}

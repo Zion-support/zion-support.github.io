@@ -1,18 +1,19 @@
+"use client";
 'use client';
 
-import React, { useState } from 'react';
-import { FileText, Sparkles, Download, Copy, RefreshCw } from 'lucide-react';
+import React{ useState } from 'react';
+FileTextSparklesDownloadCopyRefreshCw
 
 const AIContentGenerator = () => {
-  const [prompt, setPrompt] = useState('');
-  const [generatedContent, setGeneratedContent] = useState('');
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [contentType, setContentType] = useState('blog-post');
+  const [promptsetPrompt] = useState('');
+  const [generatedContentsetGeneratedContent] = useState('');
+  const [isGeneratingsetIsGenerating] = useState(false);
+  const [contentTypesetContentType] = useState('blog-post');
 
   const generateContent = async () => {
     setIsGenerating(true);
     // Simulate AI content generation
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve2000));
     
     const sampleContent = `# ${prompt || 'Generated Content'}
 
@@ -44,7 +45,7 @@ This demonstrates the power of AI-driven content generation for your business ne
   };
 
   const downloadContent = () => {
-    const blob = new Blob([generatedContent], { type: 'text/markdown' });
+    const blob = new Blob([generatedContent]{ type: 'text/markdown' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -61,7 +62,7 @@ This demonstrates the power of AI-driven content generation for your business ne
             AI Content Generator
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Generate high-quality, engaging content using advanced AI technology.
+            Generate high-qualityengaging content using advanced AI technology.
           </p>
         </div>
 

@@ -1,12 +1,13 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Calendar, 
-  TrendingUp, 
-  ArrowRight, 
-  Play, 
+  Calendar
+  TrendingUp
+  ArrowRight
+  Play
   Sparkles,
   Brain,
   Award,
@@ -19,8 +20,8 @@ import {
 } from 'lucide-react';
 
 const FuturePredictionsShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentPrediction, setCurrentPrediction] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentPredictionsetCurrentPrediction] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -28,29 +29,29 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
     // Rotate through predictions every 4 seconds
     const interval = setInterval(() => {
       setCurrentPrediction(prev => (prev + 1) % 3);
-    }, 4000);
+    }4000);
     
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const predictions = [
     { 
-      icon: Brain, 
-      title: 'Neural Interface Breakthrough', 
+      icon: Brain
+      title: 'Neural Interface Breakthrough'
       year: '2025',
       color: 'from-purple-500 to-blue-500',
       description: 'First commercial neural interface devices'
     },
     { 
-      icon: Rocket, 
-      title: 'Universal Automation', 
+      icon: Rocket
+      title: 'Universal Automation'
       year: '2026',
       color: 'from-green-500 to-emerald-500',
       description: '90% of business processes automated'
     },
     { 
-      icon: Globe, 
-      title: 'Global AI Network', 
+      icon: Globe
+      title: 'Global AI Network'
       year: '2030',
       color: 'from-orange-500 to-red-500',
       description: 'Worldwide interconnected AI consciousness'
@@ -59,8 +60,8 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+      initial={{ opacity: 0y: 50 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-8 md:p-12 my-8"
     >
@@ -76,9 +77,9 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
           <div className="flex-1 text-center lg:text-left">
             {/* Badge */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0scale: 0.8 }}
+              animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
+              transition={{ duration: 0.6delay: 0.2 }}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-400 to-purple-500 text-black px-4 py-2 rounded-full font-bold text-sm mb-6"
             >
               <Calendar className="w-4 h-4" />
@@ -88,9 +89,9 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
 
             {/* Main Heading */}
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.8delay: 0.3 }}
               className="text-4xl md:text-6xl font-bold text-white mb-6"
             >
               Future Predictions
@@ -101,27 +102,27 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
 
             {/* Description */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.8delay: 0.4 }}
               className="text-xl text-gray-300 mb-8 max-w-2xl"
             >
-              Explore our expert predictions for the future of AI, technology, and human civilization 
+              Explore our expert predictions for the future of AItechnologyand human civilization 
               from 2025 to 2030 and beyond.
             </motion.p>
 
             {/* Features */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.8delay: 0.5 }}
               className="flex flex-wrap gap-4 mb-8"
             >
               {[
-                { icon: Brain, text: 'Neural Interface 2025' },
-                { icon: Rocket, text: 'Universal Automation 2026' },
-                { icon: Globe, text: 'Global AI Network 2030' }
-              ].map((feature, index) => (
+                { icon: Braintext: 'Neural Interface 2025' },
+                { icon: Rocketext: 'Universal Automation 2026' },
+                { icon: Globetext: 'Global AI Network 2030' }
+              ].map((featureindex) => (
                 <div key={index} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                   <feature.icon className="w-4 h-4 text-pink-400" />
                   <span className="text-white text-sm font-medium">{feature.text}</span>
@@ -131,9 +132,9 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.8delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="group flex items-center gap-3 bg-gradient-to-r from-pink-400 to-purple-500 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-2xl">
@@ -151,9 +152,9 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
 
           {/* Right Visual - Rotating Predictions */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0scale: 0.8 }}
+            animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
+            transition={{ duration: 0.8delay: 0.4 }}
             className="relative"
           >
             <div className="relative w-80 h-80">
@@ -167,9 +168,9 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div
                   key={currentPrediction}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  exit={{ opacity: 0scale: 0.8 }}
                   transition={{ duration: 0.5 }}
                   className="text-center"
                 >
@@ -182,12 +183,12 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
               </div>
 
               {/* Floating Prediction Icons */}
-              {predictions.map((prediction, index) => (
+              {predictions.map((predictionindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0 }}
+                  initial={{ opacity: 0scale: 0 }}
                   animate={{ 
-                    opacity: index === currentPrediction ? 1 : 0.3, 
+                    opacity: index === currentPrediction ? 1 : 0.3
                     scale: index === currentPrediction ? 1 : 0.8 
                   }}
                   transition={{ duration: 0.5 }}
@@ -205,7 +206,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
 
               {/* Timeline Dots */}
               <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
-              {predictions.map((prediction, index) => (
+              {predictions.map((predictionindex) => (
                 <div
                   key={index}
                   className={`absolute top-1/2 ${

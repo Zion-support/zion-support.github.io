@@ -1,29 +1,30 @@
+"use client";
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Mail, 
-  Send, 
-  CheckCircle, 
-  Star, 
-  Users, 
+  Mail
+  Send
+  CheckCircle
+  Star
+  Users
   TrendingUp,
   Shield,
   Zap
 } from 'lucide-react';
 
 const NewsletterSignup2025 = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [emailsetEmail] = useState('');
+  const [isSubscribedsetIsSubscribed] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve2000));
     
     setIsSubscribed(true);
     setIsLoading(false);
@@ -38,7 +39,7 @@ const NewsletterSignup2025 = () => {
     {
       icon: Star,
       title: 'Premium Content Access',
-      description: 'Unlock exclusive tutorials, case studies, and whitepapers'
+      description: 'Unlock exclusive tutorialscase studiesand whitepapers'
     },
     {
       icon: TrendingUp,
@@ -53,10 +54,10 @@ const NewsletterSignup2025 = () => {
   ];
 
   const stats = [
-    { number: '50,000+', label: 'Subscribers' },
-    { number: '95%', label: 'Open Rate' },
-    { number: '4.9/5', label: 'Rating' },
-    { number: 'Weekly', label: 'Updates' }
+    { number: '50,000+'label: 'Subscribers' },
+    { number: '95%'label: 'Open Rate' },
+    { number: '4.9/5'label: 'Rating' },
+    { number: 'Weekly'label: 'Updates' }
   ];
 
   if (isSubscribed) {
@@ -64,15 +65,15 @@ const NewsletterSignup2025 = () => {
       <section className="py-20 bg-gradient-to-br from-green-50 via-white to-emerald-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0scale: 0.8 }}
+            animate={{ opacity: 1scale: 1 }}
             transition={{ duration: 0.8 }}
             className="bg-white rounded-3xl shadow-2xl p-12"
           >
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5delay: 0.2 }}
               className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
             >
               <CheckCircle className="w-10 h-10 text-green-600" />
@@ -130,8 +131,8 @@ const NewsletterSignup2025 = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0x: -50 }}
+            animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -147,20 +148,20 @@ const NewsletterSignup2025 = () => {
             </h2>
             
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Get exclusive access to the latest AI breakthroughs, business strategies, 
+              Get exclusive access to the latest AI breakthroughsbusiness strategies
               and cutting-edge technology insights delivered directly to your inbox.
             </p>
 
             {/* Benefits Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-              {benefits.map((benefit, index) => {
+              {benefits.map((benefitindex) => {
                 const Icon = benefit.icon;
                 return (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={{ opacity: 0y: 20 }}
+                    animate={{ opacity: 1y: 0 }}
+                    transition={{ duration: 0.6delay: index * 0.1 }}
                     className="flex items-start gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4"
                   >
                     <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -177,12 +178,12 @@ const NewsletterSignup2025 = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                   className="text-center"
                 >
                   <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
@@ -194,9 +195,9 @@ const NewsletterSignup2025 = () => {
 
           {/* Right Content - Signup Form */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
           >
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
@@ -225,7 +226,7 @@ const NewsletterSignup2025 = () => {
               <div className="flex items-start gap-3">
                 <Shield className="w-5 h-5 text-white/80 mt-0.5 flex-shrink-0" />
                 <p className="text-sm text-white/80">
-                  We respect your privacy. Unsubscribe at any time. No spam, ever.
+                  We respect your privacy. Unsubscribe at any time. No spamever.
                 </p>
               </div>
 

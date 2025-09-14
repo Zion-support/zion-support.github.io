@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 interface SEOProps {
@@ -6,42 +5,50 @@ interface SEOProps {
   description?: string;
   keywords?: string;
   url?: string;
-  image?: string;
-  type?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
-  url = '',
-  image = '/images/og-image.jpg',
-  type = 'website'
-}) => {
+export default function SEO({
+  title = "Zion Tech Group - AI & Technology Solutions",
+  description = "Leading provider of AI and technology solutions for enterprise transformation. Discover our innovative services and success stories.",
+  keywords = "AItechnologyenterprise solutionsdigital transformationartificial intelligence",
+  canonical,
+  ogImage = "/images/og-image.jpg",
+  ogType = "website",
+  twitterCard = "summary_large_image",
+  noindex = false,
+  nofollow = false
+}: SEOProps) {
+  const robots = [
+    noindex ? 'noindex' : 'index',
+    nofollow ? 'nofollow' : 'follow'
+  ].join(', ');
+
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="robots" content={robots} />
+      
+      {canonical && <link rel="canonical" href={canonical} />}
       
       {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:image" content={ogImage} />
       
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
+      {/* Twitter Card */}
+      <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      
-      {/* Canonical URL */}
-      {url && <link rel="canonical" href={url} />}
+      <meta name="twitter:image" content={ogImage} />
     </Head>
   );
-};
-
-export default SEO;
+}

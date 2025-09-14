@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { TabsListTabsTrigger } from '@/components/ui/tabs';
 
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
 

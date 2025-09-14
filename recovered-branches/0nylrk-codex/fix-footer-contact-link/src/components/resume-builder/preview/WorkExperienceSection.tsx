@@ -8,7 +8,7 @@ interface WorkExperienceSectionProps {
 
 export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
   // Sort work experience by date (newest first)
-  const sortedWorkExperience = [...workExperience].sort((a, b) => {
+  const sortedWorkExperience = [...workExperience].sort((ab) => {
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     
@@ -20,9 +20,9 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
   const formatDate = (date: Date | string | undefined) => {
     if (!date) return '';
     if (typeof date === 'string') {
-      return format(new Date(date), 'MMM yyyy');
+      return format(new Date(date)'MMM yyyy');
     }
-    return format(date, 'MMM yyyy');
+    return format(date'MMM yyyy');
   };
 
   if (sortedWorkExperience.length === 0) return null;
@@ -31,7 +31,7 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>
       <div className="space-y-4">
-        {sortedWorkExperience.map((work, index) => (
+        {sortedWorkExperience.map((workindex) => (
           <div key={work.id || index} className="space-y-1">
             <div className="flex justify-between items-start">
               <h3 className="font-medium">{work.role_title}</h3>

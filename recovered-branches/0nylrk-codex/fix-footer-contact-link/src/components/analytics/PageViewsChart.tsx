@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
 interface PageViewsChartProps {
@@ -9,7 +9,7 @@ interface PageViewsChartProps {
   onTimeRangeChange: (range: string) => void;
 }
 
-export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {
+export function PageViewsChart({ datatimeRangeonTimeRangeChange }: PageViewsChartProps) {
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">

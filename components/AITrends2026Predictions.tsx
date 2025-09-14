@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Globe, 
-  Rocket, 
-  Shield, 
+  TrendingUp
+  Brain
+  Zap
+  Globe
+  Rocket
+  Shield
   Database,
   Cpu,
   Users,
@@ -23,9 +24,9 @@ import {
 } from 'lucide-react';
 
 const AITrends2026Predictions = () => {
-  const [activeCategory, setActiveCategory] = useState('ai-breakthroughs');
-  const [isVisible, setIsVisible] = useState(false);
-  const [animatedStats, setAnimatedStats] = useState({
+  const [activeCategorysetActiveCategory] = useState('ai-breakthroughs');
+  const [isVisiblesetIsVisible] = useState(false);
+  const [animatedStatsetAnimatedStats] = useState({
     marketSize: 0,
     companies: 0,
     jobs: 0,
@@ -38,7 +39,7 @@ const AITrends2026Predictions = () => {
     // Animate statistics
     const animateStats = () => {
       const targets = {
-        marketSize: 1500, // $1.5T
+        marketSize: 1500// $1.5T
         companies: 50000,
         jobs: 2000000,
         investment: 500 // $500B
@@ -52,7 +53,7 @@ const AITrends2026Predictions = () => {
       const interval = setInterval(() => {
         step++;
         const progress = step / steps;
-        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const easeOut = 1 - Math.pow(1 - progress3);
 
         setAnimatedStats({
           marketSize: Math.floor(targets.marketSize * easeOut),
@@ -64,12 +65,12 @@ const AITrends2026Predictions = () => {
         if (step >= steps) {
           clearInterval(interval);
         }
-      }, stepDuration);
+      }stepDuration);
     };
 
-    const timer = setTimeout(animateStats, 500);
+    const timer = setTimeout(animateStats500);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   const categories = {
     'ai-breakthroughs': {
@@ -256,7 +257,7 @@ const AITrends2026Predictions = () => {
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(25)].map((_, i) => (
+        {[...Array(25)].map((_i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-indigo-400 rounded-full opacity-30"
@@ -265,8 +266,8 @@ const AITrends2026Predictions = () => {
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -100, 0],
-              opacity: [0.3, 0.8, 0.3],
+              y: [0-100],
+              opacity: [0.30.80.3],
             }}
             transition={{
               duration: 4 + Math.random() * 2,
@@ -280,8 +281,8 @@ const AITrends2026Predictions = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -305,9 +306,9 @@ const AITrends2026Predictions = () => {
 
         {/* Statistics */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           <div className="text-center">
@@ -338,9 +339,9 @@ const AITrends2026Predictions = () => {
 
         {/* Category Tabs */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categoryTabs.map((tab) => {
@@ -366,17 +367,17 @@ const AITrends2026Predictions = () => {
         {/* Predictions Grid */}
         <motion.div
           key={activeCategory}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {categories[activeCategory as keyof typeof categories].predictions.map((prediction, index) => (
+          {categories[activeCategory as keyof typeof categories].predictions.map((predictionindex) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
             >
               {/* Probability Badge */}
@@ -419,7 +420,7 @@ const AITrends2026Predictions = () => {
                 {/* Implications */}
                 <div className="space-y-3 mb-8">
                   <h4 className="text-sm font-bold text-white uppercase tracking-wide">Key Implications:</h4>
-                  {prediction.implications.map((implication, impIndex) => (
+                  {prediction.implications.map((implicationimpIndex) => (
                     <div key={impIndex} className="flex items-start text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
                       <span>{implication}</span>
@@ -445,9 +446,9 @@ const AITrends2026Predictions = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -455,7 +456,7 @@ const AITrends2026Predictions = () => {
               Stay Ahead of the Future
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get exclusive access to detailed predictions, expert analysis, 
+              Get exclusive access to detailed predictionsexpert analysis
               and early insights into the technologies that will shape 2026.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,14 +1,14 @@
 
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { AppHeader } from "@/layout/AppHeader"; 
 import { Footer } from "@/components/Footer";
 import { JobsList } from "@/components/jobs/JobsList";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { JobStatus } from "@/types/jobs";
 import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react";
+import { BriefcaseIconUserIconMessageSquareStarPlusCircleKanbanVideo } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
 import { useJobs } from "@/hooks/useJobs";
@@ -18,10 +18,10 @@ import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingIntervie
 import { useIsMobile } from "@/hooks/use-mobile";
 
 function ClientDashboardContent() {
-  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
-  const { jobs, isLoading } = useJobs();
-  const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
+  const [activeTabsetActiveTab] = useState<JobStatus | "all">("all");
+  const { jobsisLoading } = useJobs();
+  const [selectedJobIdsetSelectedJobId] = useState<string | null>(null);
+  const [selectedJobTitlesetSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
 
   // Set the first job as selected when jobs are loaded (if any)
@@ -30,9 +30,9 @@ function ClientDashboardContent() {
       setSelectedJobId(jobs[0].id);
       setSelectedJobTitle(jobs[0].title);
     }
-  }, [jobs, selectedJobId]);
+  }[jobselectedJobId]);
 
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
+  const handleJobSelect = (jobId: stringjobTitle: string) => {
     setSelectedJobId(jobId);
     setSelectedJobTitle(jobTitle);
   };

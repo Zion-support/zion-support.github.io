@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Calendar, Clock, User, TrendingUp, Star, Eye, ThumbsUp } from 'lucide-react';
+ArrowRightCalendarClockUserTrendingUpStarEyeThumbsUp
 
 export default function FeaturedContentSection2025() {
   const featuredContent = [
@@ -33,7 +33,7 @@ export default function FeaturedContentSection2025() {
     {
       type: 'tutorial',
       title: 'Complete AI Implementation Guide: From Zero to Success',
-      excerpt: 'A comprehensive, step-by-step tutorial that will guide you through implementing AI solutions in your organization.',
+      excerpt: 'A comprehensivestep-by-step tutorial that will guide you through implementing AI solutions in your organization.',
       author: 'Implementation Team',
       readTime: '45 min read',
       publishDate: 'January 2025',
@@ -84,14 +84,14 @@ export default function FeaturedContentSection2025() {
             Latest & Greatest Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our most popular and impactful content, carefully curated to help you stay ahead 
+            Discover our most popular and impactful contentcarefully curated to help you stay ahead 
             in the rapidly evolving world of AI and technology.
           </p>
         </div>
 
         {/* Featured Content Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {featuredContent.map((content, index) => (
+          {featuredContent.map((contentindex) => (
             <Link key={index} href={content.href} className="group">
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
                 {/* Featured Badge */}
@@ -179,7 +179,7 @@ export default function FeaturedContentSection2025() {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Latest Articles</h3>
             <p className="text-gray-600 mb-6">
-              Stay updated with the latest AI trends, breakthroughs, and industry insights.
+              Stay updated with the latest AI trendsbreakthroughsand industry insights.
             </p>
             <Link 
               href="/blog" 
@@ -226,7 +226,7 @@ export default function FeaturedContentSection2025() {
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
           <h3 className="text-3xl font-bold mb-4">Don't Miss Out on the Latest Content</h3>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Subscribe to our newsletter and get notified about new articles, case studies, and tutorials as soon as they're published.
+            Subscribe to our newsletter and get notified about new articlescase studiesand tutorials as soon as they're published.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 

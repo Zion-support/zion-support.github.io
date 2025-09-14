@@ -1,17 +1,17 @@
 
 import { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParamsLink } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from "lucide-react";
-import { formatDistanceToNow, format } from "date-fns";
-import { ForumPost, ForumReply } from "@/types/community";
+import { AlertDescription } from "@/components/ui/alert";
+import { ThumbsUpThumbsDownCalendarFlagEditTrash2PinLockCheckCircle } from "lucide-react";
+import { formatDistanceToNowformat } from "date-fns";
+import { ForumPostForumReply } from "@/types/community";
 import { useAuth } from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
@@ -21,13 +21,13 @@ import { useToast } from "@/hooks/use-toast";
 const mockPost: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine-tuning",
-  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
+  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirstit's important to carefully prepare your training data. Cleanwell-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecondfor parameter optimizationI've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThirdregularization techniques like dropout and weight decay help prevent overfittingespecially when working with smaller datasets.\n\nFinallyevaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
   authorId: "user1",
   authorName: "Alex Johnson",
   authorAvatar: "https://i.pravatar.cc/150?img=3",
   authorRole: "Verified Talent",
   categoryId: "ai-tools",
-  tags: ["machine-learning", "fine-tuning", "gpt"],
+  tags: ["machine-learning"fine-tuning"gpt"],
   createdAt: "2025-04-01T12:00:00Z",
   updatedAt: "2025-04-01T12:00:00Z",
   upvotes: 48,
@@ -66,7 +66,7 @@ const mockReplies: ForumReply[] = [
   {
     id: "reply3",
     postId: "1",
-    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlsowhen fine-tuning language modelsI've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",
     authorId: "user4",
     authorName: "Emma Davis",
     authorRole: "ML Research Lead",
@@ -96,8 +96,8 @@ export default function ForumPostPage() {
   const { postId } = useParams() as { postId?: string };
   const { user } = useAuth();
   const { toast } = useToast();
-  const [post, setPost] = useState(mockPost);
-  const [replies, setReplies] = useState(mockReplies);
+  const [postsetPost] = useState(mockPost);
+  const [repliesetReplies] = useState(mockReplies);
   
   // Check if this is the user's own post
   const isAuthor = user?.id === post?.authorId;
@@ -105,7 +105,7 @@ export default function ForumPostPage() {
   // Check if user is admin/mod
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
   
-  // For this demo, we'll assume the post is found
+  // For this demowe'll assume the post is found
   if (!post) {
     return (
       <AppLayout>
@@ -127,7 +127,7 @@ export default function ForumPostPage() {
       return;
     }
     
-    setPost({ ...post, upvotes: post.upvotes + 1 });
+    setPost({ ...postupvotes: post.upvotes + 1 });
     toast({
       title: "Vote recorded",
       description: "You upvoted this post"});
@@ -141,7 +141,7 @@ export default function ForumPostPage() {
       return;
     }
     
-    setPost({ ...post, downvotes: post.downvotes + 1 });
+    setPost({ ...postdownvotes: post.downvotes + 1 });
     toast({
       title: "Vote recorded",
       description: "You downvoted this post"});
@@ -169,8 +169,8 @@ export default function ForumPostPage() {
       downvotes: 0
     };
     
-    setReplies([...replies, newReply]);
-    setPost({ ...post, replyCount: post.replyCount + 1 });
+    setReplies([...repliesnewReply]);
+    setPost({ ...postreplyCount: post.replyCount + 1 });
     
     toast({
       title: "Reply posted",
@@ -195,7 +195,7 @@ export default function ForumPostPage() {
     }));
     
     setReplies(updatedReplies);
-    setPost({ ...post, isAnswered: true });
+    setPost({ ...postisAnswered: true });
     
     toast({
       title: "Answer marked",
@@ -218,7 +218,7 @@ export default function ForumPostPage() {
   const handlePinPost = () => {
     if (!isAdminOrMod) return;
     
-    setPost({ ...post, isPinned: !post.isPinned });
+    setPost({ ...postisPinned: !post.isPinned });
     
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned",
@@ -228,22 +228,22 @@ export default function ForumPostPage() {
   const handleLockPost = () => {
     if (!isAdminOrMod) return;
     
-    setPost({ ...post, isLocked: !post.isLocked });
+    setPost({ ...postisLocked: !post.isLocked });
     
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked",
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"});
   };
   
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
-  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt){ addSuffix: true });
+  const formattedDate = format(new Date(post.createdAt)"MMMM dyyyy 'at' h:mm a");
   
   return (
     <AppLayout>
       <SEO 
         title={`${post.title} | Community Forum | Zion AI Marketplace`}
-        description={post.content.substring(0, 160)}
-        keywords={`community, forum, discussion, ${post.tags.join(', ')}`}
+        description={post.content.substring(0160)}
+        keywords={`communityforumdiscussion${post.tags.join(')}`}
       />
       
       <div className="container py-8">
@@ -296,7 +296,7 @@ export default function ForumPostPage() {
             </div>
             
             <div className="prose dark:prose-invert max-w-none mb-6">
-              {post.content.split('\n\n').map((paragraph, i) => (
+              {post.content.split('\n\n').map((paragraphi) => (
                 <p key={i}>{paragraph}</p>
               ))}
             </div>

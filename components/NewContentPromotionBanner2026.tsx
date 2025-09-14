@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Sparkles, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Brain, 
+  Sparkles
+  ArrowRight
+  Star
+  Zap
+  Brain
   Globe,
   Rocket,
   TrendingUp,
@@ -17,27 +18,27 @@ import {
 } from 'lucide-react';
 
 const NewContentPromotionBanner2026 = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [showDetails, setShowDetails] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [showDetailsetShowDetails] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
+    const timer = setTimeout(() => setIsVisible(true)1000);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   const features = [
-    { icon: Brain, text: 'Multimodal AI Revolution', color: 'text-purple-400' },
-    { icon: Zap, text: 'Quantum Computing Breakthroughs', color: 'text-blue-400' },
-    { icon: Globe, text: 'Green Tech Solutions', color: 'text-green-400' },
-    { icon: Rocket, text: 'Advanced Automation', color: 'text-orange-400' }
+    { icon: Braintext: 'Multimodal AI Revolution'color: 'text-purple-400' },
+    { icon: Zaptext: 'Quantum Computing Breakthroughs'color: 'text-blue-400' },
+    { icon: Globetext: 'Green Tech Solutions'color: 'text-green-400' },
+    { icon: Rocketext: 'Advanced Automation'color: 'text-orange-400' }
   ];
 
   const stats = [
-    { number: '25+', label: 'New Articles' },
-    { number: '15+', label: 'Case Studies' },
-    { number: '8+', label: 'Implementation Guides' },
-    { number: '5+', label: 'Video Tutorials' }
+    { number: '25+'label: 'New Articles' },
+    { number: '15+'label: 'Case Studies' },
+    { number: '8+'label: 'Implementation Guides' },
+    { number: '5+'label: 'Video Tutorials' }
   ];
 
   if (isDismissed) return null;
@@ -45,9 +46,9 @@ const NewContentPromotionBanner2026 = () => {
   return (
     <motion.div
       className="relative overflow-hidden"
-      initial={{ opacity: 0, y: -50 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      initial={{ opacity: 0y: -50 }}
+      animate={isVisible ? { opacity: 1y: 0 } : { opacity: 0y: -50 }}
+      transition={{ duration: 0.8ease: "easeOut" }}
     >
       {/* Background with animated gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600">
@@ -59,7 +60,7 @@ const NewContentPromotionBanner2026 = () => {
 
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map((_i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-white rounded-full opacity-30"
@@ -68,8 +69,8 @@ const NewContentPromotionBanner2026 = () => {
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 0.8, 0.3],
+              y: [0-20],
+              opacity: [0.30.80.3],
             }}
             transition={{
               duration: 3 + Math.random() * 2,
@@ -96,7 +97,7 @@ const NewContentPromotionBanner2026 = () => {
               className="inline-flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 mb-6"
               initial={{ scale: 0 }}
               animate={isVisible ? { scale: 1 } : { scale: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
+              transition={{ delay: 0.2duration: 0.5 }}
             >
               <Sparkles className="w-4 h-4 mr-2 text-yellow-300" />
               <span className="text-sm font-bold text-white">🚀 NEW CONTENT ALERT</span>
@@ -105,9 +106,9 @@ const NewContentPromotionBanner2026 = () => {
             {/* Main heading */}
             <motion.h1
               className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : { opacity: 0y: 20 }}
+              transition={{ delay: 0.3duration: 0.6 }}
             >
               Revolutionary Content Just Dropped! 🎉
             </motion.h1>
@@ -115,22 +116,22 @@ const NewContentPromotionBanner2026 = () => {
             {/* Subheading */}
             <motion.p
               className="text-lg md:text-xl text-white opacity-90 mb-8 max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : { opacity: 0y: 20 }}
+              transition={{ delay: 0.4duration: 0.6 }}
             >
-              Discover 25+ groundbreaking articles, case studies, and implementation guides covering 
-              the latest in AI, quantum computing, sustainability, and automation.
+              Discover 25+ groundbreaking articlescase studiesand implementation guides covering 
+              the latest in AIquantum computingsustainabilityand automation.
             </motion.p>
 
             {/* Features grid */}
             <motion.div
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : { opacity: 0y: 20 }}
+              transition={{ delay: 0.5duration: 0.6 }}
             >
-              {features.map((feature, index) => {
+              {features.map((featureindex) => {
                 const Icon = feature.icon;
                 return (
                   <div
@@ -147,11 +148,11 @@ const NewContentPromotionBanner2026 = () => {
             {/* Stats */}
             <motion.div
               className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : { opacity: 0y: 20 }}
+              transition={{ delay: 0.6duration: 0.6 }}
             >
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <div key={index} className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-white mb-1">
                     {stat.number}
@@ -166,9 +167,9 @@ const NewContentPromotionBanner2026 = () => {
             {/* CTA Buttons */}
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.7, duration: 0.6 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={isVisible ? { opacity: 1y: 0 } : { opacity: 0y: 20 }}
+              transition={{ delay: 0.7duration: 0.6 }}
             >
               <Link
                 href="/content-showcase"
@@ -192,7 +193,7 @@ const NewContentPromotionBanner2026 = () => {
               className="text-white opacity-80 hover:opacity-100 transition-opacity inline-flex items-center"
               initial={{ opacity: 0 }}
               animate={isVisible ? { opacity: 0.8 } : { opacity: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
+              transition={{ delay: 0.8duration: 0.6 }}
             >
               <span className="mr-2">
                 {showDetails ? 'Show Less' : 'Show More Details'}

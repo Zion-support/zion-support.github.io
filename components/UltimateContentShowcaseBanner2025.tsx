@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  ArrowRight, 
-  Play, 
-  BookOpen, 
-  Brain, 
-  Zap, 
+  Sparkles
+  ArrowRight
+  Play
+  BookOpen
+  Brain
+  Zap
   Award,
   TrendingUp,
   Users,
@@ -20,8 +21,8 @@ import {
 } from 'lucide-react';
 
 const UltimateContentShowcaseBanner2025 = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isPlayingsetIsPlaying] = useState(true);
 
   const contentFeatures = [
     {
@@ -62,41 +63,41 @@ const UltimateContentShowcaseBanner2025 = () => {
     {
       text: "The AI tools showcase helped us identify the perfect solution for our automation needs. Game-changing!",
       author: "Sarah Chen",
-      position: "CTO, TechCorp",
+      position: "CTOTechCorp",
       avatar: "/api/placeholder/60/60",
       rating: 5
     },
     {
       text: "The case studies provided incredible insights. We achieved 300% ROI in just 6 months!",
       author: "Michael Rodriguez",
-      position: "CEO, InnovateLabs",
+      position: "CEOInnovateLabs",
       avatar: "/api/placeholder/60/60",
       rating: 5
     },
     {
       text: "The learning hub is phenomenal. Our team is now AI-certified and driving real results.",
       author: "Jennifer Park",
-      position: "VP Engineering, DataFlow",
+      position: "VP EngineeringDataFlow",
       avatar: "/api/placeholder/60/60",
       rating: 5
     }
   ];
 
   const stats = [
-    { number: '50K+', label: 'Active Learners', icon: Users },
-    { number: '95%', label: 'Success Rate', icon: TrendingUp },
-    { number: '4.9/5', label: 'Average Rating', icon: Star },
-    { number: '24/7', label: 'Expert Support', icon: Zap }
+    { number: '50K+'label: 'Active Learners'icon: Users },
+    { number: '95%'label: 'Success Rate'icon: TrendingUp },
+    { number: '4.9/5'label: 'Average Rating'icon: Star },
+    { number: '24/7'label: 'Expert Support'icon: Zap }
   ];
 
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % contentFeatures.length);
-      }, 4000);
+      }4000);
       return () => clearInterval(interval);
     }
-  }, [isPlaying, contentFeatures.length]);
+  }[isPlayingcontentFeatures.length]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -109,7 +110,7 @@ const UltimateContentShowcaseBanner2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -131,8 +132,8 @@ const UltimateContentShowcaseBanner2025 = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -147,7 +148,7 @@ const UltimateContentShowcaseBanner2025 = () => {
             </span>
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-            Explore revolutionary AI tools, interactive case studies, comprehensive learning resources, 
+            Explore revolutionary AI toolsinteractive case studiescomprehensive learning resources
             and live demonstrations - all in one powerful platform.
           </p>
           
@@ -171,7 +172,7 @@ const UltimateContentShowcaseBanner2025 = () => {
           whileInView="visible"
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -192,9 +193,9 @@ const UltimateContentShowcaseBanner2025 = () => {
 
         {/* Content Features Carousel */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="mb-16"
         >
           <div className="text-center mb-8">
@@ -213,7 +214,7 @@ const UltimateContentShowcaseBanner2025 = () => {
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
-                {contentFeatures.map((feature, index) => (
+                {contentFeatures.map((featureindex) => (
                   <div key={index} className="w-full flex-shrink-0">
                     <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -256,7 +257,7 @@ const UltimateContentShowcaseBanner2025 = () => {
 
             {/* Navigation Dots */}
             <div className="flex justify-center mt-6 space-x-2">
-              {contentFeatures.map((_, index) => (
+              {contentFeatures.map((_index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
@@ -279,9 +280,9 @@ const UltimateContentShowcaseBanner2025 = () => {
 
         {/* Testimonials */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className="mb-16"
         >
           <div className="text-center mb-8">
@@ -294,16 +295,16 @@ const UltimateContentShowcaseBanner2025 = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonialindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl"
               >
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map((_i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -338,11 +339,11 @@ const UltimateContentShowcaseBanner2025 = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {[
-            { icon: Brain, title: 'AI Tools', description: '24+ cutting-edge tools', color: 'blue' },
-            { icon: Award, title: 'Case Studies', description: 'Real success stories', color: 'green' },
-            { icon: BookOpen, title: 'Learning Hub', description: '48 expert courses', color: 'purple' },
-            { icon: Play, title: 'Live Demos', description: 'Interactive showcases', color: 'orange' }
-          ].map((feature, index) => (
+            { icon: Braintitle: 'AI Tools'description: '24+ cutting-edge tools'color: 'blue' },
+            { icon: Awardtitle: 'Case Studies'description: 'Real success stories'color: 'green' },
+            { icon: BookOpentitle: 'Learning Hub'description: '48 expert courses'color: 'purple' },
+            { icon: Playtitle: 'Live Demos'description: 'Interactive showcases'color: 'orange' }
+          ].map((featureindex) => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -363,9 +364,9 @@ const UltimateContentShowcaseBanner2025 = () => {
 
         {/* Final CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
@@ -373,7 +374,7 @@ const UltimateContentShowcaseBanner2025 = () => {
               Ready to Explore Everything?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Get instant access to all our AI tools, case studies, learning resources, 
+              Get instant access to all our AI toolscase studieslearning resources
               and interactive demos. Start your AI transformation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

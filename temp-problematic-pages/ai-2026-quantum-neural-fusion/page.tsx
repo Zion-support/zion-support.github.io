@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 const AI2026QuantumNeuralFusionPage: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const AI2026QuantumNeuralFusionPage: React.FC = () => {
       <SEO
         title="AI 2026 Quantum Neural Fusion - Revolutionary Quantum-AI Integration"
         description="Experience the future of artificial intelligence with quantum neural fusion technology. Discover how quantum computing and neural networks combine to create unprecedented AI capabilities."
-        keywords="quantum AI, neural fusion, quantum computing, artificial intelligence 2026, quantum neural networks, breakthrough technology"
+        keywords="quantum AIneural fusionquantum computingartificial intelligence 2026quantum neural networksbreakthrough technology"
       />
       
       <div className="relative overflow-hidden">
@@ -27,7 +27,7 @@ const AI2026QuantumNeuralFusionPage: React.FC = () => {
               </h1>
               
               <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
-                Witness the revolutionary convergence of quantum computing and neural networks, creating AI systems with exponential processing power and unprecedented intelligence.
+                Witness the revolutionary convergence of quantum computing and neural networkscreating AI systems with exponential processing power and unprecedented intelligence.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -60,7 +60,7 @@ const AI2026QuantumNeuralFusionPage: React.FC = () => {
                 Quantum-Enhanced AI Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience AI powered by quantum mechanics, delivering solutions that were previously impossible with classical computing.
+                Experience AI powered by quantum mechanicsdelivering solutions that were previously impossible with classical computing.
               </p>
             </div>
 
@@ -70,7 +70,7 @@ const AI2026QuantumNeuralFusionPage: React.FC = () => {
                 <div className="text-4xl mb-6">⚛️</div>
                 <h3 className="text-2xl font-bold text-white mb-4">Quantum Neural Networks</h3>
                 <p className="text-gray-300 mb-6">
-                  Neural networks operating in quantum superposition, processing exponentially more data simultaneously.
+                  Neural networks operating in quantum superpositionprocessing exponentially more data simultaneously.
                 </p>
                 <ul className="space-y-2 text-gray-300 mb-6">
                   <li>• Quantum superposition processing</li>
@@ -190,7 +190,7 @@ const AI2026QuantumNeuralFusionPage: React.FC = () => {
                 <div className="text-4xl mb-6">🤖</div>
                 <h3 className="text-2xl font-bold text-white mb-4">Quantum AI Agents</h3>
                 <p className="text-gray-300 mb-6">
-                  AI agents that exist in quantum superposition, capable of exploring multiple decision paths simultaneously.
+                  AI agents that exist in quantum superpositioncapable of exploring multiple decision paths simultaneously.
                 </p>
                 <ul className="space-y-2 text-gray-300 mb-6">
                   <li>• Superposition decision making</li>

@@ -2,9 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Brain, Shield, Zap, Target, Stethoscope, 
-  BarChart3, Cpu, Globe, Users, Award,
-  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
+  BrainShieldZapTargetStethoscope
+  BarChart3CpuGlobeUsersAward,
+  CheckCircleArrowRightStarPhoneMailMapPin
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
@@ -31,21 +31,21 @@ const pricingPlans = [
     name: 'Starter',
     price: 299,
     period: 'month',
-    features: ['Basic diagnostic tools', '3 medical specialties', 'Standard reporting', 'Standard support'],
+    features: ['Basic diagnostic tools'3 medical specialties'Standard reporting'Standard support'],
     popular: false
   },
   {
     name: 'Professional',
     price: 799,
     period: 'month',
-    features: ['Advanced AI diagnostics', 'All specialties', 'Custom reporting', 'API access', 'Priority support'],
+    features: ['Advanced AI diagnostics'All specialties'Custom reporting'API access'Priority support'],
     popular: true
   },
   {
     name: 'Enterprise',
     price: 1999,
     period: 'month',
-    features: ['Custom AI models', 'White-label solution', 'Dedicated support', 'Custom integrations', 'Training included'],
+    features: ['Custom AI models'White-label solution'Dedicated support'Custom integrations'Training included'],
     popular: false
   }
 ];
@@ -56,7 +56,7 @@ export default function AIDiagnosticPlatform() {
       <Head>
         <title>AI Diagnostic Pro Platform | Zion Tech Group</title>
         <meta name="description" content="Advanced medical diagnostic platform using AI and machine learning to provide accurate disease detection and treatment recommendations." />
-        <meta name="keywords" content="AI diagnostics, medical AI, healthcare technology, medical imaging, Zion Tech Group" />
+        <meta name="keywords" content="AI diagnosticsmedical AIhealthcare technologymedical imagingZion Tech Group" />
         <meta property="og:title" content="AI Diagnostic Pro Platform - Zion Tech Group" />
         <meta property="og:description" content="Advanced medical diagnostic platform with AI integration." />
         <meta property="og:url" content="https://ziontechgroup.com/ai-diagnostic-platform" />
@@ -75,8 +75,8 @@ export default function AIDiagnosticPlatform() {
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -98,9 +98,9 @@ export default function AIDiagnosticPlatform() {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
@@ -125,8 +125,8 @@ export default function AIDiagnosticPlatform() {
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -140,12 +140,12 @@ export default function AIDiagnosticPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 30 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300"
               >
@@ -163,8 +163,8 @@ export default function AIDiagnosticPlatform() {
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -173,17 +173,17 @@ export default function AIDiagnosticPlatform() {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options designed for healthcare providers of all sizes, from clinics to large hospital systems.
+              Flexible pricing options designed for healthcare providers of all sizesfrom clinics to large hospital systems.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((planindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 30 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border rounded-2xl p-8 ${
                   plan.popular 
@@ -208,7 +208,7 @@ export default function AIDiagnosticPlatform() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -229,8 +229,8 @@ export default function AIDiagnosticPlatform() {
       <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -245,9 +245,9 @@ export default function AIDiagnosticPlatform() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.1 }}
               viewport={{ once: true }}
               className="text-center"
             >
@@ -259,9 +259,9 @@ export default function AIDiagnosticPlatform() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.2 }}
               viewport={{ once: true }}
               className="text-center"
             >
@@ -273,9 +273,9 @@ export default function AIDiagnosticPlatform() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.3 }}
               viewport={{ once: true }}
               className="text-center"
             >

@@ -3,10 +3,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Star, 
-  Zap, 
-  TrendingUp, 
-  Users, 
+  Star
+  Zap
+  TrendingUp
+  Users
   Award,
   ArrowRight,
   CheckCircle,
@@ -22,10 +22,10 @@ const RevolutionaryContentBanner2026 = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "Companies Transformed" },
-    { number: "99.9%", label: "Uptime Guarantee" },
-    { number: "24/7", label: "Expert Support" },
-    { number: "300%", label: "Average ROI" }
+    { number: "500+"label: "Companies Transformed" },
+    { number: "99.9%"label: "Uptime Guarantee" },
+    { number: "24/7"label: "Expert Support" },
+    { number: "300%"label: "Average ROI" }
   ];
 
   return (
@@ -35,15 +35,15 @@ const RevolutionaryContentBanner2026 = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6delay: 0.2 }}
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-6 py-3 rounded-full font-bold text-lg mb-8"
           >
             <Sparkles className="w-5 h-5" />
@@ -63,12 +63,12 @@ const RevolutionaryContentBanner2026 = () => {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                whileInView={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full border border-white/20"
               >
                 <CheckCircle className="w-5 h-5 text-green-400" />
@@ -80,17 +80,17 @@ const RevolutionaryContentBanner2026 = () => {
 
         {/* Stats Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+              initial={{ opacity: 0scale: 0.8 }}
+              whileInView={{ opacity: 1scale: 1 }}
+              transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
               className="text-center"
             >
               <div className="text-4xl md:text-5xl font-bold text-white mb-2">
@@ -105,9 +105,9 @@ const RevolutionaryContentBanner2026 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20 max-w-4xl mx-auto">
@@ -165,8 +165,8 @@ const RevolutionaryContentBanner2026 = () => {
       {/* Floating Elements */}
       <motion.div
         animate={{ 
-          y: [0, -20, 0],
-          rotate: [0, 5, 0]
+          y: [0-20],
+          rotate: [050]
         }}
         transition={{ 
           duration: 6,
@@ -178,8 +178,8 @@ const RevolutionaryContentBanner2026 = () => {
       
       <motion.div
         animate={{ 
-          y: [0, 20, 0],
-          rotate: [0, -5, 0]
+          y: [020],
+          rotate: [0-50]
         }}
         transition={{ 
           duration: 8,

@@ -8,7 +8,7 @@ interface ReputationDisplayProps {
 }
 
 export const ReputationDisplay = ({ 
-  reputation, 
+  reputation
   size = 'md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone

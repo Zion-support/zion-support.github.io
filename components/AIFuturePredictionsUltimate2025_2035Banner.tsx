@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Calendar, Brain, Zap, Globe, TrendingUp, Target } from 'lucide-react';
+ArrowRightCalendarBrainZapGlobeTrendingUpTarget
 
 export default function AIFuturePredictionsUltimate2025_2035Banner() {
   return (
@@ -26,7 +26,7 @@ export default function AIFuturePredictionsUltimate2025_2035Banner() {
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Explore the most comprehensive and accurate predictions about the future of artificial intelligence. From neural revolutions to transcendent intelligence, discover what's coming next.
+            Explore the most comprehensive and accurate predictions about the future of artificial intelligence. From neural revolutions to transcendent intelligencediscover what's coming next.
           </p>
 
           {/* Feature highlights */}

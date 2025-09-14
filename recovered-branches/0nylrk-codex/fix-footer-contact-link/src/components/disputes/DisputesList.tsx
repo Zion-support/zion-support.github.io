@@ -1,6 +1,6 @@
 
-import React, { useState } from "react";
-import { Dispute, DisputeStatus } from "@/types/disputes";
+import React{ useState } from "react";
+import { DisputeStatus } from "@/types/disputes";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -20,8 +20,8 @@ type DisputesListProps = {
   isLoading: boolean;
 };
 
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+export function DisputesList({ disputesisLoading }: DisputesListProps) {
+  const [statusFiltersetStatusFilter] = useState<DisputeStatus | "all">("all");
 
   const filteredDisputes = statusFilter === "all" 
     ? disputes 
@@ -46,7 +46,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     return (
       <div className="space-y-4">
         <div className="flex gap-2 mb-4">
-          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (
+          {["All"Open"Under Review"Resolved"Closed"].map((status) => (
             <Skeleton key={status} className="h-10 w-24" />
           ))}
         </div>
@@ -63,7 +63,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {[...Array(5)].map((_, i) => (
+              {[...Array(5)].map((_i) => (
                 <TableRow key={i}>
                   <TableCell><Skeleton className="h-4 w-24" /></TableCell>
                   <TableCell><Skeleton className="h-4 w-40" /></TableCell>
@@ -164,11 +164,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                   </div>
                 </TableCell>
                 <TableCell>
-                  {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
+                  {formatDistanceToNow(new Date(dispute.created_at){ addSuffix: true })}
                 </TableCell>
                 <TableCell>
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>
-                    {dispute.status.replace('_', ' ')}
+                    {dispute.status.replace('_' ')}
                   </Badge>
                 </TableCell>
                 <TableCell className="text-right">

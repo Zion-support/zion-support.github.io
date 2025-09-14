@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Mail, Phone, MapPin, Globe, 
-  Twitter, Linkedin, Github, 
-  ArrowUp, Crown, Zap, Brain, Rocket,
-  Shield, Users, BookOpen, Briefcase, Atom
+  MailPhoneMapPinGlobe
+  TwitterLinkedinGithub
+  ArrowUpCrownZapBrainRocket,
+  ShieldUsersBookOpenBriefcaseAtom
 } from 'lucide-react';
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
@@ -25,127 +25,127 @@ const footerSections: FooterSection[] = [
   {
     title: 'Services',
     links: [
-      { label: 'AI & Machine Learning', href: '/ai-services', description: 'Advanced AI solutions' },
-      { label: 'Quantum Computing', href: '/quantum-computing', description: 'Next-gen quantum tech' },
-      { label: 'Space Technology', href: '/space-tech', description: 'Innovative space solutions' },
-      { label: 'Q4 2025 Innovation', href: '/innovative-2025-q4-showcase', description: 'Latest revolutionary services' },
-      { label: 'Pricing Guide', href: '/comprehensive-pricing-2025-q4', description: 'Comprehensive pricing' },
-      { label: 'Cybersecurity', href: '/cybersecurity', description: 'Enterprise security' },
-      { label: 'Cloud Solutions', href: '/cloud-platform', description: 'Scalable cloud infrastructure' },
-      { label: 'View All Services', href: '/services', description: 'Complete service portfolio' }
+      { label: 'AI & Machine Learning'href: '/ai-services'description: 'Advanced AI solutions' },
+      { label: 'Quantum Computing'href: '/quantum-computing'description: 'Next-gen quantum tech' },
+      { label: 'Space Technology'href: '/space-tech'description: 'Innovative space solutions' },
+      { label: 'Q4 2025 Innovation'href: '/innovative-2025-q4-showcase'description: 'Latest revolutionary services' },
+      { label: 'Pricing Guide'href: '/comprehensive-pricing-2025-q4'description: 'Comprehensive pricing' },
+      { label: 'Cybersecurity'href: '/cybersecurity'description: 'Enterprise security' },
+      { label: 'Cloud Solutions'href: '/cloud-platform'description: 'Scalable cloud infrastructure' },
+      { label: 'View All Services'href: '/services'description: 'Complete service portfolio' }
     ]
   },
   {
     title: 'Solutions',
     links: [
-      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },
-      { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' },
-      { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' },
-      { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' },
-      { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' },
-      { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' }
+      { label: 'Healthcare & Biotech'href: '/healthcare-solutions'description: 'Medical technology' },
+      { label: 'Financial Services'href: '/solutions?industry=financial'description: 'Fintech solutions' },
+      { label: 'Manufacturing'href: '/solutions?industry=manufacturing'description: 'Industry 4.0' },
+      { label: 'Retail & E-commerce'href: '/solutions?industry=retail'description: 'Digital commerce' },
+      { label: 'Government'href: '/solutions?industry=government'description: 'Public sector' },
+      { label: 'Education'href: '/solutions?industry=education'description: 'EdTech solutions' }
     ]
   },
   {
     title: 'Company',
     links: [
-      { label: 'About Us', href: '/about', description: 'Our mission and values' },
-      { label: 'Careers', href: '/careers', description: 'Join our team' },
-      { label: 'Contact', href: '/contact', description: 'Get in touch' }
+      { label: 'About Us'href: '/about'description: 'Our mission and values' },
+      { label: 'Careers'href: '/careers'description: 'Join our team' },
+      { label: 'Contact'href: '/contact'description: 'Get in touch' }
     ]
   },
   {
     title: 'Resources',
     links: [
-      { label: 'Blog', href: '/blog', description: 'Industry insights' },
-      { label: 'White Papers', href: '/white-papers', description: 'In-depth research' },
-      { label: 'Webinars', href: '/webinars', description: 'Educational content' },
-      { label: 'Documentation', href: '/docs', description: 'Technical guides' },
-      { label: 'Blog', href: '/blog', description: 'Industry insights' },
-      { label: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-      { label: 'Support', href: '/support', description: 'Help & assistance' }
+      { label: 'Blog'href: '/blog'description: 'Industry insights' },
+      { label: 'White Papers'href: '/white-papers'description: 'In-depth research' },
+      { label: 'Webinars'href: '/webinars'description: 'Educational content' },
+      { label: 'Documentation'href: '/docs'description: 'Technical guides' },
+      { label: 'Blog'href: '/blog'description: 'Industry insights' },
+      { label: 'Case Studies'href: '/case-studies'description: 'Success stories' },
+      { label: 'Support'href: '/support'description: 'Help & assistance' }
     ]
   },
   {
     title: 'Industries',
     links: [
-      { label: 'Healthcare', href: '/healthcare-solutions', description: 'Medical technology' },
-      { label: 'Finance', href: '/financial-solutions', description: 'Fintech solutions' },
-      { label: 'Manufacturing', href: '/manufacturing-ai-solutions', description: 'Industry 4.0' },
-      { label: 'Government', href: '/government-technology-solutions', description: 'Public sector' },
-      { label: 'Education', href: '/education-technology-solutions', description: 'EdTech solutions' }
+      { label: 'Healthcare'href: '/healthcare-solutions'description: 'Medical technology' },
+      { label: 'Finance'href: '/financial-solutions'description: 'Fintech solutions' },
+      { label: 'Manufacturing'href: '/manufacturing-ai-solutions'description: 'Industry 4.0' },
+      { label: 'Government'href: '/government-technology-solutions'description: 'Public sector' },
+      { label: 'Education'href: '/education-technology-solutions'description: 'EdTech solutions' }
     ]
   }
 ];
 
 const socialLinks = [
-  { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true },
-  { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true },
-  { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
+  { icon: <Linkedin className="w-5 h-5" />href: 'https://linkedin.com/company/ziontechgroup'label: 'LinkedIn'external: true },
+  { icon: <Twitter className="w-5 h-5" />href: 'https://twitter.com/ziontechgroup'label: 'Twitter'external: true },
+  { icon: <Github className="w-5 h-5" />href: 'https://github.com/ziontechgroup'label: 'GitHub'external: true }
 ];
 
 const quickLinks = [
-  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
-  { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> },
-  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
-  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
-  { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },
-  { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
+  { name: 'About Us'href: '/about'icon: <Users className="w-4 h-4" /> },
+  { name: 'Contact'href: '/contact'icon: <Phone className="w-4 h-4" /> },
+  { name: 'Support'href: '/support'icon: <HelpCircle className="w-4 h-4" /> },
+  { name: 'Documentation'href: '/docs'icon: <FileText className="w-4 h-4" /> },
+  { name: 'API Reference'href: '/api'icon: <Code className="w-4 h-4" /> },
+  { name: 'Status'href: '/status'icon: <TrendingUp className="w-4 h-4" /> }
 ];
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0behavior: 'smooth' });
   };
 
   const footerSections = [
     {
       title: 'Services',
       items: [
-        { label: 'AI & Machine Learning', href: '/ai-services' },
-        { label: 'Quantum Computing', href: '/quantum-computing' },
-        { label: 'Space Technology', href: '/space-tech' },
-        { label: 'Cybersecurity', href: '/cybersecurity' },
-        { label: '2040 Services', href: '/innovative-2040-services-showcase' }
+        { label: 'AI & Machine Learning'href: '/ai-services' },
+        { label: 'Quantum Computing'href: '/quantum-computing' },
+        { label: 'Space Technology'href: '/space-tech' },
+        { label: 'Cybersecurity'href: '/cybersecurity' },
+        { label: '2040 Services'href: '/innovative-2040-services-showcase' }
       ]
     },
     {
       title: 'Solutions',
       items: [
-        { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
-        { label: 'Micro SAAS', href: '/micro-saas' },
-        { label: 'IT Services', href: '/it-services' },
-        { label: 'Innovation Lab', href: '/innovation-lab' },
-        { label: 'Research & Development', href: '/research-development' }
+        { label: 'Enterprise Solutions'href: '/enterprise-solutions' },
+        { label: 'Micro SAAS'href: '/micro-saas' },
+        { label: 'IT Services'href: '/it-services' },
+        { label: 'Innovation Lab'href: '/innovation-lab' },
+        { label: 'Research & Development'href: '/research-development' }
       ]
     },
     {
       title: 'Company',
       items: [
-        { label: 'About Us', href: '/about' },
-        { label: 'Our Team', href: '/team' },
-        { label: 'Careers', href: '/careers' },
-        { label: 'Investors', href: '/investors' },
-        { label: 'Press & Media', href: '/press' }
+        { label: 'About Us'href: '/about' },
+        { label: 'Our Team'href: '/team' },
+        { label: 'Careers'href: '/careers' },
+        { label: 'Investors'href: '/investors' },
+        { label: 'Press & Media'href: '/press' }
       ]
     },
     {
       title: 'Resources',
       items: [
-        { label: 'Blog', href: '/blog' },
-        { label: 'Case Studies', href: '/case-studies' },
-        { label: 'White Papers', href: '/white-papers' },
-        { label: 'Documentation', href: '/docs' },
-        { label: 'Support', href: '/support' }
+        { label: 'Blog'href: '/blog' },
+        { label: 'Case Studies'href: '/case-studies' },
+        { label: 'White Papers'href: '/white-papers' },
+        { label: 'Documentation'href: '/docs' },
+        { label: 'Support'href: '/support' }
       ]
     }
   ];
 
   const socialLinks = [
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
-    { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' }
+    { icon: Twitterhref: 'https://twitter.com/ziontechgroup'label: 'Twitter' },
+    { icon: Linkedinhref: 'https://linkedin.com/company/ziontechgroup'label: 'LinkedIn' },
+    { icon: Githubhref: 'https://github.com/Zion-Holdings'label: 'GitHub' },
+    { icon: Globehref: 'https://ziontechgroup.com'label: 'Website' }
   ];
 
   const containerVariants = {
@@ -159,7 +159,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -174,15 +174,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
         {/* Quantum Particle Field */}
-        {[...Array(30)].map((_, i) => (
+        {[...Array(30)].map((_i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
             animate={{
-              x: [0, Math.random() * 1000, 0],
-              y: [0, Math.random() * 1000, 0],
-              opacity: [0, 0.6, 0],
-              scale: [0, 1, 0]}}
+              x: [0Math.random() * 1000],
+              y: [0Math.random() * 1000],
+              opacity: [0.60],
+              scale: [010]}}
             transition={{
               duration: 15 + Math.random() * 10,
               repeat: -1,
@@ -229,12 +229,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
               </div>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Pioneering the future with revolutionary AI consciousness, quantum computing, 
+                Pioneering the future with revolutionary AI consciousnessquantum computing
                 and autonomous systems. Transforming businesses through next-generation technology.
               </p>
               
               <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
-                Leading provider of innovative technology solutions, specializing in AI, automation, and future-ready services. 
+                Leading provider of innovative technology solutionspecializing in AIautomationand future-ready services. 
                 We help businesses transform and thrive in the digital age.
               </p>
 
@@ -250,7 +250,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <MapPin className="w-4 h-4 text-pink-400" />
-                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                  <span>364 E Main St STE 1008Middletown DE 19709</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Globe className="w-4 h-4 text-blue-400" />
@@ -262,7 +262,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
             </motion.div>
 
             {/* Footer Sections */}
-            {footerSections.map((section, index) => (
+            {footerSections.map((sectionindex) => (
               <motion.div key={section.title} variants={itemVariants}>
                 <h4 className="text-lg font-semibold text-white mb-6 flex items-center space-x-2">
                   {section.title === 'Services' && <Briefcase className="w-5 h-5 text-cyan-400" />}
@@ -289,8 +289,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 
           {/* Social Links & Newsletter */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mt-16 pt-12 border-t border-gray-800/50"
@@ -318,7 +318,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
               <div className="flex-1 max-w-md">
                 <h5 className="text-lg font-semibold text-white mb-3">Stay Updated</h5>
                 <p className="text-gray-400 text-sm mb-4">
-                  Get the latest insights on AI consciousness, quantum computing, and future technology.
+                  Get the latest insights on AI consciousnessquantum computingand future technology.
                 </p>
                 <div className="flex space-x-2">
                   <input
@@ -385,11 +385,11 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       <motion.button
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50"
-        whileHover={{ scale: 1.1, y: -2 }}
+        whileHover={{ scale: 1.1y: -2 }}
         whileTap={{ scale: 0.9 }}
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3, delay: 1 }}
+        initial={{ opacity: 0scale: 0 }}
+        animate={{ opacity: 1scale: 1 }}
+        transition={{ duration: 0.3delay: 1 }}
       >
         <ArrowUp className="w-6 h-6 mx-auto" />
       </motion.button>

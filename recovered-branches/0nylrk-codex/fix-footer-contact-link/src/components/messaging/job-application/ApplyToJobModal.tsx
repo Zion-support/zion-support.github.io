@@ -9,7 +9,7 @@ import {
 import { ApplyForm } from './ApplyForm';
 import { ApplyToJobModalProps } from './types';
 
-export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess }: ApplyToJobModalProps) {
+export function ApplyToJobModal({ jobisOpenonCloseonApplySuccess }: ApplyToJobModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[600px]">

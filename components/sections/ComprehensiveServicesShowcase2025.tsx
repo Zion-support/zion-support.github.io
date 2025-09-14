@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
+CheckCircleArrowRightStarTrendingUpZapShieldGlobeBrainDatabaseCloudLockRocketUsersDollarSignTargetAwardPhone
 import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
 import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';
 import { blockchainWeb32025 } from '../../data/blockchain-web3-2025';
@@ -73,7 +73,7 @@ const ComprehensiveServicesShowcase2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -95,8 +95,8 @@ const ComprehensiveServicesShowcase2025 = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -104,7 +104,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             Revolutionary 2025 Services
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.
+            Discover our comprehensive suite of cutting-edge micro SAAS servicesIT solutionsand AI innovations designed to transform your business and drive success in the digital age.
           </p>
         </motion.div>
 
@@ -116,7 +116,7 @@ const ComprehensiveServicesShowcase2025 = () => {
           viewport={{ once: true }}
           className="space-y-16"
         >
-          {serviceCategories.map((category, categoryIndex) => (
+          {serviceCategories.map((categoryIndex) => (
             <motion.div
               key={category.title}
               variants={itemVariants}
@@ -139,12 +139,12 @@ const ComprehensiveServicesShowcase2025 = () => {
 
               {/* Services Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.services.map((service, serviceIndex) => (
+                {category.services.map((serviceIndex) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
+                    initial={{ opacity: 0scale: 0.9 }}
+                    whileInView={{ opacity: 1scale: 1 }}
+                    transition={{ duration: 0.5delay: serviceIndex * 0.1 }}
                     className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
                   >
                     {/* Service Header */}
@@ -161,7 +161,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                     <div className="mb-4">
                       <h5 className="text-sm font-medium text-purple-300 mb-2">Key Features:</h5>
                       <ul className="space-y-1">
-                        {service.features?.slice(0, 3).map((feature, featureIndex) => (
+                        {service.features?.slice(03).map((featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-xs text-gray-400">
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                             {feature}
@@ -206,7 +206,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                     <div className="mb-4">
                       <h5 className="text-sm font-medium text-purple-300 mb-2">Perfect for:</h5>
                       <div className="flex flex-wrap gap-1">
-                        {service.useCases?.slice(0, 3).map((useCase, useCaseIndex) => (
+                        {service.useCases?.slice(03).map((useCaseIndex) => (
                           <span
                             key={useCaseIndex}
                             className="px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-full"
@@ -239,9 +239,9 @@ const ComprehensiveServicesShowcase2025 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.5 }}
           className="text-center mt-20"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30">
@@ -249,7 +249,7 @@ const ComprehensiveServicesShowcase2025 = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already leveraging our cutting-edge solutions to drive innovation, efficiency, and growth.
+              Join thousands of businesses already leveraging our cutting-edge solutions to drive innovationefficiencyand growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

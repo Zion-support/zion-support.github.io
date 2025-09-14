@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
-import { Star, DollarSign } from "lucide-react";
+import { StarDollarSign } from "lucide-react";
 
 interface ProductListingCardProps {
   listing: ProductListing;
@@ -11,7 +11,7 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
-  listing, 
+  listing
   view = 'grid',
   onRequestQuote
 }: ProductListingCardProps) {
@@ -103,7 +103,7 @@ export function ProductListingCard({
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
-              {listing.tags.map((tag, idx) => (
+              {listing.tags.map((tagidx) => (
                 <span 
                   key={idx} 
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full"

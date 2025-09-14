@@ -1,11 +1,11 @@
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useProjects } from '@/hooks/useProjects';
 import { useMilestones } from '@/hooks/useMilestones';
 import { useJobDetails } from '@/hooks/useJobDetails';
 import { useAuth } from '@/hooks/useAuth';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { TabsContentTabsListTabsTrigger } from '@/components/ui/tabs';
 import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 
 import { 
@@ -21,9 +21,9 @@ export function ProjectMilestonesContent() {
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const { 
-    milestones, 
+    milestones
     activities,
-    isLoading: milestonesLoading, 
+    isLoading: milestonesLoading
     createMilestone,
     updateMilestoneStatus,
     deleteMilestone,
@@ -31,12 +31,12 @@ export function ProjectMilestonesContent() {
     isSubmitting,
     refetch
   } = useMilestones(projectId);
-  const [project, setProject] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState('milestones');
-  const { job, isLoading: jobLoading } = useJobDetails(project?.job_id);
+  const [projectsetProject] = useState<any>(null);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [activeTabsetActiveTab] = useState('milestones');
+  const { jobisLoading: jobLoading } = useJobDetails(project?.job_id);
   
-  const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
+  const { isUnderDisputedisputeId } = useDisputeCheck(projectId);
 
   useEffect(() => {
     async function loadProject() {
@@ -49,7 +49,7 @@ export function ProjectMilestonesContent() {
           setProject(projectData);
         }
       } catch (error) {
-        console.error("Error loading project:", error);
+        console.error("Error loading project:"error);
       } finally {
         setIsLoading(false);
       }
@@ -57,7 +57,7 @@ export function ProjectMilestonesContent() {
     
     loadProject();
     refetch();
-  }, [projectId, getProjectById, refetch]);
+  }[projectIdgetProjectByIdrefetch]);
 
   const handleMilestoneCreated = async () => {
     await refetch();

@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  Rocket, 
-  Brain, 
-  Atom, 
-  Bot, 
-  Zap, 
-  ArrowRight, 
+  Rocket
+  Brain
+  Atom
+  Bot
+  Zap
+  ArrowRight
   Star,
   Sparkles,
   TrendingUp,
@@ -47,7 +47,7 @@ const NewContent2026PromotionalBanner = () => {
               </h2>
               
               <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                Explore cutting-edge AI technologies, quantum computing solutions, and advanced automation systems that are transforming businesses worldwide.
+                Explore cutting-edge AI technologiesquantum computing solutionsand advanced automation systems that are transforming businesses worldwide.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">

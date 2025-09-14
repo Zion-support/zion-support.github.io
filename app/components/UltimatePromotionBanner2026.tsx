@@ -1,192 +1,130 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, 
-  ArrowRight, 
-  TrendingUp, 
-  DollarSign, 
-  Clock, 
-  CheckCircle,
-  Star,
-  Zap,
-  Target,
-  Users,
-  Award
-} from 'lucide-react';
 
-const UltimatePromotionBanner2026: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentMetric, setCurrentMetric] = useState(0);
-
-  const metrics = [
-    { icon: TrendingUp, value: '400%', label: 'Average ROI', color: 'text-green-600' },
-    { icon: DollarSign, value: '$50M+', label: 'Cost Savings', color: 'text-green-600' },
-    { icon: Clock, value: '90 Days', label: 'Time to Value', color: 'text-blue-600' },
-    { icon: Target, value: '95%', label: 'Success Rate', color: 'text-purple-600' },
-    { icon: Users, value: '500+', label: 'Organizations', color: 'text-orange-600' },
-    { icon: Award, value: '2026', label: 'Latest Content', color: 'text-indigo-600' }
-  ];
-
-  useEffect(() => {
-    // Check if banner was previously dismissed
-    const dismissed = localStorage.getItem('ultimate-banner-2026-dismissed');
-    if (!dismissed) {
-      setIsVisible(true);
-    }
-
-    // Rotate metrics every 2 seconds
-    const interval = setInterval(() => {
-      setCurrentMetric((prev) => (prev + 1) % metrics.length);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-    localStorage.setItem('ultimate-banner-2026-dismissed', 'true');
-  };
-
-  if (isDismissed || !isVisible) return null;
-
+const UltimatePromotionBanner2026 = () => {
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -50 }}
-        transition={{ duration: 0.5 }}
-        className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden"
-      >
-        {/* Background Animation */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-4 left-4 w-2 h-2 bg-white/20 rounded-full animate-pulse" />
-            <div className="absolute top-8 right-8 w-3 h-3 bg-white/20 rounded-full animate-pulse delay-1000" />
-            <div className="absolute bottom-4 left-8 w-1 h-1 bg-white/20 rounded-full animate-pulse delay-2000" />
-            <div className="absolute bottom-8 right-4 w-2 h-2 bg-white/20 rounded-full animate-pulse delay-3000" />
+    <section className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-8 py-3 mb-8 font-bold text-lg">
+            🔥 ULTIMATE 2025-2026 CONTENT COLLECTION
           </div>
+          <h2 className="text-5xl md:text-7xl font-bold mb-8">
+            The Future of AI is Here
+          </h2>
+          <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
+            Comprehensive guides covering the most advanced AI technologies that will 
+            transform your business in 2025 and beyond. Expert insights, practical 
+            implementation strategies, and real-world case studies.
+          </p>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-between">
-            {/* Left Content */}
-            <div className="flex-1">
-              <div className="flex items-center space-x-4">
-                {/* New Badge */}
-                <div className="flex items-center bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse">
-                  <Zap className="w-4 h-4 mr-1" />
-                  NEW 2026
-                </div>
-                
-                {/* Main Message */}
-                <div className="flex-1">
-                  <h3 className="text-lg md:text-xl font-bold mb-1">
-                    🚀 AI 2026: Enterprise Automation Breakthrough
-                  </h3>
-                  <p className="text-sm md:text-base opacity-90">
-                    Discover how organizations achieve <span className="font-semibold">400% ROI in 90 days</span> with our proven AI strategies
-                  </p>
-                </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-10 border border-white border-opacity-30">
+            <div className="flex items-center mb-6">
+              <div className="text-5xl mr-4">🚀</div>
+              <div>
+                <h3 className="text-3xl font-bold mb-2">Generative AI Mastery</h3>
+                <div className="text-yellow-300 font-semibold">15 min read • Enterprise Guide</div>
               </div>
             </div>
-
-            {/* Center - Rotating Metrics */}
-            <div className="hidden md:flex items-center space-x-8">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentMetric}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-center"
-                >
-                  <div className={`text-2xl font-bold ${metrics[currentMetric].color}`}>
-                    {metrics[currentMetric].value}
-                  </div>
-                  <div className="text-xs opacity-80">
-                    {metrics[currentMetric].label}
-                  </div>
-                </motion.div>
-              </AnimatePresence>
+            <p className="text-xl text-gray-100 mb-8 leading-relaxed">
+              Complete enterprise transformation guide covering implementation strategies, 
+              technology stacks, ROI frameworks, and real-world success stories. Learn how 
+              leading companies are achieving 40-60% productivity gains with generative AI.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-8">
+              <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">Enterprise AI</span>
+              <span className="bg-blue-400 text-white px-4 py-2 rounded-full text-sm font-semibold">Implementation</span>
+              <span className="bg-green-400 text-white px-4 py-2 rounded-full text-sm font-semibold">ROI Guide</span>
             </div>
-
-            {/* Right Actions */}
-            <div className="flex items-center space-x-4">
-              <Link
-                href="/blog/ai-2026-enterprise-automation-breakthrough"
-                className="hidden sm:inline-flex items-center bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm"
-              >
-                Read Now
-                <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
-              
-              <Link
-                href="/contact"
-                className="hidden sm:inline-flex items-center border-2 border-white text-white px-4 py-2 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-sm"
-              >
-                Get Started
-              </Link>
-
-              {/* Mobile CTA */}
-              <Link
-                href="/blog/ai-2026-enterprise-automation-breakthrough"
-                className="sm:hidden bg-white text-purple-600 px-3 py-2 rounded-lg font-semibold text-sm"
-              >
-                Read
-              </Link>
-
-              {/* Dismiss Button */}
-              <button
-                onClick={handleDismiss}
-                className="text-white/80 hover:text-white transition-colors p-1"
-                aria-label="Dismiss banner"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
+            <Link 
+              href="/blog/ai-2025-generative-ai-enterprise-transformation-ultimate-guide"
+              className="inline-flex items-center bg-white text-teal-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
+            >
+              Read Complete Guide →
+            </Link>
           </div>
 
-          {/* Mobile Metrics */}
-          <div className="md:hidden mt-4">
-            <div className="grid grid-cols-3 gap-4">
-              {metrics.slice(0, 3).map((metric, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className={`text-lg font-bold ${metric.color}`}>
-                    {metric.value}
-                  </div>
-                  <div className="text-xs opacity-80">
-                    {metric.label}
-                  </div>
-                </motion.div>
-              ))}
+          <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-10 border border-white border-opacity-30">
+            <div className="flex items-center mb-6">
+              <div className="text-5xl mr-4">⚛️</div>
+              <div>
+                <h3 className="text-3xl font-bold mb-2">Quantum Computing Revolution</h3>
+                <div className="text-yellow-300 font-semibold">18 min read • Business Guide</div>
+              </div>
             </div>
+            <p className="text-xl text-gray-100 mb-8 leading-relaxed">
+              Comprehensive business guide to quantum computing's impact on industries. 
+              Discover how quantum technologies are creating new opportunities and solving 
+              previously unsolvable problems across finance, healthcare, and manufacturing.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-8">
+              <span className="bg-purple-400 text-white px-4 py-2 rounded-full text-sm font-semibold">Quantum AI</span>
+              <span className="bg-indigo-400 text-white px-4 py-2 rounded-full text-sm font-semibold">Business Impact</span>
+              <span className="bg-pink-400 text-white px-4 py-2 rounded-full text-sm font-semibold">Future Tech</span>
+            </div>
+            <Link 
+              href="/blog/ai-2025-quantum-computing-business-revolution-complete-guide"
+              className="inline-flex items-center bg-white text-teal-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
+            >
+              Explore Quantum Future →
+            </Link>
           </div>
         </div>
 
-        {/* Progress Bar */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-white/20">
-          <motion.div
-            className="h-full bg-gradient-to-r from-yellow-400 to-orange-500"
-            initial={{ width: '0%' }}
-            animate={{ width: '100%' }}
-            transition={{ duration: 10, ease: 'linear' }}
-          />
+        <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-10 border border-white border-opacity-30 mb-16">
+          <div className="flex items-center mb-6">
+            <div className="text-5xl mr-4">🤖</div>
+            <div>
+              <h3 className="text-3xl font-bold mb-2">Autonomous Systems Mastery</h3>
+              <div className="text-yellow-300 font-semibold">20 min read • Implementation Guide</div>
+            </div>
+          </div>
+          <p className="text-xl text-gray-100 mb-8 leading-relaxed">
+            Master guide to implementing autonomous AI systems in enterprise environments. 
+            Learn comprehensive strategies, cutting-edge technologies, and proven best practices 
+            for successful autonomous system deployment across all business functions.
+          </p>
+          <div className="flex flex-wrap gap-4 mb-8">
+            <span className="bg-red-400 text-white px-4 py-2 rounded-full text-sm font-semibold">Autonomous AI</span>
+            <span className="bg-orange-400 text-white px-4 py-2 rounded-full text-sm font-semibold">Enterprise</span>
+            <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">Master Guide</span>
+            <span className="bg-green-400 text-white px-4 py-2 rounded-full text-sm font-semibold">Implementation</span>
+          </div>
+          <Link 
+            href="/blog/ai-2025-autonomous-systems-enterprise-implementation-master-guide"
+            className="inline-flex items-center bg-white text-teal-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
+          >
+            Master Autonomous Systems →
+          </Link>
         </div>
-      </motion.div>
-    </AnimatePresence>
+
+        <div className="text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-yellow-300 mb-2">500+</div>
+              <div className="text-gray-300">Enterprise Clients</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-300 mb-2">98%</div>
+              <div className="text-gray-300">Success Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-300 mb-2">340%</div>
+              <div className="text-gray-300">Average ROI</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-300 mb-2">24/7</div>
+              <div className="text-gray-300">Expert Support</div>
+            </div>
+          </div>
+          <p className="text-lg text-gray-300">
+            Join thousands of forward-thinking organizations already transforming their business with our AI expertise
+          </p>
+        </div>
+      </div>
+    </section>
   );
 };
 

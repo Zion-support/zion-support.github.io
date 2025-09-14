@@ -1,9 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag, Cpu, Brain, Zap, Shield } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, Brain, Zap, Shield } from 'lucide-react';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'AI 2025: Autonomous Enterprise Systems - The Future of Business Operations',
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function AutonomousEnterpriseSystemsPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2025: Autonomous Enterprise Systems - The Future of Business Operations"
         description="Explore how autonomous AI systems are revolutionizing enterprise operations in 2025, creating self-managing businesses that adapt, learn, and optimize without human intervention."
@@ -72,7 +71,7 @@ export default function AutonomousEnterpriseSystemsPage() {
             <div className="flex flex-wrap gap-2">
               {['autonomous systems', 'AI 2025', 'enterprise automation', 'self-managing systems', 'business intelligence'].map((tag) => (
                 <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">
-                  <Tag className="w-3 h-3 mr-1" />
+                  <Brain className="w-3 h-3 mr-1" />
                   {tag}
                 </span>
               ))}
@@ -90,7 +89,7 @@ export default function AutonomousEnterpriseSystemsPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
-                    <Cpu className="w-6 h-6 text-purple-600 mr-2" />
+                    <Brain className="w-6 h-6 text-purple-600 mr-2" />
                     <span className="font-semibold text-gray-900">Self-Monitor</span>
                   </div>
                   <p className="text-gray-600 text-sm">Continuously track performance metrics and system health</p>
@@ -287,6 +286,6 @@ export default function AutonomousEnterpriseSystemsPage() {
           </div>
         </article>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

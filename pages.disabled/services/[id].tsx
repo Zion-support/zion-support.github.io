@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
+import { GetStaticPathsGetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
@@ -31,11 +31,11 @@ function collectAllServices(): ServiceItem[] {
 		addedITServices2025,
 		addedAIServices2025,
 	]
-	const map = new Map<string, ServiceItem>()
+	const map = new Map<stringServiceItem>()
 	for (const arr of arrays) {
 		for (const item of arr) {
 			if (item && item.id && !map.has(item.id)) {
-				map.set(item.id, {
+				map.set(item.id{
 					id: item.id,
 					name: item.name,
 					tagline: item.tagline,
@@ -56,7 +56,7 @@ function collectAllServices(): ServiceItem[] {
 export const getStaticPaths: GetStaticPaths = async () => {
 	const services = collectAllServices()
 	const paths = services.map((s) => ({ params: { id: s.id } }))
-	return { paths, fallback: false }
+	return { pathsfallback: false }
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
@@ -88,7 +88,7 @@ export default function ServiceDetail({ service }: { service: ServiceItem }) {
 					<section className="mt-8">
 						<h2 className="text-xl font-medium">Key features</h2>
 						<ul className="mt-2 list-disc pl-5 text-gray-700">
-							{service.features.slice(0, 10).map((f, idx) => (<li key={idx}>{f}</li>))}
+							{service.features.slice(010).map((fidx) => (<li key={idx}>{f}</li>))}
 						</ul>
 					</section>
 				)}

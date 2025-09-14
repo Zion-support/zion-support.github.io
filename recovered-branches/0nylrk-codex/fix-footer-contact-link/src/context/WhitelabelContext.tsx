@@ -1,6 +1,6 @@
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
+import React{ createContextuseContextuseStateuseEffectReactNode } from 'react';
+import { useWhitelabelTenant } from '@/hooks/useWhitelabelTenant';
 
 export interface WhitelabelContextType {
   isWhitelabel: boolean;
@@ -18,7 +18,7 @@ export interface WhitelabelContextType {
 
 const defaultContext: WhitelabelContextType = {
   isWhitelabel: false,
-  primaryColor: '#9b87f5', // Default Zion purple
+  primaryColor: '#9b87f5'// Default Zion purple
   logoUrl: null,
   brandName: 'Zion AI Marketplace',
   themePreset: 'light',
@@ -48,8 +48,8 @@ interface WhitelabelProviderProps {
 }
 
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
-  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
-  const { tenant, isLoading } = useWhitelabelTenant();
+  const [contextValuesetContextValue] = useState<WhitelabelContextType>(defaultContext);
+  const { tenantisLoading } = useWhitelabelTenant();
 
   useEffect(() => {
     if (!isLoading && tenant) {
@@ -64,7 +64,7 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
     } else if (!isLoading) {
       setContextValue(defaultContext);
     }
-  }, [tenant, isLoading]);
+  }[tenantisLoading]);
 
   return (
     <WhitelabelContext.Provider value={contextValue}>
