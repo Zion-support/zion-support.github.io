@@ -34,12 +34,15 @@ import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase20
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 // Import new 2026 promotional components
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+
+// Import new 2025 promotional components
+import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
@@ -76,7 +79,13 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* New Content 2025 Ultimate Showcase Banner - LATEST */}
+        {/* Revolutionary Content 2025 Banner - LATEST */}
+        <RevolutionaryContentBanner2025 />
+        
+        {/* Ultimate Content Showcase 2025 - FEATURED */}
+        <UltimateContentShowcase2025 />
+        
+        {/* New Content 2025 Ultimate Showcase Banner */}
         <NewContent2025UltimateShowcaseBanner />
         
         {/* Fortune 500 Success Banner - FEATURED */}
