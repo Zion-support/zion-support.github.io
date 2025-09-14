@@ -58,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+<<<<<<< HEAD
     {
       url: `${baseUrl}/blog/ai-2025-ultimate-breakthrough-revolutionary-autonomous-systems`,
       lastModified: new Date(),
@@ -69,6 +70,53 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
+=======
+    // New 2026 Content
+    {
+      url: `${baseUrl}/blog/ai-2026-next-generation-autonomous-systems-revolution`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/case-studies/ai-transformation-2026-ultimate-success-story`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    // New blog posts
+    {
+      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2025-quantum-computing-breakthrough`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // New case studies
+    {
+      url: `${baseUrl}/case-studies/enterprise-ai-transformation-success-story`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // New resources
+    {
+      url: `${baseUrl}/resources/ai-implementation-checklist-2025`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+>>>>>>> 7621c44dac5d00a075e94430640377c43fdedbb1
     }
   ]
 }
