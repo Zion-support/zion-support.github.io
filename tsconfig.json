@@ -17,11 +17,15 @@
     "noEmit": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+<<<<<<< HEAD
+=======
+    "forceConsistentCasingInFileNames": true,
+>>>>>>> pr-17256
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "baseUrl": ".",
     "paths": {
