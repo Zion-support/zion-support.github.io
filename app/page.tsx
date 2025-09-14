@@ -52,10 +52,6 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
 
-// Import new ultimate AI breakthrough promotional components
-import UltimateAIBreakthrough2025Banner from '../components/UltimateAIBreakthrough2025Banner';
-import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
-
 // Import new 2025 breakthrough promotional components
 import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI2025BreakthroughPromotionBanner';
 import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
@@ -69,6 +65,10 @@ import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBann
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
 import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
 import AIImplementationGuideBanner from '../components/AIImplementationGuideBanner';
+
+// Import new ultimate success content components
+import NewContent2025UltimateSuccessBanner from '../components/NewContent2025UltimateSuccessBanner';
+import UltimateSuccessShowcase2025 from '../components/UltimateSuccessShowcase2025';
 
 // Import new enhanced components
 import AITrends2025_2030FuturePredictionsBanner from '../components/AITrends2025_2030FuturePredictionsBanner';
@@ -87,19 +87,6 @@ import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBa
 import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
 import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
-import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
-import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
-
-// Import new 2025 breakthrough promotional components
-import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI2025BreakthroughPromotionBanner';
-import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
-import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
-
-// Import new ultimate AI transformation components
-import UltimateAITransformation2025Banner from '../components/UltimateAITransformation2025Banner';
-import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
-import UltimateContentShowcase2025Banner from '../components/UltimateContentShowcase2025Banner';
-import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
 
 // Import new 2026 ultimate promotional components
 import AI2026QuantumRevolutionUltimateBanner from '../components/AI2026QuantumRevolutionUltimateBanner';
@@ -141,17 +128,8 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Ultimate AI Breakthrough 2025 Banner - NEW FEATURED */}
-        <UltimateAIBreakthrough2025Banner />
-        
-        {/* Revolutionary Content 2025 Ultimate Banner - NEW */}
-        <RevolutionaryContent2025UltimateBanner />
-        
-        {/* Ultimate Content Showcase 2025 Banner - NEW */}
-        <UltimateContentShowcase2025Banner />
-        
-        {/* Ultimate AI Transformation 2025 Banner - NEW */}
-        <UltimateAITransformation2025Banner />
+        {/* New Content 2025 Ultimate Success Banner - NEW FEATURED */}
+        <NewContent2025UltimateSuccessBanner />
         
         {/* New Resource 2025 Implementation Roadmap Banner - NEW FEATURED */}
         <NewResource2025ImplementationRoadmapBanner />
@@ -293,6 +271,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Ultimate Success Showcase 2025 - NEW */}
+        <UltimateSuccessShowcase2025 />
+        
         {/* Ultimate Content Showcase 2025 - NEW */}
         <UltimateContentShowcase2025 />
         
