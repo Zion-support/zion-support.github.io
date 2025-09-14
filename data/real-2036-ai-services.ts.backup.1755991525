@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export type Real2036AIService = {
 	id: string;
 	name: string;
@@ -471,6 +473,7 @@ export const real2036AIServices: Real2036AIService[] = [
 		]
 	}
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 export const real2036AIServices = [
   {
     id: 'ai-emotion-intelligence-platform',
@@ -792,5 +795,8 @@ export const real2036AIServices = [
       'Safety systems'
     ]
   }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fee1
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];

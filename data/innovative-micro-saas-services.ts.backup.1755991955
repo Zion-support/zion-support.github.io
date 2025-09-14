@@ -3,6 +3,8 @@ export interface InnovativeMicroSaasService {
   name: string;
   tagline: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   price: string;
   period: string;
   description: string;
@@ -35,6 +37,7 @@ export interface InnovativeMicroSaasService {
   realImplementation: boolean;
   implementationDetails: string;
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   description: string;
   category: string;
   price: {
@@ -61,11 +64,16 @@ export interface InnovativeMicroSaasService {
   icon: string;
   color: string;
   popular: boolean;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d522
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }
 
@@ -601,6 +609,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
   }
 ];
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   marketSize: string;
   growthRate: string;
   innovationLevel: string;
@@ -1341,4 +1350,7 @@ export const getInnovativeServiceCategories = () => {
     count: innovativeMicroSaasServices.filter(service => service.category === category).length
   }));
 };
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d522
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

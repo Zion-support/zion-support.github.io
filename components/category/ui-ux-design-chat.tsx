@@ -13,7 +13,7 @@ const UiUxDesignChat: NextPage = () => {
       <main>
         <h1>UiUxDesignChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
   );

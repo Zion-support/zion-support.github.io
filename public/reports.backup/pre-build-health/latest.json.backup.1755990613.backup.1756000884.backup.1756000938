@@ -6,10 +6,14 @@
     "criticalFailures": 0,
     "canBuild": true,
 <<<<<<< HEAD
+    "timestamp": "2025-08-19T18:00:05.370Z"
+=======
+<<<<<<< HEAD
     "timestamp": "2025-08-19T18:35:52.610Z"
 =======
     "timestamp": "2025-08-19T18:00:05.370Z"
 >>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-2064
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   "results": [
     {

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"/><title>Internal Link Report</title>
 <style>
@@ -215,6 +217,7 @@ body{font-family:system-ui,Segoe UI,Roboto,Inter,sans-serif;margin:24px}
   </table>
 </body></html>
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 <!doctype html>
 <html lang="en">
 <head>
@@ -382,4 +385,7 @@ body{font-family:system-ui,Segoe UI,Roboto,Inter,sans-serif;margin:24px}
   </table>
 </body>
 </html>
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/crawl-and-fix-site-links-and-pages-ed4d
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

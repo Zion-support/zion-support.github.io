@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+import { SEO } from '@/components/SEO';
+=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -161,6 +165,7 @@ export default function ServicesPage() {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
   return (
     <>
@@ -170,6 +175,28 @@ export default function ServicesPage() {
         canonical="/services"
         url="https://ziontechgroup.com/services"
       />
+<<<<<<< HEAD
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Our Services
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Comprehensive IT and AI services to transform your business.
+              From AI automation to cloud infrastructure, we&apos;ve got you covered.
+            </p>
+          </div>
+          
+          <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-blue-light/30">
+            <div className="text-center">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Coming Soon
+              </h2>
+              <p className="text-zion-slate-light mb-6">
+                Our comprehensive services page is currently under development.
+              </p>
+=======
       
       {/* Hero Section */}
       <section className="bg-futuristic min-h-[60vh] flex items-center relative overflow-hidden">
@@ -658,6 +685,7 @@ export default function ServicesPage() {
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: +1 302 464 0950
               </a>
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
             </div>
             
             <div className="mt-8 text-zion-slate-light">

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -63,6 +65,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -152,11 +155,16 @@ export default function EnhancedServicesShowcase({
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ae10
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           className="text-center mb-16"
         >
@@ -381,6 +389,7 @@ export default function EnhancedServicesShowcase({
 
 export default EnhancedServicesShowcase;
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
           viewport={{ once: true }}
           className="text-center mb-12"
         >
@@ -618,4 +627,7 @@ export default EnhancedServicesShowcase;
     </section>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ae10
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

@@ -30,12 +30,17 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
 <<<<<<< HEAD
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      {/* Futuristic Background Elements */}
+=======
+<<<<<<< HEAD
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black" role="banner">
       {/* Background Elements */}
 =======
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Futuristic Background Elements */}
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d629
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       <div className="absolute inset-0">
         {/* Animated gradient backgrounds */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.15),transparent_50%)] animate-pulse" />
@@ -47,6 +52,8 @@ const Hero: React.FC<HeroProps> = ({
       {/* Animated Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.15)_1px,transparent_1px)] bg-[size:60px_60px] opacity-30 animate-grid-flow" />
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       {/* Floating Elements - Reduced animation complexity for better performance */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float" />
@@ -60,6 +67,7 @@ const Hero: React.FC<HeroProps> = ({
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-scale-in">
               <Zap className="w-4 h-4 mr-2" />
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       {/* Floating Animated Elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/15 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-green-500/12 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
@@ -95,11 +103,16 @@ const Hero: React.FC<HeroProps> = ({
           <div className="mb-8">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 text-blue-400 text-sm font-medium mb-6 animate-scale-in backdrop-blur-sm">
               <Zap className="w-4 h-4 mr-2 animate-pulse" />
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d629
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
               World&apos;s Most Advanced Autonomous Platform
             </div>
           </div>
           
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 sm:mb-8 text-white leading-tight tracking-tight">
             {title}
@@ -132,6 +145,7 @@ const Hero: React.FC<HeroProps> = ({
             </Button>
           </Link>
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 animate-gradient-x">
               {title}
@@ -169,7 +183,10 @@ const Hero: React.FC<HeroProps> = ({
               )}
             </div>
           )}
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d629
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
         </div>
 
         {/* Enhanced Stats Section */}
@@ -179,6 +196,8 @@ const Hero: React.FC<HeroProps> = ({
               <div key={index} className="text-center group">
                 <div className="relative">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   <div className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 ${stat.color} group-hover:scale-110 transition-transform duration-300`}>
                     {stat.value}
                   </div>
@@ -187,6 +206,7 @@ const Hero: React.FC<HeroProps> = ({
                 <div className="text-gray-400 text-xs sm:text-sm md:text-base font-medium">
                   {stat.label}
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
                   <div className={`text-3xl md:text-4xl font-bold mb-3 ${stat.color} group-hover:scale-110 transition-transform duration-300 animate-count-up`}>
                     {stat.value}
                   </div>
@@ -195,12 +215,17 @@ const Hero: React.FC<HeroProps> = ({
                   </div>
                   {/* Hover effect glow */}
                   <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${stat.color.replace('text-', 'from-').replace('-400', '-500/20')} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl -z-10`} />
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d629
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
                 </div>
               </div>
             ))}
           </div>
         )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
         {/* Trust Indicators */}
@@ -233,11 +258,15 @@ const Hero: React.FC<HeroProps> = ({
       <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
       <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       </div>
 
       {/* Bottom Glow Effect */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-500/10 via-transparent to-transparent" />
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d629
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     </section>
   );
 };

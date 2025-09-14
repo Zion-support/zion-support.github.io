@@ -94,6 +94,9 @@ try {
   }
 }
 
+<<<<<<< HEAD
+registerServiceWorker();
+=======
 registerServiceWorker();
 =======
 
@@ -103,3 +106,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(,
   <React.StrictMode>,
     <App />,
   </React.StrictMode>),
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
