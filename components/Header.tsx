@@ -49,12 +49,15 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
             <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium">Services</Link>
+            <Link href="/ai-2025-ultimate-breakthrough-revolution" className="text-gray-700 hover:text-blue-600 font-medium">AI 2025</Link>
+            <Link href="/ai-2026-2030-future-predictions-showcase" className="text-gray-700 hover:text-blue-600 font-medium">AI 2026</Link>
+            <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 font-medium">Case Studies</Link>
+            <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium">Blog</Link>
             <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">About</Link>
             <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">Contact</Link>
-            <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium">Blog</Link>
           </div>
 
           {/* CTA Button */}
@@ -79,9 +82,12 @@ const Header = () => {
             <div className="flex flex-col space-y-4">
               <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">Home</Link>
               <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium">Services</Link>
+              <Link href="/ai-2025-ultimate-breakthrough-revolution" className="text-gray-700 hover:text-blue-600 font-medium">AI 2025</Link>
+              <Link href="/ai-2026-2030-future-predictions-showcase" className="text-gray-700 hover:text-blue-600 font-medium">AI 2026</Link>
+              <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 font-medium">Case Studies</Link>
+              <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium">Blog</Link>
               <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">About</Link>
               <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">Contact</Link>
-              <Link href="/blog" className="text-gray-700 hover:text-blue-600 font-medium">Blog</Link>
               <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors text-center">
                 Get Started
               </Link>
