@@ -10,6 +10,11 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import InteractiveROICalculatorAdvanced from '../components/InteractiveROICalculatorAdvanced';
 import RevolutionaryNewsletterSignup2025 from '../components/RevolutionaryNewsletterSignup2025';
 
+// Import new content promotion components - LATEST FEATURED
+import NewContent2025UltimateDiscoveryBanner from '../components/NewContent2025UltimateDiscoveryBanner';
+import AI2025ContentRevolutionPromotionBanner from '../components/AI2025ContentRevolutionPromotionBanner';
+import InteractiveContentShowcase2025 from '../components/InteractiveContentShowcase2025';
+
 // Import new AI 2025-2026 Ultimate Transformation components - LATEST FEATURED
 import AI2025_2026UltimateTransformation50000ROIPromotionBanner from '../components/AI2025_2026UltimateTransformation50000ROIPromotionBanner';
 import UltimateContentShowcase2025_2026 from '../components/UltimateContentShowcase2025_2026';
@@ -317,7 +322,6 @@ import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import ROICalculatorWidget from '../components/ROICalculatorWidget';
 
-<<<<<<< HEAD
 // Import new Ultimate Content 2025 components
 import UltimateSuccessStoriesShowcase2025 from '../components/UltimateSuccessStoriesShowcase2025';
 import UltimateROICalculator2025 from '../components/UltimateROICalculator2025';
@@ -326,7 +330,7 @@ import UltimateCaseStudiesShowcase2025 from '../components/UltimateCaseStudiesSh
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import UltimateTestimonialShowcase2025 from '../components/UltimateTestimonialShowcase2025';
 import UltimateSuccessMetricsShowcase2025 from '../components/UltimateSuccessMetricsShowcase2025';
-=======
+
 // Import new revolutionary content components - NEWEST ADDITIONS
 import AI2025NextGenInnovationBanner from '../components/AI2025NextGenInnovationBanner';
 import QuantumComputingRevolution2025Banner from '../components/QuantumComputingRevolution2025Banner';
@@ -335,7 +339,6 @@ import AutonomousSystems2025Banner from '../components/AutonomousSystems2025Bann
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 import UltimateTechShowcase2025Banner from '../components/UltimateTechShowcase2025Banner';
 import InnovationHub2025Banner from '../components/InnovationHub2025Banner';
->>>>>>> cursor/create-and-deploy-new-content-66ab
 
 // Import new 2025 content and advertising components
 import NewContent2025PromotionalBanner from '../components/NewContent2025PromotionalBanner';
@@ -379,6 +382,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 CONTENT REVOLUTION PROMOTION BANNER - NEWEST FEATURED */}
+        <AI2025ContentRevolutionPromotionBanner />
+        
+        {/* NEW CONTENT 2025 ULTIMATE DISCOVERY BANNER - NEWEST FEATURED */}
+        <NewContent2025UltimateDiscoveryBanner />
+        
+        {/* INTERACTIVE CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
+        <InteractiveContentShowcase2025 />
+        
         {/* NEW REVOLUTIONARY CONTENT BANNERS - NEWEST ADDITIONS */}
         <AI2025NextGenInnovationBanner />
         <QuantumComputingRevolution2025Banner />
