@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, TrendingUp, Clock, Shield, Zap } from 'lucide-react';
+import { X, ArrowRight, TrendingUp, Clock, Shield, Zap, ArrowRight } from 'lucide-react';
 
 interface ContentItem {
   id: string;

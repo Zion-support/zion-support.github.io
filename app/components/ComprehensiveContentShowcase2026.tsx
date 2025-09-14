@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, Users, TrendingUp, Star, BookOpen, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { ArrowRight, Clock, Users, TrendingUp, Star, BookOpen, Zap, Shield, Brain, Globe, ArrowRight, Brain } from 'lucide-react';
 
 const ComprehensiveContentShowcase2026 = () => {
   const contentCategories = [

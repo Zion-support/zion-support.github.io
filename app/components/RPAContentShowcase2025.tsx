@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, TrendingUp, DollarSign, Users, CheckCircle, BookOpen, FileText, Download } from 'lucide-react';
+import { ArrowRight, Clock, TrendingUp, DollarSign, Users, CheckCircle, BookOpen, FileText, Download, ArrowRight } from 'lucide-react';
 
 const RPAContentShowcase2025 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -173,7 +173,7 @@ const RPAContentShowcase2025 = () => {
                   </div>
                 </div>
 
-                {/* Users */}
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {item.tags.map((tag, index) => (
                     <span key={index} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">

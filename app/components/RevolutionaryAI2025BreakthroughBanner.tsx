@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Zap,  TrendingUp, Award, ArrowRight, Star, Clock } from 'lucide-react';
+import { Zap, TrendingUp, Award, ArrowRight, Star, Clock } from 'lucide-react';
 
 const RevolutionaryAI2025BreakthroughBanner = () => {
   const [currentMetric, setCurrentMetric] = useState(0);

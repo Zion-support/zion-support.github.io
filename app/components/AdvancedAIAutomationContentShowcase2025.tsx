@@ -218,7 +218,7 @@ const AdvancedAIAutomationContentShowcase2025: React.FC = () => {
                       key={tag}
                       className="inline-flex items-center px-2 py-1 bg-gray-100 text-gray-700 rounded-md text-xs"
                     >
-                      <AwardIcon className="h-3 w-3 mr-1" />
+                      <TagIcon className="h-3 w-3 mr-1" />
                       {tag}
                     </span>
                   ))}

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, TrendingUp, DollarSign, Clock, CheckCircle } from 'lucide-react';
+import { X, ArrowRight, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 
 const NewContent2025RPARevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(false);

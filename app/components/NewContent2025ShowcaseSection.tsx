@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { TrendingUp, Users, Star, Clock, ArrowRight, Filter, Search } from 'lucide-react';
+import { TrendingUp, Users, Star, Clock, ArrowRight, Filter, Search, ArrowRight } from 'lucide-react';
 
 interface ContentItem {
   id: string;
@@ -271,7 +271,7 @@ const NewContent2025ShowcaseSection: React.FC = () => {
                   </div>
                 )}
 
-                {/* Users */}
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.slice(0, 3).map((tag, index) => (
                     <span

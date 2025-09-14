@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, DollarSign, Users, Zap, Clock, Star, ExternalLink } from 'lucide-react';
+import { ArrowRight, TrendingUp, DollarSign, Users, Zap, Clock, Star, ExternalLink, ArrowRight } from 'lucide-react';
 
 interface ContentItem {
   id: string;
@@ -203,7 +203,7 @@ const AutonomousEnterpriseShowcase2025: React.FC = () => {
                   {item.description}
                 </p>
 
-                {/* Users */}
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.slice(0, 3).map((tag) => (
                     <span

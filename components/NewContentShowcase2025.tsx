@@ -2,95 +2,122 @@ import React from 'react';
 import Link from 'next/link';
 
 const NewContentShowcase2025 = () => {
-  const featuredContent = [
+  const newContent = [
     {
-      title: "AI 2025-2026 Ultimate Business Transformation Guide",
-      description: "Complete guide to achieving 10,000% ROI through AI transformation with proven strategies and real-world success stories.",
-      category: "Blog Post",
-      readTime: "15 min read",
-      link: "/blog/ai-2025-2026-ultimate-business-transformation-revolution-ultimate-guide",
-      featured: true,
-      new: true
+      title: "AI-Powered Business Automation Revolution",
+      description: "Discover how our latest AI solutions are transforming enterprise operations with 500% efficiency gains.",
+      image: "🤖",
+      category: "AI Solutions",
+      readTime: "5 min read",
+      featured: true
     },
     {
-      title: "5,000% ROI Success Story: Fortune 100 Case Study",
-      description: "Discover how a Fortune 100 company achieved unprecedented success with comprehensive AI transformation in just 18 months.",
-      category: "Case Study",
-      readTime: "12 min read",
-      link: "/case-studies/ai-2025-2026-ultimate-transformation-5000-roi-success-story",
-      featured: true,
-      new: true
+      title: "Quantum Computing Breakthroughs in 2025",
+      description: "Explore the latest quantum computing innovations and their real-world business applications.",
+      image: "⚛️",
+      category: "Technology",
+      readTime: "7 min read",
+      featured: true
     },
     {
-      title: "10,000% ROI Implementation Master Guide",
-      description: "Step-by-step framework for implementing AI transformation initiatives that consistently deliver 10,000% ROI or higher.",
-      category: "Implementation Guide",
-      readTime: "20 min read",
-      link: "/resources/ai-2025-2026-implementation-ultimate-master-guide-10000-roi",
-      featured: true,
-      new: true
+      title: "Neural Interface Technology: The Future is Now",
+      description: "Learn about cutting-edge neural interface developments that are reshaping human-computer interaction.",
+      image: "🧠",
+      category: "Innovation",
+      readTime: "6 min read",
+      featured: false
+    },
+    {
+      title: "Sustainable AI: Green Technology Solutions",
+      description: "How we're building environmentally conscious AI systems for a better tomorrow.",
+      image: "🌱",
+      category: "Sustainability",
+      readTime: "4 min read",
+      featured: false
+    },
+    {
+      title: "Enterprise Security in the AI Era",
+      description: "Comprehensive security strategies for protecting your business in an AI-driven world.",
+      image: "🔒",
+      category: "Security",
+      readTime: "8 min read",
+      featured: false
+    },
+    {
+      title: "Micro SaaS Success Stories",
+      description: "Real case studies of how micro SaaS solutions are driving business growth and innovation.",
+      image: "💼",
+      category: "Case Studies",
+      readTime: "6 min read",
+      featured: false
     }
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-6 font-bold text-sm">
-            🆕 NEW CONTENT 2025
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-4">
+            <span className="text-sm font-medium">✨ NEW CONTENT 2025</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Latest AI Transformation Content
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Latest Insights & Innovations
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our newest content featuring proven strategies, real-world success stories, 
-            and comprehensive implementation guides for AI transformation.
+            Stay ahead with our cutting-edge content covering AI, technology trends, and business transformation strategies.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {featuredContent.map((content, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group">
-              <div className="p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
-                    {content.category}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {newContent.map((item, index) => (
+            <div
+              key={index}
+              className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
+                item.featured ? 'ring-2 ring-purple-500' : ''
+              }`}
+            >
+              {item.featured && (
+                <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-t-xl">
+                  FEATURED
+                </div>
+              )}
+              <div className="p-6">
+                <div className="text-4xl mb-4">{item.image}</div>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-purple-100 text-purple-800 text-xs font-medium px-2 py-1 rounded-full">
+                    {item.category}
                   </span>
-                  {content.new && (
-                    <span className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                      NEW
-                    </span>
-                  )}
+                  <span className="text-gray-500 text-sm">{item.readTime}</span>
                 </div>
-                
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
-                  {content.title}
+                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  {item.title}
                 </h3>
-                
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {content.description}
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {item.description}
                 </p>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">{content.readTime}</span>
-                  <Link
-                    href={content.link}
-                    className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
-                  >
-                    Read More →
-                  </Link>
-                </div>
+                <Link
+                  href={`/blog/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
+                >
+                  Read More
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center">
+        <div className="text-center mt-12">
           <Link
             href="/blog"
-            className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+            className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
           >
-            View All Content →
+            Explore All Content
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </Link>
         </div>
       </div>

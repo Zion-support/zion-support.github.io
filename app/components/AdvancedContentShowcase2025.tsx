@@ -77,7 +77,7 @@ const AdvancedContentShowcase2025 = () => {
       readingTime: '16 min read',
       featured: true,
       category: 'success',
-      icon: 
+      icon: Target,
       color: 'from-orange-600 to-red-600'
     },
     {
