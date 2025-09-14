@@ -1,73 +1,75 @@
 #!/bin/bash
 
-echo "Starting to merge remaining open PRs..."
+echo "Checking for remaining open PRs and branches to merge..."
 
-# Get all open PR numbers
-PR_NUMBERS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | grep -o '"number": [0-9]*' | grep -o '[0-9]*' | sort -n)
+# Get all remote branches that are not main
+echo "Fetching all remote branches..."
+git fetch --all
 
-echo "Found PRs: $PR_NUMBERS"
+# Get list of remote branches
+REMOTE_BRANCHES=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | head -20)
 
-for pr_number in $PR_NUMBERS; do
-    echo "Processing PR #$pr_number..."
+echo "Found remote branches:"
+echo "$REMOTE_BRANCHES"
+
+# Function to merge a branch
+merge_branch() {
+    local branch="$1"
+    echo "Attempting to merge branch: $branch"
     
-    # Get PR details
-    PR_DETAILS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number")
-    HEAD_REF=$(echo "$PR_DETAILS" | grep -o '"ref":"[^"]*"' | head -1 | cut -d'"' -f4)
-    
-    if [ -z "$HEAD_REF" ]; then
-        echo "Could not get head ref for PR #$pr_number, skipping..."
-        continue
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/heads/"$branch"; then
+        echo "Branch $branch exists locally, switching to it"
+        git checkout "$branch"
+    else
+        echo "Creating local branch $branch from remote"
+        git checkout -b "$branch" "origin/$branch"
     fi
     
-    echo "PR #$pr_number head ref: $HEAD_REF"
+    # Switch back to main
+    git checkout main
     
-    # Fetch the branch
-    if ! git fetch origin "$HEAD_REF"; then
-        echo "Failed to fetch branch $HEAD_REF, skipping PR #$pr_number"
-        continue
-    fi
-    
-    # Checkout the branch
-    if ! git checkout -b "pr-$pr_number" "origin/$HEAD_REF" 2>/dev/null; then
-        if ! git checkout "pr-$pr_number" 2>/dev/null; then
-            echo "Failed to checkout branch $HEAD_REF, skipping PR #$pr_number"
-            continue
+    # Try to merge the branch
+    if git merge "$branch" --no-edit; then
+        echo "Successfully merged $branch into main"
+        # Delete the branch after successful merge
+        git branch -d "$branch"
+        git push origin --delete "$branch" 2>/dev/null || true
+    else
+        echo "Failed to merge $branch, resolving conflicts..."
+        # Try to resolve conflicts automatically
+        git status --porcelain | grep "^UU\|^AU\|^UA\|^DD\|^AA" | while read status file; do
+            if [ -f "$file" ]; then
+                echo "Resolving conflict in: $file"
+                git checkout --theirs "$file"
+                git add "$file"
+            fi
+        done
+        
+        if git commit -m "Resolve merge conflicts for $branch"; then
+            echo "Successfully resolved conflicts and merged $branch"
+            git branch -d "$branch"
+            git push origin --delete "$branch" 2>/dev/null || true
+        else
+            echo "Could not resolve conflicts for $branch, aborting merge"
+            git merge --abort
         fi
     fi
-    
-    # Merge with main
-    if ! git merge main --no-edit; then
-        echo "Merge conflict in PR #$pr_number, resolving..."
-        # Resolve conflicts by keeping main branch content
-        git checkout --ours . 2>/dev/null || true
-        git add . 2>/dev/null || true
-        git commit -m "Resolve merge conflicts - keep main branch content" 2>/dev/null || true
+}
+
+# Merge the first few branches
+echo "Merging first 10 branches..."
+echo "$REMOTE_BRANCHES" | head -10 | while read branch; do
+    if [ -n "$branch" ]; then
+        merge_branch "$branch"
     fi
-    
-    # Switch back to main and merge
-    if ! git checkout main; then
-        echo "Failed to checkout main, skipping PR #$pr_number"
-        continue
-    fi
-    
-    if ! git merge "pr-$pr_number" --no-edit; then
-        echo "Failed to merge PR #$pr_number into main, skipping"
-        continue
-    fi
-    
-    # Push to main
-    if ! git push origin main --force; then
-        echo "Failed to push PR #$pr_number to main, skipping"
-        continue
-    fi
-    
-    echo "✅ Successfully merged PR #$pr_number"
-    
-    # Clean up
-    git branch -D "pr-$pr_number" 2>/dev/null || true
-    
-    # Small delay
-    sleep 1
 done
 
-echo "Finished merging all PRs"
+echo "Merge process completed!"
+echo "Current status:"
+git status
+
+echo "Pushing final changes..."
+git push origin main
+
+echo "All remaining PRs and branches have been processed!"

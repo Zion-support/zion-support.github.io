@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'AI Implementation Master Guide 2025: Comprehensive Enterprise Strategy | Zion Tech Group',
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function AIImplementationMasterGuide() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI Implementation Master Guide 2025: Comprehensive Enterprise Strategy"
         description="The complete guide to implementing AI in your enterprise, with step-by-step strategies, best practices, and real-world examples."
@@ -443,6 +442,6 @@ export default function AIImplementationMasterGuide() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

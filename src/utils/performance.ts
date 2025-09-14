@@ -1,3 +1,0 @@
-};
-          observer.unobserve(image)};
-      };
