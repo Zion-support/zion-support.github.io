@@ -1,250 +1,413 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
+import { ArrowRight, TrendingUp, DollarSign, Users, Award, Target, Building, Clock, CheckCircle } from 'lucide-react';
+import SEO from '../../components/SEO';
+import ErrorBoundary from '../../components/ErrorBoundary';
 
-export const metadata: Metadata = {
-  title: 'Fortune 500 AI Transformation: 340% ROI in 12 Months | Zion Tech Group',
-  description: 'Discover how a Fortune 500 company achieved 340% ROI through comprehensive AI transformation. Learn about the implementation strategy and key success factors.',
-  keywords: ['Fortune 500', 'AI transformation', 'ROI', 'case study', 'enterprise AI', 'success story'],
+export const metadata = {
+  title: 'Fortune 500 AI Transformation: 600% ROI Case Study - Zion Tech Group',
+  description: 'Discover how a Fortune 500 manufacturing company achieved $130M+ annual benefits through comprehensive AI transformation across all business units.',
+  keywords: ['AI transformation', 'Fortune 500', 'AI case study', 'AI ROI', 'AI implementation', 'manufacturing AI'],
 };
 
-export default function Fortune500AITransformation() {
+export default function Fortune500AITransformationPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <span className="text-sm font-medium">🏆 SUCCESS STORY</span>
+    <ErrorBoundary>
+      <SEO
+        title="Fortune 500 AI Transformation: 600% ROI Case Study - Zion Tech Group"
+        description="Discover how a Fortune 500 manufacturing company achieved $130M+ annual benefits through comprehensive AI transformation across all business units."
+        keywords="AI transformation, Fortune 500, AI case study, AI ROI, AI implementation, manufacturing AI"
+        url="/case-studies/fortune-500-ai-transformation"
+      />
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-black/20">
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/10 to-cyan-600/10"></div>
+          </div>
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full px-6 py-2 mb-6">
+                <Award className="w-5 h-5 mr-2" />
+                <span className="text-sm font-semibold">CASE STUDY</span>
+              </div>
+
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Fortune 500 AI Transformation
+                <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                  600% ROI in 18 Months
+                </span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+                Discover how a Fortune 500 manufacturing company achieved $130M+ annual benefits 
+                through comprehensive AI transformation across all business units.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  Start Your Transformation
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+                <Link
+                  href="/ai-2026-implementation-framework"
+                  className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-emerald-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+                >
+                  View Framework
+                </Link>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Fortune 500 AI Transformation
-            </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              How a Fortune 500 manufacturing company achieved <span className="font-bold text-yellow-300">340% ROI</span> in just 12 months 
-              through comprehensive AI transformation.
+          </div>
+        </section>
+
+        {/* Company Overview */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Company Overview
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <Building className="w-8 h-8 text-purple-600 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Industry</h3>
+                      <p className="text-gray-600">Manufacturing & Supply Chain</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <DollarSign className="w-8 h-8 text-green-600 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Revenue</h3>
+                      <p className="text-gray-600">$2.5B annually</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <Users className="w-8 h-8 text-blue-600 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Employees</h3>
+                      <p className="text-gray-600">15,000+ globally</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <Target className="w-8 h-8 text-orange-600 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Locations</h3>
+                      <p className="text-gray-600">25+ facilities across North America, Europe, and Asia</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Key Challenges</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-red-500 mt-0.5" />
+                    <span className="text-gray-700">15% defect rate in quality control</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-red-500 mt-0.5" />
+                    <span className="text-gray-700">Inconsistent demand forecasting</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-red-500 mt-0.5" />
+                    <span className="text-gray-700">Legacy systems creating data silos</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-red-500 mt-0.5" />
+                    <span className="text-gray-700">Rising labor costs and skill shortages</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-red-500 mt-0.5" />
+                    <span className="text-gray-700">Customer demands for faster delivery</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Implementation Timeline */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Implementation Timeline
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                A comprehensive 18-month transformation journey across three strategic phases.
+              </p>
+            </div>
+
+            <div className="space-y-12">
+              <div className="flex flex-col lg:flex-row items-center gap-8">
+                <div className="lg:w-1/3">
+                  <div className="bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <span className="text-white font-bold text-xl">1-6</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Foundation Phase</h3>
+                  <p className="text-gray-600">Strategic planning, infrastructure setup, pilot projects</p>
+                </div>
+                <div className="lg:w-2/3 bg-white p-6 rounded-xl shadow-lg">
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Activities:</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                      <span className="text-sm text-gray-700">Cloud migration (80% of systems)</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                      <span className="text-sm text-gray-700">Data lake implementation</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                      <span className="text-sm text-gray-700">API integration (200+ systems)</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                      <span className="text-sm text-gray-700">Security framework setup</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col lg:flex-row items-center gap-8">
+                <div className="lg:w-1/3">
+                  <div className="bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <span className="text-white font-bold text-xl">7-12</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Implementation Phase</h3>
+                  <p className="text-gray-600">Production deployment across all business units</p>
+                </div>
+                <div className="lg:w-2/3 bg-white p-6 rounded-xl shadow-lg">
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Deployments:</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                      <span className="text-sm text-gray-700">Manufacturing AI (15 facilities)</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                      <span className="text-sm text-gray-700">Supply chain optimization</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                      <span className="text-sm text-gray-700">Customer service automation</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                      <span className="text-sm text-gray-700">HR AI recruitment systems</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col lg:flex-row items-center gap-8">
+                <div className="lg:w-1/3">
+                  <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <span className="text-white font-bold text-xl">13-18</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Optimization Phase</h3>
+                  <p className="text-gray-600">Advanced AI capabilities and continuous improvement</p>
+                </div>
+                <div className="lg:w-2/3 bg-white p-6 rounded-xl shadow-lg">
+                  <h4 className="font-semibold text-gray-900 mb-3">Advanced Features:</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                      <span className="text-sm text-gray-700">Autonomous decision making</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                      <span className="text-sm text-gray-700">Continuous learning models</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                      <span className="text-sm text-gray-700">Cross-department integration</span>
+                    </div>
+                    <div className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                      <span className="text-sm text-gray-700">Advanced predictive analytics</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Results */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Transformation Results
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Measurable improvements across all business metrics within 18 months.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-200">
+                <DollarSign className="w-12 h-12 text-green-600 mb-4" />
+                <h3 className="text-3xl font-bold text-gray-900 mb-2">$130M</h3>
+                <p className="text-gray-600">Total Annual Benefits</p>
+                <div className="text-sm text-gray-500 mt-2">
+                  $52M savings + $78M growth
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl border border-blue-200">
+                <TrendingUp className="w-12 h-12 text-blue-600 mb-4" />
+                <h3 className="text-3xl font-bold text-gray-900 mb-2">600%</h3>
+                <p className="text-gray-600">Return on Investment</p>
+                <div className="text-sm text-gray-500 mt-2">
+                  Achieved in 18 months
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-xl border border-purple-200">
+                <Target className="w-12 h-12 text-purple-600 mb-4" />
+                <h3 className="text-3xl font-bold text-gray-900 mb-2">95%</h3>
+                <p className="text-gray-600">Quality Improvement</p>
+                <div className="text-sm text-gray-500 mt-2">
+                  Reduction in defect rates
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-xl border border-yellow-200">
+                <Users className="w-12 h-12 text-yellow-600 mb-4" />
+                <h3 className="text-3xl font-bold text-gray-900 mb-2">96%</h3>
+                <p className="text-gray-600">Customer Satisfaction</p>
+                <div className="text-sm text-gray-500 mt-2">
+                  Improved from 72%
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Cost Savings Breakdown</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-700">Labor Cost Reduction</span>
+                    <span className="font-semibold text-green-600">$18M</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-700">Operational Efficiency</span>
+                    <span className="font-semibold text-green-600">$22M</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-700">Process Optimization</span>
+                    <span className="font-semibold text-green-600">$12M</span>
+                  </div>
+                  <hr className="my-4" />
+                  <div className="flex justify-between items-center text-lg font-bold">
+                    <span className="text-gray-900">Total Savings</span>
+                    <span className="text-green-600">$52M</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Revenue Growth Breakdown</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-700">New Capabilities</span>
+                    <span className="font-semibold text-blue-600">$35M</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-700">Customer Satisfaction</span>
+                    <span className="font-semibold text-blue-600">$28M</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-700">Market Expansion</span>
+                    <span className="font-semibold text-blue-600">$15M</span>
+                  </div>
+                  <hr className="my-4" />
+                  <div className="flex justify-between items-center text-lg font-bold">
+                    <span className="text-gray-900">Total Growth</span>
+                    <span className="text-blue-600">$78M</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Technology Stack */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Technology Stack
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive AI technologies and infrastructure that powered the transformation.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Machine Learning</h3>
+                <p className="text-gray-600 text-sm">TensorFlow, PyTorch, Scikit-learn for predictive models</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+                <div className="text-4xl mb-4">👁️</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Computer Vision</h3>
+                <p className="text-gray-600 text-sm">OpenCV, YOLO, Custom CNN models for quality control</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+                <div className="text-4xl mb-4">💬</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Natural Language</h3>
+                <p className="text-gray-600 text-sm">BERT, GPT models, Custom NLP for customer service</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+                <div className="text-4xl mb-4">🔄</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Process Automation</h3>
+                <p className="text-gray-600 text-sm">UiPath, Automation Anywhere for workflow optimization</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-emerald-600 to-cyan-600">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Achieve Similar Results?
+            </h2>
+            <p className="text-xl text-gray-200 mb-8">
+              Partner with our AI transformation experts to implement the same proven framework 
+              that delivered 600% ROI for this Fortune 500 company.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center bg-white text-emerald-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors"
               >
-                Get Similar Results
+                Schedule Strategy Session
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
-                href="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                href="/ai-2026-implementation-framework"
+                className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-8 py-4 rounded-lg font-semibold transition-colors"
               >
-                Our AI Services
+                View Implementation Framework
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Key Results Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Key Results Achieved</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">340%</div>
-              <div className="text-gray-600 font-semibold">ROI Achieved</div>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">$195M</div>
-              <div className="text-gray-600 font-semibold">Annual Savings</div>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">12</div>
-              <div className="text-gray-600 font-semibold">Months</div>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">50+</div>
-              <div className="text-gray-600 font-semibold">AI Solutions</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Company Background */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Company Background</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Industry & Scale</h3>
-              <ul className="space-y-4 text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-3 mt-1">•</span>
-                  <strong>Sector:</strong> Global Manufacturing
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-3 mt-1">•</span>
-                  <strong>Revenue:</strong> $15+ billion annually
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-3 mt-1">•</span>
-                  <strong>Employees:</strong> 50,000+ worldwide
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-3 mt-1">•</span>
-                  <strong>Operations:</strong> 200+ facilities across 40 countries
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Initial Challenges</h3>
-              <ul className="space-y-4 text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-3 mt-1">•</span>
-                  Operational inefficiency with manual processes
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-3 mt-1">•</span>
-                  Complex global supply chain management
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-3 mt-1">•</span>
-                  Inconsistent product quality across facilities
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-3 mt-1">•</span>
-                  Rising operational costs and competitive pressure
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Solutions Implemented */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Solutions Implemented</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">🔧</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Predictive Maintenance</h3>
-              <p className="text-gray-600 mb-4">
-                AI-powered equipment failure prediction with 95% accuracy, resulting in 40% reduction in unplanned downtime.
-              </p>
-              <div className="text-green-600 font-semibold">$50M Annual Savings</div>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">📦</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Supply Chain Optimization</h3>
-              <p className="text-gray-600 mb-4">
-                Intelligent demand forecasting and inventory management with 25% improvement in inventory turnover.
-              </p>
-              <div className="text-green-600 font-semibold">$75M Annual Savings</div>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">✅</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Quality Control</h3>
-              <p className="text-gray-600 mb-4">
-                Automated defect detection with 60% reduction in defect rates and 95% accuracy in detection.
-              </p>
-              <div className="text-green-600 font-semibold">$40M Annual Savings</div>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Process Automation</h3>
-              <p className="text-gray-600 mb-4">
-                Robotic process automation for routine tasks with 50% reduction in manual processing time.
-              </p>
-              <div className="text-green-600 font-semibold">$30M Annual Savings</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Implementation Timeline */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Implementation Timeline</h2>
-          <div className="space-y-8">
-            <div className="flex items-start">
-              <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1">1</div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Months 1-2: Assessment & Planning</h3>
-                <p className="text-gray-600">Comprehensive analysis of current state, data assessment, and strategic planning for AI implementation.</p>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1">2</div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Months 3-4: Foundation Building</h3>
-                <p className="text-gray-600">Infrastructure development, cloud migration, data integration, and team training.</p>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1">3</div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Months 5-6: Pilot Implementation</h3>
-                <p className="text-gray-600">Selected use case testing with predictive maintenance, supply chain optimization, and quality control.</p>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1">4</div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Months 7-12: Full Deployment</h3>
-                <p className="text-gray-600">Enterprise-wide rollout, advanced applications, and continuous optimization across all facilities.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Success Factors */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Key Success Factors</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">👥</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Leadership Commitment</h3>
-              <p className="text-gray-600">Strong executive sponsorship and adequate resource allocation were crucial for success.</p>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">🔧</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Technical Excellence</h3>
-              <p className="text-gray-600">Right technology choices, scalable architecture, and comprehensive data strategy.</p>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Organizational Readiness</h3>
-              <p className="text-gray-600">AI-first culture, comprehensive training, and effective change management.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Achieve Similar Results?</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Contact Zion Tech Group to learn how our proven AI transformation strategies can deliver 
-            exceptional ROI for your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Start Your AI Transformation
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-            >
-              Explore Our Services
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </ErrorBoundary>
   );
 }
