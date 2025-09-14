@@ -33,6 +33,10 @@ import EnhancedContentPromotionBanner from '../components/EnhancedContentPromoti
 import UltimateContent2025RevolutionBanner from '../components/UltimateContent2025RevolutionBanner';
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 
+// Import advanced neural architectures promotional components
+import AdvancedNeuralArchitectures2025Banner from '../components/AdvancedNeuralArchitectures2025Banner';
+import AdvancedNeuralArchitecturesShowcase2025 from '../components/AdvancedNeuralArchitecturesShowcase2025';
+
 // Import advanced features showcase
 import AdvancedFeaturesShowcase2026 from '../components/AdvancedFeaturesShowcase2026';
 
@@ -56,6 +60,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Advanced Neural Architectures 2025 - NEWEST BREAKTHROUGH */}
+        <AdvancedNeuralArchitectures2025Banner />
+        
         {/* Performance Optimization Showcase 2026 - NEWEST */}
         <PerformanceOptimizationShowcase2026 />
         
@@ -163,6 +170,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Advanced Neural Architectures Showcase */}
+        <AdvancedNeuralArchitecturesShowcase2025 />
+        
         {/* Content Promotion Banners */}
         <NewContentPromotionBanner />
         <ComprehensiveSolutionsBanner2025 />
