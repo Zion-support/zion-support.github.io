@@ -159,6 +159,7 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <ComprehensiveContentShowcase2026 />
         <NewContent2026PromotionBanner />
         <QuantumAI2026BreakthroughBanner />
         <NewContentShowcase2026 />
@@ -168,7 +169,6 @@ export default function HomePage() {
         <UltimateContentShowcase2025 />
         <RevolutionaryContent2026Banner />
         <FeaturedContentShowcase2026 />
-        <ComprehensiveContentShowcase2026 />
         <NewContentPromotionBanner />
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
