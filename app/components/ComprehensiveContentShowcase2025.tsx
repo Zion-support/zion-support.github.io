@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-              </Link>
-            </div>
-=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -202,7 +198,6 @@ const ComprehensiveContentShowcase2025 = () => {
             >
               Explore All Services
             </Link>
->>>>>>> cursor/create-and-deploy-new-content-040d
           </div>
         </div>
       </div>

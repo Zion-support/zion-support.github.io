@@ -2,50 +2,27 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, TrendingUp, Users, Clock, Star, CheckCircle } from 'lucide-react';
-=======
->>>>>>> cursor/create-and-deploy-new-content-040d
 
 interface ContentItem {
   id: string;
   title: string;
-<<<<<<< HEAD
-  type: 'blog' | 'case-study' | 'resource';
-  excerpt: string;
-  url: string;
-  featured: boolean;
-  metrics?: {
-=======
   description: string;
   url: string;
   type: 'blog' | 'case-study' | 'resource';
   metrics: {
->>>>>>> cursor/create-and-deploy-new-content-040d
     roi?: string;
     savings?: string;
     improvement?: string;
     satisfaction?: string;
-<<<<<<< HEAD
-    timeframe?: string;
-  };
-  isNew?: boolean;
-  tags: string[];
-=======
   };
   isNew: boolean;
   featured: boolean;
->>>>>>> cursor/create-and-deploy-new-content-040d
 }
 
 const NewContent2025Showcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d764
-=======
   const newContent: ContentItem[] = [
     {
       id: 'cybersecurity-revolution',
@@ -123,7 +100,6 @@ const NewContent2025Showcase: React.FC = () => {
       default: return '📄';
     }
   };
->>>>>>> cursor/create-and-deploy-new-content-040d
 
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -134,9 +110,6 @@ const NewContent2025Showcase: React.FC = () => {
     }
   };
 
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d764
-=======
   return (
     <div className="relative bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 border-b border-indigo-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -307,7 +280,6 @@ const NewContent2025Showcase: React.FC = () => {
             </Link>
           </div>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-040d
       </div>
     </div>
   );
