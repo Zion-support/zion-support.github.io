@@ -35,15 +35,11 @@ import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContent
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 // Import new 2026 promotional components
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
 // Import new 2025 revolutionary content components
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-
-// Import new 2026 promotional components
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
 
 // Import new ultimate content showcase banner
 // Import additional promotional components
@@ -106,6 +102,9 @@ import NewResource2025ImplementationRoadmapBanner from '../components/NewResourc
 // Import AI 2030 promotional components
 import AI2030ContentShowcaseBanner from '../components/AI2030ContentShowcaseBanner';
 import AI2030ContentNavigation from '../components/AI2030ContentNavigation';
+// Import new 2025 content showcase
+import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
+import NewBlogPosts2025Banner from '../components/NewBlogPosts2025Banner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -141,6 +140,9 @@ export default function HomePage() {
         
         {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
+        
+        {/* New Content 2025 Showcase Banner - FEATURED */}
+        <NewContent2025ShowcaseBanner />
         
         {/* AI 2030 Content Showcase Banner - FEATURED */}
         <AI2030ContentShowcaseBanner />
@@ -273,6 +275,7 @@ export default function HomePage() {
         <AI1000ROISuccessStoryBanner />
         
         {/* Content Promotion Banners */}
+        <NewBlogPosts2025Banner />
         <RevolutionaryContent2026Banner />
         <NewContent2025PromotionBanner />
         <LatestContentShowcase2025 />
