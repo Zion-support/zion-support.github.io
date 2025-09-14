@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
-import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
@@ -35,6 +34,10 @@ import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPro
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+
+// Import new 2025 ultimate promotional components
+import UltimateContent2025PromotionBanner from '../components/UltimateContent2025PromotionBanner';
+
 // Import new 2026 promotional components
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
@@ -59,7 +62,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
         description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
@@ -68,6 +71,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Content 2025 Promotion Banner - NEW FEATURED */}
+        <UltimateContent2025PromotionBanner />
+        
+        {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
+        <UltimateContentShowcase2025 />
+        
         {/* AI 2026 Revolutionary Banner */}
         <AI2026RevolutionaryBanner />
         
@@ -244,6 +253,6 @@ export default function HomePage() {
           />
         </Suspense>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

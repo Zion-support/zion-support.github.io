@@ -1,249 +1,175 @@
-'use client';
-
-import { useState, useEffect } from 'react';
+"use client";
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
-interface ContentItem {
-  id: string;
-  title: string;
-  type: 'blog' | 'case-study' | 'resource';
-  url: string;
-  description: string;
-  tags: string[];
-  readingTime: string;
-  featured: boolean;
-  metrics?: {
-    roi?: string;
-    savings?: string;
-    satisfaction?: string;
-  };
-}
+const InteractiveContentWidget = () => {
+  const [selectedCategory, setSelectedCategory] = useState('ai');
+  const [hoveredItem, setHoveredItem] = useState(null);
 
-interface InteractiveContentWidgetProps {
-  contentItems: ContentItem[];
-  maxItems?: number;
-}
-
-export default function InteractiveContentWidget({ 
-  contentItems, 
-  maxItems = 6 
-}: InteractiveContentWidgetProps) {
-  const [filteredContent, setFilteredContent] = useState<ContentItem[]>([]);
-  const [selectedTag, setSelectedTag] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  // Get all unique tags
-  const allTags = Array.from(
-    new Set(contentItems.flatMap(item => item.tags))
-  ).sort();
-
-  // Filter content based on selected tag and search query
-  useEffect(() => {
-    let filtered = contentItems;
-
-    // Filter by tag
-    if (selectedTag !== 'all') {
-      filtered = filtered.filter(item => item.tags.includes(selectedTag));
-    }
-
-    // Filter by search query
-    if (searchQuery) {
-      filtered = filtered.filter(item =>
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
-    }
-
-    // Sort by featured first, then by title
-    filtered = filtered.sort((a, b) => {
-      if (a.featured && !b.featured) return -1;
-      if (!a.featured && b.featured) return 1;
-      return a.title.localeCompare(b.title);
-    });
-
-    setFilteredContent(filtered.slice(0, isExpanded ? filtered.length : maxItems));
-  }, [contentItems, selectedTag, searchQuery, isExpanded, maxItems]);
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return '📝';
-      case 'case-study':
-        return '📊';
-      case 'resource':
-        return '📚';
-      default:
-        return '📄';
-    }
-  };
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return 'bg-blue-100 text-blue-800';
-      case 'case-study':
-        return 'bg-green-100 text-green-800';
-      case 'resource':
-        return 'bg-purple-100 text-purple-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
+  const contentCategories = {
+    ai: {
+      title: 'AI & Machine Learning',
+      icon: '🤖',
+      items: [
+        { title: 'Advanced AI Services 2025', description: 'Revolutionary automation solutions', link: '/ai-services-2025', featured: true },
+        { title: 'Neural Network Architectures', description: 'Next-gen AI brain designs', link: '/neural-architectures' },
+        { title: 'Machine Learning Mastery', description: 'Complete ML implementation guide', link: '/ml-mastery' },
+        { title: 'AI Ethics & Governance', description: 'Responsible AI development', link: '/ai-ethics' }
+      ]
+    },
+    quantum: {
+      title: 'Quantum Computing',
+      icon: '⚛️',
+      items: [
+        { title: 'Quantum Supremacy 2025', description: 'Error-corrected quantum computers', link: '/quantum-supremacy', featured: true },
+        { title: 'Quantum Algorithms', description: 'Revolutionary problem-solving methods', link: '/quantum-algorithms' },
+        { title: 'Quantum Machine Learning', description: 'AI meets quantum computing', link: '/quantum-ml' },
+        { title: 'Quantum Cryptography', description: 'Unbreakable security systems', link: '/quantum-crypto' }
+      ]
+    },
+    automation: {
+      title: 'Business Automation',
+      icon: '🔄',
+      items: [
+        { title: 'Autonomous Operations', description: 'Self-managing business systems', link: '/autonomous-ops', featured: true },
+        { title: 'Process Optimization', description: 'Streamline your workflows', link: '/process-optimization' },
+        { title: 'Intelligent Automation', description: 'Smart business process automation', link: '/intelligent-automation' },
+        { title: 'ROI Optimization', description: 'Maximize your returns', link: '/roi-optimization' }
+      ]
+    },
+    future: {
+      title: 'Future Technologies',
+      icon: '🔮',
+      items: [
+        { title: '2030 Technology Predictions', description: 'What the future holds', link: '/2030-predictions', featured: true },
+        { title: 'Neural Interface Revolution', description: 'Brain-computer integration', link: '/neural-interfaces' },
+        { title: 'Transcendent AI', description: 'Beyond human intelligence', link: '/transcendent-ai' },
+        { title: 'Omniversal Computing', description: 'Computing beyond reality', link: '/omniversal-computing' }
+      ]
     }
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
-      <div className="mb-6">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">
-          Discover Our Latest Content
-        </h3>
-        <p className="text-gray-600">
-          Explore our comprehensive library of AI insights, case studies, and implementation guides.
-        </p>
-      </div>
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            🎯 Interactive Content Discovery
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore our revolutionary content through this interactive widget. Click on categories to discover cutting-edge technologies and solutions.
+          </p>
+        </motion.div>
 
-      {/* Search and Filter Controls */}
-      <div className="mb-6 space-y-4">
-        {/* Search Input */}
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search content..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Tag Filter */}
-        <div className="flex flex-wrap gap-2">
-          <button
-            onClick={() => setSelectedTag('all')}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              selectedTag === 'all'
-                ? 'bg-blue-600 text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
-          >
-            All ({contentItems.length})
-          </button>
-          {allTags.slice(0, 8).map(tag => {
-            const count = contentItems.filter(item => item.tags.includes(tag)).length;
-            return (
-              <button
-                key={tag}
-                onClick={() => setSelectedTag(tag)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedTag === tag
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {tag} ({count})
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Content Grid */}
-      <div className="space-y-4">
-        {filteredContent.length > 0 ? (
-          filteredContent.map((item) => (
-            <div
-              key={item.id}
-              className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+        {/* Category Selector */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
+        >
+          {Object.entries(contentCategories).map(([key, category]) => (
+            <button
+              key={key}
+              onClick={() => setSelectedCategory(key)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                selectedCategory === key
+                  ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white transform scale-105'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+              }`}
             >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-lg">{getTypeIcon(item.type)}</span>
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
-                      {item.type.replace('-', ' ').toUpperCase()}
-                    </span>
-                    {item.featured && (
-                      <span className="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium">
-                        FEATURED
-                      </span>
-                    )}
-                    <span className="text-sm text-gray-500">{item.readingTime}</span>
-                  </div>
-                  
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                    <Link href={item.url} className="hover:text-blue-600 transition-colors">
-                      {item.title}
-                    </Link>
-                  </h4>
-                  
-                  <p className="text-gray-600 mb-3">{item.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {item.tags.slice(0, 3).map(tag => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                    {item.tags.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
-                        +{item.tags.length - 3} more
-                      </span>
-                    )}
-                  </div>
+              <span className="mr-2">{category.icon}</span>
+              {category.title}
+            </button>
+          ))}
+        </motion.div>
 
-                  {item.metrics && (
-                    <div className="flex gap-4 text-sm">
-                      {item.metrics.roi && (
-                        <span className="text-green-600 font-medium">
-                          📈 {item.metrics.roi} ROI
-                        </span>
-                      )}
-                      {item.metrics.savings && (
-                        <span className="text-blue-600 font-medium">
-                          💰 {item.metrics.savings} Savings
-                        </span>
-                      )}
-                      {item.metrics.satisfaction && (
-                        <span className="text-purple-600 font-medium">
-                          ⭐ {item.metrics.satisfaction} Satisfaction
-                        </span>
-                      )}
-                    </div>
+        {/* Content Grid */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedCategory}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"
+          >
+            {contentCategories[selectedCategory].items.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                onHoverStart={() => setHoveredItem(item.title)}
+                onHoverEnd={() => setHoveredItem(null)}
+                className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 cursor-pointer ${
+                  item.featured 
+                    ? 'border-gradient-to-r from-cyan-400 to-purple-400 border-2' 
+                    : 'border-white/20 hover:border-white/40'
+                } ${hoveredItem === item.title ? 'transform scale-105 shadow-2xl' : ''}`}
+              >
+                {item.featured && (
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
+                    🔥 FEATURED
+                  </div>
+                )}
+                
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-3xl mb-2">{contentCategories[selectedCategory].icon}</div>
+                  {item.featured && (
+                    <div className="text-yellow-400 text-2xl">⭐</div>
                   )}
                 </div>
-              </div>
-            </div>
-          ))
-        ) : (
-          <div className="text-center py-8">
-            <div className="text-gray-400 text-6xl mb-4">🔍</div>
-            <h4 className="text-lg font-medium text-gray-900 mb-2">No content found</h4>
-            <p className="text-gray-600">
-              Try adjusting your search terms or filter criteria.
-            </p>
-          </div>
-        )}
-      </div>
+                
+                <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
+                <p className="text-gray-300 mb-6">{item.description}</p>
+                
+                <Link 
+                  href={item.link}
+                  className={`inline-flex items-center font-semibold transition-colors duration-300 ${
+                    item.featured 
+                      ? 'text-cyan-400 hover:text-cyan-300' 
+                      : 'text-purple-400 hover:text-purple-300'
+                  }`}
+                >
+                  Explore Now →
+                </Link>
+                
+                {hoveredItem === item.title && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none"
+                  />
+                )}
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
 
-      {/* Show More/Less Button */}
-      {contentItems.length > maxItems && (
-        <div className="mt-6 text-center">
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center mt-16"
+        >
+          <Link 
+            href="/content-library" 
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-full text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
-            {isExpanded ? 'Show Less' : `Show All ${contentItems.length} Items`}
-          </button>
-        </div>
-      )}
-    </div>
+            🚀 Access Full Content Library
+          </Link>
+        </motion.div>
+      </div>
+    </section>
   );
-}
+};
+
+export default InteractiveContentWidget;
