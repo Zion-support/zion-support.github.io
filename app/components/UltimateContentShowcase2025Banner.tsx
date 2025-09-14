@@ -22,15 +22,67 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const featuredContent = [
+    {
+      id: 'enterprise-automation-mastery',
+      title: 'AI 2025: Enterprise Automation Mastery - Ultimate Breakthrough Guide',
+      type: 'Blog Post',
+      url: '/blog/ai-2025-enterprise-automation-mastery-ultimate-breakthrough',
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
   const featuredContent: ContentItem[] = [
     {
       id: 'ultimate-automation-revolution',
       title: 'AI 2025: The Ultimate Automation Revolution - Complete Enterprise Guide',
       type: 'blog',
       url: '/blog/ai-2025-ultimate-automation-revolution-complete-guide',
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
       metrics: {
         roi: '500%',
         savings: '$2.8B',
+<<<<<<< HEAD
+<<<<<<< HEAD
+        efficiency: '89%',
+        satisfaction: '94%'
+      },
+      readingTime: '25 min read',
+      featured: true
+    },
+    {
+      id: 'fortune-500-success-story',
+      title: 'AI Automation Success Story: Fortune 500 Company Achieves 1,500% ROI',
+      type: 'Case Study',
+      url: '/case-studies/ai-automation-fortune-500-ultimate-success-story-2025',
+      metrics: {
+        roi: '1,500%',
+        savings: '$2.8B',
+        automation: '95%',
+        quality: '99.2%'
+      },
+      readingTime: '20 min read',
+      featured: true
+    },
+    {
+      id: 'implementation-framework',
+      title: 'AI Implementation Ultimate Success Framework 2025: Complete Guide to 1,500%+ ROI',
+      type: 'Resource',
+      url: '/resources/ai-implementation-ultimate-success-framework-2025',
+      metrics: {
+        roi: '1,500%+',
+        success: '94%',
+        speed: '67% faster',
+        projects: '500+'
+      },
+      readingTime: '30 min read',
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
         satisfaction: '98%',
         efficiency: '340%'
       },
@@ -62,11 +114,25 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
         efficiency: '67%'
       },
       readingTime: '25 min read',
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
       featured: true
     }
   ];
 
   useEffect(() => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (typeof window !== 'undefined') {
+      const dismissed = localStorage.getItem('ultimate-content-banner-dismissed');
+      if (dismissed === 'true') {
+        setIsDismissed(true);
+      }
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
     }, 5000);
@@ -83,11 +149,33 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
     const dismissed = localStorage.getItem('ultimate-content-banner-dismissed');
     if (dismissed === 'true') {
       setIsVisible(false);
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
     }
   }, []);
 
   if (!isVisible) return null;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('ultimate-content-banner-dismissed', 'true');
+    }
+  };
+
+  if (isDismissed) return null;
+
+  const currentContent = featuredContent[currentSlide];
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
   const currentContent = featuredContent[currentSlide];
 
   const getTypeColor = (type: string) => {
@@ -107,20 +195,127 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
       default: return '📄';
     }
   };
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
 
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 to-blue-600/20"></div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-24 h-24 bg-blue-500/10 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-10 left-1/4 w-16 h-16 bg-indigo-500/10 rounded-full animate-pulse delay-2000"></div>
+=======
         <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
         <div className="absolute top-32 right-20 w-16 h-16 bg-blue-400/20 rounded-full animate-bounce"></div>
         <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-purple-400/20 rounded-full animate-ping"></div>
+>>>>>>> main
+=======
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-blue-400/20 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-purple-400/20 rounded-full animate-ping"></div>
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-8">
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-4">
+            <span className="text-sm font-medium">🚀 NEW CONTENT 2025</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ultimate AI Content Collection
+          </h2>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            Discover the breakthrough strategies and success stories that are delivering 1,500%+ ROI for Fortune 500 companies
+          </p>
+        </div>
+
+        {/* Featured Content Carousel */}
+        <div className="relative">
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center space-x-3">
+                <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  {currentContent.type}
+                </span>
+                <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  {currentContent.readingTime}
+                </span>
+                {currentContent.featured && (
+                  <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    FEATURED
+                  </span>
+                )}
+              </div>
+              <div className="flex space-x-2">
+                {featuredContent.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentSlide ? 'bg-white' : 'bg-white/30'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Content Info */}
+              <div>
+                <h3 className="text-2xl font-bold mb-4 leading-tight">
+                  {currentContent.title}
+                </h3>
+                <p className="text-blue-100 mb-6 text-lg">
+                  {currentContent.type === 'Blog Post' && 
+                    'Discover how Fortune 500 companies are achieving 1,200% ROI with advanced AI automation. Complete implementation guide with real success stories and proven strategies.'
+                  }
+                  {currentContent.type === 'Case Study' && 
+                    'Discover how a Fortune 500 manufacturing company transformed their operations with AI automation, achieving $2.8B in annual savings and 1,500% ROI in just 12 months.'
+                  }
+                  {currentContent.type === 'Resource' && 
+                    'The definitive framework for AI implementation success. Proven strategies, methodologies, and best practices that have delivered 1,500%+ ROI for Fortune 500 companies.'
+                  }
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link
+                    href={currentContent.url}
+                    className="bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  >
+                    Read Full {currentContent.type}
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
+                  >
+                    Get Consultation
+                  </Link>
+                </div>
+              </div>
+
+              {/* Success Metrics */}
+              <div className="grid grid-cols-2 gap-4">
+                {Object.entries(currentContent.metrics).map(([key, value]) => (
+                  <div key={key} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-green-400 mb-1">
+                      {value}
+                    </div>
+                    <div className="text-sm text-blue-200 capitalize">
+                      {key.replace(/([A-Z])/g, ' $1').trim()}
+                    </div>
+                  </div>
+                ))}
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
           <div className="inline-flex items-center bg-white/20 rounded-full px-6 py-2 mb-4">
             <span className="text-sm font-medium">🚀 NEW ULTIMATE CONTENT 2025</span>
           </div>
@@ -193,11 +388,67 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
               <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-xl p-6 text-center">
                 <div className="text-3xl font-bold">98%</div>
                 <div className="text-sm opacity-90">Satisfaction</div>
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Additional Content Grid */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {featuredContent.map((content, index) => (
+            <div
+              key={content.id}
+              className={`bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 cursor-pointer transition-all duration-300 hover:bg-white/10 ${
+                index === currentSlide ? 'ring-2 ring-white/50' : ''
+              }`}
+              onClick={() => setCurrentSlide(index)}
+            >
+              <div className="flex items-center justify-between mb-3">
+                <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs font-medium">
+                  {content.type}
+                </span>
+                <span className="text-xs text-blue-200">
+                  {content.readingTime}
+                </span>
+              </div>
+              <h4 className="font-semibold mb-3 text-sm leading-tight">
+                {content.title}
+              </h4>
+              <div className="flex justify-between items-center">
+                <div className="text-green-400 font-bold text-sm">
+                  {content.metrics.roi} ROI
+                </div>
+                <div className="text-blue-200 text-xs">
+                  {content.metrics.savings} savings
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-8">
+          <div className="inline-flex items-center space-x-4">
+            <Link
+              href="/blog"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+            >
+              Explore All Content
+            </Link>
+            <Link
+              href="/case-studies"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
+            >
+              View Success Stories
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
         {/* Content Navigation */}
         <div className="flex justify-center space-x-2 mb-6">
           {featuredContent.map((_, index) => (
@@ -251,6 +502,10 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
             >
               Explore All Content
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6a2f
             </Link>
           </div>
           <p className="text-blue-200 text-sm mt-4">

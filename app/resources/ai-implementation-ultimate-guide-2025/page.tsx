@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Tag, Clock, TrendingUp, Shield, Users, Target, CheckCircle, BookOpen, Download } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Tag, Clock, TrendingUp, Shield, Users,  CheckCircle, BookOpen, Download } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI Implementation Ultimate Guide 2025: From Strategy to ROI - The Complete Blueprint',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function AIImplementationGuidePage() {
   const keyStats = [
     { label: 'Average ROI', value: '340%', icon: TrendingUp, color: 'text-green-600' },
-    { label: 'Success Rate', value: '89%', icon: Target, color: 'text-blue-600' },
+    { label: 'Success Rate', value: '89%', icon:  color: 'text-blue-600' },
     { label: 'Implementation Time', value: '6-9 months', icon: Clock, color: 'text-purple-600' },
     { label: 'Break-even Point', value: '3-4 months', icon: CheckCircle, color: 'text-orange-600' }
   ];

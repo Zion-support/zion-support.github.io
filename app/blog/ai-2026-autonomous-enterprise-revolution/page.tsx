@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'AI 2026: The Autonomous Enterprise Revolution - $50B+ in Value Created',
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function AI2026AutonomousEnterprisePage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2026: The Autonomous Enterprise Revolution - $50B+ in Value Created"
         description="Discover how AI-powered autonomous systems are running entire business operations with 99.7% efficiency and creating $50+ billion in value across industries."
@@ -294,6 +293,6 @@ export default function AI2026AutonomousEnterprisePage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

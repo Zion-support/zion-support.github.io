@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Tag, Download, BookOpen, Target, Zap, CheckCircle, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Clock, Tag, Download, BookOpen,  Zap, CheckCircle, TrendingUp } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
@@ -104,7 +104,7 @@ export default function QuantumImplementationGuidePage() {
                 <h3 className="font-bold text-gray-900 mb-3">Critical Success Factors</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center">
-                    <Target className="w-4 h-4 text-blue-500 mr-2" />
+                    <Award className="w-4 h-4 text-blue-500 mr-2" />
                     Executive Leadership
                   </li>
                   <li className="flex items-center">

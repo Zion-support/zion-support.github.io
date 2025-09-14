@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Quantum Computing Breakthroughs 2030: Revolutionary AI | Zion Tech Group',
@@ -11,7 +10,7 @@ export const metadata = {
 
 export default function QuantumComputingPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Quantum Computing Breakthroughs 2030: Revolutionary AI"
         description="Discover the most advanced quantum computing breakthroughs that will revolutionize AI, cryptography, and computational power by 2030."
@@ -345,6 +344,6 @@ export default function QuantumComputingPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

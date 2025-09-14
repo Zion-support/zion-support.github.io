@@ -235,6 +235,12 @@ export default function HomePage() {
         {/* Ultimate AI Transformation 2025 Banner - NEW */}
         <UltimateAITransformation2025Banner />
         
+        {/* NEW QUANTUM AI BREAKTHROUGH BANNER - FEATURED PROMINENTLY */}
+        <NewContent2026QuantumBreakthroughBanner />
+        
+        {/* AI 2026 ENTERPRISE AUTOMATION SHOWCASE - COMPREHENSIVE COLLECTION */}
+        <AI2026EnterpriseAutomationShowcase />
+        
         {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER */}
         <NewContent2025UltimateBreakthroughBanner />
         

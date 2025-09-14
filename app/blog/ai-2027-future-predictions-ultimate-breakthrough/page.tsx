@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'AI 2027 Future Predictions: Ultimate Breakthrough Technologies',
@@ -11,7 +10,7 @@ export const metadata = {
 
 export default function AI2027FuturePredictionsPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2027 Future Predictions: Ultimate Breakthrough Technologies"
         description="Discover the revolutionary AI technologies predicted for 2027. Quantum neural networks, autonomous business systems, and next-generation AI breakthroughs."
@@ -158,6 +157,6 @@ export default function AI2027FuturePredictionsPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

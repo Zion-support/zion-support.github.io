@@ -12,7 +12,7 @@ import {
   Star,
   CheckCircle,
   Clock,
-  Target,
+  
   Zap,
   X,
   ChevronRight,

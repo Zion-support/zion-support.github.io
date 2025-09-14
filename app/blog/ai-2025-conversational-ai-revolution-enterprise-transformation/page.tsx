@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'AI 2025 Conversational AI Revolution: Enterprise Transformation Through Natural Language',
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function ConversationalAIGuidePage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2025 Conversational AI Revolution: Enterprise Transformation Through Natural Language"
         description="Explore how conversational AI is revolutionizing enterprise operations in 2025. Complete guide to chatbots, voice assistants, and natural language processing for business transformation."
@@ -367,6 +366,6 @@ export default function ConversationalAIGuidePage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }
