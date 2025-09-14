@@ -41,10 +41,15 @@ import InteractiveContentDiscoveryWidget from '../components/InteractiveContentD
 import AI2025UltimateBreakthroughPromotionBanner from '../components/AI2025UltimateBreakthroughPromotionBanner';
 import AI2026RevolutionaryBreakthroughPromotionBanner from '../components/AI2026RevolutionaryBreakthroughPromotionBanner';
 import UltimateContentDiscoveryWidget2026 from '../components/UltimateContentDiscoveryWidget2026';
+<<<<<<< HEAD
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
+=======
 import QuantumNeuralFusion2026PromotionBanner from '../components/QuantumNeuralFusion2026PromotionBanner';
 import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
 import RevolutionaryContentBanner2026 from '../components/RevolutionaryContentBanner2026';
 import AI2026NewContentPromotionBanner from '../components/AI2026NewContentPromotionBanner';
+>>>>>>> origin/backup-main-20250913-171651
 
 // Import new promotional banners
 import AI2025UltimateTrendsBreakthroughPromotionBanner from '../components/AI2025UltimateTrendsBreakthroughPromotionBanner';
@@ -232,6 +237,13 @@ import AIPoweredContentRecommendationSystemPromotionBanner from '../components/A
 
 export default function HomePage() {
   return (
+<<<<<<< HEAD
+        {/* NEW REVOLUTIONARY CONTENT SHOWCASE BANNER */}
+        <NewContent2025RevolutionaryShowcaseBanner />
+        
+        {/* AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
+        <AI2025UltimateBreakthroughAnnouncementBanner />
+=======
     <ErrorBoundary>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions"
@@ -243,6 +255,7 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW 2025 BREAKTHROUGH CONTENT BANNER */}
         <NewContent2025BreakthroughBanner />
+>>>>>>> origin/backup-main-20250913-171651
         
         {/* AI 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER */}
         <AI2025UltimateBreakthroughPromotionBanner />
@@ -2675,6 +2688,31 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* NEW ULTIMATE CONTENT SHOWCASE 2025 */}
+      <UltimateContentShowcase2025 />
+
+      {/* NEW INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
+      <InteractiveContentDiscoveryWidget2025 />
+
+      {/* NEW ULTIMATE CONTENT PROMOTION BANNER 2025 */}
+      <UltimateContentPromotionBanner2025 />
+
+      {/* NEW CONTENT SHOWCASE 2025 */}
+      <NewContentShowcase2025 />
+
+      {/* INTERACTIVE TECH DEMO 2025 */}
+      <InteractiveTechDemo2025 />
+
+      {/* BUSINESS SOLUTIONS SHOWCASE 2025 */}
+      <BusinessSolutionsShowcase2025 />
+
+      {/* NEW NEWSLETTER SIGNUP 2025 */}
+      <NewsletterSignup2025 />
+        </div>
+      </PerformanceOptimizer>
+    </ErrorBoundary>
+=======
       {/* Enhanced Content Showcase */}
       <EnhancedContentShowcase />
 
@@ -2684,5 +2722,6 @@ export default function HomePage() {
       {/* Advanced SEO Analytics */}
       <AdvancedSEOAnalytics />
     </div>
+>>>>>>> origin/backup-main-20250913-171651
   );
 }
