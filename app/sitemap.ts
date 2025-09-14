@@ -60,32 +60,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // New blog posts
     {
-<<<<<<< HEAD
       url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
-=======
-      url: `${baseUrl}/blog/ai-2025-enterprise-integration-revolution`,
->>>>>>> origin/main
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-<<<<<<< HEAD
       url: `${baseUrl}/blog/quantum-ai-2026-business-revolution`,
-=======
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/blog/ai-2025-smart-automation-breakthrough`,
->>>>>>> origin/main
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2025-data-intelligence-revolution`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     // New resources
     {
-<<<<<<< HEAD
       url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
-=======
-      url: `${baseUrl}/blog/ai-2025-data-intelligence-revolution`,
->>>>>>> origin/main
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
