@@ -197,6 +197,10 @@ import AI2025EnterpriseAutomationBanner from '../components/AI2025EnterpriseAuto
 import NewContent2025AdvancedAnalyticsBanner from '../components/NewContent2025AdvancedAnalyticsBanner';
 import EdgeComputingRevolutionBanner2025 from '../components/EdgeComputingRevolutionBanner2025';
 
+// Import new AI Business Intelligence 2025 promotional components
+import AIBusinessIntelligence2025Banner from '../components/AIBusinessIntelligence2025Banner';
+import AIBusinessIntelligenceShowcase2025 from '../components/AIBusinessIntelligenceShowcase2025';
+
 // Import new AI automation promotional components
 import NewContent2025AdvancedAIAutomationBanner from '../components/NewContent2025AdvancedAIAutomationBanner';
 import UltimateAIAutomationShowcase2025 from '../components/UltimateAIAutomationShowcase2025';
@@ -257,6 +261,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI BUSINESS INTELLIGENCE 2025 BANNER - NEWEST FEATURED */}
+        <AIBusinessIntelligence2025Banner />
+        
         {/* NEW 2025 ULTIMATE SUCCESS STORIES BANNER - TOP PRIORITY FEATURED */}
         <NewContent2025UltimateSuccessBanner />
         
@@ -575,6 +582,9 @@ export default function HomePage() {
         <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
 
+        {/* AI Business Intelligence Showcase 2025 - NEW FEATURED */}
+        <AIBusinessIntelligenceShowcase2025 />
+        
         {/* Advanced AI Components */}
         <AdvancedContentRecommendationEngine />
         <RealTimePerformanceDashboard />
