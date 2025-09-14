@@ -3,6 +3,9 @@ import Link from 'next/link';
 import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import EnhancedAnalytics from '../components/EnhancedAnalytics';
+import MobileOptimizer from '../components/MobileOptimizer';
 
 // Import new advanced AI components
 import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
@@ -53,20 +56,45 @@ import AI2025RevolutionaryContentShowcase from '../components/AI2025Revolutionar
 // Import new ultimate content showcase components
 import AI2025UltimateContentShowcaseBanner from '../components/AI2025UltimateContentShowcaseBanner';
 import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
+import EnhancedCTA from '../components/EnhancedCTA';
 
 export const metadata = {
-  title: 'Zion Tech Group - AI & Technology Solutions',
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords: ['AI automation', 'cloud computing', 'micro SaaS', 'technology consulting', 'enterprise solutions', 'digital transformation'],
+  title: 'Zion Tech Group - AI & Technology Solutions | 500%+ ROI Guaranteed',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services with proven 500%+ ROI results.',
+  keywords: ['AI automation', 'cloud computing', 'micro SaaS', 'technology consulting', 'enterprise solutions', 'digital transformation', '500% ROI', 'AI implementation'],
+  openGraph: {
+    title: 'Zion Tech Group - AI & Technology Solutions',
+    description: 'Transform your business with cutting-edge AI solutions. Proven 500%+ ROI results.',
+    type: 'website',
+    url: 'https://zion.app',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - AI Solutions',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - AI & Technology Solutions',
+    description: 'Transform your business with cutting-edge AI solutions. Proven 500%+ ROI results.',
+    images: ['/og-image.jpg'],
+  },
 };
 
 export default function HomePage() {
   return (
     <ErrorBoundary>
+      <PerformanceOptimizer />
+      <EnhancedAnalytics />
+      <MobileOptimizer />
+      
       <SEO
-        title="Zion Tech Group - AI & Technology Solutions"
-        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
-        keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
+        title="Zion Tech Group - AI & Technology Solutions | 500%+ ROI Guaranteed"
+        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services with proven 500%+ ROI results."
+        keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation, 500% ROI, AI implementation"
         url="/"
       />
       
@@ -256,6 +284,28 @@ export default function HomePage() {
             }} 
           />
         </Suspense>
+
+        {/* Enhanced CTA Section */}
+        <EnhancedCTA
+          title="Ready to Transform Your Business with AI?"
+          description="Join 500+ companies achieving 500%+ ROI with our proven AI solutions. Get your free consultation and implementation roadmap today."
+          primaryButton={{
+            text: "Get Free AI Consultation",
+            href: "/contact",
+            variant: "primary"
+          }}
+          secondaryButton={{
+            text: "View Success Stories",
+            href: "/case-studies",
+            variant: "outline"
+          }}
+          urgency={true}
+          socialProof={{
+            text: "Trusted by",
+            count: 500
+          }}
+          className="mt-16"
+        />
       </div>
     </ErrorBoundary>
   );
