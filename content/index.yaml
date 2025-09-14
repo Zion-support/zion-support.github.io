@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 3
+  total_content_pieces: 6
   
   new_2025_content:
     - id: "autonomous-systems-revolution"
@@ -35,6 +35,39 @@ content_index:
       tags: ["Implementation Guide", "AI", "Best Practices", "ROI"]
       featured: true
       is_new: true
+      
+    - id: "ai-2026-enterprise-automation"
+      type: "blog"
+      title: "AI 2026: Enterprise Automation Breakthrough - 400% ROI in 90 Days"
+      file_path: "/content/blog/ai-2026-enterprise-automation-breakthrough.md"
+      url: "/blog/ai-2026-enterprise-automation-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "2026"]
+      featured: true
+      is_new: true
+      
+    - id: "fortune-500-ai-transformation-2026"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation: $5.2B Revenue Impact in 2026"
+      file_path: "/content/case-studies/fortune-500-ai-transformation-2026-success.md"
+      url: "/case-studies/fortune-500-ai-transformation-2026-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "AI Transformation", "Revenue Growth", "Enterprise Success"]
+      featured: true
+      is_new: true
+      
+    - id: "ai-implementation-master-guide-2026"
+      type: "resource"
+      title: "AI Implementation Master Guide 2026: Complete Roadmap to 400% ROI"
+      file_path: "/content/resources/ai-implementation-master-guide-2026.md"
+      url: "/resources/ai-implementation-master-guide-2026"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI Optimization", "Best Practices", "2026"]
+      featured: true
+      is_new: true
 
   promotion_components:
     - name: "NewContent2025PromotionBanner"
@@ -55,6 +88,26 @@ content_index:
         - "Success metrics grid"
         - "Interactive content cards"
         - "Call-to-action buttons"
+        
+    - name: "NewContent2026PromotionBanner"
+      file_path: "/app/components/NewContent2026PromotionBanner.tsx"
+      status: "active"
+      features:
+        - "2026 content promotion with rotating showcase"
+        - "Real-time ROI and success metrics display"
+        - "Dismissible with localStorage persistence"
+        - "Animated background and progress indicators"
+        - "Type-specific content categorization"
+        
+    - name: "AI2026SuccessShowcase"
+      file_path: "/app/components/AI2026SuccessShowcase.tsx"
+      status: "active"
+      features:
+        - "Comprehensive success metrics grid"
+        - "Client testimonials with auto-rotation"
+        - "Content showcase with ROI metrics"
+        - "Gradient backgrounds and animations"
+        - "Call-to-action sections"
 
   homepage_integration:
     component: "HomePage"
