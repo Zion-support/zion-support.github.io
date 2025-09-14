@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Zap, TrendingUp, Calculator, FileText, Users, Star, Award, Target, Rocket } from 'lucide-react';
+import { ArrowRight, Zap, TrendingUp, BarChart3, FileText, Users, Star, Award, Award as TargetIcon, Zap as RocketIcon } from 'lucide-react';
 
 const EnhancedContentPromotionBanner2026: React.FC = () => {
   const [currentContent, setCurrentContent] = useState(0);
@@ -44,7 +44,7 @@ const EnhancedContentPromotionBanner2026: React.FC = () => {
       title: "AI 2025: Autonomous Systems Revolution",
       description: "Next-generation autonomous systems transforming business",
       type: "blog",
-      icon: <Rocket className="w-8 h-8" />,
+      icon: <RocketIcon className="w-8 h-8" />,
       color: "from-purple-600 to-indigo-600",
       url: "/blog/ai-2025-next-generation-autonomous-systems-revolution",
       metrics: "300% Productivity",
