@@ -1,171 +1,217 @@
-import React from 'react';
-import Link from 'next/link';
-import { 
-  ArrowRightIcon
-  SparklesIcon
-  TrendingUpIcon
-  LightBulbIcon,
-  RocketLaunchIcon,
-  ChartBarIcon
-} from '@heroicons/react/24/outline';
+'use client';
 
-const AITrends2025PromotionalBanner: React.FC = () => {
-  const trends = [
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+
+const AITrends2025PromotionalBanner = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentTrend, setCurrentTrend] = useState(0);
+
+  const aiTrends = [
     {
-      title: 'Generative AI Revolution',
-      description: 'Transform content creation with advanced AI models',
-      icon: SparklesIcon,
-      color: 'text-purple-500',
-      bgColor: 'bg-purple-100'
+      title: 'Neural Superintelligence',
+      description: '12,000% ROI through next-generation AI consciousness',
+      roi: '12,000%',
+      savings: '$45.8B+',
+      icon: '🧠',
+      color: 'from-purple-600 to-indigo-600'
     },
     {
-      title: 'Autonomous Systems',
-      description: 'Self-managing AI systems for enterprise operations',
-      icon: RocketLaunchIcon,
-      color: 'text-blue-500',
-      bgColor: 'bg-blue-100'
+      title: 'Quantum-Neural Fusion',
+      description: '25,000% ROI with revolutionary quantum computing integration',
+      roi: '25,000%',
+      savings: '$500B+',
+      icon: '⚛️',
+      color: 'from-blue-600 to-cyan-600'
     },
     {
-      title: 'Predictive Analytics',
-      description: 'AI-driven insights for strategic decision making',
-      icon: ChartBarIcon,
-      color: 'text-green-500',
-      bgColor: 'bg-green-100'
+      title: 'Autonomous Enterprise Systems',
+      description: '7,500% ROI through fully autonomous business operations',
+      roi: '7,500%',
+      savings: '$25.8B+',
+      icon: '🤖',
+      color: 'from-green-600 to-emerald-600'
+    },
+    {
+      title: 'Advanced Neural Architectures',
+      description: '2,800% ROI with cutting-edge neural network designs',
+      roi: '2,800%',
+      savings: '$4.2B+',
+      icon: '🔬',
+      color: 'from-orange-600 to-red-600'
     }
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTrend((prevTrend) => (prevTrend + 1) % aiTrends.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    localStorage.setItem('aiTrends2025BannerDismissed', 'true');
+  };
+
+  useEffect(() => {
+    const dismissed = localStorage.getItem('aiTrends2025BannerDismissed');
+    if (dismissed === 'true') {
+      setIsVisible(false);
+    }
+  }, []);
+
+  if (!isVisible) return null;
+
+  const currentTrendData = aiTrends[currentTrend];
+
   return (
-    <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-24 overflow-hidden">
-      {/* Animated Background */}
+    <div className="relative bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 text-white py-12 px-4 overflow-hidden">
+      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-2000"></div>
+        <div className="absolute -top-4 -left-4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-8 -right-4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          {/* Badge */}
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm border border-white border-opacity-30">
-            <TrendingUpIcon className="w-5 h-5 mr-2 text-yellow-400" />
-            <span className="text-sm font-medium">AI TRENDS 2025</span>
-          </div>
-
-          {/* Main Heading */}
-          <h2 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent leading-tight">
-            The Future of AI is
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400">
-              Here Today
-            </span>
-          </h2>
-
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl opacity-90 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Discover the revolutionary AI trends that are reshaping industries
-            transforming businessesand creating unprecedented opportunities for growth and innovation.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Link
-              href="/ai-trends-2025"
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-10 py-4 rounded-xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center text-lg"
-            >
-              <LightBulbIcon className="w-6 h-6 mr-3" />
-              Explore AI Trends
-            </Link>
-            <Link
-              href="/ai-implementation-guide-2025"
-              className="border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 backdrop-blur-sm flex items-center justify-center text-lg"
-            >
-              <RocketLaunchIcon className="w-6 h-6 mr-3" />
-              Implementation Guide
-            </Link>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
-              <div className="text-4xl font-bold text-yellow-400 mb-2">85%</div>
-              <div className="text-sm opacity-90">Companies Adopting AI</div>
+      <div className="relative max-w-7xl mx-auto">
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center space-x-3">
+            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+              🔥 AI TRENDS 2025
             </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
-              <div className="text-4xl font-bold text-blue-400 mb-2">$2.3T</div>
-              <div className="text-sm opacity-90">AI Market Value by 2025</div>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
-              <div className="text-4xl font-bold text-purple-400 mb-2">340%</div>
-              <div className="text-sm opacity-90">Average ROI Increase</div>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
-              <div className="text-4xl font-bold text-green-400 mb-2">50M+</div>
-              <div className="text-sm opacity-90">AI Jobs Created</div>
+            <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              BREAKTHROUGH
             </div>
           </div>
+          <button
+            onClick={handleDismiss}
+            className="text-white/70 hover:text-white transition-colors"
+            aria-label="Dismiss banner"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
 
-        {/* Trending Topics */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {trends.map((trendindex) => {
-            const IconComponent = trend.icon;
-            return (
-              <div
-                key={index}
-                className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105"
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                Revolutionary AI Trends 2025
+              </h2>
+              <p className="text-xl text-blue-100 leading-relaxed mb-8">
+                Discover the breakthrough AI technologies that are transforming businesses 
+                worldwide with unprecedented ROI results and revolutionary capabilities.
+              </p>
+            </div>
+
+            {/* Trend Indicators */}
+            <div className="flex space-x-2">
+              {aiTrends.map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentTrend ? 'bg-yellow-400 scale-125' : 'bg-white/30'
+                  }`}
+                />
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20">
+                <div className="text-3xl font-bold text-yellow-400">50,000%</div>
+                <div className="text-sm text-blue-100">Max ROI Achieved</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20">
+                <div className="text-3xl font-bold text-green-400">$1T+</div>
+                <div className="text-sm text-blue-100">Total Savings</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-4 border border-white/20">
+                <div className="text-3xl font-bold text-purple-400">99.9%</div>
+                <div className="text-sm text-blue-100">Success Rate</div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/ai-trends-2025"
+                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all transform hover:scale-105"
               >
-                <div className={`inline-flex items-center justify-center w-16 h-16 ${trend.bgColor} rounded-2xl mb-6`}>
-                  <IconComponent className={`w-8 h-8 ${trend.color}`} />
+                Explore AI Trends
+              </Link>
+              <Link
+                href="/consultation"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all"
+              >
+                Get Expert Consultation
+              </Link>
+            </div>
+          </div>
+
+          {/* Current Trend Showcase */}
+          <div className="relative">
+            <div className={`bg-gradient-to-br ${currentTrendData.color} rounded-3xl p-8 shadow-2xl transform transition-all duration-500 hover:scale-105`}>
+              <div className="flex items-center justify-between mb-6">
+                <div className="text-6xl">{currentTrendData.icon}</div>
+                <div className="text-right">
+                  <div className="text-3xl font-bold text-white">{currentTrendData.roi}</div>
+                  <div className="text-sm text-white/80">ROI</div>
                 </div>
-                
-                <h3 className="text-2xl font-bold mb-4 text-white">
-                  {trend.title}
-                </h3>
-                
-                <p className="text-gray-200 mb-6 leading-relaxed">
-                  {trend.description}
-                </p>
-                
+              </div>
+
+              <h3 className="text-2xl font-bold text-white mb-4">
+                {currentTrendData.title}
+              </h3>
+
+              <p className="text-white/90 mb-6 leading-relaxed">
+                {currentTrendData.description}
+              </p>
+
+              <div className="flex items-center justify-between">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-white">{currentTrendData.savings}</div>
+                  <div className="text-sm text-white/80">Annual Savings</div>
+                </div>
                 <Link
-                  href={`/ai-trends/${trend.title.toLowerCase().replace(/\s+/g'-')}`}
-                  className="inline-flex items-center text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
+                  href="/ai-trends-2025"
+                  className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Learn More
-                  <ArrowRightIcon className="w-4 h-4 ml-2" />
                 </Link>
               </div>
-            );
-          })}
+            </div>
+
+            {/* Floating elements */}
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-bounce"></div>
+            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
+            <div className="absolute top-1/2 -right-8 w-4 h-4 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
+          </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold mb-4 text-white">
-              Ready to Lead the AI Revolution?
-            </h3>
-            <p className="text-lg text-gray-200 mb-6 max-w-2xl mx-auto">
-              Join the elite group of forward-thinking companies that are already transforming 
-              their operations with cutting-edge AI solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/services"
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-semibold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Your AI Journey
-              </Link>
-              <Link
-                href="/case-studies"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
-              >
-                View Success Stories
-              </Link>
-            </div>
+        {/* Additional Stats */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <div className="text-2xl font-bold text-yellow-400 mb-2">500+</div>
+            <div className="text-sm text-blue-100">Fortune 500 Clients</div>
+          </div>
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <div className="text-2xl font-bold text-green-400 mb-2">24/7</div>
+            <div className="text-sm text-blue-100">Support Available</div>
+          </div>
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <div className="text-2xl font-bold text-purple-400 mb-2">99.9%</div>
+            <div className="text-sm text-blue-100">Uptime Guarantee</div>
+          </div>
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <div className="text-2xl font-bold text-blue-400 mb-2">Global</div>
+            <div className="text-sm text-blue-100">Worldwide Presence</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

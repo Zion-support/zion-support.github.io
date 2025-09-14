@@ -26,6 +26,7 @@ import NewContent2025UltimateShowcase from '../components/NewContent2025Ultimate
 import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
 import AITrends2025PromotionalBanner from '../components/AITrends2025PromotionalBanner';
 import AIAutomationROICalculator from '../components/AIAutomationROICalculator';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 
 // Import new 2025 Innovation Showcase components
 import AI2025InnovationShowcase from '../components/AI2025InnovationShowcase';
@@ -296,6 +297,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE BANNER - NEWEST BREAKTHROUGH */}
+        <NewContent2025UltimateShowcaseBanner />
+        
+        {/* AI TRENDS 2025 PROMOTIONAL BANNER - NEWEST FEATURED */}
+        <AITrends2025PromotionalBanner />
+        
         {/* AI 2026 FUTURE PREDICTIONS ULTIMATE BREAKTHROUGH BANNER - NEWEST BREAKTHROUGH */}
         <AI2026FuturePredictionsUltimateBreakthroughBanner />
         
@@ -617,8 +624,10 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
-        <UltimateDigitalTransformationShowcase2025 />
         <UltimateContentShowcase2025 />
+        <InteractiveContentDiscovery2025 />
+        <AIAutomationROICalculator />
+        <UltimateDigitalTransformationShowcase2025 />
         <InteractiveContentDiscoveryWidget2025 />
         <NewContentShowcase2025 />
         <SuccessStoriesBanner2025 />
