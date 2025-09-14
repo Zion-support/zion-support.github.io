@@ -3221,20 +3221,20 @@
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/release-drafter.yml"
     },
     "release.yml": {
-      "complexityScore": 0,
-      "complexityLevel": "low",
+      "complexityScore": 30,
+      "complexityLevel": "medium",
       "metrics": {
         "totalLines": 38,
         "jobCount": 0,
-        "stepCount": 4,
+        "stepCount": 12,
         "conditionalCount": 0,
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
-        "secretCount": 0,
-        "actionCount": 2
+        "secretCount": 3,
+        "actionCount": 6
       },
-      "refactoringPriority": "low",
+      "refactoringPriority": "medium",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/release.yml"
     },
