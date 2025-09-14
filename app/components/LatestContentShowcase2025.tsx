@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Calendar, Clock, ArrowRight, Star, TrendingUp, Users, Calculator, FileText } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Star, TrendingUp, Users, BarChart3, FileText } from 'lucide-react';
 
 const LatestContentShowcase2025 = () => {
   const newContent = [
@@ -52,7 +52,7 @@ const LatestContentShowcase2025 = () => {
       url: '/tools/ai-2025-business-impact-calculator',
       readTime: '5 min read',
       featured: false,
-      icon: Calculator,
+      icon: BarChart3,
       category: 'Interactive Tool'
     }
   ];

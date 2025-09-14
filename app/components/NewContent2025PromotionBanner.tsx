@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, TrendingUp, Calculator, FileText, Users } from 'lucide-react';
+import { ArrowRight, Zap, TrendingUp, BarChart3, FileText, Users } from 'lucide-react';
 
 const NewContent2025PromotionBanner = () => {
   return (
@@ -111,7 +111,7 @@ const NewContent2025PromotionBanner = () => {
             {/* ROI Calculator */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <div className="flex items-center mb-4">
-                <Calculator className="w-8 h-8 text-green-300 mr-3" />
+                <BarChart3 className="w-8 h-8 text-green-300 mr-3" />
                 <h3 className="text-white font-semibold text-lg">Business Impact Calculator</h3>
               </div>
               <p className="text-blue-100 text-sm mb-4">

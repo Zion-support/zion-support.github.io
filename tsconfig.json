@@ -24,15 +24,22 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@/store/*": ["./store/*"],
-      "@/i18n/*": ["./i18n/*"]
+      "@/*": [
+        "./*"
+      ],
+      "@/store/*": [
+        "./store/*"
+      ],
+      "@/i18n/*": [
+        "./i18n/*"
+      ]
     },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
