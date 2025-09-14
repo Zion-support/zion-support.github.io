@@ -497,6 +497,96 @@ content_index:
         payback: "3.8 months"
 
   new_2025_content_latest:
+    - id: "advanced-automation-revolution"
+      type: "blog"
+      title: "AI 2025: The Advanced Automation Revolution - Ultimate Guide to 600% ROI"
+      file_path: "/content/blog/ai-2025-advanced-automation-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-advanced-automation-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Automation", "ROI", "Enterprise", "Advanced Technology", "Business Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$2.8M annually"
+        efficiency: "89%"
+        accuracy: "99.7%"
+        satisfaction: "98%"
+      reading_time: "22 min read"
+      
+    - id: "enterprise-transformation-ultimate"
+      type: "case-study"
+      title: "AI 2025 Enterprise Transformation: $2.1B Company Achieves 650% ROI in 15 Months"
+      file_path: "/content/case-studies/ai-2025-enterprise-transformation-ultimate-success-story.md"
+      url: "/case-studies/ai-2025-enterprise-transformation-ultimate-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Enterprise Transformation", "AI Implementation", "ROI", "Manufacturing", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "650%"
+        savings: "$325M"
+        efficiency: "94%"
+        satisfaction: "99.8%"
+        time: "15 months"
+      reading_time: "18 min read"
+      
+    - id: "implementation-ultimate-roadmap"
+      type: "resource"
+      title: "AI 2025 Implementation Ultimate Roadmap: From Strategy to 700% ROI in 12 Months"
+      file_path: "/content/resources/ai-2025-implementation-ultimate-roadmap-comprehensive-guide.md"
+      url: "/resources/ai-2025-implementation-ultimate-roadmap-comprehensive-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Roadmap", "Best Practices", "Framework", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "700%"
+        success_rate: "94%"
+        savings: "$4.2M annually"
+        time_to_value: "78% faster"
+        satisfaction: "99.7%"
+      reading_time: "35 min read"
+      
+    - id: "quantum-computing-breakthrough"
+      type: "blog"
+      title: "AI 2025: Quantum Computing Breakthrough - Enterprise Solutions Achieving 800% ROI"
+      file_path: "/content/blog/ai-2025-quantum-computing-breakthrough-enterprise-solutions.md"
+      url: "/blog/ai-2025-quantum-computing-breakthrough-enterprise-solutions"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Quantum Computing", "AI", "Enterprise Solutions", "ROI", "Breakthrough Technology", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        speed: "1,200%"
+        accuracy: "99.97%"
+        savings: "$180M annually"
+        market: "$100B"
+      reading_time: "20 min read"
+      
+    - id: "autonomous-systems-revolution"
+      type: "case-study"
+      title: "AI 2025 Autonomous Systems Revolution: $1.8B Company Achieves 900% ROI with Self-Managing Operations"
+      file_path: "/content/case-studies/ai-2025-autonomous-systems-revolution-success-story.md"
+      url: "/case-studies/ai-2025-autonomous-systems-revolution-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Autonomous Systems", "AI Revolution", "ROI", "Self-Managing Operations", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "900%"
+        savings: "$750M"
+        automation: "95%"
+        satisfaction: "99.8%"
+        time: "14 months"
+      reading_time: "16 min read"
+      
     - id: "edge-computing-revolution"
       type: "blog"
       title: "AI 2025: The Edge Computing Revolution - Ultimate Guide to 450% ROI"
