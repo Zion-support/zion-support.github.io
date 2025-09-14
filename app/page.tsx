@@ -71,6 +71,11 @@ import UltimateContentRevolution2026PromotionBanner from '../components/Ultimate
 import AIInnovationShowcase2026 from '../components/AIInnovationShowcase2026';
 import AIInnovationShowcase2026PromotionBanner from '../components/AIInnovationShowcase2026PromotionBanner';
 
+// Import new promotional components
+import AI2025UltimateBreakthroughShowcasePromotionBanner from '../components/AI2025UltimateBreakthroughShowcasePromotionBanner';
+import AnimatedContentDiscoveryWidget2025 from '../components/AnimatedContentDiscoveryWidget2025';
+import SocialProofTestimonials2025 from '../components/SocialProofTestimonials2025';
+
 export default function HomePage() {
   return (
     <ErrorBoundary>
@@ -82,6 +87,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE BREAKTHROUGH SHOWCASE PROMOTION BANNER */}
+        <AI2025UltimateBreakthroughShowcasePromotionBanner />
+        
+        {/* ANIMATED CONTENT DISCOVERY WIDGET 2025 */}
+        <AnimatedContentDiscoveryWidget2025 />
+        
+        {/* SOCIAL PROOF & TESTIMONIALS 2025 */}
+        <SocialProofTestimonials2025 />
+        
         {/* AI 2026 NEW CONTENT PROMOTION BANNER */}
         <AI2026NewContentPromotionBanner />
         
