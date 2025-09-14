@@ -11,6 +11,40 @@ import AIRevolutionContentShowcase from '../components/AIRevolutionContentShowca
 import UltimateContent2025RevolutionaryBanner from '../components/UltimateContent2025RevolutionaryBanner';
 import UltimateContent2025Showcase from '../components/UltimateContent2025Showcase';
 
+// Import new Ultimate Content 2025 Revolution components
+import UltimateContent2025RevolutionBanner from '../components/UltimateContent2025RevolutionBanner';
+import UltimateContent2025RevolutionShowcase from '../components/UltimateContent2025RevolutionShowcase';
+
+// Import new 2025 promotional components
+import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+import InteractiveContentDiscovery2025 from '../components/InteractiveContentDiscovery2025';
+import AITrends2025PromotionalBanner from '../components/AITrends2025PromotionalBanner';
+import AIAutomationROICalculator from '../components/AIAutomationROICalculator';
+
+// Import new 2025 Innovation Showcase components
+import AI2025InnovationShowcase from '../components/AI2025InnovationShowcase';
+import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+
+// Import new AI 2025-2026 Ultimate Business Intelligence components
+import AI2025_2026UltimateBusinessIntelligenceRevolutionBanner from '../components/AI2025_2026UltimateBusinessIntelligenceRevolutionBanner';
+import AI2025_2026UltimateBusinessIntelligenceShowcase from '../components/AI2025_2026UltimateBusinessIntelligenceShowcase';
+
+// Import new Ultimate AI 2025 Transformation components
+import UltimateAI2025TransformationBanner from '../components/UltimateAI2025TransformationBanner';
+import UltimateAI2025ContentShowcase from '../components/UltimateAI2025ContentShowcase';
+
+// Import new AI 2025-2026 Ultimate Breakthrough components
+import AI2025_2026UltimateBreakthroughPromotionBanner from '../components/AI2025_2026UltimateBreakthroughPromotionBanner';
+import AI2025_2026UltimateBreakthroughContentShowcase from '../components/AI2025_2026UltimateBreakthroughContentShowcase';
+
+// Import new Ultimate Content 2025 components
+import UltimateContent2025Banner from '../components/UltimateContent2025Banner';
+import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import ContentNavigation2025 from '../components/ContentNavigation2025';
+
 // Import new Ultimate Business Transformation 2025 components
 import UltimateBusinessTransformation2025Banner from '../components/UltimateBusinessTransformation2025Banner';
 import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
@@ -210,6 +244,30 @@ export default function HomePage() {
         
         {/* LATEST AI TRENDS 2025 - NEW CONTENT */}
         <LatestAITrends2025 />
+        
+        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE BANNER - LATEST FEATURED */}
+        <NewContent2025UltimateShowcaseBanner />
+        
+        {/* AI TRENDS 2025 PROMOTIONAL BANNER - NEWEST FEATURED */}
+        <AITrends2025PromotionalBanner />
+        
+        {/* INTERACTIVE CONTENT DISCOVERY 2025 - NEW FEATURED */}
+        <InteractiveContentDiscovery2025 />
+        
+        {/* AI AUTOMATION ROI CALCULATOR - INTERACTIVE TOOL */}
+        <AIAutomationROICalculator />
+        
+        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE - FEATURED */}
+        <NewContent2025UltimateShowcase />
+        
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER - FEATURED */}
+        <AI2025RevolutionaryBreakthroughBanner />
+        
+        {/* AI 2025 INNOVATION SHOWCASE - FEATURED */}
+        <AI2025InnovationShowcase />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 - FEATURED */}
+        <UltimateContentShowcase2025 />
         
         {/* SUCCESS STORIES SHOWCASE - NEW CONTENT */}
         <SuccessStoriesShowcase />
