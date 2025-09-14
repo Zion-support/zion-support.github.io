@@ -1,6 +1,5 @@
 // src/context/WalletContext.tsx
 
-
 // Definition of getAppKitProjectId
 const getAppKitProjectId = (): string | undefined => {
   // Prioritize NEXT_PUBLIC_ variable for Next.js context
@@ -24,32 +23,27 @@ import { captureException } from '@/utils/sentry';
 import { ZION_TOKEN_NETWORK_ID } from '@/config/governanceConfig';
 import { createAppKit, AppKitInstanceInterface } from '@reown/appkit/react';
 import { EthersAdapter } from '@reown/appkit-adapter-ethers';
-import { mainnet, polygon, goerli, optimism, arbitrum, base } from '@reown/appkit/networks'; // Import necessary chain objects
+import { mainnet, polygon, goerli, optimism, arbitrum, base } from '@reown/appkit/networks';
 
-// Some injected wallet providers implement the EIP-1193 interface but also
-// expose event methods like `on` and `removeListener`. The `ethers` type for
-// `Eip1193Provider` does not include these, so we define a helper interface with
-// optional definitions so we can safely check for them.
 interface Eip1193ProviderWithEvents extends ethers.Eip1193Provider {
   on?: (event: string, listener: (...args: any[]) => void) => void;
   removeListener?: (event: string, listener: (...args: any[]) => void) => void;
 }
 
-// Define the shape of the wallet state and context
-export interface WalletState { // Added export
-  provider: ethers.BrowserProvider | null; // Updated to BrowserProvider for ethers v6
+export interface WalletState {
+  provider: ethers.BrowserProvider | null;
   signer: ethers.Signer | null;
   address: string | null;
   chainId: number | null;
   isConnected: boolean;
-  isWalletSystemAvailable: boolean; // New state for wallet system availability
+  isWalletSystemAvailable: boolean;
 }
 
-export interface WalletContextType extends WalletState { // Added export
+export interface WalletContextType extends WalletState {
   connectWallet: () => Promise<void>;
-  disconnectWallet: () => Promise<void>; // disconnect can be async
-  displayAddress: string | null; // Shortened address for display
-  appKit: AppKitInstanceInterface | null; // To access modal.open, etc.
+  disconnectWallet: () => Promise<void>;
+  displayAddress: string | null;
+  appKit: AppKitInstanceInterface | null;
 }
 
 const initialWalletState: WalletState = {
@@ -58,15 +52,13 @@ const initialWalletState: WalletState = {
   address: null,
   chainId: null,
   isConnected: false,
-  isWalletSystemAvailable: false, // Initialize as false
+  isWalletSystemAvailable: false,
 };
 
 export const WalletContext = createContext<WalletContextType | undefined>(undefined);
 
-
-// Known default/fallback project IDs that indicate the wallet system should be considered unavailable
 const KNOWN_INVALID_PROJECT_IDS = [
-  'YOUR_PROJECT_ID', // Common placeholder
+  'YOUR_PROJECT_ID',
   'dummy',
   'fallback',
   'YOUR_DEFAULT_PROJECT_ID_ENV_MISSING',
@@ -304,30 +296,17 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   const connectWallet = useCallback(async () => {
     if (!wallet.isWalletSystemAvailable || !appKitRef.current) {
       console.warn('WalletContext: connectWallet called but wallet system is not available.');
-      // Optionally, inform the user via toast or other UI element
       return;
     }
-
-    const modalController = appKitRef.current;
-    if (!modalController) { // Should be redundant due to isWalletSystemAvailable check
-      captureException(new Error('AppKit not initialized in connectWallet (modalController is null after availability check)'));
-
-      return;
-    }
-
     try {
-      await modalController.open();
+      await appKitRef.current.open();
     } catch (error: any) {
       captureException(error);
       console.error('WalletContext: Error opening wallet modal:', error);
       if (error instanceof Error && /Coinbase Wallet SDK/i.test(error.message)) {
-        console.warn(
-          'Failed to load Coinbase Wallet. Please ensure the SDK is available or try a different wallet provider.'
-        );
+        console.warn('Failed to load Coinbase Wallet. Ensure SDK is available or try another provider.');
       }
-      // Potentially update state to reflect connection attempt failure if needed, though subscriptions should handle it.
     }
-
   }, [wallet.isWalletSystemAvailable]); // appKitRef is stable
 
   const disconnectWallet = useCallback(async () => {
@@ -335,32 +314,22 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       console.warn('WalletContext: disconnectWallet called but wallet system is not available.');
       return;
     }
-
-    const actionKit = appKitRef.current;
-
-    if (actionKit?.getState().isConnected) {
+    if (appKitRef.current.getState().isConnected) {
       try {
-        await actionKit.disconnect();
-        // State update is typically handled by the subscription to provider changes
+        await appKitRef.current.disconnect();
       } catch (error) {
-        console.error('WalletContext: Error during disconnect.', error);
         captureException(error);
         console.error('WalletContext: Error disconnecting wallet:', error);
       }
     } else {
-      // If not connected but called, ensure state is clean.
-      // updateWalletState(); // This might be redundant if subscriptions are robust
       console.log('WalletContext: disconnectWallet called but already disconnected or appKit not ready.');
     }
-
   }, [wallet.isWalletSystemAvailable]); // appKitRef is stable
-
 
   const displayAddress = wallet.address
     ? `${wallet.address.substring(0, 6)}...${wallet.address.substring(wallet.address.length - 4)}`
     : null;
 
-  // The context value now includes isWalletSystemAvailable via the wallet state object
   return (
     <WalletContext.Provider value={{ ...wallet, connectWallet, disconnectWallet, displayAddress, appKit: appKitRef.current }}>
       {children}
