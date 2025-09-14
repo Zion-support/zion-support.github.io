@@ -362,7 +362,7 @@ export default function UltimateContentShowcase2026() {
             </Link>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

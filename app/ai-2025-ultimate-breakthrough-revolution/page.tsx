@@ -49,7 +49,7 @@ export default function AI2025UltimateBreakthroughRevolution() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Revolutionary Features Section */}
       <section id="revolutionary-features" className="py-20 bg-black/20">
@@ -205,6 +205,8 @@ export default function AI2025UltimateBreakthroughRevolution() {
               See how leading companies are transforming their operations with our AI 2025 breakthrough.
             </p>
           </div>
+        </div>
+      </section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-green-800/30 to-emerald-800/30 p-8 rounded-xl border border-green-500/30">

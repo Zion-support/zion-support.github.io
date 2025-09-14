@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Zap, ChevronDown } from 'lucide-react';
 
-const EnhancedNavigation = () => {
+const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);

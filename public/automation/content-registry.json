@@ -17825,8 +17825,8 @@
       "route": "/reports/guides/guide-2025-08-15-021207"
     },
     {
-      "file": "pages/main/front/index.tsx",
-      "route": "/main/front"
+      "file": "pages/reports/cases/case-2025-08-17-213059.tsx",
+      "route": "/reports/cases/case-2025-08-17-213059"
     },
     {
       "file": "pages/reports/cases/case-2025-08-17-214103.tsx",

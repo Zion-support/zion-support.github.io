@@ -94,4 +94,6 @@ export default function NewContentPromotionBanner2026() {
       <div className="absolute bottom-8 right-1/4 w-10 h-10 bg-indigo-400/20 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
     </div>
   );
-}
+};
+
+export default NewContentPromotionBanner2026;

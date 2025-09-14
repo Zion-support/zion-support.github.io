@@ -99,7 +99,7 @@ export default function InteractiveContentDiscoveryWidget2026() {
             Discover the most relevant revolutionary AI content for your needs. 
             Use our intelligent discovery widget to find breakthrough technologies, success stories, and implementation guides.
           </p>
-        </div>
+        </motion.div>
 
         {/* Search and Filter */}
         <div className="mb-12">
@@ -138,7 +138,7 @@ export default function InteractiveContentDiscoveryWidget2026() {
               </button>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">

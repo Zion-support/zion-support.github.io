@@ -142,6 +142,7 @@ const InteractiveContentDiscoveryWidget2025: React.FC = () => {
         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
+  });
 
     // Category filter
     if (selectedCategory !== 'all') {
