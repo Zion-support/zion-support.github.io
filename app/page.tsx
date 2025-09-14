@@ -39,6 +39,7 @@ import RevolutionaryTestimonialsShowcase from '../components/RevolutionaryTestim
 import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
 import UltimatePromotionalBanner from '../components/UltimatePromotionalBanner';
 import InteractiveDemoRequest from '../components/InteractiveDemoRequest';
+import RevolutionaryContentPromotionBanner2025 from '../components/RevolutionaryContentPromotionBanner2025';
 
 // Import new advanced components
 import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
@@ -97,6 +98,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Revolutionary Content Promotion Banner 2025 */}
+      <RevolutionaryContentPromotionBanner2025 variant="hero" />
 
       {/* New Content Banner */}
       <NewContentBanner variant="featured" />
