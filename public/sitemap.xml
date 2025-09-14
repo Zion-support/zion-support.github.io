@@ -25,12 +25,6 @@
     <lastmod>2025-09-05T15:04:42Z</lastmod>
 </url>
   <url>
-    <loc>https://ziontechgroup.netlify.app/index</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-09-13T22:26:41Z</lastmod>
-</url>
-  <url>
     <loc>https://ziontechgroup.netlify.app/micro-saas</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -173,11 +167,5 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <lastmod>2025-08-17T18:49:09-03:00</lastmod>
-</url>
-  <url>
-    <loc>https://ziontechgroup.netlify.app/resources</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-09-13T22:25:07Z</lastmod>
 </url>
 </urlset>

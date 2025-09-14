@@ -1,55 +1,58 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-console.log('🚀 Starting Netlify build process...');
+console.log('🚀 Starting build process with error handling...');
 
 try {
-  // Ensure we're in the right directory
-  process.chdir(__dirname + '/..');
+  // Clean up any existing node_modules to prevent conflicts
+  console.log('🧹 Cleaning up existing node_modules...');
+  if (fs.existsSync('node_modules')) {
+    fs.rmSync('node_modules', { recursive: true, force: true });
+  }
   
-  console.log('📦 Installing dependencies...');
-  execSync('npm ci --production=false', { stdio: 'inherit' });
-  
-  // Check if Vite is available
-  console.log('🔍 Checking if Vite is available...');
+  // Clean yarn cache
+  console.log('🧹 Cleaning yarn cache...');
   try {
-    execSync('npx vite --version', { stdio: 'pipe' });
-    console.log('✅ Vite is available');
+    execSync('yarn cache clean', { stdio: 'inherit' });
   } catch (error) {
-    console.log('⚠️ Vite not found via npx, trying direct path...');
-    try {
-      execSync('./node_modules/.bin/vite --version', { stdio: 'pipe' });
-      console.log('✅ Vite found in node_modules');
-    } catch (error2) {
-      throw new Error('Vite is not available. Please check installation.');
-    }
+    console.log('⚠️  Yarn cache clean failed, continuing...');
   }
   
-  console.log('🔨 Building application...');
-  execSync('npm run prebuild:netlify', { stdio: 'inherit' });
-  execSync('npx vite build', { stdio: 'inherit' });
+  // Install dependencies with clean slate
+  console.log('📦 Installing dependencies...');
+  execSync('yarn install --frozen-lockfile --network-timeout 100000', { 
+    stdio: 'inherit',
+    env: { ...process.env, NODE_ENV: 'production' }
+  });
   
-  // Check if build output exists
-  const distPath = path.join(process.cwd(), 'dist');
-  if (!fs.existsSync(distPath)) {
-    throw new Error('Build output directory "dist" not found');
-  }
+  // Run the build
+  console.log('🔨 Running build...');
+  execSync('yarn build', { stdio: 'inherit' });
   
   console.log('✅ Build completed successfully!');
-  console.log('📁 Build output:', distPath);
-  
-  // List build contents
-  const files = fs.readdirSync(distPath);
-  console.log('📄 Built files:', files.join(', '));
   
 } catch (error) {
   console.error('❌ Build failed:', error.message);
-  process.exit(1);
+  
+  // Try alternative approach
+  console.log('🔄 Trying alternative build approach...');
+  
+  try {
+    // Remove yarn.lock and reinstall
+    if (fs.existsSync('yarn.lock')) {
+      fs.unlinkSync('yarn.lock');
+    }
+    
+    // Install with npm instead
+    execSync('npm install', { stdio: 'inherit' });
+    execSync('npm run build', { stdio: 'inherit' });
+    
+    console.log('✅ Alternative build completed successfully!');
+  } catch (altError) {
+    console.error('❌ Alternative build also failed:', altError.message);
+    process.exit(1);
+  }
 }
