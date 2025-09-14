@@ -41,7 +41,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-<<<<<<< HEAD
 const RevolutionaryContent2026Banner: React.FC = () => {
   return (
     <section className="bg-gradient-to-r from-red-900 via-purple-900 to-pink-900 text-white py-16">
@@ -168,7 +167,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
             >
               Get Expert Guidance
             </Link>
-=======
   return (
     <AnimatePresence>
       {isVisible && (
@@ -339,7 +337,6 @@ const RevolutionaryContent2026Banner: React.FC = () => {
                 </div>
               </div>
             </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-ba4f
           </div>
         </motion.section>
       )}

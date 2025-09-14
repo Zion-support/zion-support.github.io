@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 const AI2026AutonomousEnterpriseBanner = () => {
   return (
-<<<<<<< HEAD
     <section className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -54,7 +53,6 @@ const AI2026AutonomousEnterpriseBanner = () => {
               Autonomous systems that align all actions with business objectives and strategic goals.
             </p>
             <div className="text-lg font-bold text-emerald-300">100% Aligned</div>
-=======
     <section className="bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900 text-white py-16 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -100,12 +98,10 @@ const AI2026AutonomousEnterpriseBanner = () => {
             <div className="text-3xl font-bold text-emerald-300 mb-2">340%</div>
             <div className="text-lg opacity-90">Productivity Increase</div>
             <div className="text-sm opacity-75 mt-2">Across all functions</div>
->>>>>>> origin/main
           </div>
         </div>
 
         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 mb-8">
-<<<<<<< HEAD
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold mb-4">Industry Transformations</h3>
@@ -134,7 +130,6 @@ const AI2026AutonomousEnterpriseBanner = () => {
                 Autonomous Enterprise<br />
                 Systems 2026
               </div>
-=======
           <h3 className="text-2xl font-bold mb-6 text-center">Revolutionary Success Stories</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white bg-opacity-5 rounded-lg p-4">
@@ -146,7 +141,6 @@ const AI2026AutonomousEnterpriseBanner = () => {
               <h4 className="font-bold text-lg mb-2">Manufacturing Conglomerate</h4>
               <p className="text-sm opacity-90 mb-2">99.9% autonomous production with zero quality defects</p>
               <div className="text-green-300 font-bold">$8.7B in cost savings achieved</div>
->>>>>>> origin/main
             </div>
           </div>
         </div>
@@ -154,7 +148,6 @@ const AI2026AutonomousEnterpriseBanner = () => {
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Link
-<<<<<<< HEAD
               href="/blog/ai-2026-autonomous-enterprise-systems"
               className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
@@ -176,7 +169,6 @@ const AI2026AutonomousEnterpriseBanner = () => {
           <p className="text-gray-300 text-sm">
             Transform your operations with autonomous AI • 
             <span className="text-emerald-400 font-semibold"> Free implementation roadmap available</span>
-=======
               href="/blog/ai-2026-autonomous-enterprise-revolution"
               className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
@@ -191,7 +183,6 @@ const AI2026AutonomousEnterpriseBanner = () => {
           </div>
           <p className="text-sm opacity-75">
             Join 1,000+ enterprises already operating autonomously
->>>>>>> origin/main
           </p>
         </div>
       </div>
