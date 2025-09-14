@@ -3,6 +3,22 @@ content_index:
   total_content_pieces: 6
   
   new_2025_content:
+    - id: "cybersecurity-revolution"
+      type: "blog"
+      title: "AI 2025: The Cybersecurity Revolution That's Protecting Enterprises"
+      file_path: "/content/blog/ai-2025-cybersecurity-revolution.md"
+      url: "/blog/ai-2025-cybersecurity-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Cybersecurity", "Enterprise Security", "Threat Detection", "ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        threat_reduction: "95%"
+        cost_savings: "$2.3M average"
+        response_time: "67% faster"
+        false_positives: "89% reduction"
+        
     - id: "autonomous-systems-revolution"
       type: "blog"
       title: "AI 2025: The Next Generation Autonomous Systems Revolution"
@@ -14,6 +30,23 @@ content_index:
       featured: true
       is_new: true
       
+    - id: "healthcare-ai-transformation"
+      type: "case-study"
+      title: "Healthcare AI Transformation 2025: How a Regional Hospital System Achieved 400% ROI"
+      file_path: "/content/case-studies/healthcare-ai-transformation-2025.md"
+      url: "/case-studies/healthcare-ai-transformation-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Healthcare", "AI Transformation", "ROI", "Patient Care"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "400%"
+        cost_savings: "$12.3M annually"
+        wait_time_reduction: "60%"
+        diagnostic_accuracy: "35% improvement"
+        patient_satisfaction: "94%"
+        
     - id: "global-enterprise-success"
       type: "case-study"
       title: "Global Enterprise AI Transformation: $2.8B Ultimate Success Story"
@@ -25,6 +58,22 @@ content_index:
       featured: true
       is_new: true
       
+    - id: "ai-implementation-roadmap"
+      type: "resource"
+      title: "AI Implementation Roadmap 2025: Your Complete Guide to Enterprise AI Success"
+      file_path: "/content/resources/ai-implementation-roadmap-2025.md"
+      url: "/resources/ai-implementation-roadmap-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "Enterprise AI", "ROI", "Best Practices"]
+      featured: true
+      is_new: true
+      metrics:
+        success_rate: "94%"
+        average_roi: "300%+"
+        implementation_time: "67% faster"
+        cost_reduction: "45% average"
+        
     - id: "autonomous-systems-guide"
       type: "resource"
       title: "AI 2025 Autonomous Systems Implementation Master Guide"
