@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
-import ErrorBoundary from '../../components/ErrorBoundary';
-import SEO from '../../components/SEO';
+import ErrorBoundary from '../../../components/ErrorBoundary';
+import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'AI 2025 Ultimate Breakthrough: Revolutionary Autonomous Systems | Zion Tech Group',
