@@ -497,6 +497,75 @@ content_index:
         payback: "3.8 months"
 
   new_2025_content_latest:
+    - id: "enterprise-intelligence-revolution"
+      type: "blog"
+      title: "AI 2025: The Enterprise Intelligence Revolution - Ultimate Guide to 750% ROI"
+      file_path: "/content/blog/ai-2025-enterprise-intelligence-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-enterprise-intelligence-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Intelligence", "Enterprise", "ROI", "Business Intelligence", "Predictive Analytics", "Fortune 500"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "750%"
+        savings: "$4.2M"
+        satisfaction: "99.7%"
+        efficiency: "340%"
+        accuracy: "99.7%"
+      reading_time: "28 min read"
+      
+    - id: "enterprise-intelligence-success"
+      type: "case-study"
+      title: "$3.2B Company Achieves 750% ROI with AI-Powered Intelligence Systems"
+      file_path: "/content/case-studies/ai-2025-enterprise-intelligence-750-roi-success-story.md"
+      url: "/case-studies/ai-2025-enterprise-intelligence-750-roi-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "Manufacturing", "Success Story", "ROI", "Enterprise Intelligence"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "750%"
+        savings: "$240M"
+        satisfaction: "99.8%"
+        efficiency: "67%"
+      reading_time: "22 min read"
+      
+    - id: "customer-experience-revolution"
+      type: "blog"
+      title: "AI 2025: The Customer Experience Revolution - Ultimate Guide to 650% ROI"
+      file_path: "/content/blog/ai-2025-customer-experience-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-customer-experience-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Customer Experience", "AI Transformation", "ROI", "Personalization", "CX", "Digital Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "650%"
+        savings: "$4.2M"
+        satisfaction: "99%"
+        efficiency: "89%"
+      reading_time: "32 min read"
+      
+    - id: "customer-experience-implementation"
+      type: "resource"
+      title: "AI 2025 Customer Experience Implementation Master Guide: From Strategy to 650% ROI"
+      file_path: "/content/resources/ai-2025-customer-experience-implementation-master-guide.md"
+      url: "/resources/ai-2025-customer-experience-implementation-master-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "Customer Experience", "AI Strategy", "Master Guide", "ROI", "Digital Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "650%"
+        savings: "$3.2M"
+        satisfaction: "99%"
+        efficiency: "89%"
+      reading_time: "45 min read"
+      
     - id: "advanced-automation-revolution"
       type: "blog"
       title: "AI 2025: The Advanced Automation Revolution - Ultimate Guide to 600% ROI"
