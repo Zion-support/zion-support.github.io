@@ -1,8 +1,20 @@
-export default function AutomationStatus() {
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+const AutomationStatus: NextPage = () => {
   return (
     <div>
-      <h1 className="text-2xl font-semibold">Automation Status</h1>
-      <p className="text-sm text-gray-600">System health is nominal.</p>
+      <Head>
+        <title>AutomationStatus - Zion Tech Solutions</title>
+        <meta name="description" content="AutomationStatus page" />
+      </Head>
+      
+      <main>
+        <h1>AutomationStatus</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
   );
-}
+};
+
+export default AutomationStatus;

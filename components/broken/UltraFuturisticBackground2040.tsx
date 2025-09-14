@@ -1,9 +1,3 @@
-
-  componentDidCatch(error, errorInfo) {
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -34,8 +28,8 @@ const UltraFuturisticBackground2040: React.FC = () => {
       opacity: number;
     }> = [];
 
-
-
+    // Initialize particles
+    for (let i = 0; i < 100; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -100,12 +94,6 @@ const UltraFuturisticBackground2040: React.FC = () => {
         }
       }
 
-
-
-
-
-
-
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;
@@ -144,6 +132,11 @@ const UltraFuturisticBackground2040: React.FC = () => {
         
         if (index === 0) {
           // Square
+          ctx.strokeRect(-shape.size/2, -shape.size/2, shape.size, shape.size);
+        } else if (index === 1) {
+          // Circle
+          ctx.beginPath();
+          ctx.arc(0, 0, shape.size/2, 0, Math.PI * 2);
           ctx.stroke();
         } else {
           // Triangle
@@ -176,14 +169,20 @@ const UltraFuturisticBackground2040: React.FC = () => {
             ctx.lineTo(x, y);
           }
         }
+        ctx.stroke();
+      }
 
+      animationFrameId = requestAnimationFrame(animate);
+    };
 
+    animate();
 
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
 
-
-
-
-
+    window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -191,11 +190,13 @@ const UltraFuturisticBackground2040: React.FC = () => {
     };
   }, []);
 
-
-
-
-
-
+  return (
+    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+      {/* Canvas Background */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full"
+        style={{ zIndex: -1 }}
       />
       
       {/* Overlay Gradients */}
@@ -234,16 +235,60 @@ const UltraFuturisticBackground2040: React.FC = () => {
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
           animate={{
-
-
+            rotate: [360, 0],
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.5, 0.2]
           }}
           transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
         
+        <motion.div
+          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
+          animate={{
+            rotate: [45, 405],
+            scale: [1, 1.15, 1],
+            opacity: [0.2, 0.3, 0.2]
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
         
+        {/* Additional Floating Elements */}
+        <motion.div
+          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
+          animate={{
+            rotate: [12, 372],
+            scale: [1, 1.1, 1],
+            opacity: [0.15, 0.25, 0.15]
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
         
+        <motion.div
+          className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.2, 1],
+            opacity: [0.15, 0.3, 0.15]
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
         
-
-
         {/* Particle Effects */}
         <motion.div
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
@@ -281,15 +326,11 @@ const UltraFuturisticBackground2040: React.FC = () => {
           transition={{
             duration: 5,
             repeat: Infinity,
-
-
-
-
-
-
-
-
-
+            ease: "easeInOut",
+            delay: 2
+          }}
+        />
+      </div>
       
       {/* CSS Animations */}
       <style jsx>{`
@@ -298,6 +339,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
             transform: translate(0, 0);
           }
           100% {
+            transform: translate(50px, 50px);
           }
         }
         
@@ -323,15 +365,4 @@ const UltraFuturisticBackground2040: React.FC = () => {
   );
 };
 
-export default UltraFuturisticBackground2040;
-export default UltraFuturisticBackground2040;
-
-
-}export default UltraFuturisticBackground2040;            opacity: 0.5;
-export default UltraFuturisticBackground2040;
-
-
-export default UltraFuturisticBackground2040;
-
-export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;

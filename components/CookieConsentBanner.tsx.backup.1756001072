@@ -42,6 +42,17 @@ const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({
       try {
         const savedPreferences = JSON.parse(consent);
         setPreferences(savedPreferences);
+<<<<<<< HEAD
+        // No cleanup needed for this path
+        return undefined;
+      } catch (error) {
+        console.warn('Failed to load cookie preferences:', error);
+        // Show banner if preferences are corrupted
+        const timer = setTimeout(() => setIsVisible(true), 2000);
+        return () => clearTimeout(timer);
+      }
+    }
+=======
       } catch (error) {
         console.warn('Failed to load cookie preferences:', error);
       }
@@ -50,6 +61,7 @@ const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({
     timeoutRef.current = setTimeout(() => {
       setIsVisible(true);
     }, 2000); // Show after 2 seconds
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
   }, []);
 
   const handleAcceptAll = () => {
@@ -109,7 +121,11 @@ const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({
       disableMarketing();
     }
     
+<<<<<<< HEAD
+    if (prefs.preferences) {
+=======
     if (prefs.functional) {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
       enableFunctional();
     } else {
       disableFunctional();

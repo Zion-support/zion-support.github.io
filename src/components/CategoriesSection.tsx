@@ -1,148 +1,178 @@
 
 import { GradientHeading } from "./GradientHeading";
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
+import Link from "next/link";
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+import { HelpCircle } from 'lucide-react'; // Added HelpCircle for default icon
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
-const categories = [
+// This is the type definition copied from Categories.tsx for consistency.
+// Ideally, this would be in a shared types file.
+interface CategoryType {
+  id: string;
+  name: string;
+  description?: string;
+  iconName?: string; // Example field if categories have icons
+  itemCount?: number; // Example field for number of items in a category
+  // Add a 'link' property if your API provides it, or construct it.
+  link?: string;
+}
+
+// Default static categories with translation keys
+const getDefaultCategories = (t: any) => [
   {
-    title: "Services",
-    description: "On-demand IT support, consulting, development, and more",
-    icon: <Briefcase className="w-10 h-10" />,
+    id: "services",
+    name: t('categories.services'),
+    description: t('categories.services_desc'),
+    iconName: "Briefcase", // Corresponds to lucide icon name
     link: "/services",
-    color: "from-purple-500 to-indigo-600",
+    color: "from-purple-500 to-indigo-600", // Keep color for styling
   },
   {
-    title: "Talents",
-    description: "Connect with AI experts, developers, and tech specialists",
-    icon: <Users className="w-10 h-10" />,
+    id: "talents",
+    name: t('categories.talents'),
+    description: t('categories.talents_desc'),
+    iconName: "Users",
     link: "/talent",
-    color: "from-cyan-500 to-blue-600",
-  },
+    color: "from-cyan-500 to-blue-600"},
   {
-    title: "Equipment",
-    description: "Rent or buy specialized hardware, servers, and devices",
-    icon: <HardDrive className="w-10 h-10" />,
+    id: "equipment",
+    name: t('categories.equipment'),
+    description: t('categories.equipment_desc'),
+    iconName: "HardDrive",
     link: "/equipment",
-    color: "from-amber-500 to-orange-600",
-  },
-];
+    color: "from-amber-500 to-orange-600"},
+  {
+    id: "innovation",
+    name: t('categories.innovation'),
+    description: t('categories.innovation_desc'),
+    iconName: "Lightbulb",
+    link: "/innovation",
+    color: "from-emerald-500 to-green-600"}];
 
-const specialServices = [
+// Helper to get icon component from name
+const getIcon = (iconName?: string) => {
+  switch (iconName) {
+    case "Briefcase": return <Briefcase className="w-10 h-10" />;
+    case "Users": return <Users className="w-10 h-10" />;
+    case "HardDrive": return <HardDrive className="w-10 h-10" />;
+    case "Lightbulb": return <Lightbulb className="w-10 h-10" />;
+    default: return <HelpCircle className="w-10 h-10" />; // Default icon
+  }
+};
+
+const getSpecialServices = (t: any) => [
   {
-    title: "Enhanced AI & IT Services",
-    link: "/enhanced-services"
-  },
-  {
-    title: "IT Onsite Services",
+    title: t('categories.it_onsite_services'),
     link: "/it-onsite-services"
-  },
-  {
-    title: "Services Pricing",
-    description: "Compare pricing and ROI for all our services",
-    icon: <TrendingUp className="w-10 h-10" />,
-    link: "/services-pricing",
-    color: "from-green-500 to-emerald-600",
-    features: ["Transparent Pricing", "ROI Calculator", "Custom Quotes", "Volume Discounts"]
-  },
-  {
-    title: "AI Solutions",
-    description: "Cutting-edge AI and machine learning services",
-    icon: <Brain className="w-10 h-10" />,
-    link: "/ai-services",
-    color: "from-cyan-500 to-blue-600",
-    features: ["Machine Learning", "NLP", "Computer Vision", "Predictive Analytics"]
-  },
-  {
-    title: "Cybersecurity",
-    description: "Advanced security and threat protection services",
-    icon: <Shield className="w-10 h-10" />,
-    link: "/cybersecurity-services",
-    color: "from-red-500 to-pink-600",
-    features: ["Threat Detection", "Penetration Testing", "Compliance", "Incident Response"]
-  },
-  {
-    title: "Cost Calculator",
-    link: "/service-calculator"
-  },
-  {
-    title: "Service Analytics",
-    link: "/service-analytics"
-  },
-  {
-    title: "Service Marketplace",
-    link: "/service-marketplace"
   }
 ];
 
-const advancedCategories = [
-  {
-    title: "AI & Machine Learning",
-    icon: <Brain className="w-6 h-6" />,
-    description: "Process automation, NLP, computer vision",
-    link: "/expanded-services?category=AI%20%26%20Machine%20Learning",
-    color: "from-purple-500 to-pink-600",
-    features: ["Neural Networks", "Deep Learning", "Natural Language Processing"]
-  },
-  {
-    title: "Cybersecurity",
-    icon: <Shield className="w-6 h-6" />,
-    description: "Zero-trust, threat detection, compliance",
-    link: "/expanded-services?category=Cybersecurity",
-    color: "from-red-500 to-orange-600",
-    features: ["Zero Trust", "Threat Intelligence", "SOC Services"]
-  },
-  {
-    title: "Cloud & DevOps",
-    icon: <Globe className="w-6 h-6" />,
-    description: "Multi-cloud, automation, orchestration",
-    link: "/expanded-services?category=Cloud%20%26%20DevOps",
-    color: "from-blue-500 to-cyan-600",
-    features: ["Multi-Cloud", "Infrastructure as Code", "Monitoring"]
-  },
-  {
-    title: "Data & Analytics",
-    icon: <Database className="w-6 h-6" />,
-    description: "Big data, BI, predictive analytics",
-    link: "/expanded-services?category=Data%20%26%20Analytics",
-    color: "from-green-500 to-emerald-600",
-    features: ["Data Warehousing", "ETL Pipelines", "Real-time Analytics"]
-  },
-  {
-    title: "IoT & Edge Computing",
-    icon: <Network className="w-6 h-6" />,
-    description: "Connected devices, real-time processing",
-    link: "/expanded-services?category=IoT%20%26%20Edge%20Computing",
-    color: "from-indigo-500 to-purple-600",
-    features: ["IoT Platforms", "Edge Computing", "Sensor Networks"]
-  },
-  {
-    title: "Blockchain & Web3",
-    icon: <Zap className="w-6 h-6" />,
-    description: "Smart contracts, decentralized solutions",
-    link: "/expanded-services?category=Blockchain%20%26%20Web3",
-    color: "from-yellow-500 to-orange-600",
-    features: ["Smart Contracts", "DeFi", "NFTs", "DApps"]
-  },
-  {
-    title: "Quantum Computing",
-    icon: <Leaf className="w-6 h-6" />,
-    description: "Quantum algorithms, optimization",
-    link: "/expanded-services?category=Quantum%20Computing",
-    color: "from-teal-500 to-blue-600",
-    features: ["Quantum Algorithms", "Optimization", "Simulation"]
-  },
-  {
-    title: "AR/VR & Metaverse",
-    icon: <Eye className="w-6 h-6" />,
-    description: "Immersive experiences, virtual worlds",
-    link: "/expanded-services?category=AR%2FVR%20%26%20Metaverse",
-    color: "from-pink-500 to-rose-600",
-    features: ["Virtual Reality", "Augmented Reality", "3D Modeling"]
-  },
-  {
-    title: "FinTech & Digital Banking",
-    icon: <CreditCard className="w-6 h-6" />,
-    description: "Digital banking, payments, lending",
-    link: "/expanded-services?category=FinTech%20%26%20Digital%20Banking",
-    color: "from-blue-600 to-indigo-600",
-    features: ["Digital Banking", "Payment Systems", "Lending Platforms"]
+interface CategoriesSectionProps {
+  showTitle?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+  categories?: CategoryType[]; // Accept categories as a prop
+}
+
+export function CategoriesSection({
+  showTitle = true,
+  className,
+  style,
+  categories: fetchedCategories, // Rename prop for clarity
+}: CategoriesSectionProps) {
+  const { t } = useTranslation();
+  const defaultCategories = getDefaultCategories(t);
+  
+  // Use fetchedCategories if provided, otherwise fallback to defaultCategories
+  const displayCategories = fetchedCategories && fetchedCategories.length > 0
+    ? fetchedCategories.map(cat => ({
+        id: cat.id,
+        title: cat.name, // Map name to title
+        description: cat.description || "No description available.",
+        icon: getIcon(cat.iconName), // Get icon component
+        link: cat.link || `/category/${cat.id}`, // Construct link if not provided
+        // Assign a default color or implement logic to assign colors
+        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
+    : defaultCategories.map(cat => ({
+        ...cat,
+        title: cat.name,
+        icon: getIcon(cat.iconName)}));
+
+  // If fetchedCategories is an empty array, and we want to show nothing:
+  if (fetchedCategories && fetchedCategories.length === 0) {
+    return (
+      <section className={cn("py-20 bg-zion-blue text-center", className)} style={style}>
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-semibold text-white mb-4">{t('home.no_categories_title')}</h2>
+          <p className="text-zion-slate-light text-lg mb-2">
+            {t('home.no_categories_desc')}
+          </p>
+          <p className="text-zion-slate-light text-md">
+            {t('home.no_categories_support')}
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
+      <div className="container mx-auto px-4">
+        {showTitle && (
+          <div className="text-center mb-16">
+            <GradientHeading>{t('home.categories_title')}</GradientHeading>
+            <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
+              {t('home.categories_subtitle')}
+            </p>
+          </div>
+        )}
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {displayCategories.map((category) => (
+            <Link
+              key={category.id}
+              href={category.link || '#'}
+              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+            >
+              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="text-white">
+                    {category.icon}
+                  </div>
+                </div>
+                <h3 className="text-white text-xl font-bold mb-2">{category.title}</h3>
+                <p className="text-zion-slate-light">{category.description}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+        
+        {/* Special services section with translations */}
+        <div className="mt-8">
+          <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {getSpecialServices(t).map((service) => (
+              <Link 
+                key={service.title}
+                href={service.link}
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
+              >
+                {service.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+        
+        <div className="mt-12 flex justify-center">
+          <Link 
+            href="/categories/all"
+            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
+          >
+            {t('home.view_all_categories')}
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}

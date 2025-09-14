@@ -14,9 +14,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, ControllerRenderProps } from "react-hook-form";
 import { z } from "zod";
 import { format, addDays } from "date-fns";
-import { CalendarIcon } from "lucide-react";
+import { CalendarIcon } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
+import {logErrorToProduction} from '@/utils/productionLogger';
+
 
 interface InterviewRequestFormProps {
   talent: TalentProfile;
@@ -26,8 +28,7 @@ interface InterviewRequestFormProps {
 
 const formSchema = z.object({
   date: z.date({
-    required_error: "Please select a date for the interview.",
-  }).refine(date => date > new Date(), {
+    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
     message: "Interview date must be in the future"
   }),
   time: z.string().min(1, "Please select a time for the interview."),
@@ -35,8 +36,7 @@ const formSchema = z.object({
   platform: z.string().min(1, "Please select a meeting platform."),
   meetingLink: z.string().optional(),
   title: z.string().min(3, "Please provide a brief title for the interview."),
-  notes: z.string().optional(),
-});
+  notes: z.string().optional()});
 
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews();
@@ -49,17 +49,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       duration: "30",
       platform: "zoom",
       notes: "",
-      meetingLink: "",
-    },
-  });
+      meetingLink: ""}});
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {
       toast({
         title: "Authentication required",
         description: "Please log in to schedule an interview",
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return;
     }
 
@@ -87,16 +84,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
       toast({
         title: "Interview requested",
-        description: `Your interview request with ${talent.full_name} has been sent.`,
-      });
+        description: `Your interview request with ${talent.full_name} has been sent.`});
       onClose();
     } catch (error) {
-      console.error("Failed to schedule interview:", error);
+      logErrorToProduction('Failed to schedule interview:', { data: error });
       toast({
         title: "Failed to schedule interview",
         description: "An error occurred while scheduling the interview. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     } finally {
       setIsSubmitting(false);
     }

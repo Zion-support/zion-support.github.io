@@ -3,8 +3,7 @@ import React, {
   useEffect,
   useRef,
   ReactNode,
-  useContext,
-} from 'react';
+  useContext} from 'react';
 import { AuthContext } from '../../context/auth/AuthContext';
 import { useDebounce } from '../../hooks/useDebounce';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
@@ -47,8 +46,7 @@ export function ChatAssistant({
   initialMessages = [],
   onSendMessage,
   contextHeader,
-  starterQuestions = [],
-}: ChatAssistantProps) {
+  starterQuestions = []}: ChatAssistantProps) {
   const auth = useContext(AuthContext);
   const isGuest = !auth?.isAuthenticated;
 
@@ -90,8 +88,7 @@ export function ChatAssistant({
     initialMessages,
     storedGuestMessages,
     setStoredGuestMessages,
-    recipient.id,
-  ]);
+    recipient.id]);
 
   // Effect for logged-in user messages
   useEffect(() => {
@@ -148,8 +145,7 @@ export function ChatAssistant({
         id: Date.now().toString(),
         role: 'user',
         message: messageContent,
-        timestamp: new Date(),
-      };
+        timestamp: new Date()};
       setCurrentMessages((prev: Message[]) => [...prev, newMessage]);
       setPendingApiCallParams({ message: messageContent, conversationId });
     } else {
@@ -166,8 +162,7 @@ export function ChatAssistant({
       id: Date.now().toString(),
       role: 'user',
       message: guestMessage,
-      timestamp: new Date(),
-    };
+      timestamp: new Date()};
     setCurrentMessages((prev: Message[]) => [...prev, newMessage]); // This will now use the guest-aware setCurrentMessages
     setPendingApiCallParams({ message: guestMessage, conversationId });
 

@@ -68,10 +68,8 @@ export class APIRateLimiterService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(rule),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(rule)});
 
       if (!response.ok) {
         throw new Error(`Failed to create rate limit rule: ${response.statusText}`);
@@ -93,9 +91,7 @@ export class APIRateLimiterService {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-      });
+          'Authorization': `Bearer ${this.apiKey}`}});
 
       if (!response.ok) {
         throw new Error(`Failed to fetch rate limit rules: ${response.statusText}`);
@@ -147,10 +143,8 @@ export class APIRateLimiterService {
         method: 'PATCH',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(updates),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(updates)});
 
       if (!response.ok) {
         throw new Error(`Failed to update rate limit rule: ${response.statusText}`);
@@ -177,9 +171,7 @@ export class APIRateLimiterService {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'DELETE',
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-      });
+          'Authorization': `Bearer ${this.apiKey}`}});
 
       if (!response.ok) {
         throw new Error(`Failed to delete rate limit rule: ${response.statusText}`);
@@ -195,9 +187,7 @@ export class APIRateLimiterService {
       const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : '';
       const response = await fetch(`${this.baseUrl}/rate-limiter/stats${params}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-      });
+          'Authorization': `Bearer ${this.apiKey}`}});
 
       if (!response.ok) {
         throw new Error(`Failed to fetch rate limit stats: ${response.statusText}`);
@@ -243,10 +233,8 @@ export class APIRateLimiterService {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, permissions, rateLimit }),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify({ name, permissions, rateLimit })});
 
       if (!response.ok) {
         throw new Error(`Failed to create API key: ${response.statusText}`);
@@ -272,9 +260,7 @@ export class APIRateLimiterService {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/api-keys`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-      });
+          'Authorization': `Bearer ${this.apiKey}`}});
 
       if (!response.ok) {
         throw new Error(`Failed to fetch API keys: ${response.statusText}`);
@@ -324,9 +310,7 @@ export class APIRateLimiterService {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-        },
-      });
+          'Authorization': `Bearer ${this.apiKey}`}});
 
       if (!response.ok) {
         throw new Error(`Failed to fetch violations: ${response.statusText}`);
