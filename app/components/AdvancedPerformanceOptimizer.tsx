@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Zap, TrendingUp, Clock, Cpu, Database, Globe, 
+  Zap, TrendingUp, Clock, Globe, 
   Shield, CheckCircle, AlertCircle, Loader,
-  BarChart3, Activity, Gauge, Target
+  BarChart3, Activity, Gauge
 } from 'lucide-react';
 
 interface PerformanceMetric {
@@ -171,7 +171,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
               </div>
               
               <div className="text-sm text-gray-600">
-                Target: {metric.target}{metric.unit}
+                Award: {metric.target}{metric.unit}
               </div>
               
               {/* Progress Bar */}
@@ -207,7 +207,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
               <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Cpu className="w-8 h-8 text-blue-600" />
+                <Brain className="w-8 h-8 text-blue-600" />
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Code Optimization</h4>
               <p className="text-gray-600 text-sm">Intelligent code splitting and bundling optimization</p>
@@ -215,7 +215,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
             
             <div className="text-center">
               <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Database className="w-8 h-8 text-green-600" />
+                <Shield className="w-8 h-8 text-green-600" />
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Optimization</h4>
               <p className="text-gray-600 text-sm">Efficient data loading and caching strategies</p>
@@ -328,7 +328,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           
           <div className="text-center">
             <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Target className="w-8 h-8 text-orange-600" />
+              <Award className="w-8 h-8 text-orange-600" />
             </div>
             <h4 className="text-lg font-semibold text-gray-900 mb-2">Goal Oriented</h4>
             <p className="text-gray-600 text-sm">Optimization aligned with business objectives</p>

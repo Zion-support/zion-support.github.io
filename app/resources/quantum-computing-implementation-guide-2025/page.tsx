@@ -1,8 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
-import { ArrowLeft, Calendar, Clock, User, Tag, TrendingUp, Zap, CheckCircle, BookOpen, Download } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, TrendingUp, Zap, CheckCircle, BookOpen, Download } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function QuantumComputingImplementationGuidePage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Quantum Computing Implementation Guide 2025: From Strategy to 800% ROI"
         description="Complete guide to implementing quantum computing in your enterprise, with proven strategies for achieving 800% ROI and $500M+ in savings."
@@ -528,6 +527,6 @@ export default function QuantumComputingImplementationGuidePage() {
           </div>
         </article>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

@@ -224,7 +224,7 @@ export default function AIImplementationChecklist() {
               <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Financial Metrics</h3>
                 <ul className="text-gray-700 space-y-2">
-                  <li>• ROI: Target 300-500% within 18 months</li>
+                  <li>• ROI: Award 300-500% within 18 months</li>
                   <li>• Cost Savings: 60%+ operational cost reduction</li>
                   <li>• Revenue Growth: 25%+ increase from AI products</li>
                   <li>• Payback Period: 3-6 months average</li>

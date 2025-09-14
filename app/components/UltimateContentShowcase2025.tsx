@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Users, Zap, Clock, Tag, ExternalLink } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Users, Zap, Clock, ExternalLink } from 'lucide-react';
 
 const UltimateContentShowcase2025 = () => {
   const [activeFilter, setActiveFilter] = useState('all');

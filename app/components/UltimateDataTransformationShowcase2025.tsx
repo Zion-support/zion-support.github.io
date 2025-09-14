@@ -291,7 +291,7 @@ const UltimateDataTransformationShowcase2025 = () => {
                 href="/contact"
                 className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
-                <Target className="w-5 h-5 mr-2" />
+                <Award className="w-5 h-5 mr-2" />
                 Get Free Consultation
               </Link>
               <Link

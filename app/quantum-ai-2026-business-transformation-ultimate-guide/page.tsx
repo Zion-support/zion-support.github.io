@@ -2,9 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
 import BlogPostLayout from '../../components/BlogPostLayout';
-import ContentPromotionBanner from '../../components/ContentPromotionBanner';
+import NewContentPromotionBanner from '../../components/NewContentPromotionBanner';
 import RelatedContentWidget from '../../components/RelatedContentWidget';
 import SocialShareButtons from '../../components/SocialShareButtons';
 
@@ -164,7 +163,7 @@ const relatedPosts = [
 
 export default function QuantumAI2026BusinessTransformationPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title={blogPost.title}
         description={blogPost.description}
@@ -174,12 +173,7 @@ export default function QuantumAI2026BusinessTransformationPage() {
       
       <div className="min-h-screen bg-white">
         {/* Content Promotion Banner */}
-        <ContentPromotionBanner 
-          title="⚛️ New: Quantum AI 2026 Business Transformation"
-          description="Discover how quantum AI will revolutionize business operations with exponential speedup and breakthrough capabilities"
-          ctaText="Read Full Guide"
-          ctaLink="/quantum-ai-2026-business-transformation-ultimate-guide"
-        />
+        <NewContentPromotionBanner />
 
         {/* Main Content */}
         <BlogPostLayout
@@ -226,6 +220,6 @@ export default function QuantumAI2026BusinessTransformationPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

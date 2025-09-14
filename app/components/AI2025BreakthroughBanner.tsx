@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Zap, Brain, Target, Rocket, TrendingUp, Award } from 'lucide-react';
+import { Zap, Brain, Rocket, TrendingUp, Award } from 'lucide-react';
 
 const AI2025BreakthroughBanner = () => {
   return (
@@ -34,7 +34,7 @@ const AI2025BreakthroughBanner = () => {
           </div>
           <div className="text-center">
             <div className="bg-gradient-to-r from-green-500 to-teal-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Target className="w-8 h-8 text-white" />
+              <Award className="w-8 h-8 text-white" />
             </div>
             <div className="text-3xl font-bold text-yellow-400 mb-2">95%</div>
             <div className="text-gray-300">Implementation Success Rate</div>
@@ -108,7 +108,7 @@ const AI2025BreakthroughBanner = () => {
 
             <div className="bg-gradient-to-r from-purple-800 to-pink-800 rounded-xl p-6 border border-white border-opacity-20">
               <div className="flex items-center mb-3">
-                <Target className="w-5 h-5 mr-2 text-purple-400" />
+                <Award className="w-5 h-5 mr-2 text-purple-400" />
                 <span className="text-sm font-semibold text-purple-400">IMPLEMENTATION TOOLKIT</span>
               </div>
               <h4 className="text-lg font-bold mb-2">
@@ -151,7 +151,7 @@ const AI2025BreakthroughBanner = () => {
             </div>
             <div className="text-center">
               <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                <Target className="w-6 h-6 text-white" />
+                <Award className="w-6 h-6 text-white" />
               </div>
               <h4 className="text-lg font-bold mb-2">Predictive Analytics</h4>
               <p className="text-gray-300 text-sm">

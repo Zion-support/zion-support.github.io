@@ -129,7 +129,7 @@ const AutonomousEnterpriseContentShowcase2025: React.FC = () => {
       case 'efficiency':
         return <Zap className="w-4 h-4 text-purple-600" />;
       case 'accuracy':
-        return <Target className="w-4 h-4 text-indigo-600" />;
+        return <Award className="w-4 h-4 text-indigo-600" />;
       case 'projects':
         return <Users className="w-4 h-4 text-orange-600" />;
       default:

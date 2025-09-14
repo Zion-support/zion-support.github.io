@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { TrendingUp, Target, Award, Clock, ArrowRight, Zap, Star, Users, DollarSign } from 'lucide-react';
+import { TrendingUp, Award, Clock, ArrowRight, Zap, Star, Users, DollarSign } from 'lucide-react';
 
 <<<<<<< HEAD
 const UltimateContent2025Showcase = () => {
@@ -178,7 +178,7 @@ const UltimateContent2025Showcase: React.FC = () => {
       case 'blog':
         return <TrendingUp className="w-5 h-5" />;
       case 'case-study':
-        return <Target className="w-5 h-5" />;
+        return <Award className="w-5 h-5" />;
       case 'resource':
         return <Award className="w-5 h-5" />;
       default:

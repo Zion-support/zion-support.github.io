@@ -1,8 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
-import { ArrowLeft, Calendar, Clock, User, Tag, TrendingUp, Zap, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, TrendingUp, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function QuantumComputingBreakthroughPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2025: The Quantum Computing Breakthrough That's Revolutionizing Enterprise"
         description="Discover how quantum computing is transforming enterprise AI, delivering 600% ROI and $500M+ in savings across Fortune 500 companies."
@@ -293,6 +292,6 @@ export default function QuantumComputingBreakthroughPage() {
           </div>
         </article>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

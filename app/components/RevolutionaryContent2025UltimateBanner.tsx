@@ -20,7 +20,7 @@ interface BannerContent {
   type: 'blog' | 'case-study' | 'resource';
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-18b4
-import { X, ChevronRight, Star, TrendingUp, Zap, Target } from 'lucide-react';
+import { X, ChevronRight, Star, TrendingUp, Zap } from 'lucide-react';
 
 interface ContentItem {
   id: string;
@@ -464,7 +464,7 @@ const RevolutionaryContent2025UltimateBanner: React.FC = () => {
               </div>
               <div className="bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm">
                 <div className="flex items-center space-x-2 mb-2">
-                  <Target className="w-5 h-5 text-blue-400" />
+                  <Award className="w-5 h-5 text-blue-400" />
                   <span className="text-sm font-medium text-gray-300">Success Rate</span>
                 </div>
                 <div className="text-2xl font-bold text-blue-400">94%</div>
