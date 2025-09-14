@@ -180,6 +180,11 @@ import EnhancedContentDiscovery2025 from '../components/EnhancedContentDiscovery
 import AdvancedAI2025BreakthroughBanner from '../components/AdvancedAI2025BreakthroughBanner';
 import UltimateContentShowcase2025Enhanced from '../components/UltimateContentShowcase2025Enhanced';
 
+// Import new Neural Consciousness AI 2025 components
+import NeuralConsciousnessAI2025RevolutionBanner from '../components/NeuralConsciousnessAI2025RevolutionBanner';
+import UltimateAI2026FutureBanner from '../components/UltimateAI2026FutureBanner';
+import InteractiveAIConsciousnessDemo2025 from '../components/InteractiveAIConsciousnessDemo2025';
+
 // Import new AI Business Intelligence 2025 promotional components
 import AIBusinessIntelligence2025Banner from '../components/AIBusinessIntelligence2025Banner';
 import AIBusinessIntelligenceShowcase2025 from '../components/AIBusinessIntelligenceShowcase2025';
@@ -279,6 +284,12 @@ export default function HomePage() {
         />
         
         <div className='min-h-screen bg-white'>
+        {/* NEURAL CONSCIOUSNESS AI 2025 REVOLUTION BANNER - NEWEST BREAKTHROUGH */}
+        <NeuralConsciousnessAI2025RevolutionBanner />
+        
+        {/* ULTIMATE AI 2026 FUTURE BANNER - NEWEST BREAKTHROUGH */}
+        <UltimateAI2026FutureBanner />
+        
         {/* ADVANCED AI 2025 BREAKTHROUGH BANNER - NEWEST BREAKTHROUGH */}
         <AdvancedAI2025BreakthroughBanner />
         
@@ -429,6 +440,9 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT SHOWCASE 2025 ENHANCED - NEWEST FEATURED */}
         <UltimateContentShowcase2025Enhanced />
+        
+        {/* INTERACTIVE AI CONSCIOUSNESS DEMO 2025 - NEWEST INTERACTIVE */}
+        <InteractiveAIConsciousnessDemo2025 />
         
         {/* INTERACTIVE CONTENT DISCOVERY 2025 - NEWEST FEATURED */}
         <InteractiveContentDiscovery2025 />
