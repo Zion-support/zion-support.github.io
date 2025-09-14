@@ -14,6 +14,7 @@ import { MicroSaasShowcase } from "@/components/MicroSaasShowcase";
 import { InteractiveServiceShowcase } from "@/components/InteractiveServiceShowcase";
 import { EnhancedServicesShowcase } from "@/components/EnhancedServicesShowcase";
 import { FloatingCTA } from "@/components/FloatingCTA";
+import RevolutionaryContentBanner2027 from "@/components/RevolutionaryContentBanner2027";
 
 export default function Home() {
   return (
@@ -29,6 +30,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <ITServiceRequestHero />
+
+      {/* Revolutionary Content Banner */}
+      <RevolutionaryContentBanner2027 />
 
       {/* Trust Indicators */}
       <TrustIndicators />
