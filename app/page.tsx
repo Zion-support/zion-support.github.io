@@ -3,6 +3,9 @@ import Link from 'next/link';
 import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import AnalyticsTracker from '../components/AnalyticsTracker';
+import PerformanceMonitor from '../components/PerformanceMonitor';
 
 // Import new AI 2025 Ultimate Content Revolution components - NEWEST FEATURED
 import AI2025UltimateContentRevolution50000ROIBanner from '../components/AI2025UltimateContentRevolution50000ROIBanner';
@@ -161,23 +164,25 @@ export const metadata = {
 export default function HomePage() {
   return (
     <ErrorBoundary>
-      <SEO
-        title="Zion Tech Group - AI & Technology Solutions"
-        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
-        keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
-        url="/"
-      />
-      
-      <div className='min-h-screen bg-white'>
-        {/* NEURAL SUPERINTELLIGENCE BREAKTHROUGH BANNER 2025 - LATEST BREAKTHROUGH */}
-        <NeuralSuperintelligenceBreakthroughBanner2025 />
+      <PerformanceOptimizer>
+        <AnalyticsTracker />
+        <PerformanceMonitor />
+        <SEO
+          title="Zion Tech Group - AI & Technology Solutions | Neural Superintelligence Breakthrough"
+          description="Transform your business with cutting-edge AI, neural superintelligence, and micro SaaS solutions. Expert consulting and implementation services with proven 2,400% ROI results."
+          keywords="AI automation, neural superintelligence, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation, AI ROI, quantum AI, AI implementation, business automation, AI consulting, consciousness AI"
+          url="/"
+        />
         
-        {/* NEURAL SUPERINTELLIGENCE ROI CALCULATOR - INTERACTIVE TOOL */}
-        <NeuralSuperintelligenceROICalculator />
-        
-        {/* AI 2025 ULTIMATE BREAKTHROUGH 100,000% ROI BANNER - NEWEST FEATURED */}
-        <AI2025UltimateBreakthrough100000ROIBanner />
-        
+        <div className='min-h-screen bg-white'>
+          {/* NEURAL SUPERINTELLIGENCE BREAKTHROUGH BANNER 2025 - LATEST BREAKTHROUGH */}
+          <NeuralSuperintelligenceBreakthroughBanner2025 />
+          
+          {/* NEURAL SUPERINTELLIGENCE ROI CALCULATOR - INTERACTIVE TOOL */}
+          <NeuralSuperintelligenceROICalculator />
+          
+          {/* AI 2025 ULTIMATE BREAKTHROUGH 100,000% ROI BANNER - NEWEST FEATURED */}
+          <AI2025UltimateBreakthrough100000ROIBanner />
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         
@@ -355,7 +360,8 @@ export default function HomePage() {
             }} 
           />
         </Suspense>
-      </div>
+        </div>
+      </PerformanceOptimizer>
     </ErrorBoundary>
   );
 }
