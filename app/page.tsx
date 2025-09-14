@@ -9,6 +9,10 @@ import AI2025UltimateContentRevolution50000ROIBanner from '../components/AI2025U
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import InteractiveROICalculatorAdvanced from '../components/InteractiveROICalculatorAdvanced';
 import RevolutionaryNewsletterSignup2025 from '../components/RevolutionaryNewsletterSignup2025';
+import NewContent2025UltimateBreakthroughPromotionBanner from '../components/NewContent2025UltimateBreakthroughPromotionBanner';
+import UltimateSuccessStoriesShowcase2025 from '../components/UltimateSuccessStoriesShowcase2025';
+import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
+import UltimateTestimonialShowcase2025 from '../components/UltimateTestimonialShowcase2025';
 
 // Import new AI 2025-2026 Ultimate Transformation components - LATEST FEATURED
 import AI2025_2026UltimateTransformation50000ROIPromotionBanner from '../components/AI2025_2026UltimateTransformation50000ROIPromotionBanner';
@@ -370,6 +374,24 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* NEW CONTENT 2025 ULTIMATE BREAKTHROUGH PROMOTION BANNER - NEWEST FEATURED */}
         <NewContent2025UltimateBreakthroughPromotionBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
+        <UltimateContentShowcase2025 />
+        
+        {/* INTERACTIVE ROI CALCULATOR ADVANCED - NEWEST FEATURED */}
+        <InteractiveROICalculatorAdvanced />
+        
+        {/* ULTIMATE SUCCESS STORIES SHOWCASE 2025 - NEWEST FEATURED */}
+        <UltimateSuccessStoriesShowcase2025 />
+        
+        {/* REVOLUTIONARY NEWSLETTER SIGNUP 2025 - NEWEST FEATURED */}
+        <RevolutionaryNewsletterSignup2025 />
+        
+        {/* INTERACTIVE DEMO WIDGET - NEWEST FEATURED */}
+        <InteractiveDemoWidget />
+        
+        {/* ULTIMATE TESTIMONIAL SHOWCASE 2025 - NEWEST FEATURED */}
+        <UltimateTestimonialShowcase2025 />
         
         {/* AI 2025-2026 ULTIMATE TRANSFORMATION 50,000% ROI PROMOTION BANNER - LATEST FEATURED */}
         <AI2025_2026UltimateTransformation50000ROIPromotionBanner />
