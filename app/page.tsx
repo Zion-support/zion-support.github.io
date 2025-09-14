@@ -335,6 +335,11 @@ import AutonomousSystems2025Banner from '../components/AutonomousSystems2025Bann
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 import UltimateTechShowcase2025Banner from '../components/UltimateTechShowcase2025Banner';
 import InnovationHub2025Banner from '../components/InnovationHub2025Banner';
+
+// Import new content promotional banners - LATEST FEATURED
+import NewContent2025UltimateBusinessTransformationBanner from '../components/NewContent2025UltimateBusinessTransformationBanner';
+import QuantumAIRevolution2025PromotionalBanner from '../components/QuantumAIRevolution2025PromotionalBanner';
+import Fortune500SuccessStoryBanner from '../components/Fortune500SuccessStoryBanner';
 >>>>>>> cursor/create-and-deploy-new-content-66ab
 
 // Import new 2025 content and advertising components
@@ -379,6 +384,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTIONAL BANNERS - LATEST FEATURED */}
+        <NewContent2025UltimateBusinessTransformationBanner />
+        <QuantumAIRevolution2025PromotionalBanner />
+        <Fortune500SuccessStoryBanner />
+        
         {/* NEW REVOLUTIONARY CONTENT BANNERS - NEWEST ADDITIONS */}
         <AI2025NextGenInnovationBanner />
         <QuantumComputingRevolution2025Banner />
