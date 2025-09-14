@@ -36,9 +36,10 @@ import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase20
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
+import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+import QuantumAI2025RevolutionBanner from '../components/QuantumAI2025RevolutionBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 // Import new promotional components
-import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 
 // Import new 2026 promotional components
@@ -75,11 +76,14 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW: Quantum AI 2025 Revolution Banner */}
+        <QuantumAI2025RevolutionBanner />
+        
+        {/* NEW: Ultimate Content Promotion Banner */}
+        <NewContent2025UltimateBanner />
+        
         {/* Quantum AI Revolution Banner - NEW */}
         <QuantumAIRevolutionBanner2025 />
-        
-        {/* New Content 2025 Ultimate Banner */}
-        <NewContent2025UltimateBanner />
         
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
@@ -201,6 +205,7 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <UltimateContentShowcase2025 />
         <NewContent2025UltimateShowcase />
         <NewContent2026PromotionBanner />
         <QuantumAI2026BreakthroughBanner />
@@ -209,7 +214,6 @@ export default function HomePage() {
         <AI2026ContentShowcaseBanner />
         <RevolutionaryAI2026Banner />
         <RevolutionaryContentBanner2025 />
-        <UltimateContentShowcase2025 />
         <RevolutionaryContent2026Banner />
         <FeaturedContentShowcase2026 />
         <ComprehensiveContentShowcase2026 />
