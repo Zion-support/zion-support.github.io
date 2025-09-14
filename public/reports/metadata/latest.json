@@ -35195,6 +35195,16 @@
       }
     },
     {
+      "route": "/reports/innovations/insight-2025-08-18-0400",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Blueprint: DevSecOps AI",
+        "description": "Blueprint: DevSecOps AI — auto-suggested description"
+      }
+    },
+    {
       "route": "/reports/innovations/insight-2025-08-18T03-11",
       "missing": [
         "og:image"
@@ -65234,6 +65244,16 @@
       "suggestion": {
         "title": "Autonomous Playbook — Data Engineering (2025-08-18 03:50 UTC)",
         "description": "Autonomous Playbook — Data Engineering (2025-08-18 03:50 UTC) — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-18-0400",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Validation & QA Plan — Applied NLP & RAG (2025-08-18 04:00 UTC)",
+        "description": "Autonomous Validation & QA Plan — Applied NLP & RAG (2025-08-18 04:00 UTC) — auto-suggested description"
       }
     },
     {
