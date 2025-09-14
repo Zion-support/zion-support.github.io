@@ -259,6 +259,74 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
+    - id: "ai-2025-enterprise-data-analytics-revolution"
+      type: "blog"
+      title: "AI 2025: The Enterprise Data Analytics Revolution - 450% ROI Breakthrough"
+      file_path: "/content/blog/ai-2025-enterprise-data-analytics-revolution.md"
+      url: "/blog/ai-2025-enterprise-data-analytics-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Data Analytics", "Enterprise", "ROI", "Business Intelligence", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        savings: "$3.2B"
+        accuracy: "99.4%"
+        efficiency: "78%"
+      reading_time: "15 min read"
+      
+    - id: "ai-2025-autonomous-supply-chain-revolution"
+      type: "blog"
+      title: "AI 2025: The Autonomous Supply Chain Revolution - 380% ROI Breakthrough"
+      file_path: "/content/blog/ai-2025-autonomous-supply-chain-revolution.md"
+      url: "/blog/ai-2025-autonomous-supply-chain-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Supply Chain", "Autonomous Systems", "ROI", "Logistics", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "380%"
+        savings: "$2.1B"
+        efficiency: "99.7%"
+        accuracy: "99.9%"
+      reading_time: "18 min read"
+      
+    - id: "ai-2025-financial-services-transformation-520-percent-roi"
+      type: "case-study"
+      title: "Financial Services AI Transformation: $5.2B Bank Achieves 520% ROI in 15 Months"
+      file_path: "/content/case-studies/ai-2025-financial-services-transformation-520-percent-roi.md"
+      url: "/case-studies/ai-2025-financial-services-transformation-520-percent-roi"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Financial Services", "AI Transformation", "ROI", "Banking", "520% ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "520%"
+        savings: "$180M"
+        accuracy: "99.9%"
+        efficiency: "78%"
+      reading_time: "20 min read"
+      
+    - id: "ai-2025-enterprise-implementation-ultimate-guide"
+      type: "resource"
+      title: "AI 2025 Enterprise Implementation Ultimate Guide: From Strategy to 500% ROI"
+      file_path: "/content/resources/ai-2025-enterprise-implementation-ultimate-guide.md"
+      url: "/resources/ai-2025-enterprise-implementation-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Enterprise", "500% ROI", "Best Practices"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        success_rate: "98%"
+        average_savings: "$2.8B"
+        implementation_time: "12-18 months"
+      reading_time: "45 min read"
+      
     - id: "ai-2025-enterprise-automation-revolution"
       type: "blog"
       title: "AI 2025: The Enterprise Automation Revolution That's Reshaping Business"
