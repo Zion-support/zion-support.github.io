@@ -157,6 +157,12 @@ import RevolutionaryContent2026Showcase from '../components/RevolutionaryContent
 import AIInnovationShowcase2025Banner from '../components/AIInnovationShowcase2025Banner';
 import RevolutionaryAIContent2025Showcase from '../components/RevolutionaryAIContent2025Showcase';
 
+// Import new AI 2025 Ultimate Content Revolution components
+import AI2025UltimateContentRevolutionBanner from '../components/AI2025UltimateContentRevolutionBanner';
+import UltimateContentRevolutionShowcase from '../components/UltimateContentRevolutionShowcase';
+import AIContentRevolutionDemo from '../components/AIContentRevolutionDemo';
+import ContentRevolutionNewsletter from '../components/ContentRevolutionNewsletter';
+
 // Import new ultimate business transformation components
 import UltimateBusinessTransformation2025Banner from '../components/UltimateBusinessTransformation2025Banner';
 import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
@@ -213,6 +219,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE CONTENT REVOLUTION BANNER - NEWEST FEATURED */}
+        <AI2025UltimateContentRevolutionBanner />
+        
         {/* AI 2025 ULTIMATE BUSINESS INTELLIGENCE REVOLUTION BANNER - NEWEST FEATURED */}
         <AI2025UltimateBusinessIntelligenceRevolutionBanner />
         
@@ -461,6 +470,12 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* AI 2025 Ultimate Content Revolution Showcase - NEWEST FEATURED */}
+        <UltimateContentRevolutionShowcase />
+        
+        {/* AI Content Revolution Interactive Demo - NEWEST FEATURED */}
+        <AIContentRevolutionDemo />
+        
         {/* AI 2025 Ultimate Business Intelligence Showcase - NEWEST FEATURED */}
         <AI2025UltimateBusinessIntelligenceShowcase />
 
@@ -539,6 +554,9 @@ export default function HomePage() {
 
         {/* AI Business Intelligence Showcase 2025 - NEW FEATURED */}
         <AIBusinessIntelligenceShowcase2025 />
+        
+        {/* Content Revolution Newsletter - NEW FEATURED */}
+        <ContentRevolutionNewsletter />
         
         {/* Advanced AI Components */}
         <AdvancedContentRecommendationEngine />
