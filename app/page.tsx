@@ -216,6 +216,10 @@ import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import ROICalculatorWidget from '../components/ROICalculatorWidget';
 
+// Import new AI 2025 Trends promotional components
+import AI2025TrendsRevolutionaryBanner from '../components/AI2025TrendsRevolutionaryBanner';
+import AI2025TrendsShowcase from '../components/AI2025TrendsShowcase';
+
 // Import new Advanced Neural Architectures 2026 components
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
@@ -247,6 +251,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 TRENDS REVOLUTIONARY BANNER - NEWEST FEATURED */}
+        <AI2025TrendsRevolutionaryBanner />
+        
         {/* NEW CONTENT NAVIGATION BANNER - FEATURED */}
         <NewContentNavigationBanner />
         
@@ -469,6 +476,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* AI 2025 Trends Showcase - NEWEST FEATURED */}
+        <AI2025TrendsShowcase />
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
