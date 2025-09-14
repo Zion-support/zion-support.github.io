@@ -184,6 +184,7 @@ import UltimateContentShowcase2025Enhanced from '../components/UltimateContentSh
 import NeuralConsciousnessAI2025RevolutionBanner from '../components/NeuralConsciousnessAI2025RevolutionBanner';
 import UltimateAI2026FutureBanner from '../components/UltimateAI2026FutureBanner';
 import InteractiveAIConsciousnessDemo2025 from '../components/InteractiveAIConsciousnessDemo2025';
+import UltimateAIRevolutionShowcase2025 from '../components/UltimateAIRevolutionShowcase2025';
 
 // Import new AI Business Intelligence 2025 promotional components
 import AIBusinessIntelligence2025Banner from '../components/AIBusinessIntelligence2025Banner';
@@ -443,6 +444,9 @@ export default function HomePage() {
         
         {/* INTERACTIVE AI CONSCIOUSNESS DEMO 2025 - NEWEST INTERACTIVE */}
         <InteractiveAIConsciousnessDemo2025 />
+        
+        {/* ULTIMATE AI REVOLUTION SHOWCASE 2025 - NEWEST FEATURED */}
+        <UltimateAIRevolutionShowcase2025 />
         
         {/* INTERACTIVE CONTENT DISCOVERY 2025 - NEWEST FEATURED */}
         <InteractiveContentDiscovery2025 />
