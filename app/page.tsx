@@ -199,6 +199,10 @@ import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import ROICalculatorWidget from '../components/ROICalculatorWidget';
 
+// Import new Ultimate Autonomous Enterprise Revolution components
+import UltimateAutonomousEnterpriseRevolutionBanner from '../components/UltimateAutonomousEnterpriseRevolutionBanner';
+import UltimateAutonomousEnterpriseShowcase from '../components/UltimateAutonomousEnterpriseShowcase';
+
 // Import new Advanced Neural Architectures 2026 components
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
@@ -232,6 +236,12 @@ export default function HomePage() {
       <div className='min-h-screen bg-white'>
         {/* AI Revolution 2025-2026 Banner - NEWEST ULTIMATE FEATURED */}
         <AIRevolution2025Banner />
+        
+        {/* ULTIMATE AUTONOMOUS ENTERPRISE REVOLUTION BANNER - NEWEST ULTIMATE FEATURED */}
+        <UltimateAutonomousEnterpriseRevolutionBanner />
+        
+        {/* ULTIMATE AUTONOMOUS ENTERPRISE SHOWCASE - NEWEST ULTIMATE FEATURED */}
+        <UltimateAutonomousEnterpriseShowcase />
         
         {/* ULTIMATE CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
         <UltimateContentPromotionBanner2025 />
