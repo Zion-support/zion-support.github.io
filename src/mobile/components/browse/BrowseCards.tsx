@@ -3,6 +3,15 @@ import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+
+
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+
+
+
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
@@ -59,9 +68,15 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>
                   </div>
                 </div>
+                <button
+                  className='h-8 w-8 flex items-center justify-center'
+                  onClick={() => toggleSaved(item.id)}                >
                 
                 <button 
                   className="h-8 w-8 flex items-center justify-center"
+
+
+
                   onClick={() => toggleSaved(item.id)}
                 >
                   {savedItems.includes(item.id) ? (
@@ -88,22 +103,22 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
               
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
                 {item.location && (
-                  <div className="flex items-center gap-1">
-                    <MapPin className="h-3 w-3" />
+                  <div className='flex items-center gap-1'>
+                    <MapPin className='h-3 w-3' />
                     <span>{item.location}</span>
                   </div>
                 )}
                 
                 {item.price && (
-                  <div className="flex items-center gap-1">
-                    <DollarSign className="h-3 w-3" />
+                  <div className='flex items-center gap-1'>
+                    <DollarSign className='h-3 w-3' />
                     <span>{item.price}</span>
                   </div>
                 )}
                 
                 {item.timePosted && (
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" />
+                  <div className='flex items-center gap-1'>
+                    <Clock className='h-3 w-3' />
                     <span>{item.timePosted}</span>
                   </div>
                 )}

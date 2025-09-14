@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''';';
 import React from 'react';
 ;
@@ -665,4 +663,3 @@ export default Component;
 </X>
 </Check>
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from 'react';
 const AlertDialog({children, open, onOpenChange}) {;
     const [internalOpen, setInternalOpen] = useState(false);
@@ -66,4 +64,3 @@ export function AlertDialogCancel("props": "any) {;
 ;
 </AlertDialogContext>
 </AlertDialogContext>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

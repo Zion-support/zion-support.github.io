@@ -136,21 +136,32 @@ export function ValidatedFormField({
     switch (type) {
       case 'textarea':
         return (
-          <div className="relative">
+          <div className='relative'>;
             <Textarea
+              disabled = {disabled,}
+              className = {baseClasses,}
+              rows = {4,}
               disabled={disabled}
               className={baseClasses}
               rows={4}
               {...form.register(name)}
             />
-            <div className="absolute top-2 right-2">
-              {getValidationIcon()}
-            </div>
+            <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
           </div>
+
+              {...form && form.register(name)}
+            />;
+            <div className='absolute top-2 right-2'>{getValidationIcon()}</div>;
+          </div>;
+        );
+
+
         ),
 
-      case 'select':
+
+      case 'select':;
         return (
+
           <div className="relative">
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
               <SelectTrigger className={baseClasses}>
@@ -168,31 +179,48 @@ export function ValidatedFormField({
               {getValidationIcon()}
             </div>
           </div>
+        )
         ),
 
       case 'checkbox':
+              </SelectContent>;
+            </Select>;
+            <div className='absolute top-2 right-8'>{getValidationIcon()}</div>;
+          </div>;
+        );
+
+      case 'checkbox':;
         return (
-          <div className="flex items-center space-x-2">
+          <div className='flex items-center space-x-2'>;
             <Checkbox
               id={name}
               checked={fieldValue}
-              onCheckedChange={(checked) => form.setValue(name, checked)}
+              onCheckedChange={checked => form && form.setValue(name, checked)}
               disabled={disabled}
             />
             <label
               htmlFor={name}
+              className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'            >
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               {label}
             </label>
             {getValidationIcon()}
           </div>
+        )
         ),
 
       case 'password':
+          </div>;
+        );
+
+      case 'password':;
         return (
           <div className="relative">
             <Input
+              type = {showPassword ? 'text' : 'password',}
+              disabled = {disabled,}
+              className = {cn(baseClasses, 'pr-20'),}
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
@@ -201,6 +229,13 @@ export function ValidatedFormField({
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
               {getValidationIcon()}
               <Button
+                type='button'
+                variant='ghost'
+                size='sm'
+                className='h-7 w-7 p-0'
+                onClick={() => setShowPassword(!showPassword)}
+
+                aria-label={showPassword ? 'Hide password' : 'Show password'}              >
                 type="button"
                 variant="ghost"
                 size="sm"
@@ -216,12 +251,21 @@ export function ValidatedFormField({
               </Button>
             </div>
           </div>
+        )
         ),
 
       default:
+              </Button>;
+            </div>;
+          </div>;
+        );
+
+      default:;
         return (
           <div className="relative">
             <Input
+
+
               type={type}
               disabled={disabled}
               className={baseClasses}
@@ -253,6 +297,7 @@ export function ValidatedFormField({
                   </FormMessage>
                 )}
                 {description && !fieldError && (
+                  <p className='text-sm text-muted-foreground'>{description}</p>
                   <p className="text-sm text-muted-foreground">{description}</p>
                 )}
               </div>
@@ -285,6 +330,10 @@ export function ValidatedFormField({
                 </FormMessage>
               )}
               {description && !fieldError && (
+
+
+
+                <p className='text-sm text-muted-foreground'>{description}</p>
                 <p className="text-sm text-muted-foreground">{description}</p>
               )}
             </div>

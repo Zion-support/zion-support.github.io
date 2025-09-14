@@ -7,10 +7,6 @@ interface SocialShareButtonsProps {
   title: string
 }
 
-export function SocialShareButtons({ title }: SocialShareButtonsProps) {
-  const shareUrl =
-    typeof window !== 'undefined' ? encodeURIComponent(window.location.href) : '',
-  const shareText = encodeURIComponent(title),
 
   const shareToTwitter = () => {
     window.open(

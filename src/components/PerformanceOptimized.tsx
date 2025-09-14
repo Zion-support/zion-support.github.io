@@ -46,6 +46,7 @@ export const useStableCallback = <T extends (...arg: s: any[]) => any>(,
   callbac: k: T,
   dep: s: React.DependencyList): T => {,
   return useCallback(callback, deps),
+
 };
 };
 ,
@@ -84,6 +85,7 @@ export const: LazyLoadWrapper: React.FC<{,
     </div>,
   ),
 };
+
 ,
 // Image optimization component,
 export const: OptimizedImage: React.FC<{,
@@ -132,6 +134,7 @@ export const: OptimizedImage: React.FC<{,
         </div>,
       )};
     </div>,
+
   ),
 
 };

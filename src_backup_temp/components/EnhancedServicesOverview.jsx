@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';'''';';
 import {ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES} from '@/data/enhancedServices';'''';';
 import {Button} from '@/components/ui/button';'''';';
@@ -78,4 +76,3 @@ export default function EnhancedServicesOverview.js({ }: EnhancedServicesOvervie
     </div>
   );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

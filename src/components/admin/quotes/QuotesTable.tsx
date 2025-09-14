@@ -63,8 +63,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
           ) : quotes.length === 0 ? (
             <TableRow>
               <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
-                {isArchived 
-                  ? "No archived quote requests found." 
+                {isArchived
+                  ? "No archived quote requests found."
                   : "No quote requests found."}
               </TableCell>
             </TableRow>
@@ -163,6 +163,11 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             <Archive className="h-4 w-4 mr-2" />
                             Archive
                           </DropdownMenuItem>
+                          <DropdownMenuItem
+                            onClick = {() => {
+                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
+                                deleteQuote(quote.id)
+                              } }}
                           <DropdownMenuItem 
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {

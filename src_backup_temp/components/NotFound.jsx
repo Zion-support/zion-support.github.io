@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';'''';';
 import {Link} from 'react-router-dom';'''';';
 import {motion} from 'framer-motion';';
@@ -378,4 +376,3 @@ export default function NotFound.js({ }: NotFound.jsProps) {
     </div>
   );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

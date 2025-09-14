@@ -15,7 +15,6 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
   if (certifications.length === 0) {
     return null,
   }
-
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Certifications</h3>

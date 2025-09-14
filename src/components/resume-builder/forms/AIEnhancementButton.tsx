@@ -48,6 +48,8 @@ export function AIEnhancementButton({
       variant="ghost"
       size="sm"
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
+      onClick = {handleEnhance,}
+      disabled = {isEnhancing,}
       onClick={handleEnhance}
       disabled={isEnhancing}
     >

@@ -81,6 +81,32 @@ export function PartnerReferralLinks() {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
+            <Button
+              variant='outline'
+              size='sm'
+              onClick={handleDownloadLinks}
+              className='flex items-center gap-2'            >
+              <Download className='h-4 w-4' />
+              Export Links
+            </Button>
+          </CardTitle>
+          <CardDescription>
+            Share this link with your audience to earn rewards
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className='flex space-x-2'>
+            <Input value={baseLink} readOnly className='font-mono text-sm' />
+            <Button variant='outline' onClick={() => handleCopyLink(baseLink)}>
+              <Copy className='h-4 w-4' />
+              <span className='sr-only'>Copy</span>            </Button>
+          </div>
+        </CardContent>
+      </Card>
+      <div className='flex justify-between items-center'>
+        <h3 className='text-lg font-semibold text-white'>
+          Custom Campaign Links
+        </h3>
             <Button 
               variant="outline" 
               size="sm" 
@@ -144,6 +170,12 @@ export function PartnerReferralLinks() {
                   </SelectContent>
                 </Select>
               </div>
+            </div>
+            <DialogFooter>
+              <Button
+                type='button'
+                variant='secondary'
+                onClick={() => setIsDialogOpen(false)}
               <div className="grid gap-2">
                 <Label htmlFor="custom">Custom Parameter (Optional)</Label>
                 <Input 
@@ -186,13 +218,43 @@ export function PartnerReferralLinks() {
                   </div>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="pb-4">
-                <div className="flex space-x-2">
+              <CardContent className='pb-4'>
+                <div className='flex space-x-2'>
+                className='bg-zion-purple hover:bg-zion-purple-dark'>;
+                Generate Link;
+              </Button>;
+            </DialogFooter>;
+          </DialogContent>;
+        </Dialog>;
+      </div>;
+
+      <div className='grid gap-4'>;
+        {generatedLinks && generatedLinks.length > 0 ? (;
+          generatedLinks && generatedLinks.map((item, index) => (;
+            <Card
+              key={index}
+              className='bg-zion-blue-dark border-zion-blue-light'>;
+              <CardHeader className='pb-2'>;
+                <CardTitle className='text-base flex items-center justify-between'>;
+                  <div className='flex items-center gap-2'>;
+                    <Link className='h-4 w-4 text-zion-purple' />;
+                    <span>{item && item.name || 'Campaign Link'}</span>                  </div>;
+                </CardTitle>;
+              </CardHeader>;
+              <CardContent className='pb-4'>;
+                <div className='flex space-x-2'>;
                   <Input
                     value={item.link}
                     readOnly
+
                     className="font-mono text-xs"
                   />
+                  <Button
+                    variant='outline'
+                    size='sm'
+                    onClick={() => handleCopyLink(item.link)}                  >
+                    <Copy className='h-4 w-4' />
+                    <span className='sr-only'>Copy</span>
                   <Button 
                     variant="outline" 
                     size="sm" 

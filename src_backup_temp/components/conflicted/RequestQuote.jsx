@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from 'react';                <Clock className="w-5 h-5 text-cyan-400" />;
                 <span>24-Hour Response</span>;
               </motion.div>;
@@ -410,4 +408,3 @@ export default function RequestQuote.js({ }: RequestQuote.jsProps) {
     </div>
   );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

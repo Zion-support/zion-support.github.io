@@ -37,10 +37,36 @@ export const CommunityDiscussion: React.FC = () => {
   const [newBody, setNewBody] = useState(""),
 
   const handleAddPost = () => {
+    if (!newTitle.trim() |!newBody.trim()) return
+    setPosts([
+      {
+        id: Date.now()
+        author: 'You'
+        time: 'Now'
+        title: newTitle
+        body: newBody
+      }
+      ...posts
+    ])
+    setNewTitle('')
+    setNewBody('')
+    setShowNew(false)
+  }
     if (!newTitle.trim() || !newBody.trim()) return,
     setPosts([
       {
         id: Date.now(),
+        author: 'You',
+        time: 'Now',
+        title: newTitle,
+        body: newBody,
+      },
+      ...posts,
+    ])
+    setNewTitle('')
+    setNewBody('')
+    setShowNew(false)
+  }
         author: "You",
         time: "Now",
         title: newTitle,
@@ -65,6 +91,10 @@ export const CommunityDiscussion: React.FC = () => {
       <Separator className="mb-6" />
       <div className="mb-4 flex justify-end">
         <Button
+          className='bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale'
+          size='sm'
+          onClick={() => setShowNew(v => !v)}        >
+          {showNew ? 'Cancel' : 'New Post'}
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
           size="sm"
           onClick={() => setShowNew((v) => !v)}
@@ -76,10 +106,12 @@ export const CommunityDiscussion: React.FC = () => {
         <Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
             <Input
-              placeholder="Title (e.g., Share an AI tool, Ask for help...)"
+              placeholder="Title (e && e.g., Share an AI tool, Ask for help...)"
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
               value={newTitle}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
+
+
+
               maxLength={80}
             />
             <Textarea

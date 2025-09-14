@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export function Sonner("props": "any) {;
     return (<div className={`fixed ${position === 'top-left' ? 'top-4 left-4' :;
             position === 'top-right' ? 'top-4 right-4' :;
@@ -32,4 +30,3 @@ export default Sonner;
 export function Sonner($1) { return ( <div className=&quot;min-h-screen bg-white&quot;> {} success: (message) => error: (message) => info: (message) => warning: (message) => loading: (message) => dismiss: (toastId) => </div> )} export const toast = {success: (message) => ,error: (message) => ,info: (message) => ,warning: (message) => ,loading: (message) => ,dismiss: (toastId) => }} export default Sonner;&apos;;&apos;;
 module.exports = function Sonner($1) { return ( <div className="min-h-screen bg-white"> {} success: (message) => error: (message) => info: (message) => warning: (message) => loading: (message) => dismiss: (toastId) => </div> )} export const toast = {success: (message) => ,error: (message) => ,info: (message) => ,warning: (message) => ,loading: (message) => ,dismiss: (toastId) => }} export default Sonner;";";'"'"
 export function Sonner(_) { return ( <div className="min-h-screen bg-white"> {} success: (message) => error: (message) => info: (message) => warning: (message) => loading: (message) => dismiss: (toastId) => </div> )} export const toast = {success: (message) => ,error: (message) => ,info: (message) => ,warning: (message) => ,loading: (message) => ,dismiss: (toastId) => }} export default Sonner;';';
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

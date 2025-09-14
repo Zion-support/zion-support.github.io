@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-<<<<<<< HEAD
-=======
 import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = ("props": "any) => {;
   const [formData", setFormData] = useState({;
     "name": '',;
@@ -343,4 +341,3 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
 ;
 export default QuoteFormSection;
 </textarea>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

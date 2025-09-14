@@ -355,7 +355,6 @@ export function EnhancedServicesShowcase() {
         </div>
       </div>
     </section>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7c3b
 =======
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
@@ -951,124 +950,10 @@ export function EnhancedServicesShowcase({ showTitle = true, maxServices }: Enha
                     {tier.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-zion-slate-light">
                         <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-1716
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-                </CardContent>
-              </Card>
-
-              {/* Benefits */}
-              <Card className="bg-zion-slate-dark/50 border-zion-green/30">
-                <CardHeader>
-                  <CardTitle className="text-white">Benefits</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-zion-slate-light">
-                        <div className="w-2 h-2 bg-zion-green rounded-full" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Right Column */}
-            <div className="space-y-6">
-              {/* ROI & Implementation */}
-              <Card className="bg-zion-slate-dark/50 border-zion-orange/30">
-                <CardHeader>
-                  <CardTitle className="text-white">ROI & Implementation</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="text-zion-orange font-semibold mb-2">Return on Investment</h4>
-                      <p className="text-zion-slate-light">{service.roi}</p>
-                    </div>
-                    <div>
-                      <h4 className="text-zion-orange font-semibold mb-2">Implementation Time</h4>
-                      <p className="text-zion-slate-light">{service.implementationTime}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Technology Stack */}
-              <Card className="bg-zion-slate-dark/50 border-zion-blue/30">
-                <CardHeader>
-                  <CardTitle className="text-white">Technology Stack</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {service.technology.map((tech, idx) => (
-                      <Badge key={idx} variant="secondary" className="bg-zion-blue/20 text-zion-blue border-zion-blue/30">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Integrations */}
-              <Card className="bg-zion-slate-dark/50 border-zion-pink/30">
-                <CardHeader>
-                  <CardTitle className="text-white">Integrations</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {service.integrations.map((integration, idx) => (
-                      <Badge key={idx} variant="secondary" className="bg-zion-pink/20 text-zion-pink border-zion-pink/30">
-                        {integration}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8 pt-6 border-t border-zion-slate-light/20">
-            <FuturisticNeonButton
-              variant="primary"
-              size="lg"
-              className="flex-1"
-              onClick={() => window.open(service.demoUrl, '_blank')}
-            >
-              View Demo
-            </FuturisticNeonButton>
-            <FuturisticNeonButton
-              variant="secondary"
-              size="lg"
-              className="flex-1"
-              onClick={() => window.open(service.documentationUrl, '_blank')}
-            >
-              Documentation
-            </FuturisticNeonButton>
-            <FuturisticNeonButton
-              variant="success"
-              size="lg"
-              className="flex-1"
-              onClick={() => window.open(`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`)}
-            >
-              Contact Sales
-            </FuturisticNeonButton>
-          </div>
-        </div>
-      </motion.div>
-    </motion.div>
->>>>>>> origin/cursor/build-and-fix-errors-e276
-  );
-};
-
-export default EnhancedServicesShowcase;
-=======
                   <Button 
                     className={`w-full mt-6 ${
                       key === 'professional' 
@@ -1155,4 +1040,3 @@ export default EnhancedServicesShowcase;
     </section>
   );
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-1716

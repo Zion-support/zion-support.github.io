@@ -12,8 +12,10 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+
         className="flex w-full items-center justify-between text-white font-medium"
       >
+
         <span>Hourly Rate</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -21,6 +23,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+      {expanded && (
       
       {expanded && (
         <div className="mt-6">
@@ -29,6 +32,8 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             <span>${priceRange[1]}/hr</span>
           </div>
           <Slider
+
+            aria-label='Hourly rate range'            aria-label="Hourly rate range"
             aria-label="Hourly rate range"
             value={[priceRange[0], priceRange[1]]}
             min={50}

@@ -1,17 +1,11 @@
 import React from 'react';
 =======
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { cn } from '../../lib/utils';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface ButtonProps {
-=======
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'default' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   asChild?: boolean;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
@@ -50,60 +44,12 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button: React.FC<ButtonProps> = ({ 
   variant = 'default', 
   size = 'md', 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
   children, 
   className = '', 
   ...props 
 }) => {
   const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
-  
-  const variantClasses = {
-    default: 'bg-primary text-primary-foreground hover:bg-primary/90',
-    destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-    outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
-    secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-    ghost: 'hover:bg-accent hover:text-accent-foreground',
-    link: 'text-primary underline-offset-4 hover:underline'
-  };
-  
-  const sizeClasses = {
-    default: 'h-10 px-4 py-2',
-    sm: 'h-9 rounded-md px-3',
-    lg: 'h-11 rounded-md px-8',
-    icon: 'h-10 w-10'
-  };
-  
-  const finalClassName = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-  
-  if (asChild) {
-    return <span className={finalClassName}>{children}</span>;
-  }
-  
-  if (asChild) {
-    return React.cloneElement(children as React.ReactElement, {
-      className: classes,
-      ...props
-    });
-  }
-  
-  return (
-    <button
-      type={type}
-      className={finalClassName}
-      onClick={onClick}
-      disabled={disabled}
-    >
-      {children}
-    </button>
-  );
-};
-
-export { Button };
 =======
-=======
->>>>>>> origin/cursor/build-and-fix-errors-e276
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -191,33 +137,20 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
       />
-<<<<<<< HEAD
-    )
-  }
-)
-Button.displayName = "Button"
-
-<<<<<<< HEAD
-export { Button, buttonVariants }
->>>>>>> origin/cursor/build-and-fix-errors-fb38
-=======
     );
   }
 );
 Button.displayName = "Button";
 
 export { Button, buttonVariants };
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
 =======
 export { Button, buttonVariants }
->>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'default', size = 'default', asChild = false, ...props }, ref) => {
@@ -257,9 +190,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button';
 
 export { Button };
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 =======
   
   const variantClasses = {
@@ -282,4 +213,3 @@ export { Button };
     </button>
   );
 };
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b

@@ -276,10 +276,6 @@ jest.mock ('@/context / auth / AuthProvider', () => {
   return {
     __esModule: true,
     AuthProvider,
-<<<<<<< HEAD
-    default: AuthProvider,;
-    useAuth};
-=======
     default: AuthProvider,
     use_auth}
 }),

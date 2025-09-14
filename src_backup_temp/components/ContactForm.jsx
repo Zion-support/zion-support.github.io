@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import {Button} from "./ui/Button.jsx";
-<<<<<<< HEAD
-=======
 const ContactForm = ("props": "any) => {;
     const [formData", setFormData] = useState({;
         "firstName": '',;
@@ -276,4 +274,3 @@ export {ContactForm};
 export {ContactForm};
 ;
 export {ContactForm};
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

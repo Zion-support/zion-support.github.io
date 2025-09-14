@@ -27,9 +27,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         title="Send Warning"
         aria-label="Send warning"
         onClick={() => onAction(flagId, 'warning')}
-        disabled={status === 'actioned' || status === 'ignored'}
-      >
-        <Info className="h-4 w-4" />
+        disabled={status === 'actioned' |status === 'ignored'}      >
+        <Info className='h-4 w-4' />
       </Button>
       <Button
         variant="ghost"

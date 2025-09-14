@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from "react";""";,"});,"})","});,"})","});,"})","});,"})";
 const EnhancedServicesShowcase = ("props": "any) => {"}"});,"})";
 ";,"});,"})";
@@ -1582,4 +1580,3 @@ export {EnhancedServicesShowcase};
 </motion>;
 </div>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -2,8 +2,6 @@ import React, {useState, useCallback, useEffect, useRef} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles} from 'lucide-react';
 ;
-<<<<<<< HEAD
-=======
 export const AIChatbot = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});
@@ -980,4 +978,3 @@ export default Component;
 </motion>;
 </div>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

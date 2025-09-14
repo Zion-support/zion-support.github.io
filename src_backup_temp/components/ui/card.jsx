@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 ;
 const Card = ({ className, children, ...props }) => {;
@@ -141,4 +139,3 @@ export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, C
 ;';;';
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter};
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -52,7 +52,19 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
-            <DropdownMenuItem 
+            <DropdownMenuItem
+    <div className='flex items - center gap - 2'>;
+      <span className='text - sm text - muted - foreground'>Resume:</span>;
+      <DropdownMenu>;
+        <DropdownMenuTrigger as_child>;
+          <Button variant='outline' size='sm' className='gap - 2'>;
+            {current_resume?.basic_info?.title || 'My Resume'}
+            <ChevronDown className='h - 4 w - 4' />;
+          </Button>;
+        </DropdownMenuTrigger>;
+        <DropdownMenuContent align='end'>;
+          {existing_resumes.map (resume => (
+            <DropdownMenuItem;
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
               className="cursor-pointer"
@@ -84,6 +96,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             />
           </div>
           <DialogFooter>
+
             <Button 
               variant="outline" 
               onClick={() => setSaveDialogOpen(false)}

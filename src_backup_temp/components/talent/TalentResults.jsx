@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import {ActiveFilters} from "@/components/talent/ActiveFilters";
 import {ResultsHeader} from "@/components/talent/ResultsHeader";
 import {TalentGrid} from "@/components/talent/TalentGrid";
@@ -51,4 +49,3 @@ export function TalentResults({
   );
 }
 export default TalentResults;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

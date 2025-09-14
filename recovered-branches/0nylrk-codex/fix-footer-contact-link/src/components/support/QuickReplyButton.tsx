@@ -7,18 +7,23 @@
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 interface QuickReplyButtonProps {
   text: string;
+  onClick: () => void
+}
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
+
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {cn} from "@/lib/utils";
+interface QuickReplyButtonProps {;
+  text: string,;
   onClick: () => void;
 }
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
@@ -71,10 +76,7 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       )}
@@ -91,7 +93,6 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
       {text}
 
     </Button>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 }
 
@@ -102,8 +103,6 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

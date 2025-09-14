@@ -104,15 +104,6 @@ export function TenantsList() {
     }
   },
 
-  return (
-    <div className="space-y-4">
-      <div className="flex justify-between items-center">
-        <h2 className="text-xl font-semibold">White-Label Tenants</h2>
-        <Button onClick={loadTenants} variant="outline" size="sm">
-          <RefreshCcw className="mr-2 h-4 w-4" />
-          Refresh
-        </Button>
-      </div>
 
       {isLoading ? (
         <div className="flex justify-center p-8">

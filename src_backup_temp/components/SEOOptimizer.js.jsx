@@ -203,8 +203,6 @@ let summary = "Analyzed ${totalPages} pages for SEO.";
 a.download = "seo-optimization-report.csv;
         a.click();
 }
-<<<<<<< HEAD
-=======
         window.URL.revokeObjectURL(url)}";
     const getScoreColor = ("props": "any) => {"}"";
         if (score >= 80)""";
@@ -545,4 +543,3 @@ export {SEOOptimizer};
 </TrendingUp>;
 </Search>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

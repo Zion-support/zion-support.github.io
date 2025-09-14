@@ -39,11 +39,16 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
               <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured. 
+
               New users cannot sign up until this is resolved.
             </AlertDescription>
           </Alert>
-
           {/* Technical Details */}
+          <div className='bg-gray-50 rounded-lg p-4 mb-6'>
+            <h3 className='font-semibold text-gray-900 mb-2'>
+              Missing Configuration:
+            </h3>
+            <ul className='text-sm text-gray-700 space-y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg-gray-50 rounded-lg p-4 mb-6">
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
@@ -114,7 +119,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                   Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
                 </div>
               </li>
-              
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>
                 <div>
@@ -127,7 +131,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
           </div>
         </div>
 
-        {/* Alternative Actions Card */}
+
         <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
           <h3 className="font-semibold text-blue-900 mb-3">Alternative Actions:</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -135,12 +139,14 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
               href="/marketplace" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
+              <span>Browse Marketplace</span>            >
               <span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
             
             <Link 
               href="/talent" 
+
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>View Talent Pool</span>
@@ -167,6 +173,12 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
 
         {/* Setup Script Info */}
         {showSetupButton && (
+
+          <div className='mt-6 text-center'>
+            <div className='bg-green-50 rounded-lg border border-green-200 p-4'>
+              <div className='flex items-center justify-center gap-2 text-green-700 mb-2'>
+                <CheckCircle className='w-5 h-5' />
+                <span className='font-semibold'>Automated Setup Available</span>
           <div className="mt-6 text-center">
             <div className="bg-green-50 rounded-lg border border-green-200 p-4">
               <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
@@ -184,9 +196,16 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
         )}
 
         {/* Footer */}
+
+
+
+
         <div className="mt-6 text-center text-sm text-gray-500">
           <p>
             For detailed instructions, see{' '}
+
+            >
+
             <button 
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
               className="text-blue-600 hover: underline"

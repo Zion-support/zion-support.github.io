@@ -71,15 +71,7 @@ const config: Config = {
           light: '#CBD5E1',
           dark: '#64748B',
         },
-<<<<<<< HEAD
         // New futuristic colors
-=======
-<<<<<<< HEAD
-        // Futuristic accents
-=======
-        // New futuristic colors
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         'neon-pink': '#ff0080',
         'neon-green': '#00ff41',
         'neon-orange': '#ff6b35',

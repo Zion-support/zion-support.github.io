@@ -75,8 +75,6 @@ export default function Page("props": "any) {;
                 return a.title.localeCompare(b.title);
             case 'z-a':;
                 return b.title.localeCompare(a.title);
-<<<<<<< HEAD
-=======
             "default":;
                 return 0"}
     });
@@ -184,4 +182,3 @@ export default function Page("props": "any) {;
       <Footer  />
     </>)}
 '"`;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

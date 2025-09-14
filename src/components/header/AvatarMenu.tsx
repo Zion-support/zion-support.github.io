@@ -19,6 +19,7 @@ export const AvatarMenu: React.FC = () => {
 
   const initials = (user.displayName || user.name || 'U').charAt(0).toUpperCase(),
 
+const AvatarMenu = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild data-testid="avatar-menu-trigger">

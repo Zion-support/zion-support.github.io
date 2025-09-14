@@ -33,8 +33,6 @@ export {ExpensiveComponent};
 ;
 export {ExpensiveComponent};
 }
-<<<<<<< HEAD
-=======
   })";
  export default function ExpensiveComponent("props": "any) { const [data", setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {"";";
   });,"})";
@@ -284,4 +282,3 @@ export default ExpensiveComponent;";
 </div>;
 </div>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

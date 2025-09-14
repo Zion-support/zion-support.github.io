@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useEffect, useRef} from 'react',;',';';
     ;
 import {motion} from 'framer-motion'; export const FuturisticAnimatedBackground = ("props": "any) => {"}; const canvasRef = useRef(null); const particlesRef = useRef([]); const animationRef = useRef(null); useEffect(() => {}; const canvas = canvasRef.current; if(!canvas); return;'; const ctx = canvas.getContext('2d'); if(!ctx); return; ";
@@ -7,4 +5,3 @@ import React,{useEffect,useRef} from &apos;react&apos;,;&apos;,&apos;; &apos;;&a
 const React,{useEffect,useRef} from "react",;","; ";";";";";"; import {motion} from "framer-motion"; export const FuturisticAnimatedBackground = (props) => {}; const canvasRef = useRef(null); const particlesRef = useRef([]); const animationRef = useRef(null); useEffect(() => {}; const canvas = canvasRef.current; if(!canvas); return;"; const ctx = canvas.getContext("2d"); if(!ctx); return; ";";";";";";'"'"
 import { useEffect } from 'react';,
 import _React,{useEffect,useRef} from 'react',;'; ';';';';';'; import {motion} from 'framer-motion'; export const FuturisticAnimatedBackground = (props) => {};; const canvasRef = useRef(null); const particlesRef = useRef([]); const animationRef = useRef(null); useEffect(() => {}; const canvas = canvasRef.current; if(!canvas); return;'; const ctx = canvas.getContext('2d'); if(!ctx); return; ";';';';';';
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

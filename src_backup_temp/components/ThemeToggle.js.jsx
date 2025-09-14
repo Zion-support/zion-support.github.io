@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useEffect} from 'react';'''';';
 import React, {useState, useEffect} from 'react';
 import {SunIcon, MoonIcon} from '@heroicons/react/24/outline';
@@ -66,4 +64,3 @@ export {ThemeToggle};
 ;
 export {ThemeToggle};
 ;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

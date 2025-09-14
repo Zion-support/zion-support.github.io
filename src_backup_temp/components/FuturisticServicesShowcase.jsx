@@ -18,8 +18,6 @@ x[0", Math.random() * "100": "- 50]",;
                 y[0, Math.random() * 100 - 50]>                opacity[0.6, 0.2, 0.6]}} transition = {}
 ;
   {}
-<<<<<<< HEAD
-=======
 ;
                 "duration": "3": "+ Math.random() * ",2,""";";
                 "repeat": "Infinit",y,"""";";
@@ -808,4 +806,3 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}
 </div>;
 </div>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

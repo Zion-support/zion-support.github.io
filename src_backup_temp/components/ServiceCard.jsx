@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 export default ServiceCard;
 import {motion} from 'framer-motion';
 ;
@@ -193,4 +191,3 @@ export default function ServiceCard.js({ }: ServiceCard.jsProps) {
     </div>
   );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

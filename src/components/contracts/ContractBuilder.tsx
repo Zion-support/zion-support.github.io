@@ -17,24 +17,7 @@ interface ContractBuilderProps {
   onContractGenerated?: (contractContent: string) => void
 }
 
-export function ContractBuilder({
-  isOpen,
-  onClose,
-  talent,
-  clientName,
-  onContractGenerated
-}: ContractBuilderProps) {
-  const [activeTab, setActiveTab] = useState<string>("form"),
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null),
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
-    undefined
-  ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
-  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false),
 
-  const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData)
-  },
 
   const handleContractGenerated = (contract: string) => {
     setGeneratedContract(contract),
@@ -73,10 +56,10 @@ export function ContractBuilder({
             </TabsList>
             
             <div className="flex gap-2">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 size="sm"
-                onClick={() => setTemplateManagerOpen(true)}
+                onClick = {(,) => setTemplateManagerOpen(true),}
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
@@ -84,7 +67,7 @@ export function ContractBuilder({
               </Button>
               
               <Button
-                variant="secondary"
+                variant="outline" 
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}
               >

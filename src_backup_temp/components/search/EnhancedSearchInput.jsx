@@ -39,8 +39,6 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
       setIsOpen(true)} else {setFilteredSuggestions([]);
       setIsOpen(false);
       )}
-<<<<<<< HEAD
-=======
     </div>;
   );
     </div>
@@ -351,4 +349,3 @@ export function EnhancedSearchInput("props": "any) {const [isOpen", setIsOpen] =
 </button>;
 </button>;
 </Search>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

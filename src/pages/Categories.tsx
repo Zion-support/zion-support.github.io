@@ -58,6 +58,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
             Find exactly what you're looking for to enhance your business or personal projects.
           </p>
         </div>
+      </div>
 
         <ErrorBoundary>
           {isLoading && (

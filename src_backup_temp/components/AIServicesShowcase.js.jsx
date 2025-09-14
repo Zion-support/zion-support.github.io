@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan} from 'lucide-react';
@@ -266,4 +264,3 @@ import React,{useState} from &apos;react&apos;; import {motion,AnimatePresence} 
 </motion>
 </motion>
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

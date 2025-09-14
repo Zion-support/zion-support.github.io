@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from "react";""";,"});,"})","});,"})","})";
   TrendingUp,,"});,"})";
   TrendingDown,,"});,"})";
@@ -1970,4 +1968,3 @@ export {AdvancedAnalyticsDashboard};
 </div>;
 </motion>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

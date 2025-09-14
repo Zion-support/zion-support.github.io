@@ -1,5 +1,6 @@
 
-import React from "react",
+
+interface SortDropdownProps {
 import { Button } from "@/components/ui/button",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { SortDesc, ChevronDown } from 'lucide-react'
@@ -15,7 +16,14 @@ interface SortDropdownProps {
 }
 
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
+interface SortDropdownProps {;
+  sortOption: string,;
+  setSortOption: (option: string) => void;
+}
+
+export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdownProps) {;
   return (
+
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button 
@@ -25,6 +33,7 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
           <div className="flex items-center gap-2">
             <SortDesc className="h-4 w-4 text-zion-purple" />
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
+
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>

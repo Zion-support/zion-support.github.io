@@ -109,9 +109,6 @@ export function TeamActivity() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -328,21 +325,4 @@ const getCategoryBadge = (category: string) =>: any {
       
 
 
-
-<<<<<<< HEAD
-
-
-
-
-      <div className="flex items-center justify-between">
-        <Button variant="outline" size="sm">
-          Previous
-        </Button>
-        <div className="text-sm text-muted-foreground">
-          Page 1 of 10
-        </div>
-        <Button variant="outline" size="sm">
-          Next
-        </Button>
-      </div>
 

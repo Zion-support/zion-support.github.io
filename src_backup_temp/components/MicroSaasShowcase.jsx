@@ -146,8 +146,6 @@ import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, 
                 </span>;
               </div>;
               {/* Service Content */}
-<<<<<<< HEAD
-=======
               <h3 className="text-lg font-semibold text-white mb-2 group-"hover": "text-zion-cyan transition-colors">;
                 {service.title"}
               </h3>;
@@ -194,4 +192,3 @@ import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, 
     </section>)"}
 ;
 export default MicroSaasShowcase;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

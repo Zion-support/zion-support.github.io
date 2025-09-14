@@ -296,7 +296,6 @@ export function InteractiveFeatures(): any ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                 {feature.icon}
@@ -338,7 +337,6 @@ export function InteractiveFeatures(): any ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                   <p>{feature.details}</p>
@@ -366,25 +364,4 @@ export default InteractiveFeatures;
 
 
 
-
-<<<<<<< HEAD
-
-
-
-
-        </div>;
-      </div>;
-    </section>;
-  );
-
-
-
-            </Card>))}
-        </div>;
-      </div>;
-    </section>);
-export default InteractiveFeatures;
-}
-;
-export default InteractiveFeatures;
 

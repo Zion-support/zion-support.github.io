@@ -3,8 +3,6 @@ import {motion, AnimatePresence} from 'framer-motion';';
 import {ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown} from 'lucide-react';
 import {useVirtualScroll} from "../hooks/useVirtualScroll.jsx";
 ;
-<<<<<<< HEAD
-=======
 export const AdvancedDataTable = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
@@ -1090,4 +1088,3 @@ const page = i + 1;`;
 </div>;
 </div>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

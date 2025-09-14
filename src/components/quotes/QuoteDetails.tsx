@@ -94,14 +94,15 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
               </>
             )}
             
+
             <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
               <span className="font-medium">Budget: </span>
-              {quote.budget_display || 
-               (quote.budget_min && quote.budget_max 
-                ? `$${quote.budget_min} - $${quote.budget_max}` 
-                : quote.budget_min 
-                  ? `$${quote.budget_min}` 
+              {quote.budget_display |
+               (quote.budget_min && quote.budget_max
+                ? `$${quote.budget_min} - $${quote.budget_max}`
+                : quote.budget_min
+                  ? `$${quote.budget_min}`
                   : 'Not specified')}
             </div>
           </CardContent>

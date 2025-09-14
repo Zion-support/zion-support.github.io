@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import {Link} from 'react-router-dom';';';
 import {MainNavigation} from './header/MainNavigation';
 import {Link} from 'react-router-dom';
@@ -36,4 +34,3 @@ export function Header(props) {return (;
         </div>;
       </header>;
     );"}
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

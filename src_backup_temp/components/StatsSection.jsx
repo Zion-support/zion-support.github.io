@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 ;
 export function StatsSection("props": "any) {;
   const stats = [{;
@@ -161,4 +159,3 @@ export default function StatsSection.js({ }: StatsSection.jsProps) {
     </div>
   );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Brain } from 'lucide-react';

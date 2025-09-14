@@ -1,15 +1,10 @@
 
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 
-interface ReferralLinkProps {
-  referralLink: string,
-  onCopy: () => void,
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
-}
+  const handleCopy = () => {;
+    onCopy();
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false),
@@ -21,6 +16,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
   },
 
   return (
+
     <Card className="mt-6">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -52,12 +48,21 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           )}
         </div>
       </CardContent>
-      <CardFooter className="border-t bg-muted/50 p-4">
-        <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">Share on social media:</p>
-          <div className="flex space-x-2">
-            <Button 
-              variant="outline" 
+
+
+
+      <CardFooter className='border-t bg-muted/50 p-4'>
+        <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4'>
+          <p className='text-sm text-muted-foreground'>
+            Share on social media:
+          </p>
+          <div className='flex space-x-2'>
+            <Button
+              variant='outline'
+              size='sm'
+              className='flex items-center gap-2'
+              onClick={() => onShare('twitter')}            <Button
+              variant="outline"
               size="sm"
               className="flex items-center gap-2"
               onClick={() => onShare('twitter')}
@@ -74,6 +79,20 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               <Facebook className="h-4 w-4" />
               Facebook
             </Button>
+
+
+
+
+            <Button
+              variant='outline'
+              size='sm'
+              className='flex items-center gap-2'
+              onClick={() => onShare('linkedin')}            >
+              <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />
+
+
+
+
             <Button 
               variant="outline" 
               size="sm"
@@ -85,6 +104,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
             </Button>
           </div>
         </div>
+
       </CardFooter>
     </Card>
   ),

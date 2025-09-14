@@ -94,8 +94,6 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
     const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
     const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
     const externalCount = linkStatuses.filter(s => s.status === 'external').length;
-<<<<<<< HEAD
-=======
     return (<div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}>;
       {/* Header */}";
       <div className="flex items-center justify-between mb-6">;
@@ -200,4 +198,3 @@ export {LinkHealthChecker};
 ;
 export {LinkHealthChecker};
 ";
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

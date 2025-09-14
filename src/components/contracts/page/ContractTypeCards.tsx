@@ -30,6 +30,18 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
+          <Button variant='outline' onClick={onStandardClick}>            Create Standard Contract
+          </Button>
+        </CardFooter>
+      </Card>
+          <ul className="space-y-2">
+            <li className="text-sm"> Legally binding templates</li>
+            <li className="text-sm"> Milestone-based payment terms</li>
+            <li className="text-sm"> IP rights and confidentiality clauses</li>
+            <li className="text-sm"> DocuSign integration</li>
+          </ul>
+        </CardContent>
+        <CardFooter>
           <Button variant="outline" onClick={onStandardClick}>
             Create Standard Contract
           </Button>
@@ -53,6 +65,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardHeader>
         <CardContent>
           <ul className="space-y-2">
+
             <li className="text-sm">✓ All standard contract features</li>
             <li className="text-sm">✓ Automatic escrow payment release</li>
             <li className="text-sm">✓ Transaction verification</li>

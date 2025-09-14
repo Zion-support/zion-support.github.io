@@ -4,6 +4,7 @@ import { Dispute, DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import {
+
   Table,
   TableBody,
   TableCell,
@@ -20,26 +21,16 @@ type DisputesListProps = {
   isLoading: boolean
 },
 
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),
+      case "closed":;
+        return "outline";
+      default:;
+        return "default";
 
-  const filteredDisputes = statusFilter === "all" 
-    ? disputes 
-    : disputes.filter(dispute => dispute.status === statusFilter),
 
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
-      case "open": return "default",
-      case "under_review":
-        return "secondary",
-      case "resolved":
-        return "outline", // Changed from "success" to "outline"
-      case "closed":
-        return "outline",
-      default:
-        return "default"
-    }
-  },
+
+
+
+
 
   if (isLoading) {
     return (
@@ -91,7 +82,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     ),
   }
 
-  return (
     <div className="space-y-4">
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         <Button
@@ -150,6 +140,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
+
+                    addSuffix: true,
+                  })}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
+
+
                   {dispute.project?.title || "Unknown Project"}
                 </TableCell>
                 <TableCell>

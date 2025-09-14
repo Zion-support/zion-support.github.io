@@ -22,6 +22,8 @@ function ErrorFallback({ error }: { error: Error }) {
 }
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <Helmet>

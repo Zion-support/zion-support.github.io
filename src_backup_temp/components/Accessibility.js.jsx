@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useEffect, createContext, useContext} from 'react';'''';';
 import {motion, AnimatePresence} from 'framer-motion';';';
 import {Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X} from 'lucide-react';
@@ -2040,4 +2038,3 @@ export default AccessibilityPanel"";
 </motion>
 </motion>
 </AccessibilityContext>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

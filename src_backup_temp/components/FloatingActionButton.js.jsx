@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from "react";""";,"});,"})","});,"})","})";
   PlusIcon,,"});,"})";
   XMarkIcon,,"});,"})";
@@ -472,4 +470,3 @@ export {FloatingActionButton};
 </motion>;
 </motion>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -28,8 +28,6 @@ const navigationItems = [;
         "icon": "<Phone className="w-5 h-5" />;
         "description": 'Get in touch with us'"}
 ];
-<<<<<<< HEAD
-=======
 export default function FuturisticNavigation;
 export {FuturisticNavigation}() {;
 export default function FuturisticNavigation()() {
@@ -165,4 +163,3 @@ export default function FuturisticNavigation()() {
 </motion>;
 </motion>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

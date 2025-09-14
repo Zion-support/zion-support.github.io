@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useMemo} from 'react';
 import {motion} from 'framer-motion';
 import {Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone} from 'lucide-react';
@@ -528,4 +526,3 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+''']
           <divclassName="flex flex-col "sm": flex-row gap-4 justify-center"""
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light"""
             <Button variant="outline" className="border-white text-white "hover": bg-white hover:text-zion-purple""]"
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

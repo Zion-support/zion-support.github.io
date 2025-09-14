@@ -8,8 +8,6 @@ const markdown = `;
 Your privacy is important to us. This policy explains how Zion Tech Group collects, uses, and protects your information. Additional details will be added in a future revision.;
 `;
 const draft = true;
-<<<<<<< HEAD
-=======
 export default function PrivacyPolicy;
 export {PrivacyPolicy}() {;
     return (<>;
@@ -26,4 +24,3 @@ export default function PrivacyPolicy()() {
       </main>;
       <Footer  />;
     </>)}
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

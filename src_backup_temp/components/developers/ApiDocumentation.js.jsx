@@ -55,8 +55,6 @@ export function ApiDocumentation("props": "any) {;
   'Content-Type': 'application/json';
   ;
 }
-<<<<<<< HEAD
-=======
 });
 ;
 }
@@ -1074,4 +1072,3 @@ function EndpointSection(props: any) {
 </EndpointSection>;
 </EndpointSection>;
 </EndpointSection>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

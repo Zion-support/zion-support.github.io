@@ -100,6 +100,13 @@ export function WebhookManager() {
             Define webhooks to notify external systems when events occur in Zion.
           </CardDescription>
         </CardHeader>
+        <CardContent className='space-y-4'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <div className='space-y-2'>
+              <Label htmlFor='webhook-name'>Webhook Name</Label>
+              <Input
+                id='webhook-name'
+                placeholder='e.g., Job Postings Webhook'
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
@@ -108,7 +115,9 @@ export function WebhookManager() {
                 id="webhook-name" 
                 placeholder="e.g., Job Postings Webhook"
                 value={newWebhook.name}
-                onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
+                onChange={e =>
+                  setNewWebhook({ ...newWebhook, name: e.target.value })
+                }
               />
             </div>
             
@@ -203,6 +212,13 @@ export function WebhookManager() {
                         <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' : 'bg-gray-400'}`}></div>
                         <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
                       </div>
+                      <div className='flex-shrink-0'>
+                        <Button
+                          variant='outline'
+                          size='sm'
+                          onClick={() =>
+                            toggleWebhook(webhook.id, !webhook.is_active)
+                          }                        >
                       <div className="flex-shrink-0">
                         <Button 
                           variant="outline" 

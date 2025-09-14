@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 export default Sitemap;
 ;
 import {Link} from 'react-router-dom';
@@ -216,4 +214,3 @@ export default function Sitemap.js({ }: Sitemap.jsProps) {
     </div>
   );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

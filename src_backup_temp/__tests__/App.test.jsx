@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import {render, screen} from "@testing-library/react";,"});,"})","});,"})";
 ,"});,"})";
 ";,"});,"})";
@@ -255,4 +253,3 @@ export {MockIndex, MockAbout, MockContact};
 export {MockIndex, MockAbout, MockContact};
 ;
 export {MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact};
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -5,8 +5,6 @@ const LazyWrapper = ("props": "any) => {"}
 export default function Page("props": "any) {"}
     }, [inView, isInView]) ;
     if(!isInView) {}
-<<<<<<< HEAD
-=======
         return (<div ref={ref} className={`min-h-[200px] ${className}`}>;
         <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize} />;
       </div>) }
@@ -54,4 +52,3 @@ export {LazyWrapper};
 export {LazyWrapper, Page};
 ;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -38,8 +38,8 @@ export const AppStoreBanner: React.FC = () => {
           <p className="text-xs text-gray-300">Get the full experience on our app</p>
         </div>
         <div className="flex items-center gap-3">
-          <a 
-            href="/open-app" 
+          <a
+            href="/open-app"
             className="px-4 py-1 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
           >
             View

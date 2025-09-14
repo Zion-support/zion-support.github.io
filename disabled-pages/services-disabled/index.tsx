@@ -1,99 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
-
-const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
-
-export default function ServicesIndex() {
-  const services = [
-    {
-      name: 'AI & Machine Learning',
-      description: 'Advanced AI solutions for business automation and intelligence',
-      icon: Brai n,
-      href: '/services/ai-machine-learning',
-      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-    },
-    {
-      name: 'Micro SaaS Solutions',
-      description: 'Specialized software solutions for specific business needs',
-      icon: Cp u,
-      href: '/services/micro-saas',
-      features: ['Custom Applications', 'API Integration', 'Scalable Infrastructure', 'Multi-tenant Support']
-    },
-    {
-      name: 'AI Content Creation',
-      description: 'Generate high-quality content at scale with AI-powered tools',
-      icon: FileTex t,
-      href: '/services/ai-content-creation',
-      features: ['Blog Posts', 'Social Media', 'Email Campaigns', 'SEO Optimization']
-    },
-    {
-      name: 'Email Automation',
-      description: 'Automate email marketing campaigns with intelligent sequences',
-      icon: Sen d,
-      href: '/services/email-automation',
-      features: ['Lead Nurturing', 'Behavioral Triggers', 'A/B Testing', 'Analytics']
-    },
-    {
-      name: 'Customer Support Platform',
-      description: 'AI-powered customer support with chatbots and ticketing',
-      icon: Headphone s,
-      href: '/services/customer-support',
-      features: ['Live Chat', 'Ticket Management', 'Knowledge Base', 'Analytics']
-    },
-    {
-      name: 'Event Management',
-      description: 'Complete event planning and management solution',
-      icon: Calenda r,
-      href: '/services/event-management',
-      features: ['Registration', 'Ticketing', 'Analytics', 'Mobile App']
-    },
-    {
-      name: 'Cloud & DevOps',
-      description: 'Scalable cloud infrastructure and deployment automation',
-      icon: Databas e,
-      href: '/services/cloud-devops',
-      features: ['Cloud Migration', 'CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring']
-    },
-    {
-      name: 'Cybersecurity',
-      description: 'Comprehensive security solutions for digital protection',
-      icon: Shiel d,
-      href: '/services/cybersecurity',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
-    }
-  ];
-
-  const benefits = [
-    'Reduce operational costs by 50%',
-    'Increase productivity by 70%',
-    'Improve business efficiency by 60%',
-    'Scale operations without proportional cost increase',
-    'Enhance customer experience and satisfaction',
-    'Accelerate time-to-market for new features'
-  ];
-
-  const useCases = [
-    'E-commerce & Retail',
-    'SaaS & Technology',
-    'Financial Services',
-    'Healthcare & Medical',
-    'Real Estate',
-    'Professional Services',
-    'Education & Training',
-    'Non-profit Organizations'
-  ];
-
-  return (
-    <>
-      <Head>
-        <title>Our Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology solutions including AI, micro SaaS, cloud services, and cybersecurity. Transform your business with our innovative services."  />
-      </Head>
-=======
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -125,7 +29,6 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
     </EnhancedLayout>
   );
 };
->>>>>>> origin/merge-pr-11208
 
       <div className="min-h-screen bg-white">
         {/* Header */}
@@ -389,88 +292,10 @@ const Services: NextPage = () => {
                     {service.features.slice(0, 3).map((feature) => (
                       <li key={feature} className="flex items-center text-sm text-gray-600">
                         <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
->>>>>>> origin/merge-pr-10614
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-                  <Link 
-                    href={service.href}
-                    className="w-full bg-indigo-600 text-white px-4 py-2 rounded-lg hover: b g-indigo-700 transition-colors inline-flex items-center justify-center"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4 ml-2"  />
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>
-            <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                  <div className="flex items-center mb-3">
-                    <Zap className="w-6 h-6 text-indigo-600 mr-3"  />
-                    <h3 className="text-lg font-semibold text-gray-900">Performance</h3>
-                  </div>
-                  <p className="text-gray-600">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industries We Serve</h2>
-            <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-6">
-              {useCases.map((industry, index) => (
-                <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover: shado w-md transition-shadow">
-                  <div className="flex items-center mb-3">
-                    <Target className="w-5 h-5 text-indigo-600 mr-3"  />
-                    <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
-                  </div>
-                  <p className="text-gray-600">Comprehensive technology solutions tailored for {industry.toLowerCase()}.</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 bg-indigo-600">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-indigo-100 text-xl mb-8">
-              Get started with our comprehensive technology solutions today.
-            </p>
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover: b g-gray-100 transition-colors inline-flex items-center">
-                Get Started <ArrowRight className="w-4 h-4 ml-2"  />
-              </Link>
-              <Link href="/demo" className="px-8 py-3 border border-white text-white rounded-lg hover: b g-white/10 transition-colors inline-flex items-center">
-                Schedule Demo <Mail className="w-4 h-4 ml-2"  />
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
-            </p>
-          </div>
-        </footer>
-      </div>
-    </>
-  );
-}
-=======
                   <Link
                     href={service.href}
                     className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
@@ -628,4 +453,3 @@ const Services: NextPage = () => {
 };
 
 export default Services;
->>>>>>> origin/merge-pr-10614

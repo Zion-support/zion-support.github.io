@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useEffect} from 'react'; import {motion, AnimatePresence} from 'framer-motion'; import {SpeakerWaveIcon, AdjustmentsHorizontalIcon, ArrowUpIcon, ArrowDownIcon} from '@heroicons/react/24/outline'; const EnhancedAccessibility = ("props": "any) => {; const [isOpen", setIsOpen] = useState(false); const [settings, setSettings] = useState({; "highContrast": "false",; "fontSize": "16",; "reducedMotion": "false",; "screenReader": "false",; "keyboardNavigation": "false",; "focusIndicator": "true",; "colorBlindness": 'none'; }); useEffect(() => {;
 import React, {useState, useEffect} from 'react'; import {motion, AnimatePresence} from 'framer-motion'; import {SpeakerWaveIcon, AdjustmentsHorizontalIcon, ArrowUpIcon, ArrowDownIcon} from '@heroicons/react/24/outline'; const EnhancedAccessibility = (props: any) => {; const [isOpen, setIsOpen] = useState(false); const [settings, setSettings] = useState({; highContrast: false,; fontSize: 16,; reducedMotion: false,; screenReader: false,; keyboardNavigation: false,; focusIndicator: true,; colorBlindness: 'none'; }
     ); useEffect(() => {;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

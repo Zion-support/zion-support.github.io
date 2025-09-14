@@ -1,3 +1,4 @@
+"use client";
 
 
     { name: 'Contact', href: '/contact', icon: Phone }

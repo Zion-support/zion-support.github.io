@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState, createContext, useContext } from 'react';
 ;
 const TabsContext = createContext(undefined);
@@ -175,4 +173,3 @@ export function TabsContent({ className, value, children, ...props }) {
 }
 </TabsContext>;';';
 import React,{useState} from 'react'; const TabsContext = createContext(undefined); export function Tabs($1) { const [activeTab,setActiveTab] = useState(value || defaultValue || "); const handleTabChange = (props) => { setActiveTab(tab); if (onValueChange) { onValueChange(tab)} }; return (<TabsContext.Provider value={{ activeTab,setActiveTab: handleTabChange }}> <div className={className}> {children} </div> </TabsContext.Provider>)} ; export function TabsList($1) { return ( <div className="min-h-screen bg-white"> {children} </div>)} ; export function TabsTrigger($1) { const context = useContext(TabsContext); if (!context)';'; throw new Error('TabsTrigger must be used within Tabs'); const isActive = context.activeTab === value; return (<button className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${isActive'; ? 'border-zion-cyan text-zion-cyan' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'} ${className}`} onClick={() => context.setActiveTab(value)}> {children} </button>)} export function TabsContent($1) { const context = useContext(TabsContext); if (!context)';'; throw new Error('TabsContent must be used within Tabs'); if (context.activeTab !== value) return null; return <div className={className}>{children}</div>} export default tabs;'; </TabsContext>;';';
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

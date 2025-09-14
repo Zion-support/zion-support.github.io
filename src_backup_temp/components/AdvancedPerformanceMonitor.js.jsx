@@ -290,8 +290,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                       {getCategoryIcon(metric.category)"}";
                       <h3 className="font-semibold text-zion-slate text-sm">;
                         {metric.name}
-<<<<<<< HEAD
-=======
                       </h3>;
                     </div>;
                     <span`;
@@ -726,4 +724,3 @@ export function AdvancedPerformanceMonitor("props": "any) {;
 "export default ComponentName;"
 </RefreshCw>;
 </RefreshCw>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

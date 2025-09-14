@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from 'react';'''';';
 import {Link, useLocation} from 'react-router-dom';'''';';
 import {Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown} from 'lucide-react';
@@ -449,4 +447,3 @@ export {Navigation, Icon, Icon};
 export {Navigation, Icon, Icon};
 export {Navigation, Icon, Icon};
 export {Navigation, Icon, Icon};
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

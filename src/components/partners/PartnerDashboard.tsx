@@ -24,6 +24,26 @@ export function PartnerDashboard() {
             <Users className="h-4 w-4 text-zion-cyan" />
           </CardHeader>
           <CardContent>
+            <div className='text-2xl font-bold'>{stats.totalReferrals}</div>
+            <p className='text-xs text-zion-slate-light'>
+              {stats.completedReferrals} completed, {stats.pendingReferrals}{' '}
+              pending
+            </p>
+          </CardContent>
+        </Card>
+        <Card className='bg-zion-blue-dark border-zion-blue-light'>
+          <CardHeader className='flex flex-row items-center justify-between pb-2'>
+            <CardTitle className='text-sm font-medium'>
+              Conversion Rate
+            </CardTitle>
+            <TrendingUp className='h-4 w-4 text-zion-purple' />
+          </CardHeader>
+          <CardContent>
+            <div className='text-2xl font-bold'>{stats.conversionRate}%</div>
+            <p className='text-xs text-zion-slate-light'>              Of clicks that convert to sign-ups
+            </p>
+          </CardContent>
+        </Card>            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
             <p className="text-xs text-zion-slate-light">
               {stats.completedReferrals} completed, {stats.pendingReferrals} pending
@@ -71,6 +91,14 @@ export function PartnerDashboard() {
           </div>
         </CardContent>
       </Card>
+
+      {/* Recent Referrals */}
+      <Card className='bg-zion-blue-dark border-zion-blue-light'>
+        <CardHeader>
+          <CardTitle>Performance Overview</CardTitle>
+          <CardDescription>
+            Track your referral performance over time
+          </CardDescription>
       
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -87,9 +115,11 @@ export function PartnerDashboard() {
             <p className="text-zion-slate-light mb-4">No referrals yet</p>
             <p className="text-xs text-zion-slate-light">
               Start sharing your referral links to earn rewards
+
             </p>
           </div>
         </CardContent>
+
       </Card>
     </div>
   ),

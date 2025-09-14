@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Share2, BookOpen, TrendingUp, Zap, Crosshair, Award } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Clock, Share2, BookOpen, TrendingUp, Zap, Award } from 'lucide-react';
 import SEO from '../../components/SEO';
 
 export const metadata = {

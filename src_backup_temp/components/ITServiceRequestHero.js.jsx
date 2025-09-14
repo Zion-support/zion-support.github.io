@@ -30,8 +30,6 @@ export function ITServiceRequestHero("props": "any) {;
         <NeonGlow color="zion-purple" intensity="medium">"""";
           <p className="text-xl "md": "text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto leading-relaxed">;
             Pioneering the future of technology with revolutionary AI;
-<<<<<<< HEAD
-=======
             consciousness", quantum computing, and autonomous solutions that;
             transform businesses worldwide.;
           </p>;
@@ -113,4 +111,3 @@ export function ITServiceRequestHero("props": "any) {;
   );
 }'""";
 '"'""";
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

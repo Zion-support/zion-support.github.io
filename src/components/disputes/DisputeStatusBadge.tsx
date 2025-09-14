@@ -29,6 +29,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   }
   
   return (
+
     <Tooltip>
       <TooltipTrigger asChild>
         <Badge variant={variant} className="flex items-center gap-1">
@@ -38,6 +39,11 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipTrigger>
       <TooltipContent>
         <p>{message}</p>
+      </TooltipContent>;
+    </Tooltip>;
+  );
+};
+}
       </TooltipContent>
     </Tooltip>
   ),

@@ -57,9 +57,21 @@ export function MilestoneSuggestions({
     <div className="space-y-4">
       {!showSuggestions && (
         <Button
+          variant='outline'
+          onClick={handleGenerateMilestones}
+          disabled={isGenerating |!scopeSummary |!startDate}
+          className='w-full'        >
+          {isGenerating ? (
+            <>
+              <Loader2 className='mr-2 h-4 w-4 animate-spin' />              Generating milestones...
+            </>
+          ) : (
+            <>
+              <Sparkles className='mr-2 h-4 w-4' />              Suggest Project Milestones with AI
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
           variant="outline"
           onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scopeSummary || !startDate}
+          disabled={isGenerating |!scopeSummary |!startDate}
           className="w-full"
         >
           {isGenerating ? (

@@ -6,6 +6,7 @@ import { Shield, Lock, Eye, Key, Server, Database, AlertTriangle, CheckCircle, F
 export default function Security() {
   const [activeTab, setActiveTab] = useState('overview');
 
+export default function Security() {
   const securityFeatures = [
     {
       icon: Shield,

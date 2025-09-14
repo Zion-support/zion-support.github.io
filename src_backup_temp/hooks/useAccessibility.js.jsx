@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import {useState, useEffect, useCallback} from 'react'; export const useAccessibility = ("props": "any) => {; const [preferences", setPreferences] = useState({; "highContrast": "false "largeText": false "reducedMotion": false "focusIndicator": true "screenReader": false "keyboardNavigation": true"}); const [settings, setSettings] = useState({; "fontSize": 'medium' "colorScheme": 'default' "motionPreference": 'no-preference' "focusStyle": 'default'});'');';';';
 export default ComponentName;";
 import {useState, useEffect, useCallback} from 'react'; export const useAccessibility = (props: any) => {; const [preferences, setPreferences] = useState({; highContrast: false largeText: false reducedMotion: false focusIndicator: true screenReader: false keyboardNavigation: true}
@@ -11,4 +9,3 @@ const {useState,useEffect,useCallback} from "react"; export const useAccessibili
 import { useEffect } from 'react';,
 import { useState } from 'react';,
 import {useState,useEffect,useCallback} from 'react'; export const useAccessibility = (props) => {; const [preferences,setPreferences] = useState({; highContrast: false largeText: false reducedMotion: false focusIndicator: true screenReader: false keyboardNavigation: true}); const [settings,setSettings] = useState({; fontSize: 'medium' colorScheme: 'default' motionPreference: 'no-preference' focusStyle: 'default'});");';';';';'; export default ComponentName;";';';';';';
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -43,10 +43,16 @@ export function ActiveFilters({
   
   if (!hasActiveFilters) return null,
 
+  const hasActiveFilters = null;
+    selectedSkills.length > 0 ||
+    selectedAvailability.length > 0 ||
+    selectedRegions.length > 0 ||
+    experienceRange[0] !== 0 ||
+    experienceRange[1] !== 15 ||
+    priceRange[0] !== 50 ||
   return (
-    <div className="mb-6 flex flex-wrap gap-2 items-center">
-      <span className="text-zion-slate-light text-sm">Active filters:</span>
-      
+    <div className='mb-6 flex flex-wrap gap-2 items-center'>
+      <span className='text-zion-slate-light text-sm'>Active filters:</span>
       {selectedSkills.map(skill => (
         <ClickableBadge 
           key={skill}
@@ -78,6 +84,12 @@ export function ActiveFilters({
           onClick={() => toggleRegion(region)}
         >
           {region}
+
+          onClick={() => setExperienceRange([0, 15])}        >;
+          {experienceRange[0]}-{experienceRange[1]} years;
+          <X className='h-3 w-3' />;
+        </ClickableBadge>;
+      )}
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}

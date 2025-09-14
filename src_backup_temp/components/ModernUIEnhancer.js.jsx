@@ -18,8 +18,6 @@ export default function Page("props": "any) {;
             parallaxElements.forEach((element) => {;
                 const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
                 const yPos = -(scrolled * speed);
-<<<<<<< HEAD
-=======
                 element.style.transform = `translateY(${yPos"}px)`});
             // Fade in elements on scroll';
                 element.style.transform = `translateY(${yPos}px)`}
@@ -388,4 +386,3 @@ export default ModernUIEnhancer;
 </motion>;
 </motion>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

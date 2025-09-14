@@ -47,11 +47,12 @@ export function RaiseDisputeButton({
       </Button>
       
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-[550px]">
+        <DialogContent className='sm:max-w-[550px]'>
           <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
-              Please provide details about the issue you're experiencing with this project.
+              Please provide details about the issue you're experiencing with
+              this project.
             </DialogDescription>
           </DialogHeader>
           

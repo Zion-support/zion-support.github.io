@@ -35,14 +35,19 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(
               <ChevronDown
                 className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
               />
+
+
+
             )}
           </button>
         )}
-        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>
+        <div className={cn('mt-1', !expanded && 'hidden')}>{children}</div>
       </div>
     ),
   }
-),
+)
+SidebarGroup.displayName = 'SidebarGroup'
+export { SidebarGroup }
 
 SidebarGroup.displayName = "SidebarGroup",
 export { SidebarGroup },

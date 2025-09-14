@@ -108,8 +108,6 @@ export function AdvancedSecurityDashboard("props": "any) {;
             "default":;
                 return <Server className="w-5 h-5 text-gray-500" />"}
     };
-<<<<<<< HEAD
-=======
     if (!isOpen) {;
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl "hover": "shadow-3xl transition-all duration-300 "hover":scale-110 z-40" title="Open Security Dashboard">;
         <Shield className="w-6 h-6" />;
@@ -466,4 +464,3 @@ export function AdvancedSecurityDashboard("props": "any) {;
           </div>)}
       </div>;
     </div>)}
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

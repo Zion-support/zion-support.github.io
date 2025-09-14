@@ -46,6 +46,7 @@ interface PartnerProfile {
 import { Check, Flag, Search, Settings, X } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
 
+
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -88,7 +89,6 @@ export default function PartnerManager() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
@@ -636,13 +636,10 @@ if ( {) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       }
@@ -723,7 +720,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -925,9 +921,7 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -1037,12 +1031,8 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   {partners.filter(p => p.status === 'pending').length}
@@ -1360,14 +1350,12 @@ if ( {) {
           )}
         </DialogContent>
       </Dialog>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
                 </div>)}
             </div>)}
         </DialogContent>;
       </Dialog>;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       {/* Partner Settings Dialog */}
       <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>;
@@ -1461,7 +1449,6 @@ function PartnerTable({;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

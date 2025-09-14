@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';'''';';
 import ReactMarkdown from 'react-markdown';'''';';
 import {Header} from '@/components/Header';'''';';
@@ -51,4 +49,3 @@ export {PrivacyPolicy};
 </SEO>;
 ;
 </SEO>;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

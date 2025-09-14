@@ -391,32 +391,3 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
 
 
 
-<<<<<<< HEAD
-
-
-
-
-          Get Quote
-        </Button>
-        <Button
-          asChild
-          variant="ghost"
-          className="w-full text-zion-cyan hover: text-zion-purple"
-        >
-          <Link href="/contact">Contact Sales</Link>
-        </Button>
-
-
-
-      </CardFooter>;
-    </Card>;
-  );
-};
-}
-
-
-
-      </CardFooter>
-    </Card>
-  )
-

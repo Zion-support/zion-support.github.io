@@ -1,10 +1,8 @@
 
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles } from 'lucide-react'
+import { Star } from 'lucide-react';
 
 interface AIListingFormProps {
   onSubmit: (formData: {
@@ -95,7 +93,9 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       </div>
       <Button 
         onClick={handleSubmit}
+        disabled={isLoading |!title |!category}
         disabled={isLoading || !title || !category}
+
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (

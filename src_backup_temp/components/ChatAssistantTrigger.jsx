@@ -16,8 +16,6 @@ export function ChatAssistantTrigger("props": "any) {;
                 "body": "JSON.stringify({;
                     messages[{ "role": "user"", "content": "message "}];
                 }),;
-<<<<<<< HEAD
-=======
             });
             if (!response.ok) {// // // // // // // console.error("Error in AI "chat":", error);
             }
@@ -43,4 +41,3 @@ export function ChatAssistantTrigger("props": "any) {;
 ;
 export default ChatAssistantTrigger;
 </ChatAssistant>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

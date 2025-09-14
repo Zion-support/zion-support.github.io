@@ -3,6 +3,17 @@ import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
+
+
+
+  roomId: string
+  participants?: Participant[]
+  onLeave?: () => void
+  onToggleMute?: (isMuted: boolean) => void
+  onToggleVideo?: (isEnabled: boolean) => void
+  onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
 import './video-call.css',
@@ -122,6 +133,12 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           </Badge>
         </div>
       </CardHeader>
+      <CardContent className="p-0">
+        <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {participants.length > 0 ? (
+            participants.map ((participant, ) => (
+              <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow - hidden relative">;
+
       
       <CardContent className="p-0">
         <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -182,6 +199,10 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
+
+          </Button>;
+
+
             onClick={handleToggleVideo}
             aria-label={isVideoEnabled ? 'Disable camera' : 'Enable camera'}
           >
@@ -192,6 +213,10 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
+
+          </Button>;
+
+
             onClick={handleToggleScreenShare}
             aria-label={isScreenSharing ? 'Stop sharing screen' : 'Share screen'}
           >
@@ -202,6 +227,10 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
+
+          </Button>;
+
+
             onClick={handleToggleAudioOnly}
             aria-label={isAudioOnly ? 'Disable audio only' : 'Enable audio only'}
           >
@@ -212,6 +241,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
             variant="destructive"
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
+
             onClick={handleLeaveCall}
             aria-label="Leave call"
           >

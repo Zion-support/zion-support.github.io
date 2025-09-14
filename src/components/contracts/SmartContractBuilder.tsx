@@ -21,27 +21,6 @@ interface SmartContractBuilderProps {
   onContractGenerated?: (contractContent: string) => void
 }
 
-export function SmartContractBuilder({
-  isOpen,
-  onClose,
-  talent,
-  clientName,
-  onContractGenerated}: SmartContractBuilderProps) {
-  const [activeTab, setActiveTab] = useState<string>("form"),
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null),
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
-    undefined
-  ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
-  const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({
-    network: 'ethereum',
-    useEscrow: true,
-    deployToChain: false
-  }),
-  const [deployStatus, setDeployStatus] = useState<string>(''),
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
-  
-  const { deploySmartContract } = useSmartContracts(),
 
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
@@ -94,12 +73,11 @@ export function SmartContractBuilder({
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
-            
             <div className="flex gap-2">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 size="sm"
-                onClick={() => setTemplateManagerOpen(true)}
+                onClick = {(,) => setTemplateManagerOpen(true),}
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
@@ -107,7 +85,6 @@ export function SmartContractBuilder({
               </Button>
             </div>
           </div>
-          
           <TabsContent value="form" className="pt-4">
             <ContractForm 
               talent={talent}

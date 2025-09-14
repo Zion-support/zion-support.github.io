@@ -3,8 +3,6 @@ import * as Sentry from '@sentry/nextjs';
 import {mutate} from 'swr';
 import {Button} from '@/components/ui/button';
 import {Alert, AlertDescription, AlertTitle} from '@/components/ui/alert';
-<<<<<<< HEAD
-=======
 import { RefreshCcw, AlertCircle function MarketplaceErrorFallback("props": "any) {;
     const handleRetry = async () => {;
         try {;
@@ -77,4 +75,3 @@ export function MarketplaceErrorBoundary("props": "any) {;
     </ErrorBoundary>)}
 ;
 export default MarketplaceErrorBoundary;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

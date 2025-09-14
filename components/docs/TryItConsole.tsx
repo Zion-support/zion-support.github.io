@@ -1,3 +1,4 @@
+"use client";
 
 
   path: string; // full URL or relative
@@ -20,10 +21,8 @@ export default function TryItConsole({
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -38,7 +37,6 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 interface TryItProps {;
@@ -61,7 +59,6 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const [body, setBody] = useState('');
@@ -127,8 +124,6 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       setLoading(false);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -230,13 +225,10 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

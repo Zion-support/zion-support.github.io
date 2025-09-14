@@ -255,7 +255,13 @@
     "improve:security": "node scripts/security-improver.cjs",
     "improve:seo": "node scripts/seo-improver.cjs",
     "improve:accessibility": "node scripts/accessibility-improver.cjs",
-    "improve:monitoring": "node scripts/monitoring-improver.cjs"
+    "improve:monitoring": "node scripts/monitoring-improver.cjs",
+    "enhance:all": "node scripts/comprehensive-enhancement-automation.js",
+    "enhance:performance": "node scripts/performance-optimization.js",
+    "enhance:seo": "node scripts/seo-optimization.js",
+    "enhance:ui": "node scripts/ui-enhancement.js",
+    "analyze:performance": "node scripts/analyze-performance.js",
+    "generate:content": "node scripts/content-generation.js"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -343,6 +349,7 @@
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-collapsible": "^1.0.3",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-hover-card": "^1.0.7",

@@ -23,8 +23,6 @@ export function DynamicListingPage("props": "any) {;
     const listingsWithPrice = allListings.filter(l => l.price !== null);
     if (listingsWithPrice.length > 0) {;
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
-<<<<<<< HEAD
-=======
       setPriceRange({ "min": "0", max });
       setPriceRange({ min: 0, max }
     );
@@ -252,4 +250,3 @@ export function DynamicListingPage("props": "any) {;
     </div>
     );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

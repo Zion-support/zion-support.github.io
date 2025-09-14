@@ -1,3 +1,4 @@
+"use client";
 
 resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);

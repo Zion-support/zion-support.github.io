@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {MessageSquare, Send, Bot, User, X, Minimize2, Maximize2, Mic, MicOff, Settings, Brain, Paperclip, Smile} from 'lucide-react';
@@ -317,4 +315,3 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
 </motion>
 </motion>
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

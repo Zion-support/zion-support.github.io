@@ -3,8 +3,6 @@ import {motion, AnimatePresence} from 'framer-motion';';
 import {Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2} from 'lucide-react';
 ;
 ;
-<<<<<<< HEAD
-=======
 export const BlockchainWeb3Dashboard = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
@@ -987,4 +985,3 @@ export default Component;
 </div>;
 </div>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

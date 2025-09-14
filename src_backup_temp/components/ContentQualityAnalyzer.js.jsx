@@ -16,9 +16,6 @@ export default function Page("props": "any) {;
     const mediumIssues = issues.filter(i => i.severity === 'medium').length;
     const lowIssues = issues.filter(i => i.severity === 'low').length;
     setReport({;
-<<<<<<< HEAD
-
-=======
       totalPages,;
       pagesWithIssues,;
       criticalIssues,;
@@ -413,4 +410,3 @@ export {ContentQualityAnalyzer};";
 </motion>;
 </motion>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

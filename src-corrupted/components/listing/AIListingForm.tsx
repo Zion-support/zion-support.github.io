@@ -259,7 +259,6 @@ export function AIListingForm(): any ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       </div>
@@ -540,75 +539,4 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
 
 
-
-<<<<<<< HEAD
-
-
-
-
-            <Sparkles className="h-4 w-4 mr-2" />
-            Generate Optimized Content
-          </>
-        )}
-      </Button>;
-    </div>;
-  );
-
-
-}
-          on_change={(e) => set_category (e.target.value)}
-          placeholder="e.g. AI Tool, Digital Product, Service";
-          className="bg - zion - blue border border - zion - blue - light text - white";
-          disabled={is_loading}
-        />;
-      </div>;
-      <div className="space - y-2">;
-        <label html_for="key_features" className="text - sm font - medium text - zion - slate - light" html_for="input - Key Features (Optional)">Key Features (Optional)</label>;
-        <Textarea;
-          id="key_features";
-          value={key_features}
-          on_change={(e) => setKeyFeatures (e.target.value)}
-          placeholder="Briefly describe the main features or benefits";
-          className="bg - zion - blue border border - zion - blue - light text - white min - h-20";
-          disabled={is_loading}
-        />;
-      </div>;
-      <div className="space - y-2">;
-        <label html_for="target_audience" className="text - sm font - medium text - zion - slate - light" html_for="input - Target Audience (Optional)">Target Audience (Optional)</label>;
-        <Input;
-          id="target_audience";
-          value={target_audience}
-          on_change={(e) => setTargetAudience (e.target.value)}
-          placeholder="e.g. Developers, Marketers, Startups";
-          className="bg - zion - blue border border - zion - blue - light text - white";
-          disabled={is_loading}
-        />;
-      </div>;
-      <Button;
-        on_click={handle_submit}
-        disabled={is_loading || !title || !category}
-        className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt - 2";
-      >;
-        {is_loading ? (
-          <>Generating Optimized Content...</>) : (
-          <>;
-            <Sparkles className='h - 4 w - 4 mr - 2' />            Generate Optimized Content            <Sparkles className="h - 4 w - 4 mr - 2" />;
-            Generate Optimized Content;
-          </>)}
-      </Button>;
-    </div>);
-}: AIListingFormProps) {
-  // Check condition
-if ( {) {
-  $2
-}
-  toast ({
-  return;
-}/> </div> <div className="space - y-2" > <label html_for="category" className="text - sm font - medium text - zion - slate - light" >Category</label> <Input /> </div> <div className="space - y-2" > <label html_for="key_features" className="text - sm font - medium text - zion - slate - light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space - y-2" > <label html_for="target_audience" className="text - sm font - medium text - zion - slate - light" >Target Audience (Optional) </label> <Input > {";
-  is_loading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h - 4 w - 4 mr - 2" /> Generate Optimized Content </>);
-}</Button> </div>);
-}'";
-}
-}
-;
 

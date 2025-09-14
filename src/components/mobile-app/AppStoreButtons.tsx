@@ -1,6 +1,8 @@
 
 import React from "react",
 import { Apple, GithubIcon } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { logInfo } from '@/utils/productionLogger';
 import { cn } from "@/lib/utils",
 import { logInfo } from '@/utils/productionLogger',
 
@@ -32,13 +34,42 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     if (!googlePlayUrl || googlePlayUrl === "#") {
       e.preventDefault(),
       logInfo("Google Play download clicked"),
+
       onGooglePlayClick?.()
     }
-  },
+  }
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
+  className;
+  appStoreUrl = "#";
+  googlePlayUrl = "#";
+};  className,;
+  appStoreUrl = "#",;
+  googlePlayUrl = "#",;
+  onAppStoreClick,;
+  onGooglePlayClick;
+},) => {;
+  const handleAppStoreClick = (e: React && React.MouseEvent<HTMLAnchorElement>,) => {;
+    if (!appStoreUrl || appStoreUrl === "#") {;
+      e && e.preventDefault(),;
+      logInfo("App Store download clicked"),;
+      onAppStoreClick?.();
+    }
+  },;
+
+  const handleGooglePlayClick = (e: React && React.MouseEvent<HTMLAnchorElement>,) => {;
+    if (!googlePlayUrl || googlePlayUrl === "#") {;
+      e && e.preventDefault(),;
+      logInfo("Google Play download clicked"),;
+      onGooglePlayClick?.();
+    }
+  },;
 
   return (
-    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
+    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>;
       <a
+        href = {appStoreUrl,}
+        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
+        onClick = {handleAppStoreClick,}
         href={appStoreUrl}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleAppStoreClick}
@@ -54,6 +85,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       </a>
 
       <a
+        href = {googlePlayUrl,}
+        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
+        onClick = {handleGooglePlayClick,}
         href={googlePlayUrl}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}

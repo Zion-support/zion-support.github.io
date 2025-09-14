@@ -117,28 +117,17 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {
       return,
     }
+  };
+
+  const handleExport = async () => {
+    if (!selectedResume) return;
     
     try {
-      setIsLoading(true),
-      const pdfBlob = await exportResumeToPDF(selectedResume.resume),
-      
-      // Create download link
-      const url = URL.createObjectURL(pdfBlob),
-      const link = document.createElement('a'),
-      link.href = url,
-      link.download = `${selectedResume.title || 'Resume'}.pdf`,
-      document.body.appendChild(link),
-      link.click(),
-      
-      // Clean up
-      document.body.removeChild(link),
-      URL.revokeObjectURL(url),
-      
+      await exportResumeToPDF(selectedResume);
       toast({
         title: "Success!",
         description: "Your resume has been downloaded."}),
     } catch (error) {
-      logErrorToProduction('Error downloading PDF:', { data: error }),
       toast({
         title: "Download failed",
         description: "There was an error downloading your resume.",
@@ -155,27 +144,57 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   },
   
   return (
-    <div className="space-y-4">
-      <h3 className="text-lg font-medium text-white">Attach Resume</h3>
-      
-      <RadioGroup 
-        value={selectedOption} 
-        onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
-        className="space-y-3"
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <h2 className="text-xl font-semibold">Select Resume</h2>
+        <div className="space-x-2">
+          <Button
+            variant="outline"
+            onClick={() => document.getElementById('file-upload')?.click()}
+            disabled={uploading}
+          >
+            <Plus className="h-4 w-4 mr-2" />
+            {uploading ? 'Uploading...' : 'Upload New'}
+          </Button>
+          {selectedResume && (
+            <Button onClick={handleExport}>
+              Export PDF
+            </Button>
+          )}
+        </div>
+      </div>
+
+      <input
+        id="file-upload"
+        type="file"
+        accept=".pdf,.doc,.docx"
+        onChange={handleFileUpload}
+        className="hidden"
+      />
+
+      <RadioGroup
+        value={selectedResume?.id || ''}
+        onValueChange={(value) => {
+          const resume = resumes.find(r => r.id === value);
+          onResumeSelect(resume || null);
+        }}
       >
-        <div className="flex items-center space-x-2">
-          <RadioGroupItem value="recent" id="recent" />
-          <Label htmlFor="recent" className="text-white">Use most recent AI Resume</Label>
-        </div>
-        
-        <div className="flex items-center space-x-2">
-          <RadioGroupItem value="select" id="select" />
-          <Label htmlFor="select" className="text-white">Select from saved versions</Label>
-        </div>
-        
-        <div className="flex items-center space-x-2">
-          <RadioGroupItem value="upload" id="upload" />
-          <Label htmlFor="upload" className="text-white">Upload a custom resume (PDF)</Label>
+        <div className="space-y-3">
+          {resumes.map((resume) => (
+            <div key={resume.id} className="flex items-center space-x-3">
+              <RadioGroupItem value={resume.id} id={resume.id} />
+              <Label htmlFor={resume.id} className="flex-1 cursor-pointer">
+                <div className="p-3 border rounded-lg hover:bg-gray-50">
+                  <h3 className="font-medium">{resume.title}</h3>
+                  <p className="text-sm text-gray-500">{resume.description}</p>
+                  <div className="flex items-center space-x-4 mt-1 text-xs text-gray-400">
+                    <span>Modified: {resume.lastModified}</span>
+                    <span>{resume.fileSize}</span>
+                  </div>
+                </div>
+              </Label>
+            </div>
+          ))}
         </div>
       </RadioGroup>
       

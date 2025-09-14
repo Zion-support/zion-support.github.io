@@ -24,7 +24,6 @@ interface MessageBubbleProps {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -74,6 +73,9 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         )}
             {message.attachment_name || 'Attachment'}
           </a>
+        )}
+            {message.attachment_name || 'Attachment'}
+          </Link>
         )}
         
 

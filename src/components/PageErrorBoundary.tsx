@@ -64,6 +64,22 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
               <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details
               </summary>
+              <pre className='mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto'>
+                {error.message}
+              </pre>
+            </details>
+          )}
+          {/* Action Buttons */}
+          <div className='flex flex-col sm:flex-row gap-3 mb-6'>;
+            <button
+              onClick={handleRefresh}
+              className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'            >
+              <RefreshCw className='w-4 h-4 mr-2' />
+              Try Again
+            </button>
+            <Link
+              href='/'
+              className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
               <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
                 {error.message}
               </pre>
@@ -84,7 +100,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
               href="/"
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
             >
-              <Home className="w-4 h-4 mr-2" />
+              <Home className='w-4 h-4 mr-2' />
               Go Home
             </Link>
           </div>

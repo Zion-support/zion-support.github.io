@@ -28,10 +28,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
       case "Strongly Recommended": return "bg-green-100 text-green-800",
+
       case "Recommended for Review":
-        return "bg-blue-100 text-blue-800",
+        return "bg-blue-100 text-blue-800"
       case "Low Match":
-        return "bg-orange-100 text-orange-800",
+        return "bg-orange-100 text-orange-800"
       default:
         return "bg-gray-100 text-gray-800"
     }
@@ -46,6 +47,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       const { error } = await supabase.rpc(
         'trigger_resume_scoring',
         { application_id: application.id }
+      )
+      if (error) throw error
+      toast.success("Resume scoring has been initiated")
+
       ),
       
       if (error) throw error,
@@ -53,18 +58,15 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       toast.success("Resume scoring has been initiated"),
       
       // Poll for results every 3 seconds for up to 30 seconds
-      let attempts = 0,
-      const maxAttempts = 10,
-      
+      let attempts = 0
+      const maxAttempts = 10
       const checkScore = async () => {
-        attempts++,
-        
+        attempts++
         const { data, error } = await supabase
           .from("job_applications")
           .select("*")
           .eq("id", application.id)
-          .single(),
-          
+          .single()
         if (error) {
           setIsScoring(false),
           toast.error("Failed to check scoring status"),
@@ -77,6 +79,19 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
           return,
         }
+        if (attempts < maxAttempts) {
+          setTimeout(checkScore, 3000)
+        } else {
+          setIsScoring(false)
+          toast.info("Scoring is taking longer than expected. Check back later.")
+        }
+      }
+      setTimeout(checkScore, 3000)
+    } catch (error: any) {
+      setIsScoring(false)
+      toast.error(`Failed to score resume: ${error.message}`)
+    }
+  }
         
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000),
@@ -94,43 +109,54 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     }
   },
 
-  // Render the score result or button to score
+
+      setTimeout(checkScore, 3000);
+
+    } catch (error: any) {;
+      setIsScoring(false),;
+      toast && toast.error(`Failed to score resume: ${error && error.message}`);
+    }
+  },;
+
+  // Render the score result or button to score;
   return (
-    <Card className="overflow-hidden">
-      <CardHeader className="pb-3">
-        <CardTitle className="text-lg font-medium flex items-center justify-between">
-          Resume Match Score
-          <Badge variant={hasScore ? "default" : "outline"} className="ml-2">
+    <Card className="overflow-hidden">;
+      <CardHeader className="pb-3">;
+        <CardTitle className="text-lg font-medium flex items-center justify-between">;
+          Resume Match Score;
+          <Badge variant={hasScore ? "default" : "outline"} className="ml-2">;
             {hasScore ? "SCORED" : "NOT SCORED"}
-          </Badge>
-        </CardTitle>
-      </CardHeader>
-      
-      <CardContent>
-        {hasScore ? (
-          <div>
+
+          </Badge>;
+        </CardTitle>;
+      </CardHeader>;
+
+      <CardContent>;
+        {hasScore ? (;
+          <div>;
             {/* Score */}
-            <div className="flex items-center mb-4">
-              <div className="p-2 bg-primary/10 rounded-full mr-3">
-                <Star className="h-5 w-5 text-primary" />
-              </div>
-              <div>
-                <div className="text-sm text-muted-foreground">Match Score</div>
-                <div className="font-semibold text-xl">{application.match_score}/100</div>
-              </div>
-            </div>
-            
+            <div className="flex items-center mb-4">;
+              <div className="p-2 bg-primary/10 rounded-full mr-3">;
+                <Star className="h-5 w-5 text-primary" />;
+              </div>;
+              <div>;
+                <div className="text-sm text-muted-foreground">Match Score</div>;
+                <div className="font-semibold text-xl">{application && application.match_score}/100</div>;
+              </div>;
+            </div>;
+
             {/* Summary */}
-            <div className="flex items-start mb-4">
-              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">
-                <BarChart2 className="h-5 w-5 text-primary" />
-              </div>
-              <div>
-                <div className="text-sm text-muted-foreground">Summary</div>
-                <div className="font-medium">{application.match_summary}</div>
-              </div>
-            </div>
-            
+            <div className="flex items-start mb-4">;
+              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
+                <BarChart2 className="h-5 w-5 text-primary" />;
+              </div>;
+              <div>;
+                <div className="text-sm text-muted-foreground">Summary</div>;
+                <div className="font-medium">{application && application.match_summary}</div>;
+              </div>;
+            </div>;
+
+
             {/* Suggestion */}
             <div className="flex items-start">
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">

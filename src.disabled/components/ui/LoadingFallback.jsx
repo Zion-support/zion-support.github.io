@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ' import { Loader2 export function LoadingFallback({ message = \'Loading...\',size = \'md\',className = \' }) {} const sizeClasses = {} \' \"sm\": \'w-6: h-6,\',\' \"md\": \'w-8: h-8,\',\' \"lg\": \'w-12: h-12\'} const textSizes = {} \' \"sm\": \'text-sm,\',\' \"md\": \'text-base,\',\' \"lg\": \'text-lg\'} \"return\": (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}> <motion.div animate={{ \"rotate\": \'360\'}} \"transition\": = { { duration: 1,\"repeat\": \'Infinit\',y,\' \"ease\": \'linear\'}}>\" <\"Loader2\": className={\"${sizeClasses[size]} text-zion-cyan\"}/> </motion.div> \''\';\'"\"";
 " import { Loader2 export function LoadingFallback({ message = "Loading.",size = "md",className = " }) {} const sizeClasses = {} " sm: "w-6: h-6,"," md: "w-8: h-8,"," lg: "w-12: h-12"} const textSizes = {} " sm: "text-sm,"," md: "text-base,"," lg: "text-lg"} return: (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}> <motion.div animate={{ rotate: "360"}} transition: = { { duration: 1,repeat: "Infinit",y," ease: "linear"}}>" <Loader2: className={"${sizeClasses[size]} text-zion-cyan"}/> </motion.div> """;"""";""`"`
 import React from 'react';
@@ -14,4 +12,3 @@ export default function LoadingFallback({ }: LoadingFallbackProps) {
     </div>
   );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

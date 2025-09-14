@@ -1,19 +1,20 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReferralReward } from "@/types/referrals",
-import { formatDate } from "@/utils/referralUtils",
-import { BadgeDollarSign, Badge } from 'lucide-react'
 
 interface RewardsCardProps {
-  rewards: ReferralReward[],
+
+  rewards: ReferralReward[]
+
   isLoading: boolean
 }
 
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
+
     return (
       <Card>
         <CardHeader>
+          <CardTitle className='flex items-center gap-2'>
+            <BadgeDollarSign className='h-5 w-5' />
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
             Your Rewards
@@ -51,9 +52,19 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
     ),
   }
 
+
+    )
+
+
+
+
+  }
   return (
     <Card>
       <CardHeader>
+
+        <CardTitle className='flex items-center gap-2'>
+          <BadgeDollarSign className='h-5 w-5' />
         <CardTitle className="flex items-center gap-2">
           <BadgeDollarSign className="h-5 w-5" />
           Your Rewards

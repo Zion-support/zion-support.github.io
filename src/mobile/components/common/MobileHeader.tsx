@@ -32,6 +32,12 @@ export function MobileHeader({
       <div className="flex items-center justify-between h-14 px-4">
         <div className="flex items-center">
           {showBack && (
+            <Button
+              variant="ghost"
+              size="icon"
+              className="mr-2"
+              onClick = {(,) => router.back(),}
+
             <Button 
               variant="ghost" 
               size="icon" 

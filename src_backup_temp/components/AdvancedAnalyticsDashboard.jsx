@@ -114,8 +114,6 @@ case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-1
                     )"}'`';
                     <span'`'`;
                       className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-600'}`}
-<<<<<<< HEAD
-=======
                     >{metric.change}%;
                     </span>;
                   </div>;
@@ -370,4 +368,3 @@ export {AdvancedAnalyticsDashboard}
 </motion>;
 </motion>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

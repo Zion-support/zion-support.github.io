@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useEffect} from 'react';'''';';
 import React, {useState, useEffect} from 'react';
 import React, {useState, useEffect} from 'react';'''
@@ -533,4 +531,3 @@ export default Component;
 </div>
 </div>
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

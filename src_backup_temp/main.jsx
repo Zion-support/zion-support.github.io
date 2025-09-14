@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from "./App.tsx";
@@ -172,4 +170,3 @@ window.addEventListener('error', (e) => {
   console.error('Unhandled error: ', e.error || e.message);
   displayFatalError(e.message);
 });
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

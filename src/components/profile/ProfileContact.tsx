@@ -66,6 +66,25 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
             <Textarea
               placeholder={`Message to ${profileName}...`}
               value={message}
+              onChange={e => setMessage(e.target.value)}
+              className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]'
+              required
+            />
+          </div>
+          <Button
+            type='submit'
+            className='w-full bg-zion-cyan hover:bg-zion-cyan/90'
+            disabled={isSending}              required
+            />
+          </div>
+          <Button
+            type="submit"
+            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
+            disabled = {isSending,}
+          >
+            <Send className='mr-2 h-4 w-4' />
+            {isSending ? 'Sending...' : 'Send Message'}          </Button>            disabled={isSending}
+          >
               onChange={(e) => setMessage(e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
               required

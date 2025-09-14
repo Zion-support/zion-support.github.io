@@ -67,8 +67,6 @@ export function MobileNavigation("props": "any) {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-=======
     </div>;
   );
     </div>
@@ -76,4 +74,3 @@ export function MobileNavigation("props": "any) {;
 }
 ;
 export default MobileNavigation;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

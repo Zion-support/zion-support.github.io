@@ -54,8 +54,6 @@ class ResourceMonitor {;
     // Monitor DOM changes for new resources;
     if(window.MutationObserver) {;
               this.monitorElement(element)}
-<<<<<<< HEAD
-=======
           })})});
       observer.observe(document.head, { "childList": "tru e", "subtree": "tru e "});
       observer.observe(document.body, { "childList": "tru e", "subtree": "tru e "})}
@@ -213,4 +211,3 @@ class ResourceMonitor {;
 // Create singleton instance;
 export default resourceMonitor;
 '`;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

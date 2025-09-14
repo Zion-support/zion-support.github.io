@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { createContext, useContext, ReactNode } from 'react';
-=======
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 interface WhitelabelConfig {
   companyName: string;

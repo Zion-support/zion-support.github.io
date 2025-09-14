@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useEffect, useCallback} from 'react';';
 import {motion, AnimatePresence} from 'framer-motion';';
 import {ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon} from '@heroicons/react/24/outline';';
@@ -102,4 +100,3 @@ import React,{useState,useEffect,useCallback} from 'react'; import { motion, Ani
 }); const [seoAnalysis,setSeoAnalysis] = useState({; score: 0,; issues[],; suggestions[],; metaTags: {; title: false,; description: false,; keywords: false,; canonical: false,; ogTags: false,; twitterTags: false}}
 }); const [accessibilityReport,setAccessibilityReport] = useState({; score: 0,; issues[],; wcagCompliance: 'Non-Compliant',criticalIssues: 0,; warnings: 0}
 }); const [isAnalyzing,setIsAnalyzing] = useState(false); ;';';''
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

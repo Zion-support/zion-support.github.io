@@ -66,6 +66,16 @@ export function RolePicker({ onSelect }: RolePickerProps) {
                 <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
               </div>
               {selectedRole === 'client' && (
+                <Check className='h-5 w-5 text-primary' />
+              )}
+            </div>
+          </CardContent>
+        </Card>
+      </div>;
+    </div>;
+  );
+};
+}
                 <Check className="h-5 w-5 text-primary" />
               )}
             </div>

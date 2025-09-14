@@ -107,8 +107,6 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
     }
   },
 
-  const isMobile = useMediaQuery('(max-width: 768px)'),
-  const isTablet = useMediaQuery('(max-width: 1200px)'),
 
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw',
 

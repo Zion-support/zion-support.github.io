@@ -1,8 +1,4 @@
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { CreditCard, Plus, Trash } from 'lucide-react'
 
 export function PaymentMethods() {
   // Mock payment methods
@@ -29,7 +25,9 @@ export function PaymentMethods() {
     <Card>
       <CardHeader>
         <CardTitle>Payment Methods</CardTitle>
-        <CardDescription>Manage your payment methods for automatic billing</CardDescription>
+        <CardDescription>
+          Manage your payment methods for automatic billing
+        </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         {paymentMethods.map((method) => (

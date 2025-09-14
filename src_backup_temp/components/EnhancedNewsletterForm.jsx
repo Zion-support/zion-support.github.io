@@ -20,8 +20,6 @@ export function EnhancedNewsletterForm("props": "any) {;
             toast.error("Invalid email");
             return}
         setIsSubmitting(true);
-<<<<<<< HEAD
-=======
         try {;
             const res = await fetch("/api/newsletter", {;
                 "method": "POST",;
@@ -103,4 +101,3 @@ export function EnhancedNewsletterForm("props": "any) {;
     </div>)}
 ;
 export default EnhancedNewsletterForm;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

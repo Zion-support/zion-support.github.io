@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useMemo} from "react";""";,"});,"})","});,"})","});,"})""""";,"});,"})""""";,"});,"})""""";,"});,"})","});,"})";
 const AdvancedServiceInnovationHub = ("props": "any) => {"}"});,"})";
 ";,"});,"})";
@@ -2579,4 +2577,3 @@ export {AdvancedServiceInnovationHub};
 </div>;
 </motion>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

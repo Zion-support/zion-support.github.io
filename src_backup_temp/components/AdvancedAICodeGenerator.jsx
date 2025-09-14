@@ -35,8 +35,6 @@ export const useApi = ("props": "any) => {;
   const execute = async () => {;
     setLoading(true);
     setError(null);
-<<<<<<< HEAD
-=======
     ;
     try {;
       const response = await fetch(url, {;
@@ -511,4 +509,3 @@ export const AdvancedAICodeGenerator = ("props": "any) => {;
 export default AdvancedAICodeGenerator;
 ;
 </string>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

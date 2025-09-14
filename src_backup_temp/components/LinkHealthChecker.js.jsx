@@ -87,8 +87,6 @@ export default function Page("props": "any) {;"}
   return ();
     <div;
       className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}
-<<<<<<< HEAD
-=======
     >;
       {/* Header */}";
       <div className="flex items-center justify-between mb-6">;
@@ -224,4 +222,3 @@ export {LinkHealthChecker};
 export {LinkHealthChecker};
 ;
 export {LinkHealthChecker};
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

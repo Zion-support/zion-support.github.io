@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from 'react'; interface User { id: string; email: string; name: string;" role: 'user' | 'admin' | 'moderator'; userType?: string; displayName?: string; avatarUrl? string';';
   } interface AuthState { user: Use r | null; isAuthenticated: boolean; isLoading boolean'} export function useAuth() { const [authState, setAuthState] = useState<AuthState>({ user: nul l, isAuthenticated: fals e, isLoading: tru e';'}); useEffect(() => { // Check if user is logged in (e.g., check localStorage, cookies, etc.) const checkAuth = () => { const storedUser = localStorage.getItem('zion_user'); const token = localStorage.getItem('authToken'); if (storedUser && token) { try { const user = JSON.parse(storedUser); setAuthState({ user, isAuthenticated: tru e, isLoading false'});';'} catch (error) {" console.error('Error parsing stored user: ', error); setAuthState({ user: nul l, isAuthenticated: fals e, isLoading: fals e';
   })} } else { setAuthState({ user: nul l, isAuthenticated: fals e, isLoading: fals e';';
@@ -40,4 +38,3 @@ const { useState,useEffect } from "react"; interface User { id: string; email: s
 import { useEffect } from 'react';,
 import { useState } from 'react';,
 import { useState,useEffect } from 'react'; interface User { id: string; email: string; name: string;" role: 'user' | 'admin' | 'moderator'; userType?: string; displayName?: string; avatarUrl? string';'} interface AuthState { user: Use r | null; isAuthenticated: boolean; isLoading boolean'} export function useAuth() { const [authState,setAuthState] = useState<AuthState>({ user: nul l,isAuthenticated: fals e,isLoading: tru e';'}); useEffect(() => { })} } else { setAuthState({ user: nul l,isAuthenticated: fals e,isLoading: fals e';'});'} }; checkAuth();';'},[]); const login = async (email: string,password: string) => { };'} ";';';';
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

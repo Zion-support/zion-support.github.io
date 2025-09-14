@@ -206,8 +206,6 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 ;
                 </button>;
               ))}
-<<<<<<< HEAD
-=======
 ;
           </motion.div>;
       </section>;
@@ -982,4 +980,3 @@ export {EnhancedServicesShowcase}
 </div>
 </section>
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

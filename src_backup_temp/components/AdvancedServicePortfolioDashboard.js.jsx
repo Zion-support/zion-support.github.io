@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useMemo} from 'react';'''';';
 import React, {useState, useMemo} from 'react';'''
 import {motion} from 'framer-motion';
@@ -1765,4 +1763,3 @@ export {AdvancedServicePortfolioDashboard};
 </motion>
 </motion>
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -12,9 +12,6 @@ export function CollaborationPlatform("props": "any) {;
     const [isFullscreen, setIsFullscreen] = useState(false);
     const [participants, setParticipants] = useState(mockParticipants);
     const [localUser, setLocalUser] = useState({;
-<<<<<<< HEAD
-
-=======
         "isVideoOn": "true",;
         "isAudioOn": "true",;
         "isScreenSharing": "false",;
@@ -70,4 +67,3 @@ export function CollaborationPlatform("props": "any) {;
     if(isMinimized) {;
 ";
 export default Component;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

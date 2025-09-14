@@ -1,8 +1,6 @@
 "use client";
 import React, {useState, useEffect} from 'react';
 import * as React from "react";
-<<<<<<< HEAD
-=======
 ;
 const ThemeContext = React.createContext({"theme": "dark",;
   "setTheme": "() => null"});
@@ -41,4 +39,3 @@ export const useTheme = ("props": "any) => {;
 };
 ;
 </ThemeContext>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

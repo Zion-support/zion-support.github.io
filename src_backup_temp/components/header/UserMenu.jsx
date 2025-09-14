@@ -176,8 +176,6 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
             {user?.name?.charAt(0) || user?.email?.charAt(0) || 'U'}';';';
           </span>',';';
     ';';';
-<<<<<<< HEAD
-=======
         </div>';
         <span className="hidden "sm": "block text-sm font-medium">";
   return (;
@@ -361,4 +359,3 @@ export function UserMenu("props": "any) {const [isOpen", setIsOpen] = useState(f
 </button>;
 </span>;
 </button>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

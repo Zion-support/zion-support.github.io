@@ -1,6 +1,5 @@
 import React from 'react';
 =======
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { Link } from 'react-router-dom';
 
 export function UserMenu() {
@@ -32,7 +31,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useAuth } from '@/hooks/useAuth';
 
 export const UserMenu: React.FC = () => {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
   const [isOpen, setIsOpen] = useState(false);
   const { user, isAuthenticated, signOut } = useAuth();
 
@@ -52,20 +50,6 @@ export const UserMenu: React.FC = () => {
 
   if (!user) {
     return (
-<<<<<<< HEAD
-      <div className="flex items-center space-x-3">
-        <Link to="/login">
-          <Button variant="ghost" size="sm" className="text-zion-cyan hover:bg-zion-cyan/10">
-            Sign In
-          </Button>
-        </Link>
-        <Link to="/signup">
-          <Button size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-            <UserPlus className="w-4 h-4 mr-2" />
-            Sign Up
-          </Button>
-        </Link>
-=======
       <div className="flex items-center space-x-4">
         <Button variant="outline" size="sm">
           Sign In
@@ -73,33 +57,12 @@ export const UserMenu: React.FC = () => {
         <Button size="sm">
           Sign Up
         </Button>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
       </div>
     );
   }
 
   return (
     <div className="relative">
-<<<<<<< HEAD
-      <Button
-        variant="ghost"
-        size="sm"
-        onClick={() => setIsOpen(!isOpen)}
-        className="text-zion-cyan hover:bg-zion-cyan/10"
-        aria-expanded={isOpen}
-        aria-label="User menu"
-      >
-        <User className="w-4 h-4 mr-2" />
-        {user.name || user.email}
-      </Button>
-
-      {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg py-2 z-50">
-          <Link
-            to="/dashboard"
-            className="flex items-center px-4 py-2 text-zion-slate-light hover:bg-zion-blue hover:text-white transition-colors"
-            onClick={() => setIsOpen(false)}
-=======
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 transition-colors"
@@ -134,7 +97,6 @@ export const UserMenu: React.FC = () => {
           <button
             onClick={handleSignOut}
             className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center space-x-2"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
           >
             <Settings className="w-4 h-4 mr-3" />
             Dashboard
@@ -148,7 +110,6 @@ export const UserMenu: React.FC = () => {
           </button>
         </div>
       )}
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
     </div>
   );
 }

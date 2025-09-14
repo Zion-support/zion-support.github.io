@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useEffect} from 'react'; import {motion} from 'framer-motion'; import {; TrendingUp,; Users,; DollarSign,; Clock,; BarChart3,; PieChart,; Smartphone,; Monitor,; Tablet;} from 'lucide-react'; ; export function AdvancedAnalytics("props": "any) {; const [analyticsData", setAnalyticsData] = useState({; "visitors": "0",; "conversions": "0",; "revenue": "0",; "bounceRate": "0",; "avgSessionDuration": "0",; "topPages": "[]",; "trafficSources": "[]",; "deviceTypes": "[]; "}); ; const [timeRange, setTimeRange] = useState('7d'); const [isLoading, setIsLoading] = useState(true); ; useEffect(() => {;
 import React, {useState, useEffect} from 'react'; import {motion} from 'framer-motion'; import {; TrendingUp,; Users,; DollarSign,; Clock,; BarChart3,; PieChart,; Smartphone,; Monitor,; Tablet;} from 'lucide-react'; ; export function AdvancedAnalytics(props: any) {; const [analyticsData, setAnalyticsData] = useState({; visitors: 0,; conversions: 0,; revenue: 0,; bounceRate: 0,; avgSessionDuration: 0,; topPages: [],; trafficSources: [],; deviceTypes: []; }
     ); ; const [timeRange, setTimeRange] = useState('7d'); const [isLoading, setIsLoading] = useState(true); ; useEffect(() => {;
@@ -8,4 +6,3 @@ const React,{useState,useEffect} from "react"; import {motion} from "framer-moti
 import { useEffect } from 'react';,
 import { useState } from 'react';,
 import _React,{useState,useEffect} from 'react'; import {motion} from 'framer-motion'; import {; TrendingUp,; Users,; DollarSign,; Clock,; BarChart3,; PieChart,; Smartphone,; Monitor,; Tablet} from 'lucide-react'; ; export function AdvancedAnalytics(_) {; const [analyticsData,setAnalyticsData] = useState({; visitors: 0,; conversions: 0,; revenue: 0,; bounceRate: 0,; avgSessionDuration: 0,; topPages: [],; trafficSources: [],; deviceTypes: []}); ; const [timeRange,setTimeRange] = useState('7d'); const [isLoading,setIsLoading] = useState(true); ; useEffect(() => {;'; ;';';
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

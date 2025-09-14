@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 export function BlogSection("props": "any) {;
 import { Link  "} from 'react-router-dom';
 ,;
@@ -74,4 +72,3 @@ export default function BlogSection.js({ }: BlogSection.jsProps) {
     </div>
   );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';'''';';
 import {Link} from 'react-router-dom';'''';';
 import React from 'react';'''
@@ -596,4 +594,3 @@ export {EnhancedServicesOverview};
 export {EnhancedServicesOverview};
 export {EnhancedServicesOverview};
 export {EnhancedServicesOverview};
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

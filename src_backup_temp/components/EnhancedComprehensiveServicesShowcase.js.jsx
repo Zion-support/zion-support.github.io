@@ -18,8 +18,6 @@ const EnhancedComprehensiveServicesShowcase = ("props": "any) => {;
     const filteredServices = allServices.filter(service => {const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.category.toLowerCase().includes(searchTerm.toLowerCase());
-<<<<<<< HEAD
-=======
         return matchesCategory && matchesSearch});
     const categories = [;
         {"id": 'all', "name": 'All Services', "count": "allServices.length"},;
@@ -700,4 +698,3 @@ export {EnhancedComprehensiveServicesShowcase};
 </path>;
 </svg>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from "react";""";,"});,"})","});,"})","});,"})""""";,"});,"})""""";,"});,"})","});,"})";
 const AdvancedServiceRecommendation = ("props": "any) => {"}"});,"})";
     const [clientProfile, setClientProfile] = useState({}"});,"})";
@@ -2111,4 +2109,3 @@ export {AdvancedServiceRecommendation};
 </motion>;
 </motion>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

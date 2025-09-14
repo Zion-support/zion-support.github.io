@@ -40,10 +40,14 @@ export function EnterpriseTestimonials() {
             See how enterprise teams are transforming their hiring process
           </p>
         </div>
-
-        <Carousel className="w-full">
+        <Carousel className='w-full'>
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className='md:basis-1/1 lg:basis-1/1'>
+                <div className='bg-card rounded-xl p-8 border border-border h-full'>
+                  <Quote className='h-10 w-10 text-primary/20 mb-4' />
+                  <blockquote className='text-xl mb-6 italic'>
+            {testimonials.map((testimonial, index,) => (
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />
@@ -55,12 +59,12 @@ export function EnterpriseTestimonials() {
                       <img
                         src={testimonial.image}
                         alt={testimonial.author}
-                        className="h-full w-full object-cover"
-                        loading="lazy"
-                      />
+                        className='h-full w-full object-cover'
+                        loading='lazy'                      />
                     </div>
                     <div>
-                      <p className="font-bold">{testimonial.author}</p>
+                      <p className='font-bold'>{testimonial.author}</p>
+                      <p className='text-sm text-muted-foreground'>                        {testimonial.title}, {testimonial.company}                      <p className="font-bold">{testimonial.author}</p>
                       <p className="text-sm text-muted-foreground">
                         {testimonial.title}, {testimonial.company}
                       </p>
@@ -70,8 +74,33 @@ export function EnterpriseTestimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="flex justify-center gap-2 mt-8">
+          <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">
             <CarouselPrevious />
+
+            <CarouselNext />
+          </div>
+        </Carousel>
+      </div>;
+    </section>;
+  );
+};
+}
+
+
+
+
+
+                        {testimonial && testimonial.title}, {testimonial && testimonial.company}
+                      </p>;
+                    </div>;
+                  </div>;
+                </div>;
+              </CarouselItem>;
+            ))}
+
+
+
+
             <CarouselNext />
           </div>
         </Carousel>
@@ -79,3 +108,9 @@ export function EnterpriseTestimonials() {
     </section>
   ),
 }
+    </section>);
+}
+
+}
+;
+

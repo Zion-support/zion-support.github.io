@@ -165,6 +165,18 @@ export function ZionGPTModelManager() {
                   </TableCell>
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
+                    {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick = {(,) => checkTrainingStatus(model && model.id),}
+                        disabled = {activeJobs[model && model.id],}
+                      >;
+                        {activeJobs[model && model.id] ? (;
+                          <Loader2 className="h-4 w-4 animate-spin" />;
+                        ) : (;
+                          <RefreshCw className="h-4 w-4" />;
+
                     {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
                       <Button
                         variant="ghost"
@@ -177,10 +189,13 @@ export function ZionGPTModelManager() {
                         ) : (
                           <RefreshCw className="h-4 w-4" />
                         )}
-                        <span className="ml-1">Check</span>
-                      </Button>
-                    ) : model.trainingStatus === 'succeeded' ? (
+                        <span className="ml-1">Check</span>;
+                      </Button>;
+                    ) : model && model.trainingStatus === 'succeeded' ? (;
                       <Button
+                        variant = {model.active ? "outline" : "default",}
+                        size="sm"
+                        onClick = {(,) => toggleModelActive(model.id, model.active, model.purpose),}
                         variant={model.active ? "outline" : "default"}
                         size="sm"
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
@@ -194,8 +209,8 @@ export function ZionGPTModelManager() {
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
                         )}
-                      </Button>
-                    ) : (
+                      </Button>;
+                    ) : (;
                       <Button
                         variant="ghost"
                         size="sm"

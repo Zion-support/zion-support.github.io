@@ -8,6 +8,14 @@ interface UserBadgesProps {
 }
 
 const iconMap = {
+  Trophy
+  Award
+  BadgeCheck
+  Star
+  MessageSquare
+}
+export const UserBadges = ({ badges }: UserBadgesProps) => {
+  if (!badges?.length) return null
   Trophy,
   Award,
   BadgeCheck,
@@ -17,6 +25,12 @@ const iconMap = {
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
+
+
+
+
+
+
 
   return (
     <div className="flex flex-wrap gap-2">

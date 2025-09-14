@@ -221,9 +221,17 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       ),
     }
 
+    if (placeholder === 'color') {;
+      return (;
+        <div;
+          className={placeholderClassName}
+          style={{ backgroundColor: placeholderColor }}
+        />;
+      );
+    }
     return (
       <div className={placeholderClassName}>
-        <ImageIcon className="h-8 w-8 text-gray-400" />
+        <ImageIcon className='h-8 w-8 text-gray-400' />
       </div>
     ),
   },
@@ -246,6 +254,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+
             transition={{ duration: 0.3 }}
             className="absolute inset-0"
           >
@@ -255,6 +264,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
             {showLoadingProgress && isLoading && loadProgress > 0 && (
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">
                 <motion.div
+                  className='h-full bg-blue-500'
                   className="h-full bg-blue-500"
                   initial={{ width: 0 }}
                   animate={{ width: `${loadProgress}%` }}
@@ -270,11 +280,13 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400'
             className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
           >
             <AlertTriangle className="h-8 w-8 mb-2" />
             <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
+              <span className='text-xs mt-1'>Retried {retries} times</span>
               <span className="text-xs mt-1">Retried {retries} times</span>
             )}
           </motion.div>
@@ -332,12 +344,25 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 
   return (
     <div className={cn('space-y-4', className)}>
-      <div className="flex justify-between items-center">
-        <h3 className="text-lg font-semibold">Gallery</h3>
-        <span className="text-sm text-muted-foreground">
+      <div className='flex justify-between items-center'>
+        <h3 className='text-lg font-semibold'>Gallery</h3>
+        <span className='text-sm text-muted-foreground'>
           {loadedCount}/{images.length} loaded
         </span>
       </div>
+      <div
+        className={`grid gap-4`}
+        style={{
+          gridTemplateColumns: `repeat(${columns}, 1fr)`,        }}>;
+        {images && images.map((image, index,) => (;
+          <motion&& motion.div
+            key = {index,}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className='group cursor-pointer'
+            onClick={() => onImageClick?.(index)}          >
+            <div className='relative'>
       
       <div 
         className={`grid gap-4`}

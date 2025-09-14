@@ -140,7 +140,6 @@ const News: React.FC = () => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
 =======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     { id: 'all', name: 'All News', icon: Newspaper, count: 18 },
     { id: 'ai', name: 'AI & ML', icon: Brain, count: 6 },
     { id: 'innovation', name: 'Innovation', icon: Rocket, count: 4 },
@@ -213,476 +212,50 @@ const News = () => {
       date: "2024-01-10",
       author: "Dr. Sarah Chen",
       readTime: "8 min read",
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       image: "/api/placeholder/400/250"
     },
     {
       id: 3,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      title: "Zion Tech Group Expands Global Operations with New European Office",
-      excerpt: "The company opens its first European headquarters in Berlin, Germany, to better serve clients across the European Union...",
-      author: "Corporate Communications",
-      date: "2024-01-16",
-      readTime: "4 min read",
-      views: "2.9k",
-      category: "business",
-      tags: ["Global Expansion", "European Market", "Business Growth", "International"],
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Cybersecurity in the AI Era: New Threats and Solutions",
       excerpt: "As AI becomes more prevalent, we explore the evolving cybersecurity landscape and our innovative defense strategies.",
       category: "Cybersecurity",
       date: "2024-01-08",
       author: "Michael Rodriguez",
       readTime: "6 min read",
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       image: "/api/placeholder/400/250"
     },
     {
       id: 4,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      title: "New Cybersecurity Framework Released for Enterprise Clients",
-      excerpt: "Zion Tech Group introduces comprehensive security framework designed to protect against emerging cyber threats...",
-      author: "Security Team",
-      date: "2024-01-14",
-      readTime: "6 min read",
-      views: "4.1k",
-      category: "security",
-      tags: ["Cybersecurity", "Enterprise", "Security Framework", "Threat Protection"],
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "The Future of Work: How AI is Reshaping Industries",
       excerpt: "Discover how artificial intelligence is transforming traditional industries and creating new opportunities for growth.",
       category: "Industry Insights",
       date: "2024-01-05",
       author: "Jennifer Kim",
       readTime: "7 min read",
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       image: "/api/placeholder/400/250"
     },
     {
       id: 5,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      title: "Partnership Announced with Leading Cloud Infrastructure Provider",
-      excerpt: "Strategic collaboration to deliver enhanced cloud solutions and accelerate digital transformation for enterprise clients...",
-      author: "Partnership Team",
-      date: "2024-01-12",
-      readTime: "5 min read",
-      views: "3.3k",
-      category: "cloud",
-      tags: ["Partnership", "Cloud Infrastructure", "Digital Transformation", "Enterprise"],
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Zion Tech Group Named Top AI Company by Tech Innovators Association",
       excerpt: "We're honored to be recognized for our contributions to AI innovation and technological advancement.",
       category: "Company News",
       date: "2024-01-03",
       author: "Zion Tech Team",
       readTime: "3 min read",
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       image: "/api/placeholder/400/250"
     },
     {
       id: 6,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      title: "Zion Tech Group Recognized as Top AI Solutions Provider",
-      excerpt: "Industry recognition for excellence in artificial intelligence solutions and innovative technology implementations...",
-      author: "Awards Team",
-      date: "2024-01-10",
-      readTime: "4 min read",
-      views: "2.7k",
-      category: "ai",
-      tags: ["Awards", "Recognition", "AI Solutions", "Industry Leadership"],
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Micro SAAS Revolution: Democratizing Technology for Small Businesses",
       excerpt: "Learn how our micro SAAS solutions are making enterprise-grade technology accessible to businesses of all sizes.",
       category: "Product Updates",
       date: "2024-01-01",
       author: "David Thompson",
       readTime: "5 min read",
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       image: "/api/placeholder/400/250"
     }
   ];
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const filteredArticles = newsArticles.filter(article => {
-    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
-<<<<<<< HEAD
-  const getCategoryIcon = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : Newspaper;
-  };
-
-  const getCategoryName = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.name : 'General';
-  };
-
-  const toggleBookmark = (articleId: number) => {
-    // This would typically update a state or make an API call
-    console.log('Toggle bookmark for article:', articleId);
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Header Section */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
-            Latest News & Updates
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
-          >
-            Stay informed about our latest developments, partnerships, innovations, 
-            and the impact we're making in the world of technology.
-          </motion.p>
-        </div>
-      </div>
-
-      {/* Category Filter */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-12">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap gap-3 justify-center"
-          >
-            {categories.map((category, index) => (
-              <button
-                key={category}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  index === 0
-                    ? 'bg-purple-600 text-white'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Breaking News */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-3xl font-bold text-white text-center mb-12"
-          >
-            Breaking News
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {breakingNews.map((news, index) => (
-              <motion.article
-                key={news.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 group"
-              >
-                <div className="h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
-                  <div className="text-6xl text-purple-400/30">📰</div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <span className={`px-2 py-1 text-xs rounded-full ${
-                      news.priority === 'breaking' 
-                        ? 'bg-red-500/20 text-red-400' 
-                        : 'bg-purple-500/20 text-purple-400'
-                    }`}>
-                      {news.priority === 'breaking' ? 'BREAKING' : 'HIGH PRIORITY'}
-                    </span>
-                    <span className="text-gray-400 text-xs">•</span>
-                    <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">
-                      {news.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors duration-200">
-                    {news.title}
-                  </h3>
-                  
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-3">
-                    {news.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-2 text-sm text-gray-400">
-                      <UserIcon className="h-4 w-4" />
-                      <span>{news.author}</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm text-gray-400">
-                      <ClockIcon className="h-4 w-4" />
-                      <span>{news.time}</span>
-                    </div>
-                  </div>
-                  
-                  <button className="w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
-                    <span>Read Full Story</span>
-                    <ArrowRightIcon className="h-4 w-4" />
-                  </button>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Latest News */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
-            className="text-3xl font-bold text-white text-center mb-12"
-          >
-            Latest News
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {latestNews.map((news, index) => (
-              <motion.article
-                key={news.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 group"
-              >
-                <div className="h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
-                  <div className="text-4xl text-purple-400/30">📰</div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">
-                      {news.category}
-                    </span>
-                    <span className="text-gray-400 text-xs">•</span>
-                    <span className="text-gray-400 text-xs">{news.time}</span>
-                  </div>
-                  
-                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors duration-200 line-clamp-2">
-                    {news.title}
-                  </h3>
-                  
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-                    {news.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <span>{news.author}</span>
-                    <span>{new Date(news.date).toLocaleDateString()}</span>
-                  </div>
-                  
-                  <button className="w-full px-4 py-2 bg-white/10 border border-white/20 text-white font-medium rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2">
-                    <span>Read More</span>
-                    <ArrowRightIcon className="h-4 w-4" />
-                  </button>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Press Releases */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.4 }}
-            className="text-3xl font-bold text-white text-center mb-12"
-          >
-            Press Releases
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {pressReleases.map((release, index) => (
-              <motion.article
-                key={release.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <NewspaperIcon className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
-                        {release.type}
-                      </span>
-                      <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">
-                        {release.category}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">
-                      {release.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm mb-4">
-                      {release.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between text-sm text-gray-400">
-                      <span>{release.author}</span>
-                      <span>{new Date(release.date).toLocaleDateString()}</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
-                  <span>Read Press Release</span>
-                  <ArrowRightIcon className="h-4 w-4" />
-                </button>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Media Contact */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-4xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.8 }}
-            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12 text-center"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Media Inquiries
-            </h2>
-            <p className="text-gray-300 mb-8 text-lg">
-              For press inquiries, media interviews, or additional information about our company and services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
-                Contact Media Relations
-              </button>
-              <button className="px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300">
-                Download Press Kit
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Navigation Links */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Explore More</h3>
-            <p className="text-gray-300">Discover our services, team, and company information</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link to="/services" className="group">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors">Our Services</h4>
-                    <p className="text-gray-300 text-sm">Explore our AI and technology solutions</p>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
-                </div>
-              </div>
-            </Link>
-            
-            <Link to="/about" className="group">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors">About Us</h4>
-                    <p className="text-gray-300 text-sm">Learn about our company and mission</p>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
-                </div>
-              </div>
-            </Link>
-            
-            <Link to="/contact" className="group">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors">Contact Us</h4>
-                    <p className="text-gray-300 text-sm">Get in touch with our team</p>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default News;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       title: 'Zion Tech Group Named Top AI Company by Tech Innovation Awards',
       excerpt: 'Recognition for our groundbreaking work in autonomous AI systems and machine learning solutions that are transforming industries worldwide.',
@@ -968,10 +541,6 @@ export default News;
               </Link>
               <button className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
                 Download Press Kit
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               </button>
             </div>
           </div>
@@ -979,12 +548,5 @@ export default News;
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
 =======
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7

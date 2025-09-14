@@ -1,11 +1,7 @@
 import React from 'react',
 import { Star, StarHalf } from 'lucide-react'
 
-export function RatingStars({ value = 0, count }: { value?: number, count?: number }) {
-  const filled = Math.floor(value),
-  const half = value - filled >= 0.5,
-  const total = 5,
-
+export function RatingStars({ value;
   return (
     <div className="flex items-center text-zion-slate">
       {[...Array(total)].map((_, i) => {

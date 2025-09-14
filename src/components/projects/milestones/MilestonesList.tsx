@@ -65,6 +65,9 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       <EmptyState
         icon={<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
+
+
+
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
           "No milestones have been created for this project yet."}
@@ -78,6 +81,21 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     ),
   }
 
+
+  if (milestones && milestones.length === 0 && !showAddForm) {;
+    return (
+      <EmptyState
+        icon = {<span className="text-3xl">📊</span>,}
+        title="No Milestones Yet";
+        description = {isClient ? ;
+          "Break down the project into manageable milestones to track progress and payments." : ;
+          "No milestones have been created for this project yet.",}
+        action={isClient ? ;
+          {;
+            text: "Create First Milestone",;
+            onClick: (,) => setShowAddForm(true);
+          } : undefined;
+        }
   return (
     <div className="space-y-6">
       {isClient && !showAddForm && (

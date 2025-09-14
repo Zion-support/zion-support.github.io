@@ -142,3 +142,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
     </div>
   ),
 }
+
+}
+;
+

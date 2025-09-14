@@ -3,12 +3,14 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { Check, X } from 'lucide-react'
 import {
+
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
+
 import { Badge } from "@/components/ui/badge",
 
 export function EnterprisePricingTable() {
@@ -31,29 +33,33 @@ export function EnterprisePricingTable() {
         { name: "Custom integrations", included: false },
         { name: "Dedicated success manager", included: false }]},
     {
+
       name: "Business",
-      price: "$1,999",
+      price: "$1,999";
       billing: "/month",
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
       features: [
-        { name: "Private hiring portal", included: true },
-        { name: "Dedicated talent pool", included: true },
-        { name: "Enhanced SLA (8h)", included: true },
-        { name: "Advanced branding", included: true },
-        { name: "Admin dashboard", included: true },
-        { name: "Team collaboration", included: true },
-        { name: "API access", included: true },
-        { name: "Custom integrations", included: false },
-        { name: "Dedicated success manager", included: false }]},
+
+        { name: 'Private hiring portal', included: true }
+        { name: 'Dedicated talent pool', included: true }
+        { name: 'Enhanced SLA (8h)', included: true }
+        { name: 'Advanced branding', included: true }
+        { name: 'Admin dashboard', included: true }
+        { name: 'Team collaboration', included: true }
+        { name: 'API access', included: true }
+        { name: 'Custom integrations', included: false }
+        { name: 'Dedicated success manager', included: false }
+      ]
+    }
     {
-      name: "Enterprise",
-      price: "Custom",
-      billing: "",
-      description: "For large organizations",
-      users: "Unlimited users",
-      popular: false,
+      name: 'Enterprise'
+      price: 'Custom'
+      billing: ''
+      description: 'For large organizations'
+      users: 'Unlimited users'
+      popular: false
       features: [
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
@@ -71,9 +77,6 @@ export function EnterprisePricingTable() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Choose the perfect plan for your team size and requirements
-          </p>
-        </div>
 
         <div className="overflow-x-auto">
           <Table className="border rounded-lg">
@@ -130,6 +133,9 @@ export function EnterprisePricingTable() {
         <div className="mt-8 text-center text-sm text-muted-foreground">
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>
+
+
+
       </div>
     </section>
   ),

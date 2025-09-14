@@ -670,8 +670,6 @@ Get AI Recommendations;
                   </CardContent>;
                 </Card>;
               </motion.div>) ) }
-<<<<<<< HEAD
-=======
 ;
           </div> {/* comment */}";
 ""}} transition="{{" "delay": "0.4 "}} className="mt-12 text-center">"";";
@@ -890,4 +888,3 @@ export {AdvancedServiceRecommendation};
 </div>;
 </div>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

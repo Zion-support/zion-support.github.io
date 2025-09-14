@@ -24,6 +24,8 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
     }
   },
 
+    }
+  }
   return (
     <div className="flex items-center justify-center min-h-[400px] p-6">
       <div className="max-w-md w-full space-y-4">

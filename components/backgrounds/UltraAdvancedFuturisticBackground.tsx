@@ -1,3 +1,4 @@
+"use client";
 
 
 canvas.width = window.innerWidth;

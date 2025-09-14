@@ -330,29 +330,3 @@ if (contentType?.includes ('application/json') ) {;
 
 
 
-<<<<<<< HEAD
-
-
-
-
-          value={paramValues[p.name] || ""}
-          onChange={(e) => handleParamChange(p.name, e.target.value)}
-        />;
-      ))}
-      {method !== "GET" && method !== "DELETE" && (
-        <Textarea
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
-          className="font-mono"
-        />
-      )}
-      <Button onClick={sendRequest} disabled={loading}>
-        {loading ? "Sending..." : "Send Request"}
-      </Button>
-      {response && <CodeBlock code={response} language="json" />}
-    </div>
-  )
-}
-;
-export default ApiPlayground;
-

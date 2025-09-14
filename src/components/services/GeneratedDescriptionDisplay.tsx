@@ -33,6 +33,11 @@ export function GeneratedDescriptionDisplay({
       <CardHeader>
         <CardTitle className="text-white flex items-center justify-between">
           Generated Description
+          <Button
+            variant='outline'
+            size='sm'
+            onClick={() => setIsEditing(!isEditing)}
+            className='border-zion-blue-light text-zion-slate-light hover:text-white'          >
           <Button 
             variant="outline" 
             size="sm" 

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:src/lib/slugify.ts
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export function slugify("text": "unknownstring): string { return text .toLowerCase() .trim() .replace(/[^\w\s-]/g",'') .replace(/[\s_-]+/g,'-') .replace(/^-+|-+$/g,'')} export function deslugify("slug": "string): string { return slug .replace(/-/g",' ') .replace(/\b\w/g,(char) => char.toUpperCase())} export function generateUniqueSlug("text": 'string',"existingSlugs": "string[]): string { let slug = slugify(text); let counter = 1; let uniqueSlug = slug; while (existingSlugs.includes(uniqueSlug)) { uniqueSlug = `${slug"}-${counter}`; counter++} return uniqueSlug} export default slugify;
 export function slugify(text: unknownstring): string { return text .toLowerCase() .trim() .replace(/[^\w\s-]/g,&quot;) .replace(/[\s_-]+/g,&apos;-&apos;) .replace(/^-+|-+$/g,&quot;)} export function deslugify(slug: string): string { return slug .replace(/-/g,&apos; &apos;) .replace(/\b\w/g,(char) => char.toUpperCase())} export function generateUniqueSlug(text: string,existingSlugs: string[]): string { let slug = slugify(text); let counter = 1; let uniqueSlug = slug; while (existingSlugs.includes(uniqueSlug)) { uniqueSlug = `${slug}-${counter}`; counter++} return uniqueSlug} export default slugify;
 /**
@@ -48,8 +41,3 @@ export default slugify;';';
 export function slugify(text: unknownstring): string { return text .toLowerCase() .trim() .replace(/[^\w\s-]/g,'') .replace(/[\s_-]+/g,'-') .replace(/^-+|-+$/g,'')} export function deslugify(slug: string): string { return slug .replace(/-/g,' ') .replace(/\b\w/g,(char) => char.toUpperCase())} export function generateUniqueSlug(text: 'string',existingSlugs: string[]): string { let slug = slugify(text); let counter = 1; let uniqueSlug = slug; while (existingSlugs.includes(uniqueSlug)) { uniqueSlug = `${slug}-${counter}`; counter++} return uniqueSlug} export default slugify;
 export default slugify;
 export function slugify(text: unknownstring): string { return text .toLowerCase() .trim() .replace(/[^\w\s-]/g,") .replace(/[\s_-]+/g,'-') .replace(/^-+|-+$/g,")} export function deslugify(slug: string): string { return slug .replace(/-/g,' ') .replace(/\b\w/g,(char) => char.toUpperCase())} export function generateUniqueSlug(text: string,existingSlugs: string[]): string { let slug = slugify(text); let counter = 1; let uniqueSlug = slug; while (existingSlugs.includes(uniqueSlug)) { uniqueSlug = `${slug}-${counter}`; counter++} return uniqueSlug} export default slugify;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main:src_backup_temp/lib/slugify.ts
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

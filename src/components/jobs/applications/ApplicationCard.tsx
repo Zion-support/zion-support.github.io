@@ -93,6 +93,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             )}
             
             {application.match_score && (
+
               <div>
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>
                 <div className="flex items-center">
@@ -105,6 +106,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             )}
           </div>
         )}
+
       </CardContent>
       
       <CardFooter className="flex flex-col gap-3 pt-0">

@@ -18,9 +18,9 @@ interface ApplicationActionsProps {
 }
 
 export function ApplicationActions({
-  application,
-  processingId,
-  onViewApplication,
+  application;
+  processingId;
+  onViewApplication;
   onStatusChange
 }: ApplicationActionsProps) {
   return (
@@ -61,10 +61,11 @@ export function ApplicationActions({
           </DropdownMenuItem>
           <DropdownMenuItem 
             onClick={() => onStatusChange(application.id, "hired")}
+
           >
             Hire
           </DropdownMenuItem>
-          <DropdownMenuItem 
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
           >

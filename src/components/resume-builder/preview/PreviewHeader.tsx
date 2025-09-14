@@ -28,6 +28,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
         .print-section, .print-section * {
           visibility: visible
         }
+
         .print-section {
           position: absolute,
           left: 0,

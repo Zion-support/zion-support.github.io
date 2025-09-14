@@ -2,9 +2,6 @@ import React, {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 ;
 export default function Page("props": "any) {]"}) => {;
-<<<<<<< HEAD
-
-=======
     const [mousePosition, setMousePosition] = useState({ "x": "0", "y": "0 "});
 export default function Page(props: any) {]}) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }
@@ -225,4 +222,3 @@ export default InteractiveHero;
 </motion>;
 </motion>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

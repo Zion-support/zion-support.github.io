@@ -64,8 +64,6 @@ const {applications, isLoading, updateApplicationStatus} =;
     const sourceColumn = [...columns[source.droppableId]];
     const destColumn = [...columns[destination.droppableId]];
     const [removed] = sourceColumn.splice(source.index, 1);
-<<<<<<< HEAD
-=======
     destColumn.splice(destination.index, 0, {...removed, "status": "newStatus"});
     setColumns({...columns,;
       [source.droppableId]: "sourceColumn",;
@@ -157,4 +155,3 @@ const {applications, isLoading, updateApplicationStatus} =;
 }
 '"`;
 </KanbanColumn>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -135,6 +135,11 @@ export function BundleAnalyzer() {
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
+          variant='outline'
+          size='sm'
+          onClick={toggleAnalyzer}
+          className='bg-background/80 backdrop-blur-sm'        >
+          <Package className='w-4 h-4 mr-2' />
           variant="outline"
           size="sm"
           onClick={toggleAnalyzer}
@@ -205,15 +210,7 @@ export function BundleAnalyzer() {
                 </div>
               </div>
 
-              <div>
-                <div className="flex justify-between items-center text-xs mb-1">
-                  <span>Cache Hit Rate</span>
-                  <span>{bundleInfo.cacheHitRate.toFixed(1)}%</span>
-                </div>
-                <Progress value={bundleInfo.cacheHitRate} className="h-2" />
-              </div>
 
-              <div>
                 <div className="text-xs font-medium mb-2">Largest Chunks:</div>
                 <div className="space-y-1">
                   {chunks.map((chunk, index) => (

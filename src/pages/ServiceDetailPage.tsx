@@ -48,20 +48,10 @@ export default function ServiceDetailPage() {
   useEffect(() => {
     const foundService = COMPREHENSIVE_SERVICES.find(s => s.id === id);
     setService(foundService);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-63f3
   }, [id]);
 
   if (!service) {
     return (
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>
-          <Link to="/comprehensive-services" className="text-zion-gold hover:text-zion-gold-light">
-            ← Back to Services
-          </Link>
-        </div>
-=======
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -102,7 +92,6 @@ export default function ServiceDetailPage() {
         <Link to="/services">
           <Button>Back to Services</Button>
         </Link>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
       </div>
     );
   }
@@ -346,23 +335,12 @@ export default function ServiceDetailPage() {
     <>
       <SEO 
         title={`${service.title} | Zion Tech Group`}
->>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
         description={service.description}
         keywords={service.tags.join(', ')}
         canonical={`https://ziontechgroup.com/services/${service.id}`}
       />
 
       {/* Breadcrumb */}
-<<<<<<< HEAD
-      <section className="bg-white border-b py-4">
-        <div className="container mx-auto px-4">
-          <nav className="flex items-center gap-2 text-sm text-zion-slate">
-            <Link to="/" className="hover:text-zion-blue">Home</Link>
-            <span>/</span>
-            <Link to="/comprehensive-services" className="hover:text-zion-blue">Services</Link>
-            <span>/</span>
-            <span className="text-zion-blue font-semibold">{service.title}</span>
-=======
       <section className="py-4 bg-gray-50 border-b">
         <div className="container mx-auto px-4">
           <nav className="flex items-center space-x-2 text-sm">
@@ -371,174 +349,7 @@ export default function ServiceDetailPage() {
             <Link to="/services" className="text-gray-500 hover:text-gray-700">Services</Link>
             <span className="text-gray-400">/</span>
             <span className="text-gray-900">{service.title}</span>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
           </nav>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Service Header */}
-      <section className="bg-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Service Image */}
-            <div className="space-y-4">
-              <img
-                src={service.images[0]}
-                alt={service.title}
-                className="w-full h-80 object-cover rounded-lg shadow-lg"
-              />
-              <div className="flex flex-wrap gap-2">
-                {service.tags.map((tag: string, index: number) => (
-                  <Badge key={index} variant="secondary">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-
-            {/* Service Info */}
-            <div className="space-y-6">
-              <div>
-                <Badge className="bg-zion-cyan text-white mb-3">
-                  {service.subcategory}
-                </Badge>
-                <h1 className="text-4xl font-bold text-zion-blue mb-4">
-                  {service.title}
-                </h1>
-                <p className="text-lg text-zion-slate leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-
-              {/* Rating and Reviews */}
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`w-5 h-5 ${
-                          i < Math.floor(service.rating || 0)
-                            ? 'fill-yellow-400 text-yellow-400'
-                            : 'text-gray-300'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  <span className="text-lg font-semibold text-zion-blue">
-                    {service.rating}
-                  </span>
-                  <span className="text-zion-slate">
-                    ({service.reviewCount} reviews)
-                  </span>
-                </div>
-              </div>
-
-              {/* AI Score */}
-              <div className="flex items-center gap-3">
-                <span className="text-zion-slate font-semibold">AI Score:</span>
-                <div className="w-16 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold text-white">{service.aiScore}</span>
-                </div>
-                <span className="text-sm text-zion-slate">/ 100</span>
-              </div>
-
-              {/* Service Details */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex items-center gap-2 text-zion-slate">
-                  <Clock className="w-5 h-5" />
-                  <span>{service.availability}</span>
-                </div>
-                <div className="flex items-center gap-2 text-zion-slate">
-                  <MapPin className="w-5 h-5" />
-                  <span>{service.location}</span>
-                </div>
-              </div>
-
-              {/* Pricing */}
-              <div className="bg-zion-slate-light p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-zion-blue mb-4">Pricing</h3>
-                <div className="space-y-3">
-                  {Object.entries(SERVICE_PRICING_TIERS).map(([key, tier]) => {
-                    const discountedPrice = getDiscountedPrice(service.price || 0, key);
-                    const originalPrice = getOriginalPrice(service.price || 0, key);
-                    
-                    return (
-                      <div key={key} className="flex items-center justify-between p-3 bg-white rounded-lg">
-                        <div>
-                          <div className="font-semibold text-zion-blue">{tier.name}</div>
-                          <div className="text-sm text-zion-slate">{tier.description}</div>
-                        </div>
-                        <div className="text-right">
-                          {originalPrice && (
-                            <div className="text-sm text-zion-slate line-through">
-                              {formatPrice(originalPrice)}
-                            </div>
-                          )}
-                          <div className="text-2xl font-bold text-zion-purple">
-                            {formatPrice(discountedPrice)}
-                          </div>
-                          {tier.discount > 0 && (
-                            <div className="text-sm text-green-600">
-                              {tier.discount * 100}% off
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-zion-blue hover:bg-zion-blue-dark text-white flex-1">
-                  <a href={`mailto:${CONTACT_INFO.email}?subject=Inquiry about ${service.title}`}>
-                    Get Free Quote
-                  </a>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="border-zion-blue text-zion-blue hover:bg-zion-blue hover:text-white">
-                  <a href={`tel:${CONTACT_INFO.mobile}`}>Call {CONTACT_INFO.mobile}</a>
-                </Button>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-63f3
-              </div>
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* Contact Banner */}
-      <div className="bg-zion-gold/10 border-t border-zion-gold/20">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Contact us today to discuss your needs and get a personalized quote for {service.name}.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-zion-gold text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-gold-light transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                Contact Us
-              </Link>
-              <Link
-                to="/comprehensive-services"
-                className="inline-flex items-center gap-2 border-2 border-zion-gold text-zion-gold px-8 py-4 rounded-lg font-semibold hover:bg-zion-gold hover:text-zion-blue-dark transition-colors"
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default ServiceDetailPage;

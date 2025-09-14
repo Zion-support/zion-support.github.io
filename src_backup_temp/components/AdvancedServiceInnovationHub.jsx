@@ -62,8 +62,6 @@ export default function Page("props": "any) {;
             case 'biotech-ai': return <Dna className="w-5 h-5" />;";
             "default": return <Cpu className="w-5 h-5" />"}
     };
-<<<<<<< HEAD
-=======
     const categories = ['";
         {"id": 'all', "name": 'All Categories', "icon": "<Globe className="w-4 h-4" />"},";
         {"id": 'quantum', "name": 'Quantum Technology', "icon": "<Atom className="w-4 h-4" />"},";
@@ -1334,4 +1332,3 @@ export {AdvancedServiceInnovationHub};
 </div>;
 </motion>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -59,6 +59,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     }
   },
 
+
   return (
     <>
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">
@@ -79,6 +80,10 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         
         {/* Action Buttons */}
         <div className="flex gap-2">
+          <Button
+            variant="default"
+            size="sm"
+            onClick = {handleRequestHire,}
           <Button 
             variant="default" 
             size="sm" 
@@ -99,6 +104,15 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           </Button>
         </div>
       </div>
+      {/* Hire Request Modal */}
+      <HireRequestModal
+        talent = {profile,}
+        isOpen = {isHireModalOpen,}
+        onClose = {() => setIsHireModalOpen(false),}
+        userDetails = {userProfile,}
+
+
+
       
       {/* Hire Request Modal */}
       <HireRequestModal

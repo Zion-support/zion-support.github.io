@@ -80,9 +80,13 @@ export function AIMilestoneGenerator({
     } catch (error) {
       return dateString,
     }
+
   },
 
   return (
+
+
+
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-medium flex items-center">
@@ -108,13 +112,7 @@ export function AIMilestoneGenerator({
         </Button>
       </div>
 
-      {generatedMilestones.length > 0 && (
-        <Card>
-          <CardContent className="pt-6">
-            <div className="flex justify-between items-center mb-4">
-              <p className="text-sm text-muted-foreground">
-                {generatedMilestones.length} milestones generated based on your project scope
-              </p>
+
               <Button 
                 onClick={handleAddToProject}
                 disabled={!Object.values(selectedMilestones).some(Boolean)}

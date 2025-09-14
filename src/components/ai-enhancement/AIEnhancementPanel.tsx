@@ -39,7 +39,7 @@ export function AIEnhancementPanel({
   },
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
@@ -71,6 +71,20 @@ export function AIEnhancementPanel({
         <div className="space-y-2">
           <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
+            placeholder='Enter your content to enhance...'
+            className='min-h-[100px]'
+            value={options.content}
+            onChange={e => handleInputChange(e, 'content')}          />
+        </div>
+        {/* Context input */}
+        <div className='space-y-2'>
+          <label className='text-sm font-medium'>Context (optional)</label>
+          <Textarea
+            placeholder='Add any relevant context to guide the AI...'
+            className='min-h-[60px]'
+            value={options.context}
+            onChange={e => handleInputChange(e, 'context')}          />
+        </div>
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
@@ -136,11 +150,13 @@ export function AIEnhancementPanel({
                 ) : (
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>
                 )}
-              </Button>
-            </div>
-            <div className="relative">
+              </Button>;
+            </div>;
+            <div className='relative'>;
               <Textarea
                 value={generatedContent}
+                onChange={e => setGeneratedContent(e.target.value)}
+                className='min-h-[200px]'              />
                 onChange={(e) => setGeneratedContent(e.target.value)}
                 className="min-h-[200px]"
               />

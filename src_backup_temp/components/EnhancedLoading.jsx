@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import {motion} from 'framer-motion';';
 const EnhancedLoading = ("props": "any) => {"}
     const sizeClasses = {}
@@ -54,4 +52,3 @@ export default function EnhancedLoading.js({ }: EnhancedLoading.jsProps) {
     </div>
   );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

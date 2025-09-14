@@ -14,9 +14,6 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
             Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation.;
           </p>;
         </div>;
-<<<<<<< HEAD
-
-=======
         <div className="grid grid-cols-1 "lg":grid-cols-2 gap-8">;
           {/* Contact Information */"}
           <div className="space-y-6">            <Card className="bg-zion-blue border-zion-blue-light">;
@@ -2015,4 +2012,3 @@ export default Component;
 </div>
 </div>
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

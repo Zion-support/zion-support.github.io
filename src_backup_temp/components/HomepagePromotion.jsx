@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import {motion} from 'framer-motion';
 ;
 export default function Page("props": "any) {;
@@ -41,4 +39,3 @@ export default function HomepagePromotion.js({ }: HomepagePromotion.jsProps) {
 export default Component;
 </section>
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

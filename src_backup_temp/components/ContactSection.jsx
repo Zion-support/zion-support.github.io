@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, Users export function ContactSection("props": "any) {  import { Link  "} from 'react-router-dom';
 ,;
         {;
@@ -17,4 +15,3 @@ export default function ContactSection.js({ }: ContactSection.jsProps) {
   );
 export default Component;
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

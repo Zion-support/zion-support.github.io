@@ -10,8 +10,6 @@ import {useToast} from '@/hooks/use-toast';
 const WIZARD_STEPS = [1, 2, 3];
 function StepIndicator("props": "any) {;
     const progress = (step / WIZARD_STEPS.length) * 100;
-<<<<<<< HEAD
-=======
     return (<div className="space-y-1">;
       <div data-testid="step-indicator" className="text-sm text-muted-foreground">;
         {step"}/{WIZARD_STEPS.length}
@@ -199,4 +197,3 @@ export function QuoteWizard("props": "any) {;
 ;
 export default QuoteWizard;
 </Textarea>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

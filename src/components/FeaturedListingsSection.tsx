@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 import { motion } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 =======
 import React from 'react';
 =======
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 
 const featuredListings = [
   {
@@ -80,13 +72,8 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         id: "tech-ai-labs",
         avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
       },
-<<<<<<< HEAD
-      badge: "Trending",
-      badgeColor: "from-zion-purple to-zion-purple-dark"
-=======
       badge: "Top Rated",
       badgeColor: "from-yellow-500 to-orange-500"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
     },
     {
       id: "image-generation-service",
@@ -105,36 +92,11 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         id: "visual-ai"
       },
       badge: "Popular",
-<<<<<<< HEAD
-      badgeColor: "from-zion-cyan to-zion-blue"
-=======
       badgeColor: "from-purple-500 to-pink-500"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
     },
     {
-<<<<<<< HEAD
-      id: "fullstack-ai-dev",
-      title: "Full-Stack AI Development",
-      description: "End-to-end development for AI-powered applications with deployment support",
-      price: null, // Custom pricing
-      currency: "$",
-      category: "Services",
-      tags: ["Development", "Full-stack", "AI"],
-      images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
-      createdAt: "2023-12-15T09:45:00.000Z",
-      rating: 4.9,
-      reviewCount: 56,
-      author: {
-        name: "DataMinds Consulting",
-        id: "dataminds-consulting"
-      },
-<<<<<<< HEAD
-      badge: "Premium",
-      badgeColor: "from-zion-cyan-light to-zion-cyan"
-=======
       badge: "Expert",
       badgeColor: "from-blue-500 to-cyan-500"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
     },
     {
       id: "sentiment-analysis-api",
@@ -153,24 +115,10 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         id: "social-ai"
       },
       badge: "New",
-<<<<<<< HEAD
-      badgeColor: "from-zion-blue to-zion-blue-dark"
-    },
-  ];
-
-  const stats = [
-    { number: "50K+", label: "Active Listings", icon: TrendingUp },
-    { number: "98%", label: "Satisfaction Rate", icon: Star },
-    { number: "24/7", label: "Support Available", icon: Zap },
-    { number: "150+", label: "Countries Served", icon: Globe }
-  ];
-
-=======
       badgeColor: "from-green-500 to-emerald-500"
     },
   ];
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -190,8 +138,6 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       transition: { duration: 0.5 }
     }
   };
-<<<<<<< HEAD
-=======
       id: 'cybersecurity-audit',
       title: 'Cybersecurity Audit',
       description: 'Comprehensive security assessment and recommendations',
@@ -200,7 +146,6 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       image: '/images/cybersecurity-audit.jpg'
     }
   ];
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 
   return (
     <section id="featured" className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
@@ -227,52 +172,11 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 right-20 w-64 h-64 bg-zion-purple rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-48 h-48 bg-zion-cyan rounded-full blur-2xl"></div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {showTitle && (
           <motion.div 
-<<<<<<< HEAD
-            className="text-center mb-20"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <GradientHeading className="text-4xl md:text-5xl lg:text-6xl mb-6">
-              Featured Listings
-            </GradientHeading>
-            <p className="text-zion-slate-light text-xl md:text-2xl mt-6 max-w-4xl mx-auto leading-relaxed">
-              Discover our handpicked selection of top AI products, services, and cutting-edge solutions 
-              from verified providers worldwide
-            </p>
-          </motion.div>
-        )}
-
-        {/* Stats Section */}
-        <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          {stats.map((stat, index) => (
-            <motion.div 
-              key={index}
-              className="text-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              viewport={{ once: true }}
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-zion-purple/30">
-                <stat.icon className="w-10 h-10 text-zion-cyan" />
-              </div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-              <div className="text-zion-slate-light text-sm md:text-base">{stat.label}</div>
-=======
             className="text-center mb-16"
             variants={headerVariants}
             initial="hidden"
@@ -337,36 +241,10 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
                   }}
                 />
               </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
             </motion.div>
           ))}
         </motion.div>
 
-<<<<<<< HEAD
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-<<<<<<< HEAD
-          {featuredListings.map((listing, index) => (
-            <motion.div key={listing.id} variants={itemVariants}>
-              <div className="relative group">
-                {/* Badge */}
-                {listing.badge && (
-                  <div className={`absolute top-4 left-4 z-10 px-3 py-1 bg-gradient-to-r ${listing.badgeColor} text-white text-xs font-semibold rounded-full shadow-lg`}>
-                    {listing.badge}
-                  </div>
-                )}
-                
-                <ProductListingCard
-                  listing={listing}
-                  view="grid"
-                  onRequestQuote={() => {}}
-                />
-=======
           {featuredListings.map((listing) => (
             <motion.div key={listing.id} variants={itemVariants}>
               <div className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-cyan/20">
@@ -460,7 +338,6 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
                     <span>{listing.likes}</span>
                   </div>
                 </div>
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
               </div>
               
               <div className="flex flex-wrap gap-2 mb-4">
@@ -488,28 +365,11 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-        >
-          <Button 
-            className="group bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-10 py-6 text-lg font-semibold rounded-xl shadow-2xl shadow-zion-purple/25 transition-all duration-300 hover:scale-105"
-            asChild
-          >
-            <Link to="/marketplace" className="flex items-center gap-3">
-              Explore All Listings
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
-          
-          <p className="text-zion-slate-light mt-4 text-sm">
-            Join 10,000+ companies already using Zion
-          </p>
-=======
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105">
             View All Projects
           </button>
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
         </motion.div>
       </div>
     </section>
@@ -658,13 +518,7 @@ export function FeaturedListingsSection() {
             </div>
           </div>
         </motion.div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
       </div>
     </section>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-=======
-}
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

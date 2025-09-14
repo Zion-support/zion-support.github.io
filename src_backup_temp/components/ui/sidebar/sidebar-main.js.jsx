@@ -5,8 +5,6 @@ import {cn} from "@/lib/utils";
 ;
 export const Sidebar = React.forwardRef((props, ref) => {;
     const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
-<<<<<<< HEAD
-=======
     if (props.collapsible === "none") {;
         return (<div className = {;
   cn("flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",;
@@ -136,4 +134,3 @@ SidebarInset.displayName = 'SidebarInset';'"""
 </main>;
 </button>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

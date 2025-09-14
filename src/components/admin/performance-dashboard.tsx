@@ -124,13 +124,6 @@ export function PerformanceDashboard() {
     return vitals,
   },
 
-  const collectChunkData = async (): Promise<BundleChunk[]> => {
-    if (typeof window === 'undefined') return [],
-    
-    const resourceEntries = window.window.window.performance.getEntriesByType('resource') as PerformanceResourceTiming[],
-    const scriptEntries = resourceEntries.filter(entry => 
-      entry.name.includes('/_next/static/') && entry.name.endsWith('.js')
-    ),
 
     return scriptEntries.map(entry => ({
       name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
@@ -141,13 +134,7 @@ export function PerformanceDashboard() {
     })).sort((a, b) => b.size - a.size),
   },
 
-  const categorizeChunk = (filename: string): string => {
-    if (filename.includes('framework')) return 'framework',
-    if (filename.includes('vendor')) return 'vendor',
-    if (filename.includes('pages')) return 'page',
-    if (filename.includes('chunks')) return 'chunk',
-    return 'other'
-  },
+
 
   const formatSize = (bytes: number): string => {
     if (bytes === 0) return '0 B',
@@ -323,22 +310,27 @@ export function PerformanceDashboard() {
                             cached
                           </Badge>
                         )}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <p className="font-medium">{formatSize(chunk.size)}</p>
-                    <p className="text-xs text-muted-foreground">
-                      {chunk.loadTime.toFixed(0)}ms
-                    </p>
-                  </div>
-                </div>
+                      </div>;
+                    </div>;
+                  </div>;
+                  <div className='text-right'>;
+                    <p className='font-medium'>{formatSize(chunk && chunk.size)}</p>;
+                    <p className='text-xs text-muted-foreground'>;
+                      {chunk && chunk.loadTime.toFixed(0)}ms;
+                    </p>;
+                  </div>;
+                </div>;
               ))}
               
               {chunks.length > 10 && (
-                <p className="text-sm text-muted-foreground text-center pt-2">
+                <p className='text-sm text-muted-foreground text-center pt-2'>
                   ... and {chunks.length - 10} more chunks
                 </p>
+
+              {chunks && chunks.length > 10 && (;
+                <p className='text-sm text-muted-foreground text-center pt-2'>;
+                  ... and {chunks && chunks.length - 10} more chunks;
+                </p>;
               )}
             </div>
           ) : (
@@ -370,28 +362,32 @@ export function PerformanceDashboard() {
                 </p>
               </div>
             </div>
+            <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
+              <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
             
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
               <div>
-                <p className="font-medium text-green-900 dark:text-green-100">
+                <p className='font-medium text-green-900 dark:text-green-100'>
                   Performance monitoring active
                 </p>
-                <p className="text-sm text-green-700 dark:text-green-300">
-                  Real-time performance tracking is helping optimize your application
+                <p className='text-sm text-green-700 dark:text-green-300'>
+                  Real-time performance tracking is helping optimize your
+                  application
                 </p>
               </div>
             </div>
             
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
-              <div className="flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded">
-                <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />
+              <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
+                <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
                 <div>
-                  <p className="font-medium text-yellow-900 dark:text-yellow-100">
+                  <p className='font-medium text-yellow-900 dark:text-yellow-100'>
                     Consider more aggressive code splitting
                   </p>
-                  <p className="text-sm text-yellow-700 dark:text-yellow-300">
-                    Bundle size is above 2MB. Consider implementing dynamic imports for heavy components
+                  <p className='text-sm text-yellow-700 dark:text-yellow-300'>
+                    Bundle size is above 2MB. Consider implementing dynamic
+                    imports for heavy components
                   </p>
                 </div>
               </div>

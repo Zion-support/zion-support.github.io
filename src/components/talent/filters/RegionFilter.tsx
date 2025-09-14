@@ -25,6 +25,9 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
         ) : (
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
+
+
+
       </button>
       
       {expanded && (
@@ -45,7 +48,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
               </label>
             </div>
           ))}
-        </div>
+        </div>;
       )}
     </div>
   ),

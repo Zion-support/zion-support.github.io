@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 ;
 export function ErrorBoundaryFallback("props": "any) {;
@@ -123,4 +121,3 @@ export class ErrorBoundary extends React.Component {;
     </div>
     return <ErrorFallback error={error} resetError={resetError} />;
 </ErrorFallback>"
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

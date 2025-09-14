@@ -244,38 +244,3 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
-
-
-
-
-              `${editTemplate ? "Update" : "Save"} Template`
-
-
-            )}
-          </Button>;
-        </div>;
-      </form>;
-
-    </Form>;
-  );
-
-
-
-  // Check condition
-if ( {) {
-  $2
-}
-  await update_template.mutate_async ({
-  <FormItem> <FormLabel > Template Name</FormLabel> <FormControl> <Input {
-  ...field ";
-}placeholder="Enter template name" />;
-}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
-}/> <> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : (`$ {";
-  edit_template ? "Update" : "Save";
-}Template`);
-}</Button> </div> </form> </Form>);
-}"}
-}
-;
-

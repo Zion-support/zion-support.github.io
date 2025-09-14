@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export interface AdvancedMicroSaaSService {
   id: string;
   title: string;
@@ -543,4 +541,3 @@ export const "ADVANCED_MICRO_SAAS_2026": AdvancedMicroSaaSService[] = [{
     &quot;documentationUrl&quot;: &apos;https://ziontechgroup.com/docs&apos;
   };
 ];
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

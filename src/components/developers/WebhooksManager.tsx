@@ -65,10 +65,17 @@ export function WebhooksManager() {
     await toggleWebhook(webhookId, !currentStatus),
   },
 
-  const handleDeleteWebhook = async (webhookId: string) => {
-    await deleteWebhook(webhookId),
-    setShowDeleteConfirm(null)
-  },
+  // Load webhooks on mount;
+  useEffect(() => {;
+    fetchWebhooks();
+  }, []);
+  const handleCreateWebhook = async () => {;
+    if (;
+      webhookName && webhookName.trim() === '' ||;
+      webhookUrl && webhookUrl.trim() === '' ||;
+      selectedEvents && selectedEvents.length === 0;
+    );
+      return;
 
   const handleTestWebhook = async (webhookId: string) => {
     await testWebhook(webhookId, testEventType),
@@ -82,12 +89,11 @@ export function WebhooksManager() {
     setSelectedEvents([]),
   },
 
-  // Event type options
-  const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [
-    { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },
-    { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },
-    { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },
-    { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }],
+  const handleToggleStatus = async (;
+    webhookId: string,;
+    currentStatus: boolean;
+  ) => {;
+    await toggleWebhook(webhookId, !currentStatus);  };
 
   // Toggle an event selection
   const toggleEvent = (event: WebhookEventType) => {
@@ -147,7 +153,7 @@ export function WebhooksManager() {
                     id="webhook-url"
                     value={webhookUrl}
                     onChange={(e) => setWebhookUrl(e.target.value)}
-                    placeholder="https://example.com/webhook"
+                    placeholder="https: //example.com/webhook"
                     className="bg-zinc-800 border-zinc-700"
                   />
                   <p className="text-xs text-zinc-500">
@@ -176,6 +182,9 @@ export function WebhooksManager() {
                   <div className="grid gap-2 pt-2">
                     {eventOptions.map((event) => (
                       <div key={event.value} className="flex items-center space-x-2">
+
+                        <Checkbox
+                          id={event.value}
                         <Checkbox 
                           id={event.value} 
                           checked={selectedEvents.includes(event.value)}
@@ -186,6 +195,7 @@ export function WebhooksManager() {
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {event.label}
+                          <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
                         </Label>
                       </div>
@@ -204,7 +214,7 @@ export function WebhooksManager() {
                 <Button onClick={handleCreateWebhook} disabled={
                   webhookName.trim() === "" || 
                   webhookUrl.trim() === "" || 
-                  selectedEvents.length === 0
+                  selectedEvents.length === 0;
                 }>
                   Create Webhook
                 </Button>
@@ -224,6 +234,12 @@ export function WebhooksManager() {
               <p className="text-sm mt-1">Create one to receive event notifications.</p>
             </div>
           ) : (
+            webhooks.map(webhook => (
+              <div
+                key={webhook.id}
+                className='p-4 border border-zinc-800 rounded-lg'
+              >
+                <div className='flex items-center justify-between'>              <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
             webhooks.map((webhook) => (
               <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
                 <div className="flex items-center justify-between">
@@ -234,6 +250,19 @@ export function WebhooksManager() {
                       <span className="max-w-md truncate">{webhook.url}</span>
                     </div>
                   </div>
+                  <div className='flex items-center space-x-2'>
+                    <div className='flex items-center mr-2'>
+                      <Switch
+                        aria-label='Toggle webhook'
+                        checked={webhook.is_active}
+                        onCheckedChange={() =>
+                          handleToggleStatus(webhook.id, webhook.is_active)
+                        }                      />
+                      <span className='ml-2 text-sm'>
+                        {webhook.is_active ? 'Active' : 'Inactive'}
+                      </span>
+                    </div>
+                    <DropdownMenu>
                   
                   <div className="flex items-center space-x-2">
                     <div className="flex items-center mr-2">
@@ -288,6 +317,7 @@ export function WebhooksManager() {
                   {webhook.last_triggered_at && (
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>
                   )}
+
                 </div>
               </div>
             ))
@@ -335,8 +365,17 @@ export function WebhooksManager() {
                     value={testEventType}
                     onValueChange={(value) => setTestEventType(value as WebhookEventType)}
                   >
+                    <SelectTrigger className='bg-zinc-800 border-zinc-700'>
+                      <SelectValue placeholder='Select an event type' />
                     <SelectTrigger className="bg-zinc-800 border-zinc-700">
                       <SelectValue placeholder="Select an event type" />
+                  >
+
+                    <SelectTrigger className="bg-zinc-800 border-zinc-700">
+                      <SelectValue placeholder="Select an event type" />
+
+
+
                     </SelectTrigger>
                     <SelectContent className="bg-zinc-900 border-zinc-800">
                       {eventOptions.map((option) => (
@@ -344,8 +383,53 @@ export function WebhooksManager() {
                           {option.label}
                         </SelectItem>
                       ))}
-                    </SelectContent>
-                  </Select>
+
+                    </SelectContent>;
+                  </Select>;
+                  <p className='text-xs text-zinc-500'>;
+      >;
+        <DialogContent className='bg - zinc - 900 border - zinc - 800 text - white'>;
+          <DialogHeader>;
+            <DialogTitle > Test Webhook</DialogTitle>;
+            <DialogDescription className='text - zinc - 400'>;
+              Send a test webhook to your endpoint.;
+            </DialogDescription>;
+          </DialogHeader>;
+          {!showTestResult ? (
+            <>;
+              <div className='space - y-4 py - 4'>;
+                <div className='space - y-2'>;
+                  <Label html_for='test - event - type'>Event Type</Label>;
+                  <Select;
+                    value={testEventType}
+                    onValueChange={value =>;
+                      setTestEventType (value as WebhookEventType);
+                    }
+                    value = {testEventType, }
+                    onValueChange = {(value, ) => setTestEventType (value as WebhookEventType), }
+                  >;
+                    <SelectTrigger className='bg - zinc - 800 border - zinc - 700'>;
+                      <SelectValue placeholder='Select an event type' />;
+                    </SelectTrigger>;
+                    <SelectContent className='bg - zinc - 900 border - zinc - 800'>;
+                      {event_options.map (option => (                        <SelectItem key={option.value} value={option.value}>                      {event_options.map ((option, ) => (
+                    <SelectContent className="bg - zinc - 900 border - zinc - 800">;
+                      {event_options.map ((option) => (
+                        <SelectItem key={option.value} value={option.value}>;
+                          {option.label}
+                        </SelectItem>))}
+                    </SelectContent>;
+                  </Select>;
+                  <p className='text - xs text - zinc - 500'>;
+
+                    The event type will determine the structure of the test;
+                    payload.;
+                  </p>;
+                </div>;
+              </div>;
+
+
+
                   <p className="text-xs text-zinc-500">
                     The event type will determine the structure of the test payload.
                   </p>
@@ -382,6 +466,7 @@ export function WebhooksManager() {
                     <Label>Response Body</Label>
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">
+                        {testResult?.responseBody |"No response body"}
                         {testResult?.responseBody || "No response body"}
                       </pre>
                     </ScrollArea>

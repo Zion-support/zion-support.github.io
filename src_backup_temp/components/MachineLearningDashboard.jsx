@@ -3,8 +3,6 @@ import {motion, AnimatePresence} from 'framer-motion';';
 import {Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2} from 'lucide-react';
 ;
 ;
-<<<<<<< HEAD
-=======
 export const MachineLearningDashboard = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
@@ -2079,4 +2077,3 @@ export default Component;
 </div>;
 </div>;
 </Brain>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

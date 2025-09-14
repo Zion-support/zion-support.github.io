@@ -474,18 +474,3 @@ export function AIEnhancementPanel(): any ({;
 
 
 
-<<<<<<< HEAD
-
-
-
-
-          <Button onClick={handleApply}>;
-            Apply to Form;
-          </Button>;
-        </CardFooter>;
-      )}
-    </Card>;
-  );
-}
-;
-

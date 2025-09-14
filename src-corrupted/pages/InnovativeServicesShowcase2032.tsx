@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react'; import { motion  } from 'framer-motion'; import { ; Search,; Filter,; Star,; TrendingUp,; Shield,; Brain,; Database,; Globe,; Zap,; Award,; Phone,; Mail,; MapPin,; ExternalLink,; CheckCircle,; Clock,; DollarSign,; Users,; Target,; BarChart3;  } from 'lucide-react'; import { INNOVATIVE_MICRO_SAAS_SERVICES_2032 } from '../data/innovativeMicroSaasServices2032'; ; const InnovativeServicesShowcase2032: Reac t.FC = () => {; const [searchTerm, setSearchTerm] = useState<any>(''); const [selectedCategory, setSelectedCategory] = useState<any>('All'); const [selectedPriceRange, setSelectedPriceRange] = useState<any>('All'); const [sortBy, setSortBy] = useState<any>('featured'); ; const categories = ['All', 'AI & Legal Tech', 'Cybersecurity', 'AI & Healthcare', 'Blockchain & Supply Chain', 'IoT & Edge Computing', 'AI & FinTech', 'AI & Marketing', 'AI & Quantum Computing', 'AI & Customer Experience', 'AI & Supply Chain']; ; const priceRanges = [; 'All',; 'Under $500',; '$500 - $1,000',; '$1,000 - $2,000',; '$2,000+'; ]; ; const filteredServices = useMemo(() => {; let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2032; ;
-
-</any>
-</any>
-</any>
-</any>
-=======
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -470,4 +462,3 @@ const InnovativeServicesShowcase2032: React.FC = () => {
 };
 
 export default InnovativeServicesShowcase2032;
->>>>>>> origin/merge-pr-10615

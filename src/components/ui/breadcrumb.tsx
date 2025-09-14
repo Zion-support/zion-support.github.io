@@ -51,7 +51,9 @@ const BreadcrumbLink = React.forwardRef<
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<"a"> & {
     asChild?: boolean
+
   }
+
 >(({ className, asChild = false, ...props }, ref) => {
   const Comp = asChild ? Slot : "a"
  
@@ -91,6 +93,18 @@ const BreadcrumbEllipsis = ({
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
+
+    &#8230,
+  </span>;
+    role="presentation";
+    aria - hidden="true";
+    className={cn ("flex h - 9 w - 9 items - center justify - center", class_name)}
+  <li;
+    role="presentation";
+    aria - hidden="true";
+    className={cn ("[&>svg]:size - 3.5 text - zion - slate - light / 70", class_name)}
+    {...props}
+  >
     &#8230,
   </span>
 )
@@ -102,4 +116,8 @@ export {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
+
+
+
+  BreadcrumbEllipsis}
   BreadcrumbEllipsis}

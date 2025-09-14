@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 ;
@@ -98,4 +96,3 @@ export default ScrollToTop;
 </motion>
 </AnimatePresence>
 import React from 'react'; export default ScrollToTop',','; ';';';';';'; ";';';'; ";';';';'; """
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -160,39 +142,10 @@ const Sitemap = () => {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Navigate through our comprehensive website structure to find the information and services you need.
->>>>>>> origin/cursor/website-audit-and-enhancement-4b00
           </p>
         </div>
       </div>
 
-<<<<<<< HEAD
-        {/* Sitemap Content */}
-        <div className="space-y-8">
-          {renderPageSection('Main Pages', mainPages, Map)}
-          {renderPageSection('Services', servicePages, Settings)}
-          {renderPageSection('Legal & Support', legalPages, Shield)}
-        </div>
-
-        {/* Footer */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-16 text-center text-gray-400"
-        >
-          <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
-          <p className="mt-2">
-            Last updated: {new Date().toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            })}
-          </p>
-        </motion.div>
-      </div>
-    </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
-=======
   Cloud, 
   Zap, 
   Globe, 
@@ -541,7 +494,6 @@ export default function Sitemap() {
         </div>
       </div>
     </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-aa28
 =======
       {/* Sitemap Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
@@ -625,15 +577,7 @@ export default function Sitemap() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default Sitemap;
-=======
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/build-and-fix-errors-e276
-=======
 
 // Play icon component for demo link
 function Play({ className }: { className?: string }) {
@@ -877,7 +821,6 @@ export default function Sitemap() {
         </div>
       </div>
     </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
 =======
   const quickLinks = [
     { name: "Find Talent", path: "/talent", icon: <Users className="w-4 h-4" /> },
@@ -1126,7 +1069,5 @@ export default function Sitemap() {
         </div>
       </section>
     </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
   );
 }
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974

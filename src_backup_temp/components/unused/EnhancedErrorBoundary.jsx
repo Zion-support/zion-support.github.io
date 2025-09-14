@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import {motion} from 'framer-motion';
 ;
@@ -190,4 +188,3 @@ export {Page};
 </div>
 import React,{Component} from 'react'; import { motion, ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from 'lucide-react'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; hasError: false,; error: null,; errorInfo: null,; errorId: null,; showStackTrace: false}}; static getDerivedStateFromError(error) {; return {; hasError: true,; error,; errorId: this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }
 });'; ;';';''
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

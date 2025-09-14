@@ -176,9 +176,6 @@ export function InteractivePortfolio("props": "any) {;
                       <span className="text-xs">{project.rating}</span>;
                     </div>;
                   </div>;
-<<<<<<< HEAD
-
-=======
                   <h3 className="text-xl font-bold text-zion-slate mb-3 group-"hover": "text-zion-cyan transition-colors">;
                     {project.title"}
                   </h3>;
@@ -341,4 +338,3 @@ export function InteractivePortfolio("props": "any) {;
     </section>)}
 ;
 export default InteractivePortfolio;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

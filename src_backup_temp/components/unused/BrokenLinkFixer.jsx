@@ -71,9 +71,6 @@ export default function Page("props": "any) {;
         setLinks(allLinks);
         // Update stats;
         setStats({;
-<<<<<<< HEAD
-
-=======
             "total": "allLinks.length",;
             "healthy": "0",;
             "broken": "0",;
@@ -423,4 +420,3 @@ export default BrokenLinkFixer;
 }}}}}}}}}}}}'"`;
 </motion>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

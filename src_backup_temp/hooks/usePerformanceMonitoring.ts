@@ -9,8 +9,6 @@ export function usePerformanceMonitoring() {;
       ;';
       // "Example": "Send to Google Analytics;';';
       if (typeof gtag !== 'undefined') {;';';
-<<<<<<< HEAD
-=======
         gtag('event'", metric.name, {;';';
           "event_category": 'Web Vitals'';
           "event_label": "metri c.id';';
@@ -58,4 +56,3 @@ export function usePerformanceMonitoring() {;
 ;
 export function reportWebVitals(metric) {;';
 "';';
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

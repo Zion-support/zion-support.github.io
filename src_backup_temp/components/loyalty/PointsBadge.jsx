@@ -17,8 +17,6 @@ export function PointsBadge("props": "any) {;
             acc.post += e.delta;
         if (e.reason === 'referral');
             acc.referral += e.delta;
-<<<<<<< HEAD
-=======
         return acc}, {"purchase": "0", "post": "0", "referral": "0"});
     const handleLogout = async () => {;
         if (signOut) {;
@@ -62,4 +60,3 @@ export function PointsBadge("props": "any) {;
     </DropdownMenu>)}
 ;
 export default PointsBadge;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

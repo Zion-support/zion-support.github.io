@@ -28,16 +28,14 @@ export function MyApplications() {
       default:
         return <Badge variant="outline">{status}</Badge>,
     }
-  },
-  
-  if (isLoading) {
+
+import {ApplicationStatus} from "@/types/jobs";
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     ),
   }
-  
   if (error) {
     return (
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">
@@ -63,11 +61,13 @@ export function MyApplications() {
   
   return (
     <div className="grid gap-4 md:grid-cols-2">
+      {applications.map((application,) => (
       {applications.map((application) => (
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
               <CardTitle className="text-lg">
+                {application.job?.title |"Unknown Job"}
                 {application.job?.title || "Unknown Job"}
               </CardTitle>
               {getStatusBadge(application.status)}

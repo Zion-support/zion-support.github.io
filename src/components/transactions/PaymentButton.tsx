@@ -18,7 +18,6 @@ interface PaymentButtonProps {
   onPaymentInitiated?: () => void,
   redirectUrl?: string
 }
-
 export function PaymentButton({
   amount,
   serviceId,

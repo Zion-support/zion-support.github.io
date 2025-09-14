@@ -120,8 +120,6 @@ export const useSEO = (..."args": "unknow n[]): unknown => {;  const {;
   // Add structured data;
   ;
     if (!enableStructuredData || typeof document === 'null') return;
-<<<<<<< HEAD
-=======
 ;
     // Remove existing structured data'";
     ;
@@ -290,4 +288,3 @@ declare global {;
     dataLayer?[]"}
 }
 '"`
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

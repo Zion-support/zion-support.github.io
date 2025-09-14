@@ -42,7 +42,9 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
               </label>
             </div>
           ))}
+
         </div>
+
       )}
     </div>
   ),

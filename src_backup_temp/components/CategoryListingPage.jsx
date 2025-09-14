@@ -66,8 +66,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
                 return a.title.localeCompare(b.title);
             case 'z-a':;
                 return b.title.localeCompare(a.title);
-<<<<<<< HEAD
-=======
             "default":;
                 return 0"}
     });
@@ -174,4 +172,3 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
       <Footer  />
     </>)}
 '"`;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

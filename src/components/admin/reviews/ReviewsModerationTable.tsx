@@ -35,24 +35,7 @@ interface ReviewsModerationTableProps {
   onRefresh: () => void
 }
 
-export function ReviewsModerationTable({
-  reviews,
-  isLoading,
-  onRefresh}: ReviewsModerationTableProps) {
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null),
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
 
-  const { mutate: updateReviewStatus, isPending } = useMutation({
-    mutationFn: async ({
-      reviewId,
-      status}: {
-      reviewId: string,
-      status: ReviewStatus
-    }) => {
-      const { error } = await supabase
-        .from("reviews")
-        .update({ status })
-        .eq("id", reviewId),
 
       if (error) throw error,
       return { reviewId, status },
@@ -81,6 +64,7 @@ export function ReviewsModerationTable({
   },
 
   if (isLoading) {
+
     return (
       <div className="space-y-4">
         <div className="h-12 w-full bg-muted rounded animate-pulse" />
@@ -91,7 +75,393 @@ export function ReviewsModerationTable({
     ),
   }
 
-  if (reviews.length === 0) {
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className='space - y-4'>;
+        <div className='h - 12 w - full bg - muted rounded animate - pulse' />;
+        <div className='h - 16 w - full bg - muted rounded animate - pulse' />;
+        <div className='h - 16 w - full bg - muted rounded animate - pulse' />;
+        <div className='h - 16 w - full bg - muted rounded animate - pulse' />;
+      </div>);
+
+  }
+
+  // Check condition
+if ( {) {
+  $2
+}
+
+    return (
+      <div className='py - 10 text - center'>;
+        <h3 className='text - lg font - medium mb - 2'>No reviews to moderate</h3>;
+        <p className='text - muted - foreground'>;
+          All reviews have been processed. Check back later for new submissions.;
+        </p>;
+      </div>);
+  }
+
+  const handle_approve = (review_id: string) =>: any {
+    updateReviewStatus ({ review_id, status: 'approved' });
+
+  }
+  const handle_reject = (review_id: string) =>: any {
+    updateReviewStatus ({ review_id, status: 'rejected' });
+  }
+  const handleViewDetails = (review: Review) =>: any {
+    setSelectedReview (review);
+    setViewDetailsOpen (true);
+  }
+
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow,;
+} from '@/components/ui/table';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogFooter,;
+  DialogHeader,;
+  DialogTitle,;
+} from '@/components/ui/dialog';
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;
+} from '@/components/ui/dropdown-menu';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+interface ReviewsModerationTableProps {;
+  reviews: Review[];
+isLoading: boolean;
+onRefresh: () => void ;
+}export function ReviewsModerationTable(): any ({;
+  reviews;
+isLoading;
+onRefresh ;
+}: ReviewsModerationTableProps) {;
+  const [selectedReview, setSelectedReview] = useState<Review | null> (null);
+const [viewDetailsOpen,  setViewDetailsOpen] = useState (false);
+const {;
+  mutate: updateReviewStatus, isPending ;
+}= useMutation ({;
+  mutationFn: async ({;
+  reviewId;
+status ;
+}: {;
+  reviewId: string;
+status: ReviewStatus ;
+}) => {;
+  const {;
+  error ;
+}= await supabase .from ("reviews") .update ({;
+  status ;
+}) if (error) throw error;
+return {;
+  reviewId, status ;
+
+export function ReviewsModerationTable(): any ({;
+  reviews,;
+  isLoading,;
+  onRefresh,;
+}: ReviewsModerationTableProps) {;
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
+
+  const { mutate: updateReviewStatus, isPending } = useMutation({;
+    mutationFn: async ({;
+      reviewId,;
+      status,;
+    }: {;
+      reviewId: string;
+      status: ReviewStatus;
+    }) => {      const { error } = await supabase;
+        .from('reviews');
+        .update({ status });
+        .eq('id', reviewId);
+
+      if (error) throw error;
+      return { reviewId, status };
+    },;
+    onSuccess: data => {      toast({;
+        title: 'Review updated',;
+        description: `Review has been ${data && data.status}.`,;
+      });
+      onRefresh();
+      setViewDetailsOpen(false);
+    },;
+    onError: (error: Error,) => {;
+      toast({;
+        title: 'Error',;
+        description: `Failed to update review: ${error && error.message}`,;
+        variant: 'destructive',;
+      });
+    },;
+  });
+
+  const getInitials = (name: string,) => {;
+    return name;
+      .split(' ');
+      .map(n => n[0]);
+      .join('');
+      .toUpperCase();
+  };
+  if (isLoading) {;
+    return (
+      <div className='space-y-4'>;
+        <div className='h-12 w-full bg-muted rounded animate-pulse' />;
+        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
+        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
+        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
+      </div>;
+    );
+  }
+
+  if (reviews && reviews.length === 0) {;
+    return (
+      <div className='py-10 text-center'>;
+        <h3 className='text-lg font-medium mb-2'>No reviews to moderate</h3>;
+        <p className='text-muted-foreground'>;
+          All reviews have been processed. Check back later for new submissions.;
+        </p>;
+      </div>;
+    );
+  }
+
+  const handleApprove = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: 'approved' });
+  };
+
+  const handleReject = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: 'rejected' });
+  };
+
+  const handleViewDetails = (review: Review) => {;
+    setSelectedReview(review);
+    setViewDetailsOpen(true);
+  };
+  const renderStars = (rating: number,) => {;
+
+    return (
+      <div className='flex'>;
+        {[1, 2, 3, 4, 5].map(star => (;
+          <Star
+            key={star}
+            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}          />;
+        ))}
+
+  const render_stars = (rating: number, ) =>: any {
+    return (
+      <div className='flex'>;
+        {[1, 2, 3, 4, 5].map (star => (
+          <Star;
+            key={star}
+            className={`h - 4 w - 4 ${star <= rating ? 'fill - yellow - 400 text - yellow - 400' : 'text - gray - 300'}`}          />))}
+      </div>);
+
+  }
+      </div>;
+    );
+  };
+
+  return (
+    <>;
+      <Table>;
+        <TableHeader>;
+          <TableRow>;
+
+    return (
+      <div className='py - 10 text - center'>;
+        <h3 className='text - lg font - medium mb - 2'>No reviews to moderate</h3>;
+        <p className='text - muted - foreground'>;
+          All reviews have been processed. Check back later for new submissions.;
+        </p>;
+      </div>);
+  }
+
+  const handle_approve = (review_id: string) =>: any {
+    updateReviewStatus ({ review_id, status: 'approved' });
+
+  }
+  const handle_reject = (review_id: string) =>: any {
+    updateReviewStatus ({ review_id, status: 'rejected' });
+  }
+  const handleViewDetails = (review: Review) =>: any {
+    setSelectedReview (review);
+    setViewDetailsOpen (true);
+  }
+
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow,;
+} from '@/components/ui/table';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogFooter,;
+  DialogHeader,;
+  DialogTitle,;
+} from '@/components/ui/dialog';
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;
+} from '@/components/ui/dropdown-menu';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+interface ReviewsModerationTableProps {;
+  reviews: Review[];
+isLoading: boolean;
+onRefresh: () => void ;
+}export function ReviewsModerationTable(): any ({;
+  reviews;
+isLoading;
+onRefresh ;
+}: ReviewsModerationTableProps) {;
+  const [selectedReview, setSelectedReview] = useState<Review | null> (null);
+const [viewDetailsOpen,  setViewDetailsOpen] = useState (false);
+const {;
+  mutate: updateReviewStatus, isPending ;
+}= useMutation ({;
+  mutationFn: async ({;
+  reviewId;
+status ;
+}: {;
+  reviewId: string;
+status: ReviewStatus ;
+}) => {;
+  const {;
+  error ;
+}= await supabase .from ("reviews") .update ({;
+  status ;
+}) if (error) throw error;
+return {;
+  reviewId, status ;
+
+export function ReviewsModerationTable(): any ({;
+  reviews,;
+  isLoading,;
+  onRefresh,;
+}: ReviewsModerationTableProps) {;
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
+
+  const { mutate: updateReviewStatus, isPending } = useMutation({;
+    mutationFn: async ({;
+      reviewId,;
+      status,;
+    }: {;
+      reviewId: string;
+      status: ReviewStatus;
+    }) => {      const { error } = await supabase;
+        .from('reviews');
+        .update({ status });
+        .eq('id', reviewId);
+
+      if (error) throw error;
+      return { reviewId, status };
+    },;
+    onSuccess: data => {      toast({;
+        title: 'Review updated',;
+        description: `Review has been ${data && data.status}.`,;
+      });
+      onRefresh();
+      setViewDetailsOpen(false);
+    },;
+    onError: (error: Error,) => {;
+      toast({;
+        title: 'Error',;
+        description: `Failed to update review: ${error && error.message}`,;
+        variant: 'destructive',;
+      });
+    },;
+  });
+
+  const getInitials = (name: string,) => {;
+    return name;
+      .split(' ');
+      .map(n => n[0]);
+      .join('');
+      .toUpperCase();
+  };
+  if (isLoading) {;
+    return (
+      <div className='space-y-4'>;
+        <div className='h-12 w-full bg-muted rounded animate-pulse' />;
+        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
+        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
+        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
+      </div>;
+    );
+  }
+
+  if (reviews && reviews.length === 0) {;
+    return (
+      <div className='py-10 text-center'>;
+        <h3 className='text-lg font-medium mb-2'>No reviews to moderate</h3>;
+        <p className='text-muted-foreground'>;
+          All reviews have been processed. Check back later for new submissions.;
+        </p>;
+      </div>;
+    );
+  }
+
+  const handleApprove = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: 'approved' });
+  };
+
+  const handleReject = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: 'rejected' });
+  };
+
+  const handleViewDetails = (review: Review) => {;
+    setSelectedReview(review);
+    setViewDetailsOpen(true);
+  };
+  const renderStars = (rating: number,) => {;
+
+    return (
+      <div className='flex'>;
+        {[1, 2, 3, 4, 5].map(star => (;
+          <Star
+            key={star}
+            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}          />;
+        ))}
+
+  const render_stars = (rating: number, ) =>: any {
+    return (
+      <div className='flex'>;
+        {[1, 2, 3, 4, 5].map (star => (
+          <Star;
+            key={star}
+            className={`h - 4 w - 4 ${star <= rating ? 'fill - yellow - 400 text - yellow - 400' : 'text - gray - 300'}`}          />))}
+      </div>);
+
+  }
+      </div>;
+    );
+  };
+
+  return (
+    <>;
+      <Table>;
+        <TableHeader>;
+          <TableRow>;
+
     return (
       <div className="py-10 text-center">
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>
@@ -194,6 +564,20 @@ export function ReviewsModerationTable({
                   {review.status === "pending" && (
                     <>
                       <Button
+                        size='sm'
+                        variant='outline'
+                        className='h-8 w-8 p-0'
+                        onClick={() => handleApprove(review.id)}
+                        disabled={isPending}                      >
+                        <Check className='h-4 w-4 text-green-500' />
+                      </Button>
+                      <Button
+                        size='sm'
+                        variant='outline'
+                        className='h-8 w-8 p-0'
+                        onClick={() => handleReject(review.id)}
+                        disabled={isPending}                      >
+                        <X className='h-4 w-4 text-red-500' />
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
@@ -227,6 +611,28 @@ export function ReviewsModerationTable({
                       <DropdownMenuItem onClick={() => handleViewDetails(review)}>
                         View details
                       </DropdownMenuItem>
+                      {review.status === 'approved' && (
+                        <DropdownMenuItem
+                          onClick={() =>
+                            updateReviewStatus({
+                              reviewId: review.id
+                              status: 'rejected'
+                            })
+                          }
+                        >
+                          Mark as rejected
+                        </DropdownMenuItem>
+                      )}
+                      {review.status === 'rejected' && (
+                        <DropdownMenuItem
+                          onClick={() =>
+                            updateReviewStatus({
+                              reviewId: review.id
+                              status: 'approved'
+                            })
+                          }
+                        >                          Mark as approved
+                        </DropdownMenuItem>
                       {review.status === "approved" && (
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
                           Mark as rejected
@@ -245,7 +651,6 @@ export function ReviewsModerationTable({
           ))}
         </TableBody>
       </Table>
-
       {selectedReview && (
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>
           <DialogContent className="max-w-lg">
@@ -256,6 +661,9 @@ export function ReviewsModerationTable({
                 {format(new Date(selectedReview.created_at), "MMMM d, yyyy")}
               </DialogDescription>
             </DialogHeader>
+            <div className='space-y-4'>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center gap-2'>
 
             <div className="space-y-4">
               <div className="flex items-center justify-between">
@@ -277,6 +685,10 @@ export function ReviewsModerationTable({
                   <div>
                     <div className="font-medium">
                       {selectedReview.is_anonymous
+                        ? 'Anonymous'
+                        : selectedReview.reviewer_profile?.display_name |
+                          'User'}
+
                         ? "Anonymous"
                         : selectedReview.reviewer_profile?.display_name || "User"}
                     </div>
@@ -296,9 +708,37 @@ export function ReviewsModerationTable({
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedReview.communication_rating && (
-                    <Badge variant="outline">
+                    <Badge variant='outline'>
                       Communication: {selectedReview.communication_rating}/5
                     </Badge>
+
+                  </Avatar>;
+                  <div>;
+                    <div className='font-medium'>;
+                      {selectedReview && selectedReview.is_anonymous;
+                        ? 'Anonymous';
+                        : selectedReview && selectedReview.reviewer_profile?.display_name ||;
+                          'User'}
+                    </div>;
+                    <Badge variant='outline'>{selectedReview && selectedReview.status}</Badge>;
+                  </div>;
+                </div>;
+                <div>{renderStars(selectedReview && selectedReview.rating)}</div>;
+              </div>;
+
+              <div className='border rounded-md p-3 bg-muted/20'>;
+                <p className='whitespace-pre-wrap'>;
+                  {selectedReview && selectedReview.review_text}
+                </p>;
+              </div>;
+
+              <div className='space-y-2'>;
+                <h4 className='text-sm font-medium'>Additional Ratings</h4>;
+                <div className='flex flex-wrap gap-2'>;
+                  {selectedReview && selectedReview.communication_rating && (;
+                    <Badge variant='outline'>;
+                      Communication: {selectedReview && selectedReview.communication_rating}/5;
+                    </Badge>;
                   )}
                   {selectedReview.quality_rating && (
                     <Badge variant="outline">
@@ -310,29 +750,42 @@ export function ReviewsModerationTable({
                       Timeliness: {selectedReview.timeliness_rating}/5
                     </Badge>
                   )}
-                  {selectedReview.would_work_again !== undefined && (
+                  {selectedReview && selectedReview.would_work_again !== undefined && (;
                     <Badge
+                      variant={
+                        selectedReview.would_work_again
+                          ? 'default'
+                          : 'secondary'
+                      }                    >
+                      {selectedReview.would_work_again
+                        ? 'Would work again'
+                        : 'Would not work again'}
                       variant={selectedReview.would_work_again ? "default" : "secondary"}
                     >
                       {selectedReview.would_work_again ? "Would work again" : "Would not work again"}
                     </Badge>
                   )}
-                </div>
-              </div>
 
-              {selectedReview.report_count > 0 && (
-                <div className="bg-red-50 border border-red-200 rounded-md p-3">
-                  <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview.report_count}</h4>
-                  <p className="text-sm text-red-700">
-                    This review has been reported by users and may need investigation.
-                  </p>
-                </div>
+                </div>;
+              </div>;
+
+              {selectedReview && selectedReview.report_count > 0 && (;
+                <div className='bg-red-50 border border-red-200 rounded-md p-3'>;
+                  <h4 className='text-sm font-medium text-red-800'>;
+                    Reports: {selectedReview && selectedReview.report_count}
+                  </h4>;
+                  <p className='text-sm text-red-700'>;
+                    This review has been reported by users and may need;
+                    investigation.;
+                  </p>;
+                </div>;
               )}
-            </div>
+            </div>;
 
-            <DialogFooter>
-              {selectedReview.status === "pending" && (
-                <>
+            <DialogFooter>;
+              {selectedReview && selectedReview.status === 'pending' && (;
+                <>;
+
                   <Button
                     variant="destructive"
                     onClick={() => handleReject(selectedReview.id)}

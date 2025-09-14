@@ -24,7 +24,6 @@ export default function ProjectRoom() {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -90,7 +89,6 @@ export default function ProjectRoom() {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -186,7 +184,6 @@ export default function ProjectRoom() {;
   },
 
   
-
   return (
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;

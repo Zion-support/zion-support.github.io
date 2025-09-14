@@ -14,30 +14,16 @@ export interface MicroSaasService {
   features: string[];
   benefits: string[];
   targetAudience: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-  useCases: string[];
-  integration: string[];
-  pricingTier: 'Starter' | 'Professional' | 'Enterprise' | 'Custom';
-=======
   category: 'AI Services' | 'IT Services' | 'Business Solutions' | 'Development Tools' | 'Analytics' | 'Security' | 'Automation';
   price: number;
   currency: string;
 =======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
 =======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
   pricingModel: 'monthly' | 'yearly' | 'one-time' | 'usage-based';
   features: string[];
   benefits: string[];
   targetAudience: string[];
   marketPrice: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
-  website: string;
-  contactInfo: {
-=======
   rating: number;
   users: number;
   pricingTier: string;
@@ -49,255 +35,9 @@ export interface MicroSaasService {
   image?: string;
   url?: string;
   contactInfo?: {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
     email: string;
     phone: string;
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-  rating: number;
-  reviewCount: number;
-  launchDate: string;
-  status: 'Active' | 'Beta' | 'Coming Soon';
-}
-
-export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
-  {
-    id: 'ai-content-generator',
-<<<<<<< HEAD
-    title: 'Zion AI Content Generator',
-    description: 'Advanced AI-powered content creation platform that generates high-quality articles, blog posts, social media content, and marketing copy in seconds.',
-    category: 'AI',
-    subcategory: 'Content Creation',
-    price: {
-      monthly: 29,
-      yearly: 290,
-      currency: '$'
-    },
-    features: [
-      'Multi-language content generation',
-      'SEO-optimized writing',
-      'Brand voice customization',
-      'Plagiarism-free content',
-      'Bulk content creation',
-      'API access for developers'
-    ],
-    useCases: [
-      'Marketing agencies',
-      'E-commerce businesses',
-      'Content creators',
-      'Startups',
-      'Enterprise marketing teams'
-    ],
-    contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    image: 'https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format',
-    tags: ['AI Writing', 'Content Marketing', 'SEO', 'Automation'],
-    aiScore: 95,
-    rating: 4.8,
-    reviewCount: 156
-  },
-  {
-    id: 'ai-chatbot-platform',
-    title: 'Zion AI Chatbot Platform',
-    description: 'Intelligent chatbot solution with natural language processing for customer service, sales, and support automation.',
-    category: 'AI',
-    features: [
-      'Natural language understanding',
-      'Multi-channel integration',
-      'Custom training data',
-      'Analytics dashboard',
-      'A/B testing',
-      'Human handoff',
-      'Multi-language support',
-      'API and webhook support'
-    ],
-    pricing: {
-      starter: 149,
-      professional: 399,
-      enterprise: 999,
-      currency: '$',
-      billing: 'monthly'
-    },
-    benefits: [
-      '24/7 customer support',
-      'Reduced response time',
-      'Scalable customer service',
-      'Data-driven insights',
-      'Cost reduction',
-      'Improved customer satisfaction'
-    ],
-    useCases: [
-      'E-commerce websites',
-      'Customer support',
-      'Lead generation',
-      'Appointment booking',
-      'FAQ automation'
-    ],
-    contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&auto=format',
-    tags: ['Chatbot', 'Customer Service', 'AI', 'Automation'],
-    aiScore: 92,
-    rating: 4.7,
-    reviewCount: 89
-  },
-  {
-    id: 'ai-data-analytics',
-    title: 'AI-Powered Business Intelligence',
-    description: 'Advanced analytics platform with machine learning insights for data-driven decision making and business optimization.',
-    category: 'Analytics',
-    features: [
-      'Real-time data processing',
-      'Predictive analytics',
-      'Custom dashboards',
-      'Data visualization',
-      'Automated reporting',
-      'Anomaly detection',
-      'Integration APIs',
-      'Role-based access control'
-    ],
-    pricing: {
-      starter: 199,
-      professional: 499,
-      enterprise: 1299,
-      currency: '$',
-      billing: 'monthly'
-    },
-    benefits: [
-      'Data-driven insights',
-      'Predictive capabilities',
-      'Automated reporting',
-      'Real-time monitoring',
-      'Cost optimization',
-      'Competitive advantage'
-    ],
-    useCases: [
-      'Financial services',
-      'Healthcare analytics',
-      'Retail optimization',
-      'Manufacturing insights',
-      'Marketing analytics'
-    ],
-    contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format',
-    tags: ['Analytics', 'Business Intelligence', 'Machine Learning', 'Data'],
-    aiScore: 94,
-    rating: 4.9,
-    reviewCount: 203
-  },
-  // IT Services
-  {
-    id: 'cloud-migration-suite',
-    title: 'Cloud Migration & Optimization Suite',
-    description: 'Comprehensive cloud migration services with automated tools for seamless transition and cost optimization.',
-    category: 'IT',
-    features: [
-      'Automated migration tools',
-      'Cost optimization analysis',
-      'Performance monitoring',
-      'Security assessment',
-      'Disaster recovery setup',
-      'Training and documentation',
-      '24/7 support',
-      'Compliance certification'
-    ],
-    pricing: {
-      starter: 299,
-      professional: 799,
-      enterprise: 1999,
-      currency: '$',
-      billing: 'monthly'
-    },
-    benefits: [
-      'Reduced infrastructure costs',
-      'Improved scalability',
-      'Enhanced security',
-      'Better performance',
-      'Disaster recovery',
-      'Compliance adherence'
-    ],
-    useCases: [
-      'Enterprise migration',
-      'Startup cloud setup',
-      'Legacy system modernization',
-      'Multi-cloud strategies',
-      'Compliance requirements'
-    ],
-    contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format',
-    tags: ['Cloud Migration', 'DevOps', 'Infrastructure', 'Automation'],
-    aiScore: 88,
-    rating: 4.6,
-    reviewCount: 134
-  },
-  {
-    id: 'cybersecurity-monitoring',
-    title: 'Advanced Cybersecurity Monitoring',
-    description: '24/7 cybersecurity monitoring and threat detection with AI-powered analysis and automated response systems.',
-    category: 'Security',
-    features: [
-      'Real-time threat detection',
-      'AI-powered analysis',
-      'Automated incident response',
-      'Vulnerability assessment',
-      'Compliance reporting',
-      'Security awareness training',
-      'Penetration testing',
-      'Incident response planning'
-    ],
-    pricing: {
-      starter: 399,
-      professional: 999,
-      enterprise: 2499,
-      currency: '$',
-      billing: 'monthly'
-    },
-    benefits: [
-      'Proactive threat detection',
-      'Reduced security risks',
-      'Compliance adherence',
-      'Cost-effective security',
-      'Expert security team',
-      'Peace of mind'
-    ],
-    useCases: [
-      'Financial institutions',
-      'Healthcare organizations',
-      'E-commerce businesses',
-      'Government agencies',
-      'Educational institutions'
-    ],
-    contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    image: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800&auto=format',
-    tags: ['Cybersecurity', 'Threat Detection', 'Compliance', 'Monitoring'],
-    aiScore: 96,
-    rating: 4.9,
-    reviewCount: 178
-=======
       'Save 80% of content creation time',
       'Improve SEO rankings with AI-optimized content',
       'Maintain consistent brand voice across all channels',
@@ -862,119 +602,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     apiAccess: true,
     whiteLabel: true,
     customBranding: true
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
   },
   // Development Services
   {
     id: 'api-development-platform',
-<<<<<<< HEAD
-    title: 'Enterprise API Development Platform',
-    description: 'Full-service API development with automated testing, documentation, and deployment for scalable integrations.',
-    category: 'Development',
-    features: [
-      'Custom API development',
-      'Automated testing suite',
-      'API documentation generator',
-      'Rate limiting & monitoring',
-      'OAuth & security',
-      'Performance optimization',
-      'Deployment automation',
-      'Analytics dashboard'
-    ],
-    pricing: {
-      starter: 249,
-      professional: 649,
-      enterprise: 1599,
-      currency: '$',
-      billing: 'monthly'
-    },
-    benefits: [
-      'Faster development cycles',
-      'Reduced maintenance costs',
-      'Better API performance',
-      'Comprehensive documentation',
-      'Scalable architecture',
-      'Developer experience'
-    ],
-    useCases: [
-      'SaaS platforms',
-      'Mobile applications',
-      'E-commerce integrations',
-      'Third-party integrations',
-      'Microservices architecture'
-    ],
-    contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format',
-    tags: ['API Development', 'Integration', 'Testing', 'Documentation'],
-    aiScore: 91,
-    rating: 4.7,
-    reviewCount: 112
-  },
-  {
-    id: 'mobile-app-development',
-    title: 'Cross-Platform Mobile App Development',
-    description: 'Native-quality mobile applications for iOS and Android with AI-powered features and cloud backend services.',
-    category: 'Development',
-    features: [
-      'Cross-platform development',
-      'Native performance',
-      'AI integration',
-      'Cloud backend services',
-      'Push notifications',
-      'Offline functionality',
-      'Analytics integration',
-      'App store optimization'
-    ],
-    pricing: {
-      starter: 399,
-      professional: 999,
-      enterprise: 2499,
-      currency: '$',
-      billing: 'monthly'
-    },
-    benefits: [
-      'Faster time to market',
-      'Cost-effective development',
-      'Consistent user experience',
-      'Easy maintenance',
-      'Scalable architecture',
-      'Cross-platform reach'
-    ],
-    useCases: [
-      'Business applications',
-      'E-commerce apps',
-      'Social platforms',
-      'Utility applications',
-      'Enterprise solutions'
-    ],
-    contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&auto=format',
-    tags: ['Mobile Development', 'Cross-Platform', 'AI Integration', 'Cloud Services'],
-    aiScore: 89,
-    rating: 4.8,
-    reviewCount: 198,
-    launchDate: '2024-03-15',
-    status: 'Active'
-  }
-];
-
-export const getServiceByCategory = (category: string) => {
-<<<<<<< HEAD
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
-  return MICRO_SAAS_SERVICES.filter(service => service.category === category);
-=======
   return MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase() === category.toLowerCase());
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
 };
 
 export const getServiceBySubcategory = (subcategory: string) => {
@@ -988,7 +620,6 @@ export const getPopularServices = () => {
 export const getNewServices = () => {
   return MICRO_SAAS_SERVICES.filter(service => service.isNew);
 };
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
 =======
 export const getFeaturedServices = () => {
   return MICRO_SAAS_SERVICES.filter(service => service.rating >= 4.7).slice(0, 6);

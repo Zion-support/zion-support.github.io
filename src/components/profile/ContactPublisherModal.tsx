@@ -98,8 +98,10 @@ export function ContactPublisherModal({
     <>
     <Dialog open={isOpen} onOpenChange={onClose}>
       <FocusLock disabled={!isOpen} returnFocus>
+
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
+
           onKeyDown={handleKeyDown}
           aria-modal="true"
           aria-labelledby="contact-publisher-title"
@@ -132,10 +134,10 @@ export function ContactPublisherModal({
                       placeholder="Subject"
                       className="bg-zion-blue border-zion-blue-light text-white"
                       {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-red-500" />
-                </FormItem>
+                    />;
+                  </FormControl>;
+                  <FormMessage className="text-red-500" />;
+                </FormItem>;
               )}
             />
             <FormField
@@ -149,10 +151,10 @@ export function ContactPublisherModal({
                       placeholder={`Message to ${publisherName}...`}
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
                       {...field}
-                    />
-                  </FormControl>
-                  <FormMessage className="text-red-500" />
-                </FormItem>
+                    />;
+                  </FormControl>;
+                  <FormMessage className="text-red-500" />;
+                </FormItem>;
               )}
             />
             <Button
@@ -162,6 +164,8 @@ export function ContactPublisherModal({
             >
               <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
+
+
             </Button>
           </form>
         </Form>

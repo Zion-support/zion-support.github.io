@@ -49,7 +49,9 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
+
       hasError: true,
+
       error
     }
   }
@@ -232,8 +234,8 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
             stack: this.state.error.stack,
             name: this.state.error.name
           },
-          errorInfo: this.state.errorInfo,
-          userFeedback: this.state.userFeedback,
+          error_info: this.state.error_info,
+          user_feedback: this.state.user_feedback,
           context: this.props.context,
           timestamp: new Date().toISOString()
         })
@@ -247,9 +249,8 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
     }
   }
 
-  private goHome = () => {
-    if (typeof window !== 'undefined') {
-      window.location.href = '/'
+
+
     }
   }
 
@@ -272,6 +273,10 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
           >
+            transition={{ duration: 0.3 }}
+          >
+
+
             <Card className="w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
@@ -292,14 +297,15 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                     </Badge>
                   )}
                 </div>
+
               </CardHeader>
+
 
               <CardContent className="space-y-6">
                 <div className="text-center">
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
                     {suggestion}
                   </p>
-                  
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
@@ -314,12 +320,20 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                       <RefreshCw className="h-4 w-4" />
                       Try Again
                     </Button>
+
                   )}
                   
                   <Button onClick={this.goHome} variant="outline" className="flex items-center gap-2">
                     <Home className="h-4 w-4" />
                     Go Home
                   </Button>
+                  <Button 
+                    onClick={() => this.setState({ showDetails: !this.state.showDetails })}
+                    variant="ghost" 
+                    size="sm"
+                    className="flex items-center gap-2"
+                  >
+
 
                   <Button 
                     onClick={() => this.setState({ showDetails: !this.state.showDetails })}
@@ -339,6 +353,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
+                      className='border-t pt-4'
                       className="border-t pt-4"
                     >
                       <div className="space-y-4">
@@ -358,17 +373,37 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                           </div>
                         )}
 
+
+
+
+
+
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
                             Copy Details
                           </Button>
-                          
                           {this.props.showReportButton !== false && (
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               <Send className="h-4 w-4 mr-2" />
                               Report Issue
                             </Button>
+                              size='sm'>;
+                              <Send className='h-4 w-4 mr-2' />                              Report Issue;
+                        <div className="flex gap-2">;
+                          <Button onClick={this && this.copyErrorDetails} variant="outline" size="sm">;
+                            <Clipboard className="h-4 w-4 mr-2" />;
+                            Copy Details;
+                          </Button>;
+
+                          {this && this.props.showReportButton !== false && (;
+                            <Button onClick={this && this.reportError} variant="outline" size="sm">;
+                              <Send className="h-4 w-4 mr-2" />;
+                              Report Issue;
+                            </Button>;
+
+
+
                           )}
                         </div>
                       </div>

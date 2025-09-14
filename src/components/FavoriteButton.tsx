@@ -39,7 +39,10 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
         : "Item has been added to your wishlist"}),
   },
 
-  const active = isWishlisted(itemId),
+
+
+
+
 
   return (
     <>

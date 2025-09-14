@@ -1,3 +1,4 @@
+"use client";
 
 
   name: string, email: string,

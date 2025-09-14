@@ -106,6 +106,7 @@ export function PartnerResources() {
           </div>
         </CardContent>
       </Card>
+      <Card className='bg-zion-blue-dark border-zion-blue-light'>
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -125,6 +126,9 @@ export function PartnerResources() {
               <li>Focus on how the platform can help your audience solve their AI talent needs</li>
             </ul>
           </div>
+          <div className='space-y-2'>
+            <h3 className='text-lg font-semibold text-white'>Don'ts</h3>
+            <ul className='list-disc pl-5 space-y-1 text-zion-slate-light'>
 
           <div className="space-y-2">
             <h3 className="text-lg font-semibold text-white">Don'ts</h3>

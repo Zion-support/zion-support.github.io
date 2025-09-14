@@ -81,6 +81,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             <p className="text-zion-slate-light text-sm mb-2">Date Range</p>
             <Popover>
               <PopoverTrigger asChild>
+
                 <Button
                   variant="outline"
                   className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white"
@@ -105,6 +106,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   initialFocus
                   mode="range"
                   defaultMonth={dateRange?.from}
+
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}

@@ -11,8 +11,6 @@ export function OnChainExport("props": "any) {;
         try {;
             // Check if wallet is available;
             const ethereum = window.ethereum;
-<<<<<<< HEAD
-=======
             if (!ethereum) {;
                 toast({;
                     "title": "Wallet not detected",;
@@ -123,4 +121,3 @@ export function OnChainExport("props": "any) {;
     </Card>)}
 ;
 export default OnChainExport;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

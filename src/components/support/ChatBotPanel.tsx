@@ -219,11 +219,86 @@ export function ChatBotPanel() {
         <div className="flex flex-col gap-4">
           {messages.map((message) => (
             <ChatMessage
+  },;
+  const suggestEscalation = () => {;
+    const escalationMessage: Message = {;
+      id: `bot-escalation-${Date.now()}`,;
+      content:;
+        "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",;
+      sender: "bot",;
+      timestamp: new Date()},;
+    setMessages((prev) => [...prev, escalationMessage]),;
+    // Log this interaction for the support team;
+    logSupportEscalation();
+  },;
+  const logSupportEscalation = async () => {;
+    try {;
+      // Send the conversation to the backend for logging;
+      // This would be implemented in a real system;
+      logDebug("Support escalation triggered", {;
+        conversationHistory: messages.map(m => ({;
+          content: m.content,;
+          sender: m.sender,;
+          timestamp: m.timestamp;
+        })),;
+        component: 'ChatBotPanel';
+      });
+    } catch (error) {;
+      logErrorToProduction("Failed to log support escalation", error as Error, { component: 'ChatBotPanel' });
+    }
+  },;
+  const handleQuickReply = (text: string) => {;
+    handleSendMessage(text);
+  },;
+  const handleEscalateToLiveAgent = () => {;
+    setMessages((prev) => [;
+      ...prev,;
+      {;
+        id: `user-${Date.now()}`,;
+        content: "I'd like to speak with a human agent",;
+        sender: "user",;
+        timestamp: new Date();
+      },;
+      {;
+        id: `bot-${Date.now()}`,;
+        content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",;
+        sender: "bot",;
+        timestamp: new Date();
+      }
+    ]),;
+    // In a real implementation, this would trigger a live chat request;
+    toast({;
+      title: "Support request submitted",;
+      description: "A support agent will be with you shortly."});
+  },;
+  const handleEmailSupport = () => {;
+    setMessages((prev) => [;
+      ...prev,;
+      {;
+        id: `user-${Date.now()}`,;
+        content: "I'd like to email support",;
+        sender: "user",;
+        timestamp: new Date();
+      },;
+      {;
+        id: `bot-${Date.now()}`,;
+        content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.",;
+        sender: "bot",;
+        timestamp: new Date();
+      }
+    ]);
+  },;
+  return (;
+    <div className="flex flex-col h-full">;
+      <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
+        <div className="flex flex-col gap-4">;
+          {messages.map((message) => (;
+            <ChatMessage;
               key={message.id}
               message={message.content}
               isUser={message.sender === "user"}
               timestamp={message.timestamp}
-            />
+            />;
           ))}
           
           {isLoading && (
@@ -245,10 +320,10 @@ export function ChatBotPanel() {
                 key={reply.id}
                 text={reply.text}
                 onClick={() => handleQuickReply(reply.text)}
-              />
+              />;
             ))}
-          </div>
-        </div>
+          </div>;
+        </div>;
       )}
       
       {failedAttempts >= 3 && (
@@ -312,3 +387,47 @@ export function ChatBotPanel() {
     </div>
   )
 }
+  const sendToAIAssistant = async (message: string) => {
+    try {
+      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"},
+        body: JSON.stringify({ 
+          messages: [{ role: "user", content: message }] 
+        })}),
+      
+      if (!response.ok) {
+        return {
+          success: false,
+          message: "I'm having trouble connecting to my knowledge base right now."
+        }
+          message: "I'm having trouble connecting to my knowledge base right now."
+        };
+      }
+;
+      const data = await response.json(),;
+      return {;
+        success: true,;
+        message: data.message;
+      }
+    } catch (error) {
+      logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel', functionName: 'ai-chat' }),
+      return {
+        success: false,
+        message: "I'm experiencing technical difficulties. Please try again later."
+      }
+      logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel', functionName: 'ai-chat' });
+      return {
+        success: false,
+        message: "I'm experiencing technical difficulties. Please try again later."
+      };
+    }
+  },
+
+  const suggestEscalation = () => {
+    const escalationMessage: Message = {
+
+
+    handleSendMessage(text)
+

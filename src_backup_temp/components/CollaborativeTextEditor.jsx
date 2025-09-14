@@ -3,8 +3,6 @@ import {motion} from 'framer-motion';';
 import {Users, MessageSquare, Sparkles, Save, Download, Loader2} from 'lucide-react';
 ;
 ;
-<<<<<<< HEAD
-=======
 export const CollaborativeTextEditor = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});
@@ -1131,4 +1129,3 @@ generateAISuggestions()}
 </div>;
 </div>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

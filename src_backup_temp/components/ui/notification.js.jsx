@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, createContext, useContext, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell} from 'lucide-react';
@@ -201,4 +199,3 @@ export function showInfo(props: any) {
 </motion>
 </motion>
 </NotificationContext>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

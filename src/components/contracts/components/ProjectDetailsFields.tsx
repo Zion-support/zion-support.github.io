@@ -28,6 +28,11 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
         control={form.control}
         name="projectName"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName"> }) => (
+
+
+
+
+
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
@@ -40,6 +45,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
       
       <FormField
         control={form.control}
+
         name="scopeSummary"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (
           <FormItem>
@@ -129,6 +135,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                   />
                 </PopoverContent>
               </Popover>
+
               <FormDescription>
                 Leave empty if the end date is flexible
               </FormDescription>

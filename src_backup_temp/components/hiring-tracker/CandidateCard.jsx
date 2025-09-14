@@ -22,8 +22,6 @@ export function CandidateCard("props": "any) {;
         // Here you would save the notes to the database;
         // For now, we'll just show a toast;
         toast({}
-<<<<<<< HEAD
-=======
 """;
 """";
             "title": "Notes saved","""";
@@ -143,4 +141,3 @@ export function CandidateCard("props": "any) {;
 '"`;
 </HireConfirmationModal>;
 </Textarea>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

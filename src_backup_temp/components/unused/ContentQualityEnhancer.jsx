@@ -4,9 +4,6 @@ import {motion, AnimatePresence} from 'framer-motion';
 export default function Page("props": "any) {;
             // Check for very short content;
             if(words.length > 0 && words.length < 10) {;
-<<<<<<< HEAD
-
-=======
                 issues.push({;
 `;
                     "id": `short-content-${index"}`,;
@@ -663,4 +660,3 @@ export default ContentQualityEnhancer;
 }}}}}}}}}'"`;
 </motion>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

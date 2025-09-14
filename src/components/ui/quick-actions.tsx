@@ -42,6 +42,7 @@ export function QuickActions() {
   const actions: QuickAction[] = [
     // Performance Actions
     {
+
       id: 'enable-performance-monitor',
       label: 'Enable Performance Monitor',
       description: 'Show real-time performance metrics',
@@ -146,6 +147,17 @@ export function QuickActions() {
         document.body.removeChild(a),
         URL.revokeObjectURL(url),
       }},
+        throw new Error(
+          'Test error for Sentry integration - this is intentional!'
+        )
+      },
+    },
+        throw new Error('Test error for Sentry integration - this is intentional!')
+      }},
+
+
+
+
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -166,10 +178,6 @@ export function QuickActions() {
         window.location.reload()
       }}],
 
-  const categorizedActions = {
-    performance: actions.filter(a => a.category === 'performance'),
-    development: actions.filter(a => a.category === 'development'),
-    maintenance: actions.filter(a => a.category === 'maintenance')},
 
   const categoryColors = {
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
@@ -180,6 +188,11 @@ export function QuickActions() {
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
+          variant='outline'
+          size='sm'
+          onClick={() => setIsVisible(true)}
+          className='bg-background/80 backdrop-blur-sm'        >
+          <Settings className='w-4 h-4 mr-2' />
           variant="outline"
           size="sm"
           onClick={() => setIsVisible(true)}
@@ -202,6 +215,8 @@ export function QuickActions() {
               Quick Actions
             </CardTitle>
             <Button
+
+
               variant="ghost"
               size="sm"
               onClick={() => setIsVisible(false)}

@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button",
+
 
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
@@ -49,11 +51,20 @@ export function FloatingCTA() {
           >
             <Link href="/signup">Register Now</Link>
           </Button>
+          <button
+            onClick={handleClose}
+            className='text-zion-slate hover:text-white p-1'
+            aria-label='Close'          >
+            <X className='w-5 h-5' />          </button>
+            <X className="w-5 h-5" />
           <button 
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
           >
+
+
+
             <X className="w-5 h-5" />
           </button>
         </div>
@@ -61,3 +72,63 @@ export function FloatingCTA() {
     </div>
   )
 }
+  return (
+    <div className='fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in'>;
+      <div className='bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify - between'>;
+        <div className='mr - 4'>;
+          <p className='text - white font - medium'>Ready to explore Zion?</p>;
+          <p className='text - zion - slate - light text - sm'>;
+            Register today to access all features!;
+          </p>;
+        </div>;
+        <div className='flex items - center gap - 2'>;
+          <Button;
+            variant='default';
+            size='sm';
+            className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace - nowrap';
+            as_child;
+          >;
+            <Link href='/signup'>Register Now</Link>;
+          </Button>;
+          <button;
+            on_click={handle_close}
+            className='text - zion - slate hover:text - white p - 1';
+            aria - label='Close'          >;
+            <X className='w - 5 h - 5' />          </button>;
+            <X className="w - 5 h - 5" />;
+            <X className="w - 5 h - 5" />;
+          </button>;
+        </div>;
+      </div>;
+    </div>);
+}
+}, [is_closed]);
+return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in" > <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify - between" > <div className="mr - 4" > <p className="text - white font - medium" >Ready to explore Zion?</p> <p className="text - zion - slate - light text - sm" >Register today to access all features!</p> </div> <div className="flex items - center gap - 2" > <Button variant="default" size="sm" className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace - nowrap" as_child > <Link href="/signup" >Register Now</Link> </Button> <button aria - label="Close" w - 5 h - 5" /> </button> </div> </div> </div>);
+}'";
+      {/* Backdrop */}
+      <AnimatePresence>;
+        {is_expanded && (
+          <motion.div";
+            className="fixed inset - 0 bg - black / 20 z - 40";
+
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            on_click={ () => setIsExpanded (false) }
+          />) }
+
+}
+
+      </AnimatePresence>;
+    </>)}
+            on_click={ () => setIsExpanded (false) }
+          />) }
+      </AnimatePresence>;
+    </>)}
+'";
+}
+}
+;
+
+
+

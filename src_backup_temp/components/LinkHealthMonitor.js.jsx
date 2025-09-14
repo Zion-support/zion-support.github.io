@@ -17,9 +17,6 @@ export default function Page("props": "any) {;
     const avgResponseTime =;
       links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
     setReport({;
-<<<<<<< HEAD
-
-=======
       totalLinks,;
       healthyLinks,;
       brokenLinks,;
@@ -322,4 +319,3 @@ export {LinkHealthMonitor};
 </motion>;
 </motion>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

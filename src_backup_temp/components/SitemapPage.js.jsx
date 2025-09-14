@@ -15,8 +15,6 @@ export default function SitemapPage("props": "any) {;
     const adminRoutes = completeSitemap.filter(route => route.requiredAuth &&;
         route.requiredRoles &&;
         route.requiredRoles.includes('admin'));
-<<<<<<< HEAD
-=======
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;
       <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap", navigation, website structure, Zion Tech Group" canonical=""https": "//ziontechgroup.com/content/sitemap-page" />;
       ;
@@ -152,4 +150,3 @@ export {SitemapPage};
 export {SitemapPage};
 ;
 export {SitemapPage};
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

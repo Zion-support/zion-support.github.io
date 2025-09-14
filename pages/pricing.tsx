@@ -2,12 +2,10 @@
 
 import React from 'react';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Head from 'next/head';
 
 
 =======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 import React from 'react';
 import Head from 'next/head';
 
@@ -15,11 +13,9 @@ import Head from 'next/head';
 =======
 
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 import React from 'react';
 import Head from 'next / head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
   Check
   Star
@@ -326,7 +322,6 @@ function PricingPage() {
 ;
   // Enhanced service categories with pricing;
   const service_categories = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       name: 'Next - Generation AI',
       description: 'Revolutionary AI platforms',
@@ -848,7 +843,6 @@ export default function PricingPage() {;
             Choose the perfect plan for your business. All plans include
             generous free trials and access to our revolutionary AI & quantum
             computing services.
->>>>>>> main
           </p>
 
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
@@ -931,7 +925,6 @@ export default function PricingPage() {;
               Experience our cutting-edge AI consciousness simulation, quantum
               neural interfaces, and advanced cybersecurity solutions with
               comprehensive pricing and detailed comparisons.
->>>>>>> main
             </p>
 
             <Button
@@ -947,7 +940,6 @@ export default function PricingPage() {;
           </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {/* Billing Toggle */}
           <div className='flex items-center justify-center gap-4 mb-8'>;
             <span
@@ -963,121 +955,17 @@ export default function PricingPage() {;
               Monthly
             </span>
             <button
-<<<<<<< HEAD
-              onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
               onClick={() =>
                 setBillingCycle(
                   billingCycle === "monthly" ? "yearly" : "monthly",
                 )
               }
               className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'            >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
-<<<<<<< HEAD
-                  billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
-                }`}
-
-
-              <UltraFuturisticCard
-                key={tier && tier.name}
-                variant={tier && tier.variant}
-                interactive={true}
-
-
-                )}
-
-          {/* New 2026 Pricing Link */}
-          <div className='mb - 8 p - 6 bg - gradient - to - r from - purple - 800 / 60 to - pink - 800 / 60 border border - purple - 700 / 50 rounded - 2xl max - w-4xl mx - auto'>;
-            <h3 className='text - 2xl font - bold text - white mb - 4'>;
-              🚀 New for 2026: Revolutionary Services;
-            </h3>;
-            <p className='text - gray - 300 mb - 6'>;
-              Experience our cutting - edge AI consciousness simulation, quantum;
-              neural interfaces, and advanced cybersecurity solutions with;
-              comprehensive pricing and detailed comparisons.;
-            </p>;
-            <Button;
-              href='/comprehensive - pricing - 2026';
-              variant='primary';
-              size='lg';
-              className='bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 shadow - 2xl hover:shadow - purple - 500 / 30';
-            >;
-              <span className='flex items - center'>;
-                <Rocket className='mr - 3 w - 6 h - 6' />                View 2026 Comprehensive Pricing;
-              </span>;
-            </Button>;
-          </div>;
-          {/* Billing Toggle */}
-          <div className='flex items - center justify - center gap - 4 mb - 8'>;
-            <span;
-              className={`text - lg ${billing_cycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}
-            >;
-              Monthly;
-            </span>;
-            <button;
-              on_click={() =>;
-                setBillingCycle (
-                  billing_cycle === 'monthly' ? 'yearly' : 'monthly');
-              }
-              className='relative inline - flex h - 12 w - 24 items - center rounded - full bg - slate - 700 / 50 p - 1 transition - colors focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50'            >;
-              <span;
-                className={`inline - block h - 10 w - 10 transform rounded - full bg - gradient - to - r from - cyan - 500 to - purple - 500 transition - transform ${
-                  billing_cycle === 'yearly' ? 'translate - x-12' : 'translate - x-0';
-                }`}
-              />;
-            </button>;
-            <span;
-              className={`text - lg ${billing_cycle === 'yearly' ? 'text - white' : 'text - gray - 400'}`}
-            >;
-              Yearly;
-              <span className='ml - 2 text - sm text - green - 400'>Save 20%</span>            </span>;
-          </div>;
-        </div>;
-        {/* Pricing Tiers */}
-        <div className='mb - 20'>;
-          <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 max - w-7xl mx - auto'>            {pricing_tiers.map ((tier, index) => (
-              <UltraFuturisticCard;
-                key={tier.name}
-                variant={tier.variant}
-                interactive={true}
-                glow_intensity={tier.popular ? 'high' : 'medium'}
-                className={`relative h - full ${tier.popular ? 'scale - 105' : ''}`}
-              >;
-                {tier.popular && (
-                  <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
-                    <span className='bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black px - 4 py - 2 rounded - full text - sm font - bold flex items - center'>;
-                      <Star className='w - 4 h - 4 mr - 2' />                      Most Popular;
-                    </span>;
-                  </div>)}
-                <div className='text - center p - 8'>;
-                  <div className='inline - flex items - center justify - center w - 20 h - 20 rounded - full bg - gradient - to - r from - cyan - 500 to - purple - 500 mb - 6'>;
-                    {tier.icon}
-                  </div>;
-                  <h3 className='text - 2xl font - bold text - white mb - 2'>;
-                    {tier.name}
-                  </h3>;
-                  <p className='text - gray - 300 mb - 6'>{tier.description}</p>;
-                  <div className='mb - 6'>;
-                    <div className='flex items - baseline justify - center'>;
-                      <span className='text - 5xl font - bold text - cyan - 400'>;
-
-                        ${tier.price}
-                      </span>;
-                      <span className='text - xl text - gray - 400 ml - 2'>;
-                        {tier.period}
-                      </span>;
-                    </div>;
-=======
 
 
                     </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {tier.savings && (
                       <div className='text - green - 400 text - sm mt - 2'>;
                         {tier.savings}
@@ -1144,7 +1032,6 @@ export default function PricingPage() {;
                 </div>
               </UltraFuturisticCard>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1182,21 +1069,18 @@ export default function PricingPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <UltraFuturisticCard
                 key={index}
                 variant={index % 2 === 0 ? 'quantum' : 'holographic'}
                 interactive={true}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
         </div>;
 
             {serviceCategoryPricing.map((category, index) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <UltraFuturisticCard
 =======
                       </div>)}
@@ -1257,7 +1141,6 @@ export default function PricingPage() {;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
             {serviceCategoryPricing.map ((category, index) => (
               <UltraFuturisticCard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={index}
                 variant={
                   index % 3 === 0;
@@ -1311,7 +1194,6 @@ export default function PricingPage() {;
 =======
                 </ul>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   href='/services'
                   variant='secondary'
@@ -1380,7 +1262,6 @@ export default function PricingPage() {;
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Popular Services Pricing */}
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
@@ -1398,8 +1279,6 @@ export default function PricingPage() {;
 
 =======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <UltraFuturisticCard
                 key={service && service.id}
                 variant={service && service.variant as any}
@@ -1434,7 +1313,6 @@ export default function PricingPage() {;
                 </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <Button
                   href={service && service.link}
                   variant='primary'
@@ -1468,14 +1346,9 @@ export default function PricingPage() {;
 
 
             </UltraFuturisticCard>
-<<<<<<< HEAD
-            <UltraFuturisticCard variant='holographic' className='p-6'>
-              <h3 className='text-lg font-bold text-white mb-3'>
-=======
 
             <UltraFuturisticCard variant="holographic" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">
->>>>>>> main
                 Can I change my plan later?
               </h3>
               <p className="text-gray-300">
@@ -1484,14 +1357,9 @@ export default function PricingPage() {;
                 adjustments.
               </p>
             </UltraFuturisticCard>
-<<<<<<< HEAD
-            <UltraFuturisticCard variant='neural' className='p-6'>
-              <h3 className='text-lg font-bold text-white mb-3'>
-=======
 
             <UltraFuturisticCard variant="neural" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">
->>>>>>> main
                 What support is included?
               </h3>
               <p className="text-gray-300">
@@ -1499,14 +1367,9 @@ export default function PricingPage() {;
                 plans include priority support with dedicated account managers.
               </p>
             </UltraFuturisticCard>
-<<<<<<< HEAD
-            <UltraFuturisticCard variant='quantum' className='p-6'>
-              <h3 className='text-lg font-bold text-white mb-3'>
-=======
 
             <UltraFuturisticCard variant="quantum" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">
->>>>>>> main
                 Is there a setup fee?
               </h3>
               <p className="text-gray-300">
@@ -1539,7 +1402,6 @@ export default function PricingPage() {;
               <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>
             </UltraFuturisticCard>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
         </div>
         {/* Contact Information */}
@@ -1675,7 +1537,6 @@ export default function PricingPage() {;
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to Get Started?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -1877,7 +1738,6 @@ export default function PricingPage() {;
               <p className='mt - 2'>;
                 ✓ 24 / 7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               </p>            </div>;
           </UltraFuturisticCard>;
         </div>;
@@ -1900,26 +1760,16 @@ export default function PricingPage() {;
   )
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 }
->>>>>>> origin/main
 =======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
 =======
   );
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </UltraFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

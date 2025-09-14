@@ -11,30 +11,45 @@ import {
   SelectValue} from "@/components/ui/select",
 import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
-
-type ResumeStep = "basics" | "experience" | "education" | "skills",
-
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import { ChevronRight, Zap, Star } from 'lucide-react'
+type ResumeStep = "basics" | "experience" | "education" | "skills"
+import React, { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue} from "@/components/ui/select"
+type ResumeStep = "basics" | "experience" | "education" | "skills"
 export function MobileResumeBuilder() {
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
-  
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics")
   const renderStepContent = () => {
     switch (currentStep) {
-      case "basics": return <BasicsStep />,
+      case "basics": return <BasicsStep />
       case "experience":
-        return <ExperienceStep />,
+        return <ExperienceStep />
       case "education":
-        return <EducationStep />,
+        return <EducationStep />
       case "skills":
+        return <SkillsStep />
         return <SkillsStep />,
       default:
         return <BasicsStep />
     }
-  },
-  
+  },;
+
   return (
-    <div className="space-y-6 px-4 pb-24">
-      <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
+    <div className="space-y-6 px-4 pb-24">;
+      <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
         <Button
+          variant = {currentStep === "basics" ? "default" : "outline",}
+          className="flex-1 rounded-full"
+          onClick = {(,) => setCurrentStep("basics"),}
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}

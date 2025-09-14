@@ -6,11 +6,13 @@ export interface LeaderboardEntry {
   points: number
 }
 
+  name: string
+  points: number
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[]
 }
 
-export function UserLeaderboard({ entries }: UserLeaderboardProps) {
+export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
   return (
     <Card>
       <CardHeader>

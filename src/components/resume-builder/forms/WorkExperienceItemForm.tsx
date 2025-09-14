@@ -86,6 +86,8 @@ export function WorkExperienceItemForm({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
+              name='company_name'
+              render={({ field }: { field: any }) => (                <FormItem>
               name="company_name"
               render={({ field }: { field: any }) => (
                 <FormItem>
@@ -138,6 +140,7 @@ export function WorkExperienceItemForm({
                     <Switch
                       aria-label="Current position"
                       checked={field.value}
+
                       onCheckedChange={field.onChange}
                       id="current-position"
                     />
@@ -151,8 +154,6 @@ export function WorkExperienceItemForm({
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FormField
               control={form.control}
               name="start_date"
               render={({ field }: { field: any }) => (
@@ -179,6 +180,25 @@ export function WorkExperienceItemForm({
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0" align="start">
                       <Calendar
+                        mode='single'
+                        selected={field && field.value}
+                        onSelect={field && field.onChange}
+                        initialFocus
+                        captionLayout='dropdown-buttons'
+                        fromYear={1990}
+                        toYear={new Date().getFullYear()}                      />
+                    </PopoverContent>
+                  </Popover>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {!watchIsCurrent && (
+              <FormField
+                control={form.control}
+                name='end_date'
+                render={({ field }: { field: any }) => (
+                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>
                         mode="single"
                         selected={field.value}
                         onSelect={field.onChange}
@@ -282,6 +302,7 @@ export function WorkExperienceItemForm({
           
           <div className="flex justify-end gap-2">
             <Button type="button" variant="outline" onClick={onCancel}>
+
               Cancel
             </Button>
             <Button type="submit" disabled={isSubmitting}>
@@ -297,8 +318,40 @@ export function WorkExperienceItemForm({
           </div>
         </form>
       </Form>
+          />;
 
-      <AIEnhancementDialog
+          <div className='flex justify-end gap-2'>;
+            <Button type='button' variant='outline' onClick={onCancel}>;
+              Cancel;
+            </Button>;
+            <Button type='submit' disabled={isSubmitting}>;
+              {isSubmitting ? (;
+                <>;
+                  <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                  Saving...;
+                </>;
+              ) : (;
+                <>Save</>;
+              )}
+              </FormItem>)}
+          />;
+          <div className='flex justify - end gap - 2'>;
+            <Button type='button' variant='outline' on_click={on_cancel}>;
+              Cancel;
+            </Button>;
+            <Button type='submit' disabled={is_submitting}>;
+              {is_submitting ? (
+                <>;
+                  <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
+                  Saving...;
+                </>) : (
+                <>Save</>)}
+            </Button>;
+          </div>;
+        </form>;
+      </Form>;
+
+
         title="Enhance Work Experience Description"
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}

@@ -400,7 +400,7 @@ export default function HomePage() {
               <a href=&quot;/admin/instances&quot; className=&quot;btn-secondary hover-lift&quot;>
 
                 📊 View Instances
-              </a>
+              </Link>
             </div>
           </div>
         </div>

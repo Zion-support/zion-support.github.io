@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { 
   Search, 
   MessageCircle, 
-  Phone, 
   Mail, 
   Clock, 
   CheckCircle,

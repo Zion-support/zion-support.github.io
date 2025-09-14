@@ -25,8 +25,6 @@ export const AuthProvider = ("props": "any) => {"}
         // Check for specific "Email not confirmed" error first"""";
         if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {}
             toast({}
-<<<<<<< HEAD
-=======
 """;
 """";
                 "title": "Login Failed","""";
@@ -219,4 +217,3 @@ return {error: 'Incorrect email or password'}}
 '"`;
 import React, {useEffect} from "react"";"""""""""'"; ";
 </AuthContext>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

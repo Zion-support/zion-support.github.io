@@ -80,7 +80,6 @@ export function ResumeWizard() {
       </div>
     ),
   }
-  
   if (error) {
     return (
       <Alert variant="destructive" className="mb-6">
@@ -96,6 +95,12 @@ export function ResumeWizard() {
   }
   
   if (showNewResumeForm) {
+
+  if (!resume && !showNewResumeForm) {;
+    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
+  }
+
+  if (showNewResumeForm) {;
     return (
       <CreateResumeForm 
         onCreateResume={handleCreateNewResume}

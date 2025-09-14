@@ -20,6 +20,9 @@ import { z } from "zod",
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
 
 const serviceStepSchema = z.object({
+
+  serviceType: z.string().min(1)
+  specificItem: z.object({ id: z.string() })})
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
 
@@ -31,25 +34,44 @@ export function QuoteRequestForm() {
   const [autoFillLoading, setAutoFillLoading] = useState(false),
   const [autoFillOpen, setAutoFillOpen] = useState(false),
   
+
   const [formData, setFormData] = useState<QuoteFormData>({
-    serviceType: "",
-    serviceCategory: "",
-    specificItem: null,
-    projectName: "",
-    projectDescription: "",
-    startDate: undefined,
-    endDate: undefined,
-    timeline: "flexible",
+    serviceType: ""
+    serviceCategory: ""
+    specificItem: null
+    projectName: ""
+    projectDescription: ""
+    startDate: undefined
+    endDate: undefined
+    timeline: "flexible"
     budget: {
-      amount: 0,
+      amount: 0
       type: "fixed"
+    }
     },
+
+
+
     contactInfo: {
-      name: "",
-      email: "",
-      phone: "",
+      name: ""
+      email: ""
+      phone: ""
       company: ""
     }
+  })
+  const updateFormData = (data: Partial<QuoteFormData>,) => {
+    setFormData(prev => ({
+
+      ...prev;
+
+
+
+
+};
+
+  );
+};
+}
   }),
   
   const updateFormData = (data: Partial<QuoteFormData>) => {
@@ -252,3 +274,7 @@ export function QuoteRequestForm() {
     </div>
   ),
 }
+
+;
+
+

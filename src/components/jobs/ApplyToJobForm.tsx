@@ -10,11 +10,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
+import { Job } from "@/types/jobs";
+import { toast } from "sonner";
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
 
 interface ApplyToJobFormProps {
-  job: Job,
+
+  job: Job
+
   onSuccess?: () => void
 }
 
@@ -109,6 +113,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
               <span>Loading your resumes...</span>
             </div>
           ) : resumes && resumes.length > 0 ? (
+
+
             <Select
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
@@ -148,13 +154,15 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           )}
         </div>
 
-        <div>
-          <Label htmlFor="cvUpload">Or Upload CV (PDF)</Label>
           <input
             id="cvUpload"
             type="file"
             accept=".pdf"
             className="mt-1"
+            onChange = {(e,) => setResumeFile(e.target.files?.[0] |null),}
+          />
+        </div>
+      </div>
             onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
           />
         </div>

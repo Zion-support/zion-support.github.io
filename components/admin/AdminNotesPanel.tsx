@@ -1,3 +1,4 @@
+"use client";
 
 
 
@@ -40,10 +41,8 @@ export default function AdminNotesPanel({
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -66,11 +65,8 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   const [isAdmin, setIsAdmin] = useState(true);
@@ -316,7 +312,6 @@ if ( {) {
 }
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   useEffect (() => {
     if (fetch_notes ()) {

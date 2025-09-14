@@ -29,23 +29,142 @@ interface EndpointSectionProps {
 
 export function ApiDocumentation() {
   return (
-    <Card className="bg-zinc-900 border-zinc-800 text-white">
+    <Card className='bg-zinc-900 border-zinc-800 text-white'>
       <CardHeader>
-        <CardTitle className="text-xl flex items-center">
-          <BookOpen className="mr-2" size={20} /> API Documentation
+        <CardTitle className='text-xl flex items-center'>
+          <BookOpen className='mr-2' size={20} /> API Documentation
         </CardTitle>
-        <CardDescription className="text-zinc-400">
+        <CardDescription className='text-zinc-400'>
           Reference documentation for integrating with the Zion Marketplace API.
         </CardDescription>
       </CardHeader>
       
       <CardContent>
-        <Alert className="bg-blue-900/30 border-blue-800 mb-6">
-          <Terminal className="h-4 w-4" />
+        <Alert className='bg-blue-900/30 border-blue-800 mb-6'>
+          <Terminal className='h-4 w-4' />
           <AlertDescription>
-            Make sure to include your API key in all requests as a Bearer token in the Authorization header.
+            Make sure to include your API key in all requests as a Bearer token
+            in the Authorization header.
           </AlertDescription>
         </Alert>
+
+
+}` 
+
+}/> <EndpointSectionconst response = await fetch (\`https://api && api.ziontechgroup.com/v1/jobs/\$ {
+  jobId 
+}\`, {
+  method: 'GET'
+headers: {'
+  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
+
+export function ApiDocumentation() {
+  return (
+
+    <Card className='bg-zinc-900 border-zinc-800 text-white'>;
+      <CardHeader>;
+        <CardTitle className='text-xl flex items-center'>;
+          <BookOpen className='mr-2' size={20} /> API Documentation;
+        </CardTitle>;
+        <CardDescription className='text-zinc-400'>;
+          Reference documentation for integrating with the Zion Marketplace API.;
+        </CardDescription>;
+      </CardHeader>;
+
+      <CardContent>;
+        <Alert className='bg-blue-900/30 border-blue-800 mb-6'>;
+          <Terminal className='h-4 w-4' />;
+}`;
+}/> <EndpointSection const response = await fetch (\`https://api.ziontechgroup.com / v1 / jobs/\$ {
+  job_id;
+}\`, {
+  method: 'GET';
+headers: {';
+  'Authorization': 'Bearer YOUR API KEYContent - Type': 'application / json';
+export /**
+ * ApiDocumentation - Function description
+ */
+function ApiDocumentation() {
+  return (
+    <Card className='bg - zinc - 900 border - zinc - 800 text - white'>;
+      <CardHeader>;
+        <CardTitle className='text - xl flex items - center'>;
+          <BookOpen className='mr - 2' size={20} /> API Documentation;
+        </CardTitle>;
+        <CardDescription className='text - zinc - 400'>;
+          Reference documentation for integrating with the Zion Marketplace API.;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <Alert className='bg - blue - 900 / 30 border - blue - 800 mb - 6'>;
+          <Terminal className='h - 4 w - 4' />;
+
+          <AlertDescription>;
+            Make sure to include your API key in all requests as a Bearer token;
+            in the Authorization header.;
+          </AlertDescription>;
+        </Alert>;
+
+
+        <Tabs default_value='jobs' className='space - y-4'>;
+          <TabsList className='bg - zinc - 800 border - zinc - 700'>;
+
+
+            <TabsTrigger value='jobs'>Jobs</TabsTrigger>;
+            <TabsTrigger value='talent'>Talent</TabsTrigger>;
+            <TabsTrigger value='quotes'>Quotes</TabsTrigger>;
+            <TabsTrigger value='webhooks'>Webhooks</TabsTrigger>;
+            <TabsTrigger value='errors'>Errors</TabsTrigger>;
+          </TabsList>;
+
+
+          <TabsContent value='jobs' className='space-y-6'>;
+            <EndpointSection
+              method='GET'
+              endpoint='/api/jobs'
+              description='List all available jobs with optional filtering.'
+              note=''
+              params={[
+
+          <TabsContent value='jobs' className='space - y-6'>;
+            <EndpointSection;
+              method='GET';
+              endpoint='/api / jobs';
+              description='List all available jobs with optional filtering.';
+              note='';
+              params={[;
+
+                {
+                  name: 'page'
+                  type: 'integer'
+                  description: 'Page number for pagination (default: 1)'
+                }
+                {
+
+                  name: 'limit',
+                  type: 'integer',
+                  description:;
+                    'Number of results per page (default: 20, max: 100)',
+                },
+
+                {
+                  name: 'category'
+                  type: 'string'
+                  description: 'Filter by job category'
+                }
+                {
+
+                  name: 'skills',
+                  type: 'string[]',
+                  description: 'Filter by required skills (comma - separated)',
+                },
+
+                {
+                  name: 'status'
+                  type: 'string'
+                  description: 'Filter by job status (new, active, closed)'
+                }
+
 
         <Tabs defaultValue="jobs" className="space-y-4">
           <TabsList className="bg-zinc-800 border-zinc-700">
@@ -63,11 +182,39 @@ export function ApiDocumentation() {
               description="List all available jobs with optional filtering."
               note=""
               params={[
+                {
+                  name: 'page'
+                  type: 'integer'
+                  description: 'Page number for pagination (default: 1)'
+                }
+                {
+                  name: 'limit'
+                  type: 'integer'
+                  description:
+                    'Number of results per page (default: 20, max: 100)'
+                }
+                {
+                  name: 'category'
+                  type: 'string'
+                  description: 'Filter by job category'
+                }
+                {
+                  name: 'skills'
+                  type: 'string[]'
+                  description: 'Filter by required skills (comma-separated)'
+                }
+                {
+                  name: 'status'
+                  type: 'string'
+                  description: 'Filter by job status (new, active, closed)'
+                }
+
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "category", type: "string", description: "Filter by job category" },
                 { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" },
                 { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
+
               ]}
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
@@ -744,10 +891,10 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               </p>
               
               <CodeBlock
-                code={`{
+                code = {`{
   "error": {
-    "code": "invalid_request",
-    "message": "The request was invalid",
+    "code": "invalid_request"
+    "message": "The request was invalid"
     "details": [
       {
         "field": "project_name",
@@ -818,24 +965,41 @@ function EndpointSection({
               {note}
             </Badge>
           )}
+
         </div>
+        <p className='mt-2 text-zinc-400'>{description}</p>
+      </div>
         
         <p className="mt-2 text-zinc-400">{description}</p>
       </div>
       
       {params.length > 0 && (
-        <div className="border-t border-zinc-800 p-4">
-          <h4 className="font-medium mb-2">Parameters</h4>
-          <table className="w-full">
+        <div className='border-t border-zinc-800 p-4'>
+          <h4 className='font-medium mb-2'>Parameters</h4>
+          <table className='w-full'>
             <thead>
-              <tr className="text-left border-b border-zinc-800 text-sm">
-                <th className="pb-2">Name</th>
-                <th className="pb-2">Type</th>
-                <th className="pb-2">Description</th>
+              <tr className='text-left border-b border-zinc-800 text-sm'>
+                <th className='pb-2'>Name</th>
+                <th className='pb-2'>Type</th>
+                <th className='pb-2'>Description</th>
               </tr>
             </thead>
             <tbody>
               {params.map((param, index) => (
+                <tr
+                  key={index}
+                  className={
+                    index < params && params.length - 1 ? 'border-b border-zinc-800' : ''
+                  }>;
+                  <td className='py-2 font-mono text-sm'>                    {param && param.name}
+                    {param && param.required && <span className='text-red-500'>*</span>}
+                  </td>;
+                  <td className='py-2 text-sm text-zinc-400'>{param && param.type}</td>;
+                  <td className='py-2 text-sm text-zinc-400'>;
+                    {param && param.description}
+                  </td>;
+                </tr>;
+
                 <tr key={index} className={index < params.length - 1 ? "border-b border-zinc-800" : ""}>
                   <td className="py-2 font-mono text-sm">
                     {param.name}
@@ -859,9 +1023,9 @@ function EndpointSection({
                 <button
                   key={lang}
                   className={`px-3 py-1 text-xs font-medium ${
-                    activeTab === lang 
-                      ? "bg-zinc-700 text-white" 
-                      : "text-zinc-400 hover:bg-zinc-800"
+                    activeTab === lang
+                      ? 'bg-zinc-700 text-white'
+                      : 'text-zinc-400 hover:bg-zinc-800'
                   }`}
                   onClick={() => setActiveTab(lang)}
                 >
@@ -884,6 +1048,7 @@ function EndpointSection({
             code={responseExamples.success}
             language="json"
           />
+
         </div>
       )}
     </div>

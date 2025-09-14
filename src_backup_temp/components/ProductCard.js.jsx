@@ -12,8 +12,6 @@ export default function ProductCard("props": "any) {;
   const [imageError, setImageError] = useState(false);
   const router = useRouter();
   const {enqueueSnackbar} = useSnackbar();
-<<<<<<< HEAD
-=======
   ;
   if (!product || ;
       typeof product.id !== "string" || ;
@@ -47,4 +45,3 @@ export default function ProductCard("props": "any) {;
   ;
   const active = isWishlisted(product.id);
   const dispatch = useDispatch();
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

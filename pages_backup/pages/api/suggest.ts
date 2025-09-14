@@ -59,7 +59,6 @@ const SAMPLE_QUERIES = [
   "Mobile app developers iOS / Android",
   "Cloud architects AWS / Azure",
   "DevOps engineers with Kubernetes",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 ];
 
@@ -70,7 +69,6 @@ const SAMPLE_QUERIES = [
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -143,7 +141,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

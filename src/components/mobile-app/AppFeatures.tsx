@@ -17,12 +17,13 @@ const features = [
   {
     icon: <Award className="h-10 w-10 text-zion-cyan" />,
     title: "Resume Builder",
+
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
   },
   {
-    icon: <Zap className="h-10 w-10 text-zion-cyan" />,
-    title: "Real-time Notifications",
-    description: "Get instant alerts about new job opportunities, messages, and hiring requests." 
+    icon: <Zap className="h - 10 w - 10 text - zion - cyan" />,
+    title: "Real - time Notifications",
+    description: "Get instant alerts about new job opportunities, messages, and hiring requests.";
   }
 ],
 
@@ -36,6 +37,9 @@ export const AppFeatures: React.FC = () => {
             Everything you love about Zion, now in your pocket. Our mobile app brings all the powerful features you need to succeed.
           </p>
         </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, index) => (
+            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover: border-zion-cyan transition-colors duration-300">              <CardHeader>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (

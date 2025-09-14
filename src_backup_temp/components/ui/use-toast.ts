@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:src/components/ui/use-toast.ts
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { toast   } from 'react-hot-toast';
-import { toast } from 'react-hot-toast'
-import { toast } from 'react-hot-toast' interface ToastOptions { duration?: "number"} position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"} export function useToast(...args[]): "{ const showToast = ("message": 'string'",options?: "ToastOptions) => { return toast(message",options) return { showToast }};
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main:src_backup_temp/components/ui/use-toast.ts
-
-=======
 import { toast } from 'react-hot-toast'
 interface ToastOptions {
   duration?: number;
@@ -29,4 +9,3 @@ export function useToast() {
   };
   return { showToast };
 };
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

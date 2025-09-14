@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import Link from '../../lib/CompatLink';
 import { Menu, X, ChevronDown } from 'lucide-react';

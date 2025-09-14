@@ -75,9 +75,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     setHighlightedIndex(-1),
   }),
 
-  const handleSelect = (suggestion: SearchSuggestion) => {
-    onChange(suggestion.text),
-    if (onSelectSuggestion) onSelectSuggestion(suggestion),
 
     const searchQuery = encodeURIComponent(suggestion.text),
     router.push(`/search?q=${searchQuery}`),

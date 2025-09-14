@@ -29,6 +29,7 @@ export function TalentOnboardingSteps() {
       link: "/profile/availability",
       action: "Set"},
     {
+
       id: "match",
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,

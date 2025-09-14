@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from 'react';'''';';
 import {innovativeServices2025} from '../data/innovativeServices2025';'''';';
 import {ULTIMATE_INNOVATIVE_SERVICES_2027} from '../data/ultimateInnovativeServices2027';'''';';
@@ -862,4 +860,3 @@ export {EnhancedComprehensiveServicesShowcase};
 export {EnhancedComprehensiveServicesShowcase};
 </path>
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -14,7 +14,9 @@ import { toast } from "@/components/ui/use-toast",
 import { InterviewResponseForm } from "./InterviewResponseForm",
 
 interface InterviewCardProps {
-  interview: Interview,
+
+  interview: Interview
+
   onRefresh: () => Promise<void>
 }
 

@@ -273,8 +273,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
                   <div className="flex items-center justify-between mb-3">";
                     <h3 className="font-semibold text-zion-slate">;
                       {metric.name}
-<<<<<<< HEAD
-=======
                     </h3>;
                     {getTrendIcon(metric.trend)}
                   </div>";
@@ -526,4 +524,3 @@ export function AdvancedBusinessIntelligence("props": "any) {;
 "export default ComponentName;"
 </RefreshCw>;
 </RefreshCw>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

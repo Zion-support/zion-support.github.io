@@ -52,8 +52,6 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
               </div>;
               <h3 className="text-lg font-semibold text-white mb-2">;
                 {feature.title}
-<<<<<<< HEAD
-=======
               </h3>;
               <p className="text-zion-slate-light text-sm leading-relaxed">;
               <p className="text-zion-slate-light text-sm leading-relaxed">
@@ -177,4 +175,3 @@ export function SecurityHeadersCompact(props: any) {
 ;
 export default SecurityHeaders;
 </badge>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

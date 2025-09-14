@@ -140,7 +140,6 @@ export default function EnhancedFooter() {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
   return (
     <footer className;

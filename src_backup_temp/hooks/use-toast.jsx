@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useCallback} from 'react';
 ';
 // Simple toast function for direct import`';';
@@ -45,4 +43,3 @@ export const useToast = (props) => {;
   return {toast, dismiss,
     toasts};};"`";';';';
 import React,{useState,useCallback} from 'react'; ';';'; export const toast = (props) => { return Date.now()}; export const useToast = (props) => {; const [toasts,setToasts] = useState([]); `'; const toast = useCallback(({ title,description,variant = 'default' };) => { const id = Date.now(); const newToast = { id,title,description,variant };; setToasts(prev => [...prev,newToast]); setTimeout(() => {setToasts(prev => prev.filter(t => t.id !== id))},5000); return id},[]); const dismiss = useCallback((id) => {setToasts(prev => prev.filter(t => t.id !== id))},[]);';'; return {toast,dismiss,toasts}};"`";';';';
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

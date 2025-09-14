@@ -77,8 +77,6 @@ export function ChatBotPanel("props": "any) {;
             else {// Reset failed attempts if successful;
                 setFailedAttempts(0)}
         }
-<<<<<<< HEAD
-=======
         catch(error) {;
 ";
             // console.error("Error in AI "chat":", error);
@@ -279,4 +277,3 @@ export function ChatBotPanel("props": "any) {;
     </div>)"}
 '"`;
 </QuickReplyButton>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

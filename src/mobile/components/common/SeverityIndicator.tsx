@@ -36,9 +36,10 @@ export function SeverityIndicator({
           "text-green-500"
         )} />,
     }
-  },
+  }
 
   return (
+
     <div className={cn("flex items-center gap-1", className)}>
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}

@@ -44,9 +44,6 @@ const REWARD_OPTIONS: RewardOption[] = [
   }
 ],
 
-export function RedeemTokensCard() {
-  const { wallet, spendTokens } = useWallet(),
-  const [open, setOpen] = useState(false),
 
   const handleRedeem = async (option: RewardOption) => {
     if (!wallet || wallet.balance < option.cost) return,

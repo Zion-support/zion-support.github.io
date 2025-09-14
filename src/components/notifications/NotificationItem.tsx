@@ -13,26 +13,21 @@ import {
 import { useRouter } from 'next/router',
 import { Notification, NotificationType } from '@/context/notifications',
 
-export const getTypeIcon = (type: NotificationType) => {
+
+const getNotificationIcon = (type: NotificationType) => {
   switch (type) {
+    case 'success':
+      return <span className="text-green-500">✅</span>;
+    case 'error':
+      return <span className="text-red-500">❌</span>;
+    case 'warning':
+      return <span className="text-yellow-500">⚠️</span>;
+    case 'info':
+      return <span className="text-blue-500">ℹ️</span>;
     case 'message':
-      return <span className="text-blue-500">💬</span>,
-    case 'quote_request':
-      return <span className="text-purple-500">📝</span>,
-    case 'booking_confirmation':
-      return <span className="text-green-500">✅</span>,
-    case 'hire_request':
-      return <span className="text-zion-purple">🤝</span>,
-    case 'onboarding':
-      return <span className="text-zion-cyan">🚀</span>,
-    case 'system':
-      return <span className="text-yellow-500">⚠️</span>,
-    case 'project_update':
-      return <span className="text-indigo-400">📌</span>,
-    case 'milestone_complete':
-      return <span className="text-green-500">🏁</span>,
-    case 'order_status':
-      return <span className="text-orange-500">📦</span>,
+      return <span className="text-blue-500">💬</span>;
+    case 'project':
+      return <span className="text-orange-500">📦</span>;
     default:
       return <span className="text-gray-500">📣</span>
   }

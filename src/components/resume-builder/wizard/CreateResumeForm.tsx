@@ -23,7 +23,6 @@ export const CreateResumeForm = ({
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>
           <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>
-          
           <div className="flex gap-2 max-w-md mx-auto">
             <input
               type="text"

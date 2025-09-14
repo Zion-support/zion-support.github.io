@@ -1,3 +1,4 @@
+"use client";
 
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
@@ -332,7 +333,6 @@ interface NavigationItem {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 
@@ -1734,7 +1734,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -3052,7 +3051,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
                   {/* Dropdown Menu */}
@@ -3069,12 +3067,9 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
                     {activeDropdown === item && item.name && (;
@@ -3198,7 +3193,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                               >
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
                               <Link
                                 key={child && child.name}
                                 href={child && child.href}
@@ -3250,9 +3244,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
                             ))}
                           </div>;
                         </div>;
@@ -3271,9 +3263,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Right Side Actions */}
             <div className='hidden lg:flex items-center gap-4'>;
               {/* Quick Actions */}
@@ -3311,9 +3301,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
               {/* Contact Info */}
               <div className='flex items-center gap-4 text-sm text-gray-400'>;
                 <a
@@ -3433,9 +3421,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -3457,7 +3443,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -3649,11 +3634,9 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -3717,7 +3700,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
         {_/* Mobile Menu */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
             {/* Right Side Actions */}
             <div className='hidden lg:flex items-center gap-4'>
@@ -3730,7 +3712,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -3753,7 +3734,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -3787,7 +3767,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -3813,7 +3792,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
@@ -3865,7 +3843,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -3890,10 +3867,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -3941,7 +3916,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -3970,7 +3944,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -4003,12 +3976,9 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
                   {/* Mobile Contact Info */}
@@ -4028,7 +3998,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

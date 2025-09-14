@@ -9,6 +9,8 @@ interface Speaker {
   linkedin?: string
 }
 
+  linkedin?: string
+}
 const speakers: Speaker[] = [
   {
     name: 'Alex Zion',

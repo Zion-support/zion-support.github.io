@@ -58,8 +58,6 @@ const { user "} = useAuth();
         safeStorage.removeItem(getCartKey());
       }
     }
-<<<<<<< HEAD
-=======
 ;
     dispatch({"type": 'SET_ITEMS', "payload": "items"});
     dispatch({type: 'SET_ITEMS', payload: items}
@@ -158,4 +156,3 @@ if (user?.id) {const guestStored = safeStorage.getItem(getCartKey())}
 }"""";
 </CartContext>;
 </CartContext>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

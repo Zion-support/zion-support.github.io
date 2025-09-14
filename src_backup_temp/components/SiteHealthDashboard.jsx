@@ -194,8 +194,6 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
             return 'text-blue-500';
         if (score >= 60);
             return 'text-yellow-500';
-<<<<<<< HEAD
-=======
         return 'text-red-500'"};
     if (isLoading) {return (<div className="max-w-7xl mx-auto p-6">;
         <div className="text-center py-12">;
@@ -415,4 +413,3 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
     </div>)"}
 ;
 export default SiteHealthDashboard;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

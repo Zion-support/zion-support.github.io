@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useEffect, useRef} from 'react';'''';';
 import {Link, useLocation} from 'react-router-dom';'''';';
 import {motion, AnimatePresence} from 'framer-motion';';
@@ -623,4 +621,3 @@ export {MobileNavigation};
 export {MobileNavigation};
 </motion>
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

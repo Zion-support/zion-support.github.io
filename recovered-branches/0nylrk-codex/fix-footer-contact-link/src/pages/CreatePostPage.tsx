@@ -43,6 +43,7 @@ export default function CreatePostPage() {
   },
 
 
+
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database

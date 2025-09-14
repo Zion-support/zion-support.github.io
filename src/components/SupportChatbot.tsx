@@ -48,8 +48,8 @@ export function SupportChatbot() {
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
         res = await fetch('/api/kb-chat', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          method: 'POST'
+          headers: { 'Content-Type': 'application/json' }
           body: JSON.stringify({
             messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
           })
@@ -136,6 +136,12 @@ export function SupportChatbot() {
       <div className="bg-zion-blue-dark p-2 flex justify-between items-center">
         <span className="text-white font-medium">Help Bot</span>
         <Button
+          variant='ghost'
+          size='icon'
+          className='text-white'
+          onClick={() => setOpen(false)}
+          aria-label='Close help bot'        >
+          <X className='h-5 w-5' />
           variant="ghost"
           size="icon"
           className="text-white"
@@ -155,12 +161,14 @@ export function SupportChatbot() {
         {messages.map(m => (
           <ChatMessage key={m.id} role={m.role} message={m.message} />
         ))}
+
+        {typing && <ChatMessage role='assistant' message='...' />}
         {typing && (
           <ChatMessage role="assistant" message="..." />
         )}
         <div ref={endRef} />
       </div>
-      <div className="p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30">
+      <div className='p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30'>
         <ChatInput onSend={sendMessage} disabled={loading} />
       </div>
     </div>

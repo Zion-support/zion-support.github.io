@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from 'react';
 const Dialog({children, open, onOpenChange}) {;
     const [internalOpen, setInternalOpen] = useState(false);
@@ -63,4 +61,3 @@ export function DialogFooter(props: any) {
     return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}
 </div>
 </DialogContext>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

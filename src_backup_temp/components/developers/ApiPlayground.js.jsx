@@ -4,8 +4,6 @@ import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Button} from "@/components/ui/button";
 import CodeBlock from "./CodeBlock.jsx";
-<<<<<<< HEAD
-=======
 export function ApiPlayground("props": "any) {;
     const [apiKey", setApiKey] = useLocalStorage("zion_api_key", "");
     const [paramValues, setParamValues] = useState({});    const [body, setBody] = useState("{}");
@@ -83,4 +81,3 @@ export {ApiPlayground};
 export default ApiPlayground;"`;
 export default ApiPlayground;"`"`;
 </Textarea>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

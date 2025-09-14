@@ -37,6 +37,7 @@ export function ImageWithRetry({
 
   const fill = !('width' in props) && !('height' in props),
 
+  const fill = !('width' in props) && !('height' in props);
   return (
     <div className="relative inline-block">
       <Image

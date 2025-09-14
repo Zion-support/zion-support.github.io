@@ -14,9 +14,6 @@ export default function Page("props": "any) {;
         navigate('/');
       } else {;
         form.setError('root', {;
-<<<<<<< HEAD
-
-=======
           "message": 'Login failed.Please check your credentials.'});
           message: 'Login failed.Please check your credentials.'}
     );
@@ -159,4 +156,3 @@ export {Page, LoginForm};
 ;
 </FormField>;
 </FormField>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

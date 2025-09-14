@@ -1,5 +1,7 @@
 
-import { useState, useEffect } from "react",
+      })
+
+import { useState, useEffect } from "react";
 import { Star } from 'lucide-react'
 import { ReviewStats } from "@/components/reviews/ReviewStats",
 import { ReviewsList } from "@/components/reviews/ReviewsList",
@@ -9,7 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 interface ProfileRatingsProps {
   userId: string,
-  averageRating?: number,
+  averageRating?: number;
   ratingCount?: number
 }
 
@@ -30,8 +32,9 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       
       setRatingDistribution(distribution),
     }
-  }, [reviews]),
-  
+      setRatingDistribution(distribution)
+    }
+  }, [reviews])
   // Fetch reviews when component mounts
   useEffect(() => {
     fetchUserReviews(userId),
@@ -55,24 +58,52 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <TabsTrigger value="positive">Positive</TabsTrigger>
               <TabsTrigger value="critical">Critical</TabsTrigger>
             </TabsList>
-            
             <TabsContent value="all">
+
               <ReviewsList
+
                 reviews={reviews}
                 isLoading={isLoading}
-                onReportReview={reportReview}
-              />
+                onReportReview={reportReview}              />
             </TabsContent>
+
+
+            ratingDistribution={ratingDistribution}          />;
+        </div>;
+
+        <div className='md:w-2/3'>;
+          <Tabs defaultValue='all'>;
+            <TabsList className='mb-4'>;
+              <TabsTrigger value='all'>;
+                All Reviews ({reviews && reviews.length});
+              </TabsTrigger>;
+              <TabsTrigger value='positive'>Positive</TabsTrigger>;
+              <TabsTrigger value='critical'>Critical</TabsTrigger>;
+            </TabsList>;
+
+            <TabsContent value='all'>              <ReviewsList
+        <div className="md:w-2/3">;
+          <Tabs defaultValue="all">;
+            <TabsList className="mb-4">;
+              <TabsTrigger value="all">All Reviews ({reviews && reviews.length})</TabsTrigger>;
+              <TabsTrigger value="positive">Positive</TabsTrigger>;
+              <TabsTrigger value="critical">Critical</TabsTrigger>;
+            </TabsList>;
+
+            <TabsContent value="all">;
+                reviews={reviews}
+
             
             <TabsContent value="positive">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating >= 4)}
                 isLoading={isLoading}
+
                 onReportReview={reportReview}
               />
             </TabsContent>
             
-            <TabsContent value="critical">
+            <TabsContent value="positive">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}

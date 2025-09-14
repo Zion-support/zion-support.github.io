@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export type AddedService = { id: string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions'; price: string; billing: 'month' | 'project' | 'hour'; features: string[]; ctaLabel: string; href: string; external?: boolean}; ; export const servicesAdditions2025: AddedServic e[] = [;';
 ';';
 export type AddedService = { id: string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions'; price: string; billing: 'month' | 'project' | 'hour'; features: string[]; ctaLabel: string; href: string; external?: boolean}; ; export const servicesAdditions2025: AddedServic e[] = [;
@@ -7,4 +5,3 @@ export type AddedService = { "id": "string; "title": string; "description": stri
 export type AddedService = { id: string; title: string; description: string; category: &apos;Micro SaaS&apos; | &apos;IT Services&apos; | &apos;AI Solutions&apos;; price: string; billing: &apos;month&apos; | &apos;project&apos; | &apos;hour&apos;; features: string[]; ctaLabel: string; href: string; external?: boolean}; ; export const servicesAdditions2025: AddedServic e[] = [;
 export type AddedService = { "id": string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions'; price: string; billing: 'month' | 'project' | 'hour'; features: string[]; ctaLabel: string; href: string; external?: boolean}; export const "servicesAdditions2025": AddedServic e[] = [;
 export type AddedService = { id: string; title: string; description: string; category: 'Micro SaaS' | 'IT Services' | 'AI Solutions'; price: string; billing: 'month' | 'project' | 'hour'; features: string[]; ctaLabel: string; href: string; external?: boolean}; ; export const servicesAdditions2025: AddedServic e[] = [;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

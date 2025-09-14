@@ -6,8 +6,6 @@ const getBenefits = (t: any) => [
 
 
   {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -233,48 +231,4 @@ function Page() {
       "Transparent cost structure" ];
 
 
-
-<<<<<<< HEAD
-
-
-
-
-              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
-            />
-          ))}
-
-        </div>;
-      </div>;
-    </section>;
-  );
-
-
-  );
-}
-";
-    title: "24 / 7 Support", ";
-    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.", ";
-    icon: <Clock className="w - 8 h - 8"  />, ";
-    color: "from - zion - blue to - zion - blue - dark", ";
-    bg_color: "from - zion - blue / 20 to - zion - blue - dark / 20", "    stats: "99.9% Uptime",
-    features: [";
-      "Round - the - clock assistance", ";
-      "Expert technical support", ";
-      "Rapid response times", ";
-      "Proactive monitoring" ];
-},
-  {
-";
-    title: "Cost Reduction", ";
-    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.", ";
-    icon: <TrendingDown className="w - 8 h - 8"  />, ";
-    color: "from - zion - green to - zion - green - dark", ";
-    bg_color: "from - zion - green / 20 to - zion - green - dark / 20", "    stats: "40% Cost Savings",
-    features: [";
-      "Direct provider connections", ";
-      "Competitive pricing", ";
-      "Bulk discount options", ";
-      "Transparent cost structure" ];
-}
-;
 

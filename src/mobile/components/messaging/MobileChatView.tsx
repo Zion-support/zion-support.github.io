@@ -46,6 +46,31 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       e.preventDefault(),
       handleSend()
     }
+  };
+
+  const startVideoCall = () => {;
+    const roomId = `mobile-${contact && contact.id}`;
+    toast && toast.success('Starting video call', {;
+      description: `Connecting with ${contact && contact.name}...`,;
+    });
+
+    // Navigate to video call page;
+    router && router.push(`/call/${roomId}`);
+  };
+
+  const startAudioCall = () => {;
+    const roomId = `mobile-audio-${contact && contact.id}`;
+    toast && toast.success('Starting audio call', {;
+      description: `Connecting with ${contact && contact.name}...`,;
+    });
+
+    // Navigate to video call page with audio-only flag;
+    router && router.push(`/call/${roomId}?audioOnly=true`);
+  };
+
+  return (
+
+
   },
   
   const startVideoCall = () => {
@@ -73,6 +98,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       <header className="sticky top-0 z-10 bg-background border-b border-border">
         <div className="flex items-center h-14 px-4">
           <Button
+            variant='ghost'
+            size='icon'
+            onClick={onBack}
+            aria-label='Go back'          >
+            <ChevronLeft className='h-5 w-5' />
+          </Button>
+          <div className='flex items-center flex-1 gap-3 mx-2'>
             variant="ghost"
             size="icon"
             onClick={onBack}

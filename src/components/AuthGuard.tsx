@@ -14,20 +14,7 @@ interface AuthGuardProps {
   allowGuest?: boolean
 }
 
-export function AuthGuard({
-  children,
-  requireAuth = true,
-  requireRole,
-  redirectTo = '/auth/login',
-  fallback,
-  showToast = true,
-  allowGuest = false}: AuthGuardProps) {
-  const { user, isAuthenticated, isLoading } = useAuth(),
-  const router = useRouter(),
 
-  useEffect(() => {
-    // Don't redirect while auth is still loading
-    if (isLoading) return,
 
     // If authentication is required but user is not authenticated
     if (requireAuth && !isAuthenticated && !allowGuest) {

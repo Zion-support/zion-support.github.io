@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import * as React from "react";
 import {Toaster as HotToaster} from "react-hot-toast";
 export function Toaster("props": "any) {return (<HotToaster position="top-right" />)"}
@@ -9,4 +7,3 @@ import * as React from &quot;react&quot;; import {Toaster as HotToaster} from &q
 const * as React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster($1) {return (<HotToaster position="top-right" />)} export default toaster;""
 import _React from 'react';,
 import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster(_) {return (<HotToaster position="top-right" />)} export default toaster;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

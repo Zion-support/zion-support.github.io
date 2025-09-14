@@ -110,18 +110,17 @@ const HealthDashboard: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center p-8">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+      <div className='flex items-center justify-center p-8'>
+        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>
       </div>
     ),
   }
-
   if (error) {
     return (
-      <Card className="border-red-200 bg-red-50">
-        <CardContent className="p-6">
-          <div className="flex items-center text-red-600">
-            <XCircle className="w-5 h-5 mr-2" />
+      <Card className='border-red-200 bg-red-50'>
+        <CardContent className='p-6'>
+          <div className='flex items-center text-red-600'>
+            <XCircle className='w-5 h-5 mr-2' />
             <span>Failed to load health data: {error}</span>
           </div>
           <Button onClick={fetchHealthData} className="mt-4">
@@ -144,6 +143,9 @@ const HealthDashboard: React.FC = () => {
         </div>
         <div className="flex items-center space-x-2">
           <Button
+            variant='outline'
+            size='sm'
+            onClick={() => setAutoRefresh(!autoRefresh)}          >
             variant="outline"
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
@@ -215,6 +217,8 @@ const HealthDashboard: React.FC = () => {
           <TabsTrigger value="metrics">Metrics</TabsTrigger>
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
+        <TabsContent value='overview' className='space-y-4'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -260,14 +264,16 @@ const HealthDashboard: React.FC = () => {
                         {issue}
                       </li>
                     ))}
-                  </ul>
-                ) : (
-                  <p className="text-green-600 text-sm">No issues detected</p>
+                  </ul>;
+                ) : (;
+                  <p className='text-green-600 text-sm'>No issues detected</p>;
                 )}
               </CardContent>
             </Card>
           </div>
         </TabsContent>
+        <TabsContent value='errors' className='space-y-4'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -334,36 +340,52 @@ const HealthDashboard: React.FC = () => {
             </Card>
 
             <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm">Critical Errors</CardTitle>
+              <CardHeader className='pb-2'>
+                <CardTitle className='text-sm'>Error Rate</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold text-red-600">{healthData.metrics.criticalErrors}</p>
-                <p className="text-xs text-gray-600">In last hour</p>
+                <p className='text-2xl font-bold'>
+                  {healthData.metrics.errorRate.toFixed(2)}%
+                </p>
+                <p className='text-xs text-gray-600'>Errors per request</p>
               </CardContent>
             </Card>
-
             <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm">Avg Response</CardTitle>
+              <CardHeader className='pb-2'>
+                <CardTitle className='text-sm'>Critical Errors</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}ms</p>
-                <p className="text-xs text-gray-600">API response time</p>
+                <p className='text-2xl font-bold text-red-600'>
+                  {healthData.metrics.criticalErrors}
+                </p>
+                <p className='text-xs text-gray-600'>In last hour</p>
               </CardContent>
             </Card>
-
             <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm">Memory Usage</CardTitle>
+              <CardHeader className='pb-2'>
+                <CardTitle className='text-sm'>Avg Response</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold">{formatBytes(healthData.metrics.memoryUsage)}</p>
-                <p className="text-xs text-gray-600">JavaScript heap</p>
+                <p className='text-2xl font-bold'>
+                  {healthData.metrics.responseTime.toFixed(0)}ms
+                </p>
+                <p className='text-xs text-gray-600'>API response time</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className='pb-2'>
+                <CardTitle className='text-sm'>Memory Usage</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className='text-2xl font-bold'>
+                  {formatBytes(healthData.metrics.memoryUsage)}
+                </p>
+                <p className='text-xs text-gray-600'>JavaScript heap</p>
               </CardContent>
             </Card>
           </div>
         </TabsContent>
+        <TabsContent value='recommendations' className='space-y-4'>
 
         <TabsContent value="recommendations" className="space-y-4">
           <Card>

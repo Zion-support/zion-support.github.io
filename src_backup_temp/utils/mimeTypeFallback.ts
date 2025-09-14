@@ -64,8 +64,6 @@ class MimeTypeFallback {;
     const lastDot = filename.lastIndexOf('.');
     if (lastDot === -1) return '';
     return filename.substring(lastDot).toLowerCase();
-<<<<<<< HEAD
-=======
   "}
   async checkAndFixMimeType("url": "string): Promise<any> {;
     try {;
@@ -205,4 +203,3 @@ class MimeTypeFallback {;
 const mimeTypeFallback = new MimeTypeFallback();
 ;
 export default mimeTypeFallback;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

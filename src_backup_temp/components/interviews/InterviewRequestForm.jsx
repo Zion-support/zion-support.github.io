@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from "react";";
 import {Button} from '@/components/ui/button';";
 import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';";
@@ -323,4 +321,3 @@ export default function InterviewRequestForm.js({ }: InterviewRequestForm.jsProp
     </div>
   );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

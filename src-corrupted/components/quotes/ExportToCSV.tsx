@@ -417,8 +417,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -514,40 +512,4 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 
 
 
-
-<<<<<<< HEAD
-
-
-
-
-
-
-  return (
-    <Button
-      variant="outline" 
-      onClick = {handleExport,}
-      className="flex items-center gap-2"
-      disabled={quotes && quotes.length === 0}>;
-      <Download size={16} />;
-      Export CSV;
-    </Button>;
-  );
-};
-'"},;
-
-
-
-    <Button;
-      variant="outline";
-
-      onClick={handleExport}
-      className="flex items-center gap-2";
-      disabled={quotes.length === 0}
-    >;
-      <Download size={16} />;
-      Export CSV;
-    </Button>;
-  );
-
-}
 

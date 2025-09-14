@@ -12,8 +12,10 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+
         className="flex w-full items-center justify-between text-white font-medium"
       >
+
         <span>Years of Experience</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -21,6 +23,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+      {expanded && (
       
       {expanded && (
         <div className="mt-6">
@@ -29,6 +32,8 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             <span>{experienceRange[1]} years</span>
           </div>
           <Slider
+
+            aria-label='Experience range'            aria-label="Experience range"
             aria-label="Experience range"
             value={[experienceRange[0], experienceRange[1]]}
             min={0}

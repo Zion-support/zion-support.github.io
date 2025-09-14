@@ -173,7 +173,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             >
@@ -313,7 +312,6 @@ export default function PageErrorBoundary({
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
               href='mailto:support@zion && zion.tech'
               className='text-blue-400 hover:underline'>;
               support@zion && zion.tech;
@@ -346,26 +344,4 @@ export default function PageErrorBoundary({
 } ;
 
 
-
-<<<<<<< HEAD
-
-
-
-
-
-
-
-  const FallbackComponent =;
-    fallback ||;
-    ((props: FallbackProps) => (
-      <PageErrorFallback {...props} page_name={page_name} />));
-      on_reset={() => {        // Reset any application state if needed;
-        log_info (`Resetting error boundary for ${page_name || 'page'}`);
-      }}
-    >;
-      {children}
-    </ErrorBoundary>);
-}
-}
-}
 

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export function ErrorBanner("props": "any) {;
     return (<div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">;
       {msg"}
@@ -21,4 +19,3 @@ export function ErrorBanner({ message }) {
   );
 }
 export default ErrorBanner;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

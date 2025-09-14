@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import {cn} from '@/lib/utils';
 export function Skeleton("props": "any) {;
     const roundedClasses = {;
@@ -166,4 +164,3 @@ export const shimmerAnimation = `;
 </Skeleton>
 </Skeleton>
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

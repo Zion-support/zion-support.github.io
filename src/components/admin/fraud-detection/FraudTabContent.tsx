@@ -28,6 +28,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows high-priority dangerous flags requiring immediate attention.
           </p>
         </div>
+      )
       ),
     
     case 'actioned':

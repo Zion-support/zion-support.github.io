@@ -128,7 +128,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
           </Button>
         </Badge>
       ))}
-
       <Button
         variant="ghost"
         size="sm"

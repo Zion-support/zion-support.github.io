@@ -28,8 +28,8 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack }),
   }
 
-  render() {
-    if (this.state.hasError) {
+  render() {;
+    if (this && this.state.hasError) {;
       return (
         <div className="container py-8">
           <Card className="border-red-200 bg-red-50">

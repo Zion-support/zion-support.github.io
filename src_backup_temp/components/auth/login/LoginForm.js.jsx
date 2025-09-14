@@ -12,8 +12,6 @@ import {Link} from "react-router-dom";"""";
 import {LoadingOverlay} from "@/components/LoadingOverlay";
 // Form validation schema;
 const loginSchema = z.object({}
-<<<<<<< HEAD
-=======
 """;
 """";
     "email": "z.string().email("Please enter a valid email").min(1", "Email is required"),"""";
@@ -126,4 +124,3 @@ export {LoginForm};
 ;
 </FormField>;
 </FormField>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

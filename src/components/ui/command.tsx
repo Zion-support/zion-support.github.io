@@ -23,8 +23,13 @@ Command.displayName = CommandPrimitive.displayName
 interface CommandDialogProps
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
 
-const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
+
+interface CommandDialogProps;
+  extends React && React.ComponentPropsWithoutRef<typeof Dialog> {}
+
+const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {;
   return (
+
     <Dialog {...props}>
       <DialogContent className="overflow-hidden p-0 shadow-lg">
         <DialogHeader>
@@ -41,6 +46,7 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
+
 >(({ className, ...props }, ref) => (
   <div className="flex items-center border-b px-3" cmdk-input-wrapper="">
     <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
@@ -74,6 +80,7 @@ const CommandEmpty = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Empty>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Empty>
 >((props, ref) => (
+
   <CommandPrimitive.Empty
     ref={ref}
     className="py-6 text-center text-sm"
@@ -125,7 +132,6 @@ const CommandItem = React.forwardRef<
   />
 ))
 
-CommandItem.displayName = CommandPrimitive.Item.displayName
 
 const CommandShortcut = ({
   className,
@@ -150,6 +156,10 @@ export {
   CommandList,
   CommandEmpty,
   CommandGroup,
+  CommandItem,;
+  CommandShortcut,;
+  CommandSeparator;
+};
   CommandItem,
   CommandShortcut,
   CommandSeparator}

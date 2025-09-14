@@ -54,8 +54,6 @@ export const LinkMonitor = ("props": "any) => {;
       const links = document.querySelectorAll(`a[href="${originalUrl}"]`);
       links.forEach(link => {;
         link.href = newUrl;
-<<<<<<< HEAD
-=======
         link.setAttribute('data-fixed',true');'`;
         link.setAttribute('title', `"Fixed": "Redirected from ${originalUrl"}`);
       });
@@ -1232,4 +1230,3 @@ export default LinkMonitor;"";,"}
 </div>;
 </div>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

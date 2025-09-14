@@ -23,17 +23,27 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     } 
   } = useJobSuggestions(currentTalentId),
 
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied'),
-    // In a real app, this might redirect to application form or open a modal
-  },
+
+
 
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined'),
   },
 
   if (isLoading) {
+  // Check condition
+if ( {) {
+  $2
+}
     return (
+
+
+    updateJobMatchStatus, ;
+import { useAuth } from "@/hooks/useAuth";
+import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
+import { useJobSuggestions } from "@/hooks/useJobSuggestions";
+import { JobMatchesCard } from "./JobMatchesCard";
+import { NoJobsCard } from "./NoJobsCard";
       <div className="flex items-center justify-center p-6">
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>

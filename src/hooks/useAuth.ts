@@ -44,7 +44,6 @@ export function useAuth() {
       // For now, no user is logged in
       setUser(null);
     }, 1000);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 
     return () => clearTimeout(timer);
   }, []);
@@ -97,7 +96,6 @@ import { useState } from 'react'
       return { success: false, error: 'Signup failed' }
     }
   }
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
   return {
     ...authState,
@@ -109,14 +107,22 @@ import { useState } from 'react'
     signup,
   }
 }
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
 =======
   name?: string;
   email: string;
   avatar?: string;
 }
 
-interface AuthContextType {
+  id: string;
+  email: string;
+  name: string;
+  role: 'user' | 'admin' | 'moderator';
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string}
+
+interface AuthState {
+
   user: User | null;
   login: (email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;

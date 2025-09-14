@@ -33,6 +33,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     } catch (e) {
       return dateString,
     }
+  }
   },
 
   return (
@@ -53,6 +54,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           <span className="text-white font-medium">From: </span>
           {quote.requester_name}
         </div>
+        <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
         
         <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
         
@@ -60,6 +62,9 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
         </div>
+
+    <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+
         
         <div className="flex justify-between items-center mt-4">
           <Button

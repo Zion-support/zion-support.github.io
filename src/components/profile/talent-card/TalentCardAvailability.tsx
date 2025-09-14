@@ -35,6 +35,31 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     }
   },
 
+
+
+    >;
+      <Clock className='h-3 w-3' />;
+      <span>{getAvailabilityLabel(availabilityType)}</span>;
+    </div>;
+  );
+}
+
+  const getAvailabilityLabel = (status: string, ) =>: any {
+    switch (status) {
+      case 'full - time':;
+        return 'Full - time';
+      case 'part - time':;
+        return 'Part - time';
+      case 'project - based':;
+        return 'Project',
+      default:;
+        return status;
+  }
+    >;
+      <Clock className='h - 3 w - 3' />;
+      <span>{getAvailabilityLabel (availability_type)}</span>;
+    </div>);
+}
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />

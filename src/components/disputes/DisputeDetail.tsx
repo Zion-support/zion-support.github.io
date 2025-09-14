@@ -1,11 +1,5 @@
 
-import React, { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { useDisputes } from "@/hooks/useDisputes",
-import {logErrorToProduction} from '@/utils/productionLogger',
-import {
- Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType
-} from "@/types/disputes",
+
 
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
@@ -119,9 +113,21 @@ export function DisputeDetail() {
     } finally {
       setIsSending(false),
     }
-  },
+  };
+
+
+
+
+
+  if (isLoading) {;
+
+      summary: resolution.summary,
+
+
+
 
   if (isLoading) {
+
     return (
       <div className="p-8 text-center">
         <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
@@ -130,10 +136,15 @@ export function DisputeDetail() {
     ),
   }
 
-  if (!dispute) {
+  if (!dispute) {;
     return (
+
       <div className="p-8 text-center">
         <p>Dispute not found</p>
+        <Button
+          onClick={() => router.push('/dashboard/disputes')}
+          className='mt-4'
+        >          Back to Disputes
         <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes
         </Button>
@@ -149,7 +160,10 @@ export function DisputeDetail() {
       case "closed": return "outline",
       default: return "default"
     }
-  },
+  }
+
+
+
 
   return (
     <div className="container mx-auto p-4 space-y-6">
@@ -161,6 +175,23 @@ export function DisputeDetail() {
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
+          <p className='text-muted-foreground'>
+            Reported{' '}
+            {formatDistanceToNow(new Date(dispute?.created_at |''), {
+              addSuffix: true
+            })}
+          </p>
+        </div>
+
+        <div className='flex gap-2'>
+          <Button
+            variant='outline'
+            onClick={() => router.push('/dashboard/disputes')}
+          >
+            Back to List
+          </Button>
+          {isAdmin && dispute?.status === 'open' && (
+            <Button onClick={() => handleStatusChange('under_review')}>              Start Review
           <p className="text-muted-foreground">
             Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true })}
           </p>
@@ -191,20 +222,23 @@ export function DisputeDetail() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="mb-6">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="messages">Messages</TabsTrigger>
-              <TabsTrigger value="attachments">Attachments</TabsTrigger>
-              {isAdmin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
+            <TabsList className='mb-6'>
+              <TabsTrigger value='overview'>Overview</TabsTrigger>
+              <TabsTrigger value='messages'>Messages</TabsTrigger>
+              <TabsTrigger value='attachments'>Attachments</TabsTrigger>
+              {isAdmin && <TabsTrigger value='admin'>Admin Notes</TabsTrigger>}
             </TabsList>
+            <TabsContent value='overview' className='space-y-6'>
             
             <TabsContent value="overview" className="space-y-6">
               <Card>
                 <CardHeader>
                   <CardTitle>Dispute Details</CardTitle>
-                  <CardDescription>Information about this dispute case</CardDescription>
+                  <CardDescription>
+                    Information about this dispute case
+                  </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className='space-y-4'>
                   <div>
                     <h3 className="font-medium">Reason</h3>
                     <p>{
@@ -219,10 +253,11 @@ export function DisputeDetail() {
                     <p className="whitespace-pre-wrap">{dispute.description}</p>
                   </div>
                   
+
+
                   <div>
-                    <h3 className="font-medium">Project</h3>
-                    <p>{dispute.project?.title || "Unknown Project"}</p>
-                    <p className="text-sm text-muted-foreground">{dispute.project?.scope_summary}</p>
+                    <h3 className='font-medium'>Description</h3>
+                    <p className='whitespace-pre-wrap'>{dispute.description}</p>
                   </div>
                   
                   {dispute.milestone_id && (
@@ -350,30 +385,37 @@ export function DisputeDetail() {
                 </CardFooter>
               </Card>
             </TabsContent>
+            <TabsContent value='attachments'>
             
             <TabsContent value="attachments">
               <Card>
                 <CardHeader>
                   <CardTitle>Attachments</CardTitle>
-                  <CardDescription>Files related to this dispute</CardDescription>
+                  <CardDescription>
+                    Files related to this dispute
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-center py-12">
-                    <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
-                    <p className="text-muted-foreground">No attachments available</p>
+                  <div className='text-center py-12'>
+                    <Download className='mx-auto h-12 w-12 text-muted-foreground mb-2' />
+                    <p className='text-muted-foreground'>
+                      No attachments available
+                    </p>
                   </div>
                 </CardContent>
               </Card>
             </TabsContent>
             
             {isAdmin && (
-              <TabsContent value="admin" className="space-y-6">
+              <TabsContent value='admin' className='space-y-6'>
                 <Card>
                   <CardHeader>
                     <CardTitle>Admin Actions</CardTitle>
-                    <CardDescription>Handle this dispute as an administrator</CardDescription>
+                    <CardDescription>
+                      Handle this dispute as an administrator
+                    </CardDescription>
                   </CardHeader>
-                  <CardContent className="space-y-6">
+                  <CardContent className='space-y-6'>
                     <div>
                       <h3 className="font-medium mb-2">Change Status</h3>
                       <div className="flex gap-2">
@@ -396,16 +438,40 @@ export function DisputeDetail() {
                           onClick={() => handleStatusChange("closed")}
                           disabled={dispute.status === "closed"}
                         >
+                          Mark as Open
+                        </Button>
+                        <Button
+                          variant='outline'
+                          onClick={() => handleStatusChange('under_review')}
+                          disabled={dispute && dispute.status === 'under_review'}
+                        >;
+                          Mark as Under Review;
+                        </Button>;
+                        <Button
+                          variant='outline'
+                          onClick={() => handleStatusChange('closed')}
+                          disabled={dispute.status === 'closed'}                        >
                           Close Dispute
                         </Button>
                       </div>
                     </div>
+                    {dispute.status !== 'resolved' && (
                     
                     {dispute.status !== "resolved" && (
                       <div>
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>
                         <div className="space-y-4">
                           <Textarea
+                            placeholder='Enter resolution summary...'
+                            value={resolution.summary}
+                            onChange={e =>
+                              setResolution({
+                                ...resolution
+                                summary: e.target.value
+                              })
+                            }
+                            className='min-h-[100px]'                          />
+                          <div className='grid grid-cols-2 gap-4'>
                             placeholder="Enter resolution summary..."
                             value={resolution.summary}
                             onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}
@@ -427,17 +493,99 @@ export function DisputeDetail() {
                               </select>
                             </div>
                           </div>
+
                           
                           <Button onClick={handleResolveDispute}>Resolve Dispute</Button>
                         </div>
                       </div>
                     )}
+
                     
+
                     <div>
-                      <h3 className="font-medium mb-2">Admin Notes</h3>
-                      <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
+                      <h3 className='font-medium mb-2'>Admin Notes</h3>
+                      <div className='space-y-4 max-h-[300px] overflow-y-auto p-2'>
                         {messages
                           .filter(msg => msg.is_admin_note)
+
+                          disabled={dispute && dispute.status === 'closed'}                        >;
+                          Close Dispute;
+                        </Button>;
+                      </div>;
+                    </div>;
+
+                    {dispute && dispute.status !== 'resolved' && (;
+                      <div>;
+                        <h3 className='font-medium mb-2'>Resolve Dispute</h3>;
+                        <div className='space-y-4'>;
+                          <Textarea
+                            placeholder='Enter resolution summary...'
+                            value={resolution && resolution.summary}
+                            onChange={e =>;
+                              setResolution({;
+                                ...resolution,;
+                                summary: e && e.target.value,;
+                              });
+                            }
+                            className='min-h-[100px]'                          />;
+
+                          <div className='grid grid-cols-2 gap-4'>;
+                            <div>;
+                              <label className='text-sm font-medium mb-1 block'>;
+                                Resolution Type;
+                              </label>;
+                              <select
+                                className='w-full p-2 border rounded'
+                                value={resolution && resolution.resolution_type || ''}
+                                onChange={e =>;
+                                  setResolution({;
+                                    ...resolution,;
+                                    resolution_type: e && e.target;
+                                      .value as ResolutionType,;
+                            on_change={e =>;
+                              set_resolution ({
+                                ...resolution,
+                                summary: e.target.value,
+                              });
+                            }
+                            className='min - h-[100px]'                          />;
+                          <div className='grid grid - cols - 2 gap - 4'>;
+                            <div>;
+                              <label className='text - sm font - medium mb - 1 block'>;
+                                Resolution Type;
+                              </label>;
+                              <select;
+                                className='w - full p - 2 border rounded';
+                                value={resolution.resolution_type || ''}
+                                on_change={e =>;
+                                  set_resolution ({
+                                    ...resolution,
+                                    resolution_type: e.target;
+                                      .value as ResolutionType,
+
+                                  });
+                                }                              >;
+                                <option value='client_favor'>;
+                                  In Client's Favor;
+                                </option>;
+                                <option value='talent_favor'>;
+                                  In Talent's Favor;
+                                </option>;
+                                <option value='compromise'>Compromise</option>;
+                                <option value='dismissed'>Dismissed</option>;
+                              </select>;
+                            </div>;
+                          </div>;
+
+
+                          <Button onClick={handleResolveDispute}>;
+                            Resolve Dispute;
+                          </Button>;
+                        </div>;
+                      </div>;
+                    )}
+
+
                           .map((msg) => (
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
                             <div className="flex items-center justify-between mb-2">
@@ -452,18 +600,29 @@ export function DisputeDetail() {
                                   {msg.user_profile?.display_name || 'Admin'}
                                 </span>
                               </div>
-                              <span className="text-xs opacity-70">
-                                {format(new Date(msg.created_at), 'MMM d, h:mm a')}
-                              </span>
+                              <p className='whitespace-pre-wrap text-sm'>
+                                {msg.message}
+                              </p>
                             </div>
+                          ))}
+
                             <p className="whitespace-pre-wrap text-sm">{msg.message}</p>
                           </div>
                         ))}
                         
                         {!messages.some(msg => msg.is_admin_note) && (
-                          <p className="text-sm text-muted-foreground italic">No admin notes yet</p>
+                          <p className='text-sm text-muted-foreground italic'>
+                            No admin notes yet
+                          </p>
                         )}
                       </div>
+                      <Separator className='my-4' />
+                      <div className='space-y-4'>
+                        <Textarea
+                          placeholder='Add an admin note (only visible to administrators)...'
+                          value={adminNote}
+                          onChange={e => setAdminNote(e && e.target.value)}                        />;
+
                       
                       <Separator className="my-4" />
                       
@@ -494,12 +653,53 @@ export function DisputeDetail() {
             )}
           </Tabs>
         </div>
+        <div className='space-y-6'>
         
         <div className="space-y-6">
           <Card>
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
             </CardHeader>
+            <CardContent className='space-y-6'>
+              <div className='flex items-start gap-4'>
+                <Avatar className='h-10 w-10'>
+                  <AvatarImage
+                    src={dispute && dispute.client_profile?.avatar_url}
+                    alt={
+
+
+                      dispute && dispute.client_profile?.display_name || 'Client avatar'
+                    }
+                  />;
+                  <AvatarFallback>C</AvatarFallback>;
+                </Avatar>;
+                <div>;
+                  <p className='font-medium'>Client</p>;
+                  <p className='text-sm text-muted-foreground'>;
+                    {dispute && dispute.client_profile?.display_name || 'Unknown Client'}
+                  </p>;
+                </div>;
+              </div>;
+
+              <div className='flex justify-center'>;
+                <ArrowDown className='h-6 w-6 text-muted-foreground' />;
+              </div>;
+
+              <div className='flex items-start gap-4'>;
+                <Avatar className='h-10 w-10'>;
+
+                  <AvatarImage
+                    src={dispute && dispute.talent_profile?.avatar_url}
+                    alt={
+                      dispute.talent_profile?.display_name |'Talent avatar'
+                    }
+                  />
+                  <AvatarFallback>T</AvatarFallback>
+                </Avatar>
+                <div>
+                  <p className='font-medium'>Talent</p>
+                  <p className='text-sm text-muted-foreground'>
+                    {dispute.talent_profile?.display_name |'Unknown Talent'}
             <CardContent className="space-y-6">
               <div className="flex items-start gap-4">
                 <Avatar className="h-10 w-10">
@@ -513,6 +713,17 @@ export function DisputeDetail() {
                   </p>
                 </div>
               </div>
+              <div className='flex justify-center'>
+                <ArrowDown className='h-6 w-6 text-muted-foreground' />
+              </div>
+              <div className='flex items-start gap-4'>
+                <Avatar className='h-10 w-10'>
+                  <AvatarImage
+                    src={dispute.talent_profile?.avatar_url}
+                    alt={
+                      dispute.talent_profile?.display_name || 'Talent avatar'
+                    }
+                  />
               
               <div className="flex justify-center">
                 <ArrowDown className="h-6 w-6 text-muted-foreground" />
@@ -537,24 +748,35 @@ export function DisputeDetail() {
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4 text-sm">
-              <div className="flex justify-between">
-                <span className="font-medium">Case ID:</span>
-                <span className="font-mono">{dispute.id}</span>
+            <CardContent className='space-y-4 text-sm'>
+              <div className='flex justify-between'>
+                <span className='font-medium'>Case ID:</span>
+                <span className='font-mono'>{dispute.id}</span>
               </div>
-              <div className="flex justify-between">
-                <span className="font-medium">Created:</span>
-                <span>{format(new Date(dispute.created_at), "MMM d, yyyy")}</span>
+              <div className='flex justify-between'>
+                <span className='font-medium'>Created:</span>
+                <span>
+                  {format(new Date(dispute.created_at), 'MMM d, yyyy')}
+                </span>
               </div>
-              <div className="flex justify-between">
-                <span className="font-medium">Status:</span>
+              <div className='flex justify-between'>
+                <span className='font-medium'>Status:</span>
                 <Badge variant={getStatusBadgeVariant(dispute.status)}>
-                  {dispute.status.replace('_ ')}
+                  {dispute.status.replace('_', ' ')}
                 </Badge>
               </div>
-              <div className="flex justify-between">
-                <span className="font-medium">Raised by:</span>
-                <span>{dispute.client_profile && dispute.talent_profile && dispute.raised_by === (dispute.client_profile as any).id ? "Client" : dispute.talent_profile && dispute.raised_by === (dispute.talent_profile as any).id ? "Talent" : "Unknown"}</span>
+              <div className='flex justify-between'>
+                <span className='font-medium'>Raised by:</span>
+                <span>
+                  {dispute.client_profile &&
+                  dispute.talent_profile &&
+                  dispute.raised_by === (dispute.client_profile as any).id
+                    ? 'Client'
+                    : dispute.talent_profile &&
+                        dispute.raised_by === (dispute.talent_profile as any).id
+                      ? 'Talent'
+                      : 'Unknown'}
+                </span>
               </div>
             </CardContent>
           </Card>

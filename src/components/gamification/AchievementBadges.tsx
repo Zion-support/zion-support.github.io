@@ -12,7 +12,7 @@ interface AchievementBadgesProps {
   achievements: Achievement[]
 }
 
-export function AchievementBadges({ achievements }: AchievementBadgesProps) {
+export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {;
   return (
     <Card>
       <CardHeader>

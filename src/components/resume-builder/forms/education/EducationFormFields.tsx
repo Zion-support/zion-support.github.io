@@ -70,6 +70,7 @@ export function EducationFormFields({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
+
             name="institution"
             render={({ field }: { field: any }) => (
               <FormItem>
@@ -111,8 +112,6 @@ export function EducationFormFields({
           )}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
             control={form.control}
             name="start_date"
             render={({ field }: { field: any }) => (
@@ -130,8 +129,6 @@ export function EducationFormFields({
             )}
           />
 
-          <div className="space-y-4">
-            <FormField
               control={form.control}
               name="is_current"
               render={({ field }: { field: any }) => (

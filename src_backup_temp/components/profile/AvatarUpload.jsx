@@ -8,8 +8,6 @@ export function AvatarUpload("props": "any) {;
             setUrl(secure);
             onChange?.(secure)"}
     };
-<<<<<<< HEAD
-=======
     return (<div className="space-y-2">;
     return (
         <div className="space-y-2">
@@ -22,4 +20,3 @@ export function AvatarUpload("props": "any) {;
     </div>)}
 ;
 export default AvatarUpload;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

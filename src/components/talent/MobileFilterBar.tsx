@@ -30,7 +30,18 @@ export function MobileFilterBar({
         <label htmlFor="mobile-talent-search" className="sr-only">
           Search talents
         </label>
-        <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />
+        <Search className='absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate' />
+        variant='outline';
+        className='w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light'      >;
+        <Sliders className='h-4 w-4' />;
+        Filter Talents;
+      </Button>;
+
+      <div className='relative mt-4'>;
+        <label htmlFor='mobile-talent-search' className='sr-only'>;
+          Search talents;
+        </label>;
+        <Search className='absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate' />;
         <Input
           id="mobile-talent-search"
           placeholder="Search talents..."

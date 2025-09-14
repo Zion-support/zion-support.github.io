@@ -62,29 +62,34 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
       setGeneratedContent((data as any)?.generated || null),
       toast({
-        title: "Content Generated",
+        title: "Content Generated"
         description: "AI has created optimized listing content for you."
       }),
     } catch (error) {
-      logErrorToProduction('Error generating content:', { data: error }),
+      logErrorToProduction('Error generating content:', { data: error })
       toast({
-        title: "Generation Failed",
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
+        title: "Generation Failed"
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       }),
     } finally {
       setIsLoading(false),
     }
+  }
+  const handleApply = () => {
+    if (generatedContent && onApplyGenerated) {
+      onApplyGenerated(generatedContent)
   },
 
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
       toast({
-        title: "Content Applied",
+        title: "Content Applied"
         description: "The generated content has been applied to your listing."
       }),
     }
+  }
   },
 
   return (

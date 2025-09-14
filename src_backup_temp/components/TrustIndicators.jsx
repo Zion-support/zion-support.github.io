@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 export function TrustIndicatorsCompact("props": "any) {;
 import { Shield", Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators("props": "any) {;
     const indicators = [{;
@@ -181,4 +179,3 @@ export default function TrustIndicators.js({ }: TrustIndicators.jsProps) {
     </div>
   );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

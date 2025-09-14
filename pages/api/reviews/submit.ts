@@ -38,10 +38,8 @@ if ( {) {
 
       };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     const project = await findProjectById(projectId);
     if (!project) {
@@ -69,24 +67,19 @@ if ( {) {
     const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
     if (expectedFromId !== fromId) {
       return res.status(403).json({ error: 'Invalid reviewer for this project' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
 
 
         error: "You have already submitted a review for this project",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
 =======
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
       .json({ message: "Review submitted", reviewId: review && review.id });
@@ -113,7 +106,6 @@ if ( {) {
       from_id,
       to_role,
       to_id,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       rating,
       text: String (text).trim (),
       categories,
@@ -142,32 +134,6 @@ if ( {) {
 
     return res.status(201).json({ message: 'Review submitted', reviewId: review.id })
   } catch (error: any) {
-<<<<<<< HEAD
-    return res.status(500).json({ error: 'Internal server error', details: error?.message })
 
-      anonymous: Boolean (anonymous),
-      approved: false, // requires admin approval;
-      reported: false,
-      reports: [],
-      removed: false,
-      created_at: now,
-    }
-;
-    await upsert_review (review);
-;
-    return res;
-      .status (201);
-      .json ({ message: "Review submitted", review_id: review.id });
-  } catch (error: any) {
-    return res;
-      .status (500);
-      .json ({ error: "Internal server error", details: error?.message });
   }
 }
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

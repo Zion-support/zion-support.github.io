@@ -69,8 +69,6 @@ export const QuoteRequestForm = ("props": "any) => {"}
   const [isSubmitting, setIsSubmitting] = useState (false) ";
   const [isSubmitted, setIsSubmitted] = useState (false);
 }
-<<<<<<< HEAD
-=======
   const [errors, setErrors] = useState ({}) ";"";
   const serviceTypes = []";"";
   const timelineOptions = []";"";
@@ -1027,4 +1025,3 @@ export default Component;
 </div>;
 </form>;
 </CardContent>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

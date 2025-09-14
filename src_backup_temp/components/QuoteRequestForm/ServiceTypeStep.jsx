@@ -78,8 +78,6 @@ export function ServiceTypeStep("props": "any) {;
                 return false}
         if (searchQuery.trim() === "");
             return true;
-<<<<<<< HEAD
-=======
         return item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
             item.category.toLowerCase().includes(searchQuery.toLowerCase())});
     return (<div className="space-y-6">;
@@ -145,4 +143,3 @@ export function ServiceTypeStep("props": "any) {;
     </div>)}
 ;
 export default ServiceTypeStep;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

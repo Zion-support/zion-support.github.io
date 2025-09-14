@@ -1066,18 +1066,3 @@ setIsEnhancementDialogOpen (false);
 };
 
 
-<<<<<<< HEAD
-
-
-
-
-          enhancementType: "work-description",
-          content: form.getValues("description") || "",
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
-        initialContent={form.getValues("description") || ""}
-      />
-    </>
-  )
-}
-;
-

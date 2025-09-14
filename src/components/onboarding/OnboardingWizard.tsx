@@ -135,15 +135,16 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
-        <CardTitle className="text-center text-white">
-          {type === 'client' ? 
-            "Ready to find top IT talent?" : 
-            "Let's build your professional profile"}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="flex items-center mb-6">
+        <CardTitle className='text-center text-white'>
+          {type === 'client'
+            ? 'Ready to find top IT talent?'
+            : "Let's build your professional profile"}
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='flex items-center mb-6'>;
           {/* Step dots */}
+          <div className='flex items-center justify-center flex-1'>
           <div className="flex items-center justify-center flex-1">
             {steps.map((_, index) => (
               <div

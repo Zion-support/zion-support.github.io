@@ -54,6 +54,13 @@ export function ITServicePricingTable() {
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
           <Input
+            placeholder='Search by country...'
+            value={searchQuery}
+            onChange={e => setSearchQuery(e.target.value)}
+            className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'          />
+        </div>
+      </div>
+      <div className='rounded-md border border-zion-blue-light overflow-hidden'>
             placeholder="Search by country..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}

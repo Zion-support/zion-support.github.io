@@ -37,7 +37,12 @@ export function LanguageThemeSelector() {
                   ? "border-primary bg-primary/5" 
                   : "border-border hover:border-primary/40"
               }`}
+
+
               onClick={() => setSelectedLanguage(language.code)}
+
+
+
             >
               <CardContent className="p-3 flex items-center justify-between">
                 <div className="flex items-center">
@@ -82,12 +87,8 @@ export function LanguageThemeSelector() {
                 : "border-border hover:border-primary/40"
             }`}
             onClick={() => setTheme('dark')}
-          >
-            <CardContent className="p-3 flex flex-col items-center justify-center">
-              <Moon className="h-8 w-8 mb-2" />
-              <span>Dark</span>
-              {theme === 'dark' && (
-                <Check className="h-4 w-4 text-primary mt-2" />
+
+
               )}
             </CardContent>
           </Card>

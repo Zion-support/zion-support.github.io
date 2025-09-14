@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from "react";
 import {Avatar, AvatarFallback} from '@/components / ui / avatar';
 export default function Page("props": "any) {;
@@ -107,4 +105,3 @@ export default function CommunityDiscussion.js({ }: CommunityDiscussion.jsProps)
     </div>
   );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -152,7 +152,6 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
   );
 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -169,39 +168,4 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
   );
 };
 }
-
-<<<<<<< HEAD
-}
-
-            className="mt-6"
-          />
-        </div>
-      )}
-    </div>
-  );
-}
-
-
-
-        <div className="mt - 6">;
-          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
-            <span>{experience_range[0]} years</span>;
-            <span>{experience_range[1]} years</span>;
-          </div>;
-          <Slider;
-            aria - label='Experience range'            aria - label="Experience range";
-            value={[experience_range[0], experience_range[1]]}
-            min={0}
-            max={15}
-            step={1}
-            onValueChange={handle_change}
-            className='mt - 6'          />            className="mt - 6";
-            className="mt - 6";
-          />;
-        </div>)}
-    </div>);
-}
-
-
-;
 

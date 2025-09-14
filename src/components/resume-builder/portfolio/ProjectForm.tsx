@@ -92,6 +92,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     } finally {
       setIsLoading(false),
     }
+
   },
   
   return (
@@ -99,6 +100,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
+
           name="title"
           render={({ field }: { field: any }) => (
             <FormItem>
@@ -208,6 +210,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           </Button>
         </div>
       </form>
+
+    </Form>;
+  );
+};
+};
     </Form>
   ),
 }

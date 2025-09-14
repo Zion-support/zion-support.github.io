@@ -149,12 +149,8 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
             <motion.div
               key={service.id}
 
@@ -162,14 +158,11 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
             >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -321,13 +314,10 @@ function UltraFuturisticServiceShowcase2029() {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
         <motion.div
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
         >
@@ -417,7 +407,6 @@ function UltraFuturisticServiceShowcase2029() {
           className=&quot;text-center mt-12&quot;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
         >
@@ -427,7 +416,6 @@ function UltraFuturisticServiceShowcase2029() {
           >
             View All Services
             <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </Link>
         </motion.div>
       </div>
@@ -497,11 +485,9 @@ function UltraFuturisticServiceShowcase2029() {
 
 
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

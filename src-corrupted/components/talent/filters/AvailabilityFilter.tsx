@@ -206,21 +206,3 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 
 
 
-<<<<<<< HEAD
-
-
-
-
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
-              >;
-                {option.label}
-              </label>;
-            </div>;
-          ))}
-        </div>;
-      )}
-    </div>;
-  );
-}
-;
-

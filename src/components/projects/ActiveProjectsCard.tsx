@@ -9,11 +9,12 @@ import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
 
 export function ActiveProjectsCard() {
-  const { projects, isLoading } = useProjects(),
+  const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
   useEffect(() => {
     if (projects && !isLoading) {
+      const active = null;
       const active = projects.filter(p => 
         ['offer_acceptedin_progress'].includes(p.status)
       ).slice(0, 3), // Limit to 3 most recent projects

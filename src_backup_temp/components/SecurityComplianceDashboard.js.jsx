@@ -3,8 +3,6 @@ import {motion, AnimatePresence} from 'framer-motion';';
 import {Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square} from 'lucide-react';
 ;
 ;
-<<<<<<< HEAD
-=======
 export const SecurityComplianceDashboard = ("props": "any) => {;
     const { trackEvent "} = useAnalytics({"enableTracking": "true",;
         "enableUserBehaviorTracking": "true;"});';
@@ -142,4 +140,3 @@ export const SecurityComplianceDashboard = (props: any) => {
 ";
 export default Component;
 </div>"
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -306,6 +306,11 @@ export const ZoomOut = LucideZoomOut,
 
 // Define the props for your Icon component
 export type IconProps = SVGProps<SVGSVGElement> & {
+  name: keyof typeof iconMap
+  size?: number | string
+
+  className?: string
+}
   name: keyof typeof iconMap,
   size?: number | string,
   className?: string

@@ -68,8 +68,6 @@ links['/services',/team',/contact',/mission'];
             for(const page of samplePages) {contentAnalyzer.analyzePageContent(page.url, page.title, page.content, page.metaDescription, page.images, page.links)}
             const newReport = contentAnalyzer.generateReport();
             setReport(newReport)}
-<<<<<<< HEAD
-=======
         catch(error) {// console.error('Error analyzing "pages":', error)}
         finally {setIsLoading(false)}
         catch(error) {// console.error('Error analyzing pages:', error)}
@@ -1592,4 +1590,3 @@ export {ContentQualityDashboard};
 </div>;
 </div>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

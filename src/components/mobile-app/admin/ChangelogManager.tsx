@@ -71,6 +71,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <Input
                 placeholder="Version (e.g. 1.0.1)"
                 name="version"
+
                 value={newEntry.version}
                 onChange={handleInputChange}
               />
@@ -109,9 +110,25 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                     <span className="text-zion-cyan font-semibold">v{entry.version}</span>
                     <span className="text-sm text-gray-400">{entry.date}</span>
                   </div>
+
+          />;
+
+          <div className="border-t border-zion-purple/20 pt-4 space-y-4">;
+            {entries && entries.map((entry,) => (;
+              <div
+                key = {entry && entry.id,}
+                className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark">;
+                <div className="flex justify-between mb-2">;
+                  <div className="flex items-center gap-3">;
+                    <span className="text-zion-cyan font-semibold">v{entry && entry.version}</span>;
+                    <span className="text-sm text-gray-400">{entry && entry.date}</span>;
+                  </div>;
                   <Button
                     variant="ghost"
                     size="sm"
+
+
+
                     onClick={() => handleRemoveEntry(entry.id)}
                     className="text-gray-400 hover:text-red-400 p-1 h-auto"
                   >
@@ -121,9 +138,10 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>
               </div>
             ))}
-            
-            {entries.length === 0 && (
-              <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
+
+
+            {entries && entries.length === 0 && (;
+              <p className="text-center text-gray-400 py-4">No changelog entries yet</p>;
             )}
           </div>
         </div>

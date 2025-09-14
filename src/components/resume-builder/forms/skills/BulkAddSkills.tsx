@@ -56,6 +56,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
     } catch (err: any) {
       setError(err.message || 'Failed to categorize skills')
     }
+  }
   },
 
   return (

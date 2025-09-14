@@ -104,8 +104,6 @@ export function AdvancedBusinessIntelligence("props": "any) {;
         if(unit === '%') {;
             return `${value.toFixed(1)}%`}
         return new Intl.NumberFormat('en-US').format(value)};
-<<<<<<< HEAD
-=======
     if(!isOpen) {;
 ";
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl "hover": "shadow-3xl transition-all duration-300 "hover":scale-110 z-40" title="Open Business Intelligence Dashboard">";
@@ -421,4 +419,3 @@ export function AdvancedBusinessIntelligence("props": "any) {;
       </div>;
     </div>)}
 '"`;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

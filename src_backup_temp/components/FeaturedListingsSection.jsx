@@ -1,8 +1,6 @@
 import React from 'react',;',';';
     ;
 import {SEO} from '@/components/SEO';
-<<<<<<< HEAD
-=======
 export default function FeaturedListingsSection("props": "any) {return (;
     <div className="min-h-screen bg-white">;
       <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group"  />;
@@ -22,4 +20,3 @@ export default function FeaturedListingsSection(props: any) {return (
       </div>';
     </div>';';
   );';';';"}";
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

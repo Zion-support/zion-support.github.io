@@ -10,8 +10,6 @@ useEffect(() => {;
     // Cleanup function;
   "};
 }, []);, []);
-<<<<<<< HEAD
-=======
 const onScroll = ("props": "any) => {;
 useEffect(() => {        const onScroll = ("props": any) => {;
 setVisible(window.scrollY > 400)"};";
@@ -31,4 +29,3 @@ setVisible(window.scrollY > 400)};"
       <ArrowUp aria-hidden="true" className="h-5 w-5" />
     </button>)}
 '"`;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

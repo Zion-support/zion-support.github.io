@@ -89,8 +89,6 @@ export default function Page("props": "any) {;
             case 'Leading': return 'bg-purple-100 text-purple-800';
             "default": return 'bg-gray-100 text-gray-800'"}
     };
-<<<<<<< HEAD
-=======
     const categories = [';
         {"id": 'all', "name": 'All Categories', "count": "portfolioData.length"},;
         {"id": 'ai', "name": 'AI & Machine Learning', "count": "portfolioData.filter(s => s.category === 'ai').length"},;
@@ -629,4 +627,3 @@ export {AdvancedServicePortfolioDashboard};
 </motion>;
 </motion>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

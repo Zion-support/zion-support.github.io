@@ -160,9 +160,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                 Performance optimization insights;
               </p>;
             </div>;
-<<<<<<< HEAD
-
-=======
             {/* Tab Navigation */"}
             <div className="flex border-b border-gray-200 "dark": "border-gray-700">;
               {[;
@@ -328,4 +325,3 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
 export default BundleAnalyzer;
 </motion>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

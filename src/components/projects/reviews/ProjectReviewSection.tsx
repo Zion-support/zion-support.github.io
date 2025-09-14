@@ -67,6 +67,12 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                     <p className="text-sm text-muted-foreground mb-3">
                       Your review is {userReview.status === "approved" ? "published" : "pending approval"}
                     </p>
+                    {userReview.status === 'pending' && (
+                      <Button
+                        variant='outline'
+                        onClick={() => setIsReviewModalOpen(true)}
+                      >                        Edit Review
+                      </Button>
                     {userReview.status === "pending" && (
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>
                         Edit Review

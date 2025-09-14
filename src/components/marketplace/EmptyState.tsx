@@ -49,18 +49,6 @@ const defaultContent = {
     title: 'Loading...',
     description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
 
-export function EmptyState({
-  type,
-  title,
-  description,
-  action,
-  icon
-}: EmptyStateProps) {
-  const { t } = useTranslation(),
-  const content = defaultContent[type],
-  const displayTitle = title || content.title,
-  const displayDescription = description || content.description,
-  const displayIcon = icon || content.icon,
 
   return (
     <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
@@ -141,13 +129,42 @@ export function ProductsEmptyState({
   ),
 }
 
+  )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
+      />
+  )
+export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
+      />
+  )
+export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
+      />
+  )
+export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
+      />
+  )
+export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
+      />
+  )
+export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
+      />
+  )
+}
+}
   return (
     <EmptyState
       type="categories"
       action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
     />
   ),
+}
+
+
+  const customDescription = isAuthenticated;
+    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
+    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
+
+      />;
+  );
 }
 
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {

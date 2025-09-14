@@ -128,6 +128,98 @@ export function CategoryListingPage({
           </div>
 
           {/* Filters and Search */}
+
+                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />;
+              </div>;
+
+              <Select value={selectedSort} onValueChange={setSelectedSort}>;
+                <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>;
+                  <div className='flex items-center'>;
+                    {selectedSort === 'a-z' ? (;
+                      <ArrowDownAZ className='mr-2 h-4 w-4' />;
+                    ) : selectedSort === 'z-a' ? (;
+                      <ArrowUpZA className='mr-2 h-4 w-4' />;
+                    ) : null}
+                    <span>;
+                      {sortOptions && sortOptions.find(option => option && option.value === selectedSort);
+      <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;
+        <div className='container mx - auto'>;
+          <div className='text - center mb - 12'>;
+
+            <GradientHeading>{title}</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+              {description}
+
+            </p>;
+          </div>;
+
+
+
+          {/* Filters and Search */}
+
+                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />;
+              </div>;
+
+              <Select value={selectedSort} onValueChange={setSelectedSort}>;
+                <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>;
+                  <div className='flex items-center'>;
+                    {selectedSort === 'a-z' ? (;
+                      <ArrowDownAZ className='mr-2 h-4 w-4' />;
+                    ) : selectedSort === 'z-a' ? (;
+                      <ArrowUpZA className='mr-2 h-4 w-4' />;
+                    ) : null}
+                    <span>;
+                      {sortOptions && sortOptions.find(option => option && option.value === selectedSort);
+      <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;
+        <div className='container mx - auto'>;
+          <div className='text - center mb - 12'>;
+            <GradientHeading>{title}</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+              {description}
+
+            </p>;
+          </div>;
+
+
+
+          {/* Filters and Search */}
+          <div className='bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+              <div className='relative'>
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate' />
+                <Input
+                  type='text'
+                  placeholder='Search listings...'
+                  value={searchQuery}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setSearchQuery(e.target.value)
+                  }
+
+                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />
+              </div>
+              <Select value={selectedSort} onValueChange={setSelectedSort}>
+                <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>
+                  <div className='flex items-center'>
+                    {selectedSort === 'a-z' ? (
+                      <ArrowDownAZ className='mr-2 h-4 w-4' />
+                    ) : selectedSort === 'z-a' ? (
+                      <ArrowUpZA className='mr-2 h-4 w-4' />
+                    ) : null}
+                    <span>
+                      {sortOptions.find(option => option.value === selectedSort)
+                        ?.label |'Sort By'}
+                    </span>
+                  </div>
+                </SelectTrigger>
+                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
+                  {sortOptions.map(option => (
+
+                        ?.label || 'Sort By'}
+                    </span>;
+                  </div>;
+                </SelectTrigger>;
+
+
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="relative">

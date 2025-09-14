@@ -10,8 +10,8 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 
 interface AIMatchmakerProps {
-  serviceType?: string,
-  onMatchSelect?: (match: any) => void,
+  serviceType?: string
+  onMatchSelect?: (match: any,) => void
   className?: string
 }
 
@@ -20,6 +20,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [isMatchmaking, setIsMatchmaking] = useState(false),
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
+
 
   const handleSearch = async () => {
     if (!query.trim()) {
@@ -90,7 +91,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         <div className="space-y-4">
           <div className="space-y-2">
             <Textarea
-              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
+              placeholder="Describe what you need... (e && e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
               value={query}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e.target.value)}
               className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"

@@ -174,9 +174,6 @@ export default function Page("props": "any) {;
                     <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-"hover": "scale-110 transition-transform duration-300 shadow-lg`"}>";
                       <span className="text-3xl">{service.icon}</span>;
                     </div>;
-<<<<<<< HEAD
-
-=======
                     {/* Service Content */}";
                     <div className="text-center">";
                       <h3 className="text-xl font-bold text-white mb-3 group-"hover": "text-zion-cyan transition-colors duration-300">;
@@ -296,4 +293,3 @@ export {InteractiveServiceShowcase};
 </motion>;
 </motion>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

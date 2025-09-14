@@ -18,8 +18,6 @@ import {LoadingSpinner} from './ui / loading -spinner';
       {processedData.map((item", index) => (;
         <div;
           key={item.id || index}
-<<<<<<< HEAD
-=======
           onClick={() => handleClick(item)}";
           className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl "hover": "border-zion-cyan/40 transition-all duration-300 cursor-pointer";
         >";
@@ -142,4 +140,3 @@ export function PerformanceOptimizations("props": "any) {;
 </div>;
 </div>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

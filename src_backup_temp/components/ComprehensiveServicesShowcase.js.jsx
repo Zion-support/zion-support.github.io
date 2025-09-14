@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from "react";""";,"});,"})","});,"})","})";
   Brain,,"});,"})";
   Shield,,"});,"})";
@@ -1904,4 +1902,3 @@ export default Component;
 </div>;
 </motion>;
 </div>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

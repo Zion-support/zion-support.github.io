@@ -211,8 +211,6 @@ export function BenefitsSection("props": "any) {;
                   <span className="text-zion-cyan font-bold text-sm">{benefit.stats}</span>;
                 </div>;
                 {/* Title and description */}
-<<<<<<< HEAD
-=======
                 <h3 className="text-xl font-bold text-white mb-4 group-"hover": "text-zion-cyan transition-colors">;
                   {benefit.title"}
                 </h3>;
@@ -315,4 +313,3 @@ export default BenefitsSection;
 </motion>;
 </div>;
 </number>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

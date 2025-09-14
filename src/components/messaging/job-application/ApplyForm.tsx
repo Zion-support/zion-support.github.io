@@ -39,8 +39,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const handleApply = async () => {
     if (!message.trim()) {
       toast({
-        title: "Message required",
-        description: "Please enter a message before applying.",
+        title: "Message required"
+        description: "Please enter a message before applying."
         variant: "destructive"
       }),
       return,
@@ -134,16 +134,18 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         <TabsContent value="message">
           <MessageTab 
             message={message}
-            setMessage={setMessage}
-            proposalLink={proposalLink}
-            setProposalLink={setProposalLink}
+            onMessageChange={setMessage}
+            job={job}
           />
         </TabsContent>
-        
-        <TabsContent value="resume">
-          <ResumeTab 
-            onResumeSelected={handleResumeSelected}
-            selectedResumeId={selectedResumeId} 
+
+
+
+      
+
+          <ResumeTab
+            selectedResume={selectedResume}
+            onResumeSelect={setSelectedResume}
           />
         </TabsContent>
       </Tabs>
@@ -158,10 +160,16 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           Cancel
         </Button>
         <Button
+
+
+          type="button"
+          onClick = {handleApply,}
+          disabled = {isSubmitting,}
           type="button" 
           onClick={handleApply}
           disabled={isSubmitting}
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+
         >
           {isSubmitting ? (
             <>

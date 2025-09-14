@@ -78,14 +78,3 @@ export default CodeBlock;
 
 
 
-<<<<<<< HEAD
-
-
-
-
-    </div>;
-  );
-}
-;
-export default CodeBlock;
-

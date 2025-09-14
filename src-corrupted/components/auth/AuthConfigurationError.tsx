@@ -187,9 +187,7 @@ if ( {) {
           </div>
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -268,7 +266,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
@@ -432,7 +429,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 <div>
                   <strong>Create Auth0 Account:</strong>
@@ -893,7 +889,6 @@ if ( {) {
               onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -906,138 +901,4 @@ export default AuthConfigurationError;
 
 
 
-
-<<<<<<< HEAD
-
-
-
-
-        <div className="mt-6 text-center text-sm text-gray-500">;
-          <p>;
-            For detailed instructions, see{' '}
-            <button;
-              onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
-
-              className="text-blue-600 hover: underline";
-              AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md;
-            </button>;
-          </p>;
-        </div>;
-      </div>;
-    </div>;
-  );
-
-  );
-}
-
-
-export default AuthConfigurationError;}
-
-
-
-export default AuthConfigurationError;
-
-        {/* Alternative Actions Card */}
-        <div className='bg - blue - 50 rounded - xl border border - blue - 200 p - 6'>;
-          <h3 className='font - semibold text - blue - 900 mb - 3'>;
-            Alternative Actions:;
-          </h3>;
-          <div className='grid grid - cols - 1 sm:grid - cols - 2 gap - 3'>;
-            <Link;
-              href='/marketplace';
-              className='flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800';
-            >;
-              <span > Browse Marketplace</span>            >;
-              <span > Browse Marketplace</span>;
-              <ExternalLink className="w - 4 h - 4" />;
-            </Link>;
-            <Link;
-              href="/talent";
-              className="flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800";
-            >;
-              <span > View Talent Pool</span>;
-              <ExternalLink className="w - 4 h - 4" />;
-            </Link>;
-            <Link;
-              href="/help";
-              className="flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800";
-            >;
-              <span > Contact Support</span>;
-              <ExternalLink className="w - 4 h - 4" />;
-            </Link>;
-            <Link;
-              href="/status";
-              className="flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800";
-            >;
-              <span > System Status</span>;
-              <ExternalLink className='w - 4 h - 4' />;
-            </Link>;
-            <Link;
-              href='/talent';
-              className='flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800';
-            >;
-              <span > View Talent Pool</span>;
-              <ExternalLink className='w - 4 h - 4' />;
-            </Link>;
-            <Link;
-              href='/help';
-              className='flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800';
-            >;
-              <span > Contact Support</span>;
-              <ExternalLink className='w - 4 h - 4' />;
-            </Link>;
-            <Link;
-              href='/status';
-              className='flex items - center gap - 2 p - 3 bg - white rounded - lg hover:bg - blue - 50 transition - colors text - blue - 700 hover:text - blue - 800';
-            >;
-              <span > System Status</span>;
-              <ExternalLink className='w - 4 h - 4' />            </Link>              <ExternalLink className="w - 4 h - 4" />;
-            </Link>;
-          </div>;
-        </div>;
-        {/* Setup Script Info */}
-        {showSetupButton && (
-          <div className='mt - 6 text - center'>;
-            <div className='bg - green - 50 rounded - lg border border - green - 200 p - 4'>;
-              <div className='flex items - center justify - center gap - 2 text - green - 700 mb - 2'>;
-                <CheckCircle className='w - 5 h - 5' />;
-                <span className='font - semibold'>Automated Setup Available</span>;
-              </div>;
-              <p className='text - sm text - green - 600 mb - 3'>;
-                Run the setup script to configure Auth0 interactively:;
-              </p>;
-              <code className='bg - green - 100 text - green - 800 px - 3 py - 1 rounded text - sm'>                npm run setup:auth0              </div>;
-              <p className="text - sm text - green - 600 mb - 3">;
-                Run the setup script to configure Auth0 interactively:;
-              </p>;
-              <code className="bg - green - 100 text - green - 800 px - 3 py - 1 rounded text - sm">;
-                npm run setup:auth0;
-              </code>;
-            </div>;
-          </div>)}
-        {/* Footer */}
-        <div className='mt - 6 text - center text - sm text - gray - 500'>;
-          <p>;
-            For detailed instructions, see{' '}
-            <button;
-              on_click={() =>;
-                window.open ('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank');
-              }
-              className='text - blue - 600 hover:underline'            >        <div className="mt - 6 text - center text - sm text - gray - 500">;
-          <p>;
-            For detailed instructions, see{' '}
-            <button;
-              on_click = {() => window.open ('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'), }
-              className="text - blue - 600 hover: underline";
-              AUTH0_SETUP_GUIDE_ISSUE_1.md;
-            </button>;
-          </p>;
-        </div>;
-      </div>;
-    </div>);
-export default AuthConfigurationError }
-export default AuthConfigurationError,
-}
-;
-export default AuthConfigurationError;
 

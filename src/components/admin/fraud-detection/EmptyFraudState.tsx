@@ -8,9 +8,20 @@ interface EmptyFraudStateProps {
   onResetFilters: () => void
 }
 
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
-  hasFilters,
-  onResetFilters 
+
+
+
+
+
+
+interface EmptyFraudStateProps {
+
+  hasFilters: boolean
+  onResetFilters: () => void
+}
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+  hasFilters
+  onResetFilters
 }) => {
   return (
     <div className="text-center py-12">

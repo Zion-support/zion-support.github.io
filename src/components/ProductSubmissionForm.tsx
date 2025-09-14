@@ -54,7 +54,7 @@ export function ProductSubmissionForm() {
   
   // Initialize the form
   const form = useForm<ProductFormValues>({
-    resolver: zodResolver(productSchema),
+    resolver: zodResolver(productSchema)
     defaultValues: {
       title: "",
       description: "",
@@ -119,12 +119,17 @@ export function ProductSubmissionForm() {
     try {
       // Create the product listing
       const productData = {
+
+
+
+
+
         title: values.title,
         description: values.description,
-        price: parseFloat(values.price),
+        price: parse_float (values.price),
         category: values.category,
-        currency: "USD", // Default currency
-        tags: values.tags ? values.tags.split().map(tag => tag.trim()) : [],
+        currency: 'USD', // Default currency;
+        tags: values.tags ? values.tags.split (', ').map (tag => tag.trim ()) : [],
         author: {
           name: user.displayName || "Anonymous Creator",
           id: user.id},
@@ -134,6 +139,95 @@ export function ProductSubmissionForm() {
         .from('product_listings')
         .insert([productData])
         .select('id')
+        .single()
+      if (productError) {
+        throw new Error(productError.message)
+      }
+      let imagePublicUrl: string | undefined
+      // If we have an image, upload it
+      if (values.image) {
+        const imagePath = `product_images/${productRecord.id}/${values.image.name}`
+        const { error: uploadError } = await supabase.storage
+          .from('products')
+          .upload(imagePath, values.image)
+        if (uploadError) {
+          throw new Error(uploadError.message)
+        }
+        // Get the public URL for the image
+        const { data: publicUrlData } = supabase.storage
+          .from('products')
+          .getPublicUrl(imagePath)
+        imagePublicUrl = publicUrlData.publicUrl
+        // Update the product with the image URL
+        const { error: updateError } = await supabase
+          .from('product_listings')
+          .update({
+            images: [imagePublicUrl]
+          })
+          .eq('id', productRecord.id)
+        if (updateError) {
+          throw new Error(updateError.message)
+        }
+      }
+      // Upload video if provided
+      if (values.video) {
+        const videoPath = `product_videos/${productRecord.id}/${values.video.name}`
+        const { error: uploadError } = await supabase.storage
+          .from('products')
+          .upload(videoPath, values.video)
+        if (uploadError) {
+          throw new Error(uploadError.message)
+        }
+        const { data: publicUrlData } = supabase.storage
+          .from('products')
+          .getPublicUrl(videoPath)
+        const { error: updateError } = await supabase
+          .from('product_listings')
+          .update({ video_url: publicUrlData.publicUrl })
+          .eq('id', productRecord.id)
+        if (updateError) {
+          throw new Error(updateError.message)
+        }
+      }
+      // Upload model if provided
+      if (values.model) {
+        const modelPath = `product_models/${productRecord.id}/${values.model.name}`
+        const { error: uploadError } = await supabase.storage
+          .from('products')
+          .upload(modelPath, values.model)
+        if (uploadError) {
+          throw new Error(uploadError.message)
+        }
+        const { data: publicUrlData } = supabase.storage
+          .from('products')
+          .getPublicUrl(modelPath)
+        const { error: updateError } = await supabase
+          .from('product_listings')
+          .update({ model_url: publicUrlData.publicUrl })
+          .eq('id', productRecord.id)
+        if (updateError) {
+          throw new Error(updateError.message)
+        }
+      }
+      // Send listing to moderation service
+      try {
+        await supabase.functions.invoke('moderate-listing', {
+          body: {
+            listingId: productRecord.id
+            listingType: 'product'
+            description: values.description
+            images: imagePublicUrl ? [imagePublicUrl] : []
+            sellerId: user.id
+          }
+        })
+      } catch (err) {
+        logErrorToProduction('Error invoking moderation:', { data: err })
+      }
+      // Show success message
+      toast({
+        title: 'Product Published!'
+        description: 'Your product has been successfully published on Zion.'
+      })
         .single(),
         
       if (productError) {
@@ -264,12 +358,70 @@ export function ProductSubmissionForm() {
           AI-Powered Creation
         </TabsTrigger>
       </TabsList>
+      <TabsContent value='manual'>
       
       <TabsContent value="manual">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
+          className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
+          <Sparkles className='h-4 w-4 mr-2' />;
+          AI-Powered Creation;
+        </TabsTrigger>;
+      </TabsList>;
+
+      <TabsContent value='manual'>;
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-6'>;
             <FormField
+
+      // Show success message;
+      toast ({
+        title: 'Product Published!',
+        description: 'Your product has been successfully published on Zion.',
+      });
+      // Redirect to product page;
+      router.push (`/marketplace / listing/${product_record.id}`);
+    } catch (error) {
+      toast ({
+        title: 'Publication Failed',
+        description:;
+          error instanceof Error ? error.message : 'An unknown error occurred',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+  return (
+    <Tabs value={active_tab} onValueChange={setActiveTab} className='w - full'>;
+      <TabsList className='grid grid - cols - 2 mb - 6'>;
+        <TabsTrigger;
+          value='manual';
+          className='data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple';
+        >;
+          Manual Creation;
+        </TabsTrigger>;
+        <TabsTrigger;
+          value='ai';
+          className='data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple';
+        >;
+          <Sparkles className='h - 4 w - 4 mr - 2' />;
+          AI - Powered Creation;
+        </TabsTrigger>;
+      </TabsList>;
+      <TabsContent value='manual'>;
+        <Form {...form}>;
+          <form on_submit={form.handle_submit (on_submit)} className='space - y-6'>;
+            <FormField;
               control={form.control}
+
+              name='title'
+              render={({
+                field
+              }: {
+                field: ControllerRenderProps<ProductFormValues, 'title'>
+              }) => {
+                const { onChange, onBlur, value, ref } = field; return (
               name="title"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "title"> }) => {
                 const { onChange, onBlur, value, ref } = field,
@@ -326,7 +478,7 @@ export function ProductSubmissionForm() {
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />
                     </FormControl>
                     <FormDescription>
-                      Set your price in USD
+                      Create a compelling title that describes your product
                     </FormDescription>
                     <FormMessage />
                   </FormItem>

@@ -1,3 +1,4 @@
+"use client";
 
 useEffect ( () => {
   const updateDimensions = () => {

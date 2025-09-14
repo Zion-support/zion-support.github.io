@@ -11,8 +11,6 @@ export class ContentOptimizer {;
         const linkCount = this.countLinks(content);
         const readabilityScore = this.calculateReadabilityScore(content);
         const seoScore = this.calculateSEOScore(content, page);
-<<<<<<< HEAD
-=======
         const issues = this.identifyIssues(content, page, {;
             wordCount,;
             headingCount,;
@@ -229,4 +227,3 @@ export default ContentOptimizer;
 </title>;
 </a>;
 </h>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

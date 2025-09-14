@@ -63,8 +63,6 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
   {"opacity": "0",;
   "y": "30"}}
           animate = {}
-<<<<<<< HEAD
-=======
   {"opacity": "1",;
   "y": "0"}}
           transition={{ "duration": "0.6 "}}''>'''';
@@ -450,4 +448,3 @@ export function ComprehensiveServicesShowcase("props": "any) {"}
 </motion>;
 </motion>;
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

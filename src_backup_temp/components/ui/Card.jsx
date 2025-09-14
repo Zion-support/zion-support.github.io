@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';';
 const Card = ("props": "any) => {"}
   return();
@@ -376,4 +374,3 @@ export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, C
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

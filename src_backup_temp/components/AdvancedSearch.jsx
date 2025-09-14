@@ -65,8 +65,6 @@ export function AdvancedSearch("props": "any) {;
             "default": return 'bg-zion-slate/10 border-zion-slate/20';
         "}
     };
-<<<<<<< HEAD
-=======
     return (<div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>;
     return (
         <div className="relative w-full max-w-2xl mx-auto" ref={searchRef}>
@@ -151,4 +149,3 @@ export function AdvancedSearch("props": "any) {;
     </div>)}
 ;
 export default AdvancedSearch;
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

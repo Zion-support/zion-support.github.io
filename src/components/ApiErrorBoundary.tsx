@@ -132,6 +132,12 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
+                  <RefreshCw className='h-4 w-4' />
+                )}
+                <AlertTitle>
+                  {isNetworkError
+                    ? 'Connection Problem'
+                    : 'Something went wrong'}
                   <RefreshCw className="h-4 w-4" />
                 )}
                 <AlertTitle>
@@ -150,9 +156,16 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 )}
               </AlertDescription>
             </Alert>
-
-            <div className="flex flex-col gap-2">
+            <div className='flex flex-col gap-2'>
               <Button
+                onClick={this.handleRetry}
+                disabled={this.state.isRetrying}
+                className='w-full'              >
+
+
+            <div className='flex flex-col gap-2'>;
+              <Button
+
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className="w-full"
@@ -169,8 +182,10 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                   </>
                 )}
               </Button>
-
               <Button
+                variant='outline'
+                onClick={() => window.location.reload()}
+                className='w-full'              >
                 variant="outline"
                 onClick={() => window.location.reload()}
                 className="w-full"

@@ -241,15 +241,15 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       {/* Name Field */}
       <div className="space-y-2">
-        <Label htmlFor="name" className="text-sm font-medium">
-          Full Name <span className="text-red-500">*</span>
+        <Label htmlFor="confirmPassword" className="text-sm font-medium">
+          Confirm Password <span className="text-red-500">*</span>
         </Label>
         <div className="relative">
           <Input
-            id="name"
-            type="text"
-            placeholder="Enter your full name"
-            {...register('name')}
+            id="confirmPassword"
+            type={showConfirmPassword ? 'text' : 'password'}
+            placeholder="Confirm your password"
+            {...register('confirmPassword')}
             disabled={isSubmitting}
             className={cn('pr-10', getFieldClasses('name'))}
           />
@@ -308,7 +308,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
             autoComplete="new-password"
           />
           <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
-            {getFieldValidationIcon('password')}
+            {getFieldValidationIcon('confirmPassword')}
             <Button
               type="button"
               variant="ghost"

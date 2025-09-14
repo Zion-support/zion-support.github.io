@@ -38,10 +38,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     return null,
   }
 
-  const confidenceColor = {
-    High: "bg-green-100 text-green-800",
-    Medium: "bg-yellow-100 text-yellow-800",
-    Low: "bg-red-100 text-red-800"}[suggestion.confidence],
 
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
@@ -59,20 +55,23 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
           </span>
           <span className="text-sm text-muted-foreground ml-1">
             {rateType === "hourly" ? "/hour" : " total"}
-          </span>
-        </div>
 
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
           <p>{suggestion.explanation}</p>
         </div>
-
         <div className="flex items-center justify-between">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
+
                   variant="default"
+
+                  onClick={onApplySuggestion}
+                  className='w-full'                >
+                  <ThumbsUp className='h-4 w-4 mr-2' /> Apply Suggestion                </Button>
+                  <ThumbsUp className="h-4 w-4 mr-2" /> Apply Suggestion
                   onClick={onApplySuggestion}
                   className="w-full"
                 >

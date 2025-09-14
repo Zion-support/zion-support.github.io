@@ -29,11 +29,28 @@ interface ServiceLandingTemplateProps {
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
+
   title,
   subtitle,
   heroImage,
   description,
   benefits,
+
+
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
+  title,;
+  subtitle,;
+  description,;
+  benefits,;
+  features = [],;
+  stats = [],;
+  ctaText,;
+  ctaLink,;
+}) => {;
+
+  return (
+
+          </p>
   testimonials,
   ctaText,
   ctaLink}) => {
@@ -47,6 +64,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
           </p>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           {heroImage && (
             <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
               <Image

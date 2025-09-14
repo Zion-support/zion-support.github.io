@@ -34,7 +34,6 @@ interface SearchFilters {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }
@@ -224,7 +223,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           variant="secondary" 
@@ -254,7 +252,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             aria-label={`Remove ${filter.label} filter`}
@@ -463,7 +460,6 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
   onClearAll: : unknown void}
@@ -472,23 +468,4 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
         Clear all
 
 
-
-<<<<<<< HEAD
-
-
-
-      </button>
-    </div>
-  )}
-'"
-
-  filters: Filter[];
-  onRemoveFilter: key: string void;
-  onClearAll: : unknown void}
-        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
-      >;
-        Clear all;
-      </button>;
-    </div>)}
-'";
 

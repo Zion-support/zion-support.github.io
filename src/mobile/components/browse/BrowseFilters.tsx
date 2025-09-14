@@ -41,6 +41,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               <SheetHeader>
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
+              <div className='py-6 space-y-6'>
+                {type === 'jobs' ? (
               
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (

@@ -1,3 +1,4 @@
+"use client";
 
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
 

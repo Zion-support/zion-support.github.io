@@ -50,13 +50,18 @@ export const ReplyCard = ({
                 Answer
               </Badge>
             )}
-          </div>
-          <div className="text-xs text-muted-foreground">
+            {reply && reply.isAnswer && (;
+              <Badge className="ml-2 bg-green-500 text-white">;
+                <CheckCircle className="h-3 w-3 mr-1" />;
+                Answer;
+              </Badge>;
+            )}
+          </div>;
+          <div className="text-xs text-muted-foreground">;
             {timeAgo}
           </div>
         </div>
       </CardHeader>
-      
       <CardContent>
         <div>{reply.content}</div>
       </CardContent>
@@ -72,7 +77,6 @@ export const ReplyCard = ({
             <span>{reply.downvotes}</span>
           </Button>
         </div>
-        
         {canMarkAnswer && !reply.isAnswer && (
           <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">
             <CheckCircle className="h-4 w-4 mr-1" />

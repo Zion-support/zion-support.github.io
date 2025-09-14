@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useEffect, useMemo, useCallback} from 'react';';';
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -215,4 +213,3 @@ export default function PerformanceOptimizer(props) {
   return null;
 }
  export const PerformanceOptimizer = memo(({children}) => { const location = useLocation () """
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

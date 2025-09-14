@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const { createMocks } from "node-mocks-http"; import handler from "././pages/api/health"; describe("/api/health",() => { it("returns health status",async () => {; const { req,res } = createMocks({ method: "GE,T"}); await handler(req,res); expect(res._getStatusCode()).toBe(200); expect(JSON.parse(res._getData())).toMatchObject({ status: expect.any(String); timestamp: expect.any(String); services: expect.any(Object); metrics: expect.any(Object); uptime: expect.any(Numbe,r)})}); it("rejects non-GET requests",async () => { const { req,res } = createMocks({ method: "POS,T"}); await handler(req,res); expect(res._getStatusCode()).toBe(405); expect(JSON.parse(res._getData())).toMatchObject({ error: "Method not allowe,d"})})});'"'"
 import React from 'react';
 interface Health.testProps {
@@ -13,4 +11,3 @@ export default function Health.test({ }: Health.testProps) {
     </div>
   );
 }
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

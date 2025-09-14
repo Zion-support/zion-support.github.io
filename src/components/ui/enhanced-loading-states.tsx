@@ -266,9 +266,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
     }
   },
 
-  const config = getErrorConfig(),
-  const Icon = config.icon,
-  const canRetry = showRetry && onRetry && retryCount < maxRetries,
+          </p>;
 
   return (
     <Card className={cn('border-destructive/20', className)}>
@@ -285,15 +283,25 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
           </p>
 
           {error && process.env.NODE_ENV === 'development' && (
+
             <details className="mb-4 text-left">
               <summary className="text-sm text-muted-foreground cursor-pointer">
                 Error Details (Development)
               </summary>
+
+
               <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
                 {typeof error === 'string' ? error : error.message}
               </pre>
             </details>
           )}
+
+          <div className='flex flex-col sm:flex-row gap-2 justify-center'>;
+            {canRetry && (;
+              <Button onClick={onRetry} variant='default'>;
+                <RefreshCw className='h-4 w-4 mr-2' />;
+
+
 
           <div className="flex flex-col sm:flex-row gap-2 justify-center">
             {canRetry && (
@@ -348,11 +356,6 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
     table: 'space-y-2'
   },
 
-  const itemClasses = {
-    card: 'p-6 space-y-4',
-    list: 'p-4 space-y-3',
-    table: 'p-3 space-y-2'
-  },
 
   return (
     <div className={cn(gridClasses[variant], className)}>
@@ -373,6 +376,8 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
               </>
             )}
             
+
+
             {variant === 'list' && (
               <div className="flex gap-4">
                 <Skeleton variant="circular" />
@@ -382,7 +387,11 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
                 </div>
               </div>
             )}
+
+
             
+
+
             {variant === 'table' && (
               <div className="flex items-center gap-4">
                 <Skeleton variant="text" className="h-4 w-1/4" />
@@ -426,6 +435,7 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       </Badge>
     ),
   }
+    >
 
   return (
     <div className={cn('flex items-center gap-2 text-xs text-muted-foreground', className)}>

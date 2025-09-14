@@ -41,7 +41,7 @@ if (typeof self === 'undefined') {
     // Last resort - create minimal self object
     (globalThis as any).self = {},
   }
-}
+
 
 // Ensure self is properly referenced
 const selfRef: any = typeof self !== 'undefined' ? self : 
@@ -61,7 +61,7 @@ if (typeof webpackChunk_N_E === 'undefined') {
 
 // TypeScript helper polyfills for runtime
 const tsHelpers = {
-  __extends: function(d: any, b: any) {
+  __extends: function (d: any, b: any) {
     if (typeof b !== "function" && b !== null)
       throw new TypeError("Class extends value " + String(b) + " is not a constructor or null"),
     
@@ -141,6 +141,8 @@ try {
   // Silently handle any errors in error prevention setup
 }
 
+
+
 // Global error suppression for common serverless issues
 if (typeof window !== 'undefined') {
   const originalOnError = window.onerror,
@@ -192,9 +194,21 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
   if (typeof global.webpackChunk_N_E === 'undefined') {
     global.webpackChunk_N_E = [],
   }
-  
   // TypeScript helpers for Node.js
   Object.keys(tsHelpers).forEach(helper => {
+// Node && Node.js environment polyfills (for SSR/build time)
+if (typeof global !== 'undefined' && typeof window === 'undefined') {
+  // Ensure Node && Node.js global has necessary polyfills
+  if (typeof global && global.self === 'undefined') {
+    global && global.self = global;
+  }
+
+  if (typeof global && global.webpackChunk_N_E === 'undefined') {
+    global && global.webpackChunk_N_E = [];
+  }
+
+  // TypeScript helpers for Node && Node.js
+  Object && Object.keys(tsHelpers).forEach(helper => {
     if (typeof (global as any)[helper] === 'undefined') {
       (global as any)[helper] = (tsHelpers as any)[helper],
     }
@@ -218,5 +232,6 @@ export const verifyPolyfills = () => {
 if (process.env.NODE_ENV === 'development') {
   setTimeout(() => verifyPolyfills(), 100),
 }
+export default {}, // Ensure this can be imported as a module;
 
 export default {}, // Ensure this can be imported as a module

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState} from 'react';'''';';
 import {motion, AnimatePresence} from 'framer-motion';'''';';
 import {Link} from 'react-router-dom';';
@@ -820,4 +818,3 @@ export {InteractiveServiceShowcase};
 </motion>
 </motion>
 </motion>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

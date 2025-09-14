@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, {useState, useEffect, useRef} from 'react';'''';';
 import {format} from 'date-fns';'''';';
 import {MessageSquare} from 'lucide-react';'''';';
@@ -272,4 +270,3 @@ scrollToBottom()}, [activeMessages]);
     </div>)}
 '"
 </textarea>
->>>>>>> b00d294d536ffa13ab6811db6a392cfd8c423409

@@ -281,3 +281,5 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
     </>
   ),
 }
+
+export default Blog;

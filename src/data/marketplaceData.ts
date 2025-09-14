@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-export const generateSearchSuggestions = (query: string): string[] => {
-  const suggestions = [
-    'AI Services',
-    'Cybersecurity',
-    'Cloud Migration',
-    'Web Development',
-    'Mobile Apps',
-    'Data Analytics',
-    'Blockchain',
-    'IT Consulting'
-  ];
-  
-  if (!query) return suggestions.slice(0, 5);
-  
-  return suggestions
-    .filter(suggestion => 
-      suggestion.toLowerCase().includes(query.toLowerCase())
-    )
-    .slice(0, 5);
-};
-=======
 export interface SearchSuggestion {
   id: string;
   text: string;
@@ -50,4 +28,3 @@ export function generateSearchSuggestions(): SearchSuggestion[] {
     { id: '20', text: 'Cloud Migration', type: 'service' }
   ];
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-a776
