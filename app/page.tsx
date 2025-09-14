@@ -93,6 +93,10 @@ import UltimateContent2025RevolutionShowcase from '../components/UltimateContent
 import AI2025_2026UltimateBusinessIntelligenceRevolutionBanner from '../components/AI2025_2026UltimateBusinessIntelligenceRevolutionBanner';
 import AI2025_2026UltimateBusinessIntelligenceShowcase from '../components/AI2025_2026UltimateBusinessIntelligenceShowcase';
 
+// Import new Ultimate AI 2025 Transformation components
+import UltimateAI2025TransformationBanner from '../components/UltimateAI2025TransformationBanner';
+import UltimateAI2025ContentShowcase from '../components/UltimateAI2025ContentShowcase';
+
 // Import new Ultimate Content 2025 components
 import UltimateContent2025Banner from '../components/UltimateContent2025Banner';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
@@ -294,6 +298,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE AI 2025 TRANSFORMATION - TOP PRIORITY FEATURED */}
+        <UltimateAI2025TransformationBanner />
+        
+        {/* ULTIMATE AI 2025 CONTENT SHOWCASE - FEATURED */}
+        <UltimateAI2025ContentShowcase />
+        
         {/* ULTIMATE CONTENT 2025 REVOLUTION - TOP PRIORITY FEATURED */}
         <UltimateContent2025RevolutionBanner />
         
