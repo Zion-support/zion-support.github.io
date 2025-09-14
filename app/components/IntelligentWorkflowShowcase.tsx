@@ -3,56 +3,140 @@
 import React, { useState } from 'react';
 import { ArrowRight, Star, Clock, TrendingUp, Users, Award, CheckCircle, Zap } from 'lucide-react';
 
-const UltimateContentShowcase2025 = () => {
+const IntelligentWorkflowShowcase = () => {
   const [activeTab, setActiveTab] = useState('all');
 
   const content = [
     {
-      id: 'ai-2025-enterprise-transformation',
-      title: 'AI 2025: Enterprise AI Transformation Ultimate Guide',
-      subtitle: '600% ROI in 8 Months',
-      description: 'Complete guide to enterprise AI transformation with proven strategies and real-world success stories.',
+      id: 'advanced-automation-revolution',
+      title: 'AI 2025: The Advanced Automation Revolution',
+      subtitle: 'Ultimate Guide to 750% ROI',
+      description: 'Discover how Fortune 500 companies are achieving 750% ROI through advanced AI automation.',
       metrics: {
-        roi: '600%',
-        savings: '$2.8B',
+        roi: '750%',
+        savings: '$8.2M annually',
         efficiency: '340%',
         satisfaction: '99.2%'
       },
-      url: '/blog/ai-2025-enterprise-ai-transformation-ultimate-success-guide',
+      url: '/blog/ai-2025-advanced-automation-revolution-ultimate-guide',
       type: 'blog',
-      category: 'transformation',
-      readingTime: '22 min read',
+      category: 'automation',
+      readingTime: '28 min read',
       featured: true,
-      tags: ['AI Transformation', 'Enterprise', 'ROI', 'Fortune 500']
+      tags: ['AI Automation', 'Advanced Technology', 'ROI', 'Fortune 500']
     },
     {
-      id: 'fortune-500-success',
-      title: 'Fortune 500 AI Transformation Success',
-      subtitle: '$2.8B Company Achieves 600% ROI in 8 Months',
-      description: 'Real-world case study of how a Fortune 500 company achieved transformational results.',
+      id: 'intelligent-workflow-revolution',
+      title: 'AI 2025: The Intelligent Workflow Revolution',
+      subtitle: 'Ultimate Guide to 900% ROI',
+      description: 'Discover how intelligent workflows are transforming business operations with 900% ROI.',
       metrics: {
-        roi: '600%',
-        savings: '$340M',
-        efficiency: '450%',
-        satisfaction: '95%'
+        roi: '900%',
+        savings: '$12.3M annually',
+        efficiency: '560%',
+        satisfaction: '99.5%'
       },
-      url: '/case-studies/fortune-500-ai-transformation-600-roi-success-story',
+      url: '/blog/ai-2025-intelligent-workflow-revolution-ultimate-guide',
+      type: 'blog',
+      category: 'workflow',
+      readingTime: '25 min read',
+      featured: true,
+      tags: ['Intelligent Workflows', 'AI Automation', 'Business Process', 'ROI']
+    },
+    {
+      id: 'fortune-500-advanced-automation',
+      title: 'Fortune 500 Advanced Automation Success',
+      subtitle: '$3.2B Company Achieves 750% ROI in 10 Months',
+      description: 'How a Fortune 500 manufacturing company transformed operations with advanced AI automation.',
+      metrics: {
+        roi: '750%',
+        savings: '$12.8M annually',
+        efficiency: '450%',
+        satisfaction: '99.2%'
+      },
+      url: '/case-studies/fortune-500-advanced-automation-750-roi-success',
       type: 'case-study',
-      category: 'transformation',
+      category: 'automation',
       readingTime: '18 min read',
       featured: true,
-      tags: ['Case Study', 'Fortune 500', 'AI Transformation', 'Manufacturing']
+      tags: ['Case Study', 'Fortune 500', 'Advanced Automation', 'Manufacturing']
+    },
+    {
+      id: 'global-enterprise-workflow',
+      title: 'Global Enterprise Intelligent Workflow Success',
+      subtitle: '$4.1B Company Achieves 900% ROI in 8 Months',
+      description: 'How a global enterprise transformed operations with intelligent workflow automation.',
+      metrics: {
+        roi: '900%',
+        savings: '$18.7M annually',
+        efficiency: '560%',
+        satisfaction: '99.5%'
+      },
+      url: '/case-studies/global-enterprise-intelligent-workflow-900-roi-success',
+      type: 'case-study',
+      category: 'workflow',
+      readingTime: '20 min read',
+      featured: true,
+      tags: ['Case Study', 'Global Enterprise', 'Intelligent Workflows', 'Financial Services']
+    },
+    {
+      id: 'advanced-automation-master-guide',
+      title: 'AI 2025 Advanced Automation Implementation Master Guide',
+      subtitle: 'From Strategy to 750% ROI',
+      description: 'Complete implementation guide for advanced AI automation. Achieve 750% ROI within 12 months.',
+      metrics: {
+        roi: '750%',
+        success_rate: '94%',
+        implementation_time: '12 months',
+        average_savings: '$8.2M annually'
+      },
+      url: '/resources/ai-2025-advanced-automation-implementation-master-guide',
+      type: 'resource',
+      category: 'automation',
+      readingTime: '35 min read',
+      featured: true,
+      tags: ['Implementation Guide', 'Advanced Automation', 'AI Strategy', 'ROI']
     }
   ];
 
   const tabs = [
     { id: 'all', label: 'All Content', count: content.length },
-    { id: 'transformation', label: 'AI Transformation', count: content.filter(item => item.category === 'transformation').length }
+    { id: 'automation', label: 'Advanced Automation', count: content.filter(item => item.category === 'automation').length },
+    { id: 'workflow', label: 'Intelligent Workflows', count: content.filter(item => item.category === 'workflow').length },
+    { id: 'case-study', label: 'Case Studies', count: content.filter(item => item.type === 'case-study').length }
   ];
 
   const filteredContent = activeTab === 'all' 
     ? content 
-    : content.filter(item => item.category === activeTab);
+    : content.filter(item => 
+        activeTab === 'case-study' ? item.type === 'case-study' : item.category === activeTab
+      );
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return <TrendingUp className="w-4 h-4" />;
+      case 'case-study':
+        return <Users className="w-4 h-4" />;
+      case 'resource':
+        return <Award className="w-4 h-4" />;
+      default:
+        return <Star className="w-4 h-4" />;
+    }
+  };
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'from-blue-500 to-cyan-500';
+      case 'case-study':
+        return 'from-green-500 to-emerald-500';
+      case 'resource':
+        return 'from-purple-500 to-violet-500';
+      default:
+        return 'from-gray-500 to-slate-500';
+    }
+  };
 
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -61,14 +145,35 @@ const UltimateContentShowcase2025 = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-6">
             <Zap className="w-5 h-5 mr-2" />
-            <span className="font-semibold">ULTIMATE AI CONTENT 2025</span>
+            <span className="font-semibold">REVOLUTIONARY AI CONTENT</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Revolutionary AI Content
+            Advanced Automation & Intelligent Workflows
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover the latest AI transformation strategies and success stories from leading enterprises.
+            Discover how leading enterprises are achieving 750-900% ROI with cutting-edge AI automation 
+            and intelligent workflow solutions. Real success stories, proven strategies, and complete implementation guides.
           </p>
+        </div>
+
+        {/* Success Metrics */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+            <div className="text-3xl font-bold text-green-600 mb-2">750-900%</div>
+            <div className="text-gray-600 font-medium">Average ROI</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+            <div className="text-3xl font-bold text-blue-600 mb-2">$8.2M+</div>
+            <div className="text-gray-600 font-medium">Annual Savings</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+            <div className="text-3xl font-bold text-purple-600 mb-2">99.2%</div>
+            <div className="text-gray-600 font-medium">Satisfaction Rate</div>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+            <div className="text-3xl font-bold text-orange-600 mb-2">94%</div>
+            <div className="text-gray-600 font-medium">Success Rate</div>
+          </div>
         </div>
 
         {/* Filter Tabs */}
@@ -92,7 +197,7 @@ const UltimateContentShowcase2025 = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredContent.map((item) => (
             <div
               key={item.id}
@@ -102,8 +207,8 @@ const UltimateContentShowcase2025 = () => {
               <div className="p-6 pb-4">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 text-white">
-                      <TrendingUp className="w-4 h-4" />
+                    <div className={`p-2 rounded-lg bg-gradient-to-r ${getTypeColor(item.type)} text-white`}>
+                      {getTypeIcon(item.type)}
                     </div>
                     <span className="text-sm font-medium text-gray-600 capitalize">
                       {item.type.replace('-', ' ')}
@@ -157,7 +262,7 @@ const UltimateContentShowcase2025 = () => {
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-blue-600">
-                      {item.metrics.savings}
+                      {item.metrics.savings || item.metrics.average_savings}
                     </div>
                     <div className="text-xs text-gray-600">Savings</div>
                   </div>
@@ -182,7 +287,7 @@ const UltimateContentShowcase2025 = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-blue-100 mb-6 max-w-2xl mx-auto">
-              Join hundreds of companies achieving 600%+ ROI with our proven AI transformation strategies.
+              Join hundreds of companies achieving 750-900% ROI with our proven AI automation and intelligent workflow solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -207,4 +312,4 @@ const UltimateContentShowcase2025 = () => {
   );
 };
 
-export default UltimateContentShowcase2025;
+export default IntelligentWorkflowShowcase;
