@@ -4,12 +4,7 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
-<<<<<<< HEAD
-  DialogTitle,
-} from '@/components/ui/dialog';
-=======
   DialogTitle} from '@/components/ui/dialog';
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -19,12 +14,7 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-<<<<<<< HEAD
-  FormMessage,
-} from '@/components/ui/form';
-=======
   FormMessage} from '@/components/ui/form';
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 import { useForm, type Resolver } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -56,12 +46,7 @@ const schema: yup.ObjectSchema<FormValues> = yup
     message: yup
       .string()
       .min(20, 'Message must be at least 20 characters')
-<<<<<<< HEAD
-      .required('Message is required'),
-  })
-=======
       .required('Message is required')})
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   .required();
 
 export function ContactPublisherModal({
@@ -69,12 +54,7 @@ export function ContactPublisherModal({
   onClose,
   publisherName,
   publisherEmail,
-<<<<<<< HEAD
-  productId,
-}: ContactPublisherModalProps) {
-=======
   productId}: ContactPublisherModalProps) {
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -83,12 +63,7 @@ export function ContactPublisherModal({
   const form = useForm<FormValues>({
     resolver: yupResolver(schema) as Resolver<FormValues>,
     mode: 'onChange',
-<<<<<<< HEAD
-    defaultValues: { subject: '', message: '' },
-  });
-=======
     defaultValues: { subject: '', message: '' }});
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
   const handleSend = async () => {
     if (!user) {
@@ -103,12 +78,7 @@ export function ContactPublisherModal({
         productId,
         subject: values.subject,
         body: values.message,
-<<<<<<< HEAD
-        fromUser: user.id,
-      });
-=======
         fromUser: user.id});
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       toast.success('Message sent');
       form.reset();
       onClose();

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 66391aad2675410e65c3b6978d52ba23561a58a9
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -98,10 +93,6 @@ const AllServices2027: React.FC = () => {
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-<<<<<<< HEAD
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
-=======
->>>>>>> 66391aad2675410e65c3b6978d52ba23561a58a9
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

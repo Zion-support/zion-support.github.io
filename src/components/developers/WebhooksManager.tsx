@@ -87,12 +87,7 @@ export function WebhooksManager() {
     { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },
     { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },
     { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },
-<<<<<<< HEAD
-    { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' },
-  ];
-=======
     { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }];
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
   // Toggle an event selection
   const toggleEvent = (event: WebhookEventType) => {
