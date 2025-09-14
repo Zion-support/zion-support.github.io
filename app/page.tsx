@@ -359,6 +359,10 @@ import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
 import UltimateSuccessMetricsShowcase from '../components/UltimateSuccessMetricsShowcase';
 import NewContentPromotionBanner2025 from '../components/NewContentPromotionBanner2025';
 
+// Import new Ultimate Business Intelligence components
+import UltimateBusinessIntelligence2025Banner from '../components/UltimateBusinessIntelligence2025Banner';
+import UltimateBusinessIntelligenceShowcase2025 from '../components/UltimateBusinessIntelligenceShowcase2025';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions | Ultimate Content Showcase 2025',
   description: 'Transform your business with cutting-edge AI, neural superintelligence, and micro SaaS solutions. Discover our ultimate content showcase with interactive tools, case studies, and proven ROI results up to 10,000%.',
@@ -379,6 +383,9 @@ export default function HomePage() {
         />
         
         <div className='min-h-screen bg-white'>
+        {/* Ultimate Business Intelligence 2025 Banner */}
+        <UltimateBusinessIntelligence2025Banner />
+        
         {/* NEW CONTENT 2025 ULTIMATE SHOWCASE BANNER - NEWEST FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         {/* AI 2025 ULTIMATE TRENDS SHOWCASE - NEWEST FEATURED */}
@@ -894,6 +901,15 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <UltimateBusinessIntelligenceShowcase2025 />
+        <NewContent2026PromotionBanner />
+        <QuantumAI2026BreakthroughBanner />
+        <NewContentShowcase2026 />
+        <QuantumAIContentShowcase2026 />
+        <AI2026ContentShowcaseBanner />
+        <RevolutionaryAI2026Banner />
+        <AI2026RevolutionaryBanner />
+        <RevolutionaryTechBanner2026 />
         <UltimateContentShowcase2025 />
         <InteractiveContentDiscovery2025 />
         <AIAutomationROICalculator />
