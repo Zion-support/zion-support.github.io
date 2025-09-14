@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag,  Brain, Zap, Shield } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User,   Brain, Zap, Shield } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
@@ -71,7 +71,7 @@ export default function AutonomousEnterpriseSystemsPage() {
             <div className="flex flex-wrap gap-2">
               {['autonomous systems', 'AI 2025', 'enterprise automation', 'self-managing systems', 'business intelligence'].map((tag) => (
                 <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">
-                  <Tag className="w-3 h-3 mr-1" />
+                  <Award className="w-3 h-3 mr-1" />
                   {tag}
                 </span>
               ))}
