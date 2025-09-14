@@ -35345,6 +35345,16 @@
       }
     },
     {
+      "route": "/reports/innovations/insight-2025-08-18-0420",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Runbook: RAG Platforms",
+        "description": "Runbook: RAG Platforms — auto-suggested description"
+      }
+    },
+    {
       "route": "/reports/innovations/insight-2025-08-18T03-11",
       "missing": [
         "og:image"
@@ -65629,6 +65639,16 @@
     {
       "route": "/reports/updates/update-2025-08-18-0120",
       "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-18 01:20",
+        "description": "Autonomous Update — 2025-08-18 01:20 — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-18-0121",
+      "missing": [
         "og:title",
         "og:description",
         "og:image",
@@ -65647,6 +65667,16 @@
       "suggestion": {
         "title": "Autonomous Performance Tuning Guide — AI Service Design (2025-08-18 04:10 UTC)",
         "description": "Autonomous Performance Tuning Guide — AI Service Design (2025-08-18 04:10 UTC) — auto-suggested description"
+      }
+    },
+    {
+      "route": "/reports/updates/update-2025-08-18-0420",
+      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Blueprint — Evaluation & Safety (2025-08-18 04:20 UTC)",
+        "description": "Autonomous Blueprint — Evaluation & Safety (2025-08-18 04:20 UTC) — auto-suggested description"
       }
     },
     {
