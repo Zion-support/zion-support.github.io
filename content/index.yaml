@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 3
+  total_content_pieces: 6
   
   new_2025_content:
     - id: "autonomous-systems-revolution"
@@ -33,6 +33,39 @@ content_index:
       status: "published"
       created: "2025-01-17"
       tags: ["Implementation Guide", "AI", "Best Practices", "ROI"]
+      featured: true
+      is_new: true
+      
+    - id: "ai-2025-enterprise-automation"
+      type: "blog"
+      title: "AI 2025: Enterprise Automation Breakthrough - 340% ROI in 90 Days"
+      file_path: "/content/blog/ai-2025-enterprise-automation-breakthrough.md"
+      url: "/blog/ai-2025-enterprise-automation-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "Case Study"]
+      featured: true
+      is_new: true
+      
+    - id: "fortune-500-case-study"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation: 340% ROI in 90 Days - Complete Case Study"
+      file_path: "/content/case-studies/fortune-500-ai-transformation-340-percent-roi.md"
+      url: "/case-studies/fortune-500-ai-transformation-340-percent-roi"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "AI Transformation", "ROI", "Manufacturing", "Fortune 500"]
+      featured: true
+      is_new: true
+      
+    - id: "ai-roi-calculator-guide"
+      type: "resource"
+      title: "AI Implementation ROI Calculator Guide 2025: Maximize Your Investment Returns"
+      file_path: "/content/resources/ai-implementation-roi-calculator-guide-2025.md"
+      url: "/resources/ai-implementation-roi-calculator-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["ROI Calculator", "AI Implementation", "Business Planning", "Investment Analysis", "Guide"]
       featured: true
       is_new: true
 
