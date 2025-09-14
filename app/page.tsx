@@ -39,6 +39,11 @@ import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner20
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
 
+// Import new revolutionary 2026 content banners
+import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
+import AutonomousEnterprise2026Banner from '../components/AutonomousEnterprise2026Banner';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
@@ -64,6 +69,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Revolutionary Content 2026 Banner */}
+        <RevolutionaryContent2026Banner />
+        
+        {/* Quantum AI 2026 Breakthrough Banner */}
+        <QuantumAI2026BreakthroughBanner />
+        
+        {/* Autonomous Enterprise 2026 Banner */}
+        <AutonomousEnterprise2026Banner />
+        
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
         
@@ -171,6 +185,37 @@ export default function HomePage() {
                 </p>
                 <Link href="/services/micro-saas" className="text-purple-600 font-semibold hover:text-purple-800">
                   Learn More →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Tools Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Interactive Tools</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="text-4xl mb-4">⚛️</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Quantum AI ROI Calculator</h3>
+                <p className="text-gray-600 mb-4">
+                  Calculate the potential ROI of implementing quantum AI in your organization. 
+                  Based on real-world data from Fortune 500 implementations.
+                </p>
+                <Link href="/tools/quantum-ai-roi-calculator-2026" className="text-purple-600 font-semibold hover:text-purple-800">
+                  Try Calculator →
+                </Link>
+              </div>
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="text-4xl mb-4">🔍</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Autonomous Enterprise Assessment</h3>
+                <p className="text-gray-600 mb-4">
+                  Evaluate your organization's readiness for autonomous AI systems and get 
+                  personalized recommendations for successful implementation.
+                </p>
+                <Link href="/tools/autonomous-enterprise-readiness-assessment" className="text-purple-600 font-semibold hover:text-purple-800">
+                  Take Assessment →
                 </Link>
               </div>
             </div>
