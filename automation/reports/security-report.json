@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-14T18:13:18.985Z",
+  "timestamp": "2025-09-14T22:32:23.386Z",
   "vulnerabilities": [],
   "securityIssues": [
     {
@@ -27,6 +27,12 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/app/components/AI2025TrendsRevolutionaryBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/app/components/AI2025UltimateAutomationRevolutionBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
@@ -40,6 +46,12 @@
     },
     {
       "file": "/workspace/app/components/AI2025UltimateBreakthroughRevolutionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/app/components/AI2025UltimateBusinessIntelligenceRevolutionBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -105,6 +117,12 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/app/components/AIInnovationShowcase2025Banner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/app/components/AITransformation2025SuccessBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
@@ -159,6 +177,12 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/app/components/AnalyticsTracker.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/app/components/AutonomousAIRevolutionBanner2025.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
@@ -201,12 +225,6 @@
       "description": "Potential dangerousFunctions found"
     },
     {
-      "file": "/workspace/app/components/BreakthroughTechnologies2025PromotionBanner.tsx",
-      "type": "dangerousFunctions",
-      "matches": 1,
-      "description": "Potential dangerousFunctions found"
-    },
-    {
       "file": "/workspace/app/components/BreakthroughTechnologies2025Showcase.tsx",
       "type": "hardcodedSecrets",
       "matches": 4,
@@ -217,6 +235,18 @@
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/app/components/EnhancedContentPromotionBanner2026.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/app/components/EnhancedSEO.tsx",
+      "type": "innerHTML",
+      "matches": 1,
+      "description": "Potential innerHTML found"
     },
     {
       "file": "/workspace/app/components/IndustrySuccessBanner.tsx",
@@ -231,13 +261,31 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/app/components/InteractiveAIConsciousnessDemo2025.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/app/components/InteractiveDemoWidget.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/app/components/InteractiveFeatures.tsx",
+      "type": "dangerousFunctions",
+      "matches": 2,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/app/components/MultimodalAI2025RevolutionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/app/components/MultimodalIntelligence2025PromotionBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -345,13 +393,19 @@
       "description": "Potential dangerousFunctions found"
     },
     {
-      "file": "/workspace/app/components/NewContent2025UltimateSuccessBanner.tsx",
+      "file": "/workspace/app/components/NewContent2025UltimateTransformationBanner.tsx",
       "type": "dangerousFunctions",
-      "matches": 2,
+      "matches": 1,
       "description": "Potential dangerousFunctions found"
     },
     {
-      "file": "/workspace/app/components/NewContent2025UltimateTransformationBanner.tsx",
+      "file": "/workspace/app/components/PerformanceMonitor.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/app/components/PerformanceOptimizer.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -394,6 +448,12 @@
     },
     {
       "file": "/workspace/app/components/QuantumComputingBreakthroughBanner2025.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/app/components/QuantumNeuralFusionRevolutionBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -471,6 +531,12 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/app/components/SEOOptimizer.tsx",
+      "type": "innerHTML",
+      "matches": 6,
+      "description": "Potential innerHTML found"
+    },
+    {
       "file": "/workspace/app/components/SyntheticIntelligence2026RevolutionBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
@@ -513,7 +579,19 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/app/components/UltimateAutomationRevolution50000ROIBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/app/components/UltimateAutonomousAIRevolutionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/app/components/UltimateAutonomousBusinessRevolutionBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -609,13 +687,19 @@
       "description": "Potential dangerousFunctions found"
     },
     {
-      "file": "/workspace/app/components/UltimateContentShowcase2025Banner.tsx",
+      "file": "/workspace/app/components/UltimateContentShowcase2026.tsx",
       "type": "dangerousFunctions",
-      "matches": 2,
+      "matches": 1,
       "description": "Potential dangerousFunctions found"
     },
     {
-      "file": "/workspace/app/components/UltimateContentShowcase2026.tsx",
+      "file": "/workspace/app/components/UltimateDigitalTransformation2025Banner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/app/components/UltimateDigitalTransformationBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -747,6 +831,12 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/components/AI2025ContentMarketingRevolutionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/components/AI2025ContentRecommendationEngine.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
@@ -766,6 +856,12 @@
     },
     {
       "file": "/workspace/components/AI2025RevolutionaryContentBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/AI2025SingularityBreakthroughPromotionBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -801,7 +897,19 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/components/AI2025UltimateAutomationRevolution50000ROIBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/components/AI2025UltimateAutomationRevolutionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/AI2025UltimateBreakthrough100000ROIBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -819,13 +927,19 @@
       "description": "Potential dangerousFunctions found"
     },
     {
-      "file": "/workspace/components/AI2025UltimateContentRevolutionBanner.tsx",
+      "file": "/workspace/components/AI2025UltimateBusinessRevolution100000ROIBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
     },
     {
       "file": "/workspace/components/AI2025UltimateContentRevolutionPromotionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/AI2025UltimateContentShowcaseRevolutionaryBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -844,6 +958,12 @@
     },
     {
       "file": "/workspace/components/AI2025UltimateTechnologyShowcaseBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/AI2025UltimateTrendsShowcase.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -909,6 +1029,12 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/components/AIBusinessIntelligence2025Banner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/components/AIConsciousnessEvolution2027.tsx",
       "type": "dangerousFunctions",
       "matches": 2,
@@ -916,6 +1042,12 @@
     },
     {
       "file": "/workspace/components/AIContentGenerator.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/AIContentRevolutionDemo.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -969,6 +1101,12 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/components/AIRevolution50000ROIPromotionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/components/AIToolsComprehensiveShowcase2026PromotionBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
@@ -994,6 +1132,12 @@
     },
     {
       "file": "/workspace/components/AIToolsUltimateShowcase2026PromotionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/AITrends2025PromotionalBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -1131,6 +1275,12 @@
       "description": "Potential innerHTML found"
     },
     {
+      "file": "/workspace/components/AdvancedSEOOptimizer.tsx",
+      "type": "innerHTML",
+      "matches": 4,
+      "description": "Potential innerHTML found"
+    },
+    {
       "file": "/workspace/components/AdvancedSEOStructuredData.tsx",
       "type": "innerHTML",
       "matches": 5,
@@ -1227,6 +1377,18 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/components/AutonomousEnterprise2025PromotionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/AutonomousSystems2025Banner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/components/BlogPostLayout.tsx",
       "type": "innerHTML",
       "matches": 1,
@@ -1317,6 +1479,12 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/components/ConsciousnessAI2025RevolutionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/components/ContactForm.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
@@ -1356,6 +1524,12 @@
       "file": "/workspace/components/ContentRecommendationEngine.tsx",
       "type": "dangerousFunctions",
       "matches": 2,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/ContentRevolutionNewsletter.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
       "description": "Potential dangerousFunctions found"
     },
     {
@@ -1593,13 +1767,19 @@
       "description": "Potential dangerousFunctions found"
     },
     {
-      "file": "/workspace/components/InteractiveContentDiscovery2025.tsx",
+      "file": "/workspace/components/InteractiveContentDiscovery2026.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
     },
     {
       "file": "/workspace/components/InteractiveContentDiscovery2026PromotionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/InteractiveContentDiscoveryWidget2025.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -1629,9 +1809,21 @@
       "description": "Potential hardcodedSecrets found"
     },
     {
+      "file": "/workspace/components/InteractiveDemoWidget.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/components/InteractiveEngagementWidget.tsx",
       "type": "dangerousFunctions",
       "matches": 3,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/InteractiveROICalculatorAdvanced.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
       "description": "Potential dangerousFunctions found"
     },
     {
@@ -1689,6 +1881,12 @@
       "description": "Potential innerHTML found"
     },
     {
+      "file": "/workspace/components/NeuralConsciousnessBreakthroughBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/components/NeuralConsensus2026PromotionBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
@@ -1719,7 +1917,31 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/components/NeuralSuperintelligenceBreakthroughBanner2025.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/components/NewContent2025DataRevolutionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/NewContent2025PromotionalBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/NewContent2025UltimateBreakthroughPromotionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/NewContent2025UltimateContentRevolutionBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -1731,7 +1953,31 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/components/NewContent2025UltimateShowcaseBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/components/NewContent2025UltimateShowcasePromotionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/NewContent2026PromotionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 2,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/NewContent2027PromotionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/NewContent2027UltimateShowcase.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -1741,6 +1987,12 @@
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/NewContentDiscoveryWidget2025.tsx",
+      "type": "hardcodedSecrets",
+      "matches": 3,
+      "description": "Potential hardcodedSecrets found"
     },
     {
       "file": "/workspace/components/NewContentNavigationBanner.tsx",
@@ -1755,13 +2007,25 @@
       "description": "Potential dangerousFunctions found"
     },
     {
-      "file": "/workspace/components/NewContentPromotionBanner2026.tsx",
+      "file": "/workspace/components/NewContentPromotionBanner2025.tsx",
+      "type": "dangerousFunctions",
+      "matches": 2,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/NewContentShowcase2025.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
     },
     {
       "file": "/workspace/components/NewContentShowcase2025PromotionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/NewSuccessStoriesShowcase2025.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -1845,6 +2109,12 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/components/PostHumanBusinessOperationsPromotionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/components/QuantumComputingBreakthrough2027.tsx",
       "type": "dangerousFunctions",
       "matches": 2,
@@ -1920,6 +2190,12 @@
       "file": "/workspace/components/RevolutionaryCaseStudiesShowcase2027PromotionBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 2,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/RevolutionaryContent2025PromotionBanner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
       "description": "Potential dangerousFunctions found"
     },
     {
@@ -2019,6 +2295,12 @@
       "description": "Potential innerHTML found"
     },
     {
+      "file": "/workspace/components/SEOOptimization.tsx",
+      "type": "innerHTML",
+      "matches": 4,
+      "description": "Potential innerHTML found"
+    },
+    {
       "file": "/workspace/components/SEOOptimizer.tsx",
       "type": "innerHTML",
       "matches": 2,
@@ -2067,7 +2349,7 @@
       "description": "Potential innerHTML found"
     },
     {
-      "file": "/workspace/components/SuccessStoriesShowcase2025.tsx",
+      "file": "/workspace/components/SuccessStoriesBanner2025.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -2076,6 +2358,12 @@
       "file": "/workspace/components/SuccessStoriesShowcase2025PromotionBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/SuccessStoriesShowcase2026.tsx",
+      "type": "dangerousFunctions",
+      "matches": 2,
       "description": "Potential dangerousFunctions found"
     },
     {
@@ -2103,6 +2391,12 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/components/TestimonialShowcase.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/components/UltimateAI2025TransformationBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
@@ -2118,6 +2412,12 @@
       "file": "/workspace/components/UltimateAIAssistant2027.tsx",
       "type": "dangerousFunctions",
       "matches": 3,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/UltimateAutomationRevolution2025Banner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
       "description": "Potential dangerousFunctions found"
     },
     {
@@ -2175,6 +2475,12 @@
       "description": "Potential dangerousFunctions found"
     },
     {
+      "file": "/workspace/components/UltimateContentDiscoveryWidget2025.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
       "file": "/workspace/components/UltimateContentDiscoveryWidget2026.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
@@ -2188,12 +2494,6 @@
     },
     {
       "file": "/workspace/components/UltimateContentPromotionBanner.tsx",
-      "type": "dangerousFunctions",
-      "matches": 1,
-      "description": "Potential dangerousFunctions found"
-    },
-    {
-      "file": "/workspace/components/UltimateContentPromotionBanner2025.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -2235,7 +2535,7 @@
       "description": "Potential dangerousFunctions found"
     },
     {
-      "file": "/workspace/components/UltimateContentShowcase2025Banner.tsx",
+      "file": "/workspace/components/UltimateContentRevolutionROICalculator.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -2247,13 +2547,19 @@
       "description": "Potential dangerousFunctions found"
     },
     {
-      "file": "/workspace/components/UltimateContentShowcase2027PromotionBanner.tsx",
+      "file": "/workspace/components/UltimateContentShowcase2026.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
     },
     {
-      "file": "/workspace/components/UltimateContentShowcaseBanner2025.tsx",
+      "file": "/workspace/components/UltimateContentShowcase2026Banner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 2,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/UltimateContentShowcase2027PromotionBanner.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -2266,6 +2572,36 @@
     },
     {
       "file": "/workspace/components/UltimateEnterpriseTransformation2025Banner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/UltimateROICalculator2025.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/UltimateSuccessMetricsShowcase.tsx",
+      "type": "dangerousFunctions",
+      "matches": 2,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/UltimateSuccessMetricsShowcase2025.tsx",
+      "type": "dangerousFunctions",
+      "matches": 2,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/UltimateTechShowcase2025Banner.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/UltimateTestimonialShowcase2025.tsx",
       "type": "dangerousFunctions",
       "matches": 1,
       "description": "Potential dangerousFunctions found"
@@ -6199,7 +6535,7 @@
   ],
   "summary": {
     "totalVulnerabilities": 0,
-    "totalSecurityIssues": 1030,
+    "totalSecurityIssues": 1086,
     "criticalIssues": 0
   }
 }
