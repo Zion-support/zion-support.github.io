@@ -245,6 +245,57 @@ content_index:
     homepage_integration: "Complete with comprehensive showcase and ultimate content"
     
   new_ultimate_content_2025:
+    - id: "ai-2025-advanced-automation-revolution-ultimate"
+      type: "blog"
+      title: "AI 2025: The Advanced Automation Revolution - Ultimate Enterprise Guide"
+      file_path: "/content/blog/ai-2025-advanced-automation-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-advanced-automation-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Automation", "Enterprise", "ROI", "Advanced AI", "Business Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$3.2B"
+        efficiency: "95%"
+        timeline: "12 months"
+      reading_time: "25 min read"
+      
+    - id: "tech-giant-ai-transformation-2025-ultimate-success"
+      type: "case-study"
+      title: "Tech Giant AI Transformation 2025: $5.2B Annual Savings in 12 Months"
+      file_path: "/content/case-studies/tech-giant-ai-transformation-2025-ultimate-success.md"
+      url: "/case-studies/tech-giant-ai-transformation-2025-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Fortune 100", "AI Transformation", "Case Study", "ROI", "Cost Savings", "Enterprise", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        savings: "$5.2B"
+        efficiency: "95%"
+        timeline: "12 months"
+      reading_time: "22 min read"
+      
+    - id: "ai-transformation-ultimate-playbook-2025"
+      type: "resource"
+      title: "AI Transformation Ultimate Playbook 2025: From Strategy to 800% ROI"
+      file_path: "/content/resources/ai-transformation-ultimate-playbook-2025.md"
+      url: "/resources/ai-transformation-ultimate-playbook-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Transformation", "Ultimate Playbook", "ROI", "Strategy", "Implementation", "Best Practices", "Framework"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        success: "94%"
+        savings: "$5.2B"
+        timeline: "18 months"
+      reading_time: "35 min read"
+      
     - id: "ai-2025-enterprise-data-revolution-ultimate"
       type: "blog"
       title: "AI 2025: The Enterprise Data Revolution - Ultimate Guide to 400% ROI"
