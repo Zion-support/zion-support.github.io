@@ -1,15 +1,16 @@
 import React from 'react';
-import { 
-  ChevronRight, 
-  Users, 
-  Zap, 
-  Shield, 
+import {
+  ChevronRight,
+  Users,
+  Zap,
+  Shield,
   Globe,
   ArrowRight
 } from 'lucide-react';
 import { Navigation } from './components/Navigation';
 import { Button } from './components/Button';
 import { FeatureCard } from './components/FeatureCard';
+import { SEO } from './components/SEO';
 
 export default function App() {
   const features = [
@@ -36,9 +37,11 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Navigation */}
-      <Navigation />
+    <>
+      <SEO />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Navigation */}
+        <Navigation />
 
       {/* Hero Section */}
       <section id="home" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -175,6 +178,7 @@ export default function App() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }

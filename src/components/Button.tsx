@@ -38,6 +38,15 @@ export const Button: React.FC<ButtonProps> = ({
         className
       )}
       {...props}
+      // Accessibility improvements
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          (e.target as HTMLButtonElement).click();
+        }
+      }}
     >
       {children}
     </button>

@@ -52,7 +52,7 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
   ];
 
   return (
-    <nav className={`bg-white shadow-lg sticky top-0 z-50 ${className}`}>
+    <nav className={`bg-white shadow-lg sticky top-0 z-50 ${className}`} role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -110,6 +110,9 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-600 hover:text-gray-900"
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -119,7 +122,7 @@ export const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white border-t">
+        <div id="mobile-menu" className="lg:hidden bg-white border-t" role="menu" aria-label="Mobile navigation">
           <div className="px-4 py-6 space-y-4">
             {navigationItems.map((item) => (
               <div key={item.name}>

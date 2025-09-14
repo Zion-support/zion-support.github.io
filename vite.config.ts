@@ -12,10 +12,32 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    sourcemap: false, // Disable sourcemaps in production for better performance
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console.log in production
+        drop_debugger: true,
+      },
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['lucide-react'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     port: 3000,
     open: true,
+    hmr: {
+      overlay: false, // Disable error overlay for better UX
+    },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'lucide-react'],
   },
 })
