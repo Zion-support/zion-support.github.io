@@ -4,13 +4,34 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
-// Import our new promotional components
-import AI2025_2026UltimateBreakthroughBanner from '../components/AI2025-2026UltimateBreakthroughBanner';
-import RevolutionaryTransformationSuccessBanner from '../components/RevolutionaryTransformationSuccessBanner';
+// Import new advanced AI components
+import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
+import RealTimePerformanceDashboard from '../components/RealTimePerformanceDashboard';
+import IntelligentSearchEngine from '../components/IntelligentSearchEngine';
+import AdvancedAIAssistant from '../components/AdvancedAIAssistant';
+import BusinessIntelligenceDashboard from '../components/BusinessIntelligenceDashboard';
+import AdvancedSecurityMonitor from '../components/AdvancedSecurityMonitor';
+import AdvancedAnalyticsEngine from '../components/AdvancedAnalyticsEngine';
+import AutomationWorkflowEngine from '../components/AutomationWorkflowEngine';
+import EnterpriseDataManagement from '../components/EnterpriseDataManagement';
+import APIManagementSystem from '../components/APIManagementSystem';
 
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
+const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
+const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
+
+// Import key promotional components
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
+import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
+import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
+import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
+
+// Import new ultimate content promotional components
+import UltimateContent2025RevolutionBanner from '../components/UltimateContent2025RevolutionBanner';
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -29,10 +50,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* NEW 2025-2026 Revolutionary Content - Featured Prominently */}
-        <AI2025_2026UltimateBreakthroughBanner />
-        <RevolutionaryTransformationSuccessBanner />
+        {/* ULTIMATE 2025 CONTENT REVOLUTION - FEATURED */}
+        <UltimateContent2025RevolutionBanner />
         
+        {/* NEW 2025 ULTIMATE CONTENT SHOWCASE - FEATURED */}
+        <NewContent2025UltimateShowcase />
+
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,51 +151,23 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* New Content Promotion */}
-        <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest AI Breakthrough Content</h2>
-              <p className="text-xl text-gray-600">
-                Discover revolutionary AI technologies and success stories from 2025-2026
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  AI 2025-2026: The Ultimate Breakthrough Revolution
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Discover the revolutionary AI breakthroughs transforming businesses at quantum speed. 
-                  From autonomous enterprise systems to quantum-enhanced neural networks.
-                </p>
-                <Link 
-                  href="/blog/ai-2025-2026-ultimate-breakthrough-revolution"
-                  className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-                >
-                  Read Full Article
-                </Link>
-              </div>
-              
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Revolutionary Transformation: 2,500% ROI Success Story
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Learn how a Fortune 100 company achieved unprecedented success through 
-                  revolutionary AI transformation, increasing revenue from $45B to $157.5B.
-                </p>
-                <Link 
-                  href="/case-studies/ai-2025-2026-revolutionary-transformation-2500-roi-success"
-                  className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-                >
-                  View Case Study
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Content Promotion Banners */}
+        <NewContentPromotionBanner />
+        <ComprehensiveSolutionsBanner2025 />
+        <NewServicesShowcase2025 />
+        <InteractiveContentDiscoveryWidget />
+
+        {/* Advanced AI Components */}
+        <AdvancedContentRecommendationEngine />
+        <RealTimePerformanceDashboard />
+        <IntelligentSearchEngine />
+        <AdvancedAIAssistant />
+        <BusinessIntelligenceDashboard />
+        <AdvancedSecurityMonitor />
+        <AdvancedAnalyticsEngine />
+        <AutomationWorkflowEngine />
+        <EnterpriseDataManagement />
+        <APIManagementSystem />
 
         {/* Structured Data */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
