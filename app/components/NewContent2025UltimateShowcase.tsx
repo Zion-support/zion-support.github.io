@@ -1,14 +1,19 @@
 'use client';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 =======
 import React, { useState } from 'react';
 >>>>>>> 786cfaaf0d2bc00b11a733dfcf6fcdeaa815440e
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-eef3
 import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 const NewContent2025UltimateShowcase = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -474,6 +479,9 @@ const NewContent2025UltimateShowcase = () => {
     </section>
 >>>>>>> cursor/create-and-deploy-new-content-040d
 >>>>>>> 786cfaaf0d2bc00b11a733dfcf6fcdeaa815440e
+=======
+  return (
+>>>>>>> cursor/create-and-deploy-new-content-eef3
   );
 };
 
