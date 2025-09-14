@@ -140,6 +140,10 @@ import QuantumComputingShowcase2027 from './components/QuantumComputingShowcase2
 import BreakthroughTechnologies2025PromotionBanner from '../components/BreakthroughTechnologies2025PromotionBanner';
 import BreakthroughTechnologies2025Showcase from '../components/BreakthroughTechnologies2025Showcase';
 
+// Import new Ultimate Content Revolution components
+import AI2025UltimateContentRevolutionBanner from './components/AI2025UltimateContentRevolutionBanner';
+import UltimateContentRevolutionShowcase from './components/UltimateContentRevolutionShowcase';
+
 // Import new Ultimate Autonomous AI Revolution components
 import UltimateAutonomousAIRevolutionBanner from '../components/UltimateAutonomousAIRevolutionBanner';
 import UltimateAutonomousAIContentShowcase from '../components/UltimateAutonomousAIContentShowcase';
@@ -247,8 +251,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE CONTENT REVOLUTION BANNER - NEWEST ULTIMATE FEATURED */}
+        <AI2025UltimateContentRevolutionBanner />
+        
         {/* ULTIMATE AUTONOMOUS AI REVOLUTION BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
         <UltimateAutonomousAIRevolutionBanner />
+        
+        {/* AI 2025 ULTIMATE ENTERPRISE TRANSFORMATION BANNER - NEWEST ULTIMATE FEATURED */}
+        <AI2025UltimateEnterpriseTransformationBanner />
+        
+        {/* ULTIMATE ENTERPRISE TRANSFORMATION SHOWCASE - NEWEST FEATURED */}
+        <UltimateEnterpriseTransformationShowcase />
         
         {/* AI 2026 QUANTUM-NEURAL FUSION REVOLUTION BANNER - NEWEST BREAKTHROUGH */}
         <AI2026QuantumNeuralFusionRevolutionBanner />
@@ -475,6 +488,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* ULTIMATE CONTENT REVOLUTION SHOWCASE - NEWEST FEATURED */}
+        <UltimateContentRevolutionShowcase />
 
         {/* Services Section */}
         <section className="py-16">
