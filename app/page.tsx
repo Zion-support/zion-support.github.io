@@ -101,17 +101,17 @@ export default function HomePage() {
         {/* AI 2026 Autonomous Systems Banner */}
         <AI2026AutonomousSystemsBanner />
         
-        {/* Revolutionary Content 2025 Banner - NEW CONTENT */}
+        {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
-        
-        {/* New Content 2025 Showcase Banner - FEATURED */}
-        <NewContent2025ShowcaseBanner />
         
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
         
-        {/* Revolutionary AI Content Banner */}
-        <RevolutionaryAIContentBanner />
+        {/* New Content 2025 Showcase Banner */}
+        <NewContent2025PromotionBanner />
+        
+        {/* Revolutionary Content 2025 Banner */}
+        <RevolutionaryContent2025Banner />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -212,10 +212,11 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <NewContentShowcase2025 />
+        <UltimateContentShowcase2025 />
         <RevolutionaryContent2026Banner />
         <UltimateContentShowcase2026 />
         <QuantumAIContentShowcase2026 />
-        <UltimateContentShowcase2025 />
         <NewContent2025PromotionBanner />
         <LatestContentShowcase2025 />
         <EnhancedContentPromotionBanner2026 />
