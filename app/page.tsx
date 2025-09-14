@@ -44,6 +44,10 @@ import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBann
 import AdvancedNeuralNetworks2025Banner from '../components/AdvancedNeuralNetworks2025Banner';
 import NeuralNetworksContentShowcase2025 from '../components/NeuralNetworksContentShowcase2025';
 
+// Import new 2025 breakthrough promotional components
+import QuantumRevolution2025Banner from '../components/QuantumRevolution2025Banner';
+import GenerativeAI2025Banner from '../components/GenerativeAI2025Banner';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -61,7 +65,6 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
         
@@ -83,13 +86,10 @@ export default function HomePage() {
         {/* New Content 2026 Ultimate Showcase - NEW FEATURED */}
         <NewContent2026UltimateShowcase />
         
-        {/* New Content 2025 Ultimate Banner */}
-=======
         {/* Advanced Neural Networks 2025 Banner - NEW */}
         <AdvancedNeuralNetworks2025Banner />
         
         {/* New Content 2025 Ultimate Banner - NEW */}
->>>>>>> cursor/create-and-deploy-new-content-8ae5
         <NewContent2025UltimateBanner />
         
         {/* AI 2026 Ultimate Showcase Banner */}
@@ -214,15 +214,19 @@ export default function HomePage() {
         {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
         
+        {/* New 2025 Breakthrough Content Promotions */}
+        <QuantumRevolution2025Banner />
+        <GenerativeAI2025Banner />
+        <QuantumAI2025BreakthroughPromotionBanner />
+        <AutonomousBusinessOperationsPromotionBanner />
+        <AI1000ROISuccessStoryBanner />
+        
         {/* Ultimate Content Showcase 2025 */}
         <UltimateContentShowcase2025 />
         
         {/* Content Promotion Banners */}
-<<<<<<< HEAD
         <NewContentShowcase2025 />
-=======
         <NeuralNetworksContentShowcase2025 />
->>>>>>> cursor/create-and-deploy-new-content-8ae5
         <UltimateContentShowcase2025 />
         <RevolutionaryContent2026Banner />
         <UltimateContentShowcase2026 />
