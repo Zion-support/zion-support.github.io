@@ -188,7 +188,10 @@ import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import RevolutionaryTechTrends2025 from '../components/RevolutionaryTechTrends2025';
 import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
 import InteractiveContentPromotionBanner from '../components/InteractiveContentPromotionBanner';
->>>>>>> 0b0d9635540987b86bfe293a34b043aefc21b256
+
+// Import new Quantum-Neural Fusion promotional components
+import QuantumNeuralFusionRevolutionBanner from '../components/QuantumNeuralFusionRevolutionBanner';
+import QuantumNeuralFusionShowcase from '../components/QuantumNeuralFusionShowcase';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -207,6 +210,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* QUANTUM-NEURAL FUSION REVOLUTION BANNER - NEWEST FEATURED */}
+        <QuantumNeuralFusionRevolutionBanner />
+        
         {/* AI BUSINESS INTELLIGENCE 2025 BANNER - NEWEST FEATURED */}
         <AIBusinessIntelligence2025Banner />
         
@@ -525,6 +531,9 @@ export default function HomePage() {
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
         <InteractiveContentDiscoveryWidget />
+        
+        {/* QUANTUM-NEURAL FUSION SHOWCASE - NEWEST FEATURED */}
+        <QuantumNeuralFusionShowcase />
 
         {/* AI Business Intelligence Showcase 2025 - NEW FEATURED */}
         <AIBusinessIntelligenceShowcase2025 />
