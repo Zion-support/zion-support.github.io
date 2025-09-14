@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -108,7 +108,7 @@ const stats = [
 
 export default function Services() {
   return (
-    <>
+    <UltraAdvancedFuturisticBackground variant="quantum-holographic-advanced">
       <Head>
         <title>Our Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive technology services including micro SaaS, IT infrastructure, AI solutions, and cybersecurity." />

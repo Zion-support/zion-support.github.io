@@ -1,4 +1,48 @@
-export const cuttingEdgeAIServices2025 = [
+import { ServiceVariant } from '../types/service-variants';
+
+export interface CuttingEdgeAIService {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+}
+
+export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
+  // AI-Powered Quantum Financial Trading
   {
     id: 'ai-consciousness-evolution-pro',
     name: 'AI Consciousness Evolution Pro',
@@ -52,6 +96,8 @@ export const cuttingEdgeAIServices2025 = [
     integrations: ['Research platforms', 'Psychology databases', 'AI development tools', 'Neuroscience equipment', 'Academic databases'],
     compliance: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001', 'Research ethics standards']
   },
+
+  // AI-Powered Healthcare Diagnostics
   {
     id: 'quantum-ai-fusion-platform',
     name: 'Quantum AI Fusion Platform',
@@ -105,6 +151,8 @@ export const cuttingEdgeAIServices2025 = [
     integrations: ['Quantum computing platforms', 'AI frameworks', 'Cloud services', 'Research tools', 'Enterprise systems'],
     compliance: ['SOC2', 'ISO 27001', 'FedRAMP', 'GDPR', 'CCPA']
   },
+
+  // AI-Powered Autonomous Manufacturing
   {
     id: 'ai-autonomous-ecosystem',
     name: 'AI Autonomous Ecosystem',
@@ -158,6 +206,8 @@ export const cuttingEdgeAIServices2025 = [
     integrations: ['Enterprise systems', 'Cloud platforms', 'IoT devices', 'AI frameworks', 'Monitoring tools'],
     compliance: ['SOC2', 'ISO 27001', 'FedRAMP', 'GDPR', 'CCPA']
   },
+
+  // AI-Powered Cybersecurity Threat Intelligence
   {
     id: 'ai-ethics-governance-platform',
     name: 'AI Ethics & Governance Platform',
@@ -211,6 +261,8 @@ export const cuttingEdgeAIServices2025 = [
     integrations: ['AI platforms', 'Compliance tools', 'Monitoring systems', 'Reporting tools', 'Training platforms'],
     compliance: ['SOC2', 'ISO 27001', 'GDPR', 'CCPA', 'AI ethics standards']
   },
+
+  // AI-Powered Content Creation Studio
   {
     id: 'ai-creativity-studio-pro',
     name: 'AI Creativity Studio Pro',

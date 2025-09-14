@@ -105,6 +105,8 @@ export const innovativeITInfrastructureServices2025 = [
     integrations: ['SIEM systems', 'Firewall platforms', 'Identity providers', 'Cloud security', 'Network monitoring'],
     compliance: ['SOC2', 'ISO 27001', 'NIST', 'FedRAMP', 'HIPAA', 'PCI DSS']
   },
+
+  // Edge Computing Orchestration Platform
   {
     id: 'autonomous-devops-intelligence-platform',
     name: 'Autonomous DevOps Intelligence Platform',
@@ -158,6 +160,8 @@ export const innovativeITInfrastructureServices2025 = [
     integrations: ['Git platforms', 'Cloud providers', 'Monitoring tools', 'Security platforms', 'Communication tools'],
     compliance: ['SOC2', 'ISO 27001', 'GDPR', 'Industry-specific regulations']
   },
+
+  // Blockchain Infrastructure Platform
   {
     id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
@@ -211,6 +215,8 @@ export const innovativeITInfrastructureServices2025 = [
     integrations: ['Major cloud providers', 'Quantum computers', 'AI platforms', 'Data analytics tools', 'Security platforms'],
     compliance: ['SOC2', 'ISO 27001', 'FedRAMP', 'GDPR', 'Industry-specific regulations']
   },
+
+  // AI-Powered DevOps Platform
   {
     id: 'ai-powered-data-center-automation',
     name: 'AI-Powered Data Center Automation',

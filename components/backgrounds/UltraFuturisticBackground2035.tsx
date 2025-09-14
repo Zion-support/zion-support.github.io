@@ -2,7 +2,11 @@
 import React{ useEffectuseRef } from 'react';
 import { motion } from 'framer-motion';
 
-export default function UltraFuturisticBackground2035() {
+interface UltraFuturisticBackground2035Props {
+  children: React.ReactNode;
+}
+
+export default function UltraFuturisticBackground2035({ children }: UltraFuturisticBackground2035Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -29,14 +33,21 @@ export default function UltraFuturisticBackground2035() {
       size: number;
       opacity: number;
       color: string;
+      type: 'quantum' | 'hologram' | 'neon' | 'energy';
+      life: number;
+      maxLife: number;
     }> = [];
 
-    // Initialize particles
+    // Initialize particles with enhanced types
     const initParticles = () => {
       particles = [];
       const isSmallScreen = window.innerWidth < 768;
-      const particleCount = prefersReducedMotion ? 12 : (isSmallScreen ? 40 : 100);
+      const particleCount = prefersReducedMotion ? 15 : (isSmallScreen ? 60 : 150);
+      
       for (let i = 0; i < particleCount; i++) {
+        const type = ['quantum', 'hologram', 'neon', 'energy'][Math.floor(Math.random() * 4)] as any;
+        const maxLife = Math.random() * 200 + 100;
+        
         particles.push({
           x: Math.random() * canvas.width / (window.devicePixelRatio || 1),
           y: Math.random() * canvas.height / (window.devicePixelRatio || 1),
@@ -49,7 +60,23 @@ export default function UltraFuturisticBackground2035() {
       }
     };
 
-    // Update and draw particles
+    // Get color based on particle type
+    const getColorForType = (type: string) => {
+      switch (type) {
+        case 'quantum':
+          return ['#8b5cf6', '#06b6d4', '#ec4899'][Math.floor(Math.random() * 3)];
+        case 'hologram':
+          return ['#10b981', '#f59e0b', '#ef4444'][Math.floor(Math.random() * 3)];
+        case 'neon':
+          return ['#f97316', '#eab308', '#a855f7'][Math.floor(Math.random() * 3)];
+        case 'energy':
+          return ['#dc2626', '#7c3aed', '#059669'][Math.floor(Math.random() * 3)];
+        default:
+          return '#8b5cf6';
+      }
+    };
+
+    // Update and draw particles with enhanced effects
     const updateParticles = () => {
       ctx.clearRect(0canvas.widthcanvas.height);
 
@@ -70,8 +97,11 @@ export default function UltraFuturisticBackground2035() {
         ctx.globalAlpha = particle.opacity;
         ctx.fill();
 
-        // Draw connections
-        const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140);
+        // Draw particle based on type
+        drawParticle(ctx, particle, currentOpacity);
+
+        // Draw connections with enhanced effects
+        const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 120 : 180);
         if (maxDistance > 0) {
           particles.forEach((otherParticleotherIndex) => {
             if (index !== otherIndex) {
@@ -98,9 +128,139 @@ export default function UltraFuturisticBackground2035() {
       }
     };
 
-    initParticles();
-    updateParticles();
+    // Enhanced particle drawing with different types
+    const drawParticle = (ctx: CanvasRenderingContext2D, particle: any, opacity: number) => {
+      ctx.save();
+      ctx.globalAlpha = opacity;
 
+      switch (particle.type) {
+        case 'quantum':
+          drawQuantumParticle(ctx, particle);
+          break;
+        case 'hologram':
+          drawHologramParticle(ctx, particle);
+          break;
+        case 'neon':
+          drawNeonParticle(ctx, particle);
+          break;
+        case 'energy':
+          drawEnergyParticle(ctx, particle);
+          break;
+      }
+
+      ctx.restore();
+    };
+
+    // Quantum particle with wave-like effects
+    const drawQuantumParticle = (ctx: CanvasRenderingContext2D, particle: any) => {
+      const time = Date.now() * 0.001;
+      const wave = Math.sin(time + particle.x * 0.01) * 0.5;
+      
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y + wave, particle.size, 0, Math.PI * 2);
+      ctx.fillStyle = particle.color;
+      ctx.fill();
+
+      // Add quantum glow effect
+      ctx.shadowColor = particle.color;
+      ctx.shadowBlur = 10;
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y + wave, particle.size * 0.5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    };
+
+    // Hologram particle with transparency and distortion
+    const drawHologramParticle = (ctx: CanvasRenderingContext2D, particle: any) => {
+      const time = Date.now() * 0.002;
+      const distortion = Math.sin(time + particle.y * 0.02) * 2;
+      
+      ctx.globalAlpha *= 0.7;
+      ctx.beginPath();
+      ctx.arc(particle.x + distortion, particle.y, particle.size, 0, Math.PI * 2);
+      ctx.fillStyle = particle.color;
+      ctx.fill();
+
+      // Add holographic effect
+      ctx.globalAlpha *= 0.5;
+      ctx.beginPath();
+      ctx.arc(particle.x + distortion, particle.y, particle.size * 1.5, 0, Math.PI * 2);
+      ctx.strokeStyle = particle.color;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    };
+
+    // Neon particle with bright glow
+    const drawNeonParticle = (ctx: CanvasRenderingContext2D, particle: any) => {
+      // Bright core
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+      ctx.fillStyle = '#ffffff';
+      ctx.fill();
+
+      // Neon glow
+      ctx.shadowColor = particle.color;
+      ctx.shadowBlur = 15;
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y, particle.size * 0.8, 0, Math.PI * 2);
+      ctx.fillStyle = particle.color;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    };
+
+    // Energy particle with pulsing effect
+    const drawEnergyParticle = (ctx: CanvasRenderingContext2D, particle: any) => {
+      const time = Date.now() * 0.003;
+      const pulse = Math.sin(time) * 0.3 + 0.7;
+      const size = particle.size * pulse;
+      
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
+      ctx.fillStyle = particle.color;
+      ctx.fill();
+
+      // Energy field effect
+      ctx.globalAlpha *= 0.3;
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y, size * 2, 0, Math.PI * 2);
+      ctx.fillStyle = particle.color;
+      ctx.fill();
+    };
+
+    // Enhanced connection drawing with different effects
+    const drawConnections = (ctx: CanvasRenderingContext2D, particles: any[], currentIndex: number, maxDistance: number, opacity: number) => {
+      particles.forEach((otherParticle, otherIndex) => {
+        if (currentIndex !== otherIndex) {
+          const dx = particles[currentIndex].x - otherParticle.x;
+          const dy = particles[currentIndex].y - otherParticle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < maxDistance) {
+            const connectionOpacity = (maxDistance - distance) / maxDistance * 0.15 * opacity;
+            
+            // Different connection styles based on particle types
+            if (particles[currentIndex].type === otherParticle.type) {
+              // Same type - stronger connection
+              ctx.globalAlpha = connectionOpacity * 1.5;
+              ctx.strokeStyle = particles[currentIndex].color;
+              ctx.lineWidth = 2;
+            } else {
+              // Different types - weaker connection
+              ctx.globalAlpha = connectionOpacity * 0.7;
+              ctx.strokeStyle = '#ffffff';
+              ctx.lineWidth = 1;
+            }
+
+            ctx.beginPath();
+            ctx.moveTo(particles[currentIndex].x, particles[currentIndex].y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.stroke();
+          }
+        }
+      });
+    };
+
+    // Handle window resize
     const handleResize = () => {
       canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
       canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
@@ -134,7 +294,7 @@ export default function UltraFuturisticBackground2035() {
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         {/* Floating Geometric Shapes */}
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-purple-500/15 rounded-full"
+          className="absolute inset-0 opacity-30"
           animate={{
             scale: [1.151],
             rotate: [0180360],
@@ -143,7 +303,7 @@ export default function UltraFuturisticBackground2035() {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: 'easeInOut'
           }}
         />
         
@@ -214,17 +374,31 @@ export default function UltraFuturisticBackground2035() {
           />
         ))}
 
-        {/* Energy Waves */}
+        {/* Floating neon orbs */}
         <motion.div
-          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"
+          className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20"
           animate={{
             scaleX: [010],
             opacity: [010]
           }}
           transition={{
-            duration: 4,
+            duration: 6,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: 'easeInOut'
+          }}
+        />
+        
+        <motion.div
+          className="absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.5, 0.2],
+            rotate: [360, 180, 0]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: 'easeInOut'
           }}
         />
 
@@ -245,22 +419,16 @@ export default function UltraFuturisticBackground2035() {
         {/* Quantum Dots */}
         {[...Array(15)].map((_i) => (
           <motion.div
-            key={`quantum-${i}`}
-            className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`
-            }}
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
             animate={{
               scale: [010],
               opacity: [0.80],
               rotate: [0360]
             }}
             transition={{
-              duration: 5 + Math.random() * 3,
+              duration: 4,
               repeat: Infinity,
-              delay: Math.random() * 5,
-              ease: "easeInOut"
+              ease: 'easeInOut'
             }}
           />
         ))}
@@ -299,16 +467,16 @@ export default function UltraFuturisticBackground2035() {
         {/* Holographic Effects */}
         <div className="absolute inset-0">
           <motion.div
-            className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full"
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent"
             animate={{
               scale: [1.1],
               rotate: [090180270360],
               opacity: [0.10.30.1]
             }}
             transition={{
-              duration: 20,
+              duration: 6,
               repeat: Infinity,
-              ease: "linear"
+              ease: 'easeInOut'
             }}
           />
           
@@ -351,6 +519,9 @@ export default function UltraFuturisticBackground2035() {
           ))}
         </div>
       </div>
+      
+      {/* Render children */}
+      {children}
     </>
   );
 }

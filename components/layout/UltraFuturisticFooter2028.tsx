@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   PhoneMailMapPinGlobeRocketBrainAtom
   ShieldUsersBriefcaseBookOpenMessageCircle
@@ -19,7 +20,7 @@ const contactInfo = {
 
 const serviceCategories = [
   {
-    title: '🚀 2028 Futuristic Innovations',
+    title: '🚀 2028 Cutting-Edge Innovations',
     services: [
       { name: 'AI Climate Prediction Platform'href: '/ai-climate-prediction-platform' },
       { name: 'Quantum Cybersecurity Firewall'href: '/quantum-cybersecurity-firewall' },
@@ -28,7 +29,7 @@ const serviceCategories = [
     ]
   },
   {
-    title: '🏙️ Smart City & Infrastructure',
+    title: '🎯 Practical Micro SAAS 2028',
     services: [
       { name: 'Smart City Infrastructure Management'href: '/smart-city-infrastructure-management' },
       { name: 'IoT Energy Management System'href: '/iot-energy-management-system' },
@@ -37,7 +38,7 @@ const serviceCategories = [
     ]
   },
   {
-    title: '⚛️ Quantum & Advanced Tech',
+    title: '⚛️ Quantum & Space Tech 2028',
     services: [
       { name: 'Quantum Financial Trading Platform'href: '/quantum-financial-trading-platform' },
       { name: 'Quantum Machine Learning Platform'href: '/quantum-machine-learning-platform' },
@@ -109,24 +110,49 @@ export default function UltraFuturisticFooter2028() {
               Transforming businesses through intelligent automation and next-generation infrastructure.
             </p>
 
-            {/* Contact Information */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-purple-200">
-                <Phone className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">{contactInfo.mobile}</span>
+      <div className="relative z-10">
+        {/* Main Footer Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          {/* Top Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
+            {/* Company Info */}
+            <div className="lg:col-span-1">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="relative">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center">
+                    <Rocket className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-xl opacity-50"></div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </h3>
+                  <p className="text-gray-400 text-sm">2028 Future Technology</p>
+                </div>
               </div>
-              <div className="flex items-center space-x-3 text-purple-200">
-                <Mail className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">{contactInfo.email}</span>
-              </div>
-              <div className="flex items-center space-x-3 text-purple-200">
-                <MapPin className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">{contactInfo.address}</span>
-              </div>
-              <div className="flex items-center space-x-3 text-purple-200">
-                <Globe className="w-4 h-4 text-purple-400" />
-                <a href={contactInfo.website} className="text-sm hover:text-white transition-colors">
-                  {contactInfo.website}
+              
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Leading the future of technology with cutting-edge AI, quantum computing, and innovative solutions that transform businesses and industries worldwide.
+              </p>
+
+              {/* Contact Info */}
+              <div className="space-y-3">
+                <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-3 text-gray-300 hover:text-cyan-300 transition-colors">
+                  <Phone className="w-4 h-4 text-purple-400" />
+                  <span>{contactInfo.mobile}</span>
+                </a>
+                <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-3 text-gray-300 hover:text-cyan-300 transition-colors">
+                  <Mail className="w-4 h-4 text-purple-400" />
+                  <span>{contactInfo.email}</span>
+                </a>
+                <div className="flex items-start space-x-3 text-gray-300">
+                  <MapPin className="w-4 h-4 text-purple-400 mt-1" />
+                  <span className="leading-relaxed">{contactInfo.address}</span>
+                </div>
+                <a href={contactInfo.website} className="flex items-center space-x-3 text-gray-300 hover:text-cyan-300 transition-colors">
+                  <Globe className="w-4 h-4 text-purple-400" />
+                  <span>{contactInfo.website.replace('https://', '')}</span>
                 </a>
               </div>
             </div>
@@ -141,95 +167,105 @@ export default function UltraFuturisticFooter2028() {
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg flex items-center justify-center text-purple-300 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40"
                 >
-                  <social.icon className="w-5 h-5" />
-                </a>
+                  <Link
+                    href={service.href}
+                    className={`block w-full h-20 bg-gradient-to-r ${service.color} rounded-xl flex flex-col items-center justify-center hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-200`}
+                  >
+                    <service.icon className="w-6 h-6 text-white mb-1" />
+                    <span className="text-white text-xs font-medium text-center">{service.name}</span>
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>
 
-          {/* Service Categories */}
-          <div className="lg:col-span-2">
-            <h3 className="text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
-              🚀 Our Services
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {serviceCategories.map((category) => (
-                <div key={category.title} className="space-y-3">
-                  <h4 className="font-medium text-purple-300">{category.title}</h4>
-                  <ul className="space-y-2">
-                    {category.services.map((service) => (
-                      <li key={service.name}>
-                        <Link
-                          href={service.href}
-                          className="text-sm text-purple-200 hover:text-white transition-colors hover:underline"
-                        >
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div className="lg:col-span-1">
-            <h3 className="text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
-              Quick Links
-            </h3>
-            
-            {/* Company Links */}
-            <div className="mb-6">
-              <h4 className="font-medium text-purple-300 mb-3">Company</h4>
+          {/* Company & Legal Links */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {/* Company */}
+            <div>
+              <h4 className="text-lg font-medium text-white mb-4">Company</h4>
               <ul className="space-y-2">
-                {companyLinks.map((link) => (
-                  <li key={link.name}>
+                {companyLinks.map((link, index) => (
+                  <li key={index}>
                     <Link
                       href={link.href}
-                      className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2"
+                      className="text-gray-400 hover:text-cyan-300 transition-colors duration-200"
                     >
-                      <link.icon className="w-4 h-4" />
-                      <span>{link.name}</span>
+                      {link.name}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Resource Links */}
-            <div className="mb-6">
-              <h4 className="font-medium text-purple-300 mb-3">Resources</h4>
+            {/* Legal */}
+            <div>
+              <h4 className="text-lg font-medium text-white mb-4">Legal</h4>
               <ul className="space-y-2">
-                {resourceLinks.map((link) => (
-                  <li key={link.name}>
+                {legalLinks.map((link, index) => (
+                  <li key={index}>
                     <Link
                       href={link.href}
-                      className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2"
+                      className="text-gray-400 hover:text-cyan-300 transition-colors duration-200"
                     >
-                      <link.icon className="w-4 h-4" />
-                      <span>{link.name}</span>
+                      {link.name}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Newsletter Signup */}
-            <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-4">
-              <h4 className="font-medium text-white mb-3">Stay Updated</h4>
-              <p className="text-sm text-purple-200 mb-3">
-                Get the latest insights on future technology and AI innovations.
+            {/* Social Media */}
+            <div>
+              <h4 className="text-lg font-medium text-white mb-4">Connect With Us</h4>
+              <div className="grid grid-cols-3 gap-3">
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-colors duration-200 hover:bg-gray-700`}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+
+            {/* Newsletter */}
+            <div>
+              <h4 className="text-lg font-medium text-white mb-4">Stay Updated</h4>
+              <p className="text-gray-400 text-sm mb-4">
+                Get the latest updates on our revolutionary services and technology breakthroughs.
               </p>
               <div className="flex space-x-2">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-3 py-2 bg-purple-900/30 border border-purple-500/30 rounded text-white placeholder-purple-300 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors"
                 />
                 <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded text-sm hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
                   Subscribe
                 </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="border-t border-gray-800 pt-8">
+            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+              <div className="flex items-center space-x-2 text-gray-400">
+                <Star className="w-4 h-4 text-yellow-400" />
+                <span>Leading the future of technology since 2025</span>
+              </div>
+              
+              <div className="flex items-center space-x-6 text-sm text-gray-400">
+                <span>© 2028 Zion Tech Group. All rights reserved.</span>
+                <span>•</span>
+                <span>Made with ❤️ for the future</span>
               </div>
             </div>
           </div>
