@@ -7,6 +7,10 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import AIRevolution2025Banner from '../components/AIRevolution2025Banner';
 import AIRevolutionContentShowcase from '../components/AIRevolutionContentShowcase';
 
+// Import new AI Business Intelligence Revolution components
+import AIBusinessIntelligenceRevolutionBanner from '../components/AIBusinessIntelligenceRevolutionBanner';
+import AIBusinessIntelligenceShowcase from '../components/AIBusinessIntelligenceShowcase';
+
 // Import new Ultimate Content 2025 Revolutionary components
 import UltimateContent2025RevolutionaryBanner from '../components/UltimateContent2025RevolutionaryBanner';
 import UltimateContent2025Showcase from '../components/UltimateContent2025Showcase';
@@ -234,6 +238,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI BUSINESS INTELLIGENCE REVOLUTION BANNER - NEWEST ULTIMATE FEATURED */}
+        <AIBusinessIntelligenceRevolutionBanner />
+        
+        {/* AI BUSINESS INTELLIGENCE SHOWCASE - NEWEST ULTIMATE FEATURED */}
+        <AIBusinessIntelligenceShowcase />
+        
         {/* AI Revolution 2025-2026 Banner - NEWEST ULTIMATE FEATURED */}
         <AIRevolution2025Banner />
         
