@@ -145,12 +145,15 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
+<<<<<<< HEAD
 
 // Import new 2025 ultimate content components
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 
 // Import additional promotional components
+=======
+>>>>>>> origin/feature/new-ai-content-2025
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
@@ -422,6 +425,21 @@ export default function HomePage() {
         
         {/* Ultimate Content Showcase 2025 */}
         <UltimateContentShowcase2025 />
+<<<<<<< HEAD
+=======
+        
+        {/* Ultimate Content 2025 Banner - NEW */}
+        <NewContent2025UltimateBanner />
+        
+        {/* Revolutionary Content 2026 Banner - NEW FEATURED */}
+        <RevolutionaryContent2026Banner />
+        
+        {/* New Content 2026 Ultimate Showcase - NEW FEATURED */}
+        <NewContent2025UltimateShowcase />
+        
+        {/* New Content 2025 Ultimate Banner */}
+        <NewContent2025UltimateBanner />
+>>>>>>> origin/feature/new-ai-content-2025
         
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
