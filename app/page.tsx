@@ -184,7 +184,6 @@ import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent
 // Import new AI 2025-2026 Ultimate Business Transformation components
 import AI2025_2026UltimateBusinessTransformationRevolutionBanner from '../components/AI2025_2026UltimateBusinessTransformationRevolutionBanner';
 import UltimateBusinessTransformationShowcase2025 from '../components/UltimateBusinessTransformationShowcase2025';
->>>>>>> 73f123ee2cebdb7a2be0d82c48940dcfc20ffd5c
 
 // Import new Ultimate Content 2026 components
 import AI2026BreakthroughRevolutionBanner from '../components/AI2026BreakthroughRevolutionBanner';
@@ -195,6 +194,17 @@ import UltimateContent2026Showcase from '../components/UltimateContent2026Showca
 // Import new Ultimate Content 2025 Revolutionary components
 import UltimateContent2025RevolutionaryBanner from '../components/UltimateContent2025RevolutionaryBanner';
 import UltimateContent2025Showcase from '../components/UltimateContent2025Showcase';
+
+// Import new content components
+import LatestAITrends2025 from '../components/LatestAITrends2025';
+import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';
+import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
+import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
+import ROICalculatorWidget from '../components/ROICalculatorWidget';
+
+// Import new Advanced Neural Architectures 2026 components
+import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
+import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -213,8 +223,26 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* ULTIMATE CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
+        <UltimateContentPromotionBanner2025 />
+        
+        {/* LATEST AI TRENDS 2025 - NEW CONTENT */}
+        <LatestAITrends2025 />
+        
+        {/* SUCCESS STORIES SHOWCASE - NEW CONTENT */}
+        <SuccessStoriesShowcase />
+        
+        {/* INTERACTIVE DEMO WIDGET - NEW CONTENT */}
+        <InteractiveDemoWidget />
+        
+        {/* ROI CALCULATOR WIDGET - NEW CONTENT */}
+        <ROICalculatorWidget />
+        
         {/* Ultimate Enterprise Transformation 2025 Banner - NEW ULTIMATE FEATURED */}
         <UltimateEnterpriseTransformation2025Banner />
+        
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER - NEWEST FEATURED */}
+        <AI2025RevolutionaryBreakthroughBanner />
         
         {/* Ultimate Business Intelligence 2025 Banner - NEW ULTIMATE FEATURED */}
         <UltimateBusinessIntelligence2025Banner />
