@@ -85,6 +85,7 @@ import RevolutionaryContent2025_2026Showcase from '../components/RevolutionaryCo
 // Import new breakthrough promotional components
 import QuantumNeuralSuperintelligenceBanner from '../components/QuantumNeuralSuperintelligenceBanner';
 import UltimateBreakthrough2025Banner from '../components/UltimateBreakthrough2025Banner';
+import RevolutionaryContent2026Showcase from '../components/RevolutionaryContent2026Showcase';
 
 // Import new 2025 advanced analytics promotional components
 import NewContent2025AdvancedAnalyticsBanner from '../components/NewContent2025AdvancedAnalyticsBanner';
@@ -122,6 +123,9 @@ export default function HomePage() {
         
         {/* Revolutionary Content 2026 Showcase - NEW FEATURED */}
         <RevolutionaryContent2026Showcase />
+        
+        {/* Ultimate Breakthrough 2025 Banner - NEW FEATURED */}
+        <UltimateBreakthrough2025Banner />
         
         {/* AI 2025-2026 Ultimate Breakthrough Banner - FEATURED */}
         <AI2025_2026UltimateBreakthroughBanner />
