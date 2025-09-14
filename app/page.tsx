@@ -4,6 +4,12 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
+// Import new AI 2025 Ultimate Content Revolution components - NEWEST FEATURED
+import AI2025UltimateContentRevolution50000ROIBanner from '../components/AI2025UltimateContentRevolution50000ROIBanner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import InteractiveROICalculatorAdvanced from '../components/InteractiveROICalculatorAdvanced';
+import RevolutionaryNewsletterSignup2025 from '../components/RevolutionaryNewsletterSignup2025';
+
 // Import neural superintelligence components - TOP PRIORITY
 import NeuralSuperintelligence2025Banner from '../components/NeuralSuperintelligence2025Banner';
 import UltimateNeuralSuperintelligenceShowcase from '../components/UltimateNeuralSuperintelligenceShowcase';
@@ -344,6 +350,18 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE CONTENT REVOLUTION 50,000% ROI BANNER - NEWEST FEATURED */}
+        <AI2025UltimateContentRevolution50000ROIBanner />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
+        <UltimateContentShowcase2025 />
+        
+        {/* INTERACTIVE ROI CALCULATOR ADVANCED - NEWEST FEATURED */}
+        <InteractiveROICalculatorAdvanced />
+        
+        {/* REVOLUTIONARY NEWSLETTER SIGNUP 2025 - NEWEST FEATURED */}
+        <RevolutionaryNewsletterSignup2025 />
+        
         {/* AI 2025 SINGULARITY BREAKTHROUGH 100,000% ROI BANNER - NEWEST BREAKTHROUGH */}
         <AI2025SingularityBreakthroughPromotionBanner />
         
