@@ -193,6 +193,16 @@ import RevolutionaryAIContent2026Banner from '../components/RevolutionaryAIConte
 import UltimateAutonomousEnterpriseBanner from '../components/UltimateAutonomousEnterpriseBanner';
 import UltimateAutonomousEnterpriseShowcase from '../components/UltimateAutonomousEnterpriseShowcase';
 
+// Import new autonomous enterprise components
+import UltimateAutonomousEnterpriseBanner2025 from '../components/UltimateAutonomousEnterpriseBanner2025';
+import RevolutionaryContent2026UltimateShowcase from '../components/RevolutionaryContent2026UltimateShowcase';
+
+// Import new 2026 breakthrough content banners
+import AI2026UltimateBreakthroughContentBanner from '../components/AI2026UltimateBreakthroughContentBanner';
+import NewContent2025MultimodalBanner from '../components/NewContent2025MultimodalBanner';
+import AI2025BusinessIntelligenceBanner from '../components/AI2025BusinessIntelligenceBanner';
+import AI2025CybersecurityBanner from '../components/AI2025CybersecurityBanner';
+
 // Import new 2026 promotional components
 import AI2026TrendsPromotionBanner from '../components/AI2026TrendsPromotionBanner';
 import QuantumComputingPromotionBanner from '../components/QuantumComputingPromotionBanner';
@@ -238,8 +248,14 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Autonomous Enterprise Banner 2025 - LATEST FEATURED */}
+        <UltimateAutonomousEnterpriseBanner2025 />
+        
         {/* Ultimate Autonomous Enterprise Banner - NEW ULTIMATE BREAKTHROUGH */}
         <UltimateAutonomousEnterpriseBanner />
+        
+        {/* Revolutionary Content 2026 Ultimate Showcase - NEW FEATURED */}
+        <RevolutionaryContent2026UltimateShowcase />
         
         {/* Ultimate AI Revolution 2025 Banner - NEW ULTIMATE FEATURED */}
         <UltimateAIRevolution2025Banner />
@@ -247,7 +263,7 @@ export default function HomePage() {
         {/* Revolutionary Content 2025 Ultimate Showcase - NEW ULTIMATE FEATURED */}
         <RevolutionaryContent2025UltimateShowcase />
         
-        {/* Ultimate Content 2026 Breakthrough Banner - LATEST FEATURED */}
+        {/* Ultimate Content 2026 Breakthrough Banner - FEATURED */}
         <UltimateContent2026BreakthroughBanner />
         
         {/* Advanced Neural Architectures 2026 Banner - NEW ULTIMATE BREAKTHROUGH */}
@@ -255,6 +271,9 @@ export default function HomePage() {
         
         {/* Advanced Neural Architectures Showcase 2026 - NEW FEATURED */}
         <AdvancedNeuralArchitecturesShowcase2026 />
+        
+        {/* Revolutionary Content 2026 Showcase - FEATURED */}
+        <RevolutionaryContent2026Showcase />
         
         {/* Ultimate Business Transformation 2025-2026 Banner - NEW ULTIMATE BREAKTHROUGH */}
         <UltimateBusinessTransformation2025Banner />
