@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, Brain, Zap, TrendingUp, ArrowRight, Star } from 'lucide-react';
+import { X, Brain, Zap, TrendingUp, ArrowRight, Star, ArrowRight, Brain } from 'lucide-react';
 
 const NeuralInterfaceRevolutionBanner2025 = () => {
   const [isVisible, setIsVisible] = useState(true);
