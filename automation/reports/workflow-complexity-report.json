@@ -3887,20 +3887,20 @@
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/workflow-health-monitor.yml"
     },
     "workflow-manager.yml": {
-      "complexityScore": 40,
-      "complexityLevel": "medium",
+      "complexityScore": 20,
+      "complexityLevel": "low",
       "metrics": {
         "totalLines": 148,
         "jobCount": 1,
         "stepCount": 12,
         "conditionalCount": 4,
         "matrixCount": 0,
-        "dependencyCount": 3,
+        "dependencyCount": 0,
         "environmentCount": 0,
         "secretCount": 0,
-        "actionCount": 6
+        "actionCount": 3
       },
-      "refactoringPriority": "medium",
+      "refactoringPriority": "low",
       "status": "active",
       "path": "/Users/miami2/ ZION_APP_AUG_11_25/zion.app/.github/workflows/workflow-manager.yml"
     },
