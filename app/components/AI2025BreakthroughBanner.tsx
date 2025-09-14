@@ -1,223 +1,210 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Zap, 
-  TrendingUp, 
-  Shield, 
-  Heart, 
-  DollarSign, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Target,
-  X
-} from 'lucide-react';
 
 const AI2025BreakthroughBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentMetric, setCurrentMetric] = useState(0);
-
-  const metrics = [
-    { value: '$500M+', label: 'Average ROI', icon: DollarSign, color: 'text-green-400' },
-    { value: '99.8%', label: 'Success Rate', icon: CheckCircle, color: 'text-blue-400' },
-    { value: '340%', label: 'ROI Increase', icon: TrendingUp, color: 'text-purple-400' },
-    { value: '500+', label: 'Projects', icon: Target, color: 'text-pink-400' }
-  ];
-
-  const contentHighlights = [
-    {
-      title: 'AI Cybersecurity Revolution',
-      description: 'Protecting $50B+ in enterprise assets with 99.7% accuracy',
-      url: '/blog/ai-2025-cybersecurity-revolution',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      title: 'Healthcare AI Transformation',
-      description: '$2.1B health system achieves 99.8% patient safety',
-      url: '/case-studies/healthcare-ai-transformation-2025',
-      icon: Heart,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Enterprise Implementation Guide',
-      description: 'Complete framework for $500M+ ROI in 24 months',
-      url: '/resources/ai-implementation-enterprise-guide-2025',
-      icon: Target,
-      color: 'from-purple-500 to-pink-500'
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMetric((prev) => (prev + 1) % metrics.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  if (!isVisible) return null;
-
   return (
-    <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
+    <section className="py-16 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20"></div>
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-400/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-green-400/10 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 left-1/4 w-28 h-28 bg-pink-400/10 rounded-full animate-pulse"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Close Button */}
-        <div className="flex justify-end mb-4">
-          <button
-            onClick={() => setIsVisible(false)}
-            className="p-2 hover:bg-white/10 rounded-full transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Main Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full px-8 py-3 mb-8 font-bold text-lg animate-pulse">
+            🚀 AI 2025 BREAKTHROUGH ANNOUNCEMENT 🚀
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Revolutionary AI Content That's <span className="text-yellow-400">Transforming</span> Industries
+          </h1>
+          <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
+            Discover the most comprehensive collection of AI insights, breakthrough technologies, and success stories that are reshaping the business landscape in 2025.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left Content */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6"
-            >
-              <Zap className="w-5 h-5 mr-2 text-yellow-400" />
-              <span className="text-sm font-medium">BREAKTHROUGH 2025</span>
-            </motion.div>
-
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
-            >
-              AI 2025: The Ultimate
-              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Business Breakthrough
+        {/* Content Showcase Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {/* Featured Blog Post */}
+          <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/25 transition-all duration-300 hover:scale-105">
+            <div className="flex items-center justify-between mb-6">
+              <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                BREAKTHROUGH
               </span>
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl opacity-90 mb-8 leading-relaxed"
-            >
-              Discover the revolutionary AI strategies that are transforming businesses worldwide. 
-              Learn from real success stories and proven implementation frameworks.
-            </motion.p>
-
-            {/* Rotating Metrics */}
-            <motion.div
-              key={currentMetric}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20"
-            >
-              <div className="flex items-center gap-4">
-                <div className={`p-3 rounded-full bg-gradient-to-r ${metrics[currentMetric].color.replace('text-', 'from-').replace('-400', '-500')} to-${metrics[currentMetric].color.replace('text-', '').replace('-400', '-600')}`}>
-                  <metrics[currentMetric].icon className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-3xl font-bold">{metrics[currentMetric].value}</div>
-                  <div className="text-sm opacity-75">{metrics[currentMetric].label}</div>
-                </div>
+              <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-bold">
+                NEW RELEASE
+              </span>
+            </div>
+            <h3 className="text-2xl font-bold mb-4 leading-tight">
+              The Complete Business Automation Revolution Guide
+            </h3>
+            <p className="text-gray-200 mb-6 leading-relaxed">
+              Learn how organizations are achieving 450% efficiency gains and 67% cost reductions through intelligent automation systems that are revolutionizing business operations.
+            </p>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-green-400">
+                <span className="mr-2">✓</span>
+                <span className="text-sm">450% Average ROI</span>
               </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4"
+              <div className="flex items-center text-blue-400">
+                <span className="mr-2">✓</span>
+                <span className="text-sm">15 Minutes to Transform</span>
+              </div>
+              <div className="flex items-center text-purple-400">
+                <span className="mr-2">✓</span>
+                <span className="text-sm">500+ Success Stories</span>
+              </div>
+            </div>
+            <Link 
+              href="/blog/ai-2025-business-automation-revolution-complete-guide"
+              className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-black py-3 px-6 rounded-xl font-bold text-center hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 block"
             >
-              <Link
-                href="/blog/ai-2025-cybersecurity-revolution"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Explore New Content
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
-                Get Free Consultation
-              </Link>
-            </motion.div>
+              READ THE GUIDE →
+            </Link>
           </div>
 
-          {/* Right Content - Content Highlights */}
-          <div className="space-y-4">
-            {contentHighlights.map((highlight, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <Link href={highlight.url} className="block">
-                  <div className="flex items-start gap-4">
-                    <div className={`p-3 rounded-full bg-gradient-to-r ${highlight.color}`}>
-                      <highlight.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold mb-2 hover:text-blue-400 transition-colors">
-                        {highlight.title}
-                      </h3>
-                      <p className="text-sm opacity-90 mb-3">
-                        {highlight.description}
-                      </p>
-                      <div className="flex items-center gap-2 text-sm text-blue-400">
-                        <span>Read More</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
+          {/* Success Story */}
+          <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/25 transition-all duration-300 hover:scale-105">
+            <div className="flex items-center justify-between mb-6">
+              <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                SUCCESS STORY
+              </span>
+              <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-bold">
+                FEATURED
+              </span>
+            </div>
+            <h3 className="text-2xl font-bold mb-4 leading-tight">
+              From Startup to Unicorn in 18 Months
+            </h3>
+            <p className="text-gray-200 mb-6 leading-relaxed">
+              Discover how a tech startup achieved $4.2 billion valuation through strategic AI implementation and revolutionary business practices that transformed an entire industry.
+            </p>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-green-400">
+                <span className="mr-2">✓</span>
+                <span className="text-sm">$4.2B Valuation</span>
+              </div>
+              <div className="flex items-center text-blue-400">
+                <span className="mr-2">✓</span>
+                <span className="text-sm">59,900% Revenue Growth</span>
+              </div>
+              <div className="flex items-center text-purple-400">
+                <span className="mr-2">✓</span>
+                <span className="text-sm">Complete Blueprint</span>
+              </div>
+            </div>
+            <Link 
+              href="/case-studies/ai-2025-startup-to-unicorn-transformation"
+              className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-black py-3 px-6 rounded-xl font-bold text-center hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 block"
+            >
+              READ THE STORY →
+            </Link>
+          </div>
+
+          {/* Enterprise Case Study */}
+          <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/25 transition-all duration-300 hover:scale-105">
+            <div className="flex items-center justify-between mb-6">
+              <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                CASE STUDY
+              </span>
+              <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-bold">
+                EXCLUSIVE
+              </span>
+            </div>
+            <h3 className="text-2xl font-bold mb-4 leading-tight">
+              Fortune 100: $2.3B Revenue Transformation
+            </h3>
+            <p className="text-gray-200 mb-6 leading-relaxed">
+              The ultimate enterprise transformation success story - how a Fortune 100 company generated $2.3 billion in additional revenue while reducing costs by 78%.
+            </p>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-green-400">
+                <span className="mr-2">✓</span>
+                <span className="text-sm">$2.3B Additional Revenue</span>
+              </div>
+              <div className="flex items-center text-blue-400">
+                <span className="mr-2">✓</span>
+                <span className="text-sm">78% Cost Reduction</span>
+              </div>
+              <div className="flex items-center text-purple-400">
+                <span className="mr-2">✓</span>
+                <span className="text-sm">2,400% ROI</span>
+              </div>
+            </div>
+            <Link 
+              href="/case-studies/ai-2025-enterprise-transformation-ultimate-success-story"
+              className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-black py-3 px-6 rounded-xl font-bold text-center hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 block"
+            >
+              READ CASE STUDY →
+            </Link>
           </div>
         </div>
 
-        {/* Success Stories Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6"
-        >
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-            <div className="text-3xl font-bold text-green-400 mb-2">$50B+</div>
-            <div className="text-sm opacity-75">Assets Protected</div>
-            <div className="text-xs opacity-60 mt-1">Cybersecurity Solutions</div>
+        {/* Impact Statistics */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 border border-white/20 mb-16">
+          <h2 className="text-3xl font-bold text-center mb-10">Revolutionary Impact Across Industries</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold text-yellow-400 mb-2">$2.1T</div>
+              <div className="text-gray-200 font-semibold">Market Value</div>
+              <div className="text-gray-400 text-sm">Automation Revolution</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-green-400 mb-2">500+</div>
+              <div className="text-gray-200 font-semibold">Success Stories</div>
+              <div className="text-gray-400 text-sm">Enterprise Clients</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-blue-400 mb-2">340%</div>
+              <div className="text-gray-200 font-semibold">Average ROI</div>
+              <div className="text-gray-400 text-sm">AI Implementations</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">99.8%</div>
+              <div className="text-gray-200 font-semibold">Success Rate</div>
+              <div className="text-gray-400 text-sm">Our Solutions</div>
+            </div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">99.8%</div>
-            <div className="text-sm opacity-75">Patient Safety</div>
-            <div className="text-xs opacity-60 mt-1">Healthcare AI</div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-yellow-500 to-red-500 text-black rounded-2xl p-8 mb-8">
+            <h2 className="text-3xl font-bold mb-4">🔥 Get Instant Access to Revolutionary AI Content 🔥</h2>
+            <p className="text-xl mb-6">
+              Join 50,000+ executives who have already transformed their businesses with our breakthrough AI insights and strategies.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link 
+                href="/contact"
+                className="bg-black text-yellow-500 px-12 py-4 rounded-xl font-bold text-xl hover:bg-gray-800 transition-all duration-300"
+              >
+                GET INSTANT ACCESS NOW
+              </Link>
+              <div className="text-sm text-center">
+                <div className="font-semibold">✓ No Credit Card Required</div>
+                <div className="font-semibold">✓ Instant Download</div>
+                <div className="font-semibold">✓ Lifetime Access</div>
+              </div>
+            </div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-            <div className="text-3xl font-bold text-purple-400 mb-2">$500M+</div>
-            <div className="text-sm opacity-75">Average ROI</div>
-            <div className="text-xs opacity-60 mt-1">Enterprise AI</div>
+          
+          {/* Social Proof */}
+          <div className="text-gray-300">
+            <p className="mb-4">Trusted by industry leaders worldwide:</p>
+            <div className="flex flex-wrap justify-center items-center gap-6 opacity-70">
+              <span className="text-lg font-semibold">Fortune 500</span>
+              <span className="text-lg font-semibold">Global 2000</span>
+              <span className="text-lg font-semibold">Unicorn Startups</span>
+              <span className="text-lg font-semibold">Government Agencies</span>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
