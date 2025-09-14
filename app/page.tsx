@@ -10,6 +10,11 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import InteractiveROICalculatorAdvanced from '../components/InteractiveROICalculatorAdvanced';
 import RevolutionaryNewsletterSignup2025 from '../components/RevolutionaryNewsletterSignup2025';
 
+// Import new content showcase and discovery components
+import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
+import UltimateContentDiscoveryWidget from '../components/UltimateContentDiscoveryWidget';
+
 // Import neural superintelligence components - TOP PRIORITY
 import NeuralSuperintelligence2025Banner from '../components/NeuralSuperintelligence2025Banner';
 import UltimateNeuralSuperintelligenceShowcase from '../components/UltimateNeuralSuperintelligenceShowcase';
@@ -350,11 +355,20 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE BANNER - NEWEST FEATURED */}
+        <NewContent2025UltimateShowcaseBanner />
+        
         {/* AI 2025 ULTIMATE CONTENT REVOLUTION 50,000% ROI BANNER - NEWEST FEATURED */}
         <AI2025UltimateContentRevolution50000ROIBanner />
         
         {/* ULTIMATE CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
         <UltimateContentShowcase2025 />
+        
+        {/* REVOLUTIONARY CONTENT 2025 SHOWCASE - NEWEST FEATURED */}
+        <RevolutionaryContent2025Showcase />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET - NEWEST FEATURED */}
+        <UltimateContentDiscoveryWidget />
         
         {/* INTERACTIVE ROI CALCULATOR ADVANCED - NEWEST FEATURED */}
         <InteractiveROICalculatorAdvanced />

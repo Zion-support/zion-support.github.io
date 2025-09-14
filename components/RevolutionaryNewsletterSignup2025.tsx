@@ -1,46 +1,59 @@
+'use client';
+
 import React, { useState } from 'react';
 
 const RevolutionaryNewsletterSignup2025 = () => {
   const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
-    
+    setIsSubmitting(true);
+    setError('');
+
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubscribed(true);
-    setIsLoading(false);
-    setEmail('');
+    setTimeout(() => {
+      if (email.includes('@')) {
+        setIsSubscribed(true);
+        setEmail('');
+      } else {
+        setError('Please enter a valid email address');
+      }
+      setIsSubmitting(false);
+    }, 1500);
   };
 
   if (isSubscribed) {
     return (
-      <section className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
+      <section className="py-16 bg-gradient-to-r from-green-500 to-emerald-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-2xl shadow-2xl p-12">
-            <div className="text-6xl mb-6">🎉</div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Welcome to the Revolution!
+          <div className="bg-white rounded-2xl p-8 shadow-2xl">
+            <div className="text-6xl mb-4">🎉</div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Welcome to the AI Revolution!
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              You're now part of the AI 2025 Ultimate Content Revolution. 
-              Check your email for exclusive insights and breakthrough strategies.
+            <p className="text-xl text-gray-600 mb-6">
+              You're now subscribed to our exclusive AI insights newsletter. 
+              Get ready for breakthrough content delivered straight to your inbox.
             </p>
-            <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                What's Next?
-              </h3>
-              <ul className="text-gray-700 space-y-2">
-                <li>✓ Weekly breakthrough insights delivered to your inbox</li>
-                <li>✓ Exclusive access to new case studies and success stories</li>
-                <li>✓ Early access to new AI tools and features</li>
-                <li>✓ Invitation to our private community of industry leaders</li>
+            <div className="bg-green-50 rounded-lg p-4 mb-6">
+              <h3 className="font-bold text-green-800 mb-2">What you'll receive:</h3>
+              <ul className="text-green-700 text-left max-w-md mx-auto">
+                <li>• Weekly AI breakthrough insights</li>
+                <li>• Exclusive Fortune 500 case studies</li>
+                <li>• Implementation guides and best practices</li>
+                <li>• Early access to new content</li>
+                <li>• ROI optimization strategies</li>
               </ul>
             </div>
+            <button
+              onClick={() => setIsSubscribed(false)}
+              className="text-green-600 hover:text-green-700 font-semibold"
+            >
+              Subscribe Another Email
+            </button>
           </div>
         </div>
       </section>
@@ -48,60 +61,81 @@ const RevolutionaryNewsletterSignup2025 = () => {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+    <section className="py-16 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/tech-pattern.svg')] opacity-10"></div>
       
-      {/* Animated Elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
-      <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500 rounded-full opacity-30 animate-bounce"></div>
-      <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500 rounded-full opacity-25 animate-ping"></div>
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 JOIN THE REVOLUTION
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <div className="inline-flex items-center bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2 rounded-full">
+                <span className="text-sm font-medium">📧 REVOLUTIONARY NEWSLETTER 2025</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                Join the AI Revolution Newsletter
+              </h2>
+              <p className="text-xl text-blue-100 leading-relaxed">
+                Get exclusive access to breakthrough AI content, Fortune 500 success stories, 
+                and implementation guides that can transform your business with proven ROI results.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <div className="text-2xl font-bold text-green-400">50,000+</div>
+                <div className="text-sm text-blue-100">Subscribers</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+                <div className="text-2xl font-bold text-yellow-400">98%</div>
+                <div className="text-sm text-blue-100">Satisfaction Rate</div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold">What you'll get:</h3>
+              <ul className="space-y-2 text-blue-100">
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Weekly AI breakthrough insights and trends
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Exclusive Fortune 500 case studies
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Implementation guides and best practices
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Early access to new content and tools
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  ROI optimization strategies and tips
+                </li>
+              </ul>
+            </div>
           </div>
-          
-          {/* Main Headline */}
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Get Exclusive Access to
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              AI 2025 Breakthroughs
-            </span>
-          </h2>
-          
-          {/* Subheadline */}
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed opacity-90">
-            Join 50,000+ industry leaders getting exclusive insights, case studies, 
-            and breakthrough strategies delivered weekly.
-          </p>
-          
-          {/* Benefits Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="text-3xl mb-4">📊</div>
-              <h3 className="text-lg font-semibold mb-2">Exclusive Case Studies</h3>
-              <p className="text-sm opacity-90">Real success stories with 50,000% ROI results</p>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="text-3xl mb-4">🔮</div>
-              <h3 className="text-lg font-semibold mb-2">Future Predictions</h3>
-              <p className="text-sm opacity-90">AI trends and breakthrough technologies</p>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="text-3xl mb-4">🛠️</div>
-              <h3 className="text-lg font-semibold mb-2">Early Access</h3>
-              <p className="text-sm opacity-90">New tools and features before public release</p>
-            </div>
-          </div>
-          
-          {/* Newsletter Form */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 max-w-2xl mx-auto">
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold mb-6 text-center">Subscribe Now</h3>
+            
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold mb-2">
+                <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
                   Email Address
                 </label>
                 <input
@@ -110,64 +144,73 @@ const RevolutionaryNewsletterSignup2025 = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
-                  className="w-full px-6 py-4 rounded-lg text-gray-900 text-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-lg border border-white/30 bg-white/10 text-white placeholder-white/70 focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   required
                 />
+                {error && (
+                  <p className="text-red-300 text-sm mt-2">{error}</p>
+                )}
               </div>
-              
+
+              <div className="space-y-4">
+                <label className="flex items-start">
+                  <input
+                    type="checkbox"
+                    className="mt-1 mr-3 text-green-500 focus:ring-green-500"
+                    required
+                  />
+                  <span className="text-sm text-blue-100">
+                    I agree to receive the AI Revolution newsletter and understand that I can unsubscribe at any time.
+                  </span>
+                </label>
+                
+                <label className="flex items-start">
+                  <input
+                    type="checkbox"
+                    className="mt-1 mr-3 text-green-500 focus:ring-green-500"
+                  />
+                  <span className="text-sm text-blue-100">
+                    I want to receive exclusive offers and early access to new AI tools and content.
+                  </span>
+                </label>
+              </div>
+
               <button
                 type="submit"
-                disabled={isLoading}
-                className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
-                {isLoading ? (
+                {isSubmitting ? (
                   <div className="flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-black mr-2"></div>
-                    Joining Revolution...
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                    Subscribing...
                   </div>
                 ) : (
-                  'Join the AI 2025 Revolution'
+                  'Join the AI Revolution'
                 )}
               </button>
             </form>
-            
-            {/* Trust Indicators */}
-            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm opacity-80">
-              <div className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
-                <span>50,000+ subscribers</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
-                <span>Weekly insights</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-green-400">✓</span>
-                <span>No spam, ever</span>
-              </div>
-            </div>
-          </div>
-          
-          {/* Social Proof */}
-          <div className="mt-12">
-            <p className="text-sm opacity-80 mb-4">Trusted by industry leaders at:</p>
-            <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
-              <div className="text-2xl font-bold">Fortune 500</div>
-              <div className="text-2xl font-bold">Startups</div>
-              <div className="text-2xl font-bold">Enterprises</div>
-              <div className="text-2xl font-bold">Agencies</div>
+
+            <div className="mt-6 text-center">
+              <p className="text-sm text-blue-200">
+                🔒 We respect your privacy. Unsubscribe at any time.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-      
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg className="w-full h-20 text-white" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="currentColor"></path>
-          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="currentColor"></path>
-          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>
-        </svg>
+
+        {/* Social Proof */}
+        <div className="mt-16 text-center">
+          <p className="text-blue-200 text-sm mb-4">
+            Join thousands of business leaders who are already transforming their organizations
+          </p>
+          <div className="flex justify-center items-center space-x-8 opacity-60">
+            <div className="text-2xl font-bold">Fortune 500</div>
+            <div className="text-2xl font-bold">TechGlobal</div>
+            <div className="text-2xl font-bold">Enterprise</div>
+            <div className="text-2xl font-bold">Startups</div>
+          </div>
+        </div>
       </div>
     </section>
   );
