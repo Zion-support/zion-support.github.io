@@ -36,7 +36,6 @@ import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContent
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
@@ -46,6 +45,10 @@ import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakt
 import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI2025BreakthroughPromotionBanner';
 import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
+
+// Import new ultimate content promotional components
+import UltimateContent2025PromotionBanner from '../components/UltimateContent2025PromotionBanner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 
 // Import new 2025 autonomous systems promotional components
 import AutonomousSystems2025RevolutionBanner from '../components/AutonomousSystems2025RevolutionBanner';
@@ -68,6 +71,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Content 2025 Promotion Banner - NEW */}
+        <UltimateContent2025PromotionBanner />
+        
         {/* Autonomous Systems 2025 Revolution Banner - NEW */}
         <AutonomousSystems2025RevolutionBanner />
         
@@ -189,7 +195,7 @@ export default function HomePage() {
         <AutonomousBusinessOperationsPromotionBanner />
         <AI1000ROISuccessStoryBanner />
         
-        {/* Content Promotion Banners */}
+        {/* Ultimate Content Showcase 2025 - NEW */}
         <UltimateContentShowcase2025 />
         
         {/* Autonomous Systems Showcase 2025 - NEW */}
