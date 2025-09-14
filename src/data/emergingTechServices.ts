@@ -78,7 +78,6 @@ export const emergingTechServices: EmergingTechService[] = [
     freeTrialDays: 14,
     demoUrl: "https://demo.ziontechgroup.com/quantum"
   }
-<<<<<<< HEAD
 ];
 
 export const getEmergingTechServiceByCategory = (category: string) => {
@@ -111,6 +110,4 @@ export default EMERGING_TECH_SERVICES;
   // In the future, this could be enhanced with actual innovation scoring
   return EMERGING_TECH_SERVICES;
 };
-=======
 ];
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445

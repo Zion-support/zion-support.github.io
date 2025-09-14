@@ -295,7 +295,6 @@ export interface CuttingEdge2029Service {
     ],
     popular: false,
     icon: '⏰',
-<<<<<<< HEAD
     color: 'from-yellow-600 to-orange-600',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-time-manipulation-platform',
@@ -326,11 +325,9 @@ export interface CuttingEdge2029Service {
     rating: 4.6,
     reviews: 67
     implementationDetails: 'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.',
-=======
 
 
       'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.',
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
     launchDate: '2029-03-01',
     customers: 8,
     rating: 4.8,

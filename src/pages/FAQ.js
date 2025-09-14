@@ -1,11 +1,8 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/Footer";
-<<<<<<< HEAD
-import { Header } from "@/components/Header";
 import Footer from "@/components/Footer";
-=======
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
+import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";

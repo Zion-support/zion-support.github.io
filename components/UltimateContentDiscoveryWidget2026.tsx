@@ -2,34 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Clock, 
-  TrendingUp, 
-  BookOpen, 
-  Video, 
-  FileText,
-  Users,
-  Zap,
-  Brain,
-  Rocket,
-  ChevronDown,
-  ChevronUp,
-  X,
-  Play,
-  Download,
-  Share2,
-  Heart,
-  Bookmark
-} from 'lucide-react';
-=======
 import { Search, Filter, Star, Clock, TrendingUp, BookOpen, Video, FileText, Users, Zap } from 'lucide-react';
->>>>>>> 40caa684d731039eacbf2a57ff90b1b5728aba9d
-=======
 import { 
   Search, 
   Filter, 
@@ -50,13 +23,10 @@ import {
   X
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
 
 const UltimateContentDiscoveryWidget2026 = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [selectedSort, setSelectedSort] = useState('trending');
   const [showFilters, setShowFilters] = useState(false);
   const [favorites, setFavorites] = useState(new Set());
@@ -76,7 +46,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
     { id: 'newest', name: 'Newest', icon: Clock },
     { id: 'popular', name: 'Most Popular', icon: Star },
     { id: 'relevance', name: 'Most Relevant', icon: Search }
-=======
   const [isSearching, setIsSearching] = useState(false);
 
   const categories = [
@@ -86,8 +55,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
     { id: 'automation', name: 'Automation', icon: <Users className="w-4 h-4" /> },
     { id: 'tutorials', name: 'Tutorials', icon: <Video className="w-4 h-4" /> },
     { id: 'case-studies', name: 'Case Studies', icon: <FileText className="w-4 h-4" /> }
->>>>>>> 40caa684d731039eacbf2a57ff90b1b5728aba9d
-=======
   const [viewMode, setViewMode] = useState('grid');
   const [sortBy, setSortBy] = useState('trending');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -104,14 +71,11 @@ const UltimateContentDiscoveryWidget2026 = () => {
     { id: 'future-tech', name: 'Future Tech', icon: Rocket, color: 'from-orange-500 to-red-500' },
     { id: 'tutorials', name: 'Tutorials', icon: BookOpen, color: 'from-indigo-500 to-purple-500' },
     { id: 'case-studies', name: 'Case Studies', icon: TrendingUp, color: 'from-pink-500 to-rose-500' }
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
   ];
 
   const contentItems = [
     {
       id: 1,
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'AI 2026-2030 Ultimate Predictions',
       description: 'Comprehensive analysis of revolutionary AI breakthroughs that will reshape our world over the next five years.',
       category: 'ai-predictions',
@@ -193,18 +157,15 @@ const UltimateContentDiscoveryWidget2026 = () => {
       thumbnail: '/api/placeholder/400/250',
       featured: true,
       publishedAt: '2025-01-10'
-=======
       title: "AI-Powered Business Transformation Guide 2026",
       category: 'ai',
       type: 'guide',
-=======
       title: 'Neural Interface Revolution 2026',
       description: 'Breakthrough brain-computer interfaces enabling direct neural communication with AI systems',
       category: 'ai-innovations',
       type: 'Video',
       duration: '15 min',
       views: '2.3M',
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
       rating: 4.9,
       trending: true,
       thumbnail: '/api/placeholder/400/225',
@@ -271,17 +232,13 @@ const UltimateContentDiscoveryWidget2026 = () => {
       duration: '60 min',
       views: '2.8M',
       rating: 4.8,
-<<<<<<< HEAD
       duration: '18 min video',
       views: '7.4k',
       featured: false,
       description: "Understanding quantum encryption and security protocols for modern applications."
->>>>>>> 40caa684d731039eacbf2a57ff90b1b5728aba9d
-=======
       trending: true,
       thumbnail: '/api/placeholder/400/225',
       tags: ['Space', 'AI', 'Exploration', 'Communication']
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
     }
   ];
 
@@ -293,8 +250,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
     return matchesSearch && matchesCategory;
   });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const sortedContent = [...filteredContent].sort((a, b) => {
     switch (selectedSort) {
       case 'newest':
@@ -307,14 +262,12 @@ const UltimateContentDiscoveryWidget2026 = () => {
         return (b.views + b.likes) - (a.views + a.likes);
     }
   });
-=======
   const handleSearch = async (query: string) => {
     setSearchQuery(query);
     setIsSearching(true);
     // Simulate search delay
     setTimeout(() => setIsSearching(false), 1000);
   };
->>>>>>> 40caa684d731039eacbf2a57ff90b1b5728aba9d
 
   const toggleFavorite = (id) => {
     setFavorites(prev => {
@@ -350,7 +303,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
@@ -376,7 +328,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8"
         >
           <div className="flex flex-col lg:flex-row gap-4">
-=======
     <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -389,7 +340,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
             Ultimate Content Discovery
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Powered by AI 2026
-=======
   const sortedContent = [...filteredContent].sort((a, b) => {
     switch (sortBy) {
       case 'trending':
@@ -423,7 +373,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
             Discover Revolutionary
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               {' '}Content
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -432,56 +381,39 @@ const UltimateContentDiscoveryWidget2026 = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
         {/* Search and Filter Interface */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20">
           <div className="flex flex-col lg:flex-row gap-4 mb-6">
->>>>>>> 40caa684d731039eacbf2a57ff90b1b5728aba9d
-=======
         {/* Search and Filters */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">
           <div className="flex flex-col lg:flex-row gap-4">
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
             {/* Search Bar */}
             <div className="flex-1 relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-<<<<<<< HEAD
-<<<<<<< HEAD
                 placeholder="Search content, tags, or topics..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-=======
                 placeholder="Search for content, tutorials, guides..."
                 value={searchQuery}
                 onChange={(e) => handleSearch(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
->>>>>>> 40caa684d731039eacbf2a57ff90b1b5728aba9d
-=======
                 placeholder="Search for content, topics, or technologies..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
               />
             </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
             {/* Category Filter */}
             <div className="relative">
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
                 className="appearance-none bg-white/10 border border-white/20 rounded-lg px-4 py-3 pr-8 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-=======
                 className="appearance-none bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white pr-8 focus:outline-none focus:ring-2 focus:ring-purple-500"
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
               >
                 {categories.map(category => (
                   <option key={category.id} value={category.id} className="bg-slate-800">
@@ -491,7 +423,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
               </select>
               <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
             </div>
-<<<<<<< HEAD
 
             {/* Sort Options */}
             <div className="relative">
@@ -714,15 +645,12 @@ const UltimateContentDiscoveryWidget2026 = () => {
         </motion.div>
       </div>
     </div>
-=======
             {/* Filter Button */}
             <button className="flex items-center px-6 py-4 bg-white/20 border border-white/30 rounded-xl text-white hover:bg-white/30 transition-colors">
               <Filter className="w-5 h-5 mr-2" />
               Filters
             </button>
           </div>
-=======
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
 
             {/* Sort Options */}
             <div className="relative">
@@ -891,12 +819,8 @@ const UltimateContentDiscoveryWidget2026 = () => {
           </div>
         )}
       </div>
-<<<<<<< HEAD
     </section>
->>>>>>> 40caa684d731039eacbf2a57ff90b1b5728aba9d
-=======
     </motion.div>
->>>>>>> 398e7b3803392609532938c1d76a965272b05626
   );
 };
 

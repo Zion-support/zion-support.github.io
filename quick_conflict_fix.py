@@ -9,17 +9,7 @@ def fix_conflicts_in_file(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        if '<<<<<<< HEAD' not in content:
-            return False
-        
-        print(f"Fixing conflicts in: {file_path}")
-        
-        # Remove all conflict markers and keep the content
-        # This is a simple approach that removes conflict markers
-        content = re.sub(r'<<<<<<< HEAD.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'>>>>>>> [^\n]*\n?', '', content, flags=re.DOTALL)
-        
+        if '        
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(content)
         

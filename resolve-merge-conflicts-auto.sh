@@ -16,60 +16,28 @@ resolve_file_conflicts() {
     echo "🔧 Resolving conflicts in $file..."
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-        echo "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup
-        cp "$file" "${file}.conflict-backup.$(date +%s)" 2>/dev/null || true
-        
-        # Resolve conflicts based on file type
-        if [[ "$file" == "package.json" ]]; then
-            echo "📦 Package.json detected, keeping main version..."
-            # Keep main version but merge new dependencies
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
-            sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
-        elif [[ "$file" == "package-lock.json" || "$file" == "package-lock.json.backup"* ]]; then
+    if grep -q "        elif [[ "$file" == "package-lock.json" || "$file" == "package-lock.json.backup"* ]]; then
             echo "📦 Package-lock detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
-            sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
-        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
+            sed -i '/        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
             echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
-            sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
-        elif [[ "$file" == "tsconfig.tsbuildinfo" ]]; then
+            sed -i '/        elif [[ "$file" == "tsconfig.tsbuildinfo" ]]; then
             echo "⚙️  Build info file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
-            sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
-        elif [[ "$file" == "*.css" || "$file" == "*.scss" ]]; then
+            sed -i '/        elif [[ "$file" == "*.css" || "$file" == "*.scss" ]]; then
             echo "🎨 CSS file detected, merging styles..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
-            sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
-        elif [[ "$file" == "*.tsx" || "$file" == "*.ts" || "$file" == "*.jsx" || "$file" == "*.js" ]]; then
+            sed -i '/        elif [[ "$file" == "*.tsx" || "$file" == "*.ts" || "$file" == "*.jsx" || "$file" == "*.js" ]]; then
             echo "💻 Code file detected, attempting intelligent merge..."
             # For code files, try to keep both versions where possible
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
-            sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
-        elif [[ "$file" == "*.yml" || "$file" == "*.yaml" ]]; then
+            sed -i '/        elif [[ "$file" == "*.yml" || "$file" == "*.yaml" ]]; then
             echo "⚙️  YAML file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
-            sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
-        elif [[ "$file" == "*.json" ]]; then
+            sed -i '/        elif [[ "$file" == "*.json" ]]; then
             echo "📄 JSON file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
-            sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
-        elif [[ "$file" == "*.md" ]]; then
+            sed -i '/        elif [[ "$file" == "*.md" ]]; then
             echo "📝 Markdown file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
-            sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
-        elif [[ "$file" == "*.txt" ]]; then
+            sed -i '/        elif [[ "$file" == "*.txt" ]]; then
             echo "📄 Text file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
-            sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
-        else
+            sed -i '/        else
             echo "📝 Regular file, removing conflict markers..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
-            sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
-        fi
+            sed -i '/        fi
         
         echo "✅ Resolved conflicts in $file"
     else

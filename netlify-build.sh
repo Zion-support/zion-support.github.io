@@ -139,18 +139,6 @@ if [ "$build_success" = false ]; then
     echo "SWC disabled build successful!"
     build_success=true
   else
-<<<<<<< HEAD
-    echo "SWC fallback build failed, trying with fallback command..."
-    # Use the fallback build command
-    if yarn run build:fallback; then
-      echo "Fallback build successful!"
-      build_success=true
-    else
-      echo "Fallback build failed, trying with legacy provider..."
-    fi
-=======
-    echo "SWC disabled build failed, trying with legacy provider..."
->>>>>>> origin/cursor/build-nextjs-application-with-swc-download-error-a9ea
   fi
 fi
 
@@ -159,11 +147,6 @@ if [ "$build_success" = false ]; then
   echo "Attempting build with legacy OpenSSL provider..."
   export NODE_OPTIONS="--max-old-space-size=8192 --openssl-legacy-provider"
   
-<<<<<<< HEAD
-  if yarn run build:fallback; then
-=======
-  if yarn run build:netlify; then
->>>>>>> origin/cursor/build-nextjs-application-with-swc-download-error-a9ea
     echo "Legacy provider build successful!"
     build_success=true
   else

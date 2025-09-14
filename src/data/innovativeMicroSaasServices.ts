@@ -1,42 +1,4 @@
-<<<<<<< HEAD
-  price: number;
-  currency: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
-  supportLevel: string;
-  supportLevel: string;
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
 import { ProductListing } from "@/types/listings";
-
-export interface InnovativeMicroSaasService extends ProductListing {
-  marketPrice: string;
-  estimatedDelivery: string;
-  supportLevel: string;
-  technology: string[];
-  integrations: string[];
-  compliance: string[];
-  roi: string;
-  };
-  competitors: string[];
-=======
-import { ProductListing } from "@/types/listings";
-
-export interface InnovativeMicroSaasService extends ProductListing {
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
   category: 'AI & Automation' | 'Business Intelligence' | 'Digital Marketing' | 'Productivity' | 'Security & Compliance' | 'Development Tools' | 'Analytics' | 'Collaboration' | 'Finance & HR' | 'Industry Specific';
   subcategory: string;
   price: {
@@ -54,7 +16,6 @@ export interface InnovativeMicroSaasService extends ProductListing {
   estimatedDelivery: string;
   supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
   marketPrice: string;
-<<<<<<< HEAD
       "Quantum annealing algorithms",
       "Hybrid quantum-classical computing",
       "Real-time optimization dashboard",
@@ -1336,14 +1297,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
   useCases: string[];
   targetAudience: string[];
   benefits: string[];
-=======
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
   contactInfo: {
     phone: string;
     email: string;
     website: string;
   };
-<<<<<<< HEAD
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
@@ -2101,18 +2059,15 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-=======
   technology: string[];
   integrations: string[];
   compliance: string[];
   roi: string;
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
   competitors: string[];
 }
 
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
   {
-<<<<<<< HEAD
     id: "ai-project-management-suite",
     title: "AI Project Management Suite",
     description: "Intelligent project management platform that uses AI to predict project timelines, identify risks, and optimize resource allocation for maximum efficiency.",
@@ -2774,11 +2729,9 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     id: "autonomous-business-ops",
     title: "Autonomous Business Operations Platform",
     description: "Revolutionary AI platform that autonomously manages business operations including process automation, decision-making, resource optimization, and predictive maintenance.",
-=======
     id: "ai-content-generator",
     title: "AI Content Generator Suite",
     description: "Comprehensive AI-powered content creation platform for blogs, social media, and marketing materials.",
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
     category: "AI & Automation",
     subcategory: "Content Creation",
     price: {
@@ -2789,7 +2742,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
       billingCycle: "monthly"
     },
     features: [
-<<<<<<< HEAD
       "Real-time supply chain tracking",
       "Product authentication and verification",
       "Smart contract automation",
@@ -3134,9 +3086,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     features: [
       "AI content generation",
       "Multi-language support",
-=======
       "Multi-language content generation",
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
       "SEO optimization",
       "Brand voice customization",
       "Content scheduling",
@@ -3154,7 +3104,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
       "Email marketing campaigns",
       "Product descriptions"
     ],
-<<<<<<< HEAD
     targetAudience: [
       "Marketing agencies",
       "E-commerce businesses",
@@ -3320,15 +3269,12 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     ],
     tags: ["AI", "Project Management", "Automation", "Collaboration", "Analytics"],
     estimatedDelivery: "3-4 weeks",
-=======
     targetAudience: ["Content creators", "Marketing teams", "Small businesses", "Agencies"],
     tags: ["AI", "Content", "Marketing", "Automation"],
     estimatedDelivery: "2-4 weeks",
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
     supportLevel: "premium",
     marketPrice: "$29-199/month",
     contactInfo: {
-<<<<<<< HEAD
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -4997,7 +4943,6 @@ export const INNOVATIVE_CONTACT_INFO = {
   address: "364 E Main St STE 1008 Middletown DE 19709",
   website: "https://ziontechgroup.com"
 };
-=======
       phone: "+1-555-0123",
       email: "sales@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -5009,4 +4954,3 @@ export const INNOVATIVE_CONTACT_INFO = {
     competitors: ["Jasper", "Copy.ai", "Writesonic"]
   }
 ];
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445

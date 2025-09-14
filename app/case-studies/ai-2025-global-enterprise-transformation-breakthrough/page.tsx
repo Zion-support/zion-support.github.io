@@ -77,7 +77,6 @@ export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
       {/* Company Overview */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -168,7 +167,6 @@ export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
 
       {/* Implementation Section */}
       <section id="implementation" className="py-16 bg-white">
-=======
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             Company Overview
           </h2>
@@ -249,7 +247,6 @@ export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
 
       {/* Implementation Timeline */}
       <div className="py-20 bg-black/20">
->>>>>>> 337b36d89180d36c16575f8428055ca3e9ca3543
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             Implementation Timeline
@@ -388,25 +385,19 @@ export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Ready to Transform Your Enterprise?
           </h2>
-<<<<<<< HEAD
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Learn how your organization can achieve similar results with our proven AI transformation methodology.
-=======
           
           <p className="text-xl text-gray-300 mb-12">
             Join this Fortune 500 company and thousands of others achieving unprecedented ROI 
             with AI 2025 Ultimate Breakthrough. Start your transformation today.
->>>>>>> 337b36d89180d36c16575f8428055ca3e9ca3543
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact"
-<<<<<<< HEAD
               className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
-=======
               className="px-12 py-6 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold text-xl rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
->>>>>>> 337b36d89180d36c16575f8428055ca3e9ca3543
             >
               Start Your Transformation
             </Link>
@@ -414,11 +405,8 @@ export default function AI2025GlobalEnterpriseTransformationBreakthrough() {
               href="/webinars/ai-2025-enterprise-transformation-demo"
               className="px-12 py-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-xl rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-<<<<<<< HEAD
               Download Toolkit
-=======
               Watch Enterprise Demo
->>>>>>> 337b36d89180d36c16575f8428055ca3e9ca3543
             </Link>
           </div>
           

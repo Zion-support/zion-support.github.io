@@ -36,21 +36,9 @@ merge_branch() {
             echo "    🔨 Resolving conflicts in $file"
             
             # Check if it's a merge conflict
-            if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-                echo "      📄 Processing merge conflict in $file"
-                
-                # For app/page.tsx, keep both versions of banners
-                if [[ "$file" == "app/page.tsx" ]]; then
-                    # Remove conflict markers and keep both versions
-                    sed -i '/^<<<<<<< HEAD$/d' "$file"
-                    sed -i '/^=======$/d' "$file"
-                    sed -i '/^>>>>>>> /d' "$file"
-                else
+            if grep -q "                else
                     # For other files, try to keep both changes
-                    sed -i '/^<<<<<<< HEAD$/d' "$file"
-                    sed -i '/^=======$/d' "$file"
-                    sed -i '/^>>>>>>> /d' "$file"
-                fi
+                    sed -i '/^                fi
                 
                 # Add the resolved file
                 git add "$file"

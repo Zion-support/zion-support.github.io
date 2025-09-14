@@ -10,122 +10,14 @@ export interface ExpandedService {
   features: string[];
   benefits: string[];
   useCases: string[];
-<<<<<<< HEAD
   targetAudience: string[];
   pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based';
   features: string[];
   benefits: string[];
-=======
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
   marketPrice: string;
   contactLink: string;
   tags: string[];
-<<<<<<< HEAD
-  author: {
-    name: string;
-    id: string;
-    avatarUrl?: string;
 import { ProductListing } from "@/types/listings";
-
-// Expanded Services - Real Micro SAAS and IT Solutions
-export const EXPANDED_SERVICES: ProductListing[] = [
-  // AI & Machine Learning Services
-  {
-    id: "ai-automation-suite",
-    title: "AI Process Automation Suite",
-    description: "Complete workflow automation platform using AI to streamline business processes, reduce manual tasks by 80%, and increase operational efficiency. Includes process mapping, RPA integration, and analytics dashboard.",
-    category: "AI Automation",
-    price: 2999,
-    currency: "$",
-    tags: ["Process Automation", "RPA", "Workflow", "AI", "Efficiency"],
-import { ProductListing } from "@/types/listings";
-
-// AI & Machine Learning Services
-export const AI_SERVICES: ProductListing[] = [
-  {
-    id: "ai-automation-1",
-    title: "AI-Powered Process Automation Suite",
-    description: "Complete workflow automation solution using AI to streamline business processes, reduce manual tasks, and increase operational efficiency by up to 300%. Includes process mapping, RPA integration, and analytics dashboard.",
-    category: "AI Automation",
-    subcategory: "Process Optimization",
-    price: 2499,
-    currency: "$",
-    tags: ["Process Automation", "RPA", "Workflow Optimization", "AI Integration"],
-    author: {
-      name: "ZionTech Group",
-      id: "ziontech",
-      email: "kleber@ziontechgroup.com",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-    },
-    images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.9,
-    reviewCount: 156,
-    featured: true,
-    location: "Global",
-    availability: "2-3 Weeks",
-    aiScore: 96
-  },
-  {
-    id: "ai-predictive-2",
-    title: "Predictive Analytics & Forecasting Platform",
-    description: "Advanced AI-powered predictive analytics platform that analyzes historical data to forecast trends, customer behavior, and business outcomes with 95%+ accuracy. Includes machine learning models and real-time dashboards.",
-    category: "AI Analytics",
-    subcategory: "Predictive Modeling",
-    price: 3999,
-    currency: "$",
-    tags: ["Predictive Analytics", "Machine Learning", "Forecasting", "Business Intelligence"],
-    author: {
-      name: "ZionTech Group",
-      id: "ziontech",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-20T14:30:00.000Z",
-    rating: 4.8,
-    reviewCount: 89,
-    location: "Global",
-    availability: "3-4 Weeks",
-    aiScore: 94
-  },
-  {
-    id: "ai-nlp-3",
-    title: "Natural Language Processing API Suite",
-    description: "Comprehensive NLP solution including sentiment analysis, text classification, entity extraction, and language translation. Supports 50+ languages with enterprise-grade accuracy and scalability.",
-    category: "AI Development",
-    subcategory: "NLP",
-    price: 1799,
-    currency: "$",
-    tags: ["NLP", "Sentiment Analysis", "Text Processing", "API"],
-    author: {
-      name: "ZionTech Group",
-      id: "ziontech",
-      email: "kleber@ziontechgroup.com",
-    },
-  createdAt: string;
-  aiScore: number;
-  rating: number;
-  reviewCount: number;
-  isNew?: boolean;
-  isFeatured?: boolean;
-    email?: string;
-  };
-  images: string[];
-  createdAt: string;
-  rating: number;
-  reviewCount: number;
-  aiScore: number;
-  website?: string;
-  documentation?: string;
-  support?: string;
-  integration?: string[];
-  compliance?: string[];
-  sla?: string;
-    verified: boolean;
-  };
-=======
-  author: string;
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
   images: string[];
   createdAt: string;
   aiScore: number;
@@ -204,7 +96,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Content calendar management'
     ],
     benefits: [
-<<<<<<< HEAD
       "Generate 10x more content",
       "Improve SEO rankings by 60%",
       "Save 20+ hours per week",
@@ -232,7 +123,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       "Scalable customer support",
       "Improved customer satisfaction",
       "Data-driven insights"
-=======
       'Generate content 10x faster',
       'Maintain consistent brand voice',
       'Improve SEO rankings',
@@ -240,7 +130,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Reduce content creation costs',
       'Scale content production easily',
       'Data-driven content optimization'
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
     ],
     useCases: [
       'Blog and article writing',
@@ -250,7 +139,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Marketing copy generation',
       'Content localization'
     ],
-<<<<<<< HEAD
     targetAudience: ["E-commerce", "SaaS companies", "Healthcare", "Financial services", "Education"],
     tags: ["AI", "Chatbot", "NLP", "Customer Service", "Automation"],
     author: {
@@ -357,7 +245,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-20T14:30:00.000Z",
     rating: 4.8,
-=======
     marketPrice: '$1,500 - $3,500/month',
     contactLink: 'https://ziontechgroup.com/contact',
     tags: ['AI', 'Content Creation', 'Marketing', 'SEO', 'Social Media'],
@@ -366,7 +253,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     createdAt: '2024-01-20',
     aiScore: 92,
     rating: 4.7,
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
     reviewCount: 89,
     isNew: true,
     isFeatured: true
@@ -455,7 +341,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Government security',
       'Retail fraud prevention'
     ],
-<<<<<<< HEAD
     marketPrice: "$4,200 - $8,500/month",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Threat Detection", "AI Security", "Incident Response", "Network Security"],
@@ -534,14 +419,12 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     createdAt: "2024-01-25T09:15:00.000Z",
     rating: 4.9,
     reviewCount: 234,
-=======
     marketPrice: '$3,500 - $6,000/month',
     contactLink: 'https://ziontechgroup.com/contact',
     tags: ['AI', 'Security', 'Threat Detection', 'Incident Response', 'Analytics'],
     author: 'Zion Tech Group',
     images: ['/images/services/threat-detection-1.jpg', '/images/services/threat-detection-2.jpg'],
     createdAt: '2024-01-25',
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
     aiScore: 96,
     rating: 4.8,
     reviewCount: 203,
@@ -568,7 +451,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Compliance management'
     ],
     benefits: [
-<<<<<<< HEAD
       "Deploy 10x faster",
       "Reduce deployment errors by 90%",
       "Automated quality assurance",
@@ -596,7 +478,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       "Enhanced security and compliance",
       "Faster time to market",
       "Reduced maintenance overhead"
-=======
       'Reduce cloud costs by 25-40%',
       'Improve resource utilization',
       'Avoid vendor lock-in',
@@ -604,7 +485,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Simplify cloud operations',
       'Ensure compliance',
       'Optimize performance'
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
     ],
     useCases: [
       'Enterprise cloud strategy',
@@ -614,7 +494,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Performance optimization',
       'Vendor diversification'
     ],
-<<<<<<< HEAD
     targetAudience: ["Enterprises", "Mid-size companies", "Startups", "Government", "Healthcare"],
     tags: ["Cloud", "Migration", "AWS", "Azure", "DevOps"],
     author: {
@@ -1920,7 +1799,6 @@ export const PRICING_TIERS = [
     createdAt: "2024-02-01T14:20:00.000Z",
     aiScore: 88,
     rating: 4.6,
-=======
     marketPrice: '$2,500 - $5,000/month',
     contactLink: 'https://ziontechgroup.com/contact',
     tags: ['Cloud', 'DevOps', 'Orchestration', 'Cost Optimization', 'Governance'],
@@ -1929,7 +1807,6 @@ export const PRICING_TIERS = [
     createdAt: '2024-01-18',
     aiScore: 94,
     rating: 4.7,
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
     reviewCount: 178,
     isNew: false,
     isFeatured: true
@@ -2282,7 +2159,6 @@ export const SERVICE_CATEGORIES = [
   'Blockchain & Web3'
 ];
 
-<<<<<<< HEAD
 export const FEATURED_SERVICES = EXPANDED_SERVICES.filter(s => s.isFeatured);
 export const NEW_SERVICES = EXPANDED_SERVICES.filter(s => s.isNew);
     id: "ai-services",
@@ -2407,7 +2283,5 @@ export const PRICING_TIERS = [
   { label: 'IoT & Edge Computing', value: 'iot-edge' },
   { label: 'Blockchain & Web3', value: 'blockchain-web3' }
 ];
-=======
 export const FEATURED_SERVICES = EXPANDED_SERVICES.filter(service => service.isFeatured);
 export const NEW_SERVICES = EXPANDED_SERVICES.filter(service => service.isNew);
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445

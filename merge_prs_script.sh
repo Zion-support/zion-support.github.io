@@ -32,22 +32,11 @@ resolve_file_conflicts() {
     fi
     
     # Check if file has conflict markers
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "📝 Found conflict markers in $file"
-        
-        # For component files, prefer our version (the newer one)
-        if [[ $file == *"components/"* ]] && [[ $file == *".tsx" ]]; then
-            echo "📝 Resolving component file: $file"
-            # Remove conflict markers and keep our version
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-            git add "$file"
+    if grep -q "            git add "$file"
         elif [[ $file == *"app/"* ]] && [[ $file == *".tsx" ]]; then
             echo "📝 Resolving app file: $file"
             # Remove conflict markers and keep our version
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-            git add "$file"
+            sed -i '/            git add "$file"
         elif [[ $file == *"package.json" ]]; then
             echo "📦 Resolving package.json"
             # Use a simple merge strategy for package.json

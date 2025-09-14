@@ -57,9 +57,7 @@ for branch in $RECENT_BRANCHES; do
                 if [ -f "$file" ]; then
                     echo "📝 Resolving $file"
                     # Remove conflict markers and keep main version
-                    sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null || true
-                    sed -i '/>>>>>>> /d' "$file" 2>/dev/null || true
-                fi
+                    sed -i '/                fi
             done
             
             git add .

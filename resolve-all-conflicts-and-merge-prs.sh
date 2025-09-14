@@ -28,33 +28,15 @@ resolve_conflicts() {
     echo "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Strategy: Keep both versions where possible, prefer main branch for critical files
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            echo "📦 Critical file detected, keeping main version and merging dependencies..."
-            # For package files, we'll need special handling
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
+    if grep -q "        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
             echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "README.md" || "$file" == "LICENSE" ]]; then
+            sed -i '/        elif [[ "$file" == "README.md" || "$file" == "LICENSE" ]]; then
             echo "📚 Documentation file, keeping both versions where possible..."
             # Remove conflict markers but try to preserve content
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        else
+            sed -i '/        else
             echo "📝 Regular file, attempting to merge both versions..."
             # Remove conflict markers and try to keep both versions
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        fi
+            sed -i '/        fi
         
         echo "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
@@ -128,80 +110,7 @@ merge_branch() {
 
 # First, resolve any existing conflicts in the current working directory
 echo "🔍 Checking for existing merge conflicts..."
-CONFLICT_FILES=$(grep -l "<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" --exclude="*.md" 2>/dev/null || true)
-
-if [ -n "$CONFLICT_FILES" ]; then
-    echo "⚠️  Found existing conflicts in: $CONFLICT_FILES"
-    for file in $CONFLICT_FILES; do
-        if [ -f "$file" ]; then
-            resolve_conflicts "$file" "current"
-        fi
-    done
-fi
-
-# Get all cursor branches
-echo "📋 Getting all cursor branches..."
-BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | sort)
-
-if [ -z "$BRANCHES" ]; then
-    echo "ℹ️  No cursor branches found"
-else
-    echo "📊 Found $(echo "$BRANCHES" | wc -l) cursor branches to process"
-    
-    # Process each branch
-    for branch in $BRANCHES; do
-        echo "---"
-        echo "🔄 Processing branch: $branch"
-        
-        if can_merge_branch "$branch"; then
-            if merge_branch "$branch"; then
-                echo "✅ Successfully processed $branch"
-            else
-                echo "❌ Failed to process $branch"
-            fi
-        else
-            echo "⏭️  Skipping $branch (already merged or doesn't exist)"
-            SKIPPED_BRANCHES=$((SKIPPED_BRANCHES + 1))
-        fi
-    done
-fi
-
-# Also try to merge any other feature branches
-echo "📋 Getting other feature branches..."
-FEATURE_BRANCHES=$(git branch -r | grep -E "origin/(feature|enhancement|improvement|fix)/" | sed 's/origin\///' | sort)
-
-if [ -n "$FEATURE_BRANCHES" ]; then
-    echo "📊 Found $(echo "$FEATURE_BRANCHES" | wc -l) feature branches to process"
-    
-    for branch in $FEATURE_BRANCHES; do
-        echo "---"
-        echo "🔄 Processing feature branch: $branch"
-        
-        if can_merge_branch "$branch"; then
-            if merge_branch "$branch"; then
-                echo "✅ Successfully processed $branch"
-            else
-                echo "❌ Failed to process $branch"
-            fi
-        else
-            echo "⏭️  Skipping $branch (already merged or doesn't exist)"
-            SKIPPED_BRANCHES=$((SKIPPED_BRANCHES + 1))
-        fi
-    done
-fi
-
-# Final cleanup - remove any remaining conflict markers
-echo "🧹 Final cleanup - removing any remaining conflict markers..."
-REMAINING_CONFLICTS=$(grep -l "<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" --exclude="*.md" 2>/dev/null || true)
-
-if [ -n "$REMAINING_CONFLICTS" ]; then
-    echo "⚠️  Found remaining conflicts in: $REMAINING_CONFLICTS"
-    for file in $REMAINING_CONFLICTS; do
-        if [ -f "$file" ]; then
-            echo "🔧 Final cleanup for $file"
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        fi
+CONFLICT_FILES=$(grep -l "        fi
     done
 fi
 

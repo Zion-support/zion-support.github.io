@@ -444,7 +444,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2024-03-30', customers: 56,
     rating: 4.8,
     reviews: 38
-<<<<<<< HEAD
   },
 
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for data analysis, real-time processing, and automated insight generation.',
@@ -493,9 +492,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     marketSize: '$45.2B cybersecurity market',
     growthRate: '12% annual growth',
     variant: 'quantum-comm-enterprise',
-=======
   };
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
   // Cloud-Native Application Development Platform
   {
     id: 'cloud-native-app-development-platform', name: 'Cloud-Native Application Development Platform',

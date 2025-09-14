@@ -11,29 +11,7 @@ def resolve_conflicts_in_file(file_path):
             content = f.read()
         
         # Check if file has conflict markers
-        if '<<<<<<< HEAD' not in content:
-            return False
-        
-        print(f"Resolving conflicts in: {file_path}")
-        
-        # For TypeScript/JavaScript files, use a more sophisticated approach
-        if file_path.endswith(('.tsx', '.ts', '.jsx', '.js')):
-            # Remove conflict markers and keep both versions where possible
-            lines = content.split('\n')
-            resolved_lines = []
-            in_conflict = False
-            head_content = []
-            branch_content = []
-            
-            for line in lines:
-                if line.strip() == '<<<<<<< HEAD':
-                    in_conflict = True
-                    head_content = []
-                elif line.strip() == '=======':
-                    # Switch to collecting branch content
-                    pass
-                elif line.strip().startswith('>>>>>>> '):
-                    # End of conflict, resolve it
+        if '                    # End of conflict, resolve it
                     in_conflict = False
                     
                     # For imports, combine both
@@ -63,8 +41,7 @@ def resolve_conflicts_in_file(file_path):
         else:
             # For other files, use a simpler approach
             # Remove conflict markers and keep the branch version
-            resolved_content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]*\n?', '', content, flags=re.DOTALL)
-        
+            resolved_content = re.sub(r'        
         # Write the resolved content
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(resolved_content)

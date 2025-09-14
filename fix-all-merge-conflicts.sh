@@ -3,16 +3,7 @@
 echo "🔧 Fixing all merge conflicts in the codebase..."
 
 # Find and fix merge conflict markers in all relevant files
-find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" \) -exec grep -l "<<<<<<< HEAD" {} \; | while read file; do
-    echo "Fixing merge conflicts in: $file"
-    
-    # Create a backup
-    cp "$file" "$file.backup"
-    
-    # Remove merge conflict markers and keep the HEAD version
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> [a-f0-9]\+$/d' "$file"
-    
+find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" \) -exec grep -l "    
     # Remove any remaining conflict markers
     sed -i '/^=======$/d' "$file"
     sed -i '/^<<<<<<< HEAD$/d' "$file"

@@ -39,9 +39,7 @@ else
             if [ -f "$file" ]; then
                 echo "🔧 Resolving conflicts in $file..."
                 # Remove conflict markers
-                sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-                sed -i '/>>>>>>> /d' "$file"
-                echo "✅ Resolved conflicts in $file"
+                sed -i '/                echo "✅ Resolved conflicts in $file"
             fi
         done
         

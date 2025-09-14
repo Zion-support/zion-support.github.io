@@ -1,24 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-
-export const metadata = {
-  title: 'AI 2035 Singularity Breakthrough - Infinite Possibilities',
-  description: 'Experience the AI singularity with infinite processing power, matter creation capabilities, and dimensional transcendence. Revolutionary AI 2035 breakthrough predictions.',
-  keywords: ['AI 2035', 'Singularity', 'Matter Creation', 'Dimensional Transcendence', 'Infinite AI', 'Revolutionary Breakthrough'],
-=======
 import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'AI 2035 Singularity Breakthrough - Zion Tech Group',
-  description: 'Experience the AI singularity breakthrough that will transcend human limitations in 2035. Revolutionary consciousness-level AI with infinite ROI potential.',
-  keywords: ['AI 2035', 'Singularity', 'Consciousness AI', 'Transcendent Intelligence', 'Infinite ROI', 'Revolutionary Breakthrough'],
->>>>>>> origin/cursor/create-and-deploy-new-content-2fd0
 };
 
 export default function AI2035SingularityBreakthrough() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -206,7 +192,6 @@ export default function AI2035SingularityBreakthrough() {
           </div>
         </div>
       </section>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -384,7 +369,6 @@ export default function AI2035SingularityBreakthrough() {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-2fd0
     </div>
   );
 }

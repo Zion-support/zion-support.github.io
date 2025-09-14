@@ -85,12 +85,7 @@ If any conflicts arise during the merge process:
 
 ```bash
 # Find files with conflicts
-grep -l "<<<<<<< HEAD" -r src/
-
-# Resolve conflicts in a file (keep our improved version)
-sed -i '/^<<<<<<< HEAD/,/^=======/d' filename.tsx
-sed -i '/^>>>>>>> /d' filename.tsx
-
+grep -l "
 # Add resolved files
 git add filename.tsx
 

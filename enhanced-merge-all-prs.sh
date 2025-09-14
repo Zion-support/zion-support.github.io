@@ -41,40 +41,18 @@ resolve_conflicts() {
     log_message "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        log_message "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Enhanced conflict resolution strategy
-        if [[ "$file" == "package.json" ]]; then
-            log_message "📦 Package.json detected, merging dependencies intelligently..."
-            # Keep main version but merge new dependencies
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "package-lock.json" ]]; then
+    if grep -q "        elif [[ "$file" == "package-lock.json" ]]; then
             log_message "📦 Package-lock.json detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
+            sed -i '/        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
             log_message "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "*.css" || "$file" == "*.scss" ]]; then
+            sed -i '/        elif [[ "$file" == "*.css" || "$file" == "*.scss" ]]; then
             log_message "🎨 CSS file detected, merging styles..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "*.tsx" || "$file" == "*.ts" || "$file" == "*.jsx" || "$file" == "*.js" ]]; then
+            sed -i '/        elif [[ "$file" == "*.tsx" || "$file" == "*.ts" || "$file" == "*.jsx" || "$file" == "*.js" ]]; then
             log_message "💻 Code file detected, attempting intelligent merge..."
             # For code files, try to keep both versions where possible
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        else
+            sed -i '/        else
             log_message "📝 Regular file, removing conflict markers..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        fi
+            sed -i '/        fi
         
         log_message "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))

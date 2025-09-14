@@ -49,15 +49,7 @@ merge_branch() {
             echo "    🔨 Resolving conflicts in $file"
             
             # Check if it's a merge conflict
-            if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-                echo "      📄 Processing merge conflict in $file"
-                
-                # Try to resolve by keeping both changes where possible
-                # Remove conflict markers and keep both versions
-                sed -i '/^<<<<<<< HEAD$/d' "$file"
-                sed -i '/^=======$/d' "$file"
-                sed -i '/^>>>>>>> /d' "$file"
-                
+            if grep -q "                
                 # Add the resolved file
                 git add "$file"
             fi
