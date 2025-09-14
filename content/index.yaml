@@ -132,6 +132,57 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
+    - id: "ai-2025-advanced-ai-automation-revolution-ultimate-guide"
+      type: "blog"
+      title: "AI 2025: Advanced AI Automation Revolution - Ultimate Enterprise Guide"
+      file_path: "/content/blog/ai-2025-advanced-ai-automation-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-advanced-ai-automation-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Automation", "Enterprise", "ROI", "Business Transformation", "Digital Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$2.8M"
+        productivity: "340%"
+        success: "98%"
+      reading_time: "18 min read"
+      
+    - id: "ai-automation-fortune-500-manufacturing-600-roi-success"
+      type: "case-study"
+      title: "AI Automation Fortune 500 Manufacturing Success: $3.2B Annual Savings with 600% ROI"
+      file_path: "/content/case-studies/ai-automation-fortune-500-manufacturing-600-roi-success.md"
+      url: "/case-studies/ai-automation-fortune-500-manufacturing-600-roi-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Manufacturing", "AI Automation", "ROI", "Fortune 500", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$3.2B"
+        efficiency: "89%"
+        satisfaction: "98%"
+      reading_time: "12 min read"
+      
+    - id: "ai-automation-implementation-guide-2025"
+      type: "resource"
+      title: "AI Automation Implementation Master Guide 2025: Complete Blueprint for 600% ROI"
+      file_path: "/content/resources/ai-automation-implementation-guide-2025.md"
+      url: "/resources/ai-automation-implementation-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Automation", "Strategy", "ROI", "Best Practices", "Framework", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        success: "98%"
+        timeline: "8 months"
+        projects: "500+"
+      reading_time: "25 min read"
+      
     - id: "ai-2025-advanced-analytics-revolution-ultimate-guide"
       type: "blog"
       title: "AI 2025: Advanced Analytics Revolution - Ultimate Enterprise Guide"
@@ -465,6 +516,26 @@ content_index:
 >>>>>>> c8b857ad6d423d3347e8320a93310c8577edc4aa
 
   promotion_components:
+    - name: "NewContent2025AdvancedAIAutomationBanner"
+      file_path: "/app/components/NewContent2025AdvancedAIAutomationBanner.tsx"
+      status: "active"
+      features:
+        - "Auto-rotating banner showcasing new AI automation content"
+        - "Features 600% ROI metrics and $2.8M savings highlights"
+        - "Interactive content cards with hover effects and animations"
+        - "Dismissible banner with localStorage persistence"
+        - "Call-to-action buttons for content access and consultation"
+        
+    - name: "AdvancedAIAutomationContentShowcase2025"
+      file_path: "/app/components/AdvancedAIAutomationContentShowcase2025.tsx"
+      status: "active"
+      features:
+        - "Comprehensive showcase of AI automation content"
+        - "Category filtering (Blog, Case Studies, Resources)"
+        - "Interactive content cards with metrics display"
+        - "Success metrics summary with 500+ implementations data"
+        - "Call-to-action section for assessment and services"
+        
     - name: "NewContent2025AnalyticsRevolutionBanner"
       file_path: "/app/components/NewContent2025AnalyticsRevolutionBanner.tsx"
       status: "active"

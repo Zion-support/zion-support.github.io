@@ -40,6 +40,10 @@ import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI202
 import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
 
+// Import new Advanced AI Automation promotional components
+import NewContent2025AdvancedAIAutomationBanner from '../components/NewContent2025AdvancedAIAutomationBanner';
+import AdvancedAIAutomationContentShowcase2025 from '../components/AdvancedAIAutomationContentShowcase2025';
+
 // Import new Advanced Neural Networks 2025 promotional components
 import AdvancedNeuralNetworks2025Banner from '../components/AdvancedNeuralNetworks2025Banner';
 import NeuralNetworksContentShowcase2025 from '../components/NeuralNetworksContentShowcase2025';
@@ -65,6 +69,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Advanced AI Automation Banner - NEW */}
+        <NewContent2025AdvancedAIAutomationBanner />
+        
         {/* AI 2025 Ultimate Success Framework Banner - NEW */}
         <AI2025UltimateSuccessFrameworkBanner />
         
@@ -193,6 +200,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Advanced AI Automation Content Showcase - NEW */}
+        <AdvancedAIAutomationContentShowcase2025 />
+        
         {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
         
