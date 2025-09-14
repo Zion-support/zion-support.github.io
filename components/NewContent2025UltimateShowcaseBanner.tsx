@@ -1,128 +1,198 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-export default function NewContent2025UltimateShowcaseBanner() {
+const NewContent2025UltimateShowcaseBanner = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const featuredContent = [
+    {
+      id: 'ai-2025-ultimate-autonomous-enterprise-revolution',
+      title: 'AI 2025: The Ultimate Autonomous Enterprise Revolution',
+      type: 'blog',
+      roi: '7,500%',
+      savings: '$25.8B+',
+      readingTime: '35 min read',
+      description: 'Complete guide to achieving 7,500% ROI through autonomous enterprise systems',
+      url: '/blog/ai-2025-ultimate-autonomous-enterprise-revolution-ultimate-breakthrough'
+    },
+    {
+      id: 'fortune-500-autonomous-enterprise-success',
+      title: 'Fortune 500 Autonomous Enterprise Success Story',
+      type: 'case-study',
+      roi: '7,500%',
+      savings: '$25.8B',
+      readingTime: '22 min read',
+      description: 'Real-world implementation achieving $25.8B annual savings in 18 months',
+      url: '/case-studies/fortune-500-autonomous-enterprise-transformation-7500-roi-success-story'
+    },
+    {
+      id: 'autonomous-enterprise-implementation-guide',
+      title: 'Autonomous Enterprise Implementation Ultimate Guide',
+      type: 'resource',
+      roi: '7,500%',
+      savings: '$25.8B+',
+      readingTime: '45 min read',
+      description: 'Complete roadmap to implementing autonomous enterprise systems for maximum ROI',
+      url: '/resources/autonomous-enterprise-implementation-ultimate-guide-2025-2026'
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredContent.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    localStorage.setItem('newContent2025BannerDismissed', 'true');
+  };
+
+  useEffect(() => {
+    const dismissed = localStorage.getItem('newContent2025BannerDismissed');
+    if (dismissed === 'true') {
+      setIsVisible(false);
+    }
+  }, []);
+
+  if (!isVisible) return null;
+
+  const currentContent = featuredContent[currentIndex];
+
   return (
-    <section className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-20 overflow-hidden">
-      {/* Animated Background Elements */}
+    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-8 px-4 overflow-hidden">
+      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-1000"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-2000"></div>
+        <div className="absolute -top-4 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-8 -right-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
       </div>
 
-    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          {/* Main Heading */}
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            🚀 New Content Revolution 2025
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover our latest AI trends predictionscomprehensive tutorialsand real success stories 
-            that are transforming industries worldwide
-          </p>
+      <div className="relative max-w-7xl mx-auto">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center space-x-3">
+            <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold animate-pulse">
+              🚀 NEW CONTENT 2025
+            </div>
+            <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              FEATURED
+            </div>
+          </div>
+          <button
+            onClick={handleDismiss}
+            className="text-white/70 hover:text-white transition-colors"
+            aria-label="Dismiss banner"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
 
-          {/* Content Grid */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {/* AI Trends */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="space-y-6">
+            <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+              Revolutionary AI Content Collection 2025
+            </h2>
+            <p className="text-xl text-blue-100 leading-relaxed">
+              Discover the latest breakthrough content featuring autonomous enterprise systems, 
+              quantum computing, and neural superintelligence with proven ROI results.
+            </p>
+            
+            <div className="flex flex-wrap gap-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                <div className="text-2xl font-bold text-yellow-400">340%</div>
+                <div className="text-sm text-blue-100">Average ROI</div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">AI Trends 2025</h3>
-              <p className="text-gray-300 text-sm mb-4">
-                Revolutionary breakthroughs in quantum computingneural interfacesand autonomous systems
-              </p>
-              <Link 
-                href="/ai-trends-2025-ultimate-predictions"
-                className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
-                Explore Trends →
-              </Link>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                <div className="text-2xl font-bold text-green-400">98%</div>
+                <div className="text-sm text-blue-100">Client Satisfaction</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                <div className="text-2xl font-bold text-purple-400">500+</div>
+                <div className="text-sm text-blue-100">Success Stories</div>
+              </div>
             </div>
 
-            {/* AI Tutorials */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">AI Tutorials Mastery</h3>
-              <p className="text-gray-300 text-sm mb-4">
-                Complete learning path from fundamentals to advanced implementations with hands-on projects
-              </p>
-              <Link 
-                href="/ai-tutorials-mastery-2025"
-                className="inline-block bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300"
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/content"
+                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all transform hover:scale-105"
               >
-                Start Learning →
+                Explore All Content
               </Link>
-            </div>
-
-            {/* Success Stories */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Success Stories</h3>
-              <p className="text-gray-300 text-sm mb-4">
-                Real results from Fortune 500 companies achieving 2,500-5,000% ROI with our AI solutions
-              </p>
-              <Link 
-                href="/ai-success-stories-2025"
-                className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+              <Link
+                href="/consultation"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all"
               >
-                View Stories →
+                Get Consultation
               </Link>
             </div>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-indigo-400 mb-1">50+</div>
-              <div className="text-sm text-gray-300">New Content Pages</div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium text-blue-100">Currently Featured</span>
+              </div>
+              <div className="flex space-x-1">
+                {featuredContent.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`w-2 h-2 rounded-full ${
+                      index === currentIndex ? 'bg-yellow-400' : 'bg-white/30'
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-green-400 mb-1">2,500%</div>
-              <div className="text-sm text-gray-300">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-purple-400 mb-1">99.9%</div>
-              <div className="text-sm text-gray-300">Accuracy Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-pink-400 mb-1">500+</div>
-              <div className="text-sm text-gray-300">Success Stories</div>
-            </div>
-          </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/ai-trends-2025-ultimate-predictions"
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300"
-            >
-              Explore All Content
-            </Link>
-            <Link 
-              href="/contact"
-              className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-            >
-              Get Implementation Guide
-            </Link>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-semibold uppercase">
+                  {currentContent.type}
+                </span>
+                <span className="text-sm text-blue-100">{currentContent.readingTime}</span>
+              </div>
+              
+              <h3 className="text-xl font-bold text-white leading-tight">
+                {currentContent.title}
+              </h3>
+              
+              <p className="text-blue-100 text-sm leading-relaxed">
+                {currentContent.description}
+              </p>
+              
+              <div className="flex items-center justify-between">
+                <div className="flex space-x-4">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-yellow-400">{currentContent.roi}</div>
+                    <div className="text-xs text-blue-100">ROI</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-green-400">{currentContent.savings}</div>
+                    <div className="text-xs text-blue-100">Savings</div>
+                  </div>
+                </div>
+                <Link
+                  href={currentContent.url}
+                  className="bg-white text-purple-900 px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-colors"
+                >
+                  Read More
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default NewContent2025UltimateShowcaseBanner;

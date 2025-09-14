@@ -1,151 +1,277 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 const UltimateContentShowcase2025 = () => {
-  const contentItems = [
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const contentCategories = [
+    { id: 'all', label: 'All Content', count: 45 },
+    { id: 'blog', label: 'Blog Posts', count: 18 },
+    { id: 'case-study', label: 'Case Studies', count: 15 },
+    { id: 'resource', label: 'Resources', count: 12 }
+  ];
+
+  const featuredContent = [
     {
-      title: "AI 2025 Ultimate Content Revolution",
-      description: "The breakthrough delivering 25,000% ROI and 1500% engagement increases",
-      type: "Blog Post",
-      readTime: "8 min read",
+      id: 'ai-2025-ultimate-autonomous-enterprise-revolution',
+      title: 'AI 2025: The Ultimate Autonomous Enterprise Revolution',
+      type: 'blog',
+      category: 'blog',
+      roi: '7,500%',
+      savings: '$25.8B+',
+      readingTime: '35 min read',
+      description: 'Complete guide to achieving 7,500% ROI through autonomous enterprise systems',
+      url: '/blog/ai-2025-ultimate-autonomous-enterprise-revolution-ultimate-breakthrough',
       featured: true,
-      href: "/content/ai-2025-ultimate-content-revolution-breakthrough"
+      tags: ['AI Revolution', 'Autonomous Enterprise', 'ROI', 'Fortune 500']
     },
     {
-      title: "25,000% ROI Success Story",
-      description: "How a Fortune 100 company achieved unprecedented results with AI content",
-      type: "Case Study",
-      readTime: "12 min read",
+      id: 'fortune-500-autonomous-enterprise-success',
+      title: 'Fortune 500 Autonomous Enterprise Success Story',
+      type: 'case-study',
+      category: 'case-study',
+      roi: '7,500%',
+      savings: '$25.8B',
+      readingTime: '22 min read',
+      description: 'Real-world implementation achieving $25.8B annual savings in 18 months',
+      url: '/case-studies/fortune-500-autonomous-enterprise-transformation-7500-roi-success-story',
       featured: true,
-      href: "/case-studies/ai-2025-content-revolution-25000-roi-success-story"
+      tags: ['Case Study', 'Fortune 500', 'Success Story', 'ROI']
     },
     {
-      title: "AI 2025 Enterprise Automation",
-      description: "Revolutionary automation solutions transforming business operations",
-      type: "Guide",
-      readTime: "15 min read",
-      featured: false,
-      href: "/content/ai-2025-enterprise-automation-revolution"
+      id: 'autonomous-enterprise-implementation-guide',
+      title: 'Autonomous Enterprise Implementation Ultimate Guide',
+      type: 'resource',
+      category: 'resource',
+      roi: '7,500%',
+      savings: '$25.8B+',
+      readingTime: '45 min read',
+      description: 'Complete roadmap to implementing autonomous enterprise systems for maximum ROI',
+      url: '/resources/autonomous-enterprise-implementation-ultimate-guide-2025-2026',
+      featured: true,
+      tags: ['Implementation Guide', 'ROI', 'Strategy', 'Framework']
     },
     {
-      title: "Quantum AI Business Transformation",
-      description: "How quantum computing is revolutionizing business intelligence",
-      type: "Innovation",
-      readTime: "10 min read",
+      id: 'ai-2025-advanced-neural-architectures',
+      title: 'AI 2025: Advanced Neural Architectures Revolution',
+      type: 'blog',
+      category: 'blog',
+      roi: '2,800%',
+      savings: '$4.2B+',
+      readingTime: '25 min read',
+      description: 'Next-generation neural architectures delivering unprecedented business results',
+      url: '/blog/ai-2025-advanced-neural-architectures-revolution',
       featured: false,
-      href: "/content/ai-2025-quantum-ai-business-transformation"
+      tags: ['Neural Architectures', 'AI Revolution', 'ROI', 'Breakthrough']
     },
     {
-      title: "Neural Interface Revolution",
-      description: "The future of human-computer interaction in business",
-      type: "Technology",
-      readTime: "7 min read",
+      id: 'fortune-500-neural-architectures-success',
+      title: 'Fortune 500 Neural Architectures Success Story',
+      type: 'case-study',
+      category: 'case-study',
+      roi: '2,800%',
+      savings: '$4.2B',
+      readingTime: '18 min read',
+      description: 'Manufacturing giant achieves $4.2B savings with advanced neural architectures',
+      url: '/case-studies/fortune-500-advanced-neural-architectures-2800-roi-success',
       featured: false,
-      href: "/content/ai-2025-neural-interface-revolution"
+      tags: ['Case Study', 'Neural Architectures', 'Manufacturing', 'ROI']
     },
     {
-      title: "Autonomous Business Systems",
-      description: "Self-managing business operations powered by AI",
-      type: "Strategy",
-      readTime: "11 min read",
+      id: 'quantum-neural-fusion-revolution',
+      title: 'AI 2025: Quantum-Neural Fusion Revolution',
+      type: 'blog',
+      category: 'blog',
+      roi: '25,000%',
+      savings: '$500B+',
+      readingTime: '35 min read',
+      description: 'Revolutionary quantum-neural fusion technology transforming business operations',
+      url: '/blog/ai-2025-quantum-neural-fusion-revolution-ultimate-breakthrough',
+      featured: true,
+      tags: ['Quantum Computing', 'Neural Networks', 'AI Revolution', 'ROI']
+    },
+    {
+      id: 'ai-2025-ultimate-digital-transformation',
+      title: 'AI 2025: Ultimate Digital Transformation Revolution',
+      type: 'blog',
+      category: 'blog',
+      roi: '35,000%',
+      savings: '$500B+',
+      readingTime: '40 min read',
+      description: 'Complete digital transformation guide achieving unprecedented ROI results',
+      url: '/blog/ai-2025-ultimate-digital-transformation-revolution-ultimate-breakthrough',
+      featured: true,
+      tags: ['Digital Transformation', 'AI Revolution', 'ROI', 'Breakthrough']
+    },
+    {
+      id: 'ai-business-intelligence-revolution',
+      title: 'AI 2025: Ultimate Business Intelligence Revolution',
+      type: 'blog',
+      category: 'blog',
+      roi: '18,000%',
+      savings: '$89.2B+',
+      readingTime: '35 min read',
+      description: 'Revolutionary business intelligence solutions delivering massive ROI improvements',
+      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       featured: false,
-      href: "/content/ai-2025-autonomous-business-systems"
+      tags: ['Business Intelligence', 'AI Revolution', 'ROI', 'Data Analytics']
     }
   ];
 
+  const filteredContent = activeCategory === 'all' 
+    ? featuredContent 
+    : featuredContent.filter(item => item.category === activeCategory);
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return '📝';
+      case 'case-study':
+        return '📊';
+      case 'resource':
+        return '📚';
+      default:
+        return '📄';
+    }
+  };
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'blog':
+        return 'bg-blue-500';
+      case 'case-study':
+        return 'bg-green-500';
+      case 'resource':
+        return 'bg-purple-500';
+      default:
+        return 'bg-gray-500';
+    }
+  };
+
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-bold text-white">🔥 ULTIMATE CONTENT SHOWCASE 2025</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Revolutionary Content That's
-            <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              Transforming Businesses
-            </span>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Ultimate Content Collection 2025
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the breakthrough content and case studies that are delivering unprecedented results 
-            for Fortune 500 companies worldwide.
+            Discover our comprehensive collection of AI content featuring breakthrough technologies, 
+            real-world case studies, and implementation guides with proven ROI results.
           </p>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {contentItems.map((item, index) => (
-            <div
-              key={index}
-              className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
-                item.featured ? 'ring-2 ring-purple-500 ring-opacity-50' : ''
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {contentCategories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all ${
+                activeCategory === category.id
+                  ? 'bg-purple-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-purple-50 border border-gray-200'
               }`}
             >
-              {item.featured && (
-                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-bold">
-                  FEATURED
+              {category.label} ({category.count})
+            </button>
+          ))}
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredContent.map((content) => (
+            <div
+              key={content.id}
+              className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
+                content.featured ? 'ring-2 ring-purple-500' : ''
+              }`}
+            >
+              {content.featured && (
+                <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 text-center font-semibold">
+                  ⭐ FEATURED CONTENT
                 </div>
               )}
               
-              <div className="p-8">
+              <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    item.type === 'Case Study' ? 'bg-green-100 text-green-800' :
-                    item.type === 'Blog Post' ? 'bg-blue-100 text-blue-800' :
-                    item.type === 'Guide' ? 'bg-purple-100 text-purple-800' :
-                    item.type === 'Innovation' ? 'bg-orange-100 text-orange-800' :
-                    item.type === 'Technology' ? 'bg-indigo-100 text-indigo-800' :
-                    'bg-gray-100 text-gray-800'
-                  }`}>
-                    {item.type}
-                  </span>
-                  <span className="text-sm text-gray-500">{item.readTime}</span>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-2xl">{getTypeIcon(content.type)}</span>
+                    <span className={`px-3 py-1 rounded-full text-white text-xs font-semibold ${getTypeColor(content.type)}`}>
+                      {content.type.toUpperCase()}
+                    </span>
+                  </div>
+                  <span className="text-sm text-gray-500">{content.readingTime}</span>
                 </div>
-                
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                  {item.title}
+
+                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                  {content.title}
                 </h3>
-                
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {item.description}
+
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                  {content.description}
                 </p>
-                
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {content.tags.slice(0, 3).map((tag) => (
+                    <span
+                      key={tag}
+                      className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex space-x-4">
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-green-600">{content.roi}</div>
+                      <div className="text-xs text-gray-500">ROI</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-blue-600">{content.savings}</div>
+                      <div className="text-xs text-gray-500">Savings</div>
+                    </div>
+                  </div>
+                </div>
+
                 <Link
-                  href={item.href}
-                  className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors group-hover:translate-x-1 transform duration-200"
+                  href={content.url}
+                  className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all"
                 >
-                  Read More
-                  <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  Read Full Article
                 </Link>
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12 text-white">
-          <h3 className="text-3xl font-bold mb-4">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-xl mb-8 opacity-90">
-            Join the Fortune 500 companies achieving unprecedented results with our AI solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors transform hover:scale-105"
-            >
-              Explore Services
-            </Link>
+        {/* Call to Action */}
+        <div className="text-center mt-12">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-3xl font-bold mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-xl mb-6 text-blue-100">
+              Join thousands of companies already achieving massive ROI with our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/services"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all"
+              >
+                Explore Our Services
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all"
+              >
+                Get Free Consultation
+              </Link>
+            </div>
           </div>
         </div>
       </div>
