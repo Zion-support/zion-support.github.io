@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   main:
-    name: Main Job
+    name: Monetization Job
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
