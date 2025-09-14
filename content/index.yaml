@@ -259,7 +259,58 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
-    - id: "enterprise-ai-revolution-ultimate-breakthrough-2025"
+    - id: "ai-2025-ultimate-automation-revolution-enterprise-breakthrough"
+      type: "blog"
+      title: "AI 2025: The Ultimate Automation Revolution - Enterprise Breakthrough Guide"
+      file_path: "/content/blog/ai-2025-ultimate-automation-revolution-enterprise-breakthrough.md"
+      url: "/blog/ai-2025-ultimate-automation-revolution-enterprise-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Automation", "Enterprise", "ROI", "Fortune 500", "Revolutionary AI", "Business Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,500%"
+        savings: "$2.8B"
+        accuracy: "99.7%"
+        efficiency: "400%"
+      reading_time: "28 min read"
+      
+    - id: "fortune-500-ai-transformation-2500-roi-success-story"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation: $2.8B Annual Savings with 2,500% ROI in 10 Months"
+      file_path: "/content/case-studies/fortune-500-ai-transformation-2500-roi-success-story.md"
+      url: "/case-studies/fortune-500-ai-transformation-2500-roi-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "AI Transformation", "ROI", "Success Story", "Manufacturing"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "2,500%"
+        savings: "$2.8B"
+        timeline: "10 months"
+        satisfaction: "98.7%"
+      reading_time: "22 min read"
+      
+    - id: "ai-2025-implementation-ultimate-roadmap-comprehensive-guide"
+      type: "resource"
+      title: "AI 2025 Implementation Ultimate Roadmap: Complete Guide to 2,000% ROI"
+      file_path: "/content/resources/ai-2025-implementation-ultimate-roadmap-comprehensive-guide.md"
+      url: "/resources/ai-2025-implementation-ultimate-roadmap-comprehensive-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "Roadmap", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "2,000%"
+        success: "98%"
+        timeline: "18 months"
+        projects: "500+"
+      reading_time: "35 min read"
+      
+    - id: "ai-2025-ultimate-business-transformation-revolution"
       type: "blog"
       title: "AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide"
       file_path: "/content/blog/ai-2025-enterprise-ai-revolution-ultimate-breakthrough-2025.md"

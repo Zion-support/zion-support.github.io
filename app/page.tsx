@@ -44,6 +44,14 @@ import RevolutionaryContent2026Banner from '../components/RevolutionaryContent20
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
+import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
+
+// Import new 2025 breakthrough promotional components
+import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI2025BreakthroughPromotionBanner';
+import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
+import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
+
+// Import new ultimate content showcase banners
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
 import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
@@ -69,22 +77,16 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* AI 2030 Content Showcase Banner - FEATURED */}
-        <AI2030ContentShowcaseBanner />
-        
         {/* Revolutionary Content Showcase 2025 - FEATURED */}
         <RevolutionaryContentShowcase2025 />
         
         {/* New Content 2025 Ultimate Banner - NEW */}
         <NewContent2025UltimateShowcaseBanner />
         
-        {/* Quantum AI 2026 Breakthrough Banner */}
-        <QuantumAI2026BreakthroughBanner />
+        {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
+        <AI2025UltimateBreakthroughBanner />
         
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
-        
-        {/* Revolutionary Content 2025 Banner - NEW CONTENT */}
+        {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
         
         {/* AI 2030 Content Navigation - COMPREHENSIVE DISCOVERY */}
