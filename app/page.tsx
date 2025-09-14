@@ -37,6 +37,10 @@ import UltimateContentShowcase2026 from '../components/UltimateContentShowcase20
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
 
+// Import new Generative AI Revolution 2025 components
+import GenerativeAIRevolutionBanner2025 from '../components/GenerativeAIRevolutionBanner2025';
+import GenerativeAIContentShowcase2025 from '../components/GenerativeAIContentShowcase2025';
+
 // Import new AI 2027 breakthrough components
 import AI2027UltimateBreakthroughBanner from '../components/AI2027UltimateBreakthroughBanner';
 import NewContent2027Showcase from '../components/NewContent2027Showcase';
@@ -302,6 +306,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* GENERATIVE AI REVOLUTION 2025 - NEWEST FEATURED */}
+        <GenerativeAIRevolutionBanner2025 />
+        
+        {/* GENERATIVE AI CONTENT SHOWCASE 2025 - FEATURED */}
+        <GenerativeAIContentShowcase2025 />
+        
         {/* ULTIMATE AI 2025 TRANSFORMATION - TOP PRIORITY FEATURED */}
         <UltimateAI2025TransformationBanner />
         
