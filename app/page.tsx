@@ -42,7 +42,7 @@ import UltimateContentShowcase2026 from '../components/UltimateContentShowcase20
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
 
 // Import new ultimate content showcase banner
-import UltimateContent2025ShowcaseBanner from '../components/UltimateContent2025ShowcaseBanner';
+// import UltimateContent2025ShowcaseBanner from '../components/UltimateContent2025ShowcaseBanner';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
@@ -56,15 +56,24 @@ import AutonomousBusinessOperationsPromotionBanner from '../components/Autonomou
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
 
 // Import new ultimate AI transformation promotional components
-import UltimateAITransformationBanner2025 from '../components/UltimateAITransformationBanner2025';
+// import UltimateAITransformationBanner2025 from '../components/UltimateAITransformationBanner2025';
 
 // Import new 2025 autonomous systems promotional components
-import AutonomousSystems2025RevolutionBanner from '../components/AutonomousSystems2025RevolutionBanner';
-import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
+// import AutonomousSystems2025RevolutionBanner from '../components/AutonomousSystems2025RevolutionBanner';
+// import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
 
 // Import new autonomous BI promotional components
-import AutonomousBIRevolutionBanner2025 from '../components/AutonomousBIRevolutionBanner2025';
-import AutonomousBIShowcase2025 from '../components/AutonomousBIShowcase2025';
+// import AutonomousBIRevolutionBanner2025 from '../components/AutonomousBIRevolutionBanner2025';
+// import AutonomousBIShowcase2025 from '../components/AutonomousBIShowcase2025';
+
+// Import new predictive analytics promotional components
+import NewContent2025PredictiveAnalyticsBanner from '../components/NewContent2025PredictiveAnalyticsBanner';
+import PredictiveAnalyticsContentShowcase2025 from '../components/PredictiveAnalyticsContentShowcase2025';
+
+// Import new revolutionary content promotional components
+import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
+import BlockchainIntegrationRevolutionBanner2025 from '../components/BlockchainIntegrationRevolutionBanner2025';
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -83,17 +92,24 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Autonomous BI Revolution Banner 2025 - LATEST */}
-        <AutonomousBIRevolutionBanner2025 />
+        {/* New Revolutionary Content Banners 2025 - LATEST */}
+        <NeuralInterfaceRevolutionBanner2025 />
+        <BlockchainIntegrationRevolutionBanner2025 />
+        
+        {/* New Predictive Analytics Content Banner 2025 */}
+        <NewContent2025PredictiveAnalyticsBanner />
+        
+        {/* Autonomous BI Revolution Banner 2025 */}
+        {/* <AutonomousBIRevolutionBanner2025 /> */}
         
         {/* Ultimate Content 2025 Showcase Banner */}
-        <UltimateContent2025ShowcaseBanner />
+        {/* <UltimateContent2025ShowcaseBanner /> */}
         
         {/* Ultimate AI Transformation Banner 2025 */}
-        <UltimateAITransformationBanner2025 />
+        {/* <UltimateAITransformationBanner2025 /> */}
         
         {/* Autonomous Systems 2025 Revolution Banner - NEW */}
-        <AutonomousSystems2025RevolutionBanner />
+        {/* <AutonomousSystems2025RevolutionBanner /> */}
         
         {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
         <AI2025UltimateBreakthroughBanner />
@@ -217,10 +233,16 @@ export default function HomePage() {
         <UltimateContentShowcase2025 />
         
         {/* Autonomous Systems Showcase 2025 */}
-        <AutonomousSystemsShowcase2025 />
+        {/* <AutonomousSystemsShowcase2025 /> */}
         
         {/* Autonomous BI Showcase 2025 - NEW */}
-        <AutonomousBIShowcase2025 />
+        {/* <AutonomousBIShowcase2025 /> */}
+        
+        {/* Revolutionary Content Showcase 2025 - NEW */}
+        <RevolutionaryContentShowcase2025 />
+        
+        {/* Predictive Analytics Content Showcase 2025 */}
+        <PredictiveAnalyticsContentShowcase2025 />
         
         <RevolutionaryContent2026Banner />
         <FeaturedContentShowcase2026 />
