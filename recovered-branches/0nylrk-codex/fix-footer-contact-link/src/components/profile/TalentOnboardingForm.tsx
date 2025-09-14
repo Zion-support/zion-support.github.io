@@ -140,6 +140,7 @@ export function TalentOnboardingForm() {
     return publicUrl;
   };
 
+
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
 

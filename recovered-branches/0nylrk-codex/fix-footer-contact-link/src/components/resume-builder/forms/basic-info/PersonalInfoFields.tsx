@@ -56,6 +56,7 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
       <FormField
         control={control}
         name="phone"
+
         render={({ field }) => (
           <FormItem>
             <FormLabel>Phone</FormLabel>

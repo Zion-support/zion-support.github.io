@@ -1,9 +1,9 @@
-import React from 'react';
-import { useSearchParamsLink } from 'react-router-dom';
+import React from 'react',
+import { useSearchParams, Link } from 'react-router-dom',
 
 export default function OrderSuccess() {
-  const [params] = useSearchParams();
-  const sessionId = params.get('session_id');
+  const [params] = useSearchParams(),
+  const sessionId = params.get('session_id'),
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6">
@@ -11,5 +11,5 @@ export default function OrderSuccess() {
       {sessionId && <p className="mb-4">Session ID: {sessionId}</p>}
       <Link className="underline" to="/">Return Home</Link>
     </div>
-  );
+  ),
 }

@@ -46,6 +46,7 @@ export const AppTestimonials: React.FC = () => {
                   {Array.from({ length: 5 }).map((_i) => (
                     <Star 
                       key={i}
+
                       className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
                     />
                   ))}

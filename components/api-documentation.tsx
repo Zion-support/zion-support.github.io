@@ -8,6 +8,7 @@ import {
 
 export default function APIDocumentation() {
 	return (
+
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>API Documentation | Zion Tech Group</title>

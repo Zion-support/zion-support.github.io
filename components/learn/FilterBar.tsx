@@ -9,6 +9,7 @@ type Props = {
 
 export default function FilterBar({ categorylevelisFreeonChange }: Props) {
   return (
+
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
       <select
         className="border rounded px-3 py-2 bg-white dark:bg-black"

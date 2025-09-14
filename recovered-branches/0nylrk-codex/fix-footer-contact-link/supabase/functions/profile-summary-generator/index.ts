@@ -104,6 +104,7 @@ serve(async (req) => {
     );
 
   } catch (error) {
+
     console.error("Error in profile-summary-generator function:", error);
     
     return new Response(

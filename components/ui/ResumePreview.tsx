@@ -157,9 +157,14 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
             </section>
           ) : null}
 
+
+
+
           {/* Certifications */}
           {data.certifications?.length ? (
-            <section className="mb-5">
+            <section className='mb-5'>
+              <SectionTitle>Certifications</SectionTitle>
+              <ul className='mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>                {data.certifications.map((c, idx) => (            <section className="mb-5">
               <SectionTitle>Certifications</SectionTitle>
               <ul className="mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
                 {data.certifications.map((cidx) => (
@@ -173,6 +178,7 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
           {portfolioItems.length ? (
             <section className="mb-5">
               <SectionTitle>Portfolio</SectionTitle>
+
               <div className="mt-2 space-y-2">
                 {portfolioItems.map((pidx) => (
                   <div key={`proj-${idx}`} className="text-sm">

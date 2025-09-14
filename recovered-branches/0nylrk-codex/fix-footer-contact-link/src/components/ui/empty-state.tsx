@@ -16,6 +16,24 @@ interface EmptyStateProps {
   secondaryAction?: {
     text: string;
     href?: string;
+
+    onClick?: () => void
+  }
+    text: string,
+    href?: string,
+    onClick?: () => void
+  },
+  secondaryAction?: {
+    text: string,
+    href?: string,
+    onClick?: () => void
+  },
+  className?: string
+}
+
+
+
+
     onClick?: () => void;
   };
   className?: string;
@@ -28,6 +46,7 @@ export function EmptyState({
   action,
   secondaryAction,
   className}: EmptyStateProps) {
+
   return (
     <div
       className={cn(

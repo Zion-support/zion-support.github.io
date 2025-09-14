@@ -14,6 +14,7 @@ export function useReviews(projectId?: string) {
   
   // Fetch reviews for a project
   const fetchProjectReviews = async (projectId: string) => {
+
     if (!projectId) return;
     
     setIsLoading(true);
@@ -84,6 +85,7 @@ export function useReviews(projectId?: string) {
         title: "Error",
         description: "Failed to load reviews",
         variant: "destructive"});
+
     } finally {
       setIsLoading(false);
     }
@@ -205,6 +207,7 @@ export function useReviews(projectId?: string) {
             title: "Error",
             description: "You have already reported this review",
             variant: "destructive"});
+
         } else {
           throw error;
         }

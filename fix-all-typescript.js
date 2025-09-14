@@ -17,6 +17,7 @@ function fixTypeScriptFiles(dir) {,
           console.log(`Fixing "file": ${fullPath}`),
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
       } catch (error) {,
+
         console.log(`Error processing ${fullPath}: ${error.message}`)};
 };
   })};

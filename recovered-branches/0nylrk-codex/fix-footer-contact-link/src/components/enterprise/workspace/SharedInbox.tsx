@@ -29,6 +29,7 @@ export function SharedInbox() {
       preview: "The contract with freelancer Michael Chen has been approved and signed.",
       timestamp: "2d ago",
       unread: false
+
     }
   ];
 
