@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 18
+  total_content_pieces: 15
   
   new_2025_content:
     - id: "generative-ai-revolution"
@@ -97,54 +97,6 @@ content_index:
         savings: "$180M"
         accuracy: "99.8%"
         satisfaction: "94%"
-        
-    - id: "ai-2025-enterprise-automation-breakthrough"
-      type: "blog"
-      title: "AI 2025: The Enterprise Automation Breakthrough - 340% ROI Revolution"
-      file_path: "/content/blog/ai-2025-enterprise-automation-breakthrough.md"
-      url: "/blog/ai-2025-enterprise-automation-breakthrough"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "2025"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "340%"
-        savings: "$2.8B"
-        satisfaction: "98%"
-        projects: "500+"
-        
-    - id: "fortune-500-ai-transformation-340-percent-roi"
-      type: "case-study"
-      title: "Fortune 500 AI Transformation: How a $50B Company Achieved 340% ROI in 18 Months"
-      file_path: "/content/case-studies/fortune-500-ai-transformation-340-percent-roi.md"
-      url: "/case-studies/fortune-500-ai-transformation-340-percent-roi"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Case Study", "Fortune 500", "AI Transformation", "ROI", "Success Story"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "340%"
-        savings: "$2.8B"
-        satisfaction: "98%"
-        timeline: "18 months"
-        
-    - id: "ai-implementation-roi-calculator-guide-2025"
-      type: "resource"
-      title: "AI Implementation ROI Calculator Guide 2025: Calculate Your 500%+ ROI Potential"
-      file_path: "/content/resources/ai-implementation-roi-calculator-guide-2025.md"
-      url: "/resources/ai-implementation-roi-calculator-guide-2025"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["ROI Calculator", "AI Implementation", "Guide", "ROI", "2025"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "500%+"
-        accuracy: "95%"
-        users: "10,000+"
-        satisfaction: "97%"
         
     - id: "enterprise-implementation-guide"
       type: "resource"
@@ -502,28 +454,6 @@ content_index:
         - "Success metrics grid"
         - "Interactive content cards"
         - "Call-to-action buttons"
-        
-    - name: "EnhancedContentPromotionBanner"
-      file_path: "/app/components/EnhancedContentPromotionBanner.tsx"
-      status: "active"
-      features:
-        - "Rotating slides with animated transitions"
-        - "Success metrics display (340% ROI, $2.8B savings)"
-        - "Interactive content cards with hover effects"
-        - "Dismissible banner with localStorage persistence"
-        - "Call-to-action buttons and engagement features"
-        - "Responsive design and mobile optimization"
-        
-    - name: "NewContent2025Showcase"
-      file_path: "/app/components/NewContent2025Showcase.tsx"
-      status: "active"
-      features:
-        - "Interactive content showcase with filtering"
-        - "Success metrics grid and ROI highlights"
-        - "Content type indicators and badges"
-        - "Call-to-action buttons and engagement features"
-        - "Responsive design and mobile optimization"
-        - "Featured content highlighting"
 
   homepage_integration:
     component: "HomePage"
@@ -536,113 +466,13 @@ content_index:
       - "Added auto-rotating content showcase with metrics"
       - "Implemented interactive content discovery and filtering"
 
-  new_content_january_2025:
-    - id: "enterprise-automation-ultimate-guide"
-      type: "blog"
-      title: "AI 2025 Enterprise Automation Revolution: The Ultimate Guide to Transforming Your Business"
-      file_path: "/content/blog/ai-2025-enterprise-automation-revolution-ultimate-guide.md"
-      url: "/blog/ai-2025-enterprise-automation-revolution-ultimate-guide"
-      status: "published"
-      created: "2025-01-15"
-      tags: ["AI", "Automation", "Enterprise", "Digital Transformation", "2025"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "340%"
-        efficiency_gain: "78%"
-        cost_reduction: "65%"
-        accuracy: "92%"
-      reading_time: "12 min read"
-      
-    - id: "quantum-ai-business-transformation"
-      type: "blog"
-      title: "Quantum AI 2025: The Complete Business Transformation Guide"
-      file_path: "/content/blog/quantum-ai-2025-business-transformation-complete-guide.md"
-      url: "/blog/quantum-ai-2025-business-transformation-complete-guide"
-      status: "published"
-      created: "2025-01-15"
-      tags: ["Quantum AI", "Quantum Computing", "Business Transformation", "2025", "AI Revolution"]
-      featured: true
-      is_new: true
-      metrics:
-        market_size: "$65B"
-        processing_speed: "1000x"
-        roi: "340%"
-        accuracy: "99.9%"
-      reading_time: "15 min read"
-      
-    - id: "manufacturing-ai-success-story"
-      type: "case-study"
-      title: "AI Automation Success Story: 85% Efficiency Gain in Manufacturing"
-      file_path: "/content/case-studies/ai-automation-manufacturing-success-story.md"
-      url: "/case-studies/ai-automation-manufacturing-success-story"
-      status: "published"
-      created: "2025-01-15"
-      tags: ["AI Automation", "Manufacturing", "Success Story", "Efficiency", "ROI"]
-      featured: true
-      is_new: true
-      metrics:
-        efficiency_gain: "85%"
-        cost_reduction: "60%"
-        roi: "340%"
-        defect_reduction: "93%"
-      reading_time: "8 min read"
-      
-    - id: "ai-implementation-roadmap-2025"
-      type: "resource"
-      title: "AI 2025 Implementation Roadmap: Complete Guide to Success"
-      file_path: "/content/resources/ai-2025-implementation-roadmap-complete-guide.md"
-      url: "/resources/ai-2025-implementation-roadmap-complete-guide"
-      status: "published"
-      created: "2025-01-15"
-      tags: ["AI Implementation", "Roadmap", "Strategy", "2025", "Digital Transformation"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "67%"
-        efficiency: "45%"
-        cost_reduction: "89%"
-        decision_speed: "340%"
-      reading_time: "20 min read"
-
-  new_promotional_components:
-    - name: "NewContent2025UltimateBanner"
-      file_path: "/components/NewContent2025UltimateBanner.tsx"
-      status: "active"
-      features:
-        - "Revolutionary AI Content Collection showcase"
-        - "Featured blog posts, case studies, and resources"
-        - "Interactive content cards with hover effects"
-        - "Statistics display (340% ROI, 98% satisfaction)"
-        - "Call-to-action buttons for exploration and consultation"
-        
-    - name: "QuantumAI2025RevolutionBanner"
-      file_path: "/components/QuantumAI2025RevolutionBanner.tsx"
-      status: "active"
-      features:
-        - "Quantum AI Revolution 2025 showcase"
-        - "Industry transformation highlights"
-        - "Quantum AI benefits and statistics"
-        - "Complete Quantum AI Guide promotion"
-        - "Gradient backgrounds and modern design"
-        
-    - name: "UltimateContentShowcase2025"
-      file_path: "/components/UltimateContentShowcase2025.tsx"
-      status: "active"
-      features:
-        - "Comprehensive content collection display"
-        - "Interactive content grid with featured items"
-        - "Impact statistics and success metrics"
-        - "Additional resources and tools promotion"
-        - "Multiple call-to-action options"
-
   metrics:
-    expected_roi_mentions: 35
-    success_stories: 6
-    implementation_guides: 5
-    blog_posts: 8
-    total_word_count: "~65,000 words"
-    estimated_reading_time: "~260 minutes"
+    expected_roi_mentions: 25
+    success_stories: 4
+    implementation_guides: 3
+    blog_posts: 4
+    total_word_count: "~45,000 words"
+    estimated_reading_time: "~180 minutes"
     new_content_roi_highlights: "500% ROI featured prominently"
-    promotional_components: 9
+    promotional_components: 6
     homepage_integration: "Complete with auto-rotation and filtering"
