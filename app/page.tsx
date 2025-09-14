@@ -264,6 +264,12 @@ import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import ROICalculatorWidget from '../components/ROICalculatorWidget';
 
+// Import new 2025 content and advertising components
+import NewContent2025PromotionalBanner from '../components/NewContent2025PromotionalBanner';
+import InteractiveROICalculator from '../components/InteractiveROICalculator';
+import TestimonialShowcase from '../components/TestimonialShowcase';
+import NewsletterSignup2025 from '../components/NewsletterSignup2025';
+
 // Import new Advanced Neural Architectures 2026 components
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
@@ -296,6 +302,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 PROMOTIONAL BANNER - NEWEST FEATURED */}
+        <NewContent2025PromotionalBanner />
+        
         {/* AI 2026 FUTURE PREDICTIONS ULTIMATE BREAKTHROUGH BANNER - NEWEST BREAKTHROUGH */}
         <AI2026FuturePredictionsUltimateBreakthroughBanner />
         
@@ -631,6 +640,15 @@ export default function HomePage() {
 
         {/* AI Business Intelligence Showcase 2025 - NEW FEATURED */}
         <AIBusinessIntelligenceShowcase2025 />
+        
+        {/* INTERACTIVE ROI CALCULATOR - NEW FEATURED */}
+        <InteractiveROICalculator />
+        
+        {/* TESTIMONIAL SHOWCASE - NEW FEATURED */}
+        <TestimonialShowcase />
+        
+        {/* NEWSLETTER SIGNUP 2025 - NEW FEATURED */}
+        <NewsletterSignup2025 />
         
         {/* Advanced AI Components */}
         <AdvancedContentRecommendationEngine />
