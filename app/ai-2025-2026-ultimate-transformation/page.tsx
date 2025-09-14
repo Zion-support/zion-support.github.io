@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function AI2025_2026UltimateTransformationPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2025-2026 Ultimate Business Transformation | 50,000% ROI Guide"
         description="Discover the revolutionary AI technologies achieving 50,000% ROI. Complete guide to AI transformation with Fortune 500 case studies and implementation framework."
@@ -209,6 +209,6 @@ export default function AI2025_2026UltimateTransformationPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

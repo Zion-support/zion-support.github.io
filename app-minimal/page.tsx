@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'AI 2025 Trends & Predictions: The Future of Artificial Intelligence',
   description: 'Discover the most important AI trends and predictions for 2025. From quantum computing breakthroughs to neural interfacesexplore what the future holds for artificial intelligence.',
-  keywords: ['AI 2025'AI trends'AI predictions'artificial intelligence'quantum computing'neural interfaces'machine learning'],
+  keywords: ['AI 2025', 'AI trends', 'AI predictions', 'artificial intelligence', 'quantum computing', 'neural interfaces', 'machine learning'],
 };
 
 export default function AI2025TrendsPage() {
