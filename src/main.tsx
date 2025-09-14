@@ -4,24 +4,24 @@ import App from './App.tsx';
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from 'react-error-boundary';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { SnackbarProvider } from 'notistack';
-import { captureException } from '@/utils/sentry';
+import { captureException } from './utils/sentry';
 import { useTranslation } from 'react-i18next';
 // Removed ToastInitializer import as it doesn't exist
 
 // Import i18n configuration
 import './i18n';
-import { LanguageProvider } from '@/context/LanguageContext';
-import { WhitelabelProvider } from '@/context/WhitelabelContext';
-import { AppLayout } from '@/layout/AppLayout';
+import { LanguageProvider } from './context/LanguageContext';
+import { WhitelabelProvider } from './context/WhitelabelContext';
+import { AppLayout } from './layout/AppLayout';
 
 // Removed NotificationProvider import as it doesn't exist
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
-import { registerServiceWorker } from './serviceWorkerRegistration';
+import { register as registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
@@ -95,11 +95,3 @@ try {
 }
 
 registerServiceWorker();
-=======
-
-import './index.css';
-,
-ReactDOM.createRoot(document.getElementById('root')!).render(,
-  <React.StrictMode>,
-    <App />,
-  </React.StrictMode>),

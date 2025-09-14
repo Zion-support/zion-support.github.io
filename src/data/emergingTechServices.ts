@@ -79,3 +79,35 @@ export const emergingTechServices: EmergingTechService[] = [
     demoUrl: "https://demo.ziontechgroup.com/quantum"
   }
 ];
+
+export const getEmergingTechServiceByCategory = (category: string) => {
+  return EMERGING_TECH_SERVICES.filter(service => service.category === category);
+};
+
+export const getEmergingTechServiceBySubcategory = (subcategory: string) => {
+  return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory);
+};
+
+export const getFeaturedEmergingTechServices = () => {
+  // Return first 8 services since rating property doesn't exist
+  return EMERGING_TECH_SERVICES.slice(0, 8);
+};
+
+export const getServicesByInnovationScore = (minScore: number) => {
+    technology: ["Unity3D", "Unreal Engine", "React", "Node.js", "WebGL", "WebXR", "3D Graphics"],
+    integrations: ["Display hardware", "Content management systems", "Streaming platforms", "Mobile apps"],
+    compliance: ["Content standards", "Accessibility guidelines", "Industry regulations"],
+    roi: "400% within 12 months",
+    competitors: ["Magic Leap", "Microsoft HoloLens", "RealView", "Looking Glass"],
+    marketTrend: "Growing market with increasing demand for immersive experiences",
+    innovationLevel: "Advanced holographic platform for commercial applications",
+    uniqueValue: "First comprehensive platform for creating and distributing holographic content across multiple display types"
+  }
+];
+
+export default EMERGING_TECH_SERVICES;
+  // Return all services since innovationScore property doesn't exist
+  // In the future, this could be enhanced with actual innovation scoring
+  return EMERGING_TECH_SERVICES;
+};
+];

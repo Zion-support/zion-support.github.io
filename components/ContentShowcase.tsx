@@ -48,7 +48,6 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
         return 'bg-purple-100 text-purple-800';
       default:
         return 'bg-gray-100 text-gray-800';
-=======
   showViewAll = true,
   viewAllHref = '/blog',
   variant = 'default'
@@ -157,7 +156,6 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
                   <div className="flex items-center gap-1 text-blue-600 group-hover:text-blue-800">
                     <span>Read more</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-=======
       case 'blog': return 'Article';
       case 'resource': return 'Resource';
       case 'case-study': return 'Case Study';

@@ -5,6 +5,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, 
   Zap, 
+<<<<<<< HEAD
+  Cpu, 
+  Database, 
+  Shield, 
+=======
+>>>>>>> main
   Globe, 
   Rocket, 
   Target,

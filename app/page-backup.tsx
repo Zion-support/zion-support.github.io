@@ -125,12 +125,13 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW AI 2025 CONTENT PROMOTION BANNER */}
+        <AI2025NewContentPromotionBanner />
         {/* NEW AI 2025 CONTENT SHOWCASE BANNER */}
         <AI2025ContentShowcaseBanner />
         
         {/* NEW ULTIMATE CONTENT SHOWCASE 2025 PROMOTION BANNER */}
         <UltimateContentShowcase2025PromotionBanner />
-=======
         {/* NEW AI 2025 ULTIMATE BREAKTHROUGH ANNOUNCEMENT BANNER */}
         <AI2025UltimateBreakthroughAnnouncementBanner />
         
@@ -192,7 +193,6 @@ export default function HomePage() {
         {/* NEW AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER */}
         <AI2025RevolutionaryBreakthroughPromotionBanner />
         
-=======
         {/* NEW AI 2026 ULTIMATE BREAKTHROUGH BANNER */}
         <AI2026UltimateBreakthroughPromotionBanner />
         
@@ -214,7 +214,6 @@ export default function HomePage() {
         {/* INTERACTIVE CONTENT DISCOVERY WIDGET 2025 */}
         <InteractiveContentDiscoveryWidget2025 />
         
-=======
         {/* NEW CONTENT PROMOTION BANNER 2025 */}
         <NewContentPromotionBanner2025 />
         
@@ -241,7 +240,6 @@ export default function HomePage() {
         {/* NEW CONTENT PROMOTION BANNER */}
         <NewContentPromotionBanner />
         
-=======
         {/* NEW: AI 2025 REVOLUTIONARY CONTENT BANNER */}
         <AI2025RevolutionaryContentBanner />
         

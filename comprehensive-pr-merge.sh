@@ -6,8 +6,7 @@
 set -e
 
 echo "🚀 Starting Comprehensive PR Merge Process"
-echo "=========================================="
-
+echo "
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -107,3 +106,74 @@ resolve_conflicts() {
     # Common conflict resolution strategies
     if [ -f "app/page.tsx" ]; then
         # For page.tsx, prefer the main branch version but integrate new components
+        if grep -q "content = re.sub(r'
+# Clean up extra whitespace
+content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+
+with open('app/page.tsx', 'w') as f:
+    f.write(content)
+
+print("Resolved page.tsx conflicts")
+EOF
+}
+
+# Main execution
+main() {
+    print_status "Starting comprehensive PR merge process..."
+    
+    # Ensure we're on main branch
+    git checkout main
+    git pull origin main
+    
+    # Get list of all remote branches that start with cursor/
+    branches=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | sort)
+    
+    print_status "Found $(echo "$branches" | wc -l) branches to merge"
+    
+    # Merge branches in batches to avoid overwhelming the system
+    batch_size=10
+    batch_num=1
+    total_branches=$(echo "$branches" | wc -l)
+    
+    echo "$branches" | while IFS= read -r branch; do
+        if [ -z "$branch" ]; then
+            continue
+        fi
+        
+        print_status "Processing batch $batch_num, branch: $branch"
+        
+        if merge_branch "$branch"; then
+            print_success "Successfully processed $branch"
+        else
+            print_warning "Failed to merge $branch, continuing with next branch"
+        fi
+        
+        # Push changes every 10 branches
+        if [ $((batch_num % 10)) -eq 0 ]; then
+            print_status "Pushing changes after batch $batch_num..."
+            git push origin main || print_warning "Failed to push changes"
+        fi
+        
+        batch_num=$((batch_num + 1))
+    done
+    
+    # Final push
+    print_status "Pushing final changes..."
+    git push origin main
+    
+    print_success "Comprehensive PR merge process completed!"
+    
+    # Clean up merged branches
+    print_status "Cleaning up merged branches..."
+    echo "$branches" | while IFS= read -r branch; do
+        if [ -n "$branch" ]; then
+            # Delete remote branch if it exists
+            git push origin --delete "$branch" 2>/dev/null || true
+        fi
+    done
+    
+    print_success "All PRs merged and cleaned up!"
+}
+
+# Run the main function
+main "$@"

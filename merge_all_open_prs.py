@@ -1,166 +1,134 @@
 #!/usr/bin/env python3
-"""
-Script to merge all open PRs into the main branch
-"""
+
 import json
 import subprocess
-import sys
 import time
 import os
 
-def run_command(cmd, cwd=None):
-    """Run a command and return the result"""
-    try:
-        result = subprocess.run(cmd, shell=True, cwd=cwd, capture_output=True, text=True)
-        return result.returncode == 0, result.stdout, result.stderr
-    except Exception as e:
-        return False, "", str(e)
-
 def get_open_prs():
-    """Get all open PRs from the JSON file"""
+    """Get list of open PRs from the JSON file"""
     try:
         with open('_open_prs.json', 'r') as f:
             prs = json.load(f)
-        return [pr for pr in prs if pr['state'] == 'open']
+        return [pr for pr in prs if pr.get('state') == 'open']
     except Exception as e:
         print(f"Error reading PRs: {e}")
         return []
 
-def merge_pr(pr_number, branch_name):
-    """Merge a specific PR"""
-    print(f"\n🔄 Processing PR #{pr_number} from branch {branch_name}")
-    
-    # First, fetch the latest changes
-    print("📥 Fetching latest changes...")
-    success, stdout, stderr = run_command("git fetch origin")
-    if not success:
-        print(f"❌ Failed to fetch: {stderr}")
-        return False
-    
-    # Checkout the branch
-    print(f"🔀 Checking out branch {branch_name}...")
-    success, stdout, stderr = run_command(f"git checkout {branch_name}")
-    if not success:
-        print(f"❌ Failed to checkout branch {branch_name}: {stderr}")
-        return False
-    
-    # Pull latest changes for the branch
-    print("📥 Pulling latest changes for branch...")
-    success, stdout, stderr = run_command("git pull origin " + branch_name)
-    if not success:
-        print(f"⚠️  Warning: Failed to pull branch {branch_name}: {stderr}")
-    
-    # Switch back to main
-    print("🔀 Switching back to main...")
-    success, stdout, stderr = run_command("git checkout main")
-    if not success:
-        print(f"❌ Failed to checkout main: {stderr}")
-        return False
-    
-    # Pull latest main
-    print("📥 Pulling latest main...")
-    success, stdout, stderr = run_command("git pull origin main")
-    if not success:
-        print(f"❌ Failed to pull main: {stderr}")
-        return False
-    
-    # Try to merge the branch
-    print(f"🔀 Attempting to merge {branch_name} into main...")
-    success, stdout, stderr = run_command(f"git merge {branch_name}")
-    
-    if success:
-        print(f"✅ Successfully merged {branch_name}")
+def merge_pr_via_api(pr_number):
+    """Merge a PR using GitHub API"""
+    try:
+        # This would require GitHub token, for now we'll use git commands
+        print(f"Attempting to merge PR #{pr_number} via git...")
         
-        # Push the changes
-        print("📤 Pushing changes to main...")
-        success, stdout, stderr = run_command("git push origin main")
-        if success:
-            print(f"✅ Successfully pushed PR #{pr_number} to main")
+        # Try to fetch and merge the PR
+        branch_name = f"pr-{pr_number}"
+        
+        # Fetch the PR
+        result = subprocess.run([
+            'git', 'fetch', 'origin', f'pull/{pr_number}/head:{branch_name}'
+        ], capture_output=True, text=True, timeout=30)
+        
+        if result.returncode != 0:
+            print(f"Failed to fetch PR #{pr_number}: {result.stderr}")
+            return False
+        
+        # Try to merge
+        result = subprocess.run([
+            'git', 'merge', branch_name, '--no-ff', '-m', f'Merge PR #{pr_number}'
+        ], capture_output=True, text=True, timeout=30)
+        
+        if result.returncode == 0:
+            print(f"✅ Successfully merged PR #{pr_number}")
+            # Clean up branch
+            subprocess.run(['git', 'branch', '-D', branch_name], capture_output=True)
             return True
         else:
-            print(f"❌ Failed to push: {stderr}")
+            print(f"❌ Failed to merge PR #{pr_number}: {result.stderr}")
+            # Clean up branch
+            subprocess.run(['git', 'branch', '-D', branch_name], capture_output=True)
             return False
-    else:
-        print(f"⚠️  Merge conflict detected for PR #{pr_number}")
-        print(f"Conflict details: {stderr}")
-        
-        # Try to resolve conflicts automatically
-        print("🔧 Attempting to resolve conflicts...")
-        
-        # Check git status
-        success, stdout, stderr = run_command("git status --porcelain")
-        if success:
-            print(f"Files with conflicts: {stdout}")
             
-            # Try to resolve conflicts using git merge strategy
-            print("🔧 Attempting to resolve with 'ours' strategy...")
-            success, stdout, stderr = run_command("git reset --hard HEAD")
-            if success:
-                success, stdout, stderr = run_command(f"git merge {branch_name} -X ours")
-                if success:
-                    print("✅ Resolved conflicts using 'ours' strategy")
-                    success, stdout, stderr = run_command("git push origin main")
-                    if success:
-                        print(f"✅ Successfully pushed resolved PR #{pr_number}")
-                        return True
-                    else:
-                        print(f"❌ Failed to push resolved merge: {stderr}")
-                else:
-                    print(f"❌ Failed to resolve conflicts: {stderr}")
-            else:
-                print(f"❌ Failed to reset: {stderr}")
-        
+    except subprocess.TimeoutExpired:
+        print(f"⏰ Timeout merging PR #{pr_number}")
+        return False
+    except Exception as e:
+        print(f"❌ Error merging PR #{pr_number}: {e}")
         return False
 
-def main():
-    """Main function to merge all open PRs"""
-    print("🚀 Starting to merge all open PRs...")
+def merge_all_prs():
+    """Merge all open PRs"""
+    print("🚀 Starting comprehensive PR merge process")
+    print("=" * 50)
     
-    # Get all open PRs
+    # Get open PRs
     open_prs = get_open_prs()
+    print(f"Found {len(open_prs)} open PRs")
+    
     if not open_prs:
-        print("❌ No open PRs found")
+        print("No open PRs found")
         return
     
-    print(f"📋 Found {len(open_prs)} open PRs to process")
-    
-    # Sort PRs by number (oldest first)
-    open_prs.sort(key=lambda x: x['number'])
+    # Sort PRs by number
+    open_prs.sort(key=lambda x: x.get('number', 0))
     
     successful_merges = 0
     failed_merges = 0
     
-    for i, pr in enumerate(open_prs, 1):
-        print(f"\n{'='*60}")
-        print(f"Processing PR {i}/{len(open_prs)}")
-        print(f"{'='*60}")
+    for pr in open_prs:
+        pr_number = pr.get('number')
+        pr_title = pr.get('title', 'Unknown')
         
-        pr_number = pr['number']
-        branch_name = pr['head']['ref']
+        print(f"\n📋 Processing PR #{pr_number}: {pr_title}")
         
-        success = merge_pr(pr_number, branch_name)
-        
-        if success:
+        if merge_pr_via_api(pr_number):
             successful_merges += 1
-            print(f"✅ PR #{pr_number} merged successfully")
         else:
             failed_merges += 1
-            print(f"❌ PR #{pr_number} failed to merge")
         
         # Small delay between merges
-        time.sleep(2)
+        time.sleep(1)
     
-    print(f"\n{'='*60}")
-    print("📊 MERGE SUMMARY")
-    print(f"{'='*60}")
-    print(f"✅ Successful merges: {successful_merges}")
-    print(f"❌ Failed merges: {failed_merges}")
-    print(f"📋 Total PRs processed: {len(open_prs)}")
+    print(f"\n🎯 Merge Summary:")
+    print(f"Total PRs processed: {len(open_prs)}")
+    print(f"Successfully merged: {successful_merges}")
+    print(f"Failed to merge: {failed_merges}")
     
-    if failed_merges > 0:
-        print(f"\n⚠️  {failed_merges} PRs failed to merge and may need manual resolution")
-    else:
-        print(f"\n🎉 All PRs merged successfully!")
+    # Push all changes
+    if successful_merges > 0:
+        print("\n📤 Pushing all merged changes...")
+        try:
+            result = subprocess.run(['git', 'push', 'origin', 'main'], 
+                                  capture_output=True, text=True, timeout=60)
+            if result.returncode == 0:
+                print("✅ Successfully pushed all changes")
+            else:
+                print(f"⚠️ Failed to push changes: {result.stderr}")
+        except Exception as e:
+            print(f"⚠️ Error pushing changes: {e}")
+
+def main():
+    print("🚀 Comprehensive PR Merge Process")
+    print("=" * 50)
+    
+    # Ensure we're on main branch
+    try:
+        subprocess.run(['git', 'checkout', 'main'], check=True, timeout=10)
+        print("✅ Switched to main branch")
+    except:
+        print("⚠️ Could not switch to main branch")
+    
+    # Pull latest changes
+    try:
+        subprocess.run(['git', 'pull', 'origin', 'main'], check=True, timeout=30)
+        print("✅ Pulled latest changes")
+    except:
+        print("⚠️ Could not pull latest changes")
+    
+    # Merge all PRs
+    merge_all_prs()
+    
+    print("\n🎉 PR merge process completed!")
 
 if __name__ == "__main__":
     main()

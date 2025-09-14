@@ -57,3 +57,36 @@ for branch in $RECENT_BRANCHES; do
                 if [ -f "$file" ]; then
                     echo "📝 Resolving $file"
                     # Remove conflict markers and keep main version
+                    sed -i '/                fi
+            done
+            
+            git add .
+            git commit -m "Resolve conflicts for $branch_name - $(date)"
+            echo "✅ Resolved conflicts for: $branch_name"
+            SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
+        else
+            echo "❌ No conflicted files found, aborting merge for: $branch_name"
+            git merge --abort 2>/dev/null || true
+            FAILED_MERGES=$((FAILED_MERGES + 1))
+        fi
+    fi
+    
+    # Progress update every 10 merges
+    if [ $((SUCCESSFUL_MERGES % 10)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
+        echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $SKIPPED_BRANCHES skipped"
+    fi
+done
+
+# Final push
+echo "💾 Pushing final changes..."
+git push origin main
+
+# Summary
+echo ""
+echo "🎉 Efficient PR merge completed!"
+echo "📊 Summary:"
+echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
+echo "   ❌ Failed merges: $FAILED_MERGES"
+echo "   ⏭️  Skipped branches: $SKIPPED_BRANCHES"
+echo "   🔒 Backup branch: $BACKUP_BRANCH"
+echo "⏰ Completed at: $(date)"

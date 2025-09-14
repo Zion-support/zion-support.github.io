@@ -1,7 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+import { ArrowLeft, TrendingUp, DollarSign, Users, Clock, CheckCircle } from 'lucide-react';
+=======
 import { ArrowLeft, Calendar, User, Clock, Share2, BookOpen, Zap, Brain, TrendingUp, Users, Target, CheckCircle, DollarSign, BarChart3, Award, Star } from 'lucide-react';
+>>>>>>> main
 
 export default function AI2025GlobalEnterpriseTransformationUltimateSuccess() {
   return (
@@ -32,6 +36,50 @@ export default function AI2025GlobalEnterpriseTransformationUltimateSuccess() {
         </div>
       </nav>
 
+<<<<<<< HEAD
+      {/* Main Content */}
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Executive Summary */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-blue-900/50 to-green-900/50 backdrop-blur-md rounded-2xl p-8 border border-blue-500/30">
+            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <CheckCircle className="h-8 w-8 text-blue-400" />
+              Executive Summary
+            </h2>
+            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+              A leading Fortune 100 global manufacturing company embarked on a comprehensive AI transformation 
+              journey that resulted in unprecedented business success. Through strategic implementation of 
+              advanced AI technologies, the company achieved remarkable results across all key performance indicators.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30">
+                <div className="flex items-center gap-3 mb-3">
+                  <DollarSign className="h-6 w-6 text-green-400" />
+                  <h3 className="text-lg font-semibold text-white">Revenue Growth</h3>
+                </div>
+                <p className="text-3xl font-bold text-green-400 mb-2">$2.5B</p>
+                <p className="text-blue-200 text-sm">Increase in annual revenue</p>
+              </div>
+              
+              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30">
+                <div className="flex items-center gap-3 mb-3">
+                  <TrendingUp className="h-6 w-6 text-blue-400" />
+                  <h3 className="text-lg font-semibold text-white">Cost Reduction</h3>
+                </div>
+                <p className="text-3xl font-bold text-blue-400 mb-2">60%</p>
+                <p className="text-green-200 text-sm">Reduction in operational costs</p>
+              </div>
+              
+              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30">
+                <div className="flex items-center gap-3 mb-3">
+                  <Clock className="h-6 w-6 text-purple-400" />
+                  <h3 className="text-lg font-semibold text-white">Timeline</h3>
+                </div>
+                <p className="text-3xl font-bold text-purple-400 mb-2">18</p>
+                <p className="text-purple-200 text-sm">Months to full implementation</p>
+              </div>
+=======
       {/* Case Study Header */}
       <article className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
@@ -47,6 +95,7 @@ export default function AI2025GlobalEnterpriseTransformationUltimateSuccess() {
             <div className="flex items-center">
               <Clock className="h-4 w-4 mr-1" />
               15 min read
+>>>>>>> main
             </div>
           </div>
           
@@ -324,6 +373,12 @@ export default function AI2025GlobalEnterpriseTransformationUltimateSuccess() {
                   <User className="h-8 w-8 text-white" />
                 </div>
               </div>
+<<<<<<< HEAD
+              
+              <div className="text-center">
+                <div className="bg-blue-900/40 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-blue-400" />
+=======
               <div className="ml-6">
                 <blockquote className="text-lg mb-4">
                   "The AI transformation led by Zion Tech Group has been nothing short of revolutionary. 
@@ -334,6 +389,7 @@ export default function AI2025GlobalEnterpriseTransformationUltimateSuccess() {
                 <div className="text-sm">
                   <div className="font-semibold">Sarah Johnson</div>
                   <div className="text-gray-300">CEO, Global Manufacturing Corp</div>
+>>>>>>> main
                 </div>
               </div>
             </div>

@@ -1,161 +1,155 @@
 {
-  "version": "1.0",
-  "generated": "2025-09-05T21:52:45.982Z",  "pages": [
+  "generatedAt": "2025-09-14T05:16:19.892Z",
+  "items": [
     {
-      "title": "Home",
-      "url": "/",
-      "description": "Zion Tech Group - AI and Technology Solutions",
-      "keywords": [
-        "AI",
-        "technology",
-        "solutions",
-        "automation"
-      ],
-      "id": 1
+      "url": "https://ziontechgroup.netlify.app/ai-consciousness-evolution-2025",
+      "route": "/ai-consciousness-evolution-2025",
+      "title": "ai-consciousness-evolution-2025"
     },
     {
-      "title": "About",
-      "url": "/about",
-      "description": "About Zion Tech Group - Leading AI and Technology Company",
-      "keywords": [
-        "about",
-        "company",
-        "team",
-        "mission"
-      ],
-      "id": 2
+      "url": "https://ziontechgroup.netlify.app/ai-services",
+      "route": "/ai-services",
+      "title": "ai-services"
     },
     {
-      "title": "Services",
-      "url": "/services",
-      "description": "Our Services - AI Development, Automation, and Technology Solutions",
-      "keywords": [
-        "services",
-        "AI",
-        "automation",
-        "development"
-      ],
-      "id": 3
+      "url": "https://ziontechgroup.netlify.app/blog/ai-automation-trends-2025",
+      "route": "/blog/ai-automation-trends-2025",
+      "title": "blog · ai-automation-trends-2025"
     },
     {
-      "title": "Contact",
-      "url": "/contact",
-      "description": "Contact Us - Get in Touch with Zion Tech Group",
-      "keywords": [
-        "contact",
-        "support",
-        "help"
-      ],
-      "id": 4
+      "url": "https://ziontechgroup.netlify.app/help",
+      "route": "/help",
+      "title": "help"
     },
     {
-      "title": "Portfolio",
-      "url": "/portfolio",
-      "description": "Our Portfolio - AI and Technology Projects",
-      "keywords": [
-        "portfolio",
-        "projects",
-        "work",
-        "examples"
-      ],
-      "id": 5
-  "pages": [
-    {
-      "title": "Zion Tech Group — Autonomous Innovation Hub",
-      "url": "/",
-      "description": "Leading-edge technology solutions and autonomous innovation systems.",
-      "keywords": [
-        "technology",
-        "innovation",
-        "automation",
-        "AI",
-        "autonomous systems"
-      ],
-      "category": "home"
+      "url": "https://ziontechgroup.netlify.app/index",
+      "route": "/index",
+      "title": "index"
     },
     {
-      "title": "About Us",
-      "url": "/about",
-      "description": "Learn about Zion Tech Group and our mission.",
-      "keywords": [
-        "about",
-        "company",
-        "mission",
-        "team"
-      ],
-      "category": "company"
+      "url": "https://ziontechgroup.netlify.app/micro-saas",
+      "route": "/micro-saas",
+      "title": "micro-saas"
     },
     {
-      "title": "Our Services",
-      "url": "/services",
-      "description": "Explore our comprehensive technology services.",
-      "keywords": [
-        "services",
-        "technology",
-        "solutions",
-        "consulting"
-      ],
-      "category": "services"
+      "url": "https://ziontechgroup.netlify.app/reports/innovations/insight-2025-08-17-2110",
+      "route": "/reports/innovations/insight-2025-08-17-2110",
+      "title": "reports · innovations · insight-2025-08-17-2110"
     },
     {
-      "title": "Resources",
-      "url": "/resources",
-      "description": "Access our knowledge base and resources.",
-      "keywords": [
-        "resources",
-        "knowledge",
-        "guides",
-        "documentation"
-      ],
-      "category": "resources"
+      "url": "https://ziontechgroup.netlify.app/reports/innovations/insight-2025-08-17-2120",
+      "route": "/reports/innovations/insight-2025-08-17-2120",
+      "title": "reports · innovations · insight-2025-08-17-2120"
     },
     {
-      "title": "Case Studies",
-      "url": "/case-studies",
-      "description": "Real-world examples of our technology solutions.",
-      "keywords": [
-        "case studies",
-        "examples",
-        "success stories",
-        "projects"
-      ],
-      "category": "portfolio"
+      "url": "https://ziontechgroup.netlify.app/reports/innovations/insight-2025-08-17-2140",
+      "route": "/reports/innovations/insight-2025-08-17-2140",
+      "title": "reports · innovations · insight-2025-08-17-2140"
     },
     {
-      "title": "Blog",
-      "url": "/blog",
-      "description": "Blog - Latest AI and Technology Insights",
-      "keywords": [
-        "blog",
-        "articles",
-        "insights",
-        "news"
-      ],
-      "id": 6
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1808",
+      "route": "/reports/updates/update-2025-08-17-1808",
+      "title": "reports · updates · update-2025-08-17-1808"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1809",
+      "route": "/reports/updates/update-2025-08-17-1809",
+      "title": "reports · updates · update-2025-08-17-1809"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1811",
+      "route": "/reports/updates/update-2025-08-17-1811",
+      "title": "reports · updates · update-2025-08-17-1811"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1812",
+      "route": "/reports/updates/update-2025-08-17-1812",
+      "title": "reports · updates · update-2025-08-17-1812"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1813",
+      "route": "/reports/updates/update-2025-08-17-1813",
+      "title": "reports · updates · update-2025-08-17-1813"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1814",
+      "route": "/reports/updates/update-2025-08-17-1814",
+      "title": "reports · updates · update-2025-08-17-1814"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1815",
+      "route": "/reports/updates/update-2025-08-17-1815",
+      "title": "reports · updates · update-2025-08-17-1815"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1816",
+      "route": "/reports/updates/update-2025-08-17-1816",
+      "title": "reports · updates · update-2025-08-17-1816"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1817",
+      "route": "/reports/updates/update-2025-08-17-1817",
+      "title": "reports · updates · update-2025-08-17-1817"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1818",
+      "route": "/reports/updates/update-2025-08-17-1818",
+      "title": "reports · updates · update-2025-08-17-1818"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1819",
+      "route": "/reports/updates/update-2025-08-17-1819",
+      "title": "reports · updates · update-2025-08-17-1819"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1821",
+      "route": "/reports/updates/update-2025-08-17-1821",
+      "title": "reports · updates · update-2025-08-17-1821"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1841",
+      "route": "/reports/updates/update-2025-08-17-1841",
+      "title": "reports · updates · update-2025-08-17-1841"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1842",
+      "route": "/reports/updates/update-2025-08-17-1842",
+      "title": "reports · updates · update-2025-08-17-1842"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1843",
+      "route": "/reports/updates/update-2025-08-17-1843",
+      "title": "reports · updates · update-2025-08-17-1843"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1844",
+      "route": "/reports/updates/update-2025-08-17-1844",
+      "title": "reports · updates · update-2025-08-17-1844"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1845",
+      "route": "/reports/updates/update-2025-08-17-1845",
+      "title": "reports · updates · update-2025-08-17-1845"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1846",
+      "route": "/reports/updates/update-2025-08-17-1846",
+      "title": "reports · updates · update-2025-08-17-1846"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1847",
+      "route": "/reports/updates/update-2025-08-17-1847",
+      "title": "reports · updates · update-2025-08-17-1847"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/reports/updates/update-2025-08-17-1849",
+      "route": "/reports/updates/update-2025-08-17-1849",
+      "title": "reports · updates · update-2025-08-17-1849"
+    },
+    {
+      "url": "https://ziontechgroup.netlify.app/resources",
+      "route": "/resources",
+      "title": "resources"
     }
   ]
-      "description": "Latest insights and updates from our team.",
-      "keywords": [
-        "blog",
-        "insights",
-        "updates",
-        "news"
-      ],
-      "category": "content"
-    },
-    {
-      "title": "Contact",
-      "url": "/contact",
-      "description": "Get in touch with our team.",
-      "keywords": [
-        "contact",
-        "support",
-        "inquiry",
-        "get quote"
-      ],
-      "category": "contact"
-    }
-  ],
-  "lastUpdated": "2025-08-20T00:07:28.186Z",
-  "totalPages": 7
 }

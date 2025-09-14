@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -30,6 +29,14 @@ function TalentDashboardContent() {
 
   return (
     <>
+    const { user } = useAuth();
+    const [activeTab, setActiveTab] = useState("job-matches");
+    const onboardingStatus = useOnboardingStatus();
+    const showAdvanced = onboardingStatus.profileCompleted &&
+        onboardingStatus.skillsAdded &&
+        onboardingStatus.availabilitySet &&
+        onboardingStatus.matchReceived;
+    return (<>
       <SEO 
         title="Talent Dashboard | Zion AI Marketplace" 
         description="Your personalized talent dashboard with job matches and professional opportunities." 

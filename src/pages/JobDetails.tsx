@@ -85,6 +85,35 @@ export default function JobDetails() {
 
   return (
     <>
+    const handleApply = () => {
+        if (!isAuthenticated) {
+            toast.error("Please log in to apply for this job");
+            navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
+            return;
+        }
+        if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
+            toast.error("Only job seekers can apply for jobs");
+            return;
+        }
+        setIsApplyModalOpen(true);
+    };
+    const handleApplySuccess = async (appliedJobId) => {
+        toast.success("Application submitted successfully!");
+        setIsApplyModalOpen(false);
+    };
+    const formatBudget = (budget) => {
+        if (!budget)
+            return "Not specified";
+        return `$${budget.min} - $${budget.max}`;
+    };
+    const isOwnJob = user?.id === job.client_id;
+    return (<>
+      <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
+      
+      <main className="container mx-auto px-4 py-8">
+        <div className="mb-6">
+          <Button variant="outline" size="sm" onClick={() => navigate('/jobs')}>
+=======
       <SEO 
         title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={job.description.substring(0, 160)}
@@ -197,7 +226,8 @@ export default function JobDetails() {
             description: job.description,
             company_name: job.company_name ?? "Company",
             budget: formatBudget(job.budget),
-            client_id: job.client_id}}
+            client_id: job.client_id,
+          }}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
         />
