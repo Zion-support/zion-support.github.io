@@ -3,31 +3,31 @@ import ContentCard from './ContentCard';
 
 const featuredContent = [
   {
-    title: "🚀 AI 2025: Enterprise Automation Breakthrough - Ultimate Guide",
-    description: "The definitive guide to AI automation in 2025. Discover breakthrough technologies, implementation strategies, and real-world success stories transforming businesses worldwide.",
+    title: "AI 2025: The Enterprise Automation Revolution",
+    description: "Discover how AI is transforming enterprise operations in 2025 with intelligent automation, predictive analytics, and autonomous decision-making systems.",
+    href: "/blog/ai-2025-enterprise-automation-revolution",
     category: "AI & Automation",
-    date: "Jan 15, 2025",
-    href: "/blog/ai-2025-enterprise-automation-breakthrough-ultimate-guide",
+    date: "2025-01-14",
     featured: true,
-    badge: "NEW"
+    tags: ["AI", "Enterprise", "Automation", "2025"]
   },
   {
-    title: "💰 Global Retail Giant: 450% ROI with AI Transformation",
-    description: "Exclusive case study: How a global retail chain achieved 450% ROI, 60% cost reduction, and 200% increase in customer satisfaction with comprehensive AI transformation.",
+    title: "AI 2025: Next-Generation Cybersecurity Revolution",
+    description: "Explore how AI is revolutionizing cybersecurity with advanced threat detection, autonomous response systems, and predictive security analytics.",
+    href: "/blog/ai-2025-cybersecurity-revolution-next-generation-threat-protection",
+    category: "Cybersecurity",
+    date: "2025-01-14",
+    featured: true,
+    tags: ["AI", "Cybersecurity", "Threat Detection", "2025"]
+  },
+  {
+    title: "Fortune 500 AI Transformation: 340% ROI Success Story",
+    description: "How a Fortune 500 company achieved 340% ROI increase through comprehensive AI transformation, reducing operational costs by 60%.",
+    href: "/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story",
     category: "Case Study",
-    date: "Jan 15, 2025",
-    href: "/case-studies/global-retail-ai-transformation-2025-ultimate-success",
+    date: "2025-01-14",
     featured: true,
-    badge: "FEATURED"
-  },
-  {
-    title: "📋 AI Implementation Roadmap 2025: Complete Enterprise Guide",
-    description: "The ultimate step-by-step roadmap for implementing AI in your enterprise. Includes timelines, checklists, and best practices for successful AI transformation.",
-    category: "Implementation Guide",
-    date: "Jan 15, 2025",
-    href: "/resources/ai-implementation-roadmap-2025-complete-guide",
-    featured: true,
-    badge: "GUIDE"
+    tags: ["Fortune 500", "AI Transformation", "ROI", "Success Story"]
   }
 ];
 
@@ -40,7 +40,7 @@ export default function FeaturedContent() {
             Featured Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest insights, success stories, and expert guidance on AI transformation and technology innovation.
+            Discover the latest insights, case studies, and resources on AI, automation, and technology transformation.
           </p>
         </div>
         
@@ -50,11 +50,11 @@ export default function FeaturedContent() {
               key={index}
               title={content.title}
               description={content.description}
+              href={content.href}
               category={content.category}
               date={content.date}
-              href={content.href}
               featured={content.featured}
-              badge={content.badge}
+              tags={content.tags}
             />
           ))}
         </div>
@@ -62,9 +62,9 @@ export default function FeaturedContent() {
         <div className="text-center mt-12">
           <a
             href="/blog"
-            className="inline-flex items-center px-8 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors"
           >
-            View All Content →
+            View All Content
           </a>
         </div>
       </div>

@@ -25,6 +25,15 @@ export default function EdgeComputingGuidePage() {
                 <span className="text-sm font-medium">⚡ EDGE COMPUTING REVOLUTION</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                AI 2025: Edge Computing Revolution - Ultimate Guide
+              </h1>
+              <p className="text-xl text-gray-200 mb-8 max-w-3xl">
+                Discover how edge computing is revolutionizing AI deployment and creating unprecedented opportunities for real-time intelligence.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   Get Consultation
                 </Link>
