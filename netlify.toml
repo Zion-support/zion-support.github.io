@@ -1,6 +1,6 @@
 [build]
-  # Build command
-  command = "npm run build:netlify"
+  # Build command - using Vite directly
+  command = "npm run build"
   
   # Directory to publish
   publish = "dist"
@@ -28,6 +28,9 @@
   
   # Ensure Vite is available
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  
+  # Disable automatic Next.js plugin detection
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # Cache configuration to prevent dependency issues
 [build.cache]
