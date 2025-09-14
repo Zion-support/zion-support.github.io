@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, DollarSign, Clock, Users, BookOpen, FileText, BarChart3, Zap, Target, Award } from 'lucide-react';
+import { ArrowRight, TrendingUp, DollarSign, Clock, Users, BookOpen, FileText, BarChart3, Zap, Award } from 'lucide-react';
 
 const UltimateDataTransformationShowcase2025 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
