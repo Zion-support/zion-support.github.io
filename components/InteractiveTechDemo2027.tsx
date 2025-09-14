@@ -1,122 +1,129 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
-const InteractiveTechDemo2027: React.FC = () => {
+const InteractiveTechDemo2027 = () => {
   const [activeDemo, setActiveDemo] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
 
   const demos = [
     {
-      id: 'quantum-ai',
-      title: 'Quantum AI Fusion',
-      description: 'Experience real-time quantum computing simulation with AI integration',
-      features: ['Quantum Neural Networks', 'Real-time Processing', 'Predictive Analytics'],
-      color: 'from-purple-600 to-indigo-600'
+      id: 0,
+      title: "Neural Interface Demo",
+      description: "Experience direct brain-computer interaction",
+      features: ["Real-time thought processing", "Emotion recognition", "Memory enhancement"],
+      icon: "🧠",
+      color: "from-purple-500 to-pink-500"
     },
     {
-      id: 'synthetic-intelligence',
-      title: 'Synthetic Intelligence',
-      description: 'Interact with advanced AI that understands context and emotion',
-      features: ['Emotional AI', 'Context Understanding', 'Autonomous Learning'],
-      color: 'from-emerald-600 to-teal-600'
+      id: 1,
+      title: "Quantum AI Simulation",
+      description: "Witness quantum computing power in action",
+      features: ["Exponential speed increase", "Parallel processing", "Quantum entanglement"],
+      icon: "⚛️",
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      id: 'neural-interface',
-      title: 'Neural Interface',
-      description: 'Direct brain-computer interface for seamless interaction',
-      features: ['Thought Control', 'Neural Feedback', 'Mind-Machine Sync'],
-      color: 'from-pink-600 to-rose-600'
+      id: 2,
+      title: "Autonomous Systems",
+      description: "See self-managing AI systems at work",
+      features: ["Self-healing networks", "Adaptive learning", "Predictive maintenance"],
+      icon: "🤖",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      id: 3,
+      title: "Synthetic Reality",
+      description: "Step into AI-generated virtual worlds",
+      features: ["Photorealistic environments", "Dynamic content generation", "Immersive experiences"],
+      icon: "🌐",
+      color: "from-orange-500 to-red-500"
     }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setActiveDemo((prev) => (prev + 1) % demos.length);
-        setIsAnimating(false);
-      }, 500);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-black text-white relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-indigo-900/20"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-8 py-3 mb-8">
-            <span className="text-lg font-bold">🚀 INTERACTIVE TECH DEMO 2027</span>
+          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
+            <span className="text-sm font-medium text-cyan-300">🎮 INTERACTIVE DEMO</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-8">
-            Experience the Future
+          
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-300 via-white to-purple-300 bg-clip-text text-transparent">
+            Interactive Tech Demo 2027
           </h2>
-          <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Interactive demonstrations of revolutionary technologies that will transform your business operations
+          
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Experience the future of technology through interactive demonstrations. 
+            Click through different demos to see revolutionary AI technologies in action.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
-          {demos.map((demo, index) => (
-            <div
-              key={demo.id}
-              className={`relative p-8 rounded-2xl border-2 transition-all duration-500 cursor-pointer ${
-                activeDemo === index
-                  ? 'border-white bg-white bg-opacity-10 scale-105'
-                  : 'border-gray-600 bg-gray-800 bg-opacity-50 hover:border-gray-400'
-              }`}
-              onClick={() => setActiveDemo(index)}
-            >
-              <div className={`absolute inset-0 bg-gradient-to-r ${demo.color} opacity-20 rounded-2xl`}></div>
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-4">{demo.title}</h3>
-                <p className="text-gray-300 mb-6">{demo.description}</p>
-                <ul className="space-y-2">
-                  {demo.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm">
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center">
-          <div className="inline-flex items-center space-x-4 mb-8">
-            {demos.map((_, index) => (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Demo Selector */}
+          <div className="space-y-4">
+            {demos.map((demo, index) => (
               <button
-                key={index}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  activeDemo === index ? 'bg-white scale-125' : 'bg-gray-500'
-                }`}
+                key={demo.id}
                 onClick={() => setActiveDemo(index)}
-              />
+                className={`w-full p-6 rounded-xl text-left transition-all duration-300 ${
+                  activeDemo === index
+                    ? `bg-gradient-to-r ${demo.color} text-white shadow-2xl transform scale-105`
+                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                <div className="flex items-center">
+                  <span className="text-3xl mr-4">{demo.icon}</span>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">{demo.title}</h3>
+                    <p className="text-sm opacity-90">{demo.description}</p>
+                  </div>
+                </div>
+              </button>
             ))}
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/ai-2027-breakthrough"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              <span>Explore {demos[activeDemo].title}</span>
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </Link>
-            <Link
-              href="/services/ai-automation"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
-            >
-              <span>Get Started Today</span>
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
-            </Link>
+
+          {/* Demo Display */}
+          <div className="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 border border-white/20">
+            <div className="text-center mb-8">
+              <div className="text-6xl mb-4">{demos[activeDemo].icon}</div>
+              <h3 className="text-3xl font-bold mb-4">{demos[activeDemo].title}</h3>
+              <p className="text-gray-300 text-lg">{demos[activeDemo].description}</p>
+            </div>
+
+            <div className="space-y-4 mb-8">
+              {demos[activeDemo].features.map((feature, index) => (
+                <div key={index} className="flex items-center bg-white/5 rounded-lg p-4">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-4"></div>
+                  <span className="text-gray-300">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg p-6 border border-cyan-500/30">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-cyan-300 mb-2">Live Demo Available</div>
+                <p className="text-gray-300 mb-4">Experience this technology in real-time</p>
+                <Link
+                  href={`/demo/${demos[activeDemo].id}`}
+                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  Launch Demo →
+                </Link>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div className="text-center mt-16">
+          <Link
+            href="/interactive-demos"
+            className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-10 py-4 rounded-xl font-bold text-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+          >
+            Explore All Demos
+          </Link>
         </div>
       </div>
     </section>

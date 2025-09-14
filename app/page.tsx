@@ -46,6 +46,14 @@ import AI2027UltimateBreakthroughBanner from '../components/AI2027UltimateBreakt
 import NewContent2027Showcase from '../components/NewContent2027Showcase';
 import RevolutionaryTechTrends2027Banner from '../components/RevolutionaryTechTrends2027Banner';
 
+// Import new 2026 content components
+import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
+import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
+import AI2026FutureVisionBanner from '../components/AI2026FutureVisionBanner';
+import InteractiveTechDemo2027 from '../components/InteractiveTechDemo2027';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+
 // Import new AI 2025 Future Trends components
 import NewContent2025FutureTrendsBanner from '../components/NewContent2025FutureTrendsBanner';
 import NewContent2025FutureTrendsShowcase from '../components/NewContent2025FutureTrendsShowcase';
@@ -314,6 +322,24 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2026 PROMOTION BANNER - LATEST FEATURED */}
+        <NewContent2026PromotionBanner />
+        
+        {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER - NEWEST FEATURED */}
+        <AI2025RevolutionaryBreakthroughBanner />
+        
+        {/* AI 2025 REVOLUTIONARY CONTENT SHOWCASE - LATEST FEATURED */}
+        <AI2025RevolutionaryContentShowcase />
+        
+        {/* AI 2026 FUTURE VISION BANNER - NEXT EVOLUTION */}
+        <AI2026FutureVisionBanner />
+        
+        {/* INTERACTIVE TECH DEMO 2027 - EXPERIENCE THE FUTURE */}
+        <InteractiveTechDemo2027 />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2026 - COMPREHENSIVE COLLECTION */}
+        <UltimateContentShowcase2026 />
+        
         {/* GENERATIVE AI REVOLUTION 2025 - NEWEST FEATURED */}
         <GenerativeAIRevolutionBanner2025 />
         
