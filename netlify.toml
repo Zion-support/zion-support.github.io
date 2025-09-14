@@ -25,6 +25,9 @@
   
   # Install devDependencies for build tools
   YARN_INSTALL_DEV = "true"
+  
+  # Ensure Vite is available
+  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
 
 # Cache configuration to prevent dependency issues
 [build.cache]
