@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, TrendingUp, DollarSign, Users, Clock, Target, CheckCircle } from 'lucide-react';
+import { ArrowLeft, TrendingUp, DollarSign, Users, Clock, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Global Enterprise AI Transformation: $2.5B Revenue Increase Case Study',
@@ -84,7 +84,7 @@ export default function GlobalEnterpriseTransformationCaseStudy() {
         <section className="mb-16">
           <div className="bg-gradient-to-r from-blue-900/50 to-green-900/50 backdrop-blur-md rounded-2xl p-8 border border-blue-500/30">
             <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <Target className="h-8 w-8 text-blue-400" />
+              <CheckCircle className="h-8 w-8 text-blue-400" />
               Executive Summary
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
@@ -346,7 +346,7 @@ export default function GlobalEnterpriseTransformationCaseStudy() {
               
               <div className="text-center">
                 <div className="bg-blue-900/40 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Target className="h-8 w-8 text-blue-400" />
+                  <CheckCircle className="h-8 w-8 text-blue-400" />
                 </div>
                 <h4 className="text-lg font-semibold text-white mb-2">Market Leadership</h4>
                 <p className="text-blue-200 text-sm">

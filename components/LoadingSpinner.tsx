@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 interface LoadingSpinnerProps {
@@ -17,19 +19,11 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     lg: 'w-12 h-12'
   };
 
-  const textSizeClasses = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg'
-  };
-
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`}></div>
+      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-slate-300 border-t-blue-600`} />
       {text && (
-        <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
-          {text}
-        </p>
+        <p className="mt-2 text-slate-400 text-sm">{text}</p>
       )}
     </div>
   );

@@ -1,4 +1,6 @@
 import React from 'react';
+import RevolutionaryContentPromotionBanner2026 from '../components/RevolutionaryContentPromotionBanner2026';
+import RevolutionaryContentShowcase2026 from '../components/RevolutionaryContentShowcase2026';
 
 const Home: React.FC = () => {
   return (
@@ -30,6 +32,12 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Revolutionary Content Promotion Banner */}
+      <RevolutionaryContentPromotionBanner2026 />
+
+      {/* Revolutionary Content Showcase */}
+      <RevolutionaryContentShowcase2026 />
 
       {/* Quick Links */}
       <div className='container mx-auto px-4 py-16'>
