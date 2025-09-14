@@ -39,6 +39,8 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 // Import new 2025 revolutionary content components
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
@@ -47,6 +49,7 @@ import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
 import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
+<<<<<<< HEAD
 import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
 
@@ -60,6 +63,8 @@ import UltimateAITransformation2025Banner from './components/UltimateAITransform
 import AI2025RevolutionaryContentShowcase from './components/AI2025RevolutionaryContentShowcase';
 import UltimateContentShowcase2025Banner from './components/UltimateContentShowcase2025Banner';
 import RevolutionaryContent2025UltimateBanner from './components/RevolutionaryContent2025UltimateBanner';
+=======
+>>>>>>> 399941813aa4d8d7c182799510d216892a384af2
 
 // Import AI 2030 promotional components
 import AI2030ContentShowcaseBanner from '../components/AI2030ContentShowcaseBanner';
@@ -91,11 +96,11 @@ export default function HomePage() {
         {/* Revolutionary Content 2025 Ultimate Banner - NEW */}
         <RevolutionaryContent2025UltimateBanner />
         
-        {/* Ultimate Content Showcase 2025 Banner - NEW */}
-        <UltimateContentShowcase2025Banner />
+        {/* Revolutionary Content 2025 Banner - NEW FEATURED */}
+        <RevolutionaryContent2025Banner />
         
-        {/* Ultimate AI Transformation 2025 Banner - NEW */}
-        <UltimateAITransformation2025Banner />
+        {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
+        <UltimateContentShowcase2025 />
         
         {/* AI 2030 Content Showcase Banner - FEATURED */}
         <AI2030ContentShowcaseBanner />
