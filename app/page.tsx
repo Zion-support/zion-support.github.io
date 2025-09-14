@@ -76,6 +76,10 @@ import UltimateContentShowcase2025Banner from '../components/UltimateContentShow
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
 
+// Import new Neural Interface Revolution 2025-2026 components
+import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
+import UltimateNeuralInterfaceShowcase2025 from '../components/UltimateNeuralInterfaceShowcase2025';
+
 // Import new promotional banners
 import AI2025_2026UltimateBreakthroughPromotionBanner from '../components/AI2025_2026UltimateBreakthroughPromotionBanner';
 import QuantumAI2026BreakthroughPromotionBanner from '../components/QuantumAI2026BreakthroughPromotionBanner';
@@ -298,6 +302,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEURAL INTERFACE REVOLUTION 2025-2026 - NEWEST FEATURED */}
+        <NeuralInterfaceRevolutionBanner2025 />
+        
         {/* NEW PROMOTIONAL BANNERS - LATEST FEATURED */}
         <AI2025_2026UltimateBreakthroughPromotionBanner />
         <QuantumAI2026BreakthroughPromotionBanner />
@@ -637,6 +644,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* NEURAL INTERFACE REVOLUTION SHOWCASE 2025-2026 - NEWEST FEATURED */}
+        <UltimateNeuralInterfaceShowcase2025 />
+        
         {/* Content Revolution Showcase 2025 - NEW FEATURED */}
         <ContentRevolutionShowcase2025 />
         
