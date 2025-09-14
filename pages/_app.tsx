@@ -7,6 +7,7 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from '../i18n/index';
 import { Inter, Poppins } from 'next/font/google';
 import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 import '../src/index.css';
 import * as Sentry from '@sentry/nextjs';
 import '../styles/globals.css';
@@ -38,20 +39,14 @@ const queryClient = new QueryClient({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <QueryClientProvider client={queryClient}>
-      <ReduxProvider store={store}>
+    <ReduxProvider store={store}>
+      <QueryClientProvider client={queryClient}>
         <I18nextProvider i18n={i18n}>
-          <Head>
-            <title>Zion Tech Group - AI & Technology Solutions</title>
-            <meta name="description" content="Pioneering the future with cutting-edge AI solutions, quantum technology, and innovative IT services." />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
-          <main className={`${inter.className} ${poppins.className}`}>
+          <Layout>
             <Component {...pageProps} />
-          </main>
+          </Layout>
         </I18nextProvider>
-      </ReduxProvider>
-    </QueryClientProvider>
+      </QueryClientProvider>
+    </ReduxProvider>
   );
 }

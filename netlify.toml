@@ -1,39 +1,9 @@
 [build]
   functions = "netlify/functions"
-  command = "yarn install --frozen-lockfile --network-timeout 100000 --ignore-engines && yarn build:netlify"
 
 [build.environment]
-  # Set Node.js version
-  NODE_VERSION = "20.19.5"
-  # Set production environment
-  NODE_ENV = "production"
-  # Increase timeout for dependency installation
-  NETLIFY_TIMEOUT = "600"
-  # Force use of Yarn instead of pnpm
-  NPM_CONFIG_PACKAGE_MANAGER = "yarn"
-  # Yarn version
-  YARN_VERSION = "1.22.22"
-  # NPM flags for better performance
-  NPM_FLAGS = "--prefer-offline --no-audit --progress=false"
-  # Node.js options for build
   NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
-  # Disable Next.js telemetry
-  NEXT_TELEMETRY_DISABLED = "1"
-  # Force SWC to use JavaScript fallback
-  SWC_BINARY_PATH = ""
-  NEXT_SWC_BINARY_PATH = ""
-  # Clear any cached node_modules conflicts
-  YARN_CACHE_FOLDER = ".yarn-cache"
-  # Disable Yarn's integrity checks temporarily
-  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
-  # Force clean install
-  YARN_ENABLE_NETWORK = "true"
-  # Disable hoisting to prevent nested node_modules conflicts
-  YARN_ENABLE_HOISTING = "false"
-  # Clear any existing node_modules before install
-  CLEAR_NODE_MODULES = "true"
-  # Handle jsdom nested node_modules issue
-  JSDOM_OPTIONS = "--no-nested-node-modules"
+  NODE_ENV = "production"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
