@@ -24,14 +24,19 @@ const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 // Import key promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
+import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
-import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
-import NewContent2026Showcase from '../components/NewContent2026Showcase';
-import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
-import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
-import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
+
+// Import new 2026 promotional components
+import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
+
+// Import new 2025 promotional components
+import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 
 export const metadata = {
@@ -51,11 +56,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* New Content 2025 Showcase Banner */}
-        <NewContent2025ShowcaseBanner />
+        {/* New Content 2025 Promotion Banner */}
+        <NewContent2025PromotionBanner />
         
-        {/* Enhanced Content Promotion Banner */}
-        <EnhancedContentPromotionBanner />
+        {/* Ultimate Promotion Banner */}
+        <UltimatePromotionBanner2026 />
         
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
@@ -153,7 +158,6 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
-        <UltimateContentShowcase2025 />
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
         <NewContentPromotionBanner />
@@ -161,6 +165,13 @@ export default function HomePage() {
         <NewServicesShowcase2025 />
         <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
+        
+        {/* New 2025 Content Showcase */}
+        <UltimateContentShowcase2025 />
+        
+        {/* New 2026 Content Showcase */}
+        <UltimateContentShowcase2026 />
+        <SuccessMetricsShowcase2026 />
 
         {/* Advanced AI Components */}
         <AdvancedContentRecommendationEngine />
