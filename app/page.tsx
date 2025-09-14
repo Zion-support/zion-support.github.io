@@ -174,6 +174,12 @@ export default function HomePage() {
         {/* Quantum AI 2026 Breakthrough Banner */}
         <QuantumAI2026BreakthroughBanner />
         
+        {/* Revolutionary Content 2025 Banner */}
+        <RevolutionaryContent2025Banner />
+        
+        {/* Ultimate Content Showcase 2025 */}
+        <UltimateContentShowcase2025 />
+        
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
         
@@ -194,7 +200,6 @@ export default function HomePage() {
         
         {/* Revolutionary AI Content Banner */}
         <RevolutionaryAIContentBanner />
-        
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
         
