@@ -5,8 +5,8 @@ import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 // Import neural superintelligence components - TOP PRIORITY
-import NeuralSuperintelligence2025Banner from './components/NeuralSuperintelligence2025Banner';
-import UltimateNeuralSuperintelligenceShowcase from './components/UltimateNeuralSuperintelligenceShowcase';
+import NeuralSuperintelligence2025Banner from '../components/NeuralSuperintelligence2025Banner';
+import UltimateNeuralSuperintelligenceShowcase from '../components/UltimateNeuralSuperintelligenceShowcase';
 // Import new AI Revolution 2025-2026 components
 import AIRevolution2025Banner from '../components/AIRevolution2025Banner';
 import AIRevolutionContentShowcase from '../components/AIRevolutionContentShowcase';
