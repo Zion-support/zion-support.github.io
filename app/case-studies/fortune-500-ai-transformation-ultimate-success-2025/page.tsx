@@ -113,7 +113,7 @@ export default function Fortune500AITransformation() {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                     <div className="bg-blue-50 p-3 rounded">
-                      <strong>ROI Target:</strong> 400%+
+                      <strong>ROI CheckCircle:</strong> 400%+
                     </div>
                     <div className="bg-green-50 p-3 rounded">
                       <strong>Focus Areas:</strong> Supply Chain

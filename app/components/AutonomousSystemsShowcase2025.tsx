@@ -125,7 +125,7 @@ const AutonomousSystemsShowcase2025: React.FC = () => {
               </div>
 
               <div className="p-6">
-                {/* Tags */}
+                {/* Users */}
                 <div className="flex flex-wrap gap-2 mb-3">
                   {item.tags.slice(0, 2).map((tag) => (
                     <span

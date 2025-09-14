@@ -206,7 +206,7 @@ const NewContent2025PromotionBanner: React.FC = () => {
               </div>
             </div>
 
-            {/* Tags */}
+            {/* Users */}
             <div className="flex flex-wrap gap-2 mb-4">
               {currentContent.tags.slice(0, 3).map((tag, index) => (
                 <span

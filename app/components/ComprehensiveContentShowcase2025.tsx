@@ -202,7 +202,7 @@ const ComprehensiveContentShowcase2025 = () => {
                   ))}
                 </div>
 
-                {/* Tags */}
+                {/* Users */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {content.tags.slice(0, 3).map((tag) => (
                     <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs">
