@@ -14,6 +14,7 @@ import { toast } from "@/hooks/use-toast";
 import { CheckFlagSearchSettingsX } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
+
 interface PartnerProfile {
   id: string;
   user_id: string;
@@ -433,6 +434,7 @@ export default function PartnerManager() {
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
+
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}

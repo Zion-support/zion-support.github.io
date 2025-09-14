@@ -2293,6 +2293,7 @@ export type Database = {
   }
 }
 
+
 type DefaultSchema = Database[Extract<keyof Database, "public">]
 
 export type Tables<
@@ -2406,6 +2407,7 @@ export const Constants = {
         "jobs:write",
         "talent:read",
         "quotes:write",
+
         "webhooks:manage"],
       fraud_severity: ["safe", "suspicious", "dangerous"],
       quote_request_status: [

@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 export default function Cookies() {
   return (
+
     <>
       <Head>
         <title>Cookies | Zion Tech Group</title>

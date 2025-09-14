@@ -27,6 +27,7 @@ export default function CreatePostPage() {
     categoryId: initialCategory || "project-help"
   };
 
+
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database

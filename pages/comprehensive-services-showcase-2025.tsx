@@ -193,6 +193,218 @@ export default function ComprehensiveServicesShowcase2025() {
                   <Phone className="w-5 h-5 mr-2 inline" />
                   {contactInfo.mobile}
                 </a>
+
+      switch (selectedPriceRange) {
+        case 'Under $300':
+          priceMatch = price < 300,
+          break,
+        case '$300 - $500':
+          priceMatch = price >= 300 && price <= 500,
+          break,
+        case '$500 - $800':
+          priceMatch = price > 500 && price <= 800,
+          break,
+        case '$800+':
+          priceMatch = price > 800,
+          break
+      }
+          priceMatch = price > 800;
+          break;}
+
+    }
+    
+    const _searchMatch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                       service.category.toLowerCase().includes(searchQuery.toLowerCase()),
+    
+    return categoryMatch && priceMatch && searchMatch
+  }),
+
+  // Sort services
+  const _sortedServices = [...filteredServices].sort(_(a, _b) => {_switch (sortBy) {
+      case 'name':
+        return a.name.localeCompare(b.name),
+      case 'price':
+        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')),
+      case 'rating':
+        return b.rating - a.rating,
+      case 'popularity':
+      case 'rating':
+        return b.rating - a.rating,
+      case 'popularity':
+
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+      default: return 0
+    }
+  }),
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [selectedCategory, setSelectedCategory] = useState('All Services');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+
+  const [sortBy, setSortBy] = useState<
+    'name' | 'price' | 'rating' | 'popularity'
+  >('popularity');
+  // Filter services based on selections
+  const filteredServices = comprehensiveRealServices2025.filter(service => {
+    const categoryMatch =
+      selectedCategory === 'All Services' |
+      service.category.includes(selectedCategory);
+    let priceMatch = true;
+    if (selectedPriceRange !== 'All Prices') {
+      const price = parseInt(service.price.replace('$', ''));
+      switch (selectedPriceRange) {
+        case 'Under $300':
+          priceMatch = price < 300;
+          break;
+        case '$300 - $500':
+          priceMatch = price >= 300 && price <= 500;
+          break;
+        case '$500 - $800':
+          priceMatch = price > 500 && price <= 800;
+          break;
+        case '$800+':
+          priceMatch = price > 800;
+          break;
+      }
+    }
+    const searchMatch =
+      service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.category.toLowerCase().includes(searchQuery.toLowerCase());
+    return categoryMatch && priceMatch && searchMatch;  });
+  // Sort services
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'name':
+        return a.name.localeCompare(b.name);
+      case 'price':
+        return (
+          parseInt(a.price.replace('$', '')) -
+          parseInt(b.price.replace('$', ''))
+        );      case 'rating':
+        return b.rating - a.rating;
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      default:
+        return 0;    }
+  });
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  const getPriceRange = (price: string) => {
+    const numPrice = parseInt(price.replace('$', '')),
+    if (numPrice < 300) return 'Under $300',
+    if (numPrice <= 500) return '$300 - $500',
+    if (numPrice <= 800) return '$500 - $800',
+    return '$800+'
+  },
+
+  const getCategoryIcon = (category: string) => {
+    const categoryData = categories.find(cat =>
+
+      category.toLowerCase().includes(cat.id.toLowerCase())
+    ),
+    return categoryData ? categoryData.icon : Globe
+  },
+
+  const getCategoryColor = (category: string) => {
+    const categoryData = categories.find(cat =>
+
+      category.toLowerCase().includes(cat.id.toLowerCase())
+    ),
+    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
+  },
+
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  return (
+    <>
+      <Head>
+        <title>Comprehensive Services Showcase 2025 | Zion Tech Group</title>
+
+        <meta name=&quot;description&quot; content=&quot;Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with cutting-edge technology.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI services, micro SAAS, IT solutions, business automation, customer success, supply chain optimization, financial planning, sales intelligence&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Comprehensive Services Showcase 2025 | Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms.&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/comprehensive-services-showcase-2025&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/comprehensive-services-showcase-2025&quot; />
+      </Head>
+
+        {/* Hero Section */}
+        <section className=&quot;relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden&quot;>
+          {/* Animated Background */}
+          <div className=&quot;absolute inset-0&quot;>
+            <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
+            <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.05),transparent_50%)]&quot; />
+            <div className=&quot;absolute top-1/4 left-1/4 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl animate-pulse&quot;></div>
+            <div className=&quot;absolute top-3/4 right-1/4 w-24 h-24 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000&quot;></div>
+            <div className=&quot;absolute bottom-1/4 left-1/3 w-20 h-20 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-2000&quot;></div>
+          </div>
+
+          <div className=&quot;relative z-10 container mx-auto px-4 text-center&quot;>
+            <motion.div
+              initial={_{ opacity: 0, _y: 30}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 0.8}}
+            >
+              <h1 className=&quot;text-5xl lg:text-7xl font-bold mb-6&quot;>
+                <span className=&quot;bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
+                  Comprehensive Services
+                </span>
+                <br />
+                <span className=&quot;text-white&quot;>Showcase 2025</span>
+              </h1>
+              <p className=&quot;text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed&quot;>
+                Discover our portfolio of <span className=&quot;text-cyan-400 font-semibold&quot;>real, innovative micro SAAS services</span>, 
+                cutting-edge IT solutions, and revolutionary AI platforms. Transform your business with 
+                <span className=&quot;text-blue-400 font-semibold&quot;> proven technology</span> that delivers measurable results.
+              </p>
+              
+              {/* Stats */}
+              <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12&quot;>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;text-3xl font-bold text-cyan-400 mb-2&quot;>{comprehensiveRealServices2025.length}+</div>
+                  <div className=&quot;text-gray-400&quot;>Real Services</div>
+                </div>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;text-3xl font-bold text-blue-400 mb-2&quot;>$2.5B+</div>
+                  <div className=&quot;text-gray-400&quot;>Market Coverage</div>
+                </div>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;text-3xl font-bold text-purple-400 mb-2&quot;>95%</div>
+                  <div className=&quot;text-gray-400&quot;>AI Accuracy</div>
+                </div>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;text-3xl font-bold text-green-400 mb-2&quot;>400%</div>
+                  <div className=&quot;text-gray-400&quot;>Average ROI</div>
+                </div>
+
+              </div>
+
+              {/* Contact CTA */}
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
+                <Link
+                  href=&quot;/contact&quot;
+                  className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25&quot;
+                >
+                  Get Started Today
+                  <ArrowRight className=&quot;w-5 h-5 ml-2 inline&quot; />
+                </Link>
+                <a
+                  href={`tel:${contactInfo.mobile}`}
+                  className=&quot;px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300&quot;
+                >
+                  <Phone className=&quot;w-5 h-5 mr-2 inline&quot; />
+                  {contactInfo.mobile}
+                </Link>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
             </motion.div>
           </div>

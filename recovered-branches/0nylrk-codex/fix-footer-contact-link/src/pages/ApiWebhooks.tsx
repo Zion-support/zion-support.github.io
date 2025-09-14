@@ -62,16 +62,10 @@ export function ApiWebhooks() {
   }
 }`;
 
-  const webhookHandlerJs = `// Express.js webhook handler example
-const express = require('express');
-const app = express();
-const crypto = require('crypto');
 
-// Middleware to parse JSON bodies
-app.use(express.json());
 
-// Your webhook secret from the Zion dashboard
-const webhookSecret = 'YOUR_WEBHOOK_SECRET';
+
+
 
 // Middleware to verify webhook signatures
 function verifyWebhookSignature(reqresnext) {

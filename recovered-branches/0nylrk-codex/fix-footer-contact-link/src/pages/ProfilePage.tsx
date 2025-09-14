@@ -78,6 +78,7 @@ export default function ProfilePage() {
     );
   }
 
+
   return (
     <>
       <SEO
@@ -87,6 +88,7 @@ export default function ProfilePage() {
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+
           {/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}

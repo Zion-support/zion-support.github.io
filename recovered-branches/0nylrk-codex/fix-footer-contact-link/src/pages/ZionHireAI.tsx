@@ -51,6 +51,7 @@ export default function ZionHireAI() {
                     variant="outline" 
                     size="lg"
                     className="bg-transparent border-white text-white hover:bg-white/10"
+
                     asChild
                   >
                     <Link to="/enterprise/demo">

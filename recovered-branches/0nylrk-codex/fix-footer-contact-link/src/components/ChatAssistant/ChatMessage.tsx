@@ -5,6 +5,8 @@ interface ChatMessageProps {
   role: 'user' | 'assistant';
   message: string;
   timestamp?: Date;
+
+
   key?: string | number;
 }
 

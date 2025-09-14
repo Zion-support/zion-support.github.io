@@ -329,6 +329,7 @@ export function ProductSubmissionForm() {
           initialValues={{
             title: form.getValues("title"),
             category: form.getValues("category")
+
           }}
         />
       </TabsContent>

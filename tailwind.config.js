@@ -131,6 +131,14 @@ module.exports = {
         '4xl': '72px',
         '5xl': '96px',
       },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['Fira Code', 'monospace'],
+      },
+
+
+
+
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
@@ -183,6 +191,9 @@ module.exports = {
         'screen-90': '90vh',
       },
     },
+
+
+
   },
   plugins: [],
 }

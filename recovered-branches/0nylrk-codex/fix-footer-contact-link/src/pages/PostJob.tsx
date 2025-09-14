@@ -13,6 +13,7 @@ export default function PostJob() {
   const isMobile = useIsMobile();
   
   if (isLoading) {
+
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>

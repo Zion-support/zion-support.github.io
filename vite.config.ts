@@ -25,6 +25,9 @@ export default defineConfig({
     "rollupOptions": {
       output: {
         manualChunks: {
+
+
+
           'react-vendor': ['react', 'react-dom'],
           'ui-vendor': ['@radix-ui/react-accordion',
             '@radix-ui/react-alert-dialog',

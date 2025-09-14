@@ -67,6 +67,7 @@ export default function QuoteManager() {
 
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />;
+
   }
 
   return (

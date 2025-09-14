@@ -38,7 +38,7 @@ export function ServicesPage() {
   const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
         <div className="container mx-auto px-4 py-20">
@@ -215,7 +215,7 @@ export function ServicesPage() {
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
               🌐 Visit Website
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -229,6 +229,7 @@ interface ServiceCardProps {
 
 function ServiceCard({ service }: ServiceCardProps) {
   const [showDetailsetShowDetails] = useState(false);
+
 
   const getPopularPlan = () => {
     if (service.pricing.professional.popular) return service.pricing.professional;
@@ -288,6 +289,7 @@ function ServiceCard({ service }: ServiceCardProps) {
           </div>
           {service.provider.verified && (
             <span className="text-blue-600 text-sm">✓ Verified</span>
+
           )}
         </div>
 

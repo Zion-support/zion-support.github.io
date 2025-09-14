@@ -88,6 +88,7 @@ const Header: React.FC = () => {
               <Mail className="h-4 w-4 mr-1" />
               <span>kleber@ziontechgroup.com</span>
             </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
 
           {/* Mobile menu button */}

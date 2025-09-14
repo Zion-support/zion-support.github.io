@@ -53,6 +53,48 @@ const sitemapData = [
       { name: 'Guides', url: '/guides', icon: Globe },
       { name: 'FAQ', url: '/faq', icon: Users }
     ]
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+const sitemapData = [;
+  {;
+    category: 'Main Pages',;
+    pages: [;
+      { name: 'Home', url: '/', icon: Home },;
+      { name: 'About', url: '/about', icon: Users },;
+      { name: 'Contact', url: '/contact', icon: Globe },;
+      { name: 'Services', url: '/services', icon: Settings }
+    ];
+  },;
+  {;
+    category: 'Services',;
+    pages: [;
+      { name: 'AI Services', url: '/ai-services', icon: Brain },;
+      { name: 'IT Services', url: '/it-services', icon: Network },;
+      { name: 'Micro SaaS', url: '/micro-saas', icon: Target },;
+      { name: 'Cloud Services', url: '/services/cloud', icon: Cloud },;
+      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: Shield },;
+      { name: 'Data Analytics', url: '/services/data-analytics', icon: BarChart3 }
+    ];
+  },;
+  {;
+    category: 'Solutions',;
+    pages: [;
+      { name: 'Cloud Migration', url: '/solutions/cloud-migration', icon: Cloud },;
+      { name: 'Digital Transformation', url: '/solutions/digital-transformation', icon: Settings },;
+      { name: 'Custom Solutions', url: '/solutions/custom', icon: Target }
+    ];
+  },;
+  {;
+    category: 'Resources',;
+    pages: [;
+      { name: 'Documentation', url: '/docs', icon: Globe },;
+      { name: 'API Documentation', url: '/api-docs', icon: Settings },;
+      { name: 'Guides', url: '/guides', icon: Globe },;
+
+
   }
 ];
 
@@ -276,6 +318,7 @@ export default function SitemapPage() {
                   </div>
                 </motion.div>
               ))}
+
             </div>
           </div>
         </section>

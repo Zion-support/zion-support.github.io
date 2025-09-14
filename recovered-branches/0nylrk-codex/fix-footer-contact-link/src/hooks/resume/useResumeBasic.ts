@@ -18,3 +18,4 @@ export function useResumeBasic() {
     updateBasicInfo: resumeActions.updateBasicInfo,
     setActiveResume: resumeActions.setActiveResume};
 }
+

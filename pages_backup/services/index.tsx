@@ -244,48 +244,6 @@ const ServicesIndex: NextPage = () => {
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
-const services = [
-  {
-    id: 'ai-development',
-    title: 'AI Development',
-    description: 'Custom AI solutions tailored to your business needs',
-    icon: Brain,
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-    pricing: 'Starting at $5,000/month',
-    icon: '🤖',
-    link: '/ai-services'
-  },
-  {
-    id: 'cloud-services',
-    title: 'Cloud Services',
-    description: 'Scalable cloud infrastructure and migration services',
-    icon: Cloud,
-    features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization'],
-    pricing: 'Starting at $2,000/month',
-    icon: '☁️',
-    link: '/services/cloud'
-  },
-  {
-    id: 'cybersecurity',
-    title: 'Cybersecurity',
-    description: 'Comprehensive security solutions to protect your business',
-    icon: Shield,
-    features: ['Threat Detection', 'Security Audits', 'Data Protection', 'Compliance'],
-    pricing: 'Starting at $1,500/month',
-    icon: '🔒',
-    link: '/services/cybersecurity'
-  },
-  {
-    id: 'data-analytics',
-    title: 'Data Analytics',
-    description: 'Transform data into actionable business insights',
-    icon: BarChart3,
-    features: ['Business Intelligence', 'Predictive Analytics', 'Data Visualization', 'Reporting'],
-    pricing: 'Starting at $1,800/month',
-    icon: '📊',
-    link: '/services/data-analytics'
-  }
-];
 
 export default function ServicesIndex() {
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -547,6 +505,7 @@ export default function ServicesIndex() {
                     ))}
                   </div>
                   <Link
+
                     href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >

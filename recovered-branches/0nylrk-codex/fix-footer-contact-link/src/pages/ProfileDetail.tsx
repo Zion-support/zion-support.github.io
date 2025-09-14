@@ -197,6 +197,7 @@ export default function ProfileDetail() {
               </CardContent>
             </Card>
 
+
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>

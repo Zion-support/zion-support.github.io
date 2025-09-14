@@ -347,6 +347,7 @@ export default function UltraFuturisticBackground2035() {
           style={{ filter: 'blur(0.5px)' }}
         />
 
+
         {/* Floating neon orbs */}
         <motion.div
           className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20"

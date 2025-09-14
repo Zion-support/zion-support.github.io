@@ -43,6 +43,7 @@ const teamMembers = [
     github: "https://github.com/sarahjohnson",
     expertise: ["Cloud Computing", "AI/ML", "System Architecture", "DevOps"]
   },
+
   {
     id: 3,
     name: "Mike Chen",
