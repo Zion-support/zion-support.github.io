@@ -56,9 +56,9 @@ const navigationItems: NavItem[] = [
 ];
 
 export default function MobileOptimizedNav() {
-  const [isOpensetIsOpen] = useState(false);
-  const [activeDropdownsetActiveDropdown] = useState<string | null>(null);
-  const [isScrolledsetIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
 
   // Handle scroll effect
@@ -87,9 +87,9 @@ export default function MobileOptimizedNav() {
       }
     };
 
-    document.addEventListener('mousedown'handleClickOutside);
-    return () => document.removeEventListener('mousedown'handleClickOutside);
-  }[isOpen]);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isOpen]);
 
   const toggleDropdown = (label: string) => {
     setActiveDropdown(activeDropdown === label ? null : label);

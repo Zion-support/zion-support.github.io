@@ -34,9 +34,9 @@ const timeSlots = [
 ];
 
 export default function InteractiveDemoRequest() {
-  const [isOpensetIsOpen] = useState(false);
-  const [currentStepsetCurrentStep] = useState(1);
-  const [formDatasetFormData] = useState<DemoFormData>({
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentStep, setCurrentStep] = useState(1);
+  const [formData, setFormData] = useState<DemoFormData>({
     name: '',
     email: '',
     company: '',

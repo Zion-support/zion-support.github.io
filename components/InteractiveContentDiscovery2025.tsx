@@ -1,347 +1,248 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const InteractiveContentDiscovery2025 = () => {
-  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedROI, setSelectedROI] = useState('all');
-  const [isSearching, setIsSearching] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [isVisible, setIsVisible] = useState(false);
 
-  const categories = [
-    { id: 'all', label: 'All Categories', count: 45 },
-    { id: 'ai-revolution', label: 'AI Revolution', count: 12 },
-    { id: 'autonomous-systems', label: 'Autonomous Systems', count: 8 },
-    { id: 'quantum-computing', label: 'Quantum Computing', count: 6 },
-    { id: 'neural-networks', label: 'Neural Networks', count: 7 },
-    { id: 'business-intelligence', label: 'Business Intelligence', count: 5 },
-    { id: 'digital-transformation', label: 'Digital Transformation', count: 7 }
-  ];
-
-  const roiRanges = [
-    { id: 'all', label: 'All ROI Ranges', min: 0, max: 50000 },
-    { id: 'high', label: 'High ROI (10,000%+)', min: 10000, max: 50000 },
-    { id: 'medium', label: 'Medium ROI (1,000-10,000%)', min: 1000, max: 10000 },
-    { id: 'proven', label: 'Proven ROI (100-1,000%)', min: 100, max: 1000 }
-  ];
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const contentItems = [
     {
-      id: 'ai-2025-ultimate-autonomous-enterprise-revolution',
-      title: 'AI 2025: The Ultimate Autonomous Enterprise Revolution',
-      category: 'ai-revolution',
-      roi: 7500,
-      savings: '$25.8B+',
-      readingTime: '35 min read',
-      description: 'Complete guide to achieving 7,500% ROI through autonomous enterprise systems',
-      url: '/blog/ai-2025-ultimate-autonomous-enterprise-revolution-ultimate-breakthrough',
-      tags: ['AI Revolution', 'Autonomous Enterprise', 'ROI', 'Fortune 500'],
-      featured: true
+      id: 1,
+      title: "AI 2025 Ultimate Automation Revolution",
+      category: "ai-automation",
+      type: "blog",
+      excerpt: "Discover how AI automation is revolutionizing businesses with unprecedented ROI gains of up to 50,000%.",
+      readTime: "8 min read",
+      featured: true,
+      tags: ["AI", "Automation", "ROI", "2025"]
     },
     {
-      id: 'quantum-neural-fusion-revolution',
-      title: 'AI 2025: Quantum-Neural Fusion Revolution',
-      category: 'quantum-computing',
-      roi: 25000,
-      savings: '$500B+',
-      readingTime: '35 min read',
-      description: 'Revolutionary quantum-neural fusion technology transforming business operations',
-      url: '/blog/ai-2025-quantum-neural-fusion-revolution-ultimate-breakthrough',
-      tags: ['Quantum Computing', 'Neural Networks', 'AI Revolution', 'ROI'],
-      featured: true
+      id: 2,
+      title: "Quantum-Neural Fusion 2026",
+      category: "quantum-computing",
+      type: "blog",
+      excerpt: "Explore the revolutionary convergence of quantum computing and neural networks that's redefining AI.",
+      readTime: "12 min read",
+      featured: true,
+      tags: ["Quantum Computing", "Neural Networks", "AI", "2026"]
     },
     {
-      id: 'neural-superintelligence-revolution',
-      title: 'AI 2025-2026: The Ultimate Neural Superintelligence Revolution',
-      category: 'neural-networks',
-      roi: 12000,
-      savings: '$45.8B+',
-      readingTime: '35 min read',
-      description: 'Complete guide to 12,000% ROI through next-generation AI consciousness',
-      url: '/blog/ai-2025-2026-ultimate-neural-superintelligence-revolution',
-      tags: ['Neural Superintelligence', 'AI Revolution', 'ROI', 'Fortune 500'],
-      featured: true
+      id: 3,
+      title: "Fortune 500 AI Transformation",
+      category: "case-study",
+      type: "case-study",
+      excerpt: "How a Fortune 500 company achieved 800% ROI in just 6 months through comprehensive AI transformation.",
+      readTime: "15 min read",
+      featured: true,
+      tags: ["Fortune 500", "AI Transformation", "ROI", "Enterprise"]
     },
     {
-      id: 'advanced-neural-architectures',
-      title: 'AI 2025: Advanced Neural Architectures Revolution',
-      category: 'neural-networks',
-      roi: 2800,
-      savings: '$4.2B+',
-      readingTime: '25 min read',
-      description: 'Next-generation neural architectures delivering unprecedented business results',
-      url: '/blog/ai-2025-advanced-neural-architectures-revolution',
-      tags: ['Neural Architectures', 'AI Revolution', 'ROI', 'Breakthrough'],
-      featured: false
+      id: 4,
+      title: "Neural Interface Revolution 2025",
+      category: "neural-interfaces",
+      type: "blog",
+      excerpt: "The future of human-computer interaction through advanced neural interface technology.",
+      readTime: "10 min read",
+      featured: false,
+      tags: ["Neural Interfaces", "Human-Computer Interaction", "2025"]
     },
     {
-      id: 'ultimate-digital-transformation',
-      title: 'AI 2025: Ultimate Digital Transformation Revolution',
-      category: 'digital-transformation',
-      roi: 35000,
-      savings: '$500B+',
-      readingTime: '40 min read',
-      description: 'Complete digital transformation guide achieving unprecedented ROI results',
-      url: '/blog/ai-2025-ultimate-digital-transformation-revolution-ultimate-breakthrough',
-      tags: ['Digital Transformation', 'AI Revolution', 'ROI', 'Breakthrough'],
-      featured: true
+      id: 5,
+      title: "Autonomous Business Operations",
+      category: "automation",
+      type: "blog",
+      excerpt: "How businesses are achieving full autonomy through AI-powered operational systems.",
+      readTime: "9 min read",
+      featured: false,
+      tags: ["Autonomous Operations", "AI", "Business"]
     },
     {
-      id: 'business-intelligence-revolution',
-      title: 'AI 2025: Ultimate Business Intelligence Revolution',
-      category: 'business-intelligence',
-      roi: 18000,
-      savings: '$89.2B+',
-      readingTime: '35 min read',
-      description: 'Revolutionary business intelligence solutions delivering massive ROI improvements',
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
-      tags: ['Business Intelligence', 'AI Revolution', 'ROI', 'Data Analytics'],
-      featured: false
+      id: 6,
+      title: "Synthetic Intelligence Breakthrough",
+      category: "ai-research",
+      type: "blog",
+      excerpt: "The latest breakthroughs in synthetic intelligence and their implications for business.",
+      readTime: "11 min read",
+      featured: false,
+      tags: ["Synthetic Intelligence", "AI Research", "Breakthrough"]
     }
   ];
 
-  const [filteredContent, setFilteredContent] = useState(contentItems);
+  const categories = [
+    { id: 'all', name: 'All Content', count: contentItems.length },
+    { id: 'ai-automation', name: 'AI Automation', count: contentItems.filter(item => item.category === 'ai-automation').length },
+    { id: 'quantum-computing', name: 'Quantum Computing', count: contentItems.filter(item => item.category === 'quantum-computing').length },
+    { id: 'case-study', name: 'Case Studies', count: contentItems.filter(item => item.category === 'case-study').length },
+    { id: 'neural-interfaces', name: 'Neural Interfaces', count: contentItems.filter(item => item.category === 'neural-interfaces').length },
+    { id: 'automation', name: 'Automation', count: contentItems.filter(item => item.category === 'automation').length },
+    { id: 'ai-research', name: 'AI Research', count: contentItems.filter(item => item.category === 'ai-research').length }
+  ];
 
-  useEffect(() => {
-    setIsSearching(true);
-    
-    const timeout = setTimeout(() => {
-      let filtered = contentItems;
+  const filteredContent = contentItems.filter(item => {
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    const matchesSearch = searchTerm === '' || 
+      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
 
-      // Filter by search term
-      if (searchTerm) {
-        filtered = filtered.filter(item =>
-          item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-        );
-      }
-
-      // Filter by category
-      if (selectedCategory !== 'all') {
-        filtered = filtered.filter(item => item.category === selectedCategory);
-      }
-
-      // Filter by ROI range
-      if (selectedROI !== 'all') {
-        const roiRange = roiRanges.find(range => range.id === selectedROI);
-        if (roiRange) {
-          filtered = filtered.filter(item => 
-            item.roi >= roiRange.min && item.roi <= roiRange.max
-          );
-        }
-      }
-
-      setFilteredContent(filtered);
-      setIsSearching(false);
-    }, 300);
-
-    return () => clearTimeout(timeout);
-  }, [searchTerm, selectedCategory, selectedROI]);
-
-  const getCategoryColor = (category: string) => {
-    const colors = {
-      'ai-revolution': 'bg-purple-500',
-      'autonomous-systems': 'bg-blue-500',
-      'quantum-computing': 'bg-green-500',
-      'neural-networks': 'bg-orange-500',
-      'business-intelligence': 'bg-indigo-500',
-      'digital-transformation': 'bg-pink-500'
-    };
-    return colors[category as keyof typeof colors] || 'bg-gray-500';
-  };
-
-  const getROIColor = (roi: number) => {
-    if (roi >= 10000) return 'text-red-600';
-    if (roi >= 1000) return 'text-orange-600';
-    if (roi >= 100) return 'text-green-600';
-    return 'text-blue-600';
+  const getContentUrl = (item) => {
+    if (item.type === 'case-study') {
+      return `/case-studies/${item.title.toLowerCase().replace(/\s+/g, '-')}`;
+    }
+    return `/blog/${item.title.toLowerCase().replace(/\s+/g, '-')}`;
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className={`py-16 bg-gradient-to-br from-gray-50 to-blue-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Interactive Content Discovery
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 rounded-full px-6 py-2 mb-4 text-sm font-semibold text-white">
+            <span className="mr-2">🔍</span>
+            INTERACTIVE CONTENT DISCOVERY
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Explore Our Latest Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Find the perfect AI content for your business needs. Search, filter, and discover 
-            breakthrough technologies with proven ROI results.
+            Discover cutting-edge insights, case studies, and breakthrough technologies that are shaping the future of AI and business.
           </p>
         </div>
 
-        {/* Search and Filters */}
-        <div className="bg-gray-50 rounded-2xl p-8 mb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Search and Filter */}
+        <div className="mb-8">
+          <div className="flex flex-col lg:flex-row gap-4 mb-6">
             {/* Search Bar */}
-            <div className="lg:col-span-2">
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Search Content
-              </label>
+            <div className="flex-1">
               <div className="relative">
                 <input
                   type="text"
+                  placeholder="Search content, tags, or topics..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  placeholder="Search by title, description, or tags..."
-                  className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-4 py-3 pl-12 pr-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
-                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
               </div>
             </div>
-
-            {/* ROI Filter */}
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                ROI Range
-              </label>
+            
+            {/* Category Filter */}
+            <div className="lg:w-64">
               <select
-                value={selectedROI}
-                onChange={(e) => setSelectedROI(e.target.value)}
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               >
-                {roiRanges.map((range) => (
-                  <option key={range.id} value={range.id}>
-                    {range.label}
+                {categories.map(category => (
+                  <option key={category.id} value={category.id}>
+                    {category.name} ({category.count})
                   </option>
                 ))}
               </select>
             </div>
           </div>
-
-          {/* Category Filters */}
-          <div className="mt-6">
-            <label className="block text-sm font-semibold text-gray-700 mb-3">
-              Categories
-            </label>
-            <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
-                    selectedCategory === category.id
-                      ? 'bg-purple-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-purple-50 border border-gray-200'
-                  }`}
-                >
-                  {category.label} ({category.count})
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Results */}
-        <div className="mb-8">
-          <div className="flex items-center justify-between">
-            <h3 className="text-2xl font-bold text-gray-900">
-              {isSearching ? 'Searching...' : `Found ${filteredContent.length} Results`}
-            </h3>
-            {isSearching && (
-              <div className="flex items-center space-x-2 text-purple-600">
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600"></div>
-                <span className="text-sm font-medium">Searching...</span>
-              </div>
-            )}
-          </div>
         </div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((content) => (
+          {filteredContent.map((item, index) => (
             <div
-              key={content.id}
-              className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
-                content.featured ? 'ring-2 ring-purple-500' : ''
+              key={item.id}
+              className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
+                item.featured ? 'ring-2 ring-purple-500' : ''
               }`}
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              {content.featured && (
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 text-center font-semibold">
-                  ⭐ FEATURED
+              {/* Featured Badge */}
+              {item.featured && (
+                <div className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  FEATURED
                 </div>
               )}
               
               <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <span className={`px-3 py-1 rounded-full text-white text-xs font-semibold ${getCategoryColor(content.category)}`}>
-                      {categories.find(cat => cat.id === content.category)?.label}
-                    </span>
-                  </div>
-                  <span className="text-sm text-gray-500">{content.readingTime}</span>
+                {/* Category Tag */}
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded">
+                    {categories.find(cat => cat.id === item.category)?.name}
+                  </span>
+                  <span className="text-xs text-gray-500">{item.readTime}</span>
                 </div>
-
-                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
-                  {content.title}
+                
+                {/* Title */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  {item.title}
                 </h3>
-
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  {content.description}
+                
+                {/* Excerpt */}
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {item.excerpt}
                 </p>
-
+                
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {content.tags.slice(0, 3).map((tag) => (
+                  {item.tags.slice(0, 3).map((tag, tagIndex) => (
                     <span
-                      key={tag}
-                      className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"
+                      key={tagIndex}
+                      className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex space-x-4">
-                    <div className="text-center">
-                      <div className={`text-lg font-bold ${getROIColor(content.roi)}`}>
-                        {content.roi.toLocaleString()}%
-                      </div>
-                      <div className="text-xs text-gray-500">ROI</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-blue-600">{content.savings}</div>
-                      <div className="text-xs text-gray-500">Savings</div>
-                    </div>
-                  </div>
-                </div>
-
+                
+                {/* CTA Button */}
                 <Link
-                  href={content.url}
-                  className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all"
+                  href={getContentUrl(item)}
+                  className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                 >
-                  Read Full Article
+                  Read More
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
               </div>
             </div>
           ))}
         </div>
 
-        {filteredContent.length === 0 && !isSearching && (
+        {/* No Results */}
+        {filteredContent.length === 0 && (
           <div className="text-center py-12">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">No Results Found</h3>
-            <p className="text-gray-600 mb-6">
-              Try adjusting your search terms or filters to find more content.
-            </p>
-            <button
-              onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-                setSelectedROI('all');
-              }}
-              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-            >
-              Clear All Filters
-            </button>
+            <div className="text-gray-400 mb-4">
+              <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.29-1.009-5.824-2.709M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">No content found</h3>
+            <p className="text-gray-600">Try adjusting your search terms or category filter.</p>
           </div>
         )}
+
+        {/* View All Button */}
+        <div className="text-center mt-12">
+          <Link
+            href="/blog"
+            className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+          >
+            View All Content
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
       </div>
     </section>
   );

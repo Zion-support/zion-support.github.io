@@ -65,7 +65,7 @@ export default function URLShortenerPage() {
   };
 
   const getTotalClicks = () => {
-    return shortenedUrls.reduce((sumurl) => sum + url.clicks0);
+    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0);
   };
 
   const getTotalUrls = () => {
