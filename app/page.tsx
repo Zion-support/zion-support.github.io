@@ -69,6 +69,12 @@ import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025Ul
 // Import new 2025 content promotional components
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 
+// Import new promotional banners for latest content
+import AI2025UltimateInnovationShowcaseBanner from '../components/AI2025UltimateInnovationShowcaseBanner';
+import AI2026FuturePredictionsBanner from '../components/AI2026FuturePredictionsBanner';
+import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
+import ComprehensiveNewContentShowcase2025 from '../components/ComprehensiveNewContentShowcase2025';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -86,6 +92,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT PROMOTIONAL BANNERS - LATEST */}
+        <ComprehensiveNewContentShowcase2025 />
+        <AI2025UltimateInnovationShowcaseBanner />
+        <AI2026FuturePredictionsBanner />
+        <RevolutionaryContentShowcase2025 />
+        
         {/* Ultimate Content 2025 Showcase Banner - LATEST */}
         <UltimateContent2025ShowcaseBanner />
         
