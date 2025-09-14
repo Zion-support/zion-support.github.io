@@ -4,42 +4,39 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
-// Import new advanced AI components
-import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
-import RealTimePerformanceDashboard from '../components/RealTimePerformanceDashboard';
-import IntelligentSearchEngine from '../components/IntelligentSearchEngine';
-import AdvancedAIAssistant from '../components/AdvancedAIAssistant';
-import BusinessIntelligenceDashboard from '../components/BusinessIntelligenceDashboard';
-import AdvancedSecurityMonitor from '../components/AdvancedSecurityMonitor';
-import AdvancedAnalyticsEngine from '../components/AdvancedAnalyticsEngine';
-import AutomationWorkflowEngine from '../components/AutomationWorkflowEngine';
-import EnterpriseDataManagement from '../components/EnterpriseDataManagement';
-import APIManagementSystem from '../components/APIManagementSystem';
-
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
 const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
-// Import key promotional components
+// Import only working promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
 import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
 import NewContent2026Showcase from '../components/NewContent2026Showcase';
-import NewContent2025ShowcaseBanner from '../components/NewContent2025ShowcaseBanner';
+import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
+import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
+import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
-import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
+import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
+import InteractiveROICalculator from '../components/InteractiveROICalculator';
+import ComprehensiveContentShowcase2025 from '../components/ComprehensiveContentShowcase2025';
+import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
+import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+import UltimateTransformationBanner2025 from '../components/UltimateTransformationBanner2025';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -58,17 +55,44 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Revolutionary Content 2025 Banner */}
+        {/* Ultimate Transformation Banner 2025 - NEW FEATURED */}
+        <UltimateTransformationBanner2025 />
+        
+        {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
+        <UltimateContentShowcase2025 />
+        
+        {/* Revolutionary Content 2025 Banner - NEW FEATURED */}
         <RevolutionaryContent2025Banner />
+        
+        {/* Ultimate Content 2025 Showcase - NEW FEATURED */}
+        <UltimateContentShowcase2025 />
+        
+        {/* Ultimate Content 2025 Banner - NEW */}
+        <NewContent2025UltimateBanner />
+        
+        {/* Revolutionary Content 2026 Banner - NEW FEATURED */}
+        <RevolutionaryContent2026Banner />
+        
+        {/* New Content 2026 Ultimate Showcase - NEW FEATURED */}
+        <NewContent2025UltimateShowcase />
+        
+        {/* New Content 2025 Ultimate Banner */}
+        <NewContent2025UltimateBanner />
+        
+        {/* Ultimate Promotion Banner */}
+        <UltimatePromotionBanner2026 />
+        
+        {/* Revolutionary Content 2025 Banner */}
+        <RevolutionaryContentBanner2025 />
         
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
         
         {/* New Content 2025 Showcase Banner */}
-        <NewContent2025ShowcaseBanner />
+        <NewContent2025PromotionBanner />
         
-        {/* Revolutionary AI Content Banner */}
-        <RevolutionaryAIContentBanner />
+        {/* Revolutionary Content 2025 Banner */}
+        <RevolutionaryContentBanner2025 />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -169,30 +193,20 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <NewContent2025Showcase />
         <UltimateContentShowcase2025 />
+        <RevolutionaryContent2026Banner />
+        <UltimateContentShowcase2026 />
         <NewContent2025PromotionBanner />
         <LatestContentShowcase2025 />
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
-        <RevolutionaryContent2026Banner />
         <FeaturedContentShowcase2026 />
         <NewContentPromotionBanner />
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
         <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
-
-        {/* Advanced AI Components */}
-        <AdvancedContentRecommendationEngine />
-        <RealTimePerformanceDashboard />
-        <IntelligentSearchEngine />
-        <AdvancedAIAssistant />
-        <BusinessIntelligenceDashboard />
-        <AdvancedSecurityMonitor />
-        <AdvancedAnalyticsEngine />
-        <AutomationWorkflowEngine />
-        <EnterpriseDataManagement />
-        <APIManagementSystem />
 
         {/* Structured Data */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>

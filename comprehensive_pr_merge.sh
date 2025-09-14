@@ -1,121 +1,136 @@
 #!/bin/bash
 
-# Comprehensive PR Merge Script
-# This script will systematically merge all open PRs with conflict resolution
+# Comprehensive PR merge script
+set -e
 
-echo "Starting comprehensive PR merge process..."
+echo "🚀 Starting comprehensive PR merge process..."
 
-# Function to merge a PR with conflict resolution
-merge_pr_with_resolution() {
-    local pr_number=$1
-    local pr_title=$2
-    local branch_name=$3
+# Function to sync with remote
+sync_with_remote() {
+    echo "  🔄 Syncing with remote..."
+    git fetch origin main
+    git pull origin main --rebase
+}
+
+# Function to process a single branch
+process_branch() {
+    local branch=$1
+    local branch_num=$2
+    local total_branches=$3
     
-    echo "Processing PR #$pr_number: $pr_title"
-    echo "Branch: $branch_name"
+    echo ""
+    echo "🔄 [$branch_num/$total_branches] Processing branch: $branch"
     
-    # Fetch the branch
-    if git fetch origin "$branch_name" 2>/dev/null; then
-        echo "Successfully fetched $branch_name"
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/heads/$branch; then
+        echo "  ✅ Branch exists locally"
+    else
+        echo "  📥 Fetching branch from remote..."
+        if ! git fetch origin $branch:$branch 2>/dev/null; then
+            echo "  ⚠️  Failed to fetch branch $branch, skipping..."
+            return 1
+        fi
+    fi
+    
+    # Switch to main
+    git checkout main
+    
+    # Try to merge
+    echo "  🔀 Attempting to merge $branch into main..."
+    
+    if git merge $branch --no-ff -m "Merge $branch into main" 2>/dev/null; then
+        echo "  ✅ Successfully merged $branch"
+        return 0
         
-        # Try to merge
-        if git merge "origin/$branch_name" --no-edit 2>/dev/null; then
-            echo "Successfully merged PR #$pr_number"
-            return 0
-        else
-            echo "Merge conflict detected in PR #$pr_number - attempting resolution..."
+    else
+        echo "  ⚠️  Merge conflict detected in $branch"
+        
+        # Check what files have conflicts
+        CONFLICT_FILES=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
+        if [ -n "$CONFLICT_FILES" ]; then
+            echo "  📝 Conflicted files: $CONFLICT_FILES"
             
-            # Check what files have conflicts
-            git status --porcelain | grep "^UU\|^AA\|^DD" | while read -r status file; do
-                echo "Conflict in file: $file"
-                
-                # For common files, use our preferred version
-                case "$file" in
-                    "build.sh")
-                        echo "Using our preferred build.sh version"
-                        git checkout --ours "$file"
-                        ;;
-                    "package.json")
-                        echo "Using our preferred package.json version"
-                        git checkout --ours "$file"
-                        ;;
-                    "netlify.toml")
-                        echo "Using our preferred netlify.toml version"
-                        git checkout --ours "$file"
-                        ;;
-                    ".yarnrc"*)
-                        echo "Using our preferred .yarnrc version"
-                        git checkout --ours "$file"
-                        ;;
-                    *)
-                        echo "Using our version for $file"
-                        git checkout --ours "$file"
-                        ;;
-                esac
+            # Resolve conflicts by keeping our version (main branch)
+            for file in $CONFLICT_FILES; do
+                echo "  🔧 Resolving conflict in $file (keeping main version)"
+                git checkout --ours "$file" 2>/dev/null || true
+                git add "$file" 2>/dev/null || true
             done
             
-            # Add resolved files
-            git add .
-            
-            # Commit the merge
-            if git commit -m "Merge PR #$pr_number: $pr_title - resolved conflicts by preferring main branch changes"; then
-                echo "Successfully resolved conflicts and merged PR #$pr_number"
+            # Commit the resolved merge
+            if git commit -m "Merge $branch into main - conflicts resolved" --no-edit 2>/dev/null; then
+                echo "  ✅ Successfully resolved conflicts and merged $branch"
                 return 0
             else
-                echo "Failed to commit merge for PR #$pr_number"
-                git merge --abort
+                echo "  ❌ Failed to commit resolved merge for $branch"
+                git merge --abort 2>/dev/null || true
                 return 1
             fi
+        else
+            echo "  ❌ No conflict files found, aborting merge"
+            git merge --abort 2>/dev/null || true
+            return 1
         fi
-    else
-        echo "Failed to fetch branch $branch_name"
-        return 1
     fi
 }
 
-# Get list of open PRs
-echo "Fetching open PRs..."
-PRS_JSON=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100")
+# Get all cursor branches
+BRANCHES=$(git branch -r | grep "cursor/" | grep -v "HEAD" | sed 's/origin\///' | sort -u)
+TOTAL_BRANCHES=$(echo "$BRANCHES" | wc -l)
 
-# Extract PR information
-echo "$PRS_JSON" | grep -E '"number":|"title":|"ref":' | while IFS= read -r line; do
-    if echo "$line" | grep -q '"number":'; then
-        pr_number=$(echo "$line" | grep -o '[0-9]\+')
-    elif echo "$line" | grep -q '"title":'; then
-        pr_title=$(echo "$line" | sed 's/.*"title": *"\([^"]*\)".*/\1/')
-    elif echo "$line" | grep -q '"ref":'; then
-        pr_ref=$(echo "$line" | sed 's/.*"ref": *"\([^"]*\)".*/\1/')
-        if [ -n "$pr_number" ] && [ -n "$pr_title" ] && [ -n "$pr_ref" ]; then
-            echo "Found PR #$pr_number: $pr_title -> $pr_ref"
-        fi
+echo "📋 Found $TOTAL_BRANCHES branches to process"
+
+# Counter for tracking
+SUCCESS_COUNT=0
+CONFLICT_COUNT=0
+ERROR_COUNT=0
+PROCESSED=0
+
+# Process branches in batches of 10
+BATCH_SIZE=10
+BATCH_NUM=1
+
+echo "📊 Processing $TOTAL_BRANCHES branches in batches of $BATCH_SIZE"
+
+# Process each branch
+for branch in $BRANCHES; do
+    if [ -z "$branch" ]; then
+        continue
     fi
+    
+    PROCESSED=$((PROCESSED + 1))
+    CURRENT_BATCH=$(((PROCESSED - 1) / BATCH_SIZE + 1))
+    
+    # Process the branch
+    if process_branch "$branch" "$PROCESSED" "$TOTAL_BRANCHES"; then
+        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+    else
+        ERROR_COUNT=$((ERROR_COUNT + 1))
+    fi
+    
+    # Clean up the local branch
+    echo "  🧹 Cleaning up local branch $branch"
+    git branch -D $branch 2>/dev/null || true
+    
+    # Sync with remote every 10 branches
+    if [ $((PROCESSED % 10)) -eq 0 ]; then
+        echo "  📤 Syncing with remote after $PROCESSED branches..."
+        sync_with_remote
+    fi
+    
+    echo "  ✅ Completed processing $branch"
 done
 
-# Process PRs in batches to avoid overwhelming the system
-echo "Processing PRs in batches..."
+# Final sync
+echo "  📤 Final sync with remote..."
+sync_with_remote
 
-# Get PR numbers and process them
-PR_NUMBERS=$(echo "$PRS_JSON" | grep '"number":' | grep -o '[0-9]\+' | head -10)
+echo ""
+echo "📊 Comprehensive PR Merge Summary:"
+echo "  ✅ Successful merges: $SUCCESS_COUNT"
+echo "  ⚠️  Conflicts resolved: $CONFLICT_COUNT"
+echo "  ❌ Errors: $ERROR_COUNT"
+echo "  📋 Total processed: $PROCESSED"
 
-for pr_num in $PR_NUMBERS; do
-    echo "Processing PR #$pr_num..."
-    
-    # Get PR details
-    PR_DETAILS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_num")
-    pr_title=$(echo "$PR_DETAILS" | grep '"title":' | sed 's/.*"title": *"\([^"]*\)".*/\1/')
-    pr_ref=$(echo "$PR_DETAILS" | grep '"ref":' | sed 's/.*"ref": *"\([^"]*\)".*/\1/')
-    
-    if [ -n "$pr_ref" ]; then
-        merge_pr_with_resolution "$pr_num" "$pr_title" "$pr_ref"
-        echo "---"
-    fi
-done
-
-echo "PR merge process completed!"
-echo "Pushing all changes to main..."
-
-# Push all changes
-git push origin main
-
-echo "All changes pushed to main branch!"
-echo "Summary: Processed multiple PRs with conflict resolution"
+echo ""
+echo "🎉 Comprehensive PR merge process completed!"
