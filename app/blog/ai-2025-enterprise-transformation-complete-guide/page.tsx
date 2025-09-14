@@ -1,7 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen, TrendingUp, Target } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
@@ -494,6 +493,5 @@ export default function AI2025EnterpriseTransformationGuide() {
         </section>
       </div>
     </ErrorBoundary>
->>>>>>> cursor/create-and-deploy-new-content-123d
   );
 }
