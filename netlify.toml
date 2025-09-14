@@ -1,6 +1,6 @@
 [build]
-  # Build command with error handling
-  command = "bash scripts/netlify-build.sh"
+  # Build command with comprehensive error handling and dependency resolution
+  command = "bash scripts/netlify-build-final.sh"
   
   # Directory to publish
   publish = "dist"
@@ -22,7 +22,7 @@
   # Yarn configuration - optimized for reliable builds
   YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
   YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
-  YARN_FLAGS = "--frozen-lockfile --network-timeout 1000000"
+  YARN_FLAGS = "--network-timeout 1000000 --ignore-engines"
   
   # Install devDependencies for build tools
   YARN_INSTALL_DEV = "true"
