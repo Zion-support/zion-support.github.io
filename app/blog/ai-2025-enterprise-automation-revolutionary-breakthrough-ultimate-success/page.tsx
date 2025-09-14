@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function AI2025EnterpriseAutomationRevolutionaryBreakthroughPage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="AI 2025: The Enterprise Automation Revolutionary Breakthrough - Ultimate Success Guide to 2,500% ROI"
         description="Discover how Fortune 500 companies are achieving unprecedented 2,500% ROI through revolutionary AI automation. Complete implementation guide with real-world success stories."
@@ -188,6 +188,6 @@ export default function AI2025EnterpriseAutomationRevolutionaryBreakthroughPage(
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }
