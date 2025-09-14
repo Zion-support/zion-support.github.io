@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+'use client';
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -230,3 +236,4 @@ const UltimateContentShowcase2025 = () => {
 };
 
 export default UltimateContentShowcase2025;
+>>>>>>> cursor/create-and-deploy-new-content-040d
