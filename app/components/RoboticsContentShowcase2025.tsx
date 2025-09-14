@@ -7,7 +7,7 @@ import {
   ArrowRight, 
   Clock, 
   TrendingUp, 
-  Target, 
+  CheckCircle, 
   Zap, 
   Shield, 
   Users, 
@@ -148,7 +148,7 @@ const RoboticsContentShowcase2025 = () => {
             className="bg-white rounded-xl p-6 shadow-lg text-center"
           >
             <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <Target className="w-6 h-6 text-yellow-600" />
+              <CheckCircle className="w-6 h-6 text-yellow-600" />
             </div>
             <div className="text-3xl font-bold text-yellow-600 mb-2">800%</div>
             <div className="text-sm text-gray-600">Average ROI</div>
@@ -261,7 +261,7 @@ const RoboticsContentShowcase2025 = () => {
                   </div>
                 </div>
 
-                {/* Tags */}
+                {/* Users */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {content.tags.map((tag, tagIndex) => (
                     <span

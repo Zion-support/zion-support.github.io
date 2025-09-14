@@ -10,7 +10,7 @@ import {
   Star, 
   Clock, 
   Users, 
-  Target,
+  CheckCircle,
   CheckCircle,
   BarChart3,
   Cpu,
@@ -127,7 +127,7 @@ const AutonomousOperationsShowcase2025 = () => {
     switch (type) {
       case 'blog': return <Brain className="h-5 w-5" />;
       case 'case-study': return <BarChart3 className="h-5 w-5" />;
-      case 'resource': return <Target className="h-5 w-5" />;
+      case 'resource': return <CheckCircle className="h-5 w-5" />;
       default: return <Zap className="h-5 w-5" />;
     }
   };
@@ -239,7 +239,7 @@ const AutonomousOperationsShowcase2025 = () => {
                   </div>
                 </div>
 
-                {/* Tags */}
+                {/* Users */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {item.tags.slice(0, 3).map((tag, index) => (
                     <span
@@ -297,7 +297,7 @@ const AutonomousOperationsShowcase2025 = () => {
                 href="/resources"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors"
               >
-                <Target className="h-5 w-5 mr-2" />
+                <CheckCircle className="h-5 w-5 mr-2" />
                 View All Resources
               </Link>
             </div>

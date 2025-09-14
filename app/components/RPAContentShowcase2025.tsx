@@ -173,7 +173,7 @@ const RPAContentShowcase2025 = () => {
                   </div>
                 </div>
 
-                {/* Tags */}
+                {/* Users */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {item.tags.map((tag, index) => (
                     <span key={index} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">

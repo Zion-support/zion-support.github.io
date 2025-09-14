@@ -266,6 +266,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                       </div>
                     ))}
                   </div>
+                </div>
 
                 {/* Benefits */}
                 <div className="mb-6">
