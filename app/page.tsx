@@ -96,6 +96,9 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 import NewContent2025UltimateBreakthroughBanner from './components/NewContent2025UltimateBreakthroughBanner';
 import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakthroughContentShowcase2025';
 
+// Import new AI 2025 Ultimate Breakthrough Revolution components
+import AI2025UltimateBreakthroughRevolutionBanner from './components/AI2025UltimateBreakthroughRevolutionBanner';
+
 // Import additional promotional components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
@@ -230,6 +233,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 Ultimate Breakthrough Revolution Banner - NEWEST ULTIMATE FEATURED */}
+        <AI2025UltimateBreakthroughRevolutionBanner />
+        
         {/* AI Revolution 2025-2026 Banner - NEWEST ULTIMATE FEATURED */}
         <AIRevolution2025Banner />
         
@@ -463,6 +469,9 @@ export default function HomePage() {
         <UltimateContentShowcase2025 />
         
         {/* Ultimate Breakthrough Content Showcase 2025 - NEW */}
+        <UltimateBreakthroughContentShowcase2025 />
+        
+        {/* AI 2025 Ultimate Breakthrough Revolution Content Showcase - NEWEST FEATURED */}
         <UltimateBreakthroughContentShowcase2025 />
         
         {/* New 2025 Breakthrough Content Promotions */}
