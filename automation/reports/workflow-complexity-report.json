@@ -1773,7 +1773,7 @@
         "matrixCount": 0,
         "dependencyCount": 0,
         "environmentCount": 0,
-        "secretCount": 6,
+        "secretCount": 0,
         "actionCount": 2
       },
       "refactoringPriority": "low",
