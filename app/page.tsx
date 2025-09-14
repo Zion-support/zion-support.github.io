@@ -76,6 +76,41 @@ import UltimateContentShowcase2025Banner from '../components/UltimateContentShow
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
 
+// Import new Ultimate Content 2025 Revolution components
+import UltimateContent2025RevolutionBanner from '../components/UltimateContent2025RevolutionBanner';
+import UltimateContent2025RevolutionShowcase from '../components/UltimateContent2025RevolutionShowcase';
+
+// Import new 2025 Innovation Showcase components
+import AI2025InnovationShowcase from '../components/AI2025InnovationShowcase';
+import AI2025RevolutionaryBreakthroughBanner from '../components/AI2025RevolutionaryBreakthroughBanner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+
+// Import new AI 2025-2026 Ultimate Business Intelligence components
+import AI2025_2026UltimateBusinessIntelligenceRevolutionBanner from '../components/AI2025_2026UltimateBusinessIntelligenceRevolutionBanner';
+import AI2025_2026UltimateBusinessIntelligenceShowcase from '../components/AI2025_2026UltimateBusinessIntelligenceShowcase';
+
+// Import new Ultimate AI 2025 Transformation components
+import UltimateAI2025TransformationBanner from '../components/UltimateAI2025TransformationBanner';
+import UltimateAI2025ContentShowcase from '../components/UltimateAI2025ContentShowcase';
+
+// Import new AI 2025-2026 Ultimate Breakthrough components
+import AI2025_2026UltimateBreakthroughPromotionBanner from '../components/AI2025_2026UltimateBreakthroughPromotionBanner';
+import AI2025_2026UltimateBreakthroughContentShowcase from '../components/AI2025_2026UltimateBreakthroughContentShowcase';
+
+// Import new Ultimate Content 2025 components
+import UltimateContent2025Banner from '../components/UltimateContent2025Banner';
+import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import ContentNavigation2025 from '../components/ContentNavigation2025';
+
+// Import new Ultimate Business Transformation 2025 components
+import UltimateBusinessTransformation2025Banner from '../components/UltimateBusinessTransformation2025Banner';
+import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
+
+// Import new Ultimate Autonomous Enterprise 2025 components
+import UltimateAutonomousEnterpriseBanner2025 from '../components/UltimateAutonomousEnterpriseBanner2025';
+import UltimateAutonomousEnterpriseShowcase2025 from '../components/UltimateAutonomousEnterpriseShowcase2025';
+
 // Import new advanced AI components
 import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
 import RealTimePerformanceDashboard from '../components/RealTimePerformanceDashboard';
@@ -236,11 +271,17 @@ export default function HomePage() {
         {/* AI 2026 ULTIMATE BREAKTHROUGH BANNER - LATEST FEATURED */}
         <AI2026UltimateBreakthroughBanner />
         
-        {/* NEW CONTENT 2026 PROMOTION BANNER - LATEST FEATURED */}
-        <NewContent2026PromotionBanner />
-        
         {/* AI 2025 REVOLUTIONARY BREAKTHROUGH BANNER - NEWEST FEATURED */}
         <AI2025RevolutionaryBreakthroughBanner />
+        
+        {/* AI 2025 INNOVATION SHOWCASE - NEWEST FEATURED */}
+        <AI2025InnovationShowcase />
+        
+        {/* ULTIMATE CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
+        <UltimateContentShowcase2025 />
+        
+        {/* NEW CONTENT 2026 PROMOTION BANNER - LATEST FEATURED */}
+        <NewContent2026PromotionBanner />
         
         {/* AI 2025 REVOLUTIONARY CONTENT SHOWCASE - LATEST FEATURED */}
         <AI2025RevolutionaryContentShowcase />
@@ -382,6 +423,7 @@ export default function HomePage() {
         
         {/* Ultimate Content 2026 Breakthrough Banner - FEATURED */}
         <UltimateContent2026BreakthroughBanner />
+        
         {/* Advanced Neural Architectures 2026 Banner - NEW ULTIMATE BREAKTHROUGH */}
         <AdvancedNeuralArchitectures2026Banner />
         
