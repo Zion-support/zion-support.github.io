@@ -1,12 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
 import ErrorBoundary from '../components/ErrorBoundary';
-import EnhancedSEO from '../components/EnhancedSEO';
+import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-import EnhancedAnalytics from '../components/EnhancedAnalytics';
-import MobileOptimizedNav from '../components/MobileOptimizedNav';
-import InteractiveContentWidget from '../components/InteractiveContentWidget';
 
 // Core AI components
 import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
@@ -64,70 +60,15 @@ export const metadata = {
 };
 
 export default function HomePage() {
-  // Sample content data for the interactive widget
-  const sampleContent = [
-    {
-      id: 'ai-2025-enterprise-revolution',
-      title: 'AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
-      type: 'blog' as const,
-      url: '/blog/ai-2025-enterprise-ai-revolution-ultimate-breakthrough',
-      description: 'Discover how Fortune 500 companies are achieving 500%+ ROI with advanced AI automation and machine learning solutions.',
-      tags: ['AI', 'Enterprise', 'ROI', 'Digital Transformation'],
-      readingTime: '18 min read',
-      featured: true,
-      metrics: {
-        roi: '500%',
-        savings: '$2.8B',
-        satisfaction: '98%'
-      }
-    },
-    {
-      id: 'fortune-500-ai-transformation',
-      title: 'Fortune 500 AI Transformation: $2.8B Annual Savings in 18 Months',
-      type: 'case-study' as const,
-      url: '/case-studies/fortune-500-ai-transformation-ultimate-success-2025',
-      description: 'Real-world case study showing how a Fortune 500 manufacturing company achieved 567% ROI through comprehensive AI implementation.',
-      tags: ['Case Study', 'Fortune 500', 'AI Transformation', 'ROI'],
-      readingTime: '22 min read',
-      featured: true,
-      metrics: {
-        roi: '567%',
-        savings: '$2.8B',
-        satisfaction: '99.2%'
-      }
-    },
-    {
-      id: 'quantum-computing-business-revolution',
-      title: 'AI 2025: The Quantum Computing Business Revolution - $100B Market Transformation',
-      type: 'blog' as const,
-      url: '/blog/ai-2025-quantum-computing-business-revolution',
-      description: 'Explore the quantum computing revolution and its potential to transform business operations with 1,200% ROI opportunities.',
-      tags: ['Quantum AI', 'Quantum Computing', 'Business Revolution', 'ROI'],
-      readingTime: '20 min read',
-      featured: true,
-      metrics: {
-        roi: '1,200%',
-        market: '$100B',
-        accuracy: '99.97%'
-      }
-    }
-  ];
-
   return (
     <ErrorBoundary>
-      <EnhancedSEO
+      <SEO
         title="Zion Tech Group - AI & Technology Solutions | 500%+ ROI Guaranteed"
         description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services with proven 500%+ ROI results."
         keywords={['AI automation', 'cloud computing', 'micro SaaS', 'technology consulting', 'enterprise solutions', 'digital transformation', '500% ROI', 'AI implementation']}
-        canonicalUrl="https://zion.app"
-        ogImage="/og-image.jpg"
       />
       
-      <EnhancedAnalytics />
-      <PerformanceMonitor />
-      <MobileOptimizedNav />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 pt-16">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
         {/* Hero Section with Ultimate Content Showcase */}
         <section className="relative overflow-hidden">
           <UltimateContent2025ShowcaseBanner />
@@ -253,13 +194,6 @@ export default function HomePage() {
             <Suspense fallback={<LoadingSpinner />}>
               <TechnologyStack />
             </Suspense>
-          </div>
-        </section>
-
-        {/* Interactive Content Discovery Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <InteractiveContentWidget contentItems={sampleContent} maxItems={6} />
           </div>
         </section>
 
