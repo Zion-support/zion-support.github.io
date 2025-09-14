@@ -115,3 +115,6 @@ export function setupOfflineDetection() {
 
 // Initialize offline detection
 setupOfflineDetection();
+
+// Export registerServiceWorker as an alias for register
+export const registerServiceWorker = register;

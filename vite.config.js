@@ -94,8 +94,13 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+<<<<<<< HEAD
       '@': '/workspace/src'
     }
+=======
+      '@': path.resolve(__dirname, './src'),
+    },
+>>>>>>> origin/cursor/build-vite-project-with-missing-dependency-e03a
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion'],
