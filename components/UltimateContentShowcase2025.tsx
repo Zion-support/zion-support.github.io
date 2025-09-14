@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+'use client';
+
+import React, { useState, useEffect } from 'react';
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const contentSections = [
+    {
+          </motion.div>
+        </AnimatePresence>
+
+=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -185,6 +201,7 @@ const UltimateContentShowcase2025: React.FC = () => {
         </div>
       </div>
     </section>
+>>>>>>> cursor/create-and-deploy-new-content-040d
   );
 };
 
