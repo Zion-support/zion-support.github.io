@@ -19,29 +19,25 @@ export default function EdgeComputingGuidePage() {
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
                 <span className="text-sm font-medium">⚡ EDGE COMPUTING REVOLUTION</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI 2025: Edge Computing Revolution - Ultimate Guide
+                The AI Edge Computing Revolution: Your 2025 Ultimate Guide
               </h1>
-              <p className="text-xl text-gray-200 mb-8 max-w-3xl">
-                Discover how edge computing is revolutionizing AI deployment and creating unprecedented opportunities for real-time intelligence.
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl">
+                Discover how edge computing is transforming AI deployment, delivering 10x faster processing, 90% cost reduction, and real-time intelligence at the edge of your network.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Get Consultation
                 </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
               </div>
             </div>
           </div>
