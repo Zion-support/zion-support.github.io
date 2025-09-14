@@ -8,14 +8,10 @@ interface UltraFuturisticBackground2038Props {
 }
 
 export default function UltraFuturisticBackground2038({ 
-export default function UltraFuturisticBackground2038(): any ({;
-  children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038(): any ({ ;
-
-
-  children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({ ;
-
-
-
+  intensity = 'medium', 
+  theme = 'consciousness',
+  children
+}: UltraFuturisticBackground2038Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -46,7 +42,10 @@ export default function UltraFuturisticBackground2038(): any ({;
       switch (theme) {
         case 'consciousness':
           return {
-
+            primary: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff', '#00ff80'],
+            secondary: ['#ff8000', '#0080ff', '#ff4080', '#40ffff', '#ffff40', '#ff40ff'],
+            accent: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3'],
+            quantum: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b', '#ef4444']
           };
         case 'neon':
           return {
@@ -78,10 +77,13 @@ export default function UltraFuturisticBackground2038(): any ({;
           };
         default: // quantum
           return {
-
-
-
-
+            primary: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b', '#ef4444'],
+            secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#ec4899', '#10b981'],
+            accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4'],
+            quantum: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b', '#ef4444']
+          };
+      }
+    };
 
     const colors = getThemeColors();
 
@@ -94,6 +96,7 @@ export default function UltraFuturisticBackground2038(): any ({;
       size: number;
       opacity: number;
       color: string;
+      type: 'particle' | 'wave' | 'quantum' | 'neon' | 'hologram' | 'space' | 'consciousness' | 'quantum-field';
       life: number;
       maxLife: number;
       rotation: number;
@@ -106,8 +109,10 @@ export default function UltraFuturisticBackground2038(): any ({;
       quantumState: number;
     }> = [];
 
-
-
+    // Initialize particles with enhanced consciousness and quantum effects
+    const initParticles = () => {
+      particles = [];
+      const particleCount = Math.floor(50 * intensityMultiplier);
       
       for (let i = 0; i < particleCount; i++) {
         const type = Math.random() > 0.7 ? 'consciousness' : 
@@ -152,11 +157,7 @@ export default function UltraFuturisticBackground2038(): any ({;
             const alpha = (noise + 0.5) * 0.1;
             if (alpha > 0.05) {
               ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
-
-
-
-
-
+              ctx.fillRect(x, y, 20, 20);
             }
           }
         }
@@ -246,16 +247,15 @@ export default function UltraFuturisticBackground2038(): any ({;
           ctx.fill();
         }
 
-
-
-
-
-
-
-
-
-
-
+        // Boundary wrapping with quantum tunneling effect
+        if (particle.x < 0 || particle.x > canvas.width || 
+            particle.y < 0 || particle.y > canvas.height) {
+          if (Math.random() > 0.8) { // Quantum tunneling
+            particle.x = Math.random() * canvas.width;
+            particle.y = Math.random() * canvas.height;
+          } else {
+            particle.x = (particle.x + canvas.width) % canvas.width;
+            particle.y = (particle.y + canvas.height) % canvas.height;
           }
         }
 
@@ -275,23 +275,10 @@ export default function UltraFuturisticBackground2038(): any ({;
     initParticles();
     animate();
 
-
-
-
-
-
-
-
     return () => {
       window.removeEventListener('resize', resizeCanvas);
     };
   }, [intensity, theme]);
-
-
-
-
-
-
 
   return (
     <div ref={containerRef} className="fixed inset-0 pointer-events-none">
@@ -317,12 +304,10 @@ export default function UltraFuturisticBackground2038(): any ({;
                 className="absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20"
                 style={{
                   left: `${(i * 5) % 100}%`,
-                  top: `${(i * 3) % 100}%`,
-                }}
+                  top: `${(i * 3) % 100}%`}}
                 animate={{
                   height: [32, 64, 32],
-                  opacity: [0.2, 0.6, 0.2],
-                }}
+                  opacity: [0.2, 0.6, 0.2]}}
                 transition={{
                   duration: 3 + i * 0.2,
                   repeat: Infinity,
@@ -335,21 +320,19 @@ export default function UltraFuturisticBackground2038(): any ({;
 
         {/* Holographic grid */}
         {theme === 'holographic' && (
-
-
+          <div className="absolute inset-0">
+            {[...Array(15)].map((_, i) => (
+              <motion.div
                 key={i}
                 className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
                 style={{
-                  top: `${(i * 7) % 100}%`,
-
-
-
-                }}
+                  top: `${(i * 7) % 100}%`}}
                 animate={{
-                  opacity: [0.3, 0.8, 0.3],
-                }}
+                  opacity: [0.3, 0.8, 0.3]}}
                 transition={{
-
+                  duration: 4 + i * 0.3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
                 }}
               />
             ))}
@@ -358,33 +341,22 @@ export default function UltraFuturisticBackground2038(): any ({;
 
         {/* Consciousness waves */}
         {theme === 'consciousness' && (
+          <div className="absolute inset-0">
+            {[...Array(8)].map((_, i) => (
+              <motion.div
                 key={i}
                 className="absolute w-96 h-96 border border-pink-500/20 rounded-full"
                 style={{
                   left: `${(i * 12) % 100}%`,
-
-
-
-
-
-
-
-                }}
+                  top: `${(i * 8) % 100}%`}}
                 animate={{
                   scale: [1, 1.5, 1],
-                  opacity: [0.2, 0.6, 0.2],
-                }}
+                  opacity: [0.2, 0.6, 0.2]}}
                 transition={{
-
-
-
-
-
-
-
-
-
-
+                  duration: 6 + i * 0.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
               />
             ))}
           </div>
@@ -395,5 +367,3 @@ export default function UltraFuturisticBackground2038(): any ({;
     </div>
   );
 }
-
-

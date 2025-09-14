@@ -21,10 +21,6 @@ export default function AIStartupFundingGuide2025() {
             <span className="text-gray-500 text-sm">22 min read</span>
             <span className="text-gray-500 text-sm">•</span>
             <span className="text-gray-500 text-sm">Jan 28, 2025</span>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-startup-funding-guide-2025/page.tsx
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-5c02
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -35,11 +31,6 @@ export default function AIStartupFundingGuide2025() {
             Navigate the $47B AI market with confidence. This comprehensive guide covers everything from 
             pre-seed to Series A, including pitch templates, investor insights, and proven strategies 
             from successful AI startups.
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-startup-funding-guide-2025/page.tsx
->>>>>>> 92eac770117635b4a7df4309cd005c26f4692c0d:temp_backup_build_fix/ai-startup-funding-guide-2025/page.tsx
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-5c02
           </p>
           
           <div className="flex items-center gap-4">
@@ -164,12 +155,7 @@ export default function AIStartupFundingGuide2025() {
                   <li>✓ Advisory board with industry experts</li>
                   <li>✓ Basic financial projections</li>
                   <li>✓ Legal structure and IP protection</li>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-startup-funding-guide-2025/page.tsx
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-5c02
                 </ul>
->>>>>>> 92eac770117635b4a7df4309cd005c26f4692c0d:temp_backup_build_fix/ai-startup-funding-guide-2025/page.tsx
               </div>
             </div>
             
@@ -240,11 +226,6 @@ export default function AIStartupFundingGuide2025() {
                 </p>
               </div>
             </Link>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-47dd:app/blog/ai-startup-funding-guide-2025/page.tsx
->>>>>>> 92eac770117635b4a7df4309cd005c26f4692c0d:temp_backup_build_fix/ai-startup-funding-guide-2025/page.tsx
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-5c02
           </div>
         </div>
       </article>

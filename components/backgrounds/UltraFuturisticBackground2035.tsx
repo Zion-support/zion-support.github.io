@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 export default function UltraFuturisticBackground2035() {
-
-
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -21,10 +19,6 @@ export default function UltraFuturisticBackground2035() {
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
     }
 
-
-export default function UltraFuturisticBackground2035() {;
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-export default /**
     let animationFrameId: number;
     let particles: Array<{
       x: number;
@@ -33,10 +27,6 @@ export default /**
       vy: number;
       size: number;
       opacity: number;
-
-
-
-
       color: string;
     }> = [];
 
@@ -56,6 +46,7 @@ export default /**
           color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][Math.floor(Math.random() * 4)]
         });
       }
+    };
 
     // Update and draw particles
     const updateParticles = () => {
@@ -92,11 +83,9 @@ export default /**
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(otherParticle.x, otherParticle.y);
                 ctx.strokeStyle = particle.color;
-
-
-
-
-
+                ctx.globalAlpha = (maxDistance - distance) / maxDistance * 0.08;
+                ctx.lineWidth = 1;
+                ctx.stroke();
               }
             }
           });
@@ -132,10 +121,13 @@ export default /**
   }, []);
 
   return (
+    <>
+      {/* Fixed Background Canvas */}
+      <canvas
+        ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'radial-gradient(ellipse at center, rgba(139,92,246,0.04) 0%, rgba(0,0,0,0) 70%)' }}
       />
-
 
       {/* Animated Background Elements */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
@@ -143,16 +135,18 @@ export default /**
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-purple-500/15 rounded-full"
           animate={{
+            scale: [1, 1.15, 1],
+            rotate: [0, 180, 360],
+            opacity: [0.22, 0.45, 0.22]
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut"
           }}
+        />
         
-
-
-
+        <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45"
           animate={{
             scale: [1, 1.3, 1],
@@ -181,16 +175,9 @@ export default /**
         />
 
         {/* Neon Glow Effects */}
-
-
-
-
-
-
         <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" />
         <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
         <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000" />
-
 
         {/* Animated Grid Lines */}
         <div className="absolute inset-0 opacity-10">
@@ -200,16 +187,6 @@ export default /**
               linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px'
-
-
-
-
-
-
-
-
-
-
           }} />
         </div>
 
@@ -227,14 +204,6 @@ export default /**
               opacity: [0, 1, 0],
               scale: [0, 1, 0]
             }}
-
-
-
-
-
-
-
-
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
@@ -265,12 +234,6 @@ export default /**
             opacity: [0, 1, 0]
           }}
           transition={{
-
-
-
-
-
-
             duration: 4,
             repeat: Infinity,
             delay: 2,
@@ -282,16 +245,7 @@ export default /**
         {[...Array(15)].map((_, i) => (
           <motion.div
             key={`quantum-${i}`}
-
-
-
-
-
-
-
-
-
-
+            className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`
@@ -301,19 +255,16 @@ export default /**
               opacity: [0, 0.8, 0],
               rotate: [0, 360]
             }}
-
             transition={{
               duration: 5 + Math.random() * 3,
               repeat: Infinity,
               delay: Math.random() * 5,
-
-
+              ease: "easeInOut"
+            }}
           />
         ))}
 
         {/* Neural Network Connections */}
-
-
         <svg className="absolute inset-0 w-full h-full opacity-20">
           <defs>
             <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -325,45 +276,9 @@ export default /**
           
           {[...Array(8)].map((_, i) => (
             <motion.circle
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+              key={`neural-${i}`}
+              cx={`${20 + (i * 10)}%`}
+              cy={`${30 + (i * 5)}%`}
               r="3"
               fill="url(#neuralGradient)"
               animate={{
@@ -374,14 +289,14 @@ export default /**
                 duration: 4,
                 repeat: Infinity,
                 delay: i * 0.5,
-
-
+                ease: "easeInOut"
+              }}
             />
           ))}
         </svg>
 
         {/* Holographic Effects */}
-
+        <div className="absolute inset-0">
           <motion.div
             className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full"
             animate={{
@@ -408,12 +323,13 @@ export default /**
               repeat: Infinity,
               ease: "linear"
             }}
+          />
+        </div>
 
-
-
-
-
-
+        {/* Data Streams */}
+        <div className="absolute right-0 top-0 w-32 h-full opacity-30">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
               key={`stream-${i}`}
               className="absolute w-1 h-8 bg-gradient-to-b from-purple-400 to-transparent"
               style={{
@@ -430,10 +346,10 @@ export default /**
                 delay: Math.random() * 2,
                 ease: "easeInOut"
               }}
-
-
-
-
-
-
-
+            />
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}

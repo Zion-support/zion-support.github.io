@@ -1,334 +1,175 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Star, Zap, Shield, Users, Rocket, Crown, Sparkles } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Check, Star, Zap, Crown, Infinity } from 'lucide-react';
 
-interface PricingPlan {
-  id: string;
+interface PricingTier {
   name: string;
-  description: string;
   price: string;
   period: string;
+  description: string;
   features: string[];
   popular?: boolean;
   icon: React.ComponentType<any>;
-  color: string;
-  cta: string;
-  href: string;
+  ctaText: string;
+  ctaLink: string;
 }
 
-const plans: PricingPlan[] = [
+const pricingTiers: PricingTier[] = [
   {
-    id: 'starter',
-    name: 'Starter',
-    description: 'Perfect for small businesses and startups',
-    price: '$2,999',
-    period: '/month',
+    name: "Starter",
+    price: "$49",
+    period: "month",
+    description: "Perfect for small businesses getting started with AI",
     features: [
-      'Basic AI Integration',
-      'Cloud Hosting (AWS/Azure)',
-      'Responsive Web Design',
-      'SEO Optimization',
-      'Basic Analytics',
-      'Email Support',
-      '2 Team Members',
-      'Monthly Updates'
+      "Basic AI Integration",
+      "Email Support",
+      "5 AI Agents",
+      "Standard Analytics",
+      "Basic Security",
+      "1TB Storage"
     ],
-    icon: Rocket,
-    color: 'from-blue-500 to-cyan-500',
-    cta: 'Get Started',
-    href: '/contact?plan=starter'
+    icon: Zap,
+    ctaText: "Get Started",
+    ctaLink: "/contact"
   },
   {
-    id: 'professional',
-    name: 'Professional',
-    description: 'Ideal for growing businesses and enterprises',
-    price: '$7,999',
-    period: '/month',
-    popular: true,
+    name: "Professional",
+    price: "$149",
+    period: "month",
+    description: "Advanced features for growing businesses",
     features: [
-      'Advanced AI & ML Solutions',
-      'Multi-Cloud Architecture',
-      'Progressive Web Apps',
-      'Advanced SEO & Analytics',
-      'Real-time Monitoring',
-      'Priority Support',
-      'Unlimited Team Members',
-      'Weekly Updates',
-      'Custom Integrations',
-      'Performance Optimization'
+      "Advanced AI Integration",
+      "Priority Support",
+      "25 AI Agents",
+      "Advanced Analytics",
+      "Enhanced Security",
+      "10TB Storage",
+      "Custom Integrations",
+      "API Access"
+    ],
+    popular: true,
+    icon: Star,
+    ctaText: "Start Free Trial",
+    ctaLink: "/contact"
+  },
+  {
+    name: "Enterprise",
+    price: "$499",
+    period: "month",
+    description: "Complete solution for large organizations",
+    features: [
+      "Full AI Suite",
+      "24/7 Dedicated Support",
+      "Unlimited AI Agents",
+      "Enterprise Analytics",
+      "Maximum Security",
+      "Unlimited Storage",
+      "Custom Development",
+      "Full API Access",
+      "SLA Guarantee",
+      "On-premise Options"
     ],
     icon: Crown,
-    color: 'from-purple-500 to-pink-500',
-    cta: 'Choose Professional',
-    href: '/contact?plan=professional'
-  },
-  {
-    id: 'enterprise',
-    name: 'Enterprise',
-    description: 'Custom solutions for large organizations',
-    price: 'Custom',
-    period: '',
-    features: [
-      'Custom AI Development',
-      'Hybrid Cloud Solutions',
-      'Advanced Security',
-      'Custom Analytics',
-      '24/7 Support',
-      'Dedicated Team',
-      'Custom Features',
-      'SLA Guarantees',
-      'Compliance & Security',
-      'Training & Onboarding'
-    ],
-    icon: Sparkles,
-    color: 'from-emerald-500 to-green-500',
-    cta: 'Contact Sales',
-    href: '/contact?plan=enterprise'
+    ctaText: "Contact Sales",
+    ctaLink: "/contact"
   }
 ];
 
-const AdvancedPricing: React.FC = () => {
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-  const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('monthly');
-
-  const getDiscountedPrice = (basePrice: string) => {
-    if (billingPeriod === 'yearly') {
-      const price = parseInt(basePrice.replace('$', '').replace(',', ''));
-      const discounted = Math.round(price * 0.8); // 20% discount
-      return `$${discounted.toLocaleString()}`;
-    }
-    return basePrice;
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { y: 50, opacity: 0, scale: 0.9 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const,
-      },
-    },
-  };
-
+export default function AdvancedPricing() {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Choose Your Plan
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Flexible pricing options designed to scale with your business needs. 
-            Start small and grow with us.
+          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            Flexible pricing options designed to scale with your business needs
           </p>
+        </div>
 
-          {/* Billing Toggle */}
-          <div className="flex items-center justify-center space-x-4">
-            <span className={`text-sm font-medium ${billingPeriod === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
-              Monthly
-            </span>
-            <motion.button
-              onClick={() => setBillingPeriod(billingPeriod === 'monthly' ? 'yearly' : 'monthly')}
-              className="relative w-16 h-8 bg-gray-700 rounded-full p-1 transition-colors duration-300"
-              whileTap={{ scale: 0.95 }}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {pricingTiers.map((tier, index) => (
+            <motion.div
+              key={tier.name}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className={`relative rounded-xl p-8 ${
+                tier.popular
+                  ? 'bg-gradient-to-br from-purple-600/20 to-blue-600/20 border-2 border-purple-500/50'
+                  : 'bg-white/10 border border-white/20'
+              } backdrop-blur-sm hover:border-white/40 transition-all duration-300`}
             >
-              <motion.div
-                className="w-6 h-6 bg-blue-500 rounded-full"
-                animate={{ x: billingPeriod === 'yearly' ? 32 : 0 }}
-                transition={{ type: "spring", stiffness: 500, damping: 30 }}
-              />
-            </motion.button>
-            <span className={`text-sm font-medium ${billingPeriod === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
-              Yearly
-              <span className="ml-2 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
-                Save 20%
-              </span>
-            </span>
-          </div>
-        </motion.div>
-
-        {/* Pricing Cards */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto"
-        >
-          {plans.map((plan, index) => {
-            const Icon = plan.icon;
-            const isSelected = selectedPlan === plan.id;
-            const isPopular = plan.popular;
-            
-            return (
-              <motion.div
-                key={plan.id}
-                variants={cardVariants}
-                className={`relative group ${isPopular ? 'md:-mt-4' : ''}`}
-                whileHover={{ y: -10, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                {/* Popular Badge */}
-                {isPopular && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10"
-                  >
-                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="w-4 h-4 mr-2" />
-                      Most Popular
-                    </div>
-                  </motion.div>
-                )}
-
-                <motion.div
-                  className={`relative h-full bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border overflow-hidden backdrop-blur-sm transition-all duration-300 ${
-                    isSelected 
-                      ? 'border-blue-500/50 shadow-2xl shadow-blue-500/25' 
-                      : isPopular 
-                        ? 'border-purple-500/50 shadow-xl shadow-purple-500/25'
-                        : 'border-gray-700/50 hover:border-gray-600/50'
-                  }`}
-                  onClick={() => setSelectedPlan(plan.id)}
-                >
-                  {/* Background Gradient */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${plan.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-                  
-                  {/* Content */}
-                  <div className="p-8">
-                    {/* Header */}
-                    <div className="text-center mb-8">
-                      <motion.div
-                        className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300`}
-                        whileHover={{ rotate: 5 }}
-                      >
-                        <Icon className="w-8 h-8 text-white" />
-                      </motion.div>
-                      
-                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                      <p className="text-gray-400 text-sm">{plan.description}</p>
-                    </div>
-
-                    {/* Price */}
-                    <div className="text-center mb-8">
-                      <div className="flex items-baseline justify-center">
-                        <span className="text-4xl font-bold text-white">
-                          {plan.price === 'Custom' ? 'Custom' : getDiscountedPrice(plan.price)}
-                        </span>
-                        {plan.price !== 'Custom' && (
-                          <span className="text-gray-400 ml-2">
-                            {billingPeriod === 'yearly' ? '/year' : plan.period}
-                          </span>
-                        )}
-                      </div>
-                      {billingPeriod === 'yearly' && plan.price !== 'Custom' && (
-                        <p className="text-green-400 text-sm mt-2">
-                          Save ${Math.round(parseInt(plan.price.replace('$', '').replace(',', '')) * 0.2).toLocaleString()} annually
-                        </p>
-                      )}
-                    </div>
-
-                    {/* Features */}
-                    <div className="space-y-4 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
-                        <motion.div
-                          key={featureIndex}
-                          className="flex items-center text-gray-300"
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: featureIndex * 0.1 }}
-                        >
-                          <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
-                        </motion.div>
-                      ))}
-                    </div>
-
-                    {/* CTA Button */}
-                    <motion.a
-                      href={plan.href}
-                      className={`block w-full text-center py-4 px-6 rounded-xl font-semibold transition-all duration-300 ${
-                        isPopular
-                          ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
-                          : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500'
-                      }`}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      {plan.cta}
-                    </motion.a>
+              {tier.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+                    <Star className="h-4 w-4 mr-2" />
+                    Most Popular
                   </div>
+                </div>
+              )}
 
-                  {/* Selection Indicator */}
-                  <AnimatePresence>
-                    {isSelected && (
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0 }}
-                        className="absolute top-4 right-4 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center"
-                      >
-                        <Check className="w-4 h-4 text-white" />
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+              <div className="text-center mb-8">
+                <div className="flex items-center justify-center mb-4">
+                  <tier.icon className={`h-12 w-12 ${
+                    tier.popular ? 'text-purple-400' : 'text-white/70'
+                  }`} />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {tier.name}
+                </h3>
+                <p className="text-white/70 mb-4">
+                  {tier.description}
+                </p>
+                <div className="flex items-baseline justify-center">
+                  <span className="text-4xl font-bold text-white">
+                    {tier.price}
+                  </span>
+                  <span className="text-white/70 ml-2">
+                    /{tier.period}
+                  </span>
+                </div>
+              </div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl border border-blue-500/30 p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Need a Custom Solution?
-            </h3>
-            <p className="text-gray-300 mb-6">
-              We specialize in creating tailored technology solutions that perfectly fit your unique business requirements.
-            </p>
-            <motion.a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500/50"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get Custom Quote
-              <Sparkles className="ml-2 h-5 w-5" />
-            </motion.a>
-          </div>
-        </motion.div>
+              <ul className="space-y-4 mb-8">
+                {tier.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center">
+                    <Check className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                    <span className="text-white/80">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <motion.a
+                href={tier.ctaLink}
+                className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                  tier.popular
+                    ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600'
+                    : 'bg-white/10 text-white border border-white/30 hover:bg-white/20'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {tier.ctaText}
+              </motion.a>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-white/70 mb-4">
+            Need a custom solution? We're here to help.
+          </p>
+          <a
+            href="/contact"
+            className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+          >
+            Contact our sales team
+            <Infinity className="h-4 w-4 ml-2" />
+          </a>
+        </div>
       </div>
     </section>
   );
-};
-
-export default AdvancedPricing;
+}

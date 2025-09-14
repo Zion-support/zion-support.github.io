@@ -2,7 +2,7 @@
 import React, { useState, useRef } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Upload, Trash2, Plus } from "lucide-react";
+import { Upload, Trash2, Plus } from 'lucide-react'
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
 
@@ -146,7 +146,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               />
               <button
                 onClick={() => removeScreenshot(screenshot.id)}
-                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                aria-label="Remove screenshot"
               >
                 <Trash2 className="h-3 w-3" />
               </button>

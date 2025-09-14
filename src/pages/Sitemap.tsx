@@ -1,252 +1,353 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js';
-import { Badge } from '../components/ui/badge.js';
-import { 
-  Home, 
-  ShoppingCart, 
-  FileText, 
-  MessageSquare, 
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Map as SitemapIcon,
+  Home,
+  Briefcase,
+  BookOpen,
+  Users,
+  FileText,
+  Settings,
   HelpCircle,
+  ArrowRight,
+  ExternalLink,
+  Search,
+  Navigation,
   Globe,
-  Phone, 
-  Mail 
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Shield,
+  Lock,
+  Eye
 } from 'lucide-react';
 
-interface SitemapSection {
-  id: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  links: {
-    title: string;
-    href: string;
-    description?: string;
-  }[];
-}
-
 const Sitemap: React.FC = () => {
-  const sitemapSections: SitemapSection[] = [
+  const siteSections = [
     {
-      id: 'main',
       title: 'Main Pages',
-      description: 'Core pages of our website',
-      icon: <Home className="h-5 w-5" />,
+      icon: Home,
       links: [
-        {
-          title: 'Home',
-          href: '/',
-          description: 'Our main landing page'
-        },
-        {
-          title: 'About',
-          href: '/about',
-          description: 'Learn about our company and mission'
-        },
-        {
-          title: 'Services',
-          href: '/services',
-          description: 'Explore our comprehensive service offerings'
-        },
-        {
-          title: 'Contact',
-          href: '/contact',
-          description: 'Get in touch with our team'
-        }
+        { name: 'Home', path: '/', description: 'Main landing page' },
+        { name: 'About Us', path: '/about', description: 'Company information and mission' },
+        { name: 'Services', path: '/services', description: 'Overview of our services' },
+        { name: 'Contact', path: '/contact', description: 'Get in touch with us' }
       ]
     },
     {
-      id: 'services',
       title: 'Services',
-      description: 'Our comprehensive service offerings',
-      icon: <ShoppingCart className="h-5 w-5" />,
+      icon: Briefcase,
       links: [
-        {
-          title: 'AI Services',
-          href: '/ai-services',
-          description: 'Advanced AI-powered solutions'
-        },
-        {
-          title: 'IT Infrastructure',
-          href: '/it-infrastructure',
-          description: 'Robust IT infrastructure solutions'
-        },
-        {
-          title: 'Cloud Solutions',
-          href: '/cloud-solutions',
-          description: 'Scalable cloud computing services'
-        },
-        {
-          title: 'Cybersecurity',
-          href: '/cybersecurity',
-          description: 'Comprehensive security solutions'
-        }
+        { name: 'AI Services', path: '/ai-services', description: 'Artificial Intelligence solutions' },
+        { name: 'Micro SAAS', path: '/micro-saas', description: 'Specialized software solutions' },
+        { name: 'IT Services', path: '/it-services', description: 'Information Technology consulting' },
+        { name: 'Emerging Tech', path: '/emerging-tech', description: 'Cutting-edge technology' },
+        { name: 'Marketplace', path: '/marketplace', description: 'Technology marketplace' }
       ]
     },
     {
-      id: 'resources',
       title: 'Resources',
-      description: 'Helpful resources and information',
-      icon: <FileText className="h-5 w-5" />,
+      icon: BookOpen,
       links: [
-        {
-          title: 'Blog',
-          href: '/blog',
-          description: 'Latest insights and updates'
-        },
-        {
-          title: 'Case Studies',
-          href: '/case-studies',
-          description: 'Success stories and implementations'
-        },
-        {
-          title: 'Documentation',
-          href: '/documentation',
-          description: 'Technical documentation and guides'
-        },
-        {
-          title: 'FAQ',
-          href: '/faq',
-          description: 'Frequently asked questions'
-        }
+        { name: 'Blog', path: '/blog', description: 'Latest insights and articles' },
+        { name: 'Case Studies', path: '/case-studies', description: 'Success stories and implementations' },
+        { name: 'Documentation', path: '/docs', description: 'Technical documentation' },
+        { name: 'API Reference', path: '/api-docs', description: 'API documentation and examples' }
       ]
     },
     {
-      id: 'support',
-      title: 'Support',
-      description: 'Get help and support',
-      icon: <HelpCircle className="h-5 w-5" />,
+      title: 'Company',
+      icon: Users,
       links: [
-        {
-          title: 'Help Center',
-          href: '/help',
-          description: 'Comprehensive help and support'
-        },
-        {
-          title: 'Contact Support',
-          href: '/contact',
-          description: 'Reach out to our support team'
-        },
-        {
-          title: 'Status Page',
-          href: '/status',
-          description: 'Check system status and uptime'
-        }
+        { name: 'About', path: '/about', description: 'Our story and mission' },
+        { name: 'Team', path: '/team', description: 'Meet our experts' },
+        { name: 'Careers', path: '/careers', description: 'Join our team' },
+        { name: 'News', path: '/news', description: 'Company updates and announcements' }
       ]
     },
     {
-      id: 'legal',
       title: 'Legal',
-      description: 'Legal information and policies',
-      icon: <Globe className="h-5 w-5" />,
+      icon: Shield,
       links: [
-        {
-          title: 'Privacy Policy',
-          href: '/privacy',
-          description: 'How we protect your data'
-        },
-        {
-          title: 'Terms of Service',
-          href: '/terms',
-          description: 'Terms and conditions'
-        },
-        {
-          title: 'Cookie Policy',
-          href: '/cookies',
-          description: 'Cookie usage and preferences'
-        }
+        { name: 'Privacy Policy', path: '/privacy', description: 'How we protect your data' },
+        { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
+        { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information' },
+        { name: 'Security', path: '/security', description: 'Security measures and practices' }
+      ]
+    },
+    {
+      title: 'Support',
+      icon: HelpCircle,
+      links: [
+        { name: 'Help Center', path: '/help', description: 'Get help and support' },
+        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
+        { name: 'Contact Support', path: '/support', description: 'Reach our support team' },
+        { name: 'Status', path: '/status', description: 'System status and updates' }
       ]
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Sitemap - Zion Tech Group"
-        description="Navigate our website easily with our comprehensive sitemap. Find all pages, services, and resources in one place."
-      />
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Site Map
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Navigate our website easily with our comprehensive sitemap. 
-            Find all pages, services, and resources in one organized place.
-          </p>
-        </div>
+  const quickLinks = [
+    { name: 'Get Started', path: '/contact', icon: ArrowRight, color: 'from-blue-500 to-purple-500' },
+    { name: 'View Services', path: '/services', icon: Briefcase, color: 'from-purple-500 to-pink-500' },
+    { name: 'Read Blog', path: '/blog', icon: BookOpen, color: 'from-blue-500 to-cyan-500' },
+    { name: 'Join Team', path: '/careers', icon: Users, color: 'from-green-500 to-teal-500' }
+  ];
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sitemapSections.map((section) => (
-            <Card key={section.id} className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-colors">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="text-blue-400">
-                    {section.icon}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-32">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-8">
+              <SitemapIcon className="h-10 w-10 text-white" />
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Site
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                {" "}Map
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              Navigate through all our pages and discover the full range of our services and resources
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+                <ArrowRight className="inline ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+              >
+                View Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Quick Links
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Jump to the most important pages on our site
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {quickLinks.map((link, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Link
+                  to={link.path}
+                  className="block bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-xl border border-zinc-700 hover:border-zinc-500 transition-all duration-300 transform hover:scale-105 group"
+                >
+                  <div className={`bg-gradient-to-r ${link.color} p-3 rounded-lg w-12 h-12 mb-4 flex items-center justify-center`}>
+                    <link.icon className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-white text-xl">
+                  <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
+                    {link.name}
+                  </h3>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Site Sections */}
+      <section className="py-20 bg-black/20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              All Pages
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Browse through all sections of our website organized by category
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {siteSections.map((section, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-xl border border-zinc-700 p-6"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-3 rounded-lg mr-4">
+                    <section.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">
                     {section.title}
-                  </CardTitle>
+                  </h3>
                 </div>
-                <CardDescription className="text-gray-300">
-                  {section.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
+                
                 <div className="space-y-3">
-                  {section.links.map((link, index) => (
-                    <div key={index} className="group">
-                      <a
-                        href={link.href}
-                        className="block p-3 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition-colors group-hover:bg-slate-600/50"
-                      >
-                        <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                          {link.title}
-                        </div>
-                        {link.description && (
-                          <div className="text-sm text-gray-400 mt-1">
+                  {section.links.map((link, linkIndex) => (
+                    <Link
+                      key={linkIndex}
+                      to={link.path}
+                      className="block bg-white/5 backdrop-blur-xl border border-zinc-700/50 rounded-lg p-4 hover:border-blue-500/40 transition-all duration-300 group"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h4 className="text-white font-semibold group-hover:text-blue-400 transition-colors">
+                            {link.name}
+                          </h4>
+                          <p className="text-gray-400 text-sm">
                             {link.description}
-                          </div>
-                        )}
-                      </a>
-                    </div>
+                          </p>
+                        </div>
+                        <ExternalLink className="h-4 w-4 text-gray-400 group-hover:text-blue-400 transition-colors" />
+                      </div>
+                    </Link>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
+      </section>
 
-        <div className="mt-16 text-center">
-          <Card className="bg-slate-800/50 border-slate-700 max-w-4xl mx-auto">
-            <CardContent className="p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Need Help Finding Something?
-              </h2>
-              <p className="text-gray-300 mb-6">
-                Can&apos;t find what you&apos;re looking for? Our team is here to help you navigate our services and find the perfect solution for your needs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
-                  Contact Us
-                </a>
-                <a
-                  href="mailto:info@ziontechgroup.com"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white rounded-lg transition-colors"
-                >
-                  <Mail className="h-4 w-4" />
-                  Email Us
-                </a>
+      {/* Search & Navigation Help */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Need Help Finding Something?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Use our search or contact us directly for assistance
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-xl border border-zinc-700"
+            >
+              <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
+                <Search className="h-8 w-8 text-white" />
               </div>
-            </CardContent>
-          </Card>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Search Our Site
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Use our powerful search feature to find specific content, services, or information quickly.
+              </p>
+              <Link
+                to="/search"
+                className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
+              >
+                Start Searching
+                <Search className="ml-2 h-4 w-4" />
+              </Link>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-xl border border-zinc-700"
+            >
+              <div className="bg-gradient-to-r from-green-500 to-teal-500 p-4 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
+                <Navigation className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Get Personal Help
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Can't find what you're looking for? Our team is here to help guide you to the right resources.
+              </p>
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-gradient-to-r from-green-500 to-teal-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 transition-all duration-300"
+              >
+                Contact Support
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </motion.div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-20 bg-black/20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Still Can't Find What You Need?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+              Contact us directly and we'll help you navigate to the right information
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Us
+                <ArrowRight className="inline ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/help"
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+              >
+                Help Center
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };
