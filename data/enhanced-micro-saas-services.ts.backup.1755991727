@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+export interface EnhancedMicroSaasService {
+=======
+<<<<<<< HEAD
 export interface MicroSaasService {
 =======
 export interface EnhancedMicroSaasService {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-49d4
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   id: string;
   name: string;
   tagline: string;
@@ -29,10 +33,13 @@ export interface EnhancedMicroSaasService {
   marketSize: string;
   growthRate: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 
 export const enhancedMicroSaasServices: MicroSaasService[] = [
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   contactInfo: {
     mobile: string;
     email: string;
@@ -42,7 +49,10 @@ export const enhancedMicroSaasServices: MicroSaasService[] = [
 }
 
 export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-49d4
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   // AI & Machine Learning Services
   {
     id: 'ai-content-generator-pro',
@@ -78,6 +88,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     roi: '300% average ROI in 3 months',
     competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly'],
     marketSize: '$1.2B global market',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     growthRate: '25% annual growth'
   },
@@ -117,6 +129,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     marketSize: '$500M global market',
     growthRate: '40% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '25% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -124,7 +137,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-49d4
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     id: 'ai-video-editor-pro',
@@ -160,6 +176,8 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     roi: '400% average ROI in 6 months',
     competitors: ['Runway', 'Descript', 'Synthesia', 'Lumen5'],
     marketSize: '$2.1B global market',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     growthRate: '30% annual growth'
   },
@@ -379,6 +397,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     marketSize: '$1.7B global market',
     growthRate: '24% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     growthRate: '30% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -386,11 +405,16 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-49d4
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     id: 'ai-chatbot-platform',
     name: 'AI Chatbot Platform',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     tagline: 'Intelligent chatbot creation & management',
     price: '$99',
@@ -552,6 +576,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       '24/7 monitoring',
       'Expert support'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     tagline: 'Intelligent conversational AI for businesses',
     price: '$99',
     period: '/month',
@@ -777,17 +802,23 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       'Security analytics',
       'Integration with SIEM',
       '24/7 security operations'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-49d4
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-500 to-pink-600',
     textColor: 'text-red-400',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-cybersecurity-suite',
     marketPosition: 'Competitive with CrowdStrike ($8.99-15.99/user/month), SentinelOne ($4.99-8.99/user/month)',
     targetAudience: 'Enterprise security teams, IT departments, cybersecurity professionals',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/ai-cybersecurity-sentinel',
     marketPosition: 'Competitive with CrowdStrike ($8.99+), SentinelOne ($2.67+), and Cylance ($2.50+)',
     targetAudience: 'Enterprises, financial institutions, and organizations with high security requirements',
@@ -833,11 +864,16 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     link: 'https://ziontechgroup.com/zero-trust-security',
     marketPosition: 'Competitive with Okta ($2-17), Duo ($3-6), and Auth0 ($23-450)',
     targetAudience: 'Enterprises, government agencies, and organizations requiring high security',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-49d4
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     trialDays: 14,
     setupTime: '4 hours',
     category: 'Cybersecurity',
     realService: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     technology: ['Machine Learning', 'Threat Intelligence', 'Behavioral Analysis', 'Automation'],
     integrations: ['SIEM systems', 'Firewalls', 'Endpoint protection', 'Identity management'],
@@ -974,6 +1010,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       'API integration',
       'Custom dashboards'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['Identity Management', 'Access Control', 'Network Security', 'Cloud Computing'],
     integrations: ['Active Directory', 'LDAP', 'SAML', 'OAuth', 'OIDC'],
     useCases: ['Identity management', 'Access control', 'Network security', 'Compliance'],
@@ -1132,12 +1169,17 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       'Public safety systems',
       'Data analytics dashboard',
       'API for integrations'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-49d4
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🏙️',
     color: 'from-teal-500 to-cyan-600',
     textColor: 'text-teal-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-iot-platform',
     marketPosition: 'Competitive with AWS IoT ($0.08 per million messages), Azure IoT Hub ($0.50 per million messages)',
@@ -1227,6 +1269,7 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
     marketSize: '$400M global market',
     growthRate: '48% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/iot-smart-city-platform',
     marketPosition: 'Competitive with Cisco Smart Cities, Siemens City Performance, and Schneider Electric',
     targetAudience: 'City governments, urban planners, and infrastructure companies',
@@ -1763,7 +1806,10 @@ export const enhancedMicroSaasServices: EnhancedMicroSaasService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-49d4
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
@@ -1772,6 +1818,8 @@ export const serviceCategories = [
   'AI & Machine Learning',
   'Cloud & Infrastructure',
   'Cybersecurity',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   'Blockchain & Web3',
   'IoT & Smart Cities',
@@ -1789,6 +1837,7 @@ export function getPopularServices() {
 
 export function getServicesByPriceRange(min: number, max: number) {
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Emerging Technologies',
   'IoT & Smart Cities',
   'Business Automation',
@@ -1828,13 +1877,20 @@ export const getPopularServices = () => {
 };
 
 export const getServicesByPriceRange = (min: number, max: number) => {
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-49d4
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   return enhancedMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', ''));
     return price >= min && (max === Infinity || price <= max);
   });
 <<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
 }
 =======
 };
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-49d4
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

@@ -8,6 +8,8 @@
     "canBuild": true
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   "results": [
     {
       "file": "pages/_app.tsx",
@@ -25,6 +27,7 @@
   ],
 =======
 >>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   "results": [],
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T17:56:48.039Z"

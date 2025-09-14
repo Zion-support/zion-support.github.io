@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export type Real2036ITService = {
 	id: string;
 	name: string;
@@ -451,6 +453,7 @@ export const real2036ITServices: Real2036ITService[] = [
 		]
 	}
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 export const real2036ITServices = [
   {
     id: 'quantum-cloud-infrastructure-platform',
@@ -772,5 +775,8 @@ export const real2036ITServices = [
       'Business continuity'
     ]
   }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fee1
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];

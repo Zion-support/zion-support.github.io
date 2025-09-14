@@ -15,6 +15,8 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 </style>
 <h1>Next.js Page Structure Validation Report</h1>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <p>Generated 8/19/2025, 5:23:22 PM</p>
 <div class="build-status build-success">✅ BUILD READY</div>
 <div class="card success">
@@ -30,6 +32,7 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <h4>Warnings:</h4>
 <div class="pill warning">INCOMPLETE_HTML: Incomplete HTML tags detected</div>
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 <p>Generated 8/19/2025, 5:50:49 PM</p>
 <div class="build-status build-success">✅ BUILD READY</div>
 <div class="card success">
@@ -39,5 +42,8 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <p><strong>Critical Issues:</strong> 0</p>
 <p><strong>Warnings:</strong> 0</p>
 <p><strong>Build Breaking Files:</strong> 0</p>
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 </div>

@@ -2957,6 +2957,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     growthRate: '200% annual growth'
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   {
     id: 'biometric-authentication-pro',
     name: 'Biometric Authentication Pro',
@@ -3190,6 +3192,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Mobile app access',
       'Financial education'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   // Emerging Technology Services
   {
     id: 'quantum-machine-learning-platform',
@@ -3315,12 +3318,17 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Compliance reporting',
       'Machine learning models',
       'API for integrations'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '💰',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-financial-advisor',
     marketPosition: 'AI-powered financial advisory',
@@ -3371,6 +3379,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     roi: '450% average ROI in 10 months',
     competitors: ['Casetext', 'ROSS Intelligence', 'Harvey AI'],
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/ai-fraud-detection',
     marketPosition: 'Competitive with Sift ($0.01-0.10 per transaction), Signifyd ($0.10-0.30), and Riskified ($0.05-0.15)',
     targetAudience: 'Banks, fintech companies, e-commerce businesses, payment processors',
@@ -3923,11 +3932,16 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     useCases: ['Agriculture planning', 'Energy production', 'Risk assessment', 'Environmental monitoring'],
     roi: '350% average ROI in 12 months',
     competitors: ['IBM Weather', 'AccuWeather', 'WeatherBug', 'The Weather Company'],
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     marketSize: '$1.8B global market',
     growthRate: '40% annual growth'
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'ai-marketing-automation',
     name: 'AI Marketing Automation',
@@ -4180,6 +4194,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$200M emerging market',
     growthRate: '500% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'quantum-optimization-engine',
     name: 'Quantum Optimization Engine',
     tagline: 'Quantum algorithms for complex optimization',
@@ -4322,7 +4337,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Amazon Alexa', 'Google Assistant', 'Microsoft Azure Speech', 'IBM Watson'],
     marketSize: '$2.8B global market',
     growthRate: '45% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 

@@ -2165,6 +2165,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
   },
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     id: 'ai-biomedical-research-platform',
     name: 'AI Biomedical Research Platform',
     tagline: 'Accelerating drug discovery with AI',
@@ -2181,6 +2183,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Real-time research collaboration',
       'FDA compliance framework'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'ai-powered-sustainable-cities',
     name: 'AI-Powered Sustainable Cities',
     tagline: 'Smart city solutions for a sustainable future',
@@ -2448,12 +2451,17 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Real-time collaboration',
       'API for researchers',
       'Cloud deployment'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dae1
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     ],
     popular: true,
     icon: '🧬',
     color: 'from-pink-500 to-rose-600',
     textColor: 'text-pink-400',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-biomedical-research',
     marketPosition: 'Cutting-edge AI biomedical platform, 10x faster drug discovery than traditional methods',
@@ -2586,6 +2594,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     period: '/month',
     description: 'AI-powered supply chain optimization platform that predicts demand, optimizes inventory, and reduces costs through intelligent automation.',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     link: 'https://ziontechgroup.com/quantum-drug-discovery',
     marketPosition: 'Leading quantum drug discovery platform with 100x faster molecular simulations',
     targetAudience: 'Pharmaceutical companies, research institutions, biotech startups, and drug developers',
@@ -2716,11 +2725,16 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     price: '$299',
     period: '/month',
     description: 'Advanced AI platform that optimizes supply chains by predicting demand, optimizing inventory, and identifying cost-saving opportunities.',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dae1
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     features: [
       'Demand forecasting',
       'Inventory optimization',
       'Route optimization',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       'Supplier management',
       'Real-time tracking',
@@ -3108,6 +3122,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$6B emerging market',
     growthRate: '200% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Cost analysis',
       'Risk assessment',
       'Real-time tracking',
@@ -3276,7 +3291,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'D-Wave Systems'],
     marketSize: '$400M emerging market',
     growthRate: '250% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dae1
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   {
     id: 'biometric-authentication-platform',
@@ -3284,6 +3302,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     tagline: 'Multi-modal biometric security solution',
     price: '$199',
     period: '/month',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     description: 'Advanced biometric authentication platform supporting fingerprint, facial recognition, voice, and behavioral biometrics with AI-powered fraud detection.',
     features: [
@@ -4267,6 +4287,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Predictive maintenance',
       'Renewable integration',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     description: 'Revolutionary mental health platform that uses AI to provide personalized therapy, mood tracking, and mental health support.',
     features: [
       'AI therapy sessions',
@@ -4491,7 +4512,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Cost optimization',
       'Real-time monitoring',
       'Sustainability reporting',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dae1
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Mobile app support',
       'API for energy systems'
     ],
@@ -4500,6 +4524,8 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     color: 'from-yellow-500 to-orange-600',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-energy-optimization',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     marketPosition: 'Competitive with Schneider Electric ($200-1000), Siemens ($300-1500), and Honeywell ($250-1200)',
     targetAudience: 'Commercial buildings, industrial facilities, energy companies, property managers',
@@ -5508,6 +5534,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Custom vehicle support',
       'Compliance tools'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     marketPosition: 'Leading AI energy platform with 35% cost reduction and 50% efficiency improvement',
     targetAudience: 'Energy companies, utilities, commercial buildings, and industrial facilities',
     trialDays: 21,
@@ -5718,6 +5745,11 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
       'Mobile app control',
       'API integration',
       'Cloud platform'
+<<<<<<< HEAD
+    ],
+    popular: true,
+    icon: '🚗',
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dae1
     ],
     popular: true,
@@ -5838,12 +5870,18 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     targetAudience: 'Hospitals, clinics, research institutions, and healthcare providers',
     trialDays: 14,
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     color: 'from-gray-500 to-slate-600',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/ai-autonomous-vehicles',
     marketPosition: 'Leading AI autonomous vehicle platform with advanced safety and navigation',
     targetAudience: 'Automotive manufacturers, fleet operators, logistics companies, and transportation providers',
     trialDays: 30,
+<<<<<<< HEAD
+    setupTime: '2 weeks',
+    category: 'Healthcare & Life Sciences',
+    realService: true,
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dae1
     setupTime: '2 weeks',
     category: 'Healthcare & Life Sciences',
@@ -6189,6 +6227,7 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     marketSize: '$2.1B global market',
     growthRate: '55% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     technology: ['Computer Vision', 'Machine Learning', 'IoT', 'Edge Computing', 'Robotics'],
     integrations: ['Vehicle systems', 'IoT platforms', 'Safety systems', 'Control platforms'],
     useCases: ['Autonomous driving', 'Fleet optimization', 'Safety monitoring', 'Predictive maintenance'],
@@ -6268,7 +6307,10 @@ export const expandedMicroSaasServices: MicroSaasService[] = [
     competitors: ['Siemens', 'GE Digital', 'Rockwell Automation', 'ABB'],
     marketSize: '$1.8B global market',
     growthRate: '90% annual growth'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dae1
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
@@ -6288,18 +6330,24 @@ export const serviceCategories = [
   'Robotics & Automation',
   'Quantum Computing',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   'Metaverse & VR/AR',
   'Autonomous Vehicles',
   'Healthcare & Life Sciences',
   'Financial Technology'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   'Autonomous Systems',
   'Sustainable Technology',
   'Space Technology',
   'Biotechnology',
   'Financial Technology',
   'Energy & Sustainability'
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dae1
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 ];
 
 export const getServicesByCategory = (category: string) => {

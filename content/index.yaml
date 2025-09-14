@@ -1,0 +1,74 @@
+content_index:
+  last_updated: "2025-01-17"
+  total_content_pieces: 3
+  
+  new_2025_content:
+    - id: "autonomous-systems-revolution"
+      type: "blog"
+      title: "AI 2025: The Next Generation Autonomous Systems Revolution"
+      file_path: "/content/blog/ai-2025-next-generation-autonomous-systems-revolution.md"
+      url: "/blog/ai-2025-next-generation-autonomous-systems-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Autonomous Systems", "Business Transformation", "ROI"]
+      featured: true
+      is_new: true
+      
+    - id: "global-enterprise-success"
+      type: "case-study"
+      title: "Global Enterprise AI Transformation: $2.8B Ultimate Success Story"
+      file_path: "/content/case-studies/global-enterprise-ai-transformation-2025-ultimate-success.md"
+      url: "/case-studies/global-enterprise-ai-transformation-2025-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "AI Transformation", "Enterprise", "Success Story"]
+      featured: true
+      is_new: true
+      
+    - id: "autonomous-systems-guide"
+      type: "resource"
+      title: "AI 2025 Autonomous Systems Implementation Master Guide"
+      file_path: "/content/resources/ai-2025-autonomous-systems-implementation-master-guide.md"
+      url: "/resources/ai-2025-autonomous-systems-implementation-master-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI", "Best Practices", "ROI"]
+      featured: true
+      is_new: true
+
+  promotion_components:
+    - name: "NewContent2025PromotionBanner"
+      file_path: "/src/components/NewContent2025PromotionBanner.tsx"
+      status: "active"
+      features:
+        - "Auto-rotating content showcase"
+        - "Dismissible banner with localStorage persistence"
+        - "Animated background elements"
+        - "Success metrics display"
+        - "Progress indicators"
+        
+    - name: "NewContent2025ShowcaseSection"
+      file_path: "/src/components/NewContent2025PromotionBanner.tsx"
+      status: "active"
+      features:
+        - "Full-width showcase section"
+        - "Success metrics grid"
+        - "Interactive content cards"
+        - "Call-to-action buttons"
+
+  homepage_integration:
+    component: "HomePage"
+    file_path: "/src/pages/HomePage.tsx"
+    changes:
+      - "Added NewContent2025PromotionBanner import"
+      - "Integrated banner at top of homepage"
+      - "Added NewContent2025ShowcaseSection at bottom"
+      - "Updated layout to include promotional content"
+
+  metrics:
+    expected_roi_mentions: 3
+    success_stories: 1
+    implementation_guides: 1
+    blog_posts: 1
+    total_word_count: "~8,500 words"
+    estimated_reading_time: "~35 minutes"

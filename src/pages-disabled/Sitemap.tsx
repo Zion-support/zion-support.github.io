@@ -100,19 +100,19 @@ const Sitemap: React.FC = () => {
           description: 'Success stories and implementations'
         },
         {
-          title: 'AI 2025 Enterprise Automation Mastery',
-          href: '/blog/ai-2025-enterprise-automation-mastery-complete-guide',
-          description: 'Complete guide to achieving 2,500% ROI through strategic AI implementation'
+          title: '🔥 AI 2025: Generative Intelligence Revolution',
+          href: '/blog/ai-2025-generative-intelligence-revolution-complete-guide',
+          description: 'Complete implementation guide with 60% faster drug discovery and 99.7% fraud detection accuracy'
         },
         {
-          title: 'Global Enterprise AI Transformation - $2B ROI',
-          href: '/case-studies/global-enterprise-ai-transformation-2025-ultimate-success-2-billion-roi',
-          description: 'How a global enterprise achieved $2 billion ROI in 18 months'
+          title: '⚡ Quantum AI Superintelligence Implementation',
+          href: '/resources/quantum-ai-superintelligence-implementation-master-guide-2025',
+          description: 'Master guide with 1000x ML training speedup and 99.9% simulation accuracy'
         },
         {
-          title: 'AI 2025 Ultimate Implementation Roadmap',
-          href: '/resources/ai-2025-ultimate-implementation-roadmap-complete-guide',
-          description: 'Step-by-step guide with timelines, checklists, and proven strategies'
+          title: '💰 Fortune 500: $5.2B ROI Transformation',
+          href: '/case-studies/fortune-500-quantum-ai-transformation-2025-ultimate-success-story-5-billion-roi',
+          description: 'Complete case study of unprecedented quantum AI success in just 18 months'
         },
         {
           title: 'Documentation',

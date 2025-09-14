@@ -1,165 +1,262 @@
+'use client';
+
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Filter, Star, Clock, TrendingUp, Users, Globe, Zap, Brain, Rocket } from 'lucide-react';
 
-export default function InteractiveContentDiscoveryWidget2026() {
+const InteractiveContentDiscoveryWidget2026 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const contentCategories = [
-    { id: 'all', name: 'All Content', icon: '🚀' },
-    { id: 'ai2025', name: 'AI 2025', icon: '🤖' },
-    { id: 'ai2026', name: 'AI 2026', icon: '🧠' },
-    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' },
-    { id: 'case-studies', name: 'Case Studies', icon: '🏆' },
-    { id: 'predictions', name: 'Future Predictions', icon: '🔮' }
+  const categories = [
+    { id: 'all', name: 'All Content', icon: <Globe className="w-5 h-5" />, count: 1247 },
+    { id: 'ai', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 342 },
+    { id: 'quantum', name: 'Quantum Computing', icon: <Zap className="w-5 h-5" />, count: 89 },
+    { id: 'neural', name: 'Neural Interfaces', icon: <Rocket className="w-5 h-5" />, count: 156 },
+    { id: 'automation', name: 'Automation', icon: <TrendingUp className="w-5 h-5" />, count: 234 },
+    { id: 'future', name: 'Future Tech', icon: <Star className="w-5 h-5" />, count: 426 }
   ];
 
   const contentItems = [
     {
       id: 1,
-      title: 'AI 2025 Ultimate Breakthrough Revolution',
-      description: 'Revolutionary AI breakthrough delivering 10,000% ROI with autonomous operations and quantum-AI fusion.',
-      category: 'ai2025',
-      roi: '10,000%',
-      link: '/ai-2025-ultimate-breakthrough-revolution',
+      title: "Revolutionary AI Breakthroughs 2026",
+      description: "Discover the latest advances in artificial intelligence that are reshaping industries worldwide.",
+      category: 'ai',
+      readTime: "8 min read",
+      views: "12.5K",
+      rating: 4.9,
+      tags: ["AI", "Machine Learning", "Innovation"],
       featured: true
     },
     {
       id: 2,
-      title: 'AI 2026 Future Predictions Breakthrough',
-      description: 'Revolutionary predictions for AI 2026 including quantum-neural fusion and consciousness AI.',
-      category: 'ai2026',
-      roi: '15,000%',
-      link: '/ai-2026-future-predictions-breakthrough',
-      featured: true
+      title: "Quantum Computing: The Next Frontier",
+      description: "Explore how quantum computers will solve problems that are impossible for classical computers.",
+      category: 'quantum',
+      readTime: "12 min read",
+      views: "8.7K",
+      rating: 4.8,
+      tags: ["Quantum", "Computing", "Physics"],
+      featured: false
     },
     {
       id: 3,
-      title: 'Quantum Computing Breakthroughs 2030',
-      description: 'Revolutionary quantum computing breakthroughs including error-corrected quantum computers.',
-      category: 'quantum',
-      roi: '50,000%',
-      link: '/quantum-computing-breakthroughs-2030',
+      title: "Neural Interface Technology Guide",
+      description: "Learn about direct brain-computer interfaces and their potential applications.",
+      category: 'neural',
+      readTime: "15 min read",
+      views: "6.2K",
+      rating: 4.7,
+      tags: ["Neural", "Interface", "BCI"],
       featured: true
     },
     {
       id: 4,
-      title: 'Global Transformation Success Story',
-      description: 'Fortune 500 company achieves 10,000% ROI in just 6 months using AI 2025 technology.',
-      category: 'case-studies',
-      roi: '10,000%',
-      link: '/case-studies/ai-2025-global-transformation-breakthrough',
-      featured: true
-    },
-    {
-      id: 5,
-      title: 'Quantum-Neural Fusion Case Study',
-      description: 'Enterprise achieves 15,000% ROI through quantum-neural fusion technology.',
-      category: 'case-studies',
-      roi: '15,000%',
-      link: '/case-studies/ai-2026-quantum-neural-fusion-enterprise-transformation-breakthrough',
+      title: "Automation Revolution 2026",
+      description: "How intelligent automation is transforming businesses and creating new opportunities.",
+      category: 'automation',
+      readTime: "10 min read",
+      views: "9.1K",
+      rating: 4.6,
+      tags: ["Automation", "Business", "Efficiency"],
       featured: false
     },
     {
+      id: 5,
+      title: "Future Technology Predictions 2030",
+      description: "Expert insights into the technologies that will dominate the next decade.",
+      category: 'future',
+      readTime: "20 min read",
+      views: "15.3K",
+      rating: 4.9,
+      tags: ["Future", "Predictions", "Technology"],
+      featured: true
+    },
+    {
       id: 6,
-      title: 'AI 2030 Future Predictions',
-      description: 'Revolutionary predictions for AI 2030 including transcendent intelligence and space exploration.',
-      category: 'predictions',
-      roi: '∞',
-      link: '/ai-2030-future-predictions',
+      title: "AI Ethics and Governance",
+      description: "Understanding the ethical implications of advanced AI systems and how to govern them.",
+      category: 'ai',
+      readTime: "14 min read",
+      views: "7.8K",
+      rating: 4.5,
+      tags: ["AI", "Ethics", "Governance"],
       featured: false
     }
   ];
 
-  const filteredContent = selectedCategory === 'all' 
-    ? contentItems 
-    : contentItems.filter(item => item.category === selectedCategory);
+  const filteredContent = contentItems.filter(item => {
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-            🚀 INTERACTIVE CONTENT DISCOVERY 2026
+    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Discover Revolutionary
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Content</span>
           </h2>
-          <p className="text-xl text-gray-200 max-w-4xl mx-auto">
-            Discover revolutionary AI content that will transform your business. Filter by category and explore breakthrough technologies delivering unprecedented ROI.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore cutting-edge insights, breakthrough technologies, and future predictions 
+            from industry experts and thought leaders.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {contentCategories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
-                selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-black'
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-              }`}
-            >
-              {category.icon} {category.name}
-            </button>
-          ))}
-        </div>
+        {/* Search and Filter */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-8"
+        >
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+            {/* Search Bar */}
+            <div className="relative mb-6">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search content, topics, or tags..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+
+            {/* Category Filters */}
+            <div className="flex flex-wrap gap-3">
+              {categories.map((category) => (
+                <motion.button
+                  key={category.id}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center px-4 py-2 rounded-xl border transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-blue-500 border-blue-500 text-white'
+                      : 'bg-white/5 border-white/20 text-gray-300 hover:bg-white/10'
+                  }`}
+                >
+                  {category.icon}
+                  <span className="ml-2 font-medium">{category.name}</span>
+                  <span className="ml-2 text-sm opacity-70">({category.count})</span>
+                </motion.button>
+              ))}
+            </div>
+          </div>
+        </motion.div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item) => (
-            <div
-              key={item.id}
-              className={`bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border-2 transition-all duration-300 transform hover:scale-105 ${
-                item.featured 
-                  ? 'border-yellow-400 shadow-lg shadow-yellow-400/20' 
-                  : 'border-gray-600 hover:border-cyan-400'
-              }`}
-            >
-              {item.featured && (
-                <div className="inline-block bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold mb-4">
-                  ⭐ FEATURED
-                </div>
-              )}
-              
-              <h3 className="text-xl font-bold mb-3 text-cyan-400">
-                {item.title}
-              </h3>
-              
-              <p className="text-gray-300 mb-4 text-sm">
-                {item.description}
-              </p>
-              
-              <div className="flex items-center justify-between mb-4">
-                <div className="bg-gradient-to-r from-green-500 to-blue-500 text-black px-3 py-1 rounded-full text-sm font-bold">
-                  {item.roi} ROI
-                </div>
-                <div className="text-xs text-gray-400">
-                  {item.category.toUpperCase()}
-                </div>
-              </div>
-              
-              <Link
-                href={item.link}
-                className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-500 transition-all duration-300"
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <AnimatePresence>
+            {filteredContent.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 ${
+                  item.featured ? 'ring-2 ring-blue-500/50' : ''
+                }`}
               >
-                Explore Content →
-              </Link>
-            </div>
-          ))}
-        </div>
+                {item.featured && (
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    Featured
+                  </div>
+                )}
 
-        {/* Call to Action */}
-        <div className="text-center mt-12">
-          <p className="text-lg text-gray-300 mb-6">
-            Ready to transform your business with revolutionary AI technology?
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-black px-8 py-4 rounded-lg font-bold text-xl hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center">
+                    <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20">
+                      {categories.find(cat => cat.id === item.category)?.icon}
+                    </div>
+                    <span className="ml-3 text-sm text-gray-400">
+                      {categories.find(cat => cat.id === item.category)?.name}
+                    </span>
+                  </div>
+                  <div className="flex items-center text-yellow-400">
+                    <Star className="w-4 h-4 fill-current" />
+                    <span className="ml-1 text-sm font-medium">{item.rating}</span>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {item.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {item.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between text-sm text-gray-400">
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-1" />
+                    <span>{item.readTime}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Users className="w-4 h-4 mr-1" />
+                    <span>{item.views} views</span>
+                  </div>
+                </div>
+
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full mt-4 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
+                >
+                  Read More
+                </motion.button>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+
+        {/* Load More Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center mt-12"
+        >
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors"
           >
-            Get Started Today
-          </Link>
-        </div>
+            Load More Content
+          </motion.button>
+        </motion.div>
       </div>
     </div>
   );
-}
+};
+
+export default InteractiveContentDiscoveryWidget2026;

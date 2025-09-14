@@ -20,7 +20,9 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@/store/*": ["./store/*"],
+      "@/i18n/*": ["./i18n/*"]
     },
     "plugins": [
       {

@@ -1,5 +1,7 @@
 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   "generatedAt": "2025-08-14T09:38:10.512Z",
   "files": [
     "update-2025-08-14-0638.tsx",
@@ -109,6 +111,7 @@
     "duplicateCount": 0,
     "seoScore": 26
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   "generatedAt": "2025-08-19T03:44:34.226Z",
   "files": [
     "ultra-1755575056349-zlaxtt.tsx",
@@ -217,7 +220,10 @@
     "avgLen": 2082,
     "duplicateCount": 0,
     "seoScore": 5
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
   "guidance": [
     "Aim for varied intros, highlights, and CTAs across updates.",

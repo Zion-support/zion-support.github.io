@@ -47,6 +47,9 @@ const Navigation: React.FC = () => {
       href: '#',
       icon: Globe,
       submenu: [
+        { name: '🔥 AI 2025 Revolution Guide', href: '/blog/ai-2025-generative-intelligence-revolution-complete-guide', highlight: true },
+        { name: '⚡ Quantum AI Superintelligence', href: '/resources/quantum-ai-superintelligence-implementation-master-guide-2025', highlight: true },
+        { name: '💰 $5.2B ROI Case Study', href: '/case-studies/fortune-500-quantum-ai-transformation-2025-ultimate-success-story-5-billion-roi', highlight: true },
         { name: 'Blog', href: '/blog' },
         { name: 'Case Studies', href: '/case-studies' },
         { name: 'Implementation Guides', href: '/resources' },
@@ -95,12 +98,16 @@ const Navigation: React.FC = () => {
                       <ChevronDown className="w-4 h-4" />
                     </div>
                     {/* Dropdown */}
-                    <div className="absolute top-full left-0 mt-2 w-48 bg-gray-900/95 backdrop-blur-xl border border-gray-700 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                      {item.submenu.map((subitem) => (
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-gray-900/95 backdrop-blur-xl border border-gray-700 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      {item.submenu.map((subitem, index) => (
                         <a
                           key={subitem.name}
                           href={subitem.href}
-                          className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors duration-200"
+                          className={`block px-4 py-3 text-sm transition-colors duration-200 ${
+                            (subitem as any).highlight 
+                              ? 'text-cyan-400 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-semibold border-b border-gray-700/50' 
+                              : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                          }`}
                         >
                           {subitem.name}
                         </a>
@@ -166,7 +173,11 @@ const Navigation: React.FC = () => {
                           <a
                             key={subitem.name}
                             href={subitem.href}
-                            className="block text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                            className={`block text-sm transition-colors duration-200 ${
+                              (subitem as any).highlight 
+                                ? 'text-cyan-400 hover:text-white font-semibold bg-cyan-500/10 px-2 py-1 rounded' 
+                                : 'text-gray-400 hover:text-white'
+                            }`}
                             onClick={() => setIsOpen(false)}
                           >
                             {subitem.name}

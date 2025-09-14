@@ -88,6 +88,8 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     popular: true,
     icon: '🎬',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     color: 'from-red-500 to-orange-600',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-video-editing-suite',
@@ -110,6 +112,7 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     name: 'AI Healthcare Diagnostics',
     tagline: 'Advanced medical imaging and diagnostic AI',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     color: 'from-yellow-500 to-orange-600',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-video-editing',
@@ -451,11 +454,16 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     id: 'biomedical-ai-research-platform',
     name: 'Biomedical AI Research Platform',
     tagline: 'Cutting-edge AI platform for biomedical research and drug discovery',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7915
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     price: '$899',
     period: '/month',
     description: 'Revolutionary AI-powered medical diagnostics platform that analyzes medical images, predicts diseases, and assists healthcare professionals. FDA-approved and HIPAA-compliant.',
     features: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       'Medical image analysis (X-ray, MRI, CT)',
       'Disease prediction algorithms',
@@ -603,6 +611,7 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     marketSize: '$2.1B DeFi yield market',
     growthRate: '300% annual growth'
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       'Drug discovery acceleration',
       'Genomic analysis',
       'Clinical trial optimization',
@@ -696,11 +705,16 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     customers: 42,
     rating: 4.9,
     reviews: 21
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7915
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   },
 
   // QUANTUM COMPUTING SERVICES
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     id: 'quantum-cryptography-platform',
     name: 'Quantum Cryptography Platform',
@@ -1011,6 +1025,7 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     marketPosition: 'Leading edge computing platform. Competes with AWS Edge, Cloudflare Workers, and Azure Edge.',
     targetAudience: 'Gaming companies, Streaming services, Financial institutions, IoT companies, Real-time applications',
 =======
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     id: 'ai-space-exploration-platform',
     name: 'AI Space Exploration Platform',
     tagline: 'AI-powered space exploration and satellite management',
@@ -1087,7 +1102,10 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     link: 'https://ziontechgroup.com/quantum-iot-network',
     marketPosition: 'Leading quantum-secured IoT platform. Competes with AWS IoT, Microsoft Azure IoT, and Google Cloud IoT.',
     targetAudience: 'Smart cities, Industrial IoT, Healthcare IoT, Automotive IoT, Consumer IoT',
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7915
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'IoT & Edge Computing',
@@ -1111,6 +1129,9 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     launchDate: '2024-01-25',
     customers: 78,
     rating: 4.8,
+<<<<<<< HEAD
+    reviews: 39
+=======
 <<<<<<< HEAD
     reviews: 95
   },
@@ -1508,6 +1529,7 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
 =======
     reviews: 39
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7915
+>>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   }
 ];
 
