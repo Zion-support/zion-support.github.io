@@ -10,6 +10,7 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedSEO from '../components/EnhancedSEO';
 import AdvancedPerformanceMonitor2026 from '../components/AdvancedPerformanceMonitor2026';
 import UltimateAIAssistant2026 from '../components/UltimateAIAssistant2026';
+import PerformanceOptimizations from '../components/PerformanceOptimizations';
 
 export const metadata = {
   title: {
@@ -1384,6 +1385,9 @@ export default function RootLayout({
         {/* DNS prefetch for performance */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        
+        {/* Performance Optimizations */}
+        <PerformanceOptimizations />
         
         {/* Structured Data */}
         <script
