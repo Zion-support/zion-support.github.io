@@ -123,9 +123,9 @@ const companyLinks = [
 ];
 
 export default function UltraFuturisticNavigation2032() {
-  const [isOpensetIsOpen] = useState(false);
-  const [activeCategorysetActiveCategory] = useState<number | null>(null);
-  const [isScrolledsetIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<number | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {

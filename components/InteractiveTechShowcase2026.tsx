@@ -147,7 +147,7 @@ const InteractiveTechShowcase2026 = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -175,13 +175,13 @@ const InteractiveTechShowcase2026 = () => {
 
         {/* Demo Navigation */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.2 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {demos.map((demoindex) => (
+            {demos.map((demo, index) => (
               <button
                 key={demo.id}
                 onClick={() => setActiveDemo(index)}
@@ -229,7 +229,7 @@ const InteractiveTechShowcase2026 = () => {
                         Key Features
                       </h4>
                       <div className="grid grid-cols-1 gap-2">
-                        {demos[activeDemo].features.map((featureindex) => (
+                        {demos[activeDemo].features.map((feature, index) => (
                           <div key={index} className="flex items-center space-x-2">
                             <CheckCircle className="w-4 h-4 text-green-400" />
                             <span className="text-gray-300">{feature}</span>
@@ -295,7 +295,7 @@ const InteractiveTechShowcase2026 = () => {
 
         {/* Tools Section */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
@@ -305,12 +305,12 @@ const InteractiveTechShowcase2026 = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {tools.map((toolindex) => (
+            {tools.map((tool, index) => (
               <motion.div
                 key={tool.name}
-                initial={{ opacity: 0y: 20 }}
-                animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-                transition={{ duration: 0.5delay: 0.6 + index * 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-indigo-500/50 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -344,7 +344,7 @@ const InteractiveTechShowcase2026 = () => {
 
         {/* Platform Support */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
@@ -354,7 +354,7 @@ const InteractiveTechShowcase2026 = () => {
           </h2>
           
           <div className="flex justify-center space-x-8">
-            {platforms.map((platformindex) => (
+            {platforms.map((platform, index) => (
               <div key={platform.name} className="text-center">
                 <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${
                   platform.status === 'Available' 
@@ -376,7 +376,7 @@ const InteractiveTechShowcase2026 = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0y: 30 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"

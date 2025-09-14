@@ -10,6 +10,7 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import AdvancedPerformanceMonitor2026 from '../components/AdvancedPerformanceMonitor2026';
 import UltimateAIAssistant2026 from '../components/UltimateAIAssistant2026';
 import PerformanceOptimizations from '../components/PerformanceOptimizations';
+import AdvancedSEOOptimizer from '../components/AdvancedSEOOptimizer';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -1281,6 +1282,9 @@ export default function RootLayout({
         
         {/* Performance Optimizations */}
         <PerformanceOptimizations />
+        
+        {/* Advanced SEO Optimizer */}
+        <AdvancedSEOOptimizer />
         
         {/* Structured Data */}
         <script

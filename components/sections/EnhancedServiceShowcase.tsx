@@ -136,14 +136,14 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
         break;
     }
 
-    return filtered.slice(0maxServices);
-  }[serviceselectedCategoryselectedPriceRangesortBymaxServices]);
+    return filtered.slice(0, maxServices);
+  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
 
   const stats = [
-    { label: 'Total Services'value: services.lengthicon: Rocketcolor: 'text-blue-400' },
-    { label: 'Active Customers'value: services.reduce((sums) => sum + (s.customers || 0)icon: Userscolor: 'text-green-400' },
-    { label: 'Average Rating'value: (services.reduce((sums) => sum + (s.rating || 0) / services.length).toFixed(1)icon: Starcolor: 'text-yellow-400' },
-    { label: 'Market Growth'value: '300%+'icon: TrendingUpcolor: 'text-purple-400' }
+    { label: 'Total Services', value: services.length, icon: Rocket, color: 'text-blue-400' },
+    { label: 'Active Customers', value: services.reduce((sum, s) => sum + (s.customers || 0), 0), icon: Users, color: 'text-green-400' },
+    { label: 'Average Rating', value: (services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },
+    { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
   ];
 
   return (

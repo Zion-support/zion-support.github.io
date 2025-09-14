@@ -378,7 +378,7 @@ const EnterpriseDataManagement: React.FC = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Data Sources</h3>
               <div className="text-3xl font-bold text-gray-900">{dataSources.length}</div>
               <div className="text-sm text-gray-600 mt-2">
-                {dataSources.reduce((sums) => sum + s.recordCount0).toLocaleString()} total records
+                {dataSources.reduce((sum, s) => sum + s.recordCount, 0).toLocaleString()} total records
               </div>
             </div>
 
@@ -392,7 +392,7 @@ const EnterpriseDataManagement: React.FC = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Data Pipelines</h3>
               <div className="text-3xl font-bold text-gray-900">{pipelines.length}</div>
               <div className="text-sm text-gray-600 mt-2">
-                {pipelines.reduce((sump) => sum + p.recordsProcessed0).toLocaleString()} records processed
+                {pipelines.reduce((sum, p) => sum + p.recordsProcessed, 0).toLocaleString()} records processed
               </div>
             </div>
 
@@ -406,7 +406,7 @@ const EnterpriseDataManagement: React.FC = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Quality Metrics</h3>
               <div className="text-3xl font-bold text-gray-900">{qualityMetrics.length}</div>
               <div className="text-sm text-gray-600 mt-2">
-                {(qualityMetrics.reduce((sum) => sum + m.value0) / qualityMetrics.length).toFixed(1)}% avg score
+                {(qualityMetrics.reduce((sum, m) => sum + m.value, 0) / qualityMetrics.length).toFixed(1)}% avg score
               </div>
             </div>
 

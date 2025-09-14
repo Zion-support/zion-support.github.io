@@ -43,14 +43,14 @@ const AIRevolution2025Banner = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-    }5000);
+    }, 5000);
 
     return () => clearInterval(timer);
-  }[featuredContent.length]);
+  }, [featuredContent.length]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ai-revolution-banner-dismissed'true');
+    localStorage.setItem('ai-revolution-banner-dismissed', 'true');
   };
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const AIRevolution2025Banner = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }[]);
+  }, []);
 
   if (!isVisible) return null;
 
