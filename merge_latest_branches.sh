@@ -1,18 +1,17 @@
 #!/bin/bash
 
-# Smart merge script that only processes branches with new content
+# Merge latest branches that were just fetched
 set -e
 
-echo "Starting smart merge of branches with new content..."
+echo "Starting merge of latest branches..."
 
-# Get all cursor/create-and-deploy-new-content branches
-ALL_BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | sed 's/origin\///' | head -100)
+# Get the new branches that were just fetched
+NEW_BRANCHES="cursor/create-and-deploy-new-content-0a03 cursor/create-and-deploy-new-content-11fa cursor/create-and-deploy-new-content-190e cursor/create-and-deploy-new-content-260a cursor/create-and-deploy-new-content-2caa cursor/create-and-deploy-new-content-2d37 cursor/create-and-deploy-new-content-30db cursor/create-and-deploy-new-content-3c32 cursor/create-and-deploy-new-content-5159 cursor/create-and-deploy-new-content-5aa8 cursor/create-and-deploy-new-content-8389 cursor/create-and-deploy-new-content-8671 cursor/create-and-deploy-new-content-91ab cursor/create-and-deploy-new-content-b23d cursor/create-and-deploy-new-content-c9d1 cursor/create-and-deploy-new-content-d955 cursor/create-and-deploy-new-content-f433 cursor/create-and-deploy-new-content-fcbe cursor/create-and-deploy-new-content-fd6a-merged cursor/create-and-deploy-new-content-fd98-merged cursor/create-and-deploy-new-content-fdac-merged cursor/create-and-deploy-new-content-fe01-merged cursor/create-and-deploy-new-content-fe5a-merged cursor/create-and-deploy-new-content-fe5c-merged cursor/create-and-deploy-new-content-fe7f-merged cursor/create-and-deploy-new-content-fe8f-merged cursor/create-and-deploy-new-content-ff16-merged cursor/create-and-deploy-new-content-ff81-merged cursor/create-and-deploy-new-content-ffe9-merged"
 
 successful=0
 failed=0
-skipped=0
 
-echo "$ALL_BRANCHES" | while IFS= read -r branch; do
+for branch in $NEW_BRANCHES; do
     echo ""
     echo "=== Processing branch: $branch ==="
     
@@ -24,7 +23,6 @@ echo "$ALL_BRANCHES" | while IFS= read -r branch; do
         if git merge-base --is-ancestor $branch HEAD 2>/dev/null; then
             echo "⏭️  Branch $branch is already merged, skipping"
             git branch -D $branch 2>/dev/null || true
-            ((skipped++))
             continue
         fi
         
@@ -53,20 +51,13 @@ echo "$ALL_BRANCHES" | while IFS= read -r branch; do
         echo "❌ Failed to fetch branch $branch"
         ((failed++))
     fi
-    
-    # Push every 10 merges
-    if [ $((successful % 10)) -eq 0 ] && [ $successful -gt 0 ]; then
-        echo "Pushing changes..."
-        git push origin main || echo "Push failed, continuing..."
-    fi
 done
 
-# Final push
-echo "Final push..."
+# Push changes
+echo "Pushing changes..."
 git push origin main
 
 echo ""
-echo "=== Smart merge completed ==="
+echo "=== Merge completed ==="
 echo "✅ Successfully merged: $successful"
-echo "⏭️  Skipped (already merged): $skipped"
 echo "❌ Failed to merge: $failed"
