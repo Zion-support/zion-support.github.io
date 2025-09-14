@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next'
 
-const baseUrl = 'https://zion.app'
-
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://ziontechgroup.com'
+  
   return [
     {
       url: baseUrl,
@@ -11,33 +11,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/ai-automation-services`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog`,
+      url: `${baseUrl}/cybersecurity-solutions`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.7,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/case-studies`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
       priority: 0.7,
     },
     {
@@ -47,69 +59,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/tools`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    // New 2025 Content
-    {
-      url: `${baseUrl}/blog/ai-2025-ultimate-automation-revolution-enterprise-breakthrough`,
+      url: `${baseUrl}/blog/ai-2025-ultimate-breakthrough-revolutionary-autonomous-systems`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/case-studies/fortune-500-ai-transformation-2500-roi-success-story`,
+      url: `${baseUrl}/case-studies/global-enterprise-ai-2025-autonomous-transformation-ultimate-success`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/resources/ai-2025-implementation-ultimate-roadmap-comprehensive-guide`,
+      url: `${baseUrl}/blog/ai-2026-enterprise-automation-mastery-ultimate-guide`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-    // Additional blog posts
     {
-      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
+      url: `${baseUrl}/blog/quantum-ai-2026-business-revolution-complete-guide`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
-      url: `${baseUrl}/blog/ai-2025-quantum-computing-breakthrough`,
+      url: `${baseUrl}/blog/ai-2026-autonomous-systems-enterprise-breakthrough`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
+    // New resources
     {
-      url: `${baseUrl}/blog/ai-2025-edge-computing-revolution-ultimate-guide`,
+      url: `${baseUrl}/resources/ai-2026-implementation-master-guide`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    // Case studies
-    {
-      url: `${baseUrl}/case-studies/fortune-500-ai-transformation-2025-ultimate-success`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    // Resources
-    {
-      url: `${baseUrl}/resources/ai-implementation-checklist-2025`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    // Tools
-    {
-      url: `${baseUrl}/tools/ai-readiness-assessment`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     }
   ]
 }
