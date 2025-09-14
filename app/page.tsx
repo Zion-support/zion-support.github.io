@@ -10,6 +10,10 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import InteractiveROICalculatorAdvanced from '../components/InteractiveROICalculatorAdvanced';
 import RevolutionaryNewsletterSignup2025 from '../components/RevolutionaryNewsletterSignup2025';
 
+// Import new AI 2025 Content Marketing Revolution components - LATEST BREAKTHROUGH
+import AI2025ContentMarketingRevolutionBanner from '../components/AI2025ContentMarketingRevolutionBanner';
+import AI2025ContentMarketingRevolutionShowcase from '../components/AI2025ContentMarketingRevolutionShowcase';
+
 // Import new content promotion components - LATEST FEATURED
 import NewContent2025UltimateDiscoveryBanner from '../components/NewContent2025UltimateDiscoveryBanner';
 import AI2025ContentRevolutionPromotionBanner from '../components/AI2025ContentRevolutionPromotionBanner';
@@ -389,6 +393,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 CONTENT MARKETING REVOLUTION BANNER - LATEST BREAKTHROUGH */}
+        <AI2025ContentMarketingRevolutionBanner />
+        
         {/* NEW CONTENT 2026 PROMOTION BANNER - LATEST BREAKTHROUGH */}
         <NewContent2026PromotionBanner />
         
@@ -815,6 +822,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* AI 2025 CONTENT MARKETING REVOLUTION SHOWCASE - LATEST BREAKTHROUGH */}
+        <AI2025ContentMarketingRevolutionShowcase />
 
         {/* NEW CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
         <NewContentShowcase2025 />
