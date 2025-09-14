@@ -77,6 +77,10 @@ import UltimateContentShowcase2025Banner from '../components/UltimateContentShow
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
 
+// Import new AI Revolution 2025-2026 components
+import AIRevolution2025Banner from '../components/AIRevolution2025Banner';
+import AIRevolutionContentShowcase from '../components/AIRevolutionContentShowcase';
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -276,6 +280,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI Revolution 2025-2026 Banner - NEWEST ULTIMATE FEATURED */}
+        <AIRevolution2025Banner />
+        
+        {/* AI Revolution Content Showcase - NEWEST FEATURED */}
+        <AIRevolutionContentShowcase />
+        
         {/* Ultimate Content 2025 Revolutionary Banner - NEW ULTIMATE FEATURED */}
         <UltimateContent2025RevolutionaryBanner />
         
