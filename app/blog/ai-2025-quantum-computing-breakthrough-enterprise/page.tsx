@@ -278,7 +278,7 @@ export default function QuantumComputingBreakthroughPage() {
                   className="inline-flex items-center justify-center space-x-2 bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   <span>Contact Us Today</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <span className="w-4 h-4">→</span>
                 </Link>
                 <Link
                   href="/quantum-computing-solutions"
