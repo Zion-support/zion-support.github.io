@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# Batch PR Merge Script
-# This script will merge PRs in smaller batches to avoid overwhelming the system
+# Batch PR Merge Script V2
+# This script will merge PRs in batches, handling conflicts automatically
 
 set -e
 
-echo "🚀 Starting Batch PR Merge Process"
-echo "=================================="
+echo "🚀 Starting Batch PR Merge Process V2"
+echo "====================================="
 
-# Get a subset of branches (first 10)
-BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | head -10 | sed 's/origin\///' | sort)
+# Get next 20 branches (branches 11-30)
+BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | sed '1,10d' | head -20 | sed 's/origin\///' | sort)
 
-echo "📋 Processing first 10 branches"
+echo "📋 Processing next 20 branches (11-30)"
 
 # Counter for tracking
 SUCCESS_COUNT=0
@@ -36,7 +36,7 @@ merge_branch() {
         if git push origin main; then
             echo "✅ Successfully pushed merged changes to origin/main"
         else
-            echo "⚠️  Failed to push changes for $branch"
+            echo "⚠️  Failed to push changes for $branch, will retry later"
         fi
     else
         echo "❌ Merge conflict detected for $branch"
@@ -57,7 +57,7 @@ merge_branch() {
                 if git push origin main; then
                     echo "✅ Successfully pushed resolved changes to origin/main"
                 else
-                    echo "⚠️  Failed to push resolved changes for $branch"
+                    echo "⚠️  Failed to push resolved changes for $branch, will retry later"
                 fi
             else
                 echo "❌ Could not resolve conflicts automatically for $branch"
@@ -164,7 +164,7 @@ for branch in $BRANCHES; do
     branch_num=$((branch_num + 1))
     
     # Add a small delay to avoid overwhelming the system
-    sleep 2
+    sleep 1
 done
 
 # Final summary
@@ -176,4 +176,4 @@ echo "❌ Failed to merge: $FAILED_COUNT branches"
 echo "📊 Total processed: $TOTAL_COUNT branches"
 
 echo ""
-echo "🏁 Batch 1 complete! Run the script again for the next batch."
+echo "🏁 Batch 2 complete! Run the script again for the next batch."
