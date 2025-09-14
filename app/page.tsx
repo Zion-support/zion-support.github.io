@@ -35,14 +35,9 @@ import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase20
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-<<<<<<< HEAD
 // Import new promotional components
 import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
-=======
->>>>>>> c8b857ad6d423d3347e8320a93310c8577edc4aa
 
 // Import new 2026 promotional components
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
@@ -83,7 +78,6 @@ import AdvancedAutomationContentShowcase2025 from '../components/AdvancedAutomat
 // Import new 2025 analytics promotional components
 import NewContent2025AnalyticsRevolutionBanner from '../components/NewContent2025AnalyticsRevolutionBanner';
 import AnalyticsContentShowcase2025 from '../components/AnalyticsContentShowcase2025';
-
 // Import new 2026 promotional components
 import AI2026FuturePredictionsPromotionBanner from '../components/AI2026FuturePredictionsPromotionBanner';
 import QuantumAI2026BusinessTransformationBanner from '../components/QuantumAI2026BusinessTransformationBanner';
