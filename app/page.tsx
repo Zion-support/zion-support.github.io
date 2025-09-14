@@ -60,6 +60,26 @@ import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBann
 
 // Import new ultimate content showcase banners
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+import Fortune500SuccessBanner from '../components/Fortune500SuccessBanner';
+import AIImplementationGuideBanner from '../components/AIImplementationGuideBanner';
+
+// Import new enhanced components
+import AITrends2025_2030FuturePredictionsBanner from '../components/AITrends2025_2030FuturePredictionsBanner';
+import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
+import InteractiveAIAssistant from '../components/InteractiveAIAssistant';
+
+// Import new 2025 promotional components
+import UltimateContent2025Banner from '../components/UltimateContent2025Banner';
+import RevolutionaryAI2025Banner from '../components/RevolutionaryAI2025Banner';
+import AITransformation2025SuccessBanner from '../components/AITransformation2025SuccessBanner';
+
+// Import new AI 2026 promotional components
+import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
+import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
+import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
+import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
+import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
+import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -78,8 +98,13 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Revolutionary AI 2025 Banner - LATEST */}
+        <RevolutionaryAI2025Banner />
         
-        {/* New Content 2025 Ultimate Showcase Banner */}
+        {/* Ultimate Content 2025 Banner - NEW FEATURED */}
+        <UltimateContent2025Banner />
+        
+        {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         
         
