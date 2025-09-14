@@ -28,15 +28,6 @@ import {
   Package,
   Calendar,
   BookOpen,
-  Code,
-  Network,
-  Cpu,
-  Monitor,
-  Server,
-  Mic,
-  Car,
-  Settings,
-  Eye,
   ShoppingCart,
   Home,
   Vote,
@@ -49,7 +40,16 @@ import {
   Trash2,
   Camera,
   HardDrive,
-  Droplets
+  Droplets,
+  Code,
+  Network,
+  Cpu,
+  Monitor,
+  Server,
+  Mic,
+  Eye,
+  Car,
+  Settings
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
