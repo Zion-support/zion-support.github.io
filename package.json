@@ -312,6 +312,7 @@
     "rollup-plugin-visualizer": "^6.0.3",
     "uuid": "^13.0.0",
     "vite": "^7.1.4",
+    "vite-plugin-pwa": "^1.0.3",
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
@@ -399,7 +400,6 @@
     "ts-node": "^10.9.2",
     "typescript": "5.9.2",
     "vaul": "^0.9.0",
-    "vite-plugin-pwa": "^1.0.3",
     "zod": "^3.22.4"
   },
   "lint-staged": {
