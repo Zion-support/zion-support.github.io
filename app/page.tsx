@@ -190,6 +190,8 @@ import UltimateAIRevolutionShowcase2025 from '../components/UltimateAIRevolution
 import TranscendentAI2026Banner from '../components/TranscendentAI2026Banner';
 import UltimateROICalculator2026 from '../components/UltimateROICalculator2026';
 import UltimateAIAchievementSummary2025 from '../components/UltimateAIAchievementSummary2025';
+import UltimateAIRevolutionTimeline2025 from '../components/UltimateAIRevolutionTimeline2025';
+import UltimateAIGlobalImpact2025 from '../components/UltimateAIGlobalImpact2025';
 
 // Import new AI Business Intelligence 2025 promotional components
 import AIBusinessIntelligence2025Banner from '../components/AIBusinessIntelligence2025Banner';
@@ -461,6 +463,12 @@ export default function HomePage() {
         
         {/* ULTIMATE AI ACHIEVEMENT SUMMARY 2025 - NEWEST FEATURED */}
         <UltimateAIAchievementSummary2025 />
+        
+        {/* ULTIMATE AI REVOLUTION TIMELINE 2025 - NEWEST FEATURED */}
+        <UltimateAIRevolutionTimeline2025 />
+        
+        {/* ULTIMATE AI GLOBAL IMPACT 2025 - NEWEST FEATURED */}
+        <UltimateAIGlobalImpact2025 />
         
         {/* INTERACTIVE CONTENT DISCOVERY 2025 - NEWEST FEATURED */}
         <InteractiveContentDiscovery2025 />
