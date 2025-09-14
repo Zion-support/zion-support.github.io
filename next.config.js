@@ -3,7 +3,6 @@
 const nextConfig = {
   reactStrictMode: true,
   trailingSlash: false,
-  output: 'export',
   
   // Enable App Router
   experimental: {
