@@ -72,6 +72,10 @@ import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBa
 import EnterpriseAutomation2026Banner from '../components/EnterpriseAutomation2026Banner';
 import NewContent2026ShowcaseBanner from '../components/NewContent2026ShowcaseBanner';
 
+// Import new neural superintelligence promotional components
+import NeuralSuperintelligence2025Banner from '../components/NeuralSuperintelligence2025Banner';
+import UltimateNeuralSuperintelligenceShowcase from '../components/UltimateNeuralSuperintelligenceShowcase';
+
 // Import new quantum AI promotional components
 import QuantumAIRevolutionBanner2025 from '../components/QuantumAIRevolutionBanner2025';
 
@@ -165,6 +169,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEURAL SUPERINTELLIGENCE 2025-2026 - TOP PRIORITY FEATURED */}
+        <NeuralSuperintelligence2025Banner />
+        
+        {/* ULTIMATE NEURAL SUPERINTELLIGENCE SHOWCASE - NEWEST FEATURED */}
+        <UltimateNeuralSuperintelligenceShowcase />
+        
         {/* NEW ULTIMATE CONTENT 2026 - TOP PRIORITY FEATURED */}
         <UltimateContent2026Showcase />
         
