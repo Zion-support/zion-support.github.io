@@ -45,19 +45,18 @@ export default function QuantumComputingBreakthroughPage() {
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Enterprise Impact Metrics</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
               <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-purple-600 mb-2">10,000x</div>
-                <div className="text-gray-600">Faster Complex Calculations</div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">1000x</div>
+                <div className="text-gray-600">Processing Speed</div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
-                <div className="text-gray-600">Optimization Improvement</div>
+                <div className="text-3xl font-bold text-indigo-600 mb-2">99.9%</div>
+                <div className="text-gray-600">Accuracy Rate</div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-green-600 mb-2">60%</div>
-                <div className="text-gray-600">Computational Cost Reduction</div>
+                <div className="text-3xl font-bold text-pink-600 mb-2">50+</div>
+                <div className="text-gray-600">Use Cases</div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg">
                 <div className="text-3xl font-bold text-orange-600 mb-2">Unbreakable</div>
@@ -68,7 +67,7 @@ export default function QuantumComputingBreakthroughPage() {
         </section>
 
         {/* Main Content */}
-        <section className="py-16">
+        <section id="content" className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg max-w-none">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">The Quantum-AI Convergence Revolution</h2>
@@ -161,14 +160,10 @@ export default function QuantumComputingBreakthroughPage() {
                     <li>• Infrastructure evaluation</li>
                   </ul>
                 </div>
-                <div className="bg-white p-6 rounded-xl shadow-lg border">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Phase 2: Pilot</h4>
-                  <p className="text-gray-600 text-sm mb-3">Months 4-8</p>
-                  <ul className="text-sm text-gray-700 space-y-1">
-                    <li>• Selective deployment</li>
-                    <li>• Integration testing</li>
-                    <li>• Performance benchmarks</li>
-                  </ul>
+                
+                <div className="bg-indigo-50 p-6 rounded-lg">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Quantum Neural Networks</h4>
+                  <p className="text-gray-600">Revolutionary neural architectures that process information using quantum superposition and entanglement.</p>
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-lg border">
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Phase 3: Scale</h4>

@@ -68,6 +68,8 @@ export default function AIImplementationChecklist() {
               95% Success Rate
 =======
 import { ArrowLeftIcon, CalendarIcon, UserIcon, TagIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
+import SEO from '../../../components/SEO';
+import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'AI Implementation Checklist 2025: Your Complete Guide to Successful AI Deployment',
@@ -543,8 +545,8 @@ export default function ResourceGuide() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
-                className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                href="/resources"
+                className="inline-flex items-center text-green-200 hover:text-white transition-colors"
               >
                 Contact Us Today
               </Link>
@@ -555,6 +557,24 @@ export default function ResourceGuide() {
                 Schedule Consultation
               </Link>
             </div>
+            
+            <div className="flex items-center gap-2 mb-4">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-500/20 text-green-200 border border-green-400/30">
+                <TagIcon className="w-3 h-3 mr-1" />
+                Implementation Guide
+              </span>
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/20 text-white">
+                <CalendarIcon className="w-3 h-3 mr-1" />
+                15 min read
+              </span>
+            </div>
+
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              AI Implementation Checklist 2025
+            </h1>
+            <p className="text-xl md:text-2xl text-green-100 leading-relaxed">
+              Your complete guide to successful AI deployment with proven strategies for 95% implementation success rate.
+            </p>
           </div>
         </div>
       </article>
