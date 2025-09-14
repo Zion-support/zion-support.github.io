@@ -312,6 +312,12 @@ import InteractiveDemoWidget from '../components/InteractiveDemoWidget';
 import UltimateContentPromotionBanner2025 from '../components/UltimateContentPromotionBanner2025';
 import ROICalculatorWidget from '../components/ROICalculatorWidget';
 
+// Import new promotional banners for latest content
+import AI2025UltimateTransformation50000ROIBanner from '../components/AI2025UltimateTransformation50000ROIBanner';
+import AI2025UltimateBusinessRevolutionBanner from '../components/AI2025UltimateBusinessRevolutionBanner';
+import NewContentDiscoveryWidget2025 from '../components/NewContentDiscoveryWidget2025';
+import InteractiveROICalculator2025 from '../components/InteractiveROICalculator2025';
+
 // Import new 2025 content and advertising components
 import NewContent2025PromotionalBanner from '../components/NewContent2025PromotionalBanner';
 import InteractiveROICalculator from '../components/InteractiveROICalculator';
@@ -353,6 +359,18 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE TRANSFORMATION 50,000% ROI BANNER - NEWEST FEATURED */}
+        <AI2025UltimateTransformation50000ROIBanner />
+        
+        {/* AI 2025 ULTIMATE BUSINESS REVOLUTION BANNER - NEWEST FEATURED */}
+        <AI2025UltimateBusinessRevolutionBanner />
+        
+        {/* NEW CONTENT DISCOVERY WIDGET 2025 - NEWEST FEATURED */}
+        <NewContentDiscoveryWidget2025 />
+        
+        {/* INTERACTIVE ROI CALCULATOR 2025 - NEWEST FEATURED */}
+        <InteractiveROICalculator2025 />
+        
         {/* NEW CONTENT PROMOTION BANNER 2025 - NEWEST FEATURED */}
         <NewContentPromotionBanner2025 />
         
