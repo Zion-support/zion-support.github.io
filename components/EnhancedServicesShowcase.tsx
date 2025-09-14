@@ -4,8 +4,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
-  CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown,
-  Cloud, Zap, ArrowRight
+  CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
 } from 'lucide-react';
 
 interface Service {
@@ -31,28 +30,13 @@ const EnhancedServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const categories = ['all', 'AI & Machine Learning', 'Cloud Infrastructure', 'Cybersecurity', 'Quantum Computing'];
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI & Machine Learning': return Brain;
-      case 'Cloud Infrastructure': return Cloud;
-      case 'Cybersecurity': return Shield;
-      case 'Quantum Computing': return Zap;
-      default: return Rocket;
-    }
-  };
-
   const services: Service[] = [
     {
       id: 'ai',
-      name: 'AI & Machine Learning',
-      tagline: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.',
-      category: 'AI & Machine Learning',
-      price: 'Custom',
-      period: 'per project',
-      setupTime: '2-4 weeks',
-      customers: '50+',
+      title: 'AI & Machine Learning',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.',
+      icon: <Brain className="w-8 h-8 text-white" />,
+      gradient: 'from-purple-500 to-pink-500',
       features: [
         'Custom AI model development',
         'Natural language processing',
@@ -67,22 +51,15 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Improved operational efficiency',
         'Data-driven insights'
       ],
-      roi: '300-500% ROI within 6 months',
-      marketSize: '$500B+',
-      growthRate: '25% annually',
-      popular: true,
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500'
+      technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'Hugging Face', 'AWS SageMaker'],
+      href: '/services/ai'
     },
     {
       id: 'cloud',
-      name: 'Cloud Infrastructure',
-      tagline: 'Scalable, secure, and reliable cloud solutions tailored to your business needs.',
-      category: 'Cloud Infrastructure',
-      price: 'Custom',
-      period: 'per project',
-      setupTime: '1-3 weeks',
-      customers: '100+',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable, secure, and reliable cloud solutions tailored to your business needs.',
+      icon: <Cloud className="w-8 h-8 text-white" />,
+      gradient: 'from-blue-500 to-cyan-500',
       features: [
         'Multi-cloud architecture design',
         'Container orchestration',
@@ -97,22 +74,15 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Reduced operational costs',
         'Enhanced security'
       ],
-      roi: '200-400% ROI within 4 months',
-      marketSize: '$400B+',
-      growthRate: '20% annually',
-      popular: false,
-      icon: Cloud,
-      color: 'from-blue-500 to-cyan-500'
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker'],
+      href: '/services/cloud'
     },
     {
       id: 'security',
-      name: 'Cybersecurity',
-      tagline: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
-      category: 'Cybersecurity',
-      price: 'Custom',
-      period: 'per project',
-      setupTime: '2-5 weeks',
-      customers: '75+',
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
+      icon: <Shield className="w-8 h-8 text-white" />,
+      gradient: 'from-red-500 to-orange-500',
       features: [
         'Security assessment & auditing',
         'Penetration testing',
@@ -127,22 +97,15 @@ const EnhancedServicesShowcase: React.FC = () => {
         '24/7 threat monitoring',
         'Reduced security risks'
       ],
-      roi: '250-450% ROI within 5 months',
-      marketSize: '$200B+',
-      growthRate: '15% annually',
-      popular: false,
-      icon: Shield,
-      color: 'from-red-500 to-orange-500'
+      technologies: ['SIEM', 'SOAR', 'EDR', 'XDR', 'Zero Trust'],
+      href: '/services/security'
     },
     {
       id: 'quantum',
-      name: 'Quantum Computing',
-      tagline: 'Next-generation quantum solutions for complex computational challenges and optimization.',
-      category: 'Quantum Computing',
-      price: 'Custom',
-      period: 'per project',
-      setupTime: '4-8 weeks',
-      customers: '25+',
+      title: 'Quantum Computing',
+      description: 'Next-generation quantum solutions for complex computational challenges and optimization.',
+      icon: <Zap className="w-8 h-8 text-white" />,
+      gradient: 'from-indigo-500 to-purple-500',
       features: [
         'Quantum algorithm development',
         'Quantum machine learning',
@@ -157,21 +120,10 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Future-ready technology',
         'Competitive advantage'
       ],
-      roi: '500-1000% ROI within 12 months',
-      marketSize: '$50B+',
-      growthRate: '30% annually',
-      popular: true,
-      icon: Zap,
-      color: 'from-indigo-500 to-purple-500'
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'IBM Quantum', 'Google Quantum'],
+      href: '/services/quantum'
     }
   ];
-
-  const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
 
   const stats = [
     { number: '500+', label: 'Projects Delivered' },
@@ -181,7 +133,7 @@ const EnhancedServicesShowcase: React.FC = () => {
   ];
 
   return (
-    <section className="py-20">
+    <div className="py-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -263,15 +215,15 @@ const EnhancedServicesShowcase: React.FC = () => {
                 {/* Service Info */}
                 <div>
                   <div className="flex items-center space-x-4 mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center`}>
-                      <service.icon className="w-8 h-8 text-white" />
+                    <div className={`w-16 h-16 bg-gradient-to-r ${services[activeService].gradient} rounded-xl flex items-center justify-center`}>
+                      {services[activeService].icon}
                     </div>
                     <div>
                       <h3 className="text-3xl font-bold text-white mb-2">
-                        {service.name}
+                        {services[activeService].title}
                       </h3>
                       <p className="text-gray-300 text-lg">
-                        {service.tagline}
+                        {services[activeService].description}
                       </p>
                     </div>
                   </div>
@@ -280,7 +232,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                     <div>
                       <h4 className="text-xl font-semibold text-white mb-4">Key Features</h4>
                       <ul className="space-y-2">
-                        {service.features.map((feature, index) => (
+                        {services[activeService].features.map((feature, index) => (
                           <li key={index} className="flex items-center space-x-3 text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400" />
                             <span>{feature}</span>
@@ -292,7 +244,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                     <div>
                       <h4 className="text-xl font-semibold text-white mb-4">Benefits</h4>
                       <ul className="space-y-2">
-                        {service.benefits.map((benefit, index) => (
+                        {services[activeService].benefits.map((benefit, index) => (
                           <li key={index} className="flex items-center space-x-3 text-gray-300">
                             <ArrowRight className="w-5 h-5 text-blue-400" />
                             <span>{benefit}</span>
@@ -314,7 +266,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                </div>
 
                 {/* Benefits */}
                 <div className="mb-6">
