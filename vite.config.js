@@ -92,6 +92,11 @@ export default defineConfig({
     port: 3000,
     host: true
   },
+  resolve: {
+    alias: {
+      '@': '/workspace/src'
+    }
+  },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion'],
     exclude: ['@vite/client', '@vite/env']

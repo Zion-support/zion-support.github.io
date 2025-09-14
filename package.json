@@ -272,6 +272,7 @@
     "@supabase/ssr": "^0.7.0",
     "@supabase/supabase-js": "^2.57.0",
     "@tanstack/react-query": "^5.85.5",
+    "@types/js-cookie": "^3.0.6",
     "@vitejs/plugin-react": "^5.0.2",
     "axios": "^1.11.0",
     "chalk": "^5.5.0",

@@ -8,7 +8,11 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { HelmetProvider } from 'react-helmet-async';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { SnackbarProvider } from 'notistack';
+<<<<<<< HEAD
 import { captureException } from './utils/sentry';
+=======
+import { captureException } from '@/utils/sentry-mock';
+>>>>>>> origin/cursor/build-vite-project-with-missing-dependency-fbe9
 import { useTranslation } from 'react-i18next';
 // Removed ToastInitializer import as it doesn't exist
 

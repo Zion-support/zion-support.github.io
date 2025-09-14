@@ -9,10 +9,15 @@ import { useSafePathname } from '../hooks/useSafePathname';
 import { logErrorToProduction } from '../utils/productionLogger';
 import EmailVerificationBanner from '../components/EmailVerificationBanner'; // Assuming path
 import { AppHeader } from "./AppHeader";
+<<<<<<< HEAD
 import Footer from "../components/Footer";
 import { SkipLink } from "../components/SkipLink";
 import { ErrorBoundary } from 'react-error-boundary';
 import { Toaster } from 'sonner';
+=======
+import Footer from "@/components/Footer";
+import { SkipLink } from "@/components/SkipLink";
+>>>>>>> origin/cursor/build-vite-project-with-missing-dependency-fbe9
 // Removed GlobalLoaderContext import as it doesn't exist
 // import LoaderOverlay from '@/components/LoaderOverlay';
 // import ErrorOverlay from '@/components/ErrorOverlay';
