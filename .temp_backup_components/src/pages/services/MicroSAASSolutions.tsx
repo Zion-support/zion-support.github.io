@@ -20,7 +20,8 @@ import {
   Clock,
   CheckCircle,
   Star,
-  ArrowRight
+  ArrowRight,
+  Brain
 } from 'lucide-react';
 
 export default function MicroSAASSolutions() {
