@@ -108,6 +108,11 @@ import NewContent2025UltimateBreakthroughBanner from './components/NewContent202
 import UltimateContentShowcase2025Banner from './components/UltimateContentShowcase2025Banner';
 import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakthroughContentShowcase2025';
 
+// Import new content revolution components
+import AI2025ContentRevolutionUltimateBanner from '../components/AI2025ContentRevolutionUltimateBanner';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import InteractiveContentDiscoveryWidget2025 from '../components/InteractiveContentDiscoveryWidget2025';
+
 // Import new AI Content Revolution promotional components
 <<<<<<< HEAD
 import AIContentRevolution2025Banner from '../components/AIContentRevolution2025Banner';
@@ -290,6 +295,12 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        {/* AI 2025 CONTENT REVOLUTION ULTIMATE BANNER - NEWEST BREAKTHROUGH */}
+        <AI2025ContentRevolutionUltimateBanner />
+        
+>>>>>>> cursor/create-and-deploy-new-content-76c0
         {/* AI 2025 ULTIMATE BUSINESS INTELLIGENCE REVOLUTION BANNER - NEWEST FEATURED */}
         <AI2025UltimateBusinessIntelligenceRevolutionBanner />
         
@@ -418,8 +429,6 @@ export default function HomePage() {
         
         {/* SUCCESS STORIES SHOWCASE - NEW CONTENT */}
         <SuccessStoriesShowcase />
-        {/* Ultimate Content Showcase 2025 - NEW FEATURED */}
-        <UltimateContentShowcase2025 />
         
         {/* Neural Interface Revolution Banner 2025 - NEW */}
         <NeuralInterfaceRevolutionBanner2025 />
@@ -611,6 +620,8 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <UltimateContentShowcase2025 />
+        <InteractiveContentDiscoveryWidget2025 />
         <NewContentShowcase2025 />
         <SuccessStoriesBanner2025 />
         <EnhancedContentPromotionBanner2026 />
