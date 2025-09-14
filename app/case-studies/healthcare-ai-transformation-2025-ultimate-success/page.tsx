@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2, Building2, DollarSign, TrendingUp, Users, CheckCircle, Award } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User,  Share2, Building2, DollarSign, TrendingUp, Users, CheckCircle, Award } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 export const metadata = {
@@ -50,7 +50,7 @@ export default function HealthcareAITransformationPage() {
               Zion Tech Group
             </div>
             <div className="flex items-center">
-              <Tag className="w-4 h-4 mr-2" />
+              <Award className="w-4 h-4 mr-2" />
               Healthcare AI
             </div>
           </div>
