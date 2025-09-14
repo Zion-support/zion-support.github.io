@@ -116,16 +116,10 @@ export default function DesignMapPage(req, res) {
           </div>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
-          <MapColumn
-            title="Foundations"
-            sections={designMap.products.foundations}
-          />
+          <MapColumn title="Foundations" sections={designMap.products.foundations} />
           <MapColumn title="Talent UI" sections={designMap.products.talent} />
           <MapColumn title="Client UI" sections={designMap.products.client} />
-          <MapColumn
-            title="AI Tools UI"
-            sections={designMap.products.aiTools}
-          />
+          <MapColumn title="AI Tools UI" sections={designMap.products.aiTools} />
           <MapColumn title="DAO & Token UI" sections={designMap.products.dao} />
           <MapColumn
             title="Admin Console"

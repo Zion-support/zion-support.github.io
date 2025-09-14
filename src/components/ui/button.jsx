@@ -41,7 +41,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500',
     destructive: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500'
   };
-  
+
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-sm',
@@ -49,9 +49,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     xl: 'px-8 py-4 text-lg'
 
   };
-  
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-  
+
+  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : '';
+
+  const combinedClasses = [
+    baseClasses,
+    variantClasses[variant] || variantClasses.default,
+    sizeClasses[size] || sizeClasses.md,
+    disabledClasses,
+    className
+  ].filter(Boolean).join(' ');
+
   if (asChild) {
 
     return React.cloneElement(children, {
@@ -62,7 +70,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     });
 
   }
-  
+
   return (
     <button
 
