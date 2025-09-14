@@ -312,6 +312,23 @@ content_index:
         time: "12 months"
 
   new_case_studies:
+    - id: "fortune-500-ai-transformation-2025-ultimate-success"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation 2025: Ultimate Success Story"
+      file_path: "/content/case-studies/fortune-500-ai-transformation-2025-ultimate-success.md"
+      url: "/case-studies/fortune-500-ai-transformation-2025-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Fortune 500", "AI Transformation", "Success Story", "ROI", "Manufacturing"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "700%"
+        savings: "$3.2B"
+        efficiency: "89%"
+        satisfaction: "98%"
+      reading_time: "22 min read"
+        
     - id: "global-manufacturing-ai-transformation"
       type: "case-study"
       title: "Global Manufacturing Giant Achieves 500% ROI with AI Transformation"
