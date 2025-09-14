@@ -6,7 +6,6 @@ const nextConfig = {
   
   // Enable App Router
   experimental: {
-    appDir: true,
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
@@ -66,4 +65,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
