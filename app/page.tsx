@@ -111,6 +111,10 @@ import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakt
 import AIContentRevolution2025Banner from './components/AIContentRevolution2025Banner';
 import AIContentRevolutionShowcase2025 from './components/AIContentRevolutionShowcase2025';
 
+// Import new Ultimate AI Revolution promotional components
+import AI2025UltimateRevolutionBanner from './components/AI2025UltimateRevolutionBanner';
+import UltimateAIRevolutionShowcase from './components/UltimateAIRevolutionShowcase';
+
 // Import new Ultimate Enterprise Transformation components
 import AI2025UltimateEnterpriseTransformationBanner from '../components/AI2025UltimateEnterpriseTransformationBanner';
 import UltimateEnterpriseTransformationShowcase from '../components/UltimateEnterpriseTransformationShowcase';
@@ -251,6 +255,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE REVOLUTION BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
+        <AI2025UltimateRevolutionBanner />
+        
         {/* AI CONTENT REVOLUTION 2025 BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
         <AIContentRevolution2025Banner />
         
@@ -268,6 +275,9 @@ export default function HomePage() {
         
         {/* AI 2026 CONTENT SHOWCASE - NEWEST FEATURED */}
         <AI2026ContentShowcase />
+        
+        {/* ULTIMATE AI REVOLUTION SHOWCASE - NEWEST ULTIMATE FEATURED */}
+        <UltimateAIRevolutionShowcase />
         
         {/* AI CONTENT REVOLUTION 2025 SHOWCASE - NEWEST ULTIMATE FEATURED */}
         <AIContentRevolutionShowcase2025 />
