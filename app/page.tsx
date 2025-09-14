@@ -56,6 +56,10 @@ import AITrends2025_2030FuturePredictionsBanner from '../components/AITrends2025
 import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
 import InteractiveAIAssistant from '../components/InteractiveAIAssistant';
 
+// Import new 2025 promotional components
+import UltimateContent2025Banner from '../components/UltimateContent2025Banner';
+import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
+
 // Import new AI 2026 promotional components
 import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
 import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
@@ -81,6 +85,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Revolutionary Content 2025 Banner - NEWEST */}
+        <RevolutionaryContent2025Banner />
+        
+        {/* Ultimate Content 2025 Banner - FEATURED */}
+        <UltimateContent2025Banner />
+        
         {/* New Content 2025 Ultimate Showcase Banner - LATEST */}
         <NewContent2025UltimateShowcaseBanner />
         

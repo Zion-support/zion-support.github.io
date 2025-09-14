@@ -4,6 +4,12 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': '/workspace/src',
+      '@/': '/workspace/src/'
+    }
+  },
   plugins: [
     react({
       babel: {
@@ -24,9 +30,16 @@ export default defineConfig({
       registerType: 'autoUpdate',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,avif}'],
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
+        globIgnores: [
+          '**/node_modules/**/*',
+          '**/reports/**/*',
+          '**/*.log',
+          '**/*.txt'
+        ],
         runtimeCaching: [
           {
-            urlPattern: /^https://api\./,
+            urlPattern: /^https:\/\/api\./,
             handler: 'NetworkFirst',
             options: {
               cacheName: 'api-cache',
