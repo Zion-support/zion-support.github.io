@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
-import { Shield, Lock, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+ShieldLockCheckPhoneMailMapPinRocket
 
 export default function AIGuardrailsPage() {
 	const contactInfo = {
@@ -13,16 +13,16 @@ export default function AIGuardrailsPage() {
 	};
 
 	const plans = [
-		{ name: 'Starter', price: '$99/month', items: ['PII redaction', 'Toxicity checks', 'Policy-based blocking', 'REST API'] },
-		{ name: 'Pro', price: '$349/month', items: ['Real-time streaming', 'Custom policies', 'Slack/Teams alerts', 'Audit logs'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Private deployment', 'DLP integrations', 'SAML/SSO', 'SLA & support'] },
+		{ name: 'Starter'price: '$99/month'items: ['PII redaction'Toxicity checks'Policy-based blocking'REST API'] },
+		{ name: 'Pro'price: '$349/month'items: ['Real-time streaming'Custom policies'Slack/Teams alerts'Audit logs'] },
+		{ name: 'Enterprise'price: 'Custom'items: ['Private deployment'DLP integrations'SAML/SSO'SLA & support'] },
 	];
 
 	return (
 		<UltraFuturisticBackground  intensity="high">
 			<Head>
 				<title>AI Guardrails Platform | Zion Tech Group</title>
-				<meta name="description" content="Safety and compliance for AI. PII redaction, toxicity and jailbreak detection, policy enforcement with audit logs." />
+				<meta name="description" content="Safety and compliance for AI. PII redactiontoxicity and jailbreak detectionpolicy enforcement with audit logs." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />
 			</Head>
 

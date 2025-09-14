@@ -1,11 +1,11 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 
 export function ApiReference() {
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
+  const [activeEndpointsetActiveEndpoint] = useState("get-jobs");
 
   // Sample endpoint data
   const endpoints = [
@@ -15,10 +15,10 @@ export function ApiReference() {
       path: "/api/jobs",
       description: "Retrieve a list of job postings with optional filtering",
       parameters: [
-        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },
-        { name: "category", type: "string", description: "Filter by job category" },
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
+        { name: "status"type: "string"description: "Filter by job status (openclosedraft)" },
+        { name: "category"type: "string"description: "Filter by job category" },
+        { name: "limit"type: "integer"description: "Number of results per page (default: 20max: 100)" },
+        { name: "offset"type: "integer"description: "Pagination offset (default: 0)" }],
       responses: {
         "200": {
           description: "A list of jobs",
@@ -70,12 +70,12 @@ export function ApiReference() {
       path: "/api/jobs",
       description: "Create a new job posting",
       parameters: [
-        { name: "title", type: "string", required: true, description: "Job title" },
-        { name: "description", type: "string", required: true, description: "Detailed job description" },
-        { name: "category", type: "string", required: true, description: "Job category" },
-        { name: "budget", type: "object", required: true, description: "Budget information with min, max, and currency" },
-        { name: "skills", type: "array", description: "Array of required skills" },
-        { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }],
+        { name: "title"type: "string"required: truedescription: "Job title" },
+        { name: "description"type: "string"required: truedescription: "Detailed job description" },
+        { name: "category"type: "string"required: truedescription: "Job category" },
+        { name: "budget"type: "object"required: truedescription: "Budget information with minmaxand currency" },
+        { name: "skills"type: "array"description: "Array of required skills" },
+        { name: "deadline"type: "string"description: "Application deadline (ISO date format)" }],
       responses: {
         "201": {
           description: "Job created successfully",
@@ -120,7 +120,7 @@ export function ApiReference() {
       "max": 5000,
       "currency": "USD"
     },
-    "skills": ["Figma", "User Research", "Prototyping"],
+    "skills": ["Figma"User Research"Prototyping"],
     "deadline": "2023-07-01T00:00:00Z"
   }'`
     },
@@ -130,13 +130,13 @@ export function ApiReference() {
       path: "/api/talent",
       description: "Search for talent profiles with optional filtering",
       parameters: [
-        { name: "skills", type: "string", description: "Comma-separated list of skills" },
-        { name: "category", type: "string", description: "Filter by talent category" },
-        { name: "rate_min", type: "integer", description: "Minimum hourly rate" },
-        { name: "rate_max", type: "integer", description: "Maximum hourly rate" },
-        { name: "availability", type: "string", description: "Availability type (full-time, part-time)" },
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
+        { name: "skills"type: "string"description: "Comma-separated list of skills" },
+        { name: "category"type: "string"description: "Filter by talent category" },
+        { name: "rate_min"type: "integer"description: "Minimum hourly rate" },
+        { name: "rate_max"type: "integer"description: "Maximum hourly rate" },
+        { name: "availability"type: "string"description: "Availability type (full-timepart-time)" },
+        { name: "limit"type: "integer"description: "Number of results per page (default: 20max: 100)" },
+        { name: "offset"type: "integer"description: "Pagination offset (default: 0)" }],
       responses: {
         "200": {
           description: "A list of talent profiles",
@@ -146,11 +146,11 @@ export function ApiReference() {
       "id": "talent-123",
       "full_name": "Jane Smith",
       "professional_title": "Full Stack Developer",
-      "skills": ["React", "Node.js", "TypeScript"],
+      "skills": ["React"Node.js"TypeScript"],
       "hourly_rate": 75,
       "availability": "full-time",
       "years_experience": 5,
-      "location": "Remote, US",
+      "location": "RemoteUS",
       "bio": "Experienced full stack developer with a focus on React and Node.js..."
     },
     // More talent profiles...
@@ -240,7 +240,7 @@ export function ApiReference() {
                               </tr>
                             </thead>
                             <tbody>
-                              {activeEndpointData.parameters.map((param, index) => (
+                              {activeEndpointData.parameters.map((paramindex) => (
                                 <tr key={param.name} className={index < activeEndpointData.parameters.length - 1 ? "border-b border-zinc-800" : ""}>
                                   <td className="py-2 px-4 text-white font-mono">{param.name}</td>
                                   <td className="py-2 px-4 text-blue-400 font-mono">{param.type}</td>
@@ -266,7 +266,7 @@ export function ApiReference() {
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4">Responses</h3>
                     
-                    {Object.entries(activeEndpointData.responses).map(([status, response]) => (
+                    {Object.entries(activeEndpointData.responses).map(([statusresponse]) => (
                       <div key={status} className="mb-6">
                         <div className="flex items-center mb-3">
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${

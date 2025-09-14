@@ -1,6 +1,6 @@
 
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useStateuseEffect } from 'react';
+import { useParamsuseNavigate } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
@@ -10,12 +10,12 @@ import { toast } from 'sonner';
 
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
+  // definitionso avoid passing a type argument to prevent TS2347.
   const { roomId } = useParams();
   const navigate = useNavigate();
-  const [isJoining, setIsJoining] = useState(false);
-  const [hasJoined, setHasJoined] = useState(false);
-  const [participants, setParticipants] = useState<Array<{
+  const [isJoiningsetIsJoining] = useState(false);
+  const [hasJoinedsetHasJoined] = useState(false);
+  const [participantsetParticipants] = useState<Array<{
     id: string;
     name: string;
     avatar?: string;
@@ -38,36 +38,36 @@ export default function VideoCall() {
     setTimeout(() => {
       setHasJoined(true);
       setIsJoining(false);
-      toast.success("Call joined", {
+      toast.success("Call joined"{
         description: `You have joined meeting room ${roomId}`
       });
-    }, 1500);
+    }1500);
   };
 
   const handleLeaveCall = () => {
     setHasJoined(false);
-    toast.info("Call ended", {
+    toast.info("Call ended"{
       description: "You have left the meeting"
     });
     
     // Navigate back after a short delay
     setTimeout(() => {
       navigate(-1);
-    }, 1500);
+    }1500);
   };
   
   const simulateUserJoining = () => {
-    // This is just for demo purposes - in a real app, this would be handled by the video call service
+    // This is just for demo purposes - in a real appthis would be handled by the video call service
     const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+      { id: 'user-2'name: 'Alex Chen'isVideoEnabled: trueisMuted: false },
+      { id: 'user-3'name: 'Taylor Kim'isVideoEnabled: falseisMuted: true },
+      { id: 'user-4'name: 'Jordan Smith'isVideoEnabled: trueisMuted: falseisScreenSharing: true }
     ];
     
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
     
     if (!participants.find(p => p.id === randomUser.id)) {
-      setParticipants(prev => [...prev, randomUser]);
+      setParticipants(prev => [...prevrandomUser]);
       toast(`${randomUser.name} joined the call`);
     }
   };

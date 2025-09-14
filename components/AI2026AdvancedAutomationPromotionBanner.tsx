@@ -25,8 +25,8 @@ export default function AI2026AdvancedAutomationPromotionBanner() {
               AI 2026 Advanced Automation Solutions
             </h2>
             <p className="text-lg text-blue-100 mb-4 max-w-2xl">
-              Revolutionize your business with next-generation AI automation. Experience 85% cost reduction, 
-              300% efficiency increase, and 99.9% uptime guarantee with our advanced solutions.
+              Revolutionize your business with next-generation AI automation. Experience 85% cost reduction
+              300% efficiency increaseand 99.9% uptime guarantee with our advanced solutions.
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
               <span className="flex items-center gap-1">

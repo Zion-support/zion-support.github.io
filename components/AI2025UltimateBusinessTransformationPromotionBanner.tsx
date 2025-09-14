@@ -15,7 +15,7 @@ const AI2025UltimateBusinessTransformationPromotionBanner: React.FC = () => {
             </h2>
             <p className="text-lg opacity-90 mb-6 leading-relaxed">
               Discover the revolutionary AI technologies and strategies that will transform your business in 2025. 
-              Comprehensive guide to AI implementation, ROI optimization, and competitive advantage.
+              Comprehensive guide to AI implementationROI optimizationand competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

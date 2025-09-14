@@ -7,8 +7,8 @@ export default function AISustainabilityGreenTech2025() {
     <div className="min-h-screen bg-white">
       <SEO
         title="AI Sustainability & Green Tech 2025: Building Eco-Friendly AI"
-        description="Discover how to build sustainable AI systems that reduce environmental impact. Learn green AI practices, energy optimization, and carbon-neutral strategies."
-        keywords="AI sustainability, green AI, carbon neutral AI, sustainable technology, energy efficient AI, environmental AI, green tech"
+        description="Discover how to build sustainable AI systems that reduce environmental impact. Learn green AI practicesenergy optimizationand carbon-neutral strategies."
+        keywords="AI sustainabilitygreen AIcarbon neutral AIsustainable technologyenergy efficient AIenvironmental AIgreen tech"
         url="/blog/ai-sustainability-green-tech-2025"
       />
       
@@ -20,7 +20,7 @@ export default function AISustainabilityGreenTech2025() {
               ← Back to Blog
             </Link>
             <span className="text-gray-400">•</span>
-            <span className="text-sm text-gray-600">January 28, 2025</span>
+            <span className="text-sm text-gray-600">January 282025</span>
           </div>
           
           <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-4 py-2 mb-6">
@@ -33,7 +33,7 @@ export default function AISustainabilityGreenTech2025() {
           
           <p className="text-xl text-gray-600 leading-relaxed mb-8">
             Discover how to build sustainable AI systems that reduce environmental impact. 
-            Learn green AI practices, energy optimization strategies, and carbon-neutral approaches 
+            Learn green AI practicesenergy optimization strategiesand carbon-neutral approaches 
             for responsible AI development.
           </p>
           
@@ -51,8 +51,8 @@ export default function AISustainabilityGreenTech2025() {
           <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8 mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">🌱 Executive Summary</h2>
             <p className="text-gray-700 leading-relaxed">
-              AI's environmental impact is significant, but it can also be a powerful force for sustainability. 
-              This guide explores how to build energy-efficient AI systems, implement green computing practices, 
+              AI's environmental impact is significantbut it can also be a powerful force for sustainability. 
+              This guide explores how to build energy-efficient AI systemsimplement green computing practices
               and use AI to solve environmental challenges while minimizing carbon footprint.
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function AISustainabilityGreenTech2025() {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Environmental Impact of AI</h2>
           
           <p className="text-lg text-gray-700 mb-6">
-            AI systems consume massive amounts of energy, but they also offer unprecedented opportunities 
+            AI systems consume massive amounts of energybut they also offer unprecedented opportunities 
             to address climate change and environmental challenges.
           </p>
 
@@ -173,7 +173,7 @@ export default function AISustainabilityGreenTech2025() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-3">Pruning</h4>
                   <p className="text-gray-700 text-sm mb-3">
-                    Remove unnecessary parameters to create smaller, faster models.
+                    Remove unnecessary parameters to create smallerfaster models.
                   </p>
                   <ul className="space-y-1 text-gray-600 text-sm">
                     <li>• Magnitude-based pruning</li>
@@ -263,7 +263,7 @@ export default function AISustainabilityGreenTech2025() {
               <h4 className="text-lg font-semibold text-gray-900 mb-3">Efficient Hardware</h4>
               <ul className="space-y-2 text-gray-700">
                 <li>• ARM-based processors</li>
-                <li>• Specialized AI chips (TPU, NPU)</li>
+                <li>• Specialized AI chips (TPUNPU)</li>
                 <li>• Liquid cooling systems</li>
                 <li>• Heat recovery systems</li>
                 <li>• Low-power memory</li>
@@ -436,19 +436,19 @@ export default function AISustainabilityGreenTech2025() {
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
               <h4 className="text-lg font-semibold text-green-800 mb-2">✅ Google's Carbon-Neutral AI</h4>
               <p className="text-green-700 mb-3">Achieved carbon neutrality through renewable energy and efficient models.</p>
-              <p className="text-green-600"><strong>Key Strategies:</strong> 100% renewable energy, efficient TPU chips, carbon-aware scheduling.</p>
+              <p className="text-green-600"><strong>Key Strategies:</strong> 100% renewable energyefficient TPU chipscarbon-aware scheduling.</p>
             </div>
 
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
               <h4 className="text-lg font-semibold text-blue-800 mb-2">✅ Microsoft's AI for Earth</h4>
               <p className="text-blue-700 mb-3">Using AI to solve environmental challenges while minimizing impact.</p>
-              <p className="text-blue-600"><strong>Key Strategies:</strong> Environmental AI applications, carbon negative by 2030, sustainable cloud.</p>
+              <p className="text-blue-600"><strong>Key Strategies:</strong> Environmental AI applicationscarbon negative by 2030sustainable cloud.</p>
             </div>
 
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
               <h4 className="text-lg font-semibold text-purple-800 mb-2">✅ Hugging Face's Green AI</h4>
               <p className="text-purple-700 mb-3">Open-source approach to sustainable AI development.</p>
-              <p className="text-purple-600"><strong>Key Strategies:</strong> Model efficiency tools, carbon tracking, community education.</p>
+              <p className="text-purple-600"><strong>Key Strategies:</strong> Model efficiency toolscarbon trackingcommunity education.</p>
             </div>
           </div>
 
@@ -494,8 +494,8 @@ export default function AISustainabilityGreenTech2025() {
           <div className="bg-green-50 rounded-lg p-6 mb-8">
             <h3 className="text-lg font-semibold text-green-900 mb-3">Ready to Build Sustainable AI?</h3>
             <p className="text-green-800 mb-4">
-              Download our comprehensive Green AI Implementation Guide with practical strategies, 
-              tools, and templates to make your AI systems more sustainable.
+              Download our comprehensive Green AI Implementation Guide with practical strategies
+              toolsand templates to make your AI systems more sustainable.
             </p>
             <Link 
               href="/resources/green-ai-implementation-guide-2025"

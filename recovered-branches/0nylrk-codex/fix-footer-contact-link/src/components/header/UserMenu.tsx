@@ -2,18 +2,18 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuSeparator, 
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuSeparator
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
 
 export function UserMenu() {
-  const { user, logout } = useAuth();
+  const { userlogout } = useAuth();
   const { toast } = useToast();
 
   const handleSignOut = async () => {

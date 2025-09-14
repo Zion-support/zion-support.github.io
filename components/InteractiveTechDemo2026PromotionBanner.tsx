@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Play, Zap, Brain, Target } from 'lucide-react';
+ArrowRightPlayZapBrainTarget
 
 const InteractiveTechDemo2026PromotionBanner = () => {
   return (
@@ -18,8 +18,8 @@ const InteractiveTechDemo2026PromotionBanner = () => {
           </h2>
           
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Try our cutting-edge AI solutions hands-on. See how our technology works, 
-            test different scenarios, and experience the future of business automation.
+            Try our cutting-edge AI solutions hands-on. See how our technology works
+            test different scenariosand experience the future of business automation.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">

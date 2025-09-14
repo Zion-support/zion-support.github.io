@@ -30,8 +30,8 @@ export default function AI2025RevolutionaryTrendsPromotionBanner() {
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             The most comprehensive analysis of revolutionary AI trends and predictions for 2025. 
             Discover the technologies that will transform everything:
-            <span className="text-yellow-400 font-bold"> Quantum-Neural Fusion</span>, 
-            <span className="text-green-400 font-bold"> Neural Interfaces</span>, and 
+            <span className="text-yellow-400 font-bold"> Quantum-Neural Fusion</span>
+            <span className="text-green-400 font-bold"> Neural Interfaces</span>and 
             <span className="text-blue-400 font-bold"> Autonomous Operations</span>
           </p>
 

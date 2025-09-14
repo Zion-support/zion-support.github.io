@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
-  keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',
+  keywords: 'careersjobsZion Tech GroupAI jobstechnology careersquantum computing jobs',
 };
 
 export default function CareersPage() {
@@ -11,9 +11,9 @@ export default function CareersPage() {
       department: 'Research & Development',
       location: 'Remote / Global',
       type: 'Full-time',
-      description: 'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.',
+      description: 'Lead cutting-edge research in AI consciousnessautonomous systemsand quantum neural networks.',
       requirements: [
-        'PhD in Computer Science, AI, or related field',
+        'PhD in Computer ScienceAIor related field',
         '5+ years experience in AI research',
         'Expertise in machine learning and neural networks',
         'Experience with quantum computing concepts',
@@ -26,10 +26,10 @@ export default function CareersPage() {
       type: 'Full-time',
       description: 'Develop next-generation quantum algorithms and quantum computing infrastructure.',
       requirements: [
-        'MS/PhD in Physics, Computer Science, or related field',
+        'MS/PhD in PhysicsComputer Scienceor related field',
         '3+ years experience in quantum computing',
         'Knowledge of quantum algorithms and quantum programming',
-        'Experience with Qiskit, Cirq, or similar frameworks',
+        'Experience with QiskitCirqor similar frameworks',
       ],
     },
     {
@@ -40,8 +40,8 @@ export default function CareersPage() {
       description: 'Build scalable web applications and APIs for our AI-powered platforms.',
       requirements: [
         '3+ years experience in full-stack development',
-        'Proficiency in React, Node.js, and TypeScript',
-        'Experience with cloud platforms (AWS, GCP, Azure)',
+        'Proficiency in ReactNode.jsand TypeScript',
+        'Experience with cloud platforms (AWSGCPAzure)',
         'Knowledge of database design and optimization',
       ],
     },
@@ -55,7 +55,7 @@ export default function CareersPage() {
         '5+ years experience in cybersecurity',
         'Expertise in threat detection and prevention',
         'Knowledge of AI security and adversarial attacks',
-        'Relevant certifications (CISSP, CEH, etc.)',
+        'Relevant certifications (CISSPCEHetc.)',
       ],
     },
   ];
@@ -68,7 +68,7 @@ export default function CareersPage() {
     },
     {
       title: 'Cutting-Edge Technology',
-      description: 'Work with the latest AI, quantum computing, and blockchain technologies.',
+      description: 'Work with the latest AIquantum computingand blockchain technologies.',
       icon: '🚀',
     },
     {
@@ -103,7 +103,7 @@ export default function CareersPage() {
         </p>
         <p className="text-lg opacity-70 max-w-2xl mx-auto">
           We're looking for passionate innovators who want to push the boundaries of what's possible 
-          in artificial intelligence, quantum computing, and blockchain technology.
+          in artificial intelligencequantum computingand blockchain technology.
         </p>
       </section>
 
@@ -111,7 +111,7 @@ export default function CareersPage() {
       <section className="py-16">
         <h2 className="text-3xl font-bold text-center mb-12">Open Positions</h2>
         <div className="space-y-6">
-          {openPositions.map((position, index) => (
+          {openPositions.map((positionindex) => (
             <div key={index} className="p-6 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-200">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-4">
                 <div>
@@ -132,7 +132,7 @@ export default function CareersPage() {
               <div>
                 <h4 className="font-semibold mb-2">Requirements:</h4>
                 <ul className="list-disc list-inside space-y-1 text-sm opacity-70">
-                  {position.requirements.map((req, reqIndex) => (
+                  {position.requirements.map((reqIndex) => (
                     <li key={reqIndex}>{req}</li>
                   ))}
                 </ul>
@@ -146,7 +146,7 @@ export default function CareersPage() {
       <section className="py-16">
         <h2 className="text-3xl font-bold text-center mb-12">Why Work With Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
+          {benefits.map((benefitindex) => (
             <div key={index} className="text-center p-6">
               <div className="text-4xl mb-4">{benefit.icon}</div>
               <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
@@ -167,7 +167,7 @@ export default function CareersPage() {
               exploring new technologies and approaches to solve complex problems.
             </p>
             <p className="opacity-80 leading-relaxed">
-              From AI consciousness research to quantum computing breakthroughs, we're not afraid 
+              From AI consciousness research to quantum computing breakthroughswe're not afraid 
               to tackle the most challenging problems in technology.
             </p>
           </div>
@@ -178,7 +178,7 @@ export default function CareersPage() {
               has the opportunity to contribute to our mission and grow their skills.
             </p>
             <p className="opacity-80 leading-relaxed">
-              Whether you're a seasoned expert or just starting your career, we provide the 
+              Whether you're a seasoned expert or just starting your careerwe provide the 
               support and resources you need to succeed.
             </p>
           </div>

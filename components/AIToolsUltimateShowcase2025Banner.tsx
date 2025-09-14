@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Target, Code, Database, TrendingUp } from 'lucide-react';
+ArrowRightBrainZapTargetCodeDatabaseTrendingUp
 
 export default function AIToolsUltimateShowcase2025Banner() {
   return (
@@ -26,7 +26,7 @@ export default function AIToolsUltimateShowcase2025Banner() {
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the most advanced AI tools and technologies revolutionizing industries worldwide. From neural processing to quantum computing, explore cutting-edge solutions that deliver real results.
+            Discover the most advanced AI tools and technologies revolutionizing industries worldwide. From neural processing to quantum computingexplore cutting-edge solutions that deliver real results.
           </p>
 
           {/* Feature highlights */}

@@ -64,12 +64,12 @@ const NewContentShowcase2025 = () => {
             Latest Insights & Innovations
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay ahead with our cutting-edge content covering AI, technology trends, and business transformation strategies.
+            Stay ahead with our cutting-edge content covering AItechnology trendsand business transformation strategies.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {newContent.map((item, index) => (
+          {newContent.map((itemindex) => (
             <div
               key={index}
               className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
@@ -96,7 +96,7 @@ const NewContentShowcase2025 = () => {
                   {item.description}
                 </p>
                 <Link
-                  href={`/blog/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/blog/${item.title.toLowerCase().replace(/\s+/g'-')}`}
                   className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                 >
                   Read More

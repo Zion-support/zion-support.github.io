@@ -8,9 +8,9 @@ export default function AI2026RevolutionaryBreakthroughPromotionBanner() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
-                          radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.3) 0%, transparent 50%),
-                          radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.3) 0%, transparent 50%)`,
+          backgroundImage: `radial-gradient(circle at 25% 25%rgba(591302460.3) 0%transparent 50%),
+                          radial-gradient(circle at 75% 75%rgba(147512340.3) 0%transparent 50%),
+                          radial-gradient(circle at 50% 50%rgba(236721530.3) 0%transparent 50%)`,
         }} />
       </div>
       

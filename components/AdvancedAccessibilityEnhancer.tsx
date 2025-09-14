@@ -1,49 +1,49 @@
 import React from 'react';
-import { Eye, Volume2, MousePointer, Keyboard, Shield, CheckCircle } from 'lucide-react';
+EyeVolume2MousePointerKeyboardShieldCheckCircle
 
 const AdvancedAccessibilityEnhancer = () => {
   const accessibilityFeatures = [
     {
       icon: Eye,
       title: "Visual Accessibility",
-      description: "High contrast ratios, screen reader support, and visual indicators",
+      description: "High contrast ratioscreen reader supportand visual indicators",
       compliance: "WCAG 2.1 AA",
-      features: ["4.5:1 contrast ratio", "Screen reader compatibility", "Focus indicators", "Alt text optimization"]
+      features: ["4.5:1 contrast ratio"Screen reader compatibility"Focus indicators"Alt text optimization"]
     },
     {
       icon: Volume2,
       title: "Audio Accessibility",
-      description: "Audio descriptions, captions, and sound alternatives",
+      description: "Audio descriptionscaptionsand sound alternatives",
       compliance: "WCAG 2.1 AA",
-      features: ["Audio descriptions", "Closed captions", "Transcripts", "Sound alternatives"]
+      features: ["Audio descriptions"Closed captions"Transcripts"Sound alternatives"]
     },
     {
       icon: MousePointer,
       title: "Motor Accessibility",
-      description: "Large click targets, keyboard navigation, and gesture alternatives",
+      description: "Large click targetskeyboard navigationand gesture alternatives",
       compliance: "WCAG 2.1 AA",
-      features: ["44px minimum touch targets", "Keyboard navigation", "Gesture alternatives", "Voice control"]
+      features: ["44px minimum touch targets"Keyboard navigation"Gesture alternatives"Voice control"]
     },
     {
       icon: Keyboard,
       title: "Keyboard Navigation",
       description: "Full keyboard accessibility and focus management",
       compliance: "WCAG 2.1 AA",
-      features: ["Tab navigation", "Focus management", "Skip links", "Keyboard shortcuts"]
+      features: ["Tab navigation"Focus management"Skip links"Keyboard shortcuts"]
     },
     {
       icon: Shield,
       title: "Cognitive Accessibility",
-      description: "Clear navigation, consistent design, and error prevention",
+      description: "Clear navigationconsistent designand error prevention",
       compliance: "WCAG 2.1 AA",
-      features: ["Clear navigation", "Consistent design", "Error prevention", "Help text"]
+      features: ["Clear navigation"Consistent design"Error prevention"Help text"]
     },
     {
       icon: CheckCircle,
       title: "Compliance Testing",
       description: "Automated and manual accessibility testing",
       compliance: "WCAG 2.1 AA",
-      features: ["Automated testing", "Manual testing", "User testing", "Continuous monitoring"]
+      features: ["Automated testing"Manual testing"User testing"Continuous monitoring"]
     }
   ];
 
@@ -60,13 +60,13 @@ const AdvancedAccessibilityEnhancer = () => {
             <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent"> Design</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ensuring our website is accessible to everyone, regardless of ability or technology. 
+            Ensuring our website is accessible to everyoneregardless of ability or technology. 
             We follow WCAG 2.1 AA guidelines to create an inclusive digital experience.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {accessibilityFeatures.map((feature, index) => (
+          {accessibilityFeatures.map((featureindex) => (
             <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300">
               <div className="flex items-center justify-between mb-4">
                 <div className="p-3 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl">
@@ -86,7 +86,7 @@ const AdvancedAccessibilityEnhancer = () => {
               </p>
 
               <div className="space-y-2">
-                {feature.features.map((item, idx) => (
+                {feature.features.map((itemidx) => (
                   <div key={idx} className="flex items-center text-green-400 text-xs">
                     <CheckCircle className="w-3 h-3 mr-2" />
                     {item}

@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const RevolutionaryAutonomousOperationsBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [animationPhase, setAnimationPhase] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [animationPhasetAnimationPhase] = useState(0);
 
   // Check if banner was dismissed
   useEffect(() => {
@@ -13,20 +13,20 @@ const RevolutionaryAutonomousOperationsBanner: React.FC = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   // Animation phases
   useEffect(() => {
     const interval = setInterval(() => {
       setAnimationPhase((prev) => (prev + 1) % 3);
-    }, 3000);
+    }3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('revolutionary-autonomous-ops-banner-dismissed', 'true');
+    localStorage.setItem('revolutionary-autonomous-ops-banner-dismissed'true');
   };
 
   if (!isVisible) return null;
@@ -177,7 +177,7 @@ const RevolutionaryAutonomousOperationsBanner: React.FC = () => {
                 <div className="absolute -top-8 -right-8 w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg animate-spin" style={{ animationDuration: '8s' }}>
                   <span className="text-3xl">🚀</span>
                 </div>
-                <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center shadow-lg animate-spin" style={{ animationDuration: '6s', animationDirection: 'reverse' }}>
+                <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center shadow-lg animate-spin" style={{ animationDuration: '6s'animationDirection: 'reverse' }}>
                   <span className="text-2xl">⚡</span>
                 </div>
                 <div className="absolute top-1/2 -right-12 w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full flex items-center justify-center shadow-lg animate-bounce">

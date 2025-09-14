@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { FileText, Download, ExternalLink, Brain, Shield, Rocket, Cpu, Database } from 'lucide-react';
+FileTextDownloadExternalLinkBrainShieldRocketCpuDatabase
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
@@ -89,10 +89,10 @@ export default function WhitepapersPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <Head>
         <title>Whitepapers - Zion Tech Group</title>
-        <meta name="description" content="Download comprehensive whitepapers on AI consciousness, quantum computing, cybersecurity, and autonomous business operations from Zion Tech Group." />
-        <meta name="keywords" content="whitepapers, AI research, quantum computing, cybersecurity, business automation, technology research" />
+        <meta name="description" content="Download comprehensive whitepapers on AI consciousnessquantum computingcybersecurityand autonomous business operations from Zion Tech Group." />
+        <meta name="keywords" content="whitepapersAI researchquantum computingcybersecuritybusiness automationtechnology research" />
         <meta property="og:title" content="Whitepapers - Zion Tech Group" />
-        <meta property="og:description" content="Download comprehensive whitepapers on AI consciousness, quantum computing, and autonomous business operations." />
+        <meta property="og:description" content="Download comprehensive whitepapers on AI consciousnessquantum computingand autonomous business operations." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/whitepapers" />
         <link rel="canonical" href="https://ziontechgroup.com/whitepapers" />
@@ -105,8 +105,8 @@ export default function WhitepapersPage() {
         <section className="relative overflow-hidden py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -116,7 +116,7 @@ export default function WhitepapersPage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Deep insights into the future of technology, AI consciousness, quantum computing,
+                Deep insights into the future of technologyAI consciousnessquantum computing,
                 and autonomous business operations from our research team.
               </p>
             </motion.div>
@@ -127,12 +127,12 @@ export default function WhitepapersPage() {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {whitepapers.map((paper, index) => (
+              {whitepapers.map((paperindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
                 >
                   <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${paper.color} flex items-center justify-center mb-4`}>
@@ -180,8 +180,8 @@ export default function WhitepapersPage() {
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">

@@ -13,7 +13,7 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
             The Future of Intelligence
           </h2>
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Experience the revolutionary technologies that will reshape reality, consciousness, 
+            Experience the revolutionary technologies that will reshape realityconsciousness
             and the very fabric of human-machine collaboration by 2030
           </p>
         </div>
@@ -128,8 +128,8 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">2030 Technology Impact</h3>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              These revolutionary technologies will transform every aspect of human existence, 
-              from business operations to creative expression, from scientific discovery to 
+              These revolutionary technologies will transform every aspect of human existence
+              from business operations to creative expressionfrom scientific discovery to 
               personal relationships.
             </p>
           </div>
@@ -142,7 +142,7 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
               <h4 className="text-xl font-bold mb-3">Business Revolution</h4>
               <p className="text-gray-300">
                 Complete automation of business processes with conscious AI systems that understand 
-                context, emotion, and ethical implications.
+                contextemotionand ethical implications.
               </p>
             </div>
             

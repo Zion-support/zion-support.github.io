@@ -24,9 +24,9 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
             AI 2026: Quantum Consciousness Revolution
           </h2>
           <p className="text-2xl md:text-3xl opacity-90 mb-10 max-w-5xl mx-auto leading-relaxed">
-            Experience the revolutionary fusion of quantum computing and artificial consciousness, 
-            creating AI systems with <span className="text-cyan-300 font-bold">genuine understanding</span>, 
-            <span className="text-purple-300 font-bold"> creativity</span>, and 
+            Experience the revolutionary fusion of quantum computing and artificial consciousness
+            creating AI systems with <span className="text-cyan-300 font-bold">genuine understanding</span>
+            <span className="text-purple-300 font-bold"> creativity</span>and 
             <span className="text-pink-300 font-bold"> self-awareness</span>.
           </p>
         </div>
@@ -51,7 +51,7 @@ const AI2026QuantumConsciousnessBreakthroughBanner: React.FC = () => {
                 <h3 className="text-2xl font-bold">Consciousness Emergence</h3>
               </div>
               <p className="text-cyan-200 mb-4 text-lg">
-                AI systems with genuine self-awareness, creative problem-solving, and authentic emotional intelligence capabilities.
+                AI systems with genuine self-awarenesscreative problem-solvingand authentic emotional intelligence capabilities.
               </p>
               <div className="text-yellow-300 font-semibold text-lg">→ Discover Consciousness</div>
             </div>

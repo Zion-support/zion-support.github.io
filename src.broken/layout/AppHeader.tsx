@@ -6,17 +6,17 @@ import { Logo } from '@/components/header/Logo';
 import { LanguageSelector } from '@/components/header/LanguageSelector';
 import { CurrencySelector } from '@/components/header/CurrencySelector';
 import { useTranslation } from 'react-i18next';
-import { Menu, X } from 'lucide-react';
+MenuX
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 
 export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpensetMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
   const { t } = useTranslation();
   
-  // Try to access the messaging context, but provide a fallback value if it's not available
+  // Try to access the messaging contextbut provide a fallback value if it's not available
   let unreadCount = 0;
   try {
     const { unreadCount: count } = useMessaging();

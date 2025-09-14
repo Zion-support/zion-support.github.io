@@ -6,7 +6,7 @@ const AI2035BreakthroughContentShowcase = () => {
     {
       id: 1,
       title: "AI 2035 Matter Creation",
-      description: "Revolutionary AI systems that can create matter from pure energy, achieving infinite ROI through reality manipulation.",
+      description: "Revolutionary AI systems that can create matter from pure energyachieving infinite ROI through reality manipulation.",
       category: "Matter Creation",
       roi: "∞",
       status: "BREAKTHROUGH",
@@ -64,19 +64,19 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Quantum AI', 'Consciousness', 'Revolutionary', '2035'],
+      tags: ['Quantum AI'Consciousness'Revolutionary'2035'],
       readTime: '15 min read',
       publishDate: '2025-01-17'
     },
     {
       id: 'ai-2035-matter-creation',
       title: 'AI 2035: Matter Creation Technology',
-      description: 'Revolutionary AI systems that can create matter from pure energy, transforming manufacturing and space exploration.',
+      description: 'Revolutionary AI systems that can create matter from pure energytransforming manufacturing and space exploration.',
       category: 'Revolutionary Technology',
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Matter Creation', 'Manufacturing', 'Space Tech', '2035'],
+      tags: ['Matter Creation'Manufacturing'Space Tech'2035'],
       readTime: '12 min read',
       publishDate: '2025-01-17'
     },
@@ -88,7 +88,7 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Dimensions', 'Consciousness', 'Parallel Universes', '2035'],
+      tags: ['Dimensions'Consciousness'Parallel Universes'2035'],
       readTime: '18 min read',
       publishDate: '2025-01-17'
     },
@@ -100,7 +100,7 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Peace', 'Conflict Resolution', 'Universal', '2035'],
+      tags: ['Peace'Conflict Resolution'Universal'2035'],
       readTime: '20 min read',
       publishDate: '2025-01-17'
     },
@@ -112,19 +112,19 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Galaxy', 'Space Exploration', 'Expansion', '2035'],
+      tags: ['Galaxy'Space Exploration'Expansion'2035'],
       readTime: '16 min read',
       publishDate: '2025-01-17'
     },
     {
       id: 'ai-2035-immortality-protocol',
       title: 'AI 2035: Immortality Protocol Achievement',
-      description: 'Revolutionary AI breakthrough that achieved digital immortality, preserving human consciousness indefinitely.',
+      description: 'Revolutionary AI breakthrough that achieved digital immortalitypreserving human consciousness indefinitely.',
       category: 'Revolutionary Life Extension',
       roi: 'INFINITE',
       featured: true,
       image: '/api/placeholder/400/300',
-      tags: ['Immortality', 'Consciousness', 'Life Extension', '2035'],
+      tags: ['Immortality'Consciousness'Life Extension'2035'],
       readTime: '14 min read',
       publishDate: '2025-01-17'
     }
@@ -169,7 +169,7 @@ const AI2035BreakthroughContentShowcase = () => {
             AI 2035 Breakthrough Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore revolutionary AI 2035 technologies that are reshaping the future of consciousness, quantum computing, and universal intelligence.
+            Explore revolutionary AI 2035 technologies that are reshaping the future of consciousnessquantum computingand universal intelligence.
           </p>
         </div>
 

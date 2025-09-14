@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
+import { StarMapPinClockArrowRightCheckCircle2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { TalentProfile } from "@/types/talent";
 
@@ -10,7 +10,7 @@ export interface TalentCardProps {
   onViewProfile: (id: string) => void;
   onRequestHire: (talent: TalentProfile) => void;
   isSaved: boolean;
-  onToggleSave: (id: string, isSaved: boolean) => void;
+  onToggleSave: (id: stringisSaved: boolean) => void;
   isAuthenticated: boolean;
 }
 
@@ -46,12 +46,12 @@ export function TalentCard({
     e.preventDefault();
     e.stopPropagation();
     if (onToggleSave) {
-      onToggleSave(talent.id, !isSaved);
+      onToggleSave(talent.id!isSaved);
     }
   };
 
   // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) || [];
+  const skills = talent.skills?.slice(05) || [];
 
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
@@ -117,7 +117,7 @@ export function TalentCard({
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index) => (
+              {skills.map((skillindex) => (
                 <span 
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"

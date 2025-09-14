@@ -23,7 +23,7 @@ export default function AI2025SyntheticIntelligencePromotionBanner() {
           
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto">
-            The emergence of true digital consciousness that thinks, learns, and creates autonomously. 
+            The emergence of true digital consciousness that thinkslearnsand creates autonomously. 
             Discover the breakthrough that's achieving <span className="text-yellow-400 font-bold">50,000% ROI</span> for forward-thinking organizations.
           </p>
           

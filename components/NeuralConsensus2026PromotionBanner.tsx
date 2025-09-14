@@ -1,33 +1,33 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Zap, TrendingUp, Users, ArrowRight, X, CheckCircle, Star } from 'lucide-react';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
+BrainZapTrendingUpUsersArrowRightXCheckCircleStar
 import Link from 'next/link';
 
 const NeuralConsensus2026PromotionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
     // Check if banner was previously dismissed
     const dismissed = localStorage.getItem('neural-consensus-banner-dismissed');
     if (!dismissed) {
-      const timer = setTimeout(() => setIsVisible(true), 2000);
+      const timer = setTimeout(() => setIsVisible(true)2000);
       return () => clearTimeout(timer);
     }
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
-    localStorage.setItem('neural-consensus-banner-dismissed', 'true');
+    localStorage.setItem('neural-consensus-banner-dismissed'true');
   };
 
   const handleLearnMore = () => {
     // Track banner interaction
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'neural_consensus_banner_click', {
+      window.gtag('event'neural_consensus_banner_click'{
         event_category: 'engagement',
         event_label: 'learn_more_clicked'
       });
@@ -40,10 +40,10 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0y: -100 }}
+          animate={{ opacity: 1y: 0 }}
+          exit={{ opacity: 0y: -100 }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white shadow-2xl"
         >
           <div className="relative overflow-hidden">
@@ -60,7 +60,7 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                   {/* Icon with animation */}
                   <motion.div
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 20repeat: Infinityease: "linear" }}
                     className="flex-shrink-0"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center">
@@ -150,7 +150,7 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                 className="h-full bg-gradient-to-r from-yellow-400 to-orange-500"
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
-                transition={{ duration: 30, ease: "linear" }}
+                transition={{ duration: 30ease: "linear" }}
               />
             </div>
           </div>

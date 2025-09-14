@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 export default function AdvancedContentDiscoveryWidget() {
-  const [activeTab, setActiveTab] = useState('trending');
+  const [activeTabsetActiveTab] = useState('trending');
 
   const contentCategories = {
     trending: [
@@ -137,7 +137,7 @@ export default function AdvancedContentDiscoveryWidget() {
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-2xl font-bold text-white mb-2">Discover Revolutionary Content</h2>
-            <p className="text-blue-100">Explore the latest AI breakthroughs, success stories, and insights</p>
+            <p className="text-blue-100">Explore the latest AI breakthroughsuccess storiesand insights</p>
           </div>
           <div className="text-4xl">🔍</div>
         </div>
@@ -151,7 +151,7 @@ export default function AdvancedContentDiscoveryWidget() {
             breakthrough: '🚀 Breakthroughs',
             caseStudies: '📊 Case Studies',
             resources: '📚 Resources'
-          }).map(([key, label]) => (
+          }).map(([keylabel]) => (
             <button
               key={key}
               onClick={() => setActiveTab(key)}
@@ -170,7 +170,7 @@ export default function AdvancedContentDiscoveryWidget() {
       {/* Content Grid */}
       <div className="p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {contentCategories[activeTab as keyof typeof contentCategories]?.map((item, index) => (
+          {contentCategories[activeTab as keyof typeof contentCategories]?.map((itemindex) => (
             <Link
               key={index}
               href={item.href}

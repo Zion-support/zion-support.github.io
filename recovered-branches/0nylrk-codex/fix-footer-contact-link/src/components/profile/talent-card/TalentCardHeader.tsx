@@ -13,9 +13,9 @@ interface TalentCardHeaderProps {
 }
 
 export function TalentCardHeader({ 
-  fullName, 
-  professionalTitle, 
-  profilePicture, 
+  fullName
+  professionalTitle
+  profilePicture
   availabilityType,
   yearsExperience
 }: TalentCardHeaderProps) {

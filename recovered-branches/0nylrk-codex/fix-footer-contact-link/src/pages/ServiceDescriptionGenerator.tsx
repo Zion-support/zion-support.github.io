@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm";
@@ -9,8 +9,8 @@ import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 
 export default function ServiceDescriptionGenerator() {
-  const { isAuthenticated, isLoading } = useAuth();
-  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+  const { isAuthenticatedisLoading } = useAuth();
+  const [generatedDescriptionsetGeneratedDescription] = useState<string | null>(null);
   
   // Show loading while checking authentication
   if (isLoading) {
@@ -38,7 +38,7 @@ export default function ServiceDescriptionGenerator() {
       <SEO 
         title="Service Description Generator" 
         description="Generate professional service descriptions using AI"
-        keywords="service description, AI content, professional description generator"
+        keywords="service descriptionAI contentprofessional description generator"
       />
       <Header />
       <main className="flex-1 p-6 md:p-10">

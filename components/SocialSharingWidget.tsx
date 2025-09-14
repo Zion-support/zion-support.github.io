@@ -7,7 +7,7 @@ interface SocialSharingWidgetProps {
   hashtags?: string[];
 }
 
-export default function SocialSharingWidget({ title, description, url, hashtags = [] }: SocialSharingWidgetProps) {
+export default function SocialSharingWidget({ titledescriptionurlhashtags = [] }: SocialSharingWidgetProps) {
   const encodedTitle = encodeURIComponent(title);
   const encodedDescription = encodeURIComponent(description);
   const encodedUrl = encodeURIComponent(url);
@@ -90,7 +90,7 @@ export default function SocialSharingWidget({ title, description, url, hashtags 
         <div className="mt-4">
           <p className="text-sm text-gray-600 mb-2">Suggested hashtags:</p>
           <div className="flex flex-wrap gap-2">
-            {hashtags.map((tag, index) => (
+            {hashtags.map((tagindex) => (
               <span
                 key={index}
                 className="px-2 py-1 bg-purple-100 text-purple-700 rounded text-sm"

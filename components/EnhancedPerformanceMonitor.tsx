@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 
 const EnhancedPerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState({
+  const [metricsetMetrics] = useState({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
@@ -18,10 +18,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         memoryUsage: Math.random() * 100,
         networkRequests: Math.floor(Math.random() * 50) + 10
       }));
-    }, 2000);
+    }2000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   return (
     <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl p-6 border border-gray-700">
@@ -42,7 +42,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           <div className="w-full bg-gray-700 rounded-full h-2">
             <div 
               className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full transition-all duration-500"
-              style={{ width: `${Math.min((metrics.loadTime / 2000) * 100, 100)}%` }}
+              style={{ width: `${Math.min((metrics.loadTime / 2000) * 100)}%` }}
             ></div>
           </div>
         </div>
@@ -55,7 +55,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           <div className="w-full bg-gray-700 rounded-full h-2">
             <div 
               className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-500"
-              style={{ width: `${Math.min((metrics.renderTime / 500) * 100, 100)}%` }}
+              style={{ width: `${Math.min((metrics.renderTime / 500) * 100)}%` }}
             ></div>
           </div>
         </div>
@@ -81,7 +81,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           <div className="w-full bg-gray-700 rounded-full h-2">
             <div 
               className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500"
-              style={{ width: `${Math.min((metrics.networkRequests / 100) * 100, 100)}%` }}
+              style={{ width: `${Math.min((metrics.networkRequests / 100) * 100)}%` }}
             ></div>
           </div>
         </div>

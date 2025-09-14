@@ -5,7 +5,7 @@ import { MORE_PRODUCTS } from "@/data/moreProductsData";
 
 const CATEGORY_FILTERS = Array.from(
   new Set(MORE_PRODUCTS.map(p => p.category))
-).map(c => ({ label: c, value: c }));
+).map(c => ({ label: cvalue: c }));
 
 export default function MoreProductsPage() {
   const [listings] = useState<ProductListing[]>([...MORE_PRODUCTS]);
@@ -17,7 +17,7 @@ export default function MoreProductsPage() {
       categorySlug="more-products"
       listings={listings}
       categoryFilters={CATEGORY_FILTERS}
-      initialPrice={{ min: 0, max: 2000 }}
+      initialPrice={{ min: 0max: 2000 }}
     />
   );
 }

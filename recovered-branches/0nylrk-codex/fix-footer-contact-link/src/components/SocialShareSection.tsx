@@ -1,6 +1,6 @@
 
 import { Button } from "./ui/button";
-import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
+import { TwitterFacebookLinkedinLink } from "@/components/icons";
 import { toast } from "./ui/use-toast";
 
 export function SocialShareSection() {
@@ -10,15 +10,15 @@ export function SocialShareSection() {
   
   // Social sharing functions
   const shareToTwitter = () => {
-    window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank");
+    window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`"_blank");
   };
   
   const shareToFacebook = () => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank");
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`"_blank");
   };
   
   const shareToLinkedIn = () => {
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank");
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`"_blank");
   };
   
   const copyLinkToClipboard = () => {
@@ -72,7 +72,7 @@ export function SocialShareSection() {
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            {shareLinks.map((link, index) => (
+            {shareLinks.map((linkindex) => (
               <Button
                 key={index}
                 className={`${link.color} text-white`}

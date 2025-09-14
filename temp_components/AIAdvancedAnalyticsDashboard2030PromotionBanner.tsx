@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  BarChart3, 
-  TrendingUp, 
-  Users, 
-  Eye, 
-  MousePointer, 
-  Clock, 
-  Zap, 
+  BarChart3
+  TrendingUp
+  Users
+  Eye
+  MousePointer
+  Clock
+  Zap
   Target,
   Brain,
   Cpu,
@@ -18,7 +18,7 @@ import {
   Shield,
   Star,
   Award,
-  X, 
+  X
   Play,
   ArrowRight,
   Sparkles,
@@ -34,8 +34,8 @@ import {
 } from 'lucide-react';
 
 const AIAdvancedAnalyticsDashboard2030PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentMetric, setCurrentMetric] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentMetricsetCurrentMetric] = useState(0);
 
   const metrics = [
     {
@@ -65,27 +65,27 @@ const AIAdvancedAnalyticsDashboard2030PromotionBanner = () => {
   ];
 
   const features = [
-    { name: 'Predictive Analytics', icon: Brain },
-    { name: 'Real-time Insights', icon: Activity },
-    { name: 'AI Optimization', icon: Sparkles },
-    { name: 'Automated Reports', icon: BarChart3 }
+    { name: 'Predictive Analytics'icon: Brain },
+    { name: 'Real-time Insights'icon: Activity },
+    { name: 'AI Optimization'icon: Sparkles },
+    { name: 'Automated Reports'icon: BarChart3 }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMetric(prev => (prev + 1) % metrics.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0y: -100 }}
+        animate={{ opacity: 1y: 0 }}
+        exit={{ opacity: 0y: -100 }}
         className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden"
       >
         {/* Background Effects */}
@@ -106,7 +106,7 @@ const AIAdvancedAnalyticsDashboard2030PromotionBanner = () => {
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
                   <motion.div
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 2repeat: Infinityease: "linear" }}
                     className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center"
                   >
                     <Brain className="w-4 h-4 text-white" />
@@ -123,7 +123,7 @@ const AIAdvancedAnalyticsDashboard2030PromotionBanner = () => {
                 </h2>
 
                 <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-2xl">
-                  Advanced AI-powered analytics with real-time insights, predictive analytics, 
+                  Advanced AI-powered analytics with real-time insightspredictive analytics
                   and automated business intelligence for data-driven decisions.
                 </p>
 
@@ -132,9 +132,9 @@ const AIAdvancedAnalyticsDashboard2030PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentMetric}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
                       transition={{ duration: 0.5 }}
                       className="flex items-center gap-3"
                     >
@@ -175,27 +175,27 @@ const AIAdvancedAnalyticsDashboard2030PromotionBanner = () => {
                   {/* Main Visual */}
                   <motion.div
                     animate={{ 
-                      y: [0, -10, 0],
-                      rotate: [0, 2, 0]
+                      y: [0-10],
+                      rotate: [020]
                     }}
                     transition={{ 
-                      duration: 4, 
-                      repeat: Infinity, 
+                      duration: 4
+                      repeat: Infinity
                       ease: "easeInOut" 
                     }}
                     className="relative bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 backdrop-blur-sm border border-blue-500/30"
                   >
                     {/* Floating Feature Icons */}
-                    {features.map((feature, index) => (
+                    {features.map((featureindex) => (
                       <motion.div
                         key={feature.name}
                         animate={{ 
-                          y: [0, -15, 0],
-                          x: [0, 10, 0]
+                          y: [0-150],
+                          x: [010]
                         }}
                         transition={{ 
-                          duration: 3 + index * 0.5, 
-                          repeat: Infinity, 
+                          duration: 3 + index * 0.5
+                          repeat: Infinity
                           ease: "easeInOut",
                           delay: index * 0.5
                         }}
@@ -219,7 +219,7 @@ const AIAdvancedAnalyticsDashboard2030PromotionBanner = () => {
                         AI Analytics
                       </div>
                       <div className="flex justify-center gap-2 mb-4">
-                        {[...Array(5)].map((_, i) => (
+                        {[...Array(5)].map((_i) => (
                           <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                         ))}
                       </div>
@@ -273,7 +273,7 @@ const AIAdvancedAnalyticsDashboard2030PromotionBanner = () => {
             className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: 10, ease: "linear" }}
+            transition={{ duration: 10ease: "linear" }}
           />
         </div>
       </motion.div>

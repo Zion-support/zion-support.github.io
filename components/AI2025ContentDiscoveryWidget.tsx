@@ -1,11 +1,11 @@
 "use client";
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 export default function AI2025ContentDiscoveryWidget() {
-  const [activeTab, setActiveTab] = useState('breakthrough');
+  const [activeTabsetActiveTab] = useState('breakthrough');
 
   const contentCategories = {
     breakthrough: {
@@ -94,7 +94,7 @@ export default function AI2025ContentDiscoveryWidget() {
       {/* Tabs */}
       <div className="border-b border-gray-200">
         <div className="flex">
-          {Object.entries(contentCategories).map(([key, category]) => (
+          {Object.entries(contentCategories).map(([keycategory]) => (
             <button
               key={key}
               onClick={() => setActiveTab(key)}
@@ -113,7 +113,7 @@ export default function AI2025ContentDiscoveryWidget() {
       {/* Content Grid */}
       <div className="p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {currentCategory.items.map((item, index) => (
+          {currentCategory.items.map((itemindex) => (
             <Link
               key={index}
               href={item.href}

@@ -3,23 +3,23 @@ import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-  Star, Brain, Atom, Shield, Zap, TrendingUp, Globe, 
-  Rocket, Lock, Palette, Factory, Database, Cloud, 
-  Cpu, Eye, Target, Users, BarChart3
+  StarBrainAtomShieldZapTrendingUpGlobe
+  RocketLockPaletteFactoryDatabaseCloud
+  CpuEyeTargetUsersBarChart3
 } from 'lucide-react';
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   const categories = [
-    { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { name: 'Quantum & Finance', icon: Atom, color: 'from-cyan-500 to-blue-500' },
-    { name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
-    { name: 'Metaverse & AI', icon: Globe, color: 'from-green-500 to-teal-500' },
-    { name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
-    { name: 'Supply Chain & AI', icon: Factory, color: 'from-yellow-500 to-orange-500' },
-    { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' },
-    { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' },
-    { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
+    { name: 'AI & Marketing'icon: Braincolor: 'from-purple-500 to-pink-500' },
+    { name: 'Quantum & Finance'icon: Atomcolor: 'from-cyan-500 to-blue-500' },
+    { name: 'Space Technology'icon: Rocketcolor: 'from-indigo-500 to-purple-500' },
+    { name: 'Metaverse & AI'icon: Globecolor: 'from-green-500 to-teal-500' },
+    { name: 'Cybersecurity'icon: Shieldcolor: 'from-red-500 to-orange-500' },
+    { name: 'Supply Chain & AI'icon: Factorycolor: 'from-yellow-500 to-orange-500' },
+    { name: 'Quantum & Healthcare'icon: Cpucolor: 'from-violet-500 to-purple-500' },
+    { name: 'AI & Creativity'icon: Palettecolor: 'from-pink-500 to-rose-500' },
+    { name: 'AI & Robotics'icon: Databasecolor: 'from-emerald-500 to-green-500' }
   ];
 
   const getCategoryIcon = (category: string) => {
@@ -36,7 +36,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
     <Layout>
       <SEO 
         title="2025 Innovative Services Showcase | Zion Tech Group"
-        description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems."
+        description="Discover our cutting-edge 2025 innovative micro SAAS servicesIT solutionsand AI platforms. Quantum computingspace technologyand autonomous systems."
         keywords={[
           'innovative services 2025',
           'micro SAAS',
@@ -60,16 +60,16 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         
         <div className="text-center max-w-6xl mx-auto relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
             {/* Enhanced Company Badge */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0scale: 0.8 }}
+              animate={{ opacity: 1scale: 1 }}
+              transition={{ duration: 0.6delay: 0.2 }}
               className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
             >
               <Star className="w-5 h-5" />
@@ -80,14 +80,14 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               2025 Innovative Services
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
-              Pioneering the future with cutting-edge micro SAAS services, quantum computing solutions, and autonomous AI platforms
+              Pioneering the future with cutting-edge micro SAAS servicesquantum computing solutionsand autonomous AI platforms
             </p>
             
             {/* Enhanced Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.4 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
               <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20">
@@ -116,8 +116,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -131,14 +131,14 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.map((category, index) => {
+            {categories.map((categoryindex) => {
               const IconComponent = category.icon;
               return (
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -164,8 +164,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -179,14 +179,14 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {
+            {innovative2025MicroSaasBatch.filter(service => service.popular).map((serviceindex) => {
               const IconComponent = getCategoryIcon(service.category);
               return (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -210,7 +210,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                     </div>
                     
                     <div className="space-y-3 mb-6">
-                      {service.features.slice(0, 4).map((feature, idx) => (
+                      {service.features.slice(04).map((featureidx) => (
                         <div key={idx} className="flex items-center space-x-3 text-sm text-gray-300">
                           <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                           <span>{feature}</span>
@@ -240,8 +240,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -255,14 +255,14 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {innovative2025MicroSaasBatch.map((service, index) => {
+            {innovative2025MicroSaasBatch.map((serviceindex) => {
               const IconComponent = getCategoryIcon(service.category);
               return (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.05 }}
+                  initial={{ opacity: 0y: 20 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.05 }}
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -294,8 +294,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="space-y-8"
@@ -324,7 +324,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             </div>
             
             <div className="text-sm text-gray-400">
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>Address: 364 E Main St STE 1008Middletown DE 19709</p>
               <p>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>
             </div>
           </motion.div>

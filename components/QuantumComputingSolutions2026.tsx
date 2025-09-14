@@ -1,13 +1,13 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Atom, 
-  Zap, 
-  Shield, 
-  Globe, 
+  Atom
+  Zap
+  Shield
+  Globe
   Rocket,
   ArrowRight,
   CheckCircle,
@@ -21,12 +21,12 @@ import {
 } from 'lucide-react';
 
 const QuantumComputingSolutions2026 = () => {
-  const [activeSolution, setActiveSolution] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeSolutionsetActiveSolution] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const solutions = [
     {
@@ -42,7 +42,7 @@ const QuantumComputingSolutions2026 = () => {
         'Resource Allocation Problems',
         'Route Planning & Scheduling'
       ],
-      performance: { speed: '10,000x', accuracy: '99.9%' },
+      performance: { speed: '10,000x'accuracy: '99.9%' },
       useCases: [
         'Global supply chain optimization',
         'Real-time trading algorithms',
@@ -63,7 +63,7 @@ const QuantumComputingSolutions2026 = () => {
         'Quantum Random Number Generation',
         'Secure Communication Networks'
       ],
-      performance: { speed: 'Instant', accuracy: '100%' },
+      performance: { speed: 'Instant'accuracy: '100%' },
       useCases: [
         'Government communications',
         'Financial transactions',
@@ -77,14 +77,14 @@ const QuantumComputingSolutions2026 = () => {
       subtitle: 'Model Complex Systems',
       icon: Atom,
       color: 'from-cyan-600 to-blue-600',
-      description: 'Simulate quantum systems, chemical reactions, and materials at the atomic level with unprecedented accuracy.',
+      description: 'Simulate quantum systemschemical reactionsand materials at the atomic level with unprecedented accuracy.',
       features: [
         'Molecular Dynamics Simulation',
         'Drug Discovery & Development',
         'Materials Science Research',
         'Climate Modeling'
       ],
-      performance: { speed: '1Mx', accuracy: '99.99%' },
+      performance: { speed: '1Mx'accuracy: '99.99%' },
       useCases: [
         'Pharmaceutical research',
         'New material discovery',
@@ -105,7 +105,7 @@ const QuantumComputingSolutions2026 = () => {
         'Quantum Clustering Algorithms',
         'Quantum Feature Selection'
       ],
-      performance: { speed: '100x', accuracy: '95%' },
+      performance: { speed: '100x'accuracy: '95%' },
       useCases: [
         'Image recognition',
         'Natural language processing',
@@ -143,12 +143,12 @@ const QuantumComputingSolutions2026 = () => {
   ];
 
   const industries = [
-    { name: 'Healthcare', icon: '🏥', applications: ['Drug Discovery', 'Medical Imaging', 'Genomics'] },
-    { name: 'Finance', icon: '💰', applications: ['Risk Analysis', 'Algorithmic Trading', 'Fraud Detection'] },
-    { name: 'Energy', icon: '⚡', applications: ['Grid Optimization', 'Renewable Energy', 'Storage Solutions'] },
-    { name: 'Transportation', icon: '🚗', applications: ['Route Optimization', 'Autonomous Vehicles', 'Traffic Management'] },
-    { name: 'Manufacturing', icon: '🏭', applications: ['Supply Chain', 'Quality Control', 'Predictive Maintenance'] },
-    { name: 'Research', icon: '🔬', applications: ['Scientific Computing', 'Climate Modeling', 'Materials Science'] }
+    { name: 'Healthcare'icon: '🏥'applications: ['Drug Discovery'Medical Imaging'Genomics'] },
+    { name: 'Finance'icon: '💰'applications: ['Risk Analysis'Algorithmic Trading'Fraud Detection'] },
+    { name: 'Energy'icon: '⚡'applications: ['Grid Optimization'Renewable Energy'Storage Solutions'] },
+    { name: 'Transportation'icon: '🚗'applications: ['Route Optimization'Autonomous Vehicles'Traffic Management'] },
+    { name: 'Manufacturing'icon: '🏭'applications: ['Supply Chain'Quality Control'Predictive Maintenance'] },
+    { name: 'Research'icon: '🔬'applications: ['Scientific Computing'Climate Modeling'Materials Science'] }
   ];
 
   return (
@@ -158,7 +158,7 @@ const QuantumComputingSolutions2026 = () => {
         <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10" />
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/40 via-purple-900/40 to-cyan-900/40" />
         <div className="absolute inset-0">
-          {[...Array(40)].map((_, i) => (
+          {[...Array(40)].map((_i) => (
             <motion.div
               key={i}
               className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-30"
@@ -167,9 +167,9 @@ const QuantumComputingSolutions2026 = () => {
                 top: `${Math.random() * 100}%`,
               }}
               animate={{
-                y: [0, -100, 0],
-                x: [0, Math.random() * 20 - 10, 0],
-                opacity: [0.3, 0.8, 0.3],
+                y: [0-100],
+                x: [0Math.random() * 20 - 10],
+                opacity: [0.30.80.3],
               }}
               transition={{
                 duration: 5 + Math.random() * 3,
@@ -184,15 +184,15 @@ const QuantumComputingSolutions2026 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <motion.div
             initial={{ scale: 0.8 }}
             animate={isVisible ? { scale: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6delay: 0.2 }}
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full text-white text-sm font-medium mb-6"
           >
             <Atom className="w-4 h-4 mr-2" />
@@ -208,18 +208,18 @@ const QuantumComputingSolutions2026 = () => {
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Harness the power of quantum computing to solve the world's most complex problems. 
-            From optimization to encryption, discover quantum solutions that will transform your industry.
+            From optimization to encryptiondiscover quantum solutions that will transform your industry.
           </p>
         </motion.div>
 
         {/* Benefits Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
-          {benefits.map((benefit, index) => (
+          {benefits.map((benefitindex) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
@@ -235,9 +235,9 @@ const QuantumComputingSolutions2026 = () => {
 
         {/* Solutions Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -245,7 +245,7 @@ const QuantumComputingSolutions2026 = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
+            {solutions.map((solutionindex) => (
               <motion.div
                 key={solution.id}
                 whileHover={{ scale: 1.02 }}
@@ -280,7 +280,7 @@ const QuantumComputingSolutions2026 = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  {solution.features.slice(0, 3).map((feature, index) => (
+                  {solution.features.slice(03).map((featureindex) => (
                     <div key={index} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
@@ -296,9 +296,9 @@ const QuantumComputingSolutions2026 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSolution}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -30 }}
             transition={{ duration: 0.5 }}
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-16"
           >
@@ -319,7 +319,7 @@ const QuantumComputingSolutions2026 = () => {
                 </p>
                 
                 <div className="space-y-3 mb-6">
-                  {solutions[activeSolution].features.map((feature, index) => (
+                  {solutions[activeSolution].features.map((featureindex) => (
                     <div key={index} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                       {feature}
@@ -353,9 +353,9 @@ const QuantumComputingSolutions2026 = () => {
 
         {/* Industry Applications */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -363,7 +363,7 @@ const QuantumComputingSolutions2026 = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industries.map((industry, index) => (
+            {industries.map((industryindex) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
@@ -372,7 +372,7 @@ const QuantumComputingSolutions2026 = () => {
                 <div className="text-4xl mb-4">{industry.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{industry.name}</h3>
                 <div className="space-y-2">
-                  {industry.applications.map((application, appIndex) => (
+                  {industry.applications.map((applicationappIndex) => (
                     <div key={appIndex} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
                       {application}
@@ -386,9 +386,9 @@ const QuantumComputingSolutions2026 = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={isVisible ? { opacity: 1y: 0 } : {}}
+          transition={{ duration: 0.8delay: 1.0 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-3xl p-12">

@@ -3,8 +3,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Brain, Atom, Target, ArrowRight, CheckCircle, Star, 
-  Phone, Mail, MapPin
+  BrainAtomTargetArrowRightCheckCircleStar
+  PhoneMailMapPin
 } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
@@ -51,8 +51,8 @@ export default function InnovativeServicesShowcase2029() {
     <>
       <Head>
         <title>2029 Innovative Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="Discover our cutting-edge 2029 innovative services including AI autonomous ecosystems, emerging tech breakthroughs, and practical business solutions. Transform your business with next-generation technology." />
-        <meta name="keywords" content="2029 services, AI autonomous, emerging technology, business solutions, Zion Tech Group" />
+        <meta name="description" content="Discover our cutting-edge 2029 innovative services including AI autonomous ecosystemsemerging tech breakthroughsand practical business solutions. Transform your business with next-generation technology." />
+        <meta name="keywords" content="2029 servicesAI autonomousemerging technologybusiness solutionsZion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/2029-innovative-services-showcase" />
       </Head>
       
@@ -63,16 +63,16 @@ export default function InnovativeServicesShowcase2029() {
         <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
                 2029 Innovative Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-                Experience the future of technology with our revolutionary AI autonomous ecosystems, 
-                emerging tech breakthroughs, and practical business solutions that will transform your business.
+                Experience the future of technology with our revolutionary AI autonomous ecosystems
+                emerging tech breakthroughsand practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
@@ -91,26 +91,26 @@ export default function InnovativeServicesShowcase2029() {
         <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Revolutionary Service Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our 2029 services are organized into three cutting-edge categories, each designed to 
+                Our 2029 services are organized into three cutting-edge categorieseach designed to 
                 revolutionize different aspects of business and technology.
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-20">
-              {serviceCategories.map((category, index) => (
+              {serviceCategories.map((categoryindex) => (
                 <motion.div
                   key={category.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.8delay: index * 0.2 }}
                   viewport={{ once: true }} className="relative group">
                   <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-20 rounded-2xl blur-xl group-hover:opacity-30 transition-opacity duration-500`}></div>
                   <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
@@ -123,7 +123,7 @@ export default function InnovativeServicesShowcase2029() {
                       and accelerate your success in the digital age.
                     </p>
                     <div className="text-sm text-gray-400">
-                      Starting from ${Math.min(...category.services.map(s => parseInt(s.price.replace(/[^0-9]/g, ''))))}/month
+                      Starting from ${Math.min(...category.services.map(s => parseInt(s.price.replace(/[^0-9]/g''))))}/month
                     </div>
                   </div>
                 </motion.div>
@@ -136,8 +136,8 @@ export default function InnovativeServicesShowcase2029() {
         <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
@@ -150,12 +150,12 @@ export default function InnovativeServicesShowcase2029() {
             </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-8">
-              {allServices.slice(0, 4).map((service, index) => (
+              {allServices.slice(04).map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.8delay: index * 0.1 }}
                   viewport={{ once: true }} className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -172,7 +172,7 @@ export default function InnovativeServicesShowcase2029() {
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {service.category.slice(0, 3).map((cat, catIndex) => (
+                    {service.category.slice(03).map((catIndex) => (
                       <span
                         key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
                         {cat}
@@ -196,8 +196,8 @@ export default function InnovativeServicesShowcase2029() {
             </div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }} className="text-center mt-16">
               <Link
@@ -213,8 +213,8 @@ export default function InnovativeServicesShowcase2029() {
         <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 
 export default function ElasticSearchSearch() {
-  const [query, setQuery] = useState('');
+  const [querysetQuery] = useState('');
 
   const search = () => {
     // Placeholder for actual ElasticSearch request
-    console.log('ElasticSearch query', query);
+    console.log('ElasticSearch query'query);
   };
 
   return (

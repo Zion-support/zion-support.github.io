@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { CalendarIcon, ClockIcon, ArrowRightIcon, StarIcon } from '@heroicons/react/24/outline';
+import { CalendarIconClockIconArrowRightIconStarIcon } from '@heroicons/react/24/outline';
 
 export default function NewContentShowcase2025_2026() {
   const featuredContent = [
     {
       title: "AI 2025-2026: Ultimate Enterprise Transformation Revolution",
-      description: "Discover how AI is revolutionizing enterprise operations with 500%+ ROI improvements, autonomous systems, and next-generation business intelligence.",
+      description: "Discover how AI is revolutionizing enterprise operations with 500%+ ROI improvementsautonomous systemsand next-generation business intelligence.",
       category: "AI Transformation",
       readTime: "12 min read",
       date: "2025-01-15",
@@ -26,7 +26,7 @@ export default function NewContentShowcase2025_2026() {
     },
     {
       title: "AI 2025 Enterprise Transformation: 1500% ROI Success Story",
-      description: "How a Fortune 500 company achieved 1500% ROI through comprehensive AI transformation, reducing costs by 80% and increasing efficiency by 400%.",
+      description: "How a Fortune 500 company achieved 1500% ROI through comprehensive AI transformationreducing costs by 80% and increasing efficiency by 400%.",
       category: "Case Study",
       readTime: "8 min read",
       date: "2025-01-15",
@@ -52,14 +52,14 @@ export default function NewContentShowcase2025_2026() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore cutting-edge AI transformations, quantum computing breakthroughs, and proven enterprise success stories 
+            Explore cutting-edge AI transformationsquantum computing breakthroughsand proven enterprise success stories 
             that are reshaping the future of business.
           </p>
         </div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {featuredContent.map((content, index) => (
+          {featuredContent.map((contentindex) => (
             <div
               key={index}
               className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100"

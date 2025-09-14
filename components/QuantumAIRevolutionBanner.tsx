@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Cpu, Brain, Zap, Shield, TrendingUp } from 'lucide-react';
+ArrowRightCpuBrainZapShieldTrendingUp
 
 export default function QuantumAIRevolutionBanner() {
   return (
@@ -14,7 +14,7 @@ export default function QuantumAIRevolutionBanner() {
             The Quantum Computing Revolution is Here
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover how quantum computing is revolutionizing AI capabilities, delivering unprecedented processing power and solving previously impossible enterprise challenges.
+            Discover how quantum computing is revolutionizing AI capabilitiesdelivering unprecedented processing power and solving previously impossible enterprise challenges.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function QuantumAIRevolutionBanner() {
             <div>
               <h3 className="text-2xl font-bold mb-4">Featured: Quantum AI Healthcare Success</h3>
               <p className="text-lg opacity-90 mb-6">
-                Read our exclusive case study about how a leading healthcare provider achieved $2.3B in value through quantum AI implementation, revolutionizing patient care and operational efficiency.
+                Read our exclusive case study about how a leading healthcare provider achieved $2.3B in value through quantum AI implementationrevolutionizing patient care and operational efficiency.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

@@ -21,7 +21,7 @@ export default function QuantumComputing2026PromotionBanner() {
           </h2>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto">
-            Revolutionary quantum computing technology achieving true quantum supremacy with error-corrected quantum computers, quantum internet, and quantum-AI fusion delivering unprecedented 20,000% ROI.
+            Revolutionary quantum computing technology achieving true quantum supremacy with error-corrected quantum computersquantum internetand quantum-AI fusion delivering unprecedented 20,000% ROI.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -54,7 +54,7 @@ export default function QuantumComputing2026PromotionBanner() {
             <div className="text-3xl mb-3">🌐</div>
             <h3 className="text-xl font-bold text-white mb-2">Quantum Internet</h3>
             <p className="text-white/80 text-sm mb-4">
-              Global quantum internet enabling instant, secure communication and quantum cloud computing.
+              Global quantum internet enabling instantsecure communication and quantum cloud computing.
             </p>
             <div className="text-lg font-bold text-white">100% Secure</div>
           </div>
@@ -63,7 +63,7 @@ export default function QuantumComputing2026PromotionBanner() {
             <div className="text-3xl mb-3">⚛️</div>
             <h3 className="text-xl font-bold text-white mb-2">Quantum-AI Fusion</h3>
             <p className="text-white/80 text-sm mb-4">
-              Revolutionary fusion of quantum computing with AI, enabling exponential processing power.
+              Revolutionary fusion of quantum computing with AIenabling exponential processing power.
             </p>
             <div className="text-lg font-bold text-white">20,000% ROI</div>
           </div>

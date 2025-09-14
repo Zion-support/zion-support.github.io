@@ -13,7 +13,7 @@ export default function NewBlogPosts2025Banner() {
             Revolutionary AI Insights
           </h2>
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Discover the latest breakthroughs in AI technology, quantum computing, and autonomous systems. 
+            Discover the latest breakthroughs in AI technologyquantum computingand autonomous systems. 
             Stay ahead of the curve with expert insights and real-world implementation strategies.
           </p>
         </div>
@@ -31,8 +31,8 @@ export default function NewBlogPosts2025Banner() {
               AI 2025 Next-Generation Autonomous Systems
             </h3>
             <p className="text-lg opacity-90 mb-6 leading-relaxed">
-              Explore revolutionary autonomous AI systems that are transforming industries with 99.8% autonomous decision-making, 
-              real-time market adaptation, and predictive business intelligence with 98.5% accuracy.
+              Explore revolutionary autonomous AI systems that are transforming industries with 99.8% autonomous decision-making
+              real-time market adaptationand predictive business intelligence with 98.5% accuracy.
             </p>
             <div className="flex flex-wrap gap-3 mb-6">
               <span className="bg-blue-500 bg-opacity-30 px-3 py-1 rounded-full text-sm">Autonomous AI</span>
@@ -104,7 +104,7 @@ export default function NewBlogPosts2025Banner() {
               <div className="text-4xl mb-4">🚀</div>
               <h4 className="text-xl font-bold mb-3">Autonomous Revolution</h4>
               <p className="opacity-90">
-                Next-generation AI systems are achieving 99.8% autonomous decision-making capabilities, 
+                Next-generation AI systems are achieving 99.8% autonomous decision-making capabilities
                 revolutionizing how businesses operate and compete.
               </p>
             </div>
@@ -112,7 +112,7 @@ export default function NewBlogPosts2025Banner() {
               <div className="text-4xl mb-4">⚛️</div>
               <h4 className="text-xl font-bold mb-3">Quantum Breakthrough</h4>
               <p className="opacity-90">
-                Quantum AI is delivering 1000x faster processing speeds and 99.9% accurate predictions, 
+                Quantum AI is delivering 1000x faster processing speeds and 99.9% accurate predictions
                 creating unprecedented competitive advantages.
               </p>
             </div>

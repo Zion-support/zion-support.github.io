@@ -1,9 +1,9 @@
 "use client";
-import React, { useState, useEffect, useMemo } from 'react';
+import React{ useStateuseEffectuseMemo } from 'react';
 import { 
-  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code, 
-  BookOpen, Zap, AlertTriangle, Lightbulb, Settings, 
-  BarChart3, Globe, Database, Cpu, Rocket, Brain
+  SearchFilterCalendarTagTrendingUpShieldCode
+  BookOpenZapAlertTriangleLightbulbSettings
+  BarChart3GlobeDatabaseCpuRocketBrain
 } from 'lucide-react';
 
 interface ContentItem {
@@ -31,16 +31,16 @@ interface ContentCategory {
 }
 
 const ContentCategorizer: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [selectedDateRange, setSelectedDateRange] = useState('all');
-  const [selectedRelevance, setSelectedRelevance] = useState('all');
-  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [selectedSubcategorysetSelectedSubcategory] = useState('all');
+  const [selectedTypesetSelectedType] = useState('all');
+  const [selectedDateRangesetSelectedDateRange] = useState('all');
+  const [selectedRelevancesetSelectedRelevance] = useState('all');
+  const [sortBysetSortBy] = useState<'date' | 'relevance' | 'title'>('date');
+  const [sortOrdersetSortOrder] = useState<'asc' | 'desc'>('desc');
 
-  // Sample content data - in a real implementation, this would come from an API
+  // Sample content data - in a real implementationthis would come from an API
   const contentItems: ContentItem[] = [
     {
       id: '1',
@@ -51,7 +51,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'structured-data',
       date: '2025-08-19',
       relevance: 'high',
-      tags: ['seo', 'json-ld', 'schema', 'audit'],
+      tags: ['seo'json-ld'schema'audit'],
       source: 'autonomous-auditor',
       type: 'report'
     },
@@ -64,7 +64,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'vulnerability-scan',
       date: '2025-08-19',
       relevance: 'high',
-      tags: ['security', 'vulnerability', 'scan', 'remediation'],
+      tags: ['security'vulnerability'scan'remediation'],
       source: 'security-scanner',
       type: 'security'
     },
@@ -77,7 +77,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'performance',
       date: '2025-08-19',
       relevance: 'high',
-      tags: ['ai', 'performance', 'optimization', 'metrics'],
+      tags: ['ai'performance'optimization'metrics'],
       source: 'ai-monitor',
       type: 'update'
     },
@@ -90,7 +90,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'deployment',
       date: '2025-08-19',
       relevance: 'medium',
-      tags: ['features', 'deployment', 'ux', 'impact'],
+      tags: ['features'deployment'ux'impact'],
       source: 'deployment-tracker',
       type: 'feature'
     },
@@ -103,7 +103,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'system-health',
       date: '2025-08-19',
       relevance: 'medium',
-      tags: ['monitoring', 'performance', 'infrastructure', 'health'],
+      tags: ['monitoring'performance'infrastructure'health'],
       source: 'health-monitor',
       type: 'report'
     },
@@ -116,7 +116,7 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'user-behavior',
       date: '2025-08-19',
       relevance: 'high',
-      tags: ['analytics', 'user-behavior', 'engagement', 'optimization'],
+      tags: ['analytics'user-behavior'engagement'optimization'],
       source: 'behavior-analyzer',
       type: 'insight'
     }
@@ -138,7 +138,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'Search optimization and performance analytics',
       color: 'from-green-500 to-emerald-500',
       count: contentItems.filter(item => item.category === 'seo').length,
-      subcategories: ['structured-data', 'performance', 'technical-seo']
+      subcategories: ['structured-data'performance'technical-seo']
     },
     {
       id: 'security',
@@ -147,7 +147,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'Security assessments and compliance reports',
       color: 'from-red-500 to-orange-500',
       count: contentItems.filter(item => item.category === 'security').length,
-      subcategories: ['vulnerability-scan', 'compliance', 'threat-detection']
+      subcategories: ['vulnerability-scan'compliance'threat-detection']
     },
     {
       id: 'ai',
@@ -156,7 +156,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'AI model performance and insights',
       color: 'from-purple-500 to-pink-500',
       count: contentItems.filter(item => item.category === 'ai').length,
-      subcategories: ['performance', 'training', 'deployment']
+      subcategories: ['performance'training'deployment']
     },
     {
       id: 'features',
@@ -165,7 +165,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'New features and system updates',
       color: 'from-yellow-500 to-orange-500',
       count: contentItems.filter(item => item.category === 'features').length,
-      subcategories: ['deployment', 'enhancements', 'roadmap']
+      subcategories: ['deployment'enhancements'roadmap']
     },
     {
       id: 'monitoring',
@@ -174,7 +174,7 @@ const ContentCategorizer: React.FC = () => {
       description: 'Infrastructure and system health',
       color: 'from-indigo-500 to-purple-500',
       count: contentItems.filter(item => item.category === 'monitoring').length,
-      subcategories: ['system-health', 'performance', 'infrastructure']
+      subcategories: ['system-health'performance'infrastructure']
     },
     {
       id: 'analytics',
@@ -183,33 +183,33 @@ const ContentCategorizer: React.FC = () => {
       description: 'User behavior and engagement insights',
       color: 'from-teal-500 to-cyan-500',
       count: contentItems.filter(item => item.category === 'analytics').length,
-      subcategories: ['user-behavior', 'engagement', 'conversion']
+      subcategories: ['user-behavior'engagement'conversion']
     }
   ];
 
   const contentTypes = [
-    { id: 'all', name: 'All Types', icon: Globe },
-    { id: 'report', name: 'Reports', icon: BookOpen },
-    { id: 'update', name: 'Updates', icon: Zap },
-    { id: 'insight', name: 'Insights', icon: Lightbulb },
-    { id: 'guide', name: 'Guides', icon: Code },
-    { id: 'security', name: 'Security', icon: Shield },
-    { id: 'feature', name: 'Features', icon: TrendingUp }
+    { id: 'all'name: 'All Types'icon: Globe },
+    { id: 'report'name: 'Reports'icon: BookOpen },
+    { id: 'update'name: 'Updates'icon: Zap },
+    { id: 'insight'name: 'Insights'icon: Lightbulb },
+    { id: 'guide'name: 'Guides'icon: Code },
+    { id: 'security'name: 'Security'icon: Shield },
+    { id: 'feature'name: 'Features'icon: TrendingUp }
   ];
 
   const dateRanges = [
-    { id: 'all', name: 'All Time' },
-    { id: 'today', name: 'Today' },
-    { id: 'week', name: 'This Week' },
-    { id: 'month', name: 'This Month' },
-    { id: 'quarter', name: 'This Quarter' }
+    { id: 'all'name: 'All Time' },
+    { id: 'today'name: 'Today' },
+    { id: 'week'name: 'This Week' },
+    { id: 'month'name: 'This Month' },
+    { id: 'quarter'name: 'This Quarter' }
   ];
 
   const relevanceLevels = [
-    { id: 'all', name: 'All Relevance', color: 'text-gray-400' },
-    { id: 'high', name: 'High Priority', color: 'text-green-400' },
-    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' },
-    { id: 'low', name: 'Low Priority', color: 'text-red-400' }
+    { id: 'all'name: 'All Relevance'color: 'text-gray-400' },
+    { id: 'high'name: 'High Priority'color: 'text-green-400' },
+    { id: 'medium'name: 'Medium Priority'color: 'text-yellow-400' },
+    { id: 'low'name: 'Low Priority'color: 'text-red-400' }
   ];
 
   const filteredItems = useMemo(() => {
@@ -226,14 +226,14 @@ const ContentCategorizer: React.FC = () => {
     });
 
     // Sort items
-    filtered.sort((a, b) => {
+    filtered.sort((ab) => {
       let comparison = 0;
       switch (sortBy) {
         case 'date':
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;
         case 'relevance':
-          const relevanceOrder = { high: 3, medium: 2, low: 1 };
+          const relevanceOrder = { high: 3medium: 2low: 1 };
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
           break;
         case 'title':
@@ -244,7 +244,7 @@ const ContentCategorizer: React.FC = () => {
     });
 
     return filtered;
-  }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
+  }[searchTermselectedCategoryselectedSubcategoryselectedTypeselectedRelevancesortBysortOrder]);
 
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.id === category);
@@ -283,7 +283,7 @@ const ContentCategorizer: React.FC = () => {
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
           <input
             type="text"
-            placeholder="Search content by title, description, tags, or keywords..."
+            placeholder="Search content by titledescriptiontagsor keywords..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
@@ -322,7 +322,7 @@ const ContentCategorizer: React.FC = () => {
               <option value="all">All Subcategories</option>
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
-                  {sub.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                  {sub.replace('-' ').replace(/\b\w/gl => l.toUpperCase())}
                 </option>
               ))}
             </select>
@@ -461,7 +461,7 @@ const ContentCategorizer: React.FC = () => {
 
               {/* Tags */}
               <div className="flex flex-wrap gap-1 mb-4">
-                {item.tags.slice(0, 3).map((tag, index) => (
+                {item.tags.slice(03).map((tagindex) => (
                   <span key={index} className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60">
                     {tag}
                   </span>

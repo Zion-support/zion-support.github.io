@@ -1,20 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Users, Briefcase, Award, MapPin, Clock, CheckCircle, ArrowRight, Star, Globe, Target } from 'lucide-react';
+UsersBriefcaseAwardMapPinClockCheckCircleArrowRightStarGlobeTarget
 import Layout from '../components/Layout';
 
 const positions = [
   {
     title: 'Senior Full Stack Developer',
     department: 'Engineering',
-    location: 'Remote / Middletown, DE',
+    location: 'Remote / MiddletownDE',
     type: 'Full-time',
     experience: '5+ years',
     salary: '$80,000 - $120,000',
     description: 'Lead development of our micro SaaS platforms and AI-powered solutions.',
     requirements: [
-      'React, Next.js, Node.js expertise',
+      'ReactNext.jsNode.js expertise',
       'Cloud architecture experience',
       'AI/ML integration knowledge',
       'Team leadership skills'
@@ -29,13 +29,13 @@ const positions = [
   {
     title: 'AI/ML Engineer',
     department: 'AI Research',
-    location: 'Remote / Middletown, DE',
+    location: 'Remote / MiddletownDE',
     type: 'Full-time',
     experience: '3+ years',
     salary: '$90,000 - $140,000',
     description: 'Develop and implement cutting-edge AI solutions for our clients.',
     requirements: [
-      'Python, TensorFlow, PyTorch',
+      'PythonTensorFlowPyTorch',
       'Machine learning algorithms',
       'Data science background',
       'Cloud AI services experience'
@@ -50,14 +50,14 @@ const positions = [
   {
     title: 'DevOps Engineer',
     department: 'Infrastructure',
-    location: 'Remote / Middletown, DE',
+    location: 'Remote / MiddletownDE',
     type: 'Full-time',
     experience: '4+ years',
     salary: '$85,000 - $130,000',
     description: 'Manage and optimize our cloud infrastructure and deployment pipelines.',
     requirements: [
-      'AWS, Azure, GCP expertise',
-      'Docker, Kubernetes',
+      'AWSAzureGCP expertise',
+      'DockerKubernetes',
       'CI/CD pipeline design',
       'Monitoring and security'
     ],
@@ -71,7 +71,7 @@ const positions = [
   {
     title: 'Product Manager',
     department: 'Product',
-    location: 'Remote / Middletown, DE',
+    location: 'Remote / MiddletownDE',
     type: 'Full-time',
     experience: '4+ years',
     salary: '$95,000 - $135,000',
@@ -99,7 +99,7 @@ const benefits = [
   },
   {
     title: 'Health & Wellness',
-    description: 'Comprehensive health, dental, and vision coverage',
+    description: 'Comprehensive healthdentaland vision coverage',
     icon: CheckCircle
   },
   {
@@ -109,12 +109,12 @@ const benefits = [
   },
   {
     title: 'Professional Growth',
-    description: 'Learning budget, conferences, and career development',
+    description: 'Learning budgetconferencesand career development',
     icon: Target
   },
   {
     title: 'Work-Life Balance',
-    description: 'Flexible hours, unlimited PTO, and mental health support',
+    description: 'Flexible hoursunlimited PTOand mental health support',
     icon: Clock
   },
   {
@@ -152,7 +152,7 @@ export default function TalentPage() {
     <Layout
       title="Join Our Team - Zion Tech Group"
       description="Join Zion Tech Group and be part of a team that's revolutionizing technology. Explore career opportunities and join us in building the future."
-      keywords="careers, jobs, employment, technology careers, software engineering, AI jobs"
+      keywords="careersjobsemploymentechnology careersoftware engineeringAI jobs"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -173,20 +173,20 @@ export default function TalentPage() {
               Open Positions
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {jobOpenings.map((job, index) => (
+              {jobOpenings.map((jobindex) => (
                 <motion.div
                   key={job.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.8delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
 =======
           
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
@@ -222,8 +222,8 @@ export default function TalentPage() {
         <section id="positions" className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
@@ -236,12 +236,12 @@ export default function TalentPage() {
             </motion.div>
 
             <div className="space-y-8">
-              {positions.map((position, index) => (
+              {positions.map((positionindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
                 >
                   <div className="p-8">
@@ -277,7 +277,7 @@ export default function TalentPage() {
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>
                         <ul className="space-y-2">
-                          {position.requirements.map((req, reqIndex) => (
+                          {position.requirements.map((reqIndex) => (
                             <li key={reqIndex} className="flex items-center text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                               {req}
@@ -288,7 +288,7 @@ export default function TalentPage() {
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-3">Benefits</h4>
                         <ul className="space-y-2">
-                          {position.benefits.map((benefit, benefitIndex) => (
+                          {position.benefits.map((benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                               {benefit}
@@ -308,8 +308,8 @@ export default function TalentPage() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
@@ -322,12 +322,12 @@ export default function TalentPage() {
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefitindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="text-center p-6"
                 >
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -345,8 +345,8 @@ export default function TalentPage() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
@@ -359,12 +359,12 @@ export default function TalentPage() {
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
+              {values.map((valueindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="text-center p-6 bg-white rounded-xl shadow-lg"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -382,8 +382,8 @@ export default function TalentPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">

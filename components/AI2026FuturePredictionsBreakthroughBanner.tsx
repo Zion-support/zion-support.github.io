@@ -18,7 +18,7 @@ export default function AI2026FuturePredictionsBreakthroughBanner() {
           {/* Subheading */}
           <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
             Explore the revolutionary AI 2026 predictions that will reshape the future. 
-            <span className="text-cyan-400 font-bold">Quantum-neural fusion</span>, consciousness AI, and transcendent intelligence await.
+            <span className="text-cyan-400 font-bold">Quantum-neural fusion</span>consciousness AIand transcendent intelligence await.
           </p>
           
           {/* Key features */}

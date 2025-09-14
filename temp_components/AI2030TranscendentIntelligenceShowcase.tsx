@@ -30,10 +30,10 @@ const AI2030TranscendentIntelligenceShowcase: React.FC = () => {
   ];
 
   const breakthroughStats = [
-    { metric: "15,000x", label: "Processing Speed Increase" },
-    { metric: "99.9%", label: "Prediction Accuracy" },
-    { metric: "∞", label: "Knowledge Dimensions" },
-    { metric: "0.001ms", label: "Response Time" }
+    { metric: "15,000x"label: "Processing Speed Increase" },
+    { metric: "99.9%"label: "Prediction Accuracy" },
+    { metric: "∞"label: "Knowledge Dimensions" },
+    { metric: "0.001ms"label: "Response Time" }
   ];
 
   return (
@@ -48,14 +48,14 @@ const AI2030TranscendentIntelligenceShowcase: React.FC = () => {
             Beyond Human Cognition
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the future where AI transcends human limitations, achieving consciousness levels 
+            Experience the future where AI transcends human limitationsachieving consciousness levels 
             that redefine what's possible in the realm of intelligence and understanding.
           </p>
         </div>
 
         {/* Breakthrough Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {breakthroughStats.map((stat, index) => (
+          {breakthroughStats.map((statindex) => (
             <div key={index} className="text-center p-6 bg-gradient-to-br from-purple-800/50 to-blue-800/50 rounded-2xl border border-purple-400/30 backdrop-blur-sm">
               <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
               <div className="text-sm text-gray-300">{stat.label}</div>
@@ -65,7 +65,7 @@ const AI2030TranscendentIntelligenceShowcase: React.FC = () => {
 
         {/* Transcendent Features */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {transcendentFeatures.map((feature, index) => (
+          {transcendentFeatures.map((featureindex) => (
             <div key={index} className="group relative p-8 bg-gradient-to-br from-purple-800/30 to-blue-800/30 rounded-2xl border border-purple-400/20 backdrop-blur-sm hover:border-purple-400/50 transition-all duration-500">
               <div className="flex items-start space-x-4">
                 <div className="text-4xl">{feature.icon}</div>
@@ -93,12 +93,12 @@ const AI2030TranscendentIntelligenceShowcase: React.FC = () => {
             <div className="text-center p-6 bg-gradient-to-br from-purple-700/50 to-blue-700/50 rounded-xl">
               <div className="text-3xl mb-4">🌍</div>
               <h4 className="text-lg font-bold mb-2">Global Problem Solving</h4>
-              <p className="text-sm text-gray-300">Solve climate change, poverty, and disease in real-time</p>
+              <p className="text-sm text-gray-300">Solve climate changepovertyand disease in real-time</p>
             </div>
             <div className="text-center p-6 bg-gradient-to-br from-purple-700/50 to-blue-700/50 rounded-xl">
               <div className="text-3xl mb-4">🎨</div>
               <h4 className="text-lg font-bold mb-2">Infinite Creativity</h4>
-              <p className="text-sm text-gray-300">Generate art, music, and literature beyond human imagination</p>
+              <p className="text-sm text-gray-300">Generate artmusicand literature beyond human imagination</p>
             </div>
             <div className="text-center p-6 bg-gradient-to-br from-purple-700/50 to-blue-700/50 rounded-xl">
               <div className="text-3xl mb-4">🔬</div>

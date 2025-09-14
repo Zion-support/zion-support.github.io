@@ -1,11 +1,11 @@
 "use client";
-import { useEffect, useMemo, useState } from 'react';
+import { useEffectuseMemouseState } from 'react';
 
 export default function Dashboard() {
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') || '';
 
-  const [branding, setBranding] = useState<{ name: string; primaryColor?: string; logoUrl?: string } | null>(null);
+  const [brandingsetBranding] = useState<{ name: string; primaryColor?: string; logoUrl?: string } | null>(null);
 
   useEffect(() => {
     async function fetchBranding() {
@@ -19,7 +19,7 @@ export default function Dashboard() {
       }
     }
     fetchBranding();
-  }, [tenantId]);
+  }[tenantId]);
 
   const accent = branding?.primaryColor || '#111827';
 
@@ -36,7 +36,7 @@ export default function Dashboard() {
           <form className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <input className="border rounded px-3 py-2" placeholder="Company Name" defaultValue={branding?.name || ''} />
             <input className="border rounded px-3 py-2" placeholder="Primary Color (hex)" />
-            <input className="border rounded px-3 py-2 md:col-span-2" placeholder="Hiring Needs (e.g., 3 engineers, 1 PM)" />
+            <input className="border rounded px-3 py-2 md:col-span-2" placeholder="Hiring Needs (e.g.3 engineers1 PM)" />
             <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 md:col-span-2">Save</button>
           </form>
         </section>

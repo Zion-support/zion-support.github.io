@@ -29,7 +29,7 @@ const AI2026UltimateBreakthroughBanner = () => {
           
           <p className="text-xl md:text-2xl opacity-90 mb-12 max-w-4xl mx-auto leading-relaxed">
             Experience the most advanced AI technologies that will revolutionize your business in 2026. 
-            From quantum neural networks to synthetic intelligence, discover the breakthrough solutions 
+            From quantum neural networks to synthetic intelligencediscover the breakthrough solutions 
             that Fortune 500 companies are already implementing.
           </p>
           

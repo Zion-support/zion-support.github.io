@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import { GradientHeading } from "@/components/GradientHeading";
 import { StepProgress } from "@/components/QuoteRequestForm/StepProgress";
 import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep";
@@ -19,10 +19,10 @@ export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | 
 export function QuoteRequestForm() {
   const navigate = useNavigate();
   const { toast } = useToast();
-  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [currentStepsetCurrentStep] = useState<QuoteRequestSteps>("service");
+  const [isSubmittingsetIsSubmitting] = useState(false);
   
-  const [formData, setFormData] = useState<QuoteFormData>({
+  const [formDatasetFormData] = useState<QuoteFormData>({
     serviceType: "",
     serviceCategory: "",
     specificItem: null,
@@ -92,11 +92,11 @@ export function QuoteRequestForm() {
     setIsSubmitting(true);
     
     try {
-      // In a real application, you would send the data to your backend
-      console.log("Submitting form data:", formData);
+      // In a real applicationyou would send the data to your backend
+      console.log("Submitting form data:"formData);
       
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      await new Promise(resolve => setTimeout(resolve1500));
       
       toast({
         title: "Quote Request Submitted",

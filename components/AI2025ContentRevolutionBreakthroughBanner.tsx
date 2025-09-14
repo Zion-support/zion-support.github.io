@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Target, TrendingUp, Users, Globe, Lightbulb } from 'lucide-react';
+ArrowRightBrainZapTargetTrendingUpUsersGlobeLightbulb
 
 export default function AI2025ContentRevolutionBreakthroughBanner() {
   return (

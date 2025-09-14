@@ -1,15 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Wrench, Code, Database, BarChart3, Shield, Zap, Brain, Star } from 'lucide-react';
+ArrowRightWrenchCodeDatabaseBarChart3ShieldZapBrainStar
 
 export default function AIToolsUtilities2025Banner() {
   const tools = [
-    { icon: Code, name: "Dev Tools", color: "blue" },
-    { icon: Database, name: "Data & Analytics", color: "green" },
-    { icon: BarChart3, name: "Business Intelligence", color: "purple" },
-    { icon: Shield, name: "Security", color: "red" },
-    { icon: Zap, name: "Automation", color: "yellow" },
-    { icon: Brain, name: "AI & ML", color: "pink" }
+    { icon: Codename: "Dev Tools"color: "blue" },
+    { icon: Databasename: "Data & Analytics"color: "green" },
+    { icon: BarChart3name: "Business Intelligence"color: "purple" },
+    { icon: Shieldname: "Security"color: "red" },
+    { icon: Zapname: "Automation"color: "yellow" },
+    { icon: Brainame: "AI & ML"color: "pink" }
   ];
 
   return (
@@ -32,13 +32,13 @@ export default function AIToolsUtilities2025Banner() {
             </h2>
             
             <p className="text-lg text-gray-300 mb-6 max-w-2xl">
-              Discover 100+ powerful AI tools and utilities designed to accelerate your development, 
-              streamline operations, and maximize productivity across all business functions.
+              Discover 100+ powerful AI tools and utilities designed to accelerate your development
+              streamline operationsand maximize productivity across all business functions.
             </p>
 
             {/* Tool Categories */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-              {tools.map((tool, index) => {
+              {tools.map((toolindex) => {
                 const IconComponent = tool.icon;
                 const colorClasses = {
                   blue: "text-blue-400 bg-blue-500/20",

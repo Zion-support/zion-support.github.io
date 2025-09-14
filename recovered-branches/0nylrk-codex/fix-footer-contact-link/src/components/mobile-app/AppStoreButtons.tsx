@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Apple, GithubIcon } from "lucide-react";
+import { AppleGithubIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface AppStoreButtonsProps {
@@ -12,7 +12,7 @@ interface AppStoreButtonsProps {
 }
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
-  className, 
+  className
   appStoreUrl = "#",
   googlePlayUrl = "#",
   onAppStoreClick,
@@ -35,7 +35,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   };
 
   return (
-    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
+    <div className={cn("flex flex-col sm:flex-row gap-4"className)}>
       <a 
         href={appStoreUrl} 
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"

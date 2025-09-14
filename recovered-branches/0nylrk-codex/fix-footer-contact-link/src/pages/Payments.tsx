@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TransactionHistory } from "@/components/transactions/TransactionHistory";
 import { GradientHeading } from "@/components/GradientHeading";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 
 export default function Payments() {
   return (
@@ -17,7 +17,7 @@ export default function Payments() {
               Payments & Transactions
             </GradientHeading>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Track your payment history, manage transactions in escrow, and view your financial activities.
+              Track your payment historymanage transactions in escrowand view your financial activities.
             </p>
           </div>
           
@@ -42,7 +42,7 @@ export default function Payments() {
                       Manage your payment methods and set your default preference.
                     </p>
                     <Button 
-                      onClick={() => window.open('https://stripe.com', '_blank')}
+                      onClick={() => window.open('https://stripe.com'_blank')}
                       className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
                     >
                       Manage Payment Methods

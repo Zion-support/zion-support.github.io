@@ -1,18 +1,18 @@
 "use client";
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Menu, ChevronDown,
-  Brain, Rocket, Shield, 
+  MenuChevronDown,
+  BrainRocketShield
   Zap,
-  Target, Atom,
+  TargetAtom,
   BookOpen,
-  Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight,
-  Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb,
-  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
+  TruckDollarSignBarChart3GlobeUsersXPhoneMailMapPinArrowRight,
+  StarSparklesCpuLockCloudBarChart3 as BarChart3IconSettingsEyeAwardClockHeartLightbulb,
+  PaletteCodeDatabaseShield as ShieldIconGlobe as GlobeIconZap as ZapIconTarget as Target
 } from 'lucide-react';
 
 const navigationItems = [

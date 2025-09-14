@@ -7,7 +7,7 @@ export default function IndustrySolutions() {
     <>
       <Head>
         <title>Industry Solutions | Zion Tech Group</title>
-        <meta name="description" content="Industry-specific AI, quantum, and micro SaaS solutions for healthcare, finance, manufacturing, retail, education, government, energy, biotech and more." />
+        <meta name="description" content="Industry-specific AIquantumand micro SaaS solutions for healthcarefinancemanufacturingretaileducationgovernmentenergybiotech and more." />
         <link rel="canonical" href="https://ziontechgroup.com/industry-solutions" />
       </Head>
       <div className="min-h-screen bg-black text-white">

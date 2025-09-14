@@ -4,22 +4,22 @@ import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Star, MessageSquare, Brain, Shield } from "lucide-react";
+import { StarMessageSquareBrainShield } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 import { toast } from "@/hooks/use-toast";
 import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { AppLayout } from "@/layout/AppLayout";
 import { ProfileContact } from "@/components/profile/ProfileContact";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { DialogContentDialogHeaderDialogTitle } from "@/components/ui/dialog";
 
 export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a
+  // useParams may be untyped in this environmentso avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
   const { id } = useParams() as { id?: string };
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  const [selectedImageIndexsetSelectedImageIndex] = useState(0);
+  const [isLoadingsetIsLoading] = useState(false);
+  const [isContactDialogOpensetIsContactDialogOpen] = useState(false);
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
@@ -74,7 +74,7 @@ export default function ListingDetail() {
                 
                 {listing.images && listing.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
-                    {listing.images.map((image, index) => (
+                    {listing.images.map((imageindex) => (
                       <div 
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
@@ -132,7 +132,7 @@ export default function ListingDetail() {
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
                   <div className="flex flex-wrap gap-2">
-                    {listing.tags.map((tag, i) => (
+                    {listing.tags.map((tagi) => (
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
                         {tag}
                       </Badge>
@@ -161,7 +161,7 @@ export default function ListingDetail() {
                 {listing.rating && (
                   <div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
+                      {[...Array(5)].map((_i) => (
                         <Star
                           key={i}
                           className={cn(

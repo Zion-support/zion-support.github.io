@@ -24,7 +24,7 @@ export default function AutonomousSystems2025RevolutionBanner() {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             The Revolution is Here - Discover how autonomous AI systems are transforming business operations 
-            with self-managing, self-optimizing, and self-healing capabilities.
+            with self-managingself-optimizingand self-healing capabilities.
           </p>
         </div>
 

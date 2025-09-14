@@ -3,11 +3,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
-  Building, Factory, Camera, Video, Music, Gamepad2,
-  Crown, Award, Target, Users, Clock, Globe2
+  CheckCircleArrowRightStarTrendingUpPhoneZap
+  DollarSignShieldMailMapPinRocketBrainSparkles,
+  GlobeAtomHeartLeafCarGraduationCapScale,
+  BuildingFactoryCameraVideoMusicGamepad2,
+  CrownAwardTargetUsersClockGlobe2
 } from 'lucide-react';
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
@@ -87,19 +87,19 @@ const pricingTiers = [
 const servicePricing = [
   {
     category: '🚀 2028 Futuristic Innovations',
-    services: futuristic2028Services.slice(0, 6)
+    services: futuristic2028Services.slice(06)
   },
   {
     category: '🏙️ Smart City & Infrastructure',
-    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0, 4)
+    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(04)
   },
   {
     category: '⚛️ Quantum & Advanced Tech',
-    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
+    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(04)
   },
   {
     category: '🤖 AI & Machine Learning',
-    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
+    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(04)
   }
 ];
 
@@ -108,8 +108,8 @@ export default function Revolutionary2028Pricing() {
     <>
       <Head>
         <title>2028 Revolutionary Pricing - Zion Tech Group</title>
-        <meta name="description" content="Competitive pricing for our cutting-edge 2028 services. Transparent pricing with flexible plans for AI, quantum computing, and futuristic technology solutions." />
-        <meta name="keywords" content="2028 pricing, AI services pricing, quantum computing pricing, technology pricing, Zion Tech Group pricing" />
+        <meta name="description" content="Competitive pricing for our cutting-edge 2028 services. Transparent pricing with flexible plans for AIquantum computingand futuristic technology solutions." />
+        <meta name="keywords" content="2028 pricingAI services pricingquantum computing pricingtechnology pricingZion Tech Group pricing" />
         <meta property="og:title" content="2028 Revolutionary Pricing - Zion Tech Group" />
         <meta property="og:description" content="Competitive pricing for our cutting-edge 2028 services with transparent plans and flexible options." />
         <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2028-pricing" />
@@ -130,8 +130,8 @@ export default function Revolutionary2028Pricing() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
@@ -206,12 +206,12 @@ export default function Revolutionary2028Pricing() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map((tierindex) => (
               <motion.div
                 key={tier.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 30 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative ${tier.popular ? 'scale-105' : ''}`}
               >
@@ -242,7 +242,7 @@ export default function Revolutionary2028Pricing() {
                     </div>
 
                     <ul className="space-y-3 mb-8">
-                      {tier.features.map((feature, featureIndex) => (
+                      {tier.features.map((featureIndex) => (
                         <li key={featureIndex} className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200">{feature}</span>
@@ -276,16 +276,16 @@ export default function Revolutionary2028Pricing() {
             </p>
           </div>
 
-          {servicePricing.map((category, categoryIndex) => (
+          {servicePricing.map((categoryIndex) => (
             <div key={category.category} className="mb-16">
               <h3 className="text-3xl font-bold text-white mb-8 text-center">{category.category}</h3>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {category.services.map((service, serviceIndex) => (
+                {category.services.map((serviceIndex) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
+                    initial={{ opacity: 0x: serviceIndex % 2 === 0 ? -30 : 30 }}
+                    whileInView={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.6delay: serviceIndex * 0.1 }}
                     viewport={{ once: true }}
                     className="group relative"
                   >
@@ -351,8 +351,8 @@ export default function Revolutionary2028Pricing() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
@@ -368,16 +368,16 @@ export default function Revolutionary2028Pricing() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.2 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
             >
               <Shield className="w-16 h-16 text-blue-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>
               <p className="text-blue-300 mb-6">
-                Transparent pricing with no surprise fees. What you see is what you pay, 
+                Transparent pricing with no surprise fees. What you see is what you pay
                 with clear value for every dollar.
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
@@ -385,9 +385,9 @@ export default function Revolutionary2028Pricing() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: 0.4 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
             >
@@ -408,8 +408,8 @@ export default function Revolutionary2028Pricing() {
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="space-y-8"

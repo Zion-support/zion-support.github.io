@@ -19,7 +19,7 @@ const RevolutionaryAI2025ContentBanner = () => {
             The Future of AI is Here
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Discover groundbreaking AI technologies, implementation strategies, and real-world applications 
+            Discover groundbreaking AI technologiesimplementation strategiesand real-world applications 
             that are reshaping industries and creating unprecedented opportunities for business transformation.
           </p>
         </div>
@@ -43,8 +43,8 @@ const RevolutionaryAI2025ContentBanner = () => {
               </div>
             </div>
             <p className="text-gray-200 mb-6 leading-relaxed">
-              Master the art of deploying AI at the edge with our comprehensive guide covering distributed intelligence, 
-              ultra-low latency processing, and real-world implementation strategies that are transforming industries.
+              Master the art of deploying AI at the edge with our comprehensive guide covering distributed intelligence
+              ultra-low latency processingand real-world implementation strategies that are transforming industries.
             </p>
             <div className="flex items-center justify-between">
               <Link 
@@ -76,7 +76,7 @@ const RevolutionaryAI2025ContentBanner = () => {
               </div>
             </div>
             <p className="text-gray-200 mb-6 leading-relaxed">
-              Transform your customer interactions with advanced conversational AI that understands context, emotion, 
+              Transform your customer interactions with advanced conversational AI that understands contextemotion
               and intent. Learn how to implement chatbots and voice assistants that deliver truly human-like experiences.
             </p>
             <div className="flex items-center justify-between">
@@ -101,7 +101,7 @@ const RevolutionaryAI2025ContentBanner = () => {
             </h3>
             <p className="text-xl opacity-90 max-w-4xl mx-auto">
               Your step-by-step guide to AI transformation. From strategy development to full-scale deployment 
-              with proven methodologies, best practices, and real-world success stories.
+              with proven methodologiesbest practicesand real-world success stories.
             </p>
           </div>
           
@@ -111,21 +111,21 @@ const RevolutionaryAI2025ContentBanner = () => {
                 <span className="text-3xl">🎯</span>
               </div>
               <h4 className="text-xl font-bold mb-2">Strategic Foundation</h4>
-              <p className="opacity-80">Business case development, readiness assessment, and AI strategy formulation.</p>
+              <p className="opacity-80">Business case developmentreadiness assessmentand AI strategy formulation.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-black bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">⚙️</span>
               </div>
               <h4 className="text-xl font-bold mb-2">Technology Selection</h4>
-              <p className="opacity-80">Architecture design, platform selection, and vendor evaluation processes.</p>
+              <p className="opacity-80">Architecture designplatform selectionand vendor evaluation processes.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-black bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">🚀</span>
               </div>
               <h4 className="text-xl font-bold mb-2">Implementation & Scale</h4>
-              <p className="opacity-80">Pilot projects, full deployment, optimization, and continuous improvement.</p>
+              <p className="opacity-80">Pilot projectsfull deploymentoptimizationand continuous improvement.</p>
             </div>
           </div>
 
