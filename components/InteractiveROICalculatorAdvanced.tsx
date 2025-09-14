@@ -2,101 +2,79 @@ import React, { useState, useEffect } from 'react';
 
 const InteractiveROICalculatorAdvanced = () => {
   const [formData, setFormData] = useState({
-    companySize: 'small',
-    industry: 'technology',
-    currentAutomation: 0,
-    monthlyRevenue: 100000,
-    employees: 50,
-    currentEfficiency: 60,
-    targetEfficiency: 85,
-    implementationTime: 6,
-    monthlyCosts: 50000
+    currentEmployees: 100,
+    averageSalary: 75000,
+    manualProcesses: 50,
+    errorRate: 15,
+    processingTime: 8,
+    customerSatisfaction: 70,
+    revenue: 10000000
   });
 
-  const [results, setResults] = useState({
-    efficiencyGain: 0,
-    costSavings: 0,
-    revenueIncrease: 0,
-    totalROI: 0,
-    paybackPeriod: 0,
-    netBenefit: 0
-  });
-
-  const [isCalculated, setIsCalculated] = useState(false);
-
-  const companySizes = [
-    { value: 'startup', label: 'Startup (1-10 employees)', multiplier: 0.8 },
-    { value: 'small', label: 'Small (11-50 employees)', multiplier: 1.0 },
-    { value: 'medium', label: 'Medium (51-200 employees)', multiplier: 1.5 },
-    { value: 'large', label: 'Large (201-1000 employees)', multiplier: 2.0 },
-    { value: 'enterprise', label: 'Enterprise (1000+ employees)', multiplier: 3.0 }
-  ];
-
-  const industries = [
-    { value: 'technology', label: 'Technology', multiplier: 1.2 },
-    { value: 'manufacturing', label: 'Manufacturing', multiplier: 1.5 },
-    { value: 'healthcare', label: 'Healthcare', multiplier: 1.3 },
-    { value: 'finance', label: 'Finance', multiplier: 1.4 },
-    { value: 'retail', label: 'Retail', multiplier: 1.1 },
-    { value: 'education', label: 'Education', multiplier: 0.9 },
-    { value: 'other', label: 'Other', multiplier: 1.0 }
-  ];
+  const [results, setResults] = useState(null);
+  const [isCalculating, setIsCalculating] = useState(false);
 
   const calculateROI = () => {
-    const sizeMultiplier = companySizes.find(s => s.value === formData.companySize)?.multiplier || 1;
-    const industryMultiplier = industries.find(i => i.value === formData.industry)?.multiplier || 1;
+    setIsCalculating(true);
     
-    // Base calculations
-    const efficiencyGain = formData.targetEfficiency - formData.currentEfficiency;
-    const efficiencyGainPercent = efficiencyGain / 100;
-    
-    // Cost savings from efficiency gains
-    const laborCostSavings = formData.monthlyCosts * efficiencyGainPercent * 0.6; // 60% of costs are labor
-    const operationalSavings = formData.monthlyCosts * efficiencyGainPercent * 0.3; // 30% operational
-    const totalMonthlySavings = (laborCostSavings + operationalSavings) * sizeMultiplier * industryMultiplier;
-    
-    // Revenue increase from efficiency gains
-    const revenueIncrease = formData.monthlyRevenue * efficiencyGainPercent * 0.4; // 40% of efficiency gains translate to revenue
-    
-    // Implementation costs (based on company size and complexity)
-    const baseImplementationCost = 50000;
-    const implementationCost = baseImplementationCost * sizeMultiplier * industryMultiplier;
-    
-    // Monthly AI solution costs
-    const monthlyAICost = 5000 * sizeMultiplier;
-    
-    // Calculate annual benefits
-    const annualSavings = totalMonthlySavings * 12;
-    const annualRevenueIncrease = revenueIncrease * 12;
-    const annualAICost = monthlyAICost * 12;
-    const totalAnnualBenefit = annualSavings + annualRevenueIncrease - annualAICost;
-    
-    // ROI calculation
-    const totalROI = ((totalAnnualBenefit - implementationCost) / implementationCost) * 100;
-    const paybackPeriod = implementationCost / (totalAnnualBenefit / 12);
-    const netBenefit = totalAnnualBenefit - implementationCost;
-    
-    setResults({
-      efficiencyGain: efficiencyGain,
-      costSavings: annualSavings,
-      revenueIncrease: annualRevenueIncrease,
-      totalROI: totalROI,
-      paybackPeriod: paybackPeriod,
-      netBenefit: netBenefit
-    });
-    
-    setIsCalculated(true);
+    // Simulate calculation delay
+    setTimeout(() => {
+      const {
+        currentEmployees,
+        averageSalary,
+        manualProcesses,
+        errorRate,
+        processingTime,
+        customerSatisfaction,
+        revenue
+      } = formData;
+
+      // AI Implementation Costs
+      const aiSetupCost = 500000; // Base setup cost
+      const aiMonthlyCost = 50000; // Monthly operational cost
+      const trainingCost = currentEmployees * 2000; // Training cost per employee
+      const totalFirstYearCost = aiSetupCost + (aiMonthlyCost * 12) + trainingCost;
+
+      // Cost Savings Calculations
+      const laborSavings = (currentEmployees * 0.4) * averageSalary; // 40% reduction in labor
+      const processEfficiency = manualProcesses * 0.8 * 1000; // 80% process automation
+      const errorReduction = (errorRate / 100) * revenue * 0.1; // 10% of revenue lost to errors
+      const timeSavings = processingTime * 0.6 * currentEmployees * 50; // 60% time reduction
+      const customerRetention = (customerSatisfaction / 100) * revenue * 0.05; // 5% revenue from satisfaction
+
+      const totalAnnualSavings = laborSavings + processEfficiency + errorReduction + timeSavings + customerRetention;
+      const netSavings = totalAnnualSavings - totalFirstYearCost;
+      const roi = ((netSavings / totalFirstYearCost) * 100);
+      const paybackPeriod = totalFirstYearCost / (totalAnnualSavings / 12);
+
+      setResults({
+        totalFirstYearCost,
+        totalAnnualSavings,
+        netSavings,
+        roi,
+        paybackPeriod,
+        laborSavings,
+        processEfficiency,
+        errorReduction,
+        timeSavings,
+        customerRetention
+      });
+      setIsCalculating(false);
+    }, 1500);
   };
 
-  const handleInputChange = (field: string, value: any) => {
+  useEffect(() => {
+    calculateROI();
+  }, [formData]);
+
+  const handleInputChange = (field, value) => {
     setFormData(prev => ({
       ...prev,
-      [field]: value
+      [field]: parseFloat(value) || 0
     }));
-    setIsCalculated(false);
   };
 
-  const formatCurrency = (amount: number) => {
+  const formatCurrency = (amount) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -105,263 +83,235 @@ const InteractiveROICalculatorAdvanced = () => {
     }).format(amount);
   };
 
-  const formatNumber = (num: number, decimals: number = 1) => {
-    return num.toFixed(decimals);
+  const formatNumber = (num) => {
+    return new Intl.NumberFormat('en-US').format(num);
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-semibold">💰 ROI CALCULATOR</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 rounded-full px-6 py-2 mb-4 text-sm font-semibold text-white">
+            <span className="mr-2">💰</span>
+            INTERACTIVE ROI CALCULATOR
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Calculate Your AI Investment ROI
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Calculate Your AI Automation ROI
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            See exactly how much you could save and earn with our AI solutions. 
-            Get personalized ROI projections based on your business metrics.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover the potential return on investment for your AI automation implementation. 
+            Get personalized insights based on your business metrics.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Input Form */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Business Details</h3>
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Business Metrics</h3>
             
             <div className="space-y-6">
-              {/* Company Size */}
+              {/* Current Employees */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-3">Company Size</label>
-                <select
-                  value={formData.companySize}
-                  onChange={(e) => handleInputChange('companySize', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                >
-                  {companySizes.map((size) => (
-                    <option key={size.value} value={size.value}>
-                      {size.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Industry */}
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-3">Industry</label>
-                <select
-                  value={formData.industry}
-                  onChange={(e) => handleInputChange('industry', e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                >
-                  {industries.map((industry) => (
-                    <option key={industry.value} value={industry.value}>
-                      {industry.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Monthly Revenue */}
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-3">
-                  Monthly Revenue: {formatCurrency(formData.monthlyRevenue)}
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Current Employees
                 </label>
                 <input
-                  type="range"
-                  min="10000"
-                  max="10000000"
-                  step="10000"
-                  value={formData.monthlyRevenue}
-                  onChange={(e) => handleInputChange('monthlyRevenue', parseInt(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
-                />
-                <div className="flex justify-between text-sm text-gray-500 mt-1">
-                  <span>$10K</span>
-                  <span>$10M</span>
-                </div>
-              </div>
-
-              {/* Number of Employees */}
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-3">
-                  Number of Employees: {formData.employees}
-                </label>
-                <input
-                  type="range"
+                  type="number"
+                  value={formData.currentEmployees}
+                  onChange={(e) => handleInputChange('currentEmployees', e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   min="1"
-                  max="10000"
-                  step="1"
-                  value={formData.employees}
-                  onChange={(e) => handleInputChange('employees', parseInt(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                 />
-                <div className="flex justify-between text-sm text-gray-500 mt-1">
-                  <span>1</span>
-                  <span>10,000</span>
-                </div>
               </div>
 
-              {/* Current Efficiency */}
+              {/* Average Salary */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-3">
-                  Current Efficiency: {formData.currentEfficiency}%
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Average Annual Salary ($)
                 </label>
                 <input
-                  type="range"
-                  min="20"
-                  max="90"
-                  step="5"
-                  value={formData.currentEfficiency}
-                  onChange={(e) => handleInputChange('currentEfficiency', parseInt(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                  type="number"
+                  value={formData.averageSalary}
+                  onChange={(e) => handleInputChange('averageSalary', e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  min="0"
                 />
-                <div className="flex justify-between text-sm text-gray-500 mt-1">
-                  <span>20%</span>
-                  <span>90%</span>
-                </div>
               </div>
 
-              {/* Target Efficiency */}
+              {/* Manual Processes */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-3">
-                  Target Efficiency: {formData.targetEfficiency}%
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Number of Manual Processes
                 </label>
                 <input
-                  type="range"
-                  min={formData.currentEfficiency + 5}
-                  max="95"
-                  step="5"
-                  value={formData.targetEfficiency}
-                  onChange={(e) => handleInputChange('targetEfficiency', parseInt(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                  type="number"
+                  value={formData.manualProcesses}
+                  onChange={(e) => handleInputChange('manualProcesses', e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  min="0"
                 />
-                <div className="flex justify-between text-sm text-gray-500 mt-1">
-                  <span>{formData.currentEfficiency + 5}%</span>
-                  <span>95%</span>
-                </div>
               </div>
 
-              {/* Monthly Operating Costs */}
+              {/* Error Rate */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-3">
-                  Monthly Operating Costs: {formatCurrency(formData.monthlyCosts)}
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Current Error Rate (%)
                 </label>
                 <input
-                  type="range"
-                  min="5000"
-                  max="5000000"
-                  step="5000"
-                  value={formData.monthlyCosts}
-                  onChange={(e) => handleInputChange('monthlyCosts', parseInt(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                  type="number"
+                  value={formData.errorRate}
+                  onChange={(e) => handleInputChange('errorRate', e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  min="0"
+                  max="100"
                 />
-                <div className="flex justify-between text-sm text-gray-500 mt-1">
-                  <span>$5K</span>
-                  <span>$5M</span>
-                </div>
               </div>
 
-              {/* Calculate Button */}
-              <button
-                onClick={calculateROI}
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Calculate My ROI
-              </button>
+              {/* Processing Time */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Average Processing Time (hours)
+                </label>
+                <input
+                  type="number"
+                  value={formData.processingTime}
+                  onChange={(e) => handleInputChange('processingTime', e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  min="0"
+                />
+              </div>
+
+              {/* Customer Satisfaction */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Customer Satisfaction Score (%)
+                </label>
+                <input
+                  type="number"
+                  value={formData.customerSatisfaction}
+                  onChange={(e) => handleInputChange('customerSatisfaction', e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  min="0"
+                  max="100"
+                />
+              </div>
+
+              {/* Annual Revenue */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Annual Revenue ($)
+                </label>
+                <input
+                  type="number"
+                  value={formData.revenue}
+                  onChange={(e) => handleInputChange('revenue', e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  min="0"
+                />
+              </div>
             </div>
           </div>
 
           {/* Results */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Your ROI Projection</h3>
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">ROI Analysis Results</h3>
             
-            {!isCalculated ? (
-              <div className="text-center py-12">
-                <div className="text-6xl mb-4">💰</div>
-                <p className="text-gray-500 text-lg">Fill in your details and click "Calculate My ROI" to see your personalized results</p>
+            {isCalculating ? (
+              <div className="flex items-center justify-center py-12">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+                <span className="ml-4 text-gray-600">Calculating your ROI...</span>
               </div>
-            ) : (
+            ) : results ? (
               <div className="space-y-6">
                 {/* Main ROI */}
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-6">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-green-600 mb-2">
-                      {formatNumber(results.totalROI)}%
-                    </div>
-                    <div className="text-lg font-semibold text-green-800">Expected ROI</div>
-                    <div className="text-sm text-green-600 mt-1">First year return on investment</div>
+                <div className="text-center bg-gradient-to-r from-purple-100 to-blue-100 rounded-lg p-6">
+                  <div className="text-4xl font-bold text-purple-600 mb-2">
+                    {formatNumber(Math.round(results.roi))}%
                   </div>
+                  <div className="text-lg font-semibold text-gray-700">Return on Investment</div>
                 </div>
 
                 {/* Key Metrics */}
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-blue-600 mb-1">
-                      {formatNumber(results.efficiencyGain)}%
+                  <div className="bg-gray-50 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-green-600">
+                      {formatCurrency(results.totalAnnualSavings)}
                     </div>
-                    <div className="text-sm font-semibold text-blue-800">Efficiency Gain</div>
+                    <div className="text-sm text-gray-600">Annual Savings</div>
                   </div>
-                  <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-purple-600 mb-1">
-                      {formatNumber(results.paybackPeriod, 1)}m
+                  <div className="bg-gray-50 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-blue-600">
+                      {formatCurrency(results.totalFirstYearCost)}
                     </div>
-                    <div className="text-sm font-semibold text-purple-800">Payback Period</div>
+                    <div className="text-sm text-gray-600">First Year Cost</div>
                   </div>
                 </div>
 
-                {/* Financial Benefits */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-gray-900">Annual Benefits</h4>
-                  
-                  <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span className="text-gray-600">Cost Savings</span>
-                    <span className="font-semibold text-green-600">{formatCurrency(results.costSavings)}</span>
+                {/* Payback Period */}
+                <div className="bg-yellow-50 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-yellow-600">
+                    {results.paybackPeriod.toFixed(1)} months
                   </div>
-                  
-                  <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span className="text-gray-600">Revenue Increase</span>
-                    <span className="font-semibold text-blue-600">{formatCurrency(results.revenueIncrease)}</span>
-                  </div>
-                  
-                  <div className="flex justify-between items-center py-3 bg-gray-50 rounded-lg px-4">
-                    <span className="font-semibold text-gray-900">Net Annual Benefit</span>
-                    <span className="font-bold text-purple-600 text-lg">{formatCurrency(results.netBenefit)}</span>
+                  <div className="text-sm text-gray-600">Payback Period</div>
+                </div>
+
+                {/* Breakdown */}
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-gray-900">Savings Breakdown:</h4>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span>Labor Savings:</span>
+                      <span className="font-semibold">{formatCurrency(results.laborSavings)}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Process Efficiency:</span>
+                      <span className="font-semibold">{formatCurrency(results.processEfficiency)}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Error Reduction:</span>
+                      <span className="font-semibold">{formatCurrency(results.errorReduction)}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Time Savings:</span>
+                      <span className="font-semibold">{formatCurrency(results.timeSavings)}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Customer Retention:</span>
+                      <span className="font-semibold">{formatCurrency(results.customerRetention)}</span>
+                    </div>
                   </div>
                 </div>
 
                 {/* CTA */}
                 <div className="pt-4">
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                    Get Detailed Proposal
-                  </button>
+                  <a
+                    href="/contact"
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+                  >
+                    Get Your Custom AI Strategy
+                  </a>
                 </div>
               </div>
-            )}
+            ) : null}
           </div>
         </div>
 
-        {/* Additional Info */}
-        <div className="mt-12 bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">How We Calculate ROI</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl mb-4">📊</div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Efficiency Gains</h4>
-              <p className="text-gray-600 text-sm">Based on your current vs target efficiency levels and industry benchmarks</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">💰</div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Cost Savings</h4>
-              <p className="text-gray-600 text-sm">Labor and operational cost reductions from improved efficiency</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">📈</div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Revenue Growth</h4>
-              <p className="text-gray-600 text-sm">Additional revenue from improved efficiency and customer satisfaction</p>
-            </div>
+        {/* Additional Information */}
+        <div className="mt-12 text-center">
+          <p className="text-gray-600 mb-4">
+            * This calculator provides estimates based on industry averages. Actual results may vary.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
+            <a href="/blog/ai-2025-ultimate-automation-revolution" className="text-purple-600 hover:text-purple-800">
+              Read Full AI Automation Guide →
+            </a>
+            <a href="/case-studies/fortune-500-ai-transformation" className="text-purple-600 hover:text-purple-800">
+              View Success Stories →
+            </a>
+            <a href="/services/ai-automation" className="text-purple-600 hover:text-purple-800">
+              Explore AI Services →
+            </a>
           </div>
         </div>
       </div>
