@@ -10,22 +10,16 @@ export interface ExpandedService {
   features: string[];
   benefits: string[];
   useCases: string[];
-<<<<<<< HEAD
   targetAudience: string[];
-  pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based';
-  features: string[];
-  benefits: string[];
-=======
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
   marketPrice: string;
   contactLink: string;
   tags: string[];
-<<<<<<< HEAD
   author: {
     name: string;
     id: string;
     avatarUrl?: string;
-import { ProductListing } from "@/types/listings";
+  };
+}
 
 // Expanded Services - Real Micro SAAS and IT Solutions
 export const EXPANDED_SERVICES: ProductListing[] = [
