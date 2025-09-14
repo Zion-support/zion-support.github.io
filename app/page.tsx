@@ -24,8 +24,6 @@ const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 // Import key promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
-import NewContent2026PromotionBanner from '../components/NewContent2026PromotionBanner';
-import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
 import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
 import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
@@ -44,6 +42,16 @@ import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner20
 // Import new 2026 promotional components
 import RevolutionaryAI2026ContentBanner from '../components/RevolutionaryAI2026ContentBanner';
 import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
+import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
+import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
+import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
+
+// Import new Quantum AI promotional components
+import QuantumAIRevolutionBanner2025 from '../components/QuantumAIRevolutionBanner2025';
+import QuantumAIContentShowcase2025 from '../components/QuantumAIContentShowcase2025';
+
+// Import additional promotional components
+import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -62,11 +70,11 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* New Content 2025 Ultimate Banner */}
-        <NewContent2025UltimateBanner />
+        {/* Quantum AI Revolution Banner - NEW CONTENT */}
+        <QuantumAIRevolutionBanner2025 />
         
-        {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
+        {/* AI 2026 Ultimate Showcase Banner */}
+        <AI2026UltimateShowcaseBanner />
         
         {/* Revolutionary AI 2026 Content Banner */}
         <RevolutionaryAI2026ContentBanner />
@@ -74,17 +82,23 @@ export default function HomePage() {
         {/* New Content 2026 Ultimate Showcase */}
         <NewContent2026UltimateShowcase />
         
-        {/* Quantum AI 2026 Breakthrough Banner */}
-        <QuantumAI2026BreakthroughBanner />
+        {/* AI 2026 Quantum Revolution Banner */}
+        <AI2026QuantumRevolutionBanner />
         
-        {/* Revolutionary Content 2025 Banner */}
+        {/* AI 2026 Autonomous Systems Banner */}
+        <AI2026AutonomousSystemsBanner />
+        
+        {/* Revolutionary Content 2025 Banner - NEW CONTENT */}
         <RevolutionaryContent2025Banner />
+        
+        {/* New Content 2025 Showcase Banner - FEATURED */}
+        <NewContent2025ShowcaseBanner />
         
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
         
-        {/* New Content 2025 Showcase Banner */}
-        <NewContent2025ShowcaseBanner />
+        {/* Revolutionary AI Content Banner */}
+        <RevolutionaryAIContentBanner />
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -185,6 +199,7 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <QuantumAIContentShowcase2025 />
         <NewContent2026PromotionBanner />
         <QuantumAI2026BreakthroughBanner />
         <NewContentShowcase2026 />
@@ -194,10 +209,12 @@ export default function HomePage() {
         <UltimateContentShowcase2025 />
         <RevolutionaryContent2026Banner />
         <FeaturedContentShowcase2026 />
+        <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
         <NewContentPromotionBanner />
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
+        <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
 
         {/* Advanced AI Components */}

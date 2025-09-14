@@ -77,6 +77,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // New 2025 Content
+    {
+      url: `${baseUrl}/blog/ai-2025-machine-learning-revolution-enterprise-success`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2025-cloud-computing-revolution-ultimate-guide`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/ai-transformation-2025-ultimate-success-story-enterprise`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
     // New blog posts
     {
       url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
@@ -103,6 +122,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    // Quantum AI Content
+    {
+      url: `${baseUrl}/blog/ai-2025-quantum-computing-revolution-enterprise-breakthrough`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/fortune-500-quantum-ai-transformation-2025-ultimate-success`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/resources/quantum-ai-implementation-master-guide-2025`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    }
     }
   ]
 }
