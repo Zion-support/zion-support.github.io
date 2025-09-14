@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Star, TrendingUp, Users, Clock } from 'lucide-react';
+import { X, ArrowRight, Star, TrendingUp, Users, Award } from 'lucide-react';
 
 interface ContentItem {
   id: string;
@@ -12,19 +12,29 @@ interface ContentItem {
   excerpt: string;
   featured: boolean;
   isNew: boolean;
+  tags: string[];
   metrics?: {
     roi?: string;
-    savings?: string;
     impact?: string;
+    readers?: string;
   };
 }
 
 const NewContent2026PromotionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDismissed, setIsDismissed] = useState(false);
 
-  const newContent: ContentItem[] = [
+  // Check if banner was previously dismissed
+  useEffect(() => {
+    const dismissed = localStorage.getItem('content2026-banner-dismissed');
+    if (dismissed === 'true') {
+      setIsDismissed(true);
+      setIsVisible(false);
+    }
+  }, []);
+
+  const featuredContent: ContentItem[] = [
     {
       id: 'ai-2026-enterprise-automation',
       title: 'AI 2026: Enterprise Automation Breakthrough - 400% ROI in 90 Days',
@@ -33,73 +43,72 @@ const NewContent2026PromotionBanner: React.FC = () => {
       excerpt: 'Discover how Fortune 500 companies are achieving unprecedented 400% ROI through next-generation AI automation systems.',
       featured: true,
       isNew: true,
+      tags: ['AI', 'Enterprise Automation', 'ROI', 'Business Transformation'],
       metrics: {
         roi: '400%',
-        savings: '$3.2B',
-        impact: '90 Days'
+        impact: '$5.2B',
+        readers: '50K+'
       }
     },
     {
       id: 'fortune-500-ai-transformation',
-      title: 'Fortune 500 AI Transformation: $5.2B Revenue Impact in 2026',
+      title: 'Fortune 500 AI Transformation: $5.2B Revenue Impact in 12 Months',
       type: 'case-study',
-      url: '/case-studies/fortune-500-ai-transformation-2026-success',
-      excerpt: 'How a Fortune 500 manufacturing company achieved $5.2B in additional revenue through comprehensive AI transformation.',
+      url: '/case-studies/fortune-500-ai-transformation-2026',
+      excerpt: 'Learn how a Fortune 500 company achieved $5.2B in additional revenue through strategic AI implementation.',
       featured: true,
       isNew: true,
+      tags: ['Case Study', 'Fortune 500', 'AI Transformation', 'Revenue Impact'],
       metrics: {
-        roi: '450%',
-        savings: '$5.2B',
-        impact: '18 Months'
+        roi: '500%',
+        impact: '$5.2B',
+        readers: '75K+'
       }
     },
     {
       id: 'ai-implementation-master-guide',
-      title: 'AI Implementation Master Guide 2026: Complete Roadmap to 400% ROI',
+      title: 'AI Implementation Master Guide 2026: Complete Roadmap to 500% ROI',
       type: 'resource',
       url: '/resources/ai-implementation-master-guide-2026',
-      excerpt: 'The definitive guide to implementing AI in your organization. Step-by-step roadmap to achieve 400% ROI within 90 days.',
+      excerpt: 'The definitive guide to implementing AI solutions that deliver 500% ROI within 12 months.',
       featured: true,
       isNew: true,
+      tags: ['Implementation Guide', 'AI', 'ROI', 'Best Practices'],
       metrics: {
-        roi: '400%',
-        savings: '$10M+',
-        impact: '90 Days'
+        roi: '500%',
+        impact: '1K+',
+        readers: '100K+'
       }
     }
   ];
 
+  // Auto-rotate content every 8 seconds
   useEffect(() => {
-    // Check if banner was previously dismissed
-    const dismissed = localStorage.getItem('newContent2026BannerDismissed');
-    if (!dismissed) {
-      setIsVisible(true);
+    if (!isDismissed && isVisible) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % featuredContent.length);
+      }, 8000);
+
+      return () => clearInterval(interval);
     }
-
-    // Auto-rotate content every 5 seconds
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % newContent.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [newContent.length]);
+  }, [isDismissed, isVisible, featuredContent.length]);
 
   const handleDismiss = () => {
-    setIsDismissed(true);
     setIsVisible(false);
-    localStorage.setItem('newContent2026BannerDismissed', 'true');
+    setIsDismissed(true);
+    localStorage.setItem('content2026-banner-dismissed', 'true');
   };
 
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog':
-        return '📝';
+        return <TrendingUp className="w-4 h-4" />;
       case 'case-study':
-        return '📊';
+        return <Users className="w-4 h-4" />;
       case 'resource':
-        return '📚';
+        return <Award className="w-4 h-4" />;
       default:
-        return '📄';
+        return <Star className="w-4 h-4" />;
     }
   };
 
@@ -116,9 +125,11 @@ const NewContent2026PromotionBanner: React.FC = () => {
     }
   };
 
-  if (!isVisible || isDismissed) return null;
+  if (isDismissed || !isVisible) {
+    return null;
+  }
 
-  const currentContent = newContent[currentIndex];
+  const currentContent = featuredContent[currentIndex];
 
   return (
     <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden">
@@ -134,6 +145,7 @@ const NewContent2026PromotionBanner: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex items-center justify-between">
           <div className="flex-1">
+            {/* Header */}
             <div className="flex items-center space-x-3 mb-4">
               <div className="flex items-center space-x-2">
                 <Star className="w-5 h-5 text-yellow-300" />
@@ -141,106 +153,97 @@ const NewContent2026PromotionBanner: React.FC = () => {
                   NEW 2026 CONTENT
                 </span>
               </div>
-              <div className="flex space-x-1">
-                {newContent.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentIndex ? 'bg-white' : 'bg-white/50'
-                    }`}
-                  />
-                ))}
+              <div className="flex items-center space-x-1">
+                <TrendingUp className="w-4 h-4" />
+                <span className="text-sm">Trending Now</span>
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center text-2xl">
+            {/* Content Display */}
+            <div className="space-y-4">
+              <div className="flex items-start space-x-4">
+                <div className={`p-2 rounded-lg ${getTypeColor(currentContent.type)}`}>
                   {getTypeIcon(currentContent.type)}
                 </div>
-              </div>
-              
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center space-x-3 mb-2">
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(currentContent.type)}`}>
-                    {currentContent.type.replace('-', ' ').toUpperCase()}
-                  </span>
-                  {currentContent.isNew && (
-                    <span className="px-2 py-1 bg-red-500 text-white text-xs font-medium rounded-full animate-pulse">
-                      NEW
-                    </span>
-                  )}
-                </div>
-                
-                <h3 className="text-xl md:text-2xl font-bold mb-2 leading-tight">
-                  {currentContent.title}
-                </h3>
-                
-                <p className="text-white/90 mb-4 text-sm md:text-base leading-relaxed">
-                  {currentContent.excerpt}
-                </p>
-
-                {/* Success Metrics */}
-                {currentContent.metrics && (
-                  <div className="flex flex-wrap gap-4 mb-4">
-                    <div className="flex items-center space-x-2 bg-white/20 px-3 py-2 rounded-lg">
-                      <TrendingUp className="w-4 h-4" />
-                      <span className="text-sm font-medium">
-                        {currentContent.metrics.roi} ROI
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-2 leading-tight">
+                    {currentContent.title}
+                  </h3>
+                  <p className="text-white/90 mb-3 text-sm leading-relaxed">
+                    {currentContent.excerpt}
+                  </p>
+                  
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {currentContent.tags.slice(0, 3).map((tag, index) => (
+                      <span
+                        key={index}
+                        className="px-2 py-1 bg-white/20 rounded-full text-xs font-medium"
+                      >
+                        {tag}
                       </span>
-                    </div>
-                    <div className="flex items-center space-x-2 bg-white/20 px-3 py-2 rounded-lg">
-                      <Users className="w-4 h-4" />
-                      <span className="text-sm font-medium">
-                        {currentContent.metrics.savings} Savings
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-2 bg-white/20 px-3 py-2 rounded-lg">
-                      <Clock className="w-4 h-4" />
-                      <span className="text-sm font-medium">
-                        {currentContent.metrics.impact} Timeline
-                      </span>
-                    </div>
+                    ))}
                   </div>
-                )}
 
-                <div className="flex flex-col sm:flex-row gap-3">
+                  {/* Metrics */}
+                  {currentContent.metrics && (
+                    <div className="flex items-center space-x-4 mb-4">
+                      {currentContent.metrics.roi && (
+                        <div className="flex items-center space-x-1">
+                          <span className="text-sm font-medium">ROI:</span>
+                          <span className="text-yellow-300 font-bold">{currentContent.metrics.roi}</span>
+                        </div>
+                      )}
+                      {currentContent.metrics.impact && (
+                        <div className="flex items-center space-x-1">
+                          <span className="text-sm font-medium">Impact:</span>
+                          <span className="text-green-300 font-bold">{currentContent.metrics.impact}</span>
+                        </div>
+                      )}
+                      {currentContent.metrics.readers && (
+                        <div className="flex items-center space-x-1">
+                          <span className="text-sm font-medium">Readers:</span>
+                          <span className="text-blue-300 font-bold">{currentContent.metrics.readers}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* CTA Button */}
                   <Link
                     href={currentContent.url}
-                    className="inline-flex items-center space-x-2 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                    className="inline-flex items-center space-x-2 bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                   >
                     <span>Read Now</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
-                  
-                  <Link
-                    href="/content"
-                    className="inline-flex items-center space-x-2 border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-                  >
-                    <span>View All Content</span>
-                  </Link>
                 </div>
               </div>
             </div>
+
+            {/* Progress indicators */}
+            <div className="flex space-x-1 mt-4">
+              {featuredContent.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentIndex ? 'bg-white' : 'bg-white/30'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
 
+          {/* Dismiss button */}
           <button
             onClick={handleDismiss}
-            className="flex-shrink-0 ml-4 p-2 hover:bg-white/20 rounded-lg transition-colors"
+            className="flex-shrink-0 ml-4 p-2 hover:bg-white/10 rounded-lg transition-colors"
             aria-label="Dismiss banner"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
-      </div>
-
-      {/* Progress indicator */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-white/20">
-        <div 
-          className="h-full bg-white transition-all duration-5000 ease-linear"
-          style={{ width: '100%' }}
-        />
       </div>
     </div>
   );
