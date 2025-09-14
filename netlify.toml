@@ -1,6 +1,6 @@
 [build]
   # Build command
-  command = "npm run build:netlify"
+  command = "npm run build"
   
   # Directory to publish
   publish = "dist"
