@@ -31,15 +31,9 @@ const handleApiResponse = async (res: Response) => {
 };
 
 const TalentPage: React.FC = () => {
-<<<<<<< HEAD:temp_backup/pages/talent/[id].tsx.backup.1755989869
   const router = useRouter();
   const { id } = router.query as { id?: string };
-=======
-  const params = useParams();
-  const id = params.id as string;
->>>>>>> origin/merge-open-prs-batch96:pages/talent/[id].tsx
 
-<<<<<<< HEAD
   const { data, error, isLoading } = useSWR<TalentProfile | null>(
     id ? `/api/talent/${id}` : null,
     async (url: string) => {
@@ -60,11 +54,6 @@ const TalentPage: React.FC = () => {
   // Other errors (non-404)
   if (error) {
     const err: any = error;
-=======
-  // Next.js router typing in this project doesn't include `isFallback`.
-  // Cast to any to access the property during static builds.
-  if ((router as any).isFallback) {
->>>>>>> origin/5usi8s-codex/debug-persistent-login-failure
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center">
         <h2 className="text-2xl font-semibold mb-2">Error</h2>
