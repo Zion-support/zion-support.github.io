@@ -6,6 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
   resolve: {
     alias: {
+<<<<<<< HEAD
       '@': '/workspace/src',
       '@/components': '/workspace/src/components',
       '@/hooks': '/workspace/src/hooks',
@@ -13,6 +14,9 @@ export default defineConfig({
       '@/pages': '/workspace/src/pages',
       '@/data': '/workspace/src/data',
       '@/styles': '/workspace/src/styles'
+=======
+      '@': '/workspace/src'
+>>>>>>> cursor/create-and-deploy-new-content-7b62
     }
   },
   plugins: [
