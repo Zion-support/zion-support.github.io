@@ -93,6 +93,10 @@ import AI2025QuantumBreakthroughPromotionBanner from '../components/AI2025Quantu
 import AI2025AutonomousOperationsPromotionBanner from '../components/AI2025AutonomousOperationsPromotionBanner';
 import Fortune500SuccessStoryPromotionBanner from '../components/Fortune500SuccessStoryPromotionBanner';
 
+// Import new RPA promotional components
+import NewContent2025RPARevolutionBanner from '../components/NewContent2025RPARevolutionBanner';
+import RPAContentShowcase2025 from '../components/RPAContentShowcase2025';
+
 // Import neural interface promotional components
 import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
 import NeuralInterfaceContentShowcase2025 from '../components/NeuralInterfaceContentShowcase2025';
@@ -114,6 +118,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Content 2025 RPA Revolution Banner - NEW FEATURED */}
+        <NewContent2025RPARevolutionBanner />
+        
+        {/* RPA Content Showcase 2025 - NEW FEATURED */}
+        <RPAContentShowcase2025 />
+        
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
         
