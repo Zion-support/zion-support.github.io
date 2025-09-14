@@ -50,6 +50,8 @@ import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBann
 import RevolutionaryAI2026Banner from '../components/RevolutionaryAI2026Banner';
 import AI2026RevolutionaryBanner from '../components/AI2026RevolutionaryBanner';
 import RevolutionaryTechBanner2026 from '../components/RevolutionaryTechBanner2026';
+import UltimateDigitalTransformationBanner from '../components/UltimateDigitalTransformationBanner';
+import UltimateDigitalTransformationShowcase from '../components/UltimateDigitalTransformationShowcase';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -68,6 +70,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Digital Transformation Banner */}
+        <UltimateDigitalTransformationBanner />
+        
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         
@@ -204,6 +209,9 @@ export default function HomePage() {
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
         <InteractiveContentDiscoveryWidget />
+
+        {/* Ultimate Digital Transformation Showcase */}
+        <UltimateDigitalTransformationShowcase />
 
         {/* Advanced AI Components */}
         <AdvancedContentRecommendationEngine />
