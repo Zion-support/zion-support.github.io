@@ -266,6 +266,37 @@ export const metadata = {
 };
 
 export default function HomePage() {
+  const services = [
+    {
+      title: "AI Services",
+      href: "/services/ai-services",
+      description: "Harness the power of artificial intelligence to transform your business operations.",
+      bullets: ["Machine Learning", "Natural Language Processing", "Computer Vision"],
+      icon: "🤖"
+    },
+    {
+      title: "IT Services",
+      href: "/services/it-services",
+      description: "Comprehensive IT solutions to keep your business running smoothly.",
+      bullets: ["Cloud Migration", "Cybersecurity", "DevOps"],
+      icon: "💻"
+    },
+    {
+      title: "Mobile Development",
+      href: "/services/mobile-development",
+      description: "Custom mobile applications for iOS and Android platforms.",
+      bullets: ["Native Apps", "Cross-platform", "UI/UX Design"],
+      icon: "📱"
+    },
+    {
+      title: "Data Analytics",
+      href: "/services/data-analytics",
+      description: "Turn your data into actionable insights with our analytics solutions.",
+      bullets: ["Business Intelligence", "Predictive Analytics", "Data Visualization"],
+      icon: "📊"
+    }
+  ];
+
   return (
     <ErrorBoundary>
       <PerformanceOptimizer>
