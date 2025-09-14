@@ -7560,10 +7560,6 @@
       "route": "/main/front"
     },
     {
-      "file": "pages/main/front/index.tsx",
-      "route": "/main/front"
-    },
-    {
       "file": "pages/reports/updates/update-2025-08-18T03-11.tsx",
       "route": "/reports/updates/update-2025-08-18T03-11"
     },
