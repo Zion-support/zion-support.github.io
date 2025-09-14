@@ -497,6 +497,95 @@ content_index:
         payback: "3.8 months"
 
   new_2025_content_latest:
+    - id: "advanced-automation-revolution-ultimate-guide"
+      type: "blog"
+      title: "AI 2025: The Advanced Automation Revolution - Ultimate Guide to 1,500% ROI"
+      file_path: "/content/blog/ai-2025-advanced-automation-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-advanced-automation-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Advanced Automation", "AI", "ROI", "Fortune 500", "Enterprise Transformation", "Intelligent Systems"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,500%"
+        savings: "$8.2M annually"
+        efficiency: "340% improvement"
+        implementation_time: "6-12 months"
+        success_rate: "97%"
+      reading_time: "28 min read"
+      
+    - id: "intelligent-automation-breakthrough"
+      type: "blog"
+      title: "AI 2025: The Intelligent Automation Breakthrough - 2,000% ROI Through Smart Systems"
+      file_path: "/content/blog/ai-2025-intelligent-automation-breakthrough.md"
+      url: "/blog/ai-2025-intelligent-automation-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Intelligent Automation", "AI", "ROI", "Smart Systems", "Business Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "2,000%"
+        savings: "$15.8M annually"
+        efficiency: "450% improvement"
+        implementation_time: "9-15 months"
+        success_rate: "96%"
+      reading_time: "20 min read"
+      
+    - id: "fortune-500-ai-automation-1500-roi-success"
+      type: "case-study"
+      title: "Fortune 500 AI Automation Success: $4.2B Company Achieves 1,500% ROI in 8 Months"
+      file_path: "/content/case-studies/fortune-500-ai-automation-1500-roi-success-story.md"
+      url: "/case-studies/fortune-500-ai-automation-1500-roi-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "AI Automation", "ROI", "Manufacturing", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,500%"
+        savings: "$8.2M annually"
+        efficiency: "340% improvement"
+        implementation_time: "8 months"
+        company_size: "$4.2B revenue"
+      reading_time: "22 min read"
+      
+    - id: "ai-intelligent-automation-2000-roi-success"
+      type: "case-study"
+      title: "AI Intelligent Automation Success: $3.8B Company Achieves 2,000% ROI in 12 Months"
+      file_path: "/content/case-studies/ai-intelligent-automation-2000-roi-success.md"
+      url: "/case-studies/ai-intelligent-automation-2000-roi-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Intelligent Automation", "ROI", "Logistics", "Success Story", "AI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "2,000%"
+        savings: "$15.8M annually"
+        efficiency: "450% improvement"
+        implementation_time: "12 months"
+        company_size: "$3.8B revenue"
+      reading_time: "18 min read"
+      
+    - id: "ai-automation-implementation-master-guide-2025"
+      type: "resource"
+      title: "AI Automation Implementation Master Guide 2025: From Strategy to 1,500% ROI"
+      file_path: "/content/resources/ai-automation-implementation-master-guide-2025.md"
+      url: "/resources/ai-automation-implementation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "Framework", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,500%"
+        success_rate: "97%"
+        implementation_time: "6-12 months"
+        enterprises: "500+"
+      reading_time: "35 min read"
+      
     - id: "edge-computing-revolution"
       type: "blog"
       title: "AI 2025: The Edge Computing Revolution - Ultimate Guide to 450% ROI"
