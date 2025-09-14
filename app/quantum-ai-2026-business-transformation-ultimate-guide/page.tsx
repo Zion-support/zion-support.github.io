@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 import BlogPostLayout from '../../components/BlogPostLayout';
-import ContentPromotionBanner from '../../components/ContentPromotionBanner';
+import NewContentPromotionBanner from '../../components/NewContentPromotionBanner';
 import RelatedContentWidget from '../../components/RelatedContentWidget';
 import SocialShareButtons from '../../components/SocialShareButtons';
 
@@ -173,12 +173,7 @@ export default function QuantumAI2026BusinessTransformationPage() {
       
       <div className="min-h-screen bg-white">
         {/* Content Promotion Banner */}
-        <ContentPromotionBanner 
-          title="⚛️ New: Quantum AI 2026 Business Transformation"
-          description="Discover how quantum AI will revolutionize business operations with exponential speedup and breakthrough capabilities"
-          ctaText="Read Full Guide"
-          ctaLink="/quantum-ai-2026-business-transformation-ultimate-guide"
-        />
+        <NewContentPromotionBanner />
 
         {/* Main Content */}
         <BlogPostLayout

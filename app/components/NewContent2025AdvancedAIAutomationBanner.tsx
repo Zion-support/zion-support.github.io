@@ -2,63 +2,65 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronRightIcon, XMarkIcon, SparklesIcon, ChartBarIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline';
 
-const NewContent2025AdvancedAIAutomationBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
+const NewContent2025AdvancedAIAutomationBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
   const content = [
     {
-      title: "AI 2025: Advanced AI Automation Revolution",
-      subtitle: "600% ROI in 8 Months - Ultimate Enterprise Guide",
-      description: "Transform your business with cutting-edge AI automation solutions achieving $2.8M annual savings and 340% productivity increases.",
+      id: 'ai-automation-mastery',
+      title: 'AI 2025: Advanced AI Automation Enterprise Mastery',
+      description: 'Ultimate Guide to 2,000% ROI - Transform your enterprise with cutting-edge AI automation',
+      url: '/blog/ai-2025-advanced-ai-automation-enterprise-mastery-ultimate-guide',
+      type: 'Blog Post',
       metrics: {
-        roi: "600%",
-        savings: "$2.8M",
-        productivity: "340%",
-        success: "98%"
+        roi: '2,000%',
+        savings: '$8.2B+',
+        efficiency: '95%',
+        accuracy: '99.7%'
       },
-      url: "/blog/ai-2025-advanced-ai-automation-revolution-ultimate-guide",
-      type: "blog",
-      readingTime: "18 min read"
+      badge: 'NEW',
+      color: 'from-purple-600 to-blue-600'
     },
     {
-      title: "Fortune 500 Manufacturing Success Story",
-      subtitle: "$3.2B Annual Savings with 600% ROI",
-      description: "How a global manufacturing giant achieved unprecedented success with comprehensive AI automation across their operations.",
+      id: 'fortune-500-success',
+      title: 'Fortune 500 AI Automation Transformation',
+      description: '$8.2B Annual Savings - 2,000% ROI Success Story',
+      url: '/case-studies/fortune-500-ai-automation-transformation-2000-roi-success-story',
+      type: 'Case Study',
       metrics: {
-        roi: "600%",
-        savings: "$3.2B",
-        efficiency: "89%",
-        satisfaction: "98%"
+        roi: '2,000%',
+        savings: '$8.2B',
+        efficiency: '95%',
+        uptime: '99.9%'
       },
-      url: "/case-studies/ai-automation-fortune-500-manufacturing-600-roi-success",
-      type: "case-study",
-      readingTime: "12 min read"
+      badge: 'FEATURED',
+      color: 'from-blue-600 to-indigo-600'
     },
     {
-      title: "AI Automation Implementation Master Guide",
-      subtitle: "Complete Blueprint for 600% ROI Success",
-      description: "The proven framework for implementing AI automation in enterprise environments with step-by-step guidance.",
+      id: 'implementation-guide',
+      title: 'AI Automation Implementation Master Guide 2025',
+      description: 'Complete Roadmap from Strategy to 2,000% ROI',
+      url: '/resources/ai-automation-master-guide-2025',
+      type: 'Resource',
       metrics: {
-        roi: "600%",
-        success: "98%",
-        timeline: "8 months",
-        projects: "500+"
+        roi: '2,000%',
+        timeline: '18 months',
+        success: '94%',
+        projects: '1,000+'
       },
-      url: "/resources/ai-automation-implementation-guide-2025",
-      type: "resource",
-      readingTime: "25 min read"
+      badge: 'GUIDE',
+      color: 'from-indigo-600 to-purple-600'
     }
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(timer);
   }, [content.length]);
 
   const handleDismiss = () => {
@@ -78,124 +80,124 @@ const NewContent2025AdvancedAIAutomationBanner: React.FC = () => {
   const currentContent = content[currentSlide];
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-black/10">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
-          <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
-        </div>
+    <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-8 px-4 overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-4 -left-4 w-72 h-72 bg-white opacity-10 rounded-full animate-pulse"></div>
+        <div className="absolute -bottom-8 -right-8 w-96 h-96 bg-white opacity-5 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white opacity-5 rounded-full animate-pulse delay-2000"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex items-center justify-between">
-          {/* Content */}
-          <div className="flex-1 pr-8">
-            <div className="flex items-center space-x-2 mb-3">
-              <SparklesIcon className="h-5 w-5 text-yellow-300" />
-              <span className="text-sm font-medium text-yellow-300">NEW CONTENT 2025</span>
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center space-x-3">
+            <div className="bg-white bg-opacity-20 rounded-full px-4 py-2">
+              <span className="text-sm font-bold">🚀 NEW CONTENT 2025</span>
             </div>
-            
-            <h2 className="text-2xl md:text-3xl font-bold mb-2">
-              {currentContent.title}
-            </h2>
-            
-            <p className="text-lg text-blue-100 mb-4">
-              {currentContent.subtitle}
-            </p>
-            
-            <p className="text-blue-50 mb-6 max-w-2xl">
-              {currentContent.description}
-            </p>
+            <div className="bg-white bg-opacity-20 rounded-full px-4 py-2">
+              <span className="text-sm font-bold">2,000% ROI ACHIEVED</span>
+            </div>
+          </div>
+          <button
+            onClick={handleDismiss}
+            className="text-white hover:text-gray-200 transition-colors"
+            aria-label="Dismiss banner"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
 
-            {/* Metrics Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Content Showcase */}
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <span className="bg-white bg-opacity-20 rounded-full px-3 py-1 text-sm font-bold">
+                  {currentContent.badge}
+                </span>
+                <span className="text-sm opacity-90">{currentContent.type}</span>
+              </div>
+              
+              <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
+                {currentContent.title}
+              </h2>
+              
+              <p className="text-lg opacity-90 leading-relaxed">
+                {currentContent.description}
+              </p>
+            </div>
+
+            {/* Success Metrics */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
-                <div key={key} className="bg-white/10 rounded-lg p-3 text-center">
-                  <div className="text-xl font-bold text-yellow-300">{value}</div>
-                  <div className="text-xs text-blue-100 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                <div key={key} className="bg-white bg-opacity-20 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-yellow-300">{value}</div>
+                  <div className="text-sm opacity-90 capitalize">{key.replace('_', ' ')}</div>
                 </div>
               ))}
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href={currentContent.url}
-                className="inline-flex items-center px-6 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-center"
               >
-                Read {currentContent.type === 'blog' ? 'Article' : currentContent.type === 'case-study' ? 'Case Study' : 'Guide'}
-                <ChevronRightIcon className="ml-2 h-4 w-4" />
+                Read Full Content →
               </Link>
-              
               <Link
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                href="/services"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors text-center"
               >
-                Get Consultation
+                Get Implementation Help
               </Link>
-            </div>
-
-            {/* Reading Time */}
-            <div className="mt-4 text-sm text-blue-200">
-              <ClockIcon className="inline h-4 w-4 mr-1" />
-              {currentContent.readingTime}
             </div>
           </div>
 
-          {/* Visual Elements */}
-          <div className="hidden lg:block flex-shrink-0">
-            <div className="relative">
-              {/* Animated Icons */}
-              <div className="relative w-64 h-64">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-white/10 rounded-full flex items-center justify-center animate-spin-slow">
-                    <ChartBarIcon className="h-16 w-16 text-yellow-300" />
+          {/* Content Preview Cards */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold mb-4">Featured Content</h3>
+            <div className="space-y-3">
+              {content.map((item, index) => (
+                <div
+                  key={item.id}
+                  className={`p-4 rounded-lg cursor-pointer transition-all duration-300 ${
+                    index === currentSlide
+                      ? 'bg-white bg-opacity-30 scale-105'
+                      : 'bg-white bg-opacity-10 hover:bg-opacity-20'
+                  }`}
+                  onClick={() => setCurrentSlide(index)}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-bold bg-white bg-opacity-20 rounded-full px-2 py-1">
+                      {item.badge}
+                    </span>
+                    <span className="text-sm opacity-90">{item.type}</span>
                   </div>
+                  <h4 className="font-bold text-sm mb-1">{item.title}</h4>
+                  <p className="text-xs opacity-90 line-clamp-2">{item.description}</p>
                 </div>
-                <div className="absolute top-4 right-4 w-8 h-8 bg-green-400 rounded-full flex items-center justify-center animate-bounce">
-                  <CurrencyDollarIcon className="h-5 w-5 text-white" />
-                </div>
-                <div className="absolute bottom-4 left-4 w-6 h-6 bg-blue-400 rounded-full flex items-center justify-center animate-pulse">
-                  <SparklesIcon className="h-4 w-4 text-white" />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Progress Indicators */}
-        <div className="flex justify-center space-x-2 mt-6">
+        <div className="flex justify-center space-x-2 mt-8">
           {content.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-yellow-300' : 'bg-white/30'
+              className={`w-3 h-3 rounded-full transition-all ${
+                index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-50'
               }`}
             />
           ))}
         </div>
       </div>
-
-      {/* Dismiss Button */}
-      <button
-        onClick={handleDismiss}
-        className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
-      >
-        <XMarkIcon className="h-6 w-6" />
-      </button>
     </div>
   );
 };
-
-// Clock Icon Component
-const ClockIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
 
 export default NewContent2025AdvancedAIAutomationBanner;

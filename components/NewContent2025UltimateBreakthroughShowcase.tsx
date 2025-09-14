@@ -1,108 +1,139 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function NewContent2025UltimateBreakthroughShowcase() {
-  const featuredContent = [
+const NewContent2025UltimateBreakthroughShowcase = () => {
+  const newContent = [
     {
-      title: "AI 2025 Ultimate Breakthrough Revolution",
-      description: "Discover revolutionary AI breakthroughs with 10,000% ROI success stories and cutting-edge implementations.",
-      href: "/ai-2025-ultimate-breakthrough-revolution",
-      image: "🚀",
-      category: "BREAKTHROUGH",
-      roi: "10,000%",
-      color: "from-purple-500 to-pink-500"
+      title: "AI 2025: The Ultimate Business Automation Revolution",
+      description: "Complete implementation guide covering revolutionary AI solutions, industry transformations, and proven strategies for 2500% ROI.",
+      type: "Blog Post",
+      readTime: "15 min read",
+      category: "AI Revolution",
+      href: "/blog/ai-2025-ultimate-business-automation-revolution-complete-guide",
+      featured: true
     },
     {
-      title: "AI 2026 Future Predictions Interactive",
-      description: "Explore revolutionary AI predictions for 2026 with interactive insights and breakthrough technologies.",
-      href: "/ai-2026-future-predictions-interactive",
-      image: "🔮",
-      category: "INTERACTIVE",
-      roi: "15,000%",
-      color: "from-indigo-500 to-purple-500"
+      title: "Fortune 500 AI Transformation: 2500% ROI Success Story",
+      description: "Real-world case study showing how a Fortune 500 manufacturing company achieved 2500% ROI through comprehensive AI transformation.",
+      type: "Case Study",
+      readTime: "12 min read",
+      category: "Success Stories",
+      href: "/case-studies/fortune-500-ai-transformation-2500-roi-ultimate-success-story",
+      featured: true
     },
     {
-      title: "Quantum Computing Solutions 2030",
-      description: "Revolutionary quantum computing solutions with infinite scalability and unprecedented computational power.",
-      href: "/quantum-computing-solutions-breakthrough-2030",
-      image: "⚛️",
-      category: "QUANTUM",
-      roi: "∞",
-      color: "from-cyan-500 to-blue-500"
+      title: "AI 2025 Implementation: Ultimate Master Guide",
+      description: "Step-by-step implementation guide covering strategy, technology architecture, change management, and post-implementation optimization.",
+      type: "Resource",
+      readTime: "20 min read",
+      category: "Implementation Guides",
+      href: "/resources/ai-2025-implementation-guide",
+      featured: true
     }
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-bold mb-6">
-            🚀 NEW ULTIMATE BREAKTHROUGH CONTENT
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">✨ NEW ULTIMATE BREAKTHROUGH CONTENT</span>
           </div>
-          <h2 className="text-5xl font-bold text-gray-900 mb-6">
-            Revolutionary AI Content
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+            Revolutionary AI Content for 2025
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our latest breakthrough content featuring revolutionary AI technologies, 
-            interactive predictions, and quantum computing solutions that will transform your business.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Discover our latest breakthrough content featuring comprehensive guides, 
+            real-world success stories, and proven implementation strategies.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {featuredContent.map((content, index) => (
-            <div key={index} className="bg-white rounded-3xl p-8 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className={`w-16 h-16 bg-gradient-to-r ${content.color} rounded-2xl flex items-center justify-center text-white text-2xl font-bold mr-4`}>
-                  {content.image}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {newContent.map((content, index) => (
+            <div 
+              key={index}
+              className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ${
+                content.featured ? 'ring-2 ring-purple-500' : ''
+              }`}
+            >
+              {content.featured && (
+                <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 text-sm font-semibold">
+                  ⭐ FEATURED CONTENT
                 </div>
-                <div>
-                  <div className="text-sm font-bold text-purple-600 mb-1">{content.category}</div>
-                  <h3 className="text-xl font-bold text-gray-900">{content.title}</h3>
+              )}
+              
+              <div className="p-8">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">
+                    {content.type}
+                  </span>
+                  <span className="text-gray-500 text-sm">{content.readTime}</span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  {content.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-6 line-clamp-3">
+                  {content.description}
+                </p>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">{content.category}</span>
+                  <Link
+                    href={content.href}
+                    className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold transition-colors"
+                  >
+                    Read More →
+                  </Link>
                 </div>
               </div>
-              
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                {content.description}
-              </p>
-              
-              <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-4 mb-6">
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div>
-                    <div className="text-2xl font-bold text-purple-600">{content.roi}</div>
-                    <div className="text-sm text-gray-600">Expected ROI</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-blue-600">99.9%</div>
-                    <div className="text-sm text-gray-600">Success Rate</div>
-                  </div>
-                </div>
-              </div>
-              
-              <Link 
-                href={content.href}
-                className={`inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r ${content.color} text-white rounded-xl font-bold hover:shadow-lg transition-all duration-300`}
-              >
-                Explore Content
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Link 
-            href="/content-showcase"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-bold text-lg hover:shadow-lg transition-all duration-300"
-          >
-            View All Revolutionary Content
-            <svg className="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
+        <div className="text-center">
+          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Unlock the Power of AI Transformation
+            </h3>
+            <p className="text-lg text-gray-600 mb-6">
+              Join thousands of companies already achieving breakthrough results with our comprehensive AI solutions, 
+              implementation guides, and proven methodologies.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-600 mb-2">2500%</div>
+                <div className="text-gray-600">Average ROI Achieved</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                <div className="text-gray-600">Successful Implementations</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-600 mb-2">98%</div>
+                <div className="text-gray-600">Client Satisfaction Rate</div>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              >
+                Start Your AI Journey
+              </Link>
+              <Link
+                href="/resources"
+                className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
+              >
+                Explore All Resources
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default NewContent2025UltimateBreakthroughShowcase;
