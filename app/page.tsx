@@ -54,6 +54,10 @@ import AIImplementationGuideBanner from '../components/AIImplementationGuideBann
 import AI2025AdvancedAutomationMasteryBanner from '../components/AI2025AdvancedAutomationMasteryBanner';
 import UltimateAIAutomationShowcase2025 from '../components/UltimateAIAutomationShowcase2025';
 
+// Import new Next-Generation Autonomous Systems components
+import NextGenAutonomousSystemsBanner from '../components/NextGenAutonomousSystemsBanner';
+import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
+
 // Import new enhanced components
 import AITrends2025_2030FuturePredictionsBanner from '../components/AITrends2025_2030FuturePredictionsBanner';
 import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
@@ -92,6 +96,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Next-Generation Autonomous Systems Banner - NEW FEATURED */}
+        <NextGenAutonomousSystemsBanner />
+        
         {/* AI 2025 Advanced Automation Mastery Banner - NEW FEATURED */}
         <AI2025AdvancedAutomationMasteryBanner />
         
@@ -226,6 +233,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Autonomous Systems Showcase 2025 - NEW FEATURED */}
+        <AutonomousSystemsShowcase2025 />
+        
         {/* Ultimate AI Automation Showcase 2025 - NEW FEATURED */}
         <UltimateAIAutomationShowcase2025 />
         
