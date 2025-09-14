@@ -254,10 +254,87 @@ content_index:
       - "Added NewContent2025ShowcaseSection at bottom"
       - "Updated layout to include promotional content"
 
+  new_2025_content_additions:
+    - id: "ai-2025-cybersecurity-revolution"
+      type: "blog"
+      title: "AI 2025: The Cybersecurity Revolution - How AI is Transforming Enterprise Security"
+      file_path: "/content/blog/ai-2025-cybersecurity-revolution.md"
+      url: "/blog/ai-2025-cybersecurity-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Cybersecurity", "Enterprise Security", "ROI", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "89%"
+        detection_speed: "340%"
+        annual_savings: "$2.8M"
+        accuracy: "99.7%"
+        
+    - id: "ai-2025-cloud-optimization-breakthrough"
+      type: "blog"
+      title: "AI 2025: Cloud Optimization Breakthrough - How AI is Revolutionizing Cloud Infrastructure"
+      file_path: "/content/blog/ai-2025-cloud-optimization-breakthrough.md"
+      url: "/blog/ai-2025-cloud-optimization-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Cloud Computing", "Infrastructure Optimization", "ROI", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "67%"
+        performance_improvement: "340%"
+        utilization_efficiency: "89%"
+        annual_savings: "$4.2M"
+        
+    - id: "ai-cybersecurity-enterprise-success-2025"
+      type: "case-study"
+      title: "AI Cybersecurity Enterprise Success: How a $5B Company Achieved 99.9% Security with AI"
+      file_path: "/content/case-studies/ai-cybersecurity-enterprise-success-2025.md"
+      url: "/case-studies/ai-cybersecurity-enterprise-success-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "AI Cybersecurity", "Enterprise Security", "Success Story", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "99.9%"
+        annual_savings: "$12.8M"
+        detection_speed: "340%"
+        zero_breaches: "24 months"
+        
+    - id: "ai-cloud-optimization-master-guide-2025"
+      type: "resource"
+      title: "AI Cloud Optimization Master Guide 2025: From Strategy to 340% ROI"
+      file_path: "/content/resources/ai-cloud-optimization-master-guide-2025.md"
+      url: "/resources/ai-cloud-optimization-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI", "Cloud Optimization", "ROI", "Best Practices", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        average_roi: "340%"
+        cost_reduction: "67%"
+        utilization_improvement: "89%"
+        annual_savings: "$4.2M"
+
   metrics:
+<<<<<<< HEAD
     expected_roi_mentions: 12
     success_stories: 2
     implementation_guides: 2
     blog_posts: 2
     total_word_count: "~25,000 words"
     estimated_reading_time: "~100 minutes"
+=======
+    expected_roi_mentions: 35
+    success_stories: 6
+    implementation_guides: 4
+    blog_posts: 6
+    total_word_count: "~75,000 words"
+    estimated_reading_time: "~300 minutes"
+    total_content_pieces: 13
+    new_content_2025: 7
+    featured_content: 10
+>>>>>>> origin/cursor/create-and-deploy-new-content-db9e
