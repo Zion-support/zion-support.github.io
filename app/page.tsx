@@ -44,6 +44,9 @@ import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
 import NeuralInterfaceContentShowcase2025 from '../components/NeuralInterfaceContentShowcase2025';
 
+// Import autonomous vehicles promotional components
+import AutonomousVehiclesRevolutionBanner2025 from '../components/AutonomousVehiclesRevolutionBanner2025';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -64,6 +67,9 @@ export default function HomePage() {
         
         {/* Neural Interface Revolution Banner - NEW CONTENT */}
         <NeuralInterfaceRevolutionBanner2025 />
+        
+        {/* Autonomous Vehicles Revolution Banner - NEW CONTENT */}
+        <AutonomousVehiclesRevolutionBanner2025 />
         
         {/* Advanced Analytics Promotion Banner */}
         <AdvancedAnalyticsPromotionBanner />
