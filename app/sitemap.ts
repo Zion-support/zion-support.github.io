@@ -69,6 +69,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ai-2025-ultimate-automation-revolution`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/quantum-ai-2026-business-breakthrough`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2025-ultimate-automation-revolution`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/quantum-ai-2026-business-breakthrough`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
     }
   ]
 }

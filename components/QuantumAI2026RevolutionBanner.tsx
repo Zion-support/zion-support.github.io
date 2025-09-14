@@ -1,71 +1,74 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const AI2025UltimateAutomationRevolutionBanner: React.FC = () => {
+const QuantumAI2026RevolutionBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isDismissed, setIsDismissed] = useState(false);
 
   const content = [
     {
-      title: "AI 2025 Ultimate Automation Revolution",
-      subtitle: "500% ROI • $200M Savings • 99.8% Satisfaction",
-      description: "Transform your business with the most advanced AI automation platform. Join Fortune 500 companies achieving unprecedented results.",
-      cta: "Start Your Revolution",
-      link: "/ai-2025-ultimate-automation-revolution",
-      metrics: {
-        roi: "500%",
-        savings: "$200M",
-        satisfaction: "99.8%",
-        timeline: "12 months"
-      }
-    },
-    {
-      title: "Quantum AI 2026 Business Breakthrough",
-      subtitle: "400-600% ROI • 1,200% Speed • 99.97% Accuracy",
-      description: "Experience the future with Quantum AI. $100B market transformation delivering revolutionary business results.",
+      title: "Quantum AI 2026: The Business Breakthrough",
+      subtitle: "$100B Market • 400-600% ROI • 1,200% Speed",
+      description: "Experience the quantum revolution transforming business operations with unprecedented speed and accuracy.",
       cta: "Explore Quantum AI",
       link: "/quantum-ai-2026-business-breakthrough",
       metrics: {
+        market: "$100B",
         roi: "400-600%",
         speed: "1,200%",
-        accuracy: "99.97%",
-        market: "$100B"
-      }
+        accuracy: "99.97%"
+      },
+      icon: "⚛️"
     },
     {
-      title: "Enterprise AI Transformation Success",
-      subtitle: "567% ROI • $2.8B Savings • 156% Efficiency",
-      description: "Join hundreds of companies revolutionizing operations with AI. Complete implementation guides and success stories available.",
-      cta: "View Success Stories",
-      link: "/case-studies/fortune-500-ai-transformation-2025-ultimate-success",
+      title: "Fortune 500 Quantum Transformation",
+      subtitle: "567% ROI • $2.8B Savings • 6 Months",
+      description: "See how Fortune 500 companies are achieving extraordinary results with Quantum AI implementation.",
+      cta: "View Case Study",
+      link: "/case-studies/quantum-ai-fortune-500-transformation-2026",
       metrics: {
         roi: "567%",
         savings: "$2.8B",
-        efficiency: "156%",
-        companies: "500+"
-      }
+        timeline: "6 months",
+        efficiency: "156%"
+      },
+      icon: "🏆"
+    },
+    {
+      title: "Quantum AI Implementation Guide",
+      subtitle: "Complete Roadmap • 3 Phases • 3.8 Month Payback",
+      description: "Get the complete guide to implementing Quantum AI in your organization with proven frameworks.",
+      cta: "Download Guide",
+      link: "/resources/quantum-ai-implementation-guide-2026",
+      metrics: {
+        phases: "3 phases",
+        payback: "3.8 months",
+        roi: "567%",
+        timeframe: "6 months"
+      },
+      icon: "📚"
     }
   ];
 
   useEffect(() => {
     // Check if banner was previously dismissed
-    const dismissed = localStorage.getItem('ai2025-automation-banner-dismissed');
+    const dismissed = localStorage.getItem('quantum-ai-2026-banner-dismissed');
     if (!dismissed) {
       setIsVisible(true);
     }
 
-    // Auto-rotate content every 5 seconds
+    // Auto-rotate content every 6 seconds
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [content.length]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
-    localStorage.setItem('ai2025-automation-banner-dismissed', 'true');
+    localStorage.setItem('quantum-ai-2026-banner-dismissed', 'true');
   };
 
   const handleSlideChange = (index: number) => {
@@ -77,14 +80,20 @@ const AI2025UltimateAutomationRevolutionBanner: React.FC = () => {
   const currentContent = content[currentSlide];
 
   return (
-    <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden">
-      {/* Animated background elements */}
+    <div className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden">
+      {/* Quantum-themed animated background */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-full animate-pulse"></div>
-          <div className="absolute top-32 right-20 w-16 h-16 bg-white rounded-full animate-bounce"></div>
-          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white rounded-full animate-ping"></div>
-          <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-white rounded-full animate-pulse"></div>
+          {/* Quantum particles */}
+          <div className="absolute top-16 left-16 w-4 h-4 bg-white rounded-full animate-ping"></div>
+          <div className="absolute top-32 right-24 w-3 h-3 bg-white rounded-full animate-bounce"></div>
+          <div className="absolute bottom-24 left-1/3 w-5 h-5 bg-white rounded-full animate-pulse"></div>
+          <div className="absolute bottom-40 right-16 w-2 h-2 bg-white rounded-full animate-ping"></div>
+          <div className="absolute top-1/2 left-1/4 w-3 h-3 bg-white rounded-full animate-bounce"></div>
+          
+          {/* Quantum wave patterns */}
+          <div className="absolute top-20 left-1/2 w-32 h-1 bg-white opacity-30 animate-pulse"></div>
+          <div className="absolute bottom-32 right-1/4 w-24 h-1 bg-white opacity-30 animate-pulse" style={{animationDelay: '1s'}}></div>
         </div>
       </div>
 
@@ -95,7 +104,7 @@ const AI2025UltimateAutomationRevolutionBanner: React.FC = () => {
             <div className="flex-1">
               <div className="flex items-center space-x-4 mb-4">
                 <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2">
-                  <span className="text-sm font-medium">🚀 NEW CONTENT</span>
+                  <span className="text-sm font-medium">{currentContent.icon} QUANTUM AI 2026</span>
                 </div>
                 <div className="flex space-x-1">
                   {content.map((_, index) => (
@@ -120,10 +129,10 @@ const AI2025UltimateAutomationRevolutionBanner: React.FC = () => {
                 {currentContent.description}
               </p>
 
-              {/* Metrics Grid */}
+              {/* Quantum metrics grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 {Object.entries(currentContent.metrics).map(([key, value]) => (
-                  <div key={key} className="bg-white bg-opacity-10 rounded-lg p-3 text-center">
+                  <div key={key} className="bg-white bg-opacity-10 rounded-lg p-3 text-center backdrop-blur-sm">
                     <div className="text-lg font-bold">{value}</div>
                     <div className="text-xs opacity-80 capitalize">
                       {key.replace(/([A-Z])/g, ' $1').trim()}
@@ -135,15 +144,15 @@ const AI2025UltimateAutomationRevolutionBanner: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={currentContent.link}
-                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 text-center"
                 >
                   {currentContent.cta}
                 </Link>
                 <Link
-                  href="/resources/ai-automation-implementation-guide-2025"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center"
+                  href="/contact"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all text-center"
                 >
-                  Download Guide
+                  Get Quantum Consultation
                 </Link>
               </div>
             </div>
@@ -162,17 +171,22 @@ const AI2025UltimateAutomationRevolutionBanner: React.FC = () => {
         </div>
       </div>
 
-      {/* Progress bar */}
+      {/* Quantum progress bar */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-black bg-opacity-20">
         <div 
-          className="h-full bg-white transition-all duration-100 ease-linear"
+          className="h-full bg-gradient-to-r from-white to-purple-200 transition-all duration-100 ease-linear"
           style={{ 
             width: `${((currentSlide + 1) / content.length) * 100}%` 
           }}
         />
       </div>
+
+      {/* Quantum shimmer effect */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-5 animate-pulse"></div>
+      </div>
     </div>
   );
 };
 
-export default AI2025UltimateAutomationRevolutionBanner;
+export default QuantumAI2026RevolutionBanner;
