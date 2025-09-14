@@ -231,6 +231,14 @@ import NewResource2025ImplementationRoadmapBanner from '../components/NewResourc
 import AI2030ContentShowcaseBanner from '../components/AI2030ContentShowcaseBanner';
 import AI2030ContentNavigation from '../components/AI2030ContentNavigation';
 
+// Import new 2025 content promotional components
+import AdvancedPredictiveAnalyticsBanner2025 from '../components/AdvancedPredictiveAnalyticsBanner2025';
+import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+
+// Import new AI automation promotional components
+import NewContent2025AdvancedAIAutomationBanner from '../components/NewContent2025AdvancedAIAutomationBanner';
+import UltimateAIAutomationShowcase2025 from '../components/UltimateAIAutomationShowcase2025';
+
 // Import new Advanced Neural Architectures 2026 components
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
@@ -252,6 +260,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Advanced Predictive Analytics Banner 2025 - NEW FEATURED */}
+        <AdvancedPredictiveAnalyticsBanner2025 />
+        
+        {/* Edge Computing Revolution Banner 2025 - NEW FEATURED */}
+        <EdgeComputingRevolutionBanner2025 />
+        
         {/* Ultimate Business Transformation 2025 Banner - NEW ULTIMATE BREAKTHROUGH */}
         <UltimateBusinessTransformation2025Banner />
         
@@ -515,6 +529,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* New Content Showcase 2025 - FEATURED */}
+        <NewContentShowcase2025 />
+        
         {/* Ultimate Autonomous Enterprise Showcase - NEW FEATURED */}
         <UltimateAutonomousEnterpriseShowcase />
         
