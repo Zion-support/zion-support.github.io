@@ -2,12 +2,13 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { VitePWA } from 'vite-plugin-pwa';
+import path from 'path';
 
 export default defineConfig({
   resolve: {
     alias: {
-      '@': '/workspace/src'
-    }
+      '@': path.resolve(__dirname, './src'),
+    },
   },
   plugins: [
     react({
@@ -29,12 +30,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,avif}'],
-        globIgnores: [
-          '**/node_modules/**/*',
-          '**/reports/**/*',
-          '**/dist/reports/**/*',
-          '**/public/reports/**/*'
-        ],
+        globIgnores: ['**/reports/**/*', '**/node_modules/**/*'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
         runtimeCaching: [
           {
@@ -78,10 +74,8 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
-          utils: ['axios', 'framer-motion', 'clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          forms: ['react-hook-form', '@hookform/resolvers']
+          utils: ['axios', 'framer-motion'],
+          charts: ['recharts']
         },
       },
     },
@@ -113,5 +107,14 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion'],
     exclude: ['@vite/client', '@vite/env']
+  },
+  resolve: {
+    alias: {
+      '@': '/workspace',
+      '@/components': '/workspace/components',
+      '@/hooks': '/workspace/hooks',
+      '@/lib': '/workspace/lib',
+      '@/app': '/workspace/app'
+    }
   }
 });
