@@ -6,10 +6,6 @@ import Link from 'next/link';
 const EnhancedContentPromotionBanner2026 = () => {
   const [isVisible, setIsVisible] = useState(true);
 
-  const handleDismiss = () => {
-    setIsVisible(false);
-    localStorage.setItem('enhancedContent2026BannerDismissed', 'true');
-  };
 
   useEffect(() => {
     const dismissed = localStorage.getItem('enhancedContent2026BannerDismissed');

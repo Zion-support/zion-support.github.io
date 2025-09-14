@@ -155,30 +155,6 @@ const InteractiveContentDiscoveryWidget2026 = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-=======
-
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4">
-            {contentCategories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white transform scale-105'
-                    : 'bg-white/10 backdrop-blur-sm text-gray-300 border border-white/20 hover:bg-white/20'
-                }`}
-              >
-                <span className="mr-2">{category.icon}</span>
-                {category.name}
-                <span className="ml-2 text-xs bg-white/20 px-2 py-1 rounded-full">
-                  {category.count}
-                </span>
-              </button>
-            ))}
-          </div>
->>>>>>> main
         </motion.div>
 
         {/* Content Grid */}
