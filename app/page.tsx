@@ -44,6 +44,19 @@ import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBann
 import AdvancedNeuralNetworks2025Banner from '../components/AdvancedNeuralNetworks2025Banner';
 import NeuralNetworksContentShowcase2025 from '../components/NeuralNetworksContentShowcase2025';
 
+// Import new 2025 Analytics Revolution components
+import NewContent2025AnalyticsRevolutionBanner from '../components/NewContent2025AnalyticsRevolutionBanner';
+import AnalyticsContentShowcase2025 from '../components/AnalyticsContentShowcase2025';
+
+// Import new 2025 Advanced Automation components
+import NewContent2025AdvancedAutomationBanner from '../components/NewContent2025AdvancedAutomationBanner';
+import AdvancedAutomationContentShowcase2025 from '../components/AdvancedAutomationContentShowcase2025';
+
+// Import new 2026 Revolutionary AI components
+import RevolutionaryAIContent2026Banner from '../components/RevolutionaryAIContent2026Banner';
+import AI2026QuantumRevolutionUltimateBanner from '../components/AI2026QuantumRevolutionUltimateBanner';
+import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -61,7 +74,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
+        {/* Advanced Neural Networks 2025 Banner - NEW */}
+        <AdvancedNeuralNetworks2025Banner />
+        
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
         
@@ -84,12 +99,6 @@ export default function HomePage() {
         <NewContent2026UltimateShowcase />
         
         {/* New Content 2025 Ultimate Banner */}
-=======
-        {/* Advanced Neural Networks 2025 Banner - NEW */}
-        <AdvancedNeuralNetworks2025Banner />
-        
-        {/* New Content 2025 Ultimate Banner - NEW */}
->>>>>>> cursor/create-and-deploy-new-content-8ae5
         <NewContent2025UltimateBanner />
         
         {/* AI 2026 Ultimate Showcase Banner */}
@@ -218,11 +227,8 @@ export default function HomePage() {
         <UltimateContentShowcase2025 />
         
         {/* Content Promotion Banners */}
-<<<<<<< HEAD
-        <NewContentShowcase2025 />
-=======
         <NeuralNetworksContentShowcase2025 />
->>>>>>> cursor/create-and-deploy-new-content-8ae5
+        <NewContentShowcase2025 />
         <UltimateContentShowcase2025 />
         <RevolutionaryContent2026Banner />
         <UltimateContentShowcase2026 />

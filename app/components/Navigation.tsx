@@ -7,7 +7,12 @@ export default function Navigation() {
 
   const navigation = [
     { name: 'Home', href: '/' },
+    { name: 'AI 2025', href: '/ai-2025', featured: true },
+    { name: 'AI 2026', href: '/ai-2026', featured: true },
     { name: 'Services', href: '/services' },
+    { name: 'Analytics', href: '/analytics', new: true },
+    { name: 'Automation', href: '/automation', new: true },
+    { name: 'Neural Networks', href: '/neural-networks', new: true },
     { name: 'Blog', href: '/blog' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Resources', href: '/resources' },
@@ -32,9 +37,19 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors relative"
               >
                 {item.name}
+                {item.featured && (
+                  <span className="absolute -top-1 -right-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded-full">
+                    Featured
+                  </span>
+                )}
+                {item.new && (
+                  <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+                    New
+                  </span>
+                )}
               </Link>
             ))}
             <Link
