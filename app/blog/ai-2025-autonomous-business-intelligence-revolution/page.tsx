@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { Brain, TrendingUp, Zap,  Clock, Users, ArrowRight, CheckCircle } from 'lucide-react';
+import { Brain, TrendingUp, Zap, Award, Clock, Users, ArrowRight, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI 2025: The Autonomous Business Intelligence Revolution - 1,800% ROI Through Self-Managing Analytics',

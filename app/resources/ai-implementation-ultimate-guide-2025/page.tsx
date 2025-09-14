@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function AIImplementationGuidePage() {
   const keyStats = [
     { label: 'Average ROI', value: '340%', icon: TrendingUp, color: 'text-green-600' },
-    { label: 'Success Rate', value: '89%', icon:  color: 'text-blue-600' },
+    { label: 'Success Rate', value: '89%', icon: CheckCircle, color: 'text-blue-600' },
     { label: 'Implementation Time', value: '6-9 months', icon: Clock, color: 'text-purple-600' },
     { label: 'Break-even Point', value: '3-4 months', icon: CheckCircle, color: 'text-orange-600' }
   ];

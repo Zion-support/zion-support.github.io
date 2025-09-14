@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Clock, User, Calendar, Shield, Zap,  CheckCircle } from 'lucide-react';
+import { ArrowLeft, Clock, User, Calendar, Shield, Zap, Award, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI 2025: The Cybersecurity Revolution - Ultimate Guide | Zion Tech Group',
