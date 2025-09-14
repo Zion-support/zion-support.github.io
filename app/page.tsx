@@ -81,6 +81,10 @@ import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeura
 import RevolutionaryAIAutomationBanner2025 from '../components/RevolutionaryAIAutomationBanner2025';
 import RevolutionaryAIAutomationShowcase2025 from '../components/RevolutionaryAIAutomationShowcase2025';
 
+// Import new Ultimate Enterprise Transformation 2025 components
+import UltimateEnterpriseTransformation2025Banner from '../components/UltimateEnterpriseTransformation2025Banner';
+import UltimateEnterpriseTransformationShowcase from '../components/UltimateEnterpriseTransformationShowcase';
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -280,6 +284,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Enterprise Transformation 2025 Banner - NEW ULTIMATE FEATURED */}
+        <UltimateEnterpriseTransformation2025Banner />
+        
         {/* Revolutionary AI Automation Banner 2025 - NEW ULTIMATE FEATURED */}
         <RevolutionaryAIAutomationBanner2025 />
         
@@ -529,6 +536,7 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <UltimateEnterpriseTransformationShowcase />
         <RevolutionaryContent2026Banner />
         <UltimateContentShowcase2026 />
         <QuantumAIContentShowcase2026 />
