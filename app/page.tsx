@@ -15,6 +15,7 @@ import AI2025IntelligentContentRecommendationEngine from '../components/AI2025In
 import AI2025AdvancedAnalyticsDashboard from '../components/AI2025AdvancedAnalyticsDashboard';
 import AI2025ContentGenerationStudio from '../components/AI2025ContentGenerationStudio';
 import AI2025PerformanceOptimizationHub from '../components/AI2025PerformanceOptimizationHub';
+import AI2025TransformationDashboard from '../components/AI2025TransformationDashboard';
 
 // Import new revolutionary content showcase components - LATEST FEATURED
 import AI2025RevolutionaryContentShowcaseBanner from '../components/AI2025RevolutionaryContentShowcaseBanner';
@@ -357,6 +358,23 @@ export default function HomePage() {
           {/* NEW CONTENT DISCOVERY 2025 BANNER - LATEST FEATURED */}
           <NewContentDiscovery2025Banner />
           
+          {/* AI 2025 ADVANCED TOOLS SECTION - NEWEST INNOVATION */}
+          <div className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">AI 2025 Advanced Tools</h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Experience the future of AI with our cutting-edge tools and dashboards
+                </p>
+              </div>
+              <div className="space-y-16">
+                <AI2025TransformationDashboard />
+                <AI2025ContentGenerationStudio />
+                <AI2025AdvancedAnalyticsDashboard />
+                <AI2025PerformanceOptimizationHub />
+              </div>
+            </div>
+          </div>
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         {/* AI 2025 ULTIMATE BREAKTHROUGH 100,000% ROI BANNER - NEWEST FEATURED */}
