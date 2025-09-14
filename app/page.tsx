@@ -39,6 +39,10 @@ import AdvancedFeaturesShowcase2026 from '../components/AdvancedFeaturesShowcase
 // Import performance optimization showcase
 import PerformanceOptimizationShowcase2026 from '../components/PerformanceOptimizationShowcase2026';
 
+// Import new edge computing promotional components
+import EdgeComputingRevolutionBanner2025 from '../components/EdgeComputingRevolutionBanner2025';
+import EdgeComputingContentShowcase2025 from '../components/EdgeComputingContentShowcase2025';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -56,6 +60,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Edge Computing Revolution 2025 - NEWEST */}
+        <EdgeComputingRevolutionBanner2025 />
+        
         {/* Performance Optimization Showcase 2026 - NEWEST */}
         <PerformanceOptimizationShowcase2026 />
         
@@ -67,6 +74,9 @@ export default function HomePage() {
         
         {/* NEW 2025 ULTIMATE CONTENT SHOWCASE - FEATURED */}
         <NewContent2025UltimateShowcase />
+        
+        {/* Edge Computing Content Showcase 2025 - NEWEST */}
+        <EdgeComputingContentShowcase2025 />
 
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
