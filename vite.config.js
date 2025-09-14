@@ -6,17 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
   resolve: {
     alias: {
-<<<<<<< HEAD
-      '@': '/workspace/src',
-      '@/components': '/workspace/src/components',
-      '@/hooks': '/workspace/src/hooks',
-      '@/utils': '/workspace/src/utils',
-      '@/pages': '/workspace/src/pages',
-      '@/data': '/workspace/src/data',
-      '@/styles': '/workspace/src/styles'
-=======
       '@': '/workspace/src'
->>>>>>> cursor/create-and-deploy-new-content-7b62
     }
   },
   plugins: [
@@ -39,6 +29,12 @@ export default defineConfig({
       registerType: 'autoUpdate',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,avif}'],
+        globIgnores: [
+          '**/node_modules/**/*',
+          '**/reports/**/*',
+          '**/dist/reports/**/*',
+          '**/public/reports/**/*'
+        ],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
         runtimeCaching: [
           {
