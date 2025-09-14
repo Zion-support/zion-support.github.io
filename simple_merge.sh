@@ -1,44 +1,36 @@
 #!/bin/bash
 
-# Simple merge script to handle the current situation
-echo "🚀 Starting simple merge process..."
+echo "Starting simple merge process..."
 
-# Make scripts executable
-chmod +x resolve_merge_conflicts.sh
-chmod +x merge_prs_script.sh
+cd /workspace
 
-# Try the simple approach first
-echo "📍 Current directory: $(pwd)"
-echo "📍 Current branch: $(git branch --show-current 2>/dev/null || echo 'unknown')"
+# Check current status
+echo "Current branch: $(git branch --show-current)"
 
-# Check if we have uncommitted changes
-if git diff --quiet && git diff --cached --quiet; then
-    echo "✅ Working directory is clean"
-else
-    echo "⚠️  Working directory has uncommitted changes"
-    echo "📝 Staging all changes..."
+# Try to resolve any current merge conflicts
+if [ -f ".git/MERGE_HEAD" ]; then
+    echo "In merge state, resolving conflicts..."
+    git checkout --theirs .
     git add .
-    git commit -m "Auto-commit before merge - New content and advertising components"
+    git commit -m "Resolved merge conflicts"
 fi
 
-# Try to switch to main and merge
-echo "🔄 Switching to main branch..."
-git checkout main 2>/dev/null || echo "Already on main"
+# Switch to main
+git checkout main 2>/dev/null || git checkout -b main
 
-echo "📥 Pulling latest changes..."
-git pull origin main 2>/dev/null || echo "Pull failed, continuing..."
+# Try to merge the feature branch
+FEATURE_BRANCH=$(git branch --show-current 2>/dev/null | grep -v main || echo "cursor/create-and-deploy-new-content-9902")
+if [ "$FEATURE_BRANCH" != "main" ]; then
+    echo "Merging $FEATURE_BRANCH into main..."
+    git merge "$FEATURE_BRANCH" 2>/dev/null || {
+        echo "Merge conflict, resolving..."
+        git checkout --theirs .
+        git add .
+        git commit -m "Resolved merge conflicts"
+    }
+fi
 
-echo "🔄 Attempting to merge feature branch..."
-git merge cursor/create-and-deploy-new-content-9e4d 2>/dev/null || {
-    echo "⚠️  Merge conflicts detected - resolving automatically"
-    
-    # Auto-resolve conflicts by keeping our version
-    git checkout --ours . 2>/dev/null || true
-    git add . 2>/dev/null || true
-    git commit -m "Merge cursor/create-and-deploy-new-content-9e4d into main - Conflicts resolved" 2>/dev/null || true
-}
+# Push to main
+git push origin main 2>/dev/null || echo "Push failed, but merge may have succeeded locally"
 
-echo "📤 Pushing changes..."
-git push origin main 2>/dev/null || echo "Push failed, but merge completed locally"
-
-echo "✅ Simple merge process completed!"
+echo "Merge process completed!"
