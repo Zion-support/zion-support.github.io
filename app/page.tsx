@@ -448,10 +448,7 @@ export default function HomePage() {
         
         {/* NEW CONTENT PROMOTION BANNER 2026 */}
         <NewContentPromotionBanner2026 />
-<<<<<<< HEAD
-=======
         
->>>>>>> b4e75cfea76c5ece0282b031e831aab74dda64a6
         {/* NEW REVOLUTIONARY CONTENT SHOWCASE BANNER */}
         <NewContent2025RevolutionaryShowcaseBanner />
         
@@ -500,10 +497,7 @@ export default function HomePage() {
         
         {/* ULTIMATE CONTENT DISCOVERY WIDGET 2026 */}
         <UltimateContentDiscoveryWidget2026 />
-<<<<<<< HEAD
-=======
         
->>>>>>> b4e75cfea76c5ece0282b031e831aab74dda64a6
         {/* INTERACTIVE CONTENT DISCOVERY 2026 */}
         <InteractiveContentDiscovery2026 />
         
