@@ -2,10 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import FeaturedContent from './components/FeaturedContent';
 import Testimonials from './components/Testimonials';
+import RevolutionaryContent2025Banner from './components/RevolutionaryContent2025Banner';
+import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 
 export default function HomePage() {
   return (
     <div className='min-h-screen bg-white'>
+      {/* Revolutionary Content Banner */}
+      <RevolutionaryContent2025Banner />
+      
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,6 +105,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Ultimate Content Showcase 2025 */}
+      <UltimateContentShowcase2025 />
 
       {/* Featured Content Section */}
       <FeaturedContent />
