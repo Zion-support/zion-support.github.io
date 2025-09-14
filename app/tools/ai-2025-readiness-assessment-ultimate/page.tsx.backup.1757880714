@@ -2,17 +2,23 @@
 
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, XCircle, AlertCircle, TrendingUp, Zap, ArrowRight } from 'lucide-react';
 =======
+>>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../../components/ui/card';
 import { Button } from '../../../components/ui/button';
 import { Badge } from '../../../components/ui/badge';
 import { CheckCircle, XCircle, AlertCircle, TrendingUp, Target, Zap } from 'lucide-react';
+<<<<<<< HEAD
+=======
 >>>>>>> b57990bbef189939aa68e799cdd591a161de203f
+>>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
 
 interface AssessmentQuestion {
   id: string;
@@ -331,7 +337,7 @@ export default function AI2025ReadinessAssessment() {
       case 'Medium': return <AlertCircle className="w-5 h-5" />;
       case 'High': return <TrendingUp className="w-5 h-5" />;
       case 'Critical': return <XCircle className="w-5 h-5" />;
-      default: return <ArrowRight className="w-5 h-5" />;
+      default: return <Target className="w-5 h-5" />;
     }
   };
 
@@ -435,7 +441,7 @@ export default function AI2025ReadinessAssessment() {
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <ArrowRight className="w-6 h-6" />
+                <Target className="w-6 h-6" />
                 Recommended Next Steps
               </CardTitle>
             </CardHeader>
