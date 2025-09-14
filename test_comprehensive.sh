@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Comprehensive PR merge script
+# Test comprehensive PR merge with 5 branches
 set -e
 
-echo "🚀 Starting comprehensive PR merge process..."
+echo "🧪 Testing comprehensive PR merge with 5 branches..."
 
 # Function to sync with remote
 sync_with_remote() {
@@ -74,23 +74,18 @@ process_branch() {
     fi
 }
 
-# Get all cursor branches
-BRANCHES=$(git branch -r | grep "cursor/" | grep -v "HEAD" | sed 's/origin\///' | sort -u)
+# Get 5 most recent cursor branches
+BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | tail -5 | sed 's/origin\///')
 TOTAL_BRANCHES=$(echo "$BRANCHES" | wc -l)
 
-echo "📋 Found $TOTAL_BRANCHES branches to process"
+echo "📋 Testing with $TOTAL_BRANCHES branches:"
+echo "$BRANCHES"
 
 # Counter for tracking
 SUCCESS_COUNT=0
 CONFLICT_COUNT=0
 ERROR_COUNT=0
 PROCESSED=0
-
-# Process branches in batches of 10
-BATCH_SIZE=10
-BATCH_NUM=1
-
-echo "📊 Processing $TOTAL_BRANCHES branches in batches of $BATCH_SIZE"
 
 # Process each branch
 for branch in $BRANCHES; do
@@ -99,7 +94,6 @@ for branch in $BRANCHES; do
     fi
     
     PROCESSED=$((PROCESSED + 1))
-    CURRENT_BATCH=$(((PROCESSED - 1) / BATCH_SIZE + 1))
     
     # Process the branch
     if process_branch "$branch" "$PROCESSED" "$TOTAL_BRANCHES"; then
@@ -112,12 +106,6 @@ for branch in $BRANCHES; do
     echo "  🧹 Cleaning up local branch $branch"
     git branch -D $branch 2>/dev/null || true
     
-    # Sync with remote every 10 branches
-    if [ $((PROCESSED % 10)) -eq 0 ]; then
-        echo "  📤 Syncing with remote after $PROCESSED branches..."
-        sync_with_remote
-    fi
-    
     echo "  ✅ Completed processing $branch"
 done
 
@@ -126,11 +114,11 @@ echo "  📤 Final sync with remote..."
 sync_with_remote
 
 echo ""
-echo "📊 Comprehensive PR Merge Summary:"
+echo "📊 Test Comprehensive PR Merge Summary:"
 echo "  ✅ Successful merges: $SUCCESS_COUNT"
 echo "  ⚠️  Conflicts resolved: $CONFLICT_COUNT"
 echo "  ❌ Errors: $ERROR_COUNT"
 echo "  📋 Total processed: $PROCESSED"
 
 echo ""
-echo "🎉 Comprehensive PR merge process completed!"
+echo "🎉 Test comprehensive PR merge completed!"
