@@ -36,6 +36,55 @@ content_index:
       featured: true
       is_new: true
 
+  new_2025_content_ultimate:
+    - id: "cybersecurity-revolution"
+      type: "blog"
+      title: "AI 2025: The Cybersecurity Revolution - Ultimate Guide"
+      file_path: "/content/blog/ai-2025-cybersecurity-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-cybersecurity-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Cybersecurity", "Business Protection", "Threat Detection"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        savings: "$2.8M"
+        satisfaction: "98%"
+        efficiency: "67%"
+        
+    - id: "healthcare-transformation"
+      type: "case-study"
+      title: "AI Healthcare Transformation 2025: 450% ROI Success Story"
+      file_path: "/content/case-studies/ai-healthcare-transformation-2025-success-story.md"
+      url: "/case-studies/ai-healthcare-transformation-2025-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Healthcare", "AI Transformation", "ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        savings: "$12M annually"
+        satisfaction: "94%"
+        efficiency: "67%"
+        
+    - id: "implementation-guide-comprehensive"
+      type: "resource"
+      title: "AI Implementation Master Guide 2025: From Strategy to ROI - Comprehensive Edition"
+      file_path: "/content/resources/ai-implementation-master-guide-2025-comprehensive.md"
+      url: "/resources/ai-implementation-master-guide-2025-comprehensive"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices"]
+      featured: true
+      is_new: true
+      metrics:
+        success_rate: "98%"
+        average_roi: "340%"
+        implementation_time: "67% Faster"
+        projects: "500+ Success Stories"
+
   new_2026_content:
     - id: "ai-2026-enterprise-automation"
       type: "blog"
