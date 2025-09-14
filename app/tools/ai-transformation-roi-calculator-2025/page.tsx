@@ -3,8 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-// Metadata is handled by the SEO component
-
 interface ROIResults {
   totalInvestment: number;
   year1Returns: number;
