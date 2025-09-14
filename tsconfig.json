@@ -16,13 +16,9 @@
     "strict": false,
     "noEmit": true,
     "esModuleInterop": true,
-<<<<<<< HEAD
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-<<<<<<< HEAD
     "module": "esnext",
-=======
->>>>>>> cursor/create-and-deploy-new-content-7b62
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -47,8 +43,4 @@
   "exclude": [
     "node_modules"
   ]
-=======
-    "allowSyntheticDefaultImports": true
-  }
->>>>>>> cursor/create-and-deploy-new-content-60fa
 }

@@ -1,10 +1,10 @@
 'use client';
 
-import React{ useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 const AIRevolutionContentShowcase = () => {
-  const [activeCategorysetActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('all');
 
   const contentItems = [
     {
