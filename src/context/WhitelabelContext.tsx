@@ -1,46 +1,43 @@
-import React, { createContext, useContext, useState, useCallback } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
 
 interface WhitelabelContextType {
-  isWhitelabel: boolean;
-  brandName: string;
-  brandLogo: string;
-  primaryColor: string;
+  theme: {
+    primaryColor: string;
+    secondaryColor: string;
+    logo: string;
+  };
+  brand: {
+    name: string;
+    tagline: string;
+  };
 }
 
-const defaultWhitelabelContext: WhitelabelContextType = {
-  isWhitelabel: false,
-  brandName: 'Zion Tech Group',
-  brandLogo: '/logo.png',
-  primaryColor: '#3B82F6'
-};
+const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
 
-const WhitelabelContext = createContext<WhitelabelContextType>(defaultWhitelabelContext);
-
-export const useWhitelabel = () => {
-  const context = useContext(WhitelabelContext);
-  if (!context) {
-    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
-  }
-  return context;
-};
-
-interface WhitelabelProviderProps {
-  children: ReactNode;
-  value?: Partial<WhitelabelContextType>;
-}
-
-export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ 
-  children, 
-  value = {} 
-}) => {
-  const contextValue = {
-    ...defaultWhitelabelContext,
-    ...value
+export const WhitelabelProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const value: WhitelabelContextType = {
+    theme: {
+      primaryColor: '#3b82f6',
+      secondaryColor: '#1e40af',
+      logo: '/logo.png',
+    },
+    brand: {
+      name: 'Zion Tech Group',
+      tagline: 'Innovative Technology Solutions',
+    },
   };
 
   return (
-    <WhitelabelContext.Provider value={contextValue}>
+    <WhitelabelContext.Provider value={value}>
       {children}
     </WhitelabelContext.Provider>
   );
+};
+
+export const useWhitelabel = () => {
+  const context = useContext(WhitelabelContext);
+  if (context === undefined) {
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+  }
+  return context;
 };

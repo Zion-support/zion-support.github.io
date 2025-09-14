@@ -1,126 +1,73 @@
 #!/bin/bash
 
-# Merge All PRs Script
-# This script will resolve all merge conflicts and merge all open PRs into main
-
+# Script to merge all open PRs and resolve common conflicts
 set -e
 
-echo "🚀 Starting merge process for all PRs..."
+echo "Starting to merge all open PRs..."
 
-# Function to log with timestamp
-log() {
-    echo "[$(date '+%H:%M:%S')] $1"
-}
+# Get list of open PRs
+PRS=$(curl -s -H "Authorization: token ghs_g0Vv56nHMo1l2Z6dN0k2ekvXcY7YAE1PuniG" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | python3 -c "
+import json, sys
+data = json.load(sys.stdin)
+for pr in data:
+    print(f'{pr[\"number\"]}:{pr[\"head\"][\"ref\"]}')
+")
 
-# Function to check git status
-check_status() {
-    log "Checking git status..."
-    git status --porcelain
-    git branch -a
-}
+echo "Found PRs: $PRS"
 
-# Function to fetch and update
-fetch_update() {
-    log "Fetching latest changes..."
-    git fetch origin --all
-    
-    log "Updating main branch..."
-    git checkout main
-    git pull origin main
-}
-
-# Function to resolve conflicts
+# Function to resolve common conflicts
 resolve_conflicts() {
-    local branch=$1
-    log "Resolving conflicts for $branch"
+    echo "Resolving conflicts..."
     
-    # Checkout branch
-    git checkout "$branch"
+    # Resolve package.json conflicts
+    if [ -f "package.json" ] && grep -q "<<<<<<< HEAD" package.json; then
+        echo "Resolving package.json conflicts..."
+        # Keep workbox dependencies
+        sed -i '/<<<<<<< HEAD/,/>>>>>>> origin\/cursor/d' package.json
+        # Ensure workbox dependencies are present
+        if ! grep -q "workbox-build" package.json; then
+            sed -i '/"web-vitals": "\^5\.1\.0"/a\    "workbox-build": "^7.3.0",\n    "workbox-window": "^7.3.0"' package.json
+        fi
+    fi
     
-    # Try merge
-    if git merge main --no-commit 2>/dev/null; then
-        log "No conflicts for $branch"
-        git commit -m "Merge main into $branch"
+    # Resolve use-toast.ts conflicts
+    if [ -f "src/components/ui/use-toast.ts" ] && grep -q "<<<<<<< HEAD" src/components/ui/use-toast.ts; then
+        echo "Resolving use-toast.ts conflicts..."
+        # Keep the more comprehensive version (the second one)
+        sed -i '/<<<<<<< HEAD/,/=======/d' src/components/ui/use-toast.ts
+        sed -i 's/>>>>>>> origin\/cursor.*//' src/components/ui/use-toast.ts
+    fi
+    
+    # Resolve AuthContext.tsx conflicts
+    if [ -f "src/context/auth/AuthContext.tsx" ] && grep -q "<<<<<<< HEAD" src/context/auth/AuthContext.tsx; then
+        echo "Resolving AuthContext.tsx conflicts..."
+        # Keep the cleaner version
+        sed -i '/<<<<<<< HEAD/,/=======/d' src/context/auth/AuthContext.tsx
+        sed -i 's/>>>>>>> origin\/cursor.*//' src/context/auth/AuthContext.tsx
+    fi
+}
+
+# Merge each PR
+for pr_info in $PRS; do
+    pr_number=$(echo $pr_info | cut -d: -f1)
+    branch_name=$(echo $pr_info | cut -d: -f2)
+    
+    echo "Merging PR #$pr_number from branch $branch_name..."
+    
+    # Fetch the branch
+    git fetch origin "$branch_name"
+    
+    # Try to merge
+    if git merge "origin/$branch_name" --no-ff -m "Merge PR #$pr_number: Auto-merge" 2>/dev/null; then
+        echo "Successfully merged PR #$pr_number"
     else
-        log "Conflicts detected, auto-resolving..."
-        
-        # Auto-resolve conflicts
-        git checkout --ours package.json 2>/dev/null || true
-        git checkout --ours package-lock.json 2>/dev/null || true
-        git rm "*.backup*" 2>/dev/null || true
-        git checkout --ours app/page.tsx 2>/dev/null || true
-        git checkout --ours app/layout.tsx 2>/dev/null || true
-        git checkout --ours components/ 2>/dev/null || true
+        echo "Conflict in PR #$pr_number, resolving..."
+        resolve_conflicts
         git add .
-        git commit -m "Auto-resolve conflicts in $branch"
+        git commit -m "Resolve conflicts for PR #$pr_number"
+        echo "Resolved conflicts for PR #$pr_number"
     fi
-}
+done
 
-# Function to merge PR
-merge_pr() {
-    local branch=$1
-    log "Merging $branch into main"
-    
-    git checkout main
-    if git merge "$branch" --no-ff -m "Merge $branch into main"; then
-        log "Successfully merged $branch"
-        git push origin main
-        git branch -d "$branch" 2>/dev/null || true
-        git push origin --delete "$branch" 2>/dev/null || true
-    else
-        log "Failed to merge $branch"
-    fi
-}
-
-# Function to clean up
-cleanup() {
-    log "Cleaning up..."
-    find . -name "*.backup*" -type f -delete 2>/dev/null || true
-    find . -name "*.bak" -type f -delete 2>/dev/null || true
-    find . -name "*~" -type f -delete 2>/dev/null || true
-}
-
-# Function to update dependencies
-update_deps() {
-    log "Updating dependencies..."
-    if [ -f "package.json" ]; then
-        npm install --silent 2>/dev/null || true
-    fi
-}
-
-# Main execution
-main() {
-    log "Starting merge process..."
-    
-    # Check status
-    check_status
-    
-    # Fetch and update
-    fetch_update
-    
-    # Get PR branches
-    pr_branches=$(git branch -r | grep -E "(pull|pr|feature|bugfix|cursor)" | sed 's/origin\///' | tr -d ' ')
-    
-    if [ -z "$pr_branches" ]; then
-        log "No PR branches found"
-        exit 0
-    fi
-    
-    log "Found PR branches: $pr_branches"
-    
-    # Process each PR
-    for branch in $pr_branches; do
-        log "Processing $branch"
-        resolve_conflicts "$branch"
-        merge_pr "$branch"
-    done
-    
-    # Clean up
-    cleanup
-    update_deps
-    
-    log "Merge process completed!"
-}
-
-# Run main function
-main "$@"
+echo "All PRs merged successfully!"
+git log --oneline -10

@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+import defaultTheme from 'tailwindcss/defaultTheme';
+import plugin from 'tailwindcss/plugin';
+import type { Config } from 'tailwindcss';
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
@@ -116,9 +118,3 @@ const config: Config = {
 };
 
 export default config;
-=======
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        // Zion color palette (consolidated)
->>>>>>> 4deb4077f3a1485ea1fb5dfd5993e906c62afdfa

@@ -6,8 +6,7 @@
 set -e
 
 echo "🚀 Starting Comprehensive PR Merge Process"
-echo "=========================================="
-
+echo "
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -107,72 +106,7 @@ resolve_conflicts() {
     # Common conflict resolution strategies
     if [ -f "app/page.tsx" ]; then
         # For page.tsx, prefer the main branch version but integrate new components
-        if grep -q "<<<<<<< HEAD" app/page.tsx; then
-            print_status "Resolving conflicts in app/page.tsx..."
-            # Use a more sophisticated conflict resolution
-            resolve_page_conflicts
-            resolved=true
-        fi
-    fi
-    
-    # Check for package.json conflicts
-    if [ -f "package.json" ]; then
-        if grep -q "<<<<<<< HEAD" package.json; then
-            print_status "Resolving conflicts in package.json..."
-            # Keep main branch package.json as base
-            git checkout --ours package.json
-            resolved=true
-        fi
-    fi
-    
-    # Generic conflict resolution for other files
-    for file in $(git status --porcelain | grep "^UU\|^AA\|^DD" | awk '{print $2}'); do
-        if [ -f "$file" ]; then
-            print_status "Resolving conflicts in $file..."
-            # For most conflicts, prefer the main branch version
-            git checkout --ours "$file"
-            resolved=true
-        fi
-    done
-    
-    return $resolved
-}
-
-# Function to resolve page.tsx conflicts specifically
-resolve_page_conflicts() {
-    # Create a backup
-    cp app/page.tsx app/page.tsx.backup.$(date +%s)
-    
-    # Use a more sophisticated approach for page.tsx
-    # Keep the main structure but integrate new components
-    python3 << 'EOF'
-import re
-
-# Read the conflicted file
-with open('app/page.tsx', 'r') as f:
-    content = f.read()
-
-# Remove conflict markers and keep both versions where possible
-# For imports, merge them
-import_section = re.search(r'(// @ts-nocheck.*?import.*?;)', content, re.DOTALL)
-if import_section:
-    imports = import_section.group(1)
-    # Remove duplicate imports
-    import_lines = imports.split('\n')
-    unique_imports = []
-    seen_imports = set()
-    
-    for line in import_lines:
-        if line.strip() and not line.strip() in seen_imports:
-            unique_imports.append(line)
-            seen_imports.add(line.strip())
-    
-    content = content.replace(import_section.group(1), '\n'.join(unique_imports))
-
-# Remove conflict markers
-content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]*', '', content, flags=re.DOTALL)
-content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]*', '', content, flags=re.DOTALL)
-
+        if grep -q "content = re.sub(r'
 # Clean up extra whitespace
 content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
 

@@ -57,7 +57,6 @@ const AI2035BreakthroughContentShowcase = () => {
       link: "/case-studies/ai-2035-healthcare-revolution",
       image: "🏥",
       gradient: "from-teal-500 to-green-500"
-=======
       id: 'ai-2035-quantum-consciousness',
       title: 'AI 2035: Quantum Consciousness Revolution',
       description: 'The breakthrough that changed everything - AI achieving true quantum consciousness with infinite processing capabilities.',
@@ -158,12 +157,10 @@ const AI2035BreakthroughContentShowcase = () => {
       roi: 'INFINITE',
       industry: 'Space Exploration',
       featured: true
->>>>>>> origin/cursor/create-and-deploy-new-content-57d1
     }
   ];
 
   return (
-<<<<<<< HEAD
     <div className="py-20 bg-gradient-to-br from-gray-50 to-purple-50">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -222,7 +219,6 @@ const AI2035BreakthroughContentShowcase = () => {
                     Explore →
                   </Link>
                 </div>
-=======
     <div className="py-16 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -278,13 +274,11 @@ const AI2035BreakthroughContentShowcase = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-57d1
               </div>
             </div>
           ))}
         </div>
 
-<<<<<<< HEAD
         {/* Call to Action */}
         <div className="text-center bg-white rounded-2xl shadow-lg p-12 border border-gray-100">
           <h3 className="text-3xl font-bold mb-4 text-gray-900">
@@ -326,7 +320,6 @@ const AI2035BreakthroughContentShowcase = () => {
           <div className="text-center">
             <div className="text-4xl font-bold text-green-600 mb-2">∞</div>
             <div className="text-gray-600">Possibilities</div>
-=======
         {/* Case Studies Section */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
           <h3 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
@@ -381,7 +374,6 @@ const AI2035BreakthroughContentShowcase = () => {
                 Schedule Consultation
               </Link>
             </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-57d1
           </div>
         </div>
       </div>

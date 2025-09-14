@@ -1,24 +1,43 @@
 #!/bin/bash
+set -e
 
-cd /workspace
+echo "=== Git Workflow Script ==="
 
-echo "=== Git Status Check ==="
-git status --short
+# Check if we're in a git repository
+if [ ! -d ".git" ]; then
+    echo "Error: Not in a git repository"
+    exit 1
+fi
 
-echo "=== Current Branch ==="
-git branch --show-current
+# Get current branch
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+echo "Current branch: $CURRENT_BRANCH"
 
-echo "=== Adding Changes ==="
-git add .
+# Check for uncommitted changes
+if [ -n "$(git status --porcelain)" ]; then
+    echo "Warning: There are uncommitted changes"
+    git status --short
+    echo "Proceeding anyway..."
+fi
 
-echo "=== Committing Changes ==="
-git commit -m "Resolve merge conflicts and clean up repository
+# Push current branch
+echo "Pushing current branch..."
+git push origin "$CURRENT_BRANCH"
 
-- Resolved conflicts in tailwind.config.ts
-- Resolved conflicts in components/layout/Header.tsx  
-- Resolved conflicts in components/layout/Footer.tsx
-- Resolved conflicts in components/layout/EnhancedLayout.tsx
-- Removed conflicted backup files
-- Cleaned up repository structure"
+# Switch to main
+echo "Switching to main branch..."
+git checkout main
 
-echo "=== Git Operations Complete ==="
+# Pull latest
+echo "Pulling latest changes..."
+git pull origin main
+
+# Merge feature branch
+echo "Merging $CURRENT_BRANCH into main..."
+git merge "$CURRENT_BRANCH"
+
+# Push merged changes
+echo "Pushing merged changes..."
+git push origin main
+
+echo "=== Workflow completed successfully ==="

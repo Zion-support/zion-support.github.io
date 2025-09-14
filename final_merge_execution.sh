@@ -93,9 +93,7 @@ This merge includes new features, content updates, and enhancements."; then
                     # Remove conflict markers and combine content
                     if [[ "$file" == *".tsx" ]] || [[ "$file" == *".ts" ]]; then
                         # For TypeScript/React files, combine components
-                        sed -i '/^<<<<<<< HEAD$/,/^=======$/d' "$file"
-                        sed -i '/^>>>>>>> /d' "$file"
-                    else
+                        sed -i '/^                    else
                         # For other files, take the incoming version
                         git checkout --theirs "$file" 2>/dev/null || true
                     fi

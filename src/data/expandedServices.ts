@@ -10,22 +10,23 @@ export interface ExpandedService {
   features: string[];
   benefits: string[];
   useCases: string[];
-<<<<<<< HEAD
   targetAudience: string[];
   pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based';
   features: string[];
   benefits: string[];
-=======
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
   marketPrice: string;
   contactLink: string;
   tags: string[];
-<<<<<<< HEAD
+import { ProductListing } from "@/types/listings";
+  marketPrice: string;
+  contactLink: string;
+  tags: string[];
   author: {
     name: string;
     id: string;
     avatarUrl?: string;
-import { ProductListing } from "@/types/listings";
+  };
+}
 
 // Expanded Services - Real Micro SAAS and IT Solutions
 export const EXPANDED_SERVICES: ProductListing[] = [
@@ -123,9 +124,7 @@ export const AI_SERVICES: ProductListing[] = [
   sla?: string;
     verified: boolean;
   };
-=======
   author: string;
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
   images: string[];
   createdAt: string;
   aiScore: number;
@@ -204,7 +203,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Content calendar management'
     ],
     benefits: [
-<<<<<<< HEAD
       "Generate 10x more content",
       "Improve SEO rankings by 60%",
       "Save 20+ hours per week",
@@ -232,7 +230,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       "Scalable customer support",
       "Improved customer satisfaction",
       "Data-driven insights"
-=======
       'Generate content 10x faster',
       'Maintain consistent brand voice',
       'Improve SEO rankings',
@@ -240,7 +237,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Reduce content creation costs',
       'Scale content production easily',
       'Data-driven content optimization'
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
     ],
     useCases: [
       'Blog and article writing',
@@ -250,7 +246,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Marketing copy generation',
       'Content localization'
     ],
-<<<<<<< HEAD
     targetAudience: ["E-commerce", "SaaS companies", "Healthcare", "Financial services", "Education"],
     tags: ["AI", "Chatbot", "NLP", "Customer Service", "Automation"],
     author: {
@@ -357,7 +352,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-20T14:30:00.000Z",
     rating: 4.8,
-=======
     marketPrice: '$1,500 - $3,500/month',
     contactLink: 'https://ziontechgroup.com/contact',
     tags: ['AI', 'Content Creation', 'Marketing', 'SEO', 'Social Media'],
@@ -366,7 +360,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     createdAt: '2024-01-20',
     aiScore: 92,
     rating: 4.7,
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
     reviewCount: 89,
     isNew: true,
     isFeatured: true
@@ -455,7 +448,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Government security',
       'Retail fraud prevention'
     ],
-<<<<<<< HEAD
     marketPrice: "$4,200 - $8,500/month",
     contactLink: "https://ziontechgroup.com/contact",
     tags: ["Threat Detection", "AI Security", "Incident Response", "Network Security"],
@@ -534,14 +526,12 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     createdAt: "2024-01-25T09:15:00.000Z",
     rating: 4.9,
     reviewCount: 234,
-=======
     marketPrice: '$3,500 - $6,000/month',
     contactLink: 'https://ziontechgroup.com/contact',
     tags: ['AI', 'Security', 'Threat Detection', 'Incident Response', 'Analytics'],
     author: 'Zion Tech Group',
     images: ['/images/services/threat-detection-1.jpg', '/images/services/threat-detection-2.jpg'],
     createdAt: '2024-01-25',
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
     aiScore: 96,
     rating: 4.8,
     reviewCount: 203,
@@ -568,7 +558,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Compliance management'
     ],
     benefits: [
-<<<<<<< HEAD
       "Deploy 10x faster",
       "Reduce deployment errors by 90%",
       "Automated quality assurance",
@@ -596,7 +585,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       "Enhanced security and compliance",
       "Faster time to market",
       "Reduced maintenance overhead"
-=======
       'Reduce cloud costs by 25-40%',
       'Improve resource utilization',
       'Avoid vendor lock-in',
@@ -604,7 +592,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Simplify cloud operations',
       'Ensure compliance',
       'Optimize performance'
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
     ],
     useCases: [
       'Enterprise cloud strategy',
@@ -614,7 +601,6 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       'Performance optimization',
       'Vendor diversification'
     ],
-<<<<<<< HEAD
     targetAudience: ["Enterprises", "Mid-size companies", "Startups", "Government", "Healthcare"],
     tags: ["Cloud", "Migration", "AWS", "Azure", "DevOps"],
     author: {
@@ -1920,7 +1906,6 @@ export const PRICING_TIERS = [
     createdAt: "2024-02-01T14:20:00.000Z",
     aiScore: 88,
     rating: 4.6,
-=======
     marketPrice: '$2,500 - $5,000/month',
     contactLink: 'https://ziontechgroup.com/contact',
     tags: ['Cloud', 'DevOps', 'Orchestration', 'Cost Optimization', 'Governance'],
@@ -1929,7 +1914,6 @@ export const PRICING_TIERS = [
     createdAt: '2024-01-18',
     aiScore: 94,
     rating: 4.7,
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445
     reviewCount: 178,
     isNew: false,
     isFeatured: true
@@ -2282,7 +2266,6 @@ export const SERVICE_CATEGORIES = [
   'Blockchain & Web3'
 ];
 
-<<<<<<< HEAD
 export const FEATURED_SERVICES = EXPANDED_SERVICES.filter(s => s.isFeatured);
 export const NEW_SERVICES = EXPANDED_SERVICES.filter(s => s.isNew);
     id: "ai-services",
@@ -2407,7 +2390,5 @@ export const PRICING_TIERS = [
   { label: 'IoT & Edge Computing', value: 'iot-edge' },
   { label: 'Blockchain & Web3', value: 'blockchain-web3' }
 ];
-=======
 export const FEATURED_SERVICES = EXPANDED_SERVICES.filter(service => service.isFeatured);
 export const NEW_SERVICES = EXPANDED_SERVICES.filter(service => service.isNew);
->>>>>>> d06313f5ce7aeb5f7fe648218eed64dd3cfe9445

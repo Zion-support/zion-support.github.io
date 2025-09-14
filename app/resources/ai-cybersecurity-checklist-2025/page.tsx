@@ -13,7 +13,6 @@ export default function AICybersecurityChecklist2025() {
       />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-<<<<<<< HEAD
         <header className="mb-12 text-center">
           <div className="inline-flex items-center bg-red-100 text-red-800 text-sm font-medium px-4 py-2 rounded-full mb-6">
             🔒 FREE RESOURCE
@@ -280,7 +279,6 @@ export default function AICybersecurityChecklist2025() {
                 View AI Security Services
               </a>
             </div>
-=======
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
@@ -538,7 +536,6 @@ export default function AICybersecurityChecklist2025() {
             >
               Get Security Consultation
             </Link>
->>>>>>> origin/cursor/create-and-deploy-new-content-1ad9
           </div>
         </div>
       </div>

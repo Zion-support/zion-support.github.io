@@ -241,7 +241,7 @@ export function PerformanceMonitor({
 
     // Cleanup
     return () => {
-<<<<<<< HEAD
+    return () => {
       clearInterval(interval);
       if (observerRef.current) {
         observerRef.current.disconnect();
@@ -249,7 +249,6 @@ export function PerformanceMonitor({
     };
   }, []);
 
-<<<<<<< HEAD
   // This component doesn't render anything
   return null;
 }
@@ -273,7 +272,6 @@ export function getCurrentPerformanceMetrics(): PerformanceMetrics {
     fmp: null, // First Meaningful Paint is deprecated
   };
 }
-=======
   if (!isVisible || !metrics) {
     return null;
   }

@@ -16,27 +16,19 @@ export default function AIRetailTransformation2025() {
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-1ad9
             <Link href="/case-studies" className="text-blue-600 hover:text-blue-700 font-medium">
               ← Back to Case Studies
             </Link>
             <span className="text-gray-400">•</span>
             <span className="text-sm text-gray-600">Retail & E-commerce</span>
-<<<<<<< HEAD
             <span className="text-gray-400">•</span>
             <span className="text-sm text-gray-600">12 min read</span>
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-1ad9
           </div>
           
           <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-4 py-2 mb-4">
             <span className="text-sm font-medium">🏆 SUCCESS STORY</span>
           </div>
           
-<<<<<<< HEAD
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             AI Retail Transformation 2025: $50M Revenue Increase
           </h1>
@@ -58,7 +50,6 @@ export default function AIRetailTransformation2025() {
             <span>January 28, 2025</span>
             <span>•</span>
             <span>Updated 1 hour ago</span>
-=======
             <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
               Case Study
             </span>
@@ -110,12 +101,10 @@ export default function AIRetailTransformation2025() {
           <div className="bg-orange-50 rounded-xl p-6 text-center">
             <div className="text-3xl font-bold text-orange-600 mb-2">6</div>
             <div className="text-sm text-orange-800">Months ROI</div>
->>>>>>> cursor/create-and-deploy-new-content-ed4a
           </div>
         </div>
 
         {/* Executive Summary */}
-<<<<<<< HEAD
         <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-8 mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Executive Summary</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -194,7 +183,6 @@ export default function AIRetailTransformation2025() {
                   <li>• Inventory management issues</li>
                   <li>• Poor customer experience</li>
                   <li>• Competition from e-commerce</li>
-=======
         title="AI Retail Transformation: 300% Revenue Growth Case Study 2025"
         description="Discover how a major retail chain achieved 300% revenue growth through AI transformation. Complete case study with implementation details, results, and lessons learned."
         keywords="AI retail transformation, retail AI case study, AI implementation success, retail automation, customer experience AI, retail growth"
@@ -323,12 +311,10 @@ export default function AIRetailTransformation2025() {
                   <li>• Manual inventory management</li>
                   <li>• Inconsistent customer experience</li>
                   <li>• High operational costs</li>
->>>>>>> cursor/create-and-deploy-new-content-6fbd
                 </ul>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
           
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             The client was facing significant challenges in an increasingly competitive retail landscape. 
@@ -439,7 +425,6 @@ export default function AIRetailTransformation2025() {
                   </div>
                 </div>
               </div>
-=======
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Executive Summary</h2>
           
@@ -503,8 +488,6 @@ export default function AIRetailTransformation2025() {
                 <li>• Optimized operations</li>
                 <li>• 95% customer satisfaction</li>
               </ul>
->>>>>>> cursor/create-and-deploy-new-content-ed4a
-=======
         </section>
 
         {/* Implementation Process */}
@@ -653,13 +636,10 @@ export default function AIRetailTransformation2025() {
               <div className="text-sm text-green-600 font-medium">
                 Result: 50% faster decision making
               </div>
->>>>>>> cursor/create-and-deploy-new-content-6fbd
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Implementation Timeline */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Implementation Timeline</h2>
@@ -709,7 +689,6 @@ export default function AIRetailTransformation2025() {
                     expansion of AI capabilities based on business needs and opportunities.
                   </p>
                 </div>
-=======
         {/* The Challenge */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge</h2>
@@ -754,7 +733,6 @@ export default function AIRetailTransformation2025() {
                 No digital tools for customers to search, compare, or get recommendations. 
                 The company was falling behind competitors who had invested in technology.
               </p>
-=======
         {/* Challenges & Solutions */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Challenges & Solutions</h2>
@@ -796,12 +774,10 @@ export default function AIRetailTransformation2025() {
                 <strong>Solution:</strong> Developed custom integration layer and 
                 API gateway to seamlessly connect AI systems with existing infrastructure.
               </div>
->>>>>>> cursor/create-and-deploy-new-content-6fbd
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* The Solution */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Solution</h2>
@@ -882,13 +858,11 @@ export default function AIRetailTransformation2025() {
                   AI-driven pricing optimization that adjusts prices based on demand, 
                   competition, and inventory levels.
                 </p>
->>>>>>> cursor/create-and-deploy-new-content-ed4a
               </div>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Technical Architecture */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Technical Architecture</h2>
@@ -945,7 +919,6 @@ export default function AIRetailTransformation2025() {
                   <li>• Multi-region deployment</li>
                   <li>• Real-time data synchronization</li>
                   <li>• Fault-tolerant architecture</li>
-=======
         {/* Implementation Process */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Process</h2>
@@ -972,7 +945,6 @@ export default function AIRetailTransformation2025() {
                   <li>Set up cloud infrastructure and AI platforms</li>
                   <li>Trained staff on new AI tools and processes</li>
                   <li>Implemented basic recommendation engine</li>
-=======
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             AI Retail Transformation: 300% Revenue Growth in 18 Months
           </h1>
@@ -1209,12 +1181,10 @@ export default function AIRetailTransformation2025() {
                   <li>• Set up cloud infrastructure and AI development environment</li>
                   <li>• Developed initial personalization models</li>
                   <li>• Trained staff on new AI tools and processes</li>
->>>>>>> origin/cursor/create-and-deploy-new-content-1ad9
                 </ul>
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="flex items-start gap-6">
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                 <span className="text-green-600 font-bold">2</span>
@@ -1230,7 +1200,6 @@ export default function AIRetailTransformation2025() {
                   <li>Deployed personalized recommendation engine</li>
                   <li>Integrated mobile app with in-store experience</li>
                   <li>Implemented AI customer service chatbots</li>
-=======
             <div className="flex items-start gap-4">
               <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <span className="text-green-600 font-bold text-sm">2</span>
@@ -1245,12 +1214,10 @@ export default function AIRetailTransformation2025() {
                   <li>• Implemented intelligent inventory management system</li>
                   <li>• Launched AI-powered customer service chatbots</li>
                   <li>• Optimized supply chain with AI-driven logistics</li>
->>>>>>> origin/cursor/create-and-deploy-new-content-1ad9
                 </ul>
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="flex items-start gap-6">
               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
                 <span className="text-purple-600 font-bold">3</span>
@@ -1284,8 +1251,6 @@ export default function AIRetailTransformation2025() {
                   <li>Advanced analytics and reporting</li>
                   <li>Staff training and change management</li>
                   <li>Future roadmap planning</li>
->>>>>>> cursor/create-and-deploy-new-content-ed4a
-=======
             <div className="flex items-start gap-4">
               <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <span className="text-purple-600 font-bold text-sm">3</span>
@@ -1300,15 +1265,12 @@ export default function AIRetailTransformation2025() {
                   <li>• Expanded AI capabilities to physical stores</li>
                   <li>• Implemented advanced analytics and reporting</li>
                   <li>• Achieved full digital transformation goals</li>
->>>>>>> origin/cursor/create-and-deploy-new-content-1ad9
                 </ul>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
-<<<<<<< HEAD
         {/* Business Impact */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Business Impact & ROI</h2>
@@ -1383,7 +1345,6 @@ export default function AIRetailTransformation2025() {
                   and emerging technologies.
                 </p>
               </div>
-=======
         {/* Results */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Results</h2>
@@ -1471,8 +1432,6 @@ export default function AIRetailTransformation2025() {
                 <li>60% improvement in profit margins</li>
                 <li>$7.8B increase in market value</li>
               </ul>
->>>>>>> cursor/create-and-deploy-new-content-ed4a
-=======
         {/* ROI Analysis */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">ROI Analysis</h2>
@@ -1507,14 +1466,11 @@ export default function AIRetailTransformation2025() {
               <div className="text-4xl font-bold text-green-600 mb-2">1060%</div>
               <div className="text-gray-700 font-medium">Return on Investment</div>
               <div className="text-sm text-gray-500 mt-1">18-month period</div>
->>>>>>> cursor/create-and-deploy-new-content-6fbd
             </div>
           </div>
         </section>
 
         {/* Lessons Learned */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Lessons Learned</h2>
           
@@ -1549,7 +1505,6 @@ export default function AIRetailTransformation2025() {
                 <li>• Build strong partnerships with technology vendors</li>
                 <li>• Establish clear success metrics and KPIs</li>
                 <li>• Plan for continuous learning and adaptation</li>
-=======
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Lessons Learned</h2>
           
@@ -1615,8 +1570,6 @@ export default function AIRetailTransformation2025() {
                 <li>• AI-powered supply chain optimization</li>
                 <li>• Personalized pricing for individual customers</li>
                 <li>• Integration with smart home devices</li>
->>>>>>> cursor/create-and-deploy-new-content-ed4a
-=======
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Lessons Learned</h2>
           
@@ -1672,15 +1625,12 @@ export default function AIRetailTransformation2025() {
                     results quickly sometimes compromised quality
                   </div>
                 </li>
->>>>>>> cursor/create-and-deploy-new-content-6fbd
               </ul>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Conclusion */}
-<<<<<<< HEAD
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Conclusion</h2>
           
@@ -1702,7 +1652,6 @@ export default function AIRetailTransformation2025() {
             <p className="text-xl mb-6 opacity-90">
               Learn how our AI experts can help you achieve similar results. Get a free 
               consultation and customized transformation roadmap for your organization.
-=======
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Conclusion</h2>
           
@@ -1723,32 +1672,24 @@ export default function AIRetailTransformation2025() {
             <p className="text-lg text-gray-700 mb-6">
               Our AI experts can help you design and implement a comprehensive retail 
               transformation strategy tailored to your business needs.
->>>>>>> cursor/create-and-deploy-new-content-ed4a
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-<<<<<<< HEAD
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
-=======
                 className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center"
->>>>>>> cursor/create-and-deploy-new-content-ed4a
               >
                 Get Free Consultation
               </Link>
               <Link
-<<<<<<< HEAD
                 href="/resources/ai-implementation-playbook-2025"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
-=======
                 href="/resources/ai-multimodal-implementation-guide-2025"
                 className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors text-center"
->>>>>>> cursor/create-and-deploy-new-content-ed4a
               >
                 Download Implementation Guide
               </Link>
             </div>
-=======
         {/* Client Testimonial */}
         <section className="mb-12">
           <div className="bg-white border border-gray-200 rounded-xl p-8">
@@ -1776,7 +1717,6 @@ export default function AIRetailTransformation2025() {
           <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
             Learn how AI can drive similar results for your organization. Get a free 
             consultation and discover your AI transformation opportunities.
-=======
         </div>
 
         {/* Results */}
@@ -1970,12 +1910,10 @@ export default function AIRetailTransformation2025() {
           <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business with AI?</h3>
           <p className="text-lg opacity-90 mb-6">
             Let us help you achieve similar results with a customized AI transformation strategy.
->>>>>>> origin/cursor/create-and-deploy-new-content-1ad9
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-<<<<<<< HEAD
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Free Consultation
@@ -1986,14 +1924,11 @@ export default function AIRetailTransformation2025() {
             >
               Download Implementation Guide
             </Link>
->>>>>>> cursor/create-and-deploy-new-content-6fbd
           </div>
         </section>
 
         {/* Related Case Studies */}
-<<<<<<< HEAD
         <section className="border-t border-gray-200 pt-12">
-<<<<<<< HEAD
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Case Studies</h3>
           <div className="grid md:grid-cols-2 gap-6">
             <Link href="/case-studies/ai-financial-services-transformation-2025" className="group">
@@ -2004,7 +1939,6 @@ export default function AIRetailTransformation2025() {
                 <p className="text-gray-600 text-sm">
                   How a major bank achieved $50M cost savings and 300% efficiency gains 
                   through AI-powered automation and risk management.
-=======
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Case Studies</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <Link href="/case-studies/ai-automation-manufacturing-2025" className="group">
@@ -2014,12 +1948,10 @@ export default function AIRetailTransformation2025() {
                 </h3>
                 <p className="text-gray-600 text-sm">
                   40% cost reduction and 60% faster processing in manufacturing
->>>>>>> cursor/create-and-deploy-new-content-ed4a
                 </p>
               </div>
             </Link>
             
-<<<<<<< HEAD
             <Link href="/case-studies/ai-automation-manufacturing-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
@@ -2028,7 +1960,6 @@ export default function AIRetailTransformation2025() {
                 <p className="text-gray-600 text-sm">
                   Fortune 500 manufacturer achieves 40% cost reduction and 60% faster 
                   processing through intelligent automation systems.
-=======
             <Link href="/case-studies/ai-financial-services-transformation-2025" className="group">
               <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 mb-2">
@@ -2036,8 +1967,6 @@ export default function AIRetailTransformation2025() {
                 </h3>
                 <p className="text-gray-600 text-sm">
                   $50M cost savings and 300% efficiency gains in banking
->>>>>>> cursor/create-and-deploy-new-content-ed4a
-=======
         <section className="mt-16">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Case Studies</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -2058,18 +1987,14 @@ export default function AIRetailTransformation2025() {
                 </h3>
                 <p className="text-gray-600 text-sm">
                   $50M cost savings and 300% efficiency gains in financial services
->>>>>>> cursor/create-and-deploy-new-content-6fbd
                 </p>
               </div>
             </Link>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
-=======
       </article>
->>>>>>> cursor/create-and-deploy-new-content-6fbd
-=======
+      </article>
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Your AI Transformation
@@ -2083,7 +2008,6 @@ export default function AIRetailTransformation2025() {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-1ad9
     </div>
   );
 }

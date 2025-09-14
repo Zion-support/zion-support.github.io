@@ -3,104 +3,91 @@ import { useState, useEffect } from 'react';
 interface User {
   id: string;
   email: string;
-  name: string;
-  role: 'user' | 'admin' | 'moderator';
-  userType?: string;
-  displayName?: string;
-  avatarUrl?: string;
+  emailVerified: boolean;
+  name?: string;
+  avatar?: string;
 }
 
-<<<<<<< HEAD
 interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => void;
+  register: (email: string, password: string, name?: string) => Promise<void>;
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-export function useAuth() {
+export function useAuth(): AuthState {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
-=======
-export const useAuth = () => {
-  const [authState, setAuthState] = useState<AuthState>({
-    user: null,
-    isAuthenticated: false,
-    isLoading: true,
-  });
->>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-    const checkAuth = () => {
-      const storedUser = localStorage.getItem('zion_user');
-      if (storedUser) {
-        try {
-          setUser(JSON.parse(storedUser));
-        } catch (error) {
-          console.error('Error parsing stored user:', error);
-        }
+    // Check for existing auth state in localStorage
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      try {
+        setUser(JSON.parse(storedUser));
+      } catch (error) {
+        console.error('Error parsing stored user:', error);
+        localStorage.removeItem('user');
       }
-      setLoading(false);
-    };
-
-    checkAuth();
+    }
+    setIsLoading(false);
   }, []);
 
-  const login = async (email: string, password: string) => {
-    // Implement actual login logic here
-    const mockUser: User = {
-      id: '1',
-      email,
-      name: 'User',
-      role: 'user'
-    };
-    
-<<<<<<< HEAD
-    setUser(mockUser);
-=======
-    setAuthState({
-      user: mockUser,
-      isAuthenticated: true,
-      isLoading: false,
-    });
->>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    return mockUser;
+  const login = async (email: string, password: string): Promise<void> => {
+    setIsLoading(true);
+    try {
+      // Mock login - in production, this would make an API call
+      const mockUser: User = {
+        id: '1',
+        email,
+        emailVerified: true,
+        name: email.split('@')[0],
+      };
+      
+      setUser(mockUser);
+      localStorage.setItem('user', JSON.stringify(mockUser));
+    } catch (error) {
+      console.error('Login error:', error);
+      throw error;
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  const logout = () => {
+  const logout = (): void => {
     setUser(null);
-    localStorage.removeItem('zion_user');
+    localStorage.removeItem('user');
   };
 
-  const register = async (email: string, password: string, name: string) => {
-    // Implement actual registration logic here
-    const mockUser: User = {
-      id: '1',
-      email,
-      name,
-      role: 'user'
-    };
-    
-    setUser(mockUser);
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    return mockUser;
+  const register = async (email: string, password: string, name?: string): Promise<void> => {
+    setIsLoading(true);
+    try {
+      // Mock registration - in production, this would make an API call
+      const mockUser: User = {
+        id: '1',
+        email,
+        emailVerified: false,
+        name: name || email.split('@')[0],
+      };
+      
+      setUser(mockUser);
+      localStorage.setItem('user', JSON.stringify(mockUser));
+    } catch (error) {
+      console.error('Registration error:', error);
+      throw error;
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return {
     user,
-    loading,
+    isAuthenticated: !!user,
+    isLoading,
     login,
     logout,
     register,
-    isAuthenticated: !!user,
-    isAdmin: user?.role === 'admin'
   };
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
