@@ -151,6 +151,11 @@ import NewContent2026ComprehensiveShowcase from '../components/NewContent2026Com
 import AI2025_2026UltimateBreakthroughBanner from '../components/AI2025_2026UltimateBreakthroughBanner';
 import RevolutionaryContent2025_2026Showcase from '../components/RevolutionaryContent2025_2026Showcase';
 
+// Import new promotional components
+import AI2025_2026UltimateBreakthroughPromotionBanner from '../components/AI2025_2026UltimateBreakthroughPromotionBanner';
+import QuantumAI2026BreakthroughPromotionBanner from '../components/QuantumAI2026BreakthroughPromotionBanner';
+import NewContent2025_2026ComprehensiveShowcase from '../components/NewContent2025_2026ComprehensiveShowcase';
+
 // Import new Ultimate Breakthrough 2025-2026 components
 import UltimateBreakthrough2025Banner from '../components/UltimateBreakthrough2025Banner';
 import UltimateBreakthroughShowcase2025 from '../components/UltimateBreakthroughShowcase2025';
@@ -236,6 +241,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025-2026 COMPREHENSIVE SHOWCASE - TOP PRIORITY FEATURED */}
+        <NewContent2025_2026ComprehensiveShowcase />
+        
+        {/* AI 2025-2026 ULTIMATE BREAKTHROUGH PROMOTION - NEWEST FEATURED */}
+        <AI2025_2026UltimateBreakthroughPromotionBanner />
+        
+        {/* QUANTUM AI 2026 BREAKTHROUGH PROMOTION - NEWEST FEATURED */}
+        <QuantumAI2026BreakthroughPromotionBanner />
+        
         {/* ULTIMATE BREAKTHROUGH 2025-2026 - TOP PRIORITY FEATURED */}
         <UltimateBreakthrough2025Banner />
         
