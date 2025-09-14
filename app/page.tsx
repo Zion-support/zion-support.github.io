@@ -47,6 +47,19 @@ import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
 import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
+import AI2025UltimateBreakthroughBanner from '../components/AI2025UltimateBreakthroughBanner';
+import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+
+// Import new 2025 breakthrough promotional components
+import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI2025BreakthroughPromotionBanner';
+import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
+import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
+
+// Import new ultimate AI transformation components
+import UltimateAITransformation2025Banner from '../components/UltimateAITransformation2025Banner';
+import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
+import UltimateContentShowcase2025Banner from '../components/UltimateContentShowcase2025Banner';
+import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -65,6 +78,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Revolutionary Content 2025 Ultimate Banner - NEW */}
+        <RevolutionaryContent2025UltimateBanner />
+        
+        {/* Ultimate Content Showcase 2025 Banner - NEW */}
+        <UltimateContentShowcase2025Banner />
+        
+        {/* Ultimate AI Transformation 2025 Banner - NEW */}
+        <UltimateAITransformation2025Banner />
+        
         {/* Revolutionary Content Showcase 2025 - FEATURED */}
         <RevolutionaryContentShowcase2025 />
         
