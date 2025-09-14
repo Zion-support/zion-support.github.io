@@ -201,6 +201,23 @@ content_index:
         success: "98%"
       reading_time: "18 min read"
       
+    - id: "fortune-100-autonomous-operations-890-roi-success"
+      type: "case-study"
+      title: "Fortune 100 Autonomous Operations Success: $12.8B Annual Savings with 890% ROI"
+      file_path: "/content/case-studies/fortune-100-autonomous-operations-890-roi-success.md"
+      url: "/case-studies/fortune-100-autonomous-operations-890-roi-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Fortune 100", "Autonomous Operations", "Case Study", "ROI", "Manufacturing", "Success Story", "Cost Savings"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "890%"
+        savings: "$12.8B"
+        efficiency: "156%"
+        satisfaction: "94%"
+      reading_time: "18 min read"
+      
     - id: "ai-automation-fortune-500-success-600-roi"
       type: "case-study"
       title: "Fortune 500 AI Automation Success: $3.2B Annual Savings with 600% ROI"
@@ -217,6 +234,23 @@ content_index:
         efficiency: "89%"
         satisfaction: "98%"
       reading_time: "12 min read"
+      
+    - id: "autonomous-operations-implementation-guide-2025"
+      type: "resource"
+      title: "Autonomous Operations Implementation Guide 2025: From Strategy to 890% ROI"
+      file_path: "/content/resources/autonomous-operations-implementation-guide-2025.md"
+      url: "/resources/autonomous-operations-implementation-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Autonomous Operations", "Implementation Guide", "Strategy", "ROI", "Best Practices", "Framework", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "890%"
+        success: "98%"
+        payback: "1.4 months"
+        implementations: "500+"
+      reading_time: "35 min read"
       
     - id: "ai-automation-implementation-master-guide-2025"
       type: "resource"
