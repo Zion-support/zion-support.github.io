@@ -537,6 +537,74 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   new_content_january_2025:
+    - id: "quantum-neural-superintelligence-breakthrough"
+      type: "blog"
+      title: "Quantum Neural Superintelligence: The Next Evolution in AI"
+      file_path: "/content/blog/ai-2025-quantum-neural-superintelligence-breakthrough.md"
+      url: "/blog/ai-2025-quantum-neural-superintelligence-breakthrough"
+      status: "published"
+      created: "2025-01-15"
+      tags: ["quantum computing", "neural networks", "superintelligence", "AI breakthrough", "enterprise AI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "2,841%"
+        savings: "$12.5B"
+        accuracy: "99.97%"
+        efficiency: "2,400%"
+      reading_time: "15 min read"
+      
+    - id: "fortune-500-ai-transformation-2025-ultimate-success-story"
+      type: "case-study"
+      title: "Fortune 500 Manufacturing Giant Achieves $12.5B ROI Through AI Transformation"
+      file_path: "/content/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story.md"
+      url: "/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story"
+      status: "published"
+      created: "2025-01-15"
+      tags: ["fortune 500", "AI transformation", "manufacturing", "ROI", "automation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "$12.5B"
+        timeline: "10 months"
+        efficiency: "2,400%"
+        accuracy: "99.97%"
+      reading_time: "18 min read"
+      
+    - id: "ai-transformation-roi-calculator-2025"
+      type: "resource"
+      title: "AI Transformation ROI Calculator 2025"
+      file_path: "/content/resources/ai-transformation-roi-calculator-2025.md"
+      url: "/resources/ai-transformation-roi-calculator-2025"
+      status: "published"
+      created: "2025-01-15"
+      tags: ["ROI calculator", "AI transformation", "business tool", "analytics"]
+      featured: true
+      is_new: true
+      metrics:
+        accuracy: "95%"
+        users: "10,000+"
+        satisfaction: "97%"
+        completion_time: "15 minutes"
+      reading_time: "8 min read"
+      
+    - id: "ai-2025-autonomous-business-revolution-complete-guide"
+      type: "blog"
+      title: "AI 2025: Autonomous Business Revolution Complete Guide"
+      file_path: "/content/blog/ai-2025-autonomous-business-revolution-complete-guide.md"
+      url: "/blog/ai-2025-autonomous-business-revolution-complete-guide"
+      status: "published"
+      created: "2025-01-15"
+      tags: ["autonomous business", "AI implementation", "business transformation", "automation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%+"
+        efficiency: "78%"
+        automation: "95%"
+        satisfaction: "98%"
+      reading_time: "22 min read"
+      
     - id: "ai-2025-enterprise-transformation-ultimate-guide"
       type: "blog"
       title: "AI 2025: The Ultimate Enterprise Transformation Guide - 500% ROI in 12 Months"
