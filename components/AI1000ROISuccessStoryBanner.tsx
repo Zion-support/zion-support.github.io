@@ -14,7 +14,7 @@ const AI1000ROISuccessStoryBanner = () => {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto">
             Discover how a Fortune 500 manufacturing company achieved 1000% ROI through comprehensive 
-            AI transformation, reducing costs by 70% while increasing productivity by 300%.
+            AI transformationreducing costs by 70% while increasing productivity by 300%.
           </p>
         </div>
 

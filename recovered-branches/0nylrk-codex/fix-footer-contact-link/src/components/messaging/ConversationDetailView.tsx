@@ -1,10 +1,10 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React{ useStateuseEffectuseRef } from 'react';
 import { format } from 'date-fns';
-import { MessageSquare } from 'lucide-react';
+MessageSquare
 import { useMessaging } from '@/context/MessagingContext';
 import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { AvatarFallbackAvatarImage } from '@/components/ui/avatar';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useAuth } from '@/hooks/useAuth';
 import { MessageBubble } from './MessageBubble';
@@ -13,23 +13,23 @@ import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
   const { user } = useAuth();
   const { 
-    activeConversation, 
-    activeMessages, 
-    sendMessage, 
+    activeConversation
+    activeMessages
+    sendMessage
     loadMessages
   } = useMessaging();
-  const [messageText, setMessageText] = useState('');
+  const [messageTextsetMessageText] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     if (activeConversation) {
       loadMessages(activeConversation.id);
     }
-  }, [activeConversation?.id, loadMessages]);
+  }[activeConversation?.idloadMessages]);
   
   useEffect(() => {
     scrollToBottom();
-  }, [activeMessages]);
+  }[activeMessages]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -39,7 +39,7 @@ export function ConversationDetailView() {
     e.preventDefault();
     if (!messageText.trim() || !activeConversation) return;
     
-    await sendMessage(activeConversation.id, messageText);
+    await sendMessage(activeConversation.idmessageText);
     setMessageText('');
   };
   
@@ -59,7 +59,7 @@ export function ConversationDetailView() {
   const groupedMessages: { date: string; messages: any[] }[] = [];
   
   activeMessages.forEach(message => {
-    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
+    const messageDate = format(new Date(message.created_at)'yyyy-MM-dd');
     const existingGroup = groupedMessages.find(group => group.date === messageDate);
     
     if (existingGroup) {
@@ -143,7 +143,7 @@ export function ConversationDetailView() {
             <p>No messages yet. Start the conversation!</p>
           </div>
         ) : (
-          groupedMessages.map((group, groupIndex) => (
+          groupedMessages.map((groupIndex) => (
             <div key={group.date}>
               <DateDivider date={new Date(group.date)} />
               <div className="space-y-3">

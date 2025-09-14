@@ -1,8 +1,8 @@
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CardContent } from "@/components/ui/card";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { AppLayout } from "@/layout/AppLayout";
 
 export default function Careers() {
@@ -14,11 +14,11 @@ export default function Careers() {
         location: "Remote",
         type: "Full-time",
         department: "Engineering",
-        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
+        description: "Join our frontend team to build beautifulresponsiveand accessible user interfaces for our AI-powered marketplace."
       },
       {
         title: "AI Research Engineer",
-        location: "San Francisco, CA",
+        location: "San FranciscoCA",
         type: "Full-time",
         department: "Engineering",
         description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
@@ -28,13 +28,13 @@ export default function Careers() {
         location: "Remote",
         type: "Full-time",
         department: "Engineering",
-        description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
+        description: "Develop end-to-end features across our platformworking with modern technologies like ReactNode.jsand PostgreSQL."
       }
     ],
     product: [
       {
         title: "Product Manager",
-        location: "New York, NY",
+        location: "New YorkNY",
         type: "Full-time",
         department: "Product",
         description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
@@ -57,7 +57,7 @@ export default function Careers() {
       },
       {
         title: "Content Strategist",
-        location: "London, UK",
+        location: "LondonUK",
         type: "Full-time",
         department: "Marketing",
         description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
@@ -69,7 +69,7 @@ export default function Careers() {
         location: "Remote",
         type: "Full-time",
         department: "Operations",
-        description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
+        description: "Build and nurture our growing community of AI specialistsdevelopersand tech enthusiasts."
       },
       {
         title: "Talent Acquisition Specialist",
@@ -112,7 +112,7 @@ export default function Careers() {
     },
     {
       title: "Competitive Compensation",
-      description: "Salary packages that recognize your value, plus equity options to share in our success.",
+      description: "Salary packages that recognize your valueplus equity options to share in our success.",
       icon: (
         <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -126,7 +126,7 @@ export default function Careers() {
       <SEO 
         title="Careers at Zion - Join Our Team" 
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform." 
-        keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
+        keywords="Zion careersAI jobstech careersremote workstartup jobs"
         canonical="https://app.ziontechgroup.com/careers"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -142,17 +142,17 @@ export default function Careers() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
               <p className="text-zion-slate-light text-lg mb-6">
-                At Zion, we're not just building a marketplace; we're creating a new paradigm for how AI and 
-                technology are accessed, shared, and implemented globally.
+                At Zionwe're not just building a marketplace; we're creating a new paradigm for how AI and 
+                technology are accessedsharedand implemented globally.
               </p>
               <p className="text-zion-slate-light text-lg mb-6">
                 Our team is passionate about democratizing access to cutting-edge technology and connecting 
-                talented individuals with meaningful opportunities. We value innovation, collaboration, and 
+                talented individuals with meaningful opportunities. We value innovationcollaborationand 
                 impact in everything we do.
               </p>
               <p className="text-zion-slate-light text-lg">
-                If you're excited about shaping the future of AI and technology while working in a dynamic, 
-                remote-first environment with a mission-driven team, we'd love to meet you.
+                If you're excited about shaping the future of AI and technology while working in a dynamic
+                remote-first environment with a mission-driven teamwe'd love to meet you.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden">
@@ -167,7 +167,7 @@ export default function Careers() {
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefitindex) => (
                 <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                   <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                     {benefit.icon}
@@ -190,9 +190,9 @@ export default function Careers() {
                 <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>
               </TabsList>
               
-              {Object.entries(jobs).map(([department, jobList]) => (
+              {Object.entries(jobs).map(([departmentjobList]) => (
                 <TabsContent key={department} value={department} className="space-y-6">
-                  {jobList.map((job, index) => (
+                  {jobList.map((jobindex) => (
                     <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors">
                       <CardContent className="p-6">
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between">

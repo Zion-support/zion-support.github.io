@@ -1,27 +1,27 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
-  Brain, Rocket, Dna, Globe, Shield, Wifi, Package,
-  Bot, Car, Building2, DollarSign, Monitor, Users,
-  Cpu, Zap, Atom, Database, Cloud, Lock, Code
+  MenuXChevronDownSearchPhoneMailMapPin,
+  BrainRocketDnaGlobeShieldWifiPackage,
+  BotCarBuilding2DollarSignMonitorUsers,
+  CpuZapAtomDatabaseCloudLockCode
 } from 'lucide-react';
 import Link from 'next/link';
 
 const UltraAdvancedNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpensetIsOpen] = useState(false);
+  const [isScrolledsetIsScrolled] = useState(false);
+  const [activeDropdownsetActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll'handleScroll);
+    return () => window.removeEventListener('scroll'handleScroll);
+  }[]);
 
   const navigationItems = [
     {
@@ -234,8 +234,8 @@ const UltraAdvancedNavigation: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0x: -20 }}
+            animate={{ opacity: 1x: 0 }}
             transition={{ duration: 0.5 }}
             className="flex items-center"
           >
@@ -254,7 +254,7 @@ const UltraAdvancedNavigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item, index) => (
+            {navigationItems.map((itemindex) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
                   <button
@@ -282,9 +282,9 @@ const UltraAdvancedNavigation: React.FC = () => {
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        initial={{ opacity: 0y: 10scale: 0.95 }}
+                        animate={{ opacity: 1y: 0scale: 1 }}
+                        exit={{ opacity: 0y: 10scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
                       >
@@ -360,9 +360,9 @@ const UltraAdvancedNavigation: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0height: 0 }}
+            animate={{ opacity: 1height: 'auto' }}
+            exit={{ opacity: 0height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden"
           >

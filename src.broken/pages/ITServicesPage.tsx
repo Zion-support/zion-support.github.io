@@ -1,14 +1,14 @@
 import React from 'react';
 import { 
-  Server, 
-  Cloud, 
-  Shield, 
-  Code, 
-  Database, 
-  Network, 
-  Cpu, 
-  Zap, 
-  CheckCircle, 
+  Server
+  Cloud
+  Shield
+  Code
+  Database
+  Network
+  Cpu
+  Zap
+  CheckCircle
   Star,
   ExternalLink,
   ArrowRight,
@@ -28,7 +28,7 @@ export default function ITServicesPage() {
   const itServices = [
     {
       name: "Cloud Migration & Optimization",
-      description: "End-to-end cloud migration services with strategic planning, cost optimization, and performance tuning for maximum ROI.",
+      description: "End-to-end cloud migration services with strategic planningcost optimizationand performance tuning for maximum ROI.",
       icon: <Cloud className="w-12 h-12 text-blue-500" />,
       features: [
         "Multi-cloud strategy development",
@@ -46,7 +46,7 @@ export default function ITServicesPage() {
         enterprise: "From $15,000"
       },
       marketPrice: "$5,000-15,000",
-      useCases: ["Enterprises", "Mid-size companies", "Startups", "Healthcare", "Financial services"],
+      useCases: ["Enterprises"Mid-size companies"Startups"Healthcare"Financial services"],
       benefits: [
         "Reduced infrastructure costs",
         "Improved scalability",
@@ -58,7 +58,7 @@ export default function ITServicesPage() {
     },
     {
       name: "DevOps Automation Platform",
-      description: "Complete CI/CD pipeline automation with infrastructure as code, monitoring solutions, and security integration.",
+      description: "Complete CI/CD pipeline automation with infrastructure as codemonitoring solutionsand security integration.",
       icon: <Code className="w-12 h-12 text-green-500" />,
       features: [
         "CI/CD pipeline automation",
@@ -76,7 +76,7 @@ export default function ITServicesPage() {
         enterprise: "$2,499/month"
       },
       marketPrice: "$800-1500/month",
-      useCases: ["Development teams", "Tech companies", "Enterprises", "Startups", "DevOps teams"],
+      useCases: ["Development teams"Tech companies"Enterprises"Startups"DevOps teams"],
       benefits: [
         "Faster deployment cycles",
         "Reduced manual errors",
@@ -88,7 +88,7 @@ export default function ITServicesPage() {
     },
     {
       name: "Cybersecurity Assessment & Implementation",
-      description: "Comprehensive security audits, penetration testing, and security infrastructure deployment with compliance frameworks.",
+      description: "Comprehensive security auditspenetration testingand security infrastructure deployment with compliance frameworks.",
       icon: <Shield className="w-12 h-12 text-red-500" />,
       features: [
         "Security audits and assessments",
@@ -106,7 +106,7 @@ export default function ITServicesPage() {
         enterprise: "From $20,000"
       },
       marketPrice: "$7,000-20,000",
-      useCases: ["Financial services", "Healthcare", "Government", "Enterprises", "E-commerce"],
+      useCases: ["Financial services"Healthcare"Government"Enterprises"E-commerce"],
       benefits: [
         "Reduced security risks",
         "Compliance assurance",
@@ -118,7 +118,7 @@ export default function ITServicesPage() {
     },
     {
       name: "Network Infrastructure Design",
-      description: "Scalable network architecture design with high availability, security, and performance optimization.",
+      description: "Scalable network architecture design with high availabilitysecurityand performance optimization.",
       icon: <Network className="w-12 h-12 text-purple-500" />,
       features: [
         "Network architecture design",
@@ -136,7 +136,7 @@ export default function ITServicesPage() {
         enterprise: "From $25,000"
       },
       marketPrice: "$8,000-30,000",
-      useCases: ["Enterprises", "Data centers", "Cloud providers", "Educational institutions", "Healthcare"],
+      useCases: ["Enterprises"Data centers"Cloud providers"Educational institutions"Healthcare"],
       benefits: [
         "Improved network performance",
         "Enhanced security",
@@ -148,7 +148,7 @@ export default function ITServicesPage() {
     },
     {
       name: "Database Design & Optimization",
-      description: "Database architecture design, performance tuning, and migration services for optimal data management.",
+      description: "Database architecture designperformance tuningand migration services for optimal data management.",
       icon: <Database className="w-12 h-12 text-orange-500" />,
       features: [
         "Database architecture design",
@@ -166,7 +166,7 @@ export default function ITServicesPage() {
         enterprise: "From $15,000"
       },
       marketPrice: "$3,000-20,000",
-      useCases: ["E-commerce platforms", "SaaS companies", "Enterprises", "Financial services", "Healthcare"],
+      useCases: ["E-commerce platforms"SaaS companies"Enterprises"Financial services"Healthcare"],
       benefits: [
         "Improved data performance",
         "Enhanced data security",
@@ -178,7 +178,7 @@ export default function ITServicesPage() {
     },
     {
       name: "IT Infrastructure Management",
-      description: "Comprehensive IT infrastructure management with proactive monitoring, maintenance, and optimization services.",
+      description: "Comprehensive IT infrastructure management with proactive monitoringmaintenanceand optimization services.",
       icon: <Server className="w-12 h-12 text-indigo-500" />,
       features: [
         "24/7 infrastructure monitoring",
@@ -196,7 +196,7 @@ export default function ITServicesPage() {
         enterprise: "$3,199/month"
       },
       marketPrice: "$1,200-3,500/month",
-      useCases: ["Enterprises", "Mid-size companies", "Healthcare", "Financial services", "Educational institutions"],
+      useCases: ["Enterprises"Mid-size companies"Healthcare"Financial services"Educational institutions"],
       benefits: [
         "Reduced downtime",
         "Lower operational costs",
@@ -236,10 +236,10 @@ export default function ITServicesPage() {
   ];
 
   const stats = [
-    { label: "Infrastructure Deployed", value: "200+" },
-    { label: "Security Audits", value: "150+" },
-    { label: "Uptime Guarantee", value: "99.9%" },
-    { label: "Client Satisfaction", value: "97%" }
+    { label: "Infrastructure Deployed"value: "200+" },
+    { label: "Security Audits"value: "150+" },
+    { label: "Uptime Guarantee"value: "99.9%" },
+    { label: "Client Satisfaction"value: "97%" }
   ];
 
   return (
@@ -256,7 +256,7 @@ export default function ITServicesPage() {
               IT Infrastructure & DevOps Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Enterprise-grade IT solutions that drive operational excellence, security, and scalability. From cloud migration to cybersecurity, we build robust technology foundations.
+              Enterprise-grade IT solutions that drive operational excellencesecurityand scalability. From cloud migration to cybersecuritywe build robust technology foundations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
@@ -281,7 +281,7 @@ export default function ITServicesPage() {
       {/* Stats Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{stat.value}</div>
               <div className="text-gray-300 text-sm">{stat.label}</div>
@@ -297,12 +297,12 @@ export default function ITServicesPage() {
             Our IT Service Portfolio
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive IT solutions designed to modernize infrastructure, enhance security, and drive operational efficiency.
+            Comprehensive IT solutions designed to modernize infrastructurenhance securityand drive operational efficiency.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {itServices.map((service, index) => (
+          {itServices.map((serviceindex) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
@@ -316,7 +316,7 @@ export default function ITServicesPage() {
                   <div>
                     <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((featureIndex) => (
                         <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           {feature}
@@ -329,7 +329,7 @@ export default function ITServicesPage() {
                     <div>
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Pricing:</h4>
                       <div className="space-y-1">
-                        {Object.entries(service.pricing).map(([plan, price]) => (
+                        {Object.entries(service.pricing).map(([planprice]) => (
                           <div key={plan} className="flex justify-between text-sm">
                             <span className="text-gray-400 capitalize">{plan}:</span>
                             <span className="text-green-400 font-semibold">{price}</span>
@@ -344,7 +344,7 @@ export default function ITServicesPage() {
                     <div>
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
                       <ul className="space-y-1">
-                        {service.useCases.map((useCase, useCaseIndex) => (
+                        {service.useCases.map((useCaseIndex) => (
                           <li key={useCaseIndex} className="text-xs text-gray-300">• {useCase}</li>
                         ))}
                       </ul>
@@ -354,7 +354,7 @@ export default function ITServicesPage() {
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Benefits:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-1">
-                      {service.benefits.map((benefit, benefitIndex) => (
+                      {service.benefits.map((benefitIndex) => (
                         <li key={benefitIndex} className="text-xs text-gray-300">• {benefit}</li>
                       ))}
                     </ul>
@@ -396,7 +396,7 @@ export default function ITServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {additionalServices.map((service, index) => (
+          {additionalServices.map((serviceindex) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300">
               <div className="text-center space-y-4">
                 <div className="flex justify-center">
@@ -432,7 +432,7 @@ export default function ITServicesPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-white">Proven Expertise</h3>
                 <p className="text-gray-300">
-                  Years of experience in enterprise IT infrastructure, cloud technologies, and cybersecurity.
+                  Years of experience in enterprise IT infrastructurecloud technologiesand cybersecurity.
                 </p>
               </div>
               
@@ -452,7 +452,7 @@ export default function ITServicesPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-white">24/7 Support</h3>
                 <p className="text-gray-300">
-                  Round-the-clock monitoring, support, and maintenance for your critical infrastructure.
+                  Round-the-clock monitoringsupportand maintenance for your critical infrastructure.
                 </p>
               </div>
             </div>
@@ -468,7 +468,7 @@ export default function ITServicesPage() {
               Ready to Modernize Your IT Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Let's discuss how our IT solutions can enhance your operational efficiency, security posture, and business scalability.
+              Let's discuss how our IT solutions can enhance your operational efficiencysecurity postureand business scalability.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -496,7 +496,7 @@ export default function ITServicesPage() {
                 </div>
                 <h3 className="text-lg font-semibold text-white">Visit Us</h3>
                 <p className="text-gray-300">364 E Main St STE 1008</p>
-                <p className="text-sm text-gray-400">Middletown, DE 19709</p>
+                <p className="text-sm text-gray-400">MiddletownDE 19709</p>
               </div>
             </div>
 

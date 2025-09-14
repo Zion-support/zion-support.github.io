@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateContentShowcase2025Banner = () => {
-  const [currentContent, setCurrentContent] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-  const [dismissed, setDismissed] = useState(false);
+  const [currentContentsetCurrentContent] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [dismissedsetDismissed] = useState(false);
 
   useEffect(() => {
     // Check if banner was dismissed
@@ -19,13 +19,13 @@ const UltimateContentShowcase2025Banner = () => {
     // Auto-rotate content every 6 seconds
     const interval = setInterval(() => {
       setCurrentContent((prev) => (prev + 1) % contentItems.length);
-    }, 6000);
+    }6000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
-    localStorage.setItem('ultimate-content-showcase-banner-dismissed', 'true');
+    localStorage.setItem('ultimate-content-showcase-banner-dismissed'true');
     setDismissed(true);
     setIsVisible(false);
   };
@@ -141,7 +141,7 @@ const UltimateContentShowcase2025Banner = () => {
 
           {/* Progress indicators */}
           <div className="hidden md:flex flex-col items-center space-y-2 ml-8">
-            {contentItems.map((_, index) => (
+            {contentItems.map((_index) => (
               <div
                 key={index}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${

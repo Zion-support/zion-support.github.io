@@ -34,19 +34,19 @@ export default function TechnologyInsightsPage() {
     {
       title: 'Autonomous Systems Research',
       description: 'Pioneering research in building truly autonomous systems that can operate independently.',
-      focus: ['Decision Making', 'Self-Learning', 'Adaptive Behavior', 'System Integration'],
+      focus: ['Decision Making'Self-Learning'Adaptive Behavior'System Integration'],
       icon: '🔬'
     },
     {
       title: 'AI Ethics & Governance',
       description: 'Research into responsible AI development and ethical considerations for autonomous systems.',
-      focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability'],
+      focus: ['Ethical AI'Bias Detection'Transparency'Accountability'],
       icon: '⚖️'
     },
     {
       title: 'Human-AI Collaboration',
       description: 'Exploring how humans and AI can work together effectively and safely.',
-      focus: ['Human-AI Interface', 'Collaborative Decision Making', 'Safety Protocols', 'Trust Building'],
+      focus: ['Human-AI Interface'Collaborative Decision Making'Safety Protocols'Trust Building'],
       icon: '🤝'
     }
   ];
@@ -82,9 +82,9 @@ export default function TechnologyInsightsPage() {
     <>
       <Head>
         <title>Technology Insights | Zion Tech Group - Research & Innovation</title>
-        <meta name="description" content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies." />
+        <meta name="description" content="Explore Zion Tech Group's technology insightsresearchand thought leadership in AIautomationand emerging technologies." />
         <meta property="og:title" content="Technology Insights | Zion Tech Group" />
-        <meta property="og:description" content="Research insights, technology trends, and thought leadership in AI and automation." />
+        <meta property="og:description" content="Research insightstechnology trendsand thought leadership in AI and automation." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
@@ -95,7 +95,7 @@ export default function TechnologyInsightsPage() {
               Technology Insights
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Research insights, technology trends, and thought leadership in AI, automation, and emerging technologies
+              Research insightstechnology trendsand thought leadership in AIautomationand emerging technologies
             </p>
           </section>
 
@@ -104,7 +104,7 @@ export default function TechnologyInsightsPage() {
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Latest Technology Trends</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {technologyTrends.map((trend, index) => (
+                {technologyTrends.map((trendindex) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{trend.category}</span>
@@ -127,13 +127,13 @@ export default function TechnologyInsightsPage() {
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Research Focus Areas</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {researchAreas.map((area, index) => (
+                {researchAreas.map((areaindex) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="text-4xl mb-4">{area.icon}</div>
                     <h3 className="text-xl font-bold mb-3 text-white">{area.title}</h3>
                     <p className="text-white/70 mb-4">{area.description}</p>
                     <ul className="space-y-2">
-                      {area.focus.map((focus, focusIndex) => (
+                      {area.focus.map((focusIndex) => (
                         <li key={focusIndex} className="text-sm text-white/60 flex items-center">
                           <span className="text-cyan-400 mr-2">•</span>
                           {focus}
@@ -149,7 +149,7 @@ export default function TechnologyInsightsPage() {
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Research Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {whitepapers.map((paper, index) => (
+                {whitepapers.map((paperindex) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
@@ -176,8 +176,8 @@ export default function TechnologyInsightsPage() {
                   <div>
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
                     <p className="text-white/80 mb-6">
-                      Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, 
-                      AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
+                      Our innovation lab is dedicated to exploring the frontiers of technologyconducting research in autonomous systems
+                      AI ethicsand human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
                     </p>
                     <ul className="space-y-2 text-white/70">
                       <li>• Advanced AI research and development</li>

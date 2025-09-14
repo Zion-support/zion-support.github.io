@@ -1,38 +1,38 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+CheckStarZapShieldUsersGlobeArrowRightExternalLinkTrendingUpClockTargetBuildingRocketAwardDollarSignChartBarLockCpuDatabaseCloudSmartphonePaletteSearchMessageSquareFileTextCalendarCreditCardBarChart3SettingsZap as ZapIconCodeBookOpenActivityDatabase as DatabaseIconPlayMailPhoneMapPinFilterGridListChevronDownChevronUpSparklesFlaskConicalDnaCarLeafFactoryTruckMicroscopeGraduationCapShieldCheckBrainAtomGlobe2BotEyeTarget as TargetZap as ZapIcon2Shield as ShieldIconGlobe as GlobeIconCpu as CpuIconCloud as CloudIconBot as BotIconLock as LockIconBarChart3 as BarChart3IconTrendingUp as TrendingUpIconUsers as UsersIconAward as AwardIconStar as StarIconCheck as CheckIconArrowRight as ArrowRightIconExternalLink as ExternalLinkIconPhone as PhoneIconMail as MailIconMapPin as MapPinIconTrophyFlaskConical as FlaskConicalIconDna as DnaIconCar as CarIconLeaf as LeafIconFactory as FactoryIconTruck as TruckIconMicroscope as MicroscopeIconGraduationCap as GraduationCapIconShieldCheck as ShieldCheckIcon
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
-import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+import { innovativeMicroSaasServicesgetInnovativeServicesByCategorygetPopularInnovativeServicesgetInnovativeServicesByPriceRangetInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
 export default function InnovativeServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRange, setPriceRange] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('innovation');
-  const [showFilters, setShowFilters] = useState(false);
+  const [selectedCategorysetSelectedCategory] = useState('All');
+  const [viewModesetViewMode] = useState<'grid' | 'list'>('grid');
+  const [priceRangesetPriceRange] = useState('All');
+  const [searchQuerysetSearchQuery] = useState('');
+  const [sortBysetSortBy] = useState('innovation');
+  const [showFiltersetShowFilters] = useState(false);
 
   const priceRanges = [
-    { value: 'All', label: 'All Prices' },
-    { value: '0-1000', label: '$0 - $1,000' },
-    { value: '1001-2000', label: '$1,001 - $2,000' },
-    { value: '2001-3000', label: '$2,001 - $3,000' },
-    { value: '3001-5000', label: '$3,001 - $5,000' },
-    { value: '5001+', label: '$5,001+' }
+    { value: 'All'label: 'All Prices' },
+    { value: '0-1000'label: '$0 - $1,000' },
+    { value: '1001-2000'label: '$1,001 - $2,000' },
+    { value: '2001-3000'label: '$2,001 - $3,000' },
+    { value: '3001-5000'label: '$3,001 - $5,000' },
+    { value: '5001+'label: '$5,001+' }
   ];
 
   const sortOptions = [
-    { value: 'innovation', label: 'Innovation Level' },
-    { value: 'price', label: 'Price Low-High' },
-    { value: 'popularity', label: 'Most Popular' },
-    { value: 'category', label: 'Category' },
-    { value: 'roi', label: 'Highest ROI' }
+    { value: 'innovation'label: 'Innovation Level' },
+    { value: 'price'label: 'Price Low-High' },
+    { value: 'popularity'label: 'Most Popular' },
+    { value: 'category'label: 'Category' },
+    { value: 'roi'label: 'Highest ROI' }
   ];
 
   // Filter and sort services
@@ -45,8 +45,8 @@ export default function InnovativeServicesPage() {
 
   // Price range filter
   if (priceRange !== 'All') {
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
-    filteredServices = getInnovativeServicesByPriceRange(min, max);
+    const [minmax] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    filteredServices = getInnovativeServicesByPriceRange(minmax);
   }
 
   // Search filter
@@ -60,7 +60,7 @@ export default function InnovativeServicesPage() {
   }
 
   // Sort services
-  filteredServices.sort((a, b) => {
+  filteredServices.sort((ab) => {
     switch (sortBy) {
       case 'price':
         return a.price.monthly - b.price.monthly;
@@ -75,7 +75,7 @@ export default function InnovativeServicesPage() {
       }
               default: {
           // Innovation level sorting
-          const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 };
+          const innovationOrder = { 'Breakthrough': 3'Advanced': 2'Standard': 1 };
           const aLevel = a.innovationLevel.split(' - ')[0];
           const bLevel = b.innovationLevel.split(' - ')[0];
           return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0);
@@ -97,10 +97,10 @@ export default function InnovativeServicesPage() {
     <>
       <Head>
         <title>Innovative Micro SAAS Services - Zion Tech Group</title>
-        <meta name="description" content="Discover revolutionary quantum AI, blockchain, cybersecurity, and autonomous systems. Cutting-edge micro SAAS services with breakthrough innovation and unprecedented ROI." />
-        <meta name="keywords" content="quantum AI, blockchain, cybersecurity, autonomous systems, micro SAAS, innovation, quantum computing, AI services" />
+        <meta name="description" content="Discover revolutionary quantum AIblockchaincybersecurityand autonomous systems. Cutting-edge micro SAAS services with breakthrough innovation and unprecedented ROI." />
+        <meta name="keywords" content="quantum AIblockchaincybersecurityautonomous systemsmicro SAASinnovationquantum computingAI services" />
         <meta property="og:title" content="Innovative Micro SAAS Services - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary quantum AI, blockchain, and autonomous systems. Breakthrough micro SAAS services with unprecedented innovation." />
+        <meta property="og:description" content="Revolutionary quantum AIblockchainand autonomous systems. Breakthrough micro SAAS services with unprecedented innovation." />
         <meta property="og:url" content="https://ziontechgroup.com/innovative-services" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-services" />
@@ -117,7 +117,7 @@ export default function InnovativeServicesPage() {
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                   Discover the future of technology with our breakthrough micro SAAS services. 
-                  From quantum AI to autonomous systems, we're redefining what's possible.
+                  From quantum AI to autonomous systemswe're redefining what's possible.
                 </p>
               </div>
 
@@ -318,7 +318,7 @@ export default function InnovativeServicesPage() {
                         <div className="mb-6">
                           <h4 className="text-sm font-semibold text-white mb-3">Key Features</h4>
                           <div className="space-y-2">
-                            {service.features.slice(0, 3).map((feature, index) => (
+                            {service.features.slice(03).map((featureindex) => (
                               <div key={index} className="flex items-center space-x-2">
                                 <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                                 <span className="text-xs text-gray-300">{feature}</span>
@@ -385,7 +385,7 @@ export default function InnovativeServicesPage() {
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                   Join the revolution with our breakthrough micro SAAS services. 
-                  Transform your business with quantum AI, autonomous systems, and cutting-edge technology.
+                  Transform your business with quantum AIautonomous systemsand cutting-edge technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button

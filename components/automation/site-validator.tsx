@@ -9,12 +9,12 @@ type Props = { report: Report | null };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'public', 'automation', 'site-validator.json');
-    const raw = fs.readFileSync(file, 'utf8');
+    const file = path.join(process.cwd()'public'automation'site-validator.json');
+    const raw = fs.readFileSync(file'utf8');
     const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 21600 };
+    return { props: { report: data }revalidate: 21600 };
   } catch {
-    return { props: { report: null }, revalidate: 21600 };
+    return { props: { report: null }revalidate: 21600 };
   }
 };
 
@@ -35,7 +35,7 @@ export default function SiteValidator({ report }: Props) {
         <section>
           <h2 className="font-semibold mb-2">Broken Links</h2>
           <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
-            {report.brokenLinks.slice(0, 500).map((b, i) => (
+            {report.brokenLinks.slice(0500).map((bi) => (
               <li key={i} className="flex justify-between gap-4"><span className="truncate">{b.page} → {b.url}</span><span className="text-gray-500">{b.status}</span></li>
             ))}
           </ul>
@@ -45,8 +45,8 @@ export default function SiteValidator({ report }: Props) {
         <section>
           <h2 className="font-semibold mb-2">Pages Missing OG Tags</h2>
           <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
-            {report.ogIssues.map((o, i) => (
-              <li key={i} className="flex justify-between gap-4"><span className="truncate">{o.page}</span><span className="text-gray-500 truncate">{o.missing.join(', ')}</span></li>
+            {report.ogIssues.map((oi) => (
+              <li key={i} className="flex justify-between gap-4"><span className="truncate">{o.page}</span><span className="text-gray-500 truncate">{o.missing.join(')}</span></li>
             ))}
           </ul>
         </section>

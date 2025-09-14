@@ -1,14 +1,14 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, 
-  TrendingUp, 
-  DollarSign, 
-  Users, 
-  Zap, 
-  Shield, 
+  ArrowRight
+  TrendingUp
+  DollarSign
+  Users
+  Zap
+  Shield
   Target,
   BarChart3,
   Clock,
@@ -23,12 +23,12 @@ import {
 } from 'lucide-react';
 
 const BusinessTransformation2028Showcase = () => {
-  const [activeSolution, setActiveSolution] = useState('ai-automation');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeSolutionsetActiveSolution] = useState('ai-automation');
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const solutions = {
     'ai-automation': {
@@ -42,22 +42,22 @@ const BusinessTransformation2028Showcase = () => {
         {
           title: 'Autonomous Process Management',
           description: 'AI systems that independently manage complex business processes with minimal human intervention.',
-          features: ['End-to-end automation', 'Self-optimizing workflows', 'Predictive maintenance'],
-          metrics: { efficiency: '+300%', cost: '-60%', time: '-80%' },
+          features: ['End-to-end automation'Self-optimizing workflows'Predictive maintenance'],
+          metrics: { efficiency: '+300%'cost: '-60%'time: '-80%' },
           category: 'Process Automation'
         },
         {
           title: 'Intelligent Decision Engine',
           description: 'AI-powered decision support system that analyzes data and provides strategic recommendations.',
-          features: ['Real-time analytics', 'Predictive insights', 'Risk assessment'],
-          metrics: { accuracy: '95%', speed: '+500%', confidence: '98%' },
+          features: ['Real-time analytics'Predictive insights'Risk assessment'],
+          metrics: { accuracy: '95%'speed: '+500%'confidence: '98%' },
           category: 'Decision Support'
         },
         {
           title: 'Customer Experience AI',
           description: 'Advanced AI that personalizes customer interactions and anticipates needs.',
-          features: ['Personalized experiences', 'Proactive support', 'Emotion recognition'],
-          metrics: { satisfaction: '+85%', retention: '+70%', revenue: '+45%' },
+          features: ['Personalized experiences'Proactive support'Emotion recognition'],
+          metrics: { satisfaction: '+85%'retention: '+70%'revenue: '+45%' },
           category: 'Customer Experience'
         }
       ]
@@ -73,22 +73,22 @@ const BusinessTransformation2028Showcase = () => {
         {
           title: 'Quantum Supply Chain Optimization',
           description: 'Quantum algorithms that solve complex supply chain problems in real-time.',
-          features: ['Multi-variable optimization', 'Real-time adjustments', 'Cost minimization'],
-          metrics: { efficiency: '+400%', cost: '-50%', delivery: '+90%' },
+          features: ['Multi-variable optimization'Real-time adjustments'Cost minimization'],
+          metrics: { efficiency: '+400%'cost: '-50%'delivery: '+90%' },
           category: 'Supply Chain'
         },
         {
           title: 'Quantum Financial Modeling',
           description: 'Advanced financial models powered by quantum computing for risk analysis and portfolio optimization.',
-          features: ['Risk assessment', 'Portfolio optimization', 'Market prediction'],
-          metrics: { accuracy: '+200%', risk: '-75%', returns: '+150%' },
+          features: ['Risk assessment'Portfolio optimization'Market prediction'],
+          metrics: { accuracy: '+200%'risk: '-75%'returns: '+150%' },
           category: 'Finance'
         },
         {
           title: 'Quantum Resource Allocation',
           description: 'Optimal allocation of resources across multiple projects and departments.',
-          features: ['Multi-project optimization', 'Resource balancing', 'Priority management'],
-          metrics: { utilization: '+80%', efficiency: '+250%', output: '+180%' },
+          features: ['Multi-project optimization'Resource balancing'Priority management'],
+          metrics: { utilization: '+80%'efficiency: '+250%'output: '+180%' },
           category: 'Resource Management'
         }
       ]
@@ -104,22 +104,22 @@ const BusinessTransformation2028Showcase = () => {
         {
           title: 'Thought-Controlled Analytics',
           description: 'Analyze complex data through direct neural interface for instant insights.',
-          features: ['Thought-based queries', 'Instant visualization', 'Pattern recognition'],
-          metrics: { speed: '+1000%', accuracy: '+95%', insights: '+300%' },
+          features: ['Thought-based queries'Instant visualization'Pattern recognition'],
+          metrics: { speed: '+1000%'accuracy: '+95%'insights: '+300%' },
           category: 'Analytics'
         },
         {
           title: 'Neural Team Collaboration',
           description: 'Enhanced team collaboration through shared neural networks and thought synchronization.',
-          features: ['Shared mental models', 'Instant communication', 'Collective intelligence'],
-          metrics: { collaboration: '+400%', creativity: '+250%', productivity: '+180%' },
+          features: ['Shared mental models'Instant communication'Collective intelligence'],
+          metrics: { collaboration: '+400%'creativity: '+250%'productivity: '+180%' },
           category: 'Collaboration'
         },
         {
           title: 'Emotional Business Intelligence',
           description: 'AI that reads and responds to emotional cues in business interactions.',
-          features: ['Emotion recognition', 'Mood analysis', 'Empathetic responses'],
-          metrics: { engagement: '+120%', satisfaction: '+90%', retention: '+65%' },
+          features: ['Emotion recognition'Mood analysis'Empathetic responses'],
+          metrics: { engagement: '+120%'satisfaction: '+90%'retention: '+65%' },
           category: 'Emotional Intelligence'
         }
       ]
@@ -135,22 +135,22 @@ const BusinessTransformation2028Showcase = () => {
         {
           title: 'Autonomous Business Units',
           description: 'Self-managing business units that operate independently with minimal oversight.',
-          features: ['Autonomous decision making', 'Self-optimization', 'Adaptive strategies'],
-          metrics: { autonomy: '95%', efficiency: '+350%', innovation: '+200%' },
+          features: ['Autonomous decision making'Self-optimization'Adaptive strategies'],
+          metrics: { autonomy: '95%'efficiency: '+350%'innovation: '+200%' },
           category: 'Autonomous Operations'
         },
         {
           title: 'Predictive Business Modeling',
           description: 'Advanced models that predict future business scenarios and market conditions.',
-          features: ['Scenario planning', 'Market prediction', 'Risk forecasting'],
-          metrics: { accuracy: '92%', preparation: '+400%', advantage: '+300%' },
+          features: ['Scenario planning'Market prediction'Risk forecasting'],
+          metrics: { accuracy: '92%'preparation: '+400%'advantage: '+300%' },
           category: 'Predictive Analytics'
         },
         {
           title: 'Interplanetary Business Networks',
           description: 'Business operations that span multiple planets and space environments.',
-          features: ['Multi-planetary coordination', 'Space logistics', 'Universal commerce'],
-          metrics: { reach: '∞', efficiency: '+500%', innovation: '+1000%' },
+          features: ['Multi-planetary coordination'Space logistics'Universal commerce'],
+          metrics: { reach: '∞'efficiency: '+500%'innovation: '+1000%' },
           category: 'Space Commerce'
         }
       ]
@@ -158,10 +158,10 @@ const BusinessTransformation2028Showcase = () => {
   };
 
   const solutionTabs = [
-    { id: 'ai-automation', label: 'AI Automation', icon: Brain },
-    { id: 'quantum-optimization', label: 'Quantum Optimization', icon: Zap },
-    { id: 'neural-business', label: 'Neural Business', icon: Target },
-    { id: 'future-operations', label: 'Future Operations', icon: Rocket }
+    { id: 'ai-automation'label: 'AI Automation'icon: Brain },
+    { id: 'quantum-optimization'label: 'Quantum Optimization'icon: Zap },
+    { id: 'neural-business'label: 'Neural Business'icon: Target },
+    { id: 'future-operations'label: 'Future Operations'icon: Rocket }
   ];
 
   const currentSolution = solutions[activeSolution as keyof typeof solutions];
@@ -178,8 +178,8 @@ const BusinessTransformation2028Showcase = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -196,7 +196,7 @@ const BusinessTransformation2028Showcase = () => {
           </h1>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Leverage cutting-edge AI, quantum computing, and neural interfaces to revolutionize 
+            Leverage cutting-edge AIquantum computingand neural interfaces to revolutionize 
             your business operations and achieve unprecedented growth.
           </p>
 
@@ -222,9 +222,9 @@ const BusinessTransformation2028Showcase = () => {
 
         {/* Solution Tabs */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="flex flex-wrap justify-center gap-2 mb-12"
         >
           {solutionTabs.map((tab) => {
@@ -250,9 +250,9 @@ const BusinessTransformation2028Showcase = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSolution}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -30 }}
             transition={{ duration: 0.5 }}
             className="mb-16"
           >
@@ -286,12 +286,12 @@ const BusinessTransformation2028Showcase = () => {
 
             {/* Solution Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentSolution.content.map((solution, index) => (
+              {currentSolution.content.map((solutionindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   {/* Category Badge */}
@@ -316,7 +316,7 @@ const BusinessTransformation2028Showcase = () => {
 
                   {/* Features */}
                   <div className="space-y-2 mb-6">
-                    {solution.features.map((feature, featureIndex) => (
+                    {solution.features.map((featureIndex) => (
                       <div key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span>{feature}</span>
@@ -326,7 +326,7 @@ const BusinessTransformation2028Showcase = () => {
 
                   {/* Metrics */}
                   <div className="grid grid-cols-3 gap-4 mb-6">
-                    {Object.entries(solution.metrics).map(([key, value]) => (
+                    {Object.entries(solution.metrics).map(([keyvalue]) => (
                       <div key={key} className="text-center">
                         <div className="text-lg font-bold text-blue-400">{value}</div>
                         <div className="text-xs text-gray-400 capitalize">{key}</div>
@@ -355,9 +355,9 @@ const BusinessTransformation2028Showcase = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/10"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">

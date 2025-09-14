@@ -30,8 +30,8 @@ const AI2025NewContentRevolutionBanner: React.FC = () => {
 
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover the latest breakthroughs in AI technology with our comprehensive guides covering 
-            <span className="text-yellow-300 font-semibold"> Generative Automation</span>, 
-            <span className="text-blue-300 font-semibold"> Autonomous Operations</span>, and 
+            <span className="text-yellow-300 font-semibold"> Generative Automation</span>
+            <span className="text-blue-300 font-semibold"> Autonomous Operations</span>and 
             <span className="text-purple-300 font-semibold"> Quantum AI</span> transformations.
           </p>
         </div>
@@ -43,7 +43,7 @@ const AI2025NewContentRevolutionBanner: React.FC = () => {
             <div className="text-4xl mb-4">🤖</div>
             <h4 className="text-2xl font-bold mb-4 text-yellow-300">Generative Automation Revolution</h4>
             <p className="text-gray-200 mb-6 leading-relaxed">
-              Complete guide to implementing generative AI automation that creates content, processes, and solutions dynamically.
+              Complete guide to implementing generative AI automation that creates contentprocessesand solutions dynamically.
             </p>
             <div className="space-y-2 mb-6">
               <div className="flex items-center text-sm text-green-300">
@@ -133,7 +133,7 @@ const AI2025NewContentRevolutionBanner: React.FC = () => {
               Ready to Transform Your Business?
             </h4>
             <p className="text-lg mb-6 text-black/80">
-              Get exclusive access to implementation guides, ROI calculators, and expert consultations
+              Get exclusive access to implementation guidesROI calculatorsand expert consultations
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

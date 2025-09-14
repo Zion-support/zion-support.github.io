@@ -138,7 +138,7 @@ export default function AI2026QuantumNeuralFusionBanner() {
           
           {/* Subheading */}
           <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-4xl mx-auto">
-            The most revolutionary breakthrough in AI history, combining quantum computing 
+            The most revolutionary breakthrough in AI historycombining quantum computing 
             with neural networks to deliver 
             <span className="text-yellow-400 font-bold text-2xl"> 15,000% ROI</span> and infinite possibilities.
           </p>

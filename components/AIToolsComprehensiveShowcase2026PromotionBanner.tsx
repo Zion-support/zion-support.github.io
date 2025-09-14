@@ -1,14 +1,14 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 import { 
-  ArrowRight, 
-  Zap, 
-  Brain, 
-  Rocket, 
-  Target, 
-  TrendingUp, 
-  Shield, 
+  ArrowRight
+  Zap
+  Brain
+  Rocket
+  Target
+  TrendingUp
+  Shield
   Cpu,
   BarChart3,
   Code,
@@ -18,8 +18,8 @@ import {
 } from 'lucide-react';
 
 const AIToolsComprehensiveShowcase2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentTool, setCurrentTool] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentToolsetCurrentTool] = useState(0);
 
   const tools = [
     {
@@ -49,21 +49,21 @@ const AIToolsComprehensiveShowcase2026PromotionBanner = () => {
   ];
 
   const categories = [
-    { name: 'Quantum Computing', icon: Cpu, count: '12 tools' },
-    { name: 'Autonomous Operations', icon: Rocket, count: '8 tools' },
-    { name: 'Neural Interfaces', icon: Brain, count: '6 tools' },
-    { name: 'Predictive Analytics', icon: BarChart3, count: '10 tools' },
-    { name: 'Process Automation', icon: Zap, count: '15 tools' },
-    { name: 'Cybersecurity', icon: Shield, count: '9 tools' }
+    { name: 'Quantum Computing'icon: Cpucount: '12 tools' },
+    { name: 'Autonomous Operations'icon: Rocketcount: '8 tools' },
+    { name: 'Neural Interfaces'icon: Braincount: '6 tools' },
+    { name: 'Predictive Analytics'icon: BarChart3count: '10 tools' },
+    { name: 'Process Automation'icon: Zapcount: '15 tools' },
+    { name: 'Cybersecurity'icon: Shieldcount: '9 tools' }
   ];
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentTool((prev) => (prev + 1) % tools.length);
-    }, 2500);
+    }2500);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentToolData = tools[currentTool];
   const IconComponent = currentToolData.icon;
@@ -107,7 +107,7 @@ const AIToolsComprehensiveShowcase2026PromotionBanner = () => {
             
             <p className="text-gray-300 text-lg mb-6 max-w-2xl">
               Discover our complete suite of 60+ AI tools across 6 powerful categories. 
-              From quantum computing to neural networks, transform your business with cutting-edge technology.
+              From quantum computing to neural networkstransform your business with cutting-edge technology.
             </p>
 
             {/* Tool Carousel */}
@@ -144,7 +144,7 @@ const AIToolsComprehensiveShowcase2026PromotionBanner = () => {
               <div className="w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl border border-white/20 p-6">
                 {/* Category Grid */}
                 <div className="grid grid-cols-3 gap-3 h-full">
-                  {categories.map((category, index) => {
+                  {categories.map((categoryindex) => {
                     const CategoryIcon = category.icon;
                     return (
                       <div 

@@ -5,7 +5,7 @@ export default function SolutionsPage() {
   const industrySolutions = [
     {
       industry: 'Healthcare',
-      description: 'AI-powered diagnostics, patient care optimization, and secure health data management',
+      description: 'AI-powered diagnosticspatient care optimizationand secure health data management',
       solutions: [
         'AI Diagnostic Assistant',
         'Patient Care Optimization',
@@ -18,7 +18,7 @@ export default function SolutionsPage() {
     },
     {
       industry: 'Finance',
-      description: 'Quantum-powered trading algorithms, fraud detection, and risk management',
+      description: 'Quantum-powered trading algorithmsfraud detectionand risk management',
       solutions: [
         'Quantum Trading Algorithms',
         'AI Fraud Detection',
@@ -31,7 +31,7 @@ export default function SolutionsPage() {
     },
     {
       industry: 'Manufacturing',
-      description: 'Smart manufacturing, predictive maintenance, and supply chain optimization',
+      description: 'Smart manufacturingpredictive maintenanceand supply chain optimization',
       solutions: [
         'Predictive Maintenance',
         'Supply Chain Optimization',
@@ -44,7 +44,7 @@ export default function SolutionsPage() {
     },
     {
       industry: 'Retail & E-commerce',
-      description: 'Personalized shopping experiences, inventory management, and customer analytics',
+      description: 'Personalized shopping experiencesinventory managementand customer analytics',
       solutions: [
         'Personalized Recommendations',
         'Inventory Management',
@@ -57,7 +57,7 @@ export default function SolutionsPage() {
     },
     {
       industry: 'Education',
-      description: 'Adaptive learning platforms, student performance analytics, and virtual classrooms',
+      description: 'Adaptive learning platformstudent performance analyticsand virtual classrooms',
       solutions: [
         'Adaptive Learning',
         'Student Analytics',
@@ -70,7 +70,7 @@ export default function SolutionsPage() {
     },
     {
       industry: 'Transportation & Logistics',
-      description: 'Route optimization, fleet management, and predictive logistics',
+      description: 'Route optimizationfleet managementand predictive logistics',
       solutions: [
         'Route Optimization',
         'Fleet Management',
@@ -91,17 +91,17 @@ export default function SolutionsPage() {
         {
           name: 'AI Decision Engine',
           description: 'Intelligent decision-making systems for complex business scenarios',
-          features: ['Real-time Analysis', 'Predictive Modeling', 'Automated Decision Making']
+          features: ['Real-time Analysis'Predictive Modeling'Automated Decision Making']
         },
         {
           name: 'Natural Language Processing',
           description: 'Advanced text and speech processing capabilities',
-          features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation']
+          features: ['Text Analysis'Sentiment Analysis'Language Translation']
         },
         {
           name: 'Computer Vision',
           description: 'Image and video analysis for automation and quality control',
-          features: ['Object Detection', 'Quality Control', 'Process Automation']
+          features: ['Object Detection'Quality Control'Process Automation']
         }
       ]
     },
@@ -112,17 +112,17 @@ export default function SolutionsPage() {
         {
           name: 'Quantum Optimization',
           description: 'Solve complex optimization problems with quantum algorithms',
-          features: ['Supply Chain Optimization', 'Financial Modeling', 'Logistics Planning']
+          features: ['Supply Chain Optimization'Financial Modeling'Logistics Planning']
         },
         {
           name: 'Quantum Machine Learning',
           description: 'Enhanced machine learning with quantum computing power',
-          features: ['Quantum Neural Networks', 'Enhanced Pattern Recognition', 'Faster Training']
+          features: ['Quantum Neural Networks'Enhanced Pattern Recognition'Faster Training']
         },
         {
           name: 'Quantum Cryptography',
           description: 'Unbreakable encryption using quantum principles',
-          features: ['Quantum Key Distribution', 'Secure Communication', 'Future-Proof Security']
+          features: ['Quantum Key Distribution'Secure Communication'Future-Proof Security']
         }
       ]
     },
@@ -133,17 +133,17 @@ export default function SolutionsPage() {
         {
           name: 'Multi-Cloud Management',
           description: 'Unified management across multiple cloud providers',
-          features: ['Cost Optimization', 'Performance Monitoring', 'Security Management']
+          features: ['Cost Optimization'Performance Monitoring'Security Management']
         },
         {
           name: 'Serverless Architecture',
           description: 'Modern serverless computing for scalable applications',
-          features: ['Auto-scaling', 'Pay-per-use', 'Reduced Maintenance']
+          features: ['Auto-scaling'Pay-per-use'Reduced Maintenance']
         },
         {
           name: 'Edge Computing',
           description: 'Distributed computing for low-latency applications',
-          features: ['Local Processing', 'Reduced Latency', 'Bandwidth Optimization']
+          features: ['Local Processing'Reduced Latency'Bandwidth Optimization']
         }
       ]
     }
@@ -153,26 +153,26 @@ export default function SolutionsPage() {
     {
       title: 'Customer Service Automation',
       description: 'AI-powered chatbots and virtual assistants that provide 24/7 customer support',
-      benefits: ['24/7 Availability', 'Instant Response', 'Cost Reduction', 'Improved Satisfaction'],
-      industries: ['Retail', 'Healthcare', 'Finance', 'Technology']
+      benefits: ['24/7 Availability'Instant Response'Cost Reduction'Improved Satisfaction'],
+      industries: ['Retail'Healthcare'Finance'Technology']
     },
     {
       title: 'Predictive Analytics',
       description: 'Forecast trends and behaviors to make proactive business decisions',
-      benefits: ['Risk Mitigation', 'Opportunity Identification', 'Resource Optimization', 'Competitive Advantage'],
-      industries: ['Manufacturing', 'Finance', 'Healthcare', 'Transportation']
+      benefits: ['Risk Mitigation'Opportunity Identification'Resource Optimization'Competitive Advantage'],
+      industries: ['Manufacturing'Finance'Healthcare'Transportation']
     },
     {
       title: 'Cybersecurity Enhancement',
       description: 'Advanced threat detection and prevention using AI and quantum technologies',
-      benefits: ['Real-time Protection', 'Threat Intelligence', 'Compliance Assurance', 'Incident Response'],
-      industries: ['All Industries', 'Government', 'Finance', 'Healthcare']
+      benefits: ['Real-time Protection'Threat Intelligence'Compliance Assurance'Incident Response'],
+      industries: ['All Industries'Government'Finance'Healthcare']
     },
     {
       title: 'Process Automation',
       description: 'Streamline operations and reduce manual work through intelligent automation',
-      benefits: ['Efficiency Gains', 'Error Reduction', 'Cost Savings', 'Scalability'],
-      industries: ['Manufacturing', 'Finance', 'Healthcare', 'Retail']
+      benefits: ['Efficiency Gains'Error Reduction'Cost Savings'Scalability'],
+      industries: ['Manufacturing'Finance'Healthcare'Retail']
     }
   ];
 
@@ -180,8 +180,8 @@ export default function SolutionsPage() {
     <>
       <Head>
         <title>Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover industry-specific solutions and use cases powered by Zion Tech Group's cutting-edge AI, quantum computing, and cybersecurity technologies." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Discover industry-specific solutions and use cases powered by Zion Tech Group's cutting-edge AIquantum computingand cybersecurity technologies." />
+        <meta name="viewport" content="width=device-widthinitial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -193,7 +193,7 @@ export default function SolutionsPage() {
               Industry Solutions
             </h1>
             <p className="text-xl sm:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
-              Transform your business with industry-specific solutions powered by cutting-edge AI, quantum computing, and cybersecurity technologies.
+              Transform your business with industry-specific solutions powered by cutting-edge AIquantum computingand cybersecurity technologies.
             </p>
           </div>
         </section>
@@ -209,14 +209,14 @@ export default function SolutionsPage() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industrySolutions.map((industry, index) => (
+              {industrySolutions.map((industryindex) => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10 hover:bg-opacity-20 transition-all">
                   <div className="text-4xl mb-4">{industry.icon}</div>
                   <h3 className="text-xl font-semibold mb-3">{industry.industry}</h3>
                   <p className="text-gray-300 mb-4">{industry.description}</p>
                   
                   <div className="space-y-2 mb-6">
-                    {industry.solutions.map((solution, solutionIndex) => (
+                    {industry.solutions.map((solutionIndex) => (
                       <div key={solutionIndex} className="text-sm text-gray-400 bg-white bg-opacity-5 rounded px-2 py-1">
                         {solution}
                       </div>
@@ -245,7 +245,7 @@ export default function SolutionsPage() {
               </p>
             </div>
             
-            {technologySolutions.map((category, categoryIndex) => (
+            {technologySolutions.map((categoryIndex) => (
               <div key={categoryIndex} className="mb-16">
                 <div className="text-center mb-12">
                   <h3 className="text-2xl sm:text-3xl font-bold mb-4">{category.category}</h3>
@@ -253,13 +253,13 @@ export default function SolutionsPage() {
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {category.solutions.map((solution, solutionIndex) => (
+                  {category.solutions.map((solutionIndex) => (
                     <div key={solutionIndex} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                       <h4 className="text-lg font-semibold mb-3">{solution.name}</h4>
                       <p className="text-gray-300 mb-4">{solution.description}</p>
                       
                       <ul className="space-y-2 mb-4">
-                        {solution.features.map((feature, featureIndex) => (
+                        {solution.features.map((featureIndex) => (
                           <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
                             <svg className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -287,7 +287,7 @@ export default function SolutionsPage() {
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
+              {useCases.map((useCaseindex) => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                   <h3 className="text-xl font-semibold mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
@@ -295,7 +295,7 @@ export default function SolutionsPage() {
                   <div className="mb-4">
                     <h4 className="font-semibold mb-2 text-blue-400">Key Benefits:</h4>
                     <ul className="space-y-1">
-                      {useCase.benefits.map((benefit, benefitIndex) => (
+                      {useCase.benefits.map((benefitIndex) => (
                         <li key={benefitIndex} className="text-sm text-gray-300 flex items-center">
                           <svg className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -309,7 +309,7 @@ export default function SolutionsPage() {
                   <div>
                     <h4 className="font-semibold mb-2 text-blue-400">Applicable Industries:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {useCase.industries.map((industry, industryIndex) => (
+                      {useCase.industries.map((industryIndex) => (
                         <span key={industryIndex} className="text-xs bg-blue-600 bg-opacity-20 text-blue-300 px-2 py-1 rounded">
                           {industry}
                         </span>

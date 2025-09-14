@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Play, Code, Brain, Zap, Target, Users, Shield } from 'lucide-react';
+ArrowRightPlayCodeBrainZapTargetUsersShield
 
 export default function AIToolsInteractiveShowcase2025PromotionBanner() {
   return (
@@ -30,7 +30,7 @@ export default function AIToolsInteractiveShowcase2025PromotionBanner() {
 
         {/* Tool Categories Preview */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          {toolCategories.map((category, index) => (
+          {toolCategories.map((categoryindex) => (
             <div key={index} className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 {category.icon}
@@ -45,7 +45,7 @@ export default function AIToolsInteractiveShowcase2025PromotionBanner() {
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Featured AI Tools</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {featuredTools.map((tool, index) => (
+            {featuredTools.map((toolindex) => (
               <div key={index} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-center mb-3">
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mr-3">
@@ -76,7 +76,7 @@ export default function AIToolsInteractiveShowcase2025PromotionBanner() {
             <p className="text-gray-300">Watch our AI tools in action with interactive demos</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {liveDemos.map((demo, index) => (
+            {liveDemos.map((demoindex) => (
               <div key={index} className="bg-white/10 rounded-lg p-4">
                 <div className="flex items-center mb-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-3">
@@ -128,10 +128,10 @@ export default function AIToolsInteractiveShowcase2025PromotionBanner() {
 }
 
 const toolCategories = [
-  { icon: <Code className="h-8 w-8 text-white" />, title: "Development", count: "45" },
-  { icon: <Brain className="h-8 w-8 text-white" />, title: "Machine Learning", count: "32" },
-  { icon: <Target className="h-8 w-8 text-white" />, title: "Business Automation", count: "67" },
-  { icon: <Shield className="h-8 w-8 text-white" />, title: "Security", count: "28" }
+  { icon: <Code className="h-8 w-8 text-white" />title: "Development"count: "45" },
+  { icon: <Brain className="h-8 w-8 text-white" />title: "Machine Learning"count: "32" },
+  { icon: <Target className="h-8 w-8 text-white" />title: "Business Automation"count: "67" },
+  { icon: <Shield className="h-8 w-8 text-white" />title: "Security"count: "28" }
 ];
 
 const featuredTools = [

@@ -1,10 +1,10 @@
 
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from "lucide-react";
+import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
+import { CheckCircleChevronRightFileTextMessageSquareVideo } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { SeverityIndicator } from "../common/SeverityIndicator";
 import { useNavigate } from "react-router-dom";
@@ -37,12 +37,12 @@ interface ProjectViewProps {
   milestones: Milestone[];
 }
 
-export function MobileProjectView({ project, milestones }: ProjectViewProps) {
+export function MobileProjectView({ projectmilestones }: ProjectViewProps) {
   const navigate = useNavigate();
   
   const startProjectCall = () => {
     const roomId = `project-${project.id}`;
-    toast.success("Starting project call", {
+    toast.success("Starting project call"{
       description: "Initializing video connection..."
     });
     
@@ -50,7 +50,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   };
   
   const messageClient = () => {
-    toast.info("Opening message thread with client", {
+    toast.info("Opening message thread with client"{
       description: `Messaging ${project.client.name}...`
     });
     // Navigate to messaging with this client
@@ -167,7 +167,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Status:</span>
-                    <span className="capitalize">{milestone.status.replace('_', ' ')}</span>
+                    <span className="capitalize">{milestone.status.replace('_' ')}</span>
                   </div>
                   <Button 
                     size="sm" 

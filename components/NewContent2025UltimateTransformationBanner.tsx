@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, TrendingUp, Users, Shield } from 'lucide-react';
+ArrowRightStarZapTrendingUpUsersShield
 
 export default function NewContent2025UltimateTransformationBanner() {
   return (
@@ -22,7 +22,7 @@ export default function NewContent2025UltimateTransformationBanner() {
             </span>
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Explore our latest content showcasing cutting-edge AI solutions, enterprise automation mastery, 
+            Explore our latest content showcasing cutting-edge AI solutionsenterprise automation mastery
             and revolutionary business transformation strategies that are reshaping industries worldwide.
           </p>
         </div>
@@ -35,23 +35,23 @@ export default function NewContent2025UltimateTransformationBanner() {
               description: "Revolutionize your business with cutting-edge AI solutions that deliver unprecedented results and proven ROI.",
               link: "/ai-2025-ultimate-business-transformation",
               icon: <TrendingUp className="h-8 w-8 text-blue-400" />,
-              features: ["300% Average ROI", "99.7% Accuracy", "Lightning Fast Processing"]
+              features: ["300% Average ROI"99.7% Accuracy"Lightning Fast Processing"]
             },
             {
               title: "AI 2025: Enterprise Automation Mastery",
               description: "Transform enterprise operations with comprehensive AI automation platform built for scale and security.",
               link: "/ai-2025-enterprise-automation-mastery",
               icon: <Zap className="h-8 w-8 text-cyan-400" />,
-              features: ["500+ Enterprise Clients", "99.9% Uptime", "24/7 Support"]
+              features: ["500+ Enterprise Clients"99.9% Uptime"24/7 Support"]
             },
             {
               title: "AI 2025: Ultimate Breakthrough Solutions",
               description: "Explore revolutionary AI technologies and breakthrough innovations that are changing the world.",
               link: "/ai-2025-ultimate-breakthrough",
               icon: <Star className="h-8 w-8 text-purple-400" />,
-              features: ["Revolutionary Tech", "Future Predictions", "Industry Insights"]
+              features: ["Revolutionary Tech"Future Predictions"Industry Insights"]
             }
-          ].map((content, index) => (
+          ].map((contentindex) => (
             <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/10">
               <div className="flex items-center mb-4">
                 <div className="p-3 bg-white/10 rounded-lg mr-4 group-hover:bg-white/20 transition-colors">
@@ -63,7 +63,7 @@ export default function NewContent2025UltimateTransformationBanner() {
               </div>
               <p className="text-gray-300 mb-4">{content.description}</p>
               <div className="space-y-2 mb-6">
-                {content.features.map((feature, featureIndex) => (
+                {content.features.map((featureIndex) => (
                   <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                     {feature}
@@ -84,11 +84,11 @@ export default function NewContent2025UltimateTransformationBanner() {
         {/* Additional Features */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           {[
-            { icon: <Users className="h-6 w-6 text-green-400" />, text: "Expert Team" },
-            { icon: <Shield className="h-6 w-6 text-yellow-400" />, text: "Enterprise Security" },
-            { icon: <TrendingUp className="h-6 w-6 text-red-400" />, text: "Proven Results" },
-            { icon: <Star className="h-6 w-6 text-purple-400" />, text: "Industry Leading" }
-          ].map((feature, index) => (
+            { icon: <Users className="h-6 w-6 text-green-400" />text: "Expert Team" },
+            { icon: <Shield className="h-6 w-6 text-yellow-400" />text: "Enterprise Security" },
+            { icon: <TrendingUp className="h-6 w-6 text-red-400" />text: "Proven Results" },
+            { icon: <Star className="h-6 w-6 text-purple-400" />text: "Industry Leading" }
+          ].map((featureindex) => (
             <div key={index} className="flex items-center justify-center space-x-2 text-gray-300">
               {feature.icon}
               <span className="font-medium">{feature.text}</span>

@@ -32,7 +32,7 @@ export default function AI2025ContentShowcase() {
     },
     {
       title: "Quantum-Neural Fusion Technology",
-      description: "Revolutionary fusion of quantum computing and neural networks, delivering 15,000% ROI through unprecedented processing power.",
+      description: "Revolutionary fusion of quantum computing and neural networksdelivering 15,000% ROI through unprecedented processing power.",
       link: "/quantum-computing-solutions-2025",
       badge: "REVOLUTIONARY",
       color: "from-indigo-500 to-purple-500",
@@ -41,7 +41,7 @@ export default function AI2025ContentShowcase() {
     },
     {
       title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces enabling seamless human-AI collaboration, revolutionizing healthcare and productivity.",
+      description: "Direct brain-computer interfaces enabling seamless human-AI collaborationrevolutionizing healthcare and productivity.",
       link: "/neural-interface-solutions",
       badge: "BREAKTHROUGH",
       color: "from-pink-500 to-rose-500",
@@ -50,7 +50,7 @@ export default function AI2025ContentShowcase() {
     },
     {
       title: "Autonomous Decision Systems",
-      description: "Self-evolving AI systems that make complex decisions with 99.9% accuracy, reducing costs by 90% and increasing efficiency by 500%.",
+      description: "Self-evolving AI systems that make complex decisions with 99.9% accuracyreducing costs by 90% and increasing efficiency by 500%.",
       link: "/autonomous-systems-2025",
       badge: "AUTONOMOUS",
       color: "from-orange-500 to-red-500",
@@ -75,7 +75,7 @@ export default function AI2025ContentShowcase() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {contentItems.map((item, index) => (
+          {contentItems.map((itemindex) => (
             <div
               key={index}
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"

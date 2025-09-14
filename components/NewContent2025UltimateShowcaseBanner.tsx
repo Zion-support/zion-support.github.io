@@ -22,7 +22,7 @@ export default function NewContent2025UltimateShowcaseBanner() {
             🚀 New Content Revolution 2025
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover our latest AI trends predictions, comprehensive tutorials, and real success stories 
+            Discover our latest AI trends predictionscomprehensive tutorialsand real success stories 
             that are transforming industries worldwide
           </p>
 
@@ -37,7 +37,7 @@ export default function NewContent2025UltimateShowcaseBanner() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">AI Trends 2025</h3>
               <p className="text-gray-300 text-sm mb-4">
-                Revolutionary breakthroughs in quantum computing, neural interfaces, and autonomous systems
+                Revolutionary breakthroughs in quantum computingneural interfacesand autonomous systems
               </p>
               <Link 
                 href="/ai-trends-2025-ultimate-predictions"

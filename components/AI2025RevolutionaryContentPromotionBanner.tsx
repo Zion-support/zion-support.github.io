@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Zap, Brain, TrendingUp, Target, Users, Award, Star, Globe } from 'lucide-react';
+ArrowRightSparklesZapBrainTrendingUpTargetUsersAwardStarGlobe
 
 export default function AI2025RevolutionaryContentPromotionBanner() {
   const features = [
@@ -56,12 +56,12 @@ export default function AI2025RevolutionaryContentPromotionBanner() {
             The Future of AI is Here
           </h2>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Experience the most advanced AI technologies, interactive learning platforms, and business solutions that are revolutionizing industries worldwide
+            Experience the most advanced AI technologiesinteractive learning platformsand business solutions that are revolutionizing industries worldwide
           </p>
           
           {/* Highlights */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {highlights.map((highlight, index) => (
+            {highlights.map((highlightindex) => (
               <div key={index} className="flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium">
                 <Star className="h-4 w-4 mr-2 text-yellow-400" />
                 {highlight}
@@ -72,7 +72,7 @@ export default function AI2025RevolutionaryContentPromotionBanner() {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((featureindex) => (
             <div key={index} className="group bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2 border border-white/10">
               <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl mb-4 group-hover:scale-110 transition-transform">
                 <feature.icon className="h-8 w-8 text-white" />
@@ -97,7 +97,7 @@ export default function AI2025RevolutionaryContentPromotionBanner() {
               AI Interactive Learning Hub
             </h3>
             <p className="text-gray-300 mb-6">
-              Master AI technologies through hands-on, interactive experiences. Transform from beginner to expert with our comprehensive learning ecosystem.
+              Master AI technologies through hands-oninteractive experiences. Transform from beginner to expert with our comprehensive learning ecosystem.
             </p>
             <div className="flex items-center text-blue-300 font-medium group-hover:text-blue-200 transition-colors">
               Start Learning
@@ -117,7 +117,7 @@ export default function AI2025RevolutionaryContentPromotionBanner() {
               Cutting-Edge AI Technologies
             </h3>
             <p className="text-gray-300 mb-6">
-              Explore revolutionary AI technologies including quantum neural networks, consciousness AI, and neural interfaces shaping the future.
+              Explore revolutionary AI technologies including quantum neural networksconsciousness AIand neural interfaces shaping the future.
             </p>
             <div className="flex items-center text-purple-300 font-medium group-hover:text-purple-200 transition-colors">
               Explore Tech
@@ -137,7 +137,7 @@ export default function AI2025RevolutionaryContentPromotionBanner() {
               AI Business Solutions
             </h3>
             <p className="text-gray-300 mb-6">
-              Transform your enterprise with AI-powered automation, autonomous operations, and intelligent business processes delivering unprecedented ROI.
+              Transform your enterprise with AI-powered automationautonomous operationsand intelligent business processes delivering unprecedented ROI.
             </p>
             <div className="flex items-center text-indigo-300 font-medium group-hover:text-indigo-200 transition-colors">
               Transform Business

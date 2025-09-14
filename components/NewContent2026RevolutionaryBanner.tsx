@@ -13,7 +13,7 @@ const NewContent2026RevolutionaryBanner = () => {
             Revolutionary AI Content for 2026
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover the groundbreaking AI technologies, quantum computing breakthroughs, and autonomous systems that will transform your business in 2026 and beyond.
+            Discover the groundbreaking AI technologiesquantum computing breakthroughsand autonomous systems that will transform your business in 2026 and beyond.
           </p>
         </div>
 
@@ -22,7 +22,7 @@ const NewContent2026RevolutionaryBanner = () => {
             <div className="text-4xl mb-4">🧠</div>
             <h3 className="text-2xl font-bold mb-4">AI 2026 Breakthroughs</h3>
             <p className="text-lg opacity-90 mb-6">
-              Explore revolutionary AI technologies including quantum-enhanced machine learning, autonomous business systems, and multimodal AI integration.
+              Explore revolutionary AI technologies including quantum-enhanced machine learningautonomous business systemsand multimodal AI integration.
             </p>
             <Link 
               href="/blog/ai-2026-revolutionary-breakthroughs"

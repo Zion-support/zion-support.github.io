@@ -1,12 +1,12 @@
 
 import { format } from 'date-fns';
-import { Edit, Trash2 } from 'lucide-react';
+EditTrash2
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { CardContent } from '@/components/ui/card';
 import { Education } from '@/types/resume';
 import { EducationItemProps } from './types';
 
-export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
+export function EducationItem({ educationEditonDelete }: EducationItemProps) {
   return (
     <Card className="bg-muted/40">
       <CardContent className="pt-6">
@@ -20,11 +20,11 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
             <p className="text-xs text-muted-foreground mt-1">
               {typeof education.start_date === 'string' 
                 ? education.start_date 
-                : format(education.start_date, 'MMM yyyy')} - {education.is_current 
+                : format(education.start_date'MMM yyyy')} - {education.is_current 
                 ? 'Present' 
                 : (education.end_date ? (typeof education.end_date === 'string' 
                   ? education.end_date 
-                  : format(education.end_date, 'MMM yyyy')) : '')}
+                  : format(education.end_date'MMM yyyy')) : '')}
             </p>
             {education.location && (
               <p className="text-xs text-muted-foreground">{education.location}</p>

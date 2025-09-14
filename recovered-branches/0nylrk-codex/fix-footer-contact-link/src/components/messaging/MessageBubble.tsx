@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { format } from 'date-fns';
-import { PaperclipIcon } from 'lucide-react';
+PaperclipIcon
 import { cn } from '@/lib/utils';
 import { Message } from '@/types/messaging';
 
@@ -10,7 +10,7 @@ interface MessageBubbleProps {
   isUserMessage: boolean;
 }
 
-export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
+export function MessageBubble({ messageisUserMessage }: MessageBubbleProps) {
   return (
     <div className={cn(
       "flex",
@@ -37,7 +37,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         )}
         
         <div className="text-xs opacity-70 text-right mt-1">
-          {format(new Date(message.created_at), 'h:mm a')}
+          {format(new Date(message.created_at)'h:mm a')}
         </div>
       </div>
     </div>

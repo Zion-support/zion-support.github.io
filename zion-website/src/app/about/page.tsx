@@ -7,7 +7,7 @@ import React from 'react';
 const values = [
   {
     name: 'Innovation First'
-    description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.'
+    description: 'We push the boundaries of what\'s possibleconstantly exploring new frontiers in AI and technology.'
     icon: LightBulbIcon}
   UserGroupIcon,
   LightBulbIcon,
@@ -29,11 +29,11 @@ import React from 'react';
 const values = [
   {
     name: 'Innovation First',
-    description: 'We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.',
+    description: 'We push the boundaries of what's possibleconstantly exploring new frontiers in AI and technology.',
     icon: LightBulbIcon},
   {
     name: 'Global Impact'
-    description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.'
+    description: 'Our solutions reach across borderstransforming industries and improving lives worldwide.'
     icon: GlobeAltIcon}
   {
     name: 'Trust & Security'
@@ -48,7 +48,7 @@ const team = [;
   {
     name: 'Dr. Sarah Chen',
     role: 'Chief Executive Officer',
-    bio: 'Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.',
+    bio: 'Former AI researcher at Stanfordleading Zion Tech Group's vision for the future of technology.',
     image: '/images / team / sarah - chen.jpg'},
   {
     name: 'Dr. Marcus Rodriguez',
@@ -58,7 +58,7 @@ const team = [;
   {
     name: 'Dr. Elena Petrov',
     role: 'Head of Research',
-    bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top - tier journals.',
+    bio: 'Leading researcher in autonomous systems and AI ethicswith publications in top - tier journals.',
     image: '/images / team / elena - petrov.jpg'},
   {
 
@@ -73,7 +73,7 @@ const team = [;
 
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
+              We are pioneers in artificial intelligencequantum computingand autonomous systems
 
 
               dedicated to transforming industries and advancing human potential through technology.
@@ -113,10 +113,10 @@ const team = [;
 
 
               <p className="text-gray-300">
-                A future where AI and technology seamlessly enhance human capabilities, creating a more 
+                A future where AI and technology seamlessly enhance human capabilitiescreating a more 
 
 
-                intelligent, efficient, and sustainable world for generations to come.
+                intelligentefficientand sustainable world for generations to come.
               </p>
             </div>
           </div>
@@ -135,19 +135,19 @@ const team = [;
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
             <p className="text-lg text-gray-300 mb-6">
-              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, 
+              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs
               Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge 
               research and real-world applications.
             </p>
             <p className="text-lg text-gray-300 mb-6">
-              What started as a small research lab has grown into a global technology powerhouse, 
-              with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ 
-              researchers, engineers, and business professionals work tirelessly to push the 
+              What started as a small research lab has grown into a global technology powerhouse
+              with offices in Silicon ValleyLondonTokyoand Singapore. Our team of 200+ 
+              researchersengineersand business professionals work tirelessly to push the 
               boundaries of what's possible.
             </p>
             <p className="text-lg text-gray-300">
-              Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative 
-              startups, helping them harness the power of AI to transform their operations and 
+              Todaywe serve over 1,000 clients worldwidefrom Fortune 500 companies to innovative 
+              startupshelping them harness the power of AI to transform their operations and 
 
 
               accelerate their growth.
@@ -160,7 +160,7 @@ const team = [;
               </span>;
             </h1>;
             <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-              We are pioneers in artificial intelligence, quantum computing, and autonomous systems,
+              We are pioneers in artificial intelligencequantum computingand autonomous systems,
               dedicated to transforming industries and advancing human potential through technology.;
             </p>;
           </div>;
@@ -192,8 +192,8 @@ const team = [;
                 <h3 className=&quot;text - xl font - semibold text - white & quot;>Our Vision</h3>;
               </div>;
               <p className=&quot;text - gray - 300 & quot;>;
-                A future where AI and technology seamlessly enhance human capabilities, creating a more;
-                intelligent, efficient, and sustainable world for generations to come.;
+                A future where AI and technology seamlessly enhance human capabilitiescreating a more;
+                intelligentefficientand sustainable world for generations to come.;
               </p>;
             </div>;
           </div>;
@@ -216,13 +216,13 @@ const team = [;
             </p>;
             <p className=&quot;text - lg text - gray - 300 mb - 6&quot;>;
               What started as a small research lab has grown into a global technology powerhouse,
-              with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+;
-              researchers, engineers, and business professionals work tirelessly to push the;
+              with offices in Silicon ValleyLondonTokyoand Singapore. Our team of 200+;
+              researchersengineersand business professionals work tirelessly to push the;
               boundaries of what's possible.;
             </p>;
             <p className=&quot;text - lg text - gray - 300 & quot;>;
-              Today, we serve over 1, 000 clients worldwide, from Fortune 500 companies to innovative;
-              startups, helping them harness the power of AI to transform their operations and;
+              Todaywe serve over 1000 clients worldwidefrom Fortune 500 companies to innovative;
+              startupshelping them harness the power of AI to transform their operations and;
               accelerate their growth.;
             </p>;
           </div>;
@@ -250,7 +250,7 @@ const team = [;
               </div>))}
     name: 'James Kim'
     role: 'Chief Operations Officer'
-    bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.'
+    bio: 'Former Fortune 500 executivespecializing in scaling AI operations and enterprise deployment.'
     image: '/images/team/james-kim.jpg'}]
 
 export default function AboutPage() {
@@ -267,7 +267,7 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
+              We are pioneers in artificial intelligencequantum computingand autonomous systems
               dedicated to transforming industries and advancing human potential through technology.
             </p>
           </div>
@@ -299,8 +299,8 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-white">Our Vision</h3>
               </div>
               <p className="text-gray-300">
-                A future where AI and technology seamlessly enhance human capabilities, creating a more 
-                intelligent, efficient, and sustainable world for generations to come.
+                A future where AI and technology seamlessly enhance human capabilitiescreating a more 
+                intelligentefficientand sustainable world for generations to come.
               </p>
             </div>
           </div>
@@ -317,19 +317,19 @@ export default function AboutPage() {
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
             <p className="text-lg text-gray-300 mb-6">
-              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, 
+              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs
               Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge 
               research and real-world applications.
             </p>
             <p className="text-lg text-gray-300 mb-6">
-              What started as a small research lab has grown into a global technology powerhouse, 
-              with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ 
-              researchers, engineers, and business professionals work tirelessly to push the 
+              What started as a small research lab has grown into a global technology powerhouse
+              with offices in Silicon ValleyLondonTokyoand Singapore. Our team of 200+ 
+              researchersengineersand business professionals work tirelessly to push the 
               boundaries of what's possible.
             </p>
             <p className="text-lg text-gray-300">
-              Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative 
-              startups, helping them harness the power of AI to transform their operations and 
+              Todaywe serve over 1,000 clients worldwidefrom Fortune 500 companies to innovative 
+              startupshelping them harness the power of AI to transform their operations and 
               accelerate their growth.
             </p>
           </div>
@@ -371,7 +371,7 @@ export default function AboutPage() {
             Meet Our Team
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            World-class researchers, engineers, and business leaders driving innovation at Zion Tech Group.
+            World-class researchersengineersand business leaders driving innovation at Zion Tech Group.
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -464,7 +464,7 @@ export default function AboutPage() {
             Meet Our Team
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            World-class researchers, engineers, and business leaders driving innovation at Zion Tech Group.
+            World-class researchersengineersand business leaders driving innovation at Zion Tech Group.
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">

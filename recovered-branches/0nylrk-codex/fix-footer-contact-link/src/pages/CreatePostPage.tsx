@@ -1,6 +1,6 @@
 
-import { useState, useEffect } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { useStateuseEffect } from "react";
+import { LinkuseNavigateuseSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
@@ -30,7 +30,7 @@ export default function CreatePostPage() {
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database
-      // For now, we'll just simulate a successful post creation
+      // For nowe'll just simulate a successful post creation
       
       // Parse tags into an array
       const tagsArray = values.tags.split(",").map(tag => tag.trim());
@@ -56,7 +56,7 @@ export default function CreatePostPage() {
       <SEO 
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
-        keywords="community, forum, discussion, create post, new thread"
+        keywords="communityforumdiscussioncreate postnew thread"
       />
       
       <div className="container py-8">

@@ -1,10 +1,10 @@
 
 import React from 'react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { format } from 'date-fns';
-import { Check, ArrowDown, X } from "lucide-react";
+import { CheckArrowDownX } from "lucide-react";
 import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
@@ -22,17 +22,17 @@ interface MilestoneCardProps {
 }
 
 export function MilestoneCard({ 
-  id, 
+  id
   projectId,
-  title, 
-  description, 
-  amount, 
-  status, 
+  title
+  description
+  amount
+  status
   dueDate,
   onApprove,
   onReject
 }: MilestoneCardProps) {
-  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
+  const { isUnderDisputedisputeStatus } = useDisputeCheck(projectIdid);
   
   function getStatusBadgeColor() {
     switch (status) {
@@ -57,13 +57,13 @@ export function MilestoneCard({
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
               <p className="text-sm text-muted-foreground">
-                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
+                Due: {format(new Date(dueDate)'MMM dyyyy')}
               </p>
             )}
           </div>
           <div className="flex gap-2">
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
-              {status.replace('_', ' ')}
+              {status.replace('_' ')}
             </Badge>
             
             {isUnderDispute && disputeStatus && (

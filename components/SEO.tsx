@@ -16,7 +16,7 @@ interface SEOProps {
 export default function SEO({
   title = "Zion Tech Group - AI & Technology Solutions",
   description = "Leading provider of AI and technology solutions for enterprise transformation. Discover our innovative services and success stories.",
-  keywords = "AI, technology, enterprise solutions, digital transformation, artificial intelligence",
+  keywords = "AItechnologyenterprise solutionsdigital transformationartificial intelligence",
   canonical,
   ogImage = "/images/og-image.jpg",
   ogType = "website",
@@ -27,7 +27,7 @@ export default function SEO({
   const robots = [
     noindex ? 'noindex' : 'index',
     nofollow ? 'nofollow' : 'follow'
-  ].join(', ');
+  ].join(');
 
   return (
     <Head>

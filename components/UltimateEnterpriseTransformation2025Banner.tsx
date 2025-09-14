@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateEnterpriseTransformation2025Banner = () => {
-  const [currentContent, setCurrentContent] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentContentsetCurrentContent] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
 
   const featuredContent = [
     {
@@ -58,14 +58,14 @@ const UltimateEnterpriseTransformation2025Banner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentContent((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ultimate-enterprise-transformation-banner-dismissed', 'true');
+    localStorage.setItem('ultimate-enterprise-transformation-banner-dismissed'true');
   };
 
   useEffect(() => {
@@ -73,7 +73,7 @@ const UltimateEnterpriseTransformation2025Banner = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -107,7 +107,7 @@ const UltimateEnterpriseTransformation2025Banner = () => {
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
           <div className="flex items-center justify-between mb-6">
             <div className="flex space-x-2">
-              {featuredContent.map((_, index) => (
+              {featuredContent.map((_index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentContent(index)}

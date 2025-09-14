@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/table";
 import { ApplicationActions } from "./ApplicationActions";
 import { StatusBadge } from "./StatusBadge";
-import { Briefcase, User } from "lucide-react";
+import { BriefcaseUser } from "lucide-react";
 import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
@@ -23,19 +23,19 @@ interface ApplicationsTableProps {
   applications: JobApplication[];
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
+  onStatusChange: (applicationId: stringnewStatus: string) => Promise<void>;
   onViewScore: (application: JobApplication) => void;
 }
 
 export function ApplicationsTable({ 
-  applications, 
-  processingId, 
-  onViewApplication, 
+  applications
+  processingId
+  onViewApplication
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
-  const [hireModalOpen, setHireModalOpen] = useState(false);
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
+  const [hireModalOpensetHireModalOpen] = useState(false);
+  const [selectedApplicationsetSelectedApplication] = useState<JobApplication | null>(null);
   
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application);
@@ -89,7 +89,7 @@ export function ApplicationsTable({
                   </div>
                 </TableCell>
                 <TableCell className="hidden md:table-cell">
-                  {format(new Date(application.created_at), "PP")}
+                  {format(new Date(application.created_at)"PP")}
                 </TableCell>
                 <TableCell className="hidden md:table-cell">
                   <StatusBadge status={application.status} />

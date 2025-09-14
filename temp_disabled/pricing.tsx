@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
+CheckStarZapShieldUsersGlobeArrowRightExternalLinkTrendingUpClockTargetBuildingRocketAwardDollarSignChartBarLockCpuDatabaseCloudSmartphonePaletteSearchMessageSquareFileTextCalendarCreditCardBarChart3SettingsZap as ZapIconCodeBookOpenActivityDatabase as DatabaseIconPlayMailPhoneMapPinFilterGridListChevronDownChevronUpSparklesFlaskConicalDnaCarLeafFactoryTruckMicroscopeGraduationCapShieldCheckBrainAtomGlobe2BotChevronRightCrownInfinityZap as ZapIcon2Shield as ShieldIconUsers as UsersIconGlobe as GlobeIconCpu as CpuIconDatabase as DatabaseIcon2Cloud as CloudIconSmartphone as SmartphoneIconPalette as PaletteIconSearch as SearchIconMessageSquare as MessageSquareIconFileText as FileTextIconCalendar as CalendarIconCreditCard as CreditCardIconBarChart3 as BarChart3IconSettings as SettingsIconZap as ZapIcon3Code as CodeIconBookOpen as BookOpenIconActivity as ActivityIconDatabase as DatabaseIcon3Play as PlayIconMail as MailIconPhone as PhoneIconMapPin as MapPinIconFilter as FilterIconGrid as GridIconList as ListIconChevronDown as ChevronDownIconChevronUp as ChevronUpIconSparkles as SparklesIconFlaskConical as FlaskConicalIconDna as DnaIconCar as CarIconLeaf as LeafIconFactory as FactoryIconTruck as TruckIconMicroscope as MicroscopeIconGraduationCap as GraduationCapIconShieldCheck as ShieldCheckIconBrain as BrainIconAtom as AtomIconGlobe2 as Globe2IconBot as BotIconChevronRight as ChevronRightIcon
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServicesgetServicesByCategorygetPopularServices } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
 
 export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  const [billingCyclesetBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedPlansetSelectedPlan] = useState<string | null>(null);
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -36,35 +36,35 @@ export default function PricingPage() {
     {
       name: 'Next-Generation AI',
       description: 'Revolutionary AI platforms',
-      services: ['AI Multimodal Fusion', 'AI Autonomous Decision Engine', 'AI Emotional Intelligence'],
+      services: ['AI Multimodal Fusion'AI Autonomous Decision Engine'AI Emotional Intelligence'],
       avgPrice: '$3,199/month',
       savings: 'Save 60-80% vs. competitors'
     },
     {
       name: 'Cutting-Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions',
-      services: ['Zero Trust Architecture', 'Edge Computing Orchestration', '5G Private Networks'],
+      services: ['Zero Trust Architecture'Edge Computing Orchestration'5G Private Networks'],
       avgPrice: '$4,999/month',
       savings: 'Save 50-70% vs. competitors'
     },
     {
       name: 'Innovative Micro SaaS',
       description: 'Creative and practical SaaS tools',
-      services: ['AI Brand Personality', 'Virtual Event Holograms', 'AI Meeting Transcriber'],
+      services: ['AI Brand Personality'Virtual Event Holograms'AI Meeting Transcriber'],
       avgPrice: '$199/month',
       savings: 'Save 40-60% vs. competitors'
     },
     {
       name: 'Quantum & Space Technology',
       description: 'Quantum computing and space solutions',
-      services: ['Quantum AI Hybrid', 'Space Technology Platform', 'Quantum Cybersecurity'],
+      services: ['Quantum AI Hybrid'Space Technology Platform'Quantum Cybersecurity'],
       avgPrice: '$5,999/month',
       savings: 'Save 70-85% vs. competitors'
     },
     {
       name: 'Enterprise IT Services',
       description: 'Comprehensive enterprise solutions',
-      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
+      services: ['Cloud Migration'DevOps Automation'Security Hardening'],
       avgPrice: '$2,999/month',
       savings: 'Save 45-65% vs. competitors'
     }
@@ -156,37 +156,37 @@ export default function PricingPage() {
   const serviceCategoryPricing = [
     {
       category: 'Quantum AI & Computing',
-      services: ['Quantum AI Platform', 'Neural Network Training', 'Quantum Optimization'],
+      services: ['Quantum AI Platform'Neural Network Training'Quantum Optimization'],
       startingPrice: '$99/month',
       icon: <Brain className="w-6 h-6" />
     },
     {
       category: 'Autonomous Systems',
-      services: ['AI Factory Management', 'Robotic Process Automation', 'Smart Manufacturing'],
+      services: ['AI Factory Management'Robotic Process Automation'Smart Manufacturing'],
       startingPrice: '$149/month',
       icon: <Factory className="w-6 h-6" />
     },
     {
       category: 'Healthcare & Biotech',
-      services: ['Drug Discovery AI', 'Medical Imaging Analysis', 'Genomic Research Platform'],
+      services: ['Drug Discovery AI'Medical Imaging Analysis'Genomic Research Platform'],
       startingPrice: '$199/month',
       icon: <FlaskConical className="w-6 h-6" />
     },
     {
       category: 'Cybersecurity',
-      services: ['Quantum Encryption', 'Threat Intelligence', 'Zero-Trust Security'],
+      services: ['Quantum Encryption'Threat Intelligence'Zero-Trust Security'],
       startingPrice: '$129/month',
       icon: <Shield className="w-6 h-6" />
     },
     {
       category: 'Financial Technology',
-      services: ['AI Trading Platform', 'Risk Management', 'Portfolio Optimization'],
+      services: ['AI Trading Platform'Risk Management'Portfolio Optimization'],
       startingPrice: '$179/month',
       icon: <DollarSign className="w-6 h-6" />
     },
     {
       category: 'Space Technology',
-      services: ['Satellite Management', 'Space Data Analytics', 'Mission Planning AI'],
+      services: ['Satellite Management'Space Data Analytics'Mission Planning AI'],
       startingPrice: '$299/month',
       icon: <Rocket className="w-6 h-6" />
     }
@@ -228,14 +228,14 @@ export default function PricingPage() {
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <Head>
         <title>Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI & Quantum Services</title>
-        <meta name="description" content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans with generous free trials." />
-        <meta name="keywords" content="pricing, micro SaaS pricing, AI services pricing, quantum computing pricing, enterprise pricing" />
+        <meta name="description" content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month)Professional ($149/month)or Enterprise ($499/month) plans with generous free trials." />
+        <meta name="keywords" content="pricingmicro SaaS pricingAI services pricingquantum computing pricingenterprise pricing" />
         <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="indexfollow" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI & Quantum Services" />
-        <meta property="og:description" content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans." />
+        <meta property="og:description" content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month)Professional ($149/month)or Enterprise ($499/month) plans." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
@@ -243,7 +243,7 @@ export default function PricingPage() {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI & Quantum Services" />
-        <meta name="twitter:description" content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans." />
+        <meta name="twitter:description" content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month)Professional ($149/month)or Enterprise ($499/month) plans." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
       </Head>
 
@@ -263,7 +263,7 @@ export default function PricingPage() {
               🚀 New for 2026: Revolutionary Services
             </h3>
             <p className="text-gray-300 mb-6">
-              Experience our cutting-edge AI consciousness simulation, quantum neural interfaces, and advanced cybersecurity solutions with comprehensive pricing and detailed comparisons.
+              Experience our cutting-edge AI consciousness simulationquantum neural interfacesand advanced cybersecurity solutions with comprehensive pricing and detailed comparisons.
             </p>
             <Button 
               href="/comprehensive-pricing-2026" 
@@ -303,7 +303,7 @@ export default function PricingPage() {
         {/* Pricing Tiers */}
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map((tierindex) => (
               <UltraFuturisticCard
                 key={tier.name}
                 variant={tier.variant}
@@ -339,7 +339,7 @@ export default function PricingPage() {
                   </div>
                   
                   <ul className="text-left space-y-3 mb-8">
-                    {tier.features.map((feature, idx) => (
+                    {tier.features.map((featureidx) => (
                       <li key={idx} className="flex items-start">
                         <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -366,7 +366,7 @@ export default function PricingPage() {
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {valuePropositions.map((proposition, index) => (
+            {valuePropositions.map((propositionindex) => (
               <UltraFuturisticCard
                 key={index}
                 variant={index % 2 === 0 ? 'quantum' : 'holographic'}
@@ -389,7 +389,7 @@ export default function PricingPage() {
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {serviceCategoryPricing.map((category, index) => (
+            {serviceCategoryPricing.map((categoryindex) => (
               <UltraFuturisticCard
                 key={index}
                 variant={index % 3 === 0 ? 'quantum' : index % 3 === 1 ? 'holographic' : 'neural'}
@@ -407,7 +407,7 @@ export default function PricingPage() {
                 </div>
                 
                 <ul className="space-y-2 mb-4">
-                  {category.services.map((service, idx) => (
+                  {category.services.map((serviceidx) => (
                     <li key={idx} className="text-sm text-gray-300 flex items-center">
                       <Check className="w-4 h-4 text-green-400 mr-2" />
                       {service}
@@ -433,7 +433,7 @@ export default function PricingPage() {
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Popular Services Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {popularServices.slice(0, 6).map((service, index) => (
+            {popularServices.slice(06).map((serviceindex) => (
               <UltraFuturisticCard
                 key={service.id}
                 variant={service.variant as any}
@@ -450,7 +450,7 @@ export default function PricingPage() {
                 <div className="mb-4">
                   <div className="text-xs text-gray-400 mb-2">Key Features:</div>
                   <ul className="text-xs text-gray-300 space-y-1">
-                    {service.features.slice(0, 3).map((feature, idx) => (
+                    {service.features.slice(03).map((featureidx) => (
                       <li key={idx} className="flex items-center">
                         <Check className="w-3 h-3 text-green-400 mr-2" />
                         {feature}
@@ -484,7 +484,7 @@ export default function PricingPage() {
             </div>
             
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
+              {faqs.map((faqindex) => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
@@ -502,7 +502,7 @@ export default function PricingPage() {
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Start your free trial today and experience the power of revolutionary AI & quantum computing services. 
-              No credit card required, instant setup, and full support included.
+              No credit card requiredinstant setupand full support included.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

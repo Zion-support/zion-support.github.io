@@ -14,7 +14,7 @@ const AI2030ContentPromotionBanner: React.FC = () => {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover the revolutionary AI technologies that will transform enterprises by 2030. 
-            Explore autonomous decision-making, self-healing infrastructure, and predictive business intelligence.
+            Explore autonomous decision-makingself-healing infrastructureand predictive business intelligence.
           </p>
         </div>
 

@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const GenerativeAIContentShowcase2025 = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFiltersetActiveFilter] = useState('all');
 
   const contentItems = [
     {
@@ -19,7 +19,7 @@ const GenerativeAIContentShowcase2025 = () => {
         efficiency: '156%',
         satisfaction: '98%'
       },
-      tags: ['Generative AI', 'Enterprise Revolution', 'ROI', 'Digital Transformation'],
+      tags: ['Generative AI'Enterprise Revolution'ROI'Digital Transformation'],
       readingTime: '25 min read',
       featured: true
     },
@@ -28,14 +28,14 @@ const GenerativeAIContentShowcase2025 = () => {
       title: 'Fortune 500 Generative AI Transformation: $15.8B Annual Savings - 2,500% ROI Ultimate Success Story',
       type: 'case-study',
       url: '/case-studies/fortune-500-generative-ai-transformation-2500-roi-ultimate-success-story',
-      description: 'How a global technology leader achieved unprecedented success with generative AI implementation, delivering $15.8B in annual savings.',
+      description: 'How a global technology leader achieved unprecedented success with generative AI implementationdelivering $15.8B in annual savings.',
       metrics: {
         roi: '2,500%',
         savings: '$15.8B',
         timeline: '18 months',
         satisfaction: '98.7%'
       },
-      tags: ['Fortune 500', 'Case Study', 'Success Story', 'ROI'],
+      tags: ['Fortune 500'Case Study'Success Story'ROI'],
       readingTime: '22 min read',
       featured: true
     },
@@ -44,14 +44,14 @@ const GenerativeAIContentShowcase2025 = () => {
       title: 'Generative AI Implementation Master Guide 2025: Ultimate Roadmap to 2,500% ROI',
       type: 'resource',
       url: '/resources/generative-ai-implementation-master-guide-2025-ultimate-roadmap',
-      description: 'The complete, step-by-step guide to implementing generative AI in your enterprise and achieving unprecedented returns on investment.',
+      description: 'The completestep-by-step guide to implementing generative AI in your enterprise and achieving unprecedented returns on investment.',
       metrics: {
         roi: '2,500%',
         success: '94%',
         timeline: '18 months',
         guide: 'Complete'
       },
-      tags: ['Implementation Guide', 'ROI', 'Strategy', 'Complete Guide'],
+      tags: ['Implementation Guide'ROI'Strategy'Complete Guide'],
       readingTime: '45 min read',
       featured: true
     },
@@ -67,7 +67,7 @@ const GenerativeAIContentShowcase2025 = () => {
         accuracy: '99.7%',
         satisfaction: '98%'
       },
-      tags: ['Generative AI', 'Enterprise', 'ROI', 'Market Analysis'],
+      tags: ['Generative AI'Enterprise'ROI'Market Analysis'],
       readingTime: '20 min read',
       featured: false
     },
@@ -76,14 +76,14 @@ const GenerativeAIContentShowcase2025 = () => {
       title: 'Retail AI Transformation 2025: $500M Company Achieves 280% ROI with AI-Powered Operations',
       type: 'case-study',
       url: '/case-studies/retail-ai-transformation-2025-ultimate-success',
-      description: 'How a $500M retail company transformed their operations with AI, achieving 280% ROI and $45M in savings.',
+      description: 'How a $500M retail company transformed their operations with AIachieving 280% ROI and $45M in savings.',
       metrics: {
         roi: '280%',
         savings: '$45M',
         satisfaction: '99.2%',
         efficiency: '78%'
       },
-      tags: ['Retail', 'AI Transformation', 'ROI', 'Case Study'],
+      tags: ['Retail'AI Transformation'ROI'Case Study'],
       readingTime: '18 min read',
       featured: false
     },
@@ -92,24 +92,24 @@ const GenerativeAIContentShowcase2025 = () => {
       title: 'AI 2025 Implementation Master Guide: From Strategy to 500% ROI in 12 Months',
       type: 'resource',
       url: '/resources/ai-2025-implementation-master-guide',
-      description: 'Complete implementation guide covering strategy, technology, and optimization for achieving 500% ROI.',
+      description: 'Complete implementation guide covering strategytechnologyand optimization for achieving 500% ROI.',
       metrics: {
         roi: '500%',
         timeline: '12 months',
         success_rate: '94%',
         savings: '$2.8B'
       },
-      tags: ['Implementation Guide', 'Strategy', 'ROI', 'Best Practices'],
+      tags: ['Implementation Guide'Strategy'ROI'Best Practices'],
       readingTime: '30 min read',
       featured: false
     }
   ];
 
   const filters = [
-    { id: 'all', label: 'All Content', count: contentItems.length },
-    { id: 'blog', label: 'Blog Posts', count: contentItems.filter(item => item.type === 'blog').length },
-    { id: 'case-study', label: 'Case Studies', count: contentItems.filter(item => item.type === 'case-study').length },
-    { id: 'resource', label: 'Resources', count: contentItems.filter(item => item.type === 'resource').length }
+    { id: 'all'label: 'All Content'count: contentItems.length },
+    { id: 'blog'label: 'Blog Posts'count: contentItems.filter(item => item.type === 'blog').length },
+    { id: 'case-study'label: 'Case Studies'count: contentItems.filter(item => item.type === 'case-study').length },
+    { id: 'resource'label: 'Resources'count: contentItems.filter(item => item.type === 'resource').length }
   ];
 
   const filteredContent = activeFilter === 'all' 
@@ -146,8 +146,8 @@ const GenerativeAIContentShowcase2025 = () => {
             Ultimate Content Collection
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the complete guide to generative AI transformation, featuring real success stories, 
-            implementation strategies, and proven frameworks for achieving 2,500% ROI.
+            Discover the complete guide to generative AI transformationfeaturing real success stories
+            implementation strategiesand proven frameworks for achieving 2,500% ROI.
           </p>
         </div>
 
@@ -234,7 +234,7 @@ const GenerativeAIContentShowcase2025 = () => {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag) => (
+                  {item.tags.slice(03).map((tag) => (
                     <span
                       key={tag}
                       className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"

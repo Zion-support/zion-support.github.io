@@ -1,14 +1,14 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, 
-  TrendingUp, 
-  DollarSign, 
-  Building2, 
-  Brain, 
-  Zap, 
+  ArrowRight
+  TrendingUp
+  DollarSign
+  Building2
+  Brain
+  Zap
   Target,
   X,
   PlayCircle,
@@ -18,9 +18,9 @@ import {
 } from 'lucide-react';
 
 const BusinessTransformation2028PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentMetric, setCurrentMetric] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentMetricsetCurrentMetric] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -28,10 +28,10 @@ const BusinessTransformation2028PromotionBanner = () => {
     // Auto-rotate metrics
     const interval = setInterval(() => {
       setCurrentMetric((prev) => (prev + 1) % metrics.length);
-    }, 2500);
+    }2500);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const metrics = [
     {
@@ -61,10 +61,10 @@ const BusinessTransformation2028PromotionBanner = () => {
   ];
 
   const solutions = [
-    { icon: Brain, label: 'AI Automation' },
-    { icon: Zap, label: 'Quantum Optimization' },
-    { icon: Target, label: 'Neural Business' },
-    { icon: Building2, label: 'Future Operations' }
+    { icon: Brainlabel: 'AI Automation' },
+    { icon: Zaplabel: 'Quantum Optimization' },
+    { icon: Targetlabel: 'Neural Business' },
+    { icon: Building2label: 'Future Operations' }
   ];
 
   if (isDismissed) return null;
@@ -73,10 +73,10 @@ const BusinessTransformation2028PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0y: -100 }}
+          animate={{ opacity: 1y: 0 }}
+          exit={{ opacity: 0y: -100 }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 border-b border-blue-500/20"
         >
           {/* Background Effects */}
@@ -96,7 +96,7 @@ const BusinessTransformation2028PromotionBanner = () => {
                   </div>
                   
                   <div className="flex items-center gap-1 text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(5)].map((_i) => (
                       <Award key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
@@ -107,7 +107,7 @@ const BusinessTransformation2028PromotionBanner = () => {
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-4 max-w-2xl">
-                  Leverage AI automation, quantum optimization, neural interfaces, and future-ready operations 
+                  Leverage AI automationquantum optimizationeural interfacesand future-ready operations 
                   to achieve unprecedented growth and competitive advantage.
                 </p>
 
@@ -121,9 +121,9 @@ const BusinessTransformation2028PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentMetric}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
                       transition={{ duration: 0.3 }}
                       className="flex items-center gap-2"
                     >
@@ -141,7 +141,7 @@ const BusinessTransformation2028PromotionBanner = () => {
                 {/* Solutions */}
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-sm text-gray-300">
                   <span className="text-gray-400">Solutions:</span>
-                  {solutions.map((solution, index) => (
+                  {solutions.map((solutionindex) => (
                     <div key={index} className="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full">
                       <solution.icon className="w-3 h-3" />
                       <span>{solution.label}</span>

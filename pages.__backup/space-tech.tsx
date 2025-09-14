@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-import { Satellite, CheckCircle, Globe2 } from 'lucide-react';
+SatelliteCheckCircleGlobe2
 
 export default function SpaceTechPage() {
   const features = [
@@ -16,7 +16,7 @@ export default function SpaceTechPage() {
     <Layout>
       <Head>
         <title>Space Technology | Zion Tech Group</title>
-        <meta name="description" content="Space mission control, satellite operations, and secure communications consulting." />
+        <meta name="description" content="Space mission controlsatellite operationsand secure communications consulting." />
         <link rel="canonical" href="https://ziontechgroup.com/space-tech" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -26,7 +26,7 @@ export default function SpaceTechPage() {
               <Satellite className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Space Technology</h1>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, reliable operations for space and earth observation missions.</p>
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secureliable operations for space and earth observation missions.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="/contact" className="px-8 py-4">Discuss a Mission</a>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>

@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Globe, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Code, 
+  Brain
+  Zap
+  Globe
+  Shield
+  TrendingUp
+  Users
+  Code
   Database,
   Cloud,
   Smartphone,
@@ -32,13 +32,13 @@ import {
 } from 'lucide-react';
 
 const UltimateContentShowcase2029 = () => {
-  const [activeTab, setActiveTab] = useState('ai-breakthroughs');
-  const [hoveredCard, setHoveredCard] = useState(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('ai-breakthroughs');
+  const [hoveredCardsetHoveredCard] = useState(null);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const contentCategories = [
     {
@@ -84,7 +84,7 @@ const UltimateContentShowcase2029 = () => {
       comments: '12K',
       author: 'Dr. Sarah Chen',
       date: '2029-01-15',
-      tags: ['AI', 'Consciousness', 'Breakthrough', 'Research'],
+      tags: ['AI'Consciousness'Breakthrough'Research'],
       featured: true
     },
     {
@@ -99,7 +99,7 @@ const UltimateContentShowcase2029 = () => {
       comments: '8.5K',
       author: 'Prof. Michael Rodriguez',
       date: '2029-01-12',
-      tags: ['AI', 'Language', 'Translation', 'Global'],
+      tags: ['AI'Language'Translation'Global'],
       featured: false
     },
     {
@@ -114,7 +114,7 @@ const UltimateContentShowcase2029 = () => {
       comments: '6.2K',
       author: 'Dr. Emily Watson',
       date: '2029-01-10',
-      tags: ['AI', 'Emotions', 'Psychology', 'Human-AI'],
+      tags: ['AI'Emotions'Psychology'Human-AI'],
       featured: true
     },
     {
@@ -129,7 +129,7 @@ const UltimateContentShowcase2029 = () => {
       comments: '15K',
       author: 'Dr. James Park',
       date: '2029-01-08',
-      tags: ['AI', 'Healthcare', 'Prediction', 'Medicine'],
+      tags: ['AI'Healthcare'Prediction'Medicine'],
       featured: false
     }
   ];
@@ -147,7 +147,7 @@ const UltimateContentShowcase2029 = () => {
       comments: '9.8K',
       author: 'Dr. Alex Quantum',
       date: '2029-01-14',
-      tags: ['Quantum', 'Computing', 'Hardware', 'Breakthrough'],
+      tags: ['Quantum'Computing'Hardware'Breakthrough'],
       featured: true
     },
     {
@@ -162,7 +162,7 @@ const UltimateContentShowcase2029 = () => {
       comments: '7.3K',
       author: 'Prof. Lisa Zhang',
       date: '2029-01-11',
-      tags: ['Quantum', 'Internet', 'Security', 'Network'],
+      tags: ['Quantum'Internet'Security'Network'],
       featured: false
     }
   ];
@@ -180,7 +180,7 @@ const UltimateContentShowcase2029 = () => {
       comments: '18K',
       author: 'Dr. Neural Tech',
       date: '2029-01-13',
-      tags: ['Neural', 'Interface', 'Brain', 'Communication'],
+      tags: ['Neural'Interface'Brain'Communication'],
       featured: true
     },
     {
@@ -195,7 +195,7 @@ const UltimateContentShowcase2029 = () => {
       comments: '16K',
       author: 'Dr. Memory Boost',
       date: '2029-01-09',
-      tags: ['Neural', 'Memory', 'Enhancement', 'Implant'],
+      tags: ['Neural'Memory'Enhancement'Implant'],
       featured: false
     }
   ];
@@ -213,7 +213,7 @@ const UltimateContentShowcase2029 = () => {
       comments: '22K',
       author: 'Dr. Evolution AI',
       date: '2029-01-16',
-      tags: ['AI', 'Evolution', 'Autonomous', 'Self-Improvement'],
+      tags: ['AI'Evolution'Autonomous'Self-Improvement'],
       featured: true
     },
     {
@@ -228,7 +228,7 @@ const UltimateContentShowcase2029 = () => {
       comments: '8.1K',
       author: 'Prof. Robot Master',
       date: '2029-01-07',
-      tags: ['AI', 'Robotics', 'Control', 'Universal'],
+      tags: ['AI'Robotics'Control'Universal'],
       featured: false
     }
   ];
@@ -263,8 +263,8 @@ const UltimateContentShowcase2029 = () => {
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -50 }}
+          initial={{ opacity: 0y: -50 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : -50 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -281,16 +281,16 @@ const UltimateContentShowcase2029 = () => {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Explore the most groundbreaking technological advances of 2029. 
-            From synthetic consciousness AI to quantum computing breakthroughs, 
+            From synthetic consciousness AI to quantum computing breakthroughs
             discover the future that's happening now.
           </p>
         </motion.div>
 
         {/* Category Tabs */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {contentCategories.map((category) => {
@@ -316,7 +316,7 @@ const UltimateContentShowcase2029 = () => {
                   <motion.div
                     layoutId="activeTab"
                     className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl -z-10"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    transition={{ type: "spring"bounce: 0.2duration: 0.6 }}
                   />
                 )}
               </button>
@@ -328,17 +328,17 @@ const UltimateContentShowcase2029 = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: isVisible ? 1 : 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="wait">
-            {currentContent.map((item, index) => (
+            {currentContent.map((itemindex) => (
               <motion.div
                 key={`${activeTab}-${item.id}`}
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -50, scale: 0.9 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 50scale: 0.9 }}
+                animate={{ opacity: 1y: 0scale: 1 }}
+                exit={{ opacity: 0y: -50scale: 0.9 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className={`group relative bg-white/10 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 ${
                   item.featured ? 'md:col-span-2 lg:col-span-1' : ''
                 }`}
@@ -469,9 +469,9 @@ const UltimateContentShowcase2029 = () => {
 
         {/* Load More Button */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-2xl hover:shadow-purple-500/25">

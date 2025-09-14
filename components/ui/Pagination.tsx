@@ -8,8 +8,8 @@ export type PaginationProps = {
   onChange: (nextPage: number) => void;
 };
 
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+export default function Pagination({ pageSizetotalonChange }: PaginationProps) {
+  const totalPages = Math.max(1Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
 

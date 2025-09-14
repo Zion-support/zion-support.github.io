@@ -1,15 +1,15 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Star, 
-  ArrowRight, 
-  Zap, 
-  TrendingUp, 
-  Users, 
+  Star
+  ArrowRight
+  Zap
+  TrendingUp
+  Users
   Award,
   ChevronRight,
   Play,
@@ -18,15 +18,15 @@ import {
 } from 'lucide-react';
 
 const UltimateContentAdvertisingBanner2025 = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   const advertisingContent = [
     {
       id: 1,
       title: "🚀 Revolutionary AI Solutions 2025",
       subtitle: "Transform Your Business with Cutting-Edge Technology",
-      description: "Discover our latest AI-powered automation tools, quantum computing breakthroughs, and neural interface innovations that are revolutionizing industries worldwide.",
+      description: "Discover our latest AI-powered automation toolsquantum computing breakthroughsand neural interface innovations that are revolutionizing industries worldwide.",
       cta: "Explore AI Solutions",
       href: "/ai-2025-ultimate-breakthrough",
       stats: "500+ Success Stories",
@@ -72,9 +72,9 @@ const UltimateContentAdvertisingBanner2025 = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % advertisingContent.length);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentContent = advertisingContent[currentSlide];
 
@@ -92,9 +92,9 @@ const UltimateContentAdvertisingBanner2025 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -20 }}
             transition={{ duration: 0.5 }}
             className="text-center"
           >
@@ -103,15 +103,15 @@ const UltimateContentAdvertisingBanner2025 = () => {
               <motion.div
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
-                transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                transition={{ delay: 0.2type: "spring"stiffness: 200 }}
                 className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-6"
               >
                 {currentContent.icon}
               </motion.div>
               
               <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
                 transition={{ delay: 0.3 }}
                 className="text-4xl md:text-6xl font-bold text-white mb-4"
               >
@@ -119,8 +119,8 @@ const UltimateContentAdvertisingBanner2025 = () => {
               </motion.h2>
               
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
                 transition={{ delay: 0.4 }}
                 className="text-xl md:text-2xl text-blue-100 mb-6"
               >
@@ -128,8 +128,8 @@ const UltimateContentAdvertisingBanner2025 = () => {
               </motion.p>
               
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
                 transition={{ delay: 0.5 }}
                 className="text-lg text-gray-200 mb-8 max-w-4xl mx-auto"
               >
@@ -139,8 +139,8 @@ const UltimateContentAdvertisingBanner2025 = () => {
 
             {/* Stats and CTA */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8"
             >
@@ -201,7 +201,7 @@ const UltimateContentAdvertisingBanner2025 = () => {
 
         {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">
-          {advertisingContent.map((_, index) => (
+          {advertisingContent.map((_index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}

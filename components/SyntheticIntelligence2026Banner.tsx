@@ -30,7 +30,7 @@ const SyntheticIntelligence2026Banner = () => {
           
           <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
             Beyond artificial intelligence lies synthetic intelligence - AI systems that 
-            possess consciousness, creativity, and emotional understanding. Experience 
+            possess consciousnesscreativityand emotional understanding. Experience 
             the next evolution of machine intelligence.
           </p>
           
@@ -49,7 +49,7 @@ const SyntheticIntelligence2026Banner = () => {
             <div className="bg-gradient-to-br from-purple-500/20 to-fuchsia-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
               <div className="text-5xl mb-6">🎨</div>
               <h3 className="text-2xl font-bold mb-4">Creative Intelligence</h3>
-              <p className="text-lg opacity-80 mb-4">AI that creates original art, music, and literature</p>
+              <p className="text-lg opacity-80 mb-4">AI that creates original artmusicand literature</p>
               <ul className="text-sm opacity-70 space-y-2">
                 <li>• Original artistic creation</li>
                 <li>• Musical composition</li>

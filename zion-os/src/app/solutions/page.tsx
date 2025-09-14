@@ -21,7 +21,7 @@ export default function SolutionsPage() {
               Enterprise-Grade AI Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From research automation to business operations, our solutions are built to scale and deliver measurable results
+              From research automation to business operationsour solutions are built to scale and deliver measurable results
             </p>
           </div>
 
@@ -99,7 +99,7 @@ export default function SolutionsPage() {
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">AI-Powered IT Asset Management</h3>
                 <p className="text-gray-600 mb-4">
-                  Intelligent asset tracking, optimization, and lifecycle management for modern IT infrastructure.
+                  Intelligent asset trackingoptimizationand lifecycle management for modern IT infrastructure.
                 </p>
                 <div className="flex items-center justify-between">
                   <a href="/ai-powered-it-asset-management" className="text-orange-600 hover:text-orange-700 font-medium">
@@ -240,7 +240,7 @@ export default function SolutionsPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Healthcare</h3>
               <p className="text-gray-600">
-                Drug discovery, clinical research, patient care optimization, and medical device innovation
+                Drug discoveryclinical researchpatient care optimizationand medical device innovation
               </p>
             </div>
 
@@ -252,7 +252,7 @@ export default function SolutionsPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Finance</h3>
               <p className="text-gray-600">
-                Risk modeling, algorithmic trading, fraud detection, and portfolio optimization
+                Risk modelingalgorithmic tradingfraud detectionand portfolio optimization
               </p>
             </div>
 
@@ -264,7 +264,7 @@ export default function SolutionsPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Manufacturing</h3>
               <p className="text-gray-600">
-                Process optimization, quality control, predictive maintenance, and supply chain management
+                Process optimizationquality controlpredictive maintenanceand supply chain management
               </p>
             </div>
 
@@ -276,7 +276,7 @@ export default function SolutionsPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Retail</h3>
               <p className="text-gray-600">
-                Customer behavior analysis, inventory optimization, demand forecasting, and personalized marketing
+                Customer behavior analysisinventory optimizationdemand forecastingand personalized marketing
               </p>
             </div>
 
@@ -288,7 +288,7 @@ export default function SolutionsPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Technology</h3>
               <p className="text-gray-600">
-                Software development, system architecture, cloud optimization, and AI model development
+                Software developmentsystem architecturecloud optimizationand AI model development
               </p>
             </div>
 
@@ -300,7 +300,7 @@ export default function SolutionsPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Energy</h3>
               <p className="text-gray-600">
-                Grid optimization, renewable energy forecasting, demand response, and sustainability analysis
+                Grid optimizationrenewable energy forecastingdemand responseand sustainability analysis
               </p>
             </div>
           </div>

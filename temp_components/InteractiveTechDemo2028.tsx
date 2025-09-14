@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Settings, 
-  Code, 
-  Database, 
-  Cloud, 
+  Play
+  Pause
+  RotateCcw
+  Settings
+  Code
+  Database
+  Cloud
   Brain,
   Zap,
   Shield,
@@ -30,10 +30,10 @@ import {
 } from 'lucide-react';
 
 const InteractiveTechDemo2028 = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentDemo, setCurrentDemo] = useState('ai-automation');
-  const [progress, setProgress] = useState(0);
-  const [selectedFeature, setSelectedFeature] = useState(0);
+  const [isPlayingsetIsPlaying] = useState(false);
+  const [currentDemosetCurrentDemo] = useState('ai-automation');
+  const [progressetProgress] = useState(0);
+  const [selectedFeaturesetSelectedFeature] = useState(0);
 
   const demos = {
     'ai-automation': {
@@ -42,16 +42,16 @@ const InteractiveTechDemo2028 = () => {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       steps: [
-        { title: 'Data Collection', description: 'AI gathers data from multiple sources', duration: 2000 },
-        { title: 'Pattern Analysis', description: 'Machine learning identifies optimization opportunities', duration: 3000 },
-        { title: 'Process Optimization', description: 'AI automatically adjusts workflows for maximum efficiency', duration: 2500 },
-        { title: 'Results Monitoring', description: 'Real-time tracking of performance improvements', duration: 2000 }
+        { title: 'Data Collection'description: 'AI gathers data from multiple sources'duration: 2000 },
+        { title: 'Pattern Analysis'description: 'Machine learning identifies optimization opportunities'duration: 3000 },
+        { title: 'Process Optimization'description: 'AI automatically adjusts workflows for maximum efficiency'duration: 2500 },
+        { title: 'Results Monitoring'description: 'Real-time tracking of performance improvements'duration: 2000 }
       ],
       metrics: [
-        { label: 'Efficiency Gain', value: '500%', change: '+25%' },
-        { label: 'Cost Reduction', value: '$2.5M', change: '+$500K' },
-        { label: 'Time Saved', value: '40hrs', change: '+8hrs' },
-        { label: 'Error Rate', value: '0.1%', change: '-0.5%' }
+        { label: 'Efficiency Gain'value: '500%'change: '+25%' },
+        { label: 'Cost Reduction'value: '$2.5M'change: '+$500K' },
+        { label: 'Time Saved'value: '40hrs'change: '+8hrs' },
+        { label: 'Error Rate'value: '0.1%'change: '-0.5%' }
       ]
     },
     'quantum-computing': {
@@ -60,16 +60,16 @@ const InteractiveTechDemo2028 = () => {
       icon: Zap,
       color: 'from-cyan-600 to-blue-600',
       steps: [
-        { title: 'Quantum Initialization', description: 'Setting up quantum states for computation', duration: 1500 },
-        { title: 'Quantum Processing', description: 'Performing calculations using quantum algorithms', duration: 4000 },
-        { title: 'Result Extraction', description: 'Measuring and extracting quantum results', duration: 2000 },
-        { title: 'Classical Integration', description: 'Converting quantum results to classical data', duration: 1500 }
+        { title: 'Quantum Initialization'description: 'Setting up quantum states for computation'duration: 1500 },
+        { title: 'Quantum Processing'description: 'Performing calculations using quantum algorithms'duration: 4000 },
+        { title: 'Result Extraction'description: 'Measuring and extracting quantum results'duration: 2000 },
+        { title: 'Classical Integration'description: 'Converting quantum results to classical data'duration: 1500 }
       ],
       metrics: [
-        { label: 'Processing Speed', value: '1000x', change: '+200x' },
-        { label: 'Problem Size', value: '10^15', change: '+10^3' },
-        { label: 'Accuracy', value: '99.99%', change: '+0.5%' },
-        { label: 'Energy Efficiency', value: '90%', change: '+15%' }
+        { label: 'Processing Speed'value: '1000x'change: '+200x' },
+        { label: 'Problem Size'value: '10^15'change: '+10^3' },
+        { label: 'Accuracy'value: '99.99%'change: '+0.5%' },
+        { label: 'Energy Efficiency'value: '90%'change: '+15%' }
       ]
     },
     'neural-interfaces': {
@@ -78,16 +78,16 @@ const InteractiveTechDemo2028 = () => {
       icon: Globe,
       color: 'from-green-600 to-teal-600',
       steps: [
-        { title: 'Neural Signal Capture', description: 'Reading brain activity patterns', duration: 2000 },
-        { title: 'Signal Processing', description: 'AI interprets neural signals in real-time', duration: 3000 },
-        { title: 'Command Execution', description: 'Converting thoughts into computer actions', duration: 2000 },
-        { title: 'Feedback Loop', description: 'Providing sensory feedback to the user', duration: 2500 }
+        { title: 'Neural Signal Capture'description: 'Reading brain activity patterns'duration: 2000 },
+        { title: 'Signal Processing'description: 'AI interprets neural signals in real-time'duration: 3000 },
+        { title: 'Command Execution'description: 'Converting thoughts into computer actions'duration: 2000 },
+        { title: 'Feedback Loop'description: 'Providing sensory feedback to the user'duration: 2500 }
       ],
       metrics: [
-        { label: 'Response Time', value: '50ms', change: '-10ms' },
-        { label: 'Accuracy', value: '98.5%', change: '+2.5%' },
-        { label: 'Bandwidth', value: '1GB/s', change: '+200MB/s' },
-        { label: 'User Satisfaction', value: '95%', change: '+5%' }
+        { label: 'Response Time'value: '50ms'change: '-10ms' },
+        { label: 'Accuracy'value: '98.5%'change: '+2.5%' },
+        { label: 'Bandwidth'value: '1GB/s'change: '+200MB/s' },
+        { label: 'User Satisfaction'value: '95%'change: '+5%' }
       ]
     },
     'cloud-optimization': {
@@ -96,27 +96,27 @@ const InteractiveTechDemo2028 = () => {
       icon: Cloud,
       color: 'from-orange-600 to-red-600',
       steps: [
-        { title: 'Resource Monitoring', description: 'Continuous monitoring of cloud resources', duration: 2000 },
-        { title: 'Demand Prediction', description: 'AI predicts future resource needs', duration: 3000 },
-        { title: 'Auto-Scaling', description: 'Automatically adjusting resources based on demand', duration: 2500 },
-        { title: 'Cost Optimization', description: 'Minimizing costs while maintaining performance', duration: 2000 }
+        { title: 'Resource Monitoring'description: 'Continuous monitoring of cloud resources'duration: 2000 },
+        { title: 'Demand Prediction'description: 'AI predicts future resource needs'duration: 3000 },
+        { title: 'Auto-Scaling'description: 'Automatically adjusting resources based on demand'duration: 2500 },
+        { title: 'Cost Optimization'description: 'Minimizing costs while maintaining performance'duration: 2000 }
       ],
       metrics: [
-        { label: 'Uptime', value: '99.99%', change: '+0.1%' },
-        { label: 'Cost Savings', value: '60%', change: '+10%' },
-        { label: 'Response Time', value: '100ms', change: '-20ms' },
-        { label: 'Scalability', value: '1000x', change: '+200x' }
+        { label: 'Uptime'value: '99.99%'change: '+0.1%' },
+        { label: 'Cost Savings'value: '60%'change: '+10%' },
+        { label: 'Response Time'value: '100ms'change: '-20ms' },
+        { label: 'Scalability'value: '1000x'change: '+200x' }
       ]
     }
   };
 
   const features = [
-    { name: 'Real-time Processing', icon: Zap },
-    { name: 'Predictive Analytics', icon: BarChart3 },
-    { name: 'Automated Scaling', icon: TrendingUp },
-    { name: 'Security Monitoring', icon: Shield },
-    { name: 'Performance Optimization', icon: Target },
-    { name: 'Cost Management', icon: DollarSign }
+    { name: 'Real-time Processing'icon: Zap },
+    { name: 'Predictive Analytics'icon: BarChart3 },
+    { name: 'Automated Scaling'icon: TrendingUp },
+    { name: 'Security Monitoring'icon: Shield },
+    { name: 'Performance Optimization'icon: Target },
+    { name: 'Cost Management'icon: DollarSign }
   ];
 
   useEffect(() => {
@@ -130,10 +130,10 @@ const InteractiveTechDemo2028 = () => {
           }
           return prev + 1;
         });
-      }, 100);
+      }100);
     }
     return () => clearInterval(interval);
-  }, [isPlaying]);
+  }[isPlaying]);
 
   const currentDemoData = demos[currentDemo];
   const currentStep = Math.floor((progress / 100) * currentDemoData.steps.length);
@@ -145,8 +145,8 @@ const InteractiveTechDemo2028 = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -154,7 +154,7 @@ const InteractiveTechDemo2028 = () => {
               Interactive Tech Demo 2028
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience cutting-edge technologies in action. See how our AI, quantum computing, 
+              Experience cutting-edge technologies in action. See how our AIquantum computing
               and neural interface solutions work in real-time.
             </p>
           </motion.div>
@@ -170,7 +170,7 @@ const InteractiveTechDemo2028 = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {Object.entries(demos).map(([key, demo]) => (
+            {Object.entries(demos).map(([keydemo]) => (
               <motion.button
                 key={key}
                 whileHover={{ scale: 1.05 }}
@@ -233,9 +233,9 @@ const InteractiveTechDemo2028 = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentStep}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
+                      exit={{ opacity: 0y: -20 }}
                       transition={{ duration: 0.5 }}
                       className="bg-gray-700/50 rounded-xl p-4"
                     >
@@ -283,7 +283,7 @@ const InteractiveTechDemo2028 = () => {
                 <div>
                   <h4 className="text-lg font-semibold mb-4">Key Features</h4>
                   <div className="grid grid-cols-2 gap-3">
-                    {features.map((feature, index) => (
+                    {features.map((featureindex) => (
                       <motion.div
                         key={feature.name}
                         whileHover={{ scale: 1.05 }}
@@ -315,8 +315,8 @@ const InteractiveTechDemo2028 = () => {
                   {/* Animated Elements */}
                   <motion.div
                     animate={{
-                      scale: isPlaying ? [1, 1.2, 1] : 1,
-                      opacity: isPlaying ? [0.5, 1, 0.5] : 0.7
+                      scale: isPlaying ? [1.21] : 1,
+                      opacity: isPlaying ? [0.510.5] : 0.7
                     }}
                     transition={{
                       duration: 2,
@@ -333,15 +333,15 @@ const InteractiveTechDemo2028 = () => {
                   {/* Floating Data Points */}
                   {isPlaying && (
                     <>
-                      {[...Array(6)].map((_, i) => (
+                      {[...Array(6)].map((_i) => (
                         <motion.div
                           key={i}
-                          initial={{ opacity: 0, scale: 0 }}
+                          initial={{ opacity: 0scale: 0 }}
                           animate={{ 
-                            opacity: [0, 1, 0],
-                            scale: [0, 1, 0],
-                            x: [0, Math.random() * 200 - 100],
-                            y: [0, Math.random() * 200 - 100]
+                            opacity: [010],
+                            scale: [010],
+                            x: [0Math.random() * 200 - 100],
+                            y: [0Math.random() * 200 - 100]
                           }}
                           transition={{
                             duration: 3,
@@ -365,7 +365,7 @@ const InteractiveTechDemo2028 = () => {
                       <motion.div
                         className={`h-1 bg-gradient-to-r ${currentDemoData.color} rounded-full`}
                         animate={{ width: isPlaying ? '100%' : '0%' }}
-                        transition={{ duration: 10, ease: "linear" }}
+                        transition={{ duration: 10ease: "linear" }}
                       />
                     </div>
                   </div>
@@ -375,12 +375,12 @@ const InteractiveTechDemo2028 = () => {
                 <div className="mt-6">
                   <h5 className="text-lg font-semibold mb-4">Real-time Metrics</h5>
                   <div className="grid grid-cols-2 gap-4">
-                    {currentDemoData.metrics.map((metric, index) => (
+                    {currentDemoData.metrics.map((metricindex) => (
                       <motion.div
                         key={metric.label}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        initial={{ opacity: 0y: 20 }}
+                        animate={{ opacity: 1y: 0 }}
+                        transition={{ duration: 0.6delay: index * 0.1 }}
                         className="bg-gray-700/50 rounded-lg p-3"
                       >
                         <div className="text-sm text-gray-400">{metric.label}</div>

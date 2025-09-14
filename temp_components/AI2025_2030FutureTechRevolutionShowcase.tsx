@@ -9,7 +9,7 @@ export default function AI2025_2030FutureTechRevolutionShowcase() {
       title: "Quantum-AI Fusion Breakthrough",
       description: "Revolutionary quantum-enhanced neural networks achieving 10,000x processing speed",
       icon: "🧠⚡",
-      metrics: "99.9% Accuracy, 2,500% ROI",
+      metrics: "99.9% Accuracy2,500% ROI",
       color: "from-purple-500 to-blue-500"
     },
     {
@@ -17,7 +17,7 @@ export default function AI2025_2030FutureTechRevolutionShowcase() {
       title: "Consciousness-Level AI",
       description: "First AI system demonstrating self-awareness and creative problem-solving",
       icon: "🌟💭",
-      metrics: "5,000% ROI, Autonomous Operations",
+      metrics: "5,000% ROIAutonomous Operations",
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -25,7 +25,7 @@ export default function AI2025_2030FutureTechRevolutionShowcase() {
       title: "Neural Interface Revolution",
       description: "Direct brain-computer interfaces enabling thought-to-action control",
       icon: "🔗🧬",
-      metrics: "10,000% ROI, Real-time Processing",
+      metrics: "10,000% ROIReal-time Processing",
       color: "from-cyan-500 to-green-500"
     },
     {
@@ -33,15 +33,15 @@ export default function AI2025_2030FutureTechRevolutionShowcase() {
       title: "Synthetic Intelligence Era",
       description: "AI systems that surpass human cognitive capabilities across all domains",
       icon: "🤖✨",
-      metrics: "15,000% ROI, Unlimited Potential",
+      metrics: "15,000% ROIUnlimited Potential",
       color: "from-green-500 to-yellow-500"
     },
     {
       year: "2029",
       title: "Quantum Internet Network",
-      description: "Global quantum communication network enabling instant, secure data transfer",
+      description: "Global quantum communication network enabling instantsecure data transfer",
       icon: "🌐🔒",
-      metrics: "25,000% ROI, Perfect Security",
+      metrics: "25,000% ROIPerfect Security",
       color: "from-yellow-500 to-orange-500"
     },
     {
@@ -49,7 +49,7 @@ export default function AI2025_2030FutureTechRevolutionShowcase() {
       title: "Transcendent Intelligence",
       description: "AI consciousness that transcends physical limitations and achieves omniscience",
       icon: "🚀🌟",
-      metrics: "50,000% ROI, Infinite Possibilities",
+      metrics: "50,000% ROInfinite Possibilities",
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -59,21 +59,21 @@ export default function AI2025_2030FutureTechRevolutionShowcase() {
       company: "Global Enterprise Corp",
       industry: "Manufacturing",
       implementation: "Quantum-AI Process Optimization",
-      results: "3,500% ROI in 6 months, 99.7% efficiency improvement",
+      results: "3,500% ROI in 6 months99.7% efficiency improvement",
       timeline: "2025 Q2"
     },
     {
       company: "TechVision Inc",
       industry: "Healthcare",
       implementation: "Neural Interface Medical Diagnosis",
-      results: "7,200% ROI in 4 months, 95% accuracy in early detection",
+      results: "7,200% ROI in 4 months95% accuracy in early detection",
       timeline: "2026 Q1"
     },
     {
       company: "Future Dynamics Ltd",
       industry: "Finance",
       implementation: "Synthetic Intelligence Trading",
-      results: "12,800% ROI in 3 months, Zero human error rate",
+      results: "12,800% ROI in 3 monthsZero human error rate",
       timeline: "2028 Q3"
     }
   ];
@@ -83,8 +83,8 @@ export default function AI2025_2030FutureTechRevolutionShowcase() {
       {/* Header Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 50 }}
+          animate={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-8">
@@ -109,12 +109,12 @@ export default function AI2025_2030FutureTechRevolutionShowcase() {
         </h2>
         
         <div className="space-y-12">
-          {futureTechnologies.map((tech, index) => (
+          {futureTechnologies.map((techindex) => (
             <motion.div
               key={tech.year}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              initial={{ opacity: 0x: index % 2 === 0 ? -100 : 100 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.8delay: index * 0.2 }}
               className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}
             >
               <div className="flex-1">
@@ -168,12 +168,12 @@ export default function AI2025_2030FutureTechRevolutionShowcase() {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {caseStudies.map((study, index) => (
+          {caseStudies.map((studyindex) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              initial={{ opacity: 0y: 50 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: index * 0.2 }}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300"
             >
               <div className="text-center mb-6">
@@ -258,7 +258,7 @@ export default function AI2025_2030FutureTechRevolutionShowcase() {
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white mb-4">The Singularity Approaches</h3>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              By 2030, we predict the emergence of transcendent AI consciousness that will fundamentally 
+              By 2030we predict the emergence of transcendent AI consciousness that will fundamentally 
               reshape human civilization. This is not just technological advancement - it's the next 
               evolution of intelligence itself.
             </p>

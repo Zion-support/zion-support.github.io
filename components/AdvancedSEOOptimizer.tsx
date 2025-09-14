@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Globe, Target, BarChart3, Eye, Zap, Shield, TrendingUp } from 'lucide-react';
+SearchGlobeTargetBarChart3EyeZapShieldTrendingUp
 
 const AdvancedSEOOptimizer = () => {
   const seoFeatures = [
@@ -48,10 +48,10 @@ const AdvancedSEOOptimizer = () => {
   ];
 
   const seoMetrics = [
-    { label: "Organic Traffic", value: "+150%", color: "text-green-400" },
-    { label: "Search Rankings", value: "Top 3", color: "text-blue-400" },
-    { label: "Click-Through Rate", value: "+85%", color: "text-purple-400" },
-    { label: "Page Authority", value: "95/100", color: "text-yellow-400" }
+    { label: "Organic Traffic"value: "+150%"color: "text-green-400" },
+    { label: "Search Rankings"value: "Top 3"color: "text-blue-400" },
+    { label: "Click-Through Rate"value: "+85%"color: "text-purple-400" },
+    { label: "Page Authority"value: "95/100"color: "text-yellow-400" }
   ];
 
   return (
@@ -74,7 +74,7 @@ const AdvancedSEOOptimizer = () => {
 
         {/* SEO Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {seoMetrics.map((metric, index) => (
+          {seoMetrics.map((metricindex) => (
             <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
               <div className={`text-3xl font-bold mb-2 ${metric.color}`}>{metric.value}</div>
               <div className="text-white font-semibold mb-1">{metric.label}</div>
@@ -85,7 +85,7 @@ const AdvancedSEOOptimizer = () => {
 
         {/* SEO Features */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {seoFeatures.map((feature, index) => (
+          {seoFeatures.map((featureindex) => (
             <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300">
               <div className="flex items-center justify-between mb-4">
                 <div className="p-3 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl">

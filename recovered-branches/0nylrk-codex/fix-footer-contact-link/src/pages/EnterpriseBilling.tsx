@@ -23,7 +23,7 @@ export default function EnterpriseBilling() {
     <ProtectedRoute>
       <SEO 
         title="Enterprise Billing - Zion AI Marketplace"
-        description="Manage your subscription, view invoice history, and download billing statements."
+        description="Manage your subscriptionview invoice historyand download billing statements."
       />
       <Header />
       <main className="min-h-screen bg-background">

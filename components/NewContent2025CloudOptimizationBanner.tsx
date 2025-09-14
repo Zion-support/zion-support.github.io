@@ -1,13 +1,13 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
-import { X, Cloud, Zap, TrendingUp, CheckCircle, DollarSign } from 'lucide-react';
+XCloudZapTrendingUpCheckCircleDollarSign
 
 const NewContent2025CloudOptimizationBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
     // Check if banner was previously dismissed
@@ -15,12 +15,12 @@ const NewContent2025CloudOptimizationBanner: React.FC = () => {
     if (!dismissed) {
       setIsVisible(true);
     }
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsVisible(false);
     setIsDismissed(true);
-    localStorage.setItem('cloud-optimization-banner-dismissed', 'true');
+    localStorage.setItem('cloud-optimization-banner-dismissed'true');
   };
 
   if (!isVisible || isDismissed) return null;
@@ -47,12 +47,12 @@ const NewContent2025CloudOptimizationBanner: React.FC = () => {
             </div>
             
             <h2 className="text-2xl md:text-3xl font-bold mb-3">
-              ☁️ AI Cloud Optimization: 67% Cost Reduction, 340% Performance Boost
+              ☁️ AI Cloud Optimization: 67% Cost Reduction340% Performance Boost
             </h2>
             
             <p className="text-lg mb-4 opacity-90 max-w-3xl">
-              Transform your cloud infrastructure with AI-powered optimization. Achieve 67% cost reduction, 
-              340% performance improvement, and $4.2M average savings. Complete implementation guide included.
+              Transform your cloud infrastructure with AI-powered optimization. Achieve 67% cost reduction
+              340% performance improvementand $4.2M average savings. Complete implementation guide included.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-4">

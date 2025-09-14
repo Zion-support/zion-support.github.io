@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Brain, Zap, Eye, Star, ArrowRight, Users, Target } from 'lucide-react';
+BrainZapEyeStarArrowRightUsersTarget
 
 const NeuralInterfaceRevolution2035PromotionBanner = () => {
   return (
@@ -26,7 +26,7 @@ const NeuralInterfaceRevolution2035PromotionBanner = () => {
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            🧠 <strong>BREAKTHROUGH ANNOUNCEMENT:</strong> Experience the future of human-AI symbiosis with advanced neural interfaces enabling direct brain-computer communication, enhanced cognition, and seamless digital integration
+            🧠 <strong>BREAKTHROUGH ANNOUNCEMENT:</strong> Experience the future of human-AI symbiosis with advanced neural interfaces enabling direct brain-computer communicationenhanced cognitionand seamless digital integration
           </p>
 
           {/* Key Features */}

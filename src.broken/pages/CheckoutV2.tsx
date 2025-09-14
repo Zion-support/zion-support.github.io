@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React{ useEffectuseState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigateuseSearchParams } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
@@ -32,15 +32,15 @@ interface CheckoutForm {
 export default function CheckoutV2() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const [items, setItems] = useState<CartItem[]>([]);
+  const [itemsetItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({
-    defaultValues: { name: '', email: '', address: '', city: '', country: '' }});
+    defaultValues: { name: ''email: ''address: ''city: ''country: '' }});
   const { track } = useFeatureFlags();
 
   useEffect(() => {
     const sku = searchParams.get('sku');
     if (sku) {
-      setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
+      setItems([{ id: skuname: skuprice: 25quantity: 1 }]);
       return;
     }
     const stored = safeStorage.getItem('cart');
@@ -51,13 +51,13 @@ export default function CheckoutV2() {
         setItems([]);
       }
     }
-  }, [searchParams]);
+  }[searchParams]);
 
-  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  const subtotal = items.reduce((sumi) => sum + i.price * i.quantity0);
 
   const onSubmit = async (data: CheckoutForm) => {
     try {
-      const res = await fetch('/api/create-payment-intent', {
+      const res = await fetch('/api/create-payment-intent'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: subtotal })});
@@ -65,17 +65,17 @@ export default function CheckoutV2() {
       if (!res.ok) throw new Error(result.error || 'Failed');
       const stripe = await getStripe();
       if (stripe && result.clientSecret) {
-        const payment = await stripe.confirmCardPayment(result.clientSecret, {
+        const payment = await stripe.confirmCardPayment(result.clientSecret{
           payment_method: {
             card: { token: 'tok_visa' },
-            billing_details: { name: data.name, email: data.email }}});
+            billing_details: { name: data.namemail: data.email }}});
         if (payment.error) throw payment.error;
         safeStorage.removeItem('cart');
         navigate(`/orders/${result.id}`);
         track('new-checkout-v2:conversion');
       }
     } catch (err) {
-      console.error('Payment failed', err);
+      console.error('Payment failed'err);
     }
   };
 

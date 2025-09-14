@@ -10,7 +10,7 @@ export default function RevolutionaryTechShowcase2025() {
             Revolutionary Technology Showcase 2025
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Experience the cutting-edge technologies that are reshaping industries and transforming the way we work, live, and interact with technology.
+            Experience the cutting-edge technologies that are reshaping industries and transforming the way we workliveand interact with technology.
           </p>
         </div>
 
@@ -19,7 +19,7 @@ export default function RevolutionaryTechShowcase2025() {
             <div className="text-4xl mb-4">🤖</div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Automation Revolution</h3>
             <p className="text-gray-600 mb-6">
-              Autonomous AI agents that handle complex tasks, make decisions, and adapt to changing conditions without human intervention.
+              Autonomous AI agents that handle complex tasksmake decisionsand adapt to changing conditions without human intervention.
             </p>
             <div className="space-y-2 mb-6">
               <div className="flex items-center text-sm text-gray-600">

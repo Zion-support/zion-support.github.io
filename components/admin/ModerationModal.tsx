@@ -1,14 +1,14 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 
 export type ModerationModalProps = {
   flag: any | null;
   onClose: () => void;
-  onAction: (action: 'approve' | 'remove' | 'warn' | 'ban', adminNotes?: string) => Promise<void>;
+  onAction: (action: 'approve' | 'remove' | 'warn' | 'ban'adminNotes?: string) => Promise<void>;
 };
 
-export default function ModerationModal({ flag, onClose, onAction }: ModerationModalProps) {
-  const [adminNotes, setAdminNotes] = useState('');
+export default function ModerationModal({ flagonCloseonAction }: ModerationModalProps) {
+  const [adminNotesetAdminNotes] = useState('');
   if (!flag) return null;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
@@ -60,10 +60,10 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           </div>
         </div>
         <div className="p-4 border-t flex items-center justify-end gap-2">
-          <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
-          <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
-          <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
-          <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
+          <button onClick={() => onAction('approve'adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
+          <button onClick={() => onAction('remove'adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
+          <button onClick={() => onAction('warn'adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
+          <button onClick={() => onAction('ban'adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
         </div>
       </div>
     </div>

@@ -27,7 +27,7 @@ const AITutorialsMastery2025PromotionBanner: React.FC = () => {
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Master artificial intelligence from beginner to expert level. 
-            Comprehensive courses covering machine learning, deep learning, NLP, computer vision, and more.
+            Comprehensive courses covering machine learningdeep learningNLPcomputer visionand more.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ const AITutorialsMastery2025PromotionBanner: React.FC = () => {
               <h3 className="text-lg font-bold text-white">Deep Learning</h3>
             </div>
             <p className="text-purple-200 text-sm">
-              Master neural networks, CNNs, RNNs, and Transformers
+              Master neural networksCNNsRNNsand Transformers
             </p>
           </div>
 
@@ -71,7 +71,7 @@ const AITutorialsMastery2025PromotionBanner: React.FC = () => {
               <h3 className="text-lg font-bold text-white">NLP & Computer Vision</h3>
             </div>
             <p className="text-green-200 text-sm">
-              Build advanced AI applications with BERT, GPT, and CV models
+              Build advanced AI applications with BERTGPTand CV models
             </p>
           </div>
         </div>

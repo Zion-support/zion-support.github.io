@@ -1,20 +1,20 @@
 
-import React, { useEffect, useState } from "react";
+import React{ useEffectuseState } from "react";
 import { useInterviews } from "@/hooks/useInterviews";
 import { Interview } from "@/types/interview";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { InterviewCard } from "@/components/interviews/InterviewCard";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Video } from "lucide-react";
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
+import { CalendarClockVideo } from "lucide-react";
+import { formatisAfterparseISOstartOfDay } from "date-fns";
 
 function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews();
-  const [activeTab, setActiveTab] = useState("upcoming");
+  const { interviewsisLoadingfetchInterviews } = useInterviews();
+  const [activeTabsetActiveTab] = useState("upcoming");
   
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
@@ -23,7 +23,7 @@ function InterviewsContent() {
     };
     
     loadInterviews();
-  }, []);
+  }[]);
 
   // Filter interviews based on status and date
   const now = new Date();
@@ -32,10 +32,10 @@ function InterviewsContent() {
   const upcomingInterviews = interviews
     .filter((interview) => {
       const interviewDate = parseISO(interview.scheduled_date);
-      return isAfter(interviewDate, now) && 
-        ['confirmed', 'requested'].includes(interview.status);
+      return isAfter(interviewDatenow) && 
+        ['confirmed'requested'].includes(interview.status);
     })
-    .sort((a, b) => 
+    .sort((ab) => 
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
     );
   
@@ -45,16 +45,16 @@ function InterviewsContent() {
   
   const pastInterviews = interviews.filter(interview => {
     const interviewDate = parseISO(interview.scheduled_date);
-    return !isAfter(interviewDate, now) || 
-      ['completed', 'declined', 'cancelled'].includes(interview.status);
+    return !isAfter(interviewDatenow) || 
+      ['completed'declined'cancelled'].includes(interview.status);
   });
 
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
-    const grouped: Record<string, Interview[]> = {};
+    const grouped: Record<stringInterview[]> = {};
     
     interviews.forEach((interview) => {
-      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
+      const dateKey = format(parseISO(interview.scheduled_date)'yyyy-MM-dd');
       if (!grouped[dateKey]) {
         grouped[dateKey] = [];
       }
@@ -68,16 +68,16 @@ function InterviewsContent() {
   const pendingGrouped = groupInterviewsByDate(pendingInterviews);
   const pastGrouped = groupInterviewsByDate(pastInterviews);
 
-  const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {
+  const renderInterviewGroups = (groupedInterviews: Record<stringInterview[]>) => {
     return Object.entries(groupedInterviews)
-      .sort(([dateA], [dateB]) => 
+      .sort(([dateA][dateB]) => 
         parseISO(dateA).getTime() - parseISO(dateB).getTime()
       )
-      .map(([date, interviews]) => (
+      .map(([dateinterviews]) => (
         <div key={date} className="mb-8">
           <h3 className="text-lg font-medium text-white mb-4 flex items-center">
             <Calendar className="h-5 w-5 mr-2" />
-            {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
+            {format(parseISO(date)'EEEEMMMM dyyyy')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (

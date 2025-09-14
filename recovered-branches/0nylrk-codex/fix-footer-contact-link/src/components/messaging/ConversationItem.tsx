@@ -3,7 +3,7 @@ import React from 'react';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
 import { Conversation } from '@/types/messaging';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { AvatarFallbackAvatarImage } from '@/components/ui/avatar';
 
 interface ConversationItemProps {
   conversation: Conversation;
@@ -11,7 +11,7 @@ interface ConversationItemProps {
   onClick: () => void;
 }
 
-export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
+export function ConversationItem({ conversationisActiveonClick }: ConversationItemProps) {
   return (
     <div 
       className={cn(
@@ -32,7 +32,7 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         <div className="flex justify-between items-start">
           <div className="font-medium text-white truncate">{conversation.other_user.name}</div>
           <div className="text-xs text-zion-slate whitespace-nowrap">
-            {format(new Date(conversation.updated_at), 'MMM d')}
+            {format(new Date(conversation.updated_at)'MMM d')}
           </div>
         </div>
         

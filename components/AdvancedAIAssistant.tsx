@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React{ useStateuseEffectuseRef } from 'react';
 
 interface Message {
   id: string;
@@ -18,10 +18,10 @@ interface AICapability {
 }
 
 const AdvancedAIAssistant: React.FC = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [inputText, setInputText] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [activeCapability, setActiveCapability] = useState<string | null>(null);
+  const [messagesetMessages] = useState<Message[]>([]);
+  const [inputTextsetInputText] = useState('');
+  const [isLoadingsetIsLoading] = useState(false);
+  const [activeCapabilitysetActiveCapability] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const capabilities: AICapability[] = [
@@ -72,19 +72,19 @@ const AdvancedAIAssistant: React.FC = () => {
   useEffect(() => {
     // Scroll to bottom when new messages arrive
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+  }[messages]);
 
   useEffect(() => {
     // Add welcome message
     const welcomeMessage: Message = {
       id: '1',
-      text: "Hello! I'm your advanced AI assistant. I can help you with business analysis, code review, performance optimization, security audits, automation suggestions, and market insights. What would you like to explore today?",
+      text: "Hello! I'm your advanced AI assistant. I can help you with business analysiscode reviewperformance optimizationsecurity auditsautomation suggestionsand market insights. What would you like to explore today?",
       sender: 'assistant',
       timestamp: new Date(),
       type: 'text'
     };
     setMessages([welcomeMessage]);
-  }, []);
+  }[]);
 
   const handleSendMessage = async () => {
     if (!inputText.trim()) return;
@@ -97,12 +97,12 @@ const AdvancedAIAssistant: React.FC = () => {
       type: 'text'
     };
 
-    setMessages(prev => [...prev, userMessage]);
+    setMessages(prev => [...prevuserMessage]);
     setInputText('');
     setIsLoading(true);
 
     // Simulate AI processing
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise(resolve => setTimeout(resolve1500));
 
     const aiResponse: Message = {
       id: (Date.now() + 1).toString(),
@@ -112,7 +112,7 @@ const AdvancedAIAssistant: React.FC = () => {
       type: determineResponseType(inputText)
     };
 
-    setMessages(prev => [...prev, aiResponse]);
+    setMessages(prev => [...prevaiResponse]);
     setIsLoading(false);
   };
 
@@ -120,7 +120,7 @@ const AdvancedAIAssistant: React.FC = () => {
     const lowerInput = input.toLowerCase();
     
     if (lowerInput.includes('business') || lowerInput.includes('analysis')) {
-      return `Based on your business analysis request, here are my key insights:
+      return `Based on your business analysis requesthere are my key insights:
 
 📊 **Business Performance Metrics:**
 - Revenue growth: +23% YoY
@@ -208,7 +208,7 @@ Would you like me to dive deeper into any specific area?`;
 **Recommendations:**
 1. Implement API rate limiting (Redis-based)
 2. Update dependencies to latest secure versions
-3. Add security headers (CSP, HSTS, X-Frame-Options)
+3. Add security headers (CSPHSTSX-Frame-Options)
 4. Conduct penetration testing quarterly
 
 **Compliance Status:**
@@ -277,12 +277,12 @@ Could you provide more specific details about what you'd like me to analyze or h
       timestamp: new Date(),
       type: 'text'
     };
-    setMessages(prev => [...prev, capabilityMessage]);
+    setMessages(prev => [...prevcapabilityMessage]);
     setInputText(`Help me with ${capability.name.toLowerCase()}`);
   };
 
   const formatTimestamp = (timestamp: Date) => {
-    return timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    return timestamp.toLocaleTimeString([]{ hour: '2-digit'minute: '2-digit' });
   };
 
   return (
@@ -292,8 +292,8 @@ Could you provide more specific details about what you'd like me to analyze or h
           🤖 Advanced AI Assistant
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Get intelligent insights, analysis, and recommendations powered by advanced AI algorithms. 
-          I can help with business analysis, code review, performance optimization, and much more.
+          Get intelligent insightsanalysisand recommendations powered by advanced AI algorithms. 
+          I can help with business analysiscode reviewperformance optimizationand much more.
         </p>
       </div>
 
@@ -398,7 +398,7 @@ Could you provide more specific details about what you'd like me to analyze or h
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                  placeholder="Ask me anything about business, technology, or optimization..."
+                  placeholder="Ask me anything about businesstechnologyor optimization..."
                   className="flex-1 px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
                 <button

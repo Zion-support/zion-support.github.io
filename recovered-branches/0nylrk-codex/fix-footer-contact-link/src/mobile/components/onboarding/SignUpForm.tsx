@@ -1,28 +1,28 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { AlertCircle } from "lucide-react";
-import { Alert, AlertDescription } from "@/components/ui/alert";
+import { AlertDescription } from "@/components/ui/alert";
 
 export function SignUpForm() {
   const navigate = useNavigate();
-  const { signup, login, loginWithGoogle } = useAuth();
+  const { signuploginWithGoogle } = useAuth();
   
-  const [formData, setFormData] = useState({
+  const [formDatasetFormData] = useState({
     email: "",
     password: "",
     name: ""});
-  const [isLoading, setIsLoading] = useState(false);
-  const [signupMode, setSignupMode] = useState(true);
-  const [error, setError] = useState("");
+  const [isLoadingsetIsLoading] = useState(false);
+  const [signupModesetSignupMode] = useState(true);
+  const [errorsetError] = useState("");
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { namevalue } = e.target;
+    setFormData(prev => ({ ...prev[name]: value }));
     setError("");
   };
   
@@ -33,7 +33,7 @@ export function SignUpForm() {
     
     try {
       if (signupMode) {
-        const { error } = await signup(formData.email, formData.password, {
+        const { error } = await signup(formData.emailformData.password{
           name: formData.name});
         
         if (error) {
@@ -42,7 +42,7 @@ export function SignUpForm() {
         
         navigate("/mobile");
       } else {
-        const { error } = await login(formData.email, formData.password);
+        const { error } = await login(formData.emailformData.password);
         
         if (error) {
           throw new Error(error);
