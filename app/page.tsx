@@ -88,6 +88,10 @@ import QuantumComputingShowcase2027 from './components/QuantumComputingShowcase2
 import AI2025UltimateInnovationShowcaseBanner from '../components/AI2025UltimateInnovationShowcaseBanner';
 import AI2025UltimateInnovationShowcase from '../components/AI2025UltimateInnovationShowcase';
 
+// Import new AI 2025 Ultimate Innovation Breakthrough components
+import AI2025UltimateInnovationBreakthroughBanner from '../components/AI2025UltimateInnovationBreakthroughBanner';
+import AI2025UltimateInnovationBreakthroughShowcase from '../components/AI2025UltimateInnovationBreakthroughShowcase';
+
 // Import new breakthrough technologies promotional components
 import BreakthroughTechnologies2025PromotionBanner from '../components/BreakthroughTechnologies2025PromotionBanner';
 import BreakthroughTechnologies2025Showcase from '../components/BreakthroughTechnologies2025Showcase';
@@ -209,6 +213,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE INNOVATION BREAKTHROUGH BANNER - NEWEST ULTIMATE FEATURED */}
+        <AI2025UltimateInnovationBreakthroughBanner />
+        
         {/* AI 2025 ULTIMATE INNOVATION SHOWCASE BANNER - NEWEST ULTIMATE FEATURED */}
         <AI2025UltimateInnovationShowcaseBanner />
         
@@ -461,6 +468,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* AI 2025 ULTIMATE INNOVATION BREAKTHROUGH SHOWCASE - NEWEST FEATURED */}
+        <AI2025UltimateInnovationBreakthroughShowcase />
+        
         {/* AI 2025 ULTIMATE INNOVATION SHOWCASE - NEWEST FEATURED */}
         <AI2025UltimateInnovationShowcase />
         
