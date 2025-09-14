@@ -141,10 +141,10 @@ function ResearchPage() {
         </div>
       </div>
       {/* Research Focus Areas */}
-      <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Research</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Research</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Focus Areas
           </p>
 
@@ -156,22 +156,23 @@ function ResearchPage() {
             and advancing the state of the art.
           </p>
         </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
             {researchAreas.map((area) => (
-              <div key={area.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
-                <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
-                  <area.icon className=&quot;h-8 w-8 text-blue-400&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white&quot;>{area.name}</h3>
+              <div key={area.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center gap-x-3 mb-4">
+                  <area.icon className="h-8 w-8 text-blue-400" />
+                  <h3 className="text-xl font-semibold text-white">{area.name}</h3>
                 </div>
-                <p className=&quot;text-gray-300 mb-6&quot;>{area.description}</p>
-                <div className=&quot;space-y-2&quot;>
+                <p className="text-gray-300 mb-6">{area.description}</p>
+                <div className="space-y-2">
                   {area.topics.map((topic) => (
-                    <div key={topic} className=&quot;flex items-center gap-2&quot;>
-                      <div className=&quot;h-1.5 w-1.5 bg-blue-400 rounded-full&quot;></div>
-                      <span className=&quot;text-sm text-gray-400&quot;>{topic}</span>
+                    <div key={topic} className="flex items-center gap-2">
+                      <div className="h-1.5 w-1.5 bg-blue-400 rounded-full"></div>
+                      <span className="text-sm text-gray-400">{topic}</span>
                     </div>
                   ))}
+
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Innovation;
               </span>;
@@ -255,6 +256,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                       <span className="text-sm text-gray-400">{topic}</span>
                     </div>
                   ))}
+
                 </div>;
                 <p className=&quot;text - gray - 300 mb - 6&quot;>{area.description}</p>;
                 <div className=&quot;space - y-2 & quot;>;
@@ -275,6 +277,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
 
 
             Recent Research
@@ -304,6 +307,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className=&quot;text - sm text - gray - 300 mb - 4&quot;>{publication.abstract}</p>;
                 <a;
                   href={`https://doi.org/${publication.doi}`}
+
                   target=&quot;_blank & quot;
                   rel=&quot;noopener noreferrer & quot;
                   className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
@@ -342,6 +346,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className="text-sm text-gray-300 mb-4">{publication.abstract}</p>
                 <a
                   href={`https://doi.org/${publication.doi}`}
+
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
@@ -371,15 +376,16 @@ const Page: React.FC<PageProps> = ({ className }) => {
             influencing both academia and industry.
           </p>
         </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
-          <dl className=&quot;grid max-w-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4&quot;>
+        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+          <dl className="grid max-w-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
             {researchImpact.map((item) => (
-              <div key={item.metric} className=&quot;flex flex-col bg-white/5 p-8 backdrop-blur-sm&quot;>
-                <dt className=&quot;text-sm font-semibold leading-6 text-gray-300&quot;>{item.metric}</dt>
-                <dd className=&quot;order-first text-3xl font-bold tracking-tight text-white&quot;>{item.value}</dd>
-                <p className=&quot;mt-2 text-sm text-gray-400&quot;>{item.description}</p>
+              <div key={item.metric} className="flex flex-col bg-white/5 p-8 backdrop-blur-sm">
+                <dt className="text-sm font-semibold leading-6 text-gray-300">{item.metric}</dt>
+                <dd className="order-first text-3xl font-bold tracking-tight text-white">{item.value}</dd>
+                <p className="mt-2 text-sm text-gray-400">{item.description}</p>
               </div>
             ))}
+
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Impact</h2>;
@@ -419,6 +425,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className="mt-2 text-sm text-gray-400">{item.description}</p>
               </div>
             ))}
+
           </dl>;
         </div>;
       </div>;
@@ -440,17 +447,18 @@ const Page: React.FC<PageProps> = ({ className }) => {
             the frontiers of AI research and innovation.
           </p>
         </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
             {academicPartners.map((partner) => (
-              <div key={partner.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
-                <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
-                  <AcademicCapIcon className=&quot;h-8 w-8 text-blue-400&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white&quot;>{partner.name}</h3>
+              <div key={partner.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center gap-x-3 mb-4">
+                  <AcademicCapIcon className="h-8 w-8 text-blue-400" />
+                  <h3 className="text-xl font-semibold text-white">{partner.name}</h3>
                 </div>
                 <div className=&quot;space-y-3 text-gray-300&quot;>
                   <p className=&quot;flex items-center gap-2&quot;>
                     <GlobeAltIcon className=&quot;h-5 w-5 text-blue-400&quot; />
+
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Collaborations</h2>;
@@ -525,25 +533,23 @@ const Page: React.FC<PageProps> = ({ className }) => {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
-
             Join our research community
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Interested in collaborating on cutting-edge AI research? 
+
             Let's explore opportunities to work together.
           </p>
-          <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href=&quot;/contact&quot;
-              className=&quot;rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105&quot;
+              href="/contact"
+              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
             >
               Get in Touch
-            </Link>
-            <a href=&quot;/careers&quot; className=&quot;text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200&quot;>
-              Research Careers <span aria-hidden=&quot;true&quot;>→</span>
-            </Link>
+            </a>
+            <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              Research Careers <span aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
       </div>
@@ -572,6 +578,15 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </div>;
         </div>;
       </div>;
+
+      {/* CTA section */}
+
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+
+=======
     </div>);
 }
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">

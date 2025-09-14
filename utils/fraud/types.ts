@@ -1,23 +1,34 @@
 
-// Fraud detection types;
-export type AdminActionType =;
-  | 'ban_user';
-  | 'suspend_user';
-  | 'flag_content';
-  | 'remove_content';
-  | 'investigate';
-  | 'dismiss';
+// Fraud detection types
+export type AdminActionType =
+  | 'ban_user'
+  | 'suspend_user'
+  | 'flag_content'
+  | 'remove_content'
+  | 'investigate'
+  | 'dismiss'
   | 'escalate';
-;
-
-export interface AdminAction {
 
 
-export interface AdminAction {;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   id: string;
   case_id: string;
   type: AdminActionType;
+
+
+
+;
+
+export interface AdminAction {
+
+  id: string;
+  case_id: string;
+  type: AdminActionType;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   admin_id: string;
   reason: string,
@@ -26,29 +37,36 @@ export interface AdminAction {;
   executed_at?: string;
   status: 'pending' | 'executed' | 'failed',
 
-}
-}
 
 
-export interface FraudDetectionResult {;
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+export interface FraudDetectionResult {
+  is_fraud: boolean;
+
+
 
   isFraud: boolean;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   confidence: number;
   reasons: string[];
 
-  suggested_actions: AdminActionType[],
-  metadata: Record < string, any>;
-
-}
-}
 
 
-export interface FraudDetectionConfig {;
+
+export interface FraudDetectionConfig {
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   enabled: boolean;
   rules: {
     suspiciousActivity: {
       enabled: boolean;
+
 
       threshold: number,
     }
@@ -68,14 +86,25 @@ export interface FraudDetectionConfig {;
   auto_actions: {
     enabled: boolean;
     actions: AdminActionType[];
-    confidence_threshold: number,
+
+
+
+
   }
-}
 
 
 
-
-    confidenceThreshold: number,
-  };
 
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
+

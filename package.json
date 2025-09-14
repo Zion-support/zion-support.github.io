@@ -1,3 +1,4 @@
+
 {
   "name": "ziontechgroup-site",
   "version": "1.0.0",
@@ -48,8 +49,8 @@
     "google-docs:test": "node automation/test-google-docs-automation.js",
     "cursor:memory": "node run-cursor-memory-automation.js",
     "cursor:memory:dev": "nodemon run-cursor-memory-automation.js",
-    "cursor:memory:config": "node -e \"console.log(JSON.stringify(require('./cursor-memory-config.json'), null, 2))\"",
-    "cursor:memory:status": "node -e \"const fs = require('fs'); const path = './cursor-memory/memory-summary.json'; try { const data = JSON.parse(fs.readFileSync(path, 'utf8')); console.log('Memory Status:'); console.log('- Total entries:', data.totalEntries); console.log('- Categories:', Object.keys(data.categories).length); console.log('- High confidence:', data.confidenceDistribution.high); } catch(e) { console.log('No memory data found'); }\"",
+    "cursor:memory:config": "node -e \"console.log(JSON.stringify(require('./cursor-memory-config.json'), null, 2)\"",
+    "cursor:memory:status": "node -e \"const fs = require('fs'); const path = './cursor-memory/memory-summary.json'; try { const data = JSON.parse(fs.readFileSync(path, 'utf8'); console.log('Memory Status:'); console.log('- Total entries:', data.totalEntries); console.log('- Categories:', Object.keys(data.categories).length); console.log('- High confidence:', data.confidenceDistribution.high); } catch(e) { console.log('No memory data found'); }\"",
     "automation:factory": "node automation/ultimate-automation-factory-system.js",
     "automation:factory:dev": "nodemon automation/ultimate-automation-factory-system.js",
     "automation:orchestrator": "node automation/intelligent-automation-orchestrator.js",
@@ -353,7 +354,6 @@
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-hover-card": "^1.0.7",
     "@radix-ui/react-label": "^2.0.2",
-    "@radix-ui/react-menubar": "^1.0.4",
     "@radix-ui/react-navigation-menu": "^1.1.4",
     "@radix-ui/react-popover": "^1.0.7",
     "@radix-ui/react-progress": "^1.0.3",

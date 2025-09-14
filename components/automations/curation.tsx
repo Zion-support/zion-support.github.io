@@ -24,7 +24,6 @@ export default function CurationPage({ updatedAtitems }: Props) {
       ) : (
         <p className="mt-2 text-sm text-gray-600">No curated output yet. It will appear here automatically after the next run.</p>
       )}
-
       <div className="mt-6 space-y-4">
         {items.map((expidx) => (
           <div key={idx} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">

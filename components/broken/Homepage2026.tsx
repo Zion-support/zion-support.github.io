@@ -101,7 +101,7 @@ const Homepage2026: React.FC = () => {
               initial={{ opacity: 0y: 20 }}
               whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              className='text-center mb-16'
             >
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -349,12 +349,21 @@ const Homepage2026: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-3">
+                  <div className='flex items-center space-x-3'>
+                    <Phone className='w-5 h-5 text-green-400' />
+                    <div>
+                      <div className='text-sm text-gray-400'>Phone</div>
+                      <a
+                        href='tel:+13024640950'
+                        className='text-cyan-400 hover:underline font-medium'
+                      >                        +1 302 464 0950
+                      </a>
+                    </div>
+                  </div>                  <div className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-green-400" />
                     <div>
                       <div className="text-sm text-gray-400">Phone</div>
                       <a href="tel:+13024640950" className="text-cyan-400 hover:underline font-medium">
-                        +1 302 464 0950
                       </a>
                     </div>
                   </div>

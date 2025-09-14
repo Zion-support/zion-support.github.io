@@ -235,6 +235,7 @@ export default function QuantumCybersecurityPage() {
               <div className="space-y-4">
                 {benefits.map((benefitindex) => (
                   <motion.div
+
                     key={benefit}
                     initial={{ opacity: 0x: -20 }}
                     whileInView={{ opacity: 1x: 0 }}

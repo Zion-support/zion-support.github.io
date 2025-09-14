@@ -13,6 +13,7 @@ interface AIMatchingResultsProps {
   onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean;
   projectDescription?: string;
+
   serviceType?: string;
 }
 

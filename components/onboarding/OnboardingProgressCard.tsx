@@ -28,6 +28,7 @@ export default function OnboardingProgressCard({ titlestepshighlightColorClass =
 
   const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel);
 
+
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
       <div className="flex items-center justify-between">

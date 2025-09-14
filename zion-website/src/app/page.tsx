@@ -313,32 +313,24 @@ function HomePage() {
                     <a href="/solutions" className="text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200">;
                       Learn more <span aria - hidden="true">→</span>;
                     </a>;
-                  </p>;
-                </dd>;
-              </div>))}
-          </dl>;
-        </div>;
-      </div>;
-      {/* Stats section */}
-      <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8">;
-        <div className="mx - auto max - w-2xl lg:max - w-none">;
-          <div className="text - center">;
-            <h2 className="text - 3xl font - bold tracking - tight text - white sm:text - 4xl">;
-              Trusted by leading organizations worldwide;
-            </h2>;
-            <p className="mt - 4 text - lg leading - 8 text - gray - 300">;
-              Our track record speaks for itself;
-            </p>;
+                  </h3>;
+                  <p className="mt - 5 line - clamp - 3 text - sm leading - 6 text - gray - 300">{solution.description}</p>;
+                </div>;
+                <div className="relative mt - 8 flex items - center gap - x-4">;
+                  <div className="text - sm leading - 6">;
+                    <p className="font - semibold text - white">;
+                      <a href={solution.href} className="hover:text - blue - 400 transition - colors duration - 200">;
+                        <span className="absolute inset - 0" />;
+                        Learn more;
+                      </a>;
+                    </p>;
+                  </div>;
+                </div>;
+              </article>))}
           </div>;
-          <dl className="mt - 16 grid grid - cols - 1 gap - 0.5 overflow - hidden rounded - 2xl text - center sm:grid - cols - 2 lg:grid - cols - 4">;
-            {stats.map ((stat) => (
-              <div key={stat.name} className="flex flex - col bg - white / 5 p - 8 backdrop - blur - sm">;
-                <dt className="text - sm font - semibold leading - 6 text - gray - 300">{stat.name}</dt>;
-                <dd className="order - first text - 3xl font - bold tracking - tight text - white">{stat.value}</dd>;
-              </div>))}
-          </dl>;
         </div>;
       </div>;
+      {/* CTA section */}
 
 
           </dl>;
@@ -468,6 +460,7 @@ function HomePage() {
           </div>;
         </div>;
       </div>;
+
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -483,10 +476,18 @@ function HomePage() {
               className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105"
             >
               Get Started
+
+
+            </a>
+            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              View Solutions <span aria-hidden="true">→</span>
+            </a>
+
             </Link>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </Link>
+
           </div>
         </div>
       </div>

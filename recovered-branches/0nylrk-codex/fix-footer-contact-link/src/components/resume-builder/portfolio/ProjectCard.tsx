@@ -52,6 +52,7 @@ export function ProjectCard({ projectonEditonDelete }: ProjectCardProps) {
               {project.technologies.map((techindex) => (
                 <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
+
                 </Badge>
               ))}
             </div>

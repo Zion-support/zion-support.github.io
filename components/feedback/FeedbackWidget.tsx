@@ -79,6 +79,11 @@ export default function FeedbackWidget({ responseIdaiModel }: FeedbackWidgetProp
           {error && <div className="text-xs text-red-600">{error}</div>}
           <div>
             <button onClick={submit} disabled={submitting} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm">
+
+
+
+
+
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>
           </div>

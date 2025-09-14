@@ -7,7 +7,7 @@ export default [
   {
     files: ['src/**/*.{js,jsx}', 'app/**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 'latest',
+      ecmaVersion: 2022,
       sourceType: 'module',
       globals: {
         window: 'readonly',

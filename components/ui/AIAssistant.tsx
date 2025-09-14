@@ -63,6 +63,7 @@ export default function AIAssistant({
   }[output]);
 
   const onOpen = useCallback(() => {
+
     setIsOpen(true);
     setOutput('');
     setIsEditing(false);

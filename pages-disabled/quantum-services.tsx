@@ -13,6 +13,7 @@ import {
   SparklesArrowRightCheckCircleStarGlobe
 } from 'lucide-react';
 
+
 const QuantumServicesPage: React.FC = () => {
   const quantumServices = [
     {
@@ -127,6 +128,7 @@ export default function QuantumServices() {
               initial={{ opacity: 0y: 20 }}
               animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-center"
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent">
                 Quantum Computing

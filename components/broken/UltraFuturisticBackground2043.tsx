@@ -2,6 +2,7 @@
 import React{ useEffectuseRef } from 'react';
 import { motion } from 'framer-motion';
 
+
 const UltraFuturisticBackground2043: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -25,6 +26,9 @@ const UltraFuturisticBackground2043: React.FC = () => {
     const particles: Array<{
       x: number;
       y: number;
+
+
+
       vx: number;
       vy: number;
       size: number;
@@ -101,6 +105,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
+
           const distance = Math.sqrt(dx * dx + dy * dy);
           
           if (distance < 100) {

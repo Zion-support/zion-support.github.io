@@ -54,11 +54,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       return;
     }
 
-    setIsLoading(true);
 
-    try {
-      const publishedDate = startDate ? startDate.toString() : '';
-      const expiryDate = endDate ? endDate.toString() : '';
 
       const jobData = {
         ...values,
