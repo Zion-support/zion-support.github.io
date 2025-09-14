@@ -2,250 +2,179 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronRight, Star, TrendingUp, Users, Clock, ArrowRight, X, Play, BookOpen, FileText, Zap, Target, Award } from 'lucide-react';
 
 const RevolutionaryContent2025UltimateBanner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentContent, setCurrentContent] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
   const revolutionaryContent = [
     {
-      id: 'edge-computing-revolution',
-      title: 'Edge Computing Revolution',
-      subtitle: '450% ROI with 67% Latency Reduction',
-      description: 'Transform your AI deployment with edge computing solutions',
-      url: '/blog/ai-2025-edge-computing-revolution-ultimate-guide',
-      metrics: { primary: '450% ROI', secondary: '$2.3M Savings' },
-      icon: Zap,
-      gradient: 'from-blue-500 to-cyan-500',
-      category: 'Technology Innovation'
+      title: 'AI 2025: The Advanced Automation Revolution',
+      subtitle: 'Ultimate Guide to 600% ROI',
+      description: 'Fortune 500 companies are achieving 600% ROI within 12 months using these proven AI automation strategies.',
+      metrics: { roi: '600%', savings: '$4.2M', efficiency: '89%' },
+      url: '/blog/ai-2025-advanced-automation-revolution-ultimate-guide',
+      type: 'blog',
+      icon: '🤖'
     },
     {
-      id: 'sustainable-technology-revolution',
-      title: 'Sustainable AI Revolution',
-      subtitle: '380% ROI with 67% Carbon Reduction',
-      description: 'Achieve environmental responsibility with green AI technologies',
-      url: '/blog/ai-2025-sustainable-technology-revolution',
-      metrics: { primary: '380% ROI', secondary: '67% Carbon Reduction' },
-      icon: Star,
-      gradient: 'from-green-500 to-emerald-500',
-      category: 'Sustainability'
-    },
-    {
-      id: 'financial-services-transformation',
-      title: 'Banking Transformation',
-      subtitle: '520% ROI with $67M Annual Savings',
-      description: 'Revolutionary financial services AI implementation success',
+      title: 'Financial Services AI Transformation',
+      subtitle: '$850M Company Achieves 520% ROI',
+      description: 'How a leading financial services company achieved $67M in annual savings through comprehensive AI transformation.',
+      metrics: { roi: '520%', savings: '$67M', satisfaction: '99.8%' },
       url: '/case-studies/ai-2025-financial-services-transformation-ultimate-success',
-      metrics: { primary: '520% ROI', secondary: '99.8% Satisfaction' },
-      icon: Target,
-      gradient: 'from-purple-500 to-violet-500',
-      category: 'Financial Services'
+      type: 'case-study',
+      icon: '🏦'
     },
     {
-      id: 'implementation-ultimate-roadmap',
-      title: 'Implementation Roadmap',
-      subtitle: '600% ROI in 12 Months',
-      description: 'Complete guide to AI implementation success',
+      title: 'AI Implementation Ultimate Roadmap',
+      subtitle: 'From Strategy to 600% ROI in 12 Months',
+      description: 'Step-by-step roadmap based on 500+ successful AI implementations delivering 600% ROI.',
+      metrics: { roi: '600%', success: '89%', timeframe: '12 months' },
       url: '/resources/ai-2025-implementation-ultimate-roadmap',
-      metrics: { primary: '600% ROI', secondary: '89% Success Rate' },
-      icon: Award,
-      gradient: 'from-orange-500 to-red-500',
-      category: 'Implementation'
+      type: 'resource',
+      icon: '📋'
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
-    }, 5000);
+      setCurrentContent((prev) => (prev + 1) % revolutionaryContent.length);
+    }, 4000);
 
     return () => clearInterval(timer);
-  }, [revolutionaryContent.length]);
-
-  const handleClose = () => {
-    setIsVisible(false);
-    localStorage.setItem('revolutionaryContent2025UltimateBanner_dismissed', 'true');
-  };
+  }, []);
 
   useEffect(() => {
-    const dismissed = localStorage.getItem('revolutionaryContent2025UltimateBanner_dismissed');
+    const dismissed = localStorage.getItem('revolutionary-content-2025-dismissed');
     if (dismissed === 'true') {
       setIsVisible(false);
     }
   }, []);
 
+  const handleDismiss = () => {
+    setIsVisible(false);
+    localStorage.setItem('revolutionary-content-2025-dismissed', 'true');
+  };
+
   if (!isVisible) return null;
 
-  const currentContent = revolutionaryContent[currentSlide];
+  const current = revolutionaryContent[currentContent];
 
   return (
-    <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12 overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
-        <div className="absolute top-20 left-20 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
+    <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
+        <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-400/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-green-400/20 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-pink-400/20 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/3 w-8 h-8 bg-orange-400/20 rounded-full animate-bounce"></div>
       </div>
 
-      {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-white/30 rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 3}s`
-            }}
-          />
-        ))}
-      </div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex items-center justify-between">
+          {/* Content */}
+          <div className="flex-1 pr-8">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold animate-pulse">
+                REVOLUTIONARY 2025
+              </span>
+              <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium">
+                {current.type.toUpperCase()}
+              </span>
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
+              {current.title}
+            </h2>
+            
+            <h3 className="text-xl md:text-2xl text-yellow-300 font-bold mb-4">
+              {current.subtitle}
+            </h3>
+            
+            <p className="text-lg opacity-90 mb-6 max-w-2xl leading-relaxed">
+              {current.description}
+            </p>
 
-      {/* Close Button */}
-      <button
-        onClick={handleClose}
-        className="absolute top-4 right-4 z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-        aria-label="Close banner"
-      >
-        <X className="w-5 h-5" />
-      </button>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full px-6 py-2 mb-4">
-            <Star className="w-5 h-5 mr-2 text-white" />
-            <span className="text-sm font-bold text-white">REVOLUTIONARY 2025 CONTENT</span>
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
-            Ultimate AI Success Stories
-          </h2>
-          <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">
-            Discover proven strategies delivering <span className="font-bold text-yellow-300">380-600% ROI</span> across industries
-          </p>
-        </div>
-
-        {/* Main Content Display */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 md:p-8 border border-white/20 shadow-2xl">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
-            {/* Content Info */}
-            <div className="flex-1 space-y-4">
-              <div className="flex items-center gap-3">
-                <div className={`p-2 rounded-lg bg-gradient-to-r ${currentContent.gradient}`}>
-                  <currentContent.icon className="w-6 h-6 text-white" />
+            {/* Metrics */}
+            <div className="flex flex-wrap gap-4 mb-6">
+              {Object.entries(current.metrics).map(([key, value]) => (
+                <div key={key} className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg px-4 py-2">
+                  <div className="text-yellow-300 font-bold text-lg">{value}</div>
+                  <div className="text-sm opacity-80 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
                 </div>
-                <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-medium text-white">
-                  {currentContent.category}
-                </span>
-              </div>
+              ))}
+            </div>
 
-              <h3 className="text-2xl md:text-3xl font-bold text-white">
-                {currentContent.title}
-              </h3>
-
-              <p className="text-xl font-semibold text-yellow-300">
-                {currentContent.subtitle}
-              </p>
-
-              <p className="text-blue-100 text-lg">
-                {currentContent.description}
-              </p>
-
-              {/* Metrics */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                  <div className="text-2xl font-bold text-yellow-300">{currentContent.metrics.primary}</div>
-                  <div className="text-sm text-blue-200">Primary Metric</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                  <div className="text-2xl font-bold text-green-300">{currentContent.metrics.secondary}</div>
-                  <div className="text-sm text-blue-200">Secondary Metric</div>
-                </div>
-              </div>
-
-              {/* CTA Button */}
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href={currentContent.url}
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                href={current.url}
+                className="inline-flex items-center bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
               >
-                <Play className="w-5 h-5 mr-2" />
-                Explore Content
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <span className="text-2xl mr-2">{current.icon}</span>
+                Read Full Article →
+              </Link>
+              <Link
+                href="/resources"
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                View All Resources
               </Link>
             </div>
+          </div>
 
-            {/* Visual Element */}
-            <div className="flex-shrink-0">
-              <div className="relative">
-                <div className={`w-32 h-32 rounded-full bg-gradient-to-r ${currentContent.gradient} flex items-center justify-center shadow-2xl`}>
-                  <currentContent.icon className="w-16 h-16 text-white" />
-                </div>
-                {/* Rotating Ring */}
-                <div className="absolute inset-0 rounded-full border-4 border-white/20 animate-spin" style={{ animationDuration: '8s' }}></div>
-                <div className="absolute inset-2 rounded-full border-2 border-white/10 animate-spin" style={{ animationDuration: '12s', animationDirection: 'reverse' }}></div>
+          {/* Visual Element */}
+          <div className="hidden md:block flex-shrink-0">
+            <div className="relative">
+              <div className="w-48 h-48 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-6xl animate-pulse">
+                {current.icon}
+              </div>
+              
+              {/* Floating Success Indicators */}
+              <div className="absolute -top-4 -right-4 bg-green-400 text-black px-3 py-1 rounded-full text-sm font-bold animate-bounce">
+                SUCCESS
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-blue-400 text-white px-3 py-1 rounded-full text-sm font-bold animate-bounce">
+                FORTUNE 500
+              </div>
+              <div className="absolute top-1/2 -left-8 bg-purple-400 text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse">
+                NEW 2025
               </div>
             </div>
           </div>
         </div>
 
-        {/* Navigation and Progress */}
-        <div className="mt-6 flex flex-col items-center space-y-4">
-          {/* Navigation Dots */}
+        {/* Progress Indicator */}
+        <div className="mt-6 flex items-center justify-between">
           <div className="flex space-x-2">
             {revolutionaryContent.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide
-                    ? 'bg-yellow-400 scale-125 w-8'
-                    : 'bg-white/30 hover:bg-white/50'
+                onClick={() => setCurrentContent(index)}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  index === currentContent ? 'bg-yellow-400' : 'bg-white bg-opacity-30'
                 }`}
-                aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
-
-          {/* Progress Bar */}
-          <div className="w-full max-w-md bg-white/20 rounded-full h-1">
-            <div
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 h-1 rounded-full transition-all duration-1000"
-              style={{ width: `${((currentSlide + 1) / revolutionaryContent.length) * 100}%` }}
-            />
+          
+          <div className="text-sm opacity-80">
+            {currentContent + 1} of {revolutionaryContent.length}
           </div>
-
-          {/* Quick Stats */}
-          <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <div className="flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-green-400" />
-              <span className="text-blue-200">380-600% ROI Range</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-blue-400" />
-              <span className="text-blue-200">4 Success Stories</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-yellow-400" />
-              <span className="text-blue-200">Proven Results</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="mt-8 text-center">
-          <Link
-            href="/resources"
-            className="inline-flex items-center px-8 py-3 bg-white/10 border border-white/30 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300"
-          >
-            View All Revolutionary Content
-            <ChevronRight className="w-5 h-5 ml-2" />
-          </Link>
         </div>
       </div>
+
+      {/* Dismiss Button */}
+      <button
+        onClick={handleDismiss}
+        className="absolute top-4 right-4 text-white hover:text-yellow-300 transition-colors"
+        aria-label="Dismiss banner"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
     </div>
   );
 };
