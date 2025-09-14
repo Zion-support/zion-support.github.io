@@ -99,7 +99,129 @@ content_index:
         satisfaction: "98%"
         efficiency: "67%"
         
+<<<<<<< HEAD
     - id: "ai-enterprise-automation-revolution"
+=======
+    - id: "healthcare-transformation"
+      type: "case-study"
+      title: "AI Healthcare Transformation 2025: 450% ROI Success Story"
+      file_path: "/content/case-studies/ai-healthcare-transformation-2025-success-story.md"
+      url: "/case-studies/ai-healthcare-transformation-2025-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Healthcare", "AI Transformation", "ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        savings: "$12M annually"
+        satisfaction: "94%"
+        efficiency: "67%"
+        
+    - id: "implementation-guide-comprehensive"
+      type: "resource"
+      title: "AI Implementation Master Guide 2025: From Strategy to ROI - Comprehensive Edition"
+      file_path: "/content/resources/ai-implementation-master-guide-2025-comprehensive.md"
+      url: "/resources/ai-implementation-master-guide-2025-comprehensive"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices"]
+      featured: true
+      is_new: true
+      metrics:
+        success_rate: "98%"
+        average_roi: "340%"
+        implementation_time: "67% Faster"
+        projects: "500+ Success Stories"
+
+  new_2025_content_latest:
+    - id: "ai-2025-autonomous-enterprise-systems-revolution"
+      type: "blog"
+      title: "AI 2025: The Autonomous Enterprise Systems Revolution - 600% ROI Breakthrough"
+      file_path: "/content/blog/ai-2025-autonomous-enterprise-systems-revolution.md"
+      url: "/blog/ai-2025-autonomous-enterprise-systems-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Autonomous Systems", "Enterprise", "ROI", "Automation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$2.8B"
+        uptime: "99.7%"
+        efficiency: "89%"
+      reading_time: "18 min read"
+      
+    - id: "fortune-500-autonomous-ai-transformation-2025"
+      type: "case-study"
+      title: "Fortune 500 Autonomous AI Transformation: $2.8B Annual Savings in 12 Months"
+      file_path: "/content/case-studies/fortune-500-autonomous-ai-transformation-2025.md"
+      url: "/case-studies/fortune-500-autonomous-ai-transformation-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "Autonomous AI", "ROI", "Manufacturing", "Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        savings: "$2.8B"
+        uptime: "99.9%"
+        efficiency: "89%"
+      reading_time: "22 min read"
+      
+    - id: "autonomous-ai-implementation-master-guide-2025"
+      type: "resource"
+      title: "Autonomous AI Implementation Master Guide 2025: From Strategy to 800% ROI"
+      file_path: "/content/resources/autonomous-ai-implementation-master-guide-2025.md"
+      url: "/resources/autonomous-ai-implementation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "Autonomous AI", "ROI", "Strategy", "Best Practices", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        projects: "500+ Success Stories"
+        satisfaction: "98%"
+        implementation_time: "18 months"
+      reading_time: "35 min read"
+      
+    - id: "ai-2025-edge-computing-revolution"
+      type: "blog"
+      title: "AI 2025: The Edge Computing Revolution - 450% ROI with Real-Time Intelligence"
+      file_path: "/content/blog/ai-2025-edge-computing-revolution.md"
+      url: "/blog/ai-2025-edge-computing-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Edge Computing", "Real-Time Processing", "ROI", "IoT", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        savings: "$1.2B"
+        latency: "67% reduction"
+        uptime: "99.5%"
+      reading_time: "16 min read"
+      
+    - id: "retail-edge-ai-transformation-2025"
+      type: "case-study"
+      title: "Retail Edge AI Transformation 2025: $35M Annual Savings with Real-Time Intelligence"
+      file_path: "/content/case-studies/retail-edge-ai-transformation-2025.md"
+      url: "/case-studies/retail-edge-ai-transformation-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Retail", "Edge AI", "ROI", "Real-Time Intelligence", "Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$35M"
+        accuracy: "89% improvement"
+        uptime: "99.7%"
+      reading_time: "20 min read"
+      
+    - id: "ai-2025-enterprise-automation-revolution"
+>>>>>>> pr-17316
       type: "blog"
       title: "AI 2025: The Enterprise Automation Revolution - 500% ROI"
       file_path: "/content/blog/ai-2025-enterprise-automation-revolution.md"
