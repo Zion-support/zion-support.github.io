@@ -105,6 +105,10 @@ import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakt
 import AIContentRevolution2025Banner from './components/AIContentRevolution2025Banner';
 import AIContentRevolutionShowcase2025 from './components/AIContentRevolutionShowcase2025';
 
+// Import new Quantum-Neural Fusion promotional components
+import QuantumNeuralFusionRevolutionBanner from './components/QuantumNeuralFusionRevolutionBanner';
+import QuantumNeuralFusionShowcase from './components/QuantumNeuralFusionShowcase';
+
 // Import new Ultimate AI Revolution promotional components
 import AI2025UltimateRevolutionBanner from './components/AI2025UltimateRevolutionBanner';
 import UltimateAIRevolutionShowcase from './components/UltimateAIRevolutionShowcase';
@@ -262,6 +266,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* QUANTUM-NEURAL FUSION REVOLUTION BANNER - NEWEST BREAKTHROUGH */}
+        <QuantumNeuralFusionRevolutionBanner />
+        
+        {/* QUANTUM-NEURAL FUSION SHOWCASE - NEWEST FEATURED */}
+        <QuantumNeuralFusionShowcase />
+        
 <<<<<<< HEAD
         {/* NEW CONTENT NAVIGATION BANNER - FEATURED */}
         <NewContentNavigationBanner />
