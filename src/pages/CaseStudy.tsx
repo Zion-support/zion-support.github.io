@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { Link, useParams } from 'react-router-dom';
 import { CASE_STUDIES } from '@/data/case-studies';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
@@ -15,8 +14,7 @@ import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 
 export default function CaseStudy() {
-  const router = useRouter();
-  const slug = router.query.slug as string;
+  const { slug } = useParams<{ slug: string }>();
   const study = CASE_STUDIES.find((s) => s.slug === slug);
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);
 
@@ -38,13 +36,13 @@ export default function CaseStudy() {
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="/">Home</Link>
+                  <Link to="/">Home</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="/case-studies">Case Studies</Link>
+                  <Link to="/case-studies">Case Studies</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
@@ -60,16 +58,18 @@ export default function CaseStudy() {
             className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
             asChild
           >
-            <Link href="/case-studies">
+            <Link to="/case-studies">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
             </Link>
           </Button>
-          <img
-            src={study.companyLogo}
-            alt={`${study.company} logo`}
-            className="h-12 mb-4"
-            loading="lazy"
-          />
+          {study.companyLogo && (
+            <img
+              src={study.companyLogo}
+              alt={`${study.company} logo`}
+              className="h-12 mb-4"
+              loading="lazy"
+            />
+          )}
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
           <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
           {study.pdf && (

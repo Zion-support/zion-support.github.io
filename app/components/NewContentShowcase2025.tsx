@@ -11,17 +11,12 @@ const NewContentShowcase2025: React.FC = () => {
             <span className="w-3 h-3 bg-white rounded-full mr-2 animate-pulse"></span>
             NEW CONTENT 2025
           </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold mb-8">
-            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-              Revolutionary Content
-            </span>
-            <br />
-            <span className="text-white">Just Released</span>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            Revolutionary AI Content for 2025
           </h2>
-          
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-gray-200">
-            Explore our latest revolutionary content featuring <strong className="text-green-400">2000% ROI</strong> success stories and breakthrough AI technologies
+          <p className="text-xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Explore our latest insights into the most cutting-edge AI technologies and transformations 
+            that are reshaping industries in 2025.
           </p>
         </div>
 
