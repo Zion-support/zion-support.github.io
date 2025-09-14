@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { BookOpen, FileText, BarChart3, TrendingUp, Clock, Star, ArrowRight, Users, Award, CheckCircle, Zap, Target } from 'lucide-react';
+import { BookOpen, FileText, BarChart3, TrendingUp, Clock, Star, ArrowRight, Users, Award, CheckCircle, Zap } from 'lucide-react';
 
 const UltimateContentShowcase2025 = () => {
   const [activeCategory, setActiveCategory] = useState('all');

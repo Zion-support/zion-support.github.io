@@ -2,9 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
 import BlogPostLayout from '../../components/BlogPostLayout';
-import ContentPromotionBanner from '../../components/ContentPromotionBanner';
 import RelatedContentWidget from '../../components/RelatedContentWidget';
 import SocialShareButtons from '../../components/SocialShareButtons';
 
@@ -148,7 +146,7 @@ const relatedPosts = [
 
 export default function AI2026FuturePredictionsPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title={blogPost.title}
         description={blogPost.description}
@@ -157,13 +155,6 @@ export default function AI2026FuturePredictionsPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Content Promotion Banner */}
-        <ContentPromotionBanner 
-          title="🚀 New: AI 2026 Future Predictions"
-          description="Discover the revolutionary breakthroughs that will reshape industries in 2026"
-          ctaText="Read Full Guide"
-          ctaLink="/ai-2026-future-predictions-revolutionary-breakthrough-ultimate-guide"
-        />
 
         {/* Main Content */}
         <BlogPostLayout
@@ -210,6 +201,6 @@ export default function AI2026FuturePredictionsPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

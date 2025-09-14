@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Target, Zap, Clock, Users, Award } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp,  Zap, Clock, Users, Award } from 'lucide-react';
 
 const NewContent2025UltimateShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -86,7 +86,7 @@ const NewContent2025UltimateShowcase = () => {
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog': return <TrendingUp className="w-4 h-4" />;
-      case 'case-study': return <Target className="w-4 h-4" />;
+      case 'case-study': return <Award className="w-4 h-4" />;
       case 'resource': return <Award className="w-4 h-4" />;
       default: return <Star className="w-4 h-4" />;
     }

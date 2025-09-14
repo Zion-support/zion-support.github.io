@@ -1,11 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
 
 // Import promotional components
 import RevolutionaryContent2026Banner from '../../components/RevolutionaryContent2026Banner';
-import UltimateContentShowcase2026 from '../../components/UltimateContentShowcase2026';
 import NewContent2026PromotionBanner from '../../components/NewContent2026PromotionBanner';
 
 export const metadata = {
@@ -16,7 +14,7 @@ export const metadata = {
 
 export default function AI2026RevolutionaryContentPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2026 Revolutionary Content - Zion Tech Group"
         description="Discover the most advanced AI content and case studies for 2026. Quantum machine learning, generative AI, and enterprise transformation insights."
@@ -228,6 +226,6 @@ export default function AI2026RevolutionaryContentPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

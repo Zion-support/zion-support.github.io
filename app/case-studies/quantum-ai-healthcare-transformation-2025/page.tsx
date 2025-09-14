@@ -3,7 +3,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, Tag, TrendingUp, DollarSign, Users, Activity } from 'lucide-react';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'Quantum AI Healthcare Transformation: A $2.3B Success Story',
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function QuantumAIHealthcareCaseStudyPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Quantum AI Healthcare Transformation: A $2.3B Success Story"
         description="Discover how a leading healthcare provider achieved $2.3B in value through quantum AI implementation, revolutionizing patient care and operational efficiency."
@@ -414,6 +413,6 @@ export default function QuantumAIHealthcareCaseStudyPage() {
           </div>
         </article>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

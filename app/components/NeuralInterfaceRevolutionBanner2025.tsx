@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, Brain, Zap, TrendingUp, Users, Target } from 'lucide-react';
+import { X, Brain, Zap, TrendingUp, Users } from 'lucide-react';
 
 const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -51,7 +51,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
         error_reduction: '78%',
         payback: '2-4 months'
       },
-      icon: Target,
+      icon: 
       color: 'from-green-600 to-emerald-600'
     }
   ];
@@ -274,7 +274,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
                 href="/services"
                 className="inline-flex items-center justify-center px-8 py-3 border border-purple-500/50 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
               >
-                <Target className="w-4 h-4 mr-2" />
+                <Award className="w-4 h-4 mr-2" />
                 Explore Services
               </Link>
             </div>

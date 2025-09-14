@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
-import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
@@ -37,7 +36,7 @@ import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase20
 import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
@@ -86,7 +85,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <ErrorBoundary>
+    <div>
       <PerformanceOptimizer />
       <EnhancedAnalytics />
       <MobileOptimizer />
@@ -307,6 +306,6 @@ export default function HomePage() {
           className="mt-16"
         />
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

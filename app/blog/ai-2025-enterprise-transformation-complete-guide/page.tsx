@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen, TrendingUp, Target } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, Share2, BookOpen, TrendingUp } from 'lucide-react';
 import SEO from '../../components/SEO';
 
 export const metadata: Metadata = {
@@ -70,7 +70,7 @@ export default function AI2025EnterpriseTransformationGuide() {
               <span className="text-sm font-semibold">500% ROI Average</span>
             </div>
             <div className="flex items-center space-x-2 bg-white/20 rounded-full px-4 py-2">
-              <Target className="w-4 h-4" />
+              <Award className="w-4 h-4" />
               <span className="text-sm font-semibold">Fortune 500 Success</span>
             </div>
             <div className="flex items-center space-x-2 bg-white/20 rounded-full px-4 py-2">
