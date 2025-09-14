@@ -94,6 +94,10 @@ import UltimateContent2026Showcase from '../components/UltimateContent2026Showca
 import NewContent2025AdvancedAnalyticsBanner from '../components/NewContent2025AdvancedAnalyticsBanner';
 import EdgeComputingRevolutionBanner2025 from '../components/EdgeComputingRevolutionBanner2025';
 
+// Import new AI automation promotional components
+import NewContent2025AdvancedAIAutomationBanner from '../components/NewContent2025AdvancedAIAutomationBanner';
+import UltimateAIAutomationShowcase2025 from '../components/UltimateAIAutomationShowcase2025';
+
 // Import new 2026 synthetic intelligence components
 import SyntheticIntelligence2026BreakthroughBanner from '../components/SyntheticIntelligence2026BreakthroughBanner';
 import RevolutionaryContent2026Showcase from '../components/RevolutionaryContent2026Showcase';
@@ -119,6 +123,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Content 2025 Advanced AI Automation Banner - LATEST FEATURED */}
+        <NewContent2025AdvancedAIAutomationBanner />
+        
         {/* Synthetic Intelligence 2025-2026 Banner - NEW ULTIMATE BREAKTHROUGH */}
         <SyntheticIntelligence2025Banner />
         
@@ -338,6 +345,7 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <UltimateAIAutomationShowcase2025 />
         <RevolutionaryContent2026Banner />
         <UltimateContentShowcase2026 />
         <QuantumAIContentShowcase2026 />
