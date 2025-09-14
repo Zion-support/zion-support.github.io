@@ -189,6 +189,16 @@ import AI2026QuantumRevolutionUltimateBanner from '../components/AI2026QuantumRe
 import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
 import RevolutionaryAIContent2026Banner from '../components/RevolutionaryAIContent2026Banner';
 
+// Import new ultimate autonomous enterprise components
+import UltimateAutonomousEnterpriseBanner from '../components/UltimateAutonomousEnterpriseBanner';
+import UltimateAutonomousEnterpriseShowcase from '../components/UltimateAutonomousEnterpriseShowcase';
+
+// Import new 2026 promotional components
+import AI2026TrendsPromotionBanner from '../components/AI2026TrendsPromotionBanner';
+import QuantumComputingPromotionBanner from '../components/QuantumComputingPromotionBanner';
+import Fortune500CaseStudyBanner from '../components/Fortune500CaseStudyBanner';
+import NewContent2026ComprehensiveShowcase from '../components/NewContent2026ComprehensiveShowcase';
+
 // Import new 2025 advanced automation promotional components
 import NewContent2025AdvancedAutomationBanner from '../components/NewContent2025AdvancedAutomationBanner';
 import AdvancedAutomationContentShowcase2025 from '../components/AdvancedAutomationContentShowcase2025';
@@ -228,6 +238,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Autonomous Enterprise Banner - NEW ULTIMATE BREAKTHROUGH */}
+        <UltimateAutonomousEnterpriseBanner />
+        
         {/* Ultimate AI Revolution 2025 Banner - NEW ULTIMATE FEATURED */}
         <UltimateAIRevolution2025Banner />
         
@@ -473,6 +486,15 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Ultimate Autonomous Enterprise Showcase - NEW FEATURED */}
+        <UltimateAutonomousEnterpriseShowcase />
+        
+        {/* Content Promotion Banners */}
+        <UltimateAIAutomationShowcase2025 />
+        <RevolutionaryContent2026Banner />
+        <UltimateContentShowcase2026 />
+        <QuantumAIContentShowcase2026 />
+        
         {/* Ultimate Content Showcase 2025 - NEW */}
         <UltimateContentShowcase2025 />
         
