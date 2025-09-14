@@ -140,6 +140,10 @@ import RevolutionaryContent2025UltimateBanner from './components/RevolutionaryCo
 import AI2027BreakthroughPromotionBanner from './components/AI2027BreakthroughPromotionBanner';
 import QuantumComputingShowcase2027 from './components/QuantumComputingShowcase2027';
 
+// Import new ultimate breakthrough content components
+import NewContent2025UltimateBreakthroughBanner from '../components/NewContent2025UltimateBreakthroughBanner';
+import AITransformationROICalculator from '../components/AITransformationROICalculator';
+
 // Import new breakthrough technologies promotional components
 import BreakthroughTechnologies2025PromotionBanner from './components/BreakthroughTechnologies2025PromotionBanner';
 import BreakthroughTechnologies2025Showcase from './components/BreakthroughTechnologies2025Showcase';
@@ -251,6 +255,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW ULTIMATE BREAKTHROUGH CONTENT BANNER - TOP PRIORITY */}
+        <NewContent2025UltimateBreakthroughBanner />
+        
+        {/* AI TRANSFORMATION ROI CALCULATOR - INTERACTIVE TOOL */}
+        <AITransformationROICalculator />
+        
         {/* AI CONTENT REVOLUTION 2025 BANNER - NEWEST ULTIMATE BREAKTHROUGH */}
         <AIContentRevolution2025Banner />
         
