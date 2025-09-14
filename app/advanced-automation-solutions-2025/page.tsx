@@ -344,7 +344,7 @@ export default function AdvancedAutomationSolutions2025() {
             </Link>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Features Section */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">

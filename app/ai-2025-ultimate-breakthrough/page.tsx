@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import SEO from '@/components/SEO';
 
 const AI2025UltimateBreakthroughPage: React.FC = () => {
   return (
