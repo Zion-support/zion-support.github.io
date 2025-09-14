@@ -132,6 +132,10 @@ import UltimateAIRevolutionShowcase from '../components/UltimateAIRevolutionShow
 // Import new AI 2026 Future Predictions promotional components
 import AI2026FuturePredictionsUltimateBreakthroughBanner from '../components/AI2026FuturePredictionsUltimateBreakthroughBanner';
 
+// Import new Ultimate Digital Transformation promotional components
+import UltimateDigitalTransformation2025Banner from '../components/UltimateDigitalTransformation2025Banner';
+import UltimateDigitalTransformationShowcase2025 from '../components/UltimateDigitalTransformationShowcase2025';
+
 // Import new Ultimate Enterprise Transformation components
 import AI2025UltimateEnterpriseTransformationBanner from '../components/AI2025UltimateEnterpriseTransformationBanner';
 import UltimateEnterpriseTransformationShowcase from '../components/UltimateEnterpriseTransformationShowcase';
@@ -298,27 +302,23 @@ export default function HomePage() {
         {/* QUANTUM-NEURAL FUSION REVOLUTION BANNER - NEWEST BREAKTHROUGH */}
         <QuantumNeuralFusionRevolutionBanner />
         
+        {/* ULTIMATE DIGITAL TRANSFORMATION 2025 BANNER - NEWEST BREAKTHROUGH */}
+        <UltimateDigitalTransformation2025Banner />
+        
+        {/* AI 2025 CONTENT REVOLUTION ULTIMATE BANNER - NEWEST BREAKTHROUGH */}
+        <AI2025ContentRevolutionUltimateBanner />
+        
         {/* AI 2025 ULTIMATE BUSINESS INTELLIGENCE REVOLUTION BANNER - NEWEST FEATURED */}
         <AI2025UltimateBusinessIntelligenceRevolutionBanner />
         
         {/* NEW CONTENT 2025 ULTIMATE BREAKTHROUGH BANNER - NEWEST FEATURED */}
         <NewContent2025UltimateBreakthroughBanner />
         
-        {/* NEW 2025 ULTIMATE SUCCESS STORIES BANNER - TOP PRIORITY FEATURED */}
-        <NewContent2025UltimateSuccessBanner />
-        
-        {/* ULTIMATE CONTENT SHOWCASE 2025 BANNER - NEWEST FEATURED */}
-        <UltimateContentShowcase2025Banner />
-        
-        {/* AI INNOVATION SHOWCASE 2025 BANNER - NEWEST FEATURED */}
-        <AIInnovationShowcase2025Banner />
-=======
         {/* ULTIMATE AUTONOMOUS BUSINESS REVOLUTION BANNER - NEWEST BREAKTHROUGH */}
         <UltimateAutonomousBusinessRevolutionBanner />
         
         {/* ULTIMATE AUTONOMOUS BUSINESS SHOWCASE - NEWEST FEATURED */}
         <UltimateAutonomousBusinessShowcase />
->>>>>>> cursor/create-and-deploy-new-content-11fa
         
         {/* QUANTUM-NEURAL FUSION REVOLUTION BANNER - NEWEST BREAKTHROUGH */}
         <QuantumNeuralFusionRevolutionBanner />
@@ -617,6 +617,7 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
+        <UltimateDigitalTransformationShowcase2025 />
         <UltimateContentShowcase2025 />
         <InteractiveContentDiscoveryWidget2025 />
         <NewContentShowcase2025 />
