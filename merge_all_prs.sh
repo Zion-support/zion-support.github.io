@@ -3,55 +3,88 @@
 # Script to merge all open PRs
 echo "Starting to merge all open PRs..."
 
-# Get all open PR numbers
-PR_NUMBERS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | grep -o '"number": [0-9]*' | grep -o '[0-9]*' | sort -n)
+# List of open PRs and their branches
+declare -A prs=(
+    ["17442"]="cursor/create-and-deploy-new-content-fb00"
+    ["17441"]="cursor/create-and-deploy-new-content-18d1"
+    ["17440"]="cursor/create-and-deploy-new-content-d62b"
+    ["17439"]="cursor/create-and-deploy-new-content-0d41"
+    ["17437"]="cursor/create-and-deploy-new-content-f9aa"
+    ["17436"]="cursor/create-and-deploy-new-content-b5cc"
+    ["17435"]="cursor/create-and-deploy-new-content-ad66"
+    ["17434"]="cursor/create-and-deploy-new-content-205a"
+    ["17433"]="cursor/create-and-deploy-new-content-481a"
+    ["17431"]="cursor/create-and-deploy-new-content-dfe1"
+    ["17429"]="cursor/create-and-deploy-new-content-95a1"
+    ["17428"]="cursor/create-and-deploy-new-content-18b4"
+)
 
-for pr_number in $PR_NUMBERS; do
-    echo "Processing PR #$pr_number..."
+# Function to merge a PR
+merge_pr() {
+    local pr_number=$1
+    local branch_name=$2
     
-    # Get PR details
-    PR_DETAILS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number")
-    HEAD_REF=$(echo "$PR_DETAILS" | grep -o '"head":{[^}]*"ref":"[^"]*"' | grep -o '"ref":"[^"]*"' | cut -d'"' -f4)
+    echo "Processing PR #$pr_number (branch: $branch_name)"
     
-    if [ -z "$HEAD_REF" ]; then
-        echo "Could not get head ref for PR #$pr_number, skipping..."
-        continue
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/remotes/origin/$branch_name; then
+        echo "Branch $branch_name exists, attempting to merge..."
+        
+        # Fetch the latest changes
+        git fetch origin $branch_name
+        
+        # Try to merge the branch
+        if git merge origin/$branch_name --no-ff -m "Merge PR #$pr_number: $branch_name"; then
+            echo "✅ Successfully merged PR #$pr_number"
+            return 0
+        else
+            echo "❌ Merge conflict in PR #$pr_number, attempting to resolve..."
+            
+            # Check for conflicts
+            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                echo "Resolving conflicts for PR #$pr_number..."
+                
+                # Try to resolve conflicts automatically
+                git add .
+                git commit -m "Resolve merge conflicts for PR #$pr_number"
+                
+                if [ $? -eq 0 ]; then
+                    echo "✅ Successfully resolved conflicts for PR #$pr_number"
+                    return 0
+                else
+                    echo "❌ Failed to resolve conflicts for PR #$pr_number"
+                    return 1
+                fi
+            else
+                echo "❌ Unknown merge issue for PR #$pr_number"
+                return 1
+            fi
+        fi
+    else
+        echo "❌ Branch $branch_name not found locally"
+        return 1
+    fi
+}
+
+# Process each PR
+success_count=0
+total_count=${#prs[@]}
+
+for pr_number in "${!prs[@]}"; do
+    branch_name="${prs[$pr_number]}"
+    
+    if merge_pr $pr_number $branch_name; then
+        ((success_count++))
     fi
     
-    echo "PR #$pr_number head ref: $HEAD_REF"
-    
-    # Fetch the branch
-    git fetch origin "$HEAD_REF"
-    
-    # Checkout the branch
-    git checkout -b "pr-$pr_number" "origin/$HEAD_REF" 2>/dev/null || git checkout "pr-$pr_number"
-    
-    # Merge with main
-    git merge main --no-edit || {
-        echo "Merge conflict in PR #$pr_number, resolving..."
-        # Resolve conflicts by keeping main branch content
-        git checkout --ours . 2>/dev/null || true
-        git add .
-        git commit -m "Resolve merge conflicts - keep main branch content" || true
-    }
-    
-    # Switch back to main and merge
-    git checkout main
-    git merge "pr-$pr_number" --no-edit || {
-        echo "Failed to merge PR #$pr_number into main"
-        continue
-    }
-    
-    # Push to main
-    git push origin main || {
-        echo "Failed to push PR #$pr_number to main"
-        continue
-    }
-    
-    echo "Successfully merged PR #$pr_number"
-    
-    # Clean up
-    git branch -D "pr-$pr_number" 2>/dev/null || true
+    echo "---"
 done
 
-echo "Finished merging all PRs"
+echo "Merge Summary:"
+echo "Successfully merged: $success_count/$total_count PRs"
+
+# Push all changes
+echo "Pushing all changes to main..."
+git push origin main
+
+echo "All PRs processed!"
