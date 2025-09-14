@@ -605,12 +605,7 @@ const iconMap = {
   'zap-off': LucideZapOff,
   zap: LucideZap,
   'zoom-in': LucideZoomIn,
-<<<<<<< HEAD
-  'zoom-out': LucideZoomOut,
-};
-=======
   'zoom-out': LucideZoomOut};
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
 export const Icon: React.FC<IconProps> = ({
   name,
@@ -630,8 +625,4 @@ export const Icon: React.FC<IconProps> = ({
 };
 
 export default Icon; // Default export the Icon component
-<<<<<<< HEAD
 export const Icons = iconMap; // Export the map if you need to refer to available icons
-=======
-export const Icons = iconMap; // Export the map if you need to refer to available icons
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958

@@ -7,12 +7,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-<<<<<<< HEAD
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-=======
   TooltipTrigger} from "@/components/ui/tooltip";
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -50,12 +45,7 @@ export function OnChainExport() {
       setIsConnected(true);
       toast({
         title: "Wallet connected",
-<<<<<<< HEAD
-        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
-      });
-=======
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`});
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     } catch (error: any) {
       toast({
         title: "Connection failed",
@@ -76,12 +66,7 @@ export function OnChainExport() {
       setExportStatus('success');
       toast({
         title: "Tokens exported",
-<<<<<<< HEAD
-        description: "Your ZION$ tokens have been exported to your wallet",
-      });
-=======
         description: "Your ZION$ tokens have been exported to your wallet"});
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     } catch (error: any) {
       setExportStatus('error');
       toast({

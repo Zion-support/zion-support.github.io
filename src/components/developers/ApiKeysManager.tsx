@@ -67,12 +67,7 @@ export function ApiKeysManager() {
     { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' },
     { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' },
     { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' },
-<<<<<<< HEAD
-    { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' },
-  ];
-=======
     { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }];
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 
   // Toggle a scope selection
   const toggleScope = (scope: ApiKeyScope) => {

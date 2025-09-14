@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-    return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
-      {/* Enhanced background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
-            backgroundSize: '40px 40px'
-        }}/>
-      </div>
-
-      {/* Floating decorative elements */}
-      <div className="absolute inset-0">
-        <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
-        <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }}/>
-        <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}/>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-=======
 import { Clock, Target, Zap, Shield, Users, Rocket } from 'lucide-react';
 
 const steps = [
@@ -279,7 +257,6 @@ export function HowItWorksSection() {
     </section>
   );
 }
-=======
 import React from 'react';
 
 export const HowItWorksSection = () => {
@@ -305,4 +282,3 @@ export const HowItWorksSection = () => {
     </section>
   );
 };
->>>>>>> e71ddb0f29f9adf76b34755be1a22b5dd2a9388b

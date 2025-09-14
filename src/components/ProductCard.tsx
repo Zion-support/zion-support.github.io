@@ -7,12 +7,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-<<<<<<< HEAD
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
-=======
   TooltipTrigger} from '@/components/ui/tooltip';
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
@@ -66,12 +61,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
 
   if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
     captureException(new Error('Invalid product data received by ProductCard'), {
-<<<<<<< HEAD
-      extra: { product },
-    });
-=======
       extra: { product }});
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     return (
       <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
         <p className="text-destructive text-sm">Product information unavailable.</p>
@@ -92,12 +82,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       toast({
         title: 'Login Required',
         description: 'Please log in to add items to your cart.',
-<<<<<<< HEAD
-        variant: 'destructive',
-      });
-=======
         variant: 'destructive'});
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`);
       return;
     }
@@ -107,13 +92,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       description: `${productTitle} has been added to your cart`,
       action: {
         label: 'View Cart',
-<<<<<<< HEAD
-        onClick: () => router.push('/cart'),
-      },
-    });
-=======
         onClick: () => router.push('/cart')}});
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
   };
 
   const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
@@ -124,12 +103,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       setImageError(true);
       captureException(error, {
         product: product.id,
-<<<<<<< HEAD
-        imageUrl,
-      });
-=======
         imageUrl});
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
     }
   };
 

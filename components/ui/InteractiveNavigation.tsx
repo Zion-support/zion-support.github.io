@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 
 const InteractiveNavigation = () => {};
 
 
 export default InteractiveNavigation;
->>>>>>> 0019087cc94659218a6a56b7d706ee956e6c4958
 import React, { useState } from 'react';
 
 export default function InteractiveNavigation() {

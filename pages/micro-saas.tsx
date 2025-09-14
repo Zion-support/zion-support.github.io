@@ -30,7 +30,6 @@ import {
   BookOpen,
   ShoppingCart,
   Home,
-  Database,
   Vote,
   Brain,
   Lightbulb,
@@ -41,9 +40,7 @@ import {
   Trash2,
   Camera,
   HardDrive,
-  Droplets,
-  Calendar
->>>>>>> 17b17a8f81ff85e1faa2d953a804b4369cc38def
+  Droplets
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -85,7 +82,6 @@ const microSaasServices = [
     popular: false
   },
   {
-<<<<<<< HEAD
     title: 'Inventory Management System',
     description: 'Smart inventory tracking and management for e-commerce businesses.',
     icon: Package,
