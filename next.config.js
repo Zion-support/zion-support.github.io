@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> pr-17315
 // @ts-check
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -10,10 +6,6 @@ const nextConfig = {
   
   // Enable App Router
   experimental: {
-<<<<<<< HEAD
-    appDir: true,
-=======
->>>>>>> pr-17315
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
@@ -65,33 +57,13 @@ const nextConfig = {
   
   // TypeScript and ESLint configuration
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
     tsconfigPath: './tsconfig.json'
   },
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: false,
+    dirs: ['app', 'components', 'lib', 'utils']
   },
 };
 
 export default nextConfig;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true
-  }
-};
-
-export default nextConfig;
->>>>>>> pr-17316
-=======
->>>>>>> pr-17315
->>>>>>> main
->>>>>>> main

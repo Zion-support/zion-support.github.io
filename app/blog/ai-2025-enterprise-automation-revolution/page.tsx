@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'AI 2025: The Enterprise Automation Revolution | Zion Tech Group',
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function AI2025EnterpriseAutomationRevolution() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2025: The Enterprise Automation Revolution"
         description="Discover how AI automation is transforming enterprise operations in 2025, with real-world case studies and implementation strategies."
@@ -257,6 +256,6 @@ export default function AI2025EnterpriseAutomationRevolution() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

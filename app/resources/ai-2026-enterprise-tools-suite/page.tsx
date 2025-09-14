@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 import SEO from '../../../components/SEO';
 
 export const metadata = {
@@ -11,7 +10,7 @@ export const metadata = {
 
 export default function AI2026ToolsSuitePage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2026 Enterprise Tools Suite - Complete Resource Guide"
         description="Access our comprehensive suite of AI 2026 enterprise tools, calculators, and resources designed to help you plan, implement, and optimize AI solutions for maximum ROI."
@@ -341,6 +340,6 @@ export default function AI2026ToolsSuitePage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

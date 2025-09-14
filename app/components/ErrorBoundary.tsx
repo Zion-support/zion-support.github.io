@@ -1,7 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
@@ -158,4 +156,3 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
->>>>>>> cursor/create-and-deploy-new-content-040d

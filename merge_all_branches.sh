@@ -1,95 +1,104 @@
 #!/bin/bash
 
-# Script to merge all open branches into main
-# This will handle the 4000+ branches efficiently
+# Script to merge all open PR branches into main
+# This script will handle merge conflicts and merge branches systematically
 
 set -e
 
-echo "Starting bulk merge of all open branches..."
+echo "Starting systematic merge of all open PR branches..."
 
-# Create a backup branch first
-git checkout -b backup-before-bulk-merge-$(date +%Y%m%d-%H%M%S)
-git checkout main
+# Get list of recent branches
+RECENT_BRANCHES=(
+    "cursor/create-and-deploy-new-content-ca2d"
+    "cursor/create-and-deploy-new-content-c1cb"
+    "cursor/create-and-deploy-new-content-ac49"
+    "cursor/create-and-deploy-new-content-a43d"
+    "cursor/create-and-deploy-new-content-a3da"
+    "cursor/create-and-deploy-new-content-7f6f"
+    "cursor/create-and-deploy-new-content-7879"
+    "cursor/create-and-deploy-new-content-63da"
+    "cursor/create-and-deploy-new-content-6007"
+    "cursor/create-and-deploy-new-content-5f74"
+    "cursor/create-and-deploy-new-content-46b5"
+    "cursor/create-and-deploy-new-content-4348"
+    "cursor/create-and-deploy-new-content-40ce"
+    "cursor/create-and-deploy-new-content-18d3"
+    "cursor/create-and-deploy-new-content-0c61"
+)
 
-# Function to merge a branch with conflict resolution
+# Function to merge a branch
 merge_branch() {
-    local branch=$1
-    echo "Attempting to merge $branch..."
+    local branch_name=$1
+    echo "Processing branch: $branch_name"
     
-    if git merge --no-ff "$branch" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
+    # Check if branch exists
+    if ! git show-ref --verify --quiet refs/remotes/origin/$branch_name; then
+        echo "Branch $branch_name does not exist, skipping..."
         return 0
-    else
-        echo "⚠️  Conflict in $branch, resolving..."
-        # Resolve conflicts by preferring main branch
-        git checkout --ours . 2>/dev/null || true
-        git add . 2>/dev/null || true
-        if git commit --no-edit 2>/dev/null; then
-            echo "✅ Resolved conflicts and merged $branch"
-            return 0
+    fi
+    
+    # Create local branch
+    git checkout -b $branch_name origin/$branch_name 2>/dev/null || git checkout $branch_name
+    
+    # Try to merge with main
+    if git merge main --no-edit; then
+        echo "Successfully merged $branch_name with main"
+        # Merge back to main
+        git checkout main
+        if git merge $branch_name --no-edit; then
+            echo "Successfully merged $branch_name into main"
+            # Clean up local branch
+            git branch -d $branch_name
         else
-            echo "❌ Failed to merge $branch, skipping..."
-            git merge --abort 2>/dev/null || true
-            return 1
+            echo "Failed to merge $branch_name into main"
+            git merge --abort
+        fi
+    else
+        echo "Merge conflict in $branch_name, resolving..."
+        # Check for conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "Resolving conflicts in $branch_name..."
+            # Auto-resolve simple conflicts
+            git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
+                echo "Resolving conflict in $file"
+                # Use main version for conflicts (keep the latest)
+                git checkout --theirs "$file"
+                git add "$file"
+            done
+            
+            # Commit the resolution
+            if git commit --no-edit; then
+                echo "Successfully resolved conflicts in $branch_name"
+                # Merge back to main
+                git checkout main
+                if git merge $branch_name --no-edit; then
+                    echo "Successfully merged resolved $branch_name into main"
+                    git branch -d $branch_name
+                else
+                    echo "Failed to merge resolved $branch_name into main"
+                    git merge --abort
+                fi
+            else
+                echo "Failed to resolve conflicts in $branch_name"
+                git merge --abort
+                git checkout main
+                git branch -d $branch_name
+            fi
+        else
+            echo "No conflicts found, but merge failed for $branch_name"
+            git merge --abort
+            git checkout main
+            git branch -d $branch_name
         fi
     fi
 }
 
-# Get all remote branches
-echo "Fetching all remote branches..."
-git fetch --all
-
-# Merge branches in priority order
-echo "Merging branches by priority..."
-
-# Priority 1: Recent service expansion branches
-echo "=== Priority 1: Service Expansion Branches ==="
-for branch in $(git branch -r | grep -E "(services-expansion|add.*services.*2025)" | head -20); do
+# Process each branch
+for branch in "${RECENT_BRANCHES[@]}"; do
     merge_branch "$branch"
+    echo "---"
 done
 
-# Priority 2: Website enhancement branches
-echo "=== Priority 2: Website Enhancement Branches ==="
-for branch in $(git branch -r | grep -E "enhance.*website" | head -20); do
-    merge_branch "$branch"
-done
-
-# Priority 3: Fix and improvement branches
-echo "=== Priority 3: Fix and Improvement Branches ==="
-for branch in $(git branch -r | grep -E "(fix|improve|chore)" | head -20); do
-    merge_branch "$branch"
-done
-
-# Priority 4: Cursor branches (batch process)
-echo "=== Priority 4: Cursor Branches (Batch 1) ==="
-for branch in $(git branch -r | grep "cursor/" | head -50); do
-    merge_branch "$branch"
-done
-
-# Priority 5: Remaining branches (process in smaller batches)
-echo "=== Priority 5: Remaining Branches ==="
-remaining_branches=$(git branch -r | grep -v "origin/main" | grep -v "origin/HEAD" | wc -l)
-echo "Processing $remaining_branches remaining branches..."
-
-batch_size=100
-processed=0
-
-for branch in $(git branch -r | grep -v "origin/main" | grep -v "origin/HEAD"); do
-    if [ $processed -ge $batch_size ]; then
-        echo "Pushing progress after $batch_size branches..."
-        git push origin main
-        processed=0
-    fi
-    
-    merge_branch "$branch"
-    processed=$((processed + 1))
-done
-
-echo "=== Final Push ==="
-git push origin main
-
-echo "✅ Bulk merge completed!"
-echo "Summary:"
-echo "- Total branches processed: $(git log --oneline | wc -l)"
-echo "- Current branch: $(git branch --show-current)"
-echo "- Latest commit: $(git log -1 --oneline)"
+echo "Merge process completed!"
+echo "Current status:"
+git status

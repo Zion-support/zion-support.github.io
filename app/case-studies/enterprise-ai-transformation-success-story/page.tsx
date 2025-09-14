@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, TrendingUp, DollarSign, Target, Award } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, TrendingUp, DollarSign,  Award } from 'lucide-react';
 import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
@@ -63,7 +63,7 @@ export default function EnterpriseTransformationCaseStudy() {
               Zion Tech Group
             </div>
             <div className="flex items-center">
-              <Target className="w-4 h-4 mr-2" />
+              <Award className="w-4 h-4 mr-2" />
               Fortune 500 Company
             </div>
           </div>
