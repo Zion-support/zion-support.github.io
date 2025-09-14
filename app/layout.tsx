@@ -6,16 +6,3 @@ export const metadata = {
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
-  );
-}
