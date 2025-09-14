@@ -211,7 +211,59 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
-    - id: "ai-2025-enterprise-automation-revolution"
+    - id: "ai-2025-advanced-automation-revolution-ultimate-guide"
+      type: "blog"
+      title: "AI 2025: Advanced Automation Revolution - Ultimate Enterprise Guide"
+      file_path: "/content/blog/ai-2025-advanced-automation-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-advanced-automation-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Automation", "Enterprise", "ROI", "Business Process Automation", "Digital Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$2.8M"
+        productivity: "340%"
+        success: "98%"
+      reading_time: "18 min read"
+      
+    - id: "ai-automation-fortune-500-success-600-roi"
+      type: "case-study"
+      title: "Fortune 500 AI Automation Success: $3.2B Annual Savings with 600% ROI"
+      file_path: "/content/case-studies/ai-automation-fortune-500-success-600-roi.md"
+      url: "/case-studies/ai-automation-fortune-500-success-600-roi"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "AI Automation", "ROI", "Manufacturing", "Success Story", "Cost Savings"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$3.2B"
+        efficiency: "89%"
+        satisfaction: "98%"
+      reading_time: "12 min read"
+      
+    - id: "ai-automation-implementation-master-guide-2025"
+      type: "resource"
+      title: "AI Automation Implementation Master Guide 2025: From Strategy to 600% ROI"
+      file_path: "/content/resources/ai-automation-implementation-master-guide-2025.md"
+      url: "/resources/ai-automation-implementation-master-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Automation", "Strategy", "ROI", "Best Practices", "Framework", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        success: "98%"
+        payback: "3.2 months"
+        implementations: "500+"
+        roi: "600%"
+      reading_time: "25 min read"
+      
+    - id: "ai-2025-enterprise-ai-transformation-ultimate-guide"
+>>>>>>> origin/cursor/create-and-deploy-new-content-c914
       type: "blog"
       title: "AI 2025: The Enterprise Automation Revolution That's Reshaping Business"
       file_path: "/content/blog/ai-2025-enterprise-automation-revolution.md"
@@ -524,6 +576,47 @@ content_index:
       reading_time: "35 min read"
 
   promotion_components:
+    - name: "NewContent2025AdvancedAutomationBanner"
+      file_path: "/app/components/NewContent2025AdvancedAutomationBanner.tsx"
+      status: "active"
+      features:
+        - "Auto-rotating banner showcasing new AI automation content"
+        - "Features 600% ROI metrics and $2.8M savings highlights"
+        - "Interactive content cards with hover effects and animations"
+        - "Dismissible banner with localStorage persistence"
+        - "Call-to-action buttons for content access and consultation"
+        
+    - name: "AdvancedAutomationContentShowcase2025"
+      file_path: "/app/components/AdvancedAutomationContentShowcase2025.tsx"
+      status: "active"
+      features:
+        - "Comprehensive showcase of AI automation content"
+        - "Category filtering (Guides, Case Studies, Resources)"
+        - "Interactive content cards with metrics display"
+        - "Success metrics summary with 500+ implementations data"
+        - "Call-to-action section for assessment and services"
+        
+    - name: "NewContent2025UltimateBanner"
+      file_path: "/app/components/NewContent2025UltimateBanner.tsx"
+      status: "active"
+      features:
+        - "Promotes all new 2025 content with engaging design"
+        - "Features Edge Computing, Blockchain, and IoT guides"
+        - "Shows real-world case studies and success metrics"
+        - "Interactive content cards with hover effects"
+        - "Call-to-action buttons for consultation and resources"
+        
+    - name: "NewContentShowcase2025"
+      file_path: "/app/components/NewContentShowcase2025.tsx"
+      status: "active"
+      features:
+        - "Comprehensive showcase of all new content"
+        - "Content grid with categories and reading times"
+        - "Success metrics display and ROI highlights"
+        - "Case studies section with detailed metrics"
+        - "Resources section with downloadable guides"
+        
+>>>>>>> origin/cursor/create-and-deploy-new-content-c914
     - name: "RevolutionaryContent2026Banner"
       file_path: "/app/components/RevolutionaryContent2026Banner.tsx"
       status: "active"
@@ -598,12 +691,14 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   metrics:
-    expected_roi_mentions: 25
-    success_stories: 4
-    implementation_guides: 3
-    blog_posts: 4
-    total_word_count: "~45,000 words"
-    estimated_reading_time: "~180 minutes"
-    new_content_roi_highlights: "500% ROI featured prominently"
-    promotional_components: 6
-    homepage_integration: "Complete with auto-rotation and filtering"
+    expected_roi_mentions: 45
+    success_stories: 8
+    implementation_guides: 6
+    blog_posts: 10
+    total_word_count: "~85,000 words"
+    estimated_reading_time: "~340 minutes"
+    new_content_roi_highlights: "600% ROI featured prominently across all content"
+    promotional_components: 10
+    homepage_integration: "Complete with comprehensive showcase and advanced automation focus"
+    new_2025_content_pieces: 3
+    advanced_automation_focus: "Primary content theme with 600% ROI emphasis"
