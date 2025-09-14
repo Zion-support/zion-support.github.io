@@ -35,6 +35,8 @@ import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPro
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
@@ -74,6 +76,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* New Content 2025 Ultimate Banner - NEW FEATURED */}
+        <NewContent2025UltimateBanner />
+        
         {/* Ultimate Content 2025 Revolution Banner - NEW */}
         <UltimateContent2025RevolutionBanner />
         
@@ -196,6 +201,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* New Content 2025 Ultimate Showcase - NEW FEATURED */}
+        <NewContent2025UltimateShowcase />
+        
         {/* New 2025 Breakthrough Content Promotions */}
         <QuantumAI2025BreakthroughPromotionBanner />
         <AutonomousBusinessOperationsPromotionBanner />
