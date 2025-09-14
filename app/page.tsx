@@ -41,6 +41,9 @@ import UltimateContentShowcase2026 from '../components/UltimateContentShowcase20
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 
+// Import new ultimate content showcase banner
+import UltimateContent2025ShowcaseBanner from '../components/UltimateContent2025ShowcaseBanner';
+
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
 import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
@@ -76,7 +79,10 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* New Content 2025 Ultimate Showcase Banner - LATEST */}
+        {/* Ultimate Content 2025 Showcase Banner - LATEST */}
+        <UltimateContent2025ShowcaseBanner />
+        
+        {/* New Content 2025 Ultimate Showcase Banner */}
         <NewContent2025UltimateShowcaseBanner />
         
         {/* Fortune 500 Success Banner - FEATURED */}
