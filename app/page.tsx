@@ -5,6 +5,9 @@ import SEO from '../components/SEO';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 // Import new AI 2025 Ultimate Content Revolution components - NEWEST FEATURED
+import AI2025UltimateContentRevolutionPromotionBanner from '../components/AI2025UltimateContentRevolutionPromotionBanner';
+import UltimateContentRevolutionShowcase from '../components/UltimateContentRevolutionShowcase';
+import UltimateContentRevolutionROICalculator from '../components/UltimateContentRevolutionROICalculator';
 import AI2025UltimateContentRevolution50000ROIBanner from '../components/AI2025UltimateContentRevolution50000ROIBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import InteractiveROICalculatorAdvanced from '../components/InteractiveROICalculatorAdvanced';
@@ -398,6 +401,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 ULTIMATE CONTENT REVOLUTION PROMOTION BANNER - NEWEST FEATURED */}
+        <AI2025UltimateContentRevolutionPromotionBanner />
+        
         {/* AI 2025 ULTIMATE BREAKTHROUGH 100,000% ROI BANNER - NEWEST FEATURED */}
         <AI2025UltimateBreakthrough100000ROIBanner />
         
@@ -484,6 +490,12 @@ export default function HomePage() {
         
         {/* ULTIMATE SUCCESS METRICS SHOWCASE 2025 - NEWEST FEATURED */}
         <UltimateSuccessMetricsShowcase2025 />
+        
+        {/* ULTIMATE CONTENT REVOLUTION SHOWCASE - NEWEST FEATURED */}
+        <UltimateContentRevolutionShowcase />
+        
+        {/* ULTIMATE CONTENT REVOLUTION ROI CALCULATOR - NEWEST FEATURED */}
+        <UltimateContentRevolutionROICalculator />
         
         {/* ULTIMATE CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
         <UltimateContentShowcase2025 />
