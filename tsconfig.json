@@ -16,6 +16,7 @@
     "strict": false,
     "noEmit": true,
     "esModuleInterop": true,
+<<<<<<< HEAD
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
 <<<<<<< HEAD
@@ -46,4 +47,8 @@
   "exclude": [
     "node_modules"
   ]
+=======
+    "allowSyntheticDefaultImports": true
+  }
+>>>>>>> cursor/create-and-deploy-new-content-60fa
 }
