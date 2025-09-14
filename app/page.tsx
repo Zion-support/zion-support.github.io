@@ -141,6 +141,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate AI Transformation 2025 Banner - NEW FEATURED */}
+        <UltimateAITransformation2025Banner />
+        
         {/* Ultimate AI Breakthrough 2025 Banner - NEW FEATURED */}
         <UltimateAIBreakthrough2025Banner />
         
