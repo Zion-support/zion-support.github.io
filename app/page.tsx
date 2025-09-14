@@ -84,6 +84,7 @@ export default function HomePage() {
         {/* Quantum AI 2026 Breakthrough Banner */}
         <QuantumAI2026BreakthroughBanner />
         
+<<<<<<< HEAD
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
 >>>>>>> cursor/create-and-deploy-new-content-4254
@@ -95,6 +96,9 @@ export default function HomePage() {
         <AI2026AutonomousSystemsBanner />
         
         {/* Revolutionary Content 2025 Banner - NEW CONTENT */}
+=======
+        {/* Revolutionary Content 2025 Banner */}
+>>>>>>> cursor/create-and-deploy-new-content-a121
         <RevolutionaryContent2025Banner />
         
         {/* New Content 2025 Showcase Banner - FEATURED */}
@@ -103,8 +107,13 @@ export default function HomePage() {
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
         
+<<<<<<< HEAD
         {/* Revolutionary AI Content Banner */}
         <RevolutionaryAIContentBanner />
+=======
+        {/* Ultimate Promotion Banner */}
+        <UltimatePromotionBanner2026 />
+>>>>>>> cursor/create-and-deploy-new-content-a121
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -219,6 +228,11 @@ export default function HomePage() {
         <NewServicesShowcase2025 />
         <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
+        
+        {/* New 2025 Content Showcase */}
+        <NewContent2025UltimateBanner />
+        <RevolutionaryContent2025Banner />
+        <AI2025BreakthroughBanner />
 
         {/* Advanced AI Components */}
         <AdvancedContentRecommendationEngine />
