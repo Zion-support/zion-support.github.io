@@ -4,7 +4,6 @@ import './globals.css';
 import '../styles/optimizations.css';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import ErrorBoundary from '../components/ErrorBoundary';
 import NewContentBanner from '../components/NewContentBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -1329,7 +1328,7 @@ export default function RootLayout({
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className="antialiased bg-white text-gray-900">
-        <ErrorBoundary>
+        <div>
           <PerformanceMonitor>
             <AccessibilityEnhancer>
               <AdvancedPerformanceMonitor2026 />
@@ -1398,7 +1397,7 @@ export default function RootLayout({
               </footer>
             </AccessibilityEnhancer>
           </PerformanceMonitor>
-        </ErrorBoundary>
+        </div>
       </body>
     </html>
   );
