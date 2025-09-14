@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function Fortune500AIAutomationRevolutionaryBreakthroughPage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="Fortune 500 AI Automation Revolutionary Breakthrough: $8.5B Annual Savings - 2,500% ROI Success Story"
         description="How a Fortune 500 manufacturing company achieved unprecedented 2,500% ROI through revolutionary AI automation implementation, saving $8.5B annually."
@@ -309,6 +309,6 @@ export default function Fortune500AIAutomationRevolutionaryBreakthroughPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }
