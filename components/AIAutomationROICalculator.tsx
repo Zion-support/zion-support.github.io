@@ -120,10 +120,10 @@ const AIAutomationROICalculator: React.FC = () => {
       });
 
       setIsCalculating(false);
-    }800);
+    }, 800);
   };
 
-  const handleInputChange = (field: keyof CalculationInputsvalue: number) => {
+  const handleInputChange = (field: keyof CalculationInputs, value: number) => {
     setInputs(prev => ({
       ...prev,
       [field]: value
@@ -131,7 +131,7 @@ const AIAutomationROICalculator: React.FC = () => {
   };
 
   const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US'{
+    return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0,
@@ -180,7 +180,7 @@ const AIAutomationROICalculator: React.FC = () => {
                 <input
                   type="number"
                   value={inputs.currentEmployees}
-                  onChange={(e) => handleInputChange('currentEmployees'parseInt(e.target.value) || 0)}
+                  onChange={(e) => handleInputChange('currentEmployees', parseInt(e.target.value) || 0)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   min="1"
                 />
@@ -194,7 +194,7 @@ const AIAutomationROICalculator: React.FC = () => {
                 <input
                   type="number"
                   value={inputs.averageSalary}
-                  onChange={(e) => handleInputChange('averageSalary'parseInt(e.target.value) || 0)}
+                  onChange={(e) => handleInputChange('averageSalary', parseInt(e.target.value) || 0)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   min="0"
                   step="1000"
@@ -209,7 +209,7 @@ const AIAutomationROICalculator: React.FC = () => {
                 <input
                   type="number"
                   value={inputs.processHours}
-                  onChange={(e) => handleInputChange('processHours'parseInt(e.target.value) || 0)}
+                  onChange={(e) => handleInputChange('processHours', parseInt(e.target.value) || 0)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   min="0"
                 />

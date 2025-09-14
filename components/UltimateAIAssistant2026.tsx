@@ -1,7 +1,6 @@
 "use client";
-'use client';
 
-import React{ useStateuseEffectuseRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface Message {
   id: string;
@@ -75,11 +74,11 @@ const UltimateAIAssistant2026: React.FC = () => {
       };
       setMessages([welcomeMessage]);
     }
-  }[isOpenmessages.length]);
+  }, [isOpen, messages.length]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }[messages]);
+  }, [messages]);
 
   const handleSendMessage = async (content: string) => {
     if (!content.trim()) return;
@@ -104,9 +103,9 @@ const UltimateAIAssistant2026: React.FC = () => {
         content: response,
         timestamp: new Date()
       };
-      setMessages(prev => [...prevassistantMessage]);
+      setMessages(prev => [...prev, assistantMessage]);
       setIsTyping(false);
-    }1500);
+    }, 1500);
   };
 
   const handleQuickAction = (action: string) => {

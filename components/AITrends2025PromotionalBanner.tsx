@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  ArrowRightIcon
-  SparklesIcon
-  TrendingUpIcon
+  ArrowRightIcon,
+  SparklesIcon,
+  TrendingUpIcon,
   LightBulbIcon,
   RocketLaunchIcon,
   ChartBarIcon
@@ -127,7 +127,7 @@ const AITrends2025PromotionalBanner: React.FC = () => {
                 </p>
                 
                 <Link
-                  href={`/ai-trends/${trend.title.toLowerCase().replace(/\s+/g'-')}`}
+                  href={`/ai-trends/${trend.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className="inline-flex items-center text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
                 >
                   Learn More
