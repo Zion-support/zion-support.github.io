@@ -35,15 +35,10 @@ import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPro
 import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
-// Import new 2026 promotional components
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-
-// Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
@@ -55,6 +50,9 @@ import AIImplementationGuideBanner from '../components/AIImplementationGuideBann
 import AITrends2025_2030FuturePredictionsBanner from '../components/AITrends2025_2030FuturePredictionsBanner';
 import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer';
 import InteractiveAIAssistant from '../components/InteractiveAIAssistant';
+
+// Import new ultimate content components
+import UltimateContent2025RevolutionBanner from '../components/UltimateContent2025RevolutionBanner';
 
 // Import new AI 2026 promotional components
 import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
@@ -81,7 +79,10 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* New Content 2025 Ultimate Showcase Banner - LATEST */}
+        {/* Ultimate Content 2025 Revolution Banner - LATEST */}
+        <UltimateContent2025RevolutionBanner />
+        
+        {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         
         {/* Fortune 500 Success Banner - FEATURED */}
@@ -218,9 +219,12 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Ultimate Content Showcase 2025 - NEW */}
+        <UltimateContentShowcase2025 />
+        
         {/* Content Promotion Banners */}
         <RevolutionaryContent2026Banner />
-        <UltimateContentShowcase2026 />
+        {/* <UltimateContentShowcase2026 /> */}
         <QuantumAIContentShowcase2026 />
         <UltimateContentShowcase2025 />
         <NewContent2025PromotionBanner />
