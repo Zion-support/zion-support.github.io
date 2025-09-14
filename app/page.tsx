@@ -353,6 +353,11 @@ import InteractiveROICalculator from '../components/InteractiveROICalculator';
 import TestimonialShowcase from '../components/TestimonialShowcase';
 import NewsletterSignup2025 from '../components/NewsletterSignup2025';
 
+// Import new 2025 ultimate content showcase components - NEWEST FEATURED
+import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
+import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
+import UltimateContentDiscoveryWidget2025 from '../components/UltimateContentDiscoveryWidget2025';
+
 // Import new Advanced Neural Architectures 2026 components
 import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
 import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
@@ -389,6 +394,15 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 ULTIMATE SHOWCASE BANNER - NEWEST FEATURED */}
+        <NewContent2025UltimateShowcaseBanner />
+        
+        {/* REVOLUTIONARY CONTENT 2025 SHOWCASE - NEWEST FEATURED */}
+        <RevolutionaryContent2025Showcase />
+        
+        {/* ULTIMATE CONTENT DISCOVERY WIDGET 2025 - NEWEST FEATURED */}
+        <UltimateContentDiscoveryWidget2025 />
+        
         {/* NEW CONTENT 2026 PROMOTION BANNER - LATEST BREAKTHROUGH */}
         <NewContent2026PromotionBanner />
         
