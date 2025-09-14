@@ -60,53 +60,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // New blog posts
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
-=======
-      url: `${baseUrl}/blog/ai-2025-enterprise-integration-revolution`,
->>>>>>> origin/main
+      url: `${baseUrl}/blog/ai-2026-enterprise-automation-mastery-ultimate-guide`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/blog/quantum-ai-2026-business-revolution`,
-=======
-      url: `${baseUrl}/blog/ai-2025-smart-automation-breakthrough`,
->>>>>>> origin/main
+      url: `${baseUrl}/blog/quantum-ai-2026-business-revolution-complete-guide`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog/ai-2026-autonomous-systems-enterprise-breakthrough`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     // New resources
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
-=======
-      url: `${baseUrl}/blog/ai-2025-data-intelligence-revolution`,
->>>>>>> origin/main
+      url: `${baseUrl}/resources/ai-2026-implementation-master-guide`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/case-studies/global-manufacturing-ai-transformation`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/case-studies/financial-services-ai-revolution`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/resources/ai-implementation-guide-2025`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
     }
   ]
 }
