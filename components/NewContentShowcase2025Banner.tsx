@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Users, Zap } from 'lucide-react';
+ArrowRightStarTrendingUpUsersZap
 
 export default function NewContentShowcase2025Banner() {
   return (
@@ -31,7 +31,7 @@ export default function NewContentShowcase2025Banner() {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Explore groundbreaking AI technologies, real-world case studies, and proven strategies that are transforming businesses worldwide.
+            Explore groundbreaking AI technologiesreal-world case studiesand proven strategies that are transforming businesses worldwide.
           </p>
 
           {/* Stats */}
@@ -77,7 +77,7 @@ export default function NewContentShowcase2025Banner() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <h3 className="text-xl font-bold text-white mb-3">Latest AI Innovations</h3>
               <p className="text-white/80 mb-4">
-                Neural interfaces, quantum AI fusion, and autonomous business systems revolutionizing industries.
+                Neural interfacesquantum AI fusionand autonomous business systems revolutionizing industries.
               </p>
               <div className="flex items-center text-yellow-300 text-sm font-medium">
                 <Star className="w-4 h-4 mr-1" />

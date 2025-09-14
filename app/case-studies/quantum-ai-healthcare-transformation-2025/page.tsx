@@ -3,7 +3,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, TrendingUp, DollarSign, Users, Zap, Brain } from 'lucide-react';
 import SEO from '../../../components/SEO';
-// import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'Quantum AI Healthcare Transformation: A $2.3B Success Story',

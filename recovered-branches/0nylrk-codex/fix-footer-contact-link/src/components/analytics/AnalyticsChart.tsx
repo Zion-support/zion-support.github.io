@@ -1,7 +1,7 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+import { LineChartLineXAxisYAxisCartesianGridTooltipResponsiveContainerBarChartBarLegend } from 'recharts';
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
 import { useState } from "react";
 
 interface AnalyticsChartProps {
@@ -15,19 +15,19 @@ interface AnalyticsChartProps {
 }
 
 export function AnalyticsChart({ 
-  title, 
-  description, 
-  data, 
+  title
+  description
+  data
   type = 'line',
-  dataKeys, 
+  dataKeys
   timeRange = '7d',
   onTimeRangeChange
 }: AnalyticsChartProps) {
-  const [chartType, setChartType] = useState<'line' | 'bar'>(type);
+  const [chartTypesetChartType] = useState<'line' | 'bar'>(type);
   
   const colors = [
-    '#8884d8', '#82ca9d', '#ffc658', '#ff8042', '#0088fe', 
-    '#00C49F', '#FFBB28', '#FF8042', '#a4de6c', '#d0ed57'
+    '#8884d8'#82ca9d'#ffc658'#ff8042'#0088fe'
+    '#00C49F'#FFBB28'#FF8042'#a4de6c'#d0ed57'
   ];
   
   return (
@@ -69,25 +69,25 @@ export function AnalyticsChart({
         <div className="h-72 w-full p-4">
           <ResponsiveContainer width="100%" height="100%">
             {chartType === 'line' ? (
-              <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
+              <LineChart data={data} margin={{ top: 5right: 30left: 20bottom: 25 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
                 <XAxis 
                   dataKey="date" 
-                  tick={{ fill: '#b1b9c6', fontSize: 12 }}
+                  tick={{ fill: '#b1b9c6'fontSize: 12 }}
                   angle={-30}
                   textAnchor="end"
                   height={50}
                 />
-                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
+                <YAxis tick={{ fill: '#b1b9c6'fontSize: 12 }} />
                 <Tooltip 
                   contentStyle={{ 
-                    backgroundColor: '#1a2332', 
+                    backgroundColor: '#1a2332'
                     borderColor: '#293445',
                     color: '#fff'
                   }} 
                 />
                 <Legend />
-                {dataKeys.map((key, index) => (
+                {dataKeys.map((keyindex) => (
                   <Line
                     key={key}
                     type="monotone"
@@ -99,30 +99,30 @@ export function AnalyticsChart({
                 ))}
               </LineChart>
             ) : (
-              <BarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
+              <BarChart data={data} margin={{ top: 5right: 30left: 20bottom: 25 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
                 <XAxis 
                   dataKey="date" 
-                  tick={{ fill: '#b1b9c6', fontSize: 12 }} 
+                  tick={{ fill: '#b1b9c6'fontSize: 12 }} 
                   angle={-30}
                   textAnchor="end"
                   height={50}
                 />
-                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
+                <YAxis tick={{ fill: '#b1b9c6'fontSize: 12 }} />
                 <Tooltip 
                   contentStyle={{ 
-                    backgroundColor: '#1a2332', 
+                    backgroundColor: '#1a2332'
                     borderColor: '#293445',
                     color: '#fff'
                   }} 
                 />
                 <Legend />
-                {dataKeys.map((key, index) => (
+                {dataKeys.map((keyindex) => (
                   <Bar 
                     key={key}
                     dataKey={key} 
                     fill={colors[index % colors.length]} 
-                    radius={[4, 4, 0, 0]}
+                    radius={[40]}
                   />
                 ))}
               </BarChart>

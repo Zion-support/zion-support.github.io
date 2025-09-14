@@ -11,7 +11,7 @@ export function ContactSection() {
           <div>
             <GradientHeading>Get In Touch</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl mb-8">
-              We have the equipment, the parts, and the maintenance services ready for you — right now. Contact us today.
+              We have the equipmenthe partsand the maintenance services ready for you — right now. Contact us today.
             </p>
             <div className="flex items-center mb-6">
               <div className="mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan">

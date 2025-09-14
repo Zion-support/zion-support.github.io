@@ -1,6 +1,6 @@
 
-import React, { useState, useEffect, useRef } from "react";
-import { Search, X } from "lucide-react";
+import React{ useStateuseEffectuseRef } from "react";
+import { SearchX } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions"; 
 import { SearchSuggestion } from "@/types/search";
@@ -13,13 +13,13 @@ interface EnhancedSearchInputProps {
 }
 
 export function EnhancedSearchInput({ 
-  value, 
-  onChange, 
-  placeholder = "Search...", 
+  value
+  onChange
+  placeholder = "Search..."
   searchSuggestions 
 }: EnhancedSearchInputProps) {
-  const [isFocused, setIsFocused] = useState(false);
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
+  const [isFocusedsetIsFocused] = useState(false);
+  const [filteredSuggestionsetFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -36,14 +36,14 @@ export function EnhancedSearchInput({
     );
     
     // Sort suggestions to prioritize those that start with the search term
-    filtered.sort((a, b) => {
+    filtered.sort((ab) => {
       const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
       const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
       return aStartsWith - bStartsWith;
     });
     
-    setFilteredSuggestions(filtered.slice(0, 8)); // Limit to 8 suggestions
-  }, [value, searchSuggestions]);
+    setFilteredSuggestions(filtered.slice(08)); // Limit to 8 suggestions
+  }[valuesearchSuggestions]);
 
   // Handle clicks outside the component to close suggestions
   useEffect(() => {
@@ -53,9 +53,9 @@ export function EnhancedSearchInput({
       }
     }
     
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+    document.addEventListener("mousedown"handleClickOutside);
+    return () => document.removeEventListener("mousedown"handleClickOutside);
+  }[]);
 
   const handleSelectSuggestion = (suggestion: string) => {
     onChange(suggestion);

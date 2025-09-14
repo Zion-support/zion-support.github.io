@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 
 interface DataSource {
   id: string;
@@ -37,11 +37,11 @@ interface DataQualityMetric {
 }
 
 const EnterpriseDataManagement: React.FC = () => {
-  const [dataSources, setDataSources] = useState<DataSource[]>([]);
-  const [pipelines, setPipelines] = useState<DataPipeline[]>([]);
-  const [qualityMetrics, setQualityMetrics] = useState<DataQualityMetric[]>([]);
-  const [selectedView, setSelectedView] = useState<'overview' | 'sources' | 'pipelines' | 'quality'>('overview');
-  const [isLoading, setIsLoading] = useState(true);
+  const [dataSourcesetDataSources] = useState<DataSource[]>([]);
+  const [pipelinesetPipelines] = useState<DataPipeline[]>([]);
+  const [qualityMetricsetQualityMetrics] = useState<DataQualityMetric[]>([]);
+  const [selectedViewsetSelectedView] = useState<'overview' | 'sources' | 'pipelines' | 'quality'>('overview');
+  const [isLoadingsetIsLoading] = useState(true);
 
   useEffect(() => {
     generateMockData();
@@ -49,15 +49,15 @@ const EnterpriseDataManagement: React.FC = () => {
     // Simulate real-time updates
     const interval = setInterval(() => {
       updateRealTimeData();
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const generateMockData = async () => {
     setIsLoading(true);
     
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve1000));
 
     const mockDataSources: DataSource[] = [
       {
@@ -219,7 +219,7 @@ const EnterpriseDataManagement: React.FC = () => {
     // Update pipeline progress
     setPipelines(prev => prev.map(pipeline => {
       if (pipeline.status === 'running') {
-        const newProgress = Math.min(100, pipeline.progress + Math.random() * 5);
+        const newProgress = Math.min(100pipeline.progress + Math.random() * 5);
         return {
           ...pipeline,
           progress: newProgress,
@@ -290,7 +290,7 @@ const EnterpriseDataManagement: React.FC = () => {
     return `${Math.floor(diffInMinutes / 1440)}d ago`;
   };
 
-  const formatDuration = (startTime: Date, endTime?: Date) => {
+  const formatDuration = (startTime: DatendTime?: Date) => {
     const end = endTime || new Date();
     const diffInMinutes = Math.floor((end.getTime() - startTime.getTime()) / (1000 * 60));
     
@@ -305,7 +305,7 @@ const EnterpriseDataManagement: React.FC = () => {
         <div className="animate-pulse">
           <div className="h-8 bg-gray-200 rounded w-1/3 mb-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5].map(i => (
+            {[12345].map(i => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
                 <div className="h-8 bg-gray-200 rounded w-1/3 mb-2"></div>
@@ -326,7 +326,7 @@ const EnterpriseDataManagement: React.FC = () => {
             🗄️ Enterprise Data Management
           </h2>
           <p className="text-xl text-gray-600">
-            Comprehensive data governance, quality monitoring, and pipeline management
+            Comprehensive data governancequality monitoringand pipeline management
           </p>
         </div>
         <div className="flex items-center space-x-4">
@@ -343,10 +343,10 @@ const EnterpriseDataManagement: React.FC = () => {
       {/* Navigation Tabs */}
       <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg mb-8">
         {[
-          { id: 'overview', label: 'Overview', icon: '📊' },
-          { id: 'sources', label: 'Data Sources', icon: '🗄️' },
-          { id: 'pipelines', label: 'Pipelines', icon: '🔄' },
-          { id: 'quality', label: 'Data Quality', icon: '✅' }
+          { id: 'overview'label: 'Overview'icon: '📊' },
+          { id: 'sources'label: 'Data Sources'icon: '🗄️' },
+          { id: 'pipelines'label: 'Pipelines'icon: '🔄' },
+          { id: 'quality'label: 'Data Quality'icon: '✅' }
         ].map((tab) => (
           <button
             key={tab.id}
@@ -378,7 +378,7 @@ const EnterpriseDataManagement: React.FC = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Data Sources</h3>
               <div className="text-3xl font-bold text-gray-900">{dataSources.length}</div>
               <div className="text-sm text-gray-600 mt-2">
-                {dataSources.reduce((sum, s) => sum + s.recordCount, 0).toLocaleString()} total records
+                {dataSources.reduce((sums) => sum + s.recordCount0).toLocaleString()} total records
               </div>
             </div>
 
@@ -392,7 +392,7 @@ const EnterpriseDataManagement: React.FC = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Data Pipelines</h3>
               <div className="text-3xl font-bold text-gray-900">{pipelines.length}</div>
               <div className="text-sm text-gray-600 mt-2">
-                {pipelines.reduce((sum, p) => sum + p.recordsProcessed, 0).toLocaleString()} records processed
+                {pipelines.reduce((sump) => sum + p.recordsProcessed0).toLocaleString()} records processed
               </div>
             </div>
 
@@ -406,7 +406,7 @@ const EnterpriseDataManagement: React.FC = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Quality Metrics</h3>
               <div className="text-3xl font-bold text-gray-900">{qualityMetrics.length}</div>
               <div className="text-sm text-gray-600 mt-2">
-                {(qualityMetrics.reduce((sum, m) => sum + m.value, 0) / qualityMetrics.length).toFixed(1)}% avg score
+                {(qualityMetrics.reduce((sum) => sum + m.value0) / qualityMetrics.length).toFixed(1)}% avg score
               </div>
             </div>
 
@@ -427,7 +427,7 @@ const EnterpriseDataManagement: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-xl p-6">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">📈 Recent Activity</h3>
             <div className="space-y-4">
-              {pipelines.slice(0, 3).map((pipeline) => (
+              {pipelines.slice(03).map((pipeline) => (
                 <div key={pipeline.id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                   <div className="flex items-center space-x-3">
                     <span className={`w-3 h-3 rounded-full ${
@@ -447,7 +447,7 @@ const EnterpriseDataManagement: React.FC = () => {
                       {pipeline.recordsProcessed.toLocaleString()} records
                     </div>
                     <div className="text-xs text-gray-500">
-                      {pipeline.status === 'running' ? 'In progress' : formatDuration(pipeline.startTime, pipeline.endTime)}
+                      {pipeline.status === 'running' ? 'In progress' : formatDuration(pipeline.startTimepipeline.endTime)}
                     </div>
                   </div>
                 </div>
@@ -587,7 +587,7 @@ const EnterpriseDataManagement: React.FC = () => {
                       metric.status === 'pass' ? 'bg-green-500' :
                       metric.status === 'warning' ? 'bg-yellow-500' : 'bg-red-500'
                     }`}
-                    style={{ width: `${Math.min(100, (metric.value / metric.threshold) * 100)}%` }}
+                    style={{ width: `${Math.min(100(metric.value / metric.threshold) * 100)}%` }}
                   ></div>
                 </div>
               </div>

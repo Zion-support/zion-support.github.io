@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const UltimateEnterpriseTransformationShowcase = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategorysetActiveCategory] = useState('all');
 
   const content = [
     {
@@ -61,10 +61,10 @@ const UltimateEnterpriseTransformationShowcase = () => {
   ];
 
   const categories = [
-    { id: 'all', label: 'All Content', count: content.length },
-    { id: 'transformation', label: 'Transformation', count: content.filter(c => c.category === 'transformation').length },
-    { id: 'success-stories', label: 'Success Stories', count: content.filter(c => c.category === 'success-stories').length },
-    { id: 'implementation', label: 'Implementation', count: content.filter(c => c.category === 'implementation').length }
+    { id: 'all'label: 'All Content'count: content.length },
+    { id: 'transformation'label: 'Transformation'count: content.filter(c => c.category === 'transformation').length },
+    { id: 'success-stories'label: 'Success Stories'count: content.filter(c => c.category === 'success-stories').length },
+    { id: 'implementation'label: 'Implementation'count: content.filter(c => c.category === 'implementation').length }
   ];
 
   const filteredContent = activeCategory === 'all' 

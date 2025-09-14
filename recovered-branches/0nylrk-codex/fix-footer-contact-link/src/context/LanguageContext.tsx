@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
+import React{ createContextuseStateuseContextuseEffectReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { supabase } from '../integrations/supabase/client';
 import { toast } from '../components/ui/use-toast';
@@ -13,10 +13,10 @@ export type LanguageContextType = {
 };
 
 const supportedLanguages = [
-  { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' },
-  { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' },
-  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },
-  { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
+  { code: 'en' as SupportedLanguagename: 'English'flag: '🇺🇸' },
+  { code: 'es' as SupportedLanguagename: 'Español'flag: '🇪🇸' },
+  { code: 'pt' as SupportedLanguagename: 'Português'flag: '🇧🇷' },
+  { code: 'ar' as SupportedLanguagename: 'العربية'flag: '🇸🇦' }
 ];
 
 const defaultLanguageContext: LanguageContextType = {
@@ -39,15 +39,15 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
-  children, 
-  authState = { isAuthenticated: false, user: null } 
+  children
+  authState = { isAuthenticated: falseuser: null } 
 }) => {
-  const { i18n, t } = useTranslation();
-  const { isAuthenticated, user } = authState;
-  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
-    (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en'
+  const { i18nt } = useTranslation();
+  const { isAuthenticateduser } = authState;
+  const [currentLanguagesetCurrentLanguage] = useState<SupportedLanguage>(
+    (i18n.language?.substring(02) as SupportedLanguage) || 'en'
   );
-  const [isRTL, setIsRTL] = useState(i18n.dir() === 'rtl');
+  const [isRTLsetIsRTL] = useState(i18n.dir() === 'rtl');
   
   useEffect(() => {
     // Set initial language from localStorage or browser
@@ -56,7 +56,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       i18n.changeLanguage(savedLang);
       setCurrentLanguage(savedLang);
     }
-  }, []);
+  }[]);
   
   // Update RTL status when language changes
   useEffect(() => {
@@ -70,7 +70,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     } else {
       document.documentElement.classList.remove('rtl');
     }
-  }, [currentLanguage, i18n]);
+  }[currentLanguagei18n]);
   
   // Sync language preference with user profile when authenticated
   useEffect(() => {
@@ -80,19 +80,19 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
           const { error } = await supabase
             .from('profiles')
             .update({ preferred_language: currentLanguage })
-            .eq('id', user.id);
+            .eq('id'user.id);
             
           if (error) {
-            console.error('Error updating language preference:', error);
+            console.error('Error updating language preference:'error);
           }
         } catch (err) {
-          console.error('Error syncing language with profile:', err);
+          console.error('Error syncing language with profile:'err);
         }
       }
     };
     
     syncLanguageWithProfile();
-  }, [currentLanguage, isAuthenticated, user]);
+  }[currentLanguageisAuthenticateduser]);
   
   const changeLanguage = async (lang: SupportedLanguage) => {
     if (lang === currentLanguage) return;
@@ -100,35 +100,35 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     try {
       await i18n.changeLanguage(lang);
       setCurrentLanguage(lang);
-      localStorage.setItem('zion_language', lang);
+      localStorage.setItem('zion_language'lang);
       
       // Get language name for toast
       const langName = supportedLanguages.find(l => l.code === lang)?.name || lang;
       toast({
-        description: t('language.language_changed', { language: langName })
+        description: t('language.language_changed'{ language: langName })
       });
       
-      // If user is authenticated, update their profile
+      // If user is authenticatedupdate their profile
       if (isAuthenticated && user?.id) {
         const { error } = await supabase
           .from('profiles')
           .update({ preferred_language: lang })
-          .eq('id', user.id);
+          .eq('id'user.id);
           
         if (error) {
-          console.error('Error updating language preference:', error);
+          console.error('Error updating language preference:'error);
         }
       }
     } catch (err) {
-      console.error('Error changing language:', err);
+      console.error('Error changing language:'err);
     }
   };
   
   return (
     <LanguageContext.Provider 
       value={{ 
-        currentLanguage, 
-        changeLanguage, 
+        currentLanguage
+        changeLanguage
         isRTL,
         supportedLanguages
       }}

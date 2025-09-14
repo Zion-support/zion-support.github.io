@@ -1,25 +1,25 @@
 
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { Globe } from "lucide-react";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
+import { CountryPricingonsiteServicePricing } from "@/data/onsiteServicePricing";
 
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void;
   selectedCountry: CountryPricing | null;
 }
 
-export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {
-  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
+export function CountrySelector({ onCountryChangeselectedCountry }: CountrySelectorProps) {
+  const [topCountriesetTopCountries] = useState<CountryPricing[]>([]);
   
   // Set top/popular countries
   useEffect(() => {
-    const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"];
+    const popular = ["United States"United Kingdom"Canada"Germany"Australia"Japan"Singapore"];
     const top = onsiteServicePricing.filter(item => 
       popular.includes(item.country)
-    ).sort((a, b) => a.country.localeCompare(b.country));
+    ).sort((ab) => a.country.localeCompare(b.country));
     setTopCountries(top);
-  }, []);
+  }[]);
   
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
@@ -53,7 +53,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
           <div className="p-2">
             <p className="text-sm text-zion-slate-light pb-1">All Countries</p>
             {onsiteServicePricing
-              .sort((a, b) => a.country.localeCompare(b.country))
+              .sort((ab) => a.country.localeCompare(b.country))
               .map((item) => (
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}

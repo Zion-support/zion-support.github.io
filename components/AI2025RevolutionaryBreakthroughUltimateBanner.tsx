@@ -25,8 +25,8 @@ export default function AI2025RevolutionaryBreakthroughUltimateBanner() {
           
           <p className="text-lg md:text-xl mb-8 text-gray-300 max-w-4xl mx-auto">
             The most revolutionary AI breakthrough in human history. Quantum-neural fusion technology delivering 
-            <span className="text-yellow-400 font-bold"> 99.9% accuracy</span>, 
-            <span className="text-green-400 font-bold"> 10,000x faster processing</span>, and 
+            <span className="text-yellow-400 font-bold"> 99.9% accuracy</span>
+            <span className="text-green-400 font-bold"> 10,000x faster processing</span>and 
             <span className="text-red-400 font-bold"> infinite ROI potential</span>.
           </p>
 

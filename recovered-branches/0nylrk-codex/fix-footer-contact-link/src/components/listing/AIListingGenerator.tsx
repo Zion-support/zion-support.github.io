@@ -1,7 +1,7 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { AIListingForm } from "./AIListingForm";
@@ -28,10 +28,10 @@ interface AIListingGeneratorProps {
   };
 }
 
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AIListingGeneratorProps) {
   const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
+  const [isLoadingsetIsLoading] = useState(false);
+  const [generatedContentsetGeneratedContent] = useState<GeneratedContent | null>(null);
 
   const handleGenerate = async ({
     title,
@@ -47,8 +47,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     setIsLoading(true);
     
     try {
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
-        body: { title, category, keyFeatures, targetAudience }
+      const { dataerror } = await supabase.functions.invoke('ai-listing-generator'{
+        body: { titlecategorykeyFeaturestargetAudience }
       });
 
       if (error) {
@@ -65,7 +65,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "AI has created optimized listing content for you."
       });
     } catch (error) {
-      console.error("Error generating content:", error);
+      console.error("Error generating content:"error);
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
@@ -95,7 +95,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             AI Listing Optimizer
           </CardTitle>
           <p className="text-sm text-zion-slate-light">
-            Provide basic information and let AI generate optimized, SEO-friendly content for your listing
+            Provide basic information and let AI generate optimizedSEO-friendly content for your listing
           </p>
         </CardHeader>
         <CardContent>

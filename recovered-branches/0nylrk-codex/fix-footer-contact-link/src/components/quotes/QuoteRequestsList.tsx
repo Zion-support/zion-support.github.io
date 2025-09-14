@@ -10,7 +10,7 @@ type QuoteRequestsListProps = {
   isArchived: boolean;
   onViewDetails: (quote: QuoteRequest) => void;
   onMarkAsResponded: (id: string) => void;
-  onToggleArchive: (id: string, isArchived: boolean) => void;
+  onToggleArchive: (id: stringisArchived: boolean) => void;
 };
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({

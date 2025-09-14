@@ -1,21 +1,21 @@
 
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { format } from "date-fns";
-import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react";
-import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks";
+import { GlobeMoreVerticalPlayCirclePlusRefreshCwWebhookX } from "lucide-react";
+import { useWebhookstype WebhookEventType } from "@/hooks/useWebhooks";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { DialogContentDialogDescriptionDialogFooterDialogHeaderDialogTitleDialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import { DropdownMenuContentDropdownMenuItemDropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { AlertDialogActionAlertDialogCancelAlertDialogContentAlertDialogDescriptionAlertDialogFooterAlertDialogHeaderAlertDialogTitle } from "@/components/ui/alert-dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
 
 export function WebhooksManager() {
   const {
@@ -30,30 +30,30 @@ export function WebhooksManager() {
     clearTestResult
   } = useWebhooks();
   
-  const [showCreateDialog, setShowCreateDialog] = useState(false);
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
-  const [showTestDialog, setShowTestDialog] = useState<string | null>(null);
-  const [showTestResult, setShowTestResult] = useState(false);
+  const [showCreateDialogsetShowCreateDialog] = useState(false);
+  const [showDeleteConfirmsetShowDeleteConfirm] = useState<string | null>(null);
+  const [showTestDialogsetShowTestDialog] = useState<string | null>(null);
+  const [showTestResultsetShowTestResult] = useState(false);
 
   // Create webhook form state
-  const [webhookName, setWebhookName] = useState("");
-  const [webhookUrl, setWebhookUrl] = useState("");
-  const [webhookSecret, setWebhookSecret] = useState("");
-  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]);
-  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application');
+  const [webhookNamesetWebhookName] = useState("");
+  const [webhookUrlsetWebhookUrl] = useState("");
+  const [webhookSecretsetWebhookSecret] = useState("");
+  const [selectedEventsetSelectedEvents] = useState<WebhookEventType[]>([]);
+  const [testEventTypesetTestEventType] = useState<WebhookEventType>('new_application');
 
   // Load webhooks on mount
   useEffect(() => {
     fetchWebhooks();
-  }, []);
+  }[]);
 
   const handleCreateWebhook = async () => {
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return;
     
     await createWebhook(
-      webhookName, 
-      webhookUrl, 
-      selectedEvents, 
+      webhookName
+      webhookUrl
+      selectedEvents
       webhookSecret.trim() === "" ? undefined : webhookSecret
     );
     
@@ -61,8 +61,8 @@ export function WebhooksManager() {
     resetWebhookForm();
   };
 
-  const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
-    await toggleWebhook(webhookId, !currentStatus);
+  const handleToggleStatus = async (webhookId: stringcurrentStatus: boolean) => {
+    await toggleWebhook(webhookId!currentStatus);
   };
 
   const handleDeleteWebhook = async (webhookId: string) => {
@@ -71,7 +71,7 @@ export function WebhooksManager() {
   };
 
   const handleTestWebhook = async (webhookId: string) => {
-    await testWebhook(webhookId, testEventType);
+    await testWebhook(webhookIdtestEventType);
     setShowTestResult(true);
   };
 
@@ -84,17 +84,17 @@ export function WebhooksManager() {
 
   // Event type options
   const eventOptions: { value: WebhookEventType; label: string; description: string }[] = [
-    { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },
-    { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },
-    { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },
-    { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }];
+    { value: 'new_application'label: 'New Application'description: 'When a talent applies to a job' },
+    { value: 'quote_received'label: 'Quote Received'description: 'When a quote is received from talent' },
+    { value: 'milestone_approved'label: 'Milestone Approved'description: 'When a project milestone is approved' },
+    { value: 'talent_hired'label: 'Talent Hired'description: 'When talent is hired for a project' }];
 
   // Toggle an event selection
   const toggleEvent = (event: WebhookEventType) => {
     setSelectedEvents(prev => 
       prev.includes(event) 
         ? prev.filter(e => e !== event) 
-        : [...prev, event]
+        : [...prevent]
     );
   };
 
@@ -238,7 +238,7 @@ export function WebhooksManager() {
                     <div className="flex items-center mr-2">
                       <Switch
                         checked={webhook.is_active}
-                        onCheckedChange={() => handleToggleStatus(webhook.id, webhook.is_active)}
+                        onCheckedChange={() => handleToggleStatus(webhook.idwebhook.is_active)}
                       />
                       <span className="ml-2 text-sm">
                         {webhook.is_active ? "Active" : "Inactive"}
@@ -282,9 +282,9 @@ export function WebhooksManager() {
                 </div>
                 
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
-                  <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
+                  <span>Created: {format(new Date(webhook.created_at)'MMM dyyyy')}</span>
                   {webhook.last_triggered_at && (
-                    <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>
+                    <span>Last triggered: {format(new Date(webhook.last_triggered_at)'MMM dyyyy HH:mm')}</span>
                   )}
                 </div>
               </div>

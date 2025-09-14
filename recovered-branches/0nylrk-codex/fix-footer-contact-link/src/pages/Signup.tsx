@@ -1,10 +1,10 @@
 
 import { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
+import { LinkNavigate } from "react-router-dom";
+import { useFormtype UseFormReturn } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react";
+import { UserMailLockEyeOffFacebookTwitter } from "lucide-react";
 
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -23,27 +23,27 @@ import { Footer } from "@/components/Footer";
 // Form validation schema
 const signupSchema = z
   .object({
-    displayName: z.string().min(2, "Name must be at least 2 characters"),
+    displayName: z.string().min(2"Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email"),
     password: z.string()
-      .min(8, "Password must be at least 8 characters")
-      .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
-      .regex(/[a-z]/, "Password must contain at least one lowercase letter")
-      .regex(/[0-9]/, "Password must contain at least one number"),
+      .min(8"Password must be at least 8 characters")
+      .regex(/[A-Z]/"Password must contain at least one uppercase letter")
+      .regex(/[a-z]/"Password must contain at least one lowercase letter")
+      .regex(/[0-9]/"Password must contain at least one number"),
     confirmPassword: z.string(),
-    termsAccepted: z.boolean().refine(val => val === true, {
+    termsAccepted: z.boolean().refine(val => val === true{
       message: "You must accept the terms and conditions"})})
-  .refine(data => data.password === data.confirmPassword, {
+  .refine(data => data.password === data.confirmPassword{
     message: "Passwords do not match",
     path: ["confirmPassword"]});
 
 type SignupFormValues = z.infer<typeof signupSchema>;
 
 export default function Signup() {
-  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { signuploginWithGoogleloginWithFacebookloginWithTwitterisLoadingisAuthenticateduser } = useAuth();
+  const [showPasswordsetShowPassword] = useState(false);
+  const [showConfirmPasswordsetShowConfirmPassword] = useState(false);
+  const [isSubmittingsetIsSubmitting] = useState(false);
   
   // Initialize react-hook-form
   const form = useForm({
@@ -61,7 +61,7 @@ export default function Signup() {
     
     setIsSubmitting(true);
     try {
-      await signup(data.email, data.password, data.displayName);
+      await signup(data.emaildata.passwordata.displayName);
     } finally {
       setIsSubmitting(false);
     }
@@ -319,7 +319,7 @@ export default function Signup() {
               <div className="max-w-md text-center">
                 <h3 className="text-3xl font-bold text-white mb-4">Join the Future of AI Marketplace</h3>
                 <p className="text-lg text-white/80">
-                  Create your profile, showcase your AI services, find jobs, and connect with professionals worldwide.
+                  Create your profileshowcase your AI servicesfind jobsand connect with professionals worldwide.
                 </p>
               </div>
             </div>

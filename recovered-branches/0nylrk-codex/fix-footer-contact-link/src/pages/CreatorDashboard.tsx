@@ -1,5 +1,5 @@
 
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProviderSidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/creator/CreatorSidebar";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -40,9 +40,9 @@ export default function CreatorDashboard() {
               </div>
             </div>
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
-              <h2 className="text-xl font-bold text-white mb-4">Welcome back, Creator!</h2>
+              <h2 className="text-xl font-bold text-white mb-4">Welcome backCreator!</h2>
               <p className="text-zion-slate text-lg mb-2 max-w-prose">
-                Create new content, monitor your analytics, or manage your account using the sidebar menu.
+                Create new contentmonitor your analyticsor manage your account using the sidebar menu.
               </p>
               {/* Placeholder for more creator-specific content */}
             </div>

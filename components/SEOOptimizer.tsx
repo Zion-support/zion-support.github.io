@@ -29,7 +29,7 @@ interface SEOOptimizerProps {
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
   description,
-  keywords = "AI, automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation",
+  keywords = "AIautomationcloud computingmicro SaaStechnology consultingenterprise solutionsdigital transformation",
   canonical,
   ogImage = "/og-image.jpg",
   ogType = "website",
@@ -43,7 +43,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "description": "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
+    "description": "Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions. Expert consulting and implementation services.",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
@@ -63,8 +63,8 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
 export default function SEOOptimizer({
   title = "Zion Tech Group - AI & Technology Solutions",
-  description = "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.",
-  keywords = "AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation",
+  description = "Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions. Expert consulting and implementation services.",
+  keywords = "AI automationcloud computingmicro SaaStechnology consultingenterprise solutionsdigital transformation",
   canonicalUrl = "https://zion.app",
   ogImage = "https://zion.app/images/og-image.jpg",
   structuredData,
@@ -77,7 +77,7 @@ export default function SEOOptimizer({
     'max-snippet:-1',
     'max-image-preview:large',
     'max-video-preview:-1'
-  ].join(', ');
+  ].join(');
 
   return (
     <Head>
@@ -86,8 +86,8 @@ export default function SEOOptimizer({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="indexfollow" />
+      <meta name="viewport" content="width=device-widthinitial-scale=1.0" />
       
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -156,7 +156,7 @@ export const SEOPerformanceMetrics: React.FC = () => {
   React.useEffect(() => {
     // Core Web Vitals tracking
     if (typeof window !== 'undefined') {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      import('web-vitals').then(({ getCLSgetFIDgetFCPgetLCPgetTTFB }) => {
         getCLS(console.log);
         getFID(console.log);
         getFCP(console.log);
@@ -164,7 +164,7 @@ export const SEOPerformanceMetrics: React.FC = () => {
         getTTFB(console.log);
       });
     }
-  }, []);
+  }[]);
 
   return null;
 };
@@ -172,7 +172,7 @@ export const SEOPerformanceMetrics: React.FC = () => {
 export default SEOOptimizer;
       {/* Additional SEO Meta Tags */}
       <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-widthinitial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />

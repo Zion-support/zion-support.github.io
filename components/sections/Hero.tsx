@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../ui/Button';
-import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
+ArrowRightPlayStarZapShieldUsers
 
 interface HeroProps {
   title: string;
@@ -93,7 +93,7 @@ const Hero: React.FC<HeroProps> = ({
         {/* Stats Section */}
         {stats && (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            {stats.map((stat, index) => (
+            {stats.map((statindex) => (
               <div key={index} className="text-center group">
                 <div className="relative">
                   <div className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 ${stat.color} group-hover:scale-110 transition-transform duration-300`}>

@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
+ActivityBarChart3AlertTriangleClockDatabaseGlobeLockShieldTrendingUpUsersZapArrowRightPlayCheckCircleStarServerCloudEyeBellSettingsCode
 
 export default function CloudMonitoringPage() {
   const features = [
@@ -15,7 +15,7 @@ export default function CloudMonitoringPage() {
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'Advanced Analytics',
-      description: 'Deep insights into performance metrics, resource utilization, and business intelligence.',
+      description: 'Deep insights into performance metricsresource utilizationand business intelligence.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500'},
     {
@@ -27,13 +27,13 @@ export default function CloudMonitoringPage() {
     {
       icon: <Database className="w-8 h-8 text-white" />,
       title: 'Multi-Cloud Support',
-      description: 'Monitor AWS, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.',
+      description: 'Monitor AWSAzureGoogle Cloudand on-premises infrastructure from a single dashboard.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
       gradient: 'from-purple-400 to-indigo-500'},
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Security Monitoring',
-      description: 'Comprehensive security monitoring with threat detection, compliance reporting, and audit trails.',
+      description: 'Comprehensive security monitoring with threat detectioncompliance reportingand audit trails.',
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
       gradient: 'from-yellow-400 to-orange-500'},
     {
@@ -47,22 +47,22 @@ export default function CloudMonitoringPage() {
     {
       category: 'Infrastructure',
       icon: <Server className="w-6 h-6 text-blue-400" />,
-      metrics: ['CPU Usage', 'Memory Utilization', 'Disk I/O', 'Network Performance', 'Container Metrics']
+      metrics: ['CPU Usage'Memory Utilization'Disk I/O'Network Performance'Container Metrics']
     },
     {
       category: 'Applications',
       icon: <Code className="w-6 h-6 text-green-400" />,
-      metrics: ['Response Time', 'Error Rates', 'Throughput', 'User Experience', 'API Performance']
+      metrics: ['Response Time'Error Rates'Throughput'User Experience'API Performance']
     },
     {
       category: 'Databases',
       icon: <Database className="w-6 h-6 text-purple-400" />,
-      metrics: ['Query Performance', 'Connection Pool', 'Index Usage', 'Replication Lag', 'Storage Growth']
+      metrics: ['Query Performance'Connection Pool'Index Usage'Replication Lag'Storage Growth']
     },
     {
       category: 'Security',
       icon: <Shield className="w-6 h-6 text-red-400" />,
-      metrics: ['Threat Detection', 'Access Logs', 'Vulnerability Scans', 'Compliance Status', 'Audit Trails']
+      metrics: ['Threat Detection'Access Logs'Vulnerability Scans'Compliance Status'Audit Trails']
     }
   ];
 
@@ -125,40 +125,40 @@ export default function CloudMonitoringPage() {
   ];
 
   const integrations = [
-    { name: 'AWS', icon: '☁️', description: 'CloudWatch integration' },
-    { name: 'Azure', icon: '🔷', description: 'Monitor integration' },
-    { name: 'GCP', icon: '☁️', description: 'Stackdriver integration' },
-    { name: 'Docker', icon: '🐳', description: 'Container monitoring' },
-    { name: 'Kubernetes', icon: '☸️', description: 'K8s native support' },
-    { name: 'Slack', icon: '💬', description: 'Team notifications' },
-    { name: 'PagerDuty', icon: '🚨', description: 'Incident management' },
-    { name: 'Jira', icon: '📋', description: 'Issue tracking' }
+    { name: 'AWS'icon: '☁️'description: 'CloudWatch integration' },
+    { name: 'Azure'icon: '🔷'description: 'Monitor integration' },
+    { name: 'GCP'icon: '☁️'description: 'Stackdriver integration' },
+    { name: 'Docker'icon: '🐳'description: 'Container monitoring' },
+    { name: 'Kubernetes'icon: '☸️'description: 'K8s native support' },
+    { name: 'Slack'icon: '💬'description: 'Team notifications' },
+    { name: 'PagerDuty'icon: '🚨'description: 'Incident management' },
+    { name: 'Jira'icon: '📋'description: 'Issue tracking' }
   ];
 
   const useCases = [
     {
       title: 'DevOps Teams',
-      description: 'Monitor CI/CD pipelines, deployment success rates, and infrastructure health.',
+      description: 'Monitor CI/CD pipelinesdeployment success ratesand infrastructure health.',
       icon: '🔄',
-      benefits: ['Faster deployments', 'Reduced downtime', 'Better collaboration', 'Automated scaling']
+      benefits: ['Faster deployments'Reduced downtime'Better collaboration'Automated scaling']
     },
     {
       title: 'SaaS Companies',
-      description: 'Track user experience, application performance, and business metrics.',
+      description: 'Track user experienceapplication performanceand business metrics.',
       icon: '💼',
-      benefits: ['User satisfaction', 'Revenue optimization', 'Competitive advantage', 'Customer retention']
+      benefits: ['User satisfaction'Revenue optimization'Competitive advantage'Customer retention']
     },
     {
       title: 'E-commerce',
-      description: 'Monitor website performance, payment processing, and inventory systems.',
+      description: 'Monitor website performancepayment processingand inventory systems.',
       icon: '🛒',
-      benefits: ['Higher conversion', 'Faster checkout', 'Inventory optimization', 'Revenue growth']
+      benefits: ['Higher conversion'Faster checkout'Inventory optimization'Revenue growth']
     },
     {
       title: 'Financial Services',
-      description: 'Ensure compliance, security, and 24/7 availability of critical systems.',
+      description: 'Ensure compliancesecurityand 24/7 availability of critical systems.',
       icon: '💰',
-      benefits: ['Regulatory compliance', 'Fraud detection', 'Risk management', 'Customer trust']
+      benefits: ['Regulatory compliance'Fraud detection'Risk management'Customer trust']
     }
   ];
 
@@ -166,9 +166,9 @@ export default function CloudMonitoringPage() {
     <>
       <Head>
         <title>Cloud Monitoring & Analytics | Zion Tech Group - Real-time Infrastructure Monitoring</title>
-        <meta name="description" content="Comprehensive cloud monitoring and analytics platform with real-time insights, AI-powered alerting, and multi-cloud support. Monitor your entire infrastructure from a single dashboard." />
+        <meta name="description" content="Comprehensive cloud monitoring and analytics platform with real-time insightsAI-powered alertingand multi-cloud support. Monitor your entire infrastructure from a single dashboard." />
         <meta property="og:title" content="Cloud Monitoring & Analytics | Zion Tech Group" />
-        <meta property="og:description" content="Real-time infrastructure monitoring with advanced analytics, smart alerting, and multi-cloud support." />
+        <meta property="og:description" content="Real-time infrastructure monitoring with advanced analyticsmart alertingand multi-cloud support." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -249,7 +249,7 @@ export default function CloudMonitoringPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
@@ -285,7 +285,7 @@ export default function CloudMonitoringPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {monitoringCapabilities.map((capability, index) => (
+            {monitoringCapabilities.map((capabilityindex) => (
               <Card
                 key={index}
                 className="group border border-gray-700 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300"
@@ -297,7 +297,7 @@ export default function CloudMonitoringPage() {
                       {capability.category}
                     </h3>
                     <div className="grid grid-cols-1 gap-2">
-                      {capability.metrics.map((metric, metricIndex) => (
+                      {capability.metrics.map((metricIndex) => (
                         <div key={metricIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {metric}
@@ -325,7 +325,7 @@ export default function CloudMonitoringPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCaseindex) => (
               <Card
                 key={index}
                 className="group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300"
@@ -340,7 +340,7 @@ export default function CloudMonitoringPage() {
                       {useCase.description}
                     </p>
                     <div className="grid grid-cols-2 gap-2">
-                      {useCase.benefits.map((benefit, benefitIndex) => (
+                      {useCase.benefits.map((benefitIndex) => (
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit}
@@ -360,7 +360,7 @@ export default function CloudMonitoringPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              Simple, Transparent Pricing
+              SimpleTransparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the plan that fits your monitoring needs
@@ -368,7 +368,7 @@ export default function CloudMonitoringPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((planindex) => (
               <Card
                 key={index}
                 className={`relative group ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''} border ${plan.color} hover:border-green-500/50 transition-all duration-300`}
@@ -390,7 +390,7 @@ export default function CloudMonitoringPage() {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -425,7 +425,7 @@ export default function CloudMonitoringPage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {integrations.map((integration, index) => (
+            {integrations.map((integrationindex) => (
               <Card
                 key={index}
                 className="text-center group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300"

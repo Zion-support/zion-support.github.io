@@ -5,16 +5,16 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-import { useCurrency, SupportedCurrency } from '@/context/CurrencyContext';
-import { DollarSign } from 'lucide-react';
+import { useCurrencySupportedCurrency } from '@/context/CurrencyContext';
+DollarSign
 
 const SUPPORTED: { code: SupportedCurrency; symbol: string }[] = [
-  { code: 'USD', symbol: '$' },
-  { code: 'EUR', symbol: '€' },
-  { code: 'GBP', symbol: '£' }];
+  { code: 'USD'symbol: '$' },
+  { code: 'EUR'symbol: '€' },
+  { code: 'GBP'symbol: '£' }];
 
 export function CurrencySelector() {
-  const { currency, setCurrency } = useCurrency();
+  const { currencysetCurrency } = useCurrency();
 
   return (
     <DropdownMenu>

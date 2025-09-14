@@ -1,12 +1,12 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Sparkles, 
-  ArrowRight, 
-  Star, 
+  Sparkles
+  ArrowRight
+  Star
   Zap,
   Brain,
   Rocket,
@@ -17,23 +17,23 @@ import {
 } from 'lucide-react';
 
 const NewContentShowcase2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const features = [
     'Revolutionary AI Innovations',
-    'Advanced Automation Solutions', 
+    'Advanced Automation Solutions'
     'Future Technology Predictions',
     'Interactive Demonstrations'
   ];
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      initial={{ opacity: 0y: 20 }}
+      animate={isVisible ? { opacity: 1y: 0 } : {}}
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600"
     >
@@ -44,13 +44,13 @@ const NewContentShowcase2026PromotionBanner = () => {
           className="absolute top-0 left-0 w-full h-full"
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)',
-              'radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)',
-              'radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)'
+              'radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)',
+              'radial-gradient(circle at 80% 20%rgba(2552550.1) 0%transparent 50%)',
+              'radial-gradient(circle at 40% 80%rgba(2552550.1) 0%transparent 50%)',
+              'radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)'
             ]
           }}
-          transition={{ duration: 8, repeat: Infinity }}
+          transition={{ duration: 8repeat: Infinity }}
         />
       </div>
 
@@ -71,12 +71,12 @@ const NewContentShowcase2026PromotionBanner = () => {
             </h2>
             
             <p className="text-lg text-purple-100 mb-6">
-              Discover the latest breakthroughs in AI, automation, and future technology predictions. 
+              Discover the latest breakthroughs in AIautomationand future technology predictions. 
               Explore cutting-edge innovations that will transform your business and shape the future.
             </p>
             
             <div className="grid grid-cols-2 gap-3 mb-6">
-              {features.map((feature, index) => (
+              {features.map((featureindex) => (
                 <div key={index} className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-300 flex-shrink-0" />
                   <span className="text-sm text-white">{feature}</span>
@@ -101,8 +101,8 @@ const NewContentShowcase2026PromotionBanner = () => {
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
               <motion.div
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 3, repeat: Infinity }}
+                animate={{ y: [-10-10] }}
+                transition={{ duration: 3repeat: Infinity }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
               >
                 <Brain className="w-8 h-8 text-purple-300 mb-2" />
@@ -111,8 +111,8 @@ const NewContentShowcase2026PromotionBanner = () => {
               </motion.div>
               
               <motion.div
-                animate={{ y: [10, -10, 10] }}
-                transition={{ duration: 4, repeat: Infinity }}
+                animate={{ y: [10-10] }}
+                transition={{ duration: 4repeat: Infinity }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
               >
                 <Zap className="w-8 h-8 text-pink-300 mb-2" />
@@ -121,8 +121,8 @@ const NewContentShowcase2026PromotionBanner = () => {
               </motion.div>
               
               <motion.div
-                animate={{ y: [-5, 15, -5] }}
-                transition={{ duration: 5, repeat: Infinity }}
+                animate={{ y: [-515-5] }}
+                transition={{ duration: 5repeat: Infinity }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
               >
                 <Rocket className="w-8 h-8 text-yellow-300 mb-2" />
@@ -131,8 +131,8 @@ const NewContentShowcase2026PromotionBanner = () => {
               </motion.div>
               
               <motion.div
-                animate={{ y: [15, -5, 15] }}
-                transition={{ duration: 6, repeat: Infinity }}
+                animate={{ y: [15-515] }}
+                transition={{ duration: 6repeat: Infinity }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
               >
                 <Target className="w-8 h-8 text-green-300 mb-2" />
@@ -144,12 +144,12 @@ const NewContentShowcase2026PromotionBanner = () => {
             {/* Floating elements */}
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 20repeat: Infinityease: "linear" }}
               className="absolute -top-4 -right-4 w-16 h-16 border-2 border-white/30 rounded-full"
             />
             <motion.div
               animate={{ rotate: -360 }}
-              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 15repeat: Infinityease: "linear" }}
               className="absolute -bottom-4 -left-4 w-12 h-12 border-2 border-white/20 rounded-full"
             />
           </div>

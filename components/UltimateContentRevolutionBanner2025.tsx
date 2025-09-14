@@ -29,7 +29,7 @@ export default function UltimateContentRevolutionBanner2025() {
         
         {/* Subheading */}
         <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90">
-          Discover the most comprehensive collection of AI predictions, quantum computing breakthroughs, 
+          Discover the most comprehensive collection of AI predictionsquantum computing breakthroughs
           and neural interface technologies. Get exclusive access to content that delivers up to 25,000% ROI.
         </p>
         
@@ -92,7 +92,7 @@ export default function UltimateContentRevolutionBanner2025() {
               Neural Interface Revolution 2030
             </h3>
             <p className="text-sm opacity-90 mb-4">
-              Direct brain-computer integration, consciousness upload, and thought-controlled systems.
+              Direct brain-computer integrationconsciousness uploadand thought-controlled systems.
             </p>
             <div className="text-yellow-300 font-semibold text-sm">
               Up to 25,000% ROI →

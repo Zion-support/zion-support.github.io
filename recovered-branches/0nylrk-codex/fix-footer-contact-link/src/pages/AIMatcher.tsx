@@ -5,13 +5,13 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { GradientHeading } from "@/components/GradientHeading";
 import { AIMatchmaker } from "@/components/AIMatchmaker";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { SelectValueSelectTriggerSelectContentSelectItem } from "@/components/ui/select";
 import { toast } from "@/hooks/use-toast";
 import { MatchResult } from "@/lib/ai-matchmaking";
 
 export default function AIMatcherPage() {
   const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [selectedCategorysetSelectedCategory] = useState<string>("all");
   
   const handleMatchSelect = (match: MatchResult) => {
     // Get the item type from the category
@@ -30,7 +30,7 @@ export default function AIMatcherPage() {
       description: `You've selected ${match.item.title}`});
     
     // Navigate to the quote request page with the selected item
-    navigate("/request-quote", {
+    navigate("/request-quote"{
       state: { 
         serviceType: itemType,
         specificItem: match.item
@@ -46,7 +46,7 @@ export default function AIMatcherPage() {
           <div className="text-center mb-12">
             <GradientHeading>AI Matchmaker</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Describe your needs and our AI will match you with the perfect services, talents, or equipment.
+              Describe your needs and our AI will match you with the perfect servicestalentsor equipment.
             </p>
           </div>
           

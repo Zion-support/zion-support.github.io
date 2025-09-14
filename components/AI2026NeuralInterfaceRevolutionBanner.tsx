@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const AI2026NeuralInterfaceRevolutionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
 
   const content = [
     {
@@ -35,21 +35,21 @@ const AI2026NeuralInterfaceRevolutionBanner: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }[]);
 
   useEffect(() => {
     const dismissed = localStorage.getItem('ai2026-neural-interface-banner-dismissed');
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ai2026-neural-interface-banner-dismissed', 'true');
+    localStorage.setItem('ai2026-neural-interface-banner-dismissed'true');
   };
 
   if (!isVisible) return null;
@@ -161,7 +161,7 @@ const AI2026NeuralInterfaceRevolutionBanner: React.FC = () => {
 
         {/* Progress indicators */}
         <div className="flex justify-center space-x-2 mt-8">
-          {content.map((_, index) => (
+          {content.map((_index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}

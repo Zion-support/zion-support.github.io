@@ -16,10 +16,10 @@ export default function Privacy() {
               Privacy Policy
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              How we collect, use, and protect your information
+              How we collectuseand protect your information
             </p>
             <p className="text-gray-400 text-sm mt-4">
-              Last updated: January 17, 2025
+              Last updated: January 172025
             </p>
           </div>
 
@@ -30,11 +30,11 @@ export default function Privacy() {
               </h2>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  We collect information you provide directly to us, such as when you create an account, 
-                  use our services, or contact us for support. This may include:
+                  We collect information you provide directly to usuch as when you create an account
+                  use our servicesor contact us for support. This may include:
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Account information (name, email, organization)</li>
+                  <li>Account information (namemailorganization)</li>
                   <li>Usage data and analytics</li>
                   <li>Communication preferences</li>
                   <li>Technical information about your device and connection</li>
@@ -51,12 +51,12 @@ export default function Privacy() {
                   We use the information we collect to:
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Provide, maintain, and improve our services</li>
+                  <li>Providemaintainand improve our services</li>
                   <li>Process transactions and send related information</li>
                   <li>Send technical notices and support messages</li>
                   <li>Respond to your comments and questions</li>
                   <li>Monitor and analyze trends and usage</li>
-                  <li>Detect, investigate, and prevent fraudulent transactions</li>
+                  <li>Detectinvestigateand prevent fraudulent transactions</li>
                 </ul>
               </div>
             </section>
@@ -67,8 +67,8 @@ export default function Privacy() {
               </h2>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  We do not sell, trade, or otherwise transfer your personal information to third parties 
-                  without your consent, except as described in this policy:
+                  We do not selltradeor otherwise transfer your personal information to third parties 
+                  without your consentexcept as described in this policy:
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>With service providers who assist in our operations</li>
@@ -86,11 +86,11 @@ export default function Privacy() {
               <div className="space-y-4 text-gray-300">
                 <p>
                   We implement appropriate technical and organizational security measures to protect 
-                  your personal information against unauthorized access, alteration, disclosure, or destruction.
+                  your personal information against unauthorized accessalterationdisclosureor destruction.
                 </p>
                 <p>
-                  These measures include encryption, secure servers, and regular security assessments. 
-                  However, no method of transmission over the internet is 100% secure.
+                  These measures include encryptionsecure serversand regular security assessments. 
+                  Howeverno method of transmission over the internet is 100% secure.
                 </p>
               </div>
             </section>
@@ -119,7 +119,7 @@ export default function Privacy() {
               </h2>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  If you have any questions about this Privacy Policy or our data practices, 
+                  If you have any questions about this Privacy Policy or our data practices
                   please contact us:
                 </p>
                 <div className="bg-slate-800 rounded-lg p-4">

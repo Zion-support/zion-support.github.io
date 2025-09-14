@@ -9,7 +9,7 @@ export default function ResourcesPage() {
       title: 'AI-Powered Manufacturing Automation',
       company: 'Global Manufacturing Corp',
       industry: 'Manufacturing',
-      results: '40% increase in production efficiency, 60% reduction in downtime',
+      results: '40% increase in production efficiency60% reduction in downtime',
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
     },
     {
@@ -17,7 +17,7 @@ export default function ResourcesPage() {
       title: 'Scaling Content Generation 10x',
       company: 'Digital Marketing Agency',
       industry: 'Marketing',
-      results: '10x increase in content output, 85% improvement in engagement',
+      results: '10x increase in content output85% improvement in engagement',
       description: 'Transforming content creation through autonomous AI systems.'
     },
     {
@@ -25,8 +25,8 @@ export default function ResourcesPage() {
       title: 'Cloud Infrastructure Optimization',
       company: 'E-commerce Platform',
       industry: 'Technology',
-      results: '50% reduction in cloud costs, 99.9% uptime achieved',
-      description: 'Building self-healing, auto-scaling cloud infrastructure.'
+      results: '50% reduction in cloud costs99.9% uptime achieved',
+      description: 'Building self-healingauto-scaling cloud infrastructure.'
     }
   ];
 
@@ -34,7 +34,7 @@ export default function ResourcesPage() {
     {
       id: 'autonomous-systems-guide',
       title: 'The Complete Guide to Autonomous Systems',
-      description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.',
+      description: 'A comprehensive overview of autonomous technologyimplementation strategiesand best practices.',
       downloadUrl: '#',
       pages: '45',
       category: 'Technology'
@@ -58,7 +58,7 @@ export default function ResourcesPage() {
     {
       id: 'cloud-native-automation',
       title: 'Cloud-Native Automation Strategies',
-      description: 'Best practices for building scalable, resilient automation systems in the cloud.',
+      description: 'Best practices for building scalableresilient automation systems in the cloud.',
       downloadUrl: '#',
       pages: '38',
       category: 'Technology'
@@ -161,9 +161,9 @@ export default function ResourcesPage() {
     <>
       <Head>
         <title>Resources | Zion Tech Group - AI & Automation Resources</title>
-        <meta name="description" content="Access case studies, whitepapers, tools, and resources to help you understand and implement AI automation solutions." />
+        <meta name="description" content="Access case studieswhitepaperstoolsand resources to help you understand and implement AI automation solutions." />
         <meta property="og:title" content="Resources | Zion Tech Group" />
-        <meta property="og:description" content="Access case studies, whitepapers, tools, and resources for AI automation." />
+        <meta property="og:description" content="Access case studieswhitepaperstoolsand resources for AI automation." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
@@ -181,7 +181,7 @@ export default function ResourcesPage() {
                 Resources & Tools
               </h1>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Access our comprehensive collection of case studies, whitepapers, tools, and resources 
+                Access our comprehensive collection of case studieswhitepaperstoolsand resources 
                 to accelerate your AI automation journey.
               </p>
             </header>
@@ -299,7 +299,7 @@ export default function ResourcesPage() {
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Stay Updated with New Resources</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-                  Get notified when we release new case studies, whitepapers, and tools. 
+                  Get notified when we release new case studieswhitepapersand tools. 
                   Be the first to access our latest AI automation insights and resources.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -313,7 +313,7 @@ export default function ResourcesPage() {
                   </button>
                 </div>
                 <p className="text-white/60 text-sm mt-4">
-                  No spam, unsubscribe at any time. We respect your privacy.
+                  No spamunsubscribe at any time. We respect your privacy.
                 </p>
               </div>
             </section>

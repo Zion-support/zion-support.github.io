@@ -2,9 +2,9 @@ import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Brain, Atom, Shield, Target, Rocket,
-  ArrowRight, Check, Star, TrendingUp, Users,
-  Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
+  BrainAtomShieldTargetRocket,
+  ArrowRightCheckStarTrendingUpUsers,
+  GlobeZapLockCloudSmartphoneBuildingPhoneMailMapPin
 } from 'lucide-react';
 
 // Import our new 2025 V2 innovative services
@@ -15,8 +15,8 @@ import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-
 import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
+  initial: { opacity: 0y: 20 },
+  animate: { opacity: 1y: 0 },
   transition: { duration: 0.6 }
 };
 
@@ -90,8 +90,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
         title="2025 Comprehensive Services Showcase V2 | Zion Tech Group"
-        description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions."
-        keywords={["micro SAAS", "IT infrastructure", "AI services", "industry solutions", "emerging technology", "Zion Tech Group"]}
+        description="Discover our comprehensive portfolio of innovative micro SAASIT infrastructureAI servicesindustry solutionsand emerging technology breakthroughs. Transform your business with cutting-edge solutions."
+        keywords={["micro SAAS"IT infrastructure"AI services"industry solutions"emerging technology"Zion Tech Group"]}
       />
       
       {/* Hero Section */}
@@ -99,8 +99,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
           >
             2025 V2 Comprehensive
@@ -109,18 +109,18 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
           >
-            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS, 
-            IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
+            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS
+            IT infrastructureAI servicesindustry solutionsand emerging technology breakthroughs.
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.4 }}
           >
             <a 
               href="#services" 
@@ -143,8 +143,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold text-white mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -152,10 +152,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.h2>
           <motion.div 
             className="grid md:grid-cols-3 gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6delay: 0.2 }}
           >
             <div className="text-center">
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -181,8 +181,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -267,8 +267,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -277,10 +277,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
           
           <motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6delay: 0.2 }}
           >
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">25+</div>
@@ -307,8 +307,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -316,19 +316,19 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-300 mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6delay: 0.2 }}
           >
             Join thousands of businesses already transforming their operations with our cutting-edge solutions.
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            whileInView={{ opacity: 1y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6delay: 0.4 }}
           >
             <a 
               href={`mailto:${contactInfo.email}`}

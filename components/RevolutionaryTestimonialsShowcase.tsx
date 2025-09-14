@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, Quote, TrendingUp, Users, Award, Zap } from 'lucide-react';
+StarQuoteTrendingUpUsersAwardZap
 
 const testimonials = [
   {
@@ -78,10 +78,10 @@ const testimonials = [
 ];
 
 const stats = [
-  { label: "Client Satisfaction", value: "98%", icon: Star },
-  { label: "Average ROI", value: "250%", icon: TrendingUp },
-  { label: "Projects Completed", value: "500+", icon: Award },
-  { label: "Global Clients", value: "50+", icon: Users }
+  { label: "Client Satisfaction"value: "98%"icon: Star },
+  { label: "Average ROI"value: "250%"icon: TrendingUp },
+  { label: "Projects Completed"value: "500+"icon: Award },
+  { label: "Global Clients"value: "50+"icon: Users }
 ];
 
 export default function RevolutionaryTestimonialsShowcase() {
@@ -90,8 +90,8 @@ export default function RevolutionaryTestimonialsShowcase() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -113,18 +113,18 @@ export default function RevolutionaryTestimonialsShowcase() {
 
         {/* Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0scale: 0.8 }}
+              whileInView={{ opacity: 1scale: 1 }}
+              transition={{ duration: 0.5delay: index * 0.1 }}
               viewport={{ once: true }}
               className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl"
             >
@@ -137,12 +137,12 @@ export default function RevolutionaryTestimonialsShowcase() {
 
         {/* Featured Testimonials */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {testimonials.filter(testimonial => testimonial.featured).map((testimonial, index) => (
+          {testimonials.filter(testimonial => testimonial.featured).map((testimonialindex) => (
             <motion.div
               key={testimonial.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              initial={{ opacity: 0y: 50 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: index * 0.2 }}
               viewport={{ once: true }}
               className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 relative overflow-hidden"
             >
@@ -151,7 +151,7 @@ export default function RevolutionaryTestimonialsShowcase() {
               
               {/* Rating */}
               <div className="flex items-center mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
+                {[...Array(testimonial.rating)].map((_i) => (
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
@@ -174,7 +174,7 @@ export default function RevolutionaryTestimonialsShowcase() {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                  <div className="text-sm text-gray-600">{testimonial.title}, {testimonial.company}</div>
+                  <div className="text-sm text-gray-600">{testimonial.title}{testimonial.company}</div>
                   <div className="text-xs text-blue-600">{testimonial.industry}</div>
                 </div>
               </div>
@@ -184,24 +184,24 @@ export default function RevolutionaryTestimonialsShowcase() {
 
         {/* Additional Testimonials Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {testimonials.filter(testimonial => !testimonial.featured).map((testimonial, index) => (
+          {testimonials.filter(testimonial => !testimonial.featured).map((testimonialindex) => (
             <motion.div
               key={testimonial.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group"
             >
               {/* Rating */}
               <div className="flex items-center mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
+                {[...Array(testimonial.rating)].map((_i) => (
                   <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                 ))}
               </div>
@@ -233,8 +233,8 @@ export default function RevolutionaryTestimonialsShowcase() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 30 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="mt-16 text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"

@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { motion } from 'framer-motion';
 
-export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
-  const [value, setValue] = useState('');
+export default function InteractiveSearch({ placeholder = 'Search talentskillsor jobs...' }: { placeholder?: string }) {
+  const [valuesetValue] = useState('');
   return (
-    <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="relative">
+    <motion.div initial={{ opacity: 0y: 4 }} animate={{ opacity: 1y: 0 }} className="relative">
       <input
         value={value}
         onChange={(e) => setValue(e.target.value)}

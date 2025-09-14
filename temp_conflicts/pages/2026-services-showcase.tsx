@@ -1,7 +1,7 @@
-import React, { useState, useMemo } from 'react';
+import React{ useStateuseMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
+SearchFilterStarTrendingUpZapBrainCpuShieldRocketGlobeDatabaseLockCloudAtomSparklesTarget
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionary2026Services } from '../data/revolutionary-2026-services';
@@ -9,9 +9,9 @@ import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
 
 export default function ServicesShowcase2026() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [sortBysetSortBy] = useState('name');
 
   // Combine all 2026 services
   const allServices = [
@@ -29,10 +29,10 @@ export default function ServicesShowcase2026() {
       const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
       return matchesSearch && matchesCategory;
     })
-    .sort((a, b) => {
+    .sort((ab) => {
       switch (sortBy) {
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.price.replace(/[^0-9.]/g'')) - parseFloat(b.price.replace(/[^0-9.]/g''));
         case 'rating':
           return b.rating - a.rating;
         case 'customers':
@@ -43,13 +43,13 @@ export default function ServicesShowcase2026() {
     });
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
-    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length },
-    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
-    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length },
-    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
-    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },
-    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
+    { id: 'all'name: 'All Services'icon: Globecount: allServices.length },
+    { id: 'AI'name: 'AI & Machine Learning'icon: Braincount: allServices.filter(s => s.category.includes('AI')).length },
+    { id: 'Quantum'name: 'Quantum Computing'icon: Atomcount: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: 'Emerging'name: 'Emerging Technology'icon: Sparklescount: allServices.filter(s => s.category.includes('Emerging')).length },
+    { id: 'IT'name: 'IT & Infrastructure'icon: Shieldcount: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
+    { id: 'Autonomous'name: 'Autonomous Systems'icon: Targetcount: allServices.filter(s => s.category.includes('Autonomous')).length },
+    { id: 'Cloud'name: 'Cloud & DevOps'icon: Cloudcount: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
   ];
 
   const contactInfo = {
@@ -71,10 +71,10 @@ export default function ServicesShowcase2026() {
       <div className="min-h-screen">
         <Head>
           <title>Zion Tech Group - 2026 Revolutionary Services Showcase | 1500+ Solutions</title>
-          <meta name="description" content="Explore Zion Tech Group's revolutionary 2026 services including AI, quantum computing, emerging technologies, and comprehensive IT solutions. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="2026 services, AI services, quantum computing, emerging technology, IT solutions, cybersecurity, cloud computing, autonomous systems, neuromorphic computing, DNA computing, photonic computing, holographic display, swarm robotics, zero trust architecture, edge computing, 5G networks" />
+          <meta name="description" content="Explore Zion Tech Group's revolutionary 2026 services including AIquantum computingemerging technologiesand comprehensive IT solutions. Contact: +1 302 464 0950" />
+          <meta name="keywords" content="2026 servicesAI servicesquantum computingemerging technologyIT solutionscybersecuritycloud computingautonomous systemsneuromorphic computingDNA computingphotonic computingholographic displayswarm roboticszero trust architecturedge computing5G networks" />
           <meta name="author" content="Zion Tech Group" />
-          <meta name="robots" content="index, follow" />
+          <meta name="robots" content="indexfollow" />
           <meta property="og:title" content="Zion Tech Group - 2026 Revolutionary Services Showcase" />
           <meta property="og:description" content="1500+ cutting-edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase" />
@@ -89,8 +89,8 @@ export default function ServicesShowcase2026() {
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -99,8 +99,8 @@ export default function ServicesShowcase2026() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Discover the future of technology with our revolutionary AI, quantum computing, 
-                emerging technologies, and comprehensive IT solutions
+                Discover the future of technology with our revolutionary AIquantum computing
+                emerging technologiesand comprehensive IT solutions
               </p>
               
               {/* Service Statistics */}
@@ -182,12 +182,12 @@ export default function ServicesShowcase2026() {
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
+              {filteredServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 30 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="group"
                 >
                   <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -233,7 +233,7 @@ export default function ServicesShowcase2026() {
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
                       <ul className="space-y-1">
-                        {service.features.slice(0, 3).map((feature, idx) => (
+                        {service.features.slice(03).map((featureidx) => (
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
                             {feature}
@@ -283,15 +283,15 @@ export default function ServicesShowcase2026() {
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm"
             >
               <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of companies already leveraging our revolutionary 2026 AI, quantum, and IT solutions
+                Join thousands of companies already leveraging our revolutionary 2026 AIquantumand IT solutions
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

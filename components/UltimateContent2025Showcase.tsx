@@ -13,7 +13,7 @@ const UltimateContent2025Showcase = () => {
       featured: true,
       image: "/images/ai-2025-2026-revolutionary-breakthrough.jpg",
       href: "/blog/ai-2025-2026-ultimate-trends-revolutionary-breakthrough",
-      tags: ["AI Trends", "2025-2026", "Revolutionary", "Breakthrough"],
+      tags: ["AI Trends"2025-2026"Revolutionary"Breakthrough"],
       stats: {
         roi: "5000%",
         views: "50K+",
@@ -23,13 +23,13 @@ const UltimateContent2025Showcase = () => {
     {
       id: 2,
       title: "Fortune 500 AI Transformation: Ultimate Success Story 2025-2026",
-      description: "How a Fortune 500 manufacturing company achieved 5000% ROI through comprehensive AI transformation, revolutionizing operations and achieving unprecedented success.",
+      description: "How a Fortune 500 manufacturing company achieved 5000% ROI through comprehensive AI transformationrevolutionizing operations and achieving unprecedented success.",
       category: "Case Study",
       readTime: "12 min read",
       featured: true,
       image: "/images/fortune-500-ai-transformation-success.jpg",
       href: "/case-studies/fortune-500-ai-transformation-ultimate-success-2025-2026",
-      tags: ["Fortune 500", "Success Story", "5000% ROI", "Manufacturing"],
+      tags: ["Fortune 500"Success Story"5000% ROI"Manufacturing"],
       stats: {
         roi: "5000%",
         revenue: "$2.5B",
@@ -45,7 +45,7 @@ const UltimateContent2025Showcase = () => {
       featured: true,
       image: "/images/ai-2025-2026-implementation-guide.jpg",
       href: "/resources/ai-2025-2026-implementation-ultimate-master-guide",
-      tags: ["Implementation", "Master Guide", "1000%+ ROI", "Roadmap"],
+      tags: ["Implementation"Master Guide"1000%+ ROI"Roadmap"],
       stats: {
         roi: "1000%+",
         pages: "50+",
@@ -69,7 +69,7 @@ const UltimateContent2025Showcase = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Access the most comprehensive collection of AI content for 2025-2026. 
-            From trend analysis to implementation guides, everything you need to achieve unprecedented success.
+            From trend analysis to implementation guideseverything you need to achieve unprecedented success.
           </p>
         </div>
 
@@ -110,7 +110,7 @@ const UltimateContent2025Showcase = () => {
               <div className="p-6">
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 2).map((tag, index) => (
+                  {item.tags.slice(02).map((tagindex) => (
                     <span
                       key={index}
                       className="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-medium"

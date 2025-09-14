@@ -1,5 +1,5 @@
 
-import React, { useState, useRef, useEffect } from "react";
+import React{ useStateuseRefuseEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -8,14 +8,14 @@ import { toast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
 import { ChatMessage } from "./ChatMessage";
 import { QuickReplyButton } from "./QuickReplyButton";
-import { Send, Loader2 } from "lucide-react";
+import { SendLoader2 } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 
 // Define suggested quick replies
 const QUICK_REPLIES = [
-  { id: "hire", text: "How do I hire?" },
-  { id: "match", text: "How do I get matched?" },
-  { id: "billing", text: "Billing help" }];
+  { id: "hire"text: "How do I hire?" },
+  { id: "match"text: "How do I get matched?" },
+  { id: "billing"text: "Billing help" }];
 
 type Message = {
   id: string;
@@ -25,15 +25,15 @@ type Message = {
 };
 
 export function ChatBotPanel() {
-  const [messages, setMessages] = useState<Message[]>([
+  const [messagesetMessages] = useState<Message[]>([
     {
       id: "welcome",
       content: "Hi! How can I help you?",
       sender: "bot",
       timestamp: new Date()}]);
-  const [inputValue, setInputValue] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [failedAttempts, setFailedAttempts] = useState(0);
+  const [inputValuesetInputValue] = useState("");
+  const [isLoadingsetIsLoading] = useState(false);
+  const [failedAttemptsetFailedAttempts] = useState(0);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const { theme } = useTheme();
@@ -43,14 +43,14 @@ export function ChatBotPanel() {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
     }
-  }, [messages]);
+  }[messages]);
 
   // Focus input when component mounts
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
     }
-  }, []);
+  }[]);
 
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return;
@@ -61,7 +61,7 @@ export function ChatBotPanel() {
       sender: "user",
       timestamp: new Date()};
     
-    setMessages((prev) => [...prev, userMessage]);
+    setMessages((prev) => [...prevuserMessage]);
     setInputValue("");
     setIsLoading(true);
     
@@ -71,17 +71,17 @@ export function ChatBotPanel() {
       
       const botMessage: Message = {
         id: `bot-${Date.now()}`,
-        content: response.message || "Sorry, I couldn't process your request. Please try again.",
+        content: response.message || "SorryI couldn't process your request. Please try again.",
         sender: "bot",
         timestamp: new Date()};
       
-      setMessages((prev) => [...prev, botMessage]);
+      setMessages((prev) => [...prevbotMessage]);
       
       // Check if the request was successful
       if (!response.success) {
         setFailedAttempts((prev) => prev + 1);
         
-        // After 3 failed attempts, suggest escalation
+        // After 3 failed attemptsuggest escalation
         if (failedAttempts >= 2) {
           suggestEscalation();
         }
@@ -90,7 +90,7 @@ export function ChatBotPanel() {
         setFailedAttempts(0);
       }
     } catch (error) {
-      console.error("Error in AI chat:", error);
+      console.error("Error in AI chat:"error);
       toast({
         variant: "destructive",
         title: "Communication Error",
@@ -107,12 +107,12 @@ export function ChatBotPanel() {
 
   const sendToAIAssistant = async (message: string) => {
     try {
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat"{
         method: "POST",
         headers: {
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
-          messages: [{ role: "user", content: message }] 
+          messages: [{ role: "user"content: message }] 
         })});
       
       if (!response.ok) {
@@ -128,7 +128,7 @@ export function ChatBotPanel() {
         message: data.message
       };
     } catch (error) {
-      console.error("Error in AI chat:", error);
+      console.error("Error in AI chat:"error);
       return {
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later."
@@ -144,7 +144,7 @@ export function ChatBotPanel() {
       sender: "bot",
       timestamp: new Date()};
     
-    setMessages((prev) => [...prev, escalationMessage]);
+    setMessages((prev) => [...prevescalationMessage]);
     
     // Log this interaction for the support team
     logSupportEscalation();
@@ -154,7 +154,7 @@ export function ChatBotPanel() {
     try {
       // Send the conversation to the backend for logging
       // This would be implemented in a real system
-      console.log("Support escalation triggered", { 
+      console.log("Support escalation triggered"{ 
         conversationHistory: messages.map(m => ({
           content: m.content,
           sender: m.sender,
@@ -162,7 +162,7 @@ export function ChatBotPanel() {
         }))
       });
     } catch (error) {
-      console.error("Failed to log support escalation:", error);
+      console.error("Failed to log support escalation:"error);
     }
   };
 
@@ -172,7 +172,7 @@ export function ChatBotPanel() {
 
   const handleEscalateToLiveAgent = () => {
     setMessages((prev) => [
-      ...prev, 
+      ...prev
       {
         id: `user-${Date.now()}`,
         content: "I'd like to speak with a human agent",
@@ -181,13 +181,13 @@ export function ChatBotPanel() {
       },
       {
         id: `bot-${Date.now()}`,
-        content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
+        content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday9AM to 6PM EST. If you're messaging outside these hoursa team member will follow up with you as soon as possible.",
         sender: "bot",
         timestamp: new Date()
       }
     ]);
     
-    // In a real implementation, this would trigger a live chat request
+    // In a real implementationthis would trigger a live chat request
     toast({
       title: "Support request submitted",
       description: "A support agent will be with you shortly."});
@@ -195,7 +195,7 @@ export function ChatBotPanel() {
 
   const handleEmailSupport = () => {
     setMessages((prev) => [
-      ...prev, 
+      ...prev
       {
         id: `user-${Date.now()}`,
         content: "I'd like to email support",
@@ -234,7 +234,7 @@ export function ChatBotPanel() {
       
       {messages.length === 1 && (
         <div className="px-4 py-3">
-          <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
+          <p className={cn("text-sm mb-2"theme === "dark" ? "text-gray-300" : "text-gray-600")}>
             Suggested questions:
           </p>
           <div className="flex flex-wrap gap-2">
@@ -251,7 +251,7 @@ export function ChatBotPanel() {
       
       {failedAttempts >= 3 && (
         <div className="px-4 py-3 border-t border-zion-purple/10">
-          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
+          <p className={cn("text-sm mb-2 font-medium"theme === "dark" ? "text-gray-300" : "text-gray-600")}>
             Need more help?
           </p>
           <div className="flex gap-2">
@@ -274,7 +274,7 @@ export function ChatBotPanel() {
       )}
       
       <div className={cn(
-        "p-4 border-t", 
+        "p-4 border-t"
         theme === "dark" ? "border-zion-blue-light" : "border-gray-200"
       )}>
         <form 

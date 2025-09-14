@@ -1,16 +1,16 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Brain, 
-  Zap, 
-  Globe, 
+  Play
+  Pause
+  RotateCcw
+  Brain
+  Zap
+  Globe
   Cloud,
-  X, 
+  X
   ArrowRight,
   Sparkles,
   CheckCircle,
@@ -21,9 +21,9 @@ import {
 } from 'lucide-react';
 
 const InteractiveTechDemo2028PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTech, setCurrentTech] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [isPlayingsetIsPlaying] = useState(false);
+  const [currentTechsetCurrentTech] = useState(0);
 
   const technologies = [
     {
@@ -62,18 +62,18 @@ const InteractiveTechDemo2028PromotionBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTech((prev) => (prev + 1) % technologies.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0y: -100 }}
+        animate={{ opacity: 1y: 0 }}
+        exit={{ opacity: 0y: -100 }}
         className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden"
       >
         {/* Background Effects */}
@@ -94,7 +94,7 @@ const InteractiveTechDemo2028PromotionBanner = () => {
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
                   <motion.div
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 2repeat: Infinityease: "linear" }}
                     className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
                   >
                     <Sparkles className="w-4 h-4 text-white" />
@@ -111,7 +111,7 @@ const InteractiveTechDemo2028PromotionBanner = () => {
                 </h2>
 
                 <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-2xl">
-                  Interact with cutting-edge AI, quantum computing, and neural interface 
+                  Interact with cutting-edge AIquantum computingand neural interface 
                   technologies in real-time. See how they work before you implement them.
                 </p>
 
@@ -120,9 +120,9 @@ const InteractiveTechDemo2028PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentTech}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
                       transition={{ duration: 0.5 }}
                       className="flex items-center gap-3"
                     >
@@ -140,12 +140,12 @@ const InteractiveTechDemo2028PromotionBanner = () => {
                 {/* Features */}
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                    {features.map((feature, index) => (
+                    {features.map((featureindex) => (
                       <motion.span
                         key={feature}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.3, delay: index * 0.1 }}
+                        initial={{ opacity: 0scale: 0.8 }}
+                        animate={{ opacity: 1scale: 1 }}
+                        transition={{ duration: 0.3delay: index * 0.1 }}
                         className="px-3 py-1 bg-gray-800/50 rounded-full text-sm text-gray-300 border border-gray-600"
                       >
                         {feature}
@@ -181,12 +181,12 @@ const InteractiveTechDemo2028PromotionBanner = () => {
                   {/* Demo Interface */}
                   <motion.div
                     animate={{ 
-                      y: [0, -10, 0],
-                      rotate: [0, 1, 0]
+                      y: [0-10],
+                      rotate: [010]
                     }}
                     transition={{ 
-                      duration: 4, 
-                      repeat: Infinity, 
+                      duration: 4
+                      repeat: Infinity
                       ease: "easeInOut" 
                     }}
                     className="relative bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-3xl p-8 backdrop-blur-sm border border-purple-500/30"
@@ -195,8 +195,8 @@ const InteractiveTechDemo2028PromotionBanner = () => {
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center gap-2">
                         <motion.button
-                          animate={{ scale: isPlaying ? [1, 1.1, 1] : 1 }}
-                          transition={{ duration: 1, repeat: isPlaying ? Infinity : 0 }}
+                          animate={{ scale: isPlaying ? [1.1] : 1 }}
+                          transition={{ duration: 1repeat: isPlaying ? Infinity : 0 }}
                           className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
                         >
                           {isPlaying ? <Pause className="w-4 h-4 text-white" /> : <Play className="w-4 h-4 text-white" />}
@@ -215,8 +215,8 @@ const InteractiveTechDemo2028PromotionBanner = () => {
                       {/* Animated Center Element */}
                       <motion.div
                         animate={{
-                          scale: isPlaying ? [1, 1.2, 1] : 1,
-                          opacity: isPlaying ? [0.5, 1, 0.5] : 0.7
+                          scale: isPlaying ? [1.21] : 1,
+                          opacity: isPlaying ? [0.510.5] : 0.7
                         }}
                         transition={{
                           duration: 2,
@@ -233,15 +233,15 @@ const InteractiveTechDemo2028PromotionBanner = () => {
                       {/* Floating Data Points */}
                       {isPlaying && (
                         <>
-                          {[...Array(4)].map((_, i) => (
+                          {[...Array(4)].map((_i) => (
                             <motion.div
                               key={i}
-                              initial={{ opacity: 0, scale: 0 }}
+                              initial={{ opacity: 0scale: 0 }}
                               animate={{ 
-                                opacity: [0, 1, 0],
-                                scale: [0, 1, 0],
-                                x: [0, Math.random() * 100 - 50],
-                                y: [0, Math.random() * 100 - 50]
+                                opacity: [010],
+                                scale: [010],
+                                x: [0Math.random() * 100 - 50],
+                                y: [0Math.random() * 100 - 50]
                               }}
                               transition={{
                                 duration: 2,
@@ -261,7 +261,7 @@ const InteractiveTechDemo2028PromotionBanner = () => {
                           <motion.div
                             className={`h-1 bg-gradient-to-r ${technologies[currentTech].color} rounded-full`}
                             animate={{ width: isPlaying ? '100%' : '0%' }}
-                            transition={{ duration: 5, ease: "linear" }}
+                            transition={{ duration: 5ease: "linear" }}
                           />
                         </div>
                       </div>
@@ -276,7 +276,7 @@ const InteractiveTechDemo2028PromotionBanner = () => {
                         {technologies[currentTech].description}
                       </div>
                       <div className="flex justify-center gap-1">
-                        {[...Array(4)].map((_, i) => (
+                        {[...Array(4)].map((_i) => (
                           <div
                             key={i}
                             className={`w-2 h-2 rounded-full ${
@@ -332,7 +332,7 @@ const InteractiveTechDemo2028PromotionBanner = () => {
             className="h-full bg-gradient-to-r from-purple-500 to-pink-500"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: 10, ease: "linear" }}
+            transition={{ duration: 10ease: "linear" }}
           />
         </div>
       </motion.div>

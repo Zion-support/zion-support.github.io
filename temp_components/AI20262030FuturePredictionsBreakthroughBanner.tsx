@@ -18,9 +18,9 @@ export default function AI20262030FuturePredictionsBreakthroughBanner() {
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the most accurate predictions for the next decade of AI evolution, featuring 
-            <span className="text-cyan-400 font-bold"> quantum consciousness</span>, 
-            <span className="text-purple-400 font-bold"> dimensional AI systems</span>, and 
+            Discover the most accurate predictions for the next decade of AI evolutionfeaturing 
+            <span className="text-cyan-400 font-bold"> quantum consciousness</span>
+            <span className="text-purple-400 font-bold"> dimensional AI systems</span>and 
             <span className="text-pink-400 font-bold"> transcendent technologies</span>.
           </p>
           

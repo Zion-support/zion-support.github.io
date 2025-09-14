@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Check, Copy } from 'lucide-react';
+CheckCopy
 import { cn } from "@/lib/utils";
 
 interface CodeBlockProps {
@@ -16,14 +16,14 @@ export function CodeBlock({
   showLineNumbers = false,
   className
 }: CodeBlockProps) {
-  const [copied, setCopied] = useState(false);
+  const [copiedsetCopied] = useState(false);
 
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
-    }, 2000);
+    }2000);
   };
 
   return (
@@ -37,7 +37,7 @@ export function CodeBlock({
       )}>
         {showLineNumbers && (
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">
-            {code.split('\n').map((_, i) => (
+            {code.split('\n').map((_i) => (
               <div key={i} className="h-6 leading-6">
                 {i + 1}
               </div>

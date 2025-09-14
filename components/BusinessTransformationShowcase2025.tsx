@@ -1,14 +1,14 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Target, 
-  BarChart3, 
+  TrendingUp
+  Users
+  DollarSign
+  Target
+  BarChart3
   Clock,
   CheckCircle,
   ArrowRight,
@@ -19,12 +19,12 @@ import {
 } from 'lucide-react';
 
 const BusinessTransformationShowcase2025 = () => {
-  const [activeMetric, setActiveMetric] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeMetricsetActiveMetric] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const metrics = [
     {
@@ -87,7 +87,7 @@ const BusinessTransformationShowcase2025 = () => {
       industry: 'Technology',
       challenge: 'Manual processes causing delays',
       solution: 'AI-powered automation platform',
-      results: '85% faster operations, 60% cost reduction',
+      results: '85% faster operations60% cost reduction',
       logo: '🏢'
     },
     {
@@ -95,7 +95,7 @@ const BusinessTransformationShowcase2025 = () => {
       industry: 'Manufacturing',
       challenge: 'Supply chain inefficiencies',
       solution: 'Predictive analytics & optimization',
-      results: '40% inventory reduction, 95% on-time delivery',
+      results: '40% inventory reduction95% on-time delivery',
       logo: '🏭'
     },
     {
@@ -103,7 +103,7 @@ const BusinessTransformationShowcase2025 = () => {
       industry: 'Financial Services',
       challenge: 'Manual risk assessment',
       solution: 'AI-driven risk analysis system',
-      results: '70% faster decisions, 90% accuracy improvement',
+      results: '70% faster decisions90% accuracy improvement',
       logo: '🏦'
     }
   ];
@@ -120,8 +120,8 @@ const BusinessTransformationShowcase2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 }
+    hidden: { opacity: 0y: 30 },
+    visible: { opacity: 1y: 0 }
   };
 
   return (
@@ -156,7 +156,7 @@ const BusinessTransformationShowcase2025 = () => {
 
         {/* Metrics Grid */}
         <motion.div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16" variants={itemVariants}>
-          {metrics.map((metric, index) => {
+          {metrics.map((metricindex) => {
             const Icon = metric.icon;
             return (
               <motion.div
@@ -184,9 +184,9 @@ const BusinessTransformationShowcase2025 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeMetric}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
+            exit={{ opacity: 0y: -20 }}
             transition={{ duration: 0.5 }}
             className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/10 mb-16"
           >
@@ -194,7 +194,7 @@ const BusinessTransformationShowcase2025 = () => {
               <div>
                 <div className="flex items-center gap-4 mb-6">
                   <div className={`p-4 rounded-2xl bg-gradient-to-r ${metrics[activeMetric].color}`}>
-                    {React.createElement(metrics[activeMetric].icon, { className: "w-8 h-8 text-white" })}
+                    {React.createElement(metrics[activeMetric].icon{ className: "w-8 h-8 text-white" })}
                   </div>
                   <div>
                     <h2 className="text-4xl font-bold text-white mb-2">
@@ -207,12 +207,12 @@ const BusinessTransformationShowcase2025 = () => {
                 </div>
 
                 <div className="space-y-4">
-                  {metrics[activeMetric].details.map((detail, index) => (
+                  {metrics[activeMetric].details.map((detailindex) => (
                     <motion.div
                       key={index}
                       className="flex items-center gap-3"
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
+                      initial={{ opacity: 0x: -20 }}
+                      animate={{ opacity: 1x: 0 }}
                       transition={{ delay: index * 0.1 }}
                     >
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -252,12 +252,12 @@ const BusinessTransformationShowcase2025 = () => {
             Success Stories
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {successStories.map((story, index) => (
+            {successStories.map((storyindex) => (
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0y: 30 }}
+                animate={{ opacity: 1y: 0 }}
                 transition={{ delay: index * 0.2 }}
                 whileHover={{ y: -5 }}
               >

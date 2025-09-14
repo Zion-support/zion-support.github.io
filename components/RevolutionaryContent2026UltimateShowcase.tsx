@@ -42,7 +42,7 @@ const RevolutionaryContent2026UltimateShowcase = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {contentItems.map((item, index) => (
+          {contentItems.map((itemindex) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
               <div className="flex items-center justify-between mb-6">
                 <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold">

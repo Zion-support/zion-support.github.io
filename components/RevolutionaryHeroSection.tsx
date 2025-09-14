@@ -32,8 +32,8 @@ export default function RevolutionaryHeroSection() {
             
             <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed max-w-2xl">
               Experience the most advanced AI innovations delivering 
-              <span className="font-bold text-yellow-300"> 15,000% ROI</span>, 
-              <span className="font-bold text-green-300"> 99.9% accuracy</span>, and 
+              <span className="font-bold text-yellow-300"> 15,000% ROI</span>
+              <span className="font-bold text-green-300"> 99.9% accuracy</span>and 
               <span className="font-bold text-cyan-300"> quantum supremacy</span> 
               through revolutionary technologies.
             </p>

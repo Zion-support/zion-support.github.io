@@ -1,8 +1,8 @@
 
-import React, { useState } from "react";
+import React{ useState } from "react";
 import { Button } from "@/components/ui/button";
 import { 
-  getClientBudgetSuggestion, 
+  getClientBudgetSuggestion
   PricingSuggestion,
   ClientBudgetParams,
   trackPricingSuggestion
@@ -17,7 +17,7 @@ interface ClientBudgetRecommenderProps {
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;
+  onSuggestionApplied: (minValue: numbermaxValue: number) => void;
 }
 
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
@@ -27,8 +27,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   scope,
   experienceLevel,
   onSuggestionApplied}) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
+  const [isLoadingsetIsLoading] = useState(false);
+  const [suggestionsetSuggestion] = useState<PricingSuggestion | null>(null);
   const { user } = useAuth();
 
   const generateSuggestion = async () => {
@@ -49,7 +49,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       const result = await getClientBudgetSuggestion(params);
       setSuggestion(result);
     } catch (error) {
-      console.error("Error generating budget suggestion:", error);
+      console.error("Error generating budget suggestion:"error);
     } finally {
       setIsLoading(false);
     }
@@ -57,7 +57,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
   const handleApplySuggestion = () => {
     if (suggestion) {
-      onSuggestionApplied(suggestion.minRate, suggestion.maxRate);
+      onSuggestionApplied(suggestion.minRatesuggestion.maxRate);
       
       // Track this suggestion application
       if (user) {

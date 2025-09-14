@@ -9,7 +9,7 @@ interface SaveTalentButtonProps {
   isSaved: boolean;
 }
 
-export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButtonProps) {
+export function SaveTalentButton({ talentIdonSaveisSaved }: SaveTalentButtonProps) {
   return (
     <Button
       onClick={() => onSave(talentId)}

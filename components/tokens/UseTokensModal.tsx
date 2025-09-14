@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useState } from 'react';
-import { connectMetaMask, getAccounts } from '../../utils/wallet';
+import React{ useEffectuseState } from 'react';
+import { connectMetaMaskgetAccounts } from '../../utils/wallet';
 
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
 
@@ -14,10 +14,10 @@ export default function UseTokensModal({
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {
-  const [account, setAccount] = useState<string | null>(null);
-  const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
-  const [tokens, setTokens] = useState<number>(100);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [accountsetAccount] = useState<string | null>(null);
+  const [typesetType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
+  const [tokensetTokens] = useState<number>(100);
+  const [isSubmittingsetIsSubmitting] = useState(false);
   const usdValue = (tokens * 0.01).toFixed(2);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function UseTokensModal({
       const accs = await getAccounts();
       if (accs && accs.length > 0) setAccount(accs[0]);
     })();
-  }, []);
+  }[]);
 
   async function connect() {
     const accs = await connectMetaMask();
@@ -35,10 +35,10 @@ export default function UseTokensModal({
   async function redeem() {
     setIsSubmitting(true);
     try {
-      const res = await fetch('/api/tokens/redeem', {
+      const res = await fetch('/api/tokens/redeem'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ account, amount: tokens, type, serviceId })});
+        body: JSON.stringify({ accountamount: tokenstypeserviceId })});
       const data = await res.json();
       if (data?.ok) {
         onClose();
@@ -73,14 +73,14 @@ export default function UseTokensModal({
 
           <div className="text-sm">
             <div className="mb-1">Amount (ZION)</div>
-            <input type="number" min={1} value={tokens} onChange={(e) => setTokens(parseInt(e.target.value || '0', 10))} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2" />
+            <input type="number" min={1} value={tokens} onChange={(e) => setTokens(parseInt(e.target.value || '0'10))} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2" />
             <div className="opacity-70 mt-1">Approx. ${usdValue} USD</div>
           </div>
 
           <div className="text-sm">
             <div className="mb-1">Wallet</div>
             {account ? (
-              <div className="rounded border border-green-600 text-green-700 dark:text-green-400 px-2 py-2">Connected: {account.slice(0, 6)}…{account.slice(-4)}</div>
+              <div className="rounded border border-green-600 text-green-700 dark:text-green-400 px-2 py-2">Connected: {account.slice(06)}…{account.slice(-4)}</div>
             ) : (
               <button onClick={connect} className="enhanced-button enhanced-button-primary">Connect MetaMask</button>
             )}
@@ -88,7 +88,7 @@ export default function UseTokensModal({
         </div>
 
         <div className="mt-4 flex items-center justify-between">
-          <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>
+          <div className="text-xs opacity-70">You can spend tokens to boost visibilitypromote listingsor access premium support.</div>
           <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className="enhanced-button enhanced-button-primary disabled:opacity-50">Redeem</button>
         </div>
       </div>

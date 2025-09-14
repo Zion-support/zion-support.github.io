@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Zap, Brain, Rocket, Star, TrendingUp, Users, Globe, Shield, Award } from 'lucide-react';
+ArrowRightSparklesZapBrainRocketStarTrendingUpUsersGlobeShieldAward
 
 const UltimateTechShowcase2026Banner = () => {
   const technologies = [
@@ -37,10 +37,10 @@ const UltimateTechShowcase2026Banner = () => {
   ];
 
   const achievements = [
-    { number: "500+", label: "Enterprise Clients", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime Guarantee", icon: <Shield className="w-6 h-6" /> },
-    { number: "50+", label: "Industry Awards", icon: <Award className="w-6 h-6" /> },
-    { number: "1M+", label: "Daily Active Users", icon: <Star className="w-6 h-6" /> }
+    { number: "500+"label: "Enterprise Clients"icon: <Users className="w-6 h-6" /> },
+    { number: "99.9%"label: "Uptime Guarantee"icon: <Shield className="w-6 h-6" /> },
+    { number: "50+"label: "Industry Awards"icon: <Award className="w-6 h-6" /> },
+    { number: "1M+"label: "Daily Active Users"icon: <Star className="w-6 h-6" /> }
   ];
 
   return (
@@ -55,8 +55,8 @@ const UltimateTechShowcase2026Banner = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -73,24 +73,24 @@ const UltimateTechShowcase2026Banner = () => {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover the most advanced AI, quantum computing, and neural interface technologies 
+            Discover the most advanced AIquantum computingand neural interface technologies 
             that are reshaping industries and transforming the way we work and live.
           </p>
         </motion.div>
 
         {/* Technology Showcase */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0y: 40 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
         >
-          {technologies.map((tech, index) => (
+          {technologies.map((techindex) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
             >
               <div className="flex items-center justify-between mb-6">
@@ -120,7 +120,7 @@ const UltimateTechShowcase2026Banner = () => {
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: `${tech.progress}%` }}
-                    transition={{ duration: 1, delay: index * 0.2 }}
+                    transition={{ duration: 1delay: index * 0.2 }}
                     className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
                   ></motion.div>
                 </div>
@@ -131,9 +131,9 @@ const UltimateTechShowcase2026Banner = () => {
 
         {/* Achievements */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0y: 40 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center text-white mb-12">
@@ -141,12 +141,12 @@ const UltimateTechShowcase2026Banner = () => {
           </h3>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {achievements.map((achievement, index) => (
+            {achievements.map((achievementindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"
               >
                 <div className="flex justify-center mb-4">
@@ -163,9 +163,9 @@ const UltimateTechShowcase2026Banner = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0y: 40 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30 rounded-3xl p-12">

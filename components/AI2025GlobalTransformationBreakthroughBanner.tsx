@@ -33,7 +33,7 @@ export default function AI2025GlobalTransformationBreakthroughBanner() {
           
           <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-4xl mx-auto">
             Discover how we achieved 10,000% ROI for a Fortune 500 company in just 6 months. 
-            Real results, proven strategies, and actionable insights that can transform your business!
+            Real resultsproven strategiesand actionable insights that can transform your business!
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

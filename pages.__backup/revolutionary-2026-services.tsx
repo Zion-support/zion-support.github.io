@@ -3,20 +3,20 @@ import Head from 'next/head';
 import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation';
 import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero';
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
-import { Phone, Mail } from 'lucide-react';
+PhoneMail
 
 export default function Revolutionary2026ServicesPage() {
   return (
     <>
       <Head>
         <title>Revolutionary 2026 Services - Zion Tech Group</title>
-        <meta name="description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions." />
-        <meta name="keywords" content="AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Experience the future with our cutting-edge AIquantum computingand emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions." />
+        <meta name="keywords" content="AI servicesquantum computingemerging technologyhealthcare biotechfintech blockchain2026 technologyZion Tech Group" />
+        <meta name="viewport" content="width=device-widthinitial-scale=1" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Revolutionary 2026 Services - Zion Tech Group" />
-        <meta property="og:description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services." />
+        <meta property="og:description" content="Experience the future with our cutting-edge AIquantum computingand emerging technology services." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2026-services" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image-revolutionary-2026.jpg" />
@@ -24,11 +24,11 @@ export default function Revolutionary2026ServicesPage() {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Revolutionary 2026 Services - Zion Tech Group" />
-        <meta name="twitter:description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services." />
+        <meta name="twitter:description" content="Experience the future with our cutting-edge AIquantum computingand emerging technology services." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image-revolutionary-2026.jpg" />
         
         {/* Additional Meta */}
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="indexfollow" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="contact" content="kleber@ziontechgroup.com" />
         <meta name="phone" content="+1 302 464 0950" />
@@ -44,7 +44,7 @@ export default function Revolutionary2026ServicesPage() {
               "name": "Zion Tech Group",
               "url": "https://ziontechgroup.com",
               "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Revolutionary AI, quantum computing, and emerging technology services for 2026",
+              "description": "Revolutionary AIquantum computingand emerging technology services for 2026",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "364 E Main St STE 1008",
@@ -90,8 +90,8 @@ export default function Revolutionary2026ServicesPage() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're not just another technology company. We're pioneers in the future of AI, quantum computing, 
-                and emerging technologies, delivering revolutionary solutions that transform industries.
+                We're not just another technology company. We're pioneers in the future of AIquantum computing
+                and emerging technologiesdelivering revolutionary solutions that transform industries.
               </p>
             </div>
 
@@ -107,19 +107,19 @@ export default function Revolutionary2026ServicesPage() {
                 {
                   icon: '⚛️',
                   title: 'Quantum Technology',
-                  description: 'Leading-edge quantum computing, cryptography, and quantum internet infrastructure.',
+                  description: 'Leading-edge quantum computingcryptographyand quantum internet infrastructure.',
                   color: 'from-blue-500 to-cyan-500'
                 },
                 {
                   icon: '🚀',
                   title: 'Emerging Tech',
-                  description: 'Cutting-edge holographic metaverse, space tech, and autonomous manufacturing.',
+                  description: 'Cutting-edge holographic metaversespace techand autonomous manufacturing.',
                   color: 'from-green-500 to-emerald-500'
                 },
                 {
                   icon: '🏥',
                   title: 'Healthcare Innovation',
-                  description: 'Revolutionary AI drug discovery, autonomous healthcare, and biotech research.',
+                  description: 'Revolutionary AI drug discoveryautonomous healthcareand biotech research.',
                   color: 'from-teal-500 to-cyan-500'
                 },
                 {
@@ -134,7 +134,7 @@ export default function Revolutionary2026ServicesPage() {
                   description: 'Serving 2,500+ customers worldwide with transformative technology solutions.',
                   color: 'from-indigo-500 to-purple-500'
                 }
-              ].map((feature, index) => (
+              ].map((featureindex) => (
                 <div key={index} className="group">
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105">
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>

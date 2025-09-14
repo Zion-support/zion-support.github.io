@@ -21,7 +21,7 @@ export default function AI2026BreakthroughRevolutionaryContentBanner() {
           
           {/* Subheading */}
           <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
-            Experience the next evolution of AI with quantum-neural fusion, consciousness integration, and transcendent intelligence delivering infinite ROI possibilities.
+            Experience the next evolution of AI with quantum-neural fusionconsciousness integrationand transcendent intelligence delivering infinite ROI possibilities.
           </p>
 
           {/* Key features grid */}

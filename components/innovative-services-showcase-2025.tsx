@@ -1,13 +1,13 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Search, Filter, Star, CheckCircle, ArrowRight, 
-  Brain, Atom, Shield, Rocket, Target, Microscope,
-  Phone, Mail, MapPin, TrendingUp, Users, Award,
-  Zap, Globe, Cpu, Database, Lock, Cloud,
-  Stethoscope, GraduationCap, Leaf, Truck
+  SearchFilterStarCheckCircleArrowRight
+  BrainAtomShieldRocketTargetMicroscope,
+  PhoneMailMapPinTrendingUpUsersAward,
+  ZapGlobeCpuDatabaseLockCloud,
+  StethoscopeGraduationCapLeafTruck
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
@@ -35,7 +35,7 @@ const serviceCategories = [
   {
     id: 'financial-technology',
     title: '💰 Financial Technology',
-    description: 'Innovative fintech, DeFi, and financial services',
+    description: 'Innovative fintechDeFiand financial services',
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-500',
     services: [...innovativeFinancialServices2025],
@@ -95,7 +95,7 @@ const serviceCategories = [
   {
     id: 'quantum-emerging',
     title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing, DNA computing, and beyond',
+    description: 'Quantum computingDNA computingand beyond',
     icon: Atom,
     color: 'from-indigo-500 to-blue-500',
     services: [...emergingTechServices2025],
@@ -125,9 +125,9 @@ const serviceCategories = [
 ];
 
 export default function InnovativeServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [sortBysetSortBy] = useState('name');
 
   const filteredServices = serviceCategories.flatMap(category => 
     category.services.filter(service =>
@@ -139,7 +139,7 @@ export default function InnovativeServicesShowcase2025() {
     )
   );
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort((ab) => {
     switch (sortBy) {
       case 'name':
         return a.name.localeCompare(b.name);
@@ -156,8 +156,8 @@ export default function InnovativeServicesShowcase2025() {
     <Layout>
       <Head>
         <title>Innovative Services Showcase 2025 | Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive collection of innovative micro SAAS, AI, healthcare, fintech, and emerging technology services for 2025 and beyond." />
-        <meta name="keywords" content="innovative services, micro SAAS, AI services, healthcare technology, fintech, Zion Tech Group" />
+        <meta name="description" content="Discover our comprehensive collection of innovative micro SAASAIhealthcarefintechand emerging technology services for 2025 and beyond." />
+        <meta name="keywords" content="innovative servicesmicro SAASAI serviceshealthcare technologyfintechZion Tech Group" />
         <meta property="og:title" content="Innovative Services Showcase 2025 - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive collection of innovative technology services." />
         <meta property="og:url" content="https://ziontechgroup.com/innovative-services-showcase-2025" />
@@ -176,8 +176,8 @@ export default function InnovativeServicesShowcase2025() {
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -193,20 +193,20 @@ export default function InnovativeServicesShowcase2025() {
               <span className="text-white">Showcase</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover our comprehensive collection of revolutionary micro SAAS, AI, healthcare, fintech, and emerging technology services that are transforming industries worldwide.
+              Discover our comprehensive collection of revolutionary micro SAASAIhealthcarefintechand emerging technology services that are transforming industries worldwide.
             </p>
           </motion.div>
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                {serviceCategories.reduce((total, category) => total + category.services.length, 0)}+
+                {serviceCategories.reduce((totalcategory) => total + category.services.length0)}+
               </div>
               <div className="text-gray-400">Services</div>
             </div>
@@ -286,12 +286,12 @@ export default function InnovativeServicesShowcase2025() {
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedServices.map((service, index) => (
+            {sortedServices.map((serviceindex) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={{ opacity: 0y: 30 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -319,7 +319,7 @@ export default function InnovativeServicesShowcase2025() {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">Key Features</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 3).map((feature, featureIndex) => (
+                    {service.features.slice(03).map((featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -381,8 +381,8 @@ export default function InnovativeServicesShowcase2025() {
       <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -397,9 +397,9 @@ export default function InnovativeServicesShowcase2025() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.1 }}
               viewport={{ once: true }}
               className="text-center"
             >
@@ -411,9 +411,9 @@ export default function InnovativeServicesShowcase2025() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.2 }}
               viewport={{ once: true }}
               className="text-center"
             >
@@ -425,9 +425,9 @@ export default function InnovativeServicesShowcase2025() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8delay: 0.3 }}
               viewport={{ once: true }}
               className="text-center"
             >

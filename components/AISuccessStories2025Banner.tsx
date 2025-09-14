@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Users, DollarSign, Award, CheckCircle, Star } from 'lucide-react';
+ArrowRightTrendingUpUsersDollarSignAwardCheckCircleStar
 
 export default function AISuccessStories2025Banner() {
   return (
@@ -22,7 +22,7 @@ export default function AISuccessStories2025Banner() {
                 AI Success Stories
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> 2025</span>
                 <br />
-                Real Results, Real Impact
+                Real ResultsReal Impact
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">

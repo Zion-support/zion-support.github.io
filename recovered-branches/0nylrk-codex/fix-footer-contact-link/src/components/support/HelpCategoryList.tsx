@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { HelpCategory } from "./types";
 
 interface HelpCategoryListProps {
@@ -9,7 +9,7 @@ interface HelpCategoryListProps {
   searchQuery: string;
 }
 
-export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {
+export function HelpCategoryList({ categoriesonCategorySelectsearchQuery }: HelpCategoryListProps) {
   // Filter categories based on search query
   const filteredCategories = searchQuery
     ? categories.filter(

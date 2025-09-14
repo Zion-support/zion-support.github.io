@@ -27,8 +27,8 @@ export default function AI2025UltimateBreakthroughRevolutionPromotionBanner() {
           {/* Subheadline */}
           <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 max-w-5xl mx-auto leading-relaxed">
             Experience the most revolutionary AI breakthrough in history with 
-            <span className="text-yellow-400 font-bold"> 2,500-5,000% ROI</span>, 
-            <span className="text-green-400 font-bold"> 99.9% accuracy</span>, and 
+            <span className="text-yellow-400 font-bold"> 2,500-5,000% ROI</span>
+            <span className="text-green-400 font-bold"> 99.9% accuracy</span>and 
             <span className="text-cyan-400 font-bold"> 10,000x faster processing</span>
           </p>
 

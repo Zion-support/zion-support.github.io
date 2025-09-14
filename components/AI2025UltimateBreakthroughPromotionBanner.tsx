@@ -15,7 +15,7 @@ export default function AI2025UltimateBreakthroughPromotionBanner() {
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover the most revolutionary AI breakthroughs of 2025, delivering unprecedented 10,000% ROI and 99.9% accuracy across all industries.
+            Discover the most revolutionary AI breakthroughs of 2025delivering unprecedented 10,000% ROI and 99.9% accuracy across all industries.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">

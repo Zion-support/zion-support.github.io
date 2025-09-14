@@ -50,7 +50,7 @@ const BusinessIntelligenceRevolutionBanner2025 = () => {
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-3xl mb-3">🤖</div>
               <h3 className="text-lg font-bold mb-2">Autonomous Analytics</h3>
-              <p className="text-sm text-gray-300">AI systems process data 24/7, identifying insights automatically</p>
+              <p className="text-sm text-gray-300">AI systems process data 24/7identifying insights automatically</p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
               <div className="text-3xl mb-3">🔮</div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Clock, Tag, Star } from 'lucide-react';
+ArrowRightClockTagStar
 
 interface ContentItem {
   title: string;
@@ -36,7 +36,7 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
   className = '',
   variant = 'default'
 }) => {
-  const displayItems = items.slice(0, maxItems);
+  const displayItems = items.slice(0maxItems);
 
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -89,7 +89,7 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {displayItems.map((item, index) => (
+          {displayItems.map((itemindex) => (
             <Link
               key={index}
               href={item.href}
@@ -178,7 +178,7 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
           )}
         </div>
         <div className="space-y-3">
-          {items.slice(0, 3).map((item, index) => (
+          {items.slice(03).map((itemindex) => (
             <Link key={index} href={item.href} className="group block">
               <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                 <div className="text-2xl">{item.icon}</div>
@@ -227,7 +227,7 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {items.slice(0, 6).map((item, index) => (
+            {items.slice(06).map((itemindex) => (
               <Link key={index} href={item.href} className="group">
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
@@ -282,7 +282,7 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {items.map((item, index) => (
+          {items.map((itemindex) => (
             <Link key={index} href={item.href} className="group">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
                 <div className="aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative">

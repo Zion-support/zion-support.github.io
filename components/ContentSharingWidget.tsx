@@ -6,7 +6,7 @@ interface ContentSharingWidgetProps {
   description: string;
 }
 
-export default function ContentSharingWidget({ title, url, description }: ContentSharingWidgetProps) {
+export default function ContentSharingWidget({ titleurldescription }: ContentSharingWidgetProps) {
   const shareUrl = `https://zion.tech${url}`;
   const encodedTitle = encodeURIComponent(title);
   const encodedDescription = encodeURIComponent(description);

@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import { useStateuseEffect } from "react";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
@@ -12,8 +12,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function SavedTalentsPage() {
   const { user } = useAuth();
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [savedTalentsetSavedTalents] = useState<TalentProfile[]>([]);
+  const [isLoadingsetIsLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function SavedTalentsPage() {
           return;
         }
 
-        const { data, error } = await supabase
+        const { dataerror } = await supabase
           .from("saved_talents")
           .select(
             `
@@ -46,7 +46,7 @@ export default function SavedTalentsPage() {
             )
           `
           )
-          .eq("user_id", user.id);
+          .eq("user_id"user.id);
 
         if (error) {
           throw error;
@@ -60,7 +60,7 @@ export default function SavedTalentsPage() {
           setSavedTalents(talentProfiles);
         }
       } catch (error) {
-        console.error("Error fetching saved talents:", error);
+        console.error("Error fetching saved talents:"error);
         toast({
           title: "Error",
           description: "Failed to load saved talents. Please try again later.",
@@ -71,20 +71,20 @@ export default function SavedTalentsPage() {
     };
 
     fetchSavedTalents();
-  }, [user]);
+  }[user]);
 
   const handleViewProfile = (talentId: string) => {
     navigate(`/talent/${talentId}`);
   };
 
   const handleRequestHire = (talent: TalentProfile) => {
-    console.log("Request to hire:", talent);
+    console.log("Request to hire:"talent);
     toast({
       title: "Hire Request Sent",
       description: `A hire request has been sent to ${talent.full_name}.`});
   };
 
-  const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
+  const handleToggleSave = async (talentId: stringisCurrentlySaved: boolean) => {
     try {
       if (!user) {
         console.warn("User not authenticated.");
@@ -96,8 +96,8 @@ export default function SavedTalentsPage() {
         const { error } = await supabase
           .from('saved_talents')
           .delete()
-          .eq('user_id', user.id)
-          .eq('talent_id', talentId);
+          .eq('user_id'user.id)
+          .eq('talent_id'talentId);
   
         if (error) {
           throw error;
@@ -113,21 +113,21 @@ export default function SavedTalentsPage() {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
-          .insert([{ user_id: user.id, talent_id: talentId }]);
+          .insert([{ user_id: user.idtalent_id: talentId }]);
   
         if (error) {
           throw error;
         }
   
         // Fetch the updated talent profile and add it to the list
-        const { data: talentData, error: talentError } = await supabase
+        const { data: talentDataerror: talentError } = await supabase
           .from('talent_profiles')
           .select('*')
-          .eq('id', talentId)
+          .eq('id'talentId)
           .single();
   
         if (talentError) {
-          console.error("Error fetching talent profile:", talentError);
+          console.error("Error fetching talent profile:"talentError);
           toast({
             title: "Error",
             description: "Failed to update saved talents. Please try again later.",
@@ -136,14 +136,14 @@ export default function SavedTalentsPage() {
         }
   
         if (talentData) {
-          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]);
+          setSavedTalents(prevTalents => [...prevTalentstalentData as unknown as TalentProfile]);
           toast({
             title: "Talent Saved",
             description: "Talent saved to your list."});
         }
       }
     } catch (error) {
-      console.error("Error toggling saved talent:", error);
+      console.error("Error toggling saved talent:"error);
       toast({
         title: "Error",
         description: "Failed to update saved talents. Please try again later.",

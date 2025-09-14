@@ -10,11 +10,11 @@ interface LoginFields {
 
 export default function Login() {
   const navigate = useNavigate();
-  const { register, handleSubmit } = useForm<LoginFields>();
+  const { registerhandleSubmit } = useForm<LoginFields>();
 
   const onSubmit = async (data: LoginFields) => {
     try {
-      const res = await auth.login(data.email, data.password);
+      const res = await auth.login(data.emaildata.password);
       if (res.status === 200) {
         navigate('/dashboard');
       } else if (res.status >= 400 && res.status < 500) {

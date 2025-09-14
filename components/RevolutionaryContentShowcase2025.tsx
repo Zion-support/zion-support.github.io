@@ -14,7 +14,7 @@ export default function RevolutionaryContentShowcase2025() {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Experience the most cutting-edge content and insights that are revolutionizing 
-            how businesses approach AI, technology, and digital transformation.
+            how businesses approach AItechnologyand digital transformation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link

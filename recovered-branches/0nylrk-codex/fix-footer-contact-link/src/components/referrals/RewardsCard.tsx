@@ -1,15 +1,15 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
-import { BadgeDollarSign, Badge } from "lucide-react";
+import { BadgeDollarSignBadge } from "lucide-react";
 
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean;
 }
 
-export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
+export function RewardsCard({ rewardsisLoading }: RewardsCardProps) {
   if (isLoading) {
     return (
       <Card>
@@ -62,7 +62,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          {rewards.map((reward, index) => (
+          {rewards.map((rewardindex) => (
             <div 
               key={reward.id}
               className={`flex justify-between items-start ${

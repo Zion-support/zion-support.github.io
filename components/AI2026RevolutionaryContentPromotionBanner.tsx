@@ -28,8 +28,8 @@ export default function AI2026RevolutionaryContentPromotionBanner() {
           
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience the future of AI with <span className="text-pink-400 font-bold">quantum-neural fusion</span>, 
-            <span className="text-purple-400 font-bold"> consciousness integration</span>, and 
+            Experience the future of AI with <span className="text-pink-400 font-bold">quantum-neural fusion</span>
+            <span className="text-purple-400 font-bold"> consciousness integration</span>and 
             <span className="text-indigo-400 font-bold"> transcendent intelligence</span> delivering infinite possibilities.
           </p>
           

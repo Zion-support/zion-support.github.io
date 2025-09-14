@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -15,20 +15,20 @@ interface ContentItem {
 }
 
 export default function InteractiveContentShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [hoveredItemsetHoveredItem] = useState<string | null>(null);
 
   const contentItems: ContentItem[] = [
     {
       id: '1',
       title: 'AI 2025 Enterprise Success Stories',
-      description: 'Real companies, real results. See how leading enterprises achieved 300%+ ROI through AI transformation.',
+      description: 'Real companiesreal results. See how leading enterprises achieved 300%+ ROI through AI transformation.',
       category: 'case-studies',
       readTime: '8 min read',
       href: '/blog/ai-2025-enterprise-success-stories',
       featured: true,
       image: '/api/placeholder/400/250',
-      tags: ['AI', 'Success Stories', 'ROI', 'Enterprise']
+      tags: ['AI'Success Stories'ROI'Enterprise']
     },
     {
       id: '2',
@@ -39,7 +39,7 @@ export default function InteractiveContentShowcase2025() {
       href: '/blog/ai-2025-quantum-computing-breakthrough',
       featured: true,
       image: '/api/placeholder/400/250',
-      tags: ['Quantum Computing', 'AI', 'Breakthrough', 'Technology']
+      tags: ['Quantum Computing'AI'Breakthrough'Technology']
     },
     {
       id: '3',
@@ -50,7 +50,7 @@ export default function InteractiveContentShowcase2025() {
       href: '/case-studies/ai-transformation-manufacturing',
       featured: false,
       image: '/api/placeholder/400/250',
-      tags: ['Manufacturing', 'AI', 'Case Study', 'Quality Control']
+      tags: ['Manufacturing'AI'Case Study'Quality Control']
     },
     {
       id: '4',
@@ -61,7 +61,7 @@ export default function InteractiveContentShowcase2025() {
       href: '/blog/neural-interface-revolution-2035',
       featured: false,
       image: '/api/placeholder/400/250',
-      tags: ['Neural Interface', 'Future Tech', 'BCI', 'Innovation']
+      tags: ['Neural Interface'Future Tech'BCI'Innovation']
     },
     {
       id: '5',
@@ -72,7 +72,7 @@ export default function InteractiveContentShowcase2025() {
       href: '/blog/ai-cybersecurity-threats-2025',
       featured: false,
       image: '/api/placeholder/400/250',
-      tags: ['Cybersecurity', 'AI', 'Threats', 'Security']
+      tags: ['Cybersecurity'AI'Threats'Security']
     },
     {
       id: '6',
@@ -83,17 +83,17 @@ export default function InteractiveContentShowcase2025() {
       href: '/blog/startup-pricing-strategy-2025',
       featured: false,
       image: '/api/placeholder/400/250',
-      tags: ['Pricing', 'Startup', 'Strategy', 'Business']
+      tags: ['Pricing'Startup'Strategy'Business']
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length },
-    { id: 'case-studies', name: 'Case Studies', count: contentItems.filter(item => item.category === 'case-studies').length },
-    { id: 'technology', name: 'Technology', count: contentItems.filter(item => item.category === 'technology').length },
-    { id: 'future-tech', name: 'Future Tech', count: contentItems.filter(item => item.category === 'future-tech').length },
-    { id: 'security', name: 'Security', count: contentItems.filter(item => item.category === 'security').length },
-    { id: 'business', name: 'Business', count: contentItems.filter(item => item.category === 'business').length }
+    { id: 'all'name: 'All Content'count: contentItems.length },
+    { id: 'case-studies'name: 'Case Studies'count: contentItems.filter(item => item.category === 'case-studies').length },
+    { id: 'technology'name: 'Technology'count: contentItems.filter(item => item.category === 'technology').length },
+    { id: 'future-tech'name: 'Future Tech'count: contentItems.filter(item => item.category === 'future-tech').length },
+    { id: 'security'name: 'Security'count: contentItems.filter(item => item.category === 'security').length },
+    { id: 'business'name: 'Business'count: contentItems.filter(item => item.category === 'business').length }
   ];
 
   const filteredItems = selectedCategory === 'all' 
@@ -111,7 +111,7 @@ export default function InteractiveContentShowcase2025() {
             Explore Our Latest Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover cutting-edge insights, real-world case studies, and breakthrough 
+            Discover cutting-edge insightsreal-world case studiesand breakthrough 
             technologies that are shaping the future of AI and business.
           </p>
         </div>
@@ -141,7 +141,7 @@ export default function InteractiveContentShowcase2025() {
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-sm text-gray-500">{item.readTime}</span>
                     <div className="flex space-x-2">
-                      {item.tags.slice(0, 2).map((tag, index) => (
+                      {item.tags.slice(02).map((tagindex) => (
                         <span key={index} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">
                           {tag}
                         </span>
@@ -219,7 +219,7 @@ export default function InteractiveContentShowcase2025() {
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm text-gray-500">{item.readTime}</span>
                   <span className="text-sm text-blue-600 font-semibold capitalize">
-                    {item.category.replace('-', ' ')}
+                    {item.category.replace('-' ')}
                   </span>
                 </div>
                 <h4 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">
@@ -229,7 +229,7 @@ export default function InteractiveContentShowcase2025() {
                   {item.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag, index) => (
+                  {item.tags.slice(03).map((tagindex) => (
                     <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
                       {tag}
                     </span>
@@ -256,7 +256,7 @@ export default function InteractiveContentShowcase2025() {
               Want More Content Like This?
             </h3>
             <p className="text-lg text-blue-100 mb-6 max-w-2xl mx-auto">
-              Stay updated with our latest insights, case studies, and breakthrough 
+              Stay updated with our latest insightscase studiesand breakthrough 
               technologies. Join thousands of professionals who trust our content.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

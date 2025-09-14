@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
+import { useFormtype UseFormReturn } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Mail } from "lucide-react";
@@ -26,8 +26,8 @@ const forgotPasswordSchema = z.object({
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
 
 export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth();
-  const [submitted, setSubmitted] = useState(false);
+  const { resetPasswordisLoading } = useAuth();
+  const [submittedsetSubmitted] = useState(false);
   
   // Initialize react-hook-form
   const form = useForm({

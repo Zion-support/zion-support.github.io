@@ -1,22 +1,22 @@
 
-import { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useStateuseEffect } from "react";
+import { useParamsLinkuseNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
+import { ArrowLeftCalendarClockChevronLeftChevronRightShare2FacebookTwitterLinkedin } from "lucide-react";
 import type { BlogPost as BlogPostType } from "@/types/blog";
 import { Separator } from "@/components/ui/separator";
 import { AppLayout } from "@/layout/AppLayout";
 
-// Importing the sample blog posts - in a real app, you would fetch this from an API
+// Importing the sample blog posts - in a real appyou would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts";
 
 export default function BlogPost() {
   const { slug } = useParams() as { slug: string };
   const navigate = useNavigate();
-  const [post, setPost] = useState<BlogPostType | null>(null);
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
-  const [showShareMenu, setShowShareMenu] = useState(false);
+  const [postsetPost] = useState<BlogPostType | null>(null);
+  const [relatedPostsetRelatedPosts] = useState<BlogPostType[]>([]);
+  const [showShareMenusetShowShareMenu] = useState(false);
   
   useEffect(() => {
     // Find the current post by slug
@@ -25,22 +25,22 @@ export default function BlogPost() {
     if (currentPost) {
       setPost(currentPost);
       
-      // Find related posts (same category, excluding current post)
+      // Find related posts (same categoryexcluding current post)
       const related = BLOG_POSTS.filter(p => 
         p.id !== currentPost.id && 
         (p.category === currentPost.category || 
          p.tags.some(tag => currentPost.tags.includes(tag)))
-      ).slice(0, 3);
+      ).slice(03);
       
       setRelatedPosts(related);
     } else {
       // Post not found
-      navigate("/blog", { replace: true });
+      navigate("/blog"{ replace: true });
     }
     
     // Scroll to top when post changes
-    window.scrollTo(0, 0);
-  }, [slug, navigate]);
+    window.scrollTo(0);
+  }[slugnavigate]);
   
   if (!post) {
     return (
@@ -74,7 +74,7 @@ export default function BlogPost() {
       <SEO 
         title={post.title} 
         description={post.excerpt} 
-        keywords={post.tags.join(", ")}
+        keywords={post.tags.join(")}
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
       />

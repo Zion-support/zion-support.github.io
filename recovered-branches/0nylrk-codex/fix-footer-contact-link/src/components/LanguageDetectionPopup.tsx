@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useStateuseEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   AlertDialog,
@@ -9,13 +9,13 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle} from '../components/ui/alert-dialog';
-import { useLanguage, SupportedLanguage, LanguageContextType } from '../context/LanguageContext';
+import { useLanguageSupportedLanguageContextType } from '../context/LanguageContext';
 
 export function LanguageDetectionPopup() {
-  const [open, setOpen] = useState(false);
+  const [opensetOpen] = useState(false);
   const { t } = useTranslation();
-  const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType;
-  const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null);
+  const { changeLanguagecurrentLanguagesupportedLanguages } = useLanguage() as LanguageContextType;
+  const [detectedLanguagesetDetectedLanguage] = useState<SupportedLanguage | null>(null);
 
   useEffect(() => {
     // Check if this is first visit
@@ -23,10 +23,10 @@ export function LanguageDetectionPopup() {
     if (hasVisited) return;
 
     // Mark as visited
-    localStorage.setItem('zion_has_visited', 'true');
+    localStorage.setItem('zion_has_visited'true');
     
     // Get browser language
-    const browserLang = navigator.language.substring(0, 2) as SupportedLanguage;
+    const browserLang = navigator.language.substring(02) as SupportedLanguage;
     
     // Check if browser language is supported and different from current language
     const isSupported = supportedLanguages.some(lang => lang.code === browserLang);
@@ -34,7 +34,7 @@ export function LanguageDetectionPopup() {
       setDetectedLanguage(browserLang);
       setOpen(true);
     }
-  }, []);
+  }[]);
 
   if (!detectedLanguage) return null;
 
@@ -50,7 +50,7 @@ export function LanguageDetectionPopup() {
       <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">
         <AlertDialogHeader>
           <AlertDialogTitle className="text-white">
-            {t('language.switch_to_detected', { language: languageName })}
+            {t('language.switch_to_detected'{ language: languageName })}
           </AlertDialogTitle>
           <AlertDialogDescription className="text-zion-slate-light">
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}

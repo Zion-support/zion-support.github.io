@@ -1,27 +1,27 @@
 "use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React{ useStateuseEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Atom, Zap, Clock, Shield, Globe, TrendingUp } from 'lucide-react';
+CpuAtomZapClockShieldGlobeTrendingUp
 import Link from 'next/link';
 
 const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentHighlight, setCurrentHighlight] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentHighlightsetCurrentHighlight] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentHighlight(prev => (prev + 1) % 3);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const highlights = [
-    { icon: Cpu, value: "99.99%", label: "Quantum Fidelity", color: "from-blue-500 to-cyan-500" },
-    { icon: Zap, value: "10^18", label: "Ops/Second", color: "from-purple-500 to-pink-500" },
-    { icon: Shield, value: "Unbreakable", label: "Encryption", color: "from-green-500 to-emerald-500" }
+    { icon: Cpuvalue: "99.99%"label: "Quantum Fidelity"color: "from-blue-500 to-cyan-500" },
+    { icon: Zapvalue: "10^18"label: "Ops/Second"color: "from-purple-500 to-pink-500" },
+    { icon: Shieldvalue: "Unbreakable"label: "Encryption"color: "from-green-500 to-emerald-500" }
   ];
 
   const features = [
@@ -33,8 +33,8 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+      initial={{ opacity: 0y: 20 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
       className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 py-12"
     >
@@ -50,9 +50,9 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -30 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -30 }}
+              transition={{ delay: 0.2duration: 0.6 }}
               className="mb-4"
             >
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -70,12 +70,12 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
 
             {/* Features List */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ delay: 0.4duration: 0.6 }}
               className="grid grid-cols-2 gap-2 mb-6"
             >
-              {features.map((feature, index) => (
+              {features.map((featureindex) => (
                 <div key={index} className="flex items-center gap-2 text-gray-300">
                   <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
                   <span className="text-sm">{feature}</span>
@@ -85,9 +85,9 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ delay: 0.6duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link
@@ -108,9 +108,9 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
 
           {/* Right Quantum Stats */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 30 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
+            initial={{ opacity: 0x: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 30 }}
+            transition={{ delay: 0.3duration: 0.6 }}
             className="flex-shrink-0"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
@@ -119,8 +119,8 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
               {/* Animated Highlight */}
               <motion.div
                 key={currentHighlight}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={{ opacity: 1scale: 1 }}
                 transition={{ duration: 0.5 }}
                 className="text-center mb-6"
               >
@@ -160,7 +160,7 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1, duration: 0.5 }}
+                transition={{ delay: 1duration: 0.5 }}
                 className="mt-6 flex items-center justify-center gap-2 text-cyan-400 text-sm"
               >
                 <Clock className="w-4 h-4" />

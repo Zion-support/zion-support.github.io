@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
+import React{ SuspenselazyComponentType } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
 interface LazyComponentProps {
@@ -8,7 +8,7 @@ interface LazyComponentProps {
 }
 
 export default function LazyComponent({ 
-  component, 
+  component
   fallback = <LoadingSpinner size="md" text="Loading..." />,
   ...props 
 }: LazyComponentProps) {

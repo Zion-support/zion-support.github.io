@@ -1,15 +1,15 @@
 
 import React from "react";
 import { 
-  Dialog, 
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
   DialogDescription 
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { CalendarUserMailClockDollarSign } from "lucide-react";
+import { CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
@@ -21,13 +21,13 @@ interface QuoteDetailsProps {
   onClose: () => void;
 }
 
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
+export const QuoteDetails = ({ quoteisOpenonClose }: QuoteDetailsProps) => {
   if (!quote) return null;
 
   const formatDate = (dateString?: string) => {
     if (!dateString) return 'Not specified';
     try {
-      return format(new Date(dateString), 'PPP');
+      return format(new Date(dateString)'PPP');
     } catch (e) {
       return dateString;
     }

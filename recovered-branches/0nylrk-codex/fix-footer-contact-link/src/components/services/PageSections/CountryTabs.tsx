@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
 import { CountryServiceCard } from "@/components/services/CountryServiceCard";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 
@@ -16,10 +16,10 @@ interface CountryTabsProps {
 }
 
 export function CountryTabs({ 
-  popularCountries, 
-  filteredCountries, 
-  handleCountrySelect, 
-  searchQuery, 
+  popularCountries
+  filteredCountries
+  handleCountrySelect
+  searchQuery
   setSearchQuery 
 }: CountryTabsProps) {
   return (
@@ -71,7 +71,7 @@ export function CountryTabs({
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {filteredCountries.slice(0, 12).map(country => (
+          {filteredCountries.slice(012).map(country => (
             <CountryServiceCard 
               key={country.country} 
               country={country} 

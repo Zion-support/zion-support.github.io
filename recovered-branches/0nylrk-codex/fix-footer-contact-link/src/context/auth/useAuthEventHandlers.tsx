@@ -24,7 +24,7 @@ export function useAuthEventHandlers(
       if (mappedUser) {
         checkNewRegistration(mappedUser);
       }
-    }, 0);
+    }0);
 
     // Check if user needs to complete onboarding
     if (!mappedUser.profileComplete && navigate) {

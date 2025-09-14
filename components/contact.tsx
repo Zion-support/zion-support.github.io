@@ -1,13 +1,13 @@
 "use client";
 export default function Page(){return null}
 import React from 'react';
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Phone, Mail, MapPin, Globe, Clock, Users, 
-  MessageSquare, Send, CheckCircle, Star, 
-  Rocket, Brain, Atom, Shield, Zap
+  PhoneMailMapPinGlobeClockUsers
+  MessageSquareSendCheckCircleStar
+  RocketBrainAtomShieldZap
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
@@ -20,7 +20,7 @@ import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovati
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
+  const [formDatasetFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -29,8 +29,8 @@ export default function ContactPage() {
     message: ''
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [submitSuccessetSubmitSuccess] = useState(false);
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -47,7 +47,7 @@ export default function ContactPage() {
     ...quantumSpaceInnovations2029.filter(s => s.popular),
     ...enterpriseITInnovations2029.filter(s => s.popular),
     ...innovativeMicroSaas2029.filter(s => s.popular)
-  ].slice(0, 6);
+  ].slice(06);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -61,7 +61,7 @@ export default function ContactPage() {
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve2000));
     
     setIsSubmitting(false);
     setSubmitSuccess(true);
@@ -77,16 +77,16 @@ export default function ContactPage() {
         service: '',
         message: ''
       });
-    }, 3000);
+    }3000);
   };
 
   const stats = [
-    { value: '500+', label: 'Micro SaaS Services', icon: <Zap className="w-6 h-6" />, color: 'text-cyan-400' },
-    { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" />, color: 'text-fuchsia-400' },
-    { value: '30', label: 'Day Free Trials', icon: <Star className="w-6 h-6" />, color: 'text-blue-400' },
-    { value: '24/7', label: 'AI Support', icon: <Brain className="w-6 h-6" />, color: 'text-green-400' },
-    { value: '$1B+', label: 'Market Value', icon: <DollarSign className="w-6 h-6" />, color: 'text-yellow-400' },
-    { value: '2500%+', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" />, color: 'text-purple-400' }
+    { value: '500+'label: 'Micro SaaS Services'icon: <Zap className="w-6 h-6" />color: 'text-cyan-400' },
+    { value: '99.99%'label: 'Uptime Guarantee'icon: <Shield className="w-6 h-6" />color: 'text-fuchsia-400' },
+    { value: '30'label: 'Day Free Trials'icon: <Star className="w-6 h-6" />color: 'text-blue-400' },
+    { value: '24/7'label: 'AI Support'icon: <Brain className="w-6 h-6" />color: 'text-green-400' },
+    { value: '$1B+'label: 'Market Value'icon: <DollarSign className="w-6 h-6" />color: 'text-yellow-400' },
+    { value: '2500%+'label: 'Average ROI'icon: <TrendingUp className="w-6 h-6" />color: 'text-purple-400' }
   ];
 
   return (
@@ -94,7 +94,7 @@ export default function ContactPage() {
       <Head>
         <title>Contact Us - Zion Tech Group | Get Started with Revolutionary Micro SaaS Services</title>
         <meta name="description" content="Contact Zion Tech Group to get started with our revolutionary micro SaaS services. Get a free consultation and discover how our AI and quantum computing solutions can transform your business." />
-        <meta name="keywords" content="contact Zion Tech Group, micro SaaS consultation, AI services consultation, quantum computing services, business transformation" />
+        <meta name="keywords" content="contact Zion Tech Groupmicro SaaS consultationAI services consultationquantum computing servicesbusiness transformation" />
         <meta property="og:title" content="Contact Us - Zion Tech Group" />
         <meta property="og:description" content="Get started with our revolutionary micro SaaS services. Free consultation available." />
         <meta property="og:url" content="https://ziontechgroup.com/contact" />
@@ -107,8 +107,8 @@ export default function ContactPage() {
       <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -116,24 +116,24 @@ export default function ContactPage() {
               Let's Transform Your Business
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Ready to leverage the power of AI, quantum computing, and cutting-edge technology? 
+              Ready to leverage the power of AIquantum computingand cutting-edge technology? 
               Contact us today for a free consultation and discover how our revolutionary micro SaaS services can accelerate your growth.
             </p>
           </motion.div>
 
           {/* Stats Grid */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto mb-12"
           >
-            {stats.map((stat, index) => (
+            {stats.map((statindex) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.5delay: 0.4 + index * 0.1 }}
                 className="text-center group"
               >
                 <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/70 transition-all duration-300 hover:scale-105">
@@ -161,8 +161,8 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0x: -30 }}
+              whileInView={{ opacity: 1x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -173,8 +173,8 @@ export default function ContactPage() {
                 
                 {isSubmitted ? (
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0scale: 0.8 }}
+                    animate={{ opacity: 1scale: 1 }}
                     className="text-center py-12"
                   >
                     <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
@@ -191,9 +191,9 @@ export default function ContactPage() {
     <UltraFuturisticBackground2029>
       <Head>
         <title>Contact Zion Tech Group | Revolutionary 2029 Technology Services</title>
-        <meta name="description" content="Contact Zion Tech Group for revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology. Get in touch today!" />
-        <meta name="keywords" content="contact, Zion Tech Group, AI services, quantum computing, space technology, biotechnology, 2029 technology" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Contact Zion Tech Group for revolutionary 2029 technology services including AI consciousnessquantum computingspace miningand advanced biotechnology. Get in touch today!" />
+        <meta name="keywords" content="contactZion Tech GroupAI servicesquantum computingspace technologybiotechnology2029 technology" />
+        <meta name="viewport" content="width=device-widthinitial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Head>
 
@@ -203,8 +203,8 @@ export default function ContactPage() {
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
@@ -228,8 +228,8 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {/* Phone Contact */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
@@ -247,9 +247,9 @@ export default function ContactPage() {
 
               {/* Email Contact */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: 0.1 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
@@ -266,9 +266,9 @@ export default function ContactPage() {
 
               {/* Address Contact */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: 0.2 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
@@ -286,8 +286,8 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
@@ -304,8 +304,8 @@ export default function ContactPage() {
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/20">
                 {submitSuccess ? (
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0scale: 0.9 }}
+                    animate={{ opacity: 1scale: 1 }}
                     className="text-center py-12"
                   >
                     <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
@@ -415,7 +415,7 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-gray-800/50 border border-cyan-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20 resize-none"
-                        placeholder="Tell us about your project, goals, and how we can help transform your business with revolutionary technology..."
+                        placeholder="Tell us about your projectgoalsand how we can help transform your business with revolutionary technology..."
                       />
                     </div>
 
@@ -449,8 +449,8 @@ export default function ContactPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-12"
@@ -464,12 +464,12 @@ export default function ContactPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {popularServices.map((service, index) => (
+              {popularServices.map((serviceindex) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group cursor-pointer"
                 >
@@ -520,8 +520,8 @@ export default function ContactPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

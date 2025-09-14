@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Target, Users, Clock, TrendingUp } from 'lucide-react';
+ArrowRightBrainZapTargetUsersClockTrendingUp
 
 const AI2035ContentShowcase: React.FC = () => {
   const featuredContent = [
@@ -71,23 +71,23 @@ const AI2035ContentShowcase: React.FC = () => {
       icon: "🌍",
       benefit: "Infinite ROI achievement"
       title: 'AI 2035 Future Predictions',
-      description: 'Explore groundbreaking predictions for AI development through 2035, including quantum AI, neural interfaces, and autonomous systems.',
+      description: 'Explore groundbreaking predictions for AI development through 2035including quantum AIneural interfacesand autonomous systems.',
       image: '/api/placeholder/400/250',
       category: 'Predictions',
       readTime: '15 min read',
       trending: true,
       href: '/ai-2035-future-predictions',
-      features: ['Quantum AI Revolution', 'Neural Interfaces', 'Autonomous Systems', 'AI Safety']
+      features: ['Quantum AI Revolution'Neural Interfaces'Autonomous Systems'AI Safety']
     },
     {
       title: 'AI Implementation Mastery 2035',
-      description: 'Master the implementation of cutting-edge AI systems for 2035. Learn quantum AI, neural interfaces, and autonomous system deployment.',
+      description: 'Master the implementation of cutting-edge AI systems for 2035. Learn quantum AIneural interfacesand autonomous system deployment.',
       image: '/api/placeholder/400/250',
       category: 'Mastery Program',
       readTime: '12 months',
       trending: true,
       href: '/ai-implementation-mastery-2035',
-      features: ['Quantum AI Implementation', 'Neural Interface Development', 'Autonomous Systems', 'AI Safety & Governance']
+      features: ['Quantum AI Implementation'Neural Interface Development'Autonomous Systems'AI Safety & Governance']
     }
   ];
 
@@ -132,14 +132,14 @@ const AI2035ContentShowcase: React.FC = () => {
             🧠 AI 2035: The Future of Intelligence
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Experience the most advanced AI breakthroughs ever created. From consciousness transfer to matter manipulation, 
+            Experience the most advanced AI breakthroughs ever created. From consciousness transfer to matter manipulation
             discover how AI 2035 technology is reshaping reality itself and achieving infinite ROI.
           </p>
         </div>
 
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {featuredContent.map((item, index) => (
+          {featuredContent.map((itemindex) => (
             <Link key={index} to={item.href} className="group">
               <div className={`bg-gradient-to-br ${item.bgColor} p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-gray-300 h-full`}>
                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
@@ -171,7 +171,7 @@ const AI2035ContentShowcase: React.FC = () => {
             🚀 Revolutionary Capabilities
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {breakthroughFeatures.map((feature, index) => (
+            {breakthroughFeatures.map((featureindex) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="text-4xl mb-4 text-center">
                   {feature.icon}
@@ -212,7 +212,7 @@ const AI2035ContentShowcase: React.FC = () => {
           </div>
           
           <div className="grid lg:grid-cols-2 gap-8">
-            {featuredContent.map((content, index) => (
+            {featuredContent.map((contentindex) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300 group">
                 <CardHeader>
                   <div className="flex items-start justify-between mb-4">
@@ -242,7 +242,7 @@ const AI2035ContentShowcase: React.FC = () => {
                     </div>
                     
                     <div className="grid grid-cols-2 gap-2">
-                      {content.features.map((feature, featureIndex) => (
+                      {content.features.map((featureIndex) => (
                         <div key={featureIndex} className="flex items-center gap-2">
                           <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
                           <span className="text-sm text-gray-700">{feature}</span>
@@ -297,7 +297,7 @@ const AI2035ContentShowcase: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
-            {upcomingContent.map((content, index) => (
+            {upcomingContent.map((contentindex) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">

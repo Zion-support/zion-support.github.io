@@ -14,7 +14,7 @@ export default function AI2026BreakthroughRevolutionBanner() {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Experience the most transformative AI breakthroughs of 2026. From quantum-enhanced neural networks 
-            to autonomous business systems, discover how AI is revolutionizing every aspect of human life.
+            to autonomous business systemsdiscover how AI is revolutionizing every aspect of human life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

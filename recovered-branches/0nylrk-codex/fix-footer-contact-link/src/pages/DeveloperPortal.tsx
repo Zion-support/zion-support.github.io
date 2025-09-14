@@ -2,12 +2,12 @@
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { 
-  BookOpen, 
-  Code, 
-  Key, 
-  List, 
-  LucideIcon, 
-  Terminal, 
+  BookOpen
+  Code
+  Key
+  List
+  LucideIcon
+  Terminal
   Webhook 
 } from "lucide-react";
 
@@ -25,14 +25,14 @@ interface TabDefinition {
 
 export function DeveloperPortal() {
   const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState<string>("documentation");
+  const [activeTabsetActiveTab] = useState<string>("documentation");
   
   // Define the tabs
   const tabs: TabDefinition[] = [
-    { id: "documentation", label: "Documentation", icon: BookOpen },
-    { id: "api-keys", label: "API Keys", icon: Key },
-    { id: "webhooks", label: "Webhooks", icon: Webhook },
-    { id: "logs", label: "Logs", icon: List }];
+    { id: "documentation"label: "Documentation"icon: BookOpen },
+    { id: "api-keys"label: "API Keys"icon: Key },
+    { id: "webhooks"label: "Webhooks"icon: Webhook },
+    { id: "logs"label: "Logs"icon: List }];
 
   return (
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
@@ -42,7 +42,7 @@ export function DeveloperPortal() {
           Developer Portal
         </h1>
         <p className="text-zinc-400 mt-2">
-          Access the Zion API, manage your API keys, and set up webhooks.
+          Access the Zion APImanage your API keysand set up webhooks.
         </p>
       </div>
       

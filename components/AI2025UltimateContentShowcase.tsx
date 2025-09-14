@@ -1,14 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 import { 
-  BookOpen, 
-  FileText, 
-  Users, 
-  TrendingUp, 
-  Clock, 
-  Star, 
+  BookOpen
+  FileText
+  Users
+  TrendingUp
+  Clock
+  Star
   ArrowRight,
   Filter,
   Search,
@@ -19,8 +19,8 @@ import {
 } from 'lucide-react';
 
 const AI2025UltimateContentShowcase = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [searchTermsetSearchTerm] = useState('');
 
   const content = [
     {
@@ -38,7 +38,7 @@ const AI2025UltimateContentShowcase = () => {
       },
       readingTime: '25 min read',
       featured: true,
-      tags: ['AI Automation', 'Enterprise', 'ROI', 'Digital Transformation', 'Mastery Guide'],
+      tags: ['AI Automation'Enterprise'ROI'Digital Transformation'Mastery Guide'],
       publishDate: '2025-01-17',
       author: 'Zion Tech Group AI Team'
     },
@@ -57,7 +57,7 @@ const AI2025UltimateContentShowcase = () => {
       },
       readingTime: '22 min read',
       featured: true,
-      tags: ['Fortune 500', 'AI Transformation', 'ROI', 'Case Study', 'Success Story'],
+      tags: ['Fortune 500'AI Transformation'ROI'Case Study'Success Story'],
       publishDate: '2025-01-17',
       author: 'Zion Tech Group Research Team'
     },
@@ -76,7 +76,7 @@ const AI2025UltimateContentShowcase = () => {
       },
       readingTime: '35 min read',
       featured: true,
-      tags: ['AI Implementation', 'Strategy', 'ROI', 'Roadmap', 'Best Practices'],
+      tags: ['AI Implementation'Strategy'ROI'Roadmap'Best Practices'],
       publishDate: '2025-01-17',
       author: 'Zion Tech Group Strategy Team'
     },
@@ -95,7 +95,7 @@ const AI2025UltimateContentShowcase = () => {
       },
       readingTime: '22 min read',
       featured: false,
-      tags: ['Neural Architecture', 'Enterprise AI', 'Deep Learning', 'ROI', 'Breakthrough'],
+      tags: ['Neural Architecture'Enterprise AI'Deep Learning'ROI'Breakthrough'],
       publishDate: '2025-01-17',
       author: 'Zion Tech Group AI Research'
     },
@@ -114,7 +114,7 @@ const AI2025UltimateContentShowcase = () => {
       },
       readingTime: '25 min read',
       featured: false,
-      tags: ['Autonomous Systems', 'Enterprise Automation', 'AI Revolution', 'ROI', 'Business Transformation'],
+      tags: ['Autonomous Systems'Enterprise Automation'AI Revolution'ROI'Business Transformation'],
       publishDate: '2025-01-17',
       author: 'Zion Tech Group Innovation Team'
     },
@@ -124,7 +124,7 @@ const AI2025UltimateContentShowcase = () => {
       type: 'case-study',
       category: 'transformation',
       url: '/case-studies/ai-2025-manufacturing-transformation-ultimate-success',
-      description: 'Detailed case study of how a manufacturing giant achieved 650% ROI through intelligent automation, predictive maintenance, and quality control systems.',
+      description: 'Detailed case study of how a manufacturing giant achieved 650% ROI through intelligent automationpredictive maintenanceand quality control systems.',
       metrics: {
         roi: '650%',
         savings: '$2.8B',
@@ -133,18 +133,18 @@ const AI2025UltimateContentShowcase = () => {
       },
       readingTime: '18 min read',
       featured: false,
-      tags: ['Manufacturing', 'AI Transformation', 'ROI', 'Case Study', 'Intelligent Automation'],
+      tags: ['Manufacturing'AI Transformation'ROI'Case Study'Intelligent Automation'],
       publishDate: '2025-01-17',
       author: 'Zion Tech Group Manufacturing Team'
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content', count: content.length },
-    { id: 'automation', name: 'Automation', count: content.filter(item => item.category === 'automation').length },
-    { id: 'transformation', name: 'Transformation', count: content.filter(item => item.category === 'transformation').length },
-    { id: 'implementation', name: 'Implementation', count: content.filter(item => item.category === 'implementation').length },
-    { id: 'technology', name: 'Technology', count: content.filter(item => item.category === 'technology').length }
+    { id: 'all'name: 'All Content'count: content.length },
+    { id: 'automation'name: 'Automation'count: content.filter(item => item.category === 'automation').length },
+    { id: 'transformation'name: 'Transformation'count: content.filter(item => item.category === 'transformation').length },
+    { id: 'implementation'name: 'Implementation'count: content.filter(item => item.category === 'implementation').length },
+    { id: 'technology'name: 'Technology'count: content.filter(item => item.category === 'technology').length }
   ];
 
   const filteredContent = content.filter(item => {
@@ -190,7 +190,7 @@ const AI2025UltimateContentShowcase = () => {
             AI 2025 Ultimate Content Collection
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the proven strategies, real-world case studies, and implementation guides that Fortune 500 companies use to achieve extraordinary ROI with AI.
+            Discover the proven strategiesreal-world case studiesand implementation guides that Fortune 500 companies use to achieve extraordinary ROI with AI.
           </p>
         </div>
 
@@ -255,7 +255,7 @@ const AI2025UltimateContentShowcase = () => {
                       {getTypeIcon(item.type)}
                     </div>
                     <span className="text-sm font-medium text-gray-600 capitalize">
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('-' ')}
                     </span>
                   </div>
                   <div className="flex items-center space-x-1 text-sm text-gray-500">
@@ -288,7 +288,7 @@ const AI2025UltimateContentShowcase = () => {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag, index) => (
+                  {item.tags.slice(03).map((tagindex) => (
                     <span
                       key={index}
                       className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
@@ -314,7 +314,7 @@ const AI2025UltimateContentShowcase = () => {
                   href={item.url}
                   className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
                 >
-                  Read {item.type.replace('-', ' ')}
+                  Read {item.type.replace('-' ')}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>

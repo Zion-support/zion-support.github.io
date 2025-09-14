@@ -13,13 +13,13 @@ export default function FeedbackModal({
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
-  userHeaders?: Record<string, string>;
+  userHeaders?: Record<string>;
 }) {
-  const [rating, setRating] = useState<number>(0);
-  const [hover, setHover] = useState<number>(0);
-  const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
-  const [comment, setComment] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [ratingsetRating] = useState<number>(0);
+  const [hoversetHover] = useState<number>(0);
+  const [kindsetKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
+  const [commentsetComment] = useState('');
+  const [loadingsetLoading] = useState(false);
 
   if (!isOpen) return null;
 
@@ -27,10 +27,10 @@ export default function FeedbackModal({
     if (rating < 1) return onClose(false);
     setLoading(true);
     try {
-      await fetch('/api/feedback', {
+      await fetch('/api/feedback'{
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
-        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })});
+        headers: { 'Content-Type': 'application/json'...(userHeaders || {}) },
+        body: JSON.stringify({ ratingcommentkindcontext: defaultContext || {} })});
     } catch {}
     setLoading(false);
     onClose(true);

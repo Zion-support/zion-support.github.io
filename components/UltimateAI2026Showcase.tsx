@@ -28,7 +28,7 @@ const UltimateAI2026Showcase = () => {
           
           <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
             Experience the full spectrum of AI 2026 technologies. From quantum computing to 
-            synthetic intelligence, discover how these breakthrough technologies work together 
+            synthetic intelligencediscover how these breakthrough technologies work together 
             to create unprecedented possibilities.
           </p>
         </div>

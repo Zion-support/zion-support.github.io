@@ -9,7 +9,7 @@ interface EmptyFraudStateProps {
 }
 
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
-  hasFilters, 
+  hasFilters
   onResetFilters 
 }) => {
   return (

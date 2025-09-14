@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Download, FileText, Mail, BarChart3 } from "lucide-react";
+import { DownloadFileTextMailBarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function BillingHeader() {
@@ -27,7 +27,7 @@ export function BillingHeader() {
         </div>
       </div>
       <p className="text-muted-foreground">
-        Manage your subscription, view invoice history, and update payment methods.
+        Manage your subscriptionview invoice historyand update payment methods.
       </p>
     </div>
   );

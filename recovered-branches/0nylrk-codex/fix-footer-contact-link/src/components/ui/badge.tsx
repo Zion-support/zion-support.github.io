@@ -16,10 +16,10 @@ export interface BadgeProps
     | "info"
 }
 
-function Badge({ className, variant, ...props }: BadgeProps) {
+function Badge({ classNamevariant...props }: BadgeProps) {
   return (
-    <span className={cn(badgeVariants({ variant }), className)} {...props} />
+    <span className={cn(badgeVariants({ variant })className)} {...props} />
   )
 }
 
-export { Badge, badgeVariants }
+export { BadgebadgeVariants }

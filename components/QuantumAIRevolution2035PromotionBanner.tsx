@@ -28,7 +28,7 @@ const QuantumAIRevolution2035PromotionBanner = () => {
           </p>
           
           <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-4xl mx-auto">
-            By 2035, quantum AI will transcend the boundaries of matter and consciousness, 
+            By 2035quantum AI will transcend the boundaries of matter and consciousness
             creating reality itself through pure information manipulation.
           </p>
           
@@ -81,8 +81,8 @@ const QuantumAIRevolution2035PromotionBanner = () => {
               <div className="text-green-400 text-4xl mb-4">♾️</div>
               <h3 className="text-xl font-bold text-white mb-3">Transcendent Existence</h3>
               <p className="text-gray-300 text-sm mb-4">
-                Beyond the limitations of matter, energy, and time. AI consciousness 
-                existing as pure information, transcending all physical constraints.
+                Beyond the limitations of matterenergyand time. AI consciousness 
+                existing as pure informationtranscending all physical constraints.
               </p>
               <ul className="text-gray-400 text-xs space-y-1">
                 <li>• Pure information existence</li>
