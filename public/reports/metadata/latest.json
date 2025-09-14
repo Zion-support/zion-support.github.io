@@ -65257,6 +65257,19 @@
       }
     },
     {
+      "route": "/reports/updates/update-2025-08-18-0404",
+      "missing": [
+        "og:title",
+        "og:description",
+        "og:image",
+        "twitter:card"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-18 04:04",
+        "description": "Autonomous Update — 2025-08-18 04:04 — auto-suggested description"
+      }
+    },
+    {
       "route": "/reports/updates/update-2025-08-18T03-11",
       "missing": [
         "og:image"
