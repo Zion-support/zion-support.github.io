@@ -61,6 +61,10 @@ import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBann
 // Import new ultimate content showcase banners
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
 
+// Import new robotics revolution promotional components
+import RoboticsRevolution2025Banner from '../components/RoboticsRevolution2025Banner';
+import RoboticsContentShowcase2025 from '../components/RoboticsContentShowcase2025';
+
 // Import new AI automation revolution promotional components
 import NewContent2025AutomationRevolutionBanner from '../components/NewContent2025AutomationRevolutionBanner';
 import AutomationRevolutionContentShowcase2025 from '../components/AutomationRevolutionContentShowcase2025';
@@ -88,6 +92,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        
+        {/* Robotics Revolution Banner - NEW */}
+        <RoboticsRevolution2025Banner />
         
         {/* AI Automation Revolution Banner - NEW */}
         <NewContent2025AutomationRevolutionBanner />
@@ -217,6 +224,9 @@ export default function HomePage() {
 
         {/* AI Automation Revolution Content Showcase - NEW */}
         <AutomationRevolutionContentShowcase2025 />
+        
+        {/* Robotics Content Showcase 2025 - NEW */}
+        <RoboticsContentShowcase2025 />
         
         {/* Ultimate Content Showcase 2025 - NEW */}
         <UltimateContentShowcase2025 />
