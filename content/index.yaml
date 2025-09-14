@@ -211,55 +211,55 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
-    - id: "ai-2025-enterprise-automation-revolution"
+    - id: "ai-2025-enterprise-ai-transformation-ultimate-guide"
       type: "blog"
-      title: "AI 2025: The Enterprise Automation Revolution That's Reshaping Business"
-      file_path: "/content/blog/ai-2025-enterprise-automation-revolution.md"
-      url: "/blog/ai-2025-enterprise-automation-revolution"
+      title: "AI 2025: The Enterprise AI Transformation Ultimate Guide - 600% ROI in 8 Months"
+      file_path: "/content/blog/ai-2025-enterprise-ai-transformation-ultimate-guide.md"
+      url: "/blog/ai-2025-enterprise-ai-transformation-ultimate-guide"
       status: "published"
       created: "2025-01-17"
-      tags: ["AI", "Enterprise Automation", "Business Transformation", "ROI", "2025"]
+      tags: ["AI Transformation", "Enterprise", "ROI", "Fortune 500", "Digital Transformation", "AI Strategy", "Implementation Guide"]
       featured: true
       is_new: true
       metrics:
-        roi: "340%"
-        satisfaction: "98%"
-        projects: "500+"
+        roi: "600%"
+        timeline: "8 months"
         savings: "$2.8B"
+        success: "94%"
+      reading_time: "18 min read"
+      
+    - id: "fortune-500-ai-transformation-600-roi-success"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation Success: $2.8B Annual Savings with 600% ROI"
+      file_path: "/content/case-studies/fortune-500-ai-transformation-600-roi-success.md"
+      url: "/case-studies/fortune-500-ai-transformation-600-roi-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fortune 500", "AI Transformation", "ROI", "Manufacturing", "Success Story", "Cost Savings"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$2.8B"
+        efficiency: "156%"
+        uptime: "99.2%"
       reading_time: "12 min read"
       
-    - id: "healthcare-ai-transformation-2025"
-      type: "case-study"
-      title: "Healthcare AI Transformation 2025: How a $200M Health System Achieved 300% ROI"
-      file_path: "/content/case-studies/healthcare-ai-transformation-2025-success.md"
-      url: "/case-studies/healthcare-ai-transformation-2025-success"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Case Study", "Healthcare", "AI Transformation", "ROI", "Success Story"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "300%"
-        savings: "$18.7M"
-        satisfaction: "95%"
-        projects: "1 Major Implementation"
-      reading_time: "15 min read"
-      
-    - id: "ai-automation-implementation-guide-2025"
+    - id: "ai-transformation-ultimate-implementation-guide-2025"
       type: "resource"
-      title: "AI Automation Implementation Guide 2025: From Strategy to ROI"
-      file_path: "/content/resources/ai-automation-implementation-guide-2025.md"
-      url: "/resources/ai-automation-implementation-guide-2025"
+      title: "AI Transformation Ultimate Implementation Guide 2025: From Strategy to 600% ROI"
+      file_path: "/content/resources/ai-transformation-ultimate-implementation-guide-2025.md"
+      url: "/resources/ai-transformation-ultimate-implementation-guide-2025"
       status: "published"
       created: "2025-01-17"
-      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2025"]
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "Framework", "Transformation", "Enterprise"]
       featured: true
       is_new: true
       metrics:
-        roi: "300-500%"
-        projects: "500+ Success Stories"
-        satisfaction: "98%"
-        implementation_time: "18-24 months"
+        roi: "600%"
+        success: "94%"
+        timeline: "8 months"
+        projects: "500+"
       reading_time: "25 min read"
 
   new_2026_content:
