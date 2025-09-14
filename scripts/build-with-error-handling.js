@@ -15,10 +15,10 @@ try {
   process.chdir(__dirname + '/..');
   
   console.log('📦 Installing dependencies...');
-  execSync('yarn install', { stdio: 'inherit' });
+  execSync('yarn install --frozen-lockfile', { stdio: 'inherit' });
   
   console.log('🔨 Building application...');
-  execSync('npm run build', { stdio: 'inherit' });
+  execSync('yarn build', { stdio: 'inherit' });
   
   // Check if build output exists
   const distPath = path.join(process.cwd(), 'dist');
