@@ -1,8 +1,8 @@
 [build]
-  # Build command with error handling
-  command = "bash scripts/netlify-build.sh"
+  # Custom build command to handle dependency issues
+  command = "bash scripts/fix-netlify-build.sh"
   
-  # Directory to publish
+  # Publish directory
   publish = "dist"
   
   # Functions directory
@@ -15,55 +15,13 @@
   # Yarn version
   YARN_VERSION = "1.22.22"
   
-  # Build environment
-  NODE_OPTIONS = "--max-old-space-size=6144"
-  NODE_ENV = "production"
-  
-  # Yarn configuration - optimized for reliable builds
-  YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
+  # Disable Yarn cache to avoid corruption issues
   YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
-  YARN_FLAGS = "--frozen-lockfile --network-timeout 1000000"
   
-  # Install devDependencies for build tools
-  YARN_INSTALL_DEV = "true"
-  
-  # Force install all dependencies including devDependencies
-  NPM_CONFIG_INCLUDE = "dev"
-  
-  # Ensure Vite is available and handle peer dependencies
-  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
-  
-  # Disable Next.js auto-detection since this is a Vite project
-  NETLIFY_USE_NEXTJS = "false"
-  
-  # Additional build optimizations
-  CI = "true"
-  GENERATE_SOURCEMAP = "false"
+  # Clear cache on each build
+  YARN_CACHE_FOLDER = ".yarn-cache"
 
-# Cache configuration to prevent dependency issues
-[build.cache]
-  directories = ["node_modules/.cache"]
-
-# Plugin configurations
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-
-# Disable Next.js auto-detection since this is a Vite project
-[build.processing]
-  skip_processing = false
-
-# Explicitly disable Next.js plugin
-[build.processing.css]
-  bundle = true
-  minify = true
-
-[build.processing.js]
-  bundle = true
-  minify = true
-
-# Force Vite build detection
-
-# Static redirects for exported site
+# Redirects for SPA
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -74,9 +32,9 @@
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 # Cache static assets
 [[headers]]
@@ -84,8 +42,6 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Cache API routes
-[[headers]]
-  for = "/api/*"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+# Functions configuration
+[functions]
+  node_bundler = "esbuild"
