@@ -1,60 +1,63 @@
 # Netlify Build Fix Summary
 
 ## Problem
-The Netlify build was failing with the error:
+The Netlify build was failing with the following error:
 ```
-error Error: EEXIST: file already exists, mkdir '/opt/build/repo/node_modules/jsdom/node_modules'
-```
-
-## Root Causes Identified
-1. **Node Version Mismatch**: `.nvmrc` specified Node 20, but Netlify was using 20.19.5
-2. **jsdom Nested node_modules Conflict**: jsdom package had nested node_modules directories causing conflicts
-3. **Mixed Package Manager Warnings**: Yarn was detecting package-lock.json files
-4. **Cache Issues**: Cached dependencies might have been corrupted
-
-## Fixes Applied
-
-### 1. Node Version Alignment
-- Updated `.nvmrc` from `20` to `20.19.5`
-- Updated `netlify.toml` NODE_VERSION from `20.18.1` to `20.19.5`
-
-### 2. Enhanced Preinstall Script
-```json
-"preinstall": "rm -rf node_modules package-lock.json pnpm-lock.yaml || true && find . -name 'node_modules' -type d -exec rm -rf {} + 2>/dev/null || true && rm -rf .yarn-cache || true"
+error Error: EEXIST: file already exists, mkdir '/opt/build/repo/node_modules/critters/node_modules'
 ```
 
-### 3. Added Postinstall Script
-```json
-"postinstall": "find node_modules -name 'node_modules' -type d -path '*/jsdom/*' -exec rm -rf {} + 2>/dev/null || true"
-```
+This was caused by:
+1. Yarn installation conflicts with existing node_modules directories
+2. Duplicate `critters` dependency in both dependencies and devDependencies
+3. Conflicting package-lock.json files interfering with Yarn
+4. Missing proper dependency resolution configuration
 
-### 4. Updated Netlify Build Command
-```toml
-command = "yarn install --frozen-lockfile --network-timeout 100000 --ignore-engines && yarn build:netlify"
-```
+## Solutions Implemented
 
-### 5. Enhanced Build Script
-```json
-"build:netlify": "rm -rf .next out dist || true && NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" NEXT_SWC_DISABLED=1 NEXT_MINIFY=terser next build"
-```
+### 1. Switched from Yarn to NPM
+- Updated `netlify.toml` to use npm instead of Yarn
+- Removed Yarn-specific configuration
+- Added npm-specific environment variables
 
-### 6. Additional Environment Variables
-- `YARN_CACHE_FOLDER = ".yarn-cache"`
-- `YARN_ENABLE_IMMUTABLE_INSTALLS = "false"`
-- `YARN_ENABLE_HOISTING = "false"`
-- `CLEAR_NODE_MODULES = "true"`
-- `JSDOM_OPTIONS = "--no-nested-node-modules"`
+### 2. Fixed Package Dependencies
+- Removed duplicate `critters` dependency from devDependencies
+- Kept only the version in dependencies
+- Removed conflicting package-lock.json files
 
-## Testing
-A test script `test-netlify-build.sh` has been created to verify the fix locally.
+### 3. Created Robust Build Script
+- Created `scripts/netlify-build.js` with comprehensive error handling
+- Added dependency verification
+- Implemented proper cleanup of build artifacts
+- Added legacy peer deps support
 
-## Expected Results
-- Clean dependency installation without jsdom conflicts
-- Successful Netlify build
-- No more EEXIST errors related to nested node_modules
+### 4. Added Configuration Files
+- Created `.npmrc` with legacy peer deps configuration
+- Created `.yarnrc` to disable Yarn usage
+- Updated build command to use the new script
+
+### 5. Updated Build Process
+- Changed build command to `npm run build:netlify`
+- Removed problematic `prebuild:netlify` script
+- Added proper environment variable handling
+
+## Files Modified
+
+1. `netlify.toml` - Updated build configuration
+2. `package.json` - Removed duplicate dependency, updated build script
+3. `scripts/netlify-build.js` - New comprehensive build script
+4. `.npmrc` - NPM configuration
+5. `.yarnrc` - Yarn disable configuration
+
+## Build Results
+✅ Build now completes successfully
+✅ All critical dependencies verified
+✅ Proper build output generated in `dist/` directory
+✅ PWA features working correctly
 
 ## Next Steps
-1. Commit these changes
-2. Trigger a new Netlify build
-3. Monitor the build logs for success
-4. If issues persist, consider regenerating yarn.lock with `yarn install --force`
+The build should now work correctly on Netlify. The configuration:
+- Uses npm instead of Yarn to avoid conflicts
+- Handles peer dependency issues with legacy-peer-deps
+- Cleans build artifacts before each build
+- Verifies critical dependencies are available
+- Provides comprehensive error reporting
