@@ -72,8 +72,9 @@ import NewContent2025UltimateBreakthroughShowcase from '../components/NewContent
 import UltimateAIBreakthrough2025Banner from '../components/UltimateAIBreakthrough2025Banner';
 import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
 import UltimateContentShowcase2025Banner from '../components/UltimateContentShowcase2025Banner';
-=======
->>>>>>> 37d015f531208ae6fae69d4af3de909c50a3bafc
+// Import new Advanced Neural Architectures 2026 components
+import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
+import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
 
 // Import new advanced AI components
 import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
@@ -195,6 +196,10 @@ import NewResource2025ImplementationRoadmapBanner from '../components/NewResourc
 import AI2030ContentShowcaseBanner from '../components/AI2030ContentShowcaseBanner';
 import AI2030ContentNavigation from '../components/AI2030ContentNavigation';
 
+// Import new Advanced Neural Architectures 2026 components
+import AdvancedNeuralArchitectures2026Banner from '../components/AdvancedNeuralArchitectures2026Banner';
+import AdvancedNeuralArchitecturesShowcase2026 from '../components/AdvancedNeuralArchitecturesShowcase2026';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -212,7 +217,82 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Ultimate AI Breakthrough 2025 Banner - NEW FEATURED */}
+        {/* Advanced Neural Architectures 2026 Banner - NEW ULTIMATE BREAKTHROUGH */}
+        <AdvancedNeuralArchitectures2026Banner />
+        
+        {/* Advanced Neural Architectures Showcase 2026 - NEW FEATURED */}
+        <AdvancedNeuralArchitecturesShowcase2026 />
+        
+        {/* Ultimate Business Transformation 2025-2026 Banner - NEW ULTIMATE BREAKTHROUGH */}
+        <UltimateBusinessTransformation2025Banner />
+        
+        {/* Revolutionary Content 2025 Showcase - NEW FEATURED */}
+        <RevolutionaryContent2025Showcase />
+        
+        {/* New Content 2025 Advanced AI Automation Banner - LATEST FEATURED */}
+        <NewContent2025AdvancedAIAutomationBanner />
+        
+        {/* Synthetic Intelligence 2025-2026 Banner - NEW ULTIMATE BREAKTHROUGH */}
+        <SyntheticIntelligence2025Banner />
+        
+        {/* Ultimate Content 2026 Showcase - NEW FEATURED */}
+        <UltimateContent2026Showcase />
+        
+        {/* AI Innovation Showcase 2025 Banner - LATEST FEATURED */}
+        <AIInnovationShowcase2025Banner />
+        
+        {/* Revolutionary AI Content 2025 Showcase - NEW FEATURED */}
+        <RevolutionaryAIContent2025Showcase />
+        
+        {/* Quantum Neural Superintelligence Banner - ULTIMATE BREAKTHROUGH */}
+        <QuantumNeuralSuperintelligenceBanner />
+        
+        {/* Ultimate Breakthrough 2025 Banner - NEW FEATURED */}
+        <UltimateBreakthrough2025Banner />
+        
+        {/* Synthetic Intelligence 2026 Breakthrough Banner - FEATURED */}
+        <SyntheticIntelligence2026BreakthroughBanner />
+        
+        {/* Revolutionary Content 2026 Showcase - FEATURED */}
+        <RevolutionaryContent2026Showcase />
+        
+        {/* AI 2025-2026 Ultimate Breakthrough Banner - FEATURED */}
+        <AI2025_2026UltimateBreakthroughBanner />
+        
+        {/* Revolutionary Content 2025-2026 Showcase - FEATURED */}
+        <RevolutionaryContent2025_2026Showcase />
+        
+        {/* New Content 2025 Advanced Analytics Banner - LATEST FEATURED */}
+        <NewContent2025AdvancedAnalyticsBanner />
+        
+        {/* Edge Computing Revolution Banner 2025 - NEW FEATURED */}
+        <EdgeComputingRevolutionBanner2025 />
+        
+        {/* AI 2025 Ultimate Breakthrough Content Banner - NEW FEATURED */}
+        <AI2025UltimateBreakthroughContentBanner />
+        
+        {/* Ultimate Content Showcase 2025 Banner - NEW FEATURED */}
+        <UltimateContentShowcase2025Banner />
+        
+        {/* New Content 2026 Comprehensive Showcase - LATEST */}
+        <NewContent2026ComprehensiveShowcase />
+        
+        {/* AI 2026 Trends Promotion Banner - NEW */}
+        <AI2026TrendsPromotionBanner />
+        
+        {/* Quantum Computing Promotion Banner - NEW */}
+        <QuantumComputingPromotionBanner />
+        
+        {/* Fortune 500 Case Study Banner - NEW */}
+        <Fortune500CaseStudyBanner />
+        
+        {/* AI 2026 Ultimate Breakthrough Content Banner - NEW FEATURED */}
+        <AI2026UltimateBreakthroughContentBanner />
+        
+        {/* New Content 2025 Multimodal Banner - NEW FEATURED */}
+        <NewContent2025MultimodalBanner />
+        
+        {/* Ultimate AI Breakthrough 2025 Banner - FEATURED */}
         <UltimateAIBreakthrough2025Banner />
         
         {/* Revolutionary Content 2025 Ultimate Banner - NEW */}
