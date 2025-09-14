@@ -27,7 +27,7 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
       },
@@ -99,7 +99,7 @@ module.exports = {
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
       },
@@ -189,6 +189,17 @@ module.exports = {
 >>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
       time: true
     }
-  ]
+  ],
+
+  deploy: {
+    production: {
+      user: 'deploy',
+      host: 'your-production-host.com',
+      ref: 'origin/main',
+      repo: 'https://github.com/Zion-Holdings/zion.app.git',
+      path: '/var/www/zion.app',
+      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs'
+    }
+  }
 };
 >>>>>>> cursor/automate-test-improve-and-merge-code-85f4
