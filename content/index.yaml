@@ -1,8 +1,56 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 6
+  total_content_pieces: 9
   
   new_2025_content:
+    - id: "ai-cybersecurity-revolution"
+      type: "blog"
+      title: "AI 2025: The Cybersecurity Revolution That's Protecting Enterprises"
+      file_path: "/content/blog/ai-2025-cybersecurity-revolution.md"
+      url: "/blog/ai-2025-cybersecurity-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Cybersecurity", "Enterprise Security", "Threat Detection", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        savings: "$2.8M"
+        satisfaction: "98%"
+        threat_reduction: "89%"
+      
+    - id: "healthcare-ai-transformation"
+      type: "case-study"
+      title: "Healthcare AI Transformation 2025: How a Regional Hospital System Achieved 450% ROI"
+      file_path: "/content/case-studies/healthcare-ai-transformation-2025.md"
+      url: "/case-studies/healthcare-ai-transformation-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Healthcare", "AI Transformation", "ROI", "Patient Care", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        savings: "$18.7M"
+        satisfaction: "89%"
+        outcomes: "67% Better"
+      
+    - id: "ai-implementation-roadmap"
+      type: "resource"
+      title: "AI Implementation Roadmap 2025: Your Complete Guide to Enterprise AI Success"
+      file_path: "/content/resources/ai-implementation-roadmap-2025.md"
+      url: "/resources/ai-implementation-roadmap-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "Enterprise AI", "ROI", "Best Practices", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        success_rate: "98%"
+        projects: "500+"
+        satisfaction: "98%"
+      
     - id: "autonomous-systems-revolution"
       type: "blog"
       title: "AI 2025: The Next Generation Autonomous Systems Revolution"
@@ -86,6 +134,26 @@ content_index:
         projects: "500+ Success Stories"
 
   promotion_components:
+    - name: "RevolutionaryAI2025Banner"
+      file_path: "/app/components/RevolutionaryAI2025Banner.tsx"
+      status: "active"
+      features:
+        - "Dynamic rotating statistics"
+        - "Content highlights grid"
+        - "Animated background elements"
+        - "Success stories showcase"
+        - "Interactive content cards"
+        
+    - name: "UltimateContentShowcase2025"
+      file_path: "/app/components/UltimateContentShowcase2025.tsx"
+      status: "active"
+      features:
+        - "Auto-rotating content showcase"
+        - "Interactive content selection"
+        - "Real-time metrics display"
+        - "Comprehensive content grid"
+        - "Advanced animations and transitions"
+        
     - name: "NewContent2025PromotionBanner"
       file_path: "/src/components/NewContent2025PromotionBanner.tsx"
       status: "active"
@@ -115,9 +183,14 @@ content_index:
       - "Updated layout to include promotional content"
 
   metrics:
-    expected_roi_mentions: 3
-    success_stories: 1
-    implementation_guides: 1
-    blog_posts: 1
-    total_word_count: "~8,500 words"
-    estimated_reading_time: "~35 minutes"
+    expected_roi_mentions: 6
+    success_stories: 3
+    implementation_guides: 2
+    blog_posts: 3
+    total_word_count: "~25,000 words"
+    estimated_reading_time: "~100 minutes"
+    new_content_2025: 3
+    promotional_components: 4
+    average_roi: "340%"
+    total_value_created: "$2.8B+"
+    client_satisfaction: "98%"
