@@ -116,9 +116,9 @@ const mainNavigation = [
 ];
 
 export default function UltraFuturisticNavigation2031() {
-  const [isOpensetIsOpen] = useState(false);
-  const [activeCategorysetActiveCategory] = useState<string | null>(null);
-  const [scrolledsetScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {

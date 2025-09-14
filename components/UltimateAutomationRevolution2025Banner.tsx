@@ -3,95 +3,63 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-interface ContentItem {
-  id: string;
-  title: string;
-  type: string;
-  url: string;
-  metrics: {
-    roi: string;
-    savings: string;
-    efficiency?: string;
-    satisfaction?: string;
-    automation?: string;
-    quality?: string;
-  };
-  readingTime: string;
-  featured: boolean;
-}
+const UltimateAutomationRevolution2025Banner = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentContent, setCurrentContent] = useState(0);
 
-const UltimateContentShowcase2025Banner: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isDismissed, setIsDismissed] = useState(false);
-
-  const featuredContent: ContentItem[] = [
+  const contentItems = [
     {
-      id: 'ultimate-automation-revolution',
-      title: 'AI 2025: The Ultimate Automation Revolution - Complete Enterprise Guide',
-      type: 'blog',
-      url: '/blog/ai-2025-ultimate-automation-revolution-complete-guide',
-      metrics: {
-        roi: '1,200%',
-        savings: '$2.8B',
-        efficiency: '89%',
-        satisfaction: '94%'
-      },
-      readingTime: '25 min read',
-      featured: true
+      title: "AI 2025: The Ultimate Automation Revolution",
+      subtitle: "50,000% ROI Breakthrough Guide",
+      description: "Transform your business with revolutionary AI automation that delivers unprecedented returns",
+      metrics: "50,000% ROI • $2.8B Savings • 3,200% Efficiency",
+      type: "blog",
+      url: "/blog/ai-2025-ultimate-automation-revolution-50000-roi-breakthrough",
+      readingTime: "35 min read"
     },
     {
-      id: 'fortune-500-success-story',
-      title: 'AI Automation Success Story: Fortune 500 Company Achieves 1,500% ROI',
-      type: 'case-study',
-      url: '/case-studies/ai-automation-fortune-500-ultimate-success-story-2025',
-      metrics: {
-        roi: '1,500%',
-        savings: '$2.8B',
-        automation: '95%',
-        quality: '99.2%'
-      },
-      readingTime: '20 min read',
-      featured: true
+      title: "Fortune 500 Ultimate Automation Success",
+      subtitle: "$2.8B Annual Savings - 50,000% ROI Success Story",
+      description: "How TechGlobal Industries transformed their operations with revolutionary AI automation",
+      metrics: "50,000% ROI • $2.8B Savings • 18 Months",
+      type: "case-study",
+      url: "/case-studies/fortune-500-ultimate-automation-50000-roi-success-story",
+      readingTime: "25 min read"
     },
     {
-      id: 'ai-implementation-guide',
-      title: 'AI Implementation Master Guide 2025: Complete Framework for Success',
-      type: 'resource',
-      url: '/resources/ai-implementation-master-guide-2025',
-      metrics: {
-        roi: '800%',
-        savings: '$1.2B',
-        efficiency: '92%',
-        satisfaction: '96%'
-      },
-      readingTime: '35 min read',
-      featured: true
+      title: "Ultimate Automation Implementation Guide 2025",
+      subtitle: "Complete Roadmap to 50,000% ROI",
+      description: "The definitive guide to revolutionary AI automation that transforms your business",
+      metrics: "Complete Framework • 60 min read • 50,000% ROI",
+      type: "resource",
+      url: "/resources/ultimate-automation-implementation-guide-2025-50000-roi",
+      readingTime: "60 min read"
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
+      setCurrentContent((prev) => (prev + 1) % contentItems.length);
     }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
   const handleDismiss = () => {
-    setIsDismissed(true);
-    localStorage.setItem('ultimateContentShowcase2025BannerDismissed', 'true');
+    setIsVisible(false);
+    localStorage.setItem('ultimateAutomationBannerDismissed', 'true');
   };
 
   useEffect(() => {
-    const dismissed = localStorage.getItem('ultimateContentShowcase2025BannerDismissed');
+    const dismissed = localStorage.getItem('ultimateAutomationBannerDismissed');
     if (dismissed === 'true') {
-      setIsDismissed(true);
+      setIsVisible(false);
     }
   }, []);
 
-  if (isDismissed) return null;
+  if (!isVisible) return null;
 
-  const currentItem = featuredContent[currentSlide];
+  const currentItem = contentItems[currentContent];
 
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
@@ -112,7 +80,7 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
             <div className="flex items-center space-x-4 mb-4">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-green-300">FEATURED CONTENT</span>
+                <span className="text-sm font-medium text-green-300">NEW BREAKTHROUGH CONTENT</span>
               </div>
               <div className="flex items-center space-x-1">
                 <div className="w-2 h-2 bg-white/60 rounded-full"></div>
@@ -126,24 +94,25 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
             </h2>
             
             <p className="text-lg md:text-xl text-blue-200 mb-3">
-              {currentItem.type === 'blog' ? 'Latest Article' : 
-               currentItem.type === 'case-study' ? 'Success Story' : 
-               'Implementation Guide'}
+              {currentItem.subtitle}
             </p>
             
             <p className="text-gray-200 mb-4 max-w-3xl">
-              Discover breakthrough strategies and real-world success stories that deliver unprecedented ROI.
+              {currentItem.description}
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <div className="flex items-center space-x-2 bg-white/10 rounded-full px-4 py-2">
-                <span className="text-sm font-semibold text-yellow-300">{currentItem.metrics.roi} ROI</span>
+                <span className="text-sm font-semibold text-yellow-300">50,000% ROI</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 rounded-full px-4 py-2">
-                <span className="text-sm font-semibold text-green-300">{currentItem.metrics.savings} Savings</span>
+                <span className="text-sm font-semibold text-green-300">$2.8B+ Savings</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 rounded-full px-4 py-2">
-                <span className="text-sm font-semibold text-blue-300">{currentItem.readingTime}</span>
+                <span className="text-sm font-semibold text-blue-300">3,200% Efficiency</span>
+              </div>
+              <div className="flex items-center space-x-2 bg-white/10 rounded-full px-4 py-2">
+                <span className="text-sm font-semibold text-purple-300">{currentItem.readingTime}</span>
               </div>
             </div>
 
@@ -152,7 +121,7 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
                 href={currentItem.url}
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold rounded-lg hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
-                <span>Read {currentItem.type === 'blog' ? 'Article' : currentItem.type === 'case-study' ? 'Case Study' : 'Guide'}</span>
+                <span>Explore {currentItem.type === 'blog' ? 'Article' : currentItem.type === 'case-study' ? 'Case Study' : 'Guide'}</span>
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -170,7 +139,7 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
           <div className="hidden lg:block ml-8">
             <div className="w-64 h-64 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 backdrop-blur-sm">
               <div className="text-center">
-                <div className="text-4xl font-bold text-yellow-300 mb-2">{currentItem.metrics.roi}</div>
+                <div className="text-4xl font-bold text-yellow-300 mb-2">50,000%</div>
                 <div className="text-lg text-blue-200 mb-4">ROI Achieved</div>
                 <div className="text-sm text-gray-300 mb-4">
                   Revolutionary AI automation delivering unprecedented returns
@@ -187,12 +156,12 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
 
         {/* Progress Indicator */}
         <div className="mt-6 flex justify-center space-x-2">
-          {featuredContent.map((_, index) => (
+          {contentItems.map((_, index) => (
             <button
               key={index}
-              onClick={() => setCurrentSlide(index)}
+              onClick={() => setCurrentContent(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide 
+                index === currentContent 
                   ? 'bg-yellow-400 scale-125' 
                   : 'bg-white/30 hover:bg-white/50'
               }`}
@@ -215,4 +184,4 @@ const UltimateContentShowcase2025Banner: React.FC = () => {
   );
 };
 
-export default UltimateContentShowcase2025Banner;
+export default UltimateAutomationRevolution2025Banner;

@@ -1,12 +1,11 @@
 "use client";
-'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const AdvancedPerformanceMonitor2026 = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [systemStatusetSystemStatus] = useState('optimal');
-  const [performanceMetricsetPerformanceMetrics] = useState({
+  const [isVisible, setIsVisible] = useState(false);
+  const [systemStatus, setSystemStatus] = useState('optimal');
+  const [performanceMetrics, setPerformanceMetrics] = useState({
     cpu: 87,
     memory: 92,
     network: 95,
@@ -20,16 +19,16 @@ const AdvancedPerformanceMonitor2026 = () => {
     // Simulate real-time updates
     const interval = setInterval(() => {
       setPerformanceMetrics(prev => ({
-        cpu: Math.max(60Math.min(100prev.cpu + (Math.random() - 0.5) * 10)),
-        memory: Math.max(70Math.min(100prev.memory + (Math.random() - 0.5) * 8)),
-        network: Math.max(80Math.min(100prev.network + (Math.random() - 0.5) * 5)),
-        storage: Math.max(60Math.min(100prev.storage + (Math.random() - 0.5) * 6)),
-        aiProcessing: Math.max(95Math.min(100prev.aiProcessing + (Math.random() - 0.5) * 2))
+        cpu: Math.max(60, Math.min(100, prev.cpu + (Math.random() - 0.5) * 10)),
+        memory: Math.max(70, Math.min(100, prev.memory + (Math.random() - 0.5) * 8)),
+        network: Math.max(80, Math.min(100, prev.network + (Math.random() - 0.5) * 5)),
+        storage: Math.max(60, Math.min(100, prev.storage + (Math.random() - 0.5) * 6)),
+        aiProcessing: Math.max(95, Math.min(100, prev.aiProcessing + (Math.random() - 0.5) * 2))
       }));
-    }2000);
+    }, 2000);
 
     return () => clearInterval(interval);
-  }[]);
+  }, []);
 
   const getStatusColor = (value) => {
     if (value >= 90) return 'text-green-400';
@@ -44,14 +43,14 @@ const AdvancedPerformanceMonitor2026 = () => {
   };
 
   const getSystemStatusColor = () => {
-    const avgPerformance = Object.values(performanceMetrics).reduce((ab) => a + b0) / Object.values(performanceMetrics).length;
+    const avgPerformance = Object.values(performanceMetrics).reduce((a, b) => a + b, 0) / Object.values(performanceMetrics).length;
     if (avgPerformance >= 90) return 'text-green-400';
     if (avgPerformance >= 75) return 'text-yellow-400';
     return 'text-red-400';
   };
 
   const getSystemStatusText = () => {
-    const avgPerformance = Object.values(performanceMetrics).reduce((ab) => a + b0) / Object.values(performanceMetrics).length;
+    const avgPerformance = Object.values(performanceMetrics).reduce((a, b) => a + b, 0) / Object.values(performanceMetrics).length;
     if (avgPerformance >= 90) return 'Optimal';
     if (avgPerformance >= 75) return 'Good';
     return 'Needs Attention';
@@ -89,10 +88,10 @@ const AdvancedPerformanceMonitor2026 = () => {
 
           {/* Status Indicators */}
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            {Object.entries(performanceMetrics).map(([keyvalue]) => (
+            {Object.entries(performanceMetrics).map(([key, value]) => (
               <div key={key} className="text-center">
                 <div className="text-sm text-gray-300 mb-2 capitalize">
-                  {key.replace(/([A-Z])/g' $1').trim()}
+                  {key.replace(/([A-Z])/g, ' $1').trim()}
                 </div>
                 <div className={`text-2xl font-bold ${getStatusColor(value)} mb-2`}>
                   {Math.round(value)}%
@@ -117,7 +116,7 @@ const AdvancedPerformanceMonitor2026 = () => {
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
             <h3 className="text-xl font-bold text-white mb-4">CPU Usage</h3>
             <div className="h-32 flex items-end justify-between space-x-1">
-              {Array.from({ length: 20 }(_i) => (
+              {Array.from({ length: 20 }, (_, i) => (
                 <div
                   key={i}
                   className="flex-1 bg-gradient-to-t from-cyan-500 to-blue-500 rounded-t"
@@ -137,7 +136,7 @@ const AdvancedPerformanceMonitor2026 = () => {
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
             <h3 className="text-xl font-bold text-white mb-4">Memory Usage</h3>
             <div className="h-32 flex items-end justify-between space-x-1">
-              {Array.from({ length: 20 }(_i) => (
+              {Array.from({ length: 20 }, (_, i) => (
                 <div
                   key={i}
                   className="flex-1 bg-gradient-to-t from-purple-500 to-pink-500 rounded-t"
