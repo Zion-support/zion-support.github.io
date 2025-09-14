@@ -1,3 +1,4 @@
+"use client";
 import React, { Suspense, lazy, useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import Link from 'next/link';

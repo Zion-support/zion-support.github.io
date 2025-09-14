@@ -175,7 +175,7 @@ const AdvancedAutomationContentShowcase2025 = () => {
                   </div>
                 </div>
 
-                {/* Tags */}
+                {/* Users */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {item.tags.slice(0, 3).map((tag) => (
                     <span

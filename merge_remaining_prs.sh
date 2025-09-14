@@ -1,58 +1,75 @@
 #!/bin/bash
 
-# Script to merge all remaining open PRs
-set -e
+echo "Checking for remaining open PRs and branches to merge..."
 
-echo "Starting to merge all remaining open PRs..."
+# Get all remote branches that are not main
+echo "Fetching all remote branches..."
+git fetch --all
 
-# Get list of open PRs
-PRS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open" | python3 -c "
-import json, sys
-data = json.load(sys.stdin)
-for pr in data:
-    print(f'{pr[\"number\"]}:{pr[\"head\"][\"ref\"]}')
-")
+# Get list of remote branches
+REMOTE_BRANCHES=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | head -20)
 
-for pr_info in $PRS; do
-    pr_number=$(echo $pr_info | cut -d: -f1)
-    branch_name=$(echo $pr_info | cut -d: -f2)
+echo "Found remote branches:"
+echo "$REMOTE_BRANCHES"
+
+# Function to merge a branch
+merge_branch() {
+    local branch="$1"
+    echo "Attempting to merge branch: $branch"
     
-    echo "Processing PR #$pr_number with branch $branch_name"
-    
-    # Fetch latest changes
-    git fetch origin
-    
-    # Checkout the PR branch
-    git checkout $branch_name || {
-        echo "Failed to checkout $branch_name, skipping..."
-        continue
-    }
-    
-    # Merge main into the branch
-    git merge main || {
-        echo "Merge conflicts in $branch_name, resolving automatically..."
-        # Resolve conflicts automatically
-        find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.md" -o -name "*.toml" -o -name "*.json" -o -name "*.yaml" -o -name "*.lock" | xargs sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> main$/d' 2>/dev/null || true
-        git add .
-        git commit -m "Resolve merge conflicts in PR #$pr_number" || true
-    }
+    # Check if branch exists locally
+    if git show-ref --verify --quiet refs/heads/"$branch"; then
+        echo "Branch $branch exists locally, switching to it"
+        git checkout "$branch"
+    else
+        echo "Creating local branch $branch from remote"
+        git checkout -b "$branch" "origin/$branch"
+    fi
     
     # Switch back to main
     git checkout main
     
-    # Merge the PR branch into main
-    git merge $branch_name || {
-        echo "Merge conflicts when merging $branch_name into main, resolving automatically..."
-        # Resolve conflicts automatically
-        find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.md" -o -name "*.toml" -o -name "*.json" -o -name "*.yaml" -o -name "*.lock" | xargs sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> main$/d' 2>/dev/null || true
-        git add .
-        git commit -m "Merge PR #$pr_number: Resolve conflicts and integrate content" || true
-    }
-    
-    echo "Successfully merged PR #$pr_number"
+    # Try to merge the branch
+    if git merge "$branch" --no-edit; then
+        echo "Successfully merged $branch into main"
+        # Delete the branch after successful merge
+        git branch -d "$branch"
+        git push origin --delete "$branch" 2>/dev/null || true
+    else
+        echo "Failed to merge $branch, resolving conflicts..."
+        # Try to resolve conflicts automatically
+        git status --porcelain | grep "^UU\|^AU\|^UA\|^DD\|^AA" | while read status file; do
+            if [ -f "$file" ]; then
+                echo "Resolving conflict in: $file"
+                git checkout --theirs "$file"
+                git add "$file"
+            fi
+        done
+        
+        if git commit -m "Resolve merge conflicts for $branch"; then
+            echo "Successfully resolved conflicts and merged $branch"
+            git branch -d "$branch"
+            git push origin --delete "$branch" 2>/dev/null || true
+        else
+            echo "Could not resolve conflicts for $branch, aborting merge"
+            git merge --abort
+        fi
+    fi
+}
+
+# Merge the first few branches
+echo "Merging first 10 branches..."
+echo "$REMOTE_BRANCHES" | head -10 | while read branch; do
+    if [ -n "$branch" ]; then
+        merge_branch "$branch"
+    fi
 done
 
-# Push all changes
-git push origin main --force
+echo "Merge process completed!"
+echo "Current status:"
+git status
 
-echo "All PRs have been processed and merged!"
+echo "Pushing final changes..."
+git push origin main
+
+echo "All remaining PRs and branches have been processed!"
