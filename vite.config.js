@@ -24,6 +24,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,avif}'],
+        globIgnores: ['**/reports/**/*', '**/node_modules/**/*'],
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/api\./,
@@ -66,10 +68,8 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
-          utils: ['axios', 'framer-motion', 'clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          forms: ['react-hook-form', '@hookform/resolvers']
+          utils: ['axios', 'framer-motion'],
+          charts: ['recharts']
         },
       },
     },
