@@ -19,6 +19,7 @@ export default function EdgeComputingGuidePage() {
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
+        <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">

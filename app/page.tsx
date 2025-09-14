@@ -46,15 +46,14 @@ import AutonomousBusinessOperationsPromotionBanner from '../components/Autonomou
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
 
 // Import new ultimate content promotional components
-import UltimateContent2025RevolutionBanner from '../components/UltimateContent2025RevolutionBanner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import UltimateContent2025RevolutionBanner from './components/UltimateContent2025RevolutionBanner';
 
 // Import new 2025 autonomous systems promotional components
 import AutonomousSystems2025RevolutionBanner from '../components/AutonomousSystems2025RevolutionBanner';
 import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
 
 // Import new revolutionary content promotional components
-import NeuralInterfaceRevolutionBanner from '../components/NeuralInterfaceRevolutionBanner';
+import NeuralInterfaceRevolutionBanner from './components/NeuralInterfaceRevolutionBanner';
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 
 export const metadata = {
@@ -77,11 +76,11 @@ export default function HomePage() {
         {/* Ultimate Content 2025 Revolution Banner - NEW */}
         <UltimateContent2025RevolutionBanner />
         
-        {/* Neural Interface Revolution Banner - NEW REVOLUTIONARY CONTENT */}
-        <NeuralInterfaceRevolutionBanner />
-        
         {/* Revolutionary Content Showcase 2025 - NEW */}
         <RevolutionaryContentShowcase2025 />
+        
+        {/* Neural Interface Revolution Banner - NEW REVOLUTIONARY CONTENT */}
+        <NeuralInterfaceRevolutionBanner />
         
         {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
         <AI2025UltimateBreakthroughBanner />
