@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 6
+  total_content_pieces: 10
   
   new_2025_content:
     - id: "autonomous-systems-revolution"
@@ -68,6 +68,50 @@ content_index:
       tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2026"]
       featured: true
       is_new: true
+      
+    - id: "ai-2025-cybersecurity-revolution"
+      type: "blog"
+      title: "AI 2025: The Cybersecurity Revolution - Enterprise Protection at Scale"
+      file_path: "/content/blog/ai-2025-cybersecurity-revolution-enterprise-protection.md"
+      url: "/blog/ai-2025-cybersecurity-revolution-enterprise-protection"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Cybersecurity", "Enterprise Security", "Threat Detection", "ROI"]
+      featured: true
+      is_new: true
+      
+    - id: "ai-cloud-migration-2025-ultimate-success"
+      type: "case-study"
+      title: "AI-Powered Cloud Migration: $50M Savings in 6 Months - Ultimate Success Story"
+      file_path: "/content/case-studies/ai-cloud-migration-2025-ultimate-success.md"
+      url: "/case-studies/ai-cloud-migration-2025-ultimate-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Cloud Migration", "AI", "Cost Savings", "ROI"]
+      featured: true
+      is_new: true
+      
+    - id: "ai-2025-enterprise-transformation-master-guide"
+      type: "resource"
+      title: "AI 2025: Enterprise Transformation Master Guide - From Strategy to 500% ROI"
+      file_path: "/content/resources/ai-2025-enterprise-transformation-master-guide.md"
+      url: "/resources/ai-2025-enterprise-transformation-master-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Master Guide", "AI Transformation", "Enterprise", "ROI", "Strategy"]
+      featured: true
+      is_new: true
+      
+    - id: "ai-2025-automation-revolution-enterprise-efficiency"
+      type: "blog"
+      title: "AI 2025: The Automation Revolution - Enterprise Efficiency at Scale"
+      file_path: "/content/blog/ai-2025-automation-revolution-enterprise-efficiency.md"
+      url: "/blog/ai-2025-automation-revolution-enterprise-efficiency"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Automation", "Enterprise Efficiency", "Productivity", "ROI"]
+      featured: true
+      is_new: true
 
   promotion_components:
     - name: "NewContent2025PromotionBanner"
@@ -99,9 +143,9 @@ content_index:
       - "Updated layout to include promotional content"
 
   metrics:
-    expected_roi_mentions: 12
-    success_stories: 2
-    implementation_guides: 2
-    blog_posts: 2
-    total_word_count: "~25,000 words"
-    estimated_reading_time: "~100 minutes"
+    expected_roi_mentions: 25
+    success_stories: 4
+    implementation_guides: 3
+    blog_posts: 4
+    total_word_count: "~65,000 words"
+    estimated_reading_time: "~260 minutes"
