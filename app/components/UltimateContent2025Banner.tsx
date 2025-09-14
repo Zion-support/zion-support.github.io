@@ -1,229 +1,114 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { ChevronRight, X, Star, TrendingUp, Users, Clock } from 'lucide-react';
-
-interface ContentItem {
-  id: string;
-  title: string;
-  url: string;
-  type: 'blog' | 'case-study' | 'resource';
-  metrics: {
-    roi: string;
-    savings: string;
-    timeframe?: string;
-    companies?: string;
-  };
-  readingTime: string;
-}
+import React from 'react';
+import Link from 'next/link';
 
 const UltimateContent2025Banner: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-  const [isDismissed, setIsDismissed] = useState(false);
-
-  const contentItems: ContentItem[] = [
-    {
-      id: 'advanced-analytics-revolution',
-      title: 'AI 2025: The Advanced Analytics Revolution - Ultimate Guide to 750% ROI',
-      url: '/blog/ai-2025-advanced-analytics-revolution-ultimate-guide',
-      type: 'blog',
-      metrics: {
-        roi: '750%',
-        savings: '$8.2M annually',
-        companies: '500+'
-      },
-      readingTime: '28 min read'
-    },
-    {
-      id: 'blockchain-integration-revolution',
-      title: 'AI 2025: The Blockchain Integration Revolution - Ultimate Guide to 900% ROI',
-      url: '/blog/ai-2025-blockchain-integration-revolution-ultimate-guide',
-      type: 'blog',
-      metrics: {
-        roi: '900%',
-        savings: '$15.8M annually',
-        companies: '300+'
-      },
-      readingTime: '32 min read'
-    },
-    {
-      id: 'manufacturing-transformation',
-      title: 'AI 2025 Manufacturing Transformation: $3.8B Company Achieves 1,100% ROI',
-      url: '/case-studies/ai-2025-manufacturing-transformation-ultimate-success',
-      type: 'case-study',
-      metrics: {
-        roi: '1,100%',
-        savings: '$420M annually',
-        companies: 'Fortune 500'
-      },
-      readingTime: '22 min read'
-    },
-    {
-      id: 'implementation-master-guide',
-      title: 'AI 2025 Implementation Master Guide: Ultimate Roadmap to 1,000% ROI in 12 Months',
-      url: '/resources/ai-2025-implementation-master-guide-ultimate-roadmap',
-      type: 'resource',
-      metrics: {
-        roi: '1,000%',
-        savings: '$32.7M annually',
-        timeframe: '12 months',
-        companies: '500+'
-      },
-      readingTime: '45 min read'
-    }
-  ];
-
-  useEffect(() => {
-    // Check if banner was previously dismissed
-    const dismissed = localStorage.getItem('ultimateContent2025BannerDismissed');
-    if (dismissed === 'true') {
-      setIsDismissed(true);
-      setIsVisible(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isDismissed) return;
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === contentItems.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [contentItems.length, isDismissed]);
-
-  const handleDismiss = () => {
-    setIsVisible(false);
-    setIsDismissed(true);
-    localStorage.setItem('ultimateContent2025BannerDismissed', 'true');
-  };
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog': return 'bg-blue-100 text-blue-800';
-      case 'case-study': return 'bg-green-100 text-green-800';
-      case 'resource': return 'bg-purple-100 text-purple-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const getTypeLabel = (type: string) => {
-    switch (type) {
-      case 'blog': return 'Blog Post';
-      case 'case-study': return 'Case Study';
-      case 'resource': return 'Master Guide';
-      default: return 'Content';
-    }
-  };
-
-  if (isDismissed || !isVisible) return null;
-
-  const currentItem = contentItems[currentIndex];
-
   return (
-    <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20"></div>
-        <div className="absolute top-4 left-4 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
-        <div className="absolute top-8 right-8 w-1 h-1 bg-white/40 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-4 left-8 w-1.5 h-1.5 bg-white/20 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-8 right-4 w-2 h-2 bg-white/30 rounded-full animate-pulse delay-3000"></div>
-      </div>
+    <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full text-sm font-bold mb-6">
+            🚀 NEW 2025 CONTENT REVOLUTION
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+            Ultimate AI Automation Guide 2025
+          </h2>
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto">
+            Discover the complete roadmap to achieving 340% ROI through comprehensive AI automation. 
+            Revolutionary strategies, real-world case studies, and proven implementation frameworks.
+          </p>
+        </div>
 
-      <div className="relative z-10 p-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <div className="flex items-center space-x-3 mb-3">
-                <div className="flex items-center space-x-2">
-                  <Star className="w-5 h-5 text-yellow-400" />
-                  <span className="text-sm font-medium">NEW 2025 CONTENT</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <TrendingUp className="w-4 h-4 text-green-400" />
-                  <span className="text-sm font-medium">UP TO 1,100% ROI</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Users className="w-4 h-4 text-blue-400" />
-                  <span className="text-sm font-medium">500+ COMPANIES</span>
-                </div>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
+            <div className="text-4xl mb-4">📊</div>
+            <h3 className="text-2xl font-bold mb-4 text-yellow-300">Complete Business Guide</h3>
+            <p className="text-gray-200 mb-6">
+              Comprehensive 15-minute read covering everything from assessment to implementation. 
+              Step-by-step strategies for enterprise automation success.
+            </p>
+            <Link 
+              href="/blog/ai-2025-ultimate-business-automation-revolution-complete-guide"
+              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300"
+            >
+              Read Complete Guide →
+            </Link>
+          </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold mb-2 leading-tight">
-                    {currentItem.title}
-                  </h3>
-                  
-                  <div className="flex items-center space-x-6 mb-3">
-                    <div className="flex items-center space-x-2">
-                      <span className="text-2xl font-bold text-green-400">
-                        {currentItem.metrics.roi}
-                      </span>
-                      <span className="text-sm">ROI</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-lg font-semibold text-blue-400">
-                        {currentItem.metrics.savings}
-                      </span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Clock className="w-4 h-4 text-gray-300" />
-                      <span className="text-sm text-gray-300">
-                        {currentItem.readingTime}
-                      </span>
-                    </div>
-                  </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
+            <div className="text-4xl mb-4">🏆</div>
+            <h3 className="text-2xl font-bold mb-4 text-yellow-300">340% ROI Success Story</h3>
+            <p className="text-gray-200 mb-6">
+              Real Fortune 500 case study showing how $16.2M investment generated $111.1M in annual benefits. 
+              Detailed metrics, challenges, and lessons learned.
+            </p>
+            <Link 
+              href="/case-studies/enterprise-ai-automation-success-story-2025"
+              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300"
+            >
+              View Success Story →
+            </Link>
+          </div>
 
-                  <div className="flex items-center space-x-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(currentItem.type)}`}>
-                      {getTypeLabel(currentItem.type)}
-                    </span>
-                    <a 
-                      href={currentItem.url}
-                      className="inline-flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-colors duration-200"
-                    >
-                      <span className="text-sm font-medium">Read Now</span>
-                      <ChevronRight className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
+            <div className="text-4xl mb-4">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-yellow-300">Quantum AI Revolution</h3>
+            <p className="text-gray-200 mb-6">
+              Revolutionary guide to Quantum AI in 2026. Explore how quantum computing is transforming 
+              business operations and creating unprecedented competitive advantages.
+            </p>
+            <Link 
+              href="/blog/quantum-ai-2026-business-transformation-revolutionary-guide"
+              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300"
+            >
+              Explore Quantum AI →
+            </Link>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-2xl p-8 text-center">
+          <h3 className="text-2xl font-bold mb-4">🎯 Complete Implementation Checklist</h3>
+          <p className="text-lg mb-6">
+            Download our comprehensive 8-minute checklist covering all phases of AI automation implementation. 
+            Ensure you don't miss critical steps and maximize your success probability.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/resources/ai-automation-implementation-checklist-2025"
+              className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+            >
+              Get Implementation Checklist
+            </Link>
+            <Link 
+              href="/services"
+              className="border-2 border-black text-black px-8 py-3 rounded-lg font-semibold hover:bg-black hover:text-white transition-colors"
+            >
+              Get Expert Help
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-12 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4">
+              <div className="text-3xl font-bold text-yellow-300">340%</div>
+              <div className="text-sm text-gray-200">Average ROI</div>
             </div>
-
-            <div className="flex items-center space-x-4 ml-6">
-              {/* Progress indicators */}
-              <div className="flex space-x-2">
-                {contentItems.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                      index === currentIndex ? 'bg-white' : 'bg-white/40'
-                    }`}
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={handleDismiss}
-                className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-200"
-                aria-label="Dismiss banner"
-              >
-                <X className="w-5 h-5" />
-              </button>
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4">
+              <div className="text-3xl font-bold text-yellow-300">67%</div>
+              <div className="text-sm text-gray-200">Cost Reduction</div>
+            </div>
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4">
+              <div className="text-3xl font-bold text-yellow-300">89%</div>
+              <div className="text-sm text-gray-200">Efficiency Gain</div>
+            </div>
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4">
+              <div className="text-3xl font-bold text-yellow-300">95%</div>
+              <div className="text-sm text-gray-200">Satisfaction</div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Success metrics overlay */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400"></div>
-    </div>
+    </section>
   );
 };
 
