@@ -4195,6 +4195,7 @@
     date-fns "^3.3.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/react@*":
 =======
 <<<<<<< HEAD
@@ -4203,6 +4204,9 @@
 "@types/react@*", "@types/react@19.1.13":
 >>>>>>> main
 >>>>>>> main
+=======
+"@types/react@*", "@types/react@19.1.13":
+>>>>>>> cursor/create-and-deploy-new-content-c9c3
   version "19.1.13"
   resolved "https://registry.npmjs.org/@types/react/-/react-19.1.13.tgz"
   integrity sha512-hHkbU/eoO3EG5/MZkuFSKmYqPbSVk5byPFa3e7y/8TybHiLMACgI8seVYlicwk7H5K/rI2px9xrQp/C+AUDTiQ==
