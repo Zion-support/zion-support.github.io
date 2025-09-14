@@ -96,6 +96,10 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 import NewContent2025UltimateBreakthroughBanner from './components/NewContent2025UltimateBreakthroughBanner';
 import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakthroughContentShowcase2025';
 
+// Import new Ultimate Business Automation Revolution components
+import UltimateBusinessAutomationRevolutionBanner from './components/UltimateBusinessAutomationRevolutionBanner';
+import UltimateBusinessAutomationShowcase from './components/UltimateBusinessAutomationShowcase';
+
 // Import additional promotional components
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
@@ -230,6 +234,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Business Automation Revolution Banner - NEWEST ULTIMATE FEATURED */}
+        <UltimateBusinessAutomationRevolutionBanner />
+        
         {/* AI Revolution 2025-2026 Banner - NEWEST ULTIMATE FEATURED */}
         <AIRevolution2025Banner />
         
@@ -252,6 +259,9 @@ export default function HomePage() {
         
         {/* AI AUTOMATION ROI CALCULATOR - INTERACTIVE TOOL */}
         <AIAutomationROICalculator />
+        
+        {/* Ultimate Business Automation Showcase - NEW FEATURED */}
+        <UltimateBusinessAutomationShowcase />
         
         {/* NEW CONTENT 2025 ULTIMATE SHOWCASE - FEATURED */}
         <NewContent2025UltimateShowcase />
