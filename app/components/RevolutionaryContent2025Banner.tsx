@@ -1,136 +1,227 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const RevolutionaryContent2025Banner = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const featuredContent = [
+    {
+      id: 'enterprise-ai-transformation',
+      title: 'Enterprise AI Transformation Ultimate Success Guide',
+      subtitle: '600% ROI in 8 Months',
+      type: 'blog',
+      url: '/blog/ai-2025-enterprise-ai-transformation-ultimate-success-guide',
+      description: 'Fortune 500 companies achieving unprecedented 600% ROI through strategic AI transformation',
+      metrics: {
+        roi: '600%',
+        timeline: '8 months',
+        companies: 'Fortune 500',
+        savings: '$2.8B'
+      },
+      gradient: 'from-purple-600 to-blue-600'
+    },
+    {
+      id: 'fortune-500-success',
+      title: 'Fortune 500 AI Transformation Success Story',
+      subtitle: '$2.8B Company Achieves 600% ROI',
+      type: 'case-study',
+      url: '/case-studies/fortune-500-ai-transformation-600-roi-success-story',
+      description: 'Complete case study of manufacturing giant achieving 600% ROI through AI transformation',
+      metrics: {
+        roi: '600%',
+        company: '$2.8B',
+        timeline: '8 months',
+        savings: '$340M'
+      },
+      gradient: 'from-blue-600 to-indigo-600'
+    },
+    {
+      id: 'autonomous-business-systems',
+      title: 'Autonomous Business Systems Revolution',
+      subtitle: '700% ROI Through Self-Managing Operations',
+      type: 'blog',
+      url: '/blog/ai-2025-autonomous-business-systems-revolution',
+      description: 'Self-managing AI systems delivering 700% ROI through autonomous operations',
+      metrics: {
+        roi: '700%',
+        automation: '95%',
+        efficiency: '89%',
+        savings: '$4.2B'
+      },
+      gradient: 'from-indigo-600 to-purple-600'
+    },
+    {
+      id: 'financial-services-transformation',
+      title: 'Financial Services AI Transformation',
+      subtitle: '$850M Company Achieves 520% ROI',
+      type: 'case-study',
+      url: '/case-studies/ai-2025-financial-services-transformation-ultimate-success',
+      description: 'Major bank achieving 520% ROI through intelligent banking and AI transformation',
+      metrics: {
+        roi: '520%',
+        company: '$850M',
+        satisfaction: '99.8%',
+        savings: '$67M'
+      },
+      gradient: 'from-green-600 to-teal-600'
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
+    }, 6000);
+
+    return () => clearInterval(timer);
+  }, [featuredContent.length]);
+
+  if (!isVisible) return null;
+
+  const currentContent = featuredContent[currentSlide];
+
   return (
-    <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full px-6 py-2 mb-6 font-bold text-sm">
-            🚀 REVOLUTIONARY AI 2025 CONTENT
+    <div className={`bg-gradient-to-r ${currentContent.gradient} text-white py-12 relative overflow-hidden`}>
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white to-transparent"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full opacity-5 transform translate-x-48 translate-y-48"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4">
+            <span className="text-sm font-medium">🚀 REVOLUTIONARY 2025 CONTENT</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-            Discover the Future of AI
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Transform Your Business with AI
           </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Explore groundbreaking AI 2025 breakthroughs, quantum computing revolutions, and autonomous enterprise transformations that are reshaping industries worldwide.
+          <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
+            Discover the proven strategies and case studies that are helping companies achieve 600%+ ROI through AI transformation
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {/* Quantum Computing Revolution */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
-            <div className="text-4xl mb-4">⚛️</div>
-            <h3 className="text-2xl font-bold mb-4 text-yellow-400">Quantum AI Revolution</h3>
-            <p className="text-gray-200 mb-6 leading-relaxed">
-              Discover how quantum computing is revolutionizing enterprise AI with 1000x speed improvements and exponential processing power.
-            </p>
-            <div className="space-y-2 mb-6">
-              <div className="flex items-center text-sm">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                <span>1000x faster AI processing</span>
+        {/* Main Content Card */}
+        <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Content Details */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-semibold">
+                  {currentContent.type.toUpperCase()}
+                </span>
+                <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                  FEATURED
+                </span>
               </div>
-              <div className="flex items-center text-sm">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                <span>Quantum neural networks</span>
+              
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+                {currentContent.title}
+              </h3>
+              
+              <div className="text-xl font-semibold text-yellow-300 mb-4">
+                {currentContent.subtitle}
               </div>
-              <div className="flex items-center text-sm">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                <span>Enterprise implementation guide</span>
-              </div>
-            </div>
-            <Link 
-              href="/blog/ai-2025-quantum-computing-revolution-enterprise-breakthrough"
-              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300"
-            >
-              Explore Quantum AI →
-            </Link>
-          </div>
+              
+              <p className="text-lg opacity-90 mb-6 leading-relaxed">
+                {currentContent.description}
+              </p>
 
-          {/* Autonomous Enterprise */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
-            <div className="text-4xl mb-4">🤖</div>
-            <h3 className="text-2xl font-bold mb-4 text-yellow-400">Autonomous Enterprise</h3>
-            <p className="text-gray-200 mb-6 leading-relaxed">
-              Transform your organization into a fully autonomous entity with AI systems that make strategic decisions and self-optimize operations.
-            </p>
-            <div className="space-y-2 mb-6">
-              <div className="flex items-center text-sm">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                <span>Self-managing operations</span>
+              {/* Key Metrics */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                {Object.entries(currentContent.metrics).slice(0, 4).map(([key, value]) => (
+                  <div key={key} className="bg-white bg-opacity-10 rounded-lg p-3">
+                    <div className="text-sm opacity-75 capitalize">{key.replace('_', ' ')}</div>
+                    <div className="text-lg font-bold text-yellow-300">{value}</div>
+                  </div>
+                ))}
               </div>
-              <div className="flex items-center text-sm">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                <span>Autonomous decision making</span>
-              </div>
-              <div className="flex items-center text-sm">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                <span>Complete implementation guide</span>
-              </div>
-            </div>
-            <Link 
-              href="/blog/ai-2025-autonomous-enterprise-transformation-complete-guide"
-              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300"
-            >
-              Start Transformation →
-            </Link>
-          </div>
 
-          {/* Success Stories */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
-            <div className="text-4xl mb-4">🏆</div>
-            <h3 className="text-2xl font-bold mb-4 text-yellow-400">Proven Success</h3>
-            <p className="text-gray-200 mb-6 leading-relaxed">
-              Real-world case studies showing 60% cost reduction, 99.5% efficiency, and $2.3B+ in savings through AI transformation.
-            </p>
-            <div className="space-y-2 mb-6">
-              <div className="flex items-center text-sm">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                <span>Manufacturing: 60% cost reduction</span>
-              </div>
-              <div className="flex items-center text-sm">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                <span>Healthcare: 90% patient satisfaction</span>
-              </div>
-              <div className="flex items-center text-sm">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                <span>$4.1B+ total savings achieved</span>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href={currentContent.url}
+                  className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors text-center"
+                >
+                  Read Full Article →
+                </Link>
+                <Link
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors text-center"
+                >
+                  Get Free Consultation
+                </Link>
               </div>
             </div>
-            <Link 
-              href="/case-studies"
-              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300"
-            >
-              View Case Studies →
-            </Link>
+
+            {/* Content Preview Grid */}
+            <div className="space-y-4">
+              <h4 className="text-xl font-semibold mb-4">More Success Stories:</h4>
+              {featuredContent.slice(0, 3).map((content, index) => (
+                <div
+                  key={content.id}
+                  className={`bg-white bg-opacity-10 rounded-lg p-4 cursor-pointer transition-all ${
+                    index === currentSlide ? 'ring-2 ring-yellow-400 bg-white bg-opacity-20' : 'hover:bg-white hover:bg-opacity-20'
+                  }`}
+                  onClick={() => setCurrentSlide(index)}
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="bg-white bg-opacity-20 px-2 py-1 rounded text-xs">
+                      {content.type.toUpperCase()}
+                    </span>
+                    <span className="text-yellow-300 font-semibold text-sm">
+                      {content.metrics.roi} ROI
+                    </span>
+                  </div>
+                  <h5 className="font-semibold text-sm leading-tight mb-2">
+                    {content.title}
+                  </h5>
+                  <p className="text-xs opacity-75 line-clamp-2">
+                    {content.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20">
-            <h3 className="text-3xl font-bold mb-4 text-yellow-400">Ready to Transform Your Business?</h3>
-            <p className="text-xl mb-8 text-gray-200">
-              Join the AI 2025 revolution and discover how these breakthrough technologies can transform your organization.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Free AI Assessment
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-              >
-                Explore Our Services
-              </Link>
-            </div>
+        {/* Navigation Dots */}
+        <div className="flex justify-center mt-8 space-x-2">
+          {featuredContent.map((_, index) => (
+            <button
+              key={index}
+              className={`w-3 h-3 rounded-full transition-all ${
+                index === currentSlide ? 'bg-yellow-400' : 'bg-white bg-opacity-30'
+              }`}
+              onClick={() => setCurrentSlide(index)}
+            />
+          ))}
+        </div>
+
+        {/* Bottom Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-yellow-300">600%</div>
+            <div className="text-sm opacity-75">Average ROI</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-yellow-300">94%</div>
+            <div className="text-sm opacity-75">Success Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-yellow-300">8</div>
+            <div className="text-sm opacity-75">Months to ROI</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-yellow-300">$4.2B</div>
+            <div className="text-sm opacity-75">Total Savings</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
