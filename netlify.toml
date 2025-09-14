@@ -12,9 +12,6 @@
   # Node.js version
   NODE_VERSION = "20"
   
-  # Yarn version
-  YARN_VERSION = "1.22.22"
-  
   # Build environment
   NODE_OPTIONS = "--max-old-space-size=6144"
   NODE_ENV = "production"
@@ -32,6 +29,8 @@
   
   # Ensure Vite is available and handle peer dependencies
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  NPM_CONFIG_AUDIT = "false"
+  NPM_CONFIG_FUND = "false"
   
   # Disable Next.js auto-detection since this is a Vite project
   NETLIFY_USE_NEXTJS = "false"

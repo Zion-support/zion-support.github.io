@@ -1,8 +1,64 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 10
+  total_content_pieces: 12
   
   new_2025_content:
+    - id: "cybersecurity-revolution"
+      type: "blog"
+      title: "AI 2025: The Cybersecurity Revolution That's Protecting Enterprises"
+      file_path: "/content/blog/ai-2025-cybersecurity-revolution.md"
+      url: "/blog/ai-2025-cybersecurity-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Cybersecurity", "Enterprise Security", "Threat Detection", "ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        threat_reduction: "95%"
+        cost_savings: "$2.3M average"
+        response_time: "67% faster"
+        false_positives: "89% reduction"
+        
+    - id: "healthcare-transformation"
+      type: "case-study"
+      title: "Healthcare AI Transformation: $2.1B Health System Achieves 99.8% Patient Safety"
+      file_path: "/content/case-studies/healthcare-ai-transformation-2025.md"
+      url: "/case-studies/healthcare-ai-transformation-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Healthcare", "Case Study", "Patient Safety", "AI Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        savings: "$180M"
+        accuracy: "99.8%"
+        satisfaction: "94%"
+        
+    - id: "enterprise-implementation-guide"
+      type: "resource"
+      title: "AI Implementation Enterprise Guide: From Strategy to $500M+ ROI"
+      file_path: "/content/resources/ai-implementation-enterprise-guide-2025.md"
+      url: "/resources/ai-implementation-enterprise-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation", "ROI", "Strategy", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "833%"
+        savings: "$500M+"
+        satisfaction: "95%"
+=======
+      tags: ["AI", "Cybersecurity", "Enterprise Security", "Threat Detection", "ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        threat_reduction: "95%"
+        cost_savings: "$2.3M average"
+        response_time: "67% faster"
+        false_positives: "89% reduction"
+>>>>>>> cursor/create-and-deploy-new-content-5865
+        
     - id: "autonomous-systems-revolution"
       type: "blog"
       title: "AI 2025: The Next Generation Autonomous Systems Revolution"
@@ -14,6 +70,23 @@ content_index:
       featured: true
       is_new: true
       
+    - id: "healthcare-ai-transformation"
+      type: "case-study"
+      title: "Healthcare AI Transformation 2025: How a Regional Hospital System Achieved 400% ROI"
+      file_path: "/content/case-studies/healthcare-ai-transformation-2025.md"
+      url: "/case-studies/healthcare-ai-transformation-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Healthcare", "AI Transformation", "ROI", "Patient Care"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "400%"
+        cost_savings: "$12.3M annually"
+        wait_time_reduction: "60%"
+        diagnostic_accuracy: "35% improvement"
+        patient_satisfaction: "94%"
+        
     - id: "global-enterprise-success"
       type: "case-study"
       title: "Global Enterprise AI Transformation: $2.8B Ultimate Success Story"
@@ -25,6 +98,22 @@ content_index:
       featured: true
       is_new: true
       
+    - id: "ai-implementation-roadmap"
+      type: "resource"
+      title: "AI Implementation Roadmap 2025: Your Complete Guide to Enterprise AI Success"
+      file_path: "/content/resources/ai-implementation-roadmap-2025.md"
+      url: "/resources/ai-implementation-roadmap-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "Enterprise AI", "ROI", "Best Practices"]
+      featured: true
+      is_new: true
+      metrics:
+        success_rate: "94%"
+        average_roi: "300%+"
+        implementation_time: "67% faster"
+        cost_reduction: "45% average"
+        
     - id: "autonomous-systems-guide"
       type: "resource"
       title: "AI 2025 Autonomous Systems Implementation Master Guide"
@@ -36,7 +125,108 @@ content_index:
       featured: true
       is_new: true
       
-    - id: "ai-2026-enterprise-automation-breakthrough"
+    - id: "cybersecurity-revolution"
+
+  new_2025_content_latest:
+    - id: "ai-cybersecurity-revolution"
+      type: "blog"
+      title: "AI 2025: The Cybersecurity Revolution - How AI is Transforming Digital Defense"
+      file_path: "/content/blog/ai-2025-cybersecurity-revolution.md"
+      url: "/blog/ai-2025-cybersecurity-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Cybersecurity", "Digital Defense", "Enterprise Security", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        reduction: "95%"
+        savings: "$50M+"
+        accuracy: "94%"
+        projects: "500+"
+        
+    - id: "ai-healthcare-transformation"
+      type: "case-study"
+      title: "AI Healthcare Transformation 2025: How a Regional Hospital System Achieved 400% ROI"
+      file_path: "/content/case-studies/ai-healthcare-transformation-2025-success.md"
+      url: "/case-studies/ai-healthcare-transformation-2025-success"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Healthcare", "AI Transformation", "ROI", "Patient Safety", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "400%"
+        reduction: "67%"
+        satisfaction: "95%"
+        savings: "$25.8M"
+        
+    - id: "ai-implementation-ultimate-guide"
+      type: "resource"
+      title: "AI Implementation Ultimate Guide 2025: From Strategy to ROI - The Complete Blueprint"
+      file_path: "/content/resources/ai-implementation-ultimate-guide-2025.md"
+      url: "/resources/ai-implementation-ultimate-guide-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2025", "Blueprint"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        projects: "500+"
+        accuracy: "89%"
+        reduction: "67%"
+
+  new_2026_content:
+    - id: "ai-2026-enterprise-automation"
+      type: "blog"
+      title: "AI 2025: The Cybersecurity Revolution - Next-Generation Threat Protection"
+      file_path: "/content/blog/ai-2025-cybersecurity-revolution-next-generation-threat-protection.md"
+      url: "/blog/ai-2025-cybersecurity-revolution-next-generation-threat-protection"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Cybersecurity", "Threat Protection", "Business Security", "ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "94%"
+        savings: "$2.3M"
+        efficiency: "67%"
+        satisfaction: "100%"
+      
+    - id: "fintech-transformation"
+      type: "case-study"
+      title: "Fintech AI Transformation 2025: How a $100M Company Achieved 450% ROI"
+      file_path: "/content/case-studies/fintech-ai-transformation-2025-ultimate-success-story.md"
+      url: "/case-studies/fintech-ai-transformation-2025-ultimate-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Fintech", "AI Transformation", "ROI", "Success Story"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        savings: "$15M"
+        efficiency: "78%"
+        satisfaction: "89%"
+      
+    - id: "ai-implementation-roadmap"
+      type: "resource"
+      title: "AI Implementation Roadmap 2025: Complete Guide to Successful AI Deployment"
+      file_path: "/content/resources/ai-implementation-roadmap-2025-complete-guide.md"
+      url: "/resources/ai-implementation-roadmap-2025-complete-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "Digital Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "340%"
+        savings: "$2.8B"
+        efficiency: "67%"
+        satisfaction: "98%"
+
+  new_2026_content:
+    - id: "ai-2026-enterprise-automation"
       type: "blog"
       title: "AI 2026: Enterprise Automation Breakthrough - 400% ROI in 90 Days"
       file_path: "/content/blog/ai-2026-enterprise-automation-breakthrough.md"
@@ -66,50 +256,6 @@ content_index:
       status: "published"
       created: "2025-01-17"
       tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2026"]
-      featured: true
-      is_new: true
-      
-    - id: "ai-2025-cybersecurity-revolution"
-      type: "blog"
-      title: "AI 2025: The Cybersecurity Revolution - Enterprise Protection at Scale"
-      file_path: "/content/blog/ai-2025-cybersecurity-revolution-enterprise-protection.md"
-      url: "/blog/ai-2025-cybersecurity-revolution-enterprise-protection"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["AI", "Cybersecurity", "Enterprise Security", "Threat Detection", "ROI"]
-      featured: true
-      is_new: true
-      
-    - id: "ai-cloud-migration-2025-ultimate-success"
-      type: "case-study"
-      title: "AI-Powered Cloud Migration: $50M Savings in 6 Months - Ultimate Success Story"
-      file_path: "/content/case-studies/ai-cloud-migration-2025-ultimate-success.md"
-      url: "/case-studies/ai-cloud-migration-2025-ultimate-success"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Case Study", "Cloud Migration", "AI", "Cost Savings", "ROI"]
-      featured: true
-      is_new: true
-      
-    - id: "ai-2025-enterprise-transformation-master-guide"
-      type: "resource"
-      title: "AI 2025: Enterprise Transformation Master Guide - From Strategy to 500% ROI"
-      file_path: "/content/resources/ai-2025-enterprise-transformation-master-guide.md"
-      url: "/resources/ai-2025-enterprise-transformation-master-guide"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Master Guide", "AI Transformation", "Enterprise", "ROI", "Strategy"]
-      featured: true
-      is_new: true
-      
-    - id: "ai-2025-automation-revolution-enterprise-efficiency"
-      type: "blog"
-      title: "AI 2025: The Automation Revolution - Enterprise Efficiency at Scale"
-      file_path: "/content/blog/ai-2025-automation-revolution-enterprise-efficiency.md"
-      url: "/blog/ai-2025-automation-revolution-enterprise-efficiency"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["AI", "Automation", "Enterprise Efficiency", "Productivity", "ROI"]
       featured: true
       is_new: true
 
@@ -143,9 +289,9 @@ content_index:
       - "Updated layout to include promotional content"
 
   metrics:
-    expected_roi_mentions: 25
-    success_stories: 4
-    implementation_guides: 3
-    blog_posts: 4
-    total_word_count: "~65,000 words"
-    estimated_reading_time: "~260 minutes"
+    expected_roi_mentions: 12
+    success_stories: 2
+    implementation_guides: 2
+    blog_posts: 2
+    total_word_count: "~25,000 words"
+    estimated_reading_time: "~100 minutes"
