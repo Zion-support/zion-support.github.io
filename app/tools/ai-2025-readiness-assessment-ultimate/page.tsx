@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
+// import { Progress } from '../../../../components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, XCircle, AlertCircle, TrendingUp, Target, Zap } from 'lucide-react';
 
@@ -357,7 +357,7 @@ export default function AI2025ReadinessAssessment() {
                 <div className={`text-6xl font-bold mb-4 ${getScoreColor(result.overallScore)}`}>
                   {result.overallScore}%
                 </div>
-                <Progress value={result.overallScore} className="h-4 mb-4" />
+                <div value={result.overallScore} className="h-4 mb-4" />
                 <p className="text-gray-600">
                   {result.overallScore >= 80 
                     ? "Excellent! You're well-prepared for AI transformation."
@@ -388,7 +388,7 @@ export default function AI2025ReadinessAssessment() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Progress value={score} className="h-3" />
+                  <div value={score} className="h-3" />
                 </CardContent>
               </Card>
             ))}
