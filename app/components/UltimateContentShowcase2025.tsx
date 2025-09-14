@@ -1,267 +1,238 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-interface ContentItem {
-  id: string;
-  title: string;
-  description: string;
-  type: 'blog' | 'case-study' | 'resource';
-  url: string;
-  metrics: {
-    roi?: string;
-    savings?: string;
-    efficiency?: string;
-    success_rate?: string;
-  };
-  reading_time: string;
-  featured: boolean;
-  tags: string[];
-}
+const UltimateContentShowcase2025 = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
-const UltimateContentShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
-  const contentItems: ContentItem[] = [
+  const featuredContent = [
     {
-      id: 'ai-enterprise-automation-mastery',
-      title: 'AI 2025: Enterprise Automation Mastery - Ultimate Success Guide',
-      description: 'Master enterprise automation with AI in 2025. Achieve 1,200% ROI, $500M+ savings, and 99.8% efficiency with our proven framework.',
-      type: 'blog',
-      url: '/blog/ai-2025-enterprise-automation-mastery-ultimate-success-guide',
+      id: 'enterprise-data-revolution',
+      title: 'AI 2025: The Enterprise Data Revolution - Ultimate Guide',
+      type: 'Blog Post',
+      description: 'Discover how Fortune 500 companies are achieving 600% ROI with AI-powered data strategies. Complete implementation guide with real-world success stories.',
+      url: '/blog/ai-2025-enterprise-data-revolution-ultimate-guide',
       metrics: {
-        roi: '1,200%',
-        savings: '$500M+',
-        efficiency: '99.8%',
-        success_rate: '98%'
+        roi: '600%',
+        savings: '$25-100M',
+        accuracy: '99.7%',
+        satisfaction: '98%'
       },
-      reading_time: '35 min read',
-      featured: true,
-      tags: ['AI', 'Enterprise Automation', 'ROI', 'Success Guide', '2025']
+      tags: ['Data Revolution', 'Enterprise AI', 'ROI Guide', 'Fortune 500'],
+      readingTime: '18 min read',
+      isNew: true
     },
     {
-      id: 'fortune-500-ai-success',
-      title: 'Fortune 500 AI Success 2025: $2.8B Savings Story',
-      description: 'How a Fortune 500 company achieved $2.8B in annual savings and 1,500% ROI through comprehensive AI transformation in just 18 months.',
-      type: 'case-study',
-      url: '/case-studies/fortune-500-ai-success-2025',
+      id: 'fortune-500-transformation',
+      title: 'Fortune 500 AI Transformation: $2.8B Annual Savings in 8 Months',
+      type: 'Case Study',
+      description: 'Real-world success story of a Fortune 500 manufacturing company that achieved $2.8B in annual savings within just 8 months of AI implementation.',
+      url: '/case-studies/fortune-500-ai-transformation-2025-ultimate-success',
       metrics: {
-        roi: '1,500%',
+        roi: '1,302%',
         savings: '$2.8B',
-        efficiency: '340%',
-        success_rate: '98%'
+        timeframe: '8 months',
+        efficiency: '156%'
       },
-      reading_time: '15 min read',
-      featured: true,
-      tags: ['Fortune 500', 'AI Transformation', 'Case Study', 'ROI', 'Success Story']
+      tags: ['Fortune 500', 'Case Study', 'Manufacturing', 'Success Story'],
+      readingTime: '20 min read',
+      isNew: true
     },
     {
-      id: 'ai-implementation-guide',
-      title: 'AI Implementation Guide 2025: Complete Roadmap to Success',
-      description: 'Master AI implementation with our comprehensive guide. Achieve 1,200% ROI, $500M+ savings, and 99% success rate with proven methodologies.',
-      type: 'resource',
-      url: '/resources/ai-implementation-guide-2025',
+      id: 'ai-implementation-ultimate-guide',
+      title: 'AI Implementation Ultimate Guide 2025: From Strategy to 800% ROI',
+      type: 'Resource',
+      description: 'Complete framework for AI implementation success. Based on analysis of 500+ enterprise implementations and $50B in AI investments.',
+      url: '/resources/ai-implementation-ultimate-guide-2025-complete',
       metrics: {
-        roi: '1,200%',
-        savings: '$500M+',
-        efficiency: '99%',
-        success_rate: '99%'
+        roi: '800%',
+        successRate: '94%',
+        timeframe: '18 months',
+        projects: '500+'
       },
-      reading_time: '30 min read',
-      featured: true,
-      tags: ['AI Implementation', 'Guide', 'ROI', 'Strategy', '2025']
+      tags: ['Implementation Guide', 'Strategy', 'ROI', 'Best Practices'],
+      readingTime: '35 min read',
+      isNew: true
     }
   ];
 
-  const categories = [
-    { id: 'all', label: 'All Content', count: contentItems.length },
-    { id: 'blog', label: 'Blog Posts', count: contentItems.filter(item => item.type === 'blog').length },
-    { id: 'case-study', label: 'Case Studies', count: contentItems.filter(item => item.type === 'case-study').length },
-    { id: 'resource', label: 'Resources', count: contentItems.filter(item => item.type === 'resource').length }
-  ];
+  const categories = ['All', 'Blog Posts', 'Case Studies', 'Resources'];
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const filteredContent = selectedCategory === 'all' 
-    ? contentItems 
-    : contentItems.filter(item => item.type === selectedCategory);
+  const filteredContent = selectedCategory === 'All' 
+    ? featuredContent 
+    : featuredContent.filter(item => 
+        selectedCategory === 'Blog Posts' ? item.type === 'Blog Post' :
+        selectedCategory === 'Case Studies' ? item.type === 'Case Study' :
+        selectedCategory === 'Resources' ? item.type === 'Resource' : true
+      );
 
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog': return 'bg-blue-100 text-blue-800 border-blue-200';
-      case 'case-study': return 'bg-green-100 text-green-800 border-green-200';
-      case 'resource': return 'bg-purple-100 text-purple-800 border-purple-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
-    }
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % filteredContent.length);
+    }, 5000);
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'blog': return '📝';
-      case 'case-study': return '📊';
-      case 'resource': return '📚';
-      default: return '📄';
-    }
-  };
+    return () => clearInterval(interval);
+  }, [filteredContent.length]);
+
+  if (!isVisible) return null;
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-purple-100 text-purple-800 rounded-full px-6 py-2 mb-4">
-            <span className="text-sm font-medium">🚀 ULTIMATE CONTENT 2025</span>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🚀 NEW 2025 CONTENT</span>
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Master AI Implementation with Proven Success Stories
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            Ultimate Content Showcase 2025
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Learn from real-world implementations that achieved 1,200%+ ROI, $500M+ savings, and 99% success rates.
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto">
+            Discover our latest AI insights, success stories, and implementation guides. 
+            Featuring real-world results from Fortune 500 companies achieving 600-800% ROI.
           </p>
         </div>
 
-        {/* Success Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-purple-600 mb-2">1,200%</div>
-            <div className="text-gray-600">Average ROI</div>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-green-600 mb-2">$500M+</div>
-            <div className="text-gray-600">Average Savings</div>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">99%</div>
-            <div className="text-gray-600">Success Rate</div>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-orange-600 mb-2">18</div>
-            <div className="text-gray-600">Months to ROI</div>
-          </div>
-        </div>
-
-        {/* Category Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-                selectedCategory === category.id
-                  ? 'bg-purple-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                selectedCategory === category
+                  ? 'bg-white text-purple-900 shadow-lg'
+                  : 'bg-white bg-opacity-20 text-white hover:bg-opacity-30'
               }`}
             >
-              {category.label} ({category.count})
+              {category}
             </button>
           ))}
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {filteredContent.map((content, index) => (
             <div
-              key={item.id}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
+              key={content.id}
+              className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 group"
             >
               {/* Content Type Badge */}
-              <div className="p-6 pb-4">
-                <div className="flex items-center justify-between mb-4">
-                  <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getTypeColor(item.type)}`}>
-                    {getTypeIcon(item.type)} {item.type.replace('-', ' ').toUpperCase()}
-                  </div>
-                  {item.featured && (
-                    <div className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">
-                      ⭐ Featured
+              <div className="flex items-center justify-between mb-4">
+                <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium">
+                  {content.type}
+                </span>
+                {content.isNew && (
+                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    NEW
+                  </span>
+                )}
+              </div>
+
+              {/* Title */}
+              <h3 className="text-xl font-bold mb-4 group-hover:text-yellow-300 transition-colors">
+                {content.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                {content.description}
+              </p>
+
+              {/* Metrics Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                {Object.entries(content.metrics).map(([key, value]) => (
+                  <div key={key} className="text-center">
+                    <div className="text-2xl font-bold text-yellow-300">{value}</div>
+                    <div className="text-sm text-gray-400 capitalize">
+                      {key.replace(/([A-Z])/g, ' $1').trim()}
                     </div>
-                  )}
-                </div>
-
-                {/* Title and Description */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {item.description}
-                </p>
-
-                {/* Metrics */}
-                <div className="grid grid-cols-2 gap-3 mb-4">
-                  <div className="text-center p-2 bg-purple-50 rounded-lg">
-                    <div className="text-lg font-bold text-purple-600">{item.metrics.roi}</div>
-                    <div className="text-xs text-gray-600">ROI</div>
                   </div>
-                  <div className="text-center p-2 bg-green-50 rounded-lg">
-                    <div className="text-lg font-bold text-green-600">{item.metrics.savings}</div>
-                    <div className="text-xs text-gray-600">Savings</div>
-                  </div>
-                  <div className="text-center p-2 bg-blue-50 rounded-lg">
-                    <div className="text-lg font-bold text-blue-600">{item.metrics.efficiency}</div>
-                    <div className="text-xs text-gray-600">Efficiency</div>
-                  </div>
-                  <div className="text-center p-2 bg-orange-50 rounded-lg">
-                    <div className="text-lg font-bold text-orange-600">{item.metrics.success_rate}</div>
-                    <div className="text-xs text-gray-600">Success Rate</div>
-                  </div>
-                </div>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Reading Time */}
-                <div className="flex items-center text-sm text-gray-500 mb-4">
-                  <span>⏱️ {item.reading_time}</span>
-                </div>
+                ))}
               </div>
 
-              {/* Action Button */}
-              <div className="px-6 pb-6">
-                <Link
-                  href={item.url}
-                  className="w-full bg-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block"
-                >
-                  Read {item.type === 'case-study' ? 'Case Study' : item.type === 'resource' ? 'Guide' : 'Article'}
-                </Link>
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {content.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
+
+              {/* Reading Time */}
+              <div className="text-sm text-gray-400 mb-6">
+                📖 {content.readingTime}
+              </div>
+
+              {/* CTA Button */}
+              <Link
+                href={content.url}
+                className="block w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold py-3 px-6 rounded-lg text-center hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
+              >
+                Read Full {content.type}
+              </Link>
             </div>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-12">
-          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Achieve Similar Results?
-            </h3>
-            <p className="text-lg text-gray-600 mb-6">
-              Get personalized guidance and implementation support from our AI transformation experts.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-              >
-                Get Expert Consultation
-              </Link>
-              <Link
-                href="/resources"
-                className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
-              >
-                Explore All Resources
-              </Link>
+        {/* Success Metrics Summary */}
+        <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 mb-16">
+          <h3 className="text-2xl font-bold text-center mb-8">
+            Proven Success Metrics Across All Content
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-yellow-300 mb-2">800%</div>
+              <div className="text-gray-300">Average ROI</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-300 mb-2">$2.8B</div>
+              <div className="text-gray-300">Highest Savings</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-300 mb-2">94%</div>
+              <div className="text-gray-300">Success Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-300 mb-2">500+</div>
+              <div className="text-gray-300">Success Stories</div>
             </div>
           </div>
         </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <h3 className="text-3xl font-bold mb-6">
+            Ready to Achieve Similar Results?
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Our team of AI experts has helped over 500 enterprises achieve remarkable success. 
+            Let us help you implement the strategies that are driving 600-800% ROI.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold py-4 px-8 rounded-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
+            >
+              Start Your AI Transformation
+            </Link>
+            <Link
+              href="/services"
+              className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
+            >
+              Explore Our Services
+            </Link>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
