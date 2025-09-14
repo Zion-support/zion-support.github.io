@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-01-17"
-  total_content_pieces: 3
+  total_content_pieces: 6
   
   new_2025_content:
     - id: "autonomous-systems-revolution"
@@ -33,6 +33,39 @@ content_index:
       status: "published"
       created: "2025-01-17"
       tags: ["Implementation Guide", "AI", "Best Practices", "ROI"]
+      featured: true
+      is_new: true
+      
+    - id: "ai-2026-enterprise-automation"
+      type: "blog"
+      title: "AI 2026: Enterprise Automation Breakthrough - 400% ROI in 90 Days"
+      file_path: "/content/blog/ai-2026-enterprise-automation-breakthrough.md"
+      url: "/blog/ai-2026-enterprise-automation-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "2026"]
+      featured: true
+      is_new: true
+      
+    - id: "ai-transformation-500m-revenue"
+      type: "case-study"
+      title: "AI Transformation Success: $500M Revenue Increase in 18 Months"
+      file_path: "/content/case-studies/ai-transformation-500m-revenue-increase.md"
+      url: "/case-studies/ai-transformation-500m-revenue-increase"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "AI Transformation", "Revenue Growth", "Enterprise Success", "ROI"]
+      featured: true
+      is_new: true
+      
+    - id: "ai-implementation-master-guide-2026"
+      type: "resource"
+      title: "AI Implementation Master Guide 2026: From Strategy to 400% ROI"
+      file_path: "/content/resources/ai-implementation-master-guide-2026.md"
+      url: "/resources/ai-implementation-master-guide-2026"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Guide", "AI Strategy", "ROI", "Best Practices", "2026"]
       featured: true
       is_new: true
 
