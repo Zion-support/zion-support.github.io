@@ -61,6 +61,67 @@ export default function AdvancedServicesShowcase2025() {
       }
     }),
 
+const categories = [
+  {
+    id: 'all',
+    name: 'All Services',
+    icon: <Grid className="w-6 h-6" />,
+    color: 'from-gray-500 to-slate-500',
+    description: 'Complete portfolio of advanced services'
+  },
+  {
+    id: 'ai-services',
+    name: 'AI Services',
+    icon: <Brain className="w-6 h-6" />,
+    color: 'from-purple-500 to-pink-600',
+    description: 'Advanced artificial intelligence solutions'
+  },
+  {
+    id: 'it-infrastructure',
+    name: 'IT Infrastructure',
+    icon: <Cpu className="w-6 h-6" />,
+    color: 'from-blue-500 to-cyan-600',
+    description: 'Modern infrastructure and cloud solutions'
+  },
+  {
+    id: 'micro-saas',
+    name: 'Micro SAAS',
+    icon: <Rocket className="w-6 h-6" />,
+    color: 'from-green-500 to-emerald-600',
+    description: 'Innovative micro software solutions'
+  }
+];
+
+// Create unified services array
+const allServices = [
+  ...real2025AdvancedAIServices,
+  ...real2025ITInfrastructureServices,
+  ...real2025InnovativeMicroSaas
+];
+
+const AdvancedServicesShowcase: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || 
+      (selectedCategory === 'ai-services' && service.category.includes('AI')) ||
+      (selectedCategory === 'it-infrastructure' && (service.category.includes('Infrastructure') || service.category.includes('Cloud') || service.category.includes('DevOps'))) ||
+      (selectedCategory === 'micro-saas' && (service.category.includes('Finance') || service.category.includes('HR') || service.category.includes('Supply Chain') || service.category.includes('Content') || service.category.includes('Sales')));
+    
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    return matchesCategory && matchesSearch;
+  });
+
+  const getServiceCategory = (service: any) => {
+    if (service.category.includes('AI')) return 'ai-services';
+    if (service.category.includes('Infrastructure') || service.category.includes('Cloud') || service.category.includes('DevOps')) return 'it-infrastructure';
+    return 'micro-saas';
+=======
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -107,6 +168,7 @@ export default function AdvancedServicesShowcase2025() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Advanced Services Showcase

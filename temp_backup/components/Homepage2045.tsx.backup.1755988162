@@ -17,7 +17,6 @@ import {
   Users, Code, Cloud, Lock, BarChart3, Lightbulb, Zap as ZapIcon, Target as TargetIcon, Globe as GlobeIcon
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9e3c
 } from 'lucide-react';
-import EnhancedSEO from './EnhancedSEO';
 
 // Import our new revolutionary services
 import { revolutionary2045AdvancedRealMicroSaas } from '../data/revolutionary-2045-advanced-real-micro-saas';
@@ -50,53 +49,21 @@ const Homepage2045: React.FC = () => {
     ...innovativeAIAutonomousServices2025
   ], []);
 
-  // Enhanced category definitions with better accessibility
-  const categories = useMemo(() => [
-    { 
-      id: 'all', 
-      name: 'All Services', 
-      icon: SparklesIcon, 
-      color: 'from-purple-500 to-pink-500',
-      description: 'View all available services'
-    },
-    { 
-      id: 'ai', 
-      name: 'AI & Consciousness', 
-      icon: BrainIcon, 
-      color: 'from-cyan-500 to-blue-500',
-      description: 'Artificial intelligence and consciousness solutions'
-    },
-    { 
-      id: 'quantum', 
-      name: 'Quantum Technology', 
-      icon: AtomIcon, 
-      color: 'from-blue-500 to-indigo-500',
-      description: 'Quantum computing and technology solutions'
-    },
-    { 
-      id: 'cybersecurity', 
-      name: 'Cybersecurity', 
-      icon: ShieldIcon, 
-      color: 'from-red-500 to-orange-500',
-      description: 'Advanced security and protection solutions'
-    },
-    { 
-      id: 'space', 
-      name: 'Space Technology', 
-      icon: RocketIcon, 
-      color: 'from-indigo-500 to-purple-500',
-      description: 'Space exploration and satellite technology'
-    },
-    { 
-      id: 'enterprise', 
-      name: 'Enterprise Solutions', 
-      icon: Building, 
-      color: 'from-green-500 to-teal-500',
-      description: 'Enterprise-grade business solutions'
-    }
-  ], []);
+  const filteredServices = useMemo(() => 
+    allServices.filter(service => {
+      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchQuery.toLowerCase());
+      return matchesCategory && matchesSearch;
+    }), [allServices, selectedCategory, searchQuery]
+  );
 
-  // Responsive design detection
+  const categories = useMemo(() => 
+    ['all', 'AI', 'Quantum', 'IT', 'Micro SAAS', 'Cybersecurity', 'Space', 'Blockchain'], 
+    []
+  );
+
+  // Accessibility preferences
   useEffect(() => {
     setIsVisible(true);
     
@@ -139,6 +106,18 @@ const Homepage2045: React.FC = () => {
     window.addEventListener('resize', checkDeviceType);
     return () => window.removeEventListener('resize', checkDeviceType);
   }, []);
+
+  // Performance optimization with debounced search
+  const debouncedSearch = useCallback(
+    (() => {
+      let timeoutId: NodeJS.Timeout;
+      return (query: string) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => setSearchQuery(query), 300);
+      };
+    })(),
+    []
+  );
 
   useEffect(() => {
     // Simulate loading for better UX
@@ -1099,51 +1078,8 @@ const Homepage2045: React.FC = () => {
                 </p>
               </div>
               
-              {/* Enhanced CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <button
-                  onClick={handleGetStarted}
-                  className="group relative px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-2xl text-xl transition-all duration-300 hover:from-cyan-600 hover:to-purple-600 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1"
-                >
-                  <span className="relative z-10 flex items-center gap-3">
-                    Get Started Today
-                    <ArrowUpRight className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </button>
-                
-                <a
-                  href="tel:+1 302 464 0950"
-                  className="group px-12 py-6 border-2 border-white/20 text-white font-bold rounded-2xl text-xl transition-all duration-300 hover:border-cyan-400 hover:text-cyan-400 hover:bg-white/5 hover:scale-105 transform hover:-translate-y-1 backdrop-blur-sm"
-                >
-                  <span className="flex items-center gap-3">
-                    <Clock className="w-6 h-6" />
-                    Call Now
-                  </span>
-                </a>
-              </div>
-              
-              {/* Enhanced Contact Information */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-2xl mx-auto">
-                <div className="space-y-4 text-sm text-white/70">
-                  <div className="flex items-center justify-center gap-2">
-                    <Mail className="w-4 h-4 text-cyan-400" />
-                    <span>kleber@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <Phone className="w-4 h-4 text-purple-400" />
-                    <span>+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <MapPin className="w-4 h-4 text-pink-400" />
-                    <span>364 E Main St STE 1008 Middletown DE 19709</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {/* Floating geometric shapes - reduced for performance */}
+              {!isReducedMotion && [...Array(10)].map((_, i) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
