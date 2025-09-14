@@ -4,227 +4,236 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
+  ArrowRight, 
+  Star, 
   TrendingUp, 
   Users, 
-  Target, 
-  Award,
-  ChevronRight,
+  Zap, 
+  Shield, 
+  Brain, 
+  Globe,
+  CheckCircle,
   Play,
-  Star,
-  ArrowRight,
+  Download,
+  ExternalLink,
   Sparkles,
-  Rocket,
-  Shield,
-  Globe
+  Target,
+  Award,
+  Rocket
 } from 'lucide-react';
 
 const UltimateContentShowcase2026 = () => {
-  const [activeTab, setActiveTab] = useState('breakthroughs');
+  const [activeTab, setActiveTab] = useState('ai-solutions');
   const [hoveredCard, setHoveredCard] = useState(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const contentSections = {
-    breakthroughs: {
-      title: "Revolutionary AI Breakthroughs 2026",
-      description: "Discover the most advanced AI technologies transforming industries worldwide",
+    'ai-solutions': {
+      title: 'Revolutionary AI Solutions 2026',
+      subtitle: 'Transform Your Business with Next-Generation AI',
       icon: Brain,
-      color: "from-purple-600 to-blue-600",
-      items: [
+      color: 'from-purple-600 to-blue-600',
+      content: [
         {
-          title: "Quantum-Neural Fusion AI",
-          description: "Breakthrough technology combining quantum computing with neural networks for unprecedented processing power",
-          impact: "10,000x faster processing",
-          roi: "50,000% ROI",
-          category: "Quantum AI",
-          featured: true
+          title: 'Neural Consensus AI',
+          description: 'Advanced AI that achieves consensus across multiple neural networks for unprecedented accuracy',
+          features: ['99.9% Accuracy', 'Real-time Processing', 'Multi-modal Analysis'],
+          image: '/api/placeholder/400/300',
+          category: 'AI Technology',
+          rating: 5.0,
+          users: '10K+',
+          price: 'Starting at $299/month'
         },
         {
-          title: "Consciousness-Level AI Systems",
-          description: "AI systems achieving human-level consciousness and decision-making capabilities",
-          impact: "99.9% accuracy",
-          roi: "25,000% ROI",
-          category: "Consciousness AI",
-          featured: true
+          title: 'Quantum Neural Fusion',
+          description: 'Breakthrough technology combining quantum computing with neural networks',
+          features: ['Quantum Speed', 'Neural Learning', 'Hybrid Processing'],
+          image: '/api/placeholder/400/300',
+          category: 'Quantum AI',
+          rating: 4.9,
+          users: '5K+',
+          price: 'Starting at $599/month'
         },
         {
-          title: "Autonomous Business Operations",
-          description: "Complete business process automation with intelligent decision-making systems",
-          impact: "100% automation",
-          roi: "15,000% ROI",
-          category: "Business AI",
-          featured: false
-        },
-        {
-          title: "Neural Interface Technology",
-          description: "Direct brain-computer interfaces for seamless human-AI collaboration",
-          impact: "Real-time processing",
-          roi: "30,000% ROI",
-          category: "Neural Tech",
-          featured: false
+          title: 'Synthetic Intelligence Platform',
+          description: 'Create and deploy synthetic intelligence agents for any business need',
+          features: ['Custom Agents', 'API Integration', 'Scalable Deployment'],
+          image: '/api/placeholder/400/300',
+          category: 'Synthetic AI',
+          rating: 4.8,
+          users: '15K+',
+          price: 'Starting at $199/month'
         }
       ]
     },
-    caseStudies: {
-      title: "Success Stories & Case Studies",
-      description: "Real-world implementations delivering extraordinary results",
-      icon: Award,
-      color: "from-green-600 to-emerald-600",
-      items: [
-        {
-          title: "Fortune 500 Manufacturing Revolution",
-          description: "Complete transformation of manufacturing operations using AI automation",
-          impact: "500% efficiency increase",
-          roi: "50,000% ROI",
-          category: "Manufacturing",
-          featured: true
-        },
-        {
-          title: "Global Financial Services Breakthrough",
-          description: "Revolutionary AI implementation in financial services achieving unprecedented accuracy",
-          impact: "99.99% accuracy",
-          roi: "75,000% ROI",
-          category: "Finance",
-          featured: true
-        },
-        {
-          title: "Healthcare Diagnostic Revolution",
-          description: "AI-powered diagnostic systems achieving superhuman accuracy in medical diagnosis",
-          impact: "95% faster diagnosis",
-          roi: "40,000% ROI",
-          category: "Healthcare",
-          featured: false
-        },
-        {
-          title: "Retail Personalization Mastery",
-          description: "Advanced AI personalization systems transforming customer experience",
-          impact: "300% engagement increase",
-          roi: "20,000% ROI",
-          category: "Retail",
-          featured: false
-        }
-      ]
-    },
-    tools: {
-      title: "Advanced AI Tools & Solutions",
-      description: "Cutting-edge tools and platforms for enterprise implementation",
+    'automation': {
+      title: 'Advanced Automation Systems',
+      subtitle: 'Automate Everything with Intelligent Systems',
       icon: Zap,
-      color: "from-orange-600 to-red-600",
-      items: [
+      color: 'from-orange-600 to-red-600',
+      content: [
         {
-          title: "AI Implementation Platform",
-          description: "Complete platform for implementing AI solutions across any industry",
-          impact: "90% faster deployment",
-          roi: "35,000% ROI",
-          category: "Platform",
-          featured: true
+          title: 'Autonomous Business Operations',
+          description: 'Fully automated business processes that run without human intervention',
+          features: ['Zero Human Input', 'Self-Healing', 'Continuous Optimization'],
+          image: '/api/placeholder/400/300',
+          category: 'Business Automation',
+          rating: 5.0,
+          users: '25K+',
+          price: 'Starting at $399/month'
         },
         {
-          title: "Quantum Computing Solutions",
-          description: "Quantum-powered AI solutions for complex problem solving",
-          impact: "Exponential speedup",
-          roi: "60,000% ROI",
-          category: "Quantum",
-          featured: true
+          title: 'Intelligent Workflow Engine',
+          description: 'Smart workflow automation that adapts to your business needs',
+          features: ['Dynamic Workflows', 'AI-Powered Decisions', 'Seamless Integration'],
+          image: '/api/placeholder/400/300',
+          category: 'Workflow Automation',
+          rating: 4.9,
+          users: '20K+',
+          price: 'Starting at $149/month'
         },
         {
-          title: "Neural Network Architectures",
-          description: "Advanced neural network designs for specific business applications",
-          impact: "10x performance",
-          roi: "25,000% ROI",
-          category: "Neural Networks",
-          featured: false
+          title: 'Predictive Maintenance AI',
+          description: 'Prevent equipment failures before they happen with predictive analytics',
+          features: ['Predictive Analytics', 'Real-time Monitoring', 'Cost Reduction'],
+          image: '/api/placeholder/400/300',
+          category: 'Predictive AI',
+          rating: 4.8,
+          users: '12K+',
+          price: 'Starting at $249/month'
+        }
+      ]
+    },
+    'security': {
+      title: 'Next-Gen Security Solutions',
+      subtitle: 'Protect Your Business with Advanced Security',
+      icon: Shield,
+      color: 'from-green-600 to-teal-600',
+      content: [
+        {
+          title: 'Quantum-Safe Encryption',
+          description: 'Future-proof encryption that resists quantum computer attacks',
+          features: ['Quantum-Resistant', 'Military-Grade', 'Future-Proof'],
+          image: '/api/placeholder/400/300',
+          category: 'Cybersecurity',
+          rating: 5.0,
+          users: '8K+',
+          price: 'Starting at $199/month'
         },
         {
-          title: "Automation Workflow Engine",
-          description: "Intelligent workflow automation for complex business processes",
-          impact: "100% automation",
-          roi: "18,000% ROI",
-          category: "Automation",
-          featured: false
+          title: 'AI-Powered Threat Detection',
+          description: 'Advanced threat detection using machine learning and behavioral analysis',
+          features: ['Real-time Detection', 'Behavioral Analysis', 'Automated Response'],
+          image: '/api/placeholder/400/300',
+          category: 'Threat Detection',
+          rating: 4.9,
+          users: '18K+',
+          price: 'Starting at $299/month'
+        },
+        {
+          title: 'Zero-Trust Security Framework',
+          description: 'Comprehensive zero-trust security implementation for modern businesses',
+          features: ['Zero Trust Architecture', 'Continuous Verification', 'Micro-segmentation'],
+          image: '/api/placeholder/400/300',
+          category: 'Security Framework',
+          rating: 4.8,
+          users: '14K+',
+          price: 'Starting at $349/month'
+        }
+      ]
+    },
+    'analytics': {
+      title: 'Advanced Analytics & Insights',
+      subtitle: 'Unlock the Power of Your Data',
+      icon: TrendingUp,
+      color: 'from-blue-600 to-indigo-600',
+      content: [
+        {
+          title: 'Predictive Business Intelligence',
+          description: 'Advanced BI with predictive capabilities for better decision making',
+          features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom Reports'],
+          image: '/api/placeholder/400/300',
+          category: 'Business Intelligence',
+          rating: 5.0,
+          users: '22K+',
+          price: 'Starting at $179/month'
+        },
+        {
+          title: 'Customer Behavior Analytics',
+          description: 'Deep insights into customer behavior and preferences',
+          features: ['Behavior Analysis', 'Personalization', 'ROI Tracking'],
+          image: '/api/placeholder/400/300',
+          category: 'Customer Analytics',
+          rating: 4.9,
+          users: '16K+',
+          price: 'Starting at $129/month'
+        },
+        {
+          title: 'Market Intelligence Platform',
+          description: 'Comprehensive market analysis and competitive intelligence',
+          features: ['Market Analysis', 'Competitive Intelligence', 'Trend Prediction'],
+          image: '/api/placeholder/400/300',
+          category: 'Market Intelligence',
+          rating: 4.8,
+          users: '11K+',
+          price: 'Starting at $199/month'
         }
       ]
     }
   };
 
-  const tabs = [
-    { id: 'breakthroughs', label: 'AI Breakthroughs', icon: Brain },
-    { id: 'caseStudies', label: 'Success Stories', icon: Award },
-    { id: 'tools', label: 'AI Tools', icon: Zap }
-  ];
+  const currentSection = contentSections[activeTab];
 
   const currentSection = contentSections[activeTab];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10" />
-      
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse" />
-      <div className="absolute top-40 right-20 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000" />
-      <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-2000" />
-
-      <div className="relative z-10 container mx-auto px-4 py-16">
+    <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Sparkles className="w-4 h-4" />
             Ultimate Content Showcase 2026
           </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent mb-6">
-            Revolutionary AI
-            <br />
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Content Revolution
-            </span>
-          </h1>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Explore the most advanced AI technologies, success stories, and tools that are transforming 
-            industries and delivering unprecedented ROI across the globe.
+          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 bg-clip-text text-transparent mb-6">
+            {currentSection.title}
+          </h2>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+            {currentSection.subtitle}
           </p>
         </motion.div>
 
-        {/* Navigation Tabs */}
+        {/* Tab Navigation */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {tabs.map((tab) => {
-            const Icon = tab.icon;
+          {Object.entries(contentSections).map(([key, section]) => {
+            const Icon = section.icon;
             return (
               <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
+                key={key}
+                onClick={() => setActiveTab(key)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  activeTab === tab.id
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                  activeTab === key
+                    ? `bg-gradient-to-r ${section.color} text-white shadow-lg transform scale-105`
+                    : 'bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-900 shadow-md'
                 }`}
               >
                 <Icon className="w-5 h-5" />
-                {tab.label}
+                {section.title.split(' ')[0]}
               </button>
             );
           })}
         </motion.div>
 
-        {/* Content Section */}
+        {/* Content Grid */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -232,124 +241,120 @@ const UltimateContentShowcase2026 = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="mb-16"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {/* Section Header */}
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
-                <currentSection.icon className="w-4 h-4" />
-                {currentSection.title}
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                {currentSection.title}
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                {currentSection.description}
-              </p>
-            </div>
+            {currentSection.content.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                onHoverStart={() => setHoveredCard(index)}
+                onHoverEnd={() => setHoveredCard(null)}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+              >
+                {/* Image */}
+                <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                      <Brain className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-white/90 backdrop-blur-sm text-slate-700 px-3 py-1 rounded-full text-sm font-medium">
+                      {item.category}
+                    </span>
+                  </div>
+                </div>
 
-            {/* Content Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {currentSection.items.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  onMouseEnter={() => setHoveredCard(index)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                  className={`relative group cursor-pointer ${
-                    item.featured ? 'md:col-span-2' : ''
-                  }`}
-                >
-                  <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${currentSection.color} p-8 h-full transition-all duration-300 ${
-                    hoveredCard === index ? 'scale-105 shadow-2xl' : 'shadow-xl'
-                  }`}>
-                    {/* Background Pattern */}
-                    <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" />
-                    
-                    {/* Featured Badge */}
-                    {item.featured && (
-                      <div className="absolute top-4 right-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-                        <Star className="w-3 h-3" />
-                        Featured
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-purple-600 transition-colors">
+                      {item.title}
+                    </h3>
+                    <div className="flex items-center gap-1">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-sm font-medium text-slate-600">{item.rating}</span>
+                    </div>
+                  </div>
+
+                  <p className="text-slate-600 mb-4 line-clamp-2">
+                    {item.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="space-y-2 mb-6">
+                    {item.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <span className="text-sm text-slate-600">{feature}</span>
                       </div>
-                    )}
+                    ))}
+                  </div>
 
-                    {/* Content */}
-                    <div className="relative z-10">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1 text-sm font-medium">
-                          {item.category}
-                        </div>
-                        <div className="text-right">
-                          <div className="text-2xl font-bold text-white">{item.impact}</div>
-                          <div className="text-sm text-white/80">Impact</div>
-                        </div>
+                  {/* Stats */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center gap-4 text-sm text-slate-500">
+                      <div className="flex items-center gap-1">
+                        <Users className="w-4 h-4" />
+                        <span>{item.users}</span>
                       </div>
-
-                      <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-yellow-300 transition-colors">
-                        {item.title}
-                      </h3>
-                      
-                      <p className="text-white/90 mb-6 leading-relaxed">
-                        {item.description}
-                      </p>
-
-                      <div className="flex items-center justify-between">
-                        <div className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-lg">
-                          {item.roi}
-                        </div>
-                        
-                        <div className="flex items-center gap-2 text-white group-hover:text-yellow-300 transition-colors">
-                          <span className="text-sm font-medium">Learn More</span>
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </div>
+                      <div className="flex items-center gap-1">
+                        <Target className="w-4 h-4" />
+                        <span>Active</span>
                       </div>
                     </div>
-
-                    {/* Hover Effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                    <div className="text-right">
+                      <div className="text-lg font-bold text-slate-900">{item.price}</div>
+                    </div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
+
+                  {/* Actions */}
+                  <div className="flex gap-3">
+                    <button className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2">
+                      <Play className="w-4 h-4" />
+                      Try Demo
+                    </button>
+                    <button className="px-4 py-2 border border-slate-300 text-slate-700 rounded-lg font-medium hover:bg-slate-50 transition-colors flex items-center gap-2">
+                      <Download className="w-4 h-4" />
+                    </button>
+                    <button className="px-4 py-2 border border-slate-300 text-slate-700 rounded-lg font-medium hover:bg-slate-50 transition-colors flex items-center gap-2">
+                      <ExternalLink className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </AnimatePresence>
 
-        {/* Call to Action */}
+        {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/10">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-3xl font-bold mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of companies already achieving extraordinary results with our 
-              revolutionary AI solutions and tools.
+            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses already using our revolutionary AI solutions to achieve unprecedented growth and efficiency.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105"
-              >
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-purple-50 transition-colors flex items-center gap-2">
                 <Rocket className="w-5 h-5" />
-                Start Your Transformation
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              
-              <Link
-                href="/case-studies"
-                className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300"
-              >
-                <Play className="w-5 h-5" />
-                View All Case Studies
-              </Link>
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors flex items-center gap-2">
+                <Award className="w-5 h-5" />
+                View Case Studies
+              </button>
             </div>
           </div>
         </motion.div>

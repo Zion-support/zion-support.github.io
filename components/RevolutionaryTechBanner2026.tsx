@@ -1,174 +1,213 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Zap, Brain, Rocket, Star, TrendingUp, Users, Globe, Shield, Sparkles } from 'lucide-react';
+import { Rocket, Sparkles, Target, Award, ChevronRight, Play, Download } from 'lucide-react';
 
 const RevolutionaryTechBanner2026 = () => {
-  const stats = [
-    { number: "500%", label: "Performance Increase", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime Guarantee", icon: <Shield className="w-6 h-6" /> },
-    { number: "1M+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "150+", label: "Countries Served", icon: <Globe className="w-6 h-6" /> }
-  ];
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % 3);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const features = [
-    "Quantum AI Processing",
-    "Neural Interface Integration", 
-    "Real-time Predictive Analytics",
-    "Advanced Security Protocols",
-    "Global Cloud Infrastructure",
-    "Automated Workflow Optimization"
+    {
+      title: "Quantum AI Processing",
+      description: "Revolutionary quantum computing meets artificial intelligence",
+      icon: <Rocket className="w-6 h-6" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Neural Interface Technology",
+      description: "Direct brain-computer interaction for unprecedented control",
+      icon: <Sparkles className="w-6 h-6" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Autonomous Business Systems",
+      description: "Self-managing AI that evolves with your business needs",
+      icon: <Target className="w-6 h-6" />,
+      color: "from-green-500 to-emerald-500"
+    }
+  ];
+
+  const achievements = [
+    { number: "2026", label: "Revolutionary Year" },
+    { number: "99.9%", label: "Accuracy Rate" },
+    { number: "10x", label: "Performance Boost" },
+    { number: "24/7", label: "AI Monitoring" }
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20"></div>
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-pink-400/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8 }}
+      className="relative py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 overflow-hidden"
+    >
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ scale: 0.9 }}
+            animate={isVisible ? { scale: 1 } : {}}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold mb-8 shadow-lg"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
-              <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
-              <span className="text-blue-300 font-medium">Revolutionary Technology 2026</span>
-            </div>
-            
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              The Next Generation of
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI Technology</span>
-              <br />
-              is Here
-            </h2>
-            
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Experience unprecedented breakthroughs in artificial intelligence, quantum computing, 
-              and neural interfaces that will revolutionize how we work, live, and interact with technology.
-            </p>
-
-            {/* Feature List */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-center text-gray-300"
-                >
-                  <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mr-3"></div>
-                  <span className="font-medium">{feature}</span>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-xl overflow-hidden"
-              >
-                <span className="relative z-10 flex items-center">
-                  Explore Technology
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors"
-              >
-                Learn More
-              </motion.button>
-            </div>
+            <Award className="w-5 h-5 mr-2" />
+            Revolutionary Technology 2026
           </motion.div>
-
-          {/* Right Column - Stats & Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="text-5xl md:text-7xl font-bold mb-8"
           >
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center"
-                >
-                  <div className="flex justify-center mb-3">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20">
-                      {stat.icon}
-                    </div>
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300 text-sm">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">
+              The Future is
+            </span>
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              Here Today
+            </span>
+          </motion.h2>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+          >
+            Experience the most advanced AI technology ever created. Our 2026 platform 
+            combines quantum computing, neural interfaces, and autonomous systems to 
+            revolutionize how businesses operate.
+          </motion.p>
+        </div>
 
-            {/* Technology Preview */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
-            >
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-bold text-white">Live Technology Preview</h3>
-                <div className="flex items-center text-green-400">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-                  <span className="text-sm">Live</span>
-                </div>
-              </div>
+        {/* Rotating Feature Showcase */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="mb-16"
+        >
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20">
+            <div className="text-center mb-8">
+              <motion.div
+                key={currentFeature}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className={`inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r ${features[currentFeature].color} text-white font-semibold mb-6`}
+              >
+                {features[currentFeature].icon}
+                <span className="ml-2">{features[currentFeature].title}</span>
+              </motion.div>
               
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-300">AI Processing Power</span>
-                  <span className="text-blue-400 font-bold">99.7%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full w-[99.7%]"></div>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Quantum Sync Status</span>
-                  <span className="text-green-400 font-bold">Optimal</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-green-500 to-blue-500 h-2 rounded-full w-full"></div>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Neural Interface</span>
-                  <span className="text-purple-400 font-bold">Connected</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full w-[87%]"></div>
-                </div>
+              <motion.h3
+                key={`title-${currentFeature}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-3xl md:text-4xl font-bold text-white mb-4"
+              >
+                {features[currentFeature].title}
+              </motion.h3>
+              
+              <motion.p
+                key={`desc-${currentFeature}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-xl text-gray-300 max-w-2xl mx-auto"
+              >
+                {features[currentFeature].description}
+              </motion.p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Achievements Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+        >
+          {achievements.map((achievement, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.7 + index * 0.1, duration: 0.6 }}
+              className="text-center bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+            >
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                {achievement.number}
+              </div>
+              <div className="text-gray-300 font-medium">
+                {achievement.label}
               </div>
             </motion.div>
-          </motion.div>
-        </div>
+          ))}
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.8, duration: 0.6 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Be Among the First to Experience 2026
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join our exclusive beta program and get early access to revolutionary 
+              technology that will transform your business forever.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Link
+                href="/beta-signup"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 group shadow-lg"
+              >
+                Join Beta Program
+                <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/tech-demo"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-colors duration-300 group"
+              >
+                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Watch Tech Demo
+              </Link>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-400">
+              <div className="flex items-center">
+                <Download className="w-4 h-4 mr-2" />
+                Download Whitepaper
+              </div>
+              <div className="hidden sm:block">•</div>
+              <div>Free Consultation Available</div>
+            </div>
+          </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

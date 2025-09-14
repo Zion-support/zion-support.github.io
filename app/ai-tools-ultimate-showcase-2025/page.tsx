@@ -1,248 +1,385 @@
 import React from 'react';
-import SEO from '../../components/SEO';
 import { Metadata } from 'next';
+import { 
+  Brain, 
+  Code, 
+  Image, 
+  Video, 
+  Music, 
+  FileText, 
+  BarChart3, 
+  Search, 
+  MessageSquare, 
+  Zap,
+  ArrowRight,
+  Star,
+  Download,
+  Play,
+  Settings,
+  Shield,
+  Globe,
+  Users
+} from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AI Tools Ultimate Showcase 2025 - Revolutionary AI Solutions | Zion Tech Group',
-  description: 'Explore our comprehensive collection of revolutionary AI tools and solutions for 2025. From automation platforms to predictive analytics, discover the tools that will transform your business.',
-  keywords: 'AI tools 2025, artificial intelligence tools, AI automation, machine learning tools, predictive analytics, AI solutions',
+  title: 'AI Tools Ultimate Showcase 2025 - Complete AI Toolkit | Zion Tech Group',
+  description: 'Explore our comprehensive collection of AI tools and utilities for 2025. From content generation to data analysis, discover the most advanced AI-powered solutions.',
+  keywords: 'AI tools, artificial intelligence utilities, AI software, content generation, data analysis, AI automation',
+  openGraph: {
+    title: 'AI Tools Ultimate Showcase 2025 - Complete AI Toolkit',
+    description: 'Explore our comprehensive collection of AI tools and utilities for 2025.',
+    type: 'website',
+  },
 };
 
 export default function AIToolsUltimateShowcase2025() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
-      <SEO 
-        title="AI Tools Ultimate Showcase 2025 - Revolutionary AI Solutions"
-        description="Explore our comprehensive collection of revolutionary AI tools and solutions for 2025. From automation platforms to predictive analytics, discover the tools that will transform your business."
-        keywords="AI tools 2025, artificial intelligence tools, AI automation, machine learning tools"
-      />
-      
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-            AI Tools Ultimate Showcase 2025
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-8">
+            <Zap className="w-4 h-4" />
+            <span>Ultimate AI Tools Collection 2025</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            Complete AI
+            <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Toolkit
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover the most powerful and revolutionary AI tools that are reshaping industries and driving unprecedented innovation.
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Discover the most comprehensive collection of AI tools and utilities designed to revolutionize 
+            your workflow, boost productivity, and unlock new possibilities across every industry.
           </p>
-        </div>
-
-        {/* Featured Tools */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 p-8 rounded-2xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300">
-            <div className="flex items-center mb-6">
-              <div className="text-cyan-400 text-4xl mr-4">🤖</div>
-              <div>
-                <h3 className="text-3xl font-bold text-white">AI Automation Platform</h3>
-                <p className="text-cyan-400 font-semibold">Revolutionary Automation</p>
-              </div>
-            </div>
-            <p className="text-gray-300 mb-6 text-lg">
-              Our flagship AI automation platform combines machine learning, natural language processing, 
-              and robotic process automation to streamline complex business workflows.
-            </p>
-            <div className="grid grid-cols-3 gap-4 mb-6">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-cyan-400">95%</div>
-                <div className="text-gray-400 text-sm">Automation Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-400">10x</div>
-                <div className="text-gray-400 text-sm">Faster Processing</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-purple-400">$5M+</div>
-                <div className="text-gray-400 text-sm">Annual Savings</div>
-              </div>
-            </div>
-            <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-xl font-bold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-              Explore Platform
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2">
+              Explore All Tools
+              <ArrowRight className="w-5 h-5" />
             </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 p-8 rounded-2xl border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300">
-            <div className="flex items-center mb-6">
-              <div className="text-purple-400 text-4xl mr-4">🔮</div>
-              <div>
-                <h3 className="text-3xl font-bold text-white">Predictive Analytics Engine</h3>
-                <p className="text-purple-400 font-semibold">Future Intelligence</p>
-              </div>
-            </div>
-            <p className="text-gray-300 mb-6 text-lg">
-              Advanced predictive analytics powered by deep learning algorithms that forecast trends, 
-              identify opportunities, and prevent potential issues before they occur.
-            </p>
-            <div className="grid grid-cols-3 gap-4 mb-6">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-purple-400">98%</div>
-                <div className="text-gray-400 text-sm">Accuracy</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-pink-400">Real-time</div>
-                <div className="text-gray-400 text-sm">Processing</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-indigo-400">360°</div>
-                <div className="text-gray-400 text-sm">Insights</div>
-              </div>
-            </div>
-            <button className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white py-3 rounded-xl font-bold hover:from-purple-600 hover:to-pink-700 transition-all duration-300">
-              Try Analytics
+            <button className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
+              Try Free Demo
             </button>
           </div>
         </div>
+      </section>
 
-        {/* Tools Categories */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center text-white mb-12">
-            Comprehensive AI Tools Ecosystem
+      {/* Tool Categories */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-white text-center mb-16">
+            AI Tool Categories
           </h2>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 p-6 rounded-xl border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
-              <div className="text-green-400 text-3xl mb-4">📊</div>
-              <h4 className="text-xl font-bold text-white mb-3">Data Intelligence Suite</h4>
-              <p className="text-gray-300 mb-4">
-                Comprehensive data analysis and visualization tools powered by advanced AI algorithms.
-              </p>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>• Automated data cleaning</li>
-                <li>• Smart visualization</li>
-                <li>• Pattern recognition</li>
-                <li>• Anomaly detection</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-orange-900/50 to-red-900/50 p-6 rounded-xl border border-orange-500/20 hover:border-orange-400/40 transition-all duration-300">
-              <div className="text-orange-400 text-3xl mb-4">💬</div>
-              <h4 className="text-xl font-bold text-white mb-3">Conversational AI</h4>
-              <p className="text-gray-300 mb-4">
-                Advanced natural language processing and generation for intelligent conversations.
-              </p>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>• Multi-language support</li>
-                <li>• Context awareness</li>
-                <li>• Emotional intelligence</li>
-                <li>• Voice synthesis</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-indigo-900/50 to-blue-900/50 p-6 rounded-xl border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-300">
-              <div className="text-indigo-400 text-3xl mb-4">🛡️</div>
-              <h4 className="text-xl font-bold text-white mb-3">AI Security Suite</h4>
-              <p className="text-gray-300 mb-4">
-                Next-generation cybersecurity powered by machine learning and behavioral analysis.
-              </p>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>• Threat detection</li>
-                <li>• Fraud prevention</li>
-                <li>• Access control</li>
-                <li>• Incident response</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-teal-900/50 to-cyan-900/50 p-6 rounded-xl border border-teal-500/20 hover:border-teal-400/40 transition-all duration-300">
-              <div className="text-teal-400 text-3xl mb-4">🎯</div>
-              <h4 className="text-xl font-bold text-white mb-3">Marketing Intelligence</h4>
-              <p className="text-gray-300 mb-4">
-                AI-powered marketing automation and customer insights for maximum ROI.
-              </p>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>• Customer segmentation</li>
-                <li>• Campaign optimization</li>
-                <li>• Lead scoring</li>
-                <li>• Personalization</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-pink-900/50 to-rose-900/50 p-6 rounded-xl border border-pink-500/20 hover:border-pink-400/40 transition-all duration-300">
-              <div className="text-pink-400 text-3xl mb-4">🔧</div>
-              <h4 className="text-xl font-bold text-white mb-3">Development Tools</h4>
-              <p className="text-gray-300 mb-4">
-                AI-assisted development environment for faster, more efficient coding.
-              </p>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>• Code generation</li>
-                <li>• Bug detection</li>
-                <li>• Performance optimization</li>
-                <li>• Documentation</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-violet-900/50 to-purple-900/50 p-6 rounded-xl border border-violet-500/20 hover:border-violet-400/40 transition-all duration-300">
-              <div className="text-violet-400 text-3xl mb-4">🌐</div>
-              <h4 className="text-xl font-bold text-white mb-3">IoT Integration</h4>
-              <p className="text-gray-300 mb-4">
-                Seamless integration with IoT devices for smart automation and monitoring.
-              </p>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>• Device management</li>
-                <li>• Data streaming</li>
-                <li>• Predictive maintenance</li>
-                <li>• Remote control</li>
-              </ul>
-            </div>
+            {[
+              {
+                icon: Code,
+                title: 'Code Generation & Analysis',
+                description: 'Advanced AI-powered coding tools for developers and engineers.',
+                tools: ['Code Generator', 'Bug Detector', 'Code Optimizer', 'Documentation Writer'],
+                color: 'from-green-600 to-emerald-600'
+              },
+              {
+                icon: Image,
+                title: 'Visual Content Creation',
+                description: 'AI tools for creating stunning images, graphics, and visual content.',
+                tools: ['Image Generator', 'Photo Enhancer', 'Style Transfer', 'Logo Creator'],
+                color: 'from-purple-600 to-pink-600'
+              },
+              {
+                icon: Video,
+                title: 'Video Production',
+                description: 'Revolutionary video creation and editing powered by AI.',
+                tools: ['Video Generator', 'Auto Editor', 'Voice Synthesis', 'Motion Graphics'],
+                color: 'from-red-600 to-orange-600'
+              },
+              {
+                icon: Music,
+                title: 'Audio & Music',
+                description: 'AI-powered audio processing and music generation tools.',
+                tools: ['Music Composer', 'Voice Cloner', 'Audio Enhancer', 'Podcast Generator'],
+                color: 'from-yellow-600 to-amber-600'
+              },
+              {
+                icon: FileText,
+                title: 'Content Writing',
+                description: 'Advanced AI writing assistants for all types of content.',
+                tools: ['Article Writer', 'Copy Generator', 'Translation', 'SEO Optimizer'],
+                color: 'from-indigo-600 to-blue-600'
+              },
+              {
+                icon: BarChart3,
+                title: 'Data Analysis',
+                description: 'Powerful AI tools for data processing and business intelligence.',
+                tools: ['Data Visualizer', 'Predictive Analytics', 'Report Generator', 'Insight Extractor'],
+                color: 'from-teal-600 to-cyan-600'
+              },
+              {
+                icon: Search,
+                title: 'Search & Discovery',
+                description: 'Intelligent search and content discovery solutions.',
+                tools: ['Smart Search', 'Content Recommender', 'Trend Analyzer', 'Knowledge Graph'],
+                color: 'from-gray-600 to-slate-600'
+              },
+              {
+                icon: MessageSquare,
+                title: 'Communication',
+                description: 'AI-powered communication and customer service tools.',
+                tools: ['Chatbot Builder', 'Email Assistant', 'Meeting Scheduler', 'Response Generator'],
+                color: 'from-rose-600 to-pink-600'
+              },
+              {
+                icon: Brain,
+                title: 'Machine Learning',
+                description: 'Advanced ML tools for model training and deployment.',
+                tools: ['Model Trainer', 'Data Preprocessor', 'Feature Engineer', 'Model Deployer'],
+                color: 'from-violet-600 to-purple-600'
+              }
+            ].map((category, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`p-3 bg-gradient-to-r ${category.color} rounded-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">{category.title}</h3>
+                </div>
+                
+                <p className="text-gray-300 mb-6">{category.description}</p>
+                
+                <div className="space-y-2">
+                  {category.tools.map((tool, toolIndex) => (
+                    <div key={toolIndex} className="flex items-center gap-2 text-blue-300">
+                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                      <span className="text-sm">{tool}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <button className={`w-full mt-6 bg-gradient-to-r ${category.color} text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 flex items-center justify-center gap-2`}>
+                  Explore Tools
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Integration Showcase */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center text-white mb-12">
-            Seamless Integration & APIs
-          </h2>
-          <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 p-8 rounded-2xl border border-slate-600/30">
-            <div className="grid lg:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-4">Universal API Platform</h3>
-                <p className="text-gray-300 mb-6">
-                  Our comprehensive API platform allows seamless integration with any existing system, 
-                  enabling rapid deployment and customization of AI capabilities.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 bg-green-400 rounded-full mr-3"></div>
-                    <span className="text-gray-300">RESTful APIs</span>
+      {/* Featured Tools */}
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Featured AI Tools
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our most popular and powerful AI tools that are transforming industries worldwide.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: 'Neural Code Generator',
+                description: 'Generate high-quality code in any programming language using advanced neural networks.',
+                rating: 4.9,
+                users: '50K+',
+                category: 'Code Generation',
+                features: ['Multi-language Support', 'Context Awareness', 'Error Detection', 'Auto-completion'],
+                price: 'Free Tier Available'
+              },
+              {
+                name: 'Quantum Image Creator',
+                description: 'Create stunning images and artwork using quantum-enhanced AI algorithms.',
+                rating: 4.8,
+                users: '75K+',
+                category: 'Visual Content',
+                features: ['Style Transfer', 'High Resolution', 'Batch Processing', 'API Access'],
+                price: 'From $29/month'
+              },
+              {
+                name: 'Voice Synthesis Studio',
+                description: 'Generate natural-sounding speech in multiple languages and voices.',
+                rating: 4.9,
+                users: '30K+',
+                category: 'Audio & Music',
+                features: ['100+ Voices', 'Emotion Control', 'Real-time Processing', 'Custom Voices'],
+                price: 'From $19/month'
+              },
+              {
+                name: 'Data Intelligence Suite',
+                description: 'Advanced analytics and insights powered by machine learning algorithms.',
+                rating: 4.7,
+                users: '25K+',
+                category: 'Data Analysis',
+                features: ['Predictive Analytics', 'Visualization', 'Automated Reports', 'Real-time Insights'],
+                price: 'From $49/month'
+              },
+              {
+                name: 'Content Marketing AI',
+                description: 'Complete content creation and marketing automation platform.',
+                rating: 4.8,
+                users: '40K+',
+                category: 'Content Writing',
+                features: ['SEO Optimization', 'Multi-platform', 'A/B Testing', 'Performance Tracking'],
+                price: 'From $39/month'
+              },
+              {
+                name: 'Smart Chatbot Builder',
+                description: 'Create intelligent chatbots with advanced conversation capabilities.',
+                rating: 4.9,
+                users: '60K+',
+                category: 'Communication',
+                features: ['Natural Language', 'Multi-channel', 'Analytics', 'Easy Integration'],
+                price: 'From $15/month'
+              }
+            ].map((tool, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{tool.name}</h3>
+                    <span className="text-sm text-blue-400 bg-blue-400/20 px-3 py-1 rounded-full">
+                      {tool.category}
+                    </span>
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full mr-3"></div>
-                    <span className="text-gray-300">GraphQL Support</span>
+                  <div className="flex items-center gap-1">
+                    <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                    <span className="text-white font-semibold">{tool.rating}</span>
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 bg-purple-400 rounded-full mr-3"></div>
-                    <span className="text-gray-300">Real-time WebSockets</span>
+                </div>
+                
+                <p className="text-gray-300 mb-6">{tool.description}</p>
+                
+                <div className="space-y-2 mb-6">
+                  {tool.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center gap-2 text-blue-300">
+                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                      <span className="text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-4 text-sm text-gray-400">
+                    <span className="flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      {tool.users}
+                    </span>
+                    <span className="text-green-400 font-semibold">{tool.price}</span>
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-3 h-3 bg-orange-400 rounded-full mr-3"></div>
-                    <span className="text-gray-300">SDK Libraries</span>
+                </div>
+                
+                <div className="flex gap-2">
+                  <button className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2">
+                    <Play className="w-4 h-4" />
+                    Try Demo
+                  </button>
+                  <button className="px-4 py-3 border border-blue-400 text-blue-400 rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
+                    <Download className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Integration Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Seamless Integration
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI tools integrate seamlessly with your existing workflow and popular platforms.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-white mb-6">
+                Connect Everything
+              </h3>
+              <p className="text-gray-300 mb-8">
+                Our AI tools are designed to work together and integrate with your favorite platforms. 
+                From APIs to plugins, we make it easy to incorporate AI into your existing workflow.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
+                    <Settings className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white">API Integration</h4>
+                    <p className="text-gray-400">RESTful APIs for seamless integration</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white">Enterprise Security</h4>
+                    <p className="text-gray-400">Bank-level security and compliance</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white">Global Scale</h4>
+                    <p className="text-gray-400">Worldwide deployment and support</p>
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-center">
-                <div className="text-6xl text-cyan-400">⚡</div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <h4 className="text-xl font-bold text-white mb-6">Popular Integrations</h4>
+              <div className="grid grid-cols-2 gap-4">
+                {['Slack', 'Microsoft Teams', 'Google Workspace', 'Salesforce', 'HubSpot', 'Zapier', 'Webflow', 'WordPress'].map((platform, index) => (
+                  <div key={index} className="bg-white/5 rounded-lg p-4 text-center">
+                    <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mx-auto mb-2"></div>
+                    <span className="text-white text-sm font-medium">{platform}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-indigo-900/50 to-purple-900/50 p-12 rounded-2xl border border-indigo-500/20">
+      {/* Call to Action */}
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-cyan-600">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Transform Your Business with AI Tools
+            Start Building with AI Today
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of organizations already leveraging our comprehensive AI tools ecosystem 
-            to achieve unprecedented efficiency and innovation.
+          <p className="text-xl text-blue-100 mb-8">
+            Join over 500,000 developers, creators, and businesses who are already using our AI tools 
+            to build amazing products and solutions.
           </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
+            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2">
+              Get Started Free
+              <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl font-bold text-lg hover:bg-cyan-400 hover:text-white transition-all duration-300">
-              Schedule Demo
+            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+              View Documentation
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

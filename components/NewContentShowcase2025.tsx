@@ -1,258 +1,221 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import Link from 'next/link';
 import { 
-  Sparkles, 
-  TrendingUp, 
-  Users, 
-  Zap, 
   Brain, 
-  Rocket,
-  Star,
+  Atom, 
+  Zap, 
+  Globe, 
+  Rocket, 
   ArrowRight,
-  Play,
-  BookOpen,
-  Lightbulb,
-  Target
+  Star,
+  Sparkles,
+  Infinity,
+  Layers,
+  Target,
+  TrendingUp
 } from 'lucide-react';
 
-const NewContentShowcase2025 = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const contentSections = [
+export default function NewContentShowcase2025() {
+  const newContent = [
     {
-      id: 'ai-innovations',
-      title: 'AI Innovations 2025',
+      title: "AI 2035 Future Vision",
+      description: "Explore the revolutionary technologies that will transform our world by 2035. From quantum consciousness to neural interfaces.",
+      href: "/ai-2035-future-vision",
       icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      content: [
-        {
-          title: 'Revolutionary AI Breakthroughs',
-          description: 'Discover the latest AI technologies that are transforming industries worldwide.',
-          stats: '500+ New AI Models',
-          image: '/api/placeholder/400/300'
-        },
-        {
-          title: 'Quantum AI Integration',
-          description: 'Explore how quantum computing is enhancing AI capabilities.',
-          stats: '10x Performance Boost',
-          image: '/api/placeholder/400/300'
-        },
-        {
-          title: 'Neural Interface Technology',
-          description: 'The future of human-AI interaction through advanced neural interfaces.',
-          stats: '95% Accuracy Rate',
-          image: '/api/placeholder/400/300'
-        }
-      ]
+      color: "from-purple-500 to-cyan-500",
+      features: ["Quantum Consciousness", "Neural Interfaces", "Global AI Ecosystem"]
     },
     {
-      id: 'business-solutions',
-      title: 'Business Solutions',
-      icon: Target,
-      color: 'from-blue-500 to-cyan-500',
-      content: [
-        {
-          title: 'Enterprise Automation',
-          description: 'Complete automation solutions for modern businesses.',
-          stats: '60% Cost Reduction',
-          image: '/api/placeholder/400/300'
-        },
-        {
-          title: 'AI-Powered Analytics',
-          description: 'Advanced analytics powered by artificial intelligence.',
-          stats: '300% ROI Increase',
-          image: '/api/placeholder/400/300'
-        },
-        {
-          title: 'Smart Workflow Management',
-          description: 'Intelligent workflow optimization for maximum efficiency.',
-          stats: '80% Time Savings',
-          image: '/api/placeholder/400/300'
-        }
-      ]
-    },
-    {
-      id: 'future-tech',
-      title: 'Future Technologies',
-      icon: Rocket,
-      color: 'from-green-500 to-emerald-500',
-      content: [
-        {
-          title: 'Edge Computing Revolution',
-          description: 'Next-generation edge computing for real-time processing.',
-          stats: '50ms Response Time',
-          image: '/api/placeholder/400/300'
-        },
-        {
-          title: 'Blockchain Integration',
-          description: 'Secure and transparent blockchain solutions.',
-          stats: '99.9% Uptime',
-          image: '/api/placeholder/400/300'
-        },
-        {
-          title: 'IoT Smart Systems',
-          description: 'Intelligent Internet of Things solutions.',
-          stats: '1M+ Connected Devices',
-          image: '/api/placeholder/400/300'
-        }
-      ]
+      title: "Quantum AI Breakthrough 2030",
+      description: "Witness the convergence of quantum computing and artificial intelligence, unlocking unprecedented computational power.",
+      href: "/quantum-ai-breakthrough-2030",
+      icon: Atom,
+      color: "from-indigo-500 to-pink-500",
+      features: ["Quantum Neural Networks", "Quantum Optimization", "Quantum Supremacy"]
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
   return (
-    <motion.section
-      className="py-20 bg-gradient-to-br from-slate-50 to-blue-50"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 py-20">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div className="text-center mb-16" variants={itemVariants}>
-          <motion.div
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 text-sm font-medium mb-4"
-            whileHover={{ scale: 1.05 }}
-          >
-            <Sparkles className="w-4 h-4 mr-2" />
-            New Content 2025
-          </motion.div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Discover Revolutionary Content
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore cutting-edge innovations, breakthrough technologies, and transformative solutions 
-            that are shaping the future of business and technology.
-          </p>
-        </motion.div>
-
-        {/* Tab Navigation */}
-        <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
-          <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
-            {contentSections.map((section, index) => {
-              const Icon = section.icon;
-              return (
-                <button
-                  key={section.id}
-                  onClick={() => setActiveTab(index)}
-                  className={`flex items-center px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-                    activeTab === index
-                      ? `bg-gradient-to-r ${section.color} text-white shadow-lg`
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-                  }`}
-                >
-                  <Icon className="w-5 h-5 mr-2" />
-                  {section.title}
-                </button>
-              );
-            })}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-full px-6 py-3 border border-cyan-400/30 mb-8">
+            <Sparkles className="w-5 h-5 text-cyan-400" />
+            <span className="text-cyan-300 font-medium">NEW CONTENT SHOWCASE 2025</span>
           </div>
-        </motion.div>
+          
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            Revolutionary
+            <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              AI Content
+            </span>
+          </h2>
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Discover the future of artificial intelligence through our cutting-edge content. 
+            Explore groundbreaking technologies, revolutionary breakthroughs, and the next decade of AI evolution.
+          </p>
 
-        {/* Content Display */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            variants={itemVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {contentSections[activeTab].content.map((item, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group"
-                whileHover={{ y: -5, scale: 1.02 }}
-                variants={itemVariants}
-              >
-                <div className="relative mb-6">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${contentSections[activeTab].color} flex items-center justify-center mb-4`}>
-                    <Star className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                    {item.stats}
-                  </div>
-                </div>
-                
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                  {item.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {item.description}
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <button className="flex items-center text-purple-600 font-medium hover:text-purple-700 transition-colors">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                  <div className="flex space-x-2">
-                    <button className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
-                      <Play className="w-4 h-4 text-gray-600" />
-                    </button>
-                    <button className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
-                      <BookOpen className="w-4 h-4 text-gray-600" />
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Call to Action */}
-        <motion.div className="text-center mt-16" variants={itemVariants}>
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-lg mb-6 opacity-90">
-              Join thousands of companies already using our revolutionary solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-                <Lightbulb className="w-5 h-5 mr-2" />
-                Start Free Trial
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors flex items-center justify-center">
-                <Users className="w-5 h-5 mr-2" />
-                Schedule Demo
-              </button>
+          {/* Stats */}
+          <div className="flex flex-wrap justify-center gap-8 mb-12">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400">2</div>
+              <div className="text-gray-400 text-sm">New Revolutionary Pages</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400">2030-2035</div>
+              <div className="text-gray-400 text-sm">Future Predictions</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-pink-400">∞</div>
+              <div className="text-gray-400 text-sm">Possibilities</div>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </motion.section>
-  );
-};
+        </div>
 
-export default NewContentShowcase2025;
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          {newContent.map((content, index) => {
+            const IconComponent = content.icon;
+            return (
+              <div key={index} className="group relative">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 transform hover:scale-105">
+                  {/* Icon */}
+                  <div className={`w-16 h-16 bg-gradient-to-r ${content.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-3xl font-bold text-white mb-4">
+                    {content.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                    {content.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="mb-8">
+                    <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {content.features.map((feature, featureIndex) => (
+                        <span 
+                          key={featureIndex}
+                          className="bg-white/10 backdrop-blur-sm rounded-full px-3 py-1 text-sm text-gray-300 border border-white/20"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* CTA */}
+                  <Link 
+                    href={content.href}
+                    className={`inline-flex items-center gap-3 bg-gradient-to-r ${content.color} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+                  >
+                    <Rocket className="w-5 h-5" />
+                    Explore {content.title}
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </div>
+
+                {/* Glow Effect */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${content.color} opacity-0 group-hover:opacity-10 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}></div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Additional Features */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <TrendingUp className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Future-Ready Content</h3>
+            <p className="text-gray-400">
+              Stay ahead with predictions and insights into the next decade of AI evolution
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <Target className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Expert Insights</h3>
+            <p className="text-gray-400">
+              Curated by AI experts and researchers at the forefront of technological innovation
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <Layers className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Interactive Experience</h3>
+            <p className="text-gray-400">
+              Engage with cutting-edge visualizations and interactive content elements
+            </p>
+          </div>
+        </div>
+
+        {/* Global CTA */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-white/10">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Explore the Future?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of professionals, researchers, and AI enthusiasts exploring 
+              the revolutionary content that will shape tomorrow's world.
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link 
+                href="/ai-2035-future-vision"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                <Brain className="w-5 h-5" />
+                Explore AI 2035 Vision
+              </Link>
+              
+              <Link 
+                href="/quantum-ai-breakthrough-2030"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+              >
+                <Atom className="w-5 h-5" />
+                Discover Quantum AI
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust Indicators */}
+        <div className="mt-16 flex flex-wrap justify-center items-center gap-8 text-gray-400">
+          <div className="flex items-center gap-2">
+            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+            <span className="text-sm">Trusted by 50,000+ professionals</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+            <span className="text-sm">Updated with latest research</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+            <span className="text-sm">Expert-curated insights</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+            <span className="text-sm">Future-focused content</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

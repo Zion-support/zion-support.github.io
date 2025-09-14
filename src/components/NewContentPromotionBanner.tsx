@@ -3,40 +3,114 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, BookOpen, Target, FileText, Star, Clock, Users, TrendingUp } from 'lucide-react';
 
-export const NewContentPromotionBanner: React.FC = () => {
-  const newContent = [
-    {
-      type: 'blog',
-      title: 'AI 2025: Enterprise Automation Revolutionary Breakthrough',
-      excerpt: 'Discover how AI-powered enterprise automation is revolutionizing business operations in 2025',
-      link: '/blog/ai-2025-enterprise-automation-revolutionary-breakthrough',
-      category: 'AI & Automation',
-      readTime: '12 min read',
-      featured: true,
-      icon: BookOpen,
-      gradient: 'from-purple-500 to-cyan-500'
-    },
-    {
-      type: 'case-study',
-      title: 'Global Enterprise AI Transformation: Ultimate Success Story',
-      excerpt: 'How a Fortune 500 company achieved 500% ROI with comprehensive AI transformation',
-      link: '/case-studies/global-enterprise-ai-transformation-2025-ultimate-success',
-      category: 'Case Study',
-      readTime: '15 min read',
-      featured: true,
-      icon: Target,
-      gradient: 'from-green-500 to-blue-500'
-    },
-    {
-      type: 'resource',
-      title: 'AI 2025: Quick Start Implementation Guide',
-      excerpt: 'Get started with AI implementation in your organization with this comprehensive guide',
-      link: '/resources/ai-2025-implementation-quick-start-guide',
-      category: 'Implementation Guide',
-      readTime: '10 min read',
-      featured: true,
-      icon: FileText,
-      gradient: 'from-orange-500 to-red-500'
+interface NewContentItem {
+  id: string;
+  type: 'blog' | 'case-study' | 'resource';
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  badge: string;
+  icon: React.ComponentType<any>;
+  gradient: string;
+  featured: boolean;
+  isNew?: boolean;
+}
+
+const newContentItems: NewContentItem[] = [
+  {
+    id: 'neural-architecture-revolution',
+    type: 'blog',
+    title: 'AI 2026: The Neural Architecture Revolution Reshaping Enterprise Computing',
+    description: 'Discover the revolutionary neural architectures that are making advanced AI 300-500% faster and accessible to enterprises.',
+    ctaText: 'Read Revolution',
+    ctaLink: '/blog/ai-2026-neural-architecture-revolution',
+    badge: 'Revolutionary',
+    icon: Brain,
+    gradient: 'from-purple-500 to-indigo-600',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: 'fortune-500-transformation',
+    type: 'case-study',
+    title: 'Fortune 500 Manufacturing: $2.4B Neural Architecture Transformation',
+    description: 'See how a global manufacturing giant achieved 380% ROI and $2.4B in business value with neural architecture implementation.',
+    ctaText: 'View Case Study',
+    ctaLink: '/case-studies/fortune-500-neural-architecture-transformation-2026',
+    badge: 'Success Story',
+    icon: TrendingUp,
+    gradient: 'from-green-500 to-emerald-600',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: 'neural-architecture-guide',
+    type: 'resource',
+    title: 'Complete Neural Architecture Implementation Guide 2026',
+    description: 'Your comprehensive blueprint for implementing revolutionary neural architectures with proven methodologies and best practices.',
+    ctaText: 'Download Guide',
+    ctaLink: '/resources/ai-2026-neural-architecture-implementation-guide',
+    badge: 'Expert Guide',
+    icon: BookOpen,
+    gradient: 'from-blue-500 to-cyan-600',
+    featured: true,
+    isNew: true
+  },
+  {
+    id: 'quantum-ai-breakthrough',
+    type: 'blog',
+    title: 'Quantum-AI Fusion: The Breakthrough Revolutionizing Everything in 2025',
+    description: 'Discover how quantum-AI fusion is creating unprecedented processing power and solving problems 1 billion times faster.',
+    ctaText: 'Read Breakthrough',
+    ctaLink: '/blog/quantum-ai-breakthrough-2025',
+    badge: 'Revolutionary',
+    icon: Zap,
+    gradient: 'from-purple-500 to-indigo-600',
+    featured: true,
+    isNew: false
+  },
+  {
+    id: 'healthcare-ai-success',
+    type: 'case-study',
+    title: 'Healthcare AI Transformation: MedTech Solutions Achieves 400% ROI',
+    description: 'See how a regional healthcare network saved $13.2M annually and improved patient care quality dramatically.',
+    ctaText: 'View Success Story',
+    ctaLink: '/case-studies/healthcare-ai-transformation-success',
+    badge: 'Success Story',
+    icon: TrendingUp,
+    gradient: 'from-green-500 to-emerald-600',
+    featured: true,
+    isNew: false
+  },
+  {
+    id: 'ai-implementation-checklist',
+    type: 'resource',
+    title: 'AI Implementation Checklist 2025',
+    description: 'Your complete roadmap to successful AI deployment with proven methodologies and best practices.',
+    ctaText: 'Download Checklist',
+    ctaLink: '/resources/ai-implementation-checklist-2025',
+    badge: 'Free Resource',
+    icon: CheckCircle,
+    gradient: 'from-orange-500 to-red-600',
+    featured: true,
+    isNew: false
+  }
+];
+
+export function NewContentPromotionBanner() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [isDismissed, setIsDismissed] = useState(false);
+
+  useEffect(() => {
+    // Check if banner was previously dismissed
+    const dismissed = localStorage.getItem('new-content-banner-dismissed');
+    if (dismissed) {
+      setIsDismissed(true);
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
     }
   ];
 
