@@ -130,6 +130,7 @@ const RevolutionaryContent2025Banner = () => {
           ))}
         </div>
       </div>
+
       {/* Close Button */}
       <button
         onClick={() => setIsVisible(false)}

@@ -2,36 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 
 const NewContentShowcase2025: React.FC = () => {
-  const newContent = [
-    {
-      title: "Neural Interface Revolution 2025",
-      description: "Discover how neural interfaces are revolutionizing enterprise operations with 1000% faster decisions and thought-based collaboration.",
-      category: "AI Revolution",
-      readingTime: "12 min read",
-      href: "/blog/ai-2025-neural-interface-revolution-enterprise-breakthrough",
-      featured: true,
-      badge: "NEW BREAKTHROUGH"
-    },
-    {
-      title: "Quantum Neural Superintelligence",
-      description: "The most significant advancement in human technological capability. Achieve transcendent business success through quantum-powered superintelligence.",
-      category: "Quantum AI",
-      readingTime: "15 min read",
-      href: "/blog/ai-2025-quantum-neural-superintelligence-breakthrough",
-      featured: true,
-      badge: "REVOLUTIONARY"
-    },
-    {
-      title: "Fortune 500 Quantum Transformation",
-      description: "Complete case study of a Fortune 500 company achieving 15,000% ROI through quantum neural superintelligence implementation.",
-      category: "Case Study",
-      readingTime: "10 min read",
-      href: "/case-studies/quantum-neural-superintelligence-fortune-500-transformation-ultimate-success",
-      featured: true,
-      badge: "SUCCESS STORY"
-    }
-  ];
-
   return (
     <section className="bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

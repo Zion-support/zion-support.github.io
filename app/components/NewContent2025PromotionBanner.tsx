@@ -185,14 +185,6 @@ const NewContent2025PromotionBanner: React.FC = () => {
                 <span className="capitalize">{currentContent.type.replace('-', ' ')}</span>
               </div>
             </div>
-            
-            <h3 className="text-2xl md:text-3xl font-bold mb-2">
-              {currentContent.title}
-            </h3>
-            
-            <p className="text-lg opacity-90 mb-4">
-              {currentContent.description}
-            </p>
 
             <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
               {currentContent.title}
@@ -272,34 +264,6 @@ const NewContent2025PromotionBanner: React.FC = () => {
             </button>
           </div>
         </div>
-
-        {/* Progress Indicator */}
-        <div className="flex justify-center mt-6">
-          <div className="flex gap-2">
-            {featuredContent.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide
-                    ? 'bg-yellow-400 scale-125'
-                    : 'bg-white bg-opacity-50 hover:bg-opacity-75'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Dismiss Button */}
-        <button
-          onClick={handleDismiss}
-          className="absolute top-4 right-4 text-white hover:text-yellow-400 transition-colors duration-300"
-          aria-label="Dismiss banner"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
       </div>
     </div>
   );
