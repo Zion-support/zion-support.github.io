@@ -71,7 +71,7 @@ export default function AutonomousEnterpriseSystemsPage() {
             <div className="flex flex-wrap gap-2">
               {['autonomous systems', 'AI 2025', 'enterprise automation', 'self-managing systems', 'business intelligence'].map((tag) => (
                 <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">
-                  <Award className="w-3 h-3 mr-1" />
+                  <span className="w-3 h-3 mr-1">🏆</span>
                   {tag}
                 </span>
               ))}
