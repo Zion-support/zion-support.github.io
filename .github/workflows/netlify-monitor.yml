@@ -49,3 +49,21 @@ jobs:
 permissions:
   contents: read
   actions: read
+concurrency:
+  group: netlify-monitor-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  monitor:
+    name: Netlify Monitor
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Netlify status check
+        run: node automation/netlify-status-checker.cjs
