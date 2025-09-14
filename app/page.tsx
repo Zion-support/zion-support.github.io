@@ -72,6 +72,10 @@ import NewContent2025MultimodalBanner from '../components/NewContent2025Multimod
 import AI2025BusinessIntelligenceBanner from '../components/AI2025BusinessIntelligenceBanner';
 import AI2025CybersecurityBanner from '../components/AI2025CybersecurityBanner';
 
+// Import new ultimate autonomous enterprise components
+import UltimateAutonomousEnterpriseBanner from '../components/UltimateAutonomousEnterpriseBanner';
+import UltimateAutonomousEnterpriseShowcase from '../components/UltimateAutonomousEnterpriseShowcase';
+
 // Import new 2026 promotional components
 import AI2026TrendsPromotionBanner from '../components/AI2026TrendsPromotionBanner';
 import QuantumComputingPromotionBanner from '../components/QuantumComputingPromotionBanner';
@@ -131,6 +135,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Autonomous Enterprise Banner - NEW ULTIMATE BREAKTHROUGH */}
+        <UltimateAutonomousEnterpriseBanner />
+        
         {/* Ultimate Content 2026 Breakthrough Banner - LATEST FEATURED */}
         <UltimateContent2026BreakthroughBanner />
         
@@ -364,6 +371,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Ultimate Autonomous Enterprise Showcase - NEW FEATURED */}
+        <UltimateAutonomousEnterpriseShowcase />
+        
         {/* Content Promotion Banners */}
         <UltimateAIAutomationShowcase2025 />
         <RevolutionaryContent2026Banner />
