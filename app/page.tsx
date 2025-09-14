@@ -56,14 +56,17 @@ import AutonomousBusinessOperationsPromotionBanner from '../components/Autonomou
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
 
 // Import new ultimate AI transformation components
-import UltimateAITransformation2025Banner from '../components/UltimateAITransformation2025Banner';
-import AI2025RevolutionaryContentShowcase from '../components/AI2025RevolutionaryContentShowcase';
-import UltimateContentShowcase2025Banner from '../components/UltimateContentShowcase2025Banner';
-import RevolutionaryContent2025UltimateBanner from '../components/RevolutionaryContent2025UltimateBanner';
+import UltimateAITransformation2025Banner from './components/UltimateAITransformation2025Banner';
+import AI2025RevolutionaryContentShowcase from './components/AI2025RevolutionaryContentShowcase';
+import UltimateContentShowcase2025Banner from './components/UltimateContentShowcase2025Banner';
+import RevolutionaryContent2025UltimateBanner from './components/RevolutionaryContent2025UltimateBanner';
 
 // Import AI 2030 promotional components
 import AI2030ContentShowcaseBanner from '../components/AI2030ContentShowcaseBanner';
 import AI2030ContentNavigation from '../components/AI2030ContentNavigation';
+
+// Import new 2025 content revolution banner
+import AI2025NewContentRevolutionBanner from '../components/AI2025NewContentRevolutionBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -82,6 +85,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW: AI 2025 Content Revolution Banner - FEATURED */}
+        <AI2025NewContentRevolutionBanner />
+        
         {/* Revolutionary Content 2025 Ultimate Banner - NEW */}
         <RevolutionaryContent2025UltimateBanner />
         
