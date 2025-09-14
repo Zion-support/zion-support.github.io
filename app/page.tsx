@@ -13,6 +13,12 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import InteractiveROICalculatorAdvanced from '../components/InteractiveROICalculatorAdvanced';
 import RevolutionaryNewsletterSignup2025 from '../components/RevolutionaryNewsletterSignup2025';
 
+// Import new revolutionary content showcase components - LATEST FEATURED
+import AI2025RevolutionaryContentShowcaseBanner from '../components/AI2025RevolutionaryContentShowcaseBanner';
+import UltimateBusinessTransformation2025Showcase from '../components/UltimateBusinessTransformation2025Showcase';
+import AI2025FutureVisionPromotionBanner from '../components/AI2025FutureVisionPromotionBanner';
+import NewContentDiscovery2025Banner from '../components/NewContentDiscovery2025Banner';
+
 // Import new Neural Superintelligence Breakthrough components - LATEST BREAKTHROUGH
 import NeuralSuperintelligenceBreakthroughBanner2025 from '../components/NeuralSuperintelligenceBreakthroughBanner2025';
 import NeuralSuperintelligenceROICalculator from '../components/NeuralSuperintelligenceROICalculator';
@@ -183,6 +189,19 @@ export default function HomePage() {
           
           {/* AI 2025 ULTIMATE BREAKTHROUGH 100,000% ROI BANNER - NEWEST FEATURED */}
           <AI2025UltimateBreakthrough100000ROIBanner />
+          
+          {/* NEW REVOLUTIONARY CONTENT SHOWCASE BANNER - LATEST FEATURED */}
+          <AI2025RevolutionaryContentShowcaseBanner />
+          
+          {/* ULTIMATE BUSINESS TRANSFORMATION 2025 SHOWCASE - LATEST FEATURED */}
+          <UltimateBusinessTransformation2025Showcase />
+          
+          {/* AI 2025 FUTURE VISION PROMOTION BANNER - LATEST FEATURED */}
+          <AI2025FutureVisionPromotionBanner />
+          
+          {/* NEW CONTENT DISCOVERY 2025 BANNER - LATEST FEATURED */}
+          <NewContentDiscovery2025Banner />
+          
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         
