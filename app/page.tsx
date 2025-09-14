@@ -66,6 +66,10 @@ import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowca
 import AutonomousBIRevolutionBanner2025 from '../components/AutonomousBIRevolutionBanner2025';
 import AutonomousBIShowcase2025 from '../components/AutonomousBIShowcase2025';
 
+// Import new predictive analytics and edge computing promotional components
+import PredictiveAnalyticsRevolutionBanner2025 from '../components/PredictiveAnalyticsRevolutionBanner2025';
+import EdgeComputingRevolutionShowcase2025 from '../components/EdgeComputingRevolutionShowcase2025';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -83,7 +87,13 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* Autonomous BI Revolution Banner 2025 - LATEST */}
+        {/* Predictive Analytics Revolution Banner 2025 - LATEST */}
+        <PredictiveAnalyticsRevolutionBanner2025 />
+        
+        {/* Edge Computing Revolution Showcase 2025 - NEW */}
+        <EdgeComputingRevolutionShowcase2025 />
+        
+        {/* Autonomous BI Revolution Banner 2025 */}
         <AutonomousBIRevolutionBanner2025 />
         
         {/* Ultimate Content 2025 Showcase Banner */}
