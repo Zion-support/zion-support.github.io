@@ -349,6 +349,10 @@ import NewContent2025UltimateBusinessTransformationBanner from '../components/Ne
 import QuantumAIRevolution2025PromotionalBanner from '../components/QuantumAIRevolution2025PromotionalBanner';
 import Fortune500SuccessStoryBanner from '../components/Fortune500SuccessStoryBanner';
 
+// Import new Ultimate Content Revolution components - NEWEST FEATURED
+import NewContent2025UltimateContentRevolutionBanner from '../components/NewContent2025UltimateContentRevolutionBanner';
+import UltimateContentRevolutionShowcase2025 from '../components/UltimateContentRevolutionShowcase2025';
+
 // Import new 2026 revolutionary content components - LATEST BREAKTHROUGH
 import AI2026RevolutionaryBreakthroughBanner from '../components/AI2026RevolutionaryBreakthroughBanner';
 import QuantumComputing2026UltimateBanner from '../components/QuantumComputing2026UltimateBanner';
@@ -398,6 +402,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* NEW CONTENT 2025 ULTIMATE CONTENT REVOLUTION BANNER - NEWEST FEATURED */}
+        <NewContent2025UltimateContentRevolutionBanner />
+        
         {/* AI 2025 ULTIMATE BREAKTHROUGH 100,000% ROI BANNER - NEWEST FEATURED */}
         <AI2025UltimateBreakthrough100000ROIBanner />
         
@@ -484,6 +491,9 @@ export default function HomePage() {
         
         {/* ULTIMATE SUCCESS METRICS SHOWCASE 2025 - NEWEST FEATURED */}
         <UltimateSuccessMetricsShowcase2025 />
+        
+        {/* ULTIMATE CONTENT REVOLUTION SHOWCASE 2025 - NEWEST FEATURED */}
+        <UltimateContentRevolutionShowcase2025 />
         
         {/* ULTIMATE CONTENT SHOWCASE 2025 - NEWEST FEATURED */}
         <UltimateContentShowcase2025 />
