@@ -39,11 +39,9 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
 import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
@@ -56,6 +54,10 @@ import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBa
 import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
 import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
+
+// Import new promotional banners for latest content
+import QuantumAI2026RevolutionBanner from '../components/QuantumAI2026RevolutionBanner';
+import GenerativeAI2025BreakthroughBanner from '../components/GenerativeAI2025BreakthroughBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -74,8 +76,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-        {/* AI 2026 Ultimate Showcase Banner */}
-        <AI2026UltimateShowcaseBanner />
+        {/* NEW FEATURED CONTENT BANNERS - LATEST */}
+        <QuantumAI2026RevolutionBanner />
+        {/* <GenerativeAI2025BreakthroughBanner /> */}
+        
+        {/* AI 2026 Ultimate Showcase Banner - Temporarily disabled */}
+        {/* <AI2026UltimateShowcaseBanner /> */}
         
         {/* Quantum AI 2026 Breakthrough Banner */}
         <QuantumAI2026BreakthroughBanner />
@@ -83,11 +89,11 @@ export default function HomePage() {
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
         
-        {/* AI 2026 Quantum Revolution Banner */}
-        <AI2026QuantumRevolutionBanner />
+        {/* AI 2026 Quantum Revolution Banner - Temporarily disabled */}
+        {/* <AI2026QuantumRevolutionBanner /> */}
         
-        {/* AI 2026 Autonomous Systems Banner */}
-        <AI2026AutonomousSystemsBanner />
+        {/* AI 2026 Autonomous Systems Banner - Temporarily disabled */}
+        {/* <AI2026AutonomousSystemsBanner /> */}
         
         {/* Revolutionary Content 2025 Banner - NEW CONTENT */}
         <RevolutionaryContent2025Banner />
@@ -98,8 +104,8 @@ export default function HomePage() {
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
         
-        {/* Revolutionary AI Content Banner */}
-        <RevolutionaryAIContentBanner />
+        {/* Revolutionary AI Content Banner - Temporarily disabled */}
+        {/* <RevolutionaryAIContentBanner /> */}
         
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner />
@@ -202,8 +208,8 @@ export default function HomePage() {
         {/* Content Promotion Banners */}
         <RevolutionaryContent2026Banner />
         <UltimateContentShowcase2026 />
-        <QuantumAIContentShowcase2026 />
-        <UltimateContentShowcase2025 />
+        {/* <QuantumAIContentShowcase2026 /> */}
+        {/* <UltimateContentShowcase2025 /> */}
         <NewContent2025PromotionBanner />
         <LatestContentShowcase2025 />
         <EnhancedContentPromotionBanner2026 />

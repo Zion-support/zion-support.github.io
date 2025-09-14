@@ -1,7 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-<<<<<<< HEAD
 const UltimateContentShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
