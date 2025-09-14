@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';

@@ -23,11 +23,18 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"]
-    }
+      "@/*": [
+        "./*"
+      ]
+    },
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
