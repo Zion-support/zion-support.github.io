@@ -49,6 +49,11 @@ import UltimateContentShowcase2025 from '../components/UltimateContentShowcase20
 import AI2025_2026UltimateBusinessIntelligenceRevolutionBanner from '../components/AI2025_2026UltimateBusinessIntelligenceRevolutionBanner';
 import AI2025_2026UltimateBusinessIntelligenceShowcase from '../components/AI2025_2026UltimateBusinessIntelligenceShowcase';
 
+// Import new AI Singularity Breakthrough components
+import AI2025SingularityBreakthroughPromotionBanner from '../components/AI2025SingularityBreakthroughPromotionBanner';
+import PostHumanBusinessOperationsPromotionBanner from '../components/PostHumanBusinessOperationsPromotionBanner';
+import UltimateBreakthroughContentShowcase2025 from '../components/UltimateBreakthroughContentShowcase2025';
+
 // Import new Ultimate AI 2025 Transformation components
 import UltimateAI2025TransformationBanner from '../components/UltimateAI2025TransformationBanner';
 import UltimateAI2025ContentShowcase from '../components/UltimateAI2025ContentShowcase';
@@ -328,6 +333,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* AI 2025 SINGULARITY BREAKTHROUGH 100,000% ROI BANNER - NEWEST BREAKTHROUGH */}
+        <AI2025SingularityBreakthroughPromotionBanner />
+        
+        {/* POST-HUMAN BUSINESS OPERATIONS 75,000% ROI BANNER - NEWEST BREAKTHROUGH */}
+        <PostHumanBusinessOperationsPromotionBanner />
+        
         {/* AI 2025 ULTIMATE AUTOMATION REVOLUTION 50,000% ROI BANNER - NEWEST BREAKTHROUGH */}
         <AI2025UltimateAutomationRevolution50000ROIBanner />
         
@@ -345,6 +356,9 @@ export default function HomePage() {
         
         {/* ULTIMATE SUCCESS METRICS SHOWCASE - NEWEST FEATURED */}
         <UltimateSuccessMetricsShowcase />
+        
+        {/* ULTIMATE BREAKTHROUGH CONTENT SHOWCASE 2025 - NEWEST BREAKTHROUGH */}
+        <UltimateBreakthroughContentShowcase2025 />
         
         {/* AI 2025 ULTIMATE AUTOMATION REVOLUTION SHOWCASE - NEWEST FEATURED */}
         <AI2025UltimateAutomationRevolutionShowcase />
