@@ -4,6 +4,9 @@ import { Navigation } from './components/Navigation';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import CaseStudies from './pages/CaseStudies';
+import CaseStudy from './pages/CaseStudy';
+import Blog from './pages/Blog';
 import { SEO } from './components/SEO';
 import { AnalyticsProvider, trackPerformance } from './components/Analytics';
 
@@ -24,6 +27,8 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/case-studies/:slug" element={<CaseStudy />} />
           </Routes>
         </div>
       </AnalyticsProvider>
