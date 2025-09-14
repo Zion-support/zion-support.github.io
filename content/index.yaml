@@ -265,21 +265,73 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
+    - id: "enterprise-automation-mastery-ultimate-guide"
       type: "blog"
-      title: "AI 2025: The Enterprise AI Revolution - Ultimate Guide to 500% ROI"
-      file_path: "/content/blog/ai-2025-enterprise-ai-revolution-ultimate-guide.md"
-      url: "/blog/ai-2025-enterprise-ai-revolution-ultimate-guide"
+      title: "AI 2025: Enterprise Automation Mastery - The Ultimate Guide to 500% ROI"
+      file_path: "/content/blog/ai-2025-enterprise-automation-mastery-ultimate-guide.md"
+      url: "/blog/ai-2025-enterprise-automation-mastery-ultimate-guide"
       status: "published"
       created: "2025-01-17"
-      tags: ["AI", "Enterprise", "ROI", "Digital Transformation", "AI Strategy", "Fortune 500"]
+      tags: ["AI Automation", "Enterprise", "ROI", "Digital Transformation", "AI Strategy", "Fortune 500"]
       featured: true
       is_new: true
       metrics:
         roi: "500%"
         savings: "$2.8B"
+        efficiency: "340%"
         satisfaction: "98%"
-        projects: "500+"
-      reading_time: "18 min read"
+      reading_time: "25 min read"
+      
+    - id: "fortune-500-ai-transformation-ultimate-success"
+      type: "case-study"
+      title: "Fortune 500 AI Transformation: $3.2B Company Achieves 650% ROI with Intelligent Automation"
+      file_path: "/content/case-studies/ai-transformation-fortune-500-ultimate-success-2025.md"
+      url: "/case-studies/ai-transformation-fortune-500-ultimate-success-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Fortune 500", "AI Transformation", "ROI", "Manufacturing", "Success Story", "Intelligent Automation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "650%"
+        savings: "$2.8B"
+        accuracy: "99.7%"
+        efficiency: "78%"
+      reading_time: "22 min read"
+      
+    - id: "ai-implementation-ultimate-roadmap-2025"
+      type: "resource"
+      title: "AI Implementation Ultimate Roadmap 2025: From Strategy to 800% ROI in 18 Months"
+      file_path: "/content/resources/ai-implementation-ultimate-roadmap-2025.md"
+      url: "/resources/ai-implementation-ultimate-roadmap-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Implementation", "Strategy", "ROI", "Roadmap", "Best Practices", "Framework", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "800%"
+        success_rate: "99%"
+        savings: "$173.7M"
+        time_to_value: "18 months"
+      reading_time: "35 min read"
+      
+    - id: "quantum-computing-business-revolution"
+      type: "blog"
+      title: "AI 2025: The Quantum Computing Business Revolution - $100B Market Transformation"
+      file_path: "/content/blog/ai-2025-quantum-computing-business-revolution.md"
+      url: "/blog/ai-2025-quantum-computing-business-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Quantum Computing", "AI Revolution", "Business Transformation", "ROI", "Innovation", "Technology", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,200%"
+        market: "$100B"
+        speed: "1,000x"
+        accuracy: "99.97%"
+      reading_time: "28 min read"
       
       type: "case-study"
       title: "Fortune 500 AI Transformation 2025: $2.8B Annual Savings in 18 Months"
