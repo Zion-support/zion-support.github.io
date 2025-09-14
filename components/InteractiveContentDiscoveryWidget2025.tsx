@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-'use client';
-
-import React, { useState, useEffect } from 'react';
-=======
-import React, { useState, useEffect, useMemo } from 'react';
->>>>>>> main
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -180,34 +173,6 @@ const InteractiveContentDiscoveryWidget2025 = () => {
     return matchesSearch && matchesCategory && matchesType;
   });
 
-<<<<<<< HEAD
-  const sortedContent = [...filteredContent].sort((a, b) => {
-=======
-  const filteredContent = useMemo(() => {
-    let filtered = contentItems;
-
-    // Search filter
-    if (searchTerm) {
-      filtered = filtered.filter(item =>
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
-    }
-  });
-
-    // Category filter
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(item => item.category === selectedCategory);
-    }
-
-    // Type filter
-    if (selectedType !== 'all') {
-      filtered = filtered.filter(item => item.type === selectedType);
-    }
-
-    // Sort
->>>>>>> main
     switch (sortBy) {
       case 'newest':
         return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();

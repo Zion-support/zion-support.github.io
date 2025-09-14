@@ -1,10 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
-
-// Metadata moved to parent layout
 
 interface ROIResults {
   totalInvestment: number;

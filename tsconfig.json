@@ -17,39 +17,18 @@
     "noEmit": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-<<<<<<< HEAD
-=======
-    "forceConsistentCasingInFileNames": true,
->>>>>>> pr-17256
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
-    "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ]
-    },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "strictNullChecks": true
+    "jsx": "react-jsx"
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "app/**/*",
+    "components/**/*",
+    "lib/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }
