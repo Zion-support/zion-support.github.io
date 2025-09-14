@@ -11,6 +11,11 @@ import AIRevolutionContentShowcase from '../components/AIRevolutionContentShowca
 import UltimateContent2025RevolutionaryBanner from '../components/UltimateContent2025RevolutionaryBanner';
 import UltimateContent2025Showcase from '../components/UltimateContent2025Showcase';
 
+// Import new 2025 Automation Revolution components
+import NewContent2025AutomationRevolutionBanner from '../components/NewContent2025AutomationRevolutionBanner';
+import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
+import FeaturedContent2025Showcase from '../components/FeaturedContent2025Showcase';
+
 // Import new Ultimate Content 2025 Revolution components
 import UltimateContent2025RevolutionBanner from '../components/UltimateContent2025RevolutionBanner';
 import UltimateContent2025RevolutionShowcase from '../components/UltimateContent2025RevolutionShowcase';
@@ -244,6 +249,15 @@ export default function HomePage() {
         
         {/* Revolutionary Content 2025 Ultimate Banner - NEW FEATURED */}
         <RevolutionaryContent2025UltimateBanner />
+        
+        {/* NEW CONTENT 2025 AUTOMATION REVOLUTION BANNER - LATEST FEATURED */}
+        <NewContent2025AutomationRevolutionBanner />
+        
+        {/* REVOLUTIONARY CONTENT 2025 SHOWCASE - NEW FEATURED */}
+        <RevolutionaryContent2025Showcase />
+        
+        {/* FEATURED CONTENT 2025 SHOWCASE - NEW FEATURED */}
+        <FeaturedContent2025Showcase />
         
         {/* NEW CONTENT 2025 ULTIMATE SHOWCASE BANNER - LATEST FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
