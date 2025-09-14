@@ -7,14 +7,17 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { SnackbarProvider } from 'notistack';
-import { captureException } from './utils/sentry-mock';
+import { captureException } from './utils/sentry';
 import { useTranslation } from 'react-i18next';
+// Removed ToastInitializer import as it doesn't exist
 
 // Import i18n configuration
 import './i18n';
 import { LanguageProvider } from './context/LanguageContext';
 import { WhitelabelProvider } from './context/WhitelabelContext';
 import { AppLayout } from './layout/AppLayout';
+
+// Removed NotificationProvider import as it doesn't exist
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
@@ -54,18 +57,18 @@ try {
     <React.StrictMode>
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
-          <SnackbarProvider maxSnack={3}>
-            <WhitelabelProvider>
+                      <SnackbarProvider maxSnack={3}>
+                      <WhitelabelProvider>
               <Router>
                 <AnalyticsProvider>
-                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                    <ErrorBoundary FallbackComponent={GlobalErrorFallback}>
-                      <AppLayout>
-                        <App />
-                      </AppLayout>
-                    </ErrorBoundary>
-                  </LanguageProvider>
-                </AnalyticsProvider>
+                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                      <ErrorBoundary FallbackComponent={GlobalErrorFallback}>
+                        <AppLayout>
+                          <App />
+                        </AppLayout>
+                      </ErrorBoundary>
+                    </LanguageProvider>
+                  </AnalyticsProvider>
               </Router>
             </WhitelabelProvider>
           </SnackbarProvider>

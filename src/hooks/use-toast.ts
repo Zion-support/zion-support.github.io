@@ -8,15 +8,39 @@ export type ToastOptions = {
 };
 
 export const useToast = () => {
-  const toast = (options: ToastOptions) => {
-    console.log('Toast:', options);
-    // In a real implementation, this would show a toast notification
+  const toast = (props: ToastOptions) => {
+    console.log('Toast:', props.title || props.description || 'Toast notification');
   };
-
+  
   return { toast };
 };
 
-export const toast = (options: ToastOptions) => {
-  console.log('Toast:', options);
-  // In a real implementation, this would show a toast notification
+// Base toast function
+function baseToast(props: ToastOptions) {
+  console.log('Toast:', props.title || props.description || 'Toast notification');
+}
+
+// Convenience helpers
+baseToast.title = (title: string) => {
+  baseToast({ title });
+};
+
+baseToast.description = (description: string) => {
+  baseToast({ description });
+};
+
+baseToast.error = (error: string) => {
+  baseToast({ variant: "destructive", title: "Error", description: error });
+};
+
+baseToast.success = (message: string) => {
+  baseToast({ variant: "success", title: "Success", description: message });
+};
+
+// Export the callable toast function
+export const toast = baseToast as typeof baseToast & {
+  title: (title: string) => void;
+  description: (description: string) => void;
+  error: (error: string) => void;
+  success: (message: string) => void;
 };

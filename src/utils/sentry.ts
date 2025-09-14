@@ -20,8 +20,3 @@ export const setContext = (key: string, context: Record<string, any>) => {
   console.log('Sentry setContext:', key, context);
   // In a real implementation, this would set context in Sentry
 };
-
-export const addBreadcrumb = (message: string, category?: string, level?: 'info' | 'warning' | 'error') => {
-  console.log('Sentry addBreadcrumb:', message, category, level);
-  // In a real implementation, this would add breadcrumb to Sentry
-};

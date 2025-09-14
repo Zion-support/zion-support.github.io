@@ -60,19 +60,6 @@ export function AppHeader() {
         { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500', description: 'Advanced protection' },
       ]
     },
-    { 
-      name: 'Solutions', 
-      path: '/business-solutions', 
-      icon: null,
-      dropdown: [
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Shield, color: 'from-green-400 to-teal-500' },
-        { name: 'Financial Services', path: '/solutions/financial', icon: Database, color: 'from-yellow-500 to-orange-500' },
-        { name: 'Manufacturing', path: '/solutions/manufacturing', icon: Code, color: 'from-blue-500 to-indigo-500' },
-        { name: 'Retail & E-commerce', path: '/solutions/retail', icon: Users, color: 'from-purple-500 to-pink-500' },
-        { name: 'Government', path: '/solutions/government', icon: Lock, color: 'from-gray-500 to-slate-500' },
-        { name: 'Education', path: '/solutions/education', icon: Brain, color: 'from-cyan-500 to-blue-500' },
-      ]
-    },
     { name: 'About', path: '/about', icon: null },
     { name: 'Contact', path: '/contact', icon: null },
   ];
@@ -82,7 +69,6 @@ export function AppHeader() {
   const handleDropdownToggle = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
-
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
