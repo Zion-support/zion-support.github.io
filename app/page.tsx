@@ -78,8 +78,6 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
-<<<<<<< HEAD
-=======
         {/* New 2026 Revolutionary Banners */}
         <RevolutionaryQuantumSecurityBanner2026 />
         <AutonomousEnterpriseRevolutionBanner2026 />
@@ -88,7 +86,6 @@ export default function HomePage() {
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
         
->>>>>>> cursor/create-and-deploy-new-content-ba4f
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
         
@@ -206,16 +203,13 @@ export default function HomePage() {
         <InteractiveContentDiscoveryWidget2026 />
         
         {/* Content Promotion Banners */}
-<<<<<<< HEAD
         <RevolutionaryContentBanner2025 />
-=======
         <NewContent2026PromotionBanner />
         <QuantumAI2026BreakthroughBanner />
         <NewContentShowcase2026 />
         <QuantumAIContentShowcase2026 />
         <AI2026ContentShowcaseBanner />
         <RevolutionaryAI2026Banner />
->>>>>>> cursor/create-and-deploy-new-content-ba4f
         <UltimateContentShowcase2025 />
         <NewContent2025PromotionBanner />
         <LatestContentShowcase2025 />
