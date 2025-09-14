@@ -259,6 +259,24 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
+    - id: "enterprise-automation-mastery"
+      type: "blog"
+      title: "AI 2025: Enterprise Automation Mastery - 1,500% ROI Guide"
+      file_path: "/content/blog/ai-2025-enterprise-automation-mastery.md"
+      url: "/blog/ai-2025-enterprise-automation-mastery"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Enterprise Automation", "AI Mastery", "ROI", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "1,500%"
+        automation: "99%"
+        efficiency: "98%"
+        savings: "$8.5B annually"
+        satisfaction: "99.9%"
+      reading_time: "20 min read"
+      
     - id: "enterprise-ai-revolution-ultimate-breakthrough-2025"
       type: "blog"
       title: "AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide"
@@ -620,6 +638,23 @@ content_index:
       - "Implemented interactive content discovery and filtering"
 
   new_content_january_2025:
+    - id: "advanced-neural-architectures-enterprise-breakthrough"
+      type: "blog"
+      title: "AI 2025: Advanced Neural Architectures - Enterprise Breakthrough Guide"
+      file_path: "/content/blog/ai-2025-advanced-neural-architectures-enterprise-breakthrough.md"
+      url: "/blog/ai-2025-advanced-neural-architectures-enterprise-breakthrough"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Neural Architectures", "Enterprise AI", "ROI", "Advanced AI", "2025", "Breakthrough"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "450%"
+        accuracy: "99.2%"
+        cost_reduction: "67%"
+        efficiency: "89%"
+      reading_time: "18 min read"
+      
     - id: "advanced-automation-mastery-ultimate-success-guide"
       type: "blog"
       title: "AI 2025: Advanced Automation Mastery - Ultimate Success Guide"
@@ -628,6 +663,23 @@ content_index:
       status: "published"
       created: "2025-01-17"
       tags: ["AI Automation", "Advanced Mastery", "ROI", "Business Transformation", "2025", "Ultimate Guide"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%+"
+        efficiency: "85%"
+        savings: "$2.8M"
+        success: "94%"
+      reading_time: "30 min read"
+      
+    - id: "enterprise-automation-500-percent-roi-success"
+      type: "case-studies"
+      title: "AI 2025 Enterprise Automation: $2.8B Company Achieves 500% ROI Success Story"
+      file_path: "/content/case-studies/ai-2025-enterprise-automation-500-percent-roi-success-story.md"
+      url: "/case-studies/ai-2025-enterprise-automation-500-percent-roi-success-story"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Enterprise Automation", "Case Study", "ROI", "Success Story", "500% ROI", "Fortune 500"]
       featured: true
       is_new: true
       metrics:
@@ -670,6 +722,23 @@ content_index:
         savings: "$2.8M"
         success: "94%"
       reading_time: "30 min read"
+      
+    - id: "implementation-ultimate-success-framework"
+      type: "resources"
+      title: "AI 2025 Implementation: Ultimate Success Framework"
+      file_path: "/content/resources/ai-2025-implementation-ultimate-success-framework.md"
+      url: "/resources/ai-2025-implementation-ultimate-success-framework"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Framework", "AI Strategy", "ROI", "Success Guide", "2025", "Methodology"]
+      featured: true
+      is_new: true
+      metrics:
+        success_rate: "94%"
+        roi: "500%+"
+        implementation_speed: "67% faster"
+        projects: "500+ analyzed"
+      reading_time: "25 min read"
       
     - id: "ultimate-business-transformation-revolution"
       type: "blog"

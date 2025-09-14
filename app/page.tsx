@@ -39,6 +39,8 @@ import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026
 // Import new 2025 revolutionary content components
 import RevolutionaryContentShowcase2025 from '../components/RevolutionaryContentShowcase2025';
 import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
+// Import new advanced AI content components
+import AdvancedNeuralArchitecturesBanner from '../components/AdvancedNeuralArchitecturesBanner';
 import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
 import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
 
@@ -49,6 +51,7 @@ import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import NewContent2025UltimateShowcaseBanner from '../components/NewContent2025UltimateShowcaseBanner';
 import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
+import AutomationMasteryBanner from '../components/AutomationMasteryBanner';
 
 // Import AI 2030 promotional components
 import AI2030ContentShowcaseBanner from '../components/AI2030ContentShowcaseBanner';
@@ -71,6 +74,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Advanced Neural Architectures Banner - NEW FEATURED */}
+        <AdvancedNeuralArchitecturesBanner />
+        
         {/* Revolutionary Content 2025 Banner - NEW FEATURED */}
         <RevolutionaryContent2025Banner />
         
@@ -79,6 +85,9 @@ export default function HomePage() {
         
         {/* AI 2030 Content Showcase Banner - FEATURED */}
         <AI2030ContentShowcaseBanner />
+        
+        {/* Automation Mastery Banner - FEATURED */}
+        <AutomationMasteryBanner />
         
         {/* Revolutionary Content Showcase 2025 - FEATURED */}
         <RevolutionaryContentShowcase2025 />

@@ -49,7 +49,16 @@ import {
   Trash2,
   Camera,
   HardDrive,
-  Droplets
+  Droplets,
+  Code,
+  Network,
+  Cpu,
+  Monitor,
+  Server,
+  Mic,
+  Car,
+  Settings,
+  Eye
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
