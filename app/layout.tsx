@@ -1,5 +1,6 @@
 import React from 'react';
 import './globals.css';
+import Navigation from './components/Navigation';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Navigation />
         {children}
       </body>
     </html>

@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import FeaturedContent from './components/FeaturedContent';
+import Testimonials from './components/Testimonials';
 
 export default function HomePage() {
   return (
@@ -95,6 +97,39 @@ export default function HomePage() {
                 Learn More →
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Content Section */}
+      <FeaturedContent />
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Call to Action Section */}
+      <section className="py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Ready to Transform Your Business with AI?
+          </h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Join hundreds of companies already benefiting from our AI solutions. 
+            Get started with a free consultation and see how we can help you achieve your goals.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Get Free Consultation
+            </Link>
+            <Link
+              href="/case-studies"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+            >
+              View Success Stories
+            </Link>
           </div>
         </div>
       </section>
