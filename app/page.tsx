@@ -36,6 +36,15 @@ import AI2026QuantumNeuralContentShowcase from '../components/AI2026QuantumNeura
 import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
 import AI2027ContentPromotionBanner from '../components/AI2027ContentPromotionBanner';
 import AI2027ContentShowcase from '../components/AI2027ContentShowcase';
+
+// Import new AI 2027 breakthrough components
+import AI2027UltimateBreakthroughBanner from '../components/AI2027UltimateBreakthroughBanner';
+import NewContent2027Showcase from '../components/NewContent2027Showcase';
+import RevolutionaryTechTrends2027Banner from '../components/RevolutionaryTechTrends2027Banner';
+
+// Import new AI 2028 future vision components
+import AI2028FutureVisionBanner from '../components/AI2028FutureVisionBanner';
+import InteractiveTechDemo2027 from '../components/InteractiveTechDemo2027';
 import AI2035BreakthroughPromotionBanner from '../components/AI2035BreakthroughPromotionBanner';
 import AI2035BreakthroughContentShowcase from '../components/AI2035BreakthroughContentShowcase';
 import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
@@ -289,6 +298,12 @@ export default function HomePage() {
         
         {/* New Content 2027 Showcase - LATEST FEATURED */}
         <NewContent2027Showcase />
+        
+        {/* Interactive Tech Demo 2027 - EXPERIENCE THE FUTURE */}
+        <InteractiveTechDemo2027 />
+        
+        {/* AI 2028 Future Vision Banner - NEXT EVOLUTION */}
+        <AI2028FutureVisionBanner />
         
         {/* NEW ULTIMATE CONTENT 2025 - TOP PRIORITY FEATURED */}
         <UltimateContent2025Banner />
