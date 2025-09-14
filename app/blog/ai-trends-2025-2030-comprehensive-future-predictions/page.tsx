@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2, BookOpen, Download, TrendingUp, Brain, Zap,  Rocket, Star } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User,  Share2, BookOpen, Download, TrendingUp, Brain, Zap,  Rocket, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI Trends 2025-2030: Comprehensive Future Predictions & Enterprise Impact',
