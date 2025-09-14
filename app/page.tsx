@@ -47,6 +47,10 @@ import QuantumAI2025BreakthroughPromotionBanner from '../components/QuantumAI202
 import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner';
 import AI1000ROISuccessStoryBanner from '../components/AI1000ROISuccessStoryBanner';
 
+// Import new ultimate AI transformation promotional components
+import UltimateAITransformationBanner2025 from '../components/UltimateAITransformationBanner2025';
+import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+
 // Import new 2025 autonomous systems promotional components
 import AutonomousSystems2025RevolutionBanner from '../components/AutonomousSystems2025RevolutionBanner';
 import AutonomousSystemsShowcase2025 from '../components/AutonomousSystemsShowcase2025';
@@ -68,6 +72,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate AI Transformation Banner 2025 - NEW */}
+        <UltimateAITransformationBanner2025 />
+        
         {/* Autonomous Systems 2025 Revolution Banner - NEW */}
         <AutonomousSystems2025RevolutionBanner />
         
@@ -184,6 +191,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Ultimate Content Showcase 2025 - NEW */}
+        <UltimateContentShowcase2025 />
+        
         {/* New 2025 Breakthrough Content Promotions */}
         <QuantumAI2025BreakthroughPromotionBanner />
         <AutonomousBusinessOperationsPromotionBanner />
