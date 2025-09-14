@@ -122,7 +122,6 @@ export default function AI2026QuantumNeuralFusionBanner() {
         </div>
       </div>
     </section>
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white">
       {/* Animated background */}
       <div className="absolute inset-0">
@@ -210,6 +209,5 @@ export default function AI2026QuantumNeuralFusionBanner() {
         <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping opacity-75 animation-delay-2000"></div>
       </div>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-95d3
   );
 }

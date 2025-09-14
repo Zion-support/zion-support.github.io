@@ -13,6 +13,10 @@ interface State {
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
+<<<<<<< HEAD
+  showDetails: boolean;
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -22,7 +26,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
+<<<<<<< HEAD
+      errorId: '',
+      showDetails: false
+=======
       errorId: ''
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     };
   }
 
@@ -31,7 +40,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: true,
       error,
       errorInfo: null,
+<<<<<<< HEAD
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      showDetails: false
+=======
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     };
   }
 
@@ -77,7 +91,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
+<<<<<<< HEAD
+      errorId: '',
+      showDetails: false
+=======
       errorId: ''
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     });
   };
 
@@ -175,6 +194,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   </details>
                 )}
               </motion.div>
+<<<<<<< HEAD
+            )}
+=======
               <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                 Oops! Something went wrong
               </h1>
@@ -182,6 +204,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 We're sorry, but something unexpected happened. Our team has been notified.
               </p>
             </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -243,7 +266,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 Zion Tech Group - Revolutionary Technology Solutions
               </p>
             </div>
+<<<<<<< HEAD
+          </motion.div>
+=======
           </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
         </div>
       );
     }

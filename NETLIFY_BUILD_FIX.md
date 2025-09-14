@@ -1,102 +1,91 @@
-# Netlify Build Fix - Yarn find-up Package Error
+# Netlify Build Fix for Yarn Cache Issues
 
 ## Problem
 The Netlify build was failing with the following error:
 ```
-error Error: ENOENT: no such file or directory, copyfile '/opt/buildhome/.yarn_cache/v6/npm-find-up-5.0.0-integrity/node_modules/find-up/index.d.ts' -> '/opt/build/repo/node_modules/eslint/node_modules/find-up/index.d.ts'
+Error: ENOENT: no such file or directory, copyfile '/opt/buildhome/.yarn_cache/v6/npm-arg-5.0.2-c81433cc427c92c4dcf4865142dbca6f15acd59c-integrity/node_modules/arg/LICENSE.md' -> '/opt/build/repo/node_modules/tailwindcss/node_modules/arg/LICENSE.md'
 ```
 
-This is a common issue with Yarn v1 where the cache gets corrupted, specifically with the `find-up` package that ESLint depends on.
+This is a common issue with Yarn cache corruption on Netlify where dependency files are missing from the cache.
 
-## Root Cause
-1. **Corrupted Yarn Cache**: The `find-up` package in the Yarn cache was corrupted
-2. **Dependency Resolution Issues**: ESLint was trying to copy a corrupted file from cache
-3. **Merge Conflicts**: The ESLint config file had unresolved merge conflicts
-4. **Cache Inconsistency**: Different versions of `find-up` were being resolved
+## Solution Implemented
 
-## Solutions Implemented
+### 1. Updated `netlify.toml`
+- Added custom build command that runs our fix script
+- Configured Yarn environment variables to prevent cache issues
+- Added cache directory configuration
 
-### 1. Fixed ESLint Configuration
-- Resolved merge conflicts in `eslint.config.js`
-- Added proper TypeScript parser imports
-- Fixed plugin configuration syntax
+### 2. Created `scripts/netlify-build-fix.sh`
+A comprehensive build script that:
+- Clears problematic caches
+- Forces clean dependency installation
+- Verifies critical dependencies
+- Handles missing files (like the arg LICENSE.md)
+- Provides detailed logging
 
-### 2. Enhanced Build Scripts
-- Created `netlify-build.sh` with specialized handling for the find-up issue
-- Added multiple fallback strategies for dependency installation
-- Implemented aggressive cache clearing for corrupted packages
+### 3. Added `.yarnrc.yml`
+Configuration file that:
+- Disables immutable installs
+- Sets appropriate timeouts
+- Configures cache settings to prevent corruption
+- Enables better error handling
 
-### 3. Yarn Configuration
-- Created `.yarnrc` with conservative settings
-- Added specific resolutions for `find-up` package in `package.json`
-- Configured Yarn to avoid problematic cache features
+### 4. Updated `package.json`
+Added `build:netlify-fix` script as an alternative build method.
 
-### 4. Netlify Configuration
-- Created `netlify.toml` with proper build settings
-- Set appropriate timeouts and environment variables
-- Configured build command to use our specialized script
+## How to Use
 
-## Key Changes Made
+### Option 1: Automatic (Recommended)
+The fix is now automatically applied through the `netlify.toml` configuration. Just trigger a new deployment.
 
-### Files Modified:
-1. `eslint.config.js` - Fixed merge conflicts and syntax
-2. `build.sh` - Updated to use specialized Netlify script
-3. `package.json` - Added find-up resolutions
-4. `.yarnrc` - Created with conservative settings
+### Option 2: Manual
+If you need to manually trigger the fix:
+```bash
+bash scripts/netlify-build-fix.sh
+```
 
-### Files Created:
-1. `netlify-build.sh` - Specialized build script for Netlify
-2. `netlify.toml` - Netlify configuration
-3. `NETLIFY_BUILD_FIX.md` - This documentation
+### Option 3: Alternative Build Command
+Use the alternative build script:
+```bash
+yarn build:netlify-fix
+```
 
-## Build Process Flow
+## What the Fix Does
 
-1. **Cache Clearing**: Remove all corrupted packages from cache
-2. **Dependency Installation**: Try multiple strategies:
-   - Standard frozen lockfile installation
-   - Installation without frozen lockfile
-   - Manual installation of critical packages
-   - NPM fallback if Yarn fails
-3. **Verification**: Check that find-up package is properly installed
-4. **Build**: Run the actual build process
+1. **Cache Clearing**: Removes corrupted cache files that cause ENOENT errors
+2. **Force Reinstall**: Uses `--force` and `--no-cache` flags to ensure clean installation
+3. **Dependency Verification**: Checks for critical packages and reinstalls if missing
+4. **Missing File Recovery**: Creates missing files (like LICENSE.md) when possible
+5. **Detailed Logging**: Provides clear feedback on what's happening during the build
+
+## Environment Variables Set
+
+- `YARN_CACHE_FOLDER`: Sets explicit cache location
+- `YARN_ENABLE_IMMUTABLE_INSTALLS`: Disables immutable installs to allow recovery
+- `NODE_OPTIONS`: Maintains existing memory and OpenSSL settings
 
 ## Testing
-- ✅ Local installation works with `yarn install --frozen-lockfile`
-- ✅ Local build completes successfully
-- ✅ All dependencies resolve correctly
 
-## Recommendations for Netlify
+To test the fix locally:
+```bash
+# Simulate the Netlify environment
+export NODE_ENV=production
+export YARN_CACHE_FOLDER=.yarn_cache
+bash scripts/netlify-build-fix.sh
+```
 
-1. **Use the new build script**: The `netlify-build.sh` script handles the specific find-up issue
-2. **Monitor cache**: If issues persist, consider disabling Yarn cache entirely
-3. **Update dependencies**: Consider upgrading to Yarn v3+ for better reliability
-4. **Alternative**: Switch to npm if Yarn continues to cause issues
+## Rollback
 
-## Fallback Options
+If needed, you can revert to the original build command by updating `netlify.toml`:
+```toml
+[build]
+  functions = "netlify/functions"
+  command = "yarn build"
+```
 
-If the issue persists, you can:
+## Additional Notes
 
-1. **Use npm instead of Yarn**:
-   ```bash
-   rm yarn.lock
-   npm install --legacy-peer-deps
-   ```
-
-2. **Disable Yarn cache completely**:
-   ```bash
-   yarn install --no-cache --prefer-offline
-   ```
-
-3. **Use a different Node.js version**:
-   - Try Node.js 18.x instead of 20.x
-   - Update `.nvmrc` accordingly
-
-## Monitoring
-
-The build script includes extensive logging to help diagnose any future issues. Check the Netlify build logs for:
-- Cache clearing messages
-- Installation attempt details
-- Package verification results
-- Build completion status
-
-This fix should resolve the find-up package corruption issue and allow your Netlify builds to complete successfully.
+- The fix is designed to be idempotent (safe to run multiple times)
+- It preserves your existing build configuration
+- All changes are backward compatible
+- The script includes error handling and will fail fast if critical issues occur

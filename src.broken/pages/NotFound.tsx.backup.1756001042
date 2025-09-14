@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { useEffect } from "react";
+import Head from "next/head";
+
+const NotFound = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    console.error(
+      "404 Error: User attempted to access non-existent route:",
+      router.asPath
+    );
+  }, [router.asPath]);
+
+  const path = router.asPath || '';
+  const title = path && path !== '/' ? `404 – ${path} not found` : '404 – Page Not Found';
+  const description = `The page at ${path || 'this URL'} could not be found.`;
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || '';
+  const canonical = baseUrl && path ? `${baseUrl}${path}` : undefined;
+
+  return (
     <>
       <Head>
         <title>{title}</title>
@@ -20,4 +43,17 @@
       </div>
     </>
   );
+};
+
+export default NotFound;
+=======
+import React from 'react';
+export function toaster() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
 }
+>>>>>>> origin/cursor/website-audit-and-enhancement-63e3

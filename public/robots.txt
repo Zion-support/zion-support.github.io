@@ -2,21 +2,40 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://zion.app/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
 
-# Disallow certain paths
-Disallow: /api/
-Disallow: /admin/
-Disallow: /_next/
-Disallow: /private/
-Disallow: /temp/
+# Allow all search engines to access our content
+User-agent: Googlebot
+Allow: /
 
-# Allow important content
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block access to admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /automation/
+Disallow: /scripts/
+
+# Allow access to our new revolutionary content
+Allow: /blog/ai-2025-generative-intelligence-revolution-complete-guide
+Allow: /resources/quantum-ai-superintelligence-implementation-master-guide-2025
+Allow: /case-studies/fortune-500-quantum-ai-transformation-2025-ultimate-success-story-5-billion-roi
+
+# High priority pages for crawling
+User-agent: *
 Allow: /blog/
-Allow: /case-studies/
 Allow: /resources/
-Allow: /tools/
+Allow: /case-studies/
 Allow: /services/
+Allow: /about/
+Allow: /contact/

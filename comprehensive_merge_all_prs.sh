@@ -18,9 +18,6 @@ resolve_conflicts() {
         
         # Remove conflict markers and combine content intelligently
         awk '
-        /^<<<<<<< HEAD$/ { in_conflict=1; next }
-        /^=======$/ { next }
-        /^>>>>>>> / { in_conflict=0; next }
         !in_conflict { print }
         in_conflict && /^[[:space:]]*$/ { print }
         in_conflict && /import/ { print }
