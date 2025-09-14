@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight, Star, TrendingUp, Users, Award, Zap } from 'lucide-react';
 
 const NewContent2025UltimateShowcase = () => {
@@ -38,6 +39,8 @@ const NewContent2025UltimateShowcase = () => {
                 <h3 className="text-lg font-bold">AI Enterprise Transformation</h3>
               </div>
 =======
+=======
+>>>>>>> origin/main
 
 const NewContent2025UltimateShowcase = () => {
   return (
@@ -168,6 +171,7 @@ const NewContent2025UltimateShowcase = () => {
               >
                 Download Guide
               </Link>
+<<<<<<< HEAD
 >>>>>>> origin/main
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -264,11 +268,15 @@ const NewContent2025UltimateShowcase = () => {
           <div className="text-center">
             <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
             <div className="text-gray-300">Support Available</div>
+=======
+            </div>
+>>>>>>> origin/main
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20">
             <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
@@ -303,6 +311,26 @@ const NewContent2025UltimateShowcase = () => {
             <span className="bg-white bg-opacity-10 px-4 py-2 rounded-full text-sm">Digital Transformation</span>
             <span className="bg-white bg-opacity-10 px-4 py-2 rounded-full text-sm">Cloud Migration</span>
             <span className="bg-white bg-opacity-10 px-4 py-2 rounded-full text-sm">AI Ethics Framework</span>
+=======
+          <h3 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h3>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join thousands of organizations already benefiting from our AI solutions. 
+            Get started with a free consultation and discover your transformation potential.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+            >
+              Get Free Consultation
+            </Link>
+            <Link
+              href="/services"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors text-lg"
+            >
+              Explore Services
+            </Link>
+>>>>>>> origin/main
           </div>
 =======
           <h3 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h3>

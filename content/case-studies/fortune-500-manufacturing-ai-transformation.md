@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Fortune 500 Manufacturing: $50M AI Transformation Success Story"
 description: "Discover how a Fortune 500 manufacturing company achieved $50M in cost savings and 340% ROI through comprehensive AI transformation."
 date: "2025-01-17"
@@ -264,6 +265,8 @@ The key to success was a holistic approach that combined technology excellence w
 
 **Contact us today for a free consultation and transformation assessment.**
 =======
+=======
+>>>>>>> origin/main
 title: "Fortune 500 Manufacturing Giant Achieves 99.2% Uptime with AI Transformation"
 excerpt: "How a global manufacturing leader transformed operations with AI, achieving 99.2% uptime and $34.7M in annual savings."
 date: "2025-01-15"
@@ -485,5 +488,9 @@ The success of this transformation demonstrates that AI is not just a technology
 
 ---
 
+<<<<<<< HEAD
+*This case study demonstrates Zion Tech Group's expertise in manufacturing AI transformation. Contact us to learn how we can help your organization achieve similar results.*
+>>>>>>> origin/main
+=======
 *This case study demonstrates Zion Tech Group's expertise in manufacturing AI transformation. Contact us to learn how we can help your organization achieve similar results.*
 >>>>>>> origin/main
