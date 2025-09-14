@@ -1,5 +1,8 @@
 'use client';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1ab1
 import React, { useState, useEffect } from 'react';
 
 interface APIEndpoint {

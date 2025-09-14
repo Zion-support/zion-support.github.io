@@ -1,5 +1,8 @@
 'use client';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1ab1
 import React, { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
