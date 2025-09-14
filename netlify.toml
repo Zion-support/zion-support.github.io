@@ -1,12 +1,15 @@
 [build]
   # Build command
-  command = "npm run build:netlify"
+  command = "npm run build"
   
   # Directory to publish
   publish = "dist"
   
   # Functions directory
   functions = "netlify/functions"
+  
+  # Disable framework auto-detection
+  edge_functions = false
 
 [build.environment]
   # Node.js version
@@ -28,6 +31,11 @@
   
   # Ensure Vite is available
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  
+  # Disable Next.js auto-detection
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Force Vite build mode
+  NETLIFY_USE_NEXT_PLUGIN = "false"
 
 # Cache configuration to prevent dependency issues
 [build.cache]
