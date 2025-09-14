@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, TrendingUp, Zap, Shield, Target } from 'lucide-react';
+import { X, ArrowRight, TrendingUp, Zap, Shield } from 'lucide-react';
 
 const EnterpriseAIAgentsRevolutionaryBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -62,7 +62,7 @@ const EnterpriseAIAgentsRevolutionaryBanner = () => {
       type: 'Resource',
       metrics: 'Master Guide • 35 min read • Complete Framework',
       url: '/resources/enterprise-ai-agents-implementation-master-guide-2025',
-      icon: <Target className="w-6 h-6 text-blue-500" />,
+      icon: <Award className="w-6 h-6 text-blue-500" />,
       gradient: 'from-blue-600 via-cyan-600 to-indigo-600'
     }
   ];

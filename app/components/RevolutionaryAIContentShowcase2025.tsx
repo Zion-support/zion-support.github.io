@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ChevronRight, Star, TrendingUp, Users, Clock, Award, Target, Zap } from 'lucide-react';
+import { ChevronRight, Star, TrendingUp, Users, Clock, Award,  Zap } from 'lucide-react';
 
 const RevolutionaryAIContentShowcase2025 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
