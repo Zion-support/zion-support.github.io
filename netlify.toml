@@ -1,12 +1,11 @@
 [build]
+  command = "npm run build:netlify"
+  publish = "dist"
   functions = "netlify/functions"
 
 [build.environment]
-  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
+  NODE_OPTIONS = "--max-old-space-size=6144"
   NODE_ENV = "production"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
