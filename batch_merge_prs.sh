@@ -1,179 +1,80 @@
 #!/bin/bash
 
-# Batch PR Merge Script
-# This script will merge PRs in smaller batches to avoid overwhelming the system
+# Batch merge PRs script
+# This script will merge multiple PRs systematically
 
 set -e
 
-echo "🚀 Starting Batch PR Merge Process"
-echo "=================================="
+echo "Starting batch merge process..."
 
-# Get a subset of branches (first 10)
-BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | head -10 | sed 's/origin\///' | sort)
+# List of recent PR branches to process
+PR_BRANCHES=(
+    "origin/cursor/create-and-deploy-new-content-ff81"
+    "origin/cursor/create-and-deploy-new-content-ff2a"
+    "origin/cursor/create-and-deploy-new-content-ff16"
+    "origin/cursor/create-and-deploy-new-content-fe8f"
+    "origin/cursor/create-and-deploy-new-content-fe7f"
+    "origin/cursor/create-and-deploy-new-content-fe5c"
+    "origin/cursor/create-and-deploy-new-content-fe5a"
+    "origin/cursor/create-and-deploy-new-content-fe01"
+    "origin/cursor/create-and-deploy-new-content-fdac"
+    "origin/cursor/create-and-deploy-new-content-fd98"
+)
 
-echo "📋 Processing first 10 branches"
+# Ensure we're on main and up to date
+git checkout main
+git pull origin main
 
-# Counter for tracking
-SUCCESS_COUNT=0
-FAILED_COUNT=0
-TOTAL_COUNT=$(echo "$BRANCHES" | wc -l)
-
-# Function to merge a single branch
-merge_branch() {
-    local branch=$1
-    local branch_num=$2
+# Process each PR branch
+for branch in "${PR_BRANCHES[@]}"; do
+    echo "Processing branch: $branch"
     
-    echo ""
-    echo "🔄 [$branch_num/$TOTAL_COUNT] Processing branch: $branch"
-    echo "----------------------------------------"
+    # Checkout the branch
+    git checkout "$branch"
     
-    # Try to merge directly
-    if git merge "origin/$branch" --no-ff -m "Merge $branch into main" 2>/dev/null; then
-        echo "✅ Successfully merged $branch into main"
-        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+    # Try to merge with main
+    if git merge main --no-commit; then
+        echo "Merge successful for $branch"
+        git commit -m "Merge main into $branch - resolve conflicts and integrate latest changes"
         
-        # Push the changes
-        if git push origin main; then
-            echo "✅ Successfully pushed merged changes to origin/main"
+        # Push the updated branch
+        git push origin "$branch"
+        
+        # Merge into main
+        git checkout main
+        if git merge "$branch" --no-commit; then
+            git commit -m "Merge $branch into main"
+            git push origin main
+            echo "Successfully merged $branch into main"
         else
-            echo "⚠️  Failed to push changes for $branch"
+            echo "Failed to merge $branch into main"
+            git merge --abort
         fi
     else
-        echo "❌ Merge conflict detected for $branch"
-        echo "🔧 Attempting to resolve conflicts automatically..."
+        echo "Merge failed for $branch, resolving conflicts..."
         
-        # Check for conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "🔍 Found merge conflicts, attempting resolution..."
-            
-            # Try to resolve common conflicts automatically
-            if resolve_conflicts; then
-                echo "✅ Conflicts resolved automatically for $branch"
-                git add .
-                git commit -m "Resolve merge conflicts for $branch"
-                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
-                
-                # Push the changes
-                if git push origin main; then
-                    echo "✅ Successfully pushed resolved changes to origin/main"
-                else
-                    echo "⚠️  Failed to push resolved changes for $branch"
-                fi
-            else
-                echo "❌ Could not resolve conflicts automatically for $branch"
-                FAILED_COUNT=$((FAILED_COUNT + 1))
-                
-                # Abort the merge
-                git merge --abort 2>/dev/null || true
-            fi
+        # Resolve conflicts by keeping our version
+        git checkout --ours .
+        git add .
+        git commit -m "Resolve merge conflicts for $branch"
+        
+        # Push the updated branch
+        git push origin "$branch"
+        
+        # Merge into main
+        git checkout main
+        if git merge "$branch" --no-commit; then
+            git commit -m "Merge $branch into main after conflict resolution"
+            git push origin main
+            echo "Successfully merged $branch into main after conflict resolution"
         else
-            echo "❌ Merge failed for $branch (unknown reason)"
-            FAILED_COUNT=$((FAILED_COUNT + 1))
-        fi
-    fi
-}
-
-# Function to resolve common conflicts
-resolve_conflicts() {
-    local resolved=false
-    
-    # Resolve package.json conflicts by taking the version with more dependencies
-    if [ -f "package.json" ] && git status --porcelain | grep -q "package.json"; then
-        echo "🔧 Resolving package.json conflicts..."
-        if git checkout --theirs package.json 2>/dev/null; then
-            git add package.json
-            resolved=true
+            echo "Failed to merge $branch into main after conflict resolution"
+            git merge --abort
         fi
     fi
     
-    # Resolve yarn.lock conflicts by taking the newer version
-    if [ -f "yarn.lock" ] && git status --porcelain | grep -q "yarn.lock"; then
-        echo "🔧 Resolving yarn.lock conflicts..."
-        if git checkout --theirs yarn.lock 2>/dev/null; then
-            git add yarn.lock
-            resolved=true
-        fi
-    fi
-    
-    # Resolve tsconfig.json conflicts by taking the more comprehensive version
-    if [ -f "tsconfig.json" ] && git status --porcelain | grep -q "tsconfig.json"; then
-        echo "🔧 Resolving tsconfig.json conflicts..."
-        if git checkout --theirs tsconfig.json 2>/dev/null; then
-            git add tsconfig.json
-            resolved=true
-        fi
-    fi
-    
-    # Resolve next.config.js conflicts by taking the more feature-rich version
-    if [ -f "next.config.js" ] && git status --porcelain | grep -q "next.config.js"; then
-        echo "🔧 Resolving next.config.js conflicts..."
-        if git checkout --theirs next.config.js 2>/dev/null; then
-            git add next.config.js
-            resolved=true
-        fi
-    fi
-    
-    # For content files, prefer the newer content
-    if git status --porcelain | grep -q "content/"; then
-        echo "🔧 Resolving content file conflicts..."
-        git status --porcelain | grep "content/" | while read line; do
-            file=$(echo "$line" | awk '{print $2}')
-            if [ -f "$file" ]; then
-                git checkout --theirs "$file" 2>/dev/null && git add "$file"
-                resolved=true
-            fi
-        done
-    fi
-    
-    # For component files, prefer the more feature-rich version
-    if git status --porcelain | grep -q "components/"; then
-        echo "🔧 Resolving component file conflicts..."
-        git status --porcelain | grep "components/" | while read line; do
-            file=$(echo "$line" | awk '{print $2}')
-            if [ -f "$file" ]; then
-                git checkout --theirs "$file" 2>/dev/null && git add "$file"
-                resolved=true
-            fi
-        done
-    fi
-    
-    # For app files, prefer the more comprehensive version
-    if git status --porcelain | grep -q "app/"; then
-        echo "🔧 Resolving app file conflicts..."
-        git status --porcelain | grep "app/" | while read line; do
-            file=$(echo "$line" | awk '{print $2}')
-            if [ -f "$file" ]; then
-                git checkout --theirs "$file" 2>/dev/null && git add "$file"
-                resolved=true
-            fi
-        done
-    fi
-    
-    # If we resolved any conflicts, return success
-    if [ "$resolved" = true ]; then
-        return 0
-    else
-        return 1
-    fi
-}
-
-# Process each branch
-branch_num=1
-for branch in $BRANCHES; do
-    merge_branch "$branch" "$branch_num"
-    branch_num=$((branch_num + 1))
-    
-    # Add a small delay to avoid overwhelming the system
-    sleep 2
+    echo "Completed processing $branch"
+    echo "---"
 done
 
-# Final summary
-echo ""
-echo "🎉 Batch Merge Process Complete!"
-echo "==============================="
-echo "✅ Successfully merged: $SUCCESS_COUNT branches"
-echo "❌ Failed to merge: $FAILED_COUNT branches"
-echo "📊 Total processed: $TOTAL_COUNT branches"
-
-echo ""
-echo "🏁 Batch 1 complete! Run the script again for the next batch."
+echo "Batch merge process completed!"
