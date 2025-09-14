@@ -7,9 +7,6 @@
   
   # Functions directory
   functions = "netlify/functions"
-  
-  # Edge functions directory
-  edge_functions = "edge-functions"
 
 [build.environment]
   # Node.js version
