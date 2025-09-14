@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 import React, { useMemo, useState } from 'react';
 import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react';
 import { buildPrintableHtml } from '../../utils/export/buildHtml';

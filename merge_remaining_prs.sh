@@ -1,58 +1,53 @@
 #!/bin/bash
 
-# Script to merge all remaining open PRs
+# Script to merge remaining PRs efficiently
 set -e
 
-echo "Starting to merge all remaining open PRs..."
+PR_BRANCHES=(
+    "cursor/create-and-deploy-new-content-ff10"  # PR 17483
+    "cursor/create-and-deploy-new-content-689e"  # PR 17482
+    "cursor/create-and-deploy-new-content-41b2"  # PR 17480
+    "cursor/create-and-deploy-new-content-764e"  # PR 17479
+    "cursor/create-and-deploy-new-content-9a40"  # PR 17478
+    "cursor/create-and-deploy-new-content-d87d"  # PR 17477
+    "cursor/create-and-deploy-new-content-0ecd"  # PR 17475
+)
 
-# Get list of open PRs
-PRS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open" | python3 -c "
-import json, sys
-data = json.load(sys.stdin)
-for pr in data:
-    print(f'{pr[\"number\"]}:{pr[\"head\"][\"ref\"]}')
-")
-
-for pr_info in $PRS; do
-    pr_number=$(echo $pr_info | cut -d: -f1)
-    branch_name=$(echo $pr_info | cut -d: -f2)
+for branch in "${PR_BRANCHES[@]}"; do
+    echo "Processing branch: $branch"
     
-    echo "Processing PR #$pr_number with branch $branch_name"
-    
-    # Fetch latest changes
-    git fetch origin
-    
-    # Checkout the PR branch
-    git checkout $branch_name || {
-        echo "Failed to checkout $branch_name, skipping..."
+    # Checkout the branch
+    git checkout "$branch" 2>/dev/null || {
+        echo "Branch $branch not found, skipping..."
         continue
     }
     
-    # Merge main into the branch
-    git merge main || {
-        echo "Merge conflicts in $branch_name, resolving automatically..."
-        # Resolve conflicts automatically
-        find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.md" -o -name "*.toml" -o -name "*.json" -o -name "*.yaml" -o -name "*.lock" | xargs sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> main$/d' 2>/dev/null || true
+    # Try to merge with main
+    if git merge main --no-edit 2>/dev/null; then
+        echo "✅ No conflicts in $branch"
+    else
+        echo "⚠️  Conflicts found in $branch, resolving..."
+        
+        # Resolve conflicts by using HEAD version for common conflicted files
+        git checkout --ours app/page.tsx content/index.yaml app/layout.tsx app/sitemap.ts 2>/dev/null || true
+        git checkout --ours app/components/UltimateContentShowcase2025.tsx 2>/dev/null || true
+        
+        # Add all changes
         git add .
-        git commit -m "Resolve merge conflicts in PR #$pr_number" || true
-    }
+        
+        # Commit the merge
+        git commit -m "Resolve merge conflicts in $branch - used HEAD version for conflicted files" || {
+            echo "❌ Failed to commit $branch"
+            git merge --abort
+            continue
+        }
+    fi
     
-    # Switch back to main
+    # Switch back to main and merge
     git checkout main
+    git merge "$branch" --no-edit
     
-    # Merge the PR branch into main
-    git merge $branch_name || {
-        echo "Merge conflicts when merging $branch_name into main, resolving automatically..."
-        # Resolve conflicts automatically
-        find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.md" -o -name "*.toml" -o -name "*.json" -o -name "*.yaml" -o -name "*.lock" | xargs sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> main$/d' 2>/dev/null || true
-        git add .
-        git commit -m "Merge PR #$pr_number: Resolve conflicts and integrate content" || true
-    }
-    
-    echo "Successfully merged PR #$pr_number"
+    echo "✅ Successfully merged $branch into main"
 done
 
-# Push all changes
-git push origin main --force
-
-echo "All PRs have been processed and merged!"
+echo "🎉 All PRs processed successfully!"

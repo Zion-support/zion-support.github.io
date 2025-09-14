@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Quantum AI 2026: The Business Breakthrough - $100B Market Transformation',
@@ -11,7 +10,7 @@ export const metadata = {
 
 export default function QuantumAI2026BusinessBreakthrough() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="Quantum AI 2026: The Business Breakthrough - $100B Market Transformation"
         description="Discover how Quantum AI 2026 is revolutionizing business operations with 400-600% ROI, 1,200% speed improvements, and 99.97% accuracy."
@@ -249,6 +248,6 @@ export default function QuantumAI2026BusinessBreakthrough() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

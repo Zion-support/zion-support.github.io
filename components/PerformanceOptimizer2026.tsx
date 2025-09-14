@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 import React, { useEffect } from 'react';
 
 export default function PerformanceOptimizer2026() {

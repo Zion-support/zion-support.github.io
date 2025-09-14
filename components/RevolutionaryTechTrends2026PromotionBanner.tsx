@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowRight, TrendingUp, Zap, Brain, Cpu, Globe, Shield, Rocket } from 'lucide-react';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Tag, Clock, Share2, Cpu, Zap, Database, Award } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Tag, Clock, Share2,  Zap, Database, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Quantum Computing Business Applications: The 2025 Revolution | Zion Tech Group',
@@ -281,7 +281,7 @@ export default function QuantumComputingBusinessApplications() {
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Emerging Technologies</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex items-center">
-                      <Cpu className="w-5 h-5 text-indigo-500 mr-3" />
+                      <Brain className="w-5 h-5 text-indigo-500 mr-3" />
                       <span className="text-gray-700">Fault-Tolerant Quantum Computers</span>
                     </div>
                     <div className="flex items-center">

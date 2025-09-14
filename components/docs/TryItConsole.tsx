@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 import React, { useMemo, useState } from 'react';
 
 interface TryItProps {

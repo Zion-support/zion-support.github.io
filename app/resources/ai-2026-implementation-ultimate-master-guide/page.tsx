@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2, Download, BookOpen, CheckCircle, Target, Zap, Award } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, Tag, Share2, Download, BookOpen, CheckCircle,  Zap, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI 2026 Implementation: Ultimate Master Guide - Complete Roadmap to Success',
@@ -307,7 +307,7 @@ export default function AI2026ImplementationMasterGuidePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="bg-gradient-to-r from-green-500 to-teal-500 text-white p-6 rounded-lg text-center">
-              <Target className="w-8 h-8 mx-auto mb-4" />
+              <Award className="w-8 h-8 mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">Financial Metrics</h3>
               <ul className="text-sm space-y-1">
                 <li>• Return on Investment (ROI)</li>

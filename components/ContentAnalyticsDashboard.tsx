@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 import React, { useState, useEffect } from 'react';
 import { BarChart3, TrendingUp, Users, Eye, Clock, Star, Share2, BookOpen } from 'lucide-react';
 

@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 import { useEffect } from 'react';
 
 const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https://apps.apple.com/app/id0000000000';

@@ -1,10 +1,8 @@
 'use client';
-
 import React, { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 
-// Metadata removed for client component
 
 export default function AI2026ROICalculator() {
   const [inputs, setInputs] = useState({

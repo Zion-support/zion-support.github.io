@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 import { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';

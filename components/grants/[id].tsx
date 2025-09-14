@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';

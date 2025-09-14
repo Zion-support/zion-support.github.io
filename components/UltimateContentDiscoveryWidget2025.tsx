@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Search, Filter, TrendingUp, Star, Clock, ArrowRight, BookOpen, Users, Target, Zap } from 'lucide-react';
