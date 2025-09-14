@@ -109,8 +109,25 @@ import UltimateContentShowcase2025Banner from './components/UltimateContentShowc
 import UltimateBreakthroughContentShowcase2025 from './components/UltimateBreakthroughContentShowcase2025';
 
 // Import new AI Content Revolution promotional components
+<<<<<<< HEAD
 import AIContentRevolution2025Banner from '../components/AIContentRevolution2025Banner';
 import AIContentRevolutionShowcase2025 from '../components/AIContentRevolutionShowcase2025';
+=======
+import AIContentRevolution2025Banner from './components/AIContentRevolution2025Banner';
+import AIContentRevolutionShowcase2025 from './components/AIContentRevolutionShowcase2025';
+
+// Import new Quantum-Neural Fusion promotional components
+import QuantumNeuralFusionRevolutionBanner from './components/QuantumNeuralFusionRevolutionBanner';
+import QuantumNeuralFusionShowcase from './components/QuantumNeuralFusionShowcase';
+
+// Import new Ultimate Autonomous Business Revolution promotional components
+import UltimateAutonomousBusinessRevolutionBanner from './components/UltimateAutonomousBusinessRevolutionBanner';
+import UltimateAutonomousBusinessShowcase from './components/UltimateAutonomousBusinessShowcase';
+
+// Import new Ultimate AI Revolution promotional components
+import AI2025UltimateRevolutionBanner from './components/AI2025UltimateRevolutionBanner';
+import UltimateAIRevolutionShowcase from './components/UltimateAIRevolutionShowcase';
+>>>>>>> cursor/create-and-deploy-new-content-11fa
 
 // Import new Ultimate Enterprise Transformation components
 import AI2025UltimateEnterpriseTransformationBanner from '../components/AI2025UltimateEnterpriseTransformationBanner';
@@ -272,6 +289,7 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
         {/* AI 2025 ULTIMATE BUSINESS INTELLIGENCE REVOLUTION BANNER - NEWEST FEATURED */}
         <AI2025UltimateBusinessIntelligenceRevolutionBanner />
         
@@ -286,6 +304,13 @@ export default function HomePage() {
         
         {/* AI INNOVATION SHOWCASE 2025 BANNER - NEWEST FEATURED */}
         <AIInnovationShowcase2025Banner />
+=======
+        {/* ULTIMATE AUTONOMOUS BUSINESS REVOLUTION BANNER - NEWEST BREAKTHROUGH */}
+        <UltimateAutonomousBusinessRevolutionBanner />
+        
+        {/* ULTIMATE AUTONOMOUS BUSINESS SHOWCASE - NEWEST FEATURED */}
+        <UltimateAutonomousBusinessShowcase />
+>>>>>>> cursor/create-and-deploy-new-content-11fa
         
         {/* QUANTUM-NEURAL FUSION REVOLUTION BANNER - NEWEST BREAKTHROUGH */}
         <QuantumNeuralFusionRevolutionBanner />
