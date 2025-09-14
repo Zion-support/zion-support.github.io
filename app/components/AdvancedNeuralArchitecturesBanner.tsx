@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronRightIcon, XMarkIcon, SparklesIcon, CpuChipIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import { ChevronRightIcon, XMarkIcon, SparklesIconChipIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 
 const AdvancedNeuralArchitecturesBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -168,7 +168,7 @@ const AdvancedNeuralArchitecturesBanner = () => {
                 href="/services/ai-implementation"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors flex items-center"
               >
-                <CpuChipIcon className="w-5 h-5 mr-2" />
+                <BrainChipIcon className="w-5 h-5 mr-2" />
                 Get AI Implementation Help
               </Link>
             </div>

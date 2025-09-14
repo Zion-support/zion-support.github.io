@@ -1,6 +1,7 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 
 export default function NewContent2025UltimateBreakthroughBanner() {
   return (
@@ -162,18 +163,3 @@ const NewContent2025UltimateBreakthroughBanner = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-  );
-}
-=======
-      
-      {/* Animated Background Elements */}
-      <div className="absolute top-4 right-4 w-20 h-20 bg-purple-500/10 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-4 left-4 w-16 h-16 bg-blue-500/10 rounded-full animate-pulse delay-1000"></div>
-    </div>
-  );
-};
-
-export default NewContent2025UltimateBreakthroughBanner;
->>>>>>> 37d015f531208ae6fae69d4af3de909c50a3bafc

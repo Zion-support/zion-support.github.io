@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'AI 2025 Cybersecurity Revolution: Next-Generation Threat Protection',
@@ -11,7 +10,7 @@ export const metadata = {
 
 export default function AI2025CybersecurityPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2025 Cybersecurity Revolution: Next-Generation Threat Protection"
         description="Discover how AI is revolutionizing cybersecurity in 2025. Learn about advanced threat detection, automated response systems, and next-generation security solutions."
@@ -312,6 +311,6 @@ export default function AI2025CybersecurityPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

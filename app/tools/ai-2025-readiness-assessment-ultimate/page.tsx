@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 // import { Progress } from '../../../../components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, XCircle, AlertCircle, TrendingUp, Target, Zap } from 'lucide-react';
+import { CheckCircle, XCircle, AlertCircle, TrendingUp,  Zap } from 'lucide-react';
 
 interface AssessmentQuestion {
   id: string;
@@ -324,7 +324,7 @@ export default function AI2025ReadinessAssessment() {
       case 'Medium': return <AlertCircle className="w-5 h-5" />;
       case 'High': return <TrendingUp className="w-5 h-5" />;
       case 'Critical': return <XCircle className="w-5 h-5" />;
-      default: return <Target className="w-5 h-5" />;
+      default: return <Award className="w-5 h-5" />;
     }
   };
 
@@ -418,7 +418,7 @@ export default function AI2025ReadinessAssessment() {
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Target className="w-6 h-6" />
+                <Award className="w-6 h-6" />
                 Recommended Next Steps
               </CardTitle>
             </CardHeader>

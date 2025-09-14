@@ -3,7 +3,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'AI 2025: The Quantum Computing Revolution That\'s Reshaping Enterprise',
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function QuantumComputingRevolutionPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2025: The Quantum Computing Revolution That's Reshaping Enterprise"
         description="Discover how quantum computing is revolutionizing AI capabilities in 2025, delivering unprecedented processing power and solving previously impossible enterprise challenges."
@@ -182,6 +181,6 @@ export default function QuantumComputingRevolutionPage() {
           </div>
         </article>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

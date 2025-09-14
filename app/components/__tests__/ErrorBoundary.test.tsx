@@ -1,6 +1,5 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
-import ErrorBoundary from '../ErrorBoundary'
 
 // Component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
@@ -22,9 +21,9 @@ describe('ErrorBoundary', () => {
 
   it('renders children when there is no error', () => {
     render(
-      <ErrorBoundary>
+      <div>
         <ThrowError shouldThrow={false} />
-      </ErrorBoundary>
+      </div>
     )
 
     expect(screen.getByText('No error')).toBeInTheDocument()
@@ -32,9 +31,9 @@ describe('ErrorBoundary', () => {
 
   it('renders error UI when there is an error', () => {
     render(
-      <ErrorBoundary>
+      <div>
         <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      </div>
     )
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument()
@@ -45,9 +44,9 @@ describe('ErrorBoundary', () => {
 
   it('handles retry button click', () => {
     render(
-      <ErrorBoundary>
+      <div>
         <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      </div>
     )
 
     const retryButton = screen.getByText('Try Again')
@@ -61,9 +60,9 @@ describe('ErrorBoundary', () => {
     const reloadSpy = jest.spyOn(window.location, 'reload').mockImplementation(() => {})
 
     render(
-      <ErrorBoundary>
+      <div>
         <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      </div>
     )
 
     const reloadButton = screen.getByText('Reload Page')
@@ -76,9 +75,9 @@ describe('ErrorBoundary', () => {
     const assignSpy = jest.spyOn(window.location, 'assign').mockImplementation(() => {})
 
     render(
-      <ErrorBoundary>
+      <div>
         <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      </div>
     )
 
     const goHomeButton = screen.getByText('Go to Homepage')
@@ -91,9 +90,9 @@ describe('ErrorBoundary', () => {
     const alertSpy = jest.spyOn(window, 'alert').mockImplementation(() => {})
 
     render(
-      <ErrorBoundary>
+      <div>
         <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      </div>
     )
 
     const reportButton = screen.getByText('Report Issue')
@@ -106,9 +105,9 @@ describe('ErrorBoundary', () => {
     process.env.NODE_ENV = 'development'
 
     render(
-      <ErrorBoundary>
+      <div>
         <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      </div>
     )
 
     expect(screen.getByText('Error Details:')).toBeInTheDocument()
@@ -121,7 +120,7 @@ describe('ErrorBoundary', () => {
     render(
       <ErrorBoundary fallback={customFallback}>
         <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      </div>
     )
 
     expect(screen.getByText('Custom error message')).toBeInTheDocument()

@@ -61,7 +61,8 @@ const nextConfig = {
     tsconfigPath: './tsconfig.json'
   },
   eslint: {
-    ignoreDuringBuilds: false
+    ignoreDuringBuilds: false,
+    dirs: ['app', 'components', 'lib', 'utils']
   },
 };
 
