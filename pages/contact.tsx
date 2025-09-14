@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -371,7 +371,7 @@ export default function Contact() {
               </div>
             </motion.div>
           </div>
-        </section>
+        </div>
       </div>
     </Layout>
   );
