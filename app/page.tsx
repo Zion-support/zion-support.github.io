@@ -63,6 +63,10 @@ import NewContent2026UltimateShowcase from '../components/NewContent2026Ultimate
 // Import new 2025 quantum AI promotional components
 import QuantumAIRevolutionBanner2025 from '../components/QuantumAIRevolutionBanner2025';
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
+
+// Import new ultimate content promotional components
+import UltimateContent2025Banner from '../components/UltimateContent2025Banner';
+import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 
 // Import new 2026 ultimate promotional components
@@ -87,6 +91,9 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Ultimate Content 2025 Banner - NEW */}
+        <UltimateContent2025Banner />
+        
         {/* Revolutionary AI Content 2026 Banner - NEW FEATURED */}
         <RevolutionaryAIContent2026Banner />
         
@@ -95,6 +102,9 @@ export default function HomePage() {
         
         {/* New Content 2026 Ultimate Showcase - NEW FEATURED */}
         <NewContent2026UltimateShowcase />
+        
+        {/* Quantum AI Revolution Banner - NEW */}
+        <QuantumAIRevolutionBanner2025 />
         
         {/* New Content 2025 Ultimate Banner */}
         <NewContent2025UltimateBanner />
@@ -221,6 +231,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Revolutionary Content 2025 Showcase - NEW */}
+        <RevolutionaryContent2025Showcase />
+        
         {/* Content Promotion Banners */}
         <NewContentShowcase2025 />
         <UltimateContentShowcase2025 />
