@@ -93,6 +93,10 @@ import AI2025QuantumBreakthroughPromotionBanner from '../components/AI2025Quantu
 import AI2025AutonomousOperationsPromotionBanner from '../components/AI2025AutonomousOperationsPromotionBanner';
 import Fortune500SuccessStoryPromotionBanner from '../components/Fortune500SuccessStoryPromotionBanner';
 
+// Import neural interface promotional components
+import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
+import NeuralInterfaceContentShowcase2025 from '../components/NeuralInterfaceContentShowcase2025';
+
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
