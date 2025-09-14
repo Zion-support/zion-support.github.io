@@ -212,7 +212,7 @@ const AdvancedContentOptimization2026: React.FC = () => {
                             </span>
                           </div>
                           <div className="text-sm text-gray-600 mb-1">
-                            Current: {metric.current} → Target: {metric.target}
+                            Current: {metric.current} → CheckCircle: {metric.target}
                           </div>
                           <div className="text-green-600 font-semibold">
                             {metric.improvement}

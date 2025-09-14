@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
-import ErrorBoundary from '../../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   title: 'AI 2025 Smart Automation Breakthrough: The Future of Business Operations',
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function AI2025SmartAutomationBreakthroughPage() {
   return (
-    <ErrorBoundary>
+    <div>
       <SEO
         title="AI 2025 Smart Automation Breakthrough: The Future of Business Operations"
         description="Explore the revolutionary smart automation technologies transforming business operations in 2025. Learn about intelligent workflows, autonomous systems, and unprecedented efficiency gains."
@@ -273,6 +272,6 @@ export default function AI2025SmartAutomationBreakthroughPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </div>
   );
 }

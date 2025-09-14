@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import type { Room } from 'livekit-client';
 

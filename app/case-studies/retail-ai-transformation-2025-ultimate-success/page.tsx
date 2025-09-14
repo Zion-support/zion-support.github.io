@@ -1,8 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, TrendingUp, DollarSign, Users, CheckCircle, BarChart3, Target } from 'lucide-react';
-import SEO from '../../components/SEO';
+import { ArrowLeft, Calendar, User, Clock, TrendingUp, DollarSign, Users, CheckCircle, BarChart3 } from 'lucide-react';
+import SEO from '../../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'Retail AI Transformation 2025: How a $500M Company Achieved 600% ROI in 45 Days',
@@ -306,19 +306,19 @@ export default function RetailTransformationPage() {
               <h3 className="text-xl font-bold text-orange-600 mb-4">What Could Be Improved</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
-                  <Target className="w-5 h-5 mr-2 text-orange-500 mt-0.5" />
+                  <Award className="w-5 h-5 mr-2 text-orange-500 mt-0.5" />
                   <span><strong>Earlier Stakeholder Engagement:</strong> Involving all departments from day one</span>
                 </li>
                 <li className="flex items-start">
-                  <Target className="w-5 h-5 mr-2 text-orange-500 mt-0.5" />
+                  <Award className="w-5 h-5 mr-2 text-orange-500 mt-0.5" />
                   <span><strong>More Extensive Testing:</strong> Longer pilot periods for complex systems</span>
                 </li>
                 <li className="flex items-start">
-                  <Target className="w-5 h-5 mr-2 text-orange-500 mt-0.5" />
+                  <Award className="w-5 h-5 mr-2 text-orange-500 mt-0.5" />
                   <span><strong>Better Documentation:</strong> More comprehensive training materials</span>
                 </li>
                 <li className="flex items-start">
-                  <Target className="w-5 h-5 mr-2 text-orange-500 mt-0.5" />
+                  <Award className="w-5 h-5 mr-2 text-orange-500 mt-0.5" />
                   <span><strong>Faster Iteration:</strong> Shorter development cycles for rapid improvement</span>
                 </li>
               </ul>

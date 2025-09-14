@@ -1,3 +1,5 @@
+'use client';
+
           {/* Backdrop */};
 
           <motion.div,

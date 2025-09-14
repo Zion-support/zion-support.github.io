@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Clock, User, Calendar, Shield, Zap, Target, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Clock, User, Calendar, Shield, Zap, Award, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI 2025: The Cybersecurity Revolution - Ultimate Guide | Zion Tech Group',
@@ -114,7 +114,7 @@ export default function CybersecurityRevolutionPage() {
             </div>
             
             <div className="bg-purple-50 p-6 rounded-lg">
-              <Target className="w-8 h-8 text-purple-600 mb-4" />
+              <Award className="w-8 h-8 text-purple-600 mb-4" />
               <h4 className="font-bold text-lg mb-2">Computer Vision</h4>
               <p className="text-gray-600">
                 AI-powered visual analysis for access control and fraud detection.

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Star, TrendingUp, BookOpen, Download, Play,
-  Users, Award, Zap, Target, Rocket, Brain, Calendar, Clock
+  Users, Award, Zap,  Rocket, Brain, Calendar, Clock
 } from 'lucide-react';
 
 const AITrends2025_2030FuturePredictionsBanner: React.FC = () => {
@@ -54,7 +54,7 @@ const AITrends2025_2030FuturePredictionsBanner: React.FC = () => {
 
   const features = [
     { icon: <Calendar className="w-6 h-6" />, title: "5-Year Timeline", description: "Detailed predictions from 2025-2030" },
-    { icon: <Target className="w-6 h-6" />, title: "Enterprise Focus", description: "Business impact and implementation strategies" },
+    { icon: <Award className="w-6 h-6" />, title: "Enterprise Focus", description: "Business impact and implementation strategies" },
     { icon: <Rocket className="w-6 h-6" />, title: "Future Technology", description: "Cutting-edge AI breakthroughs and innovations" },
     { icon: <Award className="w-6 h-6" />, title: "Expert Insights", description: "Professional analysis and recommendations" }
   ];
