@@ -22,6 +22,20 @@ const StructuredData = lazy(() => import('../components/StructuredData'));
 const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
+// Lazy load promotional components for better performance
+const UltimateContent2025Banner = lazy(() => import('../components/UltimateContent2025Banner'));
+const RevolutionaryContent2025Showcase = lazy(() => import('../components/RevolutionaryContent2025Showcase'));
+const AI2025UltimateBreakthroughBanner = lazy(() => import('../components/AI2025UltimateBreakthroughBanner'));
+const RevolutionaryAIContent2026Banner = lazy(() => import('../components/RevolutionaryAIContent2026Banner'));
+const AI2026QuantumRevolutionUltimateBanner = lazy(() => import('../components/AI2026QuantumRevolutionUltimateBanner'));
+const NewContent2026UltimateShowcase = lazy(() => import('../components/NewContent2026UltimateShowcase'));
+const QuantumAIRevolutionBanner2025 = lazy(() => import('../components/QuantumAIRevolutionBanner2025'));
+const NewContent2025UltimateBanner = lazy(() => import('../components/NewContent2025UltimateBanner'));
+const AI2026UltimateShowcaseBanner = lazy(() => import('../components/AI2026UltimateShowcaseBanner'));
+const AI2026QuantumRevolutionBanner = lazy(() => import('../components/AI2026QuantumRevolutionBanner'));
+const AI2026AutonomousSystemsBanner = lazy(() => import('../components/AI2026AutonomousSystemsBanner'));
+const UltimatePromotionBanner2026 = lazy(() => import('../components/UltimatePromotionBanner2026'));
+
 // Import key promotional components
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
@@ -54,17 +68,13 @@ import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBa
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
 import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
 
-// Import new promotional components
+// Import remaining promotional components (non-lazy loaded)
 import RevolutionaryAI2026ContentBanner from '../components/RevolutionaryAI2026ContentBanner';
-import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
 
-// Import new 2025 quantum AI promotional components
-import QuantumAIRevolutionBanner2025 from '../components/QuantumAIRevolutionBanner2025';
+// Import remaining promotional components (non-lazy loaded)
 import NewContent2025UltimateShowcase from '../components/NewContent2025UltimateShowcase';
 
-// Import new ultimate content promotional components
-import UltimateContent2025Banner from '../components/UltimateContent2025Banner';
-import RevolutionaryContent2025Showcase from '../components/RevolutionaryContent2025Showcase';
+// Import remaining promotional components (non-lazy loaded)
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 
 // Import new 2025 breakthrough promotional components
@@ -77,9 +87,45 @@ import RevolutionaryContent2030PromotionBanner from '../components/Revolutionary
 import InteractiveContentDiscoveryWidget2030 from '../components/InteractiveContentDiscoveryWidget2030';
 
 export const metadata = {
-  title: 'Zion Tech Group - AI & Technology Solutions',
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords: ['AI automation', 'cloud computing', 'micro SaaS', 'technology consulting', 'enterprise solutions', 'digital transformation'],
+  title: 'Zion Tech Group - AI & Technology Solutions | 400-700% ROI Guaranteed',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Achieve 400-700% ROI with our proven AI implementation strategies. Expert consulting and implementation services.',
+  keywords: [
+    'AI automation', 'cloud computing', 'micro SaaS', 'technology consulting', 
+    'enterprise solutions', 'digital transformation', 'AI ROI', 'AI implementation',
+    '400% ROI', '700% ROI', 'AI transformation', 'enterprise AI', 'AI consulting',
+    'machine learning', 'artificial intelligence', 'business automation'
+  ],
+  openGraph: {
+    title: 'Zion Tech Group - AI & Technology Solutions | 400-700% ROI Guaranteed',
+    description: 'Transform your business with cutting-edge AI solutions. Achieve 400-700% ROI with our proven implementation strategies.',
+    type: 'website',
+    url: 'https://zion.app',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - AI Solutions with 400-700% ROI',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - AI & Technology Solutions | 400-700% ROI Guaranteed',
+    description: 'Transform your business with cutting-edge AI solutions. Achieve 400-700% ROI with our proven implementation strategies.',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function HomePage() {
@@ -93,38 +139,100 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "description": "Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Achieve 400-700% ROI with our proven AI implementation strategies.",
+              "url": "https://zion.app",
+              "logo": "https://zion.app/logo.png",
+              "sameAs": [
+                "https://twitter.com/ziontechgroup",
+                "https://linkedin.com/company/zion-tech-group"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-555-ZION-TECH",
+                "contactType": "customer service",
+                "areaServed": "US",
+                "availableLanguage": "English"
+              },
+              "offers": {
+                "@type": "Offer",
+                "name": "AI Implementation Services",
+                "description": "AI transformation services with guaranteed 400-700% ROI",
+                "priceRange": "$50,000 - $500,000",
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "127",
+                "bestRating": "5",
+                "worstRating": "1"
+              }
+            })
+          }}
+        />
+        
         {/* Ultimate Content 2025 Banner - NEW */}
-        <UltimateContent2025Banner />
+        <Suspense fallback={<LoadingSpinner />}>
+          <UltimateContent2025Banner />
+        </Suspense>
         
         {/* AI 2025 Ultimate Breakthrough Banner - NEW */}
-        <AI2025UltimateBreakthroughBanner />
+        <Suspense fallback={<LoadingSpinner />}>
+          <AI2025UltimateBreakthroughBanner />
+        </Suspense>
         
         {/* Revolutionary AI Content 2026 Banner - NEW FEATURED */}
-        <RevolutionaryAIContent2026Banner />
+        <Suspense fallback={<LoadingSpinner />}>
+          <RevolutionaryAIContent2026Banner />
+        </Suspense>
         
         {/* AI 2026 Quantum Revolution Ultimate Banner - NEW FEATURED */}
-        <AI2026QuantumRevolutionUltimateBanner />
+        <Suspense fallback={<LoadingSpinner />}>
+          <AI2026QuantumRevolutionUltimateBanner />
+        </Suspense>
         
         {/* New Content 2026 Ultimate Showcase - NEW FEATURED */}
-        <NewContent2026UltimateShowcase />
+        <Suspense fallback={<LoadingSpinner />}>
+          <NewContent2026UltimateShowcase />
+        </Suspense>
         
         {/* Quantum AI Revolution Banner - NEW */}
-        <QuantumAIRevolutionBanner2025 />
+        <Suspense fallback={<LoadingSpinner />}>
+          <QuantumAIRevolutionBanner2025 />
+        </Suspense>
         
         {/* New Content 2025 Ultimate Banner */}
-        <NewContent2025UltimateBanner />
+        <Suspense fallback={<LoadingSpinner />}>
+          <NewContent2025UltimateBanner />
+        </Suspense>
         
         {/* AI 2026 Ultimate Showcase Banner */}
-        <AI2026UltimateShowcaseBanner />
+        <Suspense fallback={<LoadingSpinner />}>
+          <AI2026UltimateShowcaseBanner />
+        </Suspense>
         
         {/* AI 2026 Quantum Revolution Banner */}
-        <AI2026QuantumRevolutionBanner />
+        <Suspense fallback={<LoadingSpinner />}>
+          <AI2026QuantumRevolutionBanner />
+        </Suspense>
         
         {/* AI 2026 Autonomous Systems Banner */}
-        <AI2026AutonomousSystemsBanner />
+        <Suspense fallback={<LoadingSpinner />}>
+          <AI2026AutonomousSystemsBanner />
+        </Suspense>
         
         {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner2026 />
+        <Suspense fallback={<LoadingSpinner />}>
+          <UltimatePromotionBanner2026 />
+        </Suspense>
         
         {/* Revolutionary Content 2025 Banner */}
         <RevolutionaryContent2025Banner />
