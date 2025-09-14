@@ -48,6 +48,18 @@ import NewContent2025PromotionBanner from '../components/NewContent2025Promotion
 import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
 import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
+import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
+import NewContentShowcase2026 from '../components/NewContentShowcase2026';
+import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
+import AI2026ContentShowcaseBanner from '../components/AI2026ContentShowcaseBanner';
+import RevolutionaryAI2026Banner from '../components/RevolutionaryAI2026Banner';
+
+// Import new 2026 promotional components
+import RevolutionaryQuantumSecurityBanner2026 from '../components/RevolutionaryQuantumSecurityBanner2026';
+import AutonomousEnterpriseRevolutionBanner2026 from '../components/AutonomousEnterpriseRevolutionBanner2026';
+import QuantumNeuralBreakthroughBanner2026 from '../components/QuantumNeuralBreakthroughBanner2026';
+import InteractiveContentDiscoveryWidget2026 from '../components/InteractiveContentDiscoveryWidget2026';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -66,6 +78,17 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+<<<<<<< HEAD
+=======
+        {/* New 2026 Revolutionary Banners */}
+        <RevolutionaryQuantumSecurityBanner2026 />
+        <AutonomousEnterpriseRevolutionBanner2026 />
+        <QuantumNeuralBreakthroughBanner2026 />
+        
+        {/* New Content 2025 Ultimate Banner */}
+        <NewContent2025UltimateBanner />
+        
+>>>>>>> cursor/create-and-deploy-new-content-ba4f
         {/* Ultimate Promotion Banner */}
         <UltimatePromotionBanner2026 />
         
@@ -179,8 +202,20 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Interactive Content Discovery */}
+        <InteractiveContentDiscoveryWidget2026 />
+        
         {/* Content Promotion Banners */}
+<<<<<<< HEAD
         <RevolutionaryContentBanner2025 />
+=======
+        <NewContent2026PromotionBanner />
+        <QuantumAI2026BreakthroughBanner />
+        <NewContentShowcase2026 />
+        <QuantumAIContentShowcase2026 />
+        <AI2026ContentShowcaseBanner />
+        <RevolutionaryAI2026Banner />
+>>>>>>> cursor/create-and-deploy-new-content-ba4f
         <UltimateContentShowcase2025 />
         <NewContent2025PromotionBanner />
         <LatestContentShowcase2025 />
