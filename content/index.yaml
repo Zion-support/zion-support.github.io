@@ -361,6 +361,57 @@ content_index:
         payback: "3.8 months"
 
   new_2025_content_latest:
+    - id: "advanced-automation-revolution"
+      type: "blog"
+      title: "AI 2025: The Advanced Automation Revolution - Ultimate Guide to 600% ROI"
+      file_path: "/content/blog/ai-2025-advanced-automation-revolution-ultimate-guide.md"
+      url: "/blog/ai-2025-advanced-automation-revolution-ultimate-guide"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI Automation", "Advanced Technology", "ROI", "Enterprise Solutions", "Digital Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$2.8B"
+        accuracy: "99.7%"
+        satisfaction: "99.8%"
+      reading_time: "22 min read"
+      
+    - id: "ai-transformation-600-roi"
+      type: "case-study"
+      title: "AI Transformation Success: $3.2B Company Achieves 600% ROI in 12 Months"
+      file_path: "/content/case-studies/ai-transformation-600-roi-success-story-2025.md"
+      url: "/case-studies/ai-transformation-600-roi-success-story-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "AI Transformation", "ROI", "Manufacturing", "Success Story", "600% ROI"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        savings: "$2.8B"
+        efficiency: "156%"
+        satisfaction: "99.7%"
+      reading_time: "18 min read"
+      
+    - id: "implementation-ultimate-framework"
+      type: "resource"
+      title: "AI Implementation Ultimate Framework 2025: From Strategy to 600% ROI"
+      file_path: "/content/resources/ai-implementation-ultimate-framework-2025.md"
+      url: "/resources/ai-implementation-ultimate-framework-2025"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Implementation Framework", "AI Strategy", "ROI", "Best Practices", "Fortune 500", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "600%"
+        success_rate: "95%"
+        time_to_value: "67% faster"
+        projects: "500+"
+      reading_time: "35 min read"
+      
     - id: "edge-computing-revolution"
       type: "blog"
       title: "AI 2025: The Edge Computing Revolution - Ultimate Guide to 450% ROI"
