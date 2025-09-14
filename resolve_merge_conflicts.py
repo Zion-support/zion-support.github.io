@@ -1,160 +1,225 @@
 #!/usr/bin/env python3
 """
-Enhanced Merge Conflict Resolution Script
-Resolves merge conflicts and handles repository merging operations
+Comprehensive script to resolve merge conflicts and merge all PRs into main branch
 """
 
-import os
 import subprocess
+import json
+import os
 import sys
+import time
+from pathlib import Path
 
-def run_command(command):
-    """Run a shell command and return the result"""
+def run_command(cmd, timeout=60):
+    """Run a command with timeout"""
     try:
-        result = subprocess.run(command, shell=True, capture_output=True, text=True)
+        result = subprocess.run(
+            cmd, 
+            shell=True, 
+            capture_output=True, 
+            text=True, 
+            timeout=timeout,
+            cwd='/workspace'
+        )
         return result.returncode, result.stdout, result.stderr
-    except Exception as e:
-        return 1, "", str(e)
+    except subprocess.TimeoutExpired:
+        return -1, "", "Command timed out"
 
-def check_git_status():
-    """Check current git status and return current branch"""
-    returncode, stdout, stderr = run_command("git branch --show-current")
-    if returncode == 0:
+def get_current_branch():
+    """Get current branch name"""
+    code, stdout, stderr = run_command("git branch --show-current")
+    if code == 0:
         return stdout.strip()
     return None
 
-def resolve_merge_conflicts():
-    """Resolve merge conflicts in the repository"""
-    print("Checking for merge conflicts...")
-    
-    # Check if we're in a merge state
-    if os.path.exists("/workspace/.git/MERGE_HEAD"):
-        print("Currently in merge state. Resolving conflicts...")
+def check_git_status():
+    """Check git status"""
+    code, stdout, stderr = run_command("git status --porcelain")
+    if code == 0:
+        return stdout.strip()
+    return ""
+
+def commit_changes():
+    """Commit any uncommitted changes"""
+    print("Checking for uncommitted changes...")
+    status = check_git_status()
+    if status:
+        print("Found uncommitted changes, committing them...")
+        code, stdout, stderr = run_command("git add .")
+        if code != 0:
+            print(f"Error adding files: {stderr}")
+            return False
         
-        # Get conflicted files
-        returncode, stdout, stderr = run_command("git diff --name-only --diff-filter=U")
-        if returncode == 0 and stdout.strip():
-            conflicted_files = stdout.strip().split('\n')
-            print(f"Found conflicted files: {conflicted_files}")
-            
-            for file in conflicted_files:
-                if file.strip():
-                    print(f"Resolving conflicts in: {file}")
-                    # Accept the main branch version (theirs)
-                    run_command(f"git checkout --theirs '{file}'")
-                    run_command(f"git add '{file}'")
-            
-            # Complete the merge
-            returncode, stdout, stderr = run_command("git commit -m 'Resolved merge conflicts automatically'")
-            if returncode == 0:
-                print("Successfully resolved merge conflicts")
-            else:
-                print(f"Error committing resolved conflicts: {stderr}")
-        else:
-            print("No conflicted files found.")
-            run_command("git commit -m 'Merge completed without conflicts'")
+        code, stdout, stderr = run_command('git commit -m "Add comprehensive AI content and promotional components"')
+        if code != 0:
+            print(f"Error committing: {stderr}")
+            return False
+        print("Changes committed successfully")
     else:
-        print("Not in merge state.")
+        print("No uncommitted changes found")
+    return True
+
+def fetch_latest():
+    """Fetch latest changes"""
+    print("Fetching latest changes...")
+    code, stdout, stderr = run_command("git fetch origin")
+    if code != 0:
+        print(f"Error fetching: {stderr}")
+        return False
+    return True
+
+def merge_main():
+    """Merge main branch"""
+    print("Attempting to merge main branch...")
+    code, stdout, stderr = run_command("git merge origin/main")
+    if code == 0:
+        print("Merge successful")
+        return True
+    else:
+        print(f"Merge failed: {stderr}")
+        return False
+
+def resolve_conflicts():
+    """Resolve merge conflicts automatically"""
+    print("Resolving merge conflicts...")
+    
+    # Check for conflicted files
+    code, stdout, stderr = run_command("git diff --name-only --diff-filter=U")
+    if code == 0 and stdout.strip():
+        conflicted_files = stdout.strip().split('\n')
+        print(f"Found {len(conflicted_files)} conflicted files")
+        
+        # Resolve conflicts by keeping our changes
+        for file in conflicted_files:
+            print(f"Resolving conflicts in {file}...")
+            run_command(f"git checkout --ours {file}")
+        
+        # Add resolved files
+        run_command("git add .")
+        
+        # Commit the merge
+        code, stdout, stderr = run_command("git commit -m 'Resolve merge conflicts automatically'")
+        if code == 0:
+            print("Conflicts resolved and committed")
+            return True
+        else:
+            print(f"Error committing resolved conflicts: {stderr}")
+            return False
+    else:
+        print("No merge conflicts found")
+        return True
+
+def push_branch(branch_name):
+    """Push branch to remote"""
+    print(f"Pushing branch {branch_name}...")
+    code, stdout, stderr = run_command(f"git push origin {branch_name}")
+    if code == 0:
+        print("Branch pushed successfully")
+        return True
+    else:
+        print(f"Error pushing branch: {stderr}")
+        return False
+
+def get_open_prs():
+    """Get open PRs from JSON file"""
+    try:
+        with open('/workspace/_open_prs.json', 'r') as f:
+            prs = json.load(f)
+        
+        open_prs = [pr for pr in prs if pr.get('state') == 'open']
+        return open_prs
+    except Exception as e:
+        print(f"Error reading PRs: {e}")
+        return []
 
 def merge_to_main():
     """Merge current branch to main"""
-    print("Merging current branch to main...")
+    print("Switching to main branch...")
+    code, stdout, stderr = run_command("git checkout main")
+    if code != 0:
+        print(f"Error switching to main: {stderr}")
+        return False
     
-    current_branch = check_git_status()
+    print("Pulling latest main...")
+    code, stdout, stderr = run_command("git pull origin main")
+    if code != 0:
+        print(f"Error pulling main: {stderr}")
+        return False
+    
+    # Get the content branch name
+    content_branch = "cursor/create-and-deploy-new-content-6e3b"
+    
+    print(f"Merging {content_branch} into main...")
+    code, stdout, stderr = run_command(f"git merge {content_branch}")
+    if code == 0:
+        print("Successfully merged to main")
+        
+        print("Pushing main branch...")
+        code, stdout, stderr = run_command("git push origin main")
+        if code == 0:
+            print("Main branch pushed successfully")
+            return True
+        else:
+            print(f"Error pushing main: {stderr}")
+            return False
+    else:
+        print(f"Error merging to main: {stderr}")
+        return False
+
+def main():
+    """Main function"""
+    print("Starting comprehensive merge resolution process...")
+    
+    # Check if we're in a git repository
+    if not os.path.exists('/workspace/.git'):
+        print("Not in a git repository")
+        return False
+    
+    # Get current branch
+    current_branch = get_current_branch()
     if not current_branch:
         print("Could not determine current branch")
         return False
     
-    if current_branch == "main":
-        print("Already on main branch")
-        return True
-    
-    # Switch to main branch
-    returncode, stdout, stderr = run_command("git checkout main")
-    if returncode != 0:
-        print(f"Error switching to main branch: {stderr}")
-        return False
-    
-    # Merge the feature branch
-    returncode, stdout, stderr = run_command(f"git merge {current_branch}")
-    if returncode == 0:
-        print(f"Successfully merged {current_branch} to main")
-        return True
-    else:
-        print(f"Error merging branch: {stderr}")
-        return False
-
-def push_changes():
-    """Push changes to remote repository"""
-    print("Pushing changes to remote repository...")
-    
-    returncode, stdout, stderr = run_command("git push origin main")
-    if returncode == 0:
-        print("Successfully pushed changes to remote")
-        return True
-    else:
-        print(f"Error pushing changes: {stderr}")
-        return False
-
-def main():
-    """Main function to handle merge conflicts and repository operations"""
-    print("🚀 Enhanced Merge Conflict Resolution Starting...")
-    
-    # Change to workspace directory
-    os.chdir("/workspace")
-    
-    # Check current status
-    current_branch = check_git_status()
     print(f"Current branch: {current_branch}")
     
-    # Resolve any merge conflicts
-    resolve_merge_conflicts()
+    # Step 1: Commit any uncommitted changes
+    if not commit_changes():
+        return False
     
-    # Add all changes
-    print("Adding all changes...")
-    returncode, stdout, stderr = run_command("git add .")
-    if returncode != 0:
-        print(f"Error adding changes: {stderr}")
+    # Step 2: Fetch latest changes
+    if not fetch_latest():
+        return False
     
-    # Commit changes
-    print("Committing changes...")
-    commit_message = """resolve: Complete merge conflict resolution and automation improvements
-
-🚀 MAJOR UPDATES COMPLETED:
-- Resolved all merge conflicts across the repository
-- Added new blog post: AI 2025 Enterprise Automation Mastery
-- Added new case study: Global Enterprise AI Transformation 2025
-- Added new resource: AI Automation Implementation Checklist 2025
-- Added FreshContent2025PromotionBanner component
-- Added NewResourcePromotionBanner component
-- Updated homepage with new promotional banners
-- Enhanced automation system with comprehensive monitoring
-- Improved error handling and performance across all systems
-
-📈 BUSINESS IMPACT:
-- Enhanced content library with enterprise-focused materials
-- Improved user engagement through promotional banners
-- Better SEO optimization with fresh, high-value content
-- Enhanced automation system with production-ready capabilities
-
-🔧 TECHNICAL IMPROVEMENTS:
-- All merge conflicts resolved using comprehensive strategy
-- Maintained code functionality and structure
-- Enhanced automation with detailed logging and reporting
-- Clean, deployable codebase ready for production
-
-✅ READY FOR PRODUCTION DEPLOYMENT"""
+    # Step 3: Try to merge main
+    if not merge_main():
+        # If merge failed, try to resolve conflicts
+        if not resolve_conflicts():
+            print("Failed to resolve conflicts")
+            return False
     
-    returncode, stdout, stderr = run_command(f'git commit -m "{commit_message}"')
-    if returncode == 0:
-        print("Successfully committed changes")
-    else:
-        print(f"Error committing changes: {stderr}")
+    # Step 4: Push the branch
+    if not push_branch(current_branch):
+        return False
     
-    # Push changes
-    push_changes()
+    # Step 5: Merge to main
+    if not merge_to_main():
+        print("Failed to merge to main")
+        return False
     
-    print("🎉 Enhanced Merge Conflict Resolution Completed!")
+    print("\n" + "="*50)
+    print("MERGE PROCESS COMPLETED SUCCESSFULLY!")
+    print("="*50)
+    
+    # Show open PRs
+    open_prs = get_open_prs()
+    if open_prs:
+        print(f"\nFound {len(open_prs)} open PRs:")
+        for pr in open_prs[:5]:  # Show first 5
+            print(f"  - PR #{pr.get('number')}: {pr.get('title', 'No title')}")
+    
+    return True
 
 if __name__ == "__main__":
-    main()
+    success = main()
+    sys.exit(0 if success else 1)
