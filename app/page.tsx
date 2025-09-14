@@ -60,6 +60,8 @@ import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBa
 import NeuralInterfaceRevolutionBanner2025 from '../components/NeuralInterfaceRevolutionBanner2025';
 import AutonomousVehiclesRevolutionBanner2025 from '../components/AutonomousVehiclesRevolutionBanner2025';
 import NewContentShowcase2025 from '../components/NewContentShowcase2025';
+import AI2025ContentRevolutionBanner from '../components/AI2025ContentRevolutionBanner';
+import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
 
 // Import new 2026 promotional components
 import NewContent2026UltimateShowcase from '../components/NewContent2026UltimateShowcase';
@@ -85,6 +87,12 @@ export default function HomePage() {
       />
       
       <div className='min-h-screen bg-white'>
+        {/* REVOLUTIONARY CONTENT 2025 - FEATURED */}
+        <RevolutionaryContentBanner2025 />
+        
+        {/* AI 2025 Content Revolution Banner */}
+        <AI2025ContentRevolutionBanner />
+        
         {/* NEW 2025 CONTENT - FEATURED */}
         <NeuralInterfaceRevolutionBanner2025 />
         
