@@ -1,6 +1,6 @@
 [build]
-  # Build command with comprehensive error handling
-  command = "bash scripts/netlify-build.sh"
+  # Pre-build command to handle dependencies
+  command = "bash scripts/netlify-pre-build.sh && npm run build"
   
   # Directory to publish
   publish = "dist"
@@ -19,7 +19,10 @@
   # Yarn configuration - optimized for reliable builds
   YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
   YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
-  YARN_FLAGS = "--frozen-lockfile --network-timeout 1000000"
+  YARN_NETWORK_TIMEOUT = "1000000"
+  YARN_PREFER_OFFLINE = "true"
+  YARN_IGNORE_ENGINES = "true"
+  YARN_IGNORE_PLATFORM = "true"
   
   # Install devDependencies for build tools
   YARN_INSTALL_DEV = "true"
@@ -31,9 +34,12 @@
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
   NPM_CONFIG_AUDIT = "false"
   NPM_CONFIG_FUND = "false"
+  NPM_CONFIG_FORCE = "true"
   
   # Disable Next.js auto-detection since this is a Vite project
   NETLIFY_USE_NEXTJS = "false"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NETLIFY_USE_NEXT_PLUGIN = "false"
   
   # Additional build optimizations
   CI = "true"
