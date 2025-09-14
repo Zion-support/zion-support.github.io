@@ -1,196 +1,136 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
-const RevolutionaryContent2025Banner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentContent, setCurrentContent] = useState(0);
-
-  const featuredContent = [
-    {
-      id: 'ai-enterprise-automation-revolution',
-      title: 'AI 2025: The Enterprise Automation Revolution',
-      subtitle: 'How Companies Are Achieving 500% ROI',
-      description: 'Discover how leading enterprises are leveraging AI automation to achieve unprecedented ROI, reduce costs by 60%, and transform their operations.',
-      url: '/blog/ai-2025-enterprise-automation-revolution',
-      type: 'blog',
-      metrics: {
-        roi: '500%',
-        savings: '$200M',
-        efficiency: '400%',
-        companies: '500+'
-      },
-      badge: 'NEW 2025',
-      color: 'from-purple-600 to-blue-600'
-    },
-    {
-      id: 'ai-transformation-500-roi-success',
-      title: 'AI Transformation Success Story',
-      subtitle: 'How a $2B Company Achieved 500% ROI in 12 Months',
-      description: 'Real case study showing how TechCorp Global achieved 500% ROI, $200M in annual savings, and 400% productivity gains.',
-      url: '/case-studies/ai-transformation-500-roi-success-story',
-      type: 'case-study',
-      metrics: {
-        roi: '500%',
-        savings: '$200M',
-        efficiency: '400%',
-        satisfaction: '99.8%'
-      },
-      badge: 'CASE STUDY',
-      color: 'from-green-600 to-emerald-600'
-    },
-    {
-      id: 'ai-implementation-master-guide-2025',
-      title: 'AI Implementation Master Guide 2025',
-      subtitle: 'From Strategy to 500% ROI',
-      description: 'The complete guide to implementing AI in your organization. Learn proven strategies and step-by-step processes.',
-      url: '/resources/ai-implementation-master-guide-2025',
-      type: 'resource',
-      metrics: {
-        roi: '340%',
-        success: '95%',
-        companies: '500+',
-        time: '6-12 months'
-      },
-      badge: 'MASTER GUIDE',
-      color: 'from-orange-600 to-red-600'
-    }
-  ];
-
-  useEffect(() => {
-    // Check if banner was dismissed
-    const dismissed = localStorage.getItem('revolutionary-content-2025-banner-dismissed');
-    if (!dismissed) {
-      setIsVisible(true);
-    }
-
-    // Auto-rotate content every 8 seconds
-    const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % featuredContent.length);
-    }, 8000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleDismiss = () => {
-    setIsVisible(false);
-    localStorage.setItem('revolutionary-content-2025-banner-dismissed', 'true');
-  };
-
-  const current = featuredContent[currentContent];
-
-  if (!isVisible) return null;
-
+const RevolutionaryContent2025Banner = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 text-white">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
-        <div className="absolute top-4 left-4 w-2 h-2 bg-white/30 rounded-full animate-bounce"></div>
-        <div className="absolute top-8 right-8 w-1 h-1 bg-white/40 rounded-full animate-ping"></div>
-        <div className="absolute bottom-4 left-1/4 w-1.5 h-1.5 bg-white/20 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-8 right-1/4 w-1 h-1 bg-white/30 rounded-full animate-bounce"></div>
-      </div>
+    <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full px-6 py-2 mb-6 font-bold text-sm">
+            🚀 REVOLUTIONARY AI 2025 CONTENT
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            Discover the Future of AI
+          </h2>
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Explore groundbreaking AI 2025 breakthroughs, quantum computing revolutions, and autonomous enterprise transformations that are reshaping industries worldwide.
+          </p>
+        </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex items-center justify-between">
-          <div className="flex-1">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="flex items-center space-x-2">
-                <Zap className="w-5 h-5 text-yellow-400" />
-                <span className="text-sm font-semibold bg-yellow-400/20 px-3 py-1 rounded-full">
-                  {current.badge}
-                </span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {/* Quantum Computing Revolution */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
+            <div className="text-4xl mb-4">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-yellow-400">Quantum AI Revolution</h3>
+            <p className="text-gray-200 mb-6 leading-relaxed">
+              Discover how quantum computing is revolutionizing enterprise AI with 1000x speed improvements and exponential processing power.
+            </p>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                <span>1000x faster AI processing</span>
               </div>
-              <div className="flex items-center space-x-1 text-sm text-gray-300">
-                <Star className="w-4 h-4 text-yellow-400" />
-                <span>Featured Content</span>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                <span>Quantum neural networks</span>
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                <span>Enterprise implementation guide</span>
               </div>
             </div>
+            <Link 
+              href="/blog/ai-2025-quantum-computing-revolution-enterprise-breakthrough"
+              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300"
+            >
+              Explore Quantum AI →
+            </Link>
+          </div>
 
-            <h2 className="text-2xl md:text-3xl font-bold mb-2">
-              {current.title}
-            </h2>
-            <p className="text-lg text-purple-200 mb-3">
-              {current.subtitle}
+          {/* Autonomous Enterprise */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className="text-2xl font-bold mb-4 text-yellow-400">Autonomous Enterprise</h3>
+            <p className="text-gray-200 mb-6 leading-relaxed">
+              Transform your organization into a fully autonomous entity with AI systems that make strategic decisions and self-optimize operations.
             </p>
-            <p className="text-gray-300 mb-6 max-w-3xl">
-              {current.description}
-            </p>
-
-            {/* Metrics Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
-                <div className="text-2xl font-bold text-green-400">{current.metrics.roi}</div>
-                <div className="text-xs text-gray-300">Average ROI</div>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                <span>Self-managing operations</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
-                <div className="text-2xl font-bold text-blue-400">{current.metrics.savings}</div>
-                <div className="text-xs text-gray-300">Cost Savings</div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                <span>Autonomous decision making</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
-                <div className="text-2xl font-bold text-purple-400">{current.metrics.efficiency}</div>
-                <div className="text-xs text-gray-300">Efficiency Gain</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
-                <div className="text-2xl font-bold text-orange-400">{current.metrics.companies || current.metrics.satisfaction}</div>
-                <div className="text-xs text-gray-300">{current.metrics.companies ? 'Companies' : 'Satisfaction'}</div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                <span>Complete implementation guide</span>
               </div>
             </div>
+            <Link 
+              href="/blog/ai-2025-autonomous-enterprise-transformation-complete-guide"
+              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300"
+            >
+              Start Transformation →
+            </Link>
+          </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+          {/* Success Stories */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
+            <div className="text-4xl mb-4">🏆</div>
+            <h3 className="text-2xl font-bold mb-4 text-yellow-400">Proven Success</h3>
+            <p className="text-gray-200 mb-6 leading-relaxed">
+              Real-world case studies showing 60% cost reduction, 99.5% efficiency, and $2.3B+ in savings through AI transformation.
+            </p>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                <span>Manufacturing: 60% cost reduction</span>
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                <span>Healthcare: 90% patient satisfaction</span>
+              </div>
+              <div className="flex items-center text-sm">
+                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                <span>$4.1B+ total savings achieved</span>
+              </div>
+            </div>
+            <Link 
+              href="/case-studies"
+              className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300"
+            >
+              View Case Studies →
+            </Link>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20">
+            <h3 className="text-3xl font-bold mb-4 text-yellow-400">Ready to Transform Your Business?</h3>
+            <p className="text-xl mb-8 text-gray-200">
+              Join the AI 2025 revolution and discover how these breakthrough technologies can transform your organization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href={current.url}
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                href="/contact"
+                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
-                Read Full Article
-                <ArrowRight className="ml-2 w-5 h-5" />
+                Get Free AI Assessment
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+                className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300 transform hover:scale-105"
               >
-                Get Similar Results
+                Explore Our Services
               </Link>
             </div>
           </div>
-
-          {/* Content rotation indicator */}
-          <div className="hidden md:flex flex-col space-y-2 ml-8">
-            {featuredContent.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentContent(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentContent
-                    ? 'bg-white scale-125'
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Progress bar */}
-        <div className="mt-6 bg-white/20 rounded-full h-1">
-          <div 
-            className="bg-gradient-to-r from-purple-500 to-blue-500 h-1 rounded-full transition-all duration-1000"
-            style={{ width: '33.33%' }}
-          />
         </div>
       </div>
-
-      {/* Dismiss button */}
-      <button
-        onClick={handleDismiss}
-        className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors duration-200"
-        aria-label="Dismiss banner"
-      >
-        <X className="w-6 h-6" />
-      </button>
-    </div>
+    </section>
   );
 };
 
