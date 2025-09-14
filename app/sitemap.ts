@@ -1,7 +1,5 @@
 import { MetadataRoute } from 'next'
 
-export const dynamic = 'force-static'
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com'
   
@@ -75,7 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // New resources
     {
-      url: `${baseUrl}/resources/ai-implementation-ultimate-roadmap-2025-comprehensive`,
+      url: `${baseUrl}/resources/ai-2025-implementation-ultimate-roadmap`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
