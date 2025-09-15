@@ -3,11 +3,11 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ChevronLeft, ChevronRight, Star, TrendingUp, Users, Clock } from 'lucide-react';
+XChevronLeftChevronRightStarTrendingUpUsersClock
 
 const AI2025UltimateContentPromotionBanner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   // Check if banner was previously dismissed
   useEffect(() => {
@@ -15,11 +15,11 @@ const AI2025UltimateContentPromotionBanner = () => {
     if (dismissed === 'true') {
       setIsDismissed(true);
     }
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
-    localStorage.setItem('ai2025-ultimate-content-banner-dismissed', 'true');
+    localStorage.setItem('ai2025-ultimate-content-banner-'dismissed', 'true');
   };
 
   const content = [
@@ -187,7 +187,7 @@ const AI2025UltimateContentPromotionBanner = () => {
               
               {/* Content Cards */}
               <div className="space-y-3">
-                {content.map((item, index) => (
+                {content.map((itemindex) => (
                   <div
                     key={item.id}
                     className={`p-4 rounded-lg cursor-pointer transition-all duration-200 ${
@@ -238,7 +238,7 @@ const AI2025UltimateContentPromotionBanner = () => {
               </button>
               
               <div className="flex space-x-2">
-                {content.map((_, index) => (
+                {content.map((_index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}

@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const AI2026SyntheticConsciousnessBreakthroughBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
 
   const content = [
     {
@@ -38,21 +39,21 @@ const AI2026SyntheticConsciousnessBreakthroughBanner: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 6000);
+    }6000);
 
     return () => clearInterval(timer);
-  }, []);
+  }[]);
 
   useEffect(() => {
     const dismissed = localStorage.getItem('ai2026-consciousness-banner-dismissed');
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ai2026-consciousness-banner-dismissed', 'true');
+    localStorage.setItem('ai2026-consciousness-banner-'dismissed', 'true');
   };
 
   if (!isVisible) return null;
@@ -174,7 +175,7 @@ const AI2026SyntheticConsciousnessBreakthroughBanner: React.FC = () => {
 
         {/* Advanced Progress Indicators */}
         <div className="flex justify-center items-center space-x-4 mt-10">
-          {content.map((_, index) => (
+          {content.map((_index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}

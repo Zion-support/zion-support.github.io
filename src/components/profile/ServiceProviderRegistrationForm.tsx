@@ -17,7 +17,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage,
+} from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
@@ -33,10 +34,12 @@ const serviceProfileSchema = z.object({
   location: z.string().min(2, "Location is required"),
   services: z.string().min(2, "Enter at least one service"),
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Rate must be a number"}),
+    message: "Rate must be a number",
+  }),
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().transform(val => !!val),
-  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()});
+  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional(),
+});
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
 
@@ -61,7 +64,9 @@ export function ServiceProviderRegistrationForm() {
       hourlyRate: "",
       availability: "available",
       enhancedProfile: false,
-      website: ""}});
+      website: "",
+    },
+  });
 
   // Handle adding service tags
   const handleAddService = () => {
@@ -103,7 +108,8 @@ export function ServiceProviderRegistrationForm() {
     if (!formData.bio || formData.bio.length < 20) {
       toast({
         title: "More information needed",
-        description: "Please provide at least a detailed bio before generating enhanced content."});
+        description: "Please provide at least a detailed bio before generating enhanced content.",
+      });
       return;
     }
 
@@ -133,7 +139,8 @@ export function ServiceProviderRegistrationForm() {
         
         toast({
           title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional services for your profile."});
+          description: "AI has created a professional bio and suggested additional services for your profile.",
+        });
       } else {
         // Fallback for mock/development mode
         logWarn('Mock AI response - using fallback content');
@@ -144,7 +151,8 @@ export function ServiceProviderRegistrationForm() {
         
         toast({
           title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional services for your profile."});
+          description: "AI has created a professional bio and suggested additional services for your profile.",
+        });
       }
       
     } catch (error: any) {
@@ -152,7 +160,8 @@ export function ServiceProviderRegistrationForm() {
       toast({
         title: "Generation failed",
         description: error.message || "There was an error generating your enhanced profile. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     } finally {
       setIsGenerating(false);
     }
@@ -181,7 +190,8 @@ export function ServiceProviderRegistrationForm() {
       toast({
         title: "Services required",
         description: "Please add at least one service to your profile.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       return;
     }
 
@@ -259,7 +269,8 @@ export function ServiceProviderRegistrationForm() {
           hourly_rate: Number(values.hourlyRate),
           availability_status: values.availability,
           location: values.location,
-          website: values.website || null});
+          website: values.website || null,
+        });
 
       if (serviceError) throw serviceError;
       */
@@ -292,7 +303,8 @@ export function ServiceProviderRegistrationForm() {
       
       toast({
         title: "Profile Created Successfully",
-        description: "Your service provider profile has been published and is now visible in the directory."});
+        description: "Your service provider profile has been published and is now visible in the directory.",
+      });
 
       // Redirect to service provider dashboard or profile page
       setTimeout(() => {
@@ -304,7 +316,8 @@ export function ServiceProviderRegistrationForm() {
       toast({
         title: "Error Creating Profile",
         description: error.message || "There was an error creating your profile. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }

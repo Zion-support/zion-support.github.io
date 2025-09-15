@@ -9,7 +9,8 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle} from '@/components/ui/dialog';
+  DialogTitle,
+} from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
 
@@ -22,7 +23,8 @@ interface GuestCheckoutModalProps {
 export default function GuestCheckoutModal({
   open,
   onOpenChange,
-  onSubmit}: GuestCheckoutModalProps) {
+  onSubmit,
+}: GuestCheckoutModalProps) {
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);

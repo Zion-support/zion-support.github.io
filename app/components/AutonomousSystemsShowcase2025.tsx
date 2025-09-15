@@ -1,257 +1,307 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
 
-const AutonomousSystemsShowcase2025: React.FC = () => {
-  const contentItems = [
+const AutonomousSystemsShowcase2025 = () => {
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const content = [
     {
-      id: 'autonomous-systems-guide',
+      id: 'autonomous-enterprise-systems',
+      title: 'AI 2025: The Autonomous Enterprise Systems Revolution',
       type: 'blog',
-      title: 'AI 2025: Next-Generation Autonomous Systems - Ultimate Guide',
-      description: 'Complete enterprise guide to autonomous systems transformation with proven ROI strategies',
-      url: '/blog/ai-2025-next-generation-autonomous-systems-ultimate-guide',
-      image: '/images/autonomous-systems-guide.jpg',
+      category: 'autonomous',
+      url: '/blog/ai-2025-autonomous-enterprise-systems-revolution',
+      description: 'Discover how Fortune 500 companies are achieving unprecedented 3,000% ROI through autonomous enterprise systems that self-manage, self-optimize, and self-heal.',
       metrics: {
-        roi: '1,200%',
-        savings: '$2.8B',
-        uptime: '99.9%',
-        efficiency: '400%'
+        roi: '3,000%',
+        savings: '$25.6M',
+        efficiency: '800%',
+        autonomy: '95%'
       },
+      badge: 'Revolution',
+      color: 'from-emerald-600 to-teal-600',
+      readingTime: '28 min read',
+      featured: true
+    },
+    {
+      id: 'enterprise-ai-transformation',
+      title: 'AI 2025: The Enterprise AI Transformation Ultimate Guide',
+      type: 'blog',
+      category: 'guides',
+      url: '/blog/ai-2025-enterprise-ai-transformation-ultimate-guide',
+      description: 'Discover how Fortune 500 companies are achieving unprecedented 1,000% ROI through comprehensive AI transformation strategies.',
+      metrics: {
+        roi: '1,000%',
+        savings: '$4.2M',
+        timeframe: '18 months',
+        companies: '500+'
+      },
+      badge: 'Ultimate Guide',
+      color: 'from-purple-600 to-indigo-600',
       readingTime: '25 min read',
-      tags: ['Autonomous Systems', 'AI 2025', 'Enterprise Guide', 'ROI'],
       featured: true
     },
     {
-      id: 'fortune-100-case-study',
+      id: 'quantum-computing-breakthrough',
+      title: 'AI 2025: The Quantum Computing Business Breakthrough',
+      type: 'blog',
+      category: 'breakthroughs',
+      url: '/blog/ai-2025-quantum-computing-business-breakthrough',
+      description: 'Discover how quantum computing is revolutionizing business operations with unprecedented 2,000% ROI.',
+      metrics: {
+        roi: '2,000%',
+        savings: '$12.8M',
+        speed: '1,000x faster',
+        market: '$65B'
+      },
+      badge: 'Breakthrough',
+      color: 'from-blue-600 to-cyan-600',
+      readingTime: '22 min read',
+      featured: true
+    },
+    {
+      id: 'fortune-500-success',
+      title: 'Fortune 500 AI Transformation Success Story',
       type: 'case-study',
-      title: 'Fortune 100 Autonomous Systems: $5.2B Company Achieves 1,500% ROI',
-      description: 'Real-world transformation story showing how a Fortune 100 company achieved unprecedented results',
-      url: '/case-studies/fortune-100-autonomous-systems-transformation-success-story',
-      image: '/images/fortune-100-case-study.jpg',
+      category: 'success-stories',
+      url: '/case-studies/fortune-500-ai-transformation-2000-roi-success',
+      description: 'Discover how a Fortune 500 manufacturing company achieved unprecedented 2,000% ROI through comprehensive AI transformation.',
       metrics: {
-        roi: '1,500%',
-        savings: '$2.8B',
-        timeline: '24 months',
-        satisfaction: '94%'
+        roi: '2,000%',
+        savings: '$1.2B',
+        efficiency: '450%',
+        satisfaction: '95%'
       },
+      badge: 'Success Story',
+      color: 'from-green-600 to-emerald-600',
       readingTime: '18 min read',
-      tags: ['Fortune 100', 'Case Study', 'Success Story', 'Transformation'],
-      featured: true
+      featured: false
     },
     {
-      id: 'implementation-roadmap',
-      type: 'resource',
-      title: 'AI Autonomous Systems Implementation Roadmap 2025',
-      description: 'Step-by-step roadmap to achieve 1,500% ROI through strategic autonomous systems deployment',
-      url: '/resources/ai-autonomous-systems-implementation-roadmap-2025',
-      image: '/images/implementation-roadmap.jpg',
+      id: 'generative-ai-revolution',
+      title: 'AI 2025: The Generative AI Enterprise Revolution',
+      type: 'blog',
+      category: 'guides',
+      url: '/blog/ai-2025-generative-ai-enterprise-revolution',
+      description: 'AI 2025: The Generative AI Enterprise Revolution - $2.3T Market Transformation',
       metrics: {
-        roi: '1,500%',
-        timeline: '24 months',
-        success: '95%',
-        coverage: '100%'
+        roi: '340%',
+        savings: '$180M',
+        accuracy: '99.7%',
+        satisfaction: '98%'
       },
-      readingTime: '30 min read',
-      tags: ['Implementation', 'Roadmap', 'Strategy', 'ROI'],
-      featured: true
+      badge: 'Revolution',
+      color: 'from-orange-600 to-red-600',
+      readingTime: '20 min read',
+      featured: false
+    },
+    {
+      id: 'mlops-breakthrough',
+      title: 'AI 2025: MLOps Breakthrough - 99.9% Model Reliability',
+      type: 'blog',
+      category: 'breakthroughs',
+      url: '/blog/ai-2025-machine-learning-operations-mlops-breakthrough',
+      description: 'AI 2025: MLOps Breakthrough - 99.9% Model Reliability with 67% Faster Deployment',
+      metrics: {
+        reliability: '99.9%',
+        deployment_speed: '67%',
+        savings: '$2.1B',
+        efficiency: '89%'
+      },
+      badge: 'Breakthrough',
+      color: 'from-teal-600 to-blue-600',
+      readingTime: '18 min read',
+      featured: false
     }
   ];
 
+  const categories = [
+    { id: 'all', label: 'All Content', count: content.length },
+    { id: 'autonomous', label: 'Autonomous Systems', count: content.filter(c => c.category === 'autonomous').length },
+    { id: 'guides', label: 'Implementation Guides', count: content.filter(c => c.category === 'guides').length },
+    { id: 'breakthroughs', label: 'AI Breakthroughs', count: content.filter(c => c.category === 'breakthroughs').length },
+    { id: 'success-stories', label: 'Success Stories', count: content.filter(c => c.category === 'success-stories').length }
+  ];
+
+  const filteredContent = activeCategory === 'all' 
+    ? content 
+    : content.filter(c => c.category === activeCategory);
+
+  const featuredContent = content.filter(c => c.featured);
+
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="py-16 bg-gradient-to-br from-gray-50 to-emerald-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-semibold">🚀 NEXT-GENERATION AUTONOMOUS SYSTEMS 2025</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🤖 AUTONOMOUS SYSTEMS 2025</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Transform Your Business with Autonomous Systems
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Revolutionary Autonomous AI Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover how Fortune 500 companies are achieving <span className="font-bold text-blue-600">1,500% ROI</span> and 
-            <span className="font-bold text-green-600"> $2.8B in annual savings</span> through strategic autonomous systems implementation.
+            Discover the ultimate guides, breakthrough technologies, and success stories that are reshaping enterprise operations with unprecedented ROI through autonomous systems.
           </p>
         </div>
 
-        {/* Success Metrics Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <div className="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-100">
-            <div className="text-3xl font-bold text-blue-600 mb-2">1,500%</div>
-            <div className="text-gray-600 text-sm">Average ROI</div>
-            <div className="text-xs text-gray-500 mt-1">Within 24 months</div>
-          </div>
-          
-          <div className="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-100">
-            <div className="text-3xl font-bold text-green-600 mb-2">$2.8B</div>
-            <div className="text-gray-600 text-sm">Annual Savings</div>
-            <div className="text-xs text-gray-500 mt-1">Fortune 500 average</div>
-          </div>
-          
-          <div className="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-100">
-            <div className="text-3xl font-bold text-purple-600 mb-2">99.9%</div>
-            <div className="text-gray-600 text-sm">System Uptime</div>
-            <div className="text-xs text-gray-500 mt-1">Continuous operation</div>
-          </div>
-          
-          <div className="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-100">
-            <div className="text-3xl font-bold text-orange-600 mb-2">400%</div>
-            <div className="text-gray-600 text-sm">Efficiency Gain</div>
-            <div className="text-xs text-gray-500 mt-1">Productivity improvement</div>
+        {/* Featured Content */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Featured Autonomous Content</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {featuredContent.map((item) => (
+              <div key={item.id} className="group">
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                  {/* Header */}
+                  <div className={`h-2 bg-gradient-to-r ${item.color}`}></div>
+                  
+                  <div className="p-8">
+                    {/* Badge and Type */}
+                    <div className="flex items-center justify-between mb-4">
+                      <span className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${item.color} text-white`}>
+                        {item.badge}
+                      </span>
+                      <span className="text-sm text-gray-500 uppercase tracking-wide">{item.type}</span>
+                    </div>
+
+                    {/* Title */}
+                    <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+                      {item.title}
+                    </h4>
+
+                    {/* Description */}
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {item.description}
+                    </p>
+
+                    {/* Metrics */}
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      {Object.entries(item.metrics).slice(0, 4).map(([key, value]) => (
+                        <div key={key} className="text-center">
+                          <div className="text-lg font-bold text-emerald-600">{value}</div>
+                          <div className="text-xs text-gray-500 capitalize">{key.replace('_', ' ')}</div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Reading Time */}
+                    <div className="text-sm text-gray-500 mb-6">
+                      {item.readingTime}
+                    </div>
+
+                    {/* CTA */}
+                    <Link
+                      href={item.url}
+                      className={`w-full bg-gradient-to-r ${item.color} text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 text-center block`}
+                    >
+                      Read Full Content
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
-          {contentItems.map((item) => (
-            <div
-              key={item.id}
-              className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                activeCategory === category.id
+                  ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-lg'
+                  : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+              }`}
             >
-              {/* Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <div className="text-4xl mb-2">
-                      {item.type === 'blog' ? '📖' : item.type === 'case-study' ? '📊' : '🗺️'}
-                    </div>
-                    <div className="text-sm font-semibold">{item.type.toUpperCase()}</div>
-                  </div>
-                </div>
-                {item.featured && (
-                  <div className="absolute top-4 right-4 bg-yellow-500 text-white px-2 py-1 rounded text-xs font-bold">
-                    FEATURED
-                  </div>
-                )}
-              </div>
+              {category.label} ({category.count})
+            </button>
+          ))}
+        </div>
 
-              <div className="p-6">
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {item.tags.slice(0, 2).map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium"
-                    >
-                      {tag}
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredContent.map((item) => (
+            <div key={item.id} className="group">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                {/* Header */}
+                <div className={`h-1 bg-gradient-to-r ${item.color}`}></div>
+                
+                <div className="p-6">
+                  {/* Badge and Type */}
+                  <div className="flex items-center justify-between mb-3">
+                    <span className={`px-2 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${item.color} text-white`}>
+                      {item.badge}
                     </span>
-                  ))}
-                </div>
+                    <span className="text-xs text-gray-500 uppercase tracking-wide">{item.type}</span>
+                  </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                  {item.title}
-                </h3>
+                  {/* Title */}
+                  <h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors line-clamp-2">
+                    {item.title}
+                  </h4>
 
-                {/* Description */}
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                  {item.description}
-                </p>
+                  {/* Description */}
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm line-clamp-3">
+                    {item.description}
+                  </p>
 
-                {/* Metrics */}
-                <div className="grid grid-cols-2 gap-3 mb-4">
-                  {Object.entries(item.metrics).slice(0, 4).map(([key, value]) => (
-                    <div key={key} className="bg-gray-50 rounded-lg p-3 text-center">
-                      <div className="text-lg font-bold text-blue-600">{value}</div>
-                      <div className="text-xs text-gray-500 capitalize">
-                        {key.replace(/([A-Z])/g, ' $1').trim()}
+                  {/* Metrics */}
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    {Object.entries(item.metrics).slice(0, 4).map(([key, value]) => (
+                      <div key={key} className="text-center">
+                        <div className="text-sm font-bold text-emerald-600">{value}</div>
+                        <div className="text-xs text-gray-500 capitalize">{key.replace('_', ' ')}</div>
                       </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
 
-                {/* Reading Time */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs text-gray-500">{item.readingTime}</span>
-                  <span className="text-xs text-gray-500">
-                    {item.type === 'case-study' ? 'Success Story' : 
-                     item.type === 'resource' ? 'Implementation Guide' : 'Expert Guide'}
-                  </span>
-                </div>
+                  {/* Reading Time */}
+                  <div className="text-xs text-gray-500 mb-4">
+                    {item.readingTime}
+                  </div>
 
-                {/* CTA Button */}
-                <Link
-                  href={item.url}
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-4 py-3 rounded-lg font-semibold text-center block transition-all duration-200 transform hover:scale-105"
-                >
-                  {item.type === 'case-study' ? 'Read Case Study' : 
-                   item.type === 'resource' ? 'View Roadmap' : 'Read Guide'}
-                </Link>
+                  {/* CTA */}
+                  <Link
+                    href={item.url}
+                    className={`w-full bg-gradient-to-r ${item.color} text-white px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 text-center block text-sm`}
+                  >
+                    Read More
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Additional Resources */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Start Your Autonomous Systems Transformation?
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Join Fortune 500 companies achieving unprecedented ROI through strategic autonomous systems implementation. 
-              Get your free assessment and discover your transformation potential.
+        {/* CTA Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business with Autonomous AI?</h3>
+            <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+              Discover how your organization can achieve similar results with our comprehensive autonomous systems transformation services.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
+                className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Get Free Assessment
-              </Link>
-              <Link
-                href="/services/autonomous-systems"
-                className="border-2 border-blue-500 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-200"
-              >
-                Explore Services
+                Get Free Consultation
               </Link>
               <Link
                 href="/resources"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 hover:text-white transition-all duration-200"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 View All Resources
               </Link>
             </div>
           </div>
         </div>
-
-        {/* Industry Statistics */}
-        <div className="mt-12 bg-gradient-to-r from-blue-600 to-purple-700 rounded-xl p-8 text-white">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-4">Industry Transformation Statistics</h3>
-            <p className="text-blue-100 max-w-2xl mx-auto">
-              Autonomous systems are revolutionizing industries across the globe. Here's what leading organizations are achieving:
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-300 mb-2">78%</div>
-              <div className="text-sm text-blue-100">Fortune 500 Companies</div>
-              <div className="text-xs text-blue-200">Implementing autonomous systems</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-300 mb-2">$150B</div>
-              <div className="text-sm text-blue-100">Market Size by 2025</div>
-              <div className="text-xs text-blue-200">Autonomous systems market</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-300 mb-2">85%</div>
-              <div className="text-sm text-blue-100">Cost Reduction</div>
-              <div className="text-xs text-blue-200">Average operational savings</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-300 mb-2">94%</div>
-              <div className="text-sm text-blue-100">Success Rate</div>
-              <div className="text-xs text-blue-200">Implementation success</div>
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

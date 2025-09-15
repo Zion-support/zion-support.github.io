@@ -16,8 +16,8 @@ interface ContentItem {
 }
 
 export default function ContentDiscoveryWidget() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentItem, setCurrentItem] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentItemsetCurrentItem] = useState(0);
 
   const contentItems: ContentItem[] = [
     {
@@ -73,7 +73,7 @@ export default function ContentDiscoveryWidget() {
     {
       id: 'transcendent-intelligence',
       title: 'Transcendent Intelligence',
-      description: 'AI that transcends human limitations, making decisions with infinite wisdom and perfect foresight.',
+      description: 'AI that transcends human limitationsmaking decisions with infinite wisdom and perfect foresight.',
       link: '/ai-2025-ultimate-breakthrough-revolution',
       category: 'Intelligence',
       roi: '99.9% Accuracy',
@@ -85,18 +85,18 @@ export default function ContentDiscoveryWidget() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 2000);
+    }2000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentItem((prev) => (prev + 1) % contentItems.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, [contentItems.length]);
+  }[contentItems.length]);
 
   if (!isVisible) return null;
 
@@ -169,7 +169,7 @@ export default function ContentDiscoveryWidget() {
 
         {/* Navigation Dots */}
         <div className="flex justify-center space-x-1 p-2">
-          {contentItems.map((_, index) => (
+          {contentItems.map((_index) => (
             <button
               key={index}
               onClick={() => setCurrentItem(index)}

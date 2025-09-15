@@ -1,11 +1,20 @@
+<<<<<<< HEAD
 "use client";
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+  ArrowRightPlayStarUsersAwardTrendingUpBrainShieldRocket
+  Loader2ChevronDownZapGlobeTargetLightbulbCodeDatabase,
+  CloudLockChartBarCpuAtomSatelliteGamepad2Palette
+=======
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database,
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
+>>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
 import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
@@ -17,8 +26,13 @@ import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-servic
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
     <motion.div
+<<<<<<< HEAD
+      initial={{ opacity: 0scale: 0.5 }}
+      animate={{ opacity: 1scale: 1 }}
+=======
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
+>>>>>>> origin/auto/autonomy-17186719616
       transition={{ duration: 0.5 }}
       className="text-center"
     >
@@ -33,23 +47,40 @@ const LoadingFallback = () => (
 );
 
 const Homepage2035: React.FC = () => {
+<<<<<<< HEAD
+  const [isLoadingsetIsLoading] = useState(true);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [activeCategorysetActiveCategory] = useState('all');
+=======
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const [activeCategory, setActiveCategory] = useState('all');
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
       setIsVisible(true);
+<<<<<<< HEAD
+    }800);
+
+    return () => clearTimeout(timer);
+  }[]);
+=======
     }, 800);
 
     return () => clearTimeout(timer);
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
+<<<<<<< HEAD
+    transition: { duration: 0.6ease: "easeOut" }
+=======
     transition: { duration: 0.6, ease: "easeOut" }
+>>>>>>> origin/auto/autonomy-17186719616
   };
 
   const staggerContainer = {
@@ -62,15 +93,33 @@ const Homepage2035: React.FC = () => {
   };
 
   const backgroundVariants = {
+<<<<<<< HEAD
+    initial: { opacity: 0scale: 0.8 },
+    animate: { 
+      opacity: 1
+      scale: 1,
+      transition: { duration: 1.5ease: "easeOut" as const }
+=======
     initial: { opacity: 0, scale: 0.8 },
     animate: { 
       opacity: 1, 
       scale: 1,
       transition: { duration: 1.5, ease: "easeOut" as const }
+>>>>>>> origin/auto/autonomy-17186719616
     }
   };
 
   const categories = [
+<<<<<<< HEAD
+    { id: ''all', 'name: 'All 'Services', 'icon: <Globe className="w-5 h-5" /> },
+    { id: ''ai', 'name: 'AI & 'ML', 'icon: <Brain className="w-5 h-5" /> },
+    { id: ''it', 'name: 'IT 'Enterprise', 'icon: <Cpu className="w-5 h-5" /> },
+    { id: ''quantum', 'name: 'Quantum 'Tech', 'icon: <Atom className="w-5 h-5" /> },
+    { id: ''space', 'name: 'Space 'Tech', 'icon: <Satellite className="w-5 h-5" /> },
+    { id: ''cyber', 'name: ''Cybersecurity', 'icon: <Shield className="w-5 h-5" /> },
+    { id: ''cloud', 'name: 'Cloud & 'DevOps', 'icon: <Cloud className="w-5 h-5" /> },
+    { id: ''fintech', 'name: ''FinTech', 'icon: <ChartBar className="w-5 h-5" /> }
+=======
     { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" /> },
     { id: 'ai', name: 'AI & ML', icon: <Brain className="w-5 h-5" /> },
     { id: 'it', name: 'IT Enterprise', icon: <Cpu className="w-5 h-5" /> },
@@ -79,6 +128,7 @@ const Homepage2035: React.FC = () => {
     { id: 'cyber', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" /> },
     { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
+>>>>>>> origin/auto/autonomy-17186719616
   ];
 
   const allServices = [
@@ -104,6 +154,10 @@ const Homepage2035: React.FC = () => {
     return <LoadingFallback />;
   }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <Layout>
       <UltraFuturisticBackground2035>
@@ -122,7 +176,11 @@ const Homepage2035: React.FC = () => {
                 </span>
               </h1>
               <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
+                Pioneering the future with cutting-edge AIQuantum Computingand Space Technology solutions
+=======
                 Pioneering the future with cutting-edge AI, Quantum Computing, and Space Technology solutions
+>>>>>>> origin/auto/autonomy-17186719616
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
@@ -148,6 +206,22 @@ const Homepage2035: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8delay: 0.2 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+            >
+              {[
+                { icon: <Users className="w-8 h-8" />value: '50K+'label: 'Happy Clients' },
+                { icon: <Star className="w-8 h-8" />value: '4.9'label: 'Average Rating' },
+                { icon: <Award className="w-8 h-8" />value: '200+'label: 'Services' },
+                { icon: <TrendingUp className="w-8 h-8" />value: '99.9%'label: 'Uptime' }
+              ].map((statindex) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0scale: 0.5 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ duration: 0.5delay: 0.3 + index * 0.1 }}
+=======
               transition={{ duration: 0.8, delay: 0.2 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
             >
@@ -162,6 +236,7 @@ const Homepage2035: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                   className="text-center"
                 >
                   <div className="text-cyan-400 mb-2 flex justify-center">{stat.icon}</div>
@@ -195,7 +270,11 @@ const Homepage2035: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8delay: 0.2 }}
+=======
               transition={{ duration: 0.8, delay: 0.2 }}
+>>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="flex flex-wrap justify-center gap-4 mb-12"
             >
@@ -225,7 +304,11 @@ const Homepage2035: React.FC = () => {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
+<<<<<<< HEAD
+              {filteredServices.map((serviceindex) => (
+=======
               {filteredServices.map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   variants={fadeInUp}
@@ -240,7 +323,11 @@ const Homepage2035: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8delay: 0.4 }}
+=======
               transition={{ duration: 0.8, delay: 0.4 }}
+>>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="text-center mt-16"
             >
@@ -270,7 +357,11 @@ const Homepage2035: React.FC = () => {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
+                We combine innovationexpertiseand cutting-edge technology to deliver exceptional results
+=======
                 We combine innovation, expertise, and cutting-edge technology to deliver exceptional results
+>>>>>>> origin/auto/autonomy-17186719616
               </p>
             </motion.div>
 
@@ -299,19 +390,31 @@ const Homepage2035: React.FC = () => {
                 {
                   icon: <Cloud className="w-12 h-12" />,
                   title: 'Cloud-Native',
+<<<<<<< HEAD
+                  description: 'Built for the cloud with scalabilityreliabilityand performance in mind'
+=======
                   description: 'Built for the cloud with scalability, reliability, and performance in mind'
+>>>>>>> origin/auto/autonomy-17186719616
                 },
                 {
                   icon: <Target className="w-12 h-12" />,
                   title: 'Results-Driven',
                   description: 'Focused on delivering measurable business outcomes and ROI'
                 }
+<<<<<<< HEAD
+              ].map((featureindex) => (
+=======
               ].map((feature, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                  transition={{ duration: 0.8delay: index * 0.1 }}
+=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group"
                 >

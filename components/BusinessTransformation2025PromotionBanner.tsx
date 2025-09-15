@@ -4,9 +4,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Building2, 
-  DollarSign, 
+  TrendingUp
+  Building2
+  DollarSign
   Star,
   ChevronRight,
   X,
@@ -19,15 +19,15 @@ import {
 } from 'lucide-react';
 
 const BusinessTransformation2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentMetric, setCurrentMetric] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentMetricsetCurrentMetric] = useState(0);
 
   const metrics = [
-    { icon: DollarSign, value: '340%', label: 'Revenue Increase', color: 'text-green-400' },
-    { icon: TrendingUp, value: '65%', label: 'Cost Reduction', color: 'text-blue-400' },
-    { icon: BarChart3, value: '280%', label: 'Efficiency Gain', color: 'text-yellow-400' },
-    { icon: Star, value: '98%', label: 'Customer Satisfaction', color: 'text-purple-400' }
+    { icon: DollarSignvalue: '340%'label: 'Revenue 'Increase', 'color: 'text-green-400' },
+    { icon: TrendingUpvalue: '65%'label: 'Cost 'Reduction', 'color: 'text-blue-400' },
+    { icon: BarChart3value: '280%'label: 'Efficiency 'Gain', 'color: 'text-yellow-400' },
+    { icon: Starvalue: '98%'label: 'Customer 'Satisfaction', 'color: 'text-purple-400' }
   ];
 
   useEffect(() => {
@@ -36,10 +36,10 @@ const BusinessTransformation2025PromotionBanner = () => {
     // Rotate through metrics
     const interval = setInterval(() => {
       setCurrentMetric((prev) => (prev + 1) % metrics.length);
-    }, 2500);
+    }2500);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentMetricData = metrics[currentMetric];
 
@@ -51,7 +51,7 @@ const BusinessTransformation2025PromotionBanner = () => {
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.6ease: "easeOut" }}
         className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 border-b border-green-500/30"
       >
         {/* Animated background elements */}
@@ -68,7 +68,7 @@ const BusinessTransformation2025PromotionBanner = () => {
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="flex items-center gap-2"
                 >
                   <Sparkles className="w-6 h-6 text-green-400" />
@@ -94,9 +94,9 @@ const BusinessTransformation2025PromotionBanner = () => {
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-4">
                 <motion.div
                   key={currentMetric}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0x: 20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  exit={{ opacity: 0x: -20 }}
                   transition={{ duration: 0.5 }}
                   className="flex items-center px-4 py-2 rounded-full bg-white/10 text-white"
                 >
@@ -160,7 +160,7 @@ const BusinessTransformation2025PromotionBanner = () => {
 
           {/* Metric indicators */}
           <div className="flex justify-center lg:justify-start mt-4 space-x-2">
-            {metrics.map((_, index) => (
+            {metrics.map((_index) => (
               <div
                 key={index}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${

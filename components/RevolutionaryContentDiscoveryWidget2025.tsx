@@ -1,15 +1,15 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 export default function RevolutionaryContentDiscoveryWidget2025() {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategorysetActiveCategory] = useState('all');
 
   const contentItems = [
     {
       id: 1,
       title: "AI 2025 Revolutionary Breakthrough",
-      description: "Experience 99.9% accuracy, 10,000x faster processing, and 2,500-5,000% ROI",
+      description: "Experience 99.9% accuracy10,000x faster processingand 2,500-5,000% ROI",
       category: "breakthrough",
       type: "announcement",
       roi: "5,000%",
@@ -87,11 +87,11 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length },
-    { id: 'breakthrough', name: 'Breakthroughs', count: contentItems.filter(item => item.category === 'breakthrough').length },
-    { id: 'quantum', name: 'Quantum AI', count: contentItems.filter(item => item.category === 'quantum').length },
-    { id: 'case-study', name: 'Success Stories', count: contentItems.filter(item => item.category === 'case-study').length },
-    { id: 'guide', name: 'Implementation Guides', count: contentItems.filter(item => item.category === 'guide').length }
+    { id: ''all', 'name: 'All 'Content', 'count: contentItems.length },
+    { id: ''breakthrough', 'name: ''Breakthroughs', 'count: contentItems.filter(item => item.category === 'breakthrough').length },
+    { id: ''quantum', 'name: 'Quantum 'AI', 'count: contentItems.filter(item => item.category === 'quantum').length },
+    { id: 'case-'study', 'name: 'Success 'Stories', 'count: contentItems.filter(item => item.category === 'case-study').length },
+    { id: ''guide', 'name: 'Implementation 'Guides', 'count: contentItems.filter(item => item.category === 'guide').length }
   ];
 
   const filteredContent = activeCategory === 'all' 
@@ -114,7 +114,7 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the most advanced AI content, case studies, and implementation guides. 
+            Discover the most advanced AI contentcase studiesand implementation guides. 
             Experience breakthrough technologies that deliver extraordinary results.
           </p>
         </div>

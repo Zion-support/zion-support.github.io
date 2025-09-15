@@ -1,39 +1,7 @@
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-// Authentication utilities
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
-export interface User {;
-  id: string;
-  email: string;
-  role: 'admin' | 'user' | 'guest';
-}
-
-export function parseUserFromRequest(req: NextApiRequest): User {
-  // Mock implementation - replace with actual auth logic;
-  const authHeader = req.headers.authorization;
-  if (!authHeader) {
-    return { id: 'guest', email: 'guest@example.com', role: 'guest' };
-  }
-  
-  // Simple mock for admin users
-  if (authHeader.includes('admin')) {
-    return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' };
-  }
-  
-  return { id: 'user-1', email: 'user@zion.os', role: 'user' };
-
-}
-
-  try {;
-    const user = parseUserFromRequest(req);
-
-
-    ensureAdmin(user);
-
 export function parseUserFromRequest (req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
   const auth_header = req.headers.authorization;
@@ -61,17 +29,15 @@ if ( {) {
     throw error;
   }
 }
-export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowed: boolean }> {
+export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
+
   try {
     const user = parseUserFromRequest (req);
     ensure_admin (user);
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export interface User {;
-  id: string;
-  email: string;
-  role: 'admin' | 'user' | 'guest';
-}
+
+
 
 export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
@@ -101,7 +67,7 @@ export function parseUserFromRequest(req: NextApiRequest): User {
   return { id: 'user-1', email: 'user@zion.os', role: 'user' }
 }
 export function ensureAdmin(user: User): void {
-  if (user.role !== 'admin') {;
+  if (user.role !== 'admin') {
     const error = new Error('Forbidden');
     (error as any).statusCode = 403;
     throw error;
@@ -112,15 +78,18 @@ export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed
     const user = parseUserFromRequest(req);
     ensureAdmin(user);
 
+
     return { allowed: true }
   } catch {
     return { allowed: false }
   }
 }
 
+
 // Additional auth utilities for login;
 
 export interface DemoUser {
+
 // Additional auth utilities for login
 export interface DemoUser {;
   id: string;
@@ -128,11 +97,15 @@ export interface DemoUser {;
   role: 'admin' | 'user' | 'guest';
   email: string;
 }
+const demoUsers: DemoUser[] = [];
+export function ensureDemoUsers(): void {
+  if (demoUsers.length === 0) {
+    demoUsers.push(
 
-
+      { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' }
+      { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' }
       { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
       { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' };
-
 
     );
   }
@@ -140,6 +113,13 @@ export interface DemoUser {;
 export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
   return {
 
+    id: `user-${Date.now()}`
+    name
+    role
+    email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`
+  }
+}
+export function upsertUser(user: DemoUser): void {
 
     id: `user-${Date.now()}`,
     name,
@@ -151,6 +131,13 @@ export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): De
 export function upsertUser(user: DemoUser): void {;
 
 
+
+
+
+
+
+
+
   const index = demoUsers.findIndex(u => u.id === user.id);
   if (index >= 0) {
     demoUsers[index] = user;
@@ -159,6 +146,11 @@ export function upsertUser(user: DemoUser): void {;
   }
 }
 
+export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
+  res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
+}
+export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
+  const cookieHeader = req.headers.cookie |'';
 
 
 export function setUserCookie(res: NextApiResponse, user: DemoUser): void {;
@@ -167,7 +159,6 @@ export function setUserCookie(res: NextApiResponse, user: DemoUser): void {;
 
 export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
   const cookieHeader = req.headers.cookie || '';
-
 
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
@@ -218,35 +209,28 @@ if (return null) {
   } catch {
     return null;
   }
-
-
-    user,
-    token,
-    expiresAt: Date && Date.now() + 24 * 60 * 60 * 1000, // 24 hours
-  };
 }
+
 
   }
 }
 
 
-
-export function isAuthenticated(session: AuthSession | null): boolean {
-    if (!session) return false;
-
-
-  }
-
-export function hasRole(session: AuthSession | null, role: string): boolean {
-    if (!session || !isAuthenticated(session)) return false;
-
-
   }
 }
 
-export function isModerator(session: AuthSession | null): boolean {
-  return hasRole(session, 'moderator') || isAdmin(session);
+=======
+import type { NextApiRequest } from 'next';
 
+export function getRequestUserEmail(req: NextApiRequest): string | null {
+  const emailHeader = req.headers['x-user-email'];
+  if (Array.isArray(emailHeader)) return emailHeader[0] || null;
+  return (emailHeader as string) || null;
 }
 
+export function isAdminEmail(email: string | null | undefined): boolean {
+  if (!email) return false;
+  const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean);
+  return admins.includes(email.toLowerCase());
 }
+>>>>>>> origin/auto/autonomy-17186719616

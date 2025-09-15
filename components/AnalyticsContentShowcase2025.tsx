@@ -55,13 +55,13 @@ const AnalyticsContentShowcase2025 = () => {
             Analytics Content Showcase 2025
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive collection of analytics content, tools, and resources 
+            Explore our comprehensive collection of analytics contentoolsand resources 
             designed to help you master the data revolution.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {analyticsContent.map((content, index) => (
+          {analyticsContent.map((contentindex) => (
             <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
               <div className="p-6">
                 <div className="text-4xl mb-4">{content.image}</div>

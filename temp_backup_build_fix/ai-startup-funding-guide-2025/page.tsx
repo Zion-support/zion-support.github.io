@@ -6,8 +6,8 @@ export default function AIStartupFundingGuide2025() {
     <div className="min-h-screen bg-white">
       <SEO
         title="AI Startup Funding Guide 2025: From Seed to Series A"
-        description="Complete guide to AI startup funding in 2025. Learn from $47B market insights, get pitch templates, and master the new funding landscape for AI companies."
-        keywords="AI startup funding, venture capital, AI investment, startup pitch, Series A, seed funding"
+        description="Complete guide to AI startup funding in 2025. Learn from $47B market insightsget pitch templatesand master the new funding landscape for AI companies."
+        keywords="AI startup fundingventure capitalAI investmentstartup pitchSeries Aseed funding"
         url="/blog/ai-startup-funding-guide-2025"
       />
       
@@ -20,7 +20,7 @@ export default function AIStartupFundingGuide2025() {
             </span>
             <span className="text-gray-500 text-sm">22 min read</span>
             <span className="text-gray-500 text-sm">•</span>
-            <span className="text-gray-500 text-sm">Jan 28, 2025</span>
+            <span className="text-gray-500 text-sm">Jan 282025</span>
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -29,7 +29,7 @@ export default function AIStartupFundingGuide2025() {
           
           <p className="text-xl text-gray-600 leading-relaxed mb-8">
             Navigate the $47B AI market with confidence. This comprehensive guide covers everything from 
-            pre-seed to Series A, including pitch templates, investor insights, and proven strategies 
+            pre-seed to Series Aincluding pitch templatesinvestor insightsand proven strategies 
             from successful AI startups.
           </p>
           
@@ -73,7 +73,7 @@ export default function AIStartupFundingGuide2025() {
           
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             The AI funding landscape in 2025 represents a maturing market with $47B in total funding across 
-            2,400+ startups. While the market has cooled from its 2021 peak, quality AI startups with strong 
+            2,400+ startups. While the market has cooled from its 2021 peakquality AI startups with strong 
             fundamentals continue to attract significant investment.
           </p>
 
@@ -131,7 +131,7 @@ export default function AIStartupFundingGuide2025() {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-3">Solution (2 minutes)</h4>
                   <p className="text-gray-700 text-sm">
-                    Explain your technology in business terms, not technical jargon. Highlight what 
+                    Explain your technology in business termsnot technical jargon. Highlight what 
                     makes you different from competitors and include technical validation.
                   </p>
                 </div>
@@ -176,7 +176,7 @@ export default function AIStartupFundingGuide2025() {
             
             <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Success Factors:</h4>
             <ul className="space-y-2 text-gray-700">
-              <li>• <strong>Clear Value Proposition:</strong> Solved a specific, painful problem for enterprises</li>
+              <li>• <strong>Clear Value Proposition:</strong> Solved a specificpainful problem for enterprises</li>
               <li>• <strong>Strong Technical Team:</strong> PhD-level AI researchers with industry experience</li>
               <li>• <strong>Early Customer Validation:</strong> 3 paying customers before seed funding</li>
               <li>• <strong>Rapid Iteration:</strong> Weekly product updates based on customer feedback</li>

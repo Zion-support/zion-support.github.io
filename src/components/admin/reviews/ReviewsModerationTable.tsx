@@ -12,7 +12,8 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table";
+  TableRow,
+} from "@/components/ui/table";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Dialog,
@@ -20,12 +21,14 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle} from "@/components/ui/dialog";
+  DialogTitle,
+} from "@/components/ui/dialog";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -38,14 +41,16 @@ interface ReviewsModerationTableProps {
 export function ReviewsModerationTable({
   reviews,
   isLoading,
-  onRefresh}: ReviewsModerationTableProps) {
+  onRefresh,
+}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null);
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
 
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
       reviewId,
-      status}: {
+      status,
+    }: {
       reviewId: string;
       status: ReviewStatus;
     }) => {
@@ -60,7 +65,8 @@ export function ReviewsModerationTable({
     onSuccess: (data) => {
       toast({
         title: "Review updated",
-        description: `Review has been ${data.status}.`});
+        description: `Review has been ${data.status}.`,
+      });
       onRefresh();
       setViewDetailsOpen(false);
     },
@@ -68,8 +74,10 @@ export function ReviewsModerationTable({
       toast({
         title: "Error",
         description: `Failed to update review: ${error.message}`,
-        variant: "destructive"});
-    }});
+        variant: "destructive",
+      });
+    },
+  });
 
 
   const getInitials = (name: string) => {

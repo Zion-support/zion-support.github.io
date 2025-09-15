@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React{ useEffectuseState } from 'react';
 
 interface ContentMetrics {
   pageViews: number;
@@ -14,8 +14,8 @@ interface ContentAnalyticsProps {
   pageTitle: string;
 }
 
-export default function ContentAnalytics({ pageId, pageTitle }: ContentAnalyticsProps) {
-  const [metrics, setMetrics] = useState<ContentMetrics>({
+export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsProps) {
+  const [metricsetMetrics] = useState<ContentMetrics>({
     pageViews: 0,
     timeOnPage: 0,
     scrollDepth: 0,
@@ -23,7 +23,7 @@ export default function ContentAnalytics({ pageId, pageTitle }: ContentAnalytics
     bounceRate: 0
   });
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     // Track page view
@@ -42,7 +42,7 @@ export default function ContentAnalytics({ pageId, pageTitle }: ContentAnalytics
       
       setMetrics(prev => ({
         ...prev,
-        scrollDepth: Math.max(prev.scrollDepth, scrollDepth)
+        scrollDepth: Math.max(prev.scrollDepth)
       }));
     };
 
@@ -71,21 +71,21 @@ export default function ContentAnalytics({ pageId, pageTitle }: ContentAnalytics
     trackPageView();
     
     // Set up event listeners
-    window.addEventListener('scroll', trackScrollDepth, { passive: true });
-    document.addEventListener('click', trackClicks);
+    window.addEventListener(', 'scroll', 'trackScrollDepth{ passive: true });
+    document.addEventListener(', 'click', 'trackClicks);
     
     // Update time every 5 seconds
-    const timeInterval = setInterval(trackTimeOnPage, 5000);
+    const timeInterval = setInterval(trackTimeOnPage5000);
     
     // Cleanup
     return () => {
-      window.removeEventListener('scroll', trackScrollDepth);
-      document.removeEventListener('click', trackClicks);
+      window.removeEventListener(', 'scroll', 'trackScrollDepth);
+      document.removeEventListener(', 'click', 'trackClicks);
       clearInterval(timeInterval);
     };
-  }, []);
+  }[]);
 
-  // Don't render in production
+  // 'Don', 't render in production
   if (process.env.NODE_ENV === 'production') {
     return null;
   }

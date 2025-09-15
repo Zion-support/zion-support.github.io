@@ -61,7 +61,8 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
           }));
           retryAction();
         }
-      } : undefined});
+      } : undefined,
+    });
   }, [retryCount, reportError]);
 
   const showNetworkError = useCallback((retryAction?: () => void) => {
@@ -76,7 +77,8 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       action: retryAction ? {
         label: "Retry",
         onClick: retryAction
-      } : undefined});
+      } : undefined,
+    });
   }, []);
 
   const showAuthError = useCallback((loginAction?: () => void) => {
@@ -87,7 +89,8 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       action: loginAction ? {
         label: "Log In",
         onClick: loginAction
-      } : undefined});
+      } : undefined,
+    });
   }, []);
 
   const clearAllErrors = useCallback(() => {
@@ -100,7 +103,8 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     showRetryableError,
     showNetworkError,
     showAuthError,
-    clearAllErrors};
+    clearAllErrors,
+  };
 
   return (
     <ErrorContext.Provider value={contextValue}>
@@ -181,7 +185,8 @@ export function useErrorHandler() {
       if (options?.successMessage) {
         toast({
           title: "Success",
-          description: options.successMessage});
+          description: options.successMessage,
+        });
       }
       
       return result;
@@ -201,5 +206,6 @@ export function useErrorHandler() {
   return {
     reportError,
     handleApiError,
-    handleAsyncOperation};
+    handleAsyncOperation,
+  };
 } 

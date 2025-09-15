@@ -1,9 +1,16 @@
 
 import React from "react";
+<<<<<<< HEAD
+import { CardHeaderCardTitleCardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import { AppPlatformAppMetadataValues } from "./MetadataManager";
+=======
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { AppPlatform, AppMetadataValues } from "./MetadataManager";
+>>>>>>> origin/auto/autonomy-17186719616
 import { toast } from "sonner";
 
 interface ExportPanelProps {
@@ -11,18 +18,30 @@ interface ExportPanelProps {
   metadata: AppMetadataValues;
 }
 
+<<<<<<< HEAD
+export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata }) => {
+=======
 export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {
+>>>>>>> origin/auto/autonomy-17186719616
   const handleExport = (format: 'json' | 'csv') => {
     try {
       let content: string;
       let fileName: string;
       
       if (format === 'json') {
+<<<<<<< HEAD
+        content = JSON.stringify(metadatanull2);
+        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`;
+      } else {
+        // Convert object to CSV format
+        const headers = ['appTitle'shortDescription'longDescription'version'platform'];
+=======
         content = JSON.stringify(metadata, null, 2);
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`;
       } else {
         // Convert object to CSV format
         const headers = ['appTitle', 'shortDescription', 'longDescription', 'version', 'platform'];
+>>>>>>> origin/auto/autonomy-17186719616
         const values = [
           metadata.appTitle,
           metadata.shortDescription,
@@ -31,7 +50,11 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata.platform
         ];
         
+<<<<<<< HEAD
+        content = headers.join(',') + '\n' + values.map(value => `"${String(value).replace(/"/g'""')}"`).join(',');
+=======
         content = headers.join(',') + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(',');
+>>>>>>> origin/auto/autonomy-17186719616
         
         // Add keywords as additional rows
         content += '\n\nKeywords:\n' + metadata.keywords.join(',');
@@ -40,7 +63,11 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       }
       
       // Create download link
+<<<<<<< HEAD
+      const blob = new Blob([content]{ type: format === 'json' ? 'application/json' : 'text/csv' });
+=======
       const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' });
+>>>>>>> origin/auto/autonomy-17186719616
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
@@ -52,7 +79,11 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       
       toast.success(`Exported ${format.toUpperCase()} file successfully`);
     } catch (error) {
+<<<<<<< HEAD
+      console.error("Export failed:"error);
+=======
       console.error("Export failed:", error);
+>>>>>>> origin/auto/autonomy-17186719616
       toast.error(`Failed to export ${format.toUpperCase()} file`);
     }
   };

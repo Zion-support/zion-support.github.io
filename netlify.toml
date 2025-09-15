@@ -1,103 +1,230 @@
+<<<<<<< HEAD
+# This is a VITE project, NOT a Next.js project
+# The build process uses Vite to create a static site in the 'dist' folder
+# No Next.js plugins or configurations are needed
+
 [build]
-  # Pre-build command to handle dependencies
-  command = "bash scripts/netlify-pre-build.sh && npm run build"
-  
-  # Directory to publish
+  # Use `npm install` for consistent dependency management, Vite builds to dist/
+  command = "npm ci && npm run build:netlify"
   publish = "dist"
-  
-  # Functions directory
-  functions = "netlify/functions"
+  # Force static site build (not Next.js)
+  # Functions moved to PM2 automation
+  # Explicitly specify this is a static site, not a framework
+  base = "."
 
 [build.environment]
-  # Node.js version
   NODE_VERSION = "20"
-  
-  # Build environment
-  NODE_OPTIONS = "--max-old-space-size=6144"
-  NODE_ENV = "production"
-  
-  # Yarn configuration - optimized for reliable builds
-  YARN_CACHE_FOLDER = "/opt/buildhome/.yarn_cache"
-  YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
-  YARN_NETWORK_TIMEOUT = "1000000"
-  YARN_PREFER_OFFLINE = "true"
-  YARN_IGNORE_ENGINES = "true"
-  YARN_IGNORE_PLATFORM = "true"
-  
-  # Install devDependencies for build tools
-  YARN_INSTALL_DEV = "true"
-  
-  # Force install all dependencies including devDependencies
-  NPM_CONFIG_INCLUDE = "dev"
-  
-  # Ensure Vite is available and handle peer dependencies
-  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
-  NPM_CONFIG_AUDIT = "false"
-  NPM_CONFIG_FUND = "false"
-  NPM_CONFIG_FORCE = "true"
-  
-  # Disable Next.js auto-detection since this is a Vite project
-  NETLIFY_USE_NEXTJS = "false"
+  NODE_OPTIONS = "--max_old_space_size=6144"
+  # Use npm for dependency management
+  NPM_FLAGS = "--ignore-scripts --no-optional"
+  # Skip Netlify's Next.js plugin since this is a Vite static site
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  NETLIFY_USE_NEXT_PLUGIN = "false"
-  
-  # Additional build optimizations
-  CI = "true"
-  GENERATE_SOURCEMAP = "false"
+  # Force Vite/static site detection
+  NETLIFY_USE_YARN = "false"
+  NETLIFY_USE_NPM = "true"
+  # Disable framework detection
+  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
+  # Force static site build
+  NETLIFY_FORCE_STATIC_BUILD = "true"
+  # Skip all framework plugins
+  NETLIFY_SKIP_FRAMEWORK_PLUGINS = "true"
+  CANONICAL_URL = "https://ziontechgroup.com"
+  # Fix Rollup module issues
+  NPM_CONFIG_OPTIONAL = "false"
+  NPM_CONFIG_PLATFORM = "linux"
+  NPM_CONFIG_ARCH = "x64"
+  NPM_CONFIG_TARGET_PLATFORM = "linux"
+  NPM_CONFIG_TARGET_ARCH = "x64"
+  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  NPM_CONFIG_STRICT_SSL = "false"
+  NPM_CONFIG_BUILD_FROM_SOURCE = "false"
+  NPM_CONFIG_PREFER_OFFLINE = "true"
+  # Additional Rollup fixes
+  VITE_ROLLUP_PLATFORM = "linux"
+  VITE_ROLLUP_ARCH = "x64"
+  ROLLUP_PLATFORM = "linux"
+  ROLLUP_ARCH = "x64"
 
-# Cache configuration to prevent dependency issues
-[build.cache]
-  directories = ["node_modules/.cache", ".yarn/cache"]
+# Fix MIME type issues
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Content-Type = "application/javascript"
+    Cache-Control = "public, max-age=31536000, immutable"
 
-# Alternative build configuration for fallback
-[build.processing]
-  skip_processing = false
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Content-Type = "text/css"
+    Cache-Control = "public, max-age=31536000, immutable"
 
-# Disable problematic features that can cause EEXIST errors
-[build.processing.css]
-  bundle = true
-  minify = true
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
 
-[build.processing.js]
-  bundle = true
-  minify = true
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Content-Type = "text/css"
 
-# Ignore files that might cause conflicts
-[[build.ignore]]
-  path = "package-lock.json"
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Content-Type = "image/svg+xml"
 
-[[build.ignore]]
-  path = "node_modules/.yarn-integrity"
+[[headers]]
+  for = "*.ico"
+  [headers.values]
+    Content-Type = "image/x-icon"
 
-# Plugin configurations
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Content-Type = "image/png"
 
-# Force Vite build detection
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Content-Type = "image/jpeg"
 
-# Static redirects for exported site
+[[headers]]
+  for = "*.jpeg"
+  [headers.values]
+    Content-Type = "image/jpeg"
+
+[[headers]]
+  for = "*.gif"
+  [headers.values]
+    Content-Type = "image/gif"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Content-Type = "image/webp"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/service-worker.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+# Removed Next.js plugin since this is a Vite project
+
+# Redirects for SEO/legacy URLs
+[[redirects]]
+  from = "/ai-autonomous-ecosystem"
+  to = "/ai-autonomous-ecosystem-manager"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-materials-discovery"
+  to = "/quantum-materials-discovery-platform"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-vehicle-ai"
+  to = "/autonomous-vehicle-ai-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/ai-content-generator"
+  status = 301
+
+[[redirects]]
+  from = "/ai-customer-success-automation"
+  to = "/ai-customer-success-platform"
+  status = 301
+
+[[redirects]]
+  from = "/browser-automation-cloud/"
+  to = "/browser-automation-cloud"
+  status = 301
+
+# Handle client-side routing for SPA (this is also in _redirects file)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Headers for security and performance
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Cache static assets
-[[headers]]
-  for = "/static/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+=======
+[build]
+  functions = "netlify/functions"
 
-# Cache API routes
-[[headers]]
-  for = "/api/*"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+[build.environment]
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
+  NODE_ENV = "production"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+
+# Static redirects for exported site
+[[redirects]]
+  from = "/ai-customer-success-platform"
+  to = "/services/ai-customer-success-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-sales-intelligence-platform"
+  to = "/services/ai-sales-intelligence-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-financial-planning-platform"
+  to = "/services/ai-financial-planning-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-powered-decision-engine"
+  to = "/services/ai-powered-decision-engine/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-content-automation-platform"
+  to = "/services/intelligent-content-automation-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-hr-analytics-platform"
+  to = "/services/intelligent-hr-analytics-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/smart-crm-intelligence-suite"
+  to = "/services/smart-crm-intelligence-suite/"
+  status = 301
+
+[[redirects]]
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+>>>>>>> origin/auto/autonomy-17186719616

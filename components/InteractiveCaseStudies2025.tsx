@@ -4,11 +4,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
-  CheckCircle, 
+  TrendingUp
+  Users
+  DollarSign
+  Clock
+  CheckCircle
   ArrowRight,
   ExternalLink,
   Play,
@@ -50,10 +50,10 @@ const caseStudies: CaseStudy[] = [
     challenge: 'Inefficient supply chain management leading to 30% inventory waste and delayed deliveries',
     solution: 'Implemented AI-driven demand forecasting and automated inventory management system',
     results: [
-      { metric: 'Cost Reduction', value: '$2.3M', improvement: '35%' },
-      { metric: 'Delivery Time', value: '2.1 days', improvement: '60% faster' },
-      { metric: 'Inventory Waste', value: '8%', improvement: '73% reduction' },
-      { metric: 'Customer Satisfaction', value: '94%', improvement: '28% increase' }
+      { metric: 'Cost 'Reduction', 'value: '$2.3'M', 'improvement: '35%' },
+      { metric: 'Delivery 'Time', 'value: '2.1 'days', 'improvement: '60% faster' },
+      { metric: 'Inventory 'Waste', 'value: '8%'improvement: '73% reduction' },
+      { metric: 'Customer 'Satisfaction', 'value: '94%'improvement: '28% increase' }
     ],
     duration: '6 months',
     teamSize: '12 members',
@@ -62,7 +62,7 @@ const caseStudies: CaseStudy[] = [
     author: 'Sarah Chen',
     role: 'VP of Operations',
     image: '/api/placeholder/400/300',
-    tags: ['AI', 'Supply Chain', 'Manufacturing', 'ROI'],
+    tags: [', 'AI', 'Supply 'Chain', 'Manufacturing'ROI'],
     isFeatured: true
   },
   {
@@ -73,19 +73,19 @@ const caseStudies: CaseStudy[] = [
     challenge: 'High customer service costs and low satisfaction rates with traditional support systems',
     solution: 'Deployed advanced AI chatbots with emotional intelligence and human handoff capabilities',
     results: [
-      { metric: 'Response Time', value: '15 seconds', improvement: '95% faster' },
-      { metric: 'Cost Reduction', value: '$180K', improvement: '65% savings' },
-      { metric: 'Customer Satisfaction', value: '91%', improvement: '42% increase' },
-      { metric: 'Resolution Rate', value: '87%', improvement: '38% increase' }
+      { metric: 'Response 'Time', 'value: '15 'seconds', 'improvement: '95% faster' },
+      { metric: 'Cost 'Reduction', 'value: '$180'K', 'improvement: '65% savings' },
+      { metric: 'Customer 'Satisfaction', 'value: '91%'improvement: '42% increase' },
+      { metric: 'Resolution 'Rate', 'value: '87%'improvement: '38% increase' }
     ],
     duration: '4 months',
     teamSize: '8 members',
     rating: 4.8,
-    testimonial: 'Our customers love the instant, intelligent responses. The AI understands context better than most human agents.',
+    testimonial: 'Our customers love the instantintelligent responses. The AI understands context better than most human agents.',
     author: 'Michael Rodriguez',
     role: 'Head of Customer Success',
     image: '/api/placeholder/400/300',
-    tags: ['AI', 'Customer Service', 'Automation', 'Satisfaction']
+    tags: [', 'AI', 'Customer 'Service', 'Automation'Satisfaction']
   },
   {
     id: '3',
@@ -95,10 +95,10 @@ const caseStudies: CaseStudy[] = [
     challenge: 'Complex risk assessment and fraud detection requiring massive computational power',
     solution: 'Implemented quantum-inspired algorithms for real-time risk analysis and fraud prevention',
     results: [
-      { metric: 'Fraud Detection', value: '99.7%', improvement: '23% more accurate' },
-      { metric: 'Processing Speed', value: '0.3ms', improvement: '1000x faster' },
-      { metric: 'False Positives', value: '0.1%', improvement: '89% reduction' },
-      { metric: 'Cost Savings', value: '$5.2M', improvement: '45% reduction' }
+      { metric: 'Fraud 'Detection', 'value: '99.7%'improvement: '23% more accurate' },
+      { metric: 'Processing 'Speed', 'value: '0.3'ms', 'improvement: '1000x faster' },
+      { metric: 'False 'Positives', 'value: '0.1%'improvement: '89% reduction' },
+      { metric: 'Cost 'Savings', 'value: '$5.2'M', 'improvement: '45% reduction' }
     ],
     duration: '8 months',
     teamSize: '15 members',
@@ -107,7 +107,7 @@ const caseStudies: CaseStudy[] = [
     author: 'Dr. Emily Watson',
     role: 'Chief Technology Officer',
     image: '/api/placeholder/400/300',
-    tags: ['Quantum AI', 'Finance', 'Security', 'Performance'],
+    tags: ['Quantum 'AI', 'Finance', 'Security', 'Performance'],
     isFeatured: true
   },
   {
@@ -118,32 +118,32 @@ const caseStudies: CaseStudy[] = [
     challenge: 'Manual diagnostic processes causing delays and inconsistent accuracy in medical imaging',
     solution: 'Deployed deep learning models for automated medical image analysis and diagnostic assistance',
     results: [
-      { metric: 'Diagnostic Accuracy', value: '96.8%', improvement: '18% increase' },
-      { metric: 'Processing Time', value: '2 minutes', improvement: '85% faster' },
-      { metric: 'Early Detection', value: '89%', improvement: '34% improvement' },
-      { metric: 'Cost per Diagnosis', value: '$45', improvement: '60% reduction' }
+      { metric: 'Diagnostic 'Accuracy', 'value: '96.8%'improvement: '18% increase' },
+      { metric: 'Processing 'Time', 'value: '2 'minutes', 'improvement: '85% faster' },
+      { metric: 'Early 'Detection', 'value: '89%'improvement: '34% improvement' },
+      { metric: 'Cost per 'Diagnosis', 'value: '$45'improvement: '60% reduction' }
     ],
     duration: '10 months',
     teamSize: '20 members',
     rating: 4.9,
-    testimonial: 'The AI system has revolutionized our diagnostic capabilities, helping us save lives through faster, more accurate diagnoses.',
+    testimonial: 'The AI system has revolutionized our diagnostic capabilitieshelping us save lives through fastermore accurate diagnoses.',
     author: 'Dr. James Park',
     role: 'Chief Medical Officer',
     image: '/api/placeholder/400/300',
-    tags: ['AI', 'Healthcare', 'Diagnostics', 'Life-Saving']
+    tags: [', 'AI', 'Healthcare', 'Diagnostics', 'Life-Saving']
   }
 ];
 
-const industries = ['All', 'Manufacturing', 'Technology', 'Financial Services', 'Healthcare'];
+const industries = [', 'All', 'Manufacturing', 'Technology', 'Financial 'Services', 'Healthcare'];
 
 export default function InteractiveCaseStudies2025() {
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
-  const [selectedCase, setSelectedCase] = useState<CaseStudy | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [selectedIndustrysetSelectedIndustry] = useState('All');
+  const [selectedCasetSelectedCase] = useState<CaseStudy | null>(null);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const filteredCaseStudies = selectedIndustry === 'All' 
     ? caseStudies 
@@ -171,7 +171,7 @@ export default function InteractiveCaseStudies2025() {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover how leading companies are transforming their operations with cutting-edge AI solutions. 
-            Real case studies, real results, real impact.
+            Real case studiesreal resultsreal impact.
           </p>
         </motion.div>
 
@@ -179,7 +179,7 @@ export default function InteractiveCaseStudies2025() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {industries.map((industry) => (
@@ -201,17 +201,17 @@ export default function InteractiveCaseStudies2025() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           <AnimatePresence>
-            {filteredCaseStudies.map((caseStudy, index) => (
+            {filteredCaseStudies.map((caseStudyindex) => (
               <motion.div
                 key={caseStudy.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
+                transition={{ duration: 0.4delay: index * 0.1 }}
                 className={`group relative bg-white/5 backdrop-blur-sm border rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer ${
                   caseStudy.isFeatured ? 'border-blue-500/50 shadow-lg shadow-blue-500/10' : 'border-white/10'
                 }`}
@@ -247,7 +247,7 @@ export default function InteractiveCaseStudies2025() {
 
                 {/* Key Results */}
                 <div className="grid grid-cols-2 gap-4 mb-4">
-                  {caseStudy.results.slice(0, 2).map((result, idx) => (
+                  {caseStudy.results.slice(02).map((resultidx) => (
                     <div key={idx} className="text-center">
                       <div className="text-2xl font-bold text-white">{result.value}</div>
                       <div className="text-xs text-gray-400">{result.metric}</div>
@@ -258,7 +258,7 @@ export default function InteractiveCaseStudies2025() {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {caseStudy.tags.map((tag, idx) => (
+                  {caseStudy.tags.map((tagidx) => (
                     <span
                       key={idx}
                       className="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs"
@@ -294,7 +294,7 @@ export default function InteractiveCaseStudies2025() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6delay: 0.8 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
@@ -354,7 +354,7 @@ export default function InteractiveCaseStudies2025() {
 
                 {/* Results Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                  {selectedCase.results.map((result, idx) => (
+                  {selectedCase.results.map((resultidx) => (
                     <div key={idx} className="bg-white/5 rounded-lg p-4 text-center">
                       <div className="text-2xl font-bold text-white mb-1">{result.value}</div>
                       <div className="text-sm text-gray-400 mb-1">{result.metric}</div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Shield, Globe, TrendingUp, Star, Users, Target, Clock, CheckCircle } from 'lucide-react';
+ArrowRightBrainZapShieldGlobeTrendingUpStarUsersTargetClockCheckCircle
 
 export default function LatestAIFeaturesShowcase2025() {
   const features = [
@@ -25,7 +25,7 @@ export default function LatestAIFeaturesShowcase2025() {
     {
       icon: Globe,
       title: "Autonomous Business Systems",
-      description: "Self-managing business operations that adapt, learn, and optimize in real-time for maximum efficiency.",
+      description: "Self-managing business operations that adaptlearnand optimize in real-time for maximum efficiency.",
       color: "from-green-500 to-green-600",
       bgColor: "bg-green-50",
       iconColor: "text-green-600",
@@ -43,7 +43,7 @@ export default function LatestAIFeaturesShowcase2025() {
     {
       icon: Target,
       title: "Predictive Analytics Engine",
-      description: "Advanced AI systems that predict market trends, customer behavior, and business outcomes with incredible accuracy.",
+      description: "Advanced AI systems that predict market trendscustomer behaviorand business outcomes with incredible accuracy.",
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-50",
       iconColor: "text-orange-600",
@@ -52,7 +52,7 @@ export default function LatestAIFeaturesShowcase2025() {
     {
       icon: Users,
       title: "Synthetic Intelligence",
-      description: "Artificially created consciousness that rivals human intelligence, capable of creative thinking and emotional understanding.",
+      description: "Artificially created consciousness that rivals human intelligencecapable of creative thinking and emotional understanding.",
       color: "from-indigo-500 to-indigo-600",
       bgColor: "bg-indigo-50",
       iconColor: "text-indigo-600",
@@ -84,7 +84,7 @@ export default function LatestAIFeaturesShowcase2025() {
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((featureindex) => (
             <div key={index} className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className={`w-16 h-16 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <feature.icon className={`w-8 h-8 ${feature.iconColor}`} />

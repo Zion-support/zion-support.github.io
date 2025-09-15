@@ -1,7 +1,12 @@
 
 import React from "react";
+<<<<<<< HEAD
+import { LinkuseLocation } from "react-router-dom";
+import { HomeSearchBriefcaseIconMessageSquareUserMessageCircle } from "lucide-react";
+=======
 import { Link, useLocation } from "react-router-dom";
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 

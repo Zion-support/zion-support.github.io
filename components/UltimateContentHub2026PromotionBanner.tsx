@@ -4,12 +4,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Search, 
-  Grid, 
-  List, 
-  Bookmark, 
-  Share2, 
-  Download, 
+  Search
+  Grid
+  List
+  Bookmark
+  Share2
+  Download
   Eye,
   Clock,
   User,
@@ -46,21 +46,21 @@ import {
 } from 'lucide-react';
 
 const UltimateContentHub2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [activePreview, setActivePreview] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [activePreviewsetActivePreview] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 2000);
+    const timer = setTimeout(() => setIsVisible(true)2000);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActivePreview((prev) => (prev + 1) % 3);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
@@ -75,7 +75,7 @@ const UltimateContentHub2026PromotionBanner = () => {
       author: 'Dr. Sarah Chen',
       views: '15.4K',
       likes: 892,
-      tags: ['AI', 'Machine Learning', 'Innovation']
+      tags: [', 'AI', 'Machine 'Learning', 'Innovation']
     },
     {
       title: 'Quantum Computing: The Future is Now',
@@ -83,7 +83,7 @@ const UltimateContentHub2026PromotionBanner = () => {
       author: 'Prof. Michael Rodriguez',
       views: '8.9K',
       likes: 567,
-      tags: ['Quantum Computing', 'Physics', 'Technology']
+      tags: ['Quantum 'Computing', 'Physics'Technology']
     },
     {
       title: 'Smart Automation Implementation Guide',
@@ -91,17 +91,17 @@ const UltimateContentHub2026PromotionBanner = () => {
       author: 'Alex Thompson',
       views: '6.8K',
       likes: 423,
-      tags: ['Automation', 'Implementation', 'Guide']
+      tags: [', 'Automation', 'Implementation'Guide']
     }
   ];
 
   const contentTypes = [
-    { icon: FileText, label: 'Articles', count: '456', color: 'text-blue-400' },
-    { icon: Video, label: 'Videos', count: '234', color: 'text-red-400' },
-    { icon: GraduationCap, label: 'Tutorials', count: '189', color: 'text-green-400' },
-    { icon: Briefcase, label: 'Case Studies', count: '156', color: 'text-purple-400' },
-    { icon: BookOpen, label: 'Whitepapers', count: '98', color: 'text-orange-400' },
-    { icon: Calendar, label: 'Webinars', count: '67', color: 'text-pink-400' }
+    { icon: FileTextlabel: ''Articles', 'count: '456'color: 'text-blue-400' },
+    { icon: Videolabel: ''Videos', 'count: '234'color: 'text-red-400' },
+    { icon: GraduationCaplabel: ''Tutorials', 'count: '189'color: 'text-green-400' },
+    { icon: Briefcaselabel: 'Case 'Studies', 'count: '156'color: 'text-purple-400' },
+    { icon: BookOpenlabel: ''Whitepapers', 'count: '98'color: 'text-orange-400' },
+    { icon: Calendarlabel: ''Webinars', 'count: '67'color: 'text-pink-400' }
   ];
 
   const getTypeIcon = (type) => {
@@ -120,7 +120,7 @@ const UltimateContentHub2026PromotionBanner = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative bg-gradient-to-r from-slate-800 via-blue-900 to-purple-900 text-white overflow-hidden"
         >
           {/* Background Pattern */}
@@ -138,9 +138,9 @@ const UltimateContentHub2026PromotionBanner = () => {
               {/* Content */}
               <div>
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ duration: 0.5delay: 0.2 }}
                   className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-4"
                 >
                   <Grid className="w-4 h-4" />
@@ -151,29 +151,29 @@ const UltimateContentHub2026PromotionBanner = () => {
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
+                  transition={{ duration: 0.6delay: 0.3 }}
                   className="text-3xl md:text-4xl font-bold mb-4"
                 >
-                  Discover, Learn, and Master
+                  DiscoverLearnand Master
                 </motion.h2>
 
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
+                  transition={{ duration: 0.6delay: 0.4 }}
                   className="text-lg md:text-xl opacity-90 mb-6"
                 >
-                  Access 1,247+ pieces of cutting-edge content including articles, videos, tutorials, and case studies from industry experts.
+                  Access 1,247+ pieces of cutting-edge content including articlesvideostutorialsand case studies from industry experts.
                 </motion.p>
 
                 {/* Content Types */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
+                  transition={{ duration: 0.6delay: 0.5 }}
                   className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
                 >
-                  {contentTypes.map((type, index) => (
+                  {contentTypes.map((typeindex) => (
                     <div key={index} className="flex items-center gap-2">
                       <type.icon className={`w-5 h-5 ${type.color}`} />
                       <span className="text-sm font-medium">{type.label}</span>
@@ -186,7 +186,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
+                  transition={{ duration: 0.6delay: 0.6 }}
                   className="flex flex-wrap items-center gap-6 text-sm mb-6"
                 >
                   <div className="flex items-center gap-2">
@@ -207,7 +207,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.7 }}
+                  transition={{ duration: 0.6delay: 0.7 }}
                   className="flex flex-col sm:flex-row gap-4"
                 >
                   <button className="bg-white text-slate-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105">
@@ -222,9 +222,9 @@ const UltimateContentHub2026PromotionBanner = () => {
 
               {/* Preview Section */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                initial={{ opacity: 0x: 20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.8 }}
                 className="relative"
               >
                 {/* Content Preview Card */}
@@ -248,7 +248,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                       className="space-y-4"
                     >
                       <div className="flex items-center gap-2">
-                        {React.createElement(getTypeIcon(contentPreviews[activePreview].type), { 
+                        {React.createElement(getTypeIcon(contentPreviews[activePreview].type){ 
                           className: "w-4 h-4 text-blue-400" 
                         })}
                         <span className="text-sm text-blue-300 capitalize">
@@ -261,7 +261,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                       </h4>
                       
                       <div className="flex flex-wrap gap-2">
-                        {contentPreviews[activePreview].tags.map((tag, index) => (
+                        {contentPreviews[activePreview].tags.map((tagindex) => (
                           <span
                             key={index}
                             className="px-2 py-1 bg-white/10 text-white text-xs rounded-full"
@@ -296,7 +296,7 @@ const UltimateContentHub2026PromotionBanner = () => {
 
                   {/* Preview Indicators */}
                   <div className="flex justify-center gap-2 mt-4">
-                    {contentPreviews.map((_, index) => (
+                    {contentPreviews.map((_index) => (
                       <button
                         key={index}
                         onClick={() => setActivePreview(index)}
@@ -318,7 +318,7 @@ const UltimateContentHub2026PromotionBanner = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
+              transition={{ duration: 0.6delay: 0.9 }}
               className="mt-12 pt-6 border-t border-white/20"
             >
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">

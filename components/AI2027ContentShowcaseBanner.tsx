@@ -40,7 +40,7 @@ export default function AI2027ContentShowcaseBanner() {
               </div>
             </div>
             <p className="text-lg opacity-90 mb-6 leading-relaxed">
-              Discover the revolutionary AI technologies predicted for 2027. Quantum neural networks, autonomous business systems, and next-generation AI breakthroughs that will transform how businesses operate.
+              Discover the revolutionary AI technologies predicted for 2027. Quantum neural networksautonomous business systemsand next-generation AI breakthroughs that will transform how businesses operate.
             </p>
             <div className="flex flex-wrap gap-2 mb-6">
               <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Quantum AI</span>

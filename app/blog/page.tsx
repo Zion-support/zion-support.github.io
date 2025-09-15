@@ -3,202 +3,172 @@ import Link from 'next/link';
 import SEO from '../../components/SEO';
 
 export const metadata = {
-  title: 'AI & Technology Blog - Zion Tech Group',
-  description: 'Stay ahead with the latest insights on AI, quantum computing, and technology trends that are transforming businesses in 2025.',
-  keywords: ['AI blog', 'technology insights', 'quantum computing', 'enterprise AI', 'business transformation'],
+  title: 'AI & Technology Blog - Latest Insights & Breakthroughs | Zion Tech Group',
+  description: 'Discover the latest insights in AI, quantum computing, neural interfaces, and enterprise transformation. Expert analysis, case studies, and breakthrough technologies.',
+  keywords: [
+    'AI blog', 'technology insights', 'quantum computing', 'neural interfaces', 
+    'enterprise AI', 'business transformation', 'AI trends', 'technology news'
+  ],
 };
 
 const BlogPage = () => {
-  const blogPosts = [
+  const featuredPosts = [
     {
-      title: "AI 2025: The Enterprise Transformation Revolution",
-      excerpt: "Discover how AI is revolutionizing enterprise operations in 2025 with unprecedented automation, efficiency, and ROI gains.",
+      title: "AI 2026: Enterprise AI Governance Blueprint",
+      description: "A practical blueprint to ship reliable AI with policy-as-code, risk tiers, and runtime monitoring.",
+      slug: "ai-2026-enterprise-ai-governance-blueprint",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/ai-governance-2026.jpg"
+    },
+    {
+      title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
+      description: "Discover how generative AI is transforming enterprise operations in 2025, delivering unprecedented automation, creativity, and efficiency gains across all business functions.",
+      slug: "ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough",
+      category: "AI Revolution",
       date: "2025-01-15",
-      category: "AI Innovation",
-      readTime: "5 min read",
       featured: true,
-      stats: "340% ROI",
-      slug: "ai-2025-enterprise-transformation"
+      image: "/images/generative-ai-enterprise-2025.jpg"
     },
     {
-      title: "Quantum Computing Business Applications: The 2025 Breakthrough",
-      excerpt: "Explore how quantum computing is revolutionizing business applications in 2025, delivering solutions to previously impossible problems.",
-      date: "2025-01-14",
+      title: "Enterprise Foundation Models: A Practical Guide (2025)",
+      description: "Vendor-neutral steps to evaluate, deploy, and govern foundation models that drive measurable outcomes.",
+      slug: "ai-2025-enterprise-foundation-models-practical-guide",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/enterprise-foundation-models-2025.jpg"
+    },
+    {
+      title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
+      description: "How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.",
+      slug: "ai-2025-enterprise-ai-agents-breakthrough",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/enterprise-ai-agents-2025.jpg"
+    },
+    {
+      title: "Quantum Computing Breakthrough 2025: Enterprise Applications",
+      description: "Explore how quantum computing is revolutionizing enterprise operations in 2025 with unprecedented processing power and breakthrough applications.",
+      slug: "ai-2025-quantum-computing-breakthrough",
       category: "Quantum Computing",
-      readTime: "7 min read",
+      date: "2025-01-15",
       featured: true,
-      stats: "10^15x Speed",
-      slug: "quantum-computing-business-applications-2025"
-    },
-    {
-      title: "Neural Interfaces: The Future of Human-Computer Interaction",
-      excerpt: "Learn how neural interfaces are revolutionizing how humans interact with technology and AI systems.",
-      date: "2025-01-12",
-      category: "Emerging Tech",
-      readTime: "6 min read",
-      featured: false,
-      stats: "89% Efficiency",
-      slug: "neural-interfaces-future"
-    },
-    {
-      title: "Autonomous Vehicles: Transforming Transportation in 2025",
-      excerpt: "Discover how autonomous vehicles are reshaping transportation and creating new business opportunities.",
-      date: "2025-01-10",
-      category: "Autonomous Systems",
-      readTime: "8 min read",
-      featured: false,
-      stats: "67% Safety",
-      slug: "autonomous-vehicles-2025"
+      image: "/images/quantum-computing-2025.jpg"
     }
   ];
 
+  const categories = [
+    { name: "AI Revolution", count: 25, color: "bg-blue-500" },
+    { name: "Quantum Computing", count: 15, color: "bg-purple-500" },
+    { name: "Neural Interfaces", count: 12, color: "bg-green-500" },
+    { name: "Enterprise AI", count: 18, color: "bg-orange-500" },
+    { name: "Future Tech", count: 20, color: "bg-pink-500" }
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <div>
       <SEO
-        title="AI & Technology Blog - Zion Tech Group"
-        description="Stay ahead with the latest insights on AI, quantum computing, and technology trends that are transforming businesses in 2025."
-        keywords="AI blog, technology insights, quantum computing, enterprise AI, business transformation"
+        title="AI & Technology Blog - Latest Insights & Breakthroughs"
+        description="Discover the latest insights in AI, quantum computing, neural interfaces, and enterprise transformation. Expert analysis, case studies, and breakthrough technologies."
+        keywords="AI blog, technology insights, quantum computing, neural interfaces, enterprise AI, business transformation, AI trends, technology news"
         url="/blog"
       />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <span className="text-sm font-medium">📚 AI & TECHNOLOGY BLOG</span>
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                AI & Technology Blog
+              </h1>
+              <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto">
+                Stay ahead with the latest insights, breakthroughs, and expert analysis in AI, quantum computing, and enterprise transformation.
+              </p>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Latest Insights & Trends
-            </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Stay ahead of the curve with our comprehensive coverage of AI, quantum computing, 
-              and emerging technologies that are reshaping the business landscape.
-            </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Featured Posts */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Articles</h2>
-            <p className="text-xl text-gray-600">Our most popular and impactful content</p>
+        {/* Categories */}
+        <section className="py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Explore by Category</h2>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {categories.map((category, index) => (
+                <div key={index} className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                  <div className={`w-12 h-12 ${category.color} rounded-full mx-auto mb-4 flex items-center justify-center`}>
+                    <span className="text-white font-bold text-lg">{category.count}</span>
+                  </div>
+                  <h3 className="font-semibold text-gray-900">{category.name}</h3>
+                </div>
+              ))}
+            </div>
           </div>
+        </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {blogPosts.filter(post => post.featured).map((post, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
-                      {post.category}
-                    </span>
-                    <div className="flex items-center space-x-2">
-                      <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
-                        Featured
+        {/* Featured Posts */}
+        <section className="py-16">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Featured Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {featuredPosts.map((post, index) => (
+                <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                  <div className="h-48 bg-gradient-to-r from-purple-400 to-blue-500 flex items-center justify-center">
+                    <span className="text-6xl">🚀</span>
+                  </div>
+                  <div className="p-8">
+                    <div className="flex items-center mb-4">
+                      <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {post.category}
                       </span>
-                      <span className="text-sm text-gray-500">{post.readTime}</span>
+                      <span className="text-gray-500 text-sm ml-4">{post.date}</span>
                     </div>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
-                    {post.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-500">
-                      <span className="font-semibold text-purple-600">{post.stats}</span>
-                      <span className="mx-2">•</span>
-                      <span>{post.date}</span>
-                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 line-clamp-3">
+                      {post.description}
+                    </p>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold transition-colors"
+                      className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                     >
-                      Read Article →
+                      Read Full Article →
                     </Link>
                   </div>
-                </div>
-              </div>
-            ))}
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* All Posts */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">All Articles</h2>
-            <p className="text-xl text-gray-600">Complete collection of our insights and analysis</p>
+        {/* Call to Action */}
+        <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-6">Stay Updated with Latest Insights</h2>
+            <p className="text-xl opacity-90 mb-8">
+              Get the latest AI and technology insights delivered directly to your inbox.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Subscribe to Newsletter
+              </Link>
+              <Link
+                href="/resources"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                Download Resources
+              </Link>
+            </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="bg-gray-100 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">
-                      {post.category}
-                    </span>
-                    <span className="text-sm text-gray-500">{post.readTime}</span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">
-                    {post.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
-                    {post.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-500">
-                      <span className="font-semibold text-purple-600">{post.stats}</span>
-                    </div>
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold transition-colors text-sm"
-                    >
-                      Read More →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Stay Updated with Our Latest Insights</h2>
-          <p className="text-xl opacity-90 mb-8">
-            Get exclusive access to our content library and never miss an important update.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Subscribe to Updates
-            </Link>
-            <Link
-              href="/case-studies"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              View Case Studies
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 };

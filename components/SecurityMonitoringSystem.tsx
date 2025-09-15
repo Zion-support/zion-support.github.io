@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Shield, AlertTriangle, CheckCircle, Lock, Eye, Zap, Globe, Database } from 'lucide-react';
+ShieldAlertTriangleCheckCircleLockEyeZapGlobeDatabase
 
 const SecurityMonitoringSystem = () => {
-  const [securityStatus, setSecurityStatus] = useState({
+  const [securityStatusetSecurityStatus] = useState({
     overallScore: 0,
     threatsBlocked: 0,
     vulnerabilitiesFixed: 0,
@@ -14,7 +14,7 @@ const SecurityMonitoringSystem = () => {
     protectedAssets: 0
   });
 
-  const [isScanning, setIsScanning] = useState(false);
+  const [isScanningsetIsScanning] = useState(false);
 
   useEffect(() => {
     // Simulate security data loading
@@ -24,10 +24,10 @@ const SecurityMonitoringSystem = () => {
         threatsBlocked: 1247,
         vulnerabilitiesFixed: 23,
         securityEvents: [
-          { type: 'success', message: 'SSL Certificate renewed', time: '2 hours ago' },
-          { type: 'info', message: 'Security scan completed', time: '4 hours ago' },
-          { type: 'success', message: 'Firewall rules updated', time: '6 hours ago' },
-          { type: 'warning', message: 'Unusual traffic pattern detected', time: '8 hours ago' }
+          { type: ''success', 'message: 'SSL Certificate 'renewed', 'time: '2 hours ago' },
+          { type: ''info', 'message: 'Security scan 'completed', 'time: '4 hours ago' },
+          { type: ''success', 'message: 'Firewall rules 'updated', 'time: '6 hours ago' },
+          { type: ''warning', 'message: 'Unusual traffic pattern 'detected', 'time: '8 hours ago' }
         ],
         complianceStatus: 'excellent',
         lastScan: new Date(),
@@ -37,7 +37,7 @@ const SecurityMonitoringSystem = () => {
     };
 
     loadSecurityData();
-  }, []);
+  }[]);
 
   const runSecurityScan = () => {
     setIsScanning(true);
@@ -49,7 +49,7 @@ const SecurityMonitoringSystem = () => {
         lastScan: new Date()
       }));
       setIsScanning(false);
-    }, 3000);
+    }3000);
   };
 
   const getScoreColor = (score: number) => {
@@ -152,7 +152,7 @@ const SecurityMonitoringSystem = () => {
           <h3 className="text-2xl font-bold text-white mb-6">Recent Security Events</h3>
           
           <div className="space-y-4">
-            {securityStatus.securityEvents.map((event, index) => (
+            {securityStatus.securityEvents.map((eventindex) => (
               <div key={index} className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
                 <div className="flex items-center">
                   {getEventIcon(event.type)}
@@ -198,7 +198,7 @@ const SecurityMonitoringSystem = () => {
                 <Globe className="w-8 h-8 text-white" />
               </div>
               <h4 className="text-xl font-semibold text-white mb-2">Global Compliance</h4>
-              <p className="text-gray-300">GDPR, CCPA, SOC 2, and ISO 27001 compliant</p>
+              <p className="text-gray-300">GDPRCCPASOC 2and ISO 27001 compliant</p>
             </div>
           </div>
         </div>

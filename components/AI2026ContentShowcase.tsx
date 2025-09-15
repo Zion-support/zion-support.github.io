@@ -1,223 +1,209 @@
 "use client";
-'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { ArrowRightIcon, BookOpenIcon, SparklesIcon, ClockIcon, UserIcon, TagIcon } from '@heroicons/react/24/outline';
 
 const AI2026ContentShowcase = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState('all');
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const categories = [
-    { id: 'all', name: 'All Content', icon: '🌟' },
-    { id: 'automation', name: 'Automation', icon: '🤖' },
-    { id: 'neural', name: 'Neural Tech', icon: '🧠' },
-    { id: 'quantum', name: 'Quantum AI', icon: '⚡' },
-    { id: 'predictions', name: 'Predictions', icon: '🔮' }
-  ];
+  const [activeTab, setActiveTab] = useState('all');
 
   const contentItems = [
     {
       id: 1,
-      title: "AI 2026 Neural Interface Revolution",
-      description: "Revolutionary brain-computer interfaces that enable direct neural control of digital systems",
-      category: 'neural',
-      image: "🧠",
-      link: "/ai-2026-neural-interface-revolution",
+      title: "AI 2026: Quantum-Neural Fusion Revolution",
+      description: "Discover how quantum-neural fusion is revolutionizing AI in 2026, creating unprecedented computational power and intelligence capabilities.",
+      category: "breakthrough",
+      readTime: "12 min read",
+      author: "Zion Tech Group",
+      date: "2026-01-15",
+      tags: ["quantum-computing", "neural-networks", "AI-2026", "breakthrough"],
+      image: "/images/quantum-neural-fusion-2026.jpg",
       featured: true,
-      roi: "12,000%",
-      tags: ["Neural Interface", "BCI", "Revolutionary"]
+      stats: {
+        views: "15.2k",
+        shares: "3.8k",
+        likes: "2.1k"
+      }
     },
     {
       id: 2,
-      title: "Quantum Neural Fusion Breakthrough",
-      description: "Quantum-enhanced AI systems that process information at unprecedented speeds",
-      category: 'quantum',
-      image: "⚡",
-      link: "/ai-2026-quantum-neural-fusion-revolution",
+      title: "AI 2026: Autonomous Business Ecosystems",
+      description: "Explore how AI 2026 is creating fully autonomous business ecosystems that self-manage, self-optimize, and self-evolve without human intervention.",
+      category: "business",
+      readTime: "15 min read",
+      author: "Zion Tech Group",
+      date: "2026-01-20",
+      tags: ["autonomous-systems", "business-ecosystems", "AI-2026", "self-management"],
+      image: "/images/autonomous-business-ecosystems-2026.jpg",
       featured: true,
-      roi: "15,000%",
-      tags: ["Quantum AI", "Fusion", "Breakthrough"]
+      stats: {
+        views: "12.7k",
+        shares: "2.9k",
+        likes: "1.8k"
+      }
     },
     {
       id: 3,
-      title: "Next-Generation Business Automation",
-      description: "Autonomous AI systems that adapt and optimize business processes in real-time",
-      category: 'automation',
-      image: "🚀",
-      link: "/ai-2026-next-generation-business-automation",
-      featured: false,
-      roi: "10,000%",
-      tags: ["Automation", "Business", "AI"]
-    },
-    {
-      id: 4,
-      title: "AI 2026 Future Predictions",
-      description: "Advanced forecasting systems with 99.9% accuracy for strategic planning",
-      category: 'predictions',
-      image: "🔮",
-      link: "/ai-2026-future-predictions-breakthrough",
+      title: "AI 2026: Synthetic Intelligence Breakthrough",
+      description: "Explore the revolutionary emergence of Synthetic Intelligence in 2026 - AI that creates, evolves, and transcends traditional artificial intelligence boundaries.",
+      category: "revolution",
+      readTime: "18 min read",
+      author: "Zion Tech Group",
+      date: "2026-01-25",
+      tags: ["synthetic-intelligence", "AI-evolution", "consciousness", "AI-2026"],
+      image: "/images/synthetic-intelligence-2026.jpg",
       featured: true,
-      roi: "18,000%",
-      tags: ["Predictions", "Forecasting", "Future"]
-    },
-    {
-      id: 5,
-      title: "Advanced Neural Synthesis 2030",
-      description: "Next-generation AI that synthesizes human-like cognitive abilities",
-      category: 'neural',
-      image: "🧬",
-      link: "/ai-2030-advanced-neural-synthesis",
-      featured: false,
-      roi: "20,000%",
-      tags: ["Neural", "Synthesis", "Cognitive"]
-    },
-    {
-      id: 6,
-      title: "Quantum Computing Solutions 2030",
-      description: "Revolutionary quantum computing applications for enterprise solutions",
-      category: 'quantum',
-      image: "🌌",
-      link: "/quantum-computing-solutions-breakthrough-2030",
-      featured: false,
-      roi: "25,000%",
-      tags: ["Quantum", "Computing", "Enterprise"]
+      stats: {
+        views: "18.9k",
+        shares: "4.2k",
+        likes: "2.7k"
+      }
     }
   ];
 
-  const filteredContent = activeCategory === 'all' 
+  const categories = [
+    { id: 'all', name: 'All Content', count: contentItems.length },
+    { id: 'breakthrough', name: 'Breakthroughs', count: contentItems.filter(item => item.category === 'breakthrough').length },
+    { id: 'business', name: 'Business', count: contentItems.filter(item => item.category === 'business').length },
+    { id: 'revolution', name: 'Revolution', count: contentItems.filter(item => item.category === 'revolution').length }
+  ];
+
+  const filteredContent = activeTab === 'all' 
     ? contentItems 
-    : contentItems.filter(item => item.category === activeCategory);
+    : contentItems.filter(item => item.category === activeTab);
 
   return (
-    <div className={`py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-              AI 2026 Content
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Showcase
-            </span>
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 rounded-full px-6 py-2 mb-6">
+            <BookOpenIcon className="w-5 h-5 mr-2 text-white" />
+            <span className="text-sm font-semibold text-white">📚 LATEST AI 2026 CONTENT</span>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Revolutionary AI Content Showcase
           </h2>
+          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive collection of AI breakthrough content, 
-            revolutionary technologies, and future-ready solutions
+            Explore the latest breakthroughs, innovations, and insights in AI 2026. 
+            Discover how cutting-edge technology is transforming businesses and society.
           </p>
         </div>
 
-        {/* Category Filter */}
+        {/* Category Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
               key={category.id}
-              onClick={() => setActiveCategory(category.id)}
+              onClick={() => setActiveTab(category.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeCategory === category.id
-                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg transform scale-105'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                activeTab === category.id
+                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg transform scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
               }`}
             >
-              <span className="mr-2">{category.icon}</span>
-              {category.name}
+              {category.name} ({category.count})
             </button>
           ))}
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {filteredContent.map((item) => (
-            <div
-              key={item.id}
-              className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden ${
-                item.featured ? 'ring-2 ring-blue-500 ring-opacity-50' : ''
-              }`}
-            >
+            <div key={item.id} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              {/* Featured Badge */}
               {item.featured && (
-                <div className="absolute top-4 right-4 z-10">
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                    ⭐ Featured
-                  </span>
+                <div className="absolute top-4 left-4 z-10">
+                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">
+                    <SparklesIcon className="w-3 h-3 mr-1" />
+                    FEATURED
+                  </div>
                 </div>
               )}
-              
+
+              {/* Image */}
+              <div className="relative h-48 bg-gradient-to-br from-purple-400 to-blue-500">
+                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="text-white">
+                    <div className="flex items-center text-sm mb-2">
+                      <ClockIcon className="w-4 h-4 mr-1" />
+                      {item.readTime}
+                    </div>
+                    <div className="flex items-center text-sm">
+                      <UserIcon className="w-4 h-4 mr-1" />
+                      {item.author}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
               <div className="p-6">
-                <div className="text-4xl mb-4 text-center">{item.image}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {item.description}
-                </p>
-                
+                <div className="mb-4">
+                  <div className="flex items-center text-sm text-gray-500 mb-2">
+                    <span>{new Date(item.date).toLocaleDateString()}</span>
+                    <span className="mx-2">•</span>
+                    <span className="capitalize">{item.category}</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                    {item.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {item.description}
+                  </p>
+                </div>
+
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full"
-                    >
+                  {item.tags.slice(0, 3).map((tag, index) => (
+                    <span key={index} className="inline-flex items-center bg-gray-100 text-gray-700 px-2 py-1 rounded-md text-xs">
+                      <TagIcon className="w-3 h-3 mr-1" />
                       {tag}
                     </span>
                   ))}
                 </div>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-sm text-gray-500">
-                    <span className="font-semibold text-green-600">{item.roi} ROI</span>
-                  </div>
-                  <div className="text-sm text-gray-500">
-                    {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
-                  </div>
+
+                {/* Stats */}
+                <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
+                  <span>{item.stats.views} views</span>
+                  <span>{item.stats.shares} shares</span>
+                  <span>{item.stats.likes} likes</span>
                 </div>
-                
+
+                {/* CTA */}
                 <Link
-                  href={item.link}
-                  className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-lg hover:from-blue-400 hover:to-purple-400 transition-all duration-300 transform group-hover:scale-105"
+                  href={`/blog/${item.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ', ')}`}
+                  className="inline-flex items-center w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                 >
-                  Explore Content →
+                  Read Article
+                  <ArrowRightIcon className="w-4 h-4 ml-2" />
                 </Link>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Stats Section */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">{contentItems.length}+</div>
-              <div className="text-gray-600">Content Pieces</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-purple-600 mb-2">25,000%</div>
-              <div className="text-gray-600">Max ROI</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-cyan-600 mb-2">99.9%</div>
-              <div className="text-gray-600">Accuracy</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-pink-600 mb-2">24/7</div>
-              <div className="text-gray-600">Availability</div>
-            </div>
+        {/* Newsletter Signup */}
+        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-center text-white">
+          <h3 className="text-2xl font-bold mb-4">Stay Updated with AI 2026</h3>
+          <p className="text-lg mb-6 opacity-90">
+            Get the latest insights, breakthroughs, and innovations delivered to your inbox.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+            />
+            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Subscribe
+            </button>
           </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <Link
-            href="/ai-2026-future-predictions-breakthrough"
-            className="inline-block px-12 py-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white font-bold text-xl rounded-full hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-          >
-            Explore All AI 2026 Content →
-          </Link>
         </div>
       </div>
     </div>

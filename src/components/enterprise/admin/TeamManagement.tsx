@@ -6,7 +6,8 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table";
+  TableRow,
+} from "@/components/ui/table";
 import {
   Dialog,
   DialogContent,
@@ -14,7 +15,8 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog";
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -34,28 +36,33 @@ export function TeamManagement() {
       email: "alex@example.com",
       role: "Admin",
       status: "active",
-      lastActive: "2 hours ago"},
+      lastActive: "2 hours ago",
+    },
     {
       id: 2,
       name: "Jamie Smith",
       email: "jamie@example.com",
       role: "Recruiter",
       status: "active",
-      lastActive: "Yesterday"},
+      lastActive: "Yesterday",
+    },
     {
       id: 3,
       name: "Sam Williams",
       email: "sam@example.com",
       role: "Manager",
       status: "pending",
-      lastActive: "Never"},
+      lastActive: "Never",
+    },
     {
       id: 4,
       name: "Taylor Brown",
       email: "taylor@example.com",
       role: "Viewer",
       status: "active",
-      lastActive: "3 days ago"}];
+      lastActive: "3 days ago",
+    },
+  ];
 
   const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
@@ -63,13 +70,15 @@ export function TeamManagement() {
       toast({
         title: "Email required",
         description: "Please enter an email address for the new team member.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       return;
     }
 
     toast({
       title: "Invitation sent",
-      description: `An invitation has been sent to ${newMemberEmail}`});
+      description: `An invitation has been sent to ${newMemberEmail}`,
+    });
 
     setNewMemberEmail("");
     setIsAddingMember(false);
@@ -79,14 +88,16 @@ export function TeamManagement() {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed",
-      description: "The team member has been removed from your workspace."});
+      description: "The team member has been removed from your workspace.",
+    });
   };
 
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent",
-      description: `A new invitation has been sent to ${memberEmail}`});
+      description: `A new invitation has been sent to ${memberEmail}`,
+    });
   };
 
   return (

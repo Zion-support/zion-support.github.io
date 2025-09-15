@@ -13,8 +13,8 @@ const RevolutionaryTech2025Banner = () => {
             The Future of Technology is Here
           </h2>
           <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Discover the groundbreaking technologies that are reshaping industries, 
-            transforming business operations, and creating unprecedented opportunities for growth.
+            Discover the groundbreaking technologies that are reshaping industries
+            transforming business operationsand creating unprecedented opportunities for growth.
           </p>
         </div>
 
@@ -31,8 +31,8 @@ const RevolutionaryTech2025Banner = () => {
                 </div>
               </div>
               <p className="text-lg mb-6 opacity-90">
-                Transform your business operations with AI-powered automation. Learn proven strategies, 
-                implementation best practices, and real-world success stories from industry leaders.
+                Transform your business operations with AI-powered automation. Learn proven strategies
+                implementation best practicesand real-world success stories from industry leaders.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="text-center">
@@ -69,8 +69,8 @@ const RevolutionaryTech2025Banner = () => {
                 </div>
               </div>
               <p className="text-lg mb-6 opacity-90">
-                Protect your organization with AI-powered cybersecurity solutions. Advanced threat detection, 
-                automated response systems, and quantum-safe security measures.
+                Protect your organization with AI-powered cybersecurity solutions. Advanced threat detection
+                automated response systemsand quantum-safe security measures.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="text-center">
@@ -110,8 +110,8 @@ const RevolutionaryTech2025Banner = () => {
                 </div>
               </div>
               <p className="text-lg mb-6 opacity-90">
-                Harness the power of quantum computing for your business. Explore practical applications, 
-                implementation strategies, and industry transformation opportunities.
+                Harness the power of quantum computing for your business. Explore practical applications
+                implementation strategiesand industry transformation opportunities.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="text-center">
@@ -149,7 +149,7 @@ const RevolutionaryTech2025Banner = () => {
                 </div>
               </div>
               <p className="text-lg mb-6 opacity-90">
-                Stay tuned for more groundbreaking content covering AI trends, technology innovations, 
+                Stay tuned for more groundbreaking content covering AI trendstechnology innovations
                 and business transformation strategies.
               </p>
               <div className="space-y-3 mb-6">
@@ -181,8 +181,8 @@ const RevolutionaryTech2025Banner = () => {
           <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black rounded-2xl p-12">
             <h3 className="text-4xl font-bold mb-6">Ready to Lead the Technology Revolution?</h3>
             <p className="text-xl mb-8 opacity-90">
-              Join the organizations already transforming their business with cutting-edge AI, 
-              quantum computing, and cybersecurity solutions.
+              Join the organizations already transforming their business with cutting-edge AI
+              quantum computingand cybersecurity solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link

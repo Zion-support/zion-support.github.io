@@ -4,12 +4,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Sparkles, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  Clock, 
+  Brain
+  Sparkles
+  TrendingUp
+  Target
+  Users
+  Clock
   Star,
   ArrowRight,
   BookOpen,
@@ -42,20 +42,20 @@ import {
 } from 'lucide-react';
 
 const AIPoweredContentRecommendationSystem = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [recommendations, setRecommendations] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [recommendationsetRecommendations] = useState([]);
+  const [isLoadingsetIsLoading] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     generateRecommendations();
-  }, [selectedCategory]);
+  }[selectedCategory]);
 
   const generateRecommendations = async () => {
     setIsLoading(true);
     // Simulate AI processing
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise(resolve => setTimeout(resolve1500));
     
     const mockRecommendations = [
       {
@@ -85,7 +85,7 @@ const AIPoweredContentRecommendationSystem = () => {
         engagement: 456,
         publishedAt: '2025-01-14',
         author: 'Prof. Michael Rodriguez',
-        tags: ['quantum', 'computing', 'applications'],
+        tags: [', 'quantum', 'computing'applications'],
         featured: true,
         aiScore: 8.7,
         trending: false
@@ -101,7 +101,7 @@ const AIPoweredContentRecommendationSystem = () => {
         engagement: 234,
         publishedAt: '2025-01-13',
         author: 'Emily Watson',
-        tags: ['neural-interface', 'guide', 'tutorial'],
+        tags: ['neural-'interface', 'guide'tutorial'],
         featured: false,
         aiScore: 9.0,
         trending: true
@@ -117,7 +117,7 @@ const AIPoweredContentRecommendationSystem = () => {
         engagement: 189,
         publishedAt: '2025-01-12',
         author: 'Alex Thompson',
-        tags: ['edge-ai', 'performance', 'optimization'],
+        tags: ['edge-'ai', 'performance'optimization'],
         featured: false,
         aiScore: 8.5,
         trending: false
@@ -133,7 +133,7 @@ const AIPoweredContentRecommendationSystem = () => {
         engagement: 156,
         publishedAt: '2025-01-11',
         author: 'Dr. Lisa Park',
-        tags: ['ml', 'healthcare', 'ethics'],
+        tags: [', 'ml', 'healthcare'ethics'],
         featured: false,
         aiScore: 8.9,
         trending: false
@@ -149,7 +149,7 @@ const AIPoweredContentRecommendationSystem = () => {
         engagement: 201,
         publishedAt: '2025-01-10',
         author: 'James Wilson',
-        tags: ['blockchain', 'ai', 'convergence'],
+        tags: [', 'blockchain', 'ai'convergence'],
         featured: false,
         aiScore: 8.6,
         trending: true
@@ -161,13 +161,13 @@ const AIPoweredContentRecommendationSystem = () => {
   };
 
   const categories = [
-    { id: 'all', name: 'All Recommendations', icon: Brain, count: 1247 },
-    { id: 'ai-innovation', name: 'AI Innovation', icon: Cpu, count: 342 },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, count: 156 },
-    { id: 'neural-interface', name: 'Neural Interface', icon: Brain, count: 89 },
-    { id: 'edge-computing', name: 'Edge Computing', icon: Cloud, count: 123 },
-    { id: 'healthcare-ai', name: 'Healthcare AI', icon: Shield, count: 78 },
-    { id: 'blockchain-ai', name: 'Blockchain AI', icon: Database, count: 45 }
+    { id: ''all', 'name: 'All 'Recommendations', 'icon: Braincount: 1247 },
+    { id: 'ai-'innovation', 'name: 'AI 'Innovation', 'icon: Cpucount: 342 },
+    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: Zapcount: 156 },
+    { id: 'neural-'interface', 'name: 'Neural 'Interface', 'icon: Braincount: 89 },
+    { id: 'edge-'computing', 'name: 'Edge 'Computing', 'icon: Cloudcount: 123 },
+    { id: 'healthcare-'ai', 'name: 'Healthcare 'AI', 'icon: Shieldcount: 78 },
+    { id: 'blockchain-'ai', 'name: 'Blockchain 'AI', 'icon: Databasecount: 45 }
   ];
 
   const getConfidenceColor = (confidence) => {
@@ -199,7 +199,7 @@ const AIPoweredContentRecommendationSystem = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
@@ -224,16 +224,16 @@ const AIPoweredContentRecommendationSystem = () => {
         {/* AI Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
         >
           {[
-            { label: 'AI Accuracy', value: '94.2%', icon: Target, color: 'green' },
-            { label: 'Personalization', value: '98.7%', icon: Users, color: 'blue' },
-            { label: 'Engagement Boost', value: '+67%', icon: TrendingUp, color: 'purple' },
-            { label: 'Content Matched', value: '1,247', icon: Database, color: 'orange' }
-          ].map((stat, index) => (
+            { label: 'AI 'Accuracy', 'value: '94.2%'icon: Targetcolor: 'green' },
+            { label: ''Personalization', 'value: '98.7%'icon: Userscolor: 'blue' },
+            { label: 'Engagement 'Boost', 'value: '+67%'icon: TrendingUpcolor: 'purple' },
+            { label: 'Content 'Matched', 'value: '1,247'icon: Databasecolor: 'orange' }
+          ].map((statindex) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-lg text-center">
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-${stat.color}-100 mb-4`}>
                 <stat.icon className={`w-6 h-6 text-${stat.color}-600`} />
@@ -247,8 +247,8 @@ const AIPoweredContentRecommendationSystem = () => {
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-8"
         >
           <div className="flex flex-wrap gap-2 justify-center">
@@ -289,19 +289,19 @@ const AIPoweredContentRecommendationSystem = () => {
         {/* Recommendations Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           <AnimatePresence>
-            {recommendations.map((item, index) => {
+            {recommendations.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type);
               return (
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
                 >
                   {/* Header */}
@@ -340,7 +340,7 @@ const AIPoweredContentRecommendationSystem = () => {
                     <p className="text-sm text-gray-600 mb-4">by {item.author}</p>
                     
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {item.tags.slice(0, 3).map((tag, tagIndex) => (
+                      {item.tags.slice(03).map((tagIndex) => (
                         <span key={tagIndex} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
                           #{tag}
                         </span>
@@ -408,8 +408,8 @@ const AIPoweredContentRecommendationSystem = () => {
         {/* Load More */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-12"
         >
           <button 

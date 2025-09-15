@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { TrendingUp, Brain, Zap,  Clock, Users, ArrowRight, Star } from 'lucide-react';
+import { TrendingUp, Brain, Zap, Clock, Users, ArrowRight, Star } from 'lucide-react';
 
 const AutonomousBIShowcase2025: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -82,7 +82,7 @@ const AutonomousBIShowcase2025: React.FC = () => {
     switch (type) {
       case 'blog': return <Brain className="w-5 h-5" />;
       case 'case-study': return <TrendingUp className="w-5 h-5" />;
-      case 'resource': return <Award className="w-5 h-5" />;
+      case 'resource': return <ArrowRight className="w-5 h-5" />;
       default: return <Brain className="w-5 h-5" />;
     }
   };
@@ -130,7 +130,7 @@ const AutonomousBIShowcase2025: React.FC = () => {
           </div>
           
           <div className="bg-white p-6 rounded-xl shadow-lg text-center border-l-4 border-purple-500">
-            <Award className="w-8 h-8 text-purple-500 mx-auto mb-3" />
+            <ArrowRight className="w-8 h-8 text-purple-500 mx-auto mb-3" />
             <div className="text-2xl font-bold text-purple-600 mb-1">94.8%</div>
             <div className="text-sm text-gray-600">Forecasting Accuracy</div>
           </div>
@@ -267,7 +267,7 @@ const AutonomousBIShowcase2025: React.FC = () => {
                 href="/resources"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                <Award className="w-5 h-5 mr-2" />
+                <ArrowRight className="w-5 h-5 mr-2" />
                 View All Resources
               </Link>
             </div>

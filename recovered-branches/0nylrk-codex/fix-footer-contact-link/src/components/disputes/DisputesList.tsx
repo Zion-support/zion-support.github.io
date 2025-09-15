@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
+import React{ useState } from "react";
+import { DisputeStatus } from "@/types/disputes";
+=======
 import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -9,7 +14,12 @@ import {
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table";
+=======
+  TableRow,
+} from "@/components/ui/table";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 import { ShieldAlert } from "lucide-react";
@@ -20,8 +30,13 @@ type DisputesListProps = {
   isLoading: boolean;
 };
 
+<<<<<<< HEAD
+export function DisputesList({ disputesisLoading }: DisputesListProps) {
+  const [statusFiltersetStatusFilter] = useState<DisputeStatus | "all">("all");
+=======
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+>>>>>>> origin/auto/autonomy-17186719616
 
   const filteredDisputes = statusFilter === "all" 
     ? disputes 
@@ -46,7 +61,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     return (
       <div className="space-y-4">
         <div className="flex gap-2 mb-4">
+<<<<<<< HEAD
+          {["All"Open"Under Review"Resolved"Closed"].map((status) => (
+=======
           {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (
+>>>>>>> origin/auto/autonomy-17186719616
             <Skeleton key={status} className="h-10 w-24" />
           ))}
         </div>
@@ -63,7 +82,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
               </TableRow>
             </TableHeader>
             <TableBody>
+<<<<<<< HEAD
+              {[...Array(5)].map((_i) => (
+=======
               {[...Array(5)].map((_, i) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <TableRow key={i}>
                   <TableCell><Skeleton className="h-4 w-24" /></TableCell>
                   <TableCell><Skeleton className="h-4 w-40" /></TableCell>
@@ -80,6 +103,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     );
   }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
   if (disputes.length === 0) {
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">
@@ -164,11 +191,19 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                   </div>
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
+                  {formatDistanceToNow(new Date(dispute.created_at){ addSuffix: true })}
+                </TableCell>
+                <TableCell>
+                  <Badge variant={getStatusBadgeVariant(dispute.status)}>
+                    {dispute.status.replace('_' ')}
+=======
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
                 </TableCell>
                 <TableCell>
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>
                     {dispute.status.replace('_', ' ')}
+>>>>>>> origin/auto/autonomy-17186719616
                   </Badge>
                 </TableCell>
                 <TableCell className="text-right">

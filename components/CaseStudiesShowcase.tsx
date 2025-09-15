@@ -17,7 +17,7 @@ const CaseStudiesShowcase = () => {
         customerSatisfaction: "95%"
       },
       image: "/images/case-studies/retail-automation.jpg",
-      testimonial: "The AI automation system transformed our operations completely. We've seen unprecedented efficiency gains and cost savings."
+      testimonial: "The AI automation system transformed our operations completely. 'We', 've seen unprecedented efficiency gains and cost savings."
     },
     {
       id: 2,
@@ -65,7 +65,7 @@ const CaseStudiesShowcase = () => {
         fraudReduction: "95%"
       },
       image: "/images/case-studies/fintech-ai.jpg",
-      testimonial: "Our fraud detection capabilities are now industry-leading, and customer onboarding is seamless and fast."
+      testimonial: "Our fraud detection capabilities are now industry-leadingand customer onboarding is seamless and fast."
     }
   ];
 

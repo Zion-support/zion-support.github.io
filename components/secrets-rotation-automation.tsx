@@ -1,13 +1,21 @@
 import React from 'react';
 import SEO from '../components/SEO';
+<<<<<<< HEAD
+CheckExternalLink
+=======
 import { Check, ExternalLink } from 'lucide-react';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function SecretsRotationAutomationPage() {
 	const features = [
 		'Automated key and secret rotation',
 		'JIT credentials with expirations',
 		'Policy approvals and audit trails',
+<<<<<<< HEAD
+		'CI/CD integration (GitHub ActionsCircleCI)',
+=======
 		'CI/CD integration (GitHub Actions, CircleCI)',
+>>>>>>> origin/auto/autonomy-17186719616
 		'Cloud KMS and Vault support'
 	];
 

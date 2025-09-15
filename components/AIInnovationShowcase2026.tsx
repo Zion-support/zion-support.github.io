@@ -4,13 +4,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Cpu, 
-  Zap, 
-  Eye, 
-  MessageSquare, 
-  BarChart3, 
-  Shield, 
+  Brain
+  Cpu
+  Zap
+  Eye
+  MessageSquare
+  BarChart3
+  Shield
   Globe,
   ChevronRight,
   Play,
@@ -26,12 +26,12 @@ import {
 } from 'lucide-react';
 
 const AIInnovationShowcase2026 = () => {
-  const [activeInnovation, setActiveInnovation] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeInnovationsetActiveInnovation] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const innovations = [
     {
@@ -53,7 +53,7 @@ const AIInnovationShowcase2026 = () => {
         accuracy: '99.7%',
         speed: '10x faster'
       },
-      applications: ['Healthcare', 'Education', 'Gaming', 'Professional Training']
+      applications: [', 'Healthcare', 'Education', 'Gaming', 'Professional Training']
     },
     {
       id: 'quantum-ai',
@@ -74,14 +74,14 @@ const AIInnovationShowcase2026 = () => {
         complexity: 'Unlimited',
         security: 'Unbreakable'
       },
-      applications: ['Drug Discovery', 'Climate Modeling', 'Financial Analysis', 'Space Exploration']
+      applications: ['Drug 'Discovery', 'Climate 'Modeling', 'Financial 'Analysis', 'Space Exploration']
     },
     {
       id: 'emotional-ai',
       title: 'Emotional Intelligence AI',
       icon: MessageSquare,
       color: 'from-pink-600 to-rose-600',
-      description: 'AI systems that understand, process, and respond to human emotions with unprecedented accuracy',
+      description: 'AI systems that understandprocessand respond to human emotions with unprecedented accuracy',
       features: [
         'Real-time emotion detection',
         'Contextual response generation',
@@ -95,7 +95,7 @@ const AIInnovationShowcase2026 = () => {
         engagement: '400%',
         retention: '80%'
       },
-      applications: ['Customer Service', 'Mental Health', 'Education', 'Entertainment']
+      applications: ['Customer 'Service', 'Mental 'Health', 'Education'Entertainment']
     },
     {
       id: 'predictive-analytics',
@@ -116,7 +116,7 @@ const AIInnovationShowcase2026 = () => {
         roi: '500%',
         risk: '90% reduction'
       },
-      applications: ['Finance', 'Marketing', 'Supply Chain', 'Healthcare']
+      applications: [', 'Finance', 'Marketing'Supply 'Chain', 'Healthcare']
     }
   ];
 
@@ -128,7 +128,7 @@ const AIInnovationShowcase2026 = () => {
       industry: 'Healthcare',
       challenge: 'Diagnostic accuracy and speed',
       solution: 'Neural Interface Technology',
-      results: '300% faster diagnosis, 99.7% accuracy',
+      results: '300% faster diagnosis99.7% accuracy',
       logo: '🏥'
     },
     {
@@ -136,7 +136,7 @@ const AIInnovationShowcase2026 = () => {
       industry: 'Financial Services',
       challenge: 'Complex risk modeling',
       solution: 'Quantum-Enhanced AI',
-      results: '1000x faster calculations, 90% risk reduction',
+      results: '1000x faster calculations90% risk reduction',
       logo: '💰'
     },
     {
@@ -144,7 +144,7 @@ const AIInnovationShowcase2026 = () => {
       industry: 'Education',
       challenge: 'Personalized learning',
       solution: 'Emotional Intelligence AI',
-      results: '95% student satisfaction, 400% engagement',
+      results: '95% student satisfaction400% engagement',
       logo: '🎓'
     }
   ];
@@ -157,8 +157,8 @@ const AIInnovationShowcase2026 = () => {
         <motion.div
           className="absolute top-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
           animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.5, 0.2],
+            scale: [1.31],
+            opacity: [0.20.50.2],
           }}
           transition={{
             duration: 8,
@@ -169,8 +169,8 @@ const AIInnovationShowcase2026 = () => {
         <motion.div
           className="absolute bottom-20 left-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
           animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.6, 0.3],
+            scale: [1.21.2],
+            opacity: [0.30.60.3],
           }}
           transition={{
             duration: 10,
@@ -208,10 +208,10 @@ const AIInnovationShowcase2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
-          {innovations.map((innovation, index) => {
+          {innovations.map((innovationindex) => {
             const Icon = innovation.icon;
             return (
               <motion.button
@@ -237,9 +237,9 @@ const AIInnovationShowcase2026 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeInnovation}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: -50 }}
             transition={{ duration: 0.5 }}
             className="grid lg:grid-cols-2 gap-12 items-center mb-20"
           >
@@ -248,7 +248,7 @@ const AIInnovationShowcase2026 = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.6delay: 0.1 }}
                 className="mb-8"
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -273,10 +273,10 @@ const AIInnovationShowcase2026 = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.6delay: 0.2 }}
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
               >
-                {currentInnovation.features.map((feature, index) => (
+                {currentInnovation.features.map((featureindex) => (
                   <div key={index} className="flex items-center gap-3 text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-lg">{feature}</span>
@@ -288,16 +288,16 @@ const AIInnovationShowcase2026 = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                transition={{ duration: 0.6delay: 0.3 }}
                 className="grid grid-cols-3 gap-6 mb-8"
               >
-                {Object.entries(currentInnovation.impact).map(([key, value], index) => (
+                {Object.entries(currentInnovation.impact).map(([keyvalue]index) => (
                   <div key={key} className="text-center">
                     <div className="text-3xl font-bold text-white mb-1">
                       {value}
                     </div>
                     <div className="text-sm text-gray-400 capitalize">
-                      {key.replace(/([A-Z])/g, ' $1').trim()}
+                      {key.replace(/([A-Z])/g' $1').trim()}
                     </div>
                   </div>
                 ))}
@@ -307,12 +307,12 @@ const AIInnovationShowcase2026 = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                transition={{ duration: 0.6delay: 0.4 }}
                 className="mb-8"
               >
                 <h4 className="text-lg font-semibold text-white mb-4">Key Applications:</h4>
                 <div className="flex flex-wrap gap-2">
-                  {currentInnovation.applications.map((app, index) => (
+                  {currentInnovation.applications.map((appindex) => (
                     <span
                       key={index}
                       className="px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300"
@@ -327,7 +327,7 @@ const AIInnovationShowcase2026 = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
+                transition={{ duration: 0.6delay: 0.5 }}
                 className="flex flex-wrap gap-4"
               >
                 <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
@@ -343,9 +343,9 @@ const AIInnovationShowcase2026 = () => {
 
             {/* Visual Representation */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              initial={{ opacity: 0scale: 0.8 }}
+              animate={{ opacity: 1scale: 1 }}
+              transition={{ duration: 0.8delay: 0.3 }}
               className="relative"
             >
               <div className={`bg-gradient-to-br ${currentInnovation.color} p-8 rounded-3xl shadow-2xl`}>
@@ -360,11 +360,11 @@ const AIInnovationShowcase2026 = () => {
                   
                   {/* Interactive Elements */}
                   <div className="grid grid-cols-2 gap-4">
-                    {Object.entries(currentInnovation.impact).map(([key, value], index) => (
+                    {Object.entries(currentInnovation.impact).map(([keyvalue]index) => (
                       <div key={key} className="bg-white/20 rounded-xl p-4">
                         <div className="text-2xl font-bold mb-1">{value}</div>
                         <div className="text-sm opacity-80 capitalize">
-                          {key.replace(/([A-Z])/g, ' $1').trim()}
+                          {key.replace(/([A-Z])/g' $1').trim()}
                         </div>
                       </div>
                     ))}
@@ -376,8 +376,8 @@ const AIInnovationShowcase2026 = () => {
               <motion.div
                 className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
                 animate={{
-                  y: [0, -10, 0],
-                  rotate: [0, 180, 360],
+                  y: [0-10],
+                  rotate: [0180360],
                 }}
                 transition={{
                   duration: 3,
@@ -391,8 +391,8 @@ const AIInnovationShowcase2026 = () => {
               <motion.div
                 className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full"
                 animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.7, 1, 0.7],
+                  scale: [1.21],
+                  opacity: [0.710.7],
                 }}
                 transition={{
                   duration: 2,
@@ -408,19 +408,19 @@ const AIInnovationShowcase2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="mb-20"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Real-World Success Stories
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
-            {successStories.map((story, index) => (
+            {successStories.map((storyindex) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                transition={{ duration: 0.6delay: 0.7 + index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
               >
                 <div className="text-4xl mb-4">{story.logo}</div>
@@ -442,7 +442,7 @@ const AIInnovationShowcase2026 = () => {
                   </p>
                 </div>
                 <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, i) => (
+                  {[...Array(5)].map((_i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -455,7 +455,7 @@ const AIInnovationShowcase2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20">

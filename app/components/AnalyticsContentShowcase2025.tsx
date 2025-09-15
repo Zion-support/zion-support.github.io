@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { BarChart3, TrendingUp,  Zap, Clock, Users, DollarSign, CheckCircle, ArrowRight, Filter } from 'lucide-react';
+import { BarChart3, TrendingUp, Zap, Clock, Users, DollarSign, CheckCircle, ArrowRight, Filter } from 'lucide-react';
 
 const AnalyticsContentShowcase2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -79,7 +79,7 @@ const AnalyticsContentShowcase2025 = () => {
     switch (type) {
       case 'blog': return <BarChart3 className="w-5 h-5" />;
       case 'case-study': return <TrendingUp className="w-5 h-5" />;
-      case 'resource': return <Award className="w-5 h-5" />;
+      case 'resource': return <ArrowRight className="w-5 h-5" />;
       default: return <BarChart3 className="w-5 h-5" />;
     }
   };

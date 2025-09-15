@@ -10,7 +10,6 @@ import {
   Star, 
   Clock, 
   Users, 
-  Target,
   CheckCircle,
   BarChart3,
   Cpu,
@@ -127,7 +126,7 @@ const AutonomousOperationsShowcase2025 = () => {
     switch (type) {
       case 'blog': return <Brain className="h-5 w-5" />;
       case 'case-study': return <BarChart3 className="h-5 w-5" />;
-      case 'resource': return <Target className="h-5 w-5" />;
+      case 'resource': return <ArrowRight className="h-5 w-5" />;
       default: return <Zap className="h-5 w-5" />;
     }
   };
@@ -147,7 +146,7 @@ const AutonomousOperationsShowcase2025 = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <Cpu className="h-8 w-8 text-purple-600" />
+            <Brain className="h-8 w-8 text-purple-600" />
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               Revolutionary AI Content 2025
             </h2>
@@ -297,7 +296,7 @@ const AutonomousOperationsShowcase2025 = () => {
                 href="/resources"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors"
               >
-                <Target className="h-5 w-5 mr-2" />
+                <ArrowRight className="h-5 w-5 mr-2" />
                 View All Resources
               </Link>
             </div>

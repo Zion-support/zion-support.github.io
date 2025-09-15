@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, DollarSign, Clock, Users, Award, Target, CheckCircle } from 'lucide-react';
+ArrowRightTrendingUpDollarSignClockUsersAwardTargetCheckCircle
 
 const AI2026GlobalTransformation800ROISuccessBanner = () => {
   return (
@@ -21,7 +21,7 @@ const AI2026GlobalTransformation800ROISuccessBanner = () => {
             800% ROI in 12 Months
           </h2>
           <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed">
-            Discover how Global Manufacturing Corp achieved unprecedented success through comprehensive AI transformation, 
+            Discover how Global Manufacturing Corp achieved unprecedented success through comprehensive AI transformation
             working with Zion Tech Group to implement next-generation AI technologies.
           </p>
         </div>
@@ -66,7 +66,7 @@ const AI2026GlobalTransformation800ROISuccessBanner = () => {
                 </div>
                 <div className="flex items-center">
                   <Target className="w-5 h-5 text-green-400 mr-3" />
-                  <span className="text-green-100"><strong>45 countries</strong>, 200+ facilities</span>
+                  <span className="text-green-100"><strong>45 countries</strong>200+ facilities</span>
                 </div>
                 <div className="flex items-center">
                   <Award className="w-5 h-5 text-green-400 mr-3" />
@@ -152,7 +152,7 @@ const AI2026GlobalTransformation800ROISuccessBanner = () => {
               </div>
               <h4 className="text-xl font-bold mb-3">AI Solution Implementation</h4>
               <p className="text-green-100 mb-4">
-                Deployed predictive maintenance, quality control, and autonomous operations
+                Deployed predictive maintenancequality controland autonomous operations
               </p>
               <ul className="space-y-2 text-sm text-green-200">
                 <li className="flex items-center">

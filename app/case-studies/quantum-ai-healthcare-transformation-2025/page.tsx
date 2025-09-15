@@ -1,8 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag, TrendingUp, DollarSign, Users, Activity } from 'lucide-react';
-import SEO from '../../../components/SEO';
+import { ArrowLeft, Calendar, Clock, User, TrendingUp, DollarSign, Users, Zap, Brain } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'Quantum AI Healthcare Transformation: A $2.3B Success Story',
@@ -71,7 +71,7 @@ export default function QuantumAIHealthcareCaseStudyPage() {
             <div className="flex flex-wrap gap-2">
               {['quantum AI', 'healthcare', 'transformation', 'success story', 'ROI'].map((tag) => (
                 <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-100 text-purple-800">
-                  <Tag className="w-3 h-3 mr-1" />
+                  <Brain className="w-3 h-3 mr-1" />
                   {tag}
                 </span>
               ))}
@@ -97,7 +97,7 @@ export default function QuantumAIHealthcareCaseStudyPage() {
                 <div className="text-gray-600">Patients Served</div>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-                <Activity className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+                <Zap className="w-8 h-8 text-purple-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-gray-900">340%</div>
                 <div className="text-gray-600">ROI Achieved</div>
               </div>

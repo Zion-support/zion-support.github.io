@@ -22,7 +22,7 @@ export default function NewContent2025BreakthroughPromotionBanner() {
           
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-            Discover the most revolutionary AI breakthrough content ever created, featuring guaranteed 10,000%+ ROI implementations and consciousness-level AI technology.
+            Discover the most revolutionary AI breakthrough content ever createdfeaturing guaranteed 10,000%+ ROI implementations and consciousness-level AI technology.
           </p>
           
           {/* Content Grid */}
@@ -32,7 +32,7 @@ export default function NewContent2025BreakthroughPromotionBanner() {
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🚀</div>
               <h3 className="text-xl font-bold mb-3 text-white">AI 2025 Ultimate Breakthrough Revolution</h3>
               <p className="text-gray-300 mb-4 text-sm">
-                Experience the most revolutionary AI breakthrough in history, delivering guaranteed 10,000% ROI through quantum-enhanced neural networks.
+                Experience the most revolutionary AI breakthrough in historydelivering guaranteed 10,000% ROI through quantum-enhanced neural networks.
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-red-400 font-bold text-lg">10,000% ROI</span>
@@ -68,7 +68,7 @@ export default function NewContent2025BreakthroughPromotionBanner() {
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🏆</div>
               <h3 className="text-xl font-bold mb-3 text-white">Global Transformation Success</h3>
               <p className="text-gray-300 mb-4 text-sm">
-                How a Fortune 500 company achieved 10,000% ROI through AI 2025 breakthrough implementation, transforming their global operations.
+                How a Fortune 500 company achieved 10,000% ROI through AI 2025 breakthrough implementationtransforming their global operations.
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-green-400 font-bold text-lg">10,000% ROI</span>

@@ -1,8 +1,7 @@
-'use client';
-
+"use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calculator, TrendingUp, DollarSign, Target, Users, Clock } from 'lucide-react';
+import { ArrowLeft, Calculator, TrendingUp, DollarSign, Users, Clock, ArrowRight } from 'lucide-react';
 
 export default function AIROICalculator() {
   const [inputs, setInputs] = useState({
@@ -241,7 +240,7 @@ export default function AIROICalculator() {
                 <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <Target className="w-5 h-5 text-purple-600 mr-2" />
+                      <ArrowRight className="w-5 h-5 text-purple-600 mr-2" />
                       <span className="text-sm font-medium text-gray-700">ROI</span>
                     </div>
                     <span className="text-lg font-bold text-purple-600">

@@ -12,8 +12,7 @@ function cartReducer(state, action) {
                 items = state.items.map(i => i.id === action.payload.id
                     ? { ...i, quantity: i.quantity + action.payload.quantity }
                     : i);
-            }
-            else {
+            } else {
                 items = [...state.items, action.payload];
             }
             return { items };
@@ -22,10 +21,13 @@ function cartReducer(state, action) {
             return { items: state.items.filter(i => i.id !== action.payload) };
         case 'CLEAR_CART':
             return { items: [] };
+        case 'SET_ITEMS':
+            return { items: action.payload };
         default:
             return state;
     }
 }
+
 const CartContext = createContext(undefined);
 export function useCart() {
     const ctx = useContext(CartContext);
@@ -43,8 +45,7 @@ export function CartProvider({ children }) {
         if (stored) {
             try {
                 items = JSON.parse(stored);
-            }
-            catch {
+            } catch {
                 items = [];
             }
         }
@@ -55,8 +56,7 @@ export function CartProvider({ children }) {
                 try {
                     const guestItems = JSON.parse(guestStored);
                     items = mergeCartItems(items, guestItems);
-                }
-                catch {
+                } catch {
                     /* ignore */
                 }
                 safeStorage.removeItem(getCartKey());

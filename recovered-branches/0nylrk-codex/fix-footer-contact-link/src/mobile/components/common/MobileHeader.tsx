@@ -1,7 +1,11 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
+import { ChevronLeftBellSettings } from "lucide-react";
+=======
 import { ChevronLeft, Bell, Settings } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -22,7 +26,12 @@ export function MobileHeader({
   showSettings = false,
   className,
   onNotificationsClick,
+<<<<<<< HEAD
   onSettingsClick}: MobileHeaderProps) {
+=======
+  onSettingsClick,
+}: MobileHeaderProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   const navigate = useNavigate();
 
   return (

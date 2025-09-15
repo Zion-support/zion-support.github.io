@@ -1,79 +1,119 @@
-import React from 'react';
+"use client";
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-export default function AI2025UltimateBreakthroughBanner() {
+const AI2025UltimateBreakthroughBanner = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentStat, setCurrentStat] = useState(0);
+
+  const stats = [
+    { value: "100,000%", label: "ROI Increase", color: "text-green-400" },
+    { value: "$500M+", label: "Revenue Generated", color: "text-blue-400" },
+    { value: "99.9%", label: "Success Rate", color: "text-purple-400" },
+    { value: "24/7", label: "AI Operations", color: "text-orange-400" }
+  ];
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentStat((prev) => (prev + 1) % stats.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-red-900 via-orange-900 to-yellow-900 text-white">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-yellow-600/20 animate-pulse"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-1"></div>
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-20 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-5 animate-pulse"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-red-500 to-yellow-500 text-white text-sm font-bold mb-6 animate-bounce">
-            🔥 BREAKTHROUGH ANNOUNCEMENT 2025
+      {/* Floating Elements */}
+      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-bounce"></div>
+      <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500 rounded-full opacity-30 animate-bounce delay-1000"></div>
+      <div className="absolute bottom-20 left-32 w-12 h-12 bg-indigo-500 rounded-full opacity-25 animate-bounce delay-2000"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🚀 ULTIMATE BREAKTHROUGH 2025</span>
           </div>
-          
-          {/* Main heading */}
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
-            AI 2025 Ultimate Breakthrough Revolution
-          </h2>
-          
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            The most revolutionary AI breakthrough in human history. Experience 5,000% ROI with our transcendent intelligence platform that transforms reality itself.
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+            AI 2025 Ultimate
+            <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+              Breakthrough
+            </span>
+          </h1>
+          <p className="text-2xl md:text-3xl opacity-90 mb-8 max-w-5xl mx-auto leading-relaxed">
+            Experience the most revolutionary AI transformation that delivers unprecedented results and transforms your business beyond imagination
           </p>
-          
-          {/* Key features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-              <div className="text-2xl mb-2">🧠</div>
-              <div className="font-bold text-yellow-400">Transcendent Intelligence</div>
-              <div className="text-sm text-gray-300">99.9% Accuracy Rate</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-              <div className="text-2xl mb-2">⚛️</div>
-              <div className="font-bold text-orange-400">Quantum Integration</div>
-              <div className="text-sm text-gray-300">10,000x Faster Processing</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-              <div className="text-2xl mb-2">💰</div>
-              <div className="font-bold text-red-400">5,000% ROI</div>
-              <div className="text-sm text-gray-300">Guaranteed Returns</div>
-            </div>
-          </div>
-          
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/ai-2025-ultimate-breakthrough-revolution" 
-              className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
+        </div>
+
+        {/* Dynamic Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className={`bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 text-center transition-all duration-1000 ${
+                isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
             >
-              Discover the Revolution
-            </Link>
-            <Link 
-              href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-300 shadow-lg"
-            >
-              See 5,000% ROI Success
-            </Link>
+              <div className={`text-5xl font-bold mb-2 ${stat.color} ${currentStat === index ? 'scale-110' : 'scale-100'} transition-transform duration-500`}>
+                {stat.value}
+              </div>
+              <div className="text-lg font-semibold opacity-90">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Feature Highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center">
+            <div className="text-4xl mb-4">🧠</div>
+            <h3 className="text-xl font-bold mb-2">Neural Superintelligence</h3>
+            <p className="text-sm opacity-80">Advanced AI consciousness that thinks and learns like humans</p>
           </div>
-          
-          {/* Additional links */}
-          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
-            <Link href="/resources/ai-2025-ultimate-implementation-guide" className="text-yellow-400 hover:text-yellow-300 underline">
-              📚 Implementation Guide
-            </Link>
-            <Link href="/ai-2026-ultimate-breakthrough-predictions" className="text-orange-400 hover:text-orange-300 underline">
-              🔮 AI 2026 Predictions
-            </Link>
-            <Link href="/contact" className="text-red-400 hover:text-red-300 underline">
-              💬 Get Expert Help
-            </Link>
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center">
+            <div className="text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-bold mb-2">Quantum Processing</h3>
+            <p className="text-sm opacity-80">Quantum-powered AI that processes data at light speed</p>
+          </div>
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center">
+            <div className="text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-bold mb-2">Predictive Analytics</h3>
+            <p className="text-sm opacity-80">See the future with 99.9% accuracy predictions</p>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold mb-4">
+              Ready for the Ultimate AI Breakthrough?
+            </h3>
+            <p className="text-xl opacity-90 mb-8">
+              Join the elite companies already experiencing the future of AI. 
+              Transform your business with technology that was once science fiction.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-10 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg"
+              >
+                Start Your Transformation
+              </Link>
+              <Link
+                href="/case-studies"
+                className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
+              >
+                View Success Stories
+              </Link>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default AI2025UltimateBreakthroughBanner;

@@ -4,12 +4,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Cpu, 
-  Zap, 
-  Target, 
-  TrendingUp, 
-  Users, 
+  Brain
+  Cpu
+  Zap
+  Target
+  TrendingUp
+  Users
   Globe,
   ArrowRight,
   Play,
@@ -51,30 +51,30 @@ interface InnovationItem {
 }
 
 const AIInnovationHub2026: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [selectedInnovation, setSelectedInnovation] = useState<InnovationItem | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategorysetActiveCategory] = useState('all');
+  const [selectedInnovationsetSelectedInnovation] = useState<InnovationItem | null>(null);
+  const [searchQuerysetSearchQuery] = useState('');
 
   const categories = [
-    { id: 'all', name: 'All Innovations', icon: Globe, count: 89, color: 'blue' },
-    { id: 'ai-core', name: 'AI Core', icon: Brain, count: 32, color: 'purple' },
-    { id: 'quantum', name: 'Quantum AI', icon: Atom, count: 18, color: 'cyan' },
-    { id: 'neural', name: 'Neural Networks', icon: Network, count: 24, color: 'green' },
-    { id: 'automation', name: 'Automation', icon: Zap, count: 15, color: 'yellow' },
-    { id: 'robotics', name: 'Robotics', icon: Cpu, count: 12, color: 'red' },
-    { id: 'biotech', name: 'BioTech AI', icon: Microscope, count: 8, color: 'pink' }
+    { id: ''all', 'name: 'All 'Innovations', 'icon: Globecount: 89color: 'blue' },
+    { id: 'ai-'core', 'name: 'AI 'Core', 'icon: Braincount: 32color: 'purple' },
+    { id: ''quantum', 'name: 'Quantum 'AI', 'icon: Atomcount: 18color: 'cyan' },
+    { id: ''neural', 'name: 'Neural 'Networks', 'icon: Networkcount: 24color: 'green' },
+    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: 15color: 'yellow' },
+    { id: ''robotics', 'name: ''Robotics', 'icon: Cpucount: 12color: 'red' },
+    { id: ''biotech', 'name: 'BioTech 'AI', 'icon: Microscopecount: 8color: 'pink' }
   ];
 
   const innovations: InnovationItem[] = [
     {
       id: '1',
       title: 'Consciousness-Level AI Architecture',
-      description: 'Revolutionary AI system that demonstrates self-awareness and meta-cognitive abilities, representing a breakthrough in artificial consciousness.',
+      description: 'Revolutionary AI system that demonstrates self-awareness and meta-cognitive abilitiesrepresenting a breakthrough in artificial consciousness.',
       category: 'ai-core',
       impact: 'revolutionary',
       timeline: 'Q2 2026',
       status: 'testing',
-      tags: ['Consciousness', 'Self-Awareness', 'Meta-Cognition', 'Breakthrough'],
+      tags: [', 'Consciousness', 'Self-'Awareness', 'Meta-'Cognition', 'Breakthrough'],
       image: '/api/placeholder/600/400',
       url: '/consciousness-ai-architecture-2026',
       featured: true,
@@ -88,12 +88,12 @@ const AIInnovationHub2026: React.FC = () => {
     {
       id: '2',
       title: 'Quantum-Neural Fusion Processor',
-      description: 'First commercial quantum processor integrated with neural networks, enabling unprecedented computational power and problem-solving capabilities.',
+      description: 'First commercial quantum processor integrated with neural networksenabling unprecedented computational power and problem-solving capabilities.',
       category: 'quantum',
       impact: 'revolutionary',
       timeline: 'Q3 2026',
       status: 'development',
-      tags: ['Quantum Computing', 'Neural Networks', 'Fusion', 'Processor'],
+      tags: ['Quantum 'Computing', 'Neural 'Networks', 'Fusion'Processor'],
       image: '/api/placeholder/600/400',
       url: '/quantum-neural-fusion-processor-2026',
       featured: true,
@@ -112,7 +112,7 @@ const AIInnovationHub2026: React.FC = () => {
       impact: 'high',
       timeline: 'Q1 2026',
       status: 'deployed',
-      tags: ['Business Automation', 'Autonomous', 'Operations', 'Ethical AI'],
+      tags: ['Business 'Automation', 'Autonomous', 'Operations', 'Ethical AI'],
       image: '/api/placeholder/600/400',
       url: '/autonomous-business-ai-2026',
       featured: false,
@@ -126,12 +126,12 @@ const AIInnovationHub2026: React.FC = () => {
     {
       id: '4',
       title: 'Neural Interface Direct Communication',
-      description: 'Breakthrough technology enabling direct brain-to-computer communication, allowing thought-based control of digital systems.',
+      description: 'Breakthrough technology enabling direct brain-to-computer communicationallowing thought-based control of digital systems.',
       category: 'neural',
       impact: 'revolutionary',
       timeline: 'Q4 2026',
       status: 'research',
-      tags: ['Neural Interface', 'Brain-Computer', 'Direct Communication', 'BCI'],
+      tags: ['Neural 'Interface', 'Brain-'Computer', 'Direct 'Communication', 'BCI'],
       image: '/api/placeholder/600/400',
       url: '/neural-interface-communication-2026',
       featured: true,
@@ -145,12 +145,12 @@ const AIInnovationHub2026: React.FC = () => {
     {
       id: '5',
       title: 'Self-Evolving Robotic Systems',
-      description: 'Robots that can learn, adapt, and evolve their capabilities autonomously, representing the next generation of intelligent robotics.',
+      description: 'Robots that can learnadaptand evolve their capabilities autonomouslyrepresenting the next generation of intelligent robotics.',
       category: 'robotics',
       impact: 'high',
       timeline: 'Q2 2026',
       status: 'testing',
-      tags: ['Robotics', 'Self-Evolution', 'Autonomous Learning', 'Adaptation'],
+      tags: [', 'Robotics', 'Self-'Evolution', 'Autonomous 'Learning', 'Adaptation'],
       image: '/api/placeholder/600/400',
       url: '/self-evolving-robots-2026',
       featured: false,
@@ -164,12 +164,12 @@ const AIInnovationHub2026: React.FC = () => {
     {
       id: '6',
       title: 'AI-Powered Drug Discovery Platform',
-      description: 'Revolutionary platform that uses AI to accelerate drug discovery, reducing development time from years to months.',
+      description: 'Revolutionary platform that uses AI to accelerate drug discoveryreducing development time from years to months.',
       category: 'biotech',
       impact: 'high',
       timeline: 'Q3 2026',
       status: 'development',
-      tags: ['Drug Discovery', 'Biotech', 'Pharmaceutical', 'AI Platform'],
+      tags: ['Drug 'Discovery', 'Biotech', 'Pharmaceutical', 'AI Platform'],
       image: '/api/placeholder/600/400',
       url: '/ai-drug-discovery-2026',
       featured: false,
@@ -184,7 +184,7 @@ const AIInnovationHub2026: React.FC = () => {
 
   const filteredInnovations = innovations.filter(innovation => {
     const matchesCategory = activeCategory === 'all' || innovation.category === activeCategory;
-    const matchesSearch = searchQuery === '' || 
+    const matchesSearch = searchQuery === ', ' || 
       innovation.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       innovation.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       innovation.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -238,7 +238,7 @@ const AIInnovationHub2026: React.FC = () => {
               <Sparkles className="h-8 w-8 text-yellow-400 ml-3" />
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Explore the most groundbreaking AI innovations, breakthrough technologies, and revolutionary 
+              Explore the most groundbreaking AI innovationsbreakthrough technologiesand revolutionary 
               developments that are reshaping the future of artificial intelligence.
             </p>
             
@@ -247,7 +247,7 @@ const AIInnovationHub2026: React.FC = () => {
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="Search innovations, technologies, or breakthroughs..."
+                  placeholder="Search innovationstechnologiesor breakthroughs..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full px-6 py-4 pl-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
@@ -264,7 +264,7 @@ const AIInnovationHub2026: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
           <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
@@ -272,14 +272,14 @@ const AIInnovationHub2026: React.FC = () => {
             Featured Innovations
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredInnovations.map((innovation, index) => {
+            {featuredInnovations.map((innovationindex) => {
               const CategoryIcon = getCategoryIcon(innovation.category);
               return (
                 <motion.div
                   key={innovation.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
                   onClick={() => setSelectedInnovation(innovation)}
                 >
@@ -332,7 +332,7 @@ const AIInnovationHub2026: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
         >
           <h2 className="text-3xl font-bold text-white mb-8">Browse by Category</h2>
@@ -364,17 +364,17 @@ const AIInnovationHub2026: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8delay: 0.6 }}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredInnovations.map((innovation, index) => {
+            {filteredInnovations.map((innovationindex) => {
               const CategoryIcon = getCategoryIcon(innovation.category);
               return (
                 <motion.div
                   key={innovation.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.05 }}
+                  transition={{ duration: 0.6delay: index * 0.05 }}
                   className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105"
                   onClick={() => setSelectedInnovation(innovation)}
                 >
@@ -474,7 +474,7 @@ const AIInnovationHub2026: React.FC = () => {
                 
                 {/* Metrics */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                  {Object.entries(selectedInnovation.metrics).map(([key, value]) => (
+                  {Object.entries(selectedInnovation.metrics).map(([keyvalue]) => (
                     <div key={key} className="bg-gray-50 rounded-lg p-4 text-center">
                       <div className="text-2xl font-bold text-blue-600">{value}</div>
                       <div className="text-sm text-gray-600 capitalize">{key}</div>

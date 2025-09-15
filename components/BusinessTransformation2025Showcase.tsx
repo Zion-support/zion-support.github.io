@@ -4,11 +4,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
-  Target, 
+  TrendingUp
+  Users
+  DollarSign
+  Clock
+  Target
   BarChart3,
   Zap,
   Brain,
@@ -26,12 +26,12 @@ import {
 } from 'lucide-react';
 
 const BusinessTransformation2025Showcase = () => {
-  const [activeSection, setActiveSection] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeSectionsetActiveSection] = useState('overview');
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const transformationData = {
     overview: {
@@ -39,10 +39,10 @@ const BusinessTransformation2025Showcase = () => {
       icon: Building2,
       color: 'from-blue-500 to-cyan-500',
       metrics: [
-        { label: 'Revenue Increase', value: '340%', icon: DollarSign, color: 'text-green-400' },
-        { label: 'Cost Reduction', value: '65%', icon: TrendingUp, icon: TrendingUp, color: 'text-blue-400' },
-        { label: 'Efficiency Gain', value: '280%', icon: Zap, color: 'text-yellow-400' },
-        { label: 'Customer Satisfaction', value: '98%', icon: Star, color: 'text-purple-400' }
+        { label: 'Revenue 'Increase', 'value: '340%'icon: DollarSigncolor: 'text-green-400' },
+        { label: 'Cost 'Reduction', 'value: '65%'icon: TrendingUpcolor: 'text-blue-400' },
+        { label: 'Efficiency 'Gain', 'value: '280%'icon: Zapcolor: 'text-yellow-400' },
+        { label: 'Customer 'Satisfaction', 'value: '98%'icon: Starcolor: 'text-purple-400' }
       ]
     },
     automation: {
@@ -50,10 +50,10 @@ const BusinessTransformation2025Showcase = () => {
       icon: Zap,
       color: 'from-green-500 to-emerald-500',
       metrics: [
-        { label: 'Tasks Automated', value: '15,000+', icon: Target, color: 'text-green-400' },
-        { label: 'Time Saved', value: '2,400 hrs', icon: Clock, color: 'text-blue-400' },
-        { label: 'Error Reduction', value: '95%', icon: Shield, color: 'text-red-400' },
-        { label: 'ROI Achieved', value: '450%', icon: BarChart3, color: 'text-yellow-400' }
+        { label: 'Tasks 'Automated', 'value: '15,000+'icon: Targetcolor: 'text-green-400' },
+        { label: 'Time 'Saved', 'value: '2,400 'hrs', 'icon: Clockcolor: 'text-blue-400' },
+        { label: 'Error 'Reduction', 'value: '95%'icon: Shieldcolor: 'text-red-400' },
+        { label: 'ROI 'Achieved', 'value: '450%'icon: BarChart3color: 'text-yellow-400' }
       ]
     },
     ai: {
@@ -61,10 +61,10 @@ const BusinessTransformation2025Showcase = () => {
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       metrics: [
-        { label: 'AI Models Deployed', value: '25+', icon: Brain, color: 'text-purple-400' },
-        { label: 'Decision Speed', value: '10x Faster', icon: Zap, color: 'text-yellow-400' },
-        { label: 'Prediction Accuracy', value: '94%', icon: Target, color: 'text-green-400' },
-        { label: 'Data Processing', value: '1M+ Records', icon: BarChart3, color: 'text-blue-400' }
+        { label: 'AI Models 'Deployed', 'value: '25+'icon: Braincolor: 'text-purple-400' },
+        { label: 'Decision 'Speed', 'value: '10x 'Faster', 'icon: Zapcolor: 'text-yellow-400' },
+        { label: 'Prediction 'Accuracy', 'value: '94%'icon: Targetcolor: 'text-green-400' },
+        { label: 'Data 'Processing', 'value: '1M+ 'Records', 'icon: BarChart3color: 'text-blue-400' }
       ]
     },
     global: {
@@ -72,15 +72,15 @@ const BusinessTransformation2025Showcase = () => {
       icon: Globe,
       color: 'from-orange-500 to-red-500',
       metrics: [
-        { label: 'Markets Entered', value: '12', icon: Globe, color: 'text-orange-400' },
-        { label: 'Revenue Growth', value: '180%', icon: TrendingUp, color: 'text-green-400' },
-        { label: 'Team Expansion', value: '300%', icon: Users, color: 'text-blue-400' },
-        { label: 'Market Share', value: '15%', icon: PieChart, color: 'text-purple-400' }
+        { label: 'Markets 'Entered', 'value: '12'icon: Globecolor: 'text-orange-400' },
+        { label: 'Revenue 'Growth', 'value: '180%'icon: TrendingUpcolor: 'text-green-400' },
+        { label: 'Team 'Expansion', 'value: '300%'icon: Userscolor: 'text-blue-400' },
+        { label: 'Market 'Share', 'value: '15%'icon: PieChartcolor: 'text-purple-400' }
       ]
     }
   };
 
-  const sections = Object.entries(transformationData).map(([key, data]) => ({
+  const sections = Object.entries(transformationData).map(([keydata]) => ({
     key,
     ...data
   }));
@@ -91,7 +91,7 @@ const BusinessTransformation2025Showcase = () => {
       industry: 'Technology',
       challenge: 'Manual data processing causing 40% delays',
       solution: 'AI-powered automation system',
-      results: '95% faster processing, 60% cost reduction',
+      results: '95% faster processing60% cost reduction',
       revenue: '+$2.3M',
       icon: Building2
     },
@@ -100,7 +100,7 @@ const BusinessTransformation2025Showcase = () => {
       industry: 'Manufacturing',
       challenge: 'Supply chain inefficiencies',
       solution: 'Predictive analytics and automation',
-      results: '80% reduction in downtime, 45% cost savings',
+      results: '80% reduction in downtime45% cost savings',
       revenue: '+$5.7M',
       icon: Building2
     },
@@ -109,7 +109,7 @@ const BusinessTransformation2025Showcase = () => {
       industry: 'Finance',
       challenge: 'Manual compliance reporting',
       solution: 'AI-driven compliance automation',
-      results: '99% accuracy, 70% time reduction',
+      results: '99% accuracy70% time reduction',
       revenue: '+$1.8M',
       icon: Building2
     }
@@ -155,7 +155,7 @@ const BusinessTransformation2025Showcase = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {sections.map((section) => {
@@ -180,13 +180,13 @@ const BusinessTransformation2025Showcase = () => {
         {/* Metrics Display */}
         <motion.div
           key={activeSection}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0x: 50 }}
+          animate={{ opacity: 1x: 0 }}
+          exit={{ opacity: 0x: -50 }}
           transition={{ duration: 0.5 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
-          {transformationData[activeSection as keyof typeof transformationData].metrics.map((metric, index) => {
+          {transformationData[activeSection as keyof typeof transformationData].metrics.map((metricindex) => {
             const Icon = metric.icon;
             return (
               <motion.div
@@ -221,7 +221,7 @@ const BusinessTransformation2025Showcase = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -229,7 +229,7 @@ const BusinessTransformation2025Showcase = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {successStories.map((story, index) => {
+            {successStories.map((storyindex) => {
               const Icon = story.icon;
               return (
                 <motion.div
@@ -288,7 +288,7 @@ const BusinessTransformation2025Showcase = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-500/30 rounded-3xl p-12">

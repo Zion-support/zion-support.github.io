@@ -10,7 +10,7 @@ const ClientTestimonials = () => {
       image: "/images/testimonials/sarah-johnson.jpg",
       rating: 5,
       testimonial: "Zion Tech Group transformed our entire operation. Their AI automation solutions increased our productivity by 400% while reducing costs by 60%. The ROI was evident within the first month.",
-      results: "400% productivity increase, 60% cost reduction"
+      results: "400% productivity increase60% cost reduction"
     },
     {
       name: "Michael Chen",
@@ -18,7 +18,7 @@ const ClientTestimonials = () => {
       company: "InnovateCorp",
       image: "/images/testimonials/michael-chen.jpg",
       rating: 5,
-      testimonial: "The quantum-neural computing implementation was revolutionary. We're now solving complex problems in minutes that previously took days. This is the future of business intelligence.",
+      testimonial: "The quantum-neural computing implementation was revolutionary. 'We', 're now solving complex problems in minutes that previously took days. This is the future of business intelligence.",
       results: "1000% faster problem solving"
     },
     {
@@ -27,7 +27,7 @@ const ClientTestimonials = () => {
       company: "Global Manufacturing Ltd",
       image: "/images/testimonials/emily-rodriguez.jpg",
       rating: 5,
-      testimonial: "Their autonomous business ecosystem completely changed how we operate. Our systems now self-optimize and self-heal, reducing downtime by 95%. It's like having a team of AI experts working 24/7.",
+      testimonial: "Their autonomous business ecosystem completely changed how we operate. Our systems now self-optimize and self-healreducing downtime by 95%. 'It', 's like having a team of AI experts working 24/7.",
       results: "95% downtime reduction"
     },
     {
@@ -36,7 +36,7 @@ const ClientTestimonials = () => {
       company: "FutureTech Industries",
       image: "/images/testimonials/david-kim.jpg",
       rating: 5,
-      testimonial: "The synthetic intelligence networks they implemented have accelerated our innovation pipeline by 500%. We're now developing solutions that were previously impossible.",
+      testimonial: "The synthetic intelligence networks they implemented have accelerated our innovation pipeline by 500%. 'We', 're now developing solutions that were previously impossible.",
       results: "500% innovation acceleration"
     },
     {
@@ -45,7 +45,7 @@ const ClientTestimonials = () => {
       company: "NextGen Systems",
       image: "/images/testimonials/lisa-thompson.jpg",
       rating: 5,
-      testimonial: "Working with Zion Tech Group was a game-changer. Their neural interface solutions have enhanced our team's cognitive capabilities beyond what we thought possible.",
+      testimonial: "Working with Zion Tech Group was a game-changer. Their neural interface solutions have enhanced our 'team', 's cognitive capabilities beyond what we thought possible.",
       results: "300% cognitive enhancement"
     },
     {
@@ -75,11 +75,11 @@ const ClientTestimonials = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonialindex) => (
             <div key={index} className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                  {testimonial.name.split(' ').map(n => n[0]).join('')}
+                  {testimonial.name.split(' ').map(n => n[0]).join(', ')}
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900">{testimonial.name}</h4>
@@ -89,7 +89,7 @@ const ClientTestimonials = () => {
               </div>
 
               <div className="flex mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
+                {[...Array(testimonial.rating)].map((_i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>

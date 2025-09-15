@@ -1,236 +1,129 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
-const AI2025UltimateContentShowcaseBanner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const featuredContent = [
-    {
-      id: 'enterprise-transformation-guide',
-      title: 'AI 2025: The Ultimate Enterprise Transformation Guide',
-      description: 'Complete guide to achieving 500% ROI in 12 months through strategic AI implementation',
-      type: 'blog',
-      url: '/blog/ai-2025-enterprise-transformation-ultimate-guide',
-      metrics: {
-        roi: '500%',
-        savings: '$2.8B',
-        efficiency: '78%',
-        satisfaction: '98%'
-      },
-      readingTime: '18 min read',
-      isNew: true
-    },
-    {
-      id: 'fortune-500-success-story',
-      title: 'Fortune 500 AI Transformation: 1,000% ROI Success Story',
-      description: 'How a $2.8B company achieved unprecedented 1,000% ROI in just 18 months',
-      type: 'case-study',
-      url: '/case-studies/fortune-500-ai-transformation-1000-percent-roi-success',
-      metrics: {
-        roi: '1,000%',
-        savings: '$280M',
-        timeline: '18 months',
-        revenue: '$1.2B'
-      },
-      readingTime: '15 min read',
-      isNew: true
-    },
-    {
-      id: 'implementation-master-guide',
-      title: 'AI 2025 Implementation Master Guide: Ultimate Success Framework',
-      description: 'Step-by-step framework for implementing AI solutions that deliver 500%+ ROI',
-      type: 'resource',
-      url: '/resources/ai-2025-implementation-master-guide-ultimate-success',
-      metrics: {
-        successRate: '94%',
-        averageRoi: '340%',
-        projects: '500+',
-        implementationTime: '18 months'
-      },
-      readingTime: '25 min read',
-      isNew: true
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const handleDismiss = () => {
-    setIsVisible(false);
-    localStorage.setItem('ai2025-ultimate-content-banner-dismissed', 'true');
-  };
-
-  useEffect(() => {
-    const dismissed = localStorage.getItem('ai2025-ultimate-content-banner-dismissed');
-    if (dismissed === 'true') {
-      setIsVisible(false);
-    }
-  }, []);
-
-  if (!isVisible) return null;
-
-  const currentContent = featuredContent[currentSlide];
-
+export default function AI2025UltimateContentShowcaseBanner() {
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
-      {/* Animated background elements */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800">
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
-        <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/30 rounded-full animate-bounce"></div>
-        <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500/30 rounded-full animate-bounce delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500/30 rounded-full animate-bounce delay-2000"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl"></div>
+        </div>
       </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center bg-white/20 rounded-full px-6 py-2 mb-4">
-            <span className="text-sm font-medium">🚀 NEW ULTIMATE AI CONTENT COLLECTION</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Transform Your Business with AI: 500%+ ROI Guaranteed
-          </h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Discover the proven strategies and frameworks that Fortune 500 companies use to achieve unprecedented AI transformation success
-          </p>
-        </div>
-
-        {/* Featured Content Showcase */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="text-2xl font-bold">Featured Content</h3>
-            <div className="flex space-x-2">
-              {featuredContent.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/50'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Content Details */}
-            <div className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  NEW
-                </span>
-                <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  {currentContent.type.toUpperCase()}
-                </span>
-                <span className="text-sm opacity-75">
-                  {currentContent.readingTime}
-                </span>
-              </div>
-
-              <h4 className="text-2xl font-bold leading-tight">
-                {currentContent.title}
-              </h4>
-
-              <p className="text-lg opacity-90 leading-relaxed">
-                {currentContent.description}
-              </p>
-
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href={currentContent.url}
-                  className="bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Read Now →
-                </Link>
-                <Link
-                  href="/contact"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
-                >
-                  Get Consultation
-                </Link>
-              </div>
-            </div>
-
-            {/* Success Metrics */}
-            <div className="grid grid-cols-2 gap-4">
-              {Object.entries(currentContent.metrics).map(([key, value]) => (
-                <div key={key} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-green-400 mb-1">
-                    {value}
-                  </div>
-                  <div className="text-sm opacity-75 capitalize">
-                    {key.replace(/([A-Z])/g, ' $1').trim()}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Success Statistics */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-green-400 mb-2">500+</div>
-            <div className="text-sm opacity-75">Success Stories</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">340%</div>
-            <div className="text-sm opacity-75">Average ROI</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-400 mb-2">$2.8B</div>
-            <div className="text-sm opacity-75">Total Savings</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-400 mb-2">98%</div>
-            <div className="text-sm opacity-75">Client Satisfaction</div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+          {/* Badge */}
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-sm font-bold mb-8 shadow-lg">
+            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+            </svg>
+            ULTIMATE AI CONTENT SHOWCASE 2025
+          </div>
+
+          {/* Main Heading */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            The Future of
+            <span className="block bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+              AI Innovation
+            </span>
+            is Here
+          </h1>
+
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Experience the most advanced AI technologiesbreakthrough innovationsand revolutionary tools that are transforming industries and reshaping our digital future.
+          </p>
+
+          {/* Feature Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-5xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Neural Networks</h3>
+              <p className="text-indigo-100 text-sm">Advanced deep learning models that mimic human brain processes</p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Quantum Computing</h3>
+              <p className="text-indigo-100 text-sm">Revolutionary quantum algorithms for exponential processing power</p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Emotional AI</h3>
+              <p className="text-indigo-100 text-sm">AI systems that understand and respond to human emotions</p>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+            <Link 
+              href="/ai-innovation-hub-2025"
+              className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25 transform hover:-translate-y-1"
             >
-              Explore All Content
+              <span className="flex items-center justify-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+                Explore AI Innovations
+                <svg className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
             </Link>
-            <Link
-              href="/case-studies"
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
+            
+            <Link 
+              href="/ai-tools-utilities-2025"
+              className="group border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 backdrop-blur-sm"
             >
-              View Success Stories
-            </Link>
-            <Link
-              href="/resources"
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Download Resources
+              <span className="flex items-center justify-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Browse AI Tools
+                <svg className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
             </Link>
           </div>
-        </div>
 
-        {/* Dismiss Button */}
-        <button
-          onClick={handleDismiss}
-          className="absolute top-4 right-4 text-white/75 hover:text-white transition-colors"
-          aria-label="Dismiss banner"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">50K+</div>
+              <div className="text-indigo-200 text-sm">AI Models</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-indigo-200 text-sm">Accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
+              <div className="text-indigo-200 text-sm">Support</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">1M+</div>
+              <div className="text-indigo-200 text-sm">Users</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
-};
-
-export default AI2025UltimateContentShowcaseBanner;
+}

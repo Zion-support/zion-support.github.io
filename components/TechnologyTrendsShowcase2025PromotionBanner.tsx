@@ -4,10 +4,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Globe, 
+  TrendingUp
+  Brain
+  Zap
+  Globe
   ArrowRight,
   X,
   CheckCircle,
@@ -17,22 +17,22 @@ import {
 } from 'lucide-react';
 
 const TechnologyTrendsShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentTrend, setCurrentTrend] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentTrendsetCurrentTrend] = useState(0);
 
   const trends = [
-    { name: "AI-Powered Automation", icon: Brain, adoption: "85%" },
-    { name: "Edge Computing", icon: Zap, adoption: "70%" },
-    { name: "Quantum Security", icon: Globe, adoption: "60%" },
-    { name: "Sustainable Tech", icon: TrendingUp, adoption: "90%" }
+    { name: "AI-Powered Automation"icon: Brainadoption: "85%" },
+    { name: "Edge Computing"icon: Zapadoption: "70%" },
+    { name: "Quantum Security"icon: Globeadoption: "60%" },
+    { name: "Sustainable Tech"icon: TrendingUpadoption: "90%" }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTrend((prev) => (prev + 1) % trends.length);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -62,7 +62,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
                 >
                   <TrendingUp className="w-3 h-3" />
@@ -110,7 +110,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
 
             {/* Center - Rotating Trends */}
             <div className="hidden md:flex items-center gap-8">
-              {trends.map((trend, index) => {
+              {trends.map((trendindex) => {
                 const Icon = trend.icon;
                 return (
                   <motion.div
@@ -170,7 +170,7 @@ const TechnologyTrendsShowcase2025PromotionBanner = () => {
             className="h-full bg-white"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: 15, ease: "linear" }}
+            transition={{ duration: 15ease: "linear" }}
           />
         </div>
       </div>

@@ -1,9 +1,12 @@
+"use client";
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const InteractiveContentPromotionBanner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   const slides = [
     {
@@ -48,9 +51,9 @@ const InteractiveContentPromotionBanner = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }[slides.length]);
 
   const currentSlideData = slides[currentSlide];
 

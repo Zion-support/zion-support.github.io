@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Search, Filter, ArrowRight, Clock, TrendingUp, Star, Eye } from 'lucide-react';
+SearchFilterArrowRightClockTrendingUpStarEye
 import Link from 'next/link';
 
 interface ContentItem {
@@ -21,11 +21,11 @@ interface ContentItem {
 }
 
 const InteractiveContentDiscovery = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [sortBy, setSortBy] = useState('trending');
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [searchQuerysetSearchQuery] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [selectedTypesetSelectedType] = useState('all');
+  const [sortBysetSortBy] = useState('trending');
+  const [isExpandedsetIsExpanded] = useState(false);
 
   const contentItems: ContentItem[] = [
     {
@@ -51,7 +51,7 @@ const InteractiveContentDiscovery = () => {
       readTime: '12 min',
       views: 12850,
       rating: 4.8,
-      tags: ['ROI', 'Case Study', 'Success', 'Business'],
+      tags: [', 'ROI', 'Case 'Study', 'Success'Business'],
       link: '/success-stories-2025',
       featured: true,
       new: true
@@ -65,7 +65,7 @@ const InteractiveContentDiscovery = () => {
       readTime: '15 min',
       views: 22100,
       rating: 4.7,
-      tags: ['Predictions', 'Future', 'Trends', 'Analysis'],
+      tags: [', 'Predictions', 'Future', 'Trends', 'Analysis'],
       link: '/ai-2025-2030-ultimate-predictions',
       featured: false,
       new: false
@@ -79,7 +79,7 @@ const InteractiveContentDiscovery = () => {
       readTime: '20 min',
       views: 8750,
       rating: 4.6,
-      tags: ['Quantum', 'Computing', 'Tutorial', 'Guide'],
+      tags: [', 'Quantum', 'Computing', 'Tutorial', 'Guide'],
       link: '/quantum-computing-2025',
       featured: false,
       new: false
@@ -93,7 +93,7 @@ const InteractiveContentDiscovery = () => {
       readTime: '10 min',
       views: 19600,
       rating: 4.8,
-      tags: ['Neural', 'Interface', 'Brain', 'Future'],
+      tags: [', 'Neural', 'Interface', 'Brain', 'Future'],
       link: '/neural-interface-revolution-2026',
       featured: false,
       new: false
@@ -107,20 +107,20 @@ const InteractiveContentDiscovery = () => {
       readTime: '14 min',
       views: 11200,
       rating: 4.5,
-      tags: ['Security', 'AI', 'Enterprise', 'Best Practices'],
+      tags: [', 'Security', 'AI', 'Enterprise', 'Best Practices'],
       link: '/ai-security-guide',
       featured: false,
       new: false
     }
   ];
 
-  const categories = ['all', 'Innovation', 'Success', 'Predictions', 'Technology', 'Security'];
-  const types = ['all', 'showcase', 'case-study', 'prediction', 'tutorial', 'news'];
+  const categories = [', 'all', 'Innovation', 'Success', 'Predictions', 'Technology', 'Security'];
+  const types = [', 'all', 'showcase'case-'study', 'prediction', 'tutorial', 'news'];
   const sortOptions = [
-    { value: 'trending', label: 'Trending' },
-    { value: 'newest', label: 'Newest' },
-    { value: 'popular', label: 'Most Popular' },
-    { value: 'rating', label: 'Highest Rated' }
+    { value: ''trending', 'label: 'Trending' },
+    { value: ''newest', 'label: 'Newest' },
+    { value: ''popular', 'label: 'Most Popular' },
+    { value: ''rating', 'label: 'Highest Rated' }
   ];
 
   const filteredContent = contentItems
@@ -132,7 +132,7 @@ const InteractiveContentDiscovery = () => {
       const matchesType = selectedType === 'all' || item.type === selectedType;
       return matchesSearch && matchesCategory && matchesType;
     })
-    .sort((a, b) => {
+    .sort((ab) => {
       switch (sortBy) {
         case 'newest':
           return b.new ? 1 : -1;
@@ -176,7 +176,7 @@ const InteractiveContentDiscovery = () => {
           Discover Amazing Content
         </h2>
         <p className="text-gray-300 text-lg">
-          Explore our latest AI innovations, success stories, and cutting-edge insights
+          Explore our latest AI innovationsuccess storiesand cutting-edge insights
         </p>
       </div>
 
@@ -216,7 +216,7 @@ const InteractiveContentDiscovery = () => {
           >
             {types.map(type => (
               <option key={type} value={type} className="bg-gray-800">
-                {type === 'all' ? 'All Types' : type.replace('-', ' ').toUpperCase()}
+                {type === 'all' ? 'All Types' : type.replace('-' ').toUpperCase()}
               </option>
             ))}
           </select>
@@ -271,7 +271,7 @@ const InteractiveContentDiscovery = () => {
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
-              {item.tags.slice(0, 3).map((tag, index) => (
+              {item.tags.slice(03).map((tagindex) => (
                 <span
                   key={index}
                   className="px-2 py-1 bg-white/10 text-white/70 text-xs rounded-full"

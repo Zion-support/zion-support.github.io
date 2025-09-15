@@ -4,13 +4,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Bot, 
-  MessageCircle, 
-  Send, 
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
+  Bot
+  MessageCircle
+  Send
+  Sparkles
+  Zap
+  Brain
+  Rocket
   Star,
   Play,
   X,
@@ -21,21 +21,21 @@ import {
 } from 'lucide-react';
 
 const InteractiveAIDemo2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentDemo, setCurrentDemo] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentDemosetCurrentDemo] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 2000);
+    const timer = setTimeout(() => setIsVisible(true)2000);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }, 4000);
+    }4000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const demos = [
     {
@@ -118,13 +118,13 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentDemo}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
                       className="flex items-center gap-2"
                     >
                       <div className={`w-8 h-8 bg-gradient-to-r ${demos[currentDemo].color} rounded-lg flex items-center justify-center`}>
-                        {React.createElement(demos[currentDemo].icon, { className: "w-4 h-4 text-white" })}
+                        {React.createElement(demos[currentDemo].icon{ className: "w-4 h-4 text-white" })}
                       </div>
                       <div>
                         <div className="text-white font-semibold text-sm">
@@ -172,7 +172,7 @@ const InteractiveAIDemo2025PromotionBanner = () => {
 
                 <motion.button
                   className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-blue-500/25"
-                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileHover={{ scale: 1.05y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Play className="w-4 h-4" />
@@ -204,7 +204,7 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                   className="flex items-center gap-2"
                 >
                   <div className={`w-6 h-6 bg-gradient-to-r ${demos[currentDemo].color} rounded-lg flex items-center justify-center`}>
-                    {React.createElement(demos[currentDemo].icon, { className: "w-3 h-3 text-white" })}
+                    {React.createElement(demos[currentDemo].icon{ className: "w-3 h-3 text-white" })}
                   </div>
                   <div className="text-center">
                     <div className="text-white font-semibold text-sm">
@@ -226,7 +226,7 @@ const InteractiveAIDemo2025PromotionBanner = () => {
           className="absolute bottom-0 left-0 h-1 bg-white"
           initial={{ width: "0%" }}
           animate={{ width: "100%" }}
-          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 4repeat: Infinityease: "linear" }}
         ></motion.div>
       </motion.div>
     </AnimatePresence>

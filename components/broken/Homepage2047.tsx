@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 "use client";
+import React{ useEffectuseStateuseCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import { 
+  ArrowRightPlayTrendingUpBrainShieldRocketGlobeCpuDatabaseAtomTargetStarSparkles as SparklesIcon,
+  Brain as BrainIconAtom as AtomIconShield as ShieldIconRocket as RocketIconZapEyeHeartInfinity,
+  ChevronRightChevronLeftExternalLinkUsersAwardClockCheckCircleZap as ZapIcon,
+  DollarSignBarChart3PaletteCloudNetworkShoppingCartSettingsBuildingMonitor,
+  LayersGlobe2LockCodeServerPhoneSearchFilterGridListEye as EyeIcon,
+  ArrowUpRightStar as StarIconSparklesTarget as Target
+=======
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -9,6 +21,7 @@ import {
   DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor,
   Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon,
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon
+>>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 
 // Import our new innovative services
@@ -21,6 +34,17 @@ import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackgrou
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
 
+<<<<<<< HEAD
+
+const Homepage2047: React.FC = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentServiceIndexsetCurrentServiceIndex] = useState(0);
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [mousePositionsetMousePosition] = useState({ x: 0y: 0 });
+  const [hoveredServicesetHoveredService] = useState<string | null>(null);
+  const [consciousnessLevelsetConsciousnessLevel] = useState(0.5);
+  const [scrollYsetScrollY] = useState(0);
+=======
 const Homepage2047: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -29,6 +53,7 @@ const Homepage2047: React.FC = () => {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [consciousnessLevel, setConsciousnessLevel] = useState(0.5);
   const [scrollY, setScrollY] = useState(0);
+>>>>>>> origin/auto/autonomy-17186719616
   
   useEffect(() => {
     setIsVisible(true);
@@ -36,33 +61,57 @@ const Homepage2047: React.FC = () => {
     // Auto-rotate featured services
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6);
+<<<<<<< HEAD
+    }8000);
+    
+    // Track mouse movement for parallax effects
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientXy: e.clientY });
+=======
     }, 8000);
     
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
+>>>>>>> origin/auto/autonomy-17186719616
     };
     
     // Animate consciousness level
     const consciousnessInterval = setInterval(() => {
       setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7);
+<<<<<<< HEAD
+    }100);
+=======
     }, 100);
+>>>>>>> origin/auto/autonomy-17186719616
 
     // Track scroll position
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
     
+<<<<<<< HEAD
+    window.addEventListener(', 'mousemove', 'handleMouseMove);
+    window.addEventListener(', 'scroll', 'handleScroll);
+=======
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('scroll', handleScroll);
+>>>>>>> origin/auto/autonomy-17186719616
     
     return () => {
       clearInterval(interval);
       clearInterval(consciousnessInterval);
+<<<<<<< HEAD
+      window.removeEventListener(', 'mousemove', 'handleMouseMove);
+      window.removeEventListener(', 'scroll', 'handleScroll);
+    };
+  }[]);
+=======
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Combine all innovative services
   const allInnovativeServices = [
@@ -72,7 +121,11 @@ const Homepage2047: React.FC = () => {
   ];
 
   // Get featured services for rotation
+<<<<<<< HEAD
+  const featuredServices = allInnovativeServices.slice(06);
+=======
   const featuredServices = allInnovativeServices.slice(0, 6);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Filter services by category
   const getFilteredServices = () => {
@@ -84,6 +137,28 @@ const Homepage2047: React.FC = () => {
   };
 
   const categories = [
+<<<<<<< HEAD
+    { id: ''all', 'name: 'All 'Services', 'icon: SparklesIconcolor: 'from-purple-500 to-pink-500'count: allInnovativeServices.length },
+    { id: ''ai', 'name: 'AI & 'Autonomous', 'icon: BrainIconcolor: 'from-cyan-500 to-blue-500'count: innovative2025AIAutonomousEcosystemV2.length },
+    { id: ''quantum', 'name: 'Quantum & 'Emerging', 'icon: AtomIconcolor: 'from-blue-500 to-indigo-500'count: emergingTechBreakthroughs2025V4.length },
+    { id: ''it', 'name: 'IT 'Infrastructure', 'icon: Cpucolor: 'from-emerald-500 to-teal-500'count: innovative2025ITInfrastructureV2.length }
+  ];
+
+  const features = [
+    { icon: Braintitle: "AI Autonomous Ecosystem 2025"description: "Revolutionary autonomous AI solutions"href: "/2025-innovative-services-showcase-v2"color: "from-purple-500 to-pink-500" },
+    { icon: Atomtitle: "Quantum AI Neural Networks 2025"description: "Quantum-powered AI with consciousness"href: "/quantum-ai-neural-network-fusion-platform-2025"color: "from-blue-500 to-cyan-500" },
+    { icon: Shieldtitle: "Quantum Cybersecurity Intelligence 2025"description: "Quantum-resistant security with AI"href: "/quantum-cybersecurity-intelligence-platform-2025"color: "from-red-500 to-orange-500" },
+    { icon: Rocketitle: "Space Resource Intelligence 2025"description: "AI-powered space resource discovery"href: "/space-resource-intelligence-platform-2025"color: "from-indigo-500 to-purple-500" },
+    { icon: Cputitle: "Autonomous DevOps Intelligence 2025"description: "AI-powered DevOps optimization"href: "/autonomous-devops-intelligence-platform-2025"color: "from-emerald-500 to-teal-500" },
+    { icon: Databasetitle: "Edge Computing Orchestration 2025"description: "Edge computing optimization platform"href: "/edge-computing-orchestration-platform-2025"color: "from-yellow-500 to-orange-500" }
+  ];
+
+  const stats = [
+    { number: `${allInnovativeServices.length}+`label: "Innovative Services"icon: Star },
+    { number: "99.99%"label: "Uptime Guarantee"icon: TrendingUp },
+    { number: "24/7"label: "AI Intelligence Available"icon: Brain },
+    { number: "300+"label: "Countries Served"icon: Globe }
+=======
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length },
     { id: 'ai', name: 'AI & Autonomous', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: innovative2025AIAutonomousEcosystemV2.length },
     { id: 'quantum', name: 'Quantum & Emerging', icon: AtomIcon, color: 'from-blue-500 to-indigo-500', count: emergingTechBreakthroughs2025V4.length },
@@ -104,6 +179,7 @@ const Homepage2047: React.FC = () => {
     { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
     { number: "24/7", label: "AI Intelligence Available", icon: Brain },
     { number: "300+", label: "Countries Served", icon: Globe }
+>>>>>>> origin/auto/autonomy-17186719616
   ];
 
   const fadeInUp = {
@@ -134,8 +210,13 @@ const Homepage2047: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <motion.div
+<<<<<<< HEAD
+              initial={{ opacity: 0x: -50 }}
+              animate={{ opacity: 1x: 0 }}
+=======
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
+>>>>>>> origin/auto/autonomy-17186719616
               transition={{ duration: 1 }}
               className="space-y-8"
             >
@@ -143,7 +224,11 @@ const Homepage2047: React.FC = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                  transition={{ duration: 0.8delay: 0.2 }}
+=======
                   transition={{ duration: 0.8, delay: 0.2 }}
+>>>>>>> origin/auto/autonomy-17186719616
                   className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium"
                 >
                   <Sparkles className="w-4 h-4" />
@@ -163,7 +248,11 @@ const Homepage2047: React.FC = () => {
                 </h1>
 
                 <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl">
+<<<<<<< HEAD
+                  Discover our cutting-edge micro SAAS servicesAI autonomous ecosystemsquantum computing breakthroughsand next-generation IT infrastructure that are shaping the future of technology.
+=======
                   Discover our cutting-edge micro SAAS services, AI autonomous ecosystems, quantum computing breakthroughs, and next-generation IT infrastructure that are shaping the future of technology.
+>>>>>>> origin/auto/autonomy-17186719616
                 </p>
               </div>
 
@@ -171,7 +260,11 @@ const Homepage2047: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: 0.4 }}
+=======
                 transition={{ duration: 0.8, delay: 0.4 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <Link
@@ -198,7 +291,11 @@ const Homepage2047: React.FC = () => {
                 animate="animate"
                 className="grid grid-cols-2 md:grid-cols-4 gap-6"
               >
+<<<<<<< HEAD
+                {stats.map((statindex) => (
+=======
                 {stats.map((stat, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                   <motion.div
                     key={index}
                     variants={fadeInUp}
@@ -213,17 +310,29 @@ const Homepage2047: React.FC = () => {
 
             {/* Right Content - Featured Service */}
             <motion.div
+<<<<<<< HEAD
+              initial={{ opacity: 0x: 50 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 1delay: 0.3 }}
+=======
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
+>>>>>>> origin/auto/autonomy-17186719616
               className="relative"
             >
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentServiceIndex}
+<<<<<<< HEAD
+                  initial={{ opacity: 0scale: 0.9 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  exit={{ opacity: 0scale: 0.9 }}
+=======
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
+>>>>>>> origin/auto/autonomy-17186719616
                   transition={{ duration: 0.5 }}
                   className="relative"
                 >
@@ -288,7 +397,11 @@ const Homepage2047: React.FC = () => {
               Revolutionary Service Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+<<<<<<< HEAD
+              Explore our comprehensive suite of innovative solutions across AIquantum computingIT infrastructureand emerging technologies
+=======
               Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
           </motion.div>
 
@@ -300,7 +413,11 @@ const Homepage2047: React.FC = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
+<<<<<<< HEAD
+            {categories.map((categoryindex) => (
+=======
             {categories.map((category, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={category.id}
                 variants={fadeInUp}
@@ -363,7 +480,11 @@ const Homepage2047: React.FC = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
+<<<<<<< HEAD
+            {features.map((featureindex) => (
+=======
             {features.map((feature, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={index}
                 variants={fadeInUp}
@@ -397,9 +518,16 @@ const Homepage2047: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
+            transition={{ duration: 0.8delay: 0.2 }}
+            className="text-center mt-16"
+          >
+
+=======
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mt-16"
           >
+>>>>>>> origin/auto/autonomy-17186719616
             <Link
               href="/2025-innovative-services-showcase-v2"
               className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
@@ -424,7 +552,11 @@ const Homepage2047: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+<<<<<<< HEAD
+              Join thousands of organizations already leveraging our revolutionary AIquantumand IT infrastructure solutions
+=======
               Join thousands of organizations already leveraging our revolutionary AI, quantum, and IT infrastructure solutions
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

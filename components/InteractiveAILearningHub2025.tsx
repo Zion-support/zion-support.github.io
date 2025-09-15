@@ -4,12 +4,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  BookOpen, 
-  Play, 
-  Clock, 
-  Users, 
-  Star, 
-  CheckCircle, 
+  BookOpen
+  Play
+  Clock
+  Users
+  Star
+  CheckCircle
   ArrowRight,
   Download,
   Share2,
@@ -30,25 +30,25 @@ import {
 } from 'lucide-react';
 
 const InteractiveAILearningHub2025 = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedLevel, setSelectedLevel] = useState('all');
-  const [bookmarkedCourses, setBookmarkedCourses] = useState(new Set());
+  const [activeCategorysetActiveCategory] = useState('all');
+  const [searchQuerysetSearchQuery] = useState('');
+  const [selectedLevelsetSelectedLevel] = useState('all');
+  const [bookmarkedCoursesetBookmarkedCourses] = useState(new Set());
 
   const categories = [
-    { id: 'all', name: 'All Topics', icon: Brain, count: 48 },
-    { id: 'fundamentals', name: 'AI Fundamentals', icon: BookOpen, count: 12 },
-    { id: 'machine-learning', name: 'Machine Learning', icon: Code, count: 10 },
-    { id: 'data-science', name: 'Data Science', icon: BarChart3, count: 8 },
-    { id: 'automation', name: 'Automation', icon: Zap, count: 6 },
-    { id: 'applications', name: 'AI Applications', icon: Globe, count: 12 }
+    { id: ''all', 'name: 'All 'Topics', 'icon: Braincount: 48 },
+    { id: ''fundamentals', 'name: 'AI 'Fundamentals', 'icon: BookOpencount: 12 },
+    { id: 'machine-'learning', 'name: 'Machine 'Learning', 'icon: Codecount: 10 },
+    { id: 'data-'science', 'name: 'Data 'Science', 'icon: BarChart3count: 8 },
+    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: 6 },
+    { id: ''applications', 'name: 'AI 'Applications', 'icon: Globecount: 12 }
   ];
 
   const levels = [
-    { id: 'all', name: 'All Levels', color: 'gray' },
-    { id: 'beginner', name: 'Beginner', color: 'green' },
-    { id: 'intermediate', name: 'Intermediate', color: 'blue' },
-    { id: 'advanced', name: 'Advanced', color: 'purple' }
+    { id: ''all', 'name: 'All 'Levels', 'color: 'gray' },
+    { id: ''beginner', 'name: ''Beginner', 'color: 'green' },
+    { id: ''intermediate', 'name: ''Intermediate', 'color: 'blue' },
+    { id: ''advanced', 'name: ''Advanced', 'color: 'purple' }
   ];
 
   const courses = [
@@ -57,7 +57,7 @@ const InteractiveAILearningHub2025 = () => {
       title: 'AI Fundamentals: From Zero to Hero',
       category: 'fundamentals',
       level: 'beginner',
-      description: 'Master the core concepts of artificial intelligence, machine learning, and neural networks.',
+      description: 'Master the core concepts of artificial intelligencemachine learningand neural networks.',
       duration: '8 hours',
       students: '12.5K',
       rating: 4.8,
@@ -68,14 +68,14 @@ const InteractiveAILearningHub2025 = () => {
       modules: 12,
       certificate: true,
       featured: true,
-      tags: ['AI Basics', 'Neural Networks', 'Machine Learning']
+      tags: ['AI 'Basics', 'Neural 'Networks', 'Machine Learning']
     },
     {
       id: 2,
       title: 'Advanced Machine Learning with Python',
       category: 'machine-learning',
       level: 'intermediate',
-      description: 'Deep dive into advanced ML algorithms, model optimization, and real-world applications.',
+      description: 'Deep dive into advanced ML algorithmsmodel optimizationand real-world applications.',
       duration: '15 hours',
       students: '8.2K',
       rating: 4.9,
@@ -86,14 +86,14 @@ const InteractiveAILearningHub2025 = () => {
       modules: 20,
       certificate: true,
       featured: true,
-      tags: ['Python', 'Scikit-learn', 'TensorFlow']
+      tags: [', 'Python', 'Scikit-'learn', 'TensorFlow']
     },
     {
       id: 3,
       title: 'Data Science for AI Applications',
       category: 'data-science',
       level: 'intermediate',
-      description: 'Learn data preprocessing, feature engineering, and visualization for AI projects.',
+      description: 'Learn data preprocessingfeature engineeringand visualization for AI projects.',
       duration: '12 hours',
       students: '6.8K',
       rating: 4.7,
@@ -104,7 +104,7 @@ const InteractiveAILearningHub2025 = () => {
       modules: 16,
       certificate: true,
       featured: false,
-      tags: ['Data Analysis', 'Pandas', 'Visualization']
+      tags: ['Data 'Analysis', 'Pandas'Visualization']
     },
     {
       id: 4,
@@ -122,7 +122,7 @@ const InteractiveAILearningHub2025 = () => {
       modules: 14,
       certificate: true,
       featured: true,
-      tags: ['Workflow Automation', 'RPA', 'AI Integration']
+      tags: ['Workflow 'Automation', 'RPA'AI Integration']
     },
     {
       id: 5,
@@ -140,7 +140,7 @@ const InteractiveAILearningHub2025 = () => {
       modules: 8,
       certificate: true,
       featured: false,
-      tags: ['Healthcare AI', 'Medical Imaging', 'Diagnostics']
+      tags: ['Healthcare 'AI', 'Medical 'Imaging', 'Diagnostics']
     },
     {
       id: 6,
@@ -158,7 +158,7 @@ const InteractiveAILearningHub2025 = () => {
       modules: 18,
       certificate: true,
       featured: true,
-      tags: ['Mobile AI', 'React Native', 'TensorFlow Lite']
+      tags: ['Mobile 'AI', 'React 'Native', 'TensorFlow Lite']
     }
   ];
 
@@ -194,7 +194,7 @@ const InteractiveAILearningHub2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -225,7 +225,7 @@ const InteractiveAILearningHub2025 = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Learn AI from industry experts with hands-on projects, real-world case studies, 
+            Learn AI from industry experts with hands-on projectsreal-world case studies
             and interactive content designed for all skill levels.
           </p>
         </motion.div>
@@ -234,7 +234,7 @@ const InteractiveAILearningHub2025 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -242,7 +242,7 @@ const InteractiveAILearningHub2025 = () => {
             <div className="relative w-full lg:w-96">
               <input
                 type="text"
-                placeholder="Search courses, topics, or instructors..."
+                placeholder="Search coursestopicsor instructors..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-4 py-3 pl-12 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
@@ -273,7 +273,7 @@ const InteractiveAILearningHub2025 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6delay: 0.3 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
@@ -389,7 +389,7 @@ const InteractiveAILearningHub2025 = () => {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {course.tags.slice(0, 2).map((tag, index) => (
+                    {course.tags.slice(02).map((tagindex) => (
                       <span
                         key={index}
                         className="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs"
@@ -445,7 +445,7 @@ const InteractiveAILearningHub2025 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className="mt-20"
         >
           <div className="text-center mb-12">
@@ -483,7 +483,7 @@ const InteractiveAILearningHub2025 = () => {
                 level: 'Advanced',
                 color: 'purple'
               }
-            ].map((path, index) => (
+            ].map((pathindex) => (
               <div
                 key={index}
                 className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
@@ -523,7 +523,7 @@ const InteractiveAILearningHub2025 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center mt-20"
         >
           <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white">
@@ -531,8 +531,8 @@ const InteractiveAILearningHub2025 = () => {
               Ready to Start Your AI Journey?
             </h3>
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
-              Join thousands of learners mastering AI with our comprehensive courses, 
-              hands-on projects, and expert guidance.
+              Join thousands of learners mastering AI with our comprehensive courses
+              hands-on projectsand expert guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">

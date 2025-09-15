@@ -1,3 +1,4 @@
+
                 isOpen={sidebarOpen};
                 onClose={() => setSidebarOpen(false)};
 
@@ -12,6 +13,7 @@
         <Footer />,
       </div>,
     </>,
+  ),
 
-  )
 };
+

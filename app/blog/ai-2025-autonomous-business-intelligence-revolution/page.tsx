@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { Brain, TrendingUp, Zap,  Clock, Users, ArrowRight, CheckCircle } from 'lucide-react';
+import { Brain, TrendingUp, Zap, Clock, Users, ArrowRight, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI 2025: The Autonomous Business Intelligence Revolution - 1,800% ROI Through Self-Managing Analytics',
@@ -75,7 +75,7 @@ export default function AutonomousBIRevolutionPage() {
               <div className="text-gray-600">Annual Savings</div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <Award className="w-12 h-12 text-purple-500 mx-auto mb-4" />
+              <ArrowRight className="w-12 h-12 text-purple-500 mx-auto mb-4" />
               <div className="text-3xl font-bold text-purple-600 mb-2">94.8%</div>
               <div className="text-gray-600">Forecasting Accuracy</div>
             </div>
@@ -153,7 +153,7 @@ export default function AutonomousBIRevolutionPage() {
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-lg">
-                <Award className="w-8 h-8 text-purple-500 mb-4" />
+                <ArrowRight className="w-8 h-8 text-purple-500 mb-4" />
                 <h4 className="text-lg font-bold text-gray-900 mb-2">Make Intelligent Decisions</h4>
                 <p className="text-gray-600">Execute business decisions based on data-driven insights</p>
               </div>
@@ -297,7 +297,7 @@ export default function AutonomousBIRevolutionPage() {
               href="/resources"
               className="inline-flex items-center border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
-              <Award className="w-5 h-5 mr-2" />
+              <ArrowRight className="w-5 h-5 mr-2" />
               View Implementation Guide
             </Link>
           </div>
@@ -323,7 +323,7 @@ export default function AutonomousBIRevolutionPage() {
             
             <Link href="/resources/autonomous-bi-implementation-master-guide-2025" className="group">
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1">
-                <Award className="w-8 h-8 text-purple-500 mb-4" />
+                <ArrowRight className="w-8 h-8 text-purple-500 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Implementation Guide</h3>
                 <p className="text-gray-600 mb-4">Complete roadmap to 1,800% ROI with best practices</p>
                 <div className="flex items-center text-blue-600 font-medium">

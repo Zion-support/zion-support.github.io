@@ -4,13 +4,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Rocket, 
-  Star, 
-  Play, 
-  Download, 
-  Share2, 
+  Brain
+  Zap
+  Rocket
+  Star
+  Play
+  Download
+  Share2
   Heart,
   BookOpen,
   Users,
@@ -36,33 +36,33 @@ import {
 } from 'lucide-react';
 
 const InteractiveAIToolsShowcase2027 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState('grid');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedTool, setSelectedTool] = useState(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [viewModesetViewMode] = useState('grid');
+  const [searchQuerysetSearchQuery] = useState('');
+  const [selectedToolsetSelectedTool] = useState(null);
+  const [isPlayingsetIsPlaying] = useState(false);
 
   const categories = [
-    { id: 'all', name: 'All Tools', icon: Grid, color: 'from-purple-600 to-pink-600' },
-    { id: 'ai-assistants', name: 'AI Assistants', icon: Brain, color: 'from-blue-600 to-cyan-600' },
-    { id: 'automation', name: 'Automation', icon: Zap, color: 'from-green-600 to-emerald-600' },
-    { id: 'analytics', name: 'Analytics', icon: TrendingUp, color: 'from-orange-600 to-red-600' },
-    { id: 'development', name: 'Development', icon: Cpu, color: 'from-indigo-600 to-purple-600' },
-    { id: 'security', name: 'Security', icon: Shield, color: 'from-red-600 to-pink-600' }
+    { id: ''all', 'name: 'All 'Tools', 'icon: Gridcolor: 'from-purple-600 to-pink-600' },
+    { id: 'ai-'assistants', 'name: 'AI 'Assistants', 'icon: Braincolor: 'from-blue-600 to-cyan-600' },
+    { id: ''automation', 'name: ''Automation', 'icon: Zapcolor: 'from-green-600 to-emerald-600' },
+    { id: ''analytics', 'name: ''Analytics', 'icon: TrendingUpcolor: 'from-orange-600 to-red-600' },
+    { id: ''development', 'name: ''Development', 'icon: Cpucolor: 'from-indigo-600 to-purple-600' },
+    { id: ''security', 'name: ''Security', 'icon: Shieldcolor: 'from-red-600 to-pink-600' }
   ];
 
   const aiTools = [
     {
       id: 1,
       name: "Neural Consciousness AI",
-      description: "Advanced AI system with near-human consciousness capabilities, capable of complex reasoning and emotional intelligence.",
+      description: "Advanced AI system with near-human consciousness capabilitiescapable of complex reasoning and emotional intelligence.",
       category: "ai-assistants",
       image: "/api/placeholder/400/300",
       rating: 4.9,
       downloads: "2.3M",
       price: "Free",
-      tags: ["AI", "Consciousness", "Neural Networks", "2027"],
-      features: ["Natural Language Processing", "Emotional Intelligence", "Complex Reasoning", "Learning Capabilities"],
+      tags: ["AI"Consciousness"Neural Networks"2027"],
+      features: ["Natural Language Processing"Emotional Intelligence"Complex Reasoning"Learning Capabilities"],
       demo: true,
       featured: true
     },
@@ -75,8 +75,8 @@ const InteractiveAIToolsShowcase2027 = () => {
       rating: 4.8,
       downloads: "1.8M",
       price: "$299/month",
-      tags: ["Quantum", "Automation", "High Performance", "2027"],
-      features: ["Quantum Processing", "Real-time Automation", "Scalable Architecture", "Advanced Analytics"],
+      tags: ["Quantum"Automation"High Performance"2027"],
+      features: ["Quantum Processing"Real-time Automation"Scalable Architecture"Advanced Analytics"],
       demo: true,
       featured: true
     },
@@ -89,22 +89,22 @@ const InteractiveAIToolsShowcase2027 = () => {
       rating: 4.7,
       downloads: "3.1M",
       price: "$199/month",
-      tags: ["Analytics", "Prediction", "Machine Learning", "2027"],
-      features: ["Predictive Modeling", "Real-time Analysis", "Custom Dashboards", "API Integration"],
+      tags: ["Analytics"Prediction"Machine Learning"2027"],
+      features: ["Predictive Modeling"Real-time Analysis"Custom Dashboards"API Integration"],
       demo: true,
       featured: false
     },
     {
       id: 4,
       name: "Code Generation AI",
-      description: "Advanced AI that generates, reviews, and optimizes code in multiple programming languages.",
+      description: "Advanced AI that generatesreviewsand optimizes code in multiple programming languages.",
       category: "development",
       image: "/api/placeholder/400/300",
       rating: 4.9,
       downloads: "4.2M",
       price: "Free",
-      tags: ["Development", "Code Generation", "AI", "2027"],
-      features: ["Multi-language Support", "Code Review", "Optimization", "Documentation"],
+      tags: ["Development"Code Generation"AI"2027"],
+      features: ["Multi-language Support"Code Review"Optimization"Documentation"],
       demo: true,
       featured: true
     },
@@ -117,8 +117,8 @@ const InteractiveAIToolsShowcase2027 = () => {
       rating: 4.8,
       downloads: "1.5M",
       price: "$399/month",
-      tags: ["Security", "Quantum", "Encryption", "2027"],
-      features: ["Quantum Encryption", "Threat Detection", "Zero Trust", "Compliance"],
+      tags: ["Security"Quantum"Encryption"2027"],
+      features: ["Quantum Encryption"Threat Detection"Zero Trust"Compliance"],
       demo: false,
       featured: false
     },
@@ -131,8 +131,8 @@ const InteractiveAIToolsShowcase2027 = () => {
       rating: 4.6,
       downloads: "890K",
       price: "$599/month",
-      tags: ["Neural Interface", "SDK", "BCI", "2027"],
-      features: ["Neural Signal Processing", "Real-time Control", "Multi-platform", "Documentation"],
+      tags: ["Neural Interface"SDK"BCI"2027"],
+      features: ["Neural Signal Processing"Real-time Control"Multi-platform"Documentation"],
       demo: true,
       featured: false
     }
@@ -156,14 +156,14 @@ const InteractiveAIToolsShowcase2027 = () => {
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(25)].map((_, i) => (
+        {[...Array(25)].map((_i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-30"
             animate={{
-              x: [0, Math.random() * 1000],
-              y: [0, Math.random() * 1000],
-              scale: [0, 1, 0],
+              x: [0Math.random() * 1000],
+              y: [0Math.random() * 1000],
+              scale: [010],
             }}
             transition={{
               duration: Math.random() * 12 + 8,
@@ -210,7 +210,7 @@ const InteractiveAIToolsShowcase2027 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
@@ -276,7 +276,7 @@ const InteractiveAIToolsShowcase2027 = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8delay: 0.4 }}
             className="mb-16"
           >
             <div className="flex items-center gap-3 mb-8">
@@ -285,12 +285,12 @@ const InteractiveAIToolsShowcase2027 = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredTools.map((tool, index) => (
+              {featuredTools.map((toolindex) => (
                 <motion.div
                   key={tool.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 cursor-pointer"
                   onClick={() => setSelectedTool(tool)}
                 >
@@ -309,7 +309,7 @@ const InteractiveAIToolsShowcase2027 = () => {
                     </div>
                     <div className="absolute bottom-4 left-4">
                       <div className="flex gap-2">
-                        {tool.tags.slice(0, 2).map((tag, tagIndex) => (
+                        {tool.tags.slice(02).map((tagIndex) => (
                           <span
                             key={tagIndex}
                             className="px-2 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold rounded-full"
@@ -377,7 +377,7 @@ const InteractiveAIToolsShowcase2027 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8delay: 0.6 }}
         >
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold text-white">All AI Tools</h2>
@@ -391,12 +391,12 @@ const InteractiveAIToolsShowcase2027 = () => {
               ? 'md:grid-cols-2 lg:grid-cols-3' 
               : 'grid-cols-1'
           }`}>
-            {filteredTools.map((tool, index) => (
+            {filteredTools.map((toolindex) => (
               <motion.div
                 key={tool.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
+                transition={{ duration: 0.5delay: index * 0.05 }}
                 className={`group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 cursor-pointer ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
@@ -443,7 +443,7 @@ const InteractiveAIToolsShowcase2027 = () => {
                   </p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {tool.tags.slice(0, 3).map((tag, tagIndex) => (
+                    {tool.tags.slice(03).map((tagIndex) => (
                       <span
                         key={tagIndex}
                         className="px-2 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold rounded-full"
@@ -488,7 +488,7 @@ const InteractiveAIToolsShowcase2027 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-3xl p-12 backdrop-blur-sm border border-white/20">
@@ -496,8 +496,8 @@ const InteractiveAIToolsShowcase2027 = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI tools to automate, 
-              optimize, and revolutionize their operations.
+              Join thousands of businesses already using our AI tools to automate
+              optimizeand revolutionize their operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="group flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300">
@@ -525,9 +525,9 @@ const InteractiveAIToolsShowcase2027 = () => {
             onClick={() => setSelectedTool(null)}
           >
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
+              initial={{ scale: 0.8opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
+              exit={{ scale: 0.8opacity: 0 }}
               className="bg-slate-900 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -568,7 +568,7 @@ const InteractiveAIToolsShowcase2027 = () => {
                       </div>
                       
                       <div className="flex flex-wrap gap-2">
-                        {selectedTool.tags.map((tag, index) => (
+                        {selectedTool.tags.map((tagindex) => (
                           <span
                             key={index}
                             className="px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold rounded-full"
@@ -583,7 +583,7 @@ const InteractiveAIToolsShowcase2027 = () => {
                   <div>
                     <h3 className="text-xl font-bold text-white mb-4">Features</h3>
                     <ul className="space-y-2 mb-6">
-                      {selectedTool.features.map((feature, index) => (
+                      {selectedTool.features.map((featureindex) => (
                         <li key={index} className="flex items-center gap-2 text-gray-300">
                           <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                           {feature}

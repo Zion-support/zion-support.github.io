@@ -110,7 +110,12 @@ export function createProposal(params: {
     codeModuleAffected: params.codeModuleAffected,
     votingOptions: params.votingOptions,
     fundingNeeded: params.fundingNeeded,
+<<<<<<< HEAD
     createdAt: new Date().toISOString()};
+=======
+    createdAt: new Date().toISOString(),
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   const proposal: ZgpProposal = {
     id,
     templateId: template.id,
@@ -119,7 +124,12 @@ export function createProposal(params: {
     proposalNumber,
     status: 'draft',
     versions: [firstVersion],
+<<<<<<< HEAD
     latestVersion: 1};
+=======
+    latestVersion: 1,
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   proposals.push(proposal);
   saveProposals(proposals);
   return proposal;
@@ -153,7 +163,12 @@ export function updateProposal(id: string, update: {
     codeModuleAffected: update.codeModuleAffected ?? current.versions[current.latestVersion - 1].codeModuleAffected,
     votingOptions: update.votingOptions ?? current.versions[current.latestVersion - 1].votingOptions,
     fundingNeeded: update.fundingNeeded ?? current.versions[current.latestVersion - 1].fundingNeeded,
+<<<<<<< HEAD
     createdAt: new Date().toISOString()};
+=======
+    createdAt: new Date().toISOString(),
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   const next: ZgpProposal = {
     ...current,
@@ -161,7 +176,12 @@ export function updateProposal(id: string, update: {
     status: update.status ?? current.status,
     versions: [...current.versions, nextVersion],
     latestVersion: nextVersion.version,
+<<<<<<< HEAD
     votingResultUrl: update.votingResultUrl ?? current.votingResultUrl};
+=======
+    votingResultUrl: update.votingResultUrl ?? current.votingResultUrl,
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   proposals[index] = next;
   saveProposals(proposals);

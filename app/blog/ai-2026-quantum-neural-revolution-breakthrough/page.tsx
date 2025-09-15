@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import {  Zap,  TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Atom } from 'lucide-react';
-import SEO from '../../../components/SEO';
+import {  Zap,  TrendingUp, CheckCircle, DollarSign, Clock, Users, Brain, Circle, Award } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: The Quantum Neural Revolution Reshaping Enterprise Computing',
@@ -24,7 +24,7 @@ export default function QuantumNeuralRevolutionPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <Atom className="w-5 h-5 mr-2" />
+                <Circle className="w-5 h-5 mr-2" />
               <span className="text-sm font-medium">QUANTUM NEURAL REVOLUTION</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">

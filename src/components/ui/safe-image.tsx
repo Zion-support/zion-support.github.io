@@ -25,7 +25,8 @@ export function SafeImage({
   fallbackSrc,
   priority = false,
   sizes,
-  quality = 75}: SafeImageProps) {
+  quality = 75,
+}: SafeImageProps) {
   const [hasError, setHasError] = useState(false);
   const [currentSrc, setCurrentSrc] = useState(src);
 

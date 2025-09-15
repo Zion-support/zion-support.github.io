@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useDebounce } from "@/hooks/useDebounce";
 import { GradientHeading } from "@/components/GradientHeading";
 import { SEO } from "@/components/SEO";
@@ -37,7 +38,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]);
   const query = useDebounce(searchQuery, 300);
   const [isLoading, setIsLoading] = useState(false);
-  const location = useLocation();
+  const router = useRouter();
 
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
@@ -46,7 +47,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       setSelectedCategory("All Categories");
       setPosts([...initialPosts]);
     };
-  }, [location.pathname, initialPosts]);
+  }, [router.asPath, initialPosts]);
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -156,7 +157,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"
                   >
-                    <Link to={`/blog/${featuredPost.slug}`}>
+                    <Link href={`/blog/${featuredPost.slug}`}>
                       Read Article
                     </Link>
                   </Button>
@@ -209,7 +210,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                   asChild
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
                 >
-                  <Link to={`/blog/${post.slug}`} className="block group">
+                  <Link href={`/blog/${post.slug}`} className="block group">
                   <div className="aspect-[16/9] relative overflow-hidden">
                     <img
                       src={post.featuredImage}

@@ -5,8 +5,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function ContentShowcaseBanner() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
 
   const showcaseItems = [
     {
@@ -50,18 +50,18 @@ export default function ContentShowcaseBanner() {
     // Show banner after 3 seconds
     const showTimer = setTimeout(() => {
       setIsVisible(true);
-    }, 3000);
+    }3000);
 
     // Auto-rotate slides every 6 seconds
     const rotationTimer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
-    }, 6000);
+    }6000);
 
     return () => {
       clearTimeout(showTimer);
       clearInterval(rotationTimer);
     };
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -115,7 +115,7 @@ export default function ContentShowcaseBanner() {
         {/* Progress indicator */}
         <div className="px-4 pb-3">
           <div className="flex space-x-1">
-            {showcaseItems.map((_, index) => (
+            {showcaseItems.map((_index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}

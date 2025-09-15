@@ -4,10 +4,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Globe, 
+  TrendingUp
+  Brain
+  Zap
+  Globe
   Shield,
   ArrowRight,
   Star,
@@ -18,13 +18,13 @@ import {
 } from 'lucide-react';
 
 const AITrendsPredictions2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 2000);
+    const timer = setTimeout(() => setIsVisible(true)2000);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
@@ -33,10 +33,10 @@ const AITrendsPredictions2026PromotionBanner = () => {
   if (isDismissed) return null;
 
   const predictions = [
-    { icon: Brain, label: 'Quantum AI', confidence: '95%' },
-    { icon: Zap, label: 'Neural Interfaces', confidence: '88%' },
-    { icon: Shield, label: 'Autonomous Systems', confidence: '92%' },
-    { icon: Globe, label: 'AI Consciousness', confidence: '75%' }
+    { icon: Brainlabel: 'Quantum 'AI', 'confidence: '95%' },
+    { icon: Zaplabel: 'Neural 'Interfaces', 'confidence: '88%' },
+    { icon: Shieldlabel: 'Autonomous 'Systems', 'confidence: '92%' },
+    { icon: Globelabel: 'AI 'Consciousness', 'confidence: '75%' }
   ];
 
   return (
@@ -46,14 +46,14 @@ const AITrendsPredictions2026PromotionBanner = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-cyan-900 text-white overflow-hidden"
         >
           {/* Animated Background */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-blue-600/20 to-purple-600/20" />
             <div className="absolute inset-0">
-              {[...Array(15)].map((_, i) => (
+              {[...Array(15)].map((_i) => (
                 <motion.div
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40"
@@ -62,8 +62,8 @@ const AITrendsPredictions2026PromotionBanner = () => {
                     top: `${Math.random() * 100}%`,
                   }}
                   animate={{
-                    y: [0, -30, 0],
-                    opacity: [0.4, 0.8, 0.4],
+                    y: [0-30],
+                    opacity: [0.40.80.4],
                   }}
                   transition={{
                     duration: 3 + Math.random() * 2,
@@ -80,9 +80,9 @@ const AITrendsPredictions2026PromotionBanner = () => {
               {/* Left Content */}
               <div className="flex-1 text-center lg:text-left">
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.2 }}
                   className="flex items-center justify-center lg:justify-start mb-3"
                 >
                   <div className="flex items-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-sm font-semibold mr-4">
@@ -90,38 +90,38 @@ const AITrendsPredictions2026PromotionBanner = () => {
                     AI PREDICTIONS 2026
                   </div>
                   <div className="flex items-center text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(5)].map((_i) => (
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
                 </motion.div>
 
                 <motion.h2
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.3 }}
                   className="text-2xl lg:text-3xl font-bold mb-2"
                 >
                   🔮 AI Trends & Predictions 2026
                 </motion.h2>
 
                 <motion.p
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.4 }}
                   className="text-lg text-cyan-100 mb-4 max-w-2xl"
                 >
-                  Discover groundbreaking AI trends: Quantum AI, Neural Interfaces, Autonomous Systems, and AI Consciousness
+                  Discover groundbreaking AI trends: Quantum AINeural InterfacesAutonomous Systemsand AI Consciousness
                 </motion.p>
 
                 {/* Prediction Icons */}
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
+                  transition={{ duration: 0.6delay: 0.5 }}
                   className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-4"
                 >
-                  {predictions.map((prediction, index) => (
+                  {predictions.map((predictionindex) => (
                     <div key={index} className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">
                       <prediction.icon className="w-4 h-4 text-cyan-400 mr-2" />
                       <span className="text-sm font-medium">{prediction.label}</span>
@@ -133,9 +133,9 @@ const AITrendsPredictions2026PromotionBanner = () => {
 
               {/* Right Content - CTA */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                initial={{ opacity: 0x: 20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.6 }}
                 className="flex flex-col sm:flex-row items-center gap-4"
               >
                 <div className="text-center sm:text-right">
@@ -154,7 +154,7 @@ const AITrendsPredictions2026PromotionBanner = () => {
               <motion.button
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                transition={{ duration: 0.6delay: 0.8 }}
                 onClick={handleDismiss}
                 className="absolute top-4 right-4 p-2 hover:bg-white/10 rounded-full transition-colors"
               >
@@ -167,7 +167,7 @@ const AITrendsPredictions2026PromotionBanner = () => {
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 4, ease: "easeOut" }}
+            transition={{ duration: 4ease: "easeOut" }}
             className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 origin-left"
             style={{ width: '100%' }}
           />

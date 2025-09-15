@@ -1,14 +1,14 @@
 "use client";
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
+  TrendingUp
+  Users
+  DollarSign
+  Clock
   ArrowRight,
   Star,
   Quote,
@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 
 const AISuccessStoriesShowcase = () => {
-  const [activeStory, setActiveStory] = useState(0);
+  const [activeStorysetActiveStory] = useState(0);
 
   const successStories = [
     {
@@ -37,7 +37,7 @@ const AISuccessStoriesShowcase = () => {
       },
       testimonial: 'AI transformed our entire operation. We went from manual processes to fully automated systems in just 6 months.',
       author: 'Sarah Johnson',
-      position: 'CEO, TechCorp Global',
+      position: 'CEOTechCorp Global',
       icon: Building,
       color: 'from-blue-500 to-cyan-500'
     },
@@ -55,7 +55,7 @@ const AISuccessStoriesShowcase = () => {
       },
       testimonial: 'Our fraud detection accuracy improved to 99.7%. We prevented millions in potential losses.',
       author: 'Michael Chen',
-      position: 'CTO, FinanceAI Solutions',
+      position: 'CTOFinanceAI Solutions',
       icon: Shield,
       color: 'from-green-500 to-emerald-500'
     },
@@ -73,7 +73,7 @@ const AISuccessStoriesShowcase = () => {
       },
       testimonial: 'AI personalization increased our conversion rates by 300%. Customer satisfaction is at an all-time high.',
       author: 'Emily Rodriguez',
-      position: 'VP Marketing, RetailAI Network',
+      position: 'VP MarketingRetailAI Network',
       icon: Globe,
       color: 'from-purple-500 to-pink-500'
     },
@@ -91,17 +91,17 @@ const AISuccessStoriesShowcase = () => {
       },
       testimonial: 'AI diagnostics reduced diagnosis time by 80% while improving accuracy. We can help more patients faster.',
       author: 'Dr. James Wilson',
-      position: 'Chief Medical Officer, HealthAI Medical',
+      position: 'Chief Medical OfficerHealthAI Medical',
       icon: Brain,
       color: 'from-orange-500 to-red-500'
     }
   ];
 
   const metrics = [
-    { label: 'Average Efficiency Gain', value: '93.5%', icon: TrendingUp },
-    { label: 'Average Cost Reduction', value: '47.5%', icon: DollarSign },
-    { label: 'Hours Saved Monthly', value: '2,625', icon: Clock },
-    { label: 'Average Revenue Increase', value: '+$7.1M', icon: Star }
+    { label: 'Average Efficiency 'Gain', 'value: '93.5%'icon: TrendingUp },
+    { label: 'Average Cost 'Reduction', 'value: '47.5%'icon: DollarSign },
+    { label: 'Hours Saved 'Monthly', 'value: '2,625'icon: Clock },
+    { label: 'Average Revenue 'Increase', 'value: '+$7.1'M', 'icon: Star }
   ];
 
   const currentStory = successStories[activeStory];
@@ -124,7 +124,7 @@ const AISuccessStoriesShowcase = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.6delay: 0.1 }}
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
           >
             Real Results from
@@ -134,10 +134,10 @@ const AISuccessStoriesShowcase = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Discover how leading companies achieved remarkable results with our AI solutions. Real stories, real impact, real success.
+            Discover how leading companies achieved remarkable results with our AI solutions. Real storiesreal impactreal success.
           </motion.p>
         </div>
 
@@ -145,10 +145,10 @@ const AISuccessStoriesShowcase = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6delay: 0.3 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
-          {metrics.map((metric, index) => {
+          {metrics.map((metricindex) => {
             const Icon = metric.icon;
             return (
               <div key={index} className="text-center">
@@ -164,7 +164,7 @@ const AISuccessStoriesShowcase = () => {
 
         {/* Story Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {successStories.map((story, index) => {
+          {successStories.map((storyindex) => {
             const Icon = story.icon;
             return (
               <button
@@ -187,9 +187,9 @@ const AISuccessStoriesShowcase = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeStory}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0x: 20 }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: -20 }}
             transition={{ duration: 0.5 }}
             className="bg-white rounded-3xl p-8 md:p-12 shadow-xl"
           >
@@ -260,7 +260,7 @@ const AISuccessStoriesShowcase = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl p-12 text-white">

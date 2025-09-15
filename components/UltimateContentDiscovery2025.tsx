@@ -1,20 +1,20 @@
 "use client";
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
-import { Search, Filter, ArrowRight, Clock, TrendingUp, Star, Eye, BookOpen, Video, FileText, Users, Zap } from 'lucide-react';
+SearchFilterArrowRightClockTrendingUpStarEyeBookOpenVideoFileTextUsersZap
 
 const UltimateContentDiscovery2025 = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuerysetSearchQuery] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: <BookOpen className="w-5 h-5" /> },
-    { id: 'ai', name: 'AI & Machine Learning', icon: <Zap className="w-5 h-5" /> },
-    { id: 'automation', name: 'Automation', icon: <TrendingUp className="w-5 h-5" /> },
-    { id: 'cloud', name: 'Cloud Computing', icon: <Users className="w-5 h-5" /> },
-    { id: 'quantum', name: 'Quantum Computing', icon: <Star className="w-5 h-5" /> }
+    { id: ''all', 'name: 'All 'Content', 'icon: <BookOpen className="w-5 h-5" /> },
+    { id: ''ai', 'name: 'AI & Machine 'Learning', 'icon: <Zap className="w-5 h-5" /> },
+    { id: ''automation', 'name: ''Automation', 'icon: <TrendingUp className="w-5 h-5" /> },
+    { id: ''cloud', 'name: 'Cloud 'Computing', 'icon: <Users className="w-5 h-5" /> },
+    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: <Star className="w-5 h-5" /> }
   ];
 
   const contentItems = [
@@ -123,7 +123,7 @@ const UltimateContentDiscovery2025 = () => {
             Ultimate Content Hub 2025
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover, explore, and access our comprehensive library of cutting-edge technology content, guides, and resources.
+            Discoverexploreand access our comprehensive library of cutting-edge technology contentguidesand resources.
           </p>
         </div>
 
@@ -136,7 +136,7 @@ const UltimateContentDiscovery2025 = () => {
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="Search content, guides, articles..."
+                  placeholder="Search contentguidesarticles..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -209,7 +209,7 @@ const UltimateContentDiscovery2025 = () => {
                     {item.readTime}
                   </span>
                   <div className="flex items-center space-x-1">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(5)].map((_i) => (
                       <Star
                         key={i}
                         className={`w-4 h-4 ${
@@ -245,11 +245,11 @@ const UltimateContentDiscovery2025 = () => {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { number: '500+', label: 'Articles & Guides' },
-            { number: '50+', label: 'Video Tutorials' },
-            { number: '100+', label: 'Case Studies' },
-            { number: '1M+', label: 'Monthly Readers' }
-          ].map((stat, index) => (
+            { number: '500+'label: 'Articles & Guides' },
+            { number: '50+'label: 'Video Tutorials' },
+            { number: '100+'label: 'Case Studies' },
+            { number: '1M+'label: 'Monthly Readers' }
+          ].map((statindex) => (
             <div key={index} className="text-center">
               <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
               <div className="text-gray-600">{stat.label}</div>

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, Star, TrendingUp, Users, Award } from 'lucide-react';
+import { X, ArrowRight, Star, TrendingUp, Users, Award, ArrowRight } from 'lucide-react';
 
 const UltimateContent2025MasteryBanner = () => {
   const [isVisible, setIsVisible] = useState(false);

@@ -10,8 +10,13 @@ interface MobileFilterDrawerProps {
 }
 
 export function MobileFilterDrawer({ 
+<<<<<<< HEAD
+  isMobileFilterOpen
+  setIsMobileFilterOpen
+=======
   isMobileFilterOpen, 
   setIsMobileFilterOpen, 
+>>>>>>> origin/auto/autonomy-17186719616
   filterProps
 }: MobileFilterDrawerProps) {
   return (

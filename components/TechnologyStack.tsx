@@ -15,7 +15,7 @@ const TechnologyStack: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Technology Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {technologies.map((tech, index) => (
+          {technologies.map((techindex) => (
             <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">{tech.name}</h3>
               <p className="text-sm text-gray-600 mb-2">{tech.category}</p>

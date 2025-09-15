@@ -200,8 +200,13 @@
     "go_to_dashboard": "Ir para o Painel",
     "go_to_marketplace": "Ir para o Marketplace",
     "go_back": "Voltar",
+<<<<<<< HEAD
     "forbidden_title": "403 – Proibido",
     "server_error_title": "500 – Erro do Servidor",
+=======
+    "forbidden_title": "403 \u2013 Proibido",
+    "server_error_title": "500 \u2013 Erro do Servidor",
+>>>>>>> origin/auto/autonomy-17186719616
     "server_error": "Erro do Servidor",
     "page_lost_message": "A página que você procura parece ter desaparecido. Vamos voltar e continuar explorando o futuro da tecnologia.",
     "explore_marketplace": "Explore Nosso Mercado",
@@ -264,4 +269,8 @@
     "sending": "Enviando...",
     "submit": "Receba sua Proposta Comercial Grátis"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/auto/autonomy-17186719616

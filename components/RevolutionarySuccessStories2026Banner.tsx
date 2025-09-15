@@ -4,10 +4,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Award, 
-  ArrowRight, 
-  TrendingUp, 
-  Users, 
+  Award
+  ArrowRight
+  TrendingUp
+  Users
   Star,
   X,
   Play,
@@ -16,13 +16,13 @@ import {
 } from 'lucide-react';
 
 const RevolutionarySuccessStories2026Banner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 2000);
+    const timer = setTimeout(() => setIsVisible(true)2000);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
@@ -34,11 +34,11 @@ const RevolutionarySuccessStories2026Banner = () => {
     <motion.div
       initial={{ opacity: 0, y: -100 }}
       animate={{ 
-        opacity: isVisible ? 1 : 0, 
+        opacity: isVisible ? 1 : 0
         y: isVisible ? 0 : -100 
       }}
       transition={{ 
-        duration: 0.8, 
+        duration: 0.8
         ease: "easeOut",
         type: "spring",
         stiffness: 100

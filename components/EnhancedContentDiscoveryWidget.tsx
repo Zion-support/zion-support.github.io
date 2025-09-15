@@ -17,9 +17,9 @@ interface ContentItem {
 }
 
 export default function EnhancedContentDiscoveryWidget() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [isExpandedsetIsExpanded] = useState(false);
 
   const contentItems: ContentItem[] = [
     {
@@ -100,7 +100,7 @@ export default function EnhancedContentDiscoveryWidget() {
     {
       id: 'consciousness-ai-2029',
       title: 'Consciousness AI 2029',
-      description: 'AI systems achieving true consciousness and self-awareness, capable of creative thinking and emotional understanding.',
+      description: 'AI systems achieving true consciousness and self-awarenesscapable of creative thinking and emotional understanding.',
       link: '/consciousness-ai-2029',
       category: 'ai-2029',
       badge: 'CONSCIOUSNESS',
@@ -112,7 +112,7 @@ export default function EnhancedContentDiscoveryWidget() {
     {
       id: 'transcendent-intelligence-2030',
       title: 'Transcendent Intelligence 2030',
-      description: 'AI transcending human-level intelligence by orders of magnitude, enabling solutions to global challenges.',
+      description: 'AI transcending human-level intelligence by orders of magnitudenabling solutions to global challenges.',
       link: '/transcendent-intelligence-2030',
       category: 'ai-2030',
       badge: 'TRANSCENDENT',
@@ -124,14 +124,14 @@ export default function EnhancedContentDiscoveryWidget() {
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length },
-    { id: 'ai-2025', name: 'AI 2025', count: contentItems.filter(item => item.category === 'ai-2025').length },
-    { id: 'ai-2026', name: 'AI 2026', count: contentItems.filter(item => item.category === 'ai-2026').length },
-    { id: 'ai-2029', name: 'AI 2029', count: contentItems.filter(item => item.category === 'ai-2029').length },
-    { id: 'ai-2030', name: 'AI 2030', count: contentItems.filter(item => item.category === 'ai-2030').length },
-    { id: 'quantum', name: 'Quantum Computing', count: contentItems.filter(item => item.category === 'quantum').length },
-    { id: 'predictions', name: 'Future Predictions', count: contentItems.filter(item => item.category === 'predictions').length },
-    { id: 'automation', name: 'Automation', count: contentItems.filter(item => item.category === 'automation').length }
+    { id: ''all', 'name: 'All 'Content', 'count: contentItems.length },
+    { id: 'ai-2025'name: 'AI 2025'count: contentItems.filter(item => item.category === 'ai-2025').length },
+    { id: 'ai-2026'name: 'AI 2026'count: contentItems.filter(item => item.category === 'ai-2026').length },
+    { id: 'ai-2029'name: 'AI 2029'count: contentItems.filter(item => item.category === 'ai-2029').length },
+    { id: 'ai-2030'name: 'AI 2030'count: contentItems.filter(item => item.category === 'ai-2030').length },
+    { id: ''quantum', 'name: 'Quantum 'Computing', 'count: contentItems.filter(item => item.category === 'quantum').length },
+    { id: ''predictions', 'name: 'Future 'Predictions', 'count: contentItems.filter(item => item.category === 'predictions').length },
+    { id: ''automation', 'name: ''Automation', 'count: contentItems.filter(item => item.category === 'automation').length }
   ];
 
   const filteredContent = contentItems.filter(item => {
@@ -158,7 +158,7 @@ export default function EnhancedContentDiscoveryWidget() {
             Discover Revolutionary Content
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our comprehensive library of AI breakthrough content, quantum computing solutions, 
+            Explore our comprehensive library of AI breakthrough contentquantum computing solutions
             and future predictions that will transform your business.
           </p>
         </div>
@@ -200,7 +200,7 @@ export default function EnhancedContentDiscoveryWidget() {
         </div>
 
         {/* Featured Content */}
-        {selectedCategory === 'all' && searchTerm === '' && (
+        {selectedCategory === 'all' && searchTerm === ', ' && (
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-white mb-6">⭐ Featured Content</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -265,7 +265,7 @@ export default function EnhancedContentDiscoveryWidget() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {(isExpanded ? filteredContent : filteredContent.slice(0, 6)).map((item) => (
+            {(isExpanded ? filteredContent : filteredContent.slice(06)).map((item) => (
               <div
                 key={item.id}
                 className={`bg-gradient-to-br ${item.bgColor} rounded-xl p-6 border ${item.borderColor} hover:border-opacity-50 transition-all duration-300 transform hover:scale-105 cursor-pointer group`}
@@ -308,7 +308,7 @@ export default function EnhancedContentDiscoveryWidget() {
         <div className="mt-12 text-center">
           <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-2xl p-8 border border-purple-500/30">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Can't Find What You're Looking For?
+              'Can', 't Find What 'You', 're Looking For?
             </h3>
             <p className="text-gray-300 mb-6">
               Our AI-powered content recommendation system can help you discover 

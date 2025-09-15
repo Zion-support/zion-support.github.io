@@ -4,11 +4,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  Award, 
-  DollarSign, 
-  Clock, 
+  TrendingUp
+  Users
+  Award
+  DollarSign
+  Clock
   Target,
   ChevronLeft,
   ChevronRight,
@@ -26,13 +26,13 @@ import {
 } from 'lucide-react';
 
 const BusinessSuccessStories2027 = () => {
-  const [currentStory, setCurrentStory] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentStorysetCurrentStory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isPlayingsetIsPlaying] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const successStories = [
     {
@@ -56,16 +56,16 @@ const BusinessSuccessStories2027 = () => {
         rating: 5
       },
       metrics: [
-        { label: 'Process Automation', value: '95%', icon: Zap },
-        { label: 'Error Reduction', value: '98%', icon: Shield },
-        { label: 'Customer Satisfaction', value: '99.2%', icon: Users },
-        { label: 'Revenue Growth', value: '+340%', icon: TrendingUp }
+        { label: 'Process 'Automation', 'value: '95%'icon: Zap },
+        { label: 'Error 'Reduction', 'value: '98%'icon: Shield },
+        { label: 'Customer 'Satisfaction', 'value: '99.2%'icon: Users },
+        { label: 'Revenue 'Growth', 'value: '+340%'icon: TrendingUp }
       ],
       timeline: [
-        { month: 'Month 1', milestone: 'Initial AI Integration', status: 'completed' },
-        { month: 'Month 3', milestone: 'First Automation Wave', status: 'completed' },
-        { month: 'Month 6', milestone: 'Full System Deployment', status: 'completed' },
-        { month: 'Month 12', milestone: '850% ROI Achieved', status: 'completed' }
+        { month: 'Month 1'milestone: 'Initial AI 'Integration', 'status: 'completed' },
+        { month: 'Month 3'milestone: 'First Automation 'Wave', 'status: 'completed' },
+        { month: 'Month 6'milestone: 'Full System 'Deployment', 'status: 'completed' },
+        { month: 'Month 12'milestone: '850% ROI 'Achieved', 'status: 'completed' }
       ]
     },
     {
@@ -89,16 +89,16 @@ const BusinessSuccessStories2027 = () => {
         rating: 5
       },
       metrics: [
-        { label: 'Research Speed', value: '+600%', icon: Brain },
-        { label: 'Data Processing', value: '1000x faster', icon: BarChart3 },
-        { label: 'Breakthrough Rate', value: '+450%', icon: Rocket },
-        { label: 'Patent Applications', value: '+280%', icon: Award }
+        { label: 'Research 'Speed', 'value: '+600%'icon: Brain },
+        { label: 'Data 'Processing', 'value: '1000x 'faster', 'icon: BarChart3 },
+        { label: 'Breakthrough 'Rate', 'value: '+450%'icon: Rocket },
+        { label: 'Patent 'Applications', 'value: '+280%'icon: Award }
       ],
       timeline: [
-        { month: 'Month 1', milestone: 'Quantum AI Setup', status: 'completed' },
-        { month: 'Month 2', milestone: 'First Breakthrough', status: 'completed' },
-        { month: 'Month 4', milestone: 'Full Integration', status: 'completed' },
-        { month: 'Month 8', milestone: '720% ROI Achieved', status: 'completed' }
+        { month: 'Month 1'milestone: 'Quantum AI 'Setup', 'status: 'completed' },
+        { month: 'Month 2'milestone: 'First 'Breakthrough', 'status: 'completed' },
+        { month: 'Month 4'milestone: 'Full 'Integration', 'status: 'completed' },
+        { month: 'Month 8'milestone: '720% ROI 'Achieved', 'status: 'completed' }
       ]
     },
     {
@@ -122,16 +122,16 @@ const BusinessSuccessStories2027 = () => {
         rating: 5
       },
       metrics: [
-        { label: 'Uptime', value: '99.8%', icon: Clock },
-        { label: 'Quality Score', value: '99.9%', icon: Award },
-        { label: 'Maintenance Cost', value: '-75%', icon: DollarSign },
-        { label: 'Production Output', value: '+350%', icon: Target }
+        { label: ''Uptime', 'value: '99.8%'icon: Clock },
+        { label: 'Quality 'Score', 'value: '99.9%'icon: Award },
+        { label: 'Maintenance 'Cost', 'value: '-75%'icon: DollarSign },
+        { label: 'Production 'Output', 'value: '+350%'icon: Target }
       ],
       timeline: [
-        { month: 'Month 1', milestone: 'Neural Interface Installation', status: 'completed' },
-        { month: 'Month 2', milestone: 'Predictive Model Training', status: 'completed' },
-        { month: 'Month 4', milestone: 'Full Production Integration', status: 'completed' },
-        { month: 'Month 10', milestone: '920% ROI Achieved', status: 'completed' }
+        { month: 'Month 1'milestone: 'Neural Interface 'Installation', 'status: 'completed' },
+        { month: 'Month 2'milestone: 'Predictive Model 'Training', 'status: 'completed' },
+        { month: 'Month 4'milestone: 'Full Production 'Integration', 'status: 'completed' },
+        { month: 'Month 10'milestone: '920% ROI 'Achieved', 'status: 'completed' }
       ]
     }
   ];
@@ -148,10 +148,10 @@ const BusinessSuccessStories2027 = () => {
 
   useEffect(() => {
     if (isPlaying) {
-      const interval = setInterval(nextStory, 5000);
+      const interval = setInterval(nextStory5000);
       return () => clearInterval(interval);
     }
-  }, [isPlaying]);
+  }[isPlaying]);
 
   const getStatusIcon = (status) => {
     return <CheckCircle className="w-4 h-4 text-green-400" />;
@@ -166,13 +166,13 @@ const BusinessSuccessStories2027 = () => {
           className="absolute top-0 left-0 w-full h-full"
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.2) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.2) 0%, transparent 50%)',
-              'radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.2) 0%, transparent 50%)',
-              'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.2) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 50%rgba(12011980.2) 0%transparent 50%)',
+              'radial-gradient(circle at 80% 20%rgba(25511980.2) 0%transparent 50%)',
+              'radial-gradient(circle at 40% 80%rgba(1202192550.2) 0%transparent 50%)',
+              'radial-gradient(circle at 20% 50%rgba(12011980.2) 0%transparent 50%)',
             ]
           }}
-          transition={{ duration: 20, repeat: Infinity }}
+          transition={{ duration: 20repeat: Infinity }}
         />
       </div>
 
@@ -180,7 +180,7 @@ const BusinessSuccessStories2027 = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -201,15 +201,15 @@ const BusinessSuccessStories2027 = () => {
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover how leading companies achieved extraordinary results using our 
-            revolutionary AI and automation solutions. Real stories, real results, real transformation.
+            revolutionary AI and automation solutions. Real storiesreal resultsreal transformation.
           </p>
         </motion.div>
 
         {/* Story Navigation */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="flex justify-center mb-8"
         >
           <div className="flex items-center gap-4">
@@ -221,7 +221,7 @@ const BusinessSuccessStories2027 = () => {
             </button>
             
             <div className="flex gap-2">
-              {successStories.map((_, index) => (
+              {successStories.map((_index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentStory(index)}
@@ -254,9 +254,9 @@ const BusinessSuccessStories2027 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={currentStory}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: -50 }}
             transition={{ duration: 0.5 }}
             className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-8"
           >
@@ -300,7 +300,7 @@ const BusinessSuccessStories2027 = () => {
                       <div className="text-sm text-gray-400">{currentStoryData.testimonial.role}</div>
                     </div>
                     <div className="flex items-center gap-1">
-                      {[...Array(currentStoryData.testimonial.rating)].map((_, i) => (
+                      {[...Array(currentStoryData.testimonial.rating)].map((_i) => (
                         <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                       ))}
                     </div>
@@ -336,7 +336,7 @@ const BusinessSuccessStories2027 = () => {
 
                 {/* Key Metrics */}
                 <div className="space-y-3">
-                  {currentStoryData.metrics.map((metric, index) => (
+                  {currentStoryData.metrics.map((metricindex) => (
                     <div key={index} className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/10">
                       <div className="flex items-center gap-3">
                         <metric.icon className="w-5 h-5 text-purple-400" />
@@ -356,7 +356,7 @@ const BusinessSuccessStories2027 = () => {
                 Implementation Timeline
               </h4>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {currentStoryData.timeline.map((item, index) => (
+                {currentStoryData.timeline.map((itemindex) => (
                   <div key={index} className="p-4 rounded-lg bg-white/5 border border-white/10">
                     <div className="flex items-center gap-2 mb-2">
                       {getStatusIcon(item.status)}
@@ -373,8 +373,8 @@ const BusinessSuccessStories2027 = () => {
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 border border-purple-500/30">

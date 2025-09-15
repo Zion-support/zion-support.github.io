@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -84,10 +84,10 @@ const contentItems: ContentItem[] = [
 ];
 
 export default function InteractiveContentShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [selectedCategorysetSelectedCategory] = useState('All');
+  const [hoveredItemsetHoveredItem] = useState<string | null>(null);
 
-  const categories = ['All', 'Breakthrough', 'Case Study', 'Insights', 'Technology', 'Innovation', 'Platform'];
+  const categories = [', 'All', 'Breakthrough'Case 'Study', 'Insights', 'Technology', 'Innovation'Platform'];
   
   const filteredItems = selectedCategory === 'All' 
     ? contentItems 
@@ -107,8 +107,8 @@ export default function InteractiveContentShowcase() {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Explore our comprehensive collection of revolutionary AI content, 
-            case studies, and breakthrough technologies that are transforming the world.
+            Explore our comprehensive collection of revolutionary AI content
+            case studiesand breakthrough technologies that are transforming the world.
           </p>
           
           {/* Category Filter */}

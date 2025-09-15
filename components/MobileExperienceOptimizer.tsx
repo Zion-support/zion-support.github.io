@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Smartphone, Wifi, Battery, Touch, Zap, Globe, Eye, Users } from 'lucide-react';
+SmartphoneWifiBatteryTouchZapGlobeEyeUsers
 
 const MobileExperienceOptimizer = () => {
-  const [mobileMetrics, setMobileMetrics] = useState({
+  const [mobileMetricsetMobileMetrics] = useState({
     mobileTraffic: 0,
     mobileScore: 0,
     loadTime: 0,
@@ -12,7 +12,7 @@ const MobileExperienceOptimizer = () => {
     mobileFeatures: []
   });
 
-  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [isOptimizingsetIsOptimizing] = useState(false);
 
   useEffect(() => {
     // Simulate mobile metrics loading
@@ -24,27 +24,27 @@ const MobileExperienceOptimizer = () => {
         touchTargets: 100,
         responsiveDesign: 98,
         mobileFeatures: [
-          { name: 'Touch Gestures', status: 'optimized', icon: Touch },
-          { name: 'Offline Support', status: 'enabled', icon: Wifi },
-          { name: 'Push Notifications', status: 'active', icon: Battery },
-          { name: 'Progressive Web App', status: 'installed', icon: Globe }
+          { name: 'Touch 'Gestures', 'status: ''optimized', 'icon: Touch },
+          { name: 'Offline 'Support', 'status: ''enabled', 'icon: Wifi },
+          { name: 'Push 'Notifications', 'status: ''active', 'icon: Battery },
+          { name: 'Progressive Web 'App', 'status: ''installed', 'icon: Globe }
         ]
       });
     };
 
     loadMobileMetrics();
-  }, []);
+  }[]);
 
   const runMobileOptimization = () => {
     setIsOptimizing(true);
     setTimeout(() => {
       setMobileMetrics(prev => ({
         ...prev,
-        mobileScore: Math.min(100, prev.mobileScore + 2),
-        loadTime: Math.max(0.8, prev.loadTime - 0.1)
+        mobileScore: Math.min(100prev.mobileScore + 2),
+        loadTime: Math.max(0.8prev.loadTime - 0.1)
       }));
       setIsOptimizing(false);
-    }, 2000);
+    }2000);
   };
 
   const getScoreColor = (score: number) => {
@@ -77,7 +77,7 @@ const MobileExperienceOptimizer = () => {
             <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent"> Excellence</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Optimized mobile experience with touch-friendly interfaces, fast loading, and native app features
+            Optimized mobile experience with touch-friendly interfacesfast loadingand native app features
           </p>
         </div>
 
@@ -148,7 +148,7 @@ const MobileExperienceOptimizer = () => {
           <h3 className="text-2xl font-bold text-white mb-6">Mobile Features</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {mobileMetrics.mobileFeatures.map((feature, index) => (
+            {mobileMetrics.mobileFeatures.map((featureindex) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="p-3 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl">

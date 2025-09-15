@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 "use client";
+import React{ useStateuseEffectuseMemo } from 'react';
+import { 
+  SearchFilterCalendarTagTrendingUpShieldCode
+  BookOpenZapAlertTriangleLightbulbSettings
+  BarChart3GlobeDatabaseCpuRocketBrain
+=======
 import React, { useState, useEffect, useMemo } from 'react';
 import { 
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code, 
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings, 
   BarChart3, Globe, Database, Cpu, Rocket, Brain
+>>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 
 interface ContentItem {
@@ -31,6 +39,18 @@ interface ContentCategory {
 }
 
 const ContentCategorizer: React.FC = () => {
+<<<<<<< HEAD
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [selectedSubcategorysetSelectedSubcategory] = useState('all');
+  const [selectedTypesetSelectedType] = useState('all');
+  const [selectedDateRangesetSelectedDateRange] = useState('all');
+  const [selectedRelevancesetSelectedRelevance] = useState('all');
+  const [sortBysetSortBy] = useState<'date' | 'relevance' | 'title'>('date');
+  const [sortOrdersetSortOrder] = useState<'asc' | 'desc'>('desc');
+
+  // Sample content data - in a real implementationthis would come from an API
+=======
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState('all');
@@ -41,6 +61,7 @@ const ContentCategorizer: React.FC = () => {
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
 
   // Sample content data - in a real implementation, this would come from an API
+>>>>>>> origin/auto/autonomy-17186719616
   const contentItems: ContentItem[] = [
     {
       id: '1',
@@ -51,7 +72,11 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'structured-data',
       date: '2025-08-19',
       relevance: 'high',
+<<<<<<< HEAD
+      tags: [', 'seo', 'json-'ld', 'schema'audit'],
+=======
       tags: ['seo', 'json-ld', 'schema', 'audit'],
+>>>>>>> origin/auto/autonomy-17186719616
       source: 'autonomous-auditor',
       type: 'report'
     },
@@ -64,7 +89,11 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'vulnerability-scan',
       date: '2025-08-19',
       relevance: 'high',
+<<<<<<< HEAD
+      tags: [', 'security', 'vulnerability', 'scan', 'remediation'],
+=======
       tags: ['security', 'vulnerability', 'scan', 'remediation'],
+>>>>>>> origin/auto/autonomy-17186719616
       source: 'security-scanner',
       type: 'security'
     },
@@ -77,7 +106,11 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'performance',
       date: '2025-08-19',
       relevance: 'high',
+<<<<<<< HEAD
+      tags: [', 'ai', 'performance', 'optimization', 'metrics'],
+=======
       tags: ['ai', 'performance', 'optimization', 'metrics'],
+>>>>>>> origin/auto/autonomy-17186719616
       source: 'ai-monitor',
       type: 'update'
     },
@@ -90,7 +123,11 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'deployment',
       date: '2025-08-19',
       relevance: 'medium',
+<<<<<<< HEAD
+      tags: [', 'features', 'deployment', 'ux', 'impact'],
+=======
       tags: ['features', 'deployment', 'ux', 'impact'],
+>>>>>>> origin/auto/autonomy-17186719616
       source: 'deployment-tracker',
       type: 'feature'
     },
@@ -103,7 +140,11 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'system-health',
       date: '2025-08-19',
       relevance: 'medium',
+<<<<<<< HEAD
+      tags: [', 'monitoring', 'performance', 'infrastructure', 'health'],
+=======
       tags: ['monitoring', 'performance', 'infrastructure', 'health'],
+>>>>>>> origin/auto/autonomy-17186719616
       source: 'health-monitor',
       type: 'report'
     },
@@ -116,7 +157,11 @@ const ContentCategorizer: React.FC = () => {
       subcategory: 'user-behavior',
       date: '2025-08-19',
       relevance: 'high',
+<<<<<<< HEAD
+      tags: [', 'analytics', 'user-'behavior', 'engagement'optimization'],
+=======
       tags: ['analytics', 'user-behavior', 'engagement', 'optimization'],
+>>>>>>> origin/auto/autonomy-17186719616
       source: 'behavior-analyzer',
       type: 'insight'
     }
@@ -138,7 +183,11 @@ const ContentCategorizer: React.FC = () => {
       description: 'Search optimization and performance analytics',
       color: 'from-green-500 to-emerald-500',
       count: contentItems.filter(item => item.category === 'seo').length,
+<<<<<<< HEAD
+      subcategories: ['structured-'data', 'performance'technical-seo']
+=======
       subcategories: ['structured-data', 'performance', 'technical-seo']
+>>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 'security',
@@ -147,7 +196,11 @@ const ContentCategorizer: React.FC = () => {
       description: 'Security assessments and compliance reports',
       color: 'from-red-500 to-orange-500',
       count: contentItems.filter(item => item.category === 'security').length,
+<<<<<<< HEAD
+      subcategories: ['vulnerability-'scan', 'compliance'threat-detection']
+=======
       subcategories: ['vulnerability-scan', 'compliance', 'threat-detection']
+>>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 'ai',
@@ -156,7 +209,11 @@ const ContentCategorizer: React.FC = () => {
       description: 'AI model performance and insights',
       color: 'from-purple-500 to-pink-500',
       count: contentItems.filter(item => item.category === 'ai').length,
+<<<<<<< HEAD
+      subcategories: [', 'performance', 'training'deployment']
+=======
       subcategories: ['performance', 'training', 'deployment']
+>>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 'features',
@@ -165,7 +222,11 @@ const ContentCategorizer: React.FC = () => {
       description: 'New features and system updates',
       color: 'from-yellow-500 to-orange-500',
       count: contentItems.filter(item => item.category === 'features').length,
+<<<<<<< HEAD
+      subcategories: [', 'deployment', 'enhancements'roadmap']
+=======
       subcategories: ['deployment', 'enhancements', 'roadmap']
+>>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 'monitoring',
@@ -174,7 +235,11 @@ const ContentCategorizer: React.FC = () => {
       description: 'Infrastructure and system health',
       color: 'from-indigo-500 to-purple-500',
       count: contentItems.filter(item => item.category === 'monitoring').length,
+<<<<<<< HEAD
+      subcategories: ['system-'health', 'performance'infrastructure']
+=======
       subcategories: ['system-health', 'performance', 'infrastructure']
+>>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 'analytics',
@@ -183,11 +248,39 @@ const ContentCategorizer: React.FC = () => {
       description: 'User behavior and engagement insights',
       color: 'from-teal-500 to-cyan-500',
       count: contentItems.filter(item => item.category === 'analytics').length,
+<<<<<<< HEAD
+      subcategories: ['user-'behavior', 'engagement'conversion']
+=======
       subcategories: ['user-behavior', 'engagement', 'conversion']
+>>>>>>> origin/auto/autonomy-17186719616
     }
   ];
 
   const contentTypes = [
+<<<<<<< HEAD
+    { id: ''all', 'name: 'All 'Types', 'icon: Globe },
+    { id: ''report', 'name: ''Reports', 'icon: BookOpen },
+    { id: ''update', 'name: ''Updates', 'icon: Zap },
+    { id: ''insight', 'name: ''Insights', 'icon: Lightbulb },
+    { id: ''guide', 'name: ''Guides', 'icon: Code },
+    { id: ''security', 'name: ''Security', 'icon: Shield },
+    { id: ''feature', 'name: ''Features', 'icon: TrendingUp }
+  ];
+
+  const dateRanges = [
+    { id: ''all', 'name: 'All Time' },
+    { id: ''today', 'name: 'Today' },
+    { id: ''week', 'name: 'This Week' },
+    { id: ''month', 'name: 'This Month' },
+    { id: ''quarter', 'name: 'This Quarter' }
+  ];
+
+  const relevanceLevels = [
+    { id: ''all', 'name: 'All 'Relevance', 'color: 'text-gray-400' },
+    { id: ''high', 'name: 'High 'Priority', 'color: 'text-green-400' },
+    { id: ''medium', 'name: 'Medium 'Priority', 'color: 'text-yellow-400' },
+    { id: ''low', 'name: 'Low 'Priority', 'color: 'text-red-400' }
+=======
     { id: 'all', name: 'All Types', icon: Globe },
     { id: 'report', name: 'Reports', icon: BookOpen },
     { id: 'update', name: 'Updates', icon: Zap },
@@ -210,6 +303,7 @@ const ContentCategorizer: React.FC = () => {
     { id: 'high', name: 'High Priority', color: 'text-green-400' },
     { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' },
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
+>>>>>>> origin/auto/autonomy-17186719616
   ];
 
   const filteredItems = useMemo(() => {
@@ -226,14 +320,22 @@ const ContentCategorizer: React.FC = () => {
     });
 
     // Sort items
+<<<<<<< HEAD
+    filtered.sort((ab) => {
+=======
     filtered.sort((a, b) => {
+>>>>>>> origin/auto/autonomy-17186719616
       let comparison = 0;
       switch (sortBy) {
         case 'date':
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;
         case 'relevance':
+<<<<<<< HEAD
+          const relevanceOrder = { high: 3medium: 2low: 1 };
+=======
           const relevanceOrder = { high: 3, medium: 2, low: 1 };
+>>>>>>> origin/auto/autonomy-17186719616
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
           break;
         case 'title':
@@ -244,7 +346,11 @@ const ContentCategorizer: React.FC = () => {
     });
 
     return filtered;
+<<<<<<< HEAD
+  }[searchTermselectedCategoryselectedSubcategoryselectedTypeselectedRelevancesortBysortOrder]);
+=======
   }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.id === category);
@@ -266,7 +372,11 @@ const ContentCategorizer: React.FC = () => {
   };
 
   const clearAllFilters = () => {
+<<<<<<< HEAD
+    setSearchTerm(', ');
+=======
     setSearchTerm('');
+>>>>>>> origin/auto/autonomy-17186719616
     setSelectedCategory('all');
     setSelectedSubcategory('all');
     setSelectedType('all');
@@ -283,7 +393,11 @@ const ContentCategorizer: React.FC = () => {
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
           <input
             type="text"
+<<<<<<< HEAD
+            placeholder="Search content by titledescriptiontagsor keywords..."
+=======
             placeholder="Search content by title, description, tags, or keywords..."
+>>>>>>> origin/auto/autonomy-17186719616
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
@@ -322,7 +436,11 @@ const ContentCategorizer: React.FC = () => {
               <option value="all">All Subcategories</option>
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
+<<<<<<< HEAD
+                  {sub.replace('-' ').replace(/\b\w/gl => l.toUpperCase())}
+=======
                   {sub.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
+>>>>>>> origin/auto/autonomy-17186719616
                 </option>
               ))}
             </select>
@@ -461,7 +579,11 @@ const ContentCategorizer: React.FC = () => {
 
               {/* Tags */}
               <div className="flex flex-wrap gap-1 mb-4">
+<<<<<<< HEAD
+                {item.tags.slice(03).map((tagindex) => (
+=======
                 {item.tags.slice(0, 3).map((tag, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                   <span key={index} className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60">
                     {tag}
                   </span>
@@ -511,7 +633,11 @@ const ContentCategorizer: React.FC = () => {
           <div className="text-white/40 text-6xl mb-4">🔍</div>
           <h3 className="text-xl font-semibold text-white/70 mb-2">No content found</h3>
           <p className="text-white/50 mb-4">
+<<<<<<< HEAD
+            Try adjusting your search terms or filters to find what 'you', 're looking for.
+=======
             Try adjusting your search terms or filters to find what you're looking for.
+>>>>>>> origin/auto/autonomy-17186719616
           </p>
           <button
             onClick={clearAllFilters}

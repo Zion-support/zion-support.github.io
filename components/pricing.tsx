@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 "use client";
+import React{ useState } from 'react';
+import Head from 'next/head';
+
+
+
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  CheckStarUsersTrendingUpDollarSignClock
+  ShieldZapRocketBrainAtomGlobeTarget,
+  ArrowRightPhoneMailMapPinExternalLink
+=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -7,6 +20,7 @@ import {
   Check, Star, Users, TrendingUp, DollarSign, Clock, 
   Shield, Zap, Rocket, Brain, Atom, Globe, Target,
   ArrowRight, Phone, Mail, MapPin, ExternalLink
+>>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
@@ -20,8 +34,13 @@ import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovati
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
 
 export default function PricingPage() {
+<<<<<<< HEAD
+  const [selectedCategorysetSelectedCategory] = useState('All');
+  const [selectedPriceRangesetSelectedPriceRange] = useState('All');
+=======
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Combine all services
   const allServices = [
@@ -33,22 +52,38 @@ export default function PricingPage() {
   ];
 
   // Get unique services by ID
+<<<<<<< HEAD
+  const uniqueServices = allServices.filter((serviceindexself) => 
+=======
   const uniqueServices = allServices.filter((service, index, self) => 
+>>>>>>> origin/auto/autonomy-17186719616
     index === self.findIndex(s => s.id === service.id)
   );
 
   // Get all categories
+<<<<<<< HEAD
+  const categories = ['All'...Array.from(new Set(uniqueServices.map(s => 
+=======
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
+>>>>>>> origin/auto/autonomy-17186719616
     Array.isArray(s.category) ? s.category[0] : s.category
   )))];
 
   // Price ranges
   const priceRanges = [
+<<<<<<< HEAD
+    { id: ''All', 'name: 'All 'Prices', 'range: 'All' },
+    { id: 'Under $1'K', 'name: 'Under $1K/'month', 'range: 'Under $1K' },
+    { id: '$1K - $5'K', 'name: '$1K - $5K/'month', 'range: '$1K - $5K' },
+    { id: '$5K - $20'K', 'name: '$5K - $20K/'month', 'range: '$5K - $20K' },
+    { id: '$20K+'name: '$20K+/'month', 'range: '$20K+' }
+=======
     { id: 'All', name: 'All Prices', range: 'All' },
     { id: 'Under $1K', name: 'Under $1K/month', range: 'Under $1K' },
     { id: '$1K - $5K', name: '$1K - $5K/month', range: '$1K - $5K' },
     { id: '$5K - $20K', name: '$5K - $20K/month', range: '$5K - $20K' },
     { id: '$20K+', name: '$20K+/month', range: '$20K+' }
+>>>>>>> origin/auto/autonomy-17186719616
   ];
 
   // Filter services
@@ -58,7 +93,11 @@ export default function PricingPage() {
                              service.category.includes(selectedCategory) : 
                              service.category === selectedCategory);
     
+<<<<<<< HEAD
+    const price = parseFloat(service.price.replace(/[^0-9.]/g', '));
+=======
     const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
+>>>>>>> origin/auto/autonomy-17186719616
     const matchesPrice = selectedPriceRange === 'All' ||
                         (selectedPriceRange === 'Under $1K' && price < 1000) ||
                         (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) ||
@@ -83,11 +122,34 @@ export default function PricingPage() {
     }
     acc[category].push(service);
     return acc;
+<<<<<<< HEAD
+  }{} as Record<stringtypeof filteredServices>);
+=======
   }, {} as Record<string, typeof filteredServices>);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const faqs = [
     {
       question: 'Can I change my plan at any time?',
+<<<<<<< HEAD
+      answer: 'Yesyou can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.'
+    },
+    {
+      question: 'Is there a free trial available?',
+      answer: 'Yesall our services offer a 14-day free trial with full access to all features. No credit card required.'
+    },
+    {
+      question: 'What payment methods do you accept?',
+      answer: 'We accept all major credit cardsPayPaland bank transfers for annual plans. Enterprise customers can be invoiced.'
+    },
+    {
+      question: 'Do you offer volume discounts?',
+      answer: 'Yeswe offer volume discounts for teams and organizations. Contact our sales team for custom pricing.'
+    },
+    {
+      question: 'Can I cancel my subscription?',
+      answer: 'Yesyou can cancel your subscription at any time. You\'ll continue to have access until the end of your billing period.'
+=======
       answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.'
     },
     {
@@ -105,6 +167,7 @@ export default function PricingPage() {
     {
       question: 'Can I cancel my subscription?',
       answer: 'Yes, you can cancel your subscription at any time. You\'ll continue to have access until the end of your billing period.'
+>>>>>>> origin/auto/autonomy-17186719616
     },
     {
       question: 'Is there a setup fee?',
@@ -136,9 +199,15 @@ export default function PricingPage() {
     <UltraFuturisticBackground2029>
       <Head>
         <title>Revolutionary 2029 Technology Pricing | Zion Tech Group</title>
+<<<<<<< HEAD
+        <meta name="description" content="Explore comprehensive pricing for our revolutionary 2029 technology services including AI consciousnessquantum computingspace miningand advanced biotechnology." />
+        <meta name="keywords" content="technology pricingAI services pricingquantum computing pricingspace technology pricing2029 technology pricing" />
+        <meta name="viewport" content="width=device-widthinitial-scale=1" />
+=======
         <meta name="description" content="Explore comprehensive pricing for our revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />
         <meta name="keywords" content="technology pricing, AI services pricing, quantum computing pricing, space technology pricing, 2029 technology pricing" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+>>>>>>> origin/auto/autonomy-17186719616
         <link rel="canonical" href="https://ziontechgroup.com/pricing" />
       </Head>
 
@@ -178,6 +247,10 @@ export default function PricingPage() {
               
               <select
                 value={selectedPriceRange}
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
                 className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
               >
@@ -196,12 +269,20 @@ export default function PricingPage() {
         {/* Pricing Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+            {Object.entries(servicesByCategory).map(([categoryservices]categoryIndex) => (
+=======
             {Object.entries(servicesByCategory).map(([category, services], categoryIndex) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={category}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8delay: categoryIndex * 0.2 }}
+=======
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="mb-20"
               >
@@ -215,12 +296,20 @@ export default function PricingPage() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+                  {services.map((serviceIndex) => (
+=======
                   {services.map((service, serviceIndex) => (
+>>>>>>> origin/auto/autonomy-17186719616
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                      transition={{ duration: 0.6delay: serviceIndex * 0.1 }}
+=======
                       transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                       viewport={{ once: true }}
                       className="group cursor-pointer"
                     >
@@ -268,7 +357,11 @@ export default function PricingPage() {
                         <div className="mb-6">
                           <h4 className="text-sm font-medium text-gray-400 mb-3">Key Features:</h4>
                           <div className="space-y-2">
+<<<<<<< HEAD
+                            {service.features.slice(04).map((featureidx) => (
+=======
                             {service.features.slice(0, 4).map((feature, idx) => (
+>>>>>>> origin/auto/autonomy-17186719616
                               <div key={idx} className="flex items-center space-x-2">
                                 <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                                 <span className="text-sm text-gray-300">{feature}</span>
@@ -361,7 +454,11 @@ export default function PricingPage() {
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Revolutionary Technology?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD
+                Contact our team to discuss pricingimplementationand how our revolutionary 2029 services can transform your business.
+=======
                 Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business.
+>>>>>>> origin/auto/autonomy-17186719616
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">

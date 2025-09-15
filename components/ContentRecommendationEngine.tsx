@@ -6,19 +6,19 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function ContentRecommendationEngine() {
-  const [recommendations, setRecommendations] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [userInterests, setUserInterests] = useState([]);
+  const [recommendationsetRecommendations] = useState([]);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [userInterestsetUserInterests] = useState([]);
 
   const interestCategories = [
-    { id: 'ai', name: 'Artificial Intelligence', icon: '🤖' },
-    { id: 'automation', name: 'Business Automation', icon: '⚡' },
-    { id: 'security', name: 'Cybersecurity', icon: '🛡️' },
-    { id: 'cloud', name: 'Cloud Computing', icon: '☁️' },
-    { id: 'analytics', name: 'Data Analytics', icon: '📊' },
-    { id: 'content', name: 'Content Management', icon: '📝' },
-    { id: 'marketing', name: 'Digital Marketing', icon: '📈' },
-    { id: 'finance', name: 'Financial Technology', icon: '💰' }
+    { id: ''ai', 'name: 'Artificial 'Intelligence', 'icon: '🤖' },
+    { id: ''automation', 'name: 'Business 'Automation', 'icon: '⚡' },
+    { id: ''security', 'name: ''Cybersecurity', 'icon: '🛡️' },
+    { id: ''cloud', 'name: 'Cloud 'Computing', 'icon: '☁️' },
+    { id: ''analytics', 'name: 'Data 'Analytics', 'icon: '📊' },
+    { id: ''content', 'name: 'Content 'Management', 'icon: '📝' },
+    { id: ''marketing', 'name: 'Digital 'Marketing', 'icon: '📈' },
+    { id: ''finance', 'name: 'Financial 'Technology', 'icon: '💰' }
   ];
 
   const allContent = [
@@ -32,7 +32,7 @@ export default function ContentRecommendationEngine() {
       image: '📝',
       popularity: 95,
       relevance: 98,
-      tags: ['AI', 'Content', 'Management', 'Automation'],
+      tags: [', 'AI', 'Content', 'Management', 'Automation'],
       readTime: '5 min read',
       difficulty: 'Intermediate'
     },
@@ -46,7 +46,7 @@ export default function ContentRecommendationEngine() {
       image: '⚡',
       popularity: 92,
       relevance: 96,
-      tags: ['Automation', 'AI', 'Productivity', 'ROI'],
+      tags: [', 'Automation', 'AI', 'Productivity', 'ROI'],
       readTime: '7 min read',
       difficulty: 'Advanced'
     },
@@ -60,7 +60,7 @@ export default function ContentRecommendationEngine() {
       image: '🛡️',
       popularity: 88,
       relevance: 94,
-      tags: ['Security', 'Threat Protection', 'Compliance', 'AI'],
+      tags: [', 'Security', 'Threat 'Protection', 'Compliance'AI'],
       readTime: '6 min read',
       difficulty: 'Expert'
     },
@@ -74,7 +74,7 @@ export default function ContentRecommendationEngine() {
       image: '☁️',
       popularity: 85,
       relevance: 90,
-      tags: ['Cloud', 'Infrastructure', 'Scalability', 'Security'],
+      tags: [', 'Cloud', 'Infrastructure', 'Scalability', 'Security'],
       readTime: '8 min read',
       difficulty: 'Intermediate'
     },
@@ -88,7 +88,7 @@ export default function ContentRecommendationEngine() {
       image: '📊',
       popularity: 90,
       relevance: 92,
-      tags: ['Analytics', 'Dashboard', 'Insights', 'Data'],
+      tags: [', 'Analytics', 'Dashboard', 'Insights', 'Data'],
       readTime: '4 min read',
       difficulty: 'Beginner'
     },
@@ -102,7 +102,7 @@ export default function ContentRecommendationEngine() {
       image: '🛠️',
       popularity: 87,
       relevance: 89,
-      tags: ['AI Tools', 'Utilities', 'Productivity', 'Business'],
+      tags: ['AI 'Tools', 'Utilities', 'Productivity', 'Business'],
       readTime: '5 min read',
       difficulty: 'Beginner'
     }
@@ -113,10 +113,10 @@ export default function ContentRecommendationEngine() {
     const timer = setTimeout(() => {
       generateRecommendations();
       setIsLoading(false);
-    }, 1000);
+    }1000);
 
     return () => clearTimeout(timer);
-  }, [userInterests]);
+  }[userInterests]);
 
   const generateRecommendations = () => {
     let scoredContent = allContent.map(item => {
@@ -136,19 +136,19 @@ export default function ContentRecommendationEngine() {
       // Relevance score
       score += item.relevance * 0.5;
       
-      return { ...item, score };
+      return { ...itemscore };
     });
 
     // Sort by score and take top 4
-    scoredContent.sort((a, b) => b.score - a.score);
-    setRecommendations(scoredContent.slice(0, 4));
+    scoredContent.sort((ab) => b.score - a.score);
+    setRecommendations(scoredContent.slice(04));
   };
 
   const toggleInterest = (interestId) => {
     setUserInterests(prev => 
       prev.includes(interestId) 
         ? prev.filter(id => id !== interestId)
-        : [...prev, interestId]
+        : [...previnterestId]
     );
   };
 
@@ -157,7 +157,7 @@ export default function ContentRecommendationEngine() {
       <div className="bg-white rounded-xl shadow-lg p-8">
         <h3 className="text-2xl font-bold text-gray-800 mb-6">Personalized Recommendations</h3>
         <div className="space-y-4">
-          {[1, 2, 3, 4].map(i => (
+          {[1234].map(i => (
             <div key={i} className="animate-pulse">
               <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
               <div className="h-3 bg-gray-200 rounded w-1/2"></div>
@@ -195,7 +195,7 @@ export default function ContentRecommendationEngine() {
 
       {/* Recommendations */}
       <div className="space-y-6">
-        {recommendations.map((item, index) => (
+        {recommendations.map((itemindex) => (
           <Link key={item.id} href={item.url} className="group block">
             <div className="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all duration-300">
               <div className="flex items-start space-x-4">
@@ -220,7 +220,7 @@ export default function ContentRecommendationEngine() {
                   <p className="text-gray-600 text-sm mb-3">{item.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex flex-wrap gap-1">
-                      {item.tags.slice(0, 3).map(tag => (
+                      {item.tags.slice(03).map(tag => (
                         <span
                           key={tag}
                           className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
@@ -248,7 +248,7 @@ export default function ContentRecommendationEngine() {
             setTimeout(() => {
               generateRecommendations();
               setIsLoading(false);
-            }, 500);
+            }500);
           }}
           className="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200"
         >

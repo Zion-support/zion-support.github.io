@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Clock, Shield, Zap, Users,  Award } from 'lucide-react';
+import { ArrowRight, TrendingUp, Clock, Shield, Zap, Users, Award } from 'lucide-react';
 
 interface ContentItem {
   id: string;
@@ -129,7 +129,7 @@ const AutonomousEnterpriseContentShowcase2025: React.FC = () => {
       case 'efficiency':
         return <Zap className="w-4 h-4 text-purple-600" />;
       case 'accuracy':
-        return <Award className="w-4 h-4 text-indigo-600" />;
+        return <ArrowRight className="w-4 h-4 text-indigo-600" />;
       case 'projects':
         return <Users className="w-4 h-4 text-orange-600" />;
       default:

@@ -1,60 +1,68 @@
 #!/bin/bash
 
-# Automated PR merger script
-GITHUB_TOKEN="ghs_mVwAd3X7sGrxLk26IqwlW3En74KQgQ1MJu5r"
-REPO_OWNER="Zion-Holdings"
-REPO_NAME="zion.app"
+# Script to merge all open PRs from GitHub
+REPO="Zion-Holdings/zion.app"
+API_BASE="https://api.github.com/repos/$REPO"
 
-echo "🚀 Starting automated PR merge process..."
+echo "Starting PR merge process for $REPO..."
 
-# Get list of open PRs
-echo "📋 Fetching open PRs..."
-PRS=$(curl -s -H "Accept: application/vnd.github.v3+json" \
-  -H "Authorization: token $GITHUB_TOKEN" \
-  "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/pulls?state=open")
+# Get all open PRs
+echo "Fetching open PRs..."
+PRS_JSON=$(curl -s "$API_BASE/pulls?state=open")
 
-# Extract PR numbers and check if they're not drafts
-echo "$PRS" | jq -r '.[] | select(.draft == false) | "\(.number) \(.head.ref)"' | while read pr_number branch_name; do
-  if [ -n "$pr_number" ] && [ -n "$branch_name" ]; then
-    echo "📋 Processing PR #$pr_number (branch: $branch_name)"
-    
-    # Try to merge via API first
-    echo "  🔄 Attempting API merge..."
-    merge_result=$(curl -s -X PUT \
-      -H "Accept: application/vnd.github.v3+json" \
-      -H "Authorization: token $GITHUB_TOKEN" \
-      -d '{"commit_title":"Merge PR '$pr_number'","merge_method":"merge"}' \
-      "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/pulls/$pr_number/merge")
-    
-    # Check if merge was successful
-    if echo "$merge_result" | jq -e '.merged' > /dev/null 2>&1; then
-      echo "  ✅ Successfully merged PR #$pr_number via API"
-    else
-      echo "  ⚠️  API merge failed, trying local merge..."
-      
-      # Try local merge
-      if git fetch origin "$branch_name" 2>/dev/null; then
-        if git merge "origin/$branch_name" --no-edit 2>/dev/null; then
-          echo "  ✅ Successfully merged PR #$pr_number locally"
-        else
-          echo "  ❌ Failed to merge PR #$pr_number locally (conflicts)"
-          git merge --abort 2>/dev/null
-        fi
-      else
-        echo "  ❌ Failed to fetch branch $branch_name"
-      fi
-    fi
-    
-    echo ""
-  fi
-done
+# Extract PR numbers using a more reliable method
+PRS=$(echo "$PRS_JSON" | grep -o '"number":[0-9]*' | sed 's/"number"://')
 
-# Push any changes
-echo "🚀 Pushing changes to main branch..."
-if git push origin main; then
-  echo "✅ Successfully pushed changes"
-else
-  echo "❌ Failed to push changes"
+echo "Found PRs: $PRS"
+
+if [ -z "$PRS" ]; then
+    echo "No PRs found or failed to extract PR numbers"
+    exit 1
 fi
 
-echo "📊 Merge process completed"
+for pr in $PRS; do
+    echo "Processing PR #$pr..."
+    
+    # Get PR details
+    PR_INFO=$(curl -s "$API_BASE/pulls/$pr")
+    PR_TITLE=$(echo "$PR_INFO" | grep -o '"title":"[^"]*"' | head -1 | cut -d'"' -f4)
+    PR_BRANCH=$(echo "$PR_INFO" | grep -o '"ref":"[^"]*"' | head -1 | cut -d'"' -f4)
+    
+    echo "  Title: $PR_TITLE"
+    echo "  Branch: $PR_BRANCH"
+    
+    # Get files changed in this PR
+    echo "  Fetching changed files..."
+    FILES_JSON=$(curl -s "$API_BASE/pulls/$pr/files")
+    FILES=$(echo "$FILES_JSON" | grep -o '"filename":"[^"]*"' | cut -d'"' -f4)
+    
+    echo "  Files to process: $FILES"
+    
+    for file in $FILES; do
+        echo "    Processing file: $file"
+        
+        # Get the content of the file from the PR branch
+        CONTENT_URL="$API_BASE/contents/$file?ref=$PR_BRANCH"
+        FILE_CONTENT_JSON=$(curl -s "$CONTENT_URL")
+        FILE_CONTENT=$(echo "$FILE_CONTENT_JSON" | grep -o '"content":"[^"]*"' | cut -d'"' -f4)
+        
+        if [ ! -z "$FILE_CONTENT" ]; then
+            # Create directory if it doesn't exist
+            DIR=$(dirname "$file")
+            if [ ! -d "$DIR" ]; then
+                mkdir -p "$DIR"
+            fi
+            
+            # Write the file content (base64 decode if needed)
+            echo "$FILE_CONTENT" | base64 -d > "$file" 2>/dev/null || echo "$FILE_CONTENT" > "$file"
+            echo "      Updated $file"
+        else
+            echo "      No content found for $file"
+        fi
+    done
+    
+    echo "  Completed PR #$pr"
+    echo ""
+done
+
+echo "PR merge process completed!"

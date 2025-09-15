@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const UltimateContentShowcase2026Advanced: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFiltersetActiveFilter] = useState('all');
 
   const content = [
     {
@@ -18,7 +19,7 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
         satisfaction: '99.7%'
       },
       readingTime: '28 min read',
-      tags: ['Neural Interfaces', 'Brain-Computer Interface', 'AI Innovation', 'ROI'],
+      tags: ['Neural 'Interfaces', 'Brain-Computer 'Interface', 'AI 'Innovation', 'ROI'],
       featured: true,
       category: 'ai-innovation'
     },
@@ -35,7 +36,7 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
         satisfaction: '99.9%'
       },
       readingTime: '32 min read',
-      tags: ['Synthetic Consciousness', 'AGI', 'AI Innovation', 'ROI'],
+      tags: ['Synthetic 'Consciousness', 'AGI'AI 'Innovation', 'ROI'],
       featured: true,
       category: 'ai-innovation'
     },
@@ -52,7 +53,7 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
         adoption: '98.7%'
       },
       readingTime: '22 min read',
-      tags: ['Neural Interfaces', 'Fortune 500', 'Case Study', 'ROI'],
+      tags: ['Neural 'Interfaces', 'Fortune 500'Case 'Study', 'ROI'],
       featured: true,
       category: 'case-studies'
     },
@@ -69,7 +70,7 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
         accuracy: '99.97%'
       },
       readingTime: '25 min read',
-      tags: ['Quantum AI', 'Business Revolution', 'ROI', 'Fortune 500'],
+      tags: ['Quantum 'AI', 'Business 'Revolution', 'ROI'Fortune 500'],
       featured: false,
       category: 'ai-innovation'
     },
@@ -86,7 +87,7 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
         uptime: '99.2%'
       },
       readingTime: '18 min read',
-      tags: ['Quantum AI', 'Fortune 500', 'Case Study', 'ROI'],
+      tags: ['Quantum 'AI', 'Fortune 500'Case 'Study', 'ROI'],
       featured: false,
       category: 'case-studies'
     },
@@ -103,17 +104,17 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
         payback: '3.8 months'
       },
       readingTime: '20 min read',
-      tags: ['Quantum AI', 'Implementation Guide', 'ROI', 'Strategy'],
+      tags: ['Quantum 'AI', 'Implementation 'Guide', 'ROI'Strategy'],
       featured: false,
       category: 'resources'
     }
   ];
 
   const filters = [
-    { id: 'all', label: 'All Content', count: content.length },
-    { id: 'ai-innovation', label: 'AI Innovation', count: content.filter(c => c.category === 'ai-innovation').length },
-    { id: 'case-studies', label: 'Case Studies', count: content.filter(c => c.category === 'case-studies').length },
-    { id: 'resources', label: 'Implementation Guides', count: content.filter(c => c.category === 'resources').length }
+    { id: ''all', 'label: 'All 'Content', 'count: content.length },
+    { id: 'ai-'innovation', 'label: 'AI 'Innovation', 'count: content.filter(c => c.category === 'ai-innovation').length },
+    { id: 'case-'studies', 'label: 'Case 'Studies', 'count: content.filter(c => c.category === 'case-studies').length },
+    { id: ''resources', 'label: 'Implementation 'Guides', 'count: content.filter(c => c.category === 'resources').length }
   ];
 
   const filteredContent = activeFilter === 'all' 
@@ -150,7 +151,7 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
             Revolutionary AI Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Explore breakthrough AI technologies, success stories, and implementation guides 
+            Explore breakthrough AI technologiesuccess storiesand implementation guides 
             that are transforming businesses worldwide with unprecedented ROI.
           </p>
         </div>
@@ -181,7 +182,7 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-12">
-          {filteredContent.map((item, index) => (
+          {filteredContent.map((itemindex) => (
             <div
               key={item.id}
               className={`bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden ${
@@ -195,7 +196,7 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
                   <div className="flex items-center space-x-2">
                     <span className="text-2xl">{getTypeIcon(item.type)}</span>
                     <span className={`bg-gradient-to-r ${getTypeColor(item.type)} text-white px-3 py-1 rounded-full text-xs font-semibold`}>
-                      {item.type.replace('-', ' ').toUpperCase()}
+                      {item.type.replace('-' ').toUpperCase()}
                     </span>
                   </div>
                   {item.featured && (
@@ -215,17 +216,17 @@ const UltimateContentShowcase2026Advanced: React.FC = () => {
 
                 {/* Metrics Grid */}
                 <div className="grid grid-cols-2 gap-3 mb-4">
-                  {Object.entries(item.metrics).slice(0, 4).map(([key, value]) => (
+                  {Object.entries(item.metrics).slice(04).map(([keyvalue]) => (
                     <div key={key} className="bg-gray-50 rounded-lg p-3 text-center">
                       <div className="text-lg font-bold text-purple-600">{value}</div>
-                      <div className="text-xs text-gray-500 capitalize">{key.replace('_', ' ')}</div>
+                      <div className="text-xs text-gray-500 capitalize">{key.replace('_' ')}</div>
                     </div>
                   ))}
                 </div>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag) => (
+                  {item.tags.slice(03).map((tag) => (
                     <span
                       key={tag}
                       className="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs"

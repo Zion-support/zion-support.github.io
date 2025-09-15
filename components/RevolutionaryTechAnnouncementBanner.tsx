@@ -3,20 +3,20 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Bell, Zap, TrendingUp, Users, Award, Globe, ArrowRight, Clock } from 'lucide-react';
+BellZapTrendingUpUsersAwardGlobeArrowRightClock
 import Link from 'next/link';
 
 const RevolutionaryTechAnnouncementBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentAnnouncement, setCurrentAnnouncement] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentAnnouncementsetCurrentAnnouncement] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentAnnouncement(prev => (prev + 1) % 3);
-    }, 4000);
+    }4000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const announcements = [
     {
@@ -43,15 +43,15 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
   ];
 
   const stats = [
-    { icon: Award, value: "99.9%", label: "Success Rate" },
-    { icon: Globe, value: "150+", label: "Countries" },
-    { icon: Users, value: "10M+", label: "Users" }
+    { icon: Awardvalue: "99.9%"label: "Success Rate" },
+    { icon: Globevalue: "150+"label: "Countries" },
+    { icon: Usersvalue: "10M+"label: "Users" }
   ];
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.6 }}
       className="relative overflow-hidden bg-gradient-to-r from-red-900 via-orange-900 to-yellow-900 py-12"
     >
@@ -63,9 +63,9 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -30 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -30 }}
+              transition={{ delay: 0.2duration: 0.6 }}
               className="mb-4"
             >
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -76,7 +76,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
                 Breaking: Technology Revolution
               </h2>
               <p className="text-xl text-gray-300 mb-6 max-w-2xl">
-                Revolutionary breakthroughs in AI, quantum computing, and automation are reshaping the future of technology. 
+                Revolutionary breakthroughs in AIquantum computingand automation are reshaping the future of technology. 
                 Be among the first to experience the transformation.
               </p>
             </motion.div>
@@ -110,8 +110,8 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ delay: 0.6duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link
@@ -132,9 +132,9 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
 
           {/* Right Stats */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 30 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
+            initial={{ opacity: 0x: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 30 }}
+            transition={{ delay: 0.3duration: 0.6 }}
             className="flex-shrink-0"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
@@ -142,12 +142,12 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
               
               {/* Stats Grid */}
               <div className="grid grid-cols-1 gap-6">
-                {stats.map((stat, index) => (
+                {stats.map((statindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
-                    transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
+                    initial={{ opacity: 0scale: 0.8 }}
+                    animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
+                    transition={{ delay: 0.8 + index * 0.1duration: 0.5 }}
                     className="text-center"
                   >
                     <div className="inline-flex p-3 bg-gradient-to-r from-red-600 to-orange-600 rounded-xl mb-3">
@@ -163,7 +163,7 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1, duration: 0.5 }}
+                transition={{ delay: 1duration: 0.5 }}
                 className="mt-6 flex items-center justify-center gap-2 text-orange-400 text-sm"
               >
                 <Clock className="w-4 h-4" />

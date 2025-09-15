@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Clock, Download, CheckCircle, Zap,  Award, Users, DollarSign, BarChart3 } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Clock, Download, CheckCircle, Zap, Award, Users, DollarSign, BarChart3, ArrowRight, Brain } from 'lucide-react';
 
 const RevolutionaryContentBanner2025 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

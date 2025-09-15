@@ -18,9 +18,9 @@ interface AnalyticsData {
 }
 
 export default function AnalyticsDashboard() {
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [timeRange, setTimeRange] = useState<'7d' | '30d' | '90d'>('7d');
+  const [analyticsDatasetAnalyticsData] = useState<AnalyticsData | null>(null);
+  const [isLoadingsetIsLoading] = useState(true);
+  const [timeRangesetTimeRange] = useState<'7d' | '30d' | '90d'>('7d');
 
   useEffect(() => {
     // Simulate analytics data fetching
@@ -28,32 +28,32 @@ export default function AnalyticsDashboard() {
       setIsLoading(true);
       
       // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve1000));
       
-      // Mock data - in real implementation, this would come from your analytics API
+      // Mock data - in real implementationthis would come from your analytics API
       const mockData: AnalyticsData = {
         pageViews: Math.floor(Math.random() * 10000) + 5000,
         uniqueVisitors: Math.floor(Math.random() * 5000) + 2500,
         bounceRate: Math.random() * 30 + 20,
         avgSessionDuration: Math.random() * 300 + 120,
         topPages: [
-          { path: '/', views: Math.floor(Math.random() * 2000) + 1000 },
-          { path: '/ai-2026-advanced-automation-mastery', views: Math.floor(Math.random() * 1500) + 800 },
-          { path: '/ai-2026-neural-interface-revolution', views: Math.floor(Math.random() * 1200) + 600 },
-          { path: '/services', views: Math.floor(Math.random() * 1000) + 500 },
-          { path: '/about', views: Math.floor(Math.random() * 800) + 400 },
+          { path: '/'views: Math.floor(Math.random() * 2000) + 1000 },
+          { path: '/ai-2026-advanced-automation-'mastery', 'views: Math.floor(Math.random() * 1500) + 800 },
+          { path: '/ai-2026-neural-interface-'revolution', 'views: Math.floor(Math.random() * 1200) + 600 },
+          { path: '/'services', 'views: Math.floor(Math.random() * 1000) + 500 },
+          { path: '/'about', 'views: Math.floor(Math.random() * 800) + 400 },
         ],
         trafficSources: [
-          { source: 'Direct', percentage: 35 },
-          { source: 'Google', percentage: 28 },
-          { source: 'Social Media', percentage: 20 },
-          { source: 'Referral', percentage: 12 },
-          { source: 'Email', percentage: 5 },
+          { source: ''Direct', 'percentage: 35 },
+          { source: ''Google', 'percentage: 28 },
+          { source: 'Social 'Media', 'percentage: 20 },
+          { source: ''Referral', 'percentage: 12 },
+          { source: ''Email', 'percentage: 5 },
         ],
         deviceTypes: [
-          { type: 'Desktop', percentage: 45 },
-          { type: 'Mobile', percentage: 40 },
-          { type: 'Tablet', percentage: 15 },
+          { type: ''Desktop', 'percentage: 45 },
+          { type: ''Mobile', 'percentage: 40 },
+          { type: ''Tablet', 'percentage: 15 },
         ],
         performance: {
           fcp: Math.random() * 1000 + 800,
@@ -68,7 +68,7 @@ export default function AnalyticsDashboard() {
     };
 
     fetchAnalyticsData();
-  }, [timeRange]);
+  }[timeRange]);
 
   if (isLoading) {
     return (
@@ -77,7 +77,7 @@ export default function AnalyticsDashboard() {
           <div className="animate-pulse">
             <div className="h-8 bg-gray-300 rounded w-1/4 mb-8"></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {[...Array(4)].map((_, i) => (
+              {[...Array(4)].map((_i) => (
                 <div key={i} className="bg-white p-6 rounded-lg shadow">
                   <div className="h-4 bg-gray-300 rounded w-1/2 mb-2"></div>
                   <div className="h-8 bg-gray-300 rounded w-3/4"></div>
@@ -193,7 +193,7 @@ export default function AnalyticsDashboard() {
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Top Pages</h3>
             <div className="space-y-3">
-              {analyticsData.topPages.map((page, index) => (
+              {analyticsData.topPages.map((pageindex) => (
                 <div key={index} className="flex items-center justify-between">
                   <div className="flex items-center">
                     <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-sm font-semibold text-blue-600">
@@ -213,7 +213,7 @@ export default function AnalyticsDashboard() {
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Traffic Sources</h3>
             <div className="space-y-3">
-              {analyticsData.trafficSources.map((source, index) => (
+              {analyticsData.trafficSources.map((sourceindex) => (
                 <div key={index} className="flex items-center justify-between">
                   <span className="text-gray-700">{source.source}</span>
                   <div className="flex items-center">
@@ -299,7 +299,7 @@ export default function AnalyticsDashboard() {
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Device Types</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {analyticsData.deviceTypes.map((device, index) => (
+            {analyticsData.deviceTypes.map((deviceindex) => (
               <div key={index} className="text-center">
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   {device.percentage}%

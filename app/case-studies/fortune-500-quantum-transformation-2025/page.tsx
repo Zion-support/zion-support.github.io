@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import SEO from '../../components/SEO';
-import { ArrowLeft, Calendar, Clock, User, Tag, TrendingUp, Zap, CheckCircle, Building2 } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, TrendingUp, Zap, CheckCircle, Building, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -59,7 +59,7 @@ export default function Fortune500QuantumTransformationPage() {
               <span>Zion Tech Group</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Building2 className="w-4 h-4" />
+              <Building className="w-4 h-4" />
               <span>Fortune 500 Manufacturing</span>
             </div>
           </div>

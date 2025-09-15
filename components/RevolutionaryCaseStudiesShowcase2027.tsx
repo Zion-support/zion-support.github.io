@@ -4,11 +4,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
-  Target, 
+  TrendingUp
+  Users
+  DollarSign
+  Clock
+  Target
   Award,
   ArrowRight,
   Play,
@@ -22,12 +22,12 @@ import {
 } from 'lucide-react';
 
 const RevolutionaryCaseStudiesShowcase2027 = () => {
-  const [activeCase, setActiveCase] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeCasetActiveCase] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const caseStudies = [
     {
@@ -44,8 +44,8 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
       },
       duration: '18 months',
       teamSize: '150+ experts',
-      technologies: ['AI/ML', 'Cloud Migration', 'Microservices', 'DevOps'],
-      description: 'Transformed a traditional enterprise into an AI-first organization, resulting in unprecedented growth and efficiency gains.',
+      technologies: ['AI/'ML', 'Cloud 'Migration', 'Microservices'DevOps'],
+      description: 'Transformed a traditional enterprise into an AI-first organizationresulting in unprecedented growth and efficiency gains.',
       highlights: [
         'Implemented 50+ AI models across all business functions',
         'Migrated 200+ legacy applications to cloud-native architecture',
@@ -53,16 +53,16 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         'Reduced manual processes by 85% through intelligent automation'
       ],
       testimonial: {
-        quote: "This transformation exceeded our wildest expectations. We've become a completely different company.",
+        quote: "This transformation exceeded our wildest expectations. 'We', 've become a completely different company.",
         author: "Sarah Chen",
-        position: "CTO, TechCorp Global",
+        position: "CTOTechCorp Global",
         avatar: "/api/placeholder/60/60"
       },
       metrics: [
-        { label: 'Revenue Growth', value: '+340%', icon: TrendingUp, color: 'text-green-500' },
-        { label: 'Efficiency Gain', value: '+280%', icon: Zap, color: 'text-blue-500' },
-        { label: 'Cost Reduction', value: '-65%', icon: DollarSign, color: 'text-red-500' },
-        { label: 'Time to Market', value: '-75%', icon: Clock, color: 'text-purple-500' }
+        { label: 'Revenue 'Growth', 'value: '+340%'icon: TrendingUpcolor: 'text-green-500' },
+        { label: 'Efficiency 'Gain', 'value: '+280%'icon: Zapcolor: 'text-blue-500' },
+        { label: 'Cost 'Reduction', 'value: '-65%'icon: DollarSigncolor: 'text-red-500' },
+        { label: 'Time to 'Market', 'value: '-75%'icon: Clockcolor: 'text-purple-500' }
       ]
     },
     {
@@ -79,7 +79,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
       },
       duration: '12 months',
       teamSize: '80+ experts',
-      technologies: ['Computer Vision', 'NLP', 'Predictive Analytics', 'IoT'],
+      technologies: ['Computer 'Vision', 'NLP'Predictive 'Analytics', 'IoT'],
       description: 'Revolutionized healthcare delivery through AI-powered diagnostics and personalized treatment recommendations.',
       highlights: [
         'Achieved 95% accuracy in early disease detection',
@@ -88,16 +88,16 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         'Saved $50M+ in healthcare costs annually'
       ],
       testimonial: {
-        quote: "The AI system has transformed how we approach patient care. It's like having a superhuman diagnostician on every team.",
+        quote: "The AI system has transformed how we approach patient care. 'It', 's like having a superhuman diagnostician on every team.",
         author: "Dr. Michael Rodriguez",
-        position: "Chief Medical Officer, MediTech Solutions",
+        position: "Chief Medical OfficerMediTech Solutions",
         avatar: "/api/placeholder/60/60"
       },
       metrics: [
-        { label: 'Diagnosis Accuracy', value: '+95%', icon: Target, color: 'text-green-500' },
-        { label: 'Diagnosis Time', value: '-80%', icon: Clock, color: 'text-blue-500' },
-        { label: 'Patient Outcomes', value: '+60%', icon: Users, color: 'text-purple-500' },
-        { label: 'Cost Savings', value: '-45%', icon: DollarSign, color: 'text-red-500' }
+        { label: 'Diagnosis 'Accuracy', 'value: '+95%'icon: Targetcolor: 'text-green-500' },
+        { label: 'Diagnosis 'Time', 'value: '-80%'icon: Clockcolor: 'text-blue-500' },
+        { label: 'Patient 'Outcomes', 'value: '+60%'icon: Userscolor: 'text-purple-500' },
+        { label: 'Cost 'Savings', 'value: '-45%'icon: DollarSigncolor: 'text-red-500' }
       ]
     },
     {
@@ -114,7 +114,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
       },
       duration: '15 months',
       teamSize: '120+ experts',
-      technologies: ['Quantum Computing', 'Machine Learning', 'Blockchain', 'Real-time Analytics'],
+      technologies: ['Quantum 'Computing', 'Machine 'Learning', 'Blockchain'Real-time Analytics'],
       description: 'Built the world\'s most advanced fraud detection system using quantum computing and AI.',
       highlights: [
         'Detected 99.7% of fraudulent transactions in real-time',
@@ -123,16 +123,16 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         'Achieved 99.99% system reliability'
       ],
       testimonial: {
-        quote: "We've set a new standard for financial security. Our customers trust us with their most sensitive data.",
+        quote: "'We', 've set a new standard for financial security. Our customers trust us with their most sensitive data.",
         author: "Jennifer Liu",
-        position: "CEO, FinanceFlow Inc.",
+        position: "CEOFinanceFlow Inc.",
         avatar: "/api/placeholder/60/60"
       },
       metrics: [
-        { label: 'Fraud Detection', value: '+99.7%', icon: Shield, color: 'text-green-500' },
-        { label: 'False Positives', value: '-90%', icon: Target, color: 'text-blue-500' },
-        { label: 'Processing Speed', value: '+500%', icon: Zap, color: 'text-purple-500' },
-        { label: 'Customer Satisfaction', value: '+85%', icon: Users, color: 'text-orange-500' }
+        { label: 'Fraud 'Detection', 'value: '+99.7%'icon: Shieldcolor: 'text-green-500' },
+        { label: 'False 'Positives', 'value: '-90%'icon: Targetcolor: 'text-blue-500' },
+        { label: 'Processing 'Speed', 'value: '+500%'icon: Zapcolor: 'text-purple-500' },
+        { label: 'Customer 'Satisfaction', 'value: '+85%'icon: Userscolor: 'text-orange-500' }
       ]
     },
     {
@@ -149,8 +149,8 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
       },
       duration: '24 months',
       teamSize: '200+ experts',
-      technologies: ['IoT', 'Computer Vision', 'Predictive Maintenance', 'Robotics'],
-      description: 'Transformed traditional manufacturing into a smart, AI-powered production facility.',
+      technologies: [', 'IoT', 'Computer 'Vision', 'Predictive 'Maintenance', 'Robotics'],
+      description: 'Transformed traditional manufacturing into a smartAI-powered production facility.',
       highlights: [
         'Increased productivity by 200% through intelligent automation',
         'Reduced unplanned downtime by 85%',
@@ -158,25 +158,25 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         'Reduced energy consumption by 40%'
       ],
       testimonial: {
-        quote: "We've created the factory of the future. Every process is optimized, every decision is data-driven.",
+        quote: "'We', 've created the factory of the future. Every process is optimizedevery decision is data-driven.",
         author: "Robert Kim",
-        position: "VP of Operations, AutoManufacturing Co.",
+        position: "VP of OperationsAutoManufacturing Co.",
         avatar: "/api/placeholder/60/60"
       },
       metrics: [
-        { label: 'Productivity', value: '+200%', icon: TrendingUp, color: 'text-green-500' },
-        { label: 'Downtime Reduction', value: '-85%', icon: Clock, color: 'text-blue-500' },
-        { label: 'Quality Improvement', value: '+95%', icon: Award, color: 'text-purple-500' },
-        { label: 'Energy Efficiency', value: '+40%', icon: Zap, color: 'text-orange-500' }
+        { label: ''Productivity', 'value: '+200%'icon: TrendingUpcolor: 'text-green-500' },
+        { label: 'Downtime 'Reduction', 'value: '-85%'icon: Clockcolor: 'text-blue-500' },
+        { label: 'Quality 'Improvement', 'value: '+95%'icon: Awardcolor: 'text-purple-500' },
+        { label: 'Energy 'Efficiency', 'value: '+40%'icon: Zapcolor: 'text-orange-500' }
       ]
     }
   ];
 
   const overallStats = [
-    { label: 'Projects Completed', value: '500+', icon: CheckCircle },
-    { label: 'Client Satisfaction', value: '99.2%', icon: Star },
-    { label: 'Average ROI', value: '340%', icon: TrendingUp },
-    { label: 'Years Experience', value: '15+', icon: Award }
+    { label: 'Projects 'Completed', 'value: '500+'icon: CheckCircle },
+    { label: 'Client 'Satisfaction', 'value: '99.2%'icon: Star },
+    { label: 'Average 'ROI', 'value: '340%'icon: TrendingUp },
+    { label: 'Years 'Experience', 'value: '15+'icon: Award }
   ];
 
   if (!isVisible) return null;
@@ -200,7 +200,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover how leading organizations achieved extraordinary results through our AI-powered solutions. 
-            Real projects, real results, real transformation.
+            Real projectsreal resultsreal transformation.
           </p>
         </motion.div>
 
@@ -208,10 +208,10 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
-          {overallStats.map((stat, index) => (
+          {overallStats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mb-4">
                 <stat.icon className="w-8 h-8 text-gray-900" />
@@ -226,11 +226,11 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4">
-            {caseStudies.map((caseStudy, index) => (
+            {caseStudies.map((caseStudyindex) => (
               <button
                 key={caseStudy.id}
                 onClick={() => setActiveCase(index)}
@@ -250,9 +250,9 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCase}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: -50 }}
             transition={{ duration: 0.5 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
           >
@@ -283,7 +283,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Key Highlights</h4>
                     <ul className="space-y-2">
-                      {caseStudies[activeCase].highlights.map((highlight, index) => (
+                      {caseStudies[activeCase].highlights.map((highlightindex) => (
                         <li key={index} className="flex items-start gap-2 text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                           {highlight}
@@ -295,7 +295,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
-                      {caseStudies[activeCase].technologies.map((tech, index) => (
+                      {caseStudies[activeCase].technologies.map((techindex) => (
                         <span key={index} className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">
                           {tech}
                         </span>
@@ -311,7 +311,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
                 <div className="mb-8">
                   <h4 className="text-2xl font-bold text-white mb-6">Results</h4>
                   <div className="grid grid-cols-2 gap-4">
-                    {caseStudies[activeCase].metrics.map((metric, index) => (
+                    {caseStudies[activeCase].metrics.map((metricindex) => (
                       <div key={index} className="bg-white/10 rounded-lg p-4 text-center">
                         <metric.icon className={`w-8 h-8 ${metric.color} mx-auto mb-2`} />
                         <div className="text-2xl font-bold text-white">{metric.value}</div>
@@ -359,7 +359,7 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-8 text-gray-900">

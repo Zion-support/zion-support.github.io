@@ -34,7 +34,7 @@ const AIImplementationGuideBanner: React.FC = () => {
               <span className="text-black font-bold text-lg">1</span>
             </div>
             <h3 className="text-lg font-bold mb-3">Assessment & Planning</h3>
-            <p className="text-sm opacity-80 mb-4">Evaluate current state, set objectives, and create strategic roadmap</p>
+            <p className="text-sm opacity-80 mb-4">Evaluate current stateset objectivesand create strategic roadmap</p>
             <div className="text-xs opacity-60">Weeks 1-4</div>
           </div>
 
@@ -44,7 +44,7 @@ const AIImplementationGuideBanner: React.FC = () => {
               <span className="text-black font-bold text-lg">2</span>
             </div>
             <h3 className="text-lg font-bold mb-3">Foundation Building</h3>
-            <p className="text-sm opacity-80 mb-4">Setup infrastructure, develop team, and establish data pipelines</p>
+            <p className="text-sm opacity-80 mb-4">Setup infrastructuredevelop teamand establish data pipelines</p>
             <div className="text-xs opacity-60">Weeks 5-12</div>
           </div>
 
@@ -54,7 +54,7 @@ const AIImplementationGuideBanner: React.FC = () => {
               <span className="text-black font-bold text-lg">3</span>
             </div>
             <h3 className="text-lg font-bold mb-3">Pilot Implementation</h3>
-            <p className="text-sm opacity-80 mb-4">Build MVP solutions, test with real data, and validate results</p>
+            <p className="text-sm opacity-80 mb-4">Build MVP solutionstest with real datand validate results</p>
             <div className="text-xs opacity-60">Weeks 13-20</div>
           </div>
 
@@ -64,7 +64,7 @@ const AIImplementationGuideBanner: React.FC = () => {
               <span className="text-black font-bold text-lg">4</span>
             </div>
             <h3 className="text-lg font-bold mb-3">Scaling & Optimization</h3>
-            <p className="text-sm opacity-80 mb-4">Deploy enterprise-wide, optimize performance, and drive innovation</p>
+            <p className="text-sm opacity-80 mb-4">Deploy enterprise-wideoptimize performanceand drive innovation</p>
             <div className="text-xs opacity-60">Weeks 21-36</div>
           </div>
         </div>
@@ -102,9 +102,9 @@ const AIImplementationGuideBanner: React.FC = () => {
           </div>
         </div>
 
-        {/* What's Included */}
+        {/* 'What', 's Included */}
         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 mb-12">
-          <h3 className="text-2xl font-bold text-center mb-8">What's Included in the Guide</h3>
+          <h3 className="text-2xl font-bold text-center mb-8">'What', 's Included in the Guide</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h4 className="text-lg font-semibold mb-4">📋 Assessment Tools</h4>

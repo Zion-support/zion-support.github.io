@@ -4,11 +4,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  ArrowRight, 
-  Star, 
-  Users, 
-  TrendingUp, 
+  Brain
+  ArrowRight
+  Star
+  Users
+  TrendingUp
   Zap,
   Cpu,
   Target,
@@ -32,8 +32,8 @@ import {
 } from 'lucide-react';
 
 const AIInnovationHub2026PromotionBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentInnovation, setCurrentInnovation] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentInnovationsetCurrentInnovation] = useState(0);
 
   const innovations = [
     {
@@ -67,27 +67,27 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
   ];
 
   const categories = [
-    { icon: Brain, name: 'AI Core', count: '32+', color: 'purple' },
-    { icon: Atom, name: 'Quantum AI', count: '18+', color: 'cyan' },
-    { icon: Network, name: 'Neural Networks', count: '24+', color: 'green' },
-    { icon: Zap, name: 'Automation', count: '15+', color: 'yellow' },
-    { icon: Cpu, name: 'Robotics', count: '12+', color: 'red' },
-    { icon: Microscope, name: 'BioTech AI', count: '8+', color: 'pink' }
+    { icon: Brainame: 'AI 'Core', 'count: '32+'color: 'purple' },
+    { icon: Atomname: 'Quantum 'AI', 'count: '18+'color: 'cyan' },
+    { icon: Networkname: 'Neural 'Networks', 'count: '24+'color: 'green' },
+    { icon: Zapname: ''Automation', 'count: '15+'color: 'yellow' },
+    { icon: Cpuname: ''Robotics', 'count: '12+'color: 'red' },
+    { icon: Microscopename: 'BioTech 'AI', 'count: '8+'color: 'pink' }
   ];
 
   const stats = [
-    { label: 'Active Innovations', value: '89+', icon: Lightbulb },
-    { label: 'Research Projects', value: '156+', icon: Microscope },
-    { label: 'Deployed Solutions', value: '42+', icon: Rocket },
-    { label: 'Global Impact', value: '2.5M+', icon: Users }
+    { label: 'Active 'Innovations', 'value: '89+'icon: Lightbulb },
+    { label: 'Research 'Projects', 'value: '156+'icon: Microscope },
+    { label: 'Deployed 'Solutions', 'value: '42+'icon: Rocket },
+    { label: 'Global 'Impact', 'value: '2.5M+'icon: Users }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentInnovation((prev) => (prev + 1) % innovations.length);
-    }, 4000);
+    }4000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -112,8 +112,8 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0x: -50 }}
+              animate={{ opacity: 1x: 0 }}
               transition={{ duration: 0.8 }}
               className="text-white"
             >
@@ -130,20 +130,20 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
               </h1>
               
               <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                Explore the most groundbreaking AI innovations, breakthrough technologies, and revolutionary 
+                Explore the most groundbreaking AI innovationsbreakthrough technologiesand revolutionary 
                 developments that are reshaping the future of artificial intelligence.
               </p>
 
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-4 mb-8">
-                {stats.map((stat, index) => {
+                {stats.map((statindex) => {
                   const Icon = stat.icon;
                   return (
                     <motion.div
                       key={stat.label}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      transition={{ duration: 0.6delay: index * 0.1 }}
                       className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
                     >
                       <div className="flex items-center mb-2">
@@ -179,9 +179,9 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
 
             {/* Right Content - Interactive Innovation Showcase */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0x: 50 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.8delay: 0.2 }}
               className="relative"
             >
               {/* Innovation Categories */}
@@ -191,14 +191,14 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                 </h3>
                 
                 <div className="grid grid-cols-2 gap-4">
-                  {categories.map((category, index) => {
+                  {categories.map((categoryindex) => {
                     const Icon = category.icon;
                     return (
                       <motion.div
                         key={category.name}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        initial={{ opacity: 0scale: 0.8 }}
+                        animate={{ opacity: 1scale: 1 }}
+                        transition={{ duration: 0.5delay: index * 0.1 }}
                         className="bg-white/5 rounded-xl p-4 text-center hover:bg-white/10 transition-colors cursor-pointer group"
                       >
                         <Icon className="h-8 w-8 text-yellow-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />
@@ -215,15 +215,15 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentInnovation}
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -50 }}
+                    initial={{ opacity: 0x: 50 }}
+                    animate={{ opacity: 1x: 0 }}
+                    exit={{ opacity: 0x: -50 }}
                     transition={{ duration: 0.5 }}
                     className="absolute inset-0 flex items-center justify-center p-6"
                   >
                     <div className="text-center">
                       <div className="flex items-center justify-center mb-2">
-                        {React.createElement(innovations[currentInnovation].icon, {
+                        {React.createElement(innovations[currentInnovation].icon{
                           className: "h-6 w-6 text-yellow-400 mr-2"
                         })}
                         <span className="text-white font-bold text-lg">
@@ -242,7 +242,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                 
                 {/* Innovation Indicators */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                  {innovations.map((_, index) => (
+                  {innovations.map((_index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentInnovation(index)}
@@ -257,10 +257,10 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
               {/* Floating Innovation Icons */}
               <motion.div
                 animate={{ 
-                  y: [0, -10, 0],
-                  rotate: [0, 5, 0]
+                  y: [0-10],
+                  rotate: [050]
                 }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 4repeat: Infinityease: "easeInOut" }}
                 className="absolute -top-4 -right-4 bg-yellow-400 text-black p-3 rounded-full shadow-lg"
               >
                 <Brain className="h-6 w-6" />
@@ -268,10 +268,10 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
               
               <motion.div
                 animate={{ 
-                  y: [0, 10, 0],
-                  rotate: [0, -5, 0]
+                  y: [010],
+                  rotate: [0-50]
                 }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                transition={{ duration: 3repeat: Infinityease: "easeInOut"delay: 1 }}
                 className="absolute -bottom-4 -left-4 bg-pink-400 text-white p-3 rounded-full shadow-lg"
               >
                 <Atom className="h-6 w-6" />
@@ -279,10 +279,10 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
 
               <motion.div
                 animate={{ 
-                  y: [0, -15, 0],
-                  x: [0, 5, 0]
+                  y: [0-150],
+                  x: [050]
                 }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                transition={{ duration: 5repeat: Infinityease: "easeInOut"delay: 2 }}
                 className="absolute top-1/2 -right-8 bg-blue-400 text-white p-2 rounded-full shadow-lg"
               >
                 <Network className="h-5 w-5" />

@@ -4,10 +4,16 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+console.log('🔄 Starting Git Workflow Automator...');
+
 class GitWorkflowAutomator {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(__dirname, 'logs', 'git-workflow.log');
+    this.logFile = path.join(process.cwd(), 'logs', 'git-workflow.log');
+    this.config = {
+      autoMergeEnabled: process.env.AUTO_MERGE_ENABLED === 'true',
+      branchProtection: process.env.BRANCH_PROTECTION || 'main',
+      checkInterval: 6 * 60 * 60 * 1000, // 6 hours
+    };
     this.ensureLogDirectory();
   }
 
@@ -18,137 +24,154 @@ class GitWorkflowAutomator {
     }
   }
 
-  log(message, level = 'INFO') {
+  log(message) {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    console.log(`[${level}] ${message}`);
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
 
-  async runCommand(command, description) {
-    this.log(`Running: ${description}`);
+  async executeCommand(command, options = {}) {
     try {
-      const result = execSync(command, {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8',
+      const result = execSync(command, { 
+        encoding: 'utf8', 
+        stdio: options.silent ? 'pipe' : 'inherit',
+        ...options 
       });
-      this.log(`✅ ${description} completed successfully`);
       return { success: true, output: result };
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return {
-        success: false,
-        error: error.message,
-        output: error.stdout || error.stderr,
-      };
-    }
-  }
-
-  async automateGitWorkflow() {
-    this.log('🔄 Starting Git workflow automation...');
-
-    try {
-      // Check current branch
-      const currentBranch = await this.getCurrentBranch();
-      this.log(`Current branch: ${currentBranch}`);
-
-      // Add all changes
-      await this.runCommand('git add .', 'Add all changes');
-
-      // Check if there are changes to commit
-      const statusResult = await this.runCommand(
-        'git status --porcelain',
-        'Check git status'
-      );
-      if (!statusResult.success || !statusResult.output.trim()) {
-        this.log('No changes to commit');
-        return;
-      }
-
-      // Commit changes
-      const commitMessage = `feat: Automated improvements and fixes - ${new Date().toISOString()}`;
-      await this.runCommand(
-        `git commit -m "${commitMessage}"`,
-        'Commit changes'
-      );
-
-      // Push changes
-      await this.runCommand('git push origin HEAD', 'Push changes');
-
-      // If on a feature branch, create PR
-      if (currentBranch !== 'main' && currentBranch !== 'master') {
-        await this.createPullRequest(currentBranch);
-      }
-
-      this.log('Git workflow automation completed');
-    } catch (error) {
-      this.log(`Git workflow automation failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Command failed: ${command} - ${error.message}`);
+      return { success: false, error: error.message };
     }
   }
 
   async getCurrentBranch() {
-    try {
-      const result = execSync('git branch --show-current', {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8',
-      });
-      return result.trim();
-    } catch (error) {
-      return 'unknown';
-    }
+    const result = await this.executeCommand('git branch --show-current', { silent: true });
+    return result.success ? result.output.trim() : null;
   }
 
-  async createPullRequest(branchName) {
-    try {
-      // This would typically use GitHub CLI or API
-      this.log(`Would create PR for branch: ${branchName}`);
-      // For now, just log the intention
-    } catch (error) {
-      this.log(`Could not create PR: ${error.message}`, 'WARNING');
-    }
+  async getStatus() {
+    const result = await this.executeCommand('git status --porcelain', { silent: true });
+    return result.success ? result.output.trim() : '';
   }
 
-  async mergeToMain() {
-    this.log('🔄 Starting merge to main...');
+  async hasUncommittedChanges() {
+    const status = await this.getStatus();
+    return status.length > 0;
+  }
 
-    try {
-      // Switch to main branch
-      await this.runCommand('git checkout main', 'Switch to main branch');
+  async pullLatest() {
+    this.log('📥 Pulling latest changes...');
+    const result = await this.executeCommand('git pull origin main');
+    return result.success;
+  }
 
-      // Pull latest changes
-      await this.runCommand('git pull origin main', 'Pull latest changes');
+  async pushChanges() {
+    this.log('📤 Pushing changes...');
+    const result = await this.executeCommand('git push origin main');
+    return result.success;
+  }
 
-      // Merge current branch
-      const currentBranch = await this.getCurrentBranch();
-      if (currentBranch !== 'main') {
-        await this.runCommand(
-          `git merge ${currentBranch}`,
-          `Merge ${currentBranch} into main`
-        );
+  async commitChanges(message) {
+    this.log('💾 Committing changes...');
+    const addResult = await this.executeCommand('git add .');
+    if (!addResult.success) return false;
+    
+    const commitResult = await this.executeCommand(`git commit -m "${message}"`);
+    return commitResult.success;
+  }
+
+  async checkForConflicts() {
+    this.log('🔍 Checking for merge conflicts...');
+    const status = await this.getStatus();
+    return status.includes('UU') || status.includes('AA') || status.includes('DD');
+  }
+
+  async resolveConflicts() {
+    this.log('🔧 Attempting to resolve conflicts...');
+    
+    // Try to resolve conflicts automatically
+    const checkoutOurs = await this.executeCommand('git checkout --ours .');
+    if (checkoutOurs.success) {
+      const addResult = await this.executeCommand('git add .');
+      if (addResult.success) {
+        const commitResult = await this.executeCommand('git commit -m "Auto-resolve conflicts"');
+        return commitResult.success;
       }
+    }
+    
+    return false;
+  }
 
-      // Push to main
-      await this.runCommand('git push origin main', 'Push to main');
-
-      this.log('Merge to main completed');
-    } catch (error) {
-      this.log(`Merge to main failed: ${error.message}`, 'ERROR');
+  async performGitWorkflow() {
+    this.log('🔄 Starting git workflow check...');
+    
+    const currentBranch = await this.getCurrentBranch();
+    this.log(`📍 Current branch: ${currentBranch}`);
+    
+    if (currentBranch !== 'main') {
+      this.log('⚠️ Not on main branch, skipping workflow');
+      return;
+    }
+    
+    const hasChanges = await this.hasUncommittedChanges();
+    if (hasChanges) {
+      this.log('📝 Uncommitted changes detected, committing...');
+      const commitSuccess = await this.commitChanges('Auto-commit: Automated workflow update');
+      if (!commitSuccess) {
+        this.log('❌ Failed to commit changes');
+        return;
+      }
+    }
+    
+    // Try to pull latest changes
+    const pullSuccess = await this.pullLatest();
+    if (!pullSuccess) {
+      this.log('⚠️ Pull failed, checking for conflicts...');
+      const hasConflicts = await this.checkForConflicts();
+      if (hasConflicts) {
+        this.log('🔧 Conflicts detected, attempting resolution...');
+        const resolveSuccess = await this.resolveConflicts();
+        if (!resolveSuccess) {
+          this.log('❌ Failed to resolve conflicts automatically');
+          return;
+        }
+      }
+    }
+    
+    // Push changes if we have any
+    if (hasChanges || pullSuccess) {
+      const pushSuccess = await this.pushChanges();
+      if (pushSuccess) {
+        this.log('✅ Git workflow completed successfully');
+      } else {
+        this.log('❌ Failed to push changes');
+      }
+    } else {
+      this.log('✅ No changes to sync');
     }
   }
-}
 
-// Run if called directly
-if (require.main === module) {
-  const automator = new GitWorkflowAutomator();
-  const command = process.argv[2];
-
-  if (command === 'merge') {
-    automator.mergeToMain().catch(console.error);
-  } else {
-    automator.automateGitWorkflow().catch(console.error);
+  async run() {
+    this.log('🚀 Git Workflow Automator started');
+    this.log(`📋 Auto-merge enabled: ${this.config.autoMergeEnabled}`);
+    this.log(`📋 Branch protection: ${this.config.branchProtection}`);
+    
+    // Initial workflow check
+    await this.performGitWorkflow();
+    
+    // Set up periodic workflow checks
+    setInterval(async () => {
+      await this.performGitWorkflow();
+    }, this.config.checkInterval);
+    
+    this.log('✅ Git workflow monitoring active');
   }
 }
 
-module.exports = GitWorkflowAutomator;
+// Start the git workflow automator
+const gitWorkflow = new GitWorkflowAutomator();
+gitWorkflow.run().catch(error => {
+  console.error('❌ Git Workflow Automator failed:', error);
+  process.exit(1);
+});

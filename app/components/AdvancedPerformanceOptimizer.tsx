@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Zap, TrendingUp, Clock,  Database, Globe, 
+  Zap, TrendingUp, Clock, Database, Globe, 
   Shield, CheckCircle, AlertCircle, Loader,
-  BarChart3, Activity, Gauge
+  BarChart3, Brain, ArrowRight
 } from 'lucide-react';
 
 interface PerformanceMetric {
@@ -115,7 +115,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
     switch (trend) {
       case 'up': return <TrendingUp className="w-4 h-4 text-red-500" />;
       case 'down': return <TrendingUp className="w-4 h-4 text-green-500 rotate-180" />;
-      case 'stable': return <Activity className="w-4 h-4 text-blue-500" />;
+      case 'stable': return <BarChart3 className="w-4 h-4 text-blue-500" />;
       default: return null;
     }
   };
@@ -304,7 +304,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
         >
           <div className="text-center">
             <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Gauge className="w-8 h-8 text-blue-600" />
+              <BarChart3 className="w-8 h-8 text-blue-600" />
             </div>
             <h4 className="text-lg font-semibold text-gray-900 mb-2">Real-time Monitoring</h4>
             <p className="text-gray-600 text-sm">Continuous performance tracking and analysis</p>
@@ -328,7 +328,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           
           <div className="text-center">
             <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Award className="w-8 h-8 text-orange-600" />
+              <ArrowRight className="w-8 h-8 text-orange-600" />
             </div>
             <h4 className="text-lg font-semibold text-gray-900 mb-2">Goal Oriented</h4>
             <p className="text-gray-600 text-sm">Optimization aligned with business objectives</p>

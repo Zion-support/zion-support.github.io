@@ -1,7 +1,11 @@
 
 import { Availability } from "@/types/profile";
 import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
+import { CalendarClockCheck } from "lucide-react";
+=======
 import { Calendar, Clock, Check } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface ProfileAvailabilityProps {
   availability: Availability;
@@ -54,7 +58,11 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
         <div className="mt-4">
           <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+<<<<<<< HEAD
+            {availability.availableHours.map((slotindex) => (
+=======
             {availability.availableHours.map((slot, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <div key={index} className="flex items-center gap-2 text-zion-slate">
                 <div className="w-20 text-zion-slate-light">{slot.day}:</div>
                 <div className="flex items-center gap-1">

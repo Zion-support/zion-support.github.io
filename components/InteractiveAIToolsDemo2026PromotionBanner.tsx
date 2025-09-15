@@ -4,13 +4,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Code, 
-  BarChart3, 
-  Network, 
+  Play
+  Code
+  BarChart3
+  Network
   Shield,
-  ArrowRight, 
-  Star, 
+  ArrowRight
+  Star
   Zap,
   X,
   CheckCircle,
@@ -21,27 +21,27 @@ import {
 } from 'lucide-react';
 
 const InteractiveAIToolsDemo2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentTool, setCurrentTool] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentToolsetCurrentTool] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 800);
+    const timer = setTimeout(() => setIsVisible(true)800);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTool(prev => (prev + 1) % 4);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const tools = [
-    { icon: Code, name: 'AI Code Review', color: 'text-blue-400' },
-    { icon: BarChart3, name: 'Data Analytics', color: 'text-green-400' },
-    { icon: Network, name: 'Infrastructure', color: 'text-purple-400' },
-    { icon: Shield, name: 'Security Scan', color: 'text-red-400' }
+    { icon: Codename: 'AI Code 'Review', 'color: 'text-blue-400' },
+    { icon: BarChart3name: 'Data 'Analytics', 'color: 'text-green-400' },
+    { icon: Networkname: ''Infrastructure', 'color: 'text-purple-400' },
+    { icon: Shieldname: 'Security 'Scan', 'color: 'text-red-400' }
   ];
 
   const features = [
@@ -52,9 +52,9 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
   ];
 
   const stats = [
-    { label: '95%', value: 'Efficiency' },
-    { label: '98%', value: 'Accuracy' },
-    { label: '3x', value: 'Faster' }
+    { label: '95%'value: 'Efficiency' },
+    { label: '98%'value: 'Accuracy' },
+    { label: '3'x', 'value: 'Faster' }
   ];
 
   if (!isVisible || isDismissed) return null;
@@ -65,7 +65,7 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.6ease: "easeOut" }}
         className="relative bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white overflow-hidden"
       >
         {/* Animated Background */}
@@ -76,7 +76,7 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
 
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          {[...Array(8)].map((_, i) => (
+          {[...Array(8)].map((_i) => (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30"
@@ -85,9 +85,9 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
                 top: `${Math.random() * 100}%`,
               }}
               animate={{
-                y: [0, -30, 0],
-                opacity: [0.3, 0.8, 0.3],
-                scale: [1, 1.5, 1],
+                y: [0-30],
+                opacity: [0.30.80.3],
+                scale: [1.51],
               }}
               transition={{
                 duration: 4 + Math.random() * 2,
@@ -103,9 +103,9 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
             {/* Left Content */}
             <div className="flex-1">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.2 }}
                 className="flex items-center space-x-3 mb-4"
               >
                 <Play className="w-6 h-6 text-yellow-300" />
@@ -115,18 +115,18 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
               </motion.div>
 
               <motion.h2
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.3 }}
                 className="text-2xl md:text-3xl font-bold mb-3"
               >
                 🎮 Interactive AI Tools Demo 2026
               </motion.h2>
 
               <motion.p
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.4 }}
                 className="text-lg text-blue-200 mb-6 max-w-2xl"
               >
                 Experience the power of our cutting-edge AI tools through hands-on interactive demonstrations. 
@@ -136,9 +136,9 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
               {/* Rotating Tool Display */}
               <motion.div
                 key={currentTool}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: 20 }}
                 transition={{ duration: 0.5 }}
                 className="flex items-center space-x-3 mb-6"
               >
@@ -153,12 +153,12 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
 
               {/* Features */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.5 }}
                 className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6"
               >
-                {features.map((feature, index) => (
+                {features.map((featureindex) => (
                   <div key={index} className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                     <span className="text-sm text-blue-200">{feature}</span>
@@ -168,12 +168,12 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
 
               {/* Stats */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.6 }}
                 className="flex space-x-6 mb-6"
               >
-                {stats.map((stat, index) => (
+                {stats.map((statindex) => (
                   <div key={index} className="text-center">
                     <div className="text-2xl font-bold text-yellow-300">{stat.label}</div>
                     <div className="text-sm text-blue-300">{stat.value}</div>
@@ -183,9 +183,9 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
 
               {/* CTA Buttons */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.7 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center group">
@@ -202,28 +202,28 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
 
             {/* Right Content - Animated Icons */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0x: 20 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.4 }}
               className="hidden lg:flex items-center space-x-4"
             >
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 20repeat: Infinityease: "linear" }}
                 className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
               >
                 <Code className="w-10 h-10 text-blue-400" />
               </motion.div>
               <motion.div
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 2.5, repeat: Infinity }}
+                animate={{ y: [0-150] }}
+                transition={{ duration: 2.5repeat: Infinity }}
                 className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
               >
                 <BarChart3 className="w-8 h-8 text-green-400" />
               </motion.div>
               <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 3, repeat: Infinity }}
+                animate={{ scale: [1.21] }}
+                transition={{ duration: 3repeat: Infinity }}
                 className="w-18 h-18 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
               >
                 <Network className="w-9 h-9 text-purple-400" />
@@ -243,8 +243,8 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {
         {/* Pulse Effect */}
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20"
-          animate={{ opacity: [0, 0.3, 0] }}
-          transition={{ duration: 4, repeat: Infinity }}
+          animate={{ opacity: [0.30] }}
+          transition={{ duration: 4repeat: Infinity }}
         />
       </motion.div>
     </AnimatePresence>

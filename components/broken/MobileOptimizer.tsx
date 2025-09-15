@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 "use client";
+import React{ useStateuseEffectuseRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  SmartphoneTabletMonitorRotateCcw
+  WifiOffSignalHigh
+  MouseHand
+=======
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Smartphone, Tablet, Monitor, RotateCcw, 
   Wifi, WifiOff, Signal, SignalHigh, 
   Mouse, Hand
+>>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 
 // TouchEvent types are already defined in DOM
@@ -31,17 +40,29 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   enableMobileLayout = true,
   enablePerformanceMode = true
 }) => {
+<<<<<<< HEAD
+  const [isMobilesetIsMobile] = useState(false);
+  const [isTabletsetIsTablet] = useState(false);
+  const [orientationsetOrientation] = useState<'portrait' | 'landscape'>('portrait');
+  const [touchGesturesetTouchGestures] = useState<TouchGesture[]>([]);
+  const [performanceMetricsetPerformanceMetrics] = useState({
+=======
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait');
   const [touchGestures, setTouchGestures] = useState<TouchGesture[]>([]);
   const [performanceMetrics, setPerformanceMetrics] = useState({
+>>>>>>> origin/auto/autonomy-17186719616
     fps: 0,
     memoryUsage: 0,
     batteryLevel: 0,
     networkSpeed: 'unknown'
   });
+<<<<<<< HEAD
+  const [showMobilePanelsetShowMobilePanel] = useState(false);
+=======
   const [showMobilePanel, setShowMobilePanel] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
   
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
   const touchMoveRef = useRef<{ x: number; y: number; time: number } | null>(null);
@@ -70,9 +91,15 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     };
 
     checkDevice();
+<<<<<<< HEAD
+    window.addEventListener(', 'resize', 'checkDevice);
+    return () => window.removeEventListener(', 'resize', 'checkDevice);
+  }[enableMobileLayoutenablePerformanceMode]);
+=======
     window.addEventListener('resize', checkDevice);
     return () => window.removeEventListener('resize', checkDevice);
   }, [enableMobileLayout, enablePerformanceMode]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Detect orientation changes
   useEffect(() => {
@@ -89,6 +116,16 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     };
 
     checkOrientation();
+<<<<<<< HEAD
+    window.addEventListener(', 'orientationchange', 'checkOrientation);
+    window.addEventListener(', 'resize', 'checkOrientation);
+    
+    return () => {
+      window.removeEventListener(', 'orientationchange', 'checkOrientation);
+      window.removeEventListener(', 'resize', 'checkOrientation);
+    };
+  }[]);
+=======
     window.addEventListener('orientationchange', checkOrientation);
     window.addEventListener('resize', checkOrientation);
     
@@ -97,6 +134,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       window.removeEventListener('resize', checkOrientation);
     };
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Touch gesture handling
   useEffect(() => {
@@ -122,8 +160,13 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       }
     });
     
+<<<<<<< HEAD
+    setTimeout(() => setIsOptimizing(false)2000);
+  }[]);
+=======
     setTimeout(() => setIsOptimizing(false), 2000);
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Touch gesture optimization
   const optimizeTouchGestures = useCallback(() => {
@@ -131,9 +174,15 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 
     const handleTouchEnd = (e: TouchEvent) => {
       if (touchStartRef.current && touchMoveRef.current) {
+<<<<<<< HEAD
+        const gesture = detectTouchGesture(touchStartRef.currentouchMoveRef.current);
+        if (gesture) {
+          setTouchGestures(prev => [...prev.slice(-4)gesture]);
+=======
         const gesture = detectTouchGesture(touchStartRef.current, touchMoveRef.current);
         if (gesture) {
           setTouchGestures(prev => [...prev.slice(-4), gesture]);
+>>>>>>> origin/auto/autonomy-17186719616
           handleGestureAction(gesture);
         }
         
@@ -145,9 +194,15 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     // Optimize fonts for high DPI
     const fonts = document.querySelectorAll('link[rel="preload"][as="font"]');
     fonts.forEach(font => {
+<<<<<<< HEAD
+      font.setAttribute(', 'crossorigin', 'anonymous');
+    });
+  }[]);
+=======
       font.setAttribute('crossorigin', 'anonymous');
     });
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
     const handleLongPress = (e: TouchEvent) => {
       const longPressTimer = setTimeout(() => {
@@ -155,6 +210,30 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           type: 'longPress',
           duration: 1000
         };
+<<<<<<< HEAD
+        setTouchGestures(prev => [...prev.slice(-4)gesture]);
+        handleGestureAction(gesture);
+      }1000);
+
+      const clearLongPress = () => clearTimeout(longPressTimer);
+      
+      e.target?.addEventListener(', 'touchend', 'clearLongPress{ once: true });
+      e.target?.addEventListener(', 'touchmove', 'clearLongPress{ once: true });
+    };
+
+    document.addEventListener(', 'touchstart', 'handleTouchStart{ passive: true });
+    document.addEventListener(', 'touchmove', 'handleTouchMove{ passive: true });
+    document.addEventListener(', 'touchend', 'handleTouchEnd{ passive: true });
+    document.addEventListener(', 'touchstart', 'handleLongPress{ passive: true });
+
+    return () => {
+      document.removeEventListener(', 'touchstart', 'handleTouchStart);
+      document.removeEventListener(', 'touchmove', 'handleTouchMove);
+      document.removeEventListener(', 'touchend', 'handleTouchEnd);
+      document.removeEventListener(', 'touchstart', 'handleLongPress);
+    };
+  }[enableTouchGesturesisMobile]);
+=======
         setTouchGestures(prev => [...prev.slice(-4), gesture]);
         handleGestureAction(gesture);
       }, 1000);
@@ -177,6 +256,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       document.removeEventListener('touchstart', handleLongPress);
     };
   }, [enableTouchGestures, isMobile]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Performance monitoring
   useEffect(() => {
@@ -213,7 +293,11 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) // MB
         }));
       }
+<<<<<<< HEAD
+    }2000);
+=======
     }, 2000);
+>>>>>>> origin/auto/autonomy-17186719616
 
     // Monitor battery level
     if ('getBattery' in navigator) {
@@ -226,9 +310,15 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         };
         
         updateBatteryLevel();
+<<<<<<< HEAD
+        battery.addEventListener(', 'levelchange', 'updateBatteryLevel);
+        
+        return () => battery.removeEventListener(', 'levelchange', 'updateBatteryLevel);
+=======
         battery.addEventListener('levelchange', updateBatteryLevel);
         
         return () => battery.removeEventListener('levelchange', updateBatteryLevel);
+>>>>>>> origin/auto/autonomy-17186719616
       });
     }
 
@@ -250,18 +340,30 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       };
       
       updateNetworkSpeed();
+<<<<<<< HEAD
+      connection.addEventListener(', 'change', 'updateNetworkSpeed);
+      
+      return () => connection.removeEventListener(', 'change', 'updateNetworkSpeed);
+=======
       connection.addEventListener('change', updateNetworkSpeed);
       
       return () => connection.removeEventListener('change', updateNetworkSpeed);
+>>>>>>> origin/auto/autonomy-17186719616
     }
 
     return () => {
       cancelAnimationFrame(animationFrameId);
       clearInterval(memoryInterval);
     };
+<<<<<<< HEAD
+  }[enablePerformanceMode]);
+
+  const detectTouchGesture = (start: { x: number; y: number; time: number }end: { x: number; y: number; time: number }): TouchGesture | null => {
+=======
   }, [enablePerformanceMode]);
 
   const detectTouchGesture = (start: { x: number; y: number; time: number }, end: { x: number; y: number; time: number }): TouchGesture | null => {
+>>>>>>> origin/auto/autonomy-17186719616
     const deltaX = end.x - start.x;
     const deltaY = end.y - start.y;
     const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
@@ -303,10 +405,17 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           }
         } else if (gesture.direction === 'up') {
           // Scroll to top
+<<<<<<< HEAD
+          window.scrollTo({ top: 0behavior: 'smooth' });
+        } else if (gesture.direction === 'down') {
+          // Scroll to bottom
+          window.scrollTo({ top: document.body.scrollHeightbehavior: 'smooth' });
+=======
           window.scrollTo({ top: 0, behavior: 'smooth' });
         } else if (gesture.direction === 'down') {
           // Scroll to bottom
           window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+>>>>>>> origin/auto/autonomy-17186719616
         }
         break;
       case 'longPress':
@@ -323,7 +432,11 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     // Optimize viewport
     const viewport = document.querySelector('meta[name="viewport"]');
     if (viewport) {
+<<<<<<< HEAD
+      viewport.setAttribute(', 'content', 'width=device-widthinitial-scale=1.0maximum-scale=1.0user-scalable=no');
+=======
       viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+>>>>>>> origin/auto/autonomy-17186719616
     }
     
     // Add touch-action CSS
@@ -399,6 +512,19 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     // Optimize fonts
     const fonts = document.querySelectorAll('link[rel="preload"][as="font"]');
     fonts.forEach(font => {
+<<<<<<< HEAD
+      font.setAttribute(', 'crossorigin', 'anonymous');
+    });
+
+    // Add mobile-specific event listeners
+    document.addEventListener('touchstart'() => {}{ passive: true });
+    document.addEventListener('touchmove'() => {}{ passive: true });
+  }[isMobile]);
+
+  useEffect(() => {
+    optimizeForMobile();
+  }[optimizeForMobile]);
+=======
       font.setAttribute('crossorigin', 'anonymous');
     });
 
@@ -410,13 +536,19 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   useEffect(() => {
     optimizeForMobile();
   }, [optimizeForMobile]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
     // Set up event listeners
+<<<<<<< HEAD
+    window.addEventListener(', 'orientationchange', 'handleOrientationChange);
+    window.addEventListener(', 'resize', 'handleResize);
+=======
     window.addEventListener('orientationchange', handleOrientationChange);
     window.addEventListener('resize', handleResize);
+>>>>>>> origin/auto/autonomy-17186719616
     
     // Set up orientation change detection
     const mediaQuery = window.matchMedia('(orientation: portrait)');
@@ -424,6 +556,16 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       setCurrentOrientation(e.matches ? 'portrait' : 'landscape');
     };
     
+<<<<<<< HEAD
+    mediaQuery.addEventListener(', 'change', 'handleMediaQueryChange);
+    
+    return () => {
+      window.removeEventListener(', 'orientationchange', 'handleOrientationChange);
+      window.removeEventListener(', 'resize', 'handleResize);
+      mediaQuery.removeEventListener(', 'change', 'handleMediaQueryChange);
+    };
+  }[handleOrientationChangehandleResize]);
+=======
     mediaQuery.addEventListener('change', handleMediaQueryChange);
     
     return () => {
@@ -432,6 +574,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       mediaQuery.removeEventListener('change', handleMediaQueryChange);
     };
   }, [handleOrientationChange, handleResize]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   if (!showPanel || !isVisible) return null;
 
@@ -460,9 +603,15 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       <AnimatePresence>
         {showMobilePanel && (
           <motion.div
+<<<<<<< HEAD
+            initial={{ opacity: 0x: 300 }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: 300 }}
+=======
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
+>>>>>>> origin/auto/autonomy-17186719616
             className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-md border-l border-cyan-500/30 z-40 overflow-y-auto"
           >
             <div className="p-6">
@@ -482,7 +631,11 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
                 <div className="space-y-1 text-xs text-gray-300">
                   <div>Type: {isMobile ? (isTablet ? 'Tablet' : 'Mobile') : 'Desktop'}</div>
                   <div>Orientation: {orientation}</div>
+<<<<<<< HEAD
+                  <div>User Agent: {navigator.userAgent.substring(050)}...</div>
+=======
                   <div>User Agent: {navigator.userAgent.substring(0, 50)}...</div>
+>>>>>>> origin/auto/autonomy-17186719616
                 </div>
               </div>
 
@@ -537,13 +690,21 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
                 <h3 className="text-sm font-medium text-white mb-3">Quick Actions</h3>
                 <div className="space-y-2">
                   <button
+<<<<<<< HEAD
+                    onClick={() => window.scrollTo({ top: 0behavior: 'smooth' })}
+=======
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+>>>>>>> origin/auto/autonomy-17186719616
                     className="w-full px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-sm rounded transition-colors"
                   >
                     Scroll to Top
                   </button>
                   <button
+<<<<<<< HEAD
+                    onClick={() => window.scrollTo({ top: document.body.scrollHeightbehavior: 'smooth' })}
+=======
                     onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
+>>>>>>> origin/auto/autonomy-17186719616
                     className="w-full px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded transition-colors"
                   >
                     Scroll to Bottom

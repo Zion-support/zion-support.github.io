@@ -4,11 +4,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Cpu, 
-  Zap, 
-  Eye, 
-  Mic, 
+  Brain
+  Cpu
+  Zap
+  Eye
+  Mic
   MessageSquare,
   Sparkles,
   ArrowRight,
@@ -22,15 +22,15 @@ import {
 } from 'lucide-react';
 
 const NextGenAIShowcase2026 = () => {
-  const [activeDemo, setActiveDemo] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [aiThinking, setAiThinking] = useState(false);
+  const [activeDemosetActiveDemo] = useState(0);
+  const [isPlayingsetIsPlaying] = useState(true);
+  const [aiThinkingsetAiThinking] = useState(false);
 
   const demos = [
     {
       id: 0,
       title: "Neural Language Processing",
-      description: "Advanced AI that understands context, emotion, and intent",
+      description: "Advanced AI that understands contextemotionand intent",
       icon: <MessageSquare className="w-8 h-8" />,
       color: "from-blue-600 to-cyan-600",
       features: [
@@ -40,7 +40,7 @@ const NextGenAIShowcase2026 = () => {
         "Multi-modal communication"
       ],
       demo: "🧠💬",
-      stats: { accuracy: "99.7%", languages: "247", speed: "0.1ms" }
+      stats: { accuracy: "99.7%"languages: "247"speed: "0.1ms" }
     },
     {
       id: 1,
@@ -55,7 +55,7 @@ const NextGenAIShowcase2026 = () => {
         "Augmented reality integration"
       ],
       demo: "👁️📷",
-      stats: { accuracy: "99.9%", objects: "10M+", fps: "240" }
+      stats: { accuracy: "99.9%"objects: "10M+"fps: "240" }
     },
     {
       id: 2,
@@ -70,7 +70,7 @@ const NextGenAIShowcase2026 = () => {
         "Unlimited scalability"
       ],
       demo: "⚛️💎",
-      stats: { speed: "1000x", qubits: "1024", efficiency: "99.99%" }
+      stats: { speed: "1000x"qubits: "1024"efficiency: "99.99%" }
     },
     {
       id: 3,
@@ -85,33 +85,33 @@ const NextGenAIShowcase2026 = () => {
         "Emotional tone matching"
       ],
       demo: "🎤🔊",
-      stats: { clarity: "98.8%", voices: "500K", latency: "50ms" }
+      stats: { clarity: "98.8%"voices: "500K"latency: "50ms" }
     }
   ];
 
   const aiCapabilities = [
-    { icon: <Brain className="w-6 h-6" />, title: "Deep Learning", desc: "Neural networks with billions of parameters" },
-    { icon: <Zap className="w-6 h-6" />, title: "Real-time Processing", desc: "Lightning-fast AI responses" },
-    { icon: <Shield className="w-6 h-6" />, title: "Secure & Private", desc: "Enterprise-grade security" },
-    { icon: <Globe className="w-6 h-6" />, title: "Global Scale", desc: "Worldwide deployment ready" }
+    { icon: <Brain className="w-6 h-6" />title: "Deep Learning"desc: "Neural networks with billions of parameters" },
+    { icon: <Zap className="w-6 h-6" />title: "Real-time Processing"desc: "Lightning-fast AI responses" },
+    { icon: <Shield className="w-6 h-6" />title: "Secure & Private"desc: "Enterprise-grade security" },
+    { icon: <Globe className="w-6 h-6" />title: "Global Scale"desc: "Worldwide deployment ready" }
   ];
 
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
         setActiveDemo((prev) => (prev + 1) % demos.length);
-      }, 4000);
+      }4000);
       return () => clearInterval(interval);
     }
-  }, [isPlaying, demos.length]);
+  }[isPlayingdemos.length]);
 
   useEffect(() => {
     // Simulate AI thinking animation
     const thinkingInterval = setInterval(() => {
       setAiThinking(prev => !prev);
-    }, 2000);
+    }2000);
     return () => clearInterval(thinkingInterval);
-  }, []);
+  }[]);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -194,9 +194,9 @@ const NextGenAIShowcase2026 = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeDemo}
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 50 }}
+                initial={{ opacity: 0x: -50 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: 50 }}
                 transition={{ duration: 0.5 }}
                 className={`p-8 rounded-2xl bg-gradient-to-br ${demos[activeDemo].color} shadow-2xl relative overflow-hidden`}
               >
@@ -204,11 +204,11 @@ const NextGenAIShowcase2026 = () => {
                 <div className="absolute inset-0 opacity-20">
                   <motion.div
                     animate={{ 
-                      scale: [1, 1.1, 1],
-                      rotate: [0, 5, 0]
+                      scale: [1.1],
+                      rotate: [050]
                     }}
                     transition={{ 
-                      duration: 3, 
+                      duration: 3
                       repeat: Infinity,
                       ease: "easeInOut"
                     }}
@@ -222,7 +222,7 @@ const NextGenAIShowcase2026 = () => {
                   <div className="flex items-center mb-6">
                     <motion.div 
                       className="p-4 bg-white/20 rounded-full mr-6"
-                      whileHover={{ scale: 1.1, rotate: 10 }}
+                      whileHover={{ scale: 1.1rotate: 10 }}
                     >
                       {demos[activeDemo].icon}
                     </motion.div>
@@ -238,7 +238,7 @@ const NextGenAIShowcase2026 = () => {
 
                   {/* Features */}
                   <div className="grid grid-cols-2 gap-4 mb-8">
-                    {demos[activeDemo].features.map((feature, index) => (
+                    {demos[activeDemo].features.map((featureindex) => (
                       <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 20 }}
@@ -254,11 +254,11 @@ const NextGenAIShowcase2026 = () => {
 
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-4">
-                    {Object.entries(demos[activeDemo].stats).map(([key, value], index) => (
+                    {Object.entries(demos[activeDemo].stats).map(([keyvalue]index) => (
                       <motion.div
                         key={index}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0scale: 0.8 }}
+                        animate={{ opacity: 1scale: 1 }}
                         transition={{ delay: index * 0.1 }}
                         className="text-center p-4 bg-white/10 rounded-lg"
                       >
@@ -273,7 +273,7 @@ const NextGenAIShowcase2026 = () => {
 
             {/* Demo Navigation */}
             <div className="flex justify-center mt-6 space-x-4">
-              {demos.map((demo, index) => (
+              {demos.map((demoindex) => (
                 <motion.button
                   key={index}
                   onClick={() => {
@@ -303,11 +303,11 @@ const NextGenAIShowcase2026 = () => {
               </h4>
               
               <div className="space-y-4">
-                {aiCapabilities.map((capability, index) => (
+                {aiCapabilities.map((capabilityindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0x: -20 }}
+                    animate={{ opacity: 1x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     className="p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors duration-300 group"
                   >
@@ -374,7 +374,7 @@ const NextGenAIShowcase2026 = () => {
               Get early access to our revolutionary AI platform.
             </p>
             <motion.button
-              whileHover={{ scale: 1.05, y: -2 }}
+              whileHover={{ scale: 1.05y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="px-12 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold text-xl rounded-full shadow-2xl transition-all duration-300 flex items-center mx-auto"
             >

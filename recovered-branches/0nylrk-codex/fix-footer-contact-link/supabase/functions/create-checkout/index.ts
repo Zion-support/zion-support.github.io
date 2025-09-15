@@ -5,7 +5,12 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+=======
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+};
+>>>>>>> origin/auto/autonomy-17186719616
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -51,7 +56,12 @@ serve(async (req) => {
     if (!user?.email) throw new Error("User not authenticated");
 
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
+<<<<<<< HEAD
       apiVersion: "2023-10-16"});
+=======
+      apiVersion: "2023-10-16",
+    });
+>>>>>>> origin/auto/autonomy-17186719616
 
     // Check if customer exists
     const customers = await stripe.customers.list({ email: user.email, limit: 1 });
@@ -84,7 +94,13 @@ serve(async (req) => {
             unit_amount: amount * 100, // Convert to cents
             ...(productType === "subscription" ? { recurring: { interval: "month" } } : {})
           },
+<<<<<<< HEAD
           quantity: 1}],
+=======
+          quantity: 1,
+        },
+      ],
+>>>>>>> origin/auto/autonomy-17186719616
       mode: productType === "subscription" ? "subscription" : "payment",
       success_url: successUrl || `${req.headers.get("origin")}/payment-success`,
       cancel_url: cancelUrl || `${req.headers.get("origin")}/payment-canceled`,
@@ -114,11 +130,21 @@ serve(async (req) => {
 
     return new Response(JSON.stringify({ url: session.url }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
+<<<<<<< HEAD
       status: 200});
+=======
+      status: 200,
+    });
+>>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error("Checkout error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
+<<<<<<< HEAD
       status: 500});
+=======
+      status: 500,
+    });
+>>>>>>> origin/auto/autonomy-17186719616
   }
 });

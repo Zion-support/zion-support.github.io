@@ -25,8 +25,8 @@ const UltimateBreakthrough2026Banner = () => {
             </span>
           </h1>
           <p className="text-xl md:text-3xl opacity-90 max-w-5xl mx-auto leading-relaxed mb-12">
-            Experience revolutionary AI breakthroughs that will transform your business, 
-            accelerate growth, and deliver unprecedented results in 2026.
+            Experience revolutionary AI breakthroughs that will transform your business
+            accelerate growthand deliver unprecedented results in 2026.
           </p>
           
           {/* Key Stats */}

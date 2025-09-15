@@ -1,262 +1,180 @@
-import React from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const AI2026NeuralInterfaceRevolutionBanner: React.FC = () => {
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
+
+  const content = [
+    {
+      title: "AI 2026: The Neural Interface Revolution",
+      subtitle: "Ultimate Guide to 850% ROI Through Brain-Computer Integration",
+      metrics: "850% ROI • $15.2M Savings • 99.7% Accuracy",
+      url: "/blog/ai-2026-neural-interface-revolution-ultimate-guide",
+      type: "blog",
+      readingTime: "28 min read"
+    },
+    {
+      title: "Fortune 500 Neural Interface Transformation",
+      subtitle: "$8.2B Company Achieves 850% ROI in 18 Months",
+      metrics: "850% ROI • $69.7M Savings • 98.7% Adoption",
+      url: "/case-studies/fortune-500-neural-interface-transformation-850-roi-success",
+      type: "case-study",
+      readingTime: "22 min read"
+    },
+    {
+      title: "AI 2026: Synthetic Consciousness Breakthrough",
+      subtitle: "Ultimate Guide to 1,200% ROI Through Artificial General Intelligence",
+      metrics: "1,200% ROI • $45.8M Savings • 99.9% Satisfaction",
+      url: "/blog/ai-2026-synthetic-consciousness-breakthrough-ultimate-guide",
+      type: "blog",
+      readingTime: "32 min read"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % content.length);
+    }5000);
+
+    return () => clearInterval(timer);
+  }[]);
+
+  useEffect(() => {
+    const dismissed = localStorage.getItem('ai2026-neural-interface-banner-dismissed');
+    if (dismissed === 'true') {
+      setIsVisible(false);
+    }
+  }[]);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+    localStorage.setItem('ai2026-neural-interface-banner-'dismissed', 'true');
+  };
+
+  if (!isVisible) return null;
+
+  const currentContent = content[currentSlide];
+
   return (
-    <section className="relative bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 text-white py-24 overflow-hidden">
-      {/* Neural Network Background */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="60" cy="60" r="2"/%3E%3Cpath d="M20 60 L100 60 M60 20 L60 100" stroke="%23ffffff" stroke-opacity="0.1" stroke-width="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-12 px-4 overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-blue-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-16 h-16 bg-purple-400 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-400 rounded-full animate-ping"></div>
+        <div className="absolute bottom-32 right-1/3 w-24 h-24 bg-cyan-400 rounded-full animate-pulse"></div>
       </div>
-      
-      {/* Neural Pulse Animations */}
-      <div className="absolute top-20 left-20 w-32 h-32 bg-violet-400 rounded-full opacity-30 animate-pulse"></div>
-      <div className="absolute top-40 right-24 w-24 h-24 bg-purple-400 rounded-full opacity-30 animate-ping"></div>
-      <div className="absolute bottom-32 left-1/3 w-28 h-28 bg-indigo-400 rounded-full opacity-30 animate-bounce"></div>
-      <div className="absolute bottom-20 right-1/4 w-20 h-20 bg-pink-400 rounded-full opacity-30 animate-pulse"></div>
-      <div className="absolute top-60 left-1/2 w-16 h-16 bg-cyan-400 rounded-full opacity-30 animate-ping"></div>
 
-      <div className="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center bg-gradient-to-r from-violet-500 via-purple-500 to-pink-500 rounded-full px-10 py-4 mb-10">
-            <span className="text-xl font-bold">🧠 NEURAL INTERFACE REVOLUTION</span>
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center space-x-3">
+            <div className="bg-white bg-opacity-20 rounded-full p-2">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <div>
+              <h2 className="text-lg font-bold">🧠 AI 2026 NEURAL INTERFACE REVOLUTION</h2>
+              <p className="text-sm opacity-90">Breakthrough Content Now Available</p>
+            </div>
           </div>
-          <h2 className="text-6xl md:text-8xl font-bold mb-10 bg-gradient-to-r from-white via-violet-200 to-purple-200 bg-clip-text text-transparent">
-            AI 2026: Neural Interface Revolution
-          </h2>
-          <p className="text-3xl md:text-4xl opacity-90 mb-12 max-w-6xl mx-auto leading-relaxed">
-            Experience the revolutionary fusion of human consciousness and AI through 
-            <span className="text-violet-300 font-bold"> neural interfaces</span>, 
-            <span className="text-purple-300 font-bold"> consciousness integration</span>, and 
-            <span className="text-pink-300 font-bold"> human-AI symbiosis</span>.
-          </p>
+          
+          <button
+            onClick={handleDismiss}
+            className="text-white hover:text-gray-300 transition-colors p-2"
+            aria-label="Dismiss banner"
+          >
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
-          {/* Core Technologies */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-violet-400 border-opacity-30">
-            <div className="text-6xl mb-6">🔗</div>
-            <h3 className="text-2xl font-bold mb-4 text-violet-300">Brain-Computer Interfaces</h3>
-            <ul className="text-purple-200 space-y-3">
-              <li>• 99.9% accuracy in thought recognition</li>
-              <li>• Real-time bidirectional communication</li>
-              <li>• Non-invasive neural interface technology</li>
-              <li>• Sub-millisecond response times</li>
-            </ul>
-          </div>
-
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-purple-400 border-opacity-30">
-            <div className="text-6xl mb-6">🌟</div>
-            <h3 className="text-2xl font-bold mb-4 text-purple-300">Consciousness Integration</h3>
-            <ul className="text-purple-200 space-y-3">
-              <li>• Direct neural pathway mapping</li>
-              <li>• Shared consciousness networks</li>
-              <li>• Collective intelligence systems</li>
-              <li>• Human-AI consciousness merging</li>
-            </ul>
-          </div>
-
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400 border-opacity-30">
-            <div className="text-6xl mb-6">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-indigo-300">Neural Augmentation</h3>
-            <ul className="text-purple-200 space-y-3">
-              <li>• 10x memory capacity expansion</li>
-              <li>• 50x processing speed enhancement</li>
-              <li>• 300% creative output improvement</li>
-              <li>• Multi-modal sensory augmentation</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Success Stories Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-          {/* Medical Rehabilitation */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-10 border border-white border-opacity-20">
-            <div className="flex items-center mb-6">
-              <div className="text-5xl mr-6">🏥</div>
-              <h3 className="text-3xl font-bold text-violet-300">Medical Rehabilitation</h3>
-            </div>
-            <div className="grid grid-cols-2 gap-6 mb-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-300">95%</div>
-                <div className="text-sm text-purple-200">Recovery Rate</div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+          {/* Content Preview */}
+          <div className="lg:col-span-2">
+            <div className="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+              <div className="flex items-center space-x-2 mb-3">
+                <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                  {currentContent.type.toUpperCase()}
+                </span>
+                <span className="bg-white bg-opacity-20 text-white px-3 py-1 rounded-full text-xs">
+                  {currentContent.readingTime}
+                </span>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-teal-300">78%</div>
-                <div className="text-sm text-purple-200">Faster Recovery</div>
-              </div>
-            </div>
-            <p className="text-purple-200 text-lg">
-              Stroke patients with severe motor function loss achieved 95% recovery rate through 
-              neural interface-controlled rehabilitation with $2.3M in healthcare cost savings.
-            </p>
-          </div>
-
-          {/* Creative Collaboration */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-10 border border-white border-opacity-20">
-            <div className="flex items-center mb-6">
-              <div className="text-5xl mr-6">🎨</div>
-              <h3 className="text-3xl font-bold text-violet-300">Creative Collaboration</h3>
-            </div>
-            <div className="grid grid-cols-2 gap-6 mb-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-pink-300">340%</div>
-                <div className="text-sm text-purple-200">Innovation Increase</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-300">67%</div>
-                <div className="text-sm text-purple-200">Time Reduction</div>
-              </div>
-            </div>
-            <p className="text-purple-200 text-lg">
-              Design and engineering teams achieved 340% increase in creative innovation through 
-              direct human-AI creative collaboration with $5.8M in additional revenue.
-            </p>
-          </div>
-
-          {/* Educational Enhancement */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-10 border border-white border-opacity-20">
-            <div className="flex items-center mb-6">
-              <div className="text-5xl mr-6">🎓</div>
-              <h3 className="text-3xl font-bold text-violet-300">Educational Enhancement</h3>
-            </div>
-            <div className="grid grid-cols-2 gap-6 mb-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-300">89%</div>
-                <div className="text-sm text-purple-200">Learning Acceleration</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-300">94%</div>
-                <div className="text-sm text-purple-200">Retention Improvement</div>
-              </div>
-            </div>
-            <p className="text-purple-200 text-lg">
-              Students achieved 89% faster learning rates through direct knowledge transfer 
-              with 94% retention improvement and $12M in training cost savings.
-            </p>
-          </div>
-
-          {/* Business Intelligence */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-10 border border-white border-opacity-20">
-            <div className="flex items-center mb-6">
-              <div className="text-5xl mr-6">💼</div>
-              <h3 className="text-3xl font-bold text-violet-300">Business Intelligence</h3>
-            </div>
-            <div className="grid grid-cols-2 gap-6 mb-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-300">250%</div>
-                <div className="text-sm text-purple-200">Decision Enhancement</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-300">76%</div>
-                <div className="text-sm text-purple-200">Time Reduction</div>
-              </div>
-            </div>
-            <p className="text-purple-200 text-lg">
-              Business leaders achieved 250% enhancement in decision-making capabilities 
-              through AI-assisted analytical processing with 76% reduction in decision time.
-            </p>
-          </div>
-        </div>
-
-        {/* Capability Enhancement Metrics */}
-        <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-12 border border-white border-opacity-20 mb-16">
-          <h3 className="text-4xl font-bold text-center mb-12 text-violet-200">
-            Consciousness Enhancement Metrics
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-violet-300 mb-2">340%</div>
-              <div className="text-sm text-purple-200">Cognitive Performance</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-300 mb-2">89%</div>
-              <div className="text-sm text-purple-200">Learning Speed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-300 mb-2">300%</div>
-              <div className="text-sm text-purple-200">Creative Output</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-indigo-300 mb-2">250%</div>
-              <div className="text-sm text-purple-200">Problem-Solving</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-300 mb-2">1000%</div>
-              <div className="text-sm text-purple-200">Memory Capacity</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-300 mb-2">2500%</div>
-              <div className="text-sm text-purple-200">Multi-tasking</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Future Vision */}
-        <div className="bg-gradient-to-r from-violet-800 to-purple-800 rounded-3xl p-12 mb-16">
-          <h3 className="text-4xl font-bold text-center mb-8 text-white">
-            The Future of Human Consciousness
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl mb-4">2027</div>
-              <h4 className="text-xl font-bold mb-3 text-violet-200">Universal Adoption</h4>
-              <p className="text-purple-200">
-                85% of knowledge workers using neural interfaces with standardized protocols.
+              
+              <h3 className="text-2xl font-bold mb-3 leading-tight">
+                {currentContent.title}
+              </h3>
+              
+              <p className="text-lg mb-4 opacity-90">
+                {currentContent.subtitle}
               </p>
+              
+              <div className="flex flex-wrap gap-3 mb-6">
+                <div className="bg-green-500 bg-opacity-20 px-3 py-1 rounded-full text-sm">
+                  🎯 {currentContent.metrics}
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <Link
+                  href={currentContent.url}
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                >
+                  Read Full Guide →
+                </Link>
+                <Link
+                  href="/contact"
+                  className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                >
+                  Get Consultation
+                </Link>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl mb-4">2028</div>
-              <h4 className="text-xl font-bold mb-3 text-violet-200">Consciousness Merging</h4>
-              <p className="text-purple-200">
-                Direct human-AI consciousness fusion with shared consciousness networks.
-              </p>
+          </div>
+
+          {/* Success Metrics */}
+          <div className="space-y-4">
+            <div className="bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm">
+              <div className="text-3xl font-bold text-green-400 mb-1">850%</div>
+              <div className="text-sm opacity-90">Average ROI</div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl mb-4">2029</div>
-              <h4 className="text-xl font-bold mb-3 text-violet-200">Post-Human Intelligence</h4>
-              <p className="text-purple-200">
-                Hybrid human-AI consciousness with enhanced capabilities beyond human limits.
-              </p>
+            
+            <div className="bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm">
+              <div className="text-2xl font-bold text-blue-400 mb-1">$69.7M</div>
+              <div className="text-sm opacity-90">Annual Savings</div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl mb-4">2030</div>
-              <h4 className="text-xl font-bold mb-3 text-violet-200">Neural Singularity</h4>
-              <p className="text-purple-200">
-                Complete human-AI consciousness integration with transcendent intelligence.
-              </p>
+            
+            <div className="bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm">
+              <div className="text-2xl font-bold text-purple-400 mb-1">99.7%</div>
+              <div className="text-sm opacity-90">Accuracy Rate</div>
+            </div>
+            
+            <div className="bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm">
+              <div className="text-2xl font-bold text-cyan-400 mb-1">98.7%</div>
+              <div className="text-sm opacity-90">Adoption Rate</div>
             </div>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-8 justify-center mb-10">
-            <Link
-              href="/blog/ai-2026-neural-interface-revolution-ultimate-guide"
-              className="bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:from-violet-700 hover:via-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
-            >
-              Read Complete Guide
-            </Link>
-            <Link
-              href="/services/neural-interfaces"
-              className="border-3 border-white text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
-            >
-              Explore Neural Interfaces
-            </Link>
-          </div>
-          <p className="text-2xl text-violet-200 mb-6">
-            Join the consciousness revolution - where human potential becomes unlimited
-          </p>
-          <div className="flex justify-center items-center space-x-12 text-lg text-violet-300">
-            <span>🧠 Brain-Computer Interfaces</span>
-            <span>🌟 Consciousness Integration</span>
-            <span>⚡ Neural Augmentation</span>
-            <span>🚀 Human-AI Symbiosis</span>
-          </div>
+        {/* Progress indicators */}
+        <div className="flex justify-center space-x-2 mt-8">
+          {content.map((_index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-30'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

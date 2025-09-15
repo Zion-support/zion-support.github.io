@@ -19,8 +19,8 @@ export default function QuantumComputingSolutions2025Banner() {
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Experience the power of quantum computing with our revolutionary solutions delivering 
-            <span className="text-cyan-400 font-bold"> 10,000x faster processing</span>, 
-            <span className="text-purple-400 font-bold"> 99.9% accuracy</span>, and 
+            <span className="text-cyan-400 font-bold"> 10,000x faster processing</span>
+            <span className="text-purple-400 font-bold"> 99.9% accuracy</span>and 
             <span className="text-blue-400 font-bold"> quantum supremacy</span>.
           </p>
           

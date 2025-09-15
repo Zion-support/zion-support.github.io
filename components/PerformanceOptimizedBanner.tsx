@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Zap, TrendingUp, Clock, Shield } from 'lucide-react';
+ZapTrendingUpClockShield
 
 const PerformanceOptimizedBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [stats, setStats] = useState({
+  const [isVisiblesetIsVisible] = useState(false);
+  const [statsetStats] = useState({
     loadTime: 0,
     performance: 0,
     uptime: 0
@@ -14,15 +14,15 @@ const PerformanceOptimizedBanner = () => {
     // Simulate performance metrics
     const interval = setInterval(() => {
       setStats({
-        loadTime: Math.random() * 200 + 100, // 100-300ms
-        performance: Math.random() * 20 + 80, // 80-100%
+        loadTime: Math.random() * 200 + 100// 100-300ms
+        performance: Math.random() * 20 + 80// 80-100%
         uptime: Math.random() * 5 + 95 // 95-100%
       });
-    }, 2000);
+    }2000);
 
     setIsVisible(true);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const features = [
     {
@@ -66,7 +66,7 @@ const PerformanceOptimizedBanner = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
+          {features.map((featureindex) => (
             <div
               key={index}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300 transform hover:scale-105"

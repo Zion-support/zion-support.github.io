@@ -1,11 +1,20 @@
+<<<<<<< HEAD
 "use client";
+import React{ useEffectuseState } from 'react';
+=======
 import React, { useEffect, useState } from 'react';
+>>>>>>> origin/auto/autonomy-17186719616
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 
 export default function OnboardingWizard() {
+<<<<<<< HEAD
+  const { rolesetRole } = useRole();
+  const [opensetOpen] = useState(false);
+=======
   const { role, setRole } = useRole();
   const [open, setOpen] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     try {
@@ -14,12 +23,20 @@ export default function OnboardingWizard() {
         setOpen(true);
       }
     } catch {}
+<<<<<<< HEAD
+  }[]);
+=======
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   function completeOnboarding() {
     try {
       if (typeof window !== 'undefined') {
+<<<<<<< HEAD
+        window.localStorage.setItem('zion_has_onboarded'1');
+=======
         window.localStorage.setItem('zion_has_onboarded', '1');
+>>>>>>> origin/auto/autonomy-17186719616
       }
     } catch {}
     setOpen(false);
@@ -35,10 +52,17 @@ export default function OnboardingWizard() {
           <button onClick={completeOnboarding} className="text-sm opacity-70 hover:opacity-100">Skip</button>
         </div>
         <div className="p-4 space-y-4">
+<<<<<<< HEAD
+          <div className="text-sm opacity-80">'Let', 's get you started. Who are you?</div>
+          <div className="flex gap-2">
+            <button onClick={() => setRole('client')} className={`px-3 py-1.5 rounded-md border ${role === 'client' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>'I', 'm a Client</button>
+            <button onClick={() => setRole('talent')} className={`px-3 py-1.5 rounded-md border ${role === 'talent' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>'I', 'm Talent</button>
+=======
           <div className="text-sm opacity-80">Let's get you started. Who are you?</div>
           <div className="flex gap-2">
             <button onClick={() => setRole('client')} className={`px-3 py-1.5 rounded-md border ${role === 'client' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm a Client</button>
             <button onClick={() => setRole('talent')} className={`px-3 py-1.5 rounded-md border ${role === 'talent' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 dark:border-gray-700'}`}>I'm Talent</button>
+>>>>>>> origin/auto/autonomy-17186719616
           </div>
           {role === 'client' ? (
             <div className="space-y-2">

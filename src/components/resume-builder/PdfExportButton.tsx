@@ -10,7 +10,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
-  DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
+  DropdownMenuCheckboxItem,
+} from '@/components/ui/dropdown-menu';
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download } from 'lucide-react'
 import { Resume } from '@/types/resume';
@@ -57,7 +58,8 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       
       toast({
         title: "Success!",
-        description: "Your resume has been downloaded as a PDF."});
+        description: "Your resume has been downloaded as a PDF.",
+      });
     } catch (error) {
       logErrorToProduction('Error exporting PDF:', { data: error });
       toast({

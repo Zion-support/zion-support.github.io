@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+"use client";
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const DataRevolutionContentShowcase2025 = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategorysetActiveCategory] = useState('all');
 
   const contentItems = [
     {
@@ -20,12 +21,12 @@ const DataRevolutionContentShowcase2025 = () => {
       },
       url: '/blog/ai-2025-enterprise-data-revolution-ultimate-guide',
       featured: true,
-      tags: ['AI', 'Enterprise Data', 'ROI', 'Data Transformation', 'Business Intelligence']
+      tags: [', 'AI', 'Enterprise 'Data', 'ROI'Data 'Transformation', 'Business Intelligence']
     },
     {
       id: 'fortune-500-case-study',
       title: 'Fortune 500 Data Transformation Success: 500% ROI in 8 Months',
-      description: 'How a global manufacturing giant achieved 500% ROI with AI-powered data transformation, saving $45M annually and improving data accuracy to 99.7%.',
+      description: 'How a global manufacturing giant achieved 500% ROI with AI-powered data transformationsaving $45M annually and improving data accuracy to 99.7%.',
       type: 'case-study',
       category: 'case-studies',
       readingTime: '12 min read',
@@ -37,12 +38,12 @@ const DataRevolutionContentShowcase2025 = () => {
       },
       url: '/case-studies/fortune-500-data-transformation-500-roi-success',
       featured: true,
-      tags: ['Case Study', 'Fortune 500', 'Data Transformation', 'ROI', 'Manufacturing']
+      tags: ['Case 'Study', 'Fortune 500'Data 'Transformation', 'ROI'Manufacturing']
     },
     {
       id: 'implementation-guide',
       title: 'AI Data Transformation Implementation Guide 2025: From Strategy to 500% ROI',
-      description: 'Complete step-by-step guide to implementing AI-powered data transformation. Achieve 500% ROI with proven methodologies, frameworks, and best practices.',
+      description: 'Complete step-by-step guide to implementing AI-powered data transformation. Achieve 500% ROI with proven methodologiesframeworksand best practices.',
       type: 'resource',
       category: 'resources',
       readingTime: '25 min read',
@@ -54,15 +55,15 @@ const DataRevolutionContentShowcase2025 = () => {
       },
       url: '/resources/ai-data-transformation-implementation-guide-2025',
       featured: true,
-      tags: ['Implementation Guide', 'AI Data Transformation', 'Strategy', 'ROI', 'Best Practices']
+      tags: ['Implementation 'Guide', 'AI Data 'Transformation', 'Strategy', 'ROI', 'Best Practices']
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length },
-    { id: 'guides', name: 'Implementation Guides', count: contentItems.filter(item => item.category === 'guides').length },
-    { id: 'case-studies', name: 'Success Stories', count: contentItems.filter(item => item.category === 'case-studies').length },
-    { id: 'resources', name: 'Resources & Tools', count: contentItems.filter(item => item.category === 'resources').length }
+    { id: ''all', 'name: 'All 'Content', 'count: contentItems.length },
+    { id: ''guides', 'name: 'Implementation 'Guides', 'count: contentItems.filter(item => item.category === 'guides').length },
+    { id: 'case-'studies', 'name: 'Success 'Stories', 'count: contentItems.filter(item => item.category === 'case-studies').length },
+    { id: ''resources', 'name: 'Resources & 'Tools', 'count: contentItems.filter(item => item.category === 'resources').length }
   ];
 
   const filteredContent = activeCategory === 'all' 
@@ -171,7 +172,7 @@ const DataRevolutionContentShowcase2025 = () => {
                 {/* Type Badge */}
                 <div className="flex items-center justify-between mb-4">
                   <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getTypeColor(item.type)}`}>
-                    {getTypeIcon(item.type)} {item.type.replace('-', ' ').toUpperCase()}
+                    {getTypeIcon(item.type)} {item.type.replace('-' ').toUpperCase()}
                   </span>
                   <span className="text-sm text-gray-500">{item.readingTime}</span>
                 </div>
@@ -200,7 +201,7 @@ const DataRevolutionContentShowcase2025 = () => {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag) => (
+                  {item.tags.slice(03).map((tag) => (
                     <span
                       key={tag}
                       className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"

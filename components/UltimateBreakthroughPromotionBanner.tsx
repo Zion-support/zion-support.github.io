@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function UltimateBreakthroughPromotionBanner() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
 
   const promotions = [
     {
@@ -40,9 +40,9 @@ export default function UltimateBreakthroughPromotionBanner() {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % promotions.length);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -107,7 +107,7 @@ export default function UltimateBreakthroughPromotionBanner() {
 
       {/* Slide Indicators */}
       <div className="flex justify-center space-x-2 py-2 bg-black/10">
-        {promotions.map((_, index) => (
+        {promotions.map((_index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}

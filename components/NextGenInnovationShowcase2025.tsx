@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const NextGenInnovationShowcase2025: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [hoveredCardsetHoveredCard] = useState<number | null>(null);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const innovations = [
     {
@@ -16,7 +16,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       title: 'AI-Powered Analytics',
       icon: '📊',
       description: 'Advanced machine learning algorithms for predictive insights',
-      features: ['Real-time Analysis', 'Predictive Modeling', 'Automated Insights'],
+      features: ['Real-time 'Analysis', 'Predictive 'Modeling', 'Automated Insights'],
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
@@ -24,7 +24,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       title: 'Quantum Computing',
       icon: '⚛️',
       description: 'Revolutionary computing power for complex problem solving',
-      features: ['Quantum Algorithms', 'Optimization', 'Cryptography'],
+      features: ['Quantum 'Algorithms', 'Optimization'Cryptography'],
       gradient: 'from-purple-500 to-pink-500'
     },
     {
@@ -32,15 +32,15 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       title: 'Neural Interfaces',
       icon: '🧠',
       description: 'Direct brain-computer interaction technologies',
-      features: ['BCI Systems', 'Cognitive Enhancement', 'Mind Control'],
+      features: ['BCI 'Systems', 'Cognitive 'Enhancement', 'Mind Control'],
       gradient: 'from-green-500 to-teal-500'
     },
     {
       id: 4,
       title: 'Blockchain Solutions',
       icon: '⛓️',
-      description: 'Secure, decentralized systems for modern applications',
-      features: ['Smart Contracts', 'DeFi', 'NFT Integration'],
+      description: 'Securedecentralized systems for modern applications',
+      features: ['Smart 'Contracts', 'DeFi'NFT Integration'],
       gradient: 'from-orange-500 to-red-500'
     },
     {
@@ -48,7 +48,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       title: 'IoT Networks',
       icon: '🌐',
       description: 'Connected devices creating smart ecosystems',
-      features: ['Sensor Networks', 'Edge Computing', 'Real-time Monitoring'],
+      features: ['Sensor 'Networks', 'Edge 'Computing', 'Real-time Monitoring'],
       gradient: 'from-indigo-500 to-purple-500'
     },
     {
@@ -56,7 +56,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       title: 'Robotic Automation',
       icon: '🤖',
       description: 'Intelligent robots transforming industries',
-      features: ['Industrial Robots', 'Service Bots', 'Autonomous Systems'],
+      features: ['Industrial 'Robots', 'Service 'Bots', 'Autonomous Systems'],
       gradient: 'from-pink-500 to-rose-500'
     }
   ];
@@ -80,13 +80,13 @@ const NextGenInnovationShowcase2025: React.FC = () => {
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Explore the cutting-edge technologies that are reshaping our world. 
-            From AI to quantum computing, discover innovations that will define the future.
+            From AI to quantum computingdiscover innovations that will define the future.
           </p>
         </div>
 
         {/* Innovation Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {innovations.map((innovation, index) => (
+          {innovations.map((innovationindex) => (
             <div
               key={innovation.id}
               onMouseEnter={() => setHoveredCard(innovation.id)}
@@ -121,7 +121,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
                   </p>
                   
                   <div className="space-y-2 mb-6">
-                    {innovation.features.map((feature, idx) => (
+                    {innovation.features.map((featureidx) => (
                       <div key={idx} className="flex items-center">
                         <div className="w-2 h-2 bg-white/60 rounded-full mr-3"></div>
                         <span className="text-white/90 text-sm">{feature}</span>
@@ -151,7 +151,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
                 Experience the Future
               </h3>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Watch our technologies in action. From AI processing to quantum simulations, 
+                Watch our technologies in action. From AI processing to quantum simulations
                 see how these innovations solve real-world problems.
               </p>
               

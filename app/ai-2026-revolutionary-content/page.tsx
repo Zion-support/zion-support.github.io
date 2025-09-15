@@ -4,6 +4,7 @@ import SEO from '../../components/SEO';
 
 // Import promotional components
 import RevolutionaryContent2026Banner from '../../components/RevolutionaryContent2026Banner';
+import UltimateContentShowcase2026 from '../../components/UltimateContentShowcase2026';
 import NewContent2026PromotionBanner from '../../components/NewContent2026PromotionBanner';
 
 export const metadata = {

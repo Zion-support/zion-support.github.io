@@ -29,7 +29,8 @@ export function ITServiceRequestHero() {
       toast({
         title: "Missing Information",
         description: "Name, email and location are required.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       return;
     }
 
@@ -41,12 +42,14 @@ export function ITServiceRequestHero() {
         phone,
         company,
         location,
-        details});
+        details,
+      });
 
       if (res.status === 200) {
         toast({
           title: "Request received",
-          description: "We've received your request. Our team will reach out shortly."});
+          description: "We've received your request. Our team will reach out shortly.",
+        });
         setName("");
         setEmail("");
         setPhone("");
@@ -59,7 +62,8 @@ export function ITServiceRequestHero() {
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your request.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }

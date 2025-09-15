@@ -4,19 +4,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Play, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Brain, 
+  Play
+  ArrowRight
+  Star
+  Zap
+  Brain
   TrendingUp,
   X,
   CheckCircle
 } from 'lucide-react';
 
 const InteractiveContentShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   const features = [
     "Interactive AI Demos",
@@ -28,9 +28,9 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 2000);
+    }2000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -60,7 +60,7 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
                 >
                   <Zap className="w-3 h-3" />
@@ -143,7 +143,7 @@ const InteractiveContentShowcase2025PromotionBanner = () => {
             className="h-full bg-white"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: 10, ease: "linear" }}
+            transition={{ duration: 10ease: "linear" }}
           />
         </div>
       </div>

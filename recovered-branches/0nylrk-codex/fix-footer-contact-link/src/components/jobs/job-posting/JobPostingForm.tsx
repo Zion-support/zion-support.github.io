@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
+import React{ useStateuseEffectuseCallback } from 'react';
+=======
 import React, { useState, useEffect, useCallback } from 'react';
+>>>>>>> origin/auto/autonomy-17186719616
 import { useNavigate } from 'react-router-dom';
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
@@ -18,11 +22,19 @@ interface JobPostingFormProps {
   onSuccess?: () => void;
 }
 
+<<<<<<< HEAD
+export function JobPostingForm({ jobIdonSuccess }: JobPostingFormProps) {
+  const navigate = useNavigate();
+  const { createJobupdateJobgetJobById } = useJobs();
+  const [isFormLoadingsetIsFormLoading] = useState(false);
+  const [editorContentsetEditorContent] = useState("");
+=======
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
   const [editorContent, setEditorContent] = useState("");
+>>>>>>> origin/auto/autonomy-17186719616
   
   const {
     form,
@@ -34,9 +46,15 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
     isRemote,
     setIsRemote,
     submitJob
+<<<<<<< HEAD
+  } = useJobForm({ jobIdonSuccess });
+
+  const { handleSubmitsetValueformState } = form;
+=======
   } = useJobForm({ jobId, onSuccess });
 
   const { handleSubmit, setValue, formState } = form;
+>>>>>>> origin/auto/autonomy-17186719616
   const { isSubmitting } = formState;
 
   useEffect(() => {
@@ -46,6 +64,15 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
         .then((job) => {
           if (job) {
             // Set form values
+<<<<<<< HEAD
+            Object.entries(job).forEach(([keyvalue]) => {
+              if (key === 'published_date' && value) {
+                setStartDate(new Date(value as string));
+                setValue('published_date'value as string);
+              } else if (key === 'expiry_date' && value) {
+                setEndDate(new Date(value as string));
+                setValue('expiry_date'value as string);
+=======
             Object.entries(job).forEach(([key, value]) => {
               if (key === 'published_date' && value) {
                 setStartDate(new Date(value as string));
@@ -53,15 +80,24 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
               } else if (key === 'expiry_date' && value) {
                 setEndDate(new Date(value as string));
                 setValue('expiry_date', value as string);
+>>>>>>> origin/auto/autonomy-17186719616
               } else if (key === 'is_remote') {
                 setIsRemote(value as boolean);
               } else if (key === 'description') {
                 setEditorContent(value as string);
+<<<<<<< HEAD
+                setValue('description'value as string);
+              } else {
+                try {
+                  // @ts-ignore - We know these fields exist in our form
+                  setValue(keyvalue as any);
+=======
                 setValue('description', value as string);
               } else {
                 try {
                   // @ts-ignore - We know these fields exist in our form
                   setValue(key, value as any);
+>>>>>>> origin/auto/autonomy-17186719616
                 } catch (e) {
                   // Skip fields that don't exist in our form
                 }
@@ -70,19 +106,32 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
           }
         })
         .catch((error) => {
+<<<<<<< HEAD
+          console.error("Failed to load job:"error);
+=======
           console.error("Failed to load job:", error);
+>>>>>>> origin/auto/autonomy-17186719616
           toast.error("Failed to load job");
         })
         .finally(() => {
           setIsFormLoading(false);
         });
     }
+<<<<<<< HEAD
+  }[jobIdgetJobByIdsetValuesetStartDatesetEndDatesetIsRemote]);
+
+  const handleEditorChange = useCallback((value: string) => {
+    setEditorContent(value);
+    setValue('description'value);
+  }[setValue]);
+=======
   }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
 
   const handleEditorChange = useCallback((value: string) => {
     setEditorContent(value);
     setValue('description', value);
   }, [setValue]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const onSubmit = async (values: JobSchemaType) => {
     setIsFormLoading(true);
@@ -91,7 +140,11 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
       const jobData = await submitJob(values);
       
       if (jobId) {
+<<<<<<< HEAD
+        await updateJob(jobIdjobData);
+=======
         await updateJob(jobId, jobData);
+>>>>>>> origin/auto/autonomy-17186719616
         toast.success("Job updated successfully!");
       } else {
         await createJob(jobData);
@@ -104,7 +157,11 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
         onSuccess();
       }
     } catch (error: any) {
+<<<<<<< HEAD
+      console.error("Error creating/updating job:"error);
+=======
       console.error("Error creating/updating job:", error);
+>>>>>>> origin/auto/autonomy-17186719616
       toast.error(error.message || "Failed to post job");
     } finally {
       setIsFormLoading(false);

@@ -4,13 +4,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Bot, 
-  MessageCircle, 
-  Send, 
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
+  Bot
+  MessageCircle
+  Send
+  Sparkles
+  Zap
+  Brain
+  Rocket
   Star,
   Loader2,
   CheckCircle,
@@ -21,45 +21,45 @@ import {
 } from 'lucide-react';
 
 const InteractiveAIDemo2025 = () => {
-  const [messages, setMessages] = useState([
+  const [messagesetMessages] = useState([
     {
       id: 1,
       type: 'ai',
-      content: 'Hello! I\'m your AI assistant for 2025. I can help you explore revolutionary AI technologies, business transformation strategies, and future predictions. What would you like to know?',
+      content: 'Hello! I\'m your AI assistant for 2025. I can help you explore revolutionary AI technologiesbusiness transformation strategiesand future predictions. What would you like to know?',
       timestamp: new Date(),
-      features: ['Neural Interfaces', 'Quantum AI', 'Business Automation']
+      features: ['Neural 'Interfaces', 'Quantum 'AI', 'Business Automation']
     }
   ]);
-  const [inputValue, setInputValue] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [inputValuesetInputValue] = useState('');
+  const [isTypingsetIsTyping] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const aiResponses = [
     {
-      content: "Neural interfaces represent the next frontier in human-AI interaction. Our 2025 breakthrough technology allows direct brain-computer communication, achieving 500% efficiency improvements in data processing and decision-making.",
-      features: ['Neural Interfaces', 'Brain-Computer Interface', 'Efficiency Boost'],
+      content: "Neural interfaces represent the next frontier in human-AI interaction. Our 2025 breakthrough technology allows direct brain-computer communicationachieving 500% efficiency improvements in data processing and decision-making.",
+      features: ['Neural 'Interfaces', 'Brain-Computer 'Interface', 'Efficiency Boost'],
       icon: Brain,
       color: 'from-purple-500 to-pink-500'
     },
     {
-      content: "Quantum AI fusion combines quantum computing with advanced AI algorithms, delivering 1000x faster processing speeds. This revolutionary approach enables real-time analysis of complex datasets that would take traditional computers years to process.",
-      features: ['Quantum Computing', 'AI Algorithms', 'Real-time Processing'],
+      content: "Quantum AI fusion combines quantum computing with advanced AI algorithmsdelivering 1000x faster processing speeds. This revolutionary approach enables real-time analysis of complex datasets that would take traditional computers years to process.",
+      features: ['Quantum 'Computing', 'AI 'Algorithms', 'Real-time Processing'],
       icon: Zap,
       color: 'from-blue-500 to-cyan-500'
     },
     {
       content: "Enterprise automation in 2025 delivers unprecedented efficiency gains. Our AI-powered solutions achieve 90% cost reduction while maintaining 99.9% accuracy in business process optimization.",
-      features: ['Enterprise Automation', 'Cost Reduction', 'Process Optimization'],
+      features: ['Enterprise 'Automation', 'Cost 'Reduction', 'Process Optimization'],
       icon: Target,
       color: 'from-green-500 to-emerald-500'
     },
     {
       content: "Future predictions powered by our advanced AI models show 95% accuracy in market forecasting. We predict a $50 trillion market opportunity in AI-driven technologies by 2030.",
-      features: ['Future Predictions', 'Market Forecasting', 'Market Opportunity'],
+      features: ['Future 'Predictions', 'Market 'Forecasting', 'Market Opportunity'],
       icon: TrendingUp,
       color: 'from-orange-500 to-red-500'
     }
@@ -75,8 +75,8 @@ const InteractiveAIDemo2025 = () => {
       timestamp: new Date()
     };
 
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
+    setMessages(prev => [...prevuserMessage]);
+    setInputValue(', ');
     setIsTyping(true);
 
     // Simulate AI response delay
@@ -91,9 +91,9 @@ const InteractiveAIDemo2025 = () => {
         icon: randomResponse.icon,
         color: randomResponse.color
       };
-      setMessages(prev => [...prev, aiMessage]);
+      setMessages(prev => [...prevaiMessage]);
       setIsTyping(false);
-    }, 1500);
+    }1500);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -159,8 +159,8 @@ const InteractiveAIDemo2025 = () => {
           </h1>
           
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Experience our revolutionary AI technology firsthand. Ask questions about neural interfaces, 
-            quantum computing, business automation, and future predictions.
+            Experience our revolutionary AI technology firsthand. Ask questions about neural interfaces
+            quantum computingbusiness automationand future predictions.
           </p>
         </motion.div>
 
@@ -206,7 +206,7 @@ const InteractiveAIDemo2025 = () => {
                     
                     {message.features && (
                       <div className="mt-3 flex flex-wrap gap-2">
-                        {message.features.map((feature, index) => (
+                        {message.features.map((featureindex) => (
                           <span
                             key={index}
                             className="text-xs px-2 py-1 bg-white/20 rounded-full"
@@ -249,7 +249,7 @@ const InteractiveAIDemo2025 = () => {
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  placeholder="Ask about AI breakthroughs, business automation, or future predictions..."
+                  placeholder="Ask about AI breakthroughsbusiness automationor future predictions..."
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   disabled={isTyping}
                 />
@@ -278,17 +278,17 @@ const InteractiveAIDemo2025 = () => {
           className="mt-16 grid md:grid-cols-4 gap-6"
         >
           {[
-            { icon: Brain, title: 'Neural Interfaces', description: '500% efficiency boost' },
-            { icon: Zap, title: 'Quantum AI', description: '1000x faster processing' },
-            { icon: Target, title: 'Business Automation', description: '90% cost reduction' },
-            { icon: TrendingUp, title: 'Future Predictions', description: '95% accuracy rate' }
-          ].map((feature, index) => {
+            { icon: Braintitle: 'Neural 'Interfaces', 'description: '500% efficiency boost' },
+            { icon: Zaptitle: 'Quantum 'AI', 'description: '1000x faster processing' },
+            { icon: Targetitle: 'Business 'Automation', 'description: '90% cost reduction' },
+            { icon: TrendingUptitle: 'Future 'Predictions', 'description: '95% accuracy rate' }
+          ].map((featureindex) => {
             const Icon = feature.icon;
             return (
               <motion.div
                 key={index}
                 className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover={{ y: -5scale: 1.02 }}
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-6 h-6 text-white" />

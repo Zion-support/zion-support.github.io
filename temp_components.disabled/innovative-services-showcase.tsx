@@ -2,9 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Brain, Zap, Rocket, Shield, Globe, Cpu, 
-  ArrowRight, ExternalLink, Check, Star,
-  TrendingUp, Users, Clock, DollarSign, Phone, Mail, MapPin
+  BrainZapRocketShieldGlobeCpu
+  ArrowRightExternalLinkCheckStar,
+  TrendingUpUsersClockDollarSignPhoneMailMapPin
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { innovativeAIServices } from '../data/innovative-ai-services';
@@ -31,7 +31,7 @@ export default function InnovativeServicesShowcase() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -42,7 +42,7 @@ export default function InnovativeServicesShowcase() {
     }
   };
 
-  const ServiceCard = ({ service, index }: { service: any; index: number }) => (
+  const ServiceCard = ({ serviceindex }: { service: any; index: number }) => (
     <motion.div
       variants={itemVariants}
       className="group relative overflow-hidden rounded-2xl border border-gray-800 bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-xl transition-all duration-500 hover:scale-105 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/25"
@@ -84,7 +84,7 @@ export default function InnovativeServicesShowcase() {
         <div className="mb-4">
           <h4 className="text-white font-semibold mb-2">Key Features:</h4>
           <ul className="space-y-1">
-            {service.features.slice(0, 5).map((feature: string, idx: number) => (
+            {service.features.slice(05).map((feature: stringidx: number) => (
               <li key={idx} className="flex items-center text-gray-300 text-sm">
                 <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                 {feature}
@@ -143,10 +143,10 @@ export default function InnovativeServicesShowcase() {
       <div className="min-h-screen">
         <Head>
           <title>Innovative Services Showcase - Zion Tech Group</title>
-          <meta name="description" content="Discover our cutting-edge AI, IT, and micro SaaS services. Transform your business with revolutionary technology solutions." />
-          <meta name="keywords" content="AI services, IT services, micro SaaS, quantum computing, blockchain, cybersecurity, edge computing" />
+          <meta name="description" content="Discover our cutting-edge AITand micro SaaS services. Transform your business with revolutionary technology solutions." />
+          <meta name="keywords" content="AI servicesIT servicesmicro SaaSquantum computingblockchaincybersecurityedge computing" />
           <meta property="og:title" content="Innovative Services Showcase - Zion Tech Group" />
-          <meta property="og:description" content="Cutting-edge AI, IT, and micro SaaS services" />
+          <meta property="og:description" content="Cutting-edge AITand micro SaaS services" />
           <meta property="og:url" content="https://ziontechgroup.com/innovative-services-showcase" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/innovative-services-showcase" />
@@ -156,9 +156,9 @@ export default function InnovativeServicesShowcase() {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              initial={{ opacity: 0y: 50 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 1ease: "easeOut" }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -169,7 +169,7 @@ export default function InnovativeServicesShowcase() {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Experience the future of technology with our revolutionary AI, IT, and micro SaaS services. 
+                Experience the future of technology with our revolutionary AITand micro SaaS services. 
                 Each solution is designed to transform your business and drive unprecedented growth.
               </p>
 
@@ -199,8 +199,8 @@ export default function InnovativeServicesShowcase() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-12"
@@ -222,7 +222,7 @@ export default function InnovativeServicesShowcase() {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {innovativeAIServices.map((service, index) => (
+              {innovativeAIServices.map((serviceindex) => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
             </motion.div>
@@ -233,8 +233,8 @@ export default function InnovativeServicesShowcase() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-12"
@@ -244,8 +244,8 @@ export default function InnovativeServicesShowcase() {
                 <h2 className="text-4xl font-bold text-white">Enterprise IT Solutions</h2>
               </div>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Next-generation IT infrastructure and security solutions designed for modern enterprises, 
-                featuring quantum computing, blockchain, and zero-trust security architectures.
+                Next-generation IT infrastructure and security solutions designed for modern enterprises
+                featuring quantum computingblockchainand zero-trust security architectures.
               </p>
             </motion.div>
 
@@ -256,7 +256,7 @@ export default function InnovativeServicesShowcase() {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {innovativeITServices.map((service, index) => (
+              {innovativeITServices.map((serviceindex) => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
             </motion.div>
@@ -267,8 +267,8 @@ export default function InnovativeServicesShowcase() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-12"
@@ -278,8 +278,8 @@ export default function InnovativeServicesShowcase() {
                 <h2 className="text-4xl font-bold text-white">Micro SaaS Solutions</h2>
               </div>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Specialized software solutions that address specific business needs with AI-powered automation, 
-                smart contracts, and intelligent workflows designed for maximum efficiency and ROI.
+                Specialized software solutions that address specific business needs with AI-powered automation
+                smart contractsand intelligent workflows designed for maximum efficiency and ROI.
               </p>
             </motion.div>
 
@@ -290,7 +290,7 @@ export default function InnovativeServicesShowcase() {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {innovativeMicroSaas.map((service, index) => (
+              {innovativeMicroSaas.map((serviceindex) => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
             </motion.div>
@@ -301,8 +301,8 @@ export default function InnovativeServicesShowcase() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >

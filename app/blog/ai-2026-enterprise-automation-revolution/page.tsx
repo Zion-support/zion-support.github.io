@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Share2, BookOpen, TrendingUp, Zap } from 'lucide-react';
-import SEO from '../../../components/SEO';
+import { ArrowLeft, Calendar, User, Clock, Share2, BookOpen, TrendingUp, Zap, Award } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: The Enterprise Automation Revolution - Complete Transformation Guide',

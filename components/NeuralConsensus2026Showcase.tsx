@@ -4,13 +4,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  TrendingUp, 
-  Users, 
-  Target, 
-  CheckCircle, 
-  ArrowRight, 
+  Brain
+  Zap
+  TrendingUp
+  Users
+  Target
+  CheckCircle
+  ArrowRight
   Play,
   BarChart3,
   Clock,
@@ -23,8 +23,8 @@ import {
 import Link from 'next/link';
 
 const NeuralConsensus2026Showcase: React.FC = () => {
-  const [activeFeature, setActiveFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeFeaturesetActiveFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   const features = [
     {
@@ -72,10 +72,10 @@ const NeuralConsensus2026Showcase: React.FC = () => {
   ];
 
   const stats = [
-    { label: "Decision Accuracy", value: "99.9%", icon: Target },
-    { label: "Cost Reduction", value: "40%", icon: TrendingUp },
-    { label: "Time Savings", value: "80%", icon: Clock },
-    { label: "ROI Achieved", value: "$15.2B", icon: Award }
+    { label: "Decision Accuracy"value: "99.9%"icon: Target },
+    { label: "Cost Reduction"value: "40%"icon: TrendingUp },
+    { label: "Time Savings"value: "80%"icon: Clock },
+    { label: "ROI Achieved"value: "$15.2B"icon: Award }
   ];
 
   const caseStudies = [
@@ -105,15 +105,15 @@ const NeuralConsensus2026Showcase: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+    }3000);
 
-    const visibilityTimer = setTimeout(() => setIsVisible(true), 500);
+    const visibilityTimer = setTimeout(() => setIsVisible(true)500);
 
     return () => {
       clearInterval(timer);
       clearTimeout(visibilityTimer);
     };
-  }, [features.length]);
+  }[features.length]);
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
@@ -150,12 +150,12 @@ const NeuralConsensus2026Showcase: React.FC = () => {
 
         {/* Interactive Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((featureindex) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
               className={`relative p-6 rounded-2xl bg-gradient-to-br ${feature.color} cursor-pointer transition-all duration-300 ${
                 activeFeature === index ? 'ring-4 ring-white/30 shadow-2xl' : 'hover:shadow-xl'
@@ -172,8 +172,8 @@ const NeuralConsensus2026Showcase: React.FC = () => {
               
               {activeFeature === index && (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
                   className="absolute -top-2 -right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center"
                 >
                   <CheckCircle className="w-4 h-4 text-green-600" />
@@ -187,10 +187,10 @@ const NeuralConsensus2026Showcase: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.8delay: 0.3 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full mb-4">
                 <stat.icon className="w-8 h-8 text-blue-400" />
@@ -205,7 +205,7 @@ const NeuralConsensus2026Showcase: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -213,12 +213,12 @@ const NeuralConsensus2026Showcase: React.FC = () => {
           </h3>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
+            {caseStudies.map((studyindex) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                transition={{ duration: 0.6delay: 0.5 + index * 0.1 }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -251,7 +251,7 @@ const NeuralConsensus2026Showcase: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-8 border border-blue-400/30">

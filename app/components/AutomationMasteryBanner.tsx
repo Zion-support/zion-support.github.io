@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, Zap, TrendingUp,  Users, Shield } from 'lucide-react';
+import { X, Zap, TrendingUp, Users, Shield } from 'lucide-react';
 
 const AutomationMasteryBanner = () => {
   const [isVisible, setIsVisible] = useState(false);

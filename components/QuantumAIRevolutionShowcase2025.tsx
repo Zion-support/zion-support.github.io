@@ -1,10 +1,11 @@
+"use client";
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 
 const QuantumAIRevolutionShowcase2025 = () => {
-  const [activeTab, setActiveTab] = useState('quantum-ai');
+  const [activeTabsetActiveTab] = useState('quantum-ai');
 
   const quantumContent = [
     {
@@ -16,7 +17,7 @@ const QuantumAIRevolutionShowcase2025 = () => {
       url: '/blog/ai-2025-quantum-computing-business-revolution',
       featured: true,
       readingTime: '15 min read',
-      tags: ['Quantum Computing', 'AI', 'Business Revolution', 'ROI']
+      tags: ['Quantum 'Computing', 'AI'Business 'Revolution', 'ROI']
     },
     {
       id: 'quantum-manufacturing-success',
@@ -27,7 +28,7 @@ const QuantumAIRevolutionShowcase2025 = () => {
       url: '/case-studies/quantum-ai-fortune-500-manufacturing-transformation',
       featured: true,
       readingTime: '10 min read',
-      tags: ['Quantum AI', 'Manufacturing', 'Fortune 500', 'ROI']
+      tags: ['Quantum 'AI', 'Manufacturing'Fortune 500'ROI']
     }
   ];
 
@@ -41,7 +42,7 @@ const QuantumAIRevolutionShowcase2025 = () => {
       url: '/blog/ai-2025-enterprise-ai-transformation-ultimate-guide',
       featured: true,
       readingTime: '18 min read',
-      tags: ['AI Transformation', 'Enterprise AI', 'ROI', 'Digital Transformation']
+      tags: ['AI 'Transformation', 'Enterprise 'AI', 'ROI'Digital Transformation']
     },
     {
       id: 'fortune-100-success',
@@ -52,7 +53,7 @@ const QuantumAIRevolutionShowcase2025 = () => {
       url: '/case-studies/ai-transformation-fortune-100-ultimate-success-story',
       featured: true,
       readingTime: '12 min read',
-      tags: ['Fortune 100', 'AI Transformation', 'ROI', 'Success Story']
+      tags: ['Fortune 100'AI 'Transformation', 'ROI'Success Story']
     },
     {
       id: 'ultimate-success-framework',
@@ -63,11 +64,11 @@ const QuantumAIRevolutionShowcase2025 = () => {
       url: '/resources/ai-implementation-ultimate-success-framework-2025',
       featured: true,
       readingTime: '25 min read',
-      tags: ['AI Implementation', 'Framework', 'ROI', 'Success Strategy']
+      tags: ['AI 'Implementation', 'Framework', 'ROI', 'Success Strategy']
     }
   ];
 
-  const allContent = [...quantumContent, ...enterpriseContent];
+  const allContent = [...quantumContent...enterpriseContent];
 
   const getContentByTab = () => {
     switch (activeTab) {
@@ -121,7 +122,7 @@ const QuantumAIRevolutionShowcase2025 = () => {
             AI 2025: The Ultimate Content Revolution
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the most comprehensive collection of AI transformation content, featuring proven strategies, real-world success stories, and implementation frameworks that deliver 500-1,200% ROI.
+            Discover the most comprehensive collection of AI transformation contentfeaturing proven strategiesreal-world success storiesand implementation frameworks that deliver 500-1,200% ROI.
           </p>
         </div>
 
@@ -213,7 +214,7 @@ const QuantumAIRevolutionShowcase2025 = () => {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag) => (
+                  {item.tags.slice(03).map((tag) => (
                     <span
                       key={tag}
                       className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-700"

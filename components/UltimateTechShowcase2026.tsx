@@ -1,18 +1,18 @@
 "use client";
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 import { 
-  ArrowRight, 
-  Cpu, 
-  Database, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Brain, 
-  Rocket, 
+  ArrowRight
+  Cpu
+  Database
+  Cloud
+  Shield
+  Zap
+  Globe
+  Brain
+  Rocket
   Target,
   CheckCircle,
   Star,
@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 
 const UltimateTechShowcase2026 = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+  const [activeTabsetActiveTab] = useState('ai');
 
   const technologies = {
     ai: {
@@ -74,10 +74,10 @@ const UltimateTechShowcase2026 = () => {
   };
 
   const stats = [
-    { label: "Processing Speed", value: "1000x", icon: <Zap className="w-6 h-6" /> },
-    { label: "Global Reach", value: "200+", icon: <Globe className="w-6 h-6" /> },
-    { label: "Success Rate", value: "99.9%", icon: <Target className="w-6 h-6" /> },
-    { label: "Innovation Index", value: "#1", icon: <Rocket className="w-6 h-6" /> }
+    { label: "Processing Speed"value: "1000x"icon: <Zap className="w-6 h-6" /> },
+    { label: "Global Reach"value: "200+"icon: <Globe className="w-6 h-6" /> },
+    { label: "Success Rate"value: "99.9%"icon: <Target className="w-6 h-6" /> },
+    { label: "Innovation Index"value: "#1"icon: <Rocket className="w-6 h-6" /> }
   ];
 
   const testimonials = [
@@ -85,7 +85,7 @@ const UltimateTechShowcase2026 = () => {
       name: "Dr. Sarah Kim",
       role: "Chief Technology Officer",
       company: "FutureTech Corp",
-      content: "This technology platform has revolutionized our entire operation. The AI capabilities are beyond anything we've seen before.",
+      content: "This technology platform has revolutionized our entire operation. The AI capabilities are beyond anything 'we', 've seen before.",
       rating: 5
     },
     {
@@ -130,7 +130,7 @@ const UltimateTechShowcase2026 = () => {
         {/* Technology Tabs */}
         <div className="mb-16">
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {Object.entries(technologies).map(([key, tech]) => (
+            {Object.entries(technologies).map(([keytech]) => (
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
@@ -156,7 +156,7 @@ const UltimateTechShowcase2026 = () => {
                 </div>
                 <p className="text-xl text-gray-300 mb-6">{technologies[activeTab].description}</p>
                 <ul className="space-y-3">
-                  {technologies[activeTab].features.map((feature, index) => (
+                  {technologies[activeTab].features.map((featureindex) => (
                     <li key={index} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -176,7 +176,7 @@ const UltimateTechShowcase2026 = () => {
 
         {/* Stats Grid */}
         <div className="grid md:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <div className="flex justify-center mb-4">
                 <div className="p-3 bg-gradient-to-r from-blue-600/30 to-purple-600/30 rounded-full">
@@ -193,10 +193,10 @@ const UltimateTechShowcase2026 = () => {
         <div className="mb-16">
           <h3 className="text-4xl font-bold text-center mb-12">Industry Leaders Trust Us</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonialindex) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
                 <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map((_i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -216,7 +216,7 @@ const UltimateTechShowcase2026 = () => {
           <h3 className="text-4xl font-bold mb-4">Ready to Lead the Future?</h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join the technology revolution and be part of the next generation of innovation. 
-            Our 2026 showcase is just the beginning of what's possible.
+            Our 2026 showcase is just the beginning of 'what', 's possible.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

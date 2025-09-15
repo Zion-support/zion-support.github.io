@@ -18,7 +18,7 @@ const RevolutionaryContent2025ShowcaseBanner: React.FC = () => {
           </h2>
           
           <p className="text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-            Explore cutting-edge AI innovations that are revolutionizing business operations, 
+            Explore cutting-edge AI innovations that are revolutionizing business operations
             from neural interfaces to sustainable technology solutions. Discover the future of AI today.
           </p>
         </div>

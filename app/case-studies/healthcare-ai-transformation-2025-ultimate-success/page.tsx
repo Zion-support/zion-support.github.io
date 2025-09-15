@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2, Building2, DollarSign, TrendingUp, Users, CheckCircle, Award } from 'lucide-react';
-import SEO from '../../../components/SEO';
+import { ArrowLeft, Calendar, Clock, User,  Share2, Building, DollarSign, TrendingUp, Users, CheckCircle, Award } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'Healthcare AI Transformation 2025: $50M Annual Savings & 95% Patient Satisfaction',
@@ -50,7 +50,7 @@ export default function HealthcareAITransformationPage() {
               Zion Tech Group
             </div>
             <div className="flex items-center">
-              <Tag className="w-4 h-4 mr-2" />
+              <Award className="w-4 h-4 mr-2" />
               Healthcare AI
             </div>
           </div>
@@ -289,7 +289,7 @@ export default function HealthcareAITransformationPage() {
               </blockquote>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
-                  <Building2 className="w-6 h-6" />
+                  <Building className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-bold">Dr. Sarah Johnson</div>

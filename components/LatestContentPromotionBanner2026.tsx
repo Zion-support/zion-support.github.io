@@ -23,8 +23,8 @@ export default function LatestContentPromotionBanner2026() {
             </h2>
             
             <p className="text-xl mb-8 opacity-90 leading-relaxed">
-              Discover our latest breakthrough content covering AI automation, quantum computing, 
-              cybersecurity, and enterprise transformation. Stay ahead with cutting-edge insights 
+              Discover our latest breakthrough content covering AI automationquantum computing
+              cybersecurityand enterprise transformation. Stay ahead with cutting-edge insights 
               from industry leaders.
             </p>
             

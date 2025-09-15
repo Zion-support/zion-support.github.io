@@ -25,7 +25,8 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   yearsExperience,
   location,
   onSuggestionApplied,
-  rateType}) => {
+  rateType,
+}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
   const { user } = useAuth();
@@ -40,7 +41,8 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
       const params: TalentRateParams = {
         skills,
         yearsExperience,
-        location};
+        location,
+      };
 
       const result = await getTalentRateSuggestion(params);
       setSuggestion(result);

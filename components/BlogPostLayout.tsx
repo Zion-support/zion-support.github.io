@@ -16,7 +16,7 @@ interface BlogPostLayoutProps {
   content: string;
 }
 
-export default function BlogPostLayout({ post, content }: BlogPostLayoutProps) {
+export default function BlogPostLayout({ postcontent }: BlogPostLayoutProps) {
   return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Header */}

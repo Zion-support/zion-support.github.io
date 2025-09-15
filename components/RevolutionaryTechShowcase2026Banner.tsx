@@ -4,12 +4,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
-  Star, 
-  ArrowRight, 
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  Star
+  ArrowRight
   Play,
   Globe,
   Shield,
@@ -21,16 +21,16 @@ import {
 } from 'lucide-react';
 
 const RevolutionaryTechShowcase2026Banner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const slides = [
     {
@@ -40,25 +40,25 @@ const RevolutionaryTechShowcase2026Banner = () => {
       icon: Brain,
       color: "from-purple-600 to-blue-600",
       stats: "2.3M+ Users",
-      features: ["Thought Control", "Real-time Processing", "Zero Latency"]
+      features: ["Thought Control"Real-time Processing"Zero Latency"]
     },
     {
       title: "Quantum AI Fusion",
       subtitle: "Exponential Processing Power",
-      description: "Witness the convergence of quantum computing and artificial intelligence, delivering unprecedented computational capabilities.",
+      description: "Witness the convergence of quantum computing and artificial intelligencedelivering unprecedented computational capabilities.",
       icon: Zap,
       color: "from-green-600 to-teal-600",
       stats: "10,000x Faster",
-      features: ["Quantum Algorithms", "Parallel Processing", "Infinite Scalability"]
+      features: ["Quantum Algorithms"Parallel Processing"Infinite Scalability"]
     },
     {
       title: "Synthetic Intelligence",
       subtitle: "Consciousness-Level AI",
-      description: "Meet the next generation of AI systems that think, learn, and evolve with biological-level consciousness and creativity.",
+      description: "Meet the next generation of AI systems that thinklearnand evolve with biological-level consciousness and creativity.",
       icon: Rocket,
       color: "from-orange-600 to-red-600",
       stats: "99.9% Accuracy",
-      features: ["Self-Learning", "Creative Problem Solving", "Emotional Intelligence"]
+      features: ["Self-Learning"Creative Problem Solving"Emotional Intelligence"]
     }
   ];
 
@@ -106,9 +106,9 @@ const RevolutionaryTechShowcase2026Banner = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0x: 50 }}
+              animate={{ opacity: 1x: 0 }}
+              exit={{ opacity: 0x: -50 }}
               transition={{ duration: 0.8 }}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
             >
@@ -137,12 +137,12 @@ const RevolutionaryTechShowcase2026Banner = () => {
 
                 {/* Features */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                  {currentSlideData.features.map((feature, index) => (
+                  {currentSlideData.features.map((featureindex) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      transition={{ duration: 0.6delay: index * 0.1 }}
                       className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center"
                     >
                       <div className="text-white font-semibold">{feature}</div>
@@ -188,7 +188,7 @@ const RevolutionaryTechShowcase2026Banner = () => {
 
           {/* Slide Indicators */}
           <div className="flex justify-center gap-3 mt-12">
-            {slides.map((_, index) => (
+            {slides.map((_index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
@@ -206,21 +206,21 @@ const RevolutionaryTechShowcase2026Banner = () => {
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mt-20"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {[
-              { icon: Users, label: "Active Users", value: "50M+" },
-              { icon: Globe, label: "Countries", value: "180+" },
-              { icon: Code, label: "Technologies", value: "500+" },
-              { icon: Star, label: "Success Rate", value: "99.9%" }
-            ].map((stat, index) => (
+              { icon: Userslabel: "Active Users"value: "50M+" },
+              { icon: Globelabel: "Countries"value: "180+" },
+              { icon: Codelabel: "Technologies"value: "500+" },
+              { icon: Starlabel: "Success Rate"value: "99.9%" }
+            ].map((statindex) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
                 className="text-center"
               >
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">

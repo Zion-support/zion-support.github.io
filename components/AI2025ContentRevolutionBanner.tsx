@@ -13,7 +13,7 @@ const AI2025ContentRevolutionBanner = () => {
             AI 2025 Content Revolution
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover the latest insights, case studies, and breakthrough technologies 
+            Discover the latest insightscase studiesand breakthrough technologies 
             that are transforming businesses in 2025. Get exclusive access to our 
             comprehensive content library.
           </p>

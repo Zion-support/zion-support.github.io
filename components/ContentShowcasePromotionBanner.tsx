@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Star, Zap, Brain, Atom } from 'lucide-react';
+ArrowRightStarZapBrainAtom
 
 export default function ContentShowcasePromotionBanner() {
   return (
@@ -13,7 +13,7 @@ export default function ContentShowcasePromotionBanner() {
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Explore our latest AI innovations, quantum computing breakthroughs, and advanced automation solutions. 
+            Explore our latest AI innovationsquantum computing breakthroughsand advanced automation solutions. 
             Experience the future of technology today.
           </p>
         </div>
@@ -29,7 +29,7 @@ export default function ContentShowcasePromotionBanner() {
               <h3 className="text-2xl font-bold text-white ml-4">AI Innovation Showcase</h3>
             </div>
             <p className="text-gray-300 mb-6">
-              Revolutionary AI breakthroughs, quantum AI fusion, and next-generation neural interfaces 
+              Revolutionary AI breakthroughsquantum AI fusionand next-generation neural interfaces 
               that are transforming the future of artificial intelligence.
             </p>
             <div className="flex items-center justify-between">
@@ -52,8 +52,8 @@ export default function ContentShowcasePromotionBanner() {
               <h3 className="text-2xl font-bold text-white ml-4">Quantum Computing</h3>
             </div>
             <p className="text-gray-300 mb-6">
-              Experience the quantum revolution with groundbreaking quantum computing solutions, 
-              quantum neural networks, and unprecedented computational power.
+              Experience the quantum revolution with groundbreaking quantum computing solutions
+              quantum neural networksand unprecedented computational power.
             </p>
             <div className="flex items-center justify-between">
               <div className="flex items-center text-purple-400 font-semibold group-hover:text-purple-300 transition-colors">
@@ -75,7 +75,7 @@ export default function ContentShowcasePromotionBanner() {
               <h3 className="text-2xl font-bold text-white ml-4">Automation Solutions</h3>
             </div>
             <p className="text-gray-300 mb-6">
-              Transform your business with intelligent workflows, autonomous operations, 
+              Transform your business with intelligent workflowsautonomous operations
               and AI-powered automation that delivers unprecedented efficiency and productivity.
             </p>
             <div className="flex items-center justify-between">

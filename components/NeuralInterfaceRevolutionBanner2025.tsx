@@ -1,9 +1,10 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Brain, Zap, TrendingUp, ArrowRight, Play, Users, Award } from 'lucide-react';
+XBrainZapTrendingUpArrowRightPlayUsersAward
 
 interface NeuralInterfaceContent {
   id: string;
@@ -21,9 +22,9 @@ interface NeuralInterfaceContent {
 }
 
 const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [currentIndexsetCurrentIndex] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   const neuralInterfaceContent: NeuralInterfaceContent[] = [
     {
@@ -76,22 +77,22 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
       setIsDismissed(true);
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => 
         prevIndex === neuralInterfaceContent.length - 1 ? 0 : prevIndex + 1
       );
-    }, 8000);
+    }8000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsVisible(false);
     setIsDismissed(true);
-    localStorage.setItem('neural-interface-banner-dismissed', 'true');
+    localStorage.setItem('neural-interface-banner-'dismissed', 'true');
   };
 
   const handleUndismiss = () => {
@@ -134,14 +135,14 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
         >
           {/* Animated Background */}
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
             
             {/* Floating Neural Network Animation */}
             <motion.div
               className="absolute top-10 left-10 w-20 h-20 border border-purple-400/30 rounded-full"
               animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.6, 0.3],
+                scale: [1.21],
+                opacity: [0.30.60.3],
               }}
               transition={{
                 duration: 4,
@@ -152,8 +153,8 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
             <motion.div
               className="absolute top-20 right-20 w-16 h-16 border border-blue-400/30 rounded-full"
               animate={{
-                scale: [1.2, 1, 1.2],
-                opacity: [0.6, 0.3, 0.6],
+                scale: [1.21.2],
+                opacity: [0.60.30.6],
               }}
               transition={{
                 duration: 5,
@@ -164,8 +165,8 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
             <motion.div
               className="absolute bottom-20 left-1/4 w-12 h-12 border border-indigo-400/30 rounded-full"
               animate={{
-                scale: [1, 1.3, 1],
-                opacity: [0.4, 0.7, 0.4],
+                scale: [1.31],
+                opacity: [0.40.70.4],
               }}
               transition={{
                 duration: 6,
@@ -219,9 +220,9 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
                     <AnimatePresence mode="wait">
                       <motion.div
                         key={currentIndex}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0x: 20 }}
+                        animate={{ opacity: 1x: 0 }}
+                        exit={{ opacity: 0x: -20 }}
                         transition={{ duration: 0.5 }}
                       >
                         <h3 className="text-xl font-bold text-white mb-3 leading-tight">
@@ -261,7 +262,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
 
                     {/* Progress Indicators */}
                     <div className="flex space-x-2 mt-4">
-                      {neuralInterfaceContent.map((_, index) => (
+                      {neuralInterfaceContent.map((_index) => (
                         <button
                           key={index}
                           onClick={() => setCurrentIndex(index)}

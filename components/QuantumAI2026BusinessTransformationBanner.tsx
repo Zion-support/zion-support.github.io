@@ -26,7 +26,7 @@ export default function QuantumAI2026BusinessTransformationBanner() {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Business Transformation Ultimate Guide - Discover how quantum AI will revolutionize business operations 
-            with exponential speedup, quantum machine learning, and breakthrough optimization algorithms.
+            with exponential speedupquantum machine learningand breakthrough optimization algorithms.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export default function QuantumAI2026BusinessTransformationBanner() {
             <div className="text-3xl mb-4">🎯</div>
             <h3 className="text-xl font-bold mb-3">Perfect Optimization</h3>
             <p className="text-gray-300 text-sm">
-              QAOA and Grover's algorithms for portfolio optimization, supply chain, and resource allocation.
+              QAOA and 'Grover', 's algorithms for portfolio optimizationsupply chainand resource allocation.
             </p>
           </div>
           
@@ -74,7 +74,7 @@ export default function QuantumAI2026BusinessTransformationBanner() {
                 <span className="text-white text-2xl">💰</span>
               </div>
               <h4 className="font-semibold mb-2">Financial Services</h4>
-              <p className="text-gray-300 text-sm">Portfolio optimization, risk assessment, fraud detection, algorithmic trading</p>
+              <p className="text-gray-300 text-sm">Portfolio optimizationrisk assessmentfraud detectionalgorithmic trading</p>
             </div>
             
             <div className="text-center">
@@ -82,7 +82,7 @@ export default function QuantumAI2026BusinessTransformationBanner() {
                 <span className="text-white text-2xl">🏥</span>
               </div>
               <h4 className="font-semibold mb-2">Healthcare</h4>
-              <p className="text-gray-300 text-sm">Drug discovery, protein folding, clinical trials, personalized medicine</p>
+              <p className="text-gray-300 text-sm">Drug discoveryprotein foldingclinical trialspersonalized medicine</p>
             </div>
             
             <div className="text-center">
@@ -90,7 +90,7 @@ export default function QuantumAI2026BusinessTransformationBanner() {
                 <span className="text-white text-2xl">🏭</span>
               </div>
               <h4 className="font-semibold mb-2">Manufacturing</h4>
-              <p className="text-gray-300 text-sm">Supply chain optimization, quality control, predictive maintenance</p>
+              <p className="text-gray-300 text-sm">Supply chain optimizationquality controlpredictive maintenance</p>
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function QuantumAI2026BusinessTransformationBanner() {
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
             <h3 className="text-2xl font-bold mb-4">Prepare for the Quantum AI Revolution</h3>
             <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-              Don't get left behind in the quantum computing era. Start your quantum AI transformation journey today 
+              'Don', 't get left behind in the quantum computing era. Start your quantum AI transformation journey today 
               with expert guidance from Zion Tech Group.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

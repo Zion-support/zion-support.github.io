@@ -4,17 +4,17 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Building2, 
-  TrendingUp, 
-  Users, 
-  Shield, 
-  Zap, 
-  Target, 
-  BarChart3, 
-  Globe, 
-  Cpu, 
-  Database, 
-  Cloud, 
+  Building2
+  TrendingUp
+  Users
+  Shield
+  Zap
+  Target
+  BarChart3
+  Globe
+  Cpu
+  Database
+  Cloud
   Settings,
   CheckCircle,
   ArrowRight,
@@ -27,12 +27,12 @@ import {
 } from 'lucide-react';
 
 const BusinessSolutionsShowcase2027 = () => {
-  const [activeCategory, setActiveCategory] = useState('enterprise');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeCategorysetActiveCategory] = useState('enterprise');
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const categories = {
     enterprise: {
@@ -44,21 +44,21 @@ const BusinessSolutionsShowcase2027 = () => {
         {
           title: 'AI-Powered Business Intelligence',
           description: 'Advanced analytics and insights powered by machine learning algorithms',
-          features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards'],
+          features: ['Real-time 'Analytics', 'Predictive 'Modeling', 'Custom Dashboards'],
           icon: BarChart3,
           roi: '300% ROI'
         },
         {
           title: 'Enterprise Security Suite',
           description: 'Comprehensive security solutions protecting your digital assets',
-          features: ['Zero-Trust Architecture', 'AI Threat Detection', 'Compliance Management'],
+          features: ['Zero-Trust 'Architecture', 'AI Threat 'Detection', 'Compliance Management'],
           icon: Shield,
           roi: '99.9% Security'
         },
         {
           title: 'Cloud Infrastructure Management',
           description: 'Scalable cloud solutions optimized for enterprise workloads',
-          features: ['Multi-Cloud Support', 'Auto-Scaling', 'Cost Optimization'],
+          features: ['Multi-Cloud 'Support', 'Auto-'Scaling', 'Cost Optimization'],
           icon: Cloud,
           roi: '50% Cost Reduction'
         }
@@ -73,21 +73,21 @@ const BusinessSolutionsShowcase2027 = () => {
         {
           title: 'Rapid MVP Development',
           description: 'Fast-track your product development with our proven frameworks',
-          features: ['2-Week Delivery', 'Scalable Architecture', 'Technical Support'],
+          features: ['2-Week 'Delivery', 'Scalable 'Architecture', 'Technical Support'],
           icon: Zap,
           roi: '80% Faster Launch'
         },
         {
           title: 'Growth Analytics Platform',
           description: 'Data-driven insights to accelerate your startup growth',
-          features: ['User Behavior Analysis', 'Conversion Tracking', 'Growth Hacking Tools'],
+          features: ['User Behavior 'Analysis', 'Conversion 'Tracking', 'Growth Hacking Tools'],
           icon: TrendingUp,
           roi: '200% Growth Rate'
         },
         {
           title: 'Automated Operations',
           description: 'Streamline operations with intelligent automation tools',
-          features: ['Process Automation', 'Workflow Optimization', 'Resource Management'],
+          features: ['Process 'Automation', 'Workflow 'Optimization', 'Resource Management'],
           icon: Settings,
           roi: '60% Efficiency Gain'
         }
@@ -102,21 +102,21 @@ const BusinessSolutionsShowcase2027 = () => {
         {
           title: 'Digital Transformation Package',
           description: 'Complete digital transformation tailored for SMBs',
-          features: ['Process Digitization', 'Customer Experience', 'Operational Efficiency'],
+          features: ['Process 'Digitization', 'Customer 'Experience', 'Operational Efficiency'],
           icon: Lightbulb,
           roi: '150% Productivity'
         },
         {
           title: 'Customer Relationship Management',
           description: 'AI-powered CRM to enhance customer relationships',
-          features: ['Lead Management', 'Sales Automation', 'Customer Insights'],
+          features: ['Lead 'Management', 'Sales 'Automation', 'Customer Insights'],
           icon: Target,
           roi: '40% Sales Increase'
         },
         {
           title: 'Financial Management Suite',
           description: 'Comprehensive financial tools for better business management',
-          features: ['Expense Tracking', 'Revenue Analytics', 'Financial Forecasting'],
+          features: ['Expense 'Tracking', 'Revenue 'Analytics', 'Financial Forecasting'],
           icon: BarChart3,
           roi: '25% Cost Savings'
         }
@@ -127,7 +127,7 @@ const BusinessSolutionsShowcase2027 = () => {
   const testimonials = [
     {
       name: "Sarah Johnson",
-      role: "CEO, TechCorp",
+      role: "CEOTechCorp",
       company: "Fortune 500",
       content: "Zion Tech Group transformed our entire digital infrastructure. The results exceeded our expectations with 300% ROI in just 6 months.",
       rating: 5,
@@ -135,7 +135,7 @@ const BusinessSolutionsShowcase2027 = () => {
     },
     {
       name: "Michael Chen",
-      role: "Founder, StartupXYZ",
+      role: "FounderStartupXYZ",
       company: "Series A Startup",
       content: "Their rapid MVP development helped us launch 3 months ahead of schedule. The quality and speed were incredible.",
       rating: 5,
@@ -143,19 +143,19 @@ const BusinessSolutionsShowcase2027 = () => {
     },
     {
       name: "Emily Rodriguez",
-      role: "Operations Director, LocalBiz",
+      role: "Operations DirectorLocalBiz",
       company: "SMB",
-      content: "The digital transformation package revolutionized our operations. We're now 60% more efficient and our customers love the new experience.",
+      content: "The digital transformation package revolutionized our operations. 'We', 're now 60% more efficient and our customers love the new experience.",
       rating: 5,
       avatar: "ER"
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Projects Completed", icon: CheckCircle },
-    { number: "99.9%", label: "Client Satisfaction", icon: Star },
-    { number: "300%", label: "Average ROI", icon: TrendingUp },
-    { number: "24/7", label: "Support Available", icon: Shield }
+    { number: "500+"label: "Projects Completed"icon: CheckCircle },
+    { number: "99.9%"label: "Client Satisfaction"icon: Star },
+    { number: "300%"label: "Average ROI"icon: TrendingUp },
+    { number: "24/7"label: "Support Available"icon: Shield }
   ];
 
   return (
@@ -178,8 +178,8 @@ const BusinessSolutionsShowcase2027 = () => {
             Business Solutions Showcase 2027
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Comprehensive technology solutions designed to accelerate your business growth, 
-            enhance efficiency, and drive innovation across all industries and company sizes.
+            Comprehensive technology solutions designed to accelerate your business growth
+            enhance efficiencyand drive innovation across all industries and company sizes.
           </p>
         </motion.div>
 
@@ -187,10 +187,10 @@ const BusinessSolutionsShowcase2027 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {Object.entries(categories).map(([key, category]) => (
+          {Object.entries(categories).map(([keycategory]) => (
             <button
               key={key}
               onClick={() => setActiveCategory(key)}
@@ -233,12 +233,12 @@ const BusinessSolutionsShowcase2027 = () => {
 
                 {/* Solutions Grid */}
                 <div className="grid md:grid-cols-3 gap-8">
-                  {categories[activeCategory].solutions.map((solution, index) => (
+                  {categories[activeCategory].solutions.map((solutionindex) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      transition={{ duration: 0.6delay: index * 0.1 }}
                       className="group"
                     >
                       <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105 h-full">
@@ -257,7 +257,7 @@ const BusinessSolutionsShowcase2027 = () => {
                         </p>
 
                         <div className="space-y-3 mb-6">
-                          {solution.features.map((feature, featureIndex) => (
+                          {solution.features.map((featureIndex) => (
                             <div key={featureIndex} className="flex items-center gap-3">
                               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                               <span className="text-gray-300">{feature}</span>
@@ -282,7 +282,7 @@ const BusinessSolutionsShowcase2027 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mt-20"
         >
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/10">
@@ -290,12 +290,12 @@ const BusinessSolutionsShowcase2027 = () => {
               Proven Results Across Industries
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isVisible ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                  transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
                   className="text-center"
                 >
                   <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-4" />
@@ -311,19 +311,19 @@ const BusinessSolutionsShowcase2027 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="mt-20"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             What Our Clients Say
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonialindex) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                transition={{ duration: 0.6delay: 0.8 + index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
               >
                 <div className="flex items-center gap-4 mb-4">
@@ -338,7 +338,7 @@ const BusinessSolutionsShowcase2027 = () => {
                 </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div className="flex gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map((_i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -351,7 +351,7 @@ const BusinessSolutionsShowcase2027 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-20"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-400/30">

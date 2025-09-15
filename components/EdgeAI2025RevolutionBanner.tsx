@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+"use client";
+import React{ useStateuseEffect } from 'react';
 import Link from 'next/link';
 
 const EdgeAI2025RevolutionBanner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
 
   const edgeAIContent = [
     {
@@ -56,14 +57,14 @@ const EdgeAI2025RevolutionBanner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % edgeAIContent.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('edgeAI2025BannerDismissed', 'true');
+    localStorage.setItem(', 'edgeAI2025BannerDismissed', 'true');
   };
 
   useEffect(() => {
@@ -71,7 +72,7 @@ const EdgeAI2025RevolutionBanner = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -168,7 +169,7 @@ const EdgeAI2025RevolutionBanner = () => {
               {/* Content Preview Cards */}
               <div className="space-y-4">
                 <h4 className="text-lg font-semibold mb-4">Featured Edge AI Content:</h4>
-                {edgeAIContent.map((content, index) => (
+                {edgeAIContent.map((contentindex) => (
                   <div
                     key={content.id}
                     className={`p-4 rounded-lg cursor-pointer transition-all duration-300 ${
@@ -203,7 +204,7 @@ const EdgeAI2025RevolutionBanner = () => {
 
           {/* Progress Indicators */}
           <div className="flex justify-center space-x-2 mb-6">
-            {edgeAIContent.map((_, index) => (
+            {edgeAIContent.map((_index) => (
               <button
                 key={index}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${

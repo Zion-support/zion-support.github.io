@@ -3,27 +3,27 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function QuantumComputingBreakthrough2027() {
-  const [activeBreakthrough, setActiveBreakthrough] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [activeBreakthroughsetActiveBreakthrough] = useState(0);
+  const [isAnimatingsetIsAnimating] = useState(false);
 
   const breakthroughs = [
     {
       title: 'Quantum Supremacy 2.0',
-      description: 'Achieved quantum supremacy with 1 million qubits, solving problems impossible for classical computers',
+      description: 'Achieved quantum supremacy with 1 million qubitsolving problems impossible for classical computers',
       impact: '10^15x faster computation',
       year: '2027',
       icon: '⚛️',
       color: 'from-blue-500 to-cyan-500',
-      applications: ['Drug Discovery', 'Climate Modeling', 'Financial Optimization', 'Space Exploration']
+      applications: ['Drug 'Discovery', 'Climate 'Modeling', 'Financial 'Optimization', 'Space Exploration']
     },
     {
       title: 'Quantum Internet',
-      description: 'Global quantum internet enables instant, secure communication across the planet',
+      description: 'Global quantum internet enables instantsecure communication across the planet',
       impact: '100% secure communication',
       year: '2027',
       icon: '🌐',
       color: 'from-purple-500 to-pink-500',
-      applications: ['Secure Banking', 'Government Communications', 'Medical Data', 'Military Operations']
+      applications: ['Secure 'Banking', 'Government 'Communications', 'Medical 'Data', 'Military Operations']
     },
     {
       title: 'Quantum AI Integration',
@@ -32,7 +32,7 @@ export default function QuantumComputingBreakthrough2027() {
       year: '2028',
       icon: '🧠',
       color: 'from-green-500 to-teal-500',
-      applications: ['Machine Learning', 'Pattern Recognition', 'Optimization', 'Neural Networks']
+      applications: ['Machine 'Learning', 'Pattern 'Recognition', 'Optimization'Neural Networks']
     },
     {
       title: 'Quantum Consciousness',
@@ -41,7 +41,7 @@ export default function QuantumComputingBreakthrough2027() {
       year: '2029',
       icon: '🌟',
       color: 'from-yellow-500 to-orange-500',
-      applications: ['Self-Aware AI', 'Creative Problem Solving', 'Emotional Intelligence', 'Moral Reasoning']
+      applications: ['Self-Aware 'AI', 'Creative Problem 'Solving', 'Emotional 'Intelligence', 'Moral Reasoning']
     },
     {
       title: 'Universal Quantum Computer',
@@ -50,7 +50,7 @@ export default function QuantumComputingBreakthrough2027() {
       year: '2030',
       icon: '♾️',
       color: 'from-indigo-500 to-purple-500',
-      applications: ['Universe Simulation', 'Time Travel Research', 'Parallel Universe Exploration', 'Reality Manipulation']
+      applications: ['Universe 'Simulation', 'Time Travel 'Research', 'Parallel Universe 'Exploration', 'Reality Manipulation']
     }
   ];
 
@@ -60,11 +60,11 @@ export default function QuantumComputingBreakthrough2027() {
       setTimeout(() => {
         setActiveBreakthrough((prev) => (prev + 1) % breakthroughs.length);
         setIsAnimating(false);
-      }, 500);
-    }, 5000);
+      }500);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentBreakthrough = breakthroughs[activeBreakthrough];
 
@@ -107,7 +107,7 @@ export default function QuantumComputingBreakthrough2027() {
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {currentBreakthrough.applications.map((application, index) => (
+                {currentBreakthrough.applications.map((applicationindex) => (
                   <div key={index} className="bg-white/20 backdrop-blur-sm p-4 rounded-lg text-center">
                     <div className="text-sm font-semibold text-white">{application}</div>
                   </div>
@@ -127,7 +127,7 @@ export default function QuantumComputingBreakthrough2027() {
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 transform -translate-y-1/2"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-              {breakthroughs.map((breakthrough, index) => (
+              {breakthroughs.map((breakthroughindex) => (
                 <div key={index} className="relative">
                   <div 
                     className={`w-12 h-12 rounded-full border-4 border-white transform transition-all duration-300 cursor-pointer ${

@@ -1,10 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-// import { Progress } from '../../../../components/ui/progress';
-import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../../components/ui/card';
+import { Button } from '../../../components/ui/button';
+import { Badge } from '../../../components/ui/badge';
 import { CheckCircle, XCircle, AlertCircle, TrendingUp, Brain, Zap, Shield, Users } from 'lucide-react';
 
 interface AssessmentQuestion {
@@ -375,7 +374,7 @@ export default function AI2030ReadinessAssessment() {
                       {result.categoryScores.technology}%
                     </span>
                   </div>
-                  <div value={result.categoryScores.technology} className="h-2" />
+                  <Progress value={result.categoryScores.technology} className="h-2" />
                 </div>
               </CardContent>
             </Card>
@@ -395,7 +394,7 @@ export default function AI2030ReadinessAssessment() {
                       {result.categoryScores.strategy}%
                     </span>
                   </div>
-                  <div value={result.categoryScores.strategy} className="h-2" />
+                  <Progress value={result.categoryScores.strategy} className="h-2" />
                 </div>
               </CardContent>
             </Card>
@@ -415,7 +414,7 @@ export default function AI2030ReadinessAssessment() {
                       {result.categoryScores.people}%
                     </span>
                   </div>
-                  <div value={result.categoryScores.people} className="h-2" />
+                  <Progress value={result.categoryScores.people} className="h-2" />
                 </div>
               </CardContent>
             </Card>
@@ -435,7 +434,7 @@ export default function AI2030ReadinessAssessment() {
                       {result.categoryScores.processes}%
                     </span>
                   </div>
-                  <div value={result.categoryScores.processes} className="h-2" />
+                  <Progress value={result.categoryScores.processes} className="h-2" />
                 </div>
               </CardContent>
             </Card>

@@ -26,18 +26,18 @@ export default function PerformanceOptimizations() {
           __html: `
             // Performance monitoring
             if ('performance' in window) {
-              window.addEventListener('load', () => {
+              window.addEventListener('load'() => {
                 const perfData = performance.getEntriesByType('navigation')[0];
                 if (perfData) {
-                  console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
-                  console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
+                  console.log('Page Load Time:'perfData.loadEventEnd - perfData.'loadEventStart', 'ms');
+                  console.log('DOM Content Loaded:'perfData.domContentLoadedEventEnd - perfData.'domContentLoadedEventStart', 'ms');
                 }
               });
             }
             
             // Lazy loading for images
             if ('IntersectionObserver' in window) {
-              const imageObserver = new IntersectionObserver((entries, observer) => {
+              const imageObserver = new IntersectionObserver((entriesobserver) => {
                 entries.forEach(entry => {
                   if (entry.isIntersecting) {
                     const img = entry.target;

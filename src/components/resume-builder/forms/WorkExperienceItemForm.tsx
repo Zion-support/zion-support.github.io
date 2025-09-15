@@ -21,11 +21,13 @@ const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required"),
   role_title: z.string().min(1, "Role title is required"),
   start_date: z.date({
-    required_error: "Start date is required"}),
+    required_error: "Start date is required",
+  }),
   end_date: z.date().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
-  location: z.string().optional()});
+  location: z.string().optional(),
+});
 
 type FormValues = z.infer<typeof formSchema>;
 
@@ -38,7 +40,8 @@ interface WorkExperienceItemFormProps {
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
-  onCancel}: WorkExperienceItemFormProps) {
+  onCancel,
+}: WorkExperienceItemFormProps) {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
 
   // Set up form
@@ -51,7 +54,9 @@ export function WorkExperienceItemForm({
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
       description: initialData?.description || "",
-      location: initialData?.location || ""}});
+      location: initialData?.location || "",
+    },
+  });
   
   const { isSubmitting } = form.formState;
   const watchIsCurrent = form.watch("is_current");
@@ -306,7 +311,8 @@ export function WorkExperienceItemForm({
         defaultOptions={{
           enhancementType: "work-description",
           content: form.getValues("description") || "",
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+          context: `${watchRoleTitle} at ${watchCompanyName}`,
+        }}
         initialContent={form.getValues("description") || ""}
       />
     </>

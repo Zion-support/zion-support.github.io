@@ -21,7 +21,8 @@ export function AuthGuard({
   redirectTo = '/auth/login',
   fallback,
   showToast = true,
-  allowGuest = false}: AuthGuardProps) {
+  allowGuest = false,
+}: AuthGuardProps) {
   const { user, isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
 
@@ -35,7 +36,8 @@ export function AuthGuard({
         toast({
           title: "Authentication Required",
           description: "Please log in to access this feature.",
-          variant: "destructive"});
+          variant: "destructive",
+        });
       }
 
       const returnTo = encodeURIComponent(router.asPath);
@@ -53,7 +55,8 @@ export function AuthGuard({
           toast({
             title: "Access Denied",
             description: `This feature requires ${requireRole.join(' or ')} privileges.`,
-            variant: "destructive"});
+            variant: "destructive",
+          });
         }
         router.push('/dashboard'); // Redirect to dashboard instead of login
         return;
@@ -146,7 +149,8 @@ export function useAuthGuard() {
         toast({
           title: "Authentication Required",
           description: "Please log in to continue.",
-          variant: "destructive"});
+          variant: "destructive",
+        });
       }
 
       router.push(`${redirectTo}?returnTo=${encodeURIComponent(returnUrl)}`);
@@ -170,7 +174,8 @@ export function useAuthGuard() {
         toast({
           title: "Access Denied",
           description: `This feature requires ${roles.join(' or ')} privileges.`,
-          variant: "destructive"});
+          variant: "destructive",
+        });
       }
 
       router.push(options?.redirectTo || '/dashboard');
@@ -195,5 +200,6 @@ export function useAuthGuard() {
     checkPermission,
     isAuthenticated,
     user,
-    isLoading};
+    isLoading,
+  };
 }

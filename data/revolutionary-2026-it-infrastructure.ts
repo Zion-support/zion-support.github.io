@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2026ITInfrastructureService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Revolutionary2026ITInfrastructureService {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfrastructureService[] = [
   {
     id: 'quantum-cloud-infrastructure',

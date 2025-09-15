@@ -5,13 +5,13 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Cpu, 
-  Database, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Target, 
+  Brain
+  Cpu
+  Database
+  Cloud
+  Shield
+  Zap
+  Target
   TrendingUp,
   Users,
   Globe,
@@ -53,20 +53,20 @@ import {
 } from 'lucide-react';
 
 const ComprehensiveServiceShowcase2025_2026 = () => {
-  const [activeService, setActiveService] = useState('ai-consulting');
-  const [isVisible, setIsVisible] = useState(false);
-  const [hoveredService, setHoveredService] = useState(null);
+  const [activeServicesetActiveService] = useState('ai-consulting');
+  const [isVisiblesetIsVisible] = useState(false);
+  const [hoveredServicesetHoveredService] = useState(null);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const services = [
     {
       id: 'ai-consulting',
       title: 'AI Strategy Consulting',
       subtitle: 'Transform your business with AI',
-      description: 'Comprehensive AI strategy development, implementation planning, and digital transformation consulting.',
+      description: 'Comprehensive AI strategy developmentimplementation planningand digital transformation consulting.',
       icon: Brain,
       color: 'from-blue-600 to-purple-600',
       features: [
@@ -105,7 +105,7 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
       id: 'ai-development',
       title: 'AI Development Services',
       subtitle: 'Custom AI solutions built for you',
-      description: 'End-to-end AI application development, from concept to deployment, tailored to your specific needs.',
+      description: 'End-to-end AI application developmentfrom concept to deploymentailored to your specific needs.',
       icon: Code,
       color: 'from-emerald-600 to-cyan-600',
       features: [
@@ -182,8 +182,8 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
     {
       id: 'automation',
       title: 'Intelligent Automation',
-      subtitle: 'Automate everything, optimize everything',
-      description: 'Complete business process automation using AI, RPA, and intelligent workflows.',
+      subtitle: 'Automate everythingoptimize everything',
+      description: 'Complete business process automation using AIRPAand intelligent workflows.',
       icon: Settings,
       color: 'from-orange-600 to-red-600',
       features: [
@@ -222,7 +222,7 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
       id: 'data-intelligence',
       title: 'Data Intelligence Platform',
       subtitle: 'Turn data into competitive advantage',
-      description: 'Advanced data analytics, business intelligence, and predictive insights platform.',
+      description: 'Advanced data analyticsbusiness intelligenceand predictive insights platform.',
       icon: BarChart3,
       color: 'from-indigo-600 to-blue-600',
       features: [
@@ -261,7 +261,7 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
       id: 'ai-security',
       title: 'AI Security & Compliance',
       subtitle: 'Secure AI for enterprise',
-      description: 'Comprehensive AI security, privacy protection, and regulatory compliance solutions.',
+      description: 'Comprehensive AI securityprivacy protectionand regulatory compliance solutions.',
       icon: Shield,
       color: 'from-green-600 to-emerald-600',
       features: [
@@ -323,18 +323,18 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.8delay: 0.2 }}
         className="container mx-auto px-4 mb-12"
       >
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {services.map((service, index) => {
+          {services.map((serviceindex) => {
             const Icon = service.icon;
             return (
               <motion.button
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                 onClick={() => setActiveService(service.id)}
                 onMouseEnter={() => setHoveredService(service.id)}
                 onMouseLeave={() => setHoveredService(null)}
@@ -387,12 +387,12 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {currentService.features.map((feature, index) => (
+                {currentService.features.map((featureindex) => (
                   <motion.div
                     key={feature}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial={{ opacity: 0x: -20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.6delay: index * 0.1 }}
                     className="flex items-center gap-3 p-4 bg-slate-800/50 rounded-xl border border-white/20"
                   >
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -406,12 +406,12 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
               <div className="space-y-4">
-                {currentService.benefits.map((benefit, index) => (
+                {currentService.benefits.map((benefitindex) => (
                   <motion.div
                     key={benefit}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+                    initial={{ opacity: 0x: -20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.6delay: 0.2 + index * 0.1 }}
                     className="flex items-center gap-3"
                   >
                     <Star className="w-5 h-5 text-yellow-400 flex-shrink-0" />
@@ -428,7 +428,7 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Pricing Plans</h3>
               <div className="space-y-4">
-                {Object.entries(currentService.pricing).map(([plan, price]) => (
+                {Object.entries(currentService.pricing).map(([planprice]) => (
                   <div key={plan} className="flex justify-between items-center p-4 bg-slate-700/50 rounded-xl">
                     <span className="text-gray-300 capitalize font-medium">{plan}</span>
                     <span className="text-white font-bold text-lg">{price}</span>
@@ -445,12 +445,12 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Success Stories</h3>
               <div className="space-y-6">
-                {currentService.caseStudies.map((study, index) => (
+                {currentService.caseStudies.map((studyindex) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.2 }}
+                    transition={{ duration: 0.6delay: index * 0.2 }}
                     className="p-4 bg-slate-700/50 rounded-xl"
                   >
                     <div className="flex items-center justify-between mb-2">
@@ -470,7 +470,7 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, delay: 0.6 }}
+        transition={{ duration: 0.8delay: 0.6 }}
         className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border-t border-white/20 py-16"
       >
         <div className="container mx-auto px-4 text-center">

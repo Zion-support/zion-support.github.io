@@ -4,15 +4,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Code, 
-  BarChart3, 
-  Shield, 
-  Search, 
-  MessageSquare, 
-  Image, 
-  Video, 
+  Brain
+  Zap
+  Code
+  BarChart3
+  Shield
+  Search
+  MessageSquare
+  Image
+  Video
   FileText,
   ArrowRight,
   Star,
@@ -40,7 +40,7 @@ const aiTools: AITool[] = [
     description: 'Advanced AI-powered code generation and debugging tool with real-time suggestions and error detection.',
     category: 'Development',
     icon: <Code className="w-8 h-8" />,
-    features: ['Code Generation', 'Bug Detection', 'Performance Optimization', 'Documentation'],
+    features: ['Code 'Generation', 'Bug 'Detection', 'Performance 'Optimization', 'Documentation'],
     pricing: '$29/month',
     rating: 4.9,
     isNew: true,
@@ -52,7 +52,7 @@ const aiTools: AITool[] = [
     description: 'Comprehensive business intelligence platform powered by advanced neural networks.',
     category: 'Analytics',
     icon: <BarChart3 className="w-8 h-8" />,
-    features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'API Integration'],
+    features: ['Predictive 'Analytics', 'Real-time 'Insights', 'Custom 'Dashboards', 'API Integration'],
     pricing: '$49/month',
     rating: 4.8,
     isPopular: true
@@ -63,7 +63,7 @@ const aiTools: AITool[] = [
     description: 'Next-generation cybersecurity solution using quantum-resistant encryption algorithms.',
     category: 'Security',
     icon: <Shield className="w-8 h-8" />,
-    features: ['Quantum Encryption', 'Threat Detection', 'Zero Trust Architecture', 'Compliance'],
+    features: ['Quantum 'Encryption', 'Threat 'Detection', 'Zero Trust 'Architecture', 'Compliance'],
     pricing: '$99/month',
     rating: 4.9,
     isNew: true
@@ -71,10 +71,10 @@ const aiTools: AITool[] = [
   {
     id: '4',
     name: 'AI Content Generator',
-    description: 'Multi-modal content creation tool for text, images, and video using cutting-edge AI models.',
+    description: 'Multi-modal content creation tool for textimagesand video using cutting-edge AI models.',
     category: 'Content',
     icon: <FileText className="w-8 h-8" />,
-    features: ['Text Generation', 'Image Creation', 'Video Editing', 'SEO Optimization'],
+    features: ['Text 'Generation', 'Image 'Creation', 'Video 'Editing', 'SEO Optimization'],
     pricing: '$39/month',
     rating: 4.7
   },
@@ -84,7 +84,7 @@ const aiTools: AITool[] = [
     description: 'Semantic search solution with natural language processing and contextual understanding.',
     category: 'Search',
     icon: <Search className="w-8 h-8" />,
-    features: ['Natural Language', 'Contextual Results', 'Voice Search', 'Multi-language'],
+    features: ['Natural 'Language', 'Contextual 'Results', 'Voice 'Search', 'Multi-language'],
     pricing: '$19/month',
     rating: 4.6
   },
@@ -94,23 +94,23 @@ const aiTools: AITool[] = [
     description: 'Advanced conversational AI with emotional intelligence and multi-turn dialogue capabilities.',
     category: 'Communication',
     icon: <MessageSquare className="w-8 h-8" />,
-    features: ['Emotional AI', 'Multi-language', 'Voice Integration', 'Custom Training'],
+    features: ['Emotional 'AI', 'Multi-'language', 'Voice 'Integration', 'Custom Training'],
     pricing: '$25/month',
     rating: 4.8,
     isPopular: true
   }
 ];
 
-const categories = ['All', 'Development', 'Analytics', 'Security', 'Content', 'Search', 'Communication'];
+const categories = [', 'All', 'Development', 'Analytics', 'Security', 'Content', 'Search'Communication'];
 
 export default function AIToolsShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [hoveredTool, setHoveredTool] = useState<string | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [selectedCategorysetSelectedCategory] = useState('All');
+  const [hoveredToolsetHoveredTool] = useState<string | null>(null);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const filteredTools = selectedCategory === 'All' 
     ? aiTools 
@@ -137,8 +137,8 @@ export default function AIToolsShowcase2025() {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover cutting-edge AI tools that are revolutionizing how we work, create, and innovate. 
-            From development to analytics, security to content creation.
+            Discover cutting-edge AI tools that are revolutionizing how we workcreateand innovate. 
+            From development to analyticsecurity to content creation.
           </p>
         </motion.div>
 
@@ -146,7 +146,7 @@ export default function AIToolsShowcase2025() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
@@ -168,17 +168,17 @@ export default function AIToolsShowcase2025() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
-            {filteredTools.map((tool, index) => (
+            {filteredTools.map((toolindex) => (
               <motion.div
                 key={tool.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
+                transition={{ duration: 0.4delay: index * 0.1 }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
                 onMouseEnter={() => setHoveredTool(tool.id)}
                 onMouseLeave={() => setHoveredTool(null)}
@@ -212,7 +212,7 @@ export default function AIToolsShowcase2025() {
 
                 {/* Features */}
                 <div className="space-y-2 mb-6">
-                  {tool.features.map((feature, idx) => (
+                  {tool.features.map((featureidx) => (
                     <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400" />
                       {feature}
@@ -223,7 +223,7 @@ export default function AIToolsShowcase2025() {
                 {/* Rating */}
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(5)].map((_i) => (
                       <Star
                         key={i}
                         className={`w-4 h-4 ${
@@ -263,7 +263,7 @@ export default function AIToolsShowcase2025() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6delay: 0.8 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
@@ -271,8 +271,8 @@ export default function AIToolsShowcase2025() {
               Ready to Transform Your Workflow?
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of professionals who are already using our AI tools to boost productivity, 
-              enhance creativity, and drive innovation.
+              Join thousands of professionals who are already using our AI tools to boost productivity
+              enhance creativityand drive innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300">

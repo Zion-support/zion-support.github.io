@@ -1,15 +1,28 @@
+<<<<<<< HEAD
 "use client";
+import React{ SuspenselazyuseStateuseEffect } from 'react';
+=======
 import React, { Suspense, lazy, useState, useEffect } from 'react';
+>>>>>>> origin/auto/autonomy-17186719616
 import Layout from './layout/Layout';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+  ArrowRightStar
+  BrainAtomShieldZapTrendingUpGlobe,
+  RocketTargetUsersCpuEyeNetwork,
+  CarSearchTestTubeGlobe as PlanetIconLockPalette,
+  FileTextBarChart3HeartTruckShieldCheck,
+  SparklesInfinity as InfinityIconZap as Lightning
+=======
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe,
   Rocket, Target, Users, Cpu, Eye, Network,
   Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette,
   FileText, BarChart3, Heart, Truck, ShieldCheck,
   Sparkles, Infinity as InfinityIcon, Zap as Lightning
+>>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 
 // Import new service data
@@ -20,16 +33,27 @@ import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-
 const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
 
 const Homepage2040: React.FC = () => {
+<<<<<<< HEAD
+  const [currentServiceIndexsetCurrentServiceIndex] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+=======
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length);
+<<<<<<< HEAD
+    }5000);
+    return () => clearInterval(interval);
+  }[]);
+=======
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Enhanced animation variants for better performance
   const containerVariants = {
@@ -57,7 +81,11 @@ const Homepage2040: React.FC = () => {
 
   const floatingVariants = {
     float: {
+<<<<<<< HEAD
+      y: [-10-10],
+=======
       y: [-10, 10, -10],
+>>>>>>> origin/auto/autonomy-17186719616
       transition: {
         duration: 3,
         repeat: -1,
@@ -102,8 +130,13 @@ const Homepage2040: React.FC = () => {
   ];
 
   // Combine all services for showcase
+<<<<<<< HEAD
+  const allServices = [...innovativeMicroSaasServices2025V2...emergingTechServices2025V2];
+  const featuredServices = allServices.filter(service => service.popular).slice(06);
+=======
   const allServices = [...innovativeMicroSaasServices2025V2, ...emergingTechServices2025V2];
   const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const serviceCategories = [
     {
@@ -164,7 +197,11 @@ const Homepage2040: React.FC = () => {
             
             {/* Quantum particle effects */}
             <div className="absolute inset-0">
+<<<<<<< HEAD
+              {[...Array(20)].map((_i) => (
+=======
               {[...Array(20)].map((_, i) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
@@ -174,8 +211,14 @@ const Homepage2040: React.FC = () => {
                     animationDelay: `${Math.random() * 3}s`
                   }}
                   animate={{
+<<<<<<< HEAD
+                    scale: [010],
+                    opacity: [010]}}
+=======
                     scale: [0, 1, 0],
-                    opacity: [0, 1, 0]}}
+                    opacity: [0, 1, 0],
+                  }}
+>>>>>>> origin/auto/autonomy-17186719616
                   transition={{
                     duration: 3,
                     repeat: Infinity,
@@ -217,7 +260,11 @@ const Homepage2040: React.FC = () => {
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
               >
+<<<<<<< HEAD
+                Pioneering the future of technology with revolutionary AIquantum computingand autonomous solutions that transform businesses worldwide
+=======
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
+>>>>>>> origin/auto/autonomy-17186719616
               </motion.p>
               
               {/* Enhanced CTA Section */}
@@ -284,7 +331,11 @@ const Homepage2040: React.FC = () => {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
+<<<<<<< HEAD
+              {statsData.map((statindex) => (
+=======
               {statsData.map((stat, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={stat.label}
                   variants={itemVariants}
@@ -335,7 +386,11 @@ const Homepage2040: React.FC = () => {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
+<<<<<<< HEAD
+              {serviceCategories.map((categoryindex) => (
+=======
               {serviceCategories.map((category, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={category.name}
                   variants={itemVariants}
@@ -387,7 +442,11 @@ const Homepage2040: React.FC = () => {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
+<<<<<<< HEAD
+              {featuredServices.map((serviceindex) => (
+=======
               {featuredServices.map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -416,7 +475,11 @@ const Homepage2040: React.FC = () => {
                   </div>
                   
                   <div className="space-y-3 mb-6">
+<<<<<<< HEAD
+                    {service.features.slice(03).map((featureidx) => (
+=======
                     {service.features.slice(0, 3).map((feature, idx) => (
+>>>>>>> origin/auto/autonomy-17186719616
                       <div key={idx} className="flex items-center gap-3 text-gray-300">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                         <span className="text-sm">{feature}</span>
@@ -446,7 +509,11 @@ const Homepage2040: React.FC = () => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
+                  transition={{ duration: 0.8delay: 0.4 }}
+=======
                   transition={{ duration: 0.8, delay: 0.4 }}
+>>>>>>> origin/auto/autonomy-17186719616
                   className="text-center mt-12"
                 >
                   <Link 
@@ -458,9 +525,12 @@ const Homepage2040: React.FC = () => {
                   </Link>
                 </motion.div>
               ))}
+<<<<<<< HEAD
+=======
             </motion.div>
           </div>
         </section>
+>>>>>>> origin/auto/autonomy-17186719616
 
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">

@@ -1,8 +1,23 @@
+<<<<<<< HEAD
 "use client";
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 import { useState } from 'react';
 import Head from 'next/head';
 
 export default function OffworldConsole() {
+<<<<<<< HEAD
+  const [chatsetChat] = useState('');
+  const [voteChoicesetVoteChoice] = useState('yes');
+  const [proposalIdsetProposalId] = useState('prop-1');
+  const [namesetName] = useState('');
+  const [skillsetSkills] = useState('');
+  const [statusetStatus] = useState('');
+
+  async function sendChat() {
+    setStatus('Sending chat...');
+    const res = await fetch('/api/offworld/orbit?action=chat'{ method: ''POST', 'headers: { 'content-type': 'application/json' }body: JSON.stringify({ from: ''anon', 'text: chat }) });
+=======
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
   const [proposalId, setProposalId] = useState('prop-1');
@@ -13,25 +28,38 @@ export default function OffworldConsole() {
   async function sendChat() {
     setStatus('Sending chat...');
     const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) });
+>>>>>>> origin/auto/autonomy-17186719616
     setStatus(res.ok ? 'Chat sent' : 'Chat failed');
   }
 
   async function castVote() {
     setStatus('Recording vote...');
+<<<<<<< HEAD
+    const res = await fetch('/api/offworld/orbit?action=vote'{ method: ''POST', 'headers: { 'content-type': 'application/json' }body: JSON.stringify({ proposalIdvoter: ''anon', 'choice: voteChoice }) });
+=======
     const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) });
+>>>>>>> origin/auto/autonomy-17186719616
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed');
   }
 
   async function syncProfile() {
     setStatus('Pinning profile...');
+<<<<<<< HEAD
+    const res = await fetch('/api/offworld/ipfs?action=json'{ method: ''POST', 'headers: { 'content-type': 'application/json' }body: JSON.stringify({ profile: { nameskills: skills.split(',').map(s => s.trim()) } }) });
+=======
     const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split(',').map(s => s.trim()) } }) });
+>>>>>>> origin/auto/autonomy-17186719616
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');
   }
 
   async function broadcast() {
     setStatus('Broadcasting manifesto...');
+<<<<<<< HEAD
+    const res = await fetch('/api/offworld/ipfs?action=broadcast'{ method: ''POST', 'headers: { 'content-type': 'application/json' }body: JSON.stringify({ message: 'We build beyond platforms.' }) });
+=======
     const res = await fetch('/api/offworld/ipfs?action=broadcast', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ message: 'We build beyond platforms.' }) });
+>>>>>>> origin/auto/autonomy-17186719616
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
   }
 

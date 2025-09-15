@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function RevolutionaryContentPromotionBanner() {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentPromotion, setCurrentPromotion] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentPromotionsetCurrentPromotion] = useState(0);
 
   const promotions = [
     {
@@ -36,10 +36,10 @@ export default function RevolutionaryContentPromotionBanner() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPromotion((prev) => (prev + 1) % promotions.length);
-    }, 5000);
+    }5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 

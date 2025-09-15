@@ -8,11 +8,11 @@ import {
   Zap, 
   Shield, 
   TrendingUp, 
-  
+  Target,
   Award,
   Users,
   BarChart3,
-  
+  Cpu,
   Globe,
   Smartphone
 } from 'lucide-react';
@@ -40,7 +40,7 @@ const EdgeAIRevolutionShowcase2025 = () => {
         {
           title: 'Real-Time Processing',
           description: 'Process data locally with ultra-low latency for instant decision making',
-          icon: 
+          icon: Cpu,
           color: 'bg-blue-500'
         },
         {
@@ -157,7 +157,7 @@ const EdgeAIRevolutionShowcase2025 = () => {
                   href="/blog/ai-2025-edge-computing-revolution"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
-                  <Award className="w-5 h-5 mr-2" />
+                  <ArrowRight className="w-5 h-5 mr-2" />
                   Read Full Article
                   <ChevronRight className="w-5 h-5 ml-2" />
                 </Link>

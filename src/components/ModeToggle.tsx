@@ -46,7 +46,8 @@ export function ModeToggle() {
       const title = messages[Math.floor(Math.random() * messages.length)]
       toast({
         title,
-        description: `Theme changed to ${newTheme} mode successfully`});
+        description: `Theme changed to ${newTheme} mode successfully`,
+      });
 
       // Accessibility announcement for screen readers
       const announcement = `Theme switched to ${newTheme} mode`;
@@ -70,7 +71,8 @@ export function ModeToggle() {
       toast({
         title: "Theme switch failed",
         description: "Unable to change theme. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     }
   };
 

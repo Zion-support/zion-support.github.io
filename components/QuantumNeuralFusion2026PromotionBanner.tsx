@@ -28,7 +28,7 @@ export default function QuantumNeuralFusion2026PromotionBanner() {
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             The most significant AI breakthrough in history: Quantum-Neural Fusion technology 
-            combining quantum computing with neural networks, delivering unprecedented results 
+            combining quantum computing with neural networksdelivering unprecedented results 
             for enterprises worldwide.
           </p>
           
@@ -154,7 +154,7 @@ export default function QuantumNeuralFusion2026PromotionBanner() {
         {/* Final CTA */}
         <div className="text-center mt-12">
           <p className="text-lg text-gray-300 mb-6">
-            Don't miss out on the most significant technological breakthrough of 2026
+            'Don', 't miss out on the most significant technological breakthrough of 2026
           </p>
           <Link 
             href="/contact"

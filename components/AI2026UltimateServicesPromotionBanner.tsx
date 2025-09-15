@@ -4,10 +4,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  ArrowRight, 
-  Star, 
+  Brain
+  Zap
+  ArrowRight
+  Star
   Sparkles,
   TrendingUp,
   Users,
@@ -15,11 +15,11 @@ import {
 } from 'lucide-react';
 
 const AI2026UltimateServicesPromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const features = [
     "Neural Interface Revolution",
@@ -48,9 +48,9 @@ const AI2026UltimateServicesPromotionBanner = () => {
           {/* Left Content */}
           <motion.div
             className="space-y-8"
-            initial={{ opacity: 0, x: -50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0x: -50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: -50 }}
+            transition={{ duration: 0.8delay: 0.2 }}
           >
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
               <Star className="w-4 h-4" />
@@ -69,18 +69,18 @@ const AI2026UltimateServicesPromotionBanner = () => {
             </h1>
 
             <p className="text-xl text-gray-300 leading-relaxed">
-              Experience the next generation of AI services that are revolutionizing industries, 
-              enhancing human capabilities, and creating unprecedented opportunities for growth and innovation.
+              Experience the next generation of AI services that are revolutionizing industries
+              enhancing human capabilitiesand creating unprecedented opportunities for growth and innovation.
             </p>
 
             <div className="space-y-4">
-              {features.map((feature, index) => (
+              {features.map((featureindex) => (
                 <motion.div
                   key={index}
                   className="flex items-center gap-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: -20 }}
+                  transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                 >
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{feature}</span>
@@ -121,16 +121,16 @@ const AI2026UltimateServicesPromotionBanner = () => {
           {/* Right Content - Visual Elements */}
           <motion.div
             className="relative"
-            initial={{ opacity: 0, x: 50 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: 50 }}
+            transition={{ duration: 0.8delay: 0.4 }}
           >
             <div className="relative">
               {/* Main Service Cards */}
               <div className="grid grid-cols-2 gap-4">
                 <motion.div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
-                  whileHover={{ scale: 1.05, rotate: 2 }}
+                  whileHover={{ scale: 1.05rotate: 2 }}
                   transition={{ duration: 0.3 }}
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-4">
@@ -142,7 +142,7 @@ const AI2026UltimateServicesPromotionBanner = () => {
 
                 <motion.div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
-                  whileHover={{ scale: 1.05, rotate: -2 }}
+                  whileHover={{ scale: 1.05rotate: -2 }}
                   transition={{ duration: 0.3 }}
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center mb-4">
@@ -154,7 +154,7 @@ const AI2026UltimateServicesPromotionBanner = () => {
 
                 <motion.div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
-                  whileHover={{ scale: 1.05, rotate: 2 }}
+                  whileHover={{ scale: 1.05rotate: 2 }}
                   transition={{ duration: 0.3 }}
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-4">
@@ -166,7 +166,7 @@ const AI2026UltimateServicesPromotionBanner = () => {
 
                 <motion.div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
-                  whileHover={{ scale: 1.05, rotate: -2 }}
+                  whileHover={{ scale: 1.05rotate: -2 }}
                   transition={{ duration: 0.3 }}
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-orange-600 rounded-xl flex items-center justify-center mb-4">
@@ -181,8 +181,8 @@ const AI2026UltimateServicesPromotionBanner = () => {
               <motion.div
                 className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-60"
                 animate={{
-                  y: [0, -20, 0],
-                  scale: [1, 1.1, 1],
+                  y: [0-20],
+                  scale: [1.1],
                 }}
                 transition={{
                   duration: 4,
@@ -193,8 +193,8 @@ const AI2026UltimateServicesPromotionBanner = () => {
               <motion.div
                 className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-xl opacity-60"
                 animate={{
-                  y: [0, 20, 0],
-                  scale: [1, 1.2, 1],
+                  y: [020],
+                  scale: [1.21],
                 }}
                 transition={{
                   duration: 3,

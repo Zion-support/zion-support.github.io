@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2025BreakthroughPromotionBanner() {
   return (
@@ -27,7 +27,7 @@ export default function AI2025BreakthroughPromotionBanner() {
           <p className="text-lg md:text-xl text-white/90 mb-6 max-w-4xl mx-auto">
             Discover revolutionary AI technologies delivering 
             <span className="text-yellow-300 font-bold"> 2,500-5,000% ROI</span> across industries. 
-            Join the transformation that's reshaping the future of business.
+            Join the transformation 'that', 's reshaping the future of business.
           </p>
 
           {/* Key metrics */}

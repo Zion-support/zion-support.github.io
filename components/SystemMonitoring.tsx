@@ -1,7 +1,7 @@
 "use client";
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React{ useEffectuseStateuseCallback } from 'react';
 
 interface Alert {
   id: string;
@@ -21,8 +21,8 @@ interface SystemMetrics {
 }
 
 const SystemMonitoring: React.FC = () => {
-  const [alerts, setAlerts] = useState<Alert[]>([]);
-  const [metrics, setMetrics] = useState<SystemMetrics>({
+  const [alertsetAlerts] = useState<Alert[]>([]);
+  const [metricsetMetrics] = useState<SystemMetrics>({
     memoryUsage: 0,
     responseTime: 0,
     uptime: 0,
@@ -45,19 +45,19 @@ const SystemMonitoring: React.FC = () => {
       resolved: false,
     };
 
-    setAlerts(prev => [...prev, alert]);
+    setAlerts(prev => [...prevalert]);
     console.warn(`[${severity.toUpperCase()}] ${title}: ${message}`);
-  }, []);
+  }[]);
 
   const resolveAlert = useCallback((alertId: string) => {
     setAlerts(prev => 
       prev.map(alert => 
         alert.id === alertId 
-          ? { ...alert, resolved: true }
+          ? { ...alertresolved: true }
           : alert
       )
     );
-  }, []);
+  }[]);
 
   const collectMetrics = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -85,30 +85,30 @@ const SystemMonitoring: React.FC = () => {
 
     // Check thresholds
     if (memoryUsage > 80) {
-      createAlert('performance', 'high', 'High Memory Usage', `Memory usage is ${memoryUsage}%`);
+      createAlert(', 'performance', 'high'High Memory Usage'`Memory usage is ${memoryUsage}%`);
     }
 
     if (responseTime > 2000) {
-      createAlert('performance', 'medium', 'Slow Response', `Response time is ${responseTime}ms`);
+      createAlert(', 'performance', 'medium'Slow Response'`Response time is ${responseTime}ms`);
     }
-  }, [alerts, createAlert]);
+  }[alertscreateAlert]);
 
   useEffect(() => {
-    const interval = setInterval(collectMetrics, 5000);
+    const interval = setInterval(collectMetrics5000);
     collectMetrics(); // Initial collection
 
     // Error tracking
     const handleError = (event: ErrorEvent) => {
-      createAlert('error', 'high', 'JavaScript Error', event.message);
+      createAlert(', 'error', 'high'JavaScript 'Error', 'event.message);
     };
 
-    window.addEventListener('error', handleError);
+    window.addEventListener(', 'error', 'handleError);
 
     return () => {
       clearInterval(interval);
-      window.removeEventListener('error', handleError);
+      window.removeEventListener(', 'error', 'handleError);
     };
-  }, [collectMetrics]);
+  }[collectMetrics]);
 
   const activeAlerts = alerts.filter(alert => !alert.resolved);
 

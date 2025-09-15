@@ -4,13 +4,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Wrench, 
-  Zap, 
-  Brain, 
-  Code, 
-  BarChart3, 
-  Shield, 
-  Globe, 
+  Wrench
+  Zap
+  Brain
+  Code
+  BarChart3
+  Shield
+  Globe
   Smartphone,
   ArrowRight,
   Star,
@@ -28,12 +28,12 @@ import {
 } from 'lucide-react';
 
 const AI2025ToolsUtilitiesShowcase = () => {
-  const [activeCategory, setActiveCategory] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeCategorysetActiveCategory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const categories = [
     {
@@ -41,7 +41,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
       name: "Development Tools",
       icon: Code,
       color: "from-blue-500 to-cyan-500",
-      description: "AI-powered development tools for faster, smarter coding"
+      description: "AI-powered development tools for fastersmarter coding"
     },
     {
       id: 2,
@@ -71,8 +71,8 @@ const AI2025ToolsUtilitiesShowcase = () => {
       id: 1,
       name: "AI Code Assistant",
       category: "Development Tools",
-      description: "Intelligent code completion, debugging, and optimization suggestions",
-      features: ["Code Completion", "Bug Detection", "Performance Optimization", "Documentation Generation"],
+      description: "Intelligent code completiondebuggingand optimization suggestions",
+      features: ["Code Completion"Bug Detection"Performance Optimization"Documentation Generation"],
       icon: Code,
       rating: 4.9,
       users: "50K+",
@@ -84,7 +84,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
       name: "Smart Analytics Dashboard",
       category: "Analytics & Insights",
       description: "Real-time data visualization and predictive analytics platform",
-      features: ["Real-time Dashboards", "Predictive Analytics", "Custom Reports", "API Integration"],
+      features: ["Real-time Dashboards"Predictive Analytics"Custom Reports"API Integration"],
       icon: BarChart3,
       rating: 4.8,
       users: "25K+",
@@ -96,7 +96,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
       name: "AI Security Scanner",
       category: "Security & Compliance",
       description: "Automated vulnerability detection and security compliance monitoring",
-      features: ["Vulnerability Scanning", "Compliance Checks", "Threat Detection", "Security Reports"],
+      features: ["Vulnerability Scanning"Compliance Checks"Threat Detection"Security Reports"],
       icon: Shield,
       rating: 4.9,
       users: "15K+",
@@ -108,7 +108,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
       name: "Workflow Automator",
       category: "Automation Tools",
       description: "Intelligent workflow automation with AI-powered decision making",
-      features: ["Process Automation", "AI Decision Making", "Integration Hub", "Custom Workflows"],
+      features: ["Process Automation"AI Decision Making"Integration Hub"Custom Workflows"],
       icon: Settings,
       rating: 4.7,
       users: "30K+",
@@ -119,8 +119,8 @@ const AI2025ToolsUtilitiesShowcase = () => {
       id: 5,
       name: "Content Generator Pro",
       category: "Content Tools",
-      description: "AI-powered content creation for blogs, social media, and marketing",
-      features: ["Content Generation", "SEO Optimization", "Multi-language", "Brand Voice"],
+      description: "AI-powered content creation for blogsocial mediand marketing",
+      features: ["Content Generation"SEO Optimization"Multi-language"Brand Voice"],
       icon: Lightbulb,
       rating: 4.8,
       users: "40K+",
@@ -131,8 +131,8 @@ const AI2025ToolsUtilitiesShowcase = () => {
       id: 6,
       name: "Data Processor AI",
       category: "Data Tools",
-      description: "Intelligent data processing, cleaning, and transformation tools",
-      features: ["Data Cleaning", "ETL Processing", "Data Validation", "Schema Detection"],
+      description: "Intelligent data processingcleaningand transformation tools",
+      features: ["Data Cleaning"ETL Processing"Data Validation"Schema Detection"],
       icon: Database,
       rating: 4.6,
       users: "20K+",
@@ -142,10 +142,10 @@ const AI2025ToolsUtilitiesShowcase = () => {
   ];
 
   const features = [
-    { icon: Zap, text: "Lightning Fast", description: "Optimized for speed and performance" },
-    { icon: Shield, text: "Secure & Reliable", description: "Enterprise-grade security" },
-    { icon: Globe, text: "Cloud Native", description: "Scalable cloud infrastructure" },
-    { icon: Smartphone, text: "Mobile Ready", description: "Works on all devices" }
+    { icon: Zaptext: "Lightning Fast"description: "Optimized for speed and performance" },
+    { icon: Shieldtext: "Secure & Reliable"description: "Enterprise-grade security" },
+    { icon: Globetext: "Cloud Native"description: "Scalable cloud infrastructure" },
+    { icon: Smartphonetext: "Mobile Ready"description: "Works on all devices" }
   ];
 
   const filteredTools = tools.filter(tool => 
@@ -176,8 +176,8 @@ const AI2025ToolsUtilitiesShowcase = () => {
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of AI-powered tools and utilities designed to streamline your workflow, 
-            boost productivity, and drive innovation across all aspects of your business.
+            Discover our comprehensive suite of AI-powered tools and utilities designed to streamline your workflow
+            boost productivityand drive innovation across all aspects of your business.
           </p>
         </motion.div>
 
@@ -194,7 +194,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
             >
               All Tools
             </button>
-            {categories.map((category, index) => (
+            {categories.map((categoryindex) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
@@ -214,13 +214,13 @@ const AI2025ToolsUtilitiesShowcase = () => {
         {/* Tools Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <AnimatePresence mode="wait">
-            {filteredTools.map((tool, index) => (
+            {filteredTools.map((toolindex) => (
               <motion.div
                 key={tool.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
                 className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/20 hover:border-indigo-500/50 transition-all duration-300 group"
               >
                 {/* Tool Header */}
@@ -248,7 +248,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
 
                 {/* Features */}
                 <div className="space-y-2 mb-6">
-                  {tool.features.map((feature, featureIndex) => (
+                  {tool.features.map((featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-green-400" />
                       <span className="text-sm text-gray-300">{feature}</span>
@@ -280,12 +280,12 @@ const AI2025ToolsUtilitiesShowcase = () => {
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our AI Tools?</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
+            {features.map((featureindex) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center p-6 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-indigo-500 to-blue-500 mb-4">
@@ -302,7 +302,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-indigo-500/10 to-blue-500/10 rounded-2xl p-8 border border-indigo-500/20">

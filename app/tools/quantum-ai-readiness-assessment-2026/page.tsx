@@ -1,8 +1,12 @@
-'use client';
+"use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+<<<<<<< HEAD
+=======
+// Metadata moved to parent component
 
+>>>>>>> origin/new-content-and-promotional-components
 interface AssessmentResults {
   overallScore: number;
   readinessLevel: string;

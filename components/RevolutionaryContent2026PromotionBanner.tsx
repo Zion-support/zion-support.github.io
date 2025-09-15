@@ -44,13 +44,13 @@ const RevolutionaryContent2026PromotionBanner = () => {
             Revolutionary Content 2026
           </h2>
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-            Explore cutting-edge insights, breakthrough case studies, and revolutionary technologies 
+            Explore cutting-edge insightsbreakthrough case studiesand revolutionary technologies 
             that will shape the future of business and society.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {contentItems.map((item, index) => (
+          {contentItems.map((itemindex) => (
             <div 
               key={index}
               className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 group"
@@ -152,7 +152,7 @@ const RevolutionaryContent2026PromotionBanner = () => {
           <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20">
             <h3 className="text-2xl font-bold mb-4">Stay Updated with Latest Content</h3>
             <p className="text-gray-300 mb-6">
-              Get exclusive access to new content, insights, and breakthrough technologies delivered to your inbox.
+              Get exclusive access to new contentinsightsand breakthrough technologies delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input

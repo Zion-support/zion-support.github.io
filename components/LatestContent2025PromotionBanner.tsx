@@ -2,13 +2,13 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Calendar, TrendingUp, Users, Star, Clock, Eye, BookOpen, Video, FileText } from 'lucide-react';
+ArrowRightCalendarTrendingUpUsersStarClockEyeBookOpenVideoFileText
 
 const LatestContent2025PromotionBanner = () => {
   const latestContent = [
     {
       id: 1,
-      title: "AI Revolution 2025: What's Next?",
+      title: "AI Revolution 2025: 'What', 's Next?",
       type: 'article',
       readTime: '8 min',
       views: '15.2k',
@@ -71,7 +71,7 @@ const LatestContent2025PromotionBanner = () => {
             Fresh Insights & Breakthroughs
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Stay ahead with our latest articles, guides, and insights on cutting-edge technology and AI innovations.
+            Stay ahead with our latest articlesguidesand insights on cutting-edge technology and AI innovations.
           </p>
         </div>
 
@@ -120,11 +120,11 @@ const LatestContent2025PromotionBanner = () => {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {[
-            { number: '50+', label: 'New Articles This Week' },
-            { number: '1M+', label: 'Monthly Readers' },
-            { number: '95%', label: 'Reader Satisfaction' },
-            { number: '24/7', label: 'Content Updates' }
-          ].map((stat, index) => (
+            { number: '50+'label: 'New Articles This Week' },
+            { number: '1M+'label: 'Monthly Readers' },
+            { number: '95%'label: 'Reader Satisfaction' },
+            { number: '24/7'label: 'Content Updates' }
+          ].map((statindex) => (
             <div key={index} className="text-center">
               <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-blue-100">{stat.label}</div>

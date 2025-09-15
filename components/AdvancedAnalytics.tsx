@@ -1,369 +1,437 @@
+"use client";
 'use client';
 
-import { useEffect, useState } from 'react';
+import React{ useEffectuseStateuseCallback } from 'react';
 
-const AdvancedAnalytics = () => {
-  const [sessionId] = useState(() => Math.random().toString(36).substr(2, 9));
-  const [pageStartTime] = useState(() => Date.now());
+interface AnalyticsEvent {
+  event: string;
+  category: string;
+  action: string;
+  label?: string;
+  value?: number;
+  timestamp: number;
+  userId?: string;
+  sessionId: string;
+  page: string;
+  userAgent: string;
+  referrer: string;
+}
 
-  useEffect(() => {
-    // Enhanced Analytics Implementation
-    const initAnalytics = () => {
-      // Google Analytics 4 Configuration
-      const GA4_CONFIG = {
-        measurement_id: 'G-XXXXXXXXXX', // Replace with actual GA4 ID
-        custom_map: {
-          'custom_parameter_1': 'roi_metrics',
-          'custom_parameter_2': 'content_engagement',
-          'custom_parameter_3': 'conversion_funnel',
-          'custom_parameter_4': 'user_journey'
-        }
-      };
+interface UserBehavior {
+  pageViews: number;
+  timeOnPage: number;
+  scrollDepth: number;
+  clickEvents: number;
+  formInteractions: number;
+  exitIntent: boolean;
+}
 
-      // Initialize GA4
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('config', GA4_CONFIG.measurement_id, {
-          page_title: document.title,
-          page_location: window.location.href,
-          custom_map: GA4_CONFIG.custom_map,
-          send_page_view: true
-        });
-      }
+interface PerformanceMetrics {
+  loadTime: number;
+  domContentLoaded: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+}
 
-      // Enhanced Event Tracking
-      const trackEvent = (eventName: string, parameters: any = {}) => {
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', eventName, {
-            ...parameters,
-            session_id: sessionId,
-            timestamp: Date.now(),
-            page_title: document.title,
-            page_location: window.location.href
-          });
-        }
-      };
+const AdvancedAnalytics: React.FC = () => {
+  const [eventsetEvents] = useState<AnalyticsEvent[]>([]);
+  const [userBehaviorsetUserBehavior] = useState<UserBehavior>({
+    pageViews: 0,
+    timeOnPage: 0,
+    scrollDepth: 0,
+    clickEvents: 0,
+    formInteractions: 0,
+    exitIntent: false,
+  });
+  const [performanceMetricsetPerformanceMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    domContentLoaded: 0,
+    firstPaint: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    cumulativeLayoutShift: 0,
+    firstInputDelay: 0,
+  });
 
-      // User Engagement Tracking
-      const trackEngagement = () => {
-        let engagementTime = 0;
-        let maxScroll = 0;
-        let clickCount = 0;
-        let formInteractions = 0;
-        let videoViews = 0;
-        let downloadCount = 0;
+  const sessionId = React.useMemo(() => {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(29)}`;
+  }[]);
 
-        // Time on page tracking
-        const startTime = Date.now();
-        const trackTimeOnPage = () => {
-          engagementTime = Date.now() - startTime;
-          trackEvent('engagement_time', {
-            engagement_time_msec: engagementTime,
-            time_on_page: Math.round(engagementTime / 1000)
-          });
-        };
-
-        // Scroll depth tracking
-        const trackScrollDepth = () => {
-          let scrollCheckpoints = [25, 50, 75, 90, 100];
-          let triggeredCheckpoints = new Set();
-
-          const handleScroll = () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = Math.round((scrollTop / documentHeight) * 100);
-            
-            maxScroll = Math.max(maxScroll, scrollPercent);
-
-            scrollCheckpoints.forEach(checkpoint => {
-              if (scrollPercent >= checkpoint && !triggeredCheckpoints.has(checkpoint)) {
-                triggeredCheckpoints.add(checkpoint);
-                trackEvent('scroll_depth', {
-                  scroll_depth_percent: checkpoint,
-                  max_scroll_depth: maxScroll
-                });
-              }
-            });
-          };
-
-          window.addEventListener('scroll', handleScroll, { passive: true });
-          return () => window.removeEventListener('scroll', handleScroll);
-        };
-
-        // Click tracking
-        const trackClicks = () => {
-          document.addEventListener('click', (e) => {
-            const target = e.target as HTMLElement;
-            clickCount++;
-
-            // CTA tracking
-            if (target.closest('[data-cta]') || target.closest('.cta-button')) {
-              const ctaText = target.textContent || target.innerText || 'Unknown CTA';
-              const ctaLocation = target.closest('section')?.className || 'Unknown Section';
-              
-              trackEvent('cta_click', {
-                cta_text: ctaText,
-                cta_location: ctaLocation,
-                click_count: clickCount
-              });
-            }
-
-            // Link tracking
-            if (target.tagName === 'A') {
-              const linkText = target.textContent || target.innerText;
-              const linkUrl = target.getAttribute('href');
-              
-              trackEvent('link_click', {
-                link_text: linkText,
-                link_url: linkUrl,
-                link_type: target.getAttribute('data-link-type') || 'internal'
-              });
-            }
-
-            // Button tracking
-            if (target.tagName === 'BUTTON' || target.getAttribute('role') === 'button') {
-              const buttonText = target.textContent || target.innerText;
-              const buttonType = target.getAttribute('data-button-type') || 'unknown';
-              
-              trackEvent('button_click', {
-                button_text: buttonText,
-                button_type: buttonType,
-                click_count: clickCount
-              });
-            }
-          });
-        };
-
-        // Form interaction tracking
-        const trackFormInteractions = () => {
-          const forms = document.querySelectorAll('form');
-          forms.forEach(form => {
-            form.addEventListener('submit', (e) => {
-              formInteractions++;
-              const formName = form.getAttribute('name') || form.getAttribute('id') || 'Unknown Form';
-              
-              trackEvent('form_submit', {
-                form_name: formName,
-                form_interactions: formInteractions
-              });
-            });
-
-            // Track form field interactions
-            const inputs = form.querySelectorAll('input, textarea, select');
-            inputs.forEach(input => {
-              input.addEventListener('focus', () => {
-                trackEvent('form_field_focus', {
-                  field_name: input.getAttribute('name') || input.getAttribute('id'),
-                  form_name: form.getAttribute('name') || form.getAttribute('id')
-                });
-              });
-            });
-          });
-        };
-
-        // Video tracking
-        const trackVideoViews = () => {
-          const videos = document.querySelectorAll('video');
-          videos.forEach(video => {
-            video.addEventListener('play', () => {
-              videoViews++;
-              trackEvent('video_play', {
-                video_src: video.src,
-                video_duration: video.duration,
-                video_views: videoViews
-              });
-            });
-
-            video.addEventListener('ended', () => {
-              trackEvent('video_complete', {
-                video_src: video.src,
-                video_duration: video.duration
-              });
-            });
-          });
-        };
-
-        // Download tracking
-        const trackDownloads = () => {
-          document.addEventListener('click', (e) => {
-            const target = e.target as HTMLElement;
-            const link = target.closest('a');
-            
-            if (link && link.href) {
-              const href = link.href;
-              const isDownload = link.hasAttribute('download') || 
-                                href.includes('.pdf') || 
-                                href.includes('.doc') || 
-                                href.includes('.zip') ||
-                                href.includes('download');
-              
-              if (isDownload) {
-                downloadCount++;
-                trackEvent('file_download', {
-                  file_url: href,
-                  file_name: link.getAttribute('download') || href.split('/').pop(),
-                  download_count: downloadCount
-                });
-              }
-            }
-          });
-        };
-
-        // Content engagement tracking
-        const trackContentEngagement = () => {
-          const contentCards = document.querySelectorAll('[data-content-card], .content-card, .blog-card');
-          
-          contentCards.forEach(card => {
-            card.addEventListener('click', (e) => {
-              const contentTitle = card.querySelector('h3, h2, .title')?.textContent || 'Unknown Content';
-              const contentType = card.getAttribute('data-content-type') || 'Unknown Type';
-              const contentId = card.getAttribute('data-content-id') || 'Unknown ID';
-              
-              trackEvent('content_click', {
-                content_title: contentTitle,
-                content_type: contentType,
-                content_id: contentId
-              });
-            });
-
-            // Track content hover time
-            let hoverStartTime = 0;
-            card.addEventListener('mouseenter', () => {
-              hoverStartTime = Date.now();
-            });
-
-            card.addEventListener('mouseleave', () => {
-              if (hoverStartTime > 0) {
-                const hoverTime = Date.now() - hoverStartTime;
-                if (hoverTime > 1000) { // Only track if hovered for more than 1 second
-                  trackEvent('content_hover', {
-                    content_title: card.querySelector('h3, h2, .title')?.textContent || 'Unknown Content',
-                    hover_duration: hoverTime
-                  });
-                }
-              }
-            });
-          });
-        };
-
-        // Error tracking
-        const trackErrors = () => {
-          window.addEventListener('error', (e) => {
-            trackEvent('javascript_error', {
-              error_message: e.message,
-              error_filename: e.filename,
-              error_lineno: e.lineno,
-              error_colno: e.colno
-            });
-          });
-
-          window.addEventListener('unhandledrejection', (e) => {
-            trackEvent('promise_rejection', {
-              error_message: e.reason?.message || 'Unknown promise rejection',
-              error_stack: e.reason?.stack
-            });
-          });
-        };
-
-        // Performance tracking
-        const trackPerformance = () => {
-          window.addEventListener('load', () => {
-            // Core Web Vitals
-            if ('PerformanceObserver' in window) {
-              const observer = new PerformanceObserver((list) => {
-                list.getEntries().forEach((entry) => {
-                  if (entry.entryType === 'largest-contentful-paint') {
-                    trackEvent('core_web_vital', {
-                      metric_name: 'LCP',
-                      metric_value: entry.startTime,
-                      metric_rating: entry.startTime < 2500 ? 'good' : entry.startTime < 4000 ? 'needs_improvement' : 'poor'
-                    });
-                  }
-                  
-                  if (entry.entryType === 'first-input') {
-                    const fid = entry.processingStart - entry.startTime;
-                    trackEvent('core_web_vital', {
-                      metric_name: 'FID',
-                      metric_value: fid,
-                      metric_rating: fid < 100 ? 'good' : fid < 300 ? 'needs_improvement' : 'poor'
-                    });
-                  }
-                  
-                  if (entry.entryType === 'layout-shift') {
-                    trackEvent('core_web_vital', {
-                      metric_name: 'CLS',
-                      metric_value: entry.value,
-                      metric_rating: entry.value < 0.1 ? 'good' : entry.value < 0.25 ? 'needs_improvement' : 'poor'
-                    });
-                  }
-                });
-              });
-
-              observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-            }
-
-            // Page load metrics
-            const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-            if (navigation) {
-              trackEvent('page_load_metrics', {
-                dom_content_loaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-                load_complete: navigation.loadEventEnd - navigation.loadEventStart,
-                total_load_time: navigation.loadEventEnd - navigation.fetchStart,
-                time_to_first_byte: navigation.responseStart - navigation.fetchStart,
-                dom_processing: navigation.domComplete - navigation.domLoading
-              });
-            }
-          });
-        };
-
-        // Initialize all tracking
-        const cleanupScroll = trackScrollDepth();
-        trackClicks();
-        trackFormInteractions();
-        trackVideoViews();
-        trackDownloads();
-        trackContentEngagement();
-        trackErrors();
-        trackPerformance();
-
-        // Track page unload
-        window.addEventListener('beforeunload', trackTimeOnPage);
-
-        // Return cleanup function
-        return () => {
-          cleanupScroll();
-          window.removeEventListener('beforeunload', trackTimeOnPage);
-        };
-      };
-
-      // Initialize engagement tracking
-      const cleanup = trackEngagement();
-
-      // Track page view
-      trackEvent('page_view', {
-        page_title: document.title,
-        page_location: window.location.href,
-        page_path: window.location.pathname,
-        referrer: document.referrer,
-        session_id: sessionId
-      });
-
-      // Track session start
-      trackEvent('session_start', {
-        session_id: sessionId,
-        timestamp: pageStartTime
-      });
-
-      return cleanup;
+  const trackEvent = useCallback((
+    event: string,
+    category: string,
+    action: string,
+    label?: string,
+    value?: number
+  ) => {
+    const analyticsEvent: AnalyticsEvent = {
+      event,
+      category,
+      action,
+      label,
+      value,
+      timestamp: Date.now(),
+      sessionId,
+      page: window.location.pathname,
+      userAgent: navigator.userAgent,
+      referrer: document.referrer,
     };
 
-    // Initialize analytics
-    const cleanup = initAnalytics();
+    setEvents(prev => [...prevanalyticsEvent]);
 
-    // Cleanup on unmount
+    // Send to analytics service
+    if (process.env.NODE_ENV === 'production') {
+      fetch('/api/analytics'{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(analyticsEvent),
+      }).catch(console.error);
+    }
+
+    console.log('Analytics Event:'analyticsEvent);
+  }[sessionId]);
+
+  const trackPageView = useCallback(() => {
+    setUserBehavior(prev => ({
+      ...prev,
+      pageViews: prev.pageViews + 1,
+    }));
+
+    trackEvent(', 'page_view', 'navigation', 'view', 'window.location.pathname);
+  }[trackEvent]);
+
+  const trackClick = useCallback((element: stringcategory: string = 'interaction') => {
+    setUserBehavior(prev => ({
+      ...prev,
+      clickEvents: prev.clickEvents + 1,
+    }));
+
+    trackEvent(', 'click', 'category', 'click', 'element);
+  }[trackEvent]);
+
+  const trackFormInteraction = useCallback((formName: stringaction: string) => {
+    setUserBehavior(prev => ({
+      ...prev,
+      formInteractions: prev.formInteractions + 1,
+    }));
+
+    trackEvent(', 'form_interaction', 'form'actionformName);
+  }[trackEvent]);
+
+  const trackScrollDepth = useCallback((depth: number) => {
+    setUserBehavior(prev => ({
+      ...prev,
+      scrollDepth: Math.max(prev.scrollDepthdepth),
+    }));
+
+    trackEvent(', 'scroll', 'engagement', 'scroll', 'undefinedepth);
+  }[trackEvent]);
+
+  const trackExitIntent = useCallback(() => {
+    setUserBehavior(prev => ({
+      ...prev,
+      exitIntent: true,
+    }));
+
+    trackEvent(', 'exit_intent', 'engagement'exit_intent');
+  }[trackEvent]);
+
+  // Performance monitoring
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      
+      if (navigation) {
+        setPerformanceMetrics(prev => ({
+          ...prev,
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        }));
+      }
+
+      // First Paint
+      const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+      if (fcpEntry) {
+        setPerformanceMetrics(prev => ({
+          ...prev,
+          firstContentfulPaint: fcpEntry.startTime,
+        }));
+      }
+
+      // Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        setPerformanceMetrics(prev => ({
+          ...prev,
+          largestContentfulPaint: lastEntry.startTime,
+        }));
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          setPerformanceMetrics(prev => ({
+            ...prev,
+            firstInputDelay: entry.processingStart - entry.startTime,
+          }));
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Cumulative Layout Shift
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+            setPerformanceMetrics(prev => ({
+              ...prev,
+              cumulativeLayoutShift: clsValue,
+            }));
+          }
+        });
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      return () => {
+        lcpObserver.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    };
+
+    const cleanup = measurePerformance();
     return cleanup;
-  }, [sessionId, pageStartTime]);
+  }[]);
 
-  return null;
+  // Scroll tracking
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollDepth = Math.round((scrollTop / documentHeight) * 100);
+      
+      trackScrollDepth(scrollDepth);
+    };
+
+    window.addEventListener(', 'scroll', 'handleScroll{ passive: true });
+    return () => window.removeEventListener(', 'scroll', 'handleScroll);
+  }[trackScrollDepth]);
+
+  // Click tracking
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      const element = target.tagName.toLowerCase();
+      const className = target.className || ', ';
+      const id = target.id || ', ';
+      
+      const identifier = id || className || element;
+      trackClick(identifier);
+    };
+
+    document.addEventListener(', 'click', 'handleClick);
+    return () => document.removeEventListener(', 'click', 'handleClick);
+  }[trackClick]);
+
+  // Exit intent tracking
+  useEffect(() => {
+    const handleMouseLeave = (event: MouseEvent) => {
+      if (event.clientY <= 0) {
+        trackExitIntent();
+      }
+    };
+
+    document.addEventListener(', 'mouseleave', 'handleMouseLeave);
+    return () => document.removeEventListener(', 'mouseleave', 'handleMouseLeave);
+  }[trackExitIntent]);
+
+  // Time on page tracking
+  useEffect(() => {
+    const startTime = Date.now();
+    
+    const updateTimeOnPage = () => {
+      const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+      setUserBehavior(prev => ({
+        ...prev,
+        timeOnPage,
+      }));
+    };
+
+    const interval = setInterval(updateTimeOnPage1000);
+    
+    // Track page view on mount
+    trackPageView();
+
+    return () => {
+      clearInterval(interval);
+      // Track final time on page
+      const finalTime = Math.round((Date.now() - startTime) / 1000);
+      trackEvent(', 'page_exit', 'navigation', 'exit', 'undefinedfinalTime);
+    };
+  }[trackPageViewtrackEvent]);
+
+  // Form tracking
+  useEffect(() => {
+    const handleFormSubmit = (event: Event) => {
+      const form = event.target as HTMLFormElement;
+      const formName = form.name || form.id || 'unknown_form';
+      trackFormInteraction('formName', 'submit');
+    };
+
+    const handleFormFocus = (event: Event) => {
+      const input = event.target as HTMLInputElement;
+      const form = input.closest('form');
+      if (form) {
+        const formName = form.name || form.id || 'unknown_form';
+        trackFormInteraction('formName', 'focus');
+      }
+    };
+
+    document.addEventListener(', 'submit', 'handleFormSubmit);
+    document.addEventListener(', 'focus', 'handleFormFocustrue);
+
+    return () => {
+      document.removeEventListener(', 'submit', 'handleFormSubmit);
+      document.removeEventListener(', 'focus', 'handleFormFocustrue);
+    };
+  }[trackFormInteraction]);
+
+  return {
+    events,
+    userBehavior,
+    performanceMetrics,
+    trackEvent,
+    trackPageView,
+    trackClick,
+    trackFormInteraction,
+    trackScrollDepth,
+    trackExitIntent,
+  };
+};
+
+// Hook for using analytics
+export const useAnalytics = () => {
+  return React.useContext(AnalyticsContext);
+};
+
+// Analytics Context
+const AnalyticsContext = React.createContext<ReturnType<typeof AdvancedAnalytics> | null>(null);
+
+// Analytics Provider
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const analytics = AdvancedAnalytics();
+
+  return (
+    <AnalyticsContext.Provider value={analytics}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+};
+
+// Analytics Dashboard Component
+export const AnalyticsDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible = false }) => {
+  const analytics = useAnalytics();
+
+  if (!analytics || !isVisible) return null;
+
+  const { userBehaviorperformanceMetricsevents } = analytics;
+
+  return (
+    <div className="fixed top-4 right-4 z-50 bg-white rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto border">
+      <h3 className="text-lg font-semibold mb-4">Analytics Dashboard</h3>
+      
+      {/* User Behavior */}
+      <div className="mb-4">
+        <h4 className="text-sm font-semibold mb-2">User Behavior</h4>
+        <div className="space-y-1 text-sm">
+          <div className="flex justify-between">
+            <span>Page Views:</span>
+            <span>{userBehavior.pageViews}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Time on Page:</span>
+            <span>{userBehavior.timeOnPage}s</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Scroll Depth:</span>
+            <span>{userBehavior.scrollDepth}%</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Clicks:</span>
+            <span>{userBehavior.clickEvents}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Form Interactions:</span>
+            <span>{userBehavior.formInteractions}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Exit Intent:</span>
+            <span>{userBehavior.exitIntent ? 'Yes' : 'No'}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Performance Metrics */}
+      <div className="mb-4">
+        <h4 className="text-sm font-semibold mb-2">Performance</h4>
+        <div className="space-y-1 text-sm">
+          <div className="flex justify-between">
+            <span>Load Time:</span>
+            <span>{performanceMetrics.loadTime.toFixed(0)}ms</span>
+          </div>
+          <div className="flex justify-between">
+            <span>DOM Load:</span>
+            <span>{performanceMetrics.domContentLoaded.toFixed(0)}ms</span>
+          </div>
+          <div className="flex justify-between">
+            <span>First Paint:</span>
+            <span>{performanceMetrics.firstPaint.toFixed(0)}ms</span>
+          </div>
+          <div className="flex justify-between">
+            <span>FCP:</span>
+            <span>{performanceMetrics.firstContentfulPaint.toFixed(0)}ms</span>
+          </div>
+          <div className="flex justify-between">
+            <span>LCP:</span>
+            <span>{performanceMetrics.largestContentfulPaint.toFixed(0)}ms</span>
+          </div>
+          <div className="flex justify-between">
+            <span>CLS:</span>
+            <span>{performanceMetrics.cumulativeLayoutShift.toFixed(3)}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>FID:</span>
+            <span>{performanceMetrics.firstInputDelay.toFixed(0)}ms</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Recent Events */}
+      <div>
+        <h4 className="text-sm font-semibold mb-2">Recent Events</h4>
+        <div className="space-y-1 text-xs max-h-32 overflow-y-auto">
+          {events.slice(-5).map((eventindex) => (
+            <div key={index} className="flex justify-between">
+              <span>{event.action}</span>
+              <span className="text-gray-500">{event.category}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default AdvancedAnalytics;

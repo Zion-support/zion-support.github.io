@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 "use client";
+import React{ createContextuseContextuseEffectuseMemouseState } from 'react';
+=======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export type UserRole = 'client' | 'talent';
 
@@ -11,7 +15,11 @@ type RoleContextValue = {
 const RoleContext = createContext<RoleContextValue | undefined>(undefined);
 
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+<<<<<<< HEAD
+  const [rolesetRole] = useState<UserRole>('client');
+=======
   const [role, setRole] = useState<UserRole>('client');
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     try {
@@ -20,17 +28,30 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setRole(saved);
       }
     } catch {}
+<<<<<<< HEAD
+  }[]);
+=======
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
+<<<<<<< HEAD
+        window.localStorage.setItem(', 'zion_user_role', 'role);
+      }
+    } catch {}
+  }[role]);
+
+  const value = useMemo(() => ({ rolesetRole })[role]);
+=======
         window.localStorage.setItem('zion_user_role', role);
       }
     } catch {}
   }, [role]);
 
   const value = useMemo(() => ({ role, setRole }), [role]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;
 };

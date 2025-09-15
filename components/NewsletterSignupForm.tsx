@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from 'react';
-import { Mail, Send, CheckCircle, Star, Zap, Gift, ArrowRight } from 'lucide-react';
+import React{ useState } from 'react';
+MailSendCheckCircleStarZapGiftArrowRight
 
 const benefits = [
   "Exclusive access to new content",
@@ -13,29 +13,29 @@ const benefits = [
 const testimonials = [
   {
     name: "Sarah Chen",
-    role: "CTO, TechCorp",
+    role: "CTOTechCorp",
     content: "The weekly insights have been invaluable for our AI strategy. Highly recommended!",
     rating: 5
   },
   {
     name: "Michael Rodriguez",
-    role: "CEO, InnovateLabs",
+    role: "CEOInnovateLabs",
     content: "Early access to new features has given us a competitive edge. Amazing value!",
     rating: 5
   }
 ];
 
 export default function NewsletterSignupForm() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [emailsetEmail] = useState('');
+  const [isSubscribedsetIsSubscribed] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve2000));
     
     setIsSubscribed(true);
     setIsLoading(false);
@@ -47,11 +47,11 @@ export default function NewsletterSignupForm() {
         <CheckCircle className="w-16 h-16 text-white mx-auto mb-4" />
         <h3 className="text-2xl font-bold text-white mb-2">Welcome to the Future!</h3>
         <p className="text-green-100 mb-6">
-          You've successfully subscribed to our newsletter. Check your email for a confirmation link.
+          'You', 've successfully subscribed to our newsletter. Check your email for a confirmation link.
         </p>
         <div className="bg-white/20 rounded-lg p-4">
           <p className="text-green-100 text-sm">
-            🎉 You'll receive your first update within 24 hours with exclusive content and early access to new features!
+            🎉 'You', 'll receive your first update within 24 hours with exclusive content and early access to new features!
           </p>
         </div>
       </div>
@@ -77,12 +77,12 @@ export default function NewsletterSignupForm() {
             </h2>
             
             <p className="text-xl text-gray-300 mb-8">
-              Get exclusive access to the latest AI innovations, quantum computing breakthroughs, and automation solutions delivered directly to your inbox.
+              Get exclusive access to the latest AI innovationsquantum computing breakthroughsand automation solutions delivered directly to your inbox.
             </p>
 
             {/* Benefits */}
             <div className="space-y-4 mb-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefitindex) => (
                 <div key={index} className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
@@ -92,10 +92,10 @@ export default function NewsletterSignupForm() {
 
             {/* Testimonials */}
             <div className="space-y-4">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonialindex) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20">
                   <div className="flex items-center gap-1 mb-2">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map((_i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>

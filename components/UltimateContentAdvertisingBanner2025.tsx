@@ -5,11 +5,11 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Star, 
-  ArrowRight, 
-  Zap, 
-  TrendingUp, 
-  Users, 
+  Star
+  ArrowRight
+  Zap
+  TrendingUp
+  Users
   Award,
   ChevronRight,
   Play,
@@ -18,15 +18,15 @@ import {
 } from 'lucide-react';
 
 const UltimateContentAdvertisingBanner2025 = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   const advertisingContent = [
     {
       id: 1,
       title: "🚀 Revolutionary AI Solutions 2025",
       subtitle: "Transform Your Business with Cutting-Edge Technology",
-      description: "Discover our latest AI-powered automation tools, quantum computing breakthroughs, and neural interface innovations that are revolutionizing industries worldwide.",
+      description: "Discover our latest AI-powered automation toolsquantum computing breakthroughsand neural interface innovations that are revolutionizing industries worldwide.",
       cta: "Explore AI Solutions",
       href: "/ai-2025-ultimate-breakthrough",
       stats: "500+ Success Stories",
@@ -72,9 +72,9 @@ const UltimateContentAdvertisingBanner2025 = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % advertisingContent.length);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentContent = advertisingContent[currentSlide];
 
@@ -103,7 +103,7 @@ const UltimateContentAdvertisingBanner2025 = () => {
               <motion.div
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
-                transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+                transition={{ delay: 0.2type: "spring"stiffness: 200 }}
                 className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-6"
               >
                 {currentContent.icon}
@@ -201,7 +201,7 @@ const UltimateContentAdvertisingBanner2025 = () => {
 
         {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">
-          {advertisingContent.map((_, index) => (
+          {advertisingContent.map((_index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}

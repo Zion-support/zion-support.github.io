@@ -2,9 +2,6 @@ import { useState, useEffect } from "react";
 import { JobsList } from "@/components/jobs/JobsList";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";
-=======
 import Link from "next/link";
 import { JobStatus } from "@/types/jobs";
 import { SEO } from "@/components/SEO";
@@ -49,26 +46,6 @@ function ClientDashboardContent() {
 
   return (
     <>
-    const [activeTab, setActiveTab] = useState("all");
-    const { jobs, isLoading } = useJobs();
-    const [selectedJobId, setSelectedJobId] = useState(null);
-    const [selectedJobTitle, setSelectedJobTitle] = useState("");
-    const isMobile = useIsMobile();
-    // Set the first job as selected when jobs are loaded (if any)
-    useEffect(() => {
-        if (jobs.length > 0 && !selectedJobId) {
-            setSelectedJobId(jobs[0].id);
-            setSelectedJobTitle(jobs[0].title);
-        }
-    }, [jobs, selectedJobId]);
-    const handleJobSelect = (jobId, jobTitle) => {
-        setSelectedJobId(jobId);
-        setSelectedJobTitle(jobTitle);
-    };
-    return (<>
-      <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."/>
-      
-=======
       <SEO 
         title="Client Dashboard | Zion AI Marketplace" 
         description="Manage your jobs and talent requests in the Zion AI Marketplace." 

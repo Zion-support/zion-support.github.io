@@ -5,11 +5,11 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Search, 
-  Filter, 
-  TrendingUp, 
-  Clock, 
-  Star, 
+  Search
+  Filter
+  TrendingUp
+  Clock
+  Star
   Eye,
   ThumbsUp,
   MessageCircle,
@@ -30,34 +30,34 @@ import {
 } from 'lucide-react';
 
 const EnhancedContentDiscoveryWidget2025 = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('trending');
-  const [showFilters, setShowFilters] = useState(false);
+  const [searchQuerysetSearchQuery] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [sortBysetSortBy] = useState('trending');
+  const [showFiltersetShowFilters] = useState(false);
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: Globe, count: 1247 },
-    { id: 'breakthroughs', name: 'AI Breakthroughs', icon: Brain, count: 156 },
-    { id: 'solutions', name: 'Enterprise Solutions', icon: Target, count: 89 },
-    { id: 'predictions', name: 'Future Predictions', icon: Rocket, count: 67 },
-    { id: 'case-studies', name: 'Case Studies', icon: BarChart3, count: 234 },
-    { id: 'tutorials', name: 'Tutorials', icon: Bookmark, count: 189 },
-    { id: 'tools', name: 'AI Tools', icon: Cpu, count: 312 },
-    { id: 'security', name: 'Security', icon: Shield, count: 45 }
+    { id: ''all', 'name: 'All 'Content', 'icon: Globecount: 1247 },
+    { id: ''breakthroughs', 'name: 'AI 'Breakthroughs', 'icon: Braincount: 156 },
+    { id: ''solutions', 'name: 'Enterprise 'Solutions', 'icon: Targetcount: 89 },
+    { id: ''predictions', 'name: 'Future 'Predictions', 'icon: Rocketcount: 67 },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: BarChart3count: 234 },
+    { id: ''tutorials', 'name: ''Tutorials', 'icon: Bookmarkcount: 189 },
+    { id: ''tools', 'name: 'AI 'Tools', 'icon: Cpucount: 312 },
+    { id: ''security', 'name: ''Security', 'icon: Shieldcount: 45 }
   ];
 
   const sortOptions = [
-    { id: 'trending', name: 'Trending', icon: TrendingUp },
-    { id: 'newest', name: 'Newest', icon: Clock },
-    { id: 'popular', name: 'Most Popular', icon: Star },
-    { id: 'views', name: 'Most Viewed', icon: Eye }
+    { id: ''trending', 'name: ''Trending', 'icon: TrendingUp },
+    { id: ''newest', 'name: ''Newest', 'icon: Clock },
+    { id: ''popular', 'name: 'Most 'Popular', 'icon: Star },
+    { id: ''views', 'name: 'Most 'Viewed', 'icon: Eye }
   ];
 
   const contentItems = [
     {
       id: 1,
       title: "AI 2025 Ultimate Content Revolution: Revolutionary Breakthroughs",
-      description: "Discover the most advanced AI technologies, breakthrough innovations, and future predictions that are reshaping industries worldwide.",
+      description: "Discover the most advanced AI technologiesbreakthrough innovationsand future predictions that are reshaping industries worldwide.",
       category: "breakthroughs",
       type: "blog",
       readTime: "15 min",
@@ -65,7 +65,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
       likes: 1200,
       comments: 89,
       rating: 4.9,
-      tags: ["AI 2025", "Revolutionary AI", "Quantum Computing", "Breakthroughs"],
+      tags: ["AI 2025"Revolutionary AI"Quantum Computing"Breakthroughs"],
       featured: true,
       image: "/api/placeholder/400/200"
     },
@@ -80,7 +80,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
       likes: 950,
       comments: 45,
       rating: 4.8,
-      tags: ["ROI", "Fortune 500", "AI Transformation", "Success Story"],
+      tags: ["ROI"Fortune 500"AI Transformation"Success Story"],
       featured: true,
       image: "/api/placeholder/400/200"
     },
@@ -95,7 +95,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
       likes: 1800,
       comments: 120,
       rating: 4.9,
-      tags: ["Quantum Computing", "Neural Networks", "AI Breakthroughs"],
+      tags: ["Quantum Computing"Neural Networks"AI Breakthroughs"],
       featured: false,
       image: "/api/placeholder/400/200"
     },
@@ -110,7 +110,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
       likes: 800,
       comments: 67,
       rating: 4.7,
-      tags: ["Autonomous Operations", "Cost Reduction", "Business Automation"],
+      tags: ["Autonomous Operations"Cost Reduction"Business Automation"],
       featured: false,
       image: "/api/placeholder/400/200"
     },
@@ -125,7 +125,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
       likes: 2100,
       comments: 156,
       rating: 4.8,
-      tags: ["Future Predictions", "AI 2026", "Technology Trends"],
+      tags: ["Future Predictions"AI 2026"Technology Trends"],
       featured: true,
       image: "/api/placeholder/400/200"
     },
@@ -140,7 +140,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
       likes: 1400,
       comments: 98,
       rating: 4.9,
-      tags: ["Consciousness AI", "Human-like AI", "Emotional Intelligence"],
+      tags: ["Consciousness AI"Human-like AI"Emotional Intelligence"],
       featured: false,
       image: "/api/placeholder/400/200"
     }
@@ -186,7 +186,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore breakthrough innovations, enterprise solutions, and future predictions 
+            Explore breakthrough innovationsenterprise solutionsand future predictions 
             that are transforming industries worldwide.
           </p>
         </div>
@@ -199,7 +199,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
               <input
                 type="text"
-                placeholder="Search content, tags, or topics..."
+                placeholder="Search contentagsor topics..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -275,7 +275,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
-            {filteredContent.map((item, index) => {
+            {filteredContent.map((itemindex) => {
               const TypeIcon = getContentTypeIcon(item.type);
               return (
                 <motion.div
@@ -283,7 +283,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className={`group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 ${
                     item.featured ? 'ring-2 ring-blue-500/30' : ''
                   }`}
@@ -319,7 +319,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {item.tags.slice(0, 3).map((tag) => (
+                      {item.tags.slice(03).map((tag) => (
                         <span
                           key={tag}
                           className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full hover:bg-white/20 transition-colors duration-200"
@@ -355,7 +355,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
 
                     {/* CTA */}
                     <Link
-                      href={`/${item.type === 'case-study' ? 'case-studies' : 'blog'}/${item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}
+                      href={`/${item.type === 'case-study' ? 'case-studies' : 'blog'}/${item.title.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g', ')}`}
                       className="group/btn inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                     >
                       <span>Read More</span>

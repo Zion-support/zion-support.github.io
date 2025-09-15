@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ChevronRight, TrendingUp, Brain, Zap } from 'lucide-react';
+import { X, ChevronRight, TrendingUp, Brain, Zap, ArrowRight } from 'lucide-react';
 
 const AutonomousBIRevolutionBanner2025: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -151,7 +151,7 @@ const AutonomousBIRevolutionBanner2025: React.FC = () => {
                 
                 <div className="bg-white bg-opacity-10 rounded-lg p-3 text-center">
                   <div className="flex items-center justify-center mb-1">
-                    <Award className="w-4 h-4 text-blue-300 mr-1" />
+                    <ArrowRight className="w-4 h-4 text-blue-300 mr-1" />
                     <span className="text-xs text-gray-300 uppercase">Accuracy</span>
                   </div>
                   <div className="text-lg font-bold text-blue-300">{currentContent.metrics.accuracy || currentContent.metrics.reliability}</div>

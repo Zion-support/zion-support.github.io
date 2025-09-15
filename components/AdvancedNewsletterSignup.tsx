@@ -1,21 +1,21 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 
 export default function AdvancedNewsletterSignup() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [emailsetEmail] = useState('');
+  const [isSubscribedsetIsSubscribed] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve2000));
     
     setIsSubscribed(true);
     setIsLoading(false);
-    setEmail('');
+    setEmail(', ');
   };
 
   if (isSubscribed) {
@@ -24,7 +24,7 @@ export default function AdvancedNewsletterSignup() {
         <div className="text-6xl mb-4">🎉</div>
         <h3 className="text-2xl font-bold text-white mb-2">Welcome to the AI Revolution!</h3>
         <p className="text-green-100 mb-4">
-          You're now subscribed to our exclusive AI breakthrough updates. Check your email for confirmation.
+          'You', 're now subscribed to our exclusive AI breakthrough updates. Check your email for confirmation.
         </p>
         <div className="text-sm text-green-200">
           Get ready for insights that will transform your business!
@@ -47,7 +47,7 @@ export default function AdvancedNewsletterSignup() {
             Join the AI Revolution
           </h2>
           <p className="text-xl text-blue-100 mb-2">
-            Get exclusive access to breakthrough AI insights, case studies, and implementation guides
+            Get exclusive access to breakthrough AI insightscase studiesand implementation guides
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
             <span className="flex items-center">
@@ -96,7 +96,7 @@ export default function AdvancedNewsletterSignup() {
           
           <div className="text-center text-blue-200 text-sm">
             <p>Join 50,000+ business leaders already transforming with AI</p>
-            <p className="mt-1">No spam, unsubscribe anytime</p>
+            <p className="mt-1">No spamunsubscribe anytime</p>
           </div>
         </form>
 

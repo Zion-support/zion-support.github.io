@@ -249,7 +249,6 @@ export default function ServicesPage() {
     );
   }
 
-const ServicesPage: React.FC = () => {
   return (
     <div className="container py-8">
       <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
@@ -317,6 +316,4 @@ const ServicesPage: React.FC = () => {
       </AnimatePresence>
     </div>
   );
-};
-
-export default ServicesPage;
+}

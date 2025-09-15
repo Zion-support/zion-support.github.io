@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, TrendingUp, Target, Zap, Award, CheckCircle, Star } from 'lucide-react';
+import { ArrowRight, TrendingUp, Zap, Award, CheckCircle, Star } from 'lucide-react';
 
 const AutonomousBusinessRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -153,7 +153,7 @@ const AutonomousBusinessRevolutionBanner = () => {
             </div>
             
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white border-opacity-20">
-              <Target className="h-8 w-8 mx-auto mb-3 text-blue-300" />
+              <ArrowRight className="h-8 w-8 mx-auto mb-3 text-blue-300" />
               <div className="text-3xl font-bold text-blue-300 mb-1">${animatedStats.savings}M</div>
               <div className="text-blue-100 text-sm">Annual Savings</div>
             </div>

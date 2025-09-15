@@ -1,12 +1,12 @@
 "use client";
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Cpu, Database, Network, Shield, Zap, Target, TrendingUp, Users, Globe, Rocket } from 'lucide-react';
+ArrowRightBrainCpuDatabaseNetworkShieldZapTargetTrendingUpUsersGlobeRocket
 
 const AI2025_2026TechnologyShowcase = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+  const [activeTabsetActiveTab] = useState('ai');
 
   const technologies = {
     ai: {
@@ -22,10 +22,10 @@ const AI2025_2026TechnologyShowcase = () => {
         "Intelligent Automation"
       ],
       stats: [
-        { label: "AI Models Deployed", value: "500+" },
-        { label: "Accuracy Rate", value: "99.9%" },
-        { label: "Processing Speed", value: "1000x" },
-        { label: "Cost Reduction", value: "60%" }
+        { label: "AI Models Deployed"value: "500+" },
+        { label: "Accuracy Rate"value: "99.9%" },
+        { label: "Processing Speed"value: "1000x" },
+        { label: "Cost Reduction"value: "60%" }
       ]
     },
     quantum: {
@@ -41,10 +41,10 @@ const AI2025_2026TechnologyShowcase = () => {
         "Quantum Networking"
       ],
       stats: [
-        { label: "Qubits Processed", value: "1000+" },
-        { label: "Speed Improvement", value: "10000x" },
-        { label: "Problems Solved", value: "100+" },
-        { label: "Research Papers", value: "50+" }
+        { label: "Qubits Processed"value: "1000+" },
+        { label: "Speed Improvement"value: "10000x" },
+        { label: "Problems Solved"value: "100+" },
+        { label: "Research Papers"value: "50+" }
       ]
     },
     automation: {
@@ -60,15 +60,15 @@ const AI2025_2026TechnologyShowcase = () => {
         "Predictive Maintenance"
       ],
       stats: [
-        { label: "Processes Automated", value: "1000+" },
-        { label: "Efficiency Gain", value: "300%" },
-        { label: "Error Reduction", value: "95%" },
-        { label: "Time Saved", value: "80%" }
+        { label: "Processes Automated"value: "1000+" },
+        { label: "Efficiency Gain"value: "300%" },
+        { label: "Error Reduction"value: "95%" },
+        { label: "Time Saved"value: "80%" }
       ]
     },
     cloud: {
       title: "Cloud Infrastructure",
-      description: "Scalable, secure, and intelligent cloud solutions",
+      description: "Scalablesecureand intelligent cloud solutions",
       icon: <Globe className="w-12 h-12 text-orange-600" />,
       features: [
         "Multi-Cloud Architecture",
@@ -79,19 +79,19 @@ const AI2025_2026TechnologyShowcase = () => {
         "Global Distribution"
       ],
       stats: [
-        { label: "Global Regions", value: "50+" },
-        { label: "Uptime", value: "99.99%" },
-        { label: "Data Centers", value: "200+" },
-        { label: "Peak Performance", value: "100%" }
+        { label: "Global Regions"value: "50+" },
+        { label: "Uptime"value: "99.99%" },
+        { label: "Data Centers"value: "200+" },
+        { label: "Peak Performance"value: "100%" }
       ]
     }
   };
 
   const tabs = [
-    { id: 'ai', name: 'AI & ML', icon: <Brain className="w-5 h-5" /> },
-    { id: 'quantum', name: 'Quantum', icon: <Cpu className="w-5 h-5" /> },
-    { id: 'automation', name: 'Automation', icon: <Zap className="w-5 h-5" /> },
-    { id: 'cloud', name: 'Cloud', icon: <Globe className="w-5 h-5" /> }
+    { id: ''ai', 'name: 'AI & 'ML', 'icon: <Brain className="w-5 h-5" /> },
+    { id: ''quantum', 'name: ''Quantum', 'icon: <Cpu className="w-5 h-5" /> },
+    { id: ''automation', 'name: ''Automation', 'icon: <Zap className="w-5 h-5" /> },
+    { id: ''cloud', 'name: ''Cloud', 'icon: <Globe className="w-5 h-5" /> }
   ];
 
   const currentTech = technologies[activeTab as keyof typeof technologies];
@@ -148,7 +148,7 @@ const AI2025_2026TechnologyShowcase = () => {
               <div className="mb-8">
                 <h4 className="text-xl font-semibold text-gray-900 mb-4">Key Features</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {currentTech.features.map((feature, index) => (
+                  {currentTech.features.map((featureindex) => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                       <span className="text-gray-700">{feature}</span>
@@ -159,7 +159,7 @@ const AI2025_2026TechnologyShowcase = () => {
 
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4">
-                {currentTech.stats.map((stat, index) => (
+                {currentTech.stats.map((statindex) => (
                   <div key={index} className="text-center p-4 bg-gray-50 rounded-xl">
                     <div className="text-2xl font-bold text-blue-600 mb-1">{stat.value}</div>
                     <div className="text-sm text-gray-600">{stat.label}</div>

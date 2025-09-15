@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Zap, Target, Users, BarChart3, CheckCircle, Star } from 'lucide-react';
+ArrowRightTrendingUpZapTargetUsersBarChart3CheckCircleStar
 
 const UltimateBusinessTransformation2026 = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeTransformation, setActiveTransformation] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [activeTransformationsetActiveTransformation] = useState(0);
 
   const transformations = [
     {
@@ -18,7 +18,7 @@ const UltimateBusinessTransformation2026 = () => {
         costReduction: '80%',
         timeSaved: '40 hours/week'
       },
-      benefits: ['Automated Workflows', 'Smart Decision Making', 'Predictive Analytics']
+      benefits: ['Automated 'Workflows', 'Smart Decision 'Making', 'Predictive Analytics']
     },
     {
       title: 'Digital Transformation',
@@ -30,7 +30,7 @@ const UltimateBusinessTransformation2026 = () => {
         costReduction: '70%',
         timeSaved: '35 hours/week'
       },
-      benefits: ['Cloud Migration', 'API Integration', 'Data Analytics']
+      benefits: ['Cloud 'Migration', 'API 'Integration', 'Data Analytics']
     },
     {
       title: 'Customer Experience Revolution',
@@ -42,7 +42,7 @@ const UltimateBusinessTransformation2026 = () => {
         costReduction: '60%',
         timeSaved: '30 hours/week'
       },
-      benefits: ['Personalization', 'Omnichannel', 'Real-time Support']
+      benefits: [', 'Personalization', 'Omnichannel'Real-time Support']
     },
     {
       title: 'Data-Driven Intelligence',
@@ -54,7 +54,7 @@ const UltimateBusinessTransformation2026 = () => {
         costReduction: '75%',
         timeSaved: '25 hours/week'
       },
-      benefits: ['Predictive Modeling', 'Real-time Insights', 'Automated Reporting']
+      benefits: ['Predictive 'Modeling', 'Real-time 'Insights', 'Automated Reporting']
     }
   ];
 
@@ -86,9 +86,9 @@ const UltimateBusinessTransformation2026 = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setActiveTransformation((prev) => (prev + 1) % transformations.length);
-    }, 4000);
+    }4000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const currentTransformation = transformations[activeTransformation];
   const IconComponent = currentTransformation.icon;
@@ -102,7 +102,7 @@ const UltimateBusinessTransformation2026 = () => {
       
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map((_i) => (
           <div
             key={i}
             className="absolute w-2 h-2 bg-green-400/40 rounded-full animate-pulse"
@@ -164,7 +164,7 @@ const UltimateBusinessTransformation2026 = () => {
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2 justify-center">
-                  {currentTransformation.benefits.map((benefit, index) => (
+                  {currentTransformation.benefits.map((benefitindex) => (
                     <span
                       key={index}
                       className="px-3 py-1 bg-green-500/20 border border-green-400/30 rounded-full text-green-200 text-sm"
@@ -178,7 +178,7 @@ const UltimateBusinessTransformation2026 = () => {
 
             {/* Transformation Navigation */}
             <div className="space-y-4">
-              {transformations.map((transformation, index) => {
+              {transformations.map((transformationindex) => {
                 const IconComponent = transformation.icon;
                 return (
                   <div
@@ -216,7 +216,7 @@ const UltimateBusinessTransformation2026 = () => {
               Success Stories
             </h3>
             <div className="grid md:grid-cols-3 gap-8">
-              {successStories.map((story, index) => (
+              {successStories.map((storyindex) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-green-500/30 rounded-2xl p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center">

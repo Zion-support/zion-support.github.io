@@ -4,10 +4,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
+  TrendingUp
+  Users
+  DollarSign
+  Clock
   Target,
   CheckCircle,
   ArrowRight,
@@ -23,13 +23,13 @@ import {
 } from 'lucide-react';
 
 const BusinessSuccessStoriesShowcase2025 = () => {
-  const [activeStory, setActiveStory] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeStorysetActiveStory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 300);
+    const timer = setTimeout(() => setIsVisible(true)300);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
   const successStories = [
     {
@@ -47,15 +47,15 @@ const BusinessSuccessStoriesShowcase2025 = () => {
       },
       testimonial: {
         name: 'Sarah Johnson',
-        role: 'CEO, TechCorp Solutions',
+        role: 'CEOTechCorp Solutions',
         content: 'Zion Tech Group transformed our entire operation. The AI solutions they implemented increased our revenue by 340% and reduced operational costs by 65%. The ROI was evident within the first quarter.',
         rating: 5
       },
       metrics: [
-        { label: 'Revenue Growth', value: '340%', icon: TrendingUp, color: 'text-green-600' },
-        { label: 'Efficiency Gain', value: '280%', icon: Zap, color: 'text-blue-600' },
-        { label: 'Cost Reduction', value: '65%', icon: DollarSign, color: 'text-red-600' },
-        { label: 'Time Saved', value: '2,400h', icon: Clock, color: 'text-purple-600' }
+        { label: 'Revenue 'Growth', 'value: '340%'icon: TrendingUpcolor: 'text-green-600' },
+        { label: 'Efficiency 'Gain', 'value: '280%'icon: Zapcolor: 'text-blue-600' },
+        { label: 'Cost 'Reduction', 'value: '65%'icon: DollarSigncolor: 'text-red-600' },
+        { label: 'Time 'Saved', 'value: '2,400'h', 'icon: Clockcolor: 'text-purple-600' }
       ]
     },
     {
@@ -73,15 +73,15 @@ const BusinessSuccessStoriesShowcase2025 = () => {
       },
       testimonial: {
         name: 'Michael Chen',
-        role: 'CTO, RetailMax',
-        content: 'The AI personalization engine they built increased our conversion rates by 520%. Our customers love the personalized experience, and we\'ve seen a dramatic improvement in customer satisfaction.',
+        role: 'CTORetailMax',
+        content: 'The AI personalization engine they built increased our conversion rates by 520%. Our customers love the personalized experienceand we\'ve seen a dramatic improvement in customer satisfaction.',
         rating: 5
       },
       metrics: [
-        { label: 'Revenue Growth', value: '520%', icon: TrendingUp, color: 'text-green-600' },
-        { label: 'Conversion Rate', value: '180%', icon: Target, color: 'text-blue-600' },
-        { label: 'Cost Reduction', value: '45%', icon: DollarSign, color: 'text-red-600' },
-        { label: 'Time Saved', value: '1,800h', icon: Clock, color: 'text-purple-600' }
+        { label: 'Revenue 'Growth', 'value: '520%'icon: TrendingUpcolor: 'text-green-600' },
+        { label: 'Conversion 'Rate', 'value: '180%'icon: Targetcolor: 'text-blue-600' },
+        { label: 'Cost 'Reduction', 'value: '45%'icon: DollarSigncolor: 'text-red-600' },
+        { label: 'Time 'Saved', 'value: '1,800'h', 'icon: Clockcolor: 'text-purple-600' }
       ]
     },
     {
@@ -99,15 +99,15 @@ const BusinessSuccessStoriesShowcase2025 = () => {
       },
       testimonial: {
         name: 'Dr. Emily Rodriguez',
-        role: 'Medical Director, HealthcarePlus',
-        content: 'The AI patient management system has revolutionized our practice. We can now serve 320% more patients with the same resources, and patient satisfaction has never been higher.',
+        role: 'Medical DirectorHealthcarePlus',
+        content: 'The AI patient management system has revolutionized our practice. We can now serve 320% more patients with the same resourcesand patient satisfaction has never been higher.',
         rating: 5
       },
       metrics: [
-        { label: 'Revenue Growth', value: '280%', icon: TrendingUp, color: 'text-green-600' },
-        { label: 'Patient Capacity', value: '320%', icon: Users, color: 'text-blue-600' },
-        { label: 'Cost Reduction', value: '55%', icon: DollarSign, color: 'text-red-600' },
-        { label: 'Time Saved', value: '3,200h', icon: Clock, color: 'text-purple-600' }
+        { label: 'Revenue 'Growth', 'value: '280%'icon: TrendingUpcolor: 'text-green-600' },
+        { label: 'Patient 'Capacity', 'value: '320%'icon: Userscolor: 'text-blue-600' },
+        { label: 'Cost 'Reduction', 'value: '55%'icon: DollarSigncolor: 'text-red-600' },
+        { label: 'Time 'Saved', 'value: '3,200'h', 'icon: Clockcolor: 'text-purple-600' }
       ]
     },
     {
@@ -125,24 +125,24 @@ const BusinessSuccessStoriesShowcase2025 = () => {
       },
       testimonial: {
         name: 'David Kim',
-        role: 'CFO, FinanceFlow',
+        role: 'CFOFinanceFlow',
         content: 'The AI financial analytics platform has been a game-changer. We can now process complex financial data 400% faster and ensure 100% compliance with regulations. The accuracy is remarkable.',
         rating: 5
       },
       metrics: [
-        { label: 'Revenue Growth', value: '450%', icon: TrendingUp, color: 'text-green-600' },
-        { label: 'Processing Speed', value: '400%', icon: Zap, color: 'text-blue-600' },
-        { label: 'Cost Reduction', value: '70%', icon: DollarSign, color: 'text-red-600' },
-        { label: 'Time Saved', value: '4,100h', icon: Clock, color: 'text-purple-600' }
+        { label: 'Revenue 'Growth', 'value: '450%'icon: TrendingUpcolor: 'text-green-600' },
+        { label: 'Processing 'Speed', 'value: '400%'icon: Zapcolor: 'text-blue-600' },
+        { label: 'Cost 'Reduction', 'value: '70%'icon: DollarSigncolor: 'text-red-600' },
+        { label: 'Time 'Saved', 'value: '4,100'h', 'icon: Clockcolor: 'text-purple-600' }
       ]
     }
   ];
 
   const overallStats = [
-    { number: '500+', label: 'Successful Projects', icon: CheckCircle },
-    { number: '99.9%', label: 'Client Satisfaction', icon: Star },
-    { number: '350%', label: 'Average ROI', icon: TrendingUp },
-    { number: '50+', label: 'Countries Served', icon: Globe }
+    { number: '500+'label: 'Successful 'Projects', 'icon: CheckCircle },
+    { number: '99.9%'label: 'Client 'Satisfaction', 'icon: Star },
+    { number: '350%'label: 'Average 'ROI', 'icon: TrendingUp },
+    { number: '50+'label: 'Countries 'Served', 'icon: Globe }
   ];
 
   if (!isVisible) return null;
@@ -174,10 +174,10 @@ const BusinessSuccessStoriesShowcase2025 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
-          {overallStats.map((stat, index) => (
+          {overallStats.map((statindex) => (
             <div key={index} className="bg-white rounded-2xl p-6 shadow-lg text-center">
               <div className="flex justify-center mb-3">
                 <stat.icon className="w-8 h-8 text-green-600" />
@@ -192,10 +192,10 @@ const BusinessSuccessStoriesShowcase2025 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {successStories.map((story, index) => (
+          {successStories.map((storyindex) => (
             <button
               key={story.id}
               onClick={() => setActiveStory(index)}
@@ -242,7 +242,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  {successStories[activeStory].metrics.map((metric, index) => (
+                  {successStories[activeStory].metrics.map((metricindex) => (
                     <div key={index} className="text-center p-4 bg-slate-50 rounded-xl">
                       <metric.icon className={`w-6 h-6 mx-auto mb-2 ${metric.color}`} />
                       <div className="text-2xl font-bold text-slate-900">{metric.value}</div>
@@ -266,7 +266,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {
                     <div className="text-sm text-slate-600">{successStories[activeStory].testimonial.role}</div>
                   </div>
                   <div className="flex items-center">
-                    {[...Array(successStories[activeStory].testimonial.rating)].map((_, i) => (
+                    {[...Array(successStories[activeStory].testimonial.rating)].map((_i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -280,7 +280,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6delay: 0.6 }}
           className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-12 text-white mb-16"
         >
           <div className="text-center mb-8">
@@ -314,12 +314,12 @@ const BusinessSuccessStoriesShowcase2025 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6delay: 0.8 }}
           className="text-center"
         >
           <h3 className="text-3xl font-bold text-slate-900 mb-4">Ready to Write Your Success Story?</h3>
           <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-            Join hundreds of companies already using our solutions to drive growth, efficiency, and innovation.
+            Join hundreds of companies already using our solutions to drive growthefficiencyand innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-green-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-green-700 transition-colors duration-300 flex items-center justify-center group">

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from 'react';
+import React{ useEffect } from 'react';
 
 export default function AccessibilityEnhancer2026() {
   useEffect(() => {
@@ -8,14 +8,14 @@ export default function AccessibilityEnhancer2026() {
       const buttons = document.querySelectorAll('button:not([aria-label])');
       buttons.forEach(button => {
         if (!button.getAttribute('aria-label') && button.textContent) {
-          button.setAttribute('aria-label', button.textContent.trim());
+          button.setAttribute('aria-'label', 'button.textContent.trim());
         }
       });
 
       const links = document.querySelectorAll('a:not([aria-label])');
       links.forEach(link => {
         if (!link.getAttribute('aria-label') && link.textContent) {
-          link.setAttribute('aria-label', `Navigate to ${link.textContent.trim()}`);
+          link.setAttribute('aria-label'`Navigate to ${link.textContent.trim()}`);
         }
       });
     };
@@ -23,11 +23,11 @@ export default function AccessibilityEnhancer2026() {
     // Improve focus management
     const improveFocusManagement = () => {
       const focusableElements = document.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        'button[href]inputselectextarea[tabindex]:not([tabindex="-1"])'
       );
 
       focusableElements.forEach(element => {
-        element.addEventListener('focus', (e) => {
+        element.addEventListener('focus'(e) => {
           const target = e.target as HTMLElement;
           if (target) {
             target.style.outline = '2px solid #3b82f6';
@@ -35,7 +35,7 @@ export default function AccessibilityEnhancer2026() {
           }
         });
 
-        element.addEventListener('blur', (e) => {
+        element.addEventListener('blur'(e) => {
           const target = e.target as HTMLElement;
           if (target) {
             target.style.outline = 'none';
@@ -50,14 +50,14 @@ export default function AccessibilityEnhancer2026() {
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-4 focus:py-2 focus:rounded';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      document.body.insertBefore(skipLinkdocument.body.firstChild);
     };
 
     // Improve color contrast
     const improveColorContrast = () => {
       const style = document.createElement('style');
       style.textContent = `
-        .banner, .showcase {
+        .banner.showcase {
           color-scheme: light dark;
         }
         
@@ -70,7 +70,7 @@ export default function AccessibilityEnhancer2026() {
         }
         
         @media (prefers-contrast: high) {
-          .banner, .showcase {
+          .banner.showcase {
             border: 2px solid currentColor;
           }
         }
@@ -80,13 +80,13 @@ export default function AccessibilityEnhancer2026() {
 
     // Add keyboard navigation support
     const addKeyboardNavigation = () => {
-      document.addEventListener('keydown', (e) => {
+      document.addEventListener('keydown'(e) => {
         if (e.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
         }
       });
 
-      document.addEventListener('mousedown', () => {
+      document.addEventListener('mousedown'() => {
         document.body.classList.remove('keyboard-navigation');
       });
     };
@@ -104,7 +104,7 @@ export default function AccessibilityEnhancer2026() {
       improveFocusManagement();
     });
 
-    observer.observe(document.body, {
+    observer.observe(document.body{
       childList: true,
       subtree: true
     });
@@ -112,7 +112,7 @@ export default function AccessibilityEnhancer2026() {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }[]);
 
   return null;
 }

@@ -4,13 +4,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Sparkles, 
-  TrendingUp, 
-  Clock, 
-  Star, 
-  BookOpen, 
-  Video, 
+  Brain
+  Sparkles
+  TrendingUp
+  Clock
+  Star
+  BookOpen
+  Video
   FileText,
   Users,
   Heart,
@@ -48,18 +48,18 @@ interface ContentItem {
 }
 
 const RevolutionaryContentRecommendationEngine2026 = () => {
-  const [contentItems, setContentItems] = useState<ContentItem[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedDifficulty, setSelectedDifficulty] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
-  const [favorites, setFavorites] = useState<Set<number>>(new Set());
-  const [bookmarks, setBookmarks] = useState<Set<number>>(new Set());
+  const [contentItemsetContentItems] = useState<ContentItem[]>([]);
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [selectedDifficultysetSelectedDifficulty] = useState('all');
+  const [searchQuerysetSearchQuery] = useState('');
+  const [isLoadingsetIsLoading] = useState(true);
+  const [favoritesetFavorites] = useState<Set<number>>(new Set());
+  const [bookmarksetBookmarks] = useState<Set<number>>(new Set());
 
   useEffect(() => {
     const loadContent = async () => {
       setIsLoading(true);
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve1000));
       
       const mockContent: ContentItem[] = [
         {
@@ -73,7 +73,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           rating: 4.9,
           views: 12500,
           likes: 892,
-          tags: ['AI', 'Neural Networks', 'Deep Learning', 'Tutorial'],
+          tags: [', 'AI', 'Neural 'Networks', 'Deep 'Learning', 'Tutorial'],
           thumbnail: '/api/placeholder/400/250',
           author: 'Dr. Sarah Chen',
           publishedAt: '2024-01-15',
@@ -93,7 +93,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           rating: 4.8,
           views: 8900,
           likes: 654,
-          tags: ['Quantum Computing', 'Case Study', 'Business', 'ROI'],
+          tags: ['Quantum 'Computing', 'Case 'Study', 'Business'ROI'],
           thumbnail: '/api/placeholder/400/250',
           author: 'Michael Rodriguez',
           publishedAt: '2024-01-12',
@@ -113,7 +113,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           rating: 4.7,
           views: 15600,
           likes: 1203,
-          tags: ['Automation', 'AI', 'Autonomous Systems', 'Tutorial'],
+          tags: [', 'Automation', 'AI'Autonomous 'Systems', 'Tutorial'],
           thumbnail: '/api/placeholder/400/250',
           author: 'AI Research Team',
           publishedAt: '2024-01-10',
@@ -133,7 +133,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           rating: 4.6,
           views: 9800,
           likes: 567,
-          tags: ['Machine Learning', 'Predictions', 'Future', 'AI'],
+          tags: ['Machine 'Learning', 'Predictions', 'Future', 'AI'],
           thumbnail: '/api/placeholder/400/250',
           author: 'Dr. Emily Watson',
           publishedAt: '2024-01-08',
@@ -153,7 +153,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           rating: 4.5,
           views: 7200,
           likes: 423,
-          tags: ['Data Science', 'Best Practices', 'Tools', 'Business'],
+          tags: ['Data 'Science', 'Best 'Practices', 'Tools'Business'],
           thumbnail: '/api/placeholder/400/250',
           author: 'Data Science Institute',
           publishedAt: '2024-01-05',
@@ -169,28 +169,28 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
     };
 
     loadContent();
-  }, []);
+  }[]);
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: BookOpen, color: 'from-blue-500 to-cyan-500' },
-    { id: 'ai-fundamentals', name: 'AI Fundamentals', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, color: 'from-green-500 to-emerald-500' },
-    { id: 'automation', name: 'Automation', icon: Target, color: 'from-orange-500 to-red-500' },
-    { id: 'ai-predictions', name: 'AI Predictions', icon: TrendingUp, color: 'from-indigo-500 to-purple-500' },
-    { id: 'data-science', name: 'Data Science', icon: BookOpen, color: 'from-teal-500 to-cyan-500' }
+    { id: ''all', 'name: 'All 'Content', 'icon: BookOpencolor: 'from-blue-500 to-cyan-500' },
+    { id: 'ai-'fundamentals', 'name: 'AI 'Fundamentals', 'icon: Braincolor: 'from-purple-500 to-pink-500' },
+    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: Zapcolor: 'from-green-500 to-emerald-500' },
+    { id: ''automation', 'name: ''Automation', 'icon: Targetcolor: 'from-orange-500 to-red-500' },
+    { id: 'ai-'predictions', 'name: 'AI 'Predictions', 'icon: TrendingUpcolor: 'from-indigo-500 to-purple-500' },
+    { id: 'data-'science', 'name: 'Data 'Science', 'icon: BookOpencolor: 'from-teal-500 to-cyan-500' }
   ];
 
   const difficulties = [
-    { id: 'all', name: 'All Levels' },
-    { id: 'beginner', name: 'Beginner' },
-    { id: 'intermediate', name: 'Intermediate' },
-    { id: 'advanced', name: 'Advanced' }
+    { id: ''all', 'name: 'All Levels' },
+    { id: ''beginner', 'name: 'Beginner' },
+    { id: ''intermediate', 'name: 'Intermediate' },
+    { id: ''advanced', 'name: 'Advanced' }
   ];
 
   const filteredContent = contentItems.filter(item => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
     const matchesDifficulty = selectedDifficulty === 'all' || item.difficulty === selectedDifficulty;
-    const matchesSearch = searchQuery === '' || 
+    const matchesSearch = searchQuery === ', ' || 
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -198,8 +198,8 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
     return matchesCategory && matchesDifficulty && matchesSearch;
   });
 
-  const sortedContent = [...filteredContent].sort((a, b) => {
-    // AI recommended content first, then by relevance score
+  const sortedContent = [...filteredContent].sort((ab) => {
+    // AI recommended content firsthen by relevance score
     if (a.aiRecommended && !b.aiRecommended) return -1;
     if (!a.aiRecommended && b.aiRecommended) return 1;
     return b.relevanceScore - a.relevanceScore;
@@ -311,13 +311,13 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
       {/* Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <AnimatePresence>
-          {sortedContent.map((item, index) => (
+          {sortedContent.map((itemindex) => (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5delay: index * 0.1 }}
               className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 group"
             >
               <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500 relative">

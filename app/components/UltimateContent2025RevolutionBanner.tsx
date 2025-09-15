@@ -2,7 +2,21 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ChevronLeft, ChevronRight, Star, TrendingUp, Users, Zap } from 'lucide-react';
+import { X, ChevronRight, Star, TrendingUp, Users, Award } from 'lucide-react';
+
+interface ContentItem {
+  id: string;
+  title: string;
+  type: 'blog' | 'case-study' | 'resource';
+  url: string;
+  metrics: {
+    roi?: string;
+    savings?: string;
+    accuracy?: string;
+    satisfaction?: string;
+  };
+  featured: boolean;
+}
 
 const UltimateContent2025RevolutionBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -60,7 +74,22 @@ const UltimateContent2025RevolutionBanner = () => {
   ];
 
   useEffect(() => {
-    const dismissed = localStorage.getItem('ultimate-content-2025-revolution-banner-dismissed');
+    if (isDismissed) return;
+    
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isDismissed, featuredContent.length]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+    localStorage.setItem('ultimate-content-2025-revolution-dismissed', 'true');
+  };
+
+  useEffect(() => {
+    const dismissed = localStorage.getItem('ultimate-content-2025-revolution-dismissed');
     if (dismissed === 'true') {
       setIsDismissed(true);
     }

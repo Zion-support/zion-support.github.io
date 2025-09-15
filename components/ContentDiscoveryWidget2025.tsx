@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
-import { Search, Filter, BookOpen, Target, Users, TrendingUp, ArrowRight, Star, Zap, Clock } from 'lucide-react';
+SearchFilterBookOpenTargetUsersTrendingUpArrowRightStarZapClock
 
 interface ContentItem {
   id: string;
@@ -16,9 +16,9 @@ interface ContentItem {
 }
 
 const ContentDiscoveryWidget2025: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
+  const [searchTermsetSearchTerm] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [selectedTypesetSelectedType] = useState('all');
 
   const contentItems: ContentItem[] = [
     {
@@ -29,8 +29,8 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       readTime: '12 min read',
       featured: true,
       url: '/blog/ai-2025-generative-ai-business-transformation',
-      excerpt: 'Explore how generative AI is revolutionizing business operations in 2025, from content creation to customer service automation.',
-      tags: ['Generative AI', 'Business Transformation', 'AI 2025']
+      excerpt: 'Explore how generative AI is revolutionizing business operations in 2025from content creation to customer service automation.',
+      tags: ['Generative 'AI', 'Business 'Transformation', 'AI 2025']
     },
     {
       id: '2',
@@ -40,8 +40,8 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       readTime: '15 min read',
       featured: true,
       url: '/blog/quantum-computing-2025-business-applications',
-      excerpt: 'Discover how quantum computing is revolutionizing business operations in 2025, from optimization problems to advanced cryptography.',
-      tags: ['Quantum Computing', 'Business Applications', 'Optimization']
+      excerpt: 'Discover how quantum computing is revolutionizing business operations in 2025from optimization problems to advanced cryptography.',
+      tags: ['Quantum 'Computing', 'Business 'Applications', 'Optimization']
     },
     {
       id: '3',
@@ -52,7 +52,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       featured: true,
       url: '/case-studies/ai-automation-manufacturing-success-2025',
       excerpt: 'How a leading manufacturing company achieved 500% productivity increase through comprehensive AI automation.',
-      tags: ['AI Automation', 'Manufacturing', 'Productivity']
+      tags: ['AI 'Automation', 'Manufacturing'Productivity']
     },
     {
       id: '4',
@@ -62,8 +62,8 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       readTime: '25 min read',
       featured: true,
       url: '/resources/ai-implementation-checklist-2025',
-      excerpt: 'Comprehensive checklist for successful AI implementation in 2025, covering strategy, technology, and change management.',
-      tags: ['AI Implementation', 'Checklist', 'Strategy']
+      excerpt: 'Comprehensive checklist for successful AI implementation in 2025covering strategytechnologyand change management.',
+      tags: ['AI 'Implementation', 'Checklist'Strategy']
     },
     {
       id: '5',
@@ -74,7 +74,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       featured: true,
       url: '/case-studies/enterprise-ai-transformation-success-story',
       excerpt: 'Discover how a Fortune 500 company achieved unprecedented success through comprehensive AI transformation.',
-      tags: ['AI Transformation', 'Enterprise Success', 'ROI']
+      tags: ['AI 'Transformation', 'Enterprise 'Success', 'ROI']
     },
     {
       id: '6',
@@ -85,12 +85,12 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       featured: false,
       url: '/blog/ai-2025-autonomous-business-operations',
       excerpt: 'Discover how AI-powered autonomous operations are transforming businesses in 2025.',
-      tags: ['AI 2025', 'Autonomous Operations', 'Business Automation']
+      tags: ['AI 2025'Autonomous 'Operations', 'Business Automation']
     }
   ];
 
-  const categories = ['all', 'AI Innovation', 'Quantum Technology', 'Manufacturing', 'Enterprise', 'Implementation Guide'];
-  const types = ['all', 'blog', 'case-study', 'resource', 'webinar'];
+  const categories = [', 'all', 'AI 'Innovation', 'Quantum 'Technology', 'Manufacturing', 'Enterprise', 'Implementation Guide'];
+  const types = [', 'all', 'blog'case-'study', 'resource'webinar'];
 
   const filteredContent = contentItems.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -128,7 +128,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h3 className="text-2xl font-bold text-gray-900 mb-2">Discover Latest Content</h3>
-          <p className="text-gray-600">Explore our comprehensive library of AI insights, case studies, and implementation guides</p>
+          <p className="text-gray-600">Explore our comprehensive library of AI insightscase studiesand implementation guides</p>
         </div>
         <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full">
           <Star className="w-4 h-4 fill-current" />
@@ -143,7 +143,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
           <input
             type="text"
-            placeholder="Search content, tags, or categories..."
+            placeholder="Search contentagsor categories..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -176,7 +176,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
           >
             {types.map(type => (
               <option key={type} value={type}>
-                {type === 'all' ? 'All Types' : type.charAt(0).toUpperCase() + type.slice(1).replace('-', ' ')}
+                {type === 'all' ? 'All Types' : type.charAt(0).toUpperCase() + type.slice(1).replace('-' ')}
               </option>
             ))}
           </select>
@@ -195,7 +195,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
             <div className="flex items-start justify-between mb-3">
               <div className={`flex items-center space-x-2 px-3 py-1 rounded-full border text-xs font-medium ${getTypeColor(item.type)}`}>
                 {getTypeIcon(item.type)}
-                <span>{item.type.replace('-', ' ')}</span>
+                <span>{item.type.replace('-' ')}</span>
               </div>
               {item.featured && (
                 <div className="flex items-center space-x-1 text-yellow-600">
@@ -225,7 +225,7 @@ const ContentDiscoveryWidget2025: React.FC = () => {
 
             {/* Tags */}
             <div className="flex flex-wrap gap-1 mb-4">
-              {item.tags.slice(0, 3).map((tag, index) => (
+              {item.tags.slice(03).map((tagindex) => (
                 <span
                   key={index}
                   className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full"

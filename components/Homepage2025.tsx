@@ -1,31 +1,40 @@
 "use client";
-import React, { useState, useEffect, Suspense } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  innovativeRealMicroSaasServices2025 
-} from '../data/2025-innovative-real-micro-saas-services';
-import { 
-  innovativeAIServicesEnhanced2025 
-} from '../data/2025-innovative-ai-services-enhanced';
-import { 
-  innovativeITServicesEnhanced2025 
-} from '../data/2025-innovative-it-services-enhanced';
-import { 
-  emergingTechServicesEnhanced2025 
+import { AnimatePresence, motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Atom,
+  BarChart3,
+  Brain,
+  Cloud,
+  Globe,
+  Lock,
+  Rocket,
+  Shield,
+  Star,
+  TrendingUp,
+  Users,
+  Zap
+} from 'lucide-react';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import {
+  emergingTechServicesEnhanced2025
 } from '../data/2025-emerging-tech-services-enhanced';
-import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
-import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
+import {
+  innovativeAIServicesEnhanced2025
+} from '../data/2025-innovative-ai-services-enhanced';
+import {
+  innovativeITServicesEnhanced2025
+} from '../data/2025-innovative-it-services-enhanced';
+import {
+  innovativeRealMicroSaasServices2025
+} from '../data/2025-innovative-real-micro-saas-services';
+import { advancedAIAutomationServices2026 as advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
+import { advancedCybersecurityServices2026 as advancedCybersecurityServices } from '../data/2026-advanced-cybersecurity-services';
+import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
-import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-import Link from 'next/link';
-import { 
-  ArrowRight, Star, Brain, Atom, Shield, Zap,
-  Users, Globe, TrendingUp, Rocket, Cpu, Lock,
-  BarChart3, Cloud
-} from 'lucide-react';
 
 interface Homepage2025Props { showInternalNav?: boolean }
 
@@ -58,13 +67,40 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     ...innovativeITServicesEnhanced2025,
     ...emergingTechServicesEnhanced2025,
     ...advancedAIAutomationServices,
-    ...quantumCybersecurityServices,
+    ...advancedCybersecurityServices,
     ...innovativeMicroSaasServices2026,
     ...specializedITSolutions2026,
     ...emergingTechServices2026
   ];
 
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
+
+  const latestInsights = [
+    {
+      title: 'AI 2026: Edge Agents in Production',
+      href: '/blog/ai-2026-edge-agents-production-guide',
+      tag: 'Guide',
+      gradient: 'from-emerald-500 to-cyan-500'
+    },
+    {
+      title: 'AI 2026: Safety Evals Blueprint',
+      href: '/content/ai-2026-safety-evals-blueprint',
+      tag: 'Blueprint',
+      gradient: 'from-fuchsia-500 to-indigo-500'
+    },
+    {
+      title: 'AI 2026: Real-Time Retrieval Architectures',
+      href: '/blog/ai-2026-real-time-retrieval-architectures',
+      tag: 'Article',
+      gradient: 'from-purple-500 to-blue-500'
+    },
+    {
+      title: 'AI 2026: Autonomous Ops Playbook',
+      href: '/content/ai-2026-autonomous-ops-playbook',
+      tag: 'Playbook',
+      gradient: 'from-cyan-500 to-blue-600'
+    }
+  ];
 
   const navigationSections = [
     { id: 'hero', label: 'Home', icon: '🏠' },
@@ -308,6 +344,51 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </motion.div>
             </motion.div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Latest Insights */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="flex items-end justify-between mb-8"
+          >
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Latest Insights</h2>
+              <p className="text-gray-300 mt-2">New guides and blueprints from our experts</p>
+            </div>
+            <Link href="/blog" className="text-cyan-400 hover:text-cyan-300">View all</Link>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {latestInsights.map((post, index) => (
+              <motion.a
+                key={post.href}
+                href={post.href}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-6"
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-cyan-300">
+                  <span className="px-2 py-1 rounded-md bg-white/10 border border-white/10">{post.tag}</span>
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                  {post.title}
+                </h3>
+                <span className="mt-4 inline-flex items-center text-cyan-400 group-hover:text-cyan-300 text-sm">
+                  Read more
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </motion.a>
+            ))}
+          </div>
         </div>
       </section>
 

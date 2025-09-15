@@ -14,7 +14,7 @@ const UltimatePromotionBanner2026 = () => {
             Ultimate AI Package 2026
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Get access to ALL our AI solutions, content, and tools for one incredible price. 
+            Get access to ALL our AI solutionscontentand tools for one incredible price. 
             Save 70% on the complete package - Limited time only!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -45,7 +45,7 @@ const UltimatePromotionBanner2026 = () => {
             <div className="text-4xl mb-4">📚</div>
             <h3 className="text-xl font-bold mb-3">Complete Content Library</h3>
             <p className="opacity-90">
-              Access to 500+ AI tutorials, guides, and case studies
+              Access to 500+ AI tutorialsguidesand case studies
             </p>
           </div>
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 text-center">

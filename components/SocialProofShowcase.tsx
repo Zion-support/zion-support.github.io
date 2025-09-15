@@ -6,7 +6,7 @@ export default function SocialProofShowcase() {
     {
       id: 1,
       name: 'Sarah Chen',
-      title: 'CEO, TechCorp Global',
+      title: 'CEOTechCorp Global',
       company: 'Fortune 500 Technology',
       content: 'The AI 2025 Ultimate Breakthrough Revolution transformed our entire operation. We achieved 18,500% ROI in just 6 months. This is the most revolutionary technology I\'ve ever seen.',
       metrics: '18,500% ROI',
@@ -26,7 +26,7 @@ export default function SocialProofShowcase() {
     {
       id: 3,
       name: 'Jennifer Walsh',
-      title: 'CTO, FinanceFirst Bank',
+      title: 'CTOFinanceFirst Bank',
       company: 'Global Banking Corporation',
       content: 'Quantum-powered fraud detection systems reduced false positives by 95% while catching 100% of actual fraud attempts. Our security is now unbreakable.',
       metrics: '99.9% Accuracy',
@@ -46,19 +46,19 @@ export default function SocialProofShowcase() {
   ];
 
   const successMetrics = [
-    { label: 'Companies Transformed', value: '500+', icon: '🏢' },
-    { label: 'Average ROI Achieved', value: '15,000%', icon: '📈' },
-    { label: 'Countries Served', value: '50+', icon: '🌍' },
-    { label: 'Success Rate', value: '99.9%', icon: '✅' }
+    { label: 'Companies 'Transformed', 'value: '500+'icon: '🏢' },
+    { label: 'Average ROI 'Achieved', 'value: '15,000%'icon: '📈' },
+    { label: 'Countries 'Served', 'value: '50+'icon: '🌍' },
+    { label: 'Success 'Rate', 'value: '99.9%'icon: '✅' }
   ];
 
   const logos = [
-    { name: 'Microsoft', logo: 'MS' },
-    { name: 'Google', logo: 'GO' },
-    { name: 'Amazon', logo: 'AM' },
-    { name: 'Tesla', logo: 'TS' },
-    { name: 'Meta', logo: 'ME' },
-    { name: 'Apple', logo: 'AP' }
+    { name: ''Microsoft', 'logo: 'MS' },
+    { name: ''Google', 'logo: 'GO' },
+    { name: ''Amazon', 'logo: 'AM' },
+    { name: ''Tesla', 'logo: 'TS' },
+    { name: ''Meta', 'logo: 'ME' },
+    { name: ''Apple', 'logo: 'AP' }
   ];
 
   return (
@@ -67,16 +67,16 @@ export default function SocialProofShowcase() {
         {/* Success Metrics */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Proven Results, Revolutionary Impact
+            Proven ResultsRevolutionary Impact
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our revolutionary AI technologies have transformed businesses worldwide, 
+            Our revolutionary AI technologies have transformed businesses worldwide
             delivering unprecedented results and breakthrough performance.
           </p>
         </div>
 
         <div className="grid md:grid-cols-4 gap-8 mb-20">
-          {successMetrics.map((metric, index) => (
+          {successMetrics.map((metricindex) => (
             <div key={index} className="text-center">
               <div className="text-4xl mb-4">{metric.icon}</div>
               <div className="text-4xl font-bold text-gray-900 mb-2">{metric.value}</div>
@@ -91,7 +91,7 @@ export default function SocialProofShowcase() {
             Trusted by Industry Leaders
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            {logos.map((logo, index) => (
+            {logos.map((logoindex) => (
               <div key={index} className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 font-bold">
                 {logo.logo}
               </div>
@@ -177,7 +177,7 @@ export default function SocialProofShowcase() {
             Join the Revolution
           </h3>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Don't just read about our success stories. Become one. Join thousands of companies 
+            'Don', 't just read about our success stories. Become one. Join thousands of companies 
             already experiencing the revolutionary power of our AI technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
