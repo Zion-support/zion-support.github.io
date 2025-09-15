@@ -46,6 +46,7 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
+<<<<<<< HEAD
                 {/* Featured Content Section */}
                 <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 mb-12 text-white">
                   <div className="text-center mb-8">
@@ -73,6 +74,64 @@ export default function App(): JSX.Element {
                     </div>
                   </div>
                 </div>
+=======
+        {/* Featured New Services */}
+        <section className="mb-12">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl font-bold text-gray-900">Newest Services</h2>
+            <p className="text-gray-600">Explore our latest offerings designed to drive measurable outcomes.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-4xl mb-4">🧭</div>
+              <h3 className="text-xl font-semibold mb-2">AI Sales Copilot</h3>
+              <p className="text-gray-600 mb-4">Automate prospecting, personalize outreach, and accelerate pipeline with conversational AI.</p>
+              <a href="/services" className="text-blue-600 hover:underline">Learn more →</a>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-4xl mb-4">💸</div>
+              <h3 className="text-xl font-semibold mb-2">Cloud Cost Optimizer</h3>
+              <p className="text-gray-600 mb-4">Cut multi-cloud spend with automated rightsizing, scheduling, and anomaly detection.</p>
+              <a href="/services" className="text-blue-600 hover:underline">Learn more →</a>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-xl font-semibold mb-2">Cyber Threat Intelligence Hub</h3>
+              <p className="text-gray-600 mb-4">Unify threat feeds and correlate signals with AI to reduce alert fatigue.</p>
+              <a href="/services" className="text-blue-600 hover:underline">Learn more →</a>
+            </div>
+          </div>
+          <div className="text-center mt-6">
+            <a href="/services" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">View all services</a>
+          </div>
+        </section>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className="text-xl font-semibold mb-2">AI Solutions</h3>
+            <p className="text-gray-600">
+              Cutting-edge artificial intelligence solutions for your business needs.
+            </p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="text-4xl mb-4">🔗</div>
+            <h3 className="text-xl font-semibold mb-2">Blockchain</h3>
+            <p className="text-gray-600">
+              Secure, decentralized solutions powered by blockchain technology.
+            </p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="text-4xl mb-4">☁️</div>
+            <h3 className="text-xl font-semibold mb-2">Cloud Services</h3>
+            <p className="text-gray-600">
+              Scalable cloud infrastructure and deployment solutions.
+            </p>
+          </div>
+        </div>
+>>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
 
                 {/* Services Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -195,4 +254,8 @@ export default function App(): JSX.Element {
       </div>
     </Router>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)

@@ -2,20 +2,29 @@
 import { useState } from "react";
 import { Rocket, Clock, CheckCircle, AlertCircle, Activity, Pause, RefreshCw, Eye, Settings, Globe, MapPin, User, Building2, Shield, Users, Zap, Calendar, StopCircle, Play } from "lucide-react";
 
+<<<<<<< HEAD
+=======
+import { useState } from "react";
+import { Rocket, Clock, CheckCircle, AlertCircle, Activity } from "lucide-react";
+
+>>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
 interface Deployment {
   id: string;
   instanceName: string;
-  status: 'pending' | 'deploying' | 'completed' | 'failed' | 'paused';
+  status: "pending" | "deploying" | "completed" | "failed" | "paused";
   createdAt: string;
   updatedAt: string;
   progress: number;
   features: string[];
   vertical: string;
+<<<<<<< HEAD
   governanceType: string;
   domain?: string;
   subdomain?: string;
   region?: string;
   country?: string;
+=======
+>>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
 }
 
 const mockDeployments: Deployment[] = [
@@ -28,15 +37,30 @@ const mockDeployments: Deployment[] = [
     progress: 100,
     features: ["marketplace", "zion_gpt", "kyc_aml", "dao_voting"],
     vertical: "HEALTH",
+<<<<<<< HEAD
     governanceType: "DAO_FULL",
     domain: "health.zion.network",
     region: "North America",
     country: "United States"
   }
+=======
+  },
+  {
+    id: "deploy-002",
+    instanceName: "EduDAO Academy",
+    status: "deploying",
+    createdAt: "2024-01-15T14:20:00Z",
+    updatedAt: "2024-01-15T15:10:00Z",
+    progress: 65,
+    features: ["academy", "zion_gpt", "incubator_grants"],
+    vertical: "EDUCATION",
+  },
+>>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
 ];
 
 export default function DeploymentsPage() {
   const [deployments] = useState<Deployment[]>(mockDeployments);
+<<<<<<< HEAD
   const [filter, setFilter] = useState<'all' | 'pending' | 'deploying' | 'completed' | 'failed'>('all');
 
   const getStatusColor = (status: string) => {
@@ -75,6 +99,11 @@ export default function DeploymentsPage() {
 
   const filteredDeployments = deployments.filter(d => filter === 'all' || d.status === filter);
   const getStatusCount = (status: string) => deployments.filter(d => d.status === status).length;
+=======
+
+  const getStatusCount = (status: Deployment["status"]) =>
+    deployments.filter((d) => d.status === status).length;
+>>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
 
   return (
     <div className="space-y-8">
@@ -97,16 +126,22 @@ export default function DeploymentsPage() {
           <div className="flex items-center gap-3">
             <div className="p-2 bg-yellow-500/20 rounded-lg"><Clock className="w-5 h-5 text-yellow-400" /></div>
             <div>
-              <p className="text-2xl font-bold">{getStatusCount('pending')}</p>
+              <p className="text-2xl font-bold">{getStatusCount("pending")}</p>
               <p className="text-sm text-white/60">Pending</p>
             </div>
           </div>
         </div>
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
           <div className="flex items-center gap-3">
+<<<<<<< HEAD
             <div className="p-2 bg-blue-500/20 rounded-lg"><Activity className="w-5 h-5 text-blue-400" /></div>
+=======
+            <div className="p-2 bg-blue-500/20 rounded-lg">
+              <Activity className="w-5 h-5 text-blue-400" />
+            </div>
+>>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
             <div>
-              <p className="text-2xl font-bold">{getStatusCount('deploying')}</p>
+              <p className="text-2xl font-bold">{getStatusCount("deploying")}</p>
               <p className="text-sm text-white/60">Active</p>
             </div>
           </div>
@@ -115,7 +150,7 @@ export default function DeploymentsPage() {
           <div className="flex items-center gap-3">
             <div className="p-2 bg-green-500/20 rounded-lg"><CheckCircle className="w-5 h-5 text-green-400" /></div>
             <div>
-              <p className="text-2xl font-bold">{getStatusCount('completed')}</p>
+              <p className="text-2xl font-bold">{getStatusCount("completed")}</p>
               <p className="text-sm text-white/60">Live</p>
             </div>
           </div>
@@ -124,12 +159,13 @@ export default function DeploymentsPage() {
           <div className="flex items-center gap-3">
             <div className="p-2 bg-red-500/20 rounded-lg"><AlertCircle className="w-5 h-5 text-red-400" /></div>
             <div>
-              <p className="text-2xl font-bold">{getStatusCount('failed')}</p>
+              <p className="text-2xl font-bold">{getStatusCount("failed")}</p>
               <p className="text-sm text-white/60">Failed</p>
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       <div className="flex flex-wrap gap-2">
         {[
@@ -241,3 +277,8 @@ export default function DeploymentsPage() {
     </div>
   );
 }
+=======
+    </div>
+  );
+}
+>>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)

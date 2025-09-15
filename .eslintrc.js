@@ -22,7 +22,10 @@ module.exports = {
     'scripts/',
     'automation/',
     'netlify/',
+<<<<<<< HEAD
     'src/',
+=======
+>>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
     'apps/'
   ]
 };
