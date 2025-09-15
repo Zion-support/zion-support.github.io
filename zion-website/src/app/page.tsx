@@ -106,6 +106,27 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
+                href="/updates/autonomous-incident-response-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-red-400/30 bg-red-500/10 px-4 py-2 text-sm font-semibold text-red-200 hover:bg-red-500/20 transition-colors duration-200"
+              >
+                Launch: Incident Response v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/enterprise-retrieval-observability-2026"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+              >
+                Report: Retrieval Observability 2026
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/ai-lab-research-portal"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Launch: AI Lab Research Portal
+                <span aria-hidden>→</span>
+              </a>
+              <a
                 href="/updates/autonomous-ops-control-center-2-0"
                 className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
               >

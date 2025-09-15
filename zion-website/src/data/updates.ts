@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Incident Response v1.0',
+    summary:
+      'End-to-end automated incident detection, triage, and remediation workflows for AI systems.',
+    href: '/updates/autonomous-incident-response-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: Enterprise Retrieval Observability (2026)',
+    summary:
+      'Metrics, traces, and dashboards to monitor retrieval quality, drift, and SLIs at scale.',
+    href: '/updates/enterprise-retrieval-observability-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Launch: AI Lab Research Portal',
+    summary:
+      'Central hub for publications, datasets, and live benchmarks from Zion AI Lab.',
+    href: '/updates/ai-lab-research-portal',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Launch: Autonomous Ops Control Center 2.0',
     summary:
       'Unified command center with live evals, guardrails, and automated incident workflows for agent ops.',
