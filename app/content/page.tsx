@@ -15,6 +15,31 @@ export default function ContentIndexPage() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Hub</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evaluation-hub" className="hover:underline">
+              AI 2026: Evaluation Hub
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Central hub for eval harnesses, scenario suites, and governance gates for autonomous AI.
+          </p>
+          <Link href="/content/ai-2026-evaluation-hub" className="text-indigo-700 font-semibold">Explore Hub →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-rose-700 mb-2">Guide</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-operational-guardrails" className="hover:underline">
+              AI 2026: Operational Guardrails
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Practical runtime safeguards, policy gates, and incident response for safe AI operations.
+          </p>
+          <Link href="/content/ai-2026-operational-guardrails" className="text-rose-700 font-semibold">Read Guide →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/ai-governance-blueprint-2026" className="hover:underline">
