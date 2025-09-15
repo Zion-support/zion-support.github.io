@@ -16,6 +16,8 @@ import AIInnovationPlaybook2025 from './src/pages/AIInnovationPlaybook2025';
 import TechnologyInsights2025 from './src/pages/TechnologyInsights2025';
 import AITransformationGuide2025 from './src/pages/AITransformationGuide2025';
 import QuantumComputingSolutions2025 from './src/pages/QuantumComputingSolutions2025';
+import TechLeadershipGuide2025 from './src/pages/TechLeadershipGuide2025';
+import EdgeAITrends2025 from './src/pages/EdgeAITrends2025';
 import './src/index.css';
 
 export default function App(): JSX.Element {
@@ -90,6 +92,12 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/AIInnovationPlaybook2025" className="border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors text-center font-semibold">
                       📘 AI Playbook
+                    </a>
+                    <a href="/pages/TechLeadershipGuide2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🧭 Tech Leadership
+                    </a>
+                    <a href="/pages/EdgeAITrends2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🛰️ Edge AI Trends
                     </a>
                   </div>
                 </div>
@@ -284,6 +292,18 @@ export default function App(): JSX.Element {
                       <p className="text-sm opacity-90 mb-4">Next-generation quantum solutions</p>
                       <a href="/pages/QuantumComputingSolutions2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Go Quantum →</a>
                     </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/30 transition-all duration-300">
+                      <div className="text-4xl mb-3">🧭</div>
+                      <h3 className="text-xl font-semibold mb-2">Tech Leadership Guide</h3>
+                      <p className="text-sm opacity-90 mb-4">Scale teams, AI, and reliability</p>
+                      <a href="/pages/TechLeadershipGuide2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Read Guide →</a>
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/30 transition-all duration-300">
+                      <div className="text-4xl mb-3">🛰️</div>
+                      <h3 className="text-xl font-semibold mb-2">Edge AI Trends 2025</h3>
+                      <p className="text-sm opacity-90 mb-4">On-device genAI and privacy</p>
+                      <a href="/pages/EdgeAITrends2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore Trends →</a>
+                    </div>
                   </div>
                 </div>
 
@@ -327,6 +347,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/TechnologyInsights2025" element={<TechnologyInsights2025 />} />
           <Route path="/pages/AITransformationGuide2025" element={<AITransformationGuide2025 />} />
           <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
+          <Route path="/pages/TechLeadershipGuide2025" element={<TechLeadershipGuide2025 />} />
+          <Route path="/pages/EdgeAITrends2025" element={<EdgeAITrends2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
