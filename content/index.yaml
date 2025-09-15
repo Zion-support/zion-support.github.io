@@ -712,6 +712,36 @@ content_index:
         mttr: "< 15 min"
         permission_scope: "least-privilege"
 
+    - id: "ai-2026-agentic-sandbox-patterns"
+      type: "blog"
+      title: "AI 2026: Agentic Sandbox Patterns"
+      file_path: "/app/blog/ai-2026-agentic-sandbox-patterns/page.tsx"
+      url: "/blog/ai-2026-agentic-sandbox-patterns"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Sandbox", "Security", "Policy-as-Code", "Least Privilege", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incidents_reduction: "40%"
+        rollback: "automatic"
+        audit_ready: true
+
+    - id: "ai-2026-safe-evaluation-hub"
+      type: "blueprint"
+      title: "AI 2026: Safe Evaluation Hub"
+      file_path: "/app/content/ai-2026-safe-evaluation-hub/page.tsx"
+      url: "/content/ai-2026-safe-evaluation-hub"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evaluation", "Reliability", "Policy-as-Code", "Risk", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        risk_reduction: "60%"
+        rollback_time: "< 5 min"
+
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
       file_path: "/app/components/NewContent2025AdvancedAutomationBanner.tsx"
