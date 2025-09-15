@@ -34,7 +34,6 @@ import RevolutionaryInnovationHub2026 from './pages/RevolutionaryInnovationHub20
 import ComprehensiveCaseStudies2026 from './pages/ComprehensiveCaseStudies2026';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
-import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution2026';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import NextGenAIRevolution2027 from './pages/NextGenAIRevolution2027';
 import QuantumConsciousnessRevolution2027 from './pages/QuantumConsciousnessRevolution2027';
@@ -145,7 +144,6 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/AdvancedAISystems2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🤖 AI Systems 2026 →
-                      </a>
                       </a>
                     </div>
                   </div>
