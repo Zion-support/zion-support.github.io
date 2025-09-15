@@ -16,6 +16,26 @@ const DynamicContentCarousel: React.FC = () => {
       features: ['Autonomous Intelligence', 'Predictive Analytics', 'Smart Automation']
     },
     {
+      id: 5,
+      title: 'AI Use Cases 2025',
+      subtitle: 'Proven Patterns That Drive ROI',
+      description: 'Sales, marketing, ops, and support use cases you can deploy today.',
+      image: '📈',
+      gradient: 'from-cyan-600 to-blue-600',
+      link: '/pages/NewAIUseCases2025',
+      features: ['Sales Copilot', 'Content Studio', 'Ops Automation']
+    },
+    {
+      id: 6,
+      title: 'Edge AI & IoT 2025',
+      subtitle: 'Intelligence Where Data Is Born',
+      description: 'Predictive maintenance, fleet optimization, smart grids, and cities.',
+      image: '🌐',
+      gradient: 'from-teal-600 to-emerald-600',
+      link: '/pages/EdgeAIandIoT2025',
+      features: ['On-device ML', 'Edge Gateways', 'Streaming Analytics']
+    },
+    {
       id: 2,
       title: 'Quantum Computing Revolution',
       subtitle: 'Unlock Exponential Computational Power',

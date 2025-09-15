@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-09-15"
-  total_content_pieces: 27
+  total_content_pieces: 29
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -511,6 +511,34 @@ content_index:
         mttr_reduction: "45%"
         automation: "eval-gated"
         audit_ready: true
+    - id: "ai-2026-go-to-market-agents-blueprint"
+      type: "blueprint"
+      title: "AI 2026: Go-To-Market Agents Blueprint"
+      file_path: "/app/content/ai-2026-go-to-market-agents-blueprint/page.tsx"
+      url: "/content/ai-2026-go-to-market-agents-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["GTM", "Sales", "Marketing", "Policy-as-Code", "Evals", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        pipeline_growth: "+38%"
+        win_rate: "+12%"
+        cac_payback: "< 6 months"
+    - id: "blog-ai-2026-go-to-market-agents-blueprint"
+      type: "blog"
+      title: "AI 2026: Go-To-Market Agents Blueprint — Overview"
+      file_path: "/app/blog/ai-2026-go-to-market-agents-blueprint/page.tsx"
+      url: "/blog/ai-2026-go-to-market-agents-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["GTM", "Sales", "Marketing", "Policy-as-Code", "Evals", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        pipeline_growth: "+38%"
+        conversion_rate: "+8%"
+        safety_incidents: "-60%"
     - id: "ai-2026-end-to-end-eval-pipelines"
       type: "blog"
       title: "AI 2026: End-to-End Evaluation Pipelines"
