@@ -8,39 +8,11 @@ type Props = { pypi: Item[]; crates: Item[]; github: { [k: string]: Item[] } };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-<<<<<<< HEAD
-    const file = path.join(process.cwd()', 'public', 'automation'tech-radar.json');
-    const raw = fs.readFileSync('file', 'utf8');
-=======
-    const file = path.join(process.cwd(), 'public', 'automation', 'tech-radar.json');
-    const raw = fs.readFileSync(file, 'utf8');
->>>>>>> origin/auto/autonomy-17186719616
     const data = JSON.parse(raw);
     return {
       props: {
         pypi: data.ecosystems.pypi || [],
         crates: data.ecosystems.crates || [],
-<<<<<<< HEAD
-        github: data.ecosystems.github || {}},
-      revalidate: 7200};
-  } catch {
-    return { props: { pypi: []crates: []github: {} }revalidate: 7200 };
-  }
-};
-
-export default function TechRadar({ pypicratesgithub }: Props) {
-=======
-        github: data.ecosystems.github || {},
-      },
-      revalidate: 7200,
-    };
-  } catch {
-    return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 };
-  }
-};
-
-export default function TechRadar({ pypi, crates, github }: Props) {
->>>>>>> origin/auto/autonomy-17186719616
   const langs = Object.keys(github);
   return (
     <div className="space-y-8">
@@ -52,11 +24,6 @@ export default function TechRadar({ pypi, crates, github }: Props) {
       <section>
         <h2 className="font-semibold text-lg mb-3">PyPI (30 days)</h2>
         <ul className="grid md:grid-cols-2 gap-3">
-<<<<<<< HEAD
-          {pypi.map((iti) => (
-=======
-          {pypi.map((it, i) => (
->>>>>>> origin/auto/autonomy-17186719616
             <li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
               {typeof it.downloads === 'number' && (
@@ -70,11 +37,6 @@ export default function TechRadar({ pypi, crates, github }: Props) {
       <section>
         <h2 className="font-semibold text-lg mb-3">crates.io</h2>
         <ul className="grid md:grid-cols-2 gap-3">
-<<<<<<< HEAD
-          {crates.map((iti) => (
-=======
-          {crates.map((it, i) => (
->>>>>>> origin/auto/autonomy-17186719616
             <li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
               {it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it.description}</div>}
@@ -87,11 +49,6 @@ export default function TechRadar({ pypi, crates, github }: Props) {
         <section key={lang}>
           <h2 className="font-semibold text-lg mb-3">GitHub Trending: {lang}</h2>
           <ul className="grid md:grid-cols-2 gap-3">
-<<<<<<< HEAD
-            {(github[lang] || []).map((iti) => (
-=======
-            {(github[lang] || []).map((it, i) => (
->>>>>>> origin/auto/autonomy-17186719616
               <li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">
                 <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
                 {it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it.description}</div>}

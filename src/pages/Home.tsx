@@ -55,6 +55,7 @@ const SecurityComplianceSection = React.lazy(() => import("@/components/Security
 const AIServicesShowcase = React.lazy(() => import("@/components/AIServicesShowcase"));
 const InteractiveTestimonials = React.lazy(() => import("@/components/InteractiveTestimonials"));
 const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase"));
+const RevolutionaryContentShowcase2027 = React.lazy(() => import("@/components/RevolutionaryContentShowcase2027"));
 
 interface StatItem {
   value: string;
@@ -782,6 +783,7 @@ export default function Home() {
           <AIServicesShowcase />
           <InteractiveTestimonials />
           <ServicesShowcase />
+          <RevolutionaryContentShowcase2027 />
         </React.Suspense>
       </div>
     </>

@@ -1,242 +1,229 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const AdvancedTechInsights2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-  const [isLoading, setIsLoading] = useState(false);
 
-  const techInsights = {
+  const insights = {
     ai: {
-      title: "Advanced AI Systems 2026",
-      icon: "🤖",
-      gradient: "from-purple-600 to-pink-600",
-      insights: [
-        {
-          title: "Synthetic Intelligence Revolution",
-          description: "Beyond traditional AI, synthetic intelligence represents a new paradigm where artificial systems develop genuine consciousness and self-awareness.",
-          impact: "Transformative",
-          timeline: "2026-2028"
-        },
-        {
-          title: "Autonomous AI Agents",
-          description: "Self-managing AI systems that operate independently, make complex decisions, and continuously evolve without human intervention.",
-          impact: "High",
-          timeline: "2026-2027"
-        },
-        {
-          title: "Quantum-Enhanced Machine Learning",
-          description: "Combining quantum computing with machine learning to solve previously intractable problems and achieve exponential performance gains.",
-          impact: "Revolutionary",
-          timeline: "2026-2029"
-        }
-      ]
+      title: "Artificial Intelligence Revolution",
+      content: "The AI landscape in 2026 represents a paradigm shift from narrow AI to general artificial intelligence. We're witnessing the emergence of synthetic intelligence that can reason, create, and evolve beyond human capabilities.",
+      trends: [
+        "Autonomous AI agents operating independently",
+        "Emotional intelligence in machines",
+        "Self-evolving neural networks",
+        "AI-human consciousness fusion",
+        "Predictive analytics at quantum scale"
+      ],
+      impact: "AI is transforming every industry, from healthcare to finance, creating new opportunities while raising important questions about consciousness and machine rights."
     },
     quantum: {
-      title: "Quantum Computing Breakthroughs",
-      icon: "⚛️",
-      gradient: "from-cyan-600 to-blue-600",
-      insights: [
-        {
-          title: "Quantum Supremacy Achieved",
-          description: "Practical quantum computers now outperform classical systems in specific applications, marking a new era of computing.",
-          impact: "Revolutionary",
-          timeline: "2026"
-        },
-        {
-          title: "Quantum Internet Infrastructure",
-          description: "Global quantum communication networks enabling ultra-secure, instantaneous data transmission across continents.",
-          impact: "Transformative",
-          timeline: "2026-2027"
-        },
-        {
-          title: "Quantum Cryptography Standards",
-          description: "New cryptographic protocols that are theoretically unbreakable, ensuring data security in the quantum age.",
-          impact: "High",
-          timeline: "2026-2028"
-        }
-      ]
+      title: "Quantum Computing Breakthrough",
+      content: "Quantum computing has reached a critical inflection point in 2026, with practical applications emerging across multiple sectors. The quantum advantage is becoming a reality.",
+      trends: [
+        "Fault-tolerant quantum computers",
+        "Quantum internet infrastructure",
+        "Quantum machine learning algorithms",
+        "Quantum cryptography standards",
+        "Quantum simulation of complex systems"
+      ],
+      impact: "Quantum computing is solving previously impossible problems in cryptography, drug discovery, and optimization, fundamentally changing how we approach computation."
     },
     neural: {
       title: "Neural Interface Technology",
-      icon: "🧬",
-      gradient: "from-emerald-600 to-teal-600",
-      insights: [
-        {
-          title: "Non-Invasive Brain-Computer Interfaces",
-          description: "Advanced neural interfaces that allow direct thought control of devices without surgical implantation.",
-          impact: "Revolutionary",
-          timeline: "2026-2027"
-        },
-        {
-          title: "Neural Data Processing",
-          description: "Real-time analysis of neural signals to understand and predict human behavior and cognitive states.",
-          impact: "High",
-          timeline: "2026-2028"
-        },
-        {
-          title: "Consciousness Upload Technology",
-          description: "Pioneering research into transferring human consciousness to digital substrates for preservation and enhancement.",
-          impact: "Transformative",
-          timeline: "2026-2030"
-        }
-      ]
+      content: "Direct brain-computer interfaces are no longer science fiction. 2026 marks the beginning of the neural interface revolution, enabling seamless communication between mind and machine.",
+      trends: [
+        "Non-invasive neural interfaces",
+        "Thought-controlled prosthetics",
+        "Memory enhancement systems",
+        "Telepathic communication protocols",
+        "Consciousness transfer research"
+      ],
+      impact: "Neural interfaces are restoring mobility to paralyzed patients and enhancing cognitive abilities, while raising profound questions about human identity and privacy."
+    },
+    biotech: {
+      title: "Biotechnology Revolution",
+      content: "Advanced biotechnology is enabling human enhancement and biological computing. We're entering an era where biology and technology merge seamlessly.",
+      trends: [
+        "CRISPR 3.0 gene editing",
+        "Synthetic biology applications",
+        "Biological computing systems",
+        "Regenerative medicine breakthroughs",
+        "Longevity treatment protocols"
+      ],
+      impact: "Biotechnology is extending human lifespan, curing genetic diseases, and creating new forms of biological intelligence that could surpass silicon-based systems."
     }
   };
 
-  const handleTabChange = (tab: string) => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setActiveTab(tab);
-      setIsLoading(false);
-    }, 300);
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌟 ADVANCED TECH INSIGHTS • JANUARY 2026
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-cyan-600/10 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center text-white">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full border border-purple-400/30 mb-8">
+              <span className="text-purple-400">🔮</span>
+              <span className="text-purple-300 font-semibold ml-2">ADVANCED TECH INSIGHTS 2026</span>
             </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Revolutionary Technology Insights
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
+              Technology Insights 2026
             </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Explore the most advanced technological breakthroughs that are reshaping our world in 2026. 
-              From synthetic intelligence to quantum computing and neural interfaces.
+            <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+              Deep insights into the revolutionary technologies that are reshaping our world. 
+              Expert analysis, trend predictions, and real-world applications.
             </p>
           </div>
         </div>
       </div>
 
       {/* Navigation Tabs */}
-      <div className="container mx-auto px-4 -mt-8">
-        <div className="bg-white rounded-2xl shadow-2xl p-2 mb-12">
-          <div className="flex flex-wrap justify-center gap-2">
-            {Object.entries(techInsights).map(([key, tech]) => (
-              <button
-                key={key}
-                onClick={() => handleTabChange(key)}
-                className={`flex items-center px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
-                  activeTab === key
-                    ? `bg-gradient-to-r ${tech.gradient} text-white shadow-lg transform scale-105`
-                    : 'text-gray-600 hover:bg-gray-100'
-                }`}
-              >
-                <span className="text-2xl mr-3">{tech.icon}</span>
-                {tech.title}
-              </button>
-            ))}
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {Object.entries(insights).map(([key, insight]) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === key
+                  ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              }`}
+            >
+              {insight.title}
+            </button>
+          ))}
+        </div>
+
+        {/* Active Content */}
+        <div className="bg-gradient-to-br from-gray-800/50 to-purple-800/50 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              {insights[activeTab as keyof typeof insights].title}
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              {insights[activeTab as keyof typeof insights].content}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Key Trends */}
+            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                <span className="text-3xl mr-3">📈</span>
+                Key Trends 2026
+              </h3>
+              <ul className="space-y-4">
+                {insights[activeTab as keyof typeof insights].trends.map((trend, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-cyan-400 mr-3 mt-1">•</span>
+                    <span className="text-cyan-200">{trend}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Impact Analysis */}
+            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                <span className="text-3xl mr-3">🌍</span>
+                Global Impact
+              </h3>
+              <p className="text-purple-200 leading-relaxed">
+                {insights[activeTab as keyof typeof insights].impact}
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Content Section */}
-      <div className="container mx-auto px-4 mb-16">
-        {isLoading ? (
-          <div className="text-center py-20">
-            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mx-auto mb-4"></div>
-            <p className="text-gray-600">Loading insights...</p>
-          </div>
-        ) : (
-          <div className="space-y-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                {techInsights[activeTab as keyof typeof techInsights].title}
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover the latest breakthroughs and their potential impact on society and business
-              </p>
-            </div>
+      {/* Expert Analysis Section */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-6">🎓 Expert Analysis</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Insights from leading technology experts and researchers
+          </p>
+        </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {techInsights[activeTab as keyof typeof techInsights].insights.map((insight, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`w-12 h-12 bg-gradient-to-r ${techInsights[activeTab as keyof typeof techInsights].gradient} rounded-xl flex items-center justify-center text-white text-2xl`}>
-                      {techInsights[activeTab as keyof typeof techInsights].icon}
-                    </div>
-                    <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                      insight.impact === 'Revolutionary' 
-                        ? 'bg-red-100 text-red-700' 
-                        : insight.impact === 'Transformative'
-                        ? 'bg-orange-100 text-orange-700'
-                        : 'bg-green-100 text-green-700'
-                    }`}>
-                      {insight.impact}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{insight.title}</h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">{insight.description}</p>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <span>Timeline: {insight.timeline}</span>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                      Active Research
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
+            <div className="text-6xl mb-4 text-center">🧠</div>
+            <h3 className="text-xl font-bold text-white mb-4 text-center">Dr. Sarah Chen</h3>
+            <p className="text-emerald-200 text-sm mb-4 text-center">AI Research Director</p>
+            <p className="text-emerald-300 text-sm">
+              "The convergence of AI and quantum computing will create unprecedented opportunities for solving humanity's greatest challenges."
+            </p>
           </div>
-        )}
+
+          <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
+            <div className="text-6xl mb-4 text-center">⚡</div>
+            <h3 className="text-xl font-bold text-white mb-4 text-center">Prof. Marcus Rodriguez</h3>
+            <p className="text-orange-200 text-sm mb-4 text-center">Quantum Computing Expert</p>
+            <p className="text-orange-300 text-sm">
+              "We're witnessing the birth of a new computational paradigm that will fundamentally change how we process information."
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-violet-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30">
+            <div className="text-6xl mb-4 text-center">🧬</div>
+            <h3 className="text-xl font-bold text-white mb-4 text-center">Dr. Aisha Patel</h3>
+            <p className="text-violet-200 text-sm mb-4 text-center">Neural Interface Researcher</p>
+            <p className="text-violet-300 text-sm">
+              "Neural interfaces represent the next frontier in human-computer interaction, enabling direct mind-machine communication."
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Technology Impact Stats */}
-      <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">
-        <div className="container mx-auto px-4">
+      {/* Future Predictions */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-3xl p-12 border border-indigo-400/30">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Technology Impact Metrics</h2>
-            <p className="text-xl opacity-90">Quantifying the revolutionary changes happening in 2026</p>
+            <h2 className="text-4xl font-bold text-white mb-6">🔮 Future Predictions</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              What to expect in the next 5 years based on current technological trajectories
+            </p>
           </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-5xl font-bold mb-2">10^18x</div>
-              <div className="text-lg opacity-90">Quantum Speed Increase</div>
+              <div className="text-4xl mb-4">2027</div>
+              <h3 className="text-lg font-bold text-white mb-2">Quantum Internet</h3>
+              <p className="text-gray-300 text-sm">First quantum internet networks operational</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold mb-2">99.9%</div>
-              <div className="text-lg opacity-90">Neural Interface Accuracy</div>
+              <div className="text-4xl mb-4">2028</div>
+              <h3 className="text-lg font-bold text-white mb-2">Neural Interfaces</h3>
+              <p className="text-gray-300 text-sm">Consumer neural interface devices available</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold mb-2">1000x</div>
-              <div className="text-lg opacity-90">AI Learning Acceleration</div>
+              <div className="text-4xl mb-4">2029</div>
+              <h3 className="text-lg font-bold text-white mb-2">Synthetic Intelligence</h3>
+              <p className="text-gray-300 text-sm">First synthetic intelligence systems deployed</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold mb-2">24/7</div>
-              <div className="text-lg opacity-90">Autonomous Operation</div>
+              <div className="text-4xl mb-4">2030</div>
+              <h3 className="text-lg font-bold text-white mb-2">Consciousness Transfer</h3>
+              <p className="text-gray-300 text-sm">First successful consciousness transfer experiments</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-br from-gray-900 to-indigo-900 rounded-3xl p-12 text-white text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Explore the Future?</h2>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Stay Ahead of the Curve</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join us in discovering and implementing these revolutionary technologies that are reshaping our world.
+            Get exclusive access to our latest technology insights and be the first to know about breakthrough developments.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/pages/AdvancedTechSolutions2026" 
-              className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform"
-            >
-              Explore Solutions →
-            </a>
-            <a 
-              href="/pages/InnovationShowcase2026" 
-              className="inline-block border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
-            >
-              View Innovation Showcase
-            </a>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform">
+              📧 Subscribe to Insights
+            </button>
+            <button className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
+              📚 Download Report
+            </button>
           </div>
         </div>
       </div>

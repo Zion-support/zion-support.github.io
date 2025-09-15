@@ -14,40 +14,10 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
   const { 
-<<<<<<< HEAD
-    isLoading
-    updateJobMatchStatus
-    categorizedMatches: { 
-      newMatches
-      viewedMatches
-=======
-    isLoading, 
-    updateJobMatchStatus, 
-    categorizedMatches: { 
-      newMatches, 
-      viewedMatches, 
->>>>>>> origin/auto/autonomy-17186719616
       appliedMatches 
     } 
   } = useJobSuggestions(currentTalentId);
 
-<<<<<<< HEAD
-  const handleApply = (matchId: stringjobId: string) => {
-    updateJobMatchStatus(matchId'applied');
-    // In a real appthis might redirect to application form or open a modal
-  };
-
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId'declined');
-=======
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied');
-    // In a real app, this might redirect to application form or open a modal
-  };
-
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined');
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   if (isLoading) {
