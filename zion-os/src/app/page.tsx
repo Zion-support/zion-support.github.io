@@ -138,7 +138,11 @@ export default function HomePage() {
 =======
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+<<<<<<< HEAD
 >>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -190,12 +194,6 @@ export default function HomePage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
             </p>
-            <div className="mb-8">
-              <p className="text-lg text-blue-300 mb-4">📚 Latest: AI Governance Blueprint 2025</p>
-              <a href="/blog/ai-governance-blueprint-2025" className="text-blue-400 hover:text-blue-300 underline">
-                Read our comprehensive guide to dual-layer policy for safe autonomy →
-              </a>
-            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
