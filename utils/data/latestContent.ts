@@ -80,5 +80,21 @@ export const latestContent: ContentItem[] = [
     tag: "Guide",
     date: "2025-09-15",
   },
+  {
+    id: "genai-risk-register-2026",
+    title: "AI 2026: Generative AI Risk Register",
+    summary: "A living catalog of GenAI risks tied to owners, mitigations, and eval gates.",
+    href: "/blog/ai-2026-generative-ai-risk-register",
+    tag: "Guide",
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-cost-optimization-2026",
+    title: "AI 2026: Agent Cost Optimization Guide",
+    summary: "Reduce agent TCO via routing, caching, batching, and benchmark-driven choices.",
+    href: "/blog/ai-2026-agent-cost-optimization",
+    tag: "Guide",
+    date: "2025-09-15",
+  },
 ];
 

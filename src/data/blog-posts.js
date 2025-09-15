@@ -365,6 +365,37 @@ export const blogPosts = [
     imageUrl: "/images/blog/production-guardrails-playbook-2026.jpg",
     slug: "ai-2026-production-guardrails-playbook"
   }
+  ,
+  {
+    id: 23,
+    title: "AI 2026: Generative AI Risk Register",
+    excerpt: "Practical, living risk registers for GenAI systems with owners and mitigations.",
+    content: "A risk register ties model, data, tooling, and runtime risks to owners and measurable mitigations. This guide includes a canonical schema, example entries (prompt injection, data leakage, insecure tool use), and how to connect risks to eval gates, policy-as-code, and observability for continuous assurance.",
+    author: "Isabella Moore",
+    authorRole: "Head of Risk & Compliance",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Risk",
+    tags: ["Risk", "Governance", "GenAI"],
+    featured: true,
+    imageUrl: "/images/blog/genai-risk-register-2026.jpg",
+    slug: "ai-2026-generative-ai-risk-register"
+  },
+  {
+    id: 24,
+    title: "AI 2026: Agent Cost Optimization Guide",
+    excerpt: "Slash agent TCO: caching, batching, model routing, and eval-driven spend.",
+    content: "Cost-efficient agents require an architecture that routes by task criticality, caches semantic results, batches tool calls, and continuously evaluates quality versus cost. We share reference budgets, benchmarking harnesses, and safe downgrade strategies that preserve outcomes while reducing spend.",
+    author: "Victor Huang",
+    authorRole: "FinOps Lead",
+    publishDate: "2025-09-15",
+    readTime: "7 min read",
+    category: "FinOps",
+    tags: ["Cost", "Routing", "Caching", "Benchmarking"],
+    featured: false,
+    imageUrl: "/images/blog/agent-cost-optimization-2026.jpg",
+    slug: "ai-2026-agent-cost-optimization"
+  }
 ];
 
 export const getBlogPostBySlug = (slug) => {
