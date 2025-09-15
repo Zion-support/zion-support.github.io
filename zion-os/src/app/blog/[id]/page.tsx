@@ -11,6 +11,34 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'agent-safety-eval-suite-2025': {
+    id: 'agent-safety-eval-suite-2025',
+    title: 'Agent Safety Eval Suite 2025: Measuring Reliability in Multi‑Agent Systems',
+    excerpt:
+      'A practical evaluation framework with red-team scenarios, reproducible metrics, and policy gating for enterprise-grade agent systems.',
+    category: 'AI Safety',
+    author: 'Dr. James Wilson',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'Enterprises deploying agent swarms need standardized evaluations to quantify safety, reliability, and misuse resistance. Our 2025 suite introduces tiered challenges, intervention points, and policy gating hooks.',
+      'We provide templates for incident taxonomies, dataset generation, and red-team scripts. The suite integrates with CI so every model update is evaluated against safety thresholds before release.'
+    ]
+  },
+  'sovereign-compute-zk-proofing': {
+    id: 'sovereign-compute-zk-proofing',
+    title: 'Sovereign Compute with ZK Proofing: Verifiable Execution for AI Workloads',
+    excerpt:
+      'How zero-knowledge proofs and attested runtimes enable verifiable, privacy-preserving AI execution across untrusted infra.',
+    category: 'Cryptography',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-13',
+    readTime: '9 min read',
+    content: [
+      'As AI workloads span clouds, edges, and third-party providers, trust in execution becomes critical. We combine attested TEEs with succinct ZK proofs to verify task integrity without exposing data.',
+      'This article covers architecture patterns, proof systems selection, and performance trade-offs. We include a rollout plan and SLAs for regulated environments requiring verifiable compute.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',

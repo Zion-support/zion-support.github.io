@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'agent-safety-eval-suite-2025',
+      title: 'Agent Safety Eval Suite 2025: Measuring Reliability in Multi‑Agent Systems',
+      excerpt: 'A practical evaluation framework with red-team scenarios, reproducible metrics, and policy gating for enterprise-grade agent systems.',
+      category: 'AI Safety',
+      author: 'Dr. James Wilson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/agent-safety-eval.jpg',
+      featured: true
+    },
+    {
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
       excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
@@ -52,6 +63,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'sovereign-compute-zk-proofing',
+      title: 'Sovereign Compute with ZK Proofing: Verifiable Execution for AI Workloads',
+      excerpt: 'How zero-knowledge proofs and attested runtimes enable verifiable, privacy-preserving AI execution across untrusted infra.',
+      category: 'Cryptography',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-13',
+      readTime: '9 min read',
+      image: '/blog/zk-proofing.jpg',
+      featured: true
+    },
+    {
       id: 'quantum-computing-finance',
       title: 'Quantum Computing Revolutionizing Financial Trading: A Deep Dive',
       excerpt: 'Discover how our quantum algorithms are transforming financial markets and creating new opportunities for investors and institutions.',
@@ -77,6 +99,16 @@ export default function BlogPage() {
 
   const recentPosts = [
     {
+      id: 'agent-safety-eval-suite-2025',
+      title: 'Agent Safety Eval Suite 2025: Measuring Reliability in Multi‑Agent Systems',
+      excerpt: 'A standardized evaluation suite for agent safety with CI integration and red-team scenarios.',
+      category: 'AI Safety',
+      author: 'Dr. James Wilson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/agent-safety-eval.jpg'
+    },
+    {
       id: 'edge-ai-marketplaces',
       title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
       excerpt: 'Architectures for edge-native agent marketplaces with local policy and cloud sync.',
@@ -85,6 +117,16 @@ export default function BlogPage() {
       date: '2025-09-14',
       readTime: '7 min read',
       image: '/blog/edge-ai-marketplaces.jpg'
+    },
+    {
+      id: 'sovereign-compute-zk-proofing',
+      title: 'Sovereign Compute with ZK Proofing: Verifiable Execution for AI Workloads',
+      excerpt: 'Attested TEEs and ZK proofs for verifiable, privacy-preserving AI compute across providers.',
+      category: 'Cryptography',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-13',
+      readTime: '9 min read',
+      image: '/blog/zk-proofing.jpg'
     },
     {
       id: 'autonomous-it-operations',
