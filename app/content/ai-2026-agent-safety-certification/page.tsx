@@ -1,5 +1,59 @@
 import React from 'react';
 import Link from 'next/link';
+
+export const metadata = {
+  title: 'AI 2026: Agent Safety Certification',
+  description: 'Structured certification to validate agent safety with scenario test suites and governance.',
+};
+
+export default function AgentSafetyCertificationPage() {
+  return (
+    <main className="min-h-screen bg-white">
+      <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 text-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl md:text-5xl font-bold">AI 2026: Agent Safety Certification</h1>
+          <p className="mt-4 text-lg opacity-90 max-w-3xl">
+            A structured, scenario-driven certification to validate agent safety before production releases.
+          </p>
+          <div className="mt-6">
+            <Link href="#overview" className="bg-white text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">View overview</Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" className="py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="prose prose-lg max-w-none">
+            <h2>Certification Scope</h2>
+            <p>
+              This certification defines policies, evaluation scenarios, and pass thresholds across safety, security,
+              and reliability. It is designed to be enforced via policy-as-code and integrated into CI/CD.
+            </p>
+            <h3>Core Domains</h3>
+            <ul>
+              <li>Safety: harmful outputs, jailbreak resilience, compliance alignment</li>
+              <li>Security: data leakage prevention, isolation, auditability</li>
+              <li>Reliability: bounded behavior, determinism where needed, fallback strategies</li>
+            </ul>
+            <h3>Process</h3>
+            <ol>
+              <li>Define risk tier and acceptance criteria</li>
+              <li>Run scenario suites via evaluation harness</li>
+              <li>Review artifacts and sign-offs via policy gates</li>
+              <li>Monitor and re-certify on significant changes</li>
+            </ol>
+            <p>
+              Related: <Link href="/content/ai-2026-agent-risk-management" className="text-purple-700 font-semibold">Agent Risk Management Blueprint</Link> and <Link href="/content/ai-2026-agentic-evaluation-checklists" className="text-purple-700 font-semibold">Evaluation Checklists</Link>.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+import React from 'react';
+import Link from 'next/link';
 import SEO from '../../components/SEO';
 
 export const metadata = {
