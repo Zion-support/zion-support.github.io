@@ -3,6 +3,9 @@ import React from 'react';
 const AIInnovation2026: React.FC = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -89,6 +92,7 @@ const AIInnovation2026: React.FC = () => {
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Join Network →
             </button>
+<<<<<<< HEAD
 =======
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
@@ -145,11 +149,16 @@ const AIInnovation2026: React.FC = () => {
               <li>• Offline AI capabilities</li>
             </ul>
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
           </div>
         </div>
 
         {/* Industry Applications */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
         <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">🏭 Industry Applications</h2>
@@ -178,6 +187,7 @@ const AIInnovation2026: React.FC = () => {
               <div className="text-4xl mb-3">🚗</div>
               <h3 className="text-lg font-bold text-white mb-2">Transportation</h3>
               <p className="text-purple-100 text-sm">Autonomous vehicles and smart traffic management</p>
+<<<<<<< HEAD
 =======
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 mb-16 text-white">
           <h2 className="text-4xl font-bold text-center mb-12">Transform Your Industry</h2>
@@ -202,11 +212,16 @@ const AIInnovation2026: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2">Transportation</h3>
               <p className="text-purple-100 text-sm">Autonomous systems with 99.9% safety rating</p>
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
             </div>
           </div>
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
         {/* Success Stories */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">🏆 Success Stories</h2>
@@ -268,6 +283,7 @@ const AIInnovation2026: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
+<<<<<<< HEAD
 =======
         {/* Case Studies */}
         <div className="mb-16">
@@ -358,6 +374,8 @@ const AIInnovation2026: React.FC = () => {
               View All Services
             </a>
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
           </div>
         </div>
       </div>

@@ -1,3 +1,46 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Safe storage utility for browser compatibility
+export const safeStorage = {
+  getItem: (key) => {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return null;
+    }
+  },
+  
+  setItem: (key, value) => {
+    try {
+      localStorage.setItem(key, value);
+      return true;
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return false;
+    }
+  },
+  
+  removeItem: (key) => {
+    try {
+      localStorage.removeItem(key);
+      return true;
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return false;
+    }
+  },
+  
+  clear: () => {
+    try {
+      localStorage.clear();
+      return true;
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return false;
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 // Safe storage utility for handling localStorage and sessionStorage
 // with error handling and fallbacks
 
@@ -107,6 +150,10 @@ export const safeStorage = {
         console.warn('JSON stringify failed:', error);
         return false;
       }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d952
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
     }
   }
 };

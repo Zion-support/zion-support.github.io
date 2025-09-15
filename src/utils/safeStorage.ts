@@ -1,4 +1,40 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+// Safe storage utilities for browser compatibility
+export const safeStorage = {
+  getItem: (key: string): string | null => {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+      return null;
+    }
+  },
+  
+  setItem: (key: string, value: string): void => {
+    try {
+      localStorage.setItem(key, value);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+  
+  removeItem: (key: string): void => {
+    try {
+      localStorage.removeItem(key);
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+    }
+  },
+  
+  clear: (): void => {
+    try {
+      localStorage.clear();
+    } catch (error) {
+      console.warn('localStorage not available:', error);
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 /**
  * Safe storage utility for handling localStorage and sessionStorage
  * with error handling and fallbacks
@@ -112,6 +148,7 @@ export const safeStorage = {
     } catch (error) {
       console.warn('Failed to clear sessionStorage:', error);
       return false;
+<<<<<<< HEAD
 =======
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
@@ -146,6 +183,9 @@ export const safeStorage = {
     } catch (error) {
       console.warn('localStorage not available:', error);
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
     }
   }
 };

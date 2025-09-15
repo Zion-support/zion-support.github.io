@@ -530,7 +530,11 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </a>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
       </div>
     </div>
   );

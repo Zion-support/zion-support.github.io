@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -221,6 +227,11 @@ const InteractiveTechShowcase: React.FC = () => {
                 ))}
               </tbody>
             </table>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 =======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -440,6 +451,10 @@ const InteractiveTechShowcase: React.FC = () => {
               </button>
             </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
           </div>
         </div>
       </div>
