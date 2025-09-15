@@ -17,15 +17,29 @@ export default function LatestContentShowcase2025() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">🛡️</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Enterprise AI Governance 2026</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Agent Risk Management 2026</h3>
             <p className="text-gray-600 mb-4">
-              Practical blueprint for policy-as-code, risk tiers, and continuous evaluations to scale AI safely.
+              Threat models, layered controls, and runtime guardrails for enterprise agents.
             </p>
             <Link 
-              href="/content/enterprise-ai-governance-2026"
+              href="/content/ai-2026-agent-risk-management"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              Read Full Guide →
+              Read Framework →
+            </Link>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="text-4xl mb-4">⚙️</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Autonomous Incident Response 2026</h3>
+            <p className="text-gray-600 mb-4">
+              Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability.
+            </p>
+            <Link 
+              href="/blog/ai-2026-ai-ops-autonomous-incident-response"
+              className="text-purple-600 font-semibold hover:text-purple-800"
+            >
+              Read Article →
             </Link>
           </div>
 
@@ -40,20 +54,6 @@ export default function LatestContentShowcase2025() {
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
               Explore Architecture →
-            </Link>
-          </div>
-
-          <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">📏</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">AI Agents ROI Playbook</h3>
-            <p className="text-gray-600 mb-4">
-              A practical playbook to model, track, and realize ROI from enterprise AI agents.
-            </p>
-            <Link 
-              href="/content/ai-agents-roi-playbook-2026"
-              className="text-purple-600 font-semibold hover:text-purple-800"
-            >
-              Read Playbook →
             </Link>
           </div>
         </div>

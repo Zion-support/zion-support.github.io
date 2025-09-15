@@ -53,6 +53,27 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+    id: "agent-risk-management-2026",
+    title: "AI 2026: Agent Risk Management",
+    description:
+      "Threat models, layered controls, and runtime guardrails for enterprise agents.",
+    ctaLabel: "Read Framework",
+    href: "/content/ai-2026-agent-risk-management",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-incident-response-2026",
+    title: "AI 2026: Autonomous Incident Response",
+    description:
+      "Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-ai-ops-autonomous-incident-response",
+    emoji: "⚙️",
+    date: "2025-09-14",
+  },
+  {
     id: "autonomous-finance-os",
     title: "AI 2026: Autonomous Finance OS",
     description:
