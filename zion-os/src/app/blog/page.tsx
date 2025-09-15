@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'ai-safety-red-teaming-2025',
+      title: 'AI Safety Red Teaming 2025: Practical Playbooks for Enterprise',
+      excerpt: 'Playbooks, tooling, and governance to harden AI systems against real-world attacks.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/ai-safety-red-team.jpg',
+      featured: true
+    },
+    {
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
       excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
@@ -76,6 +87,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'multi-agent-systems-at-scale',
+      title: 'Operating Multi‑Agent Systems at Scale: Reliability, Cost, and Policy',
+      excerpt: 'Operating patterns for reliable, cost-bounded, policy-compliant multi-agent systems.',
+      category: 'Autonomous Systems',
+      author: 'Michael Rodriguez',
+      date: '2025-09-12',
+      readTime: '11 min read',
+      image: '/blog/multi-agent-scale.jpg'
+    },
     {
       id: 'edge-ai-marketplaces',
       title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
@@ -179,11 +200,13 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
     { name: 'AI Solutions', count: 2, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
+    { name: 'AI Safety', count: 1, active: false },
+    { name: 'Autonomous Systems', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
@@ -213,9 +236,9 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/ai-governance-blueprint-2025"
+            href="/blog/ai-safety-red-teaming-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy"
+            aria-label="Read: AI Safety Red Teaming 2025: Practical Playbooks for Enterprise"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
@@ -223,14 +246,14 @@ export default function BlogPage() {
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Governance</span>
+                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Safety</span>
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy
+                  AI Safety Red Teaming 2025: Practical Playbooks for Enterprise
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A pragmatic framework for blending automated policy engines with human oversight for AI at scale.
+                  Playbooks, tooling, and governance to harden AI systems against real-world attacks.
                 </p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
