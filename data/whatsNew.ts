@@ -11,6 +11,38 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "real-time-rag-2026",
+    title: "AI 2026: Real-Time Retrieval Architectures",
+    description:
+      "Sub-100ms RAG with hybrid search, semantic caching, and streaming for production.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-real-time-retrieval-architectures",
+    emoji: "⚡",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-ops-playbook-2026",
+    title: "AI 2026: Autonomous Ops Playbook",
+    description:
+      "A practical playbook to deploy autonomous, outcome-driven operations with guardrails.",
+    ctaLabel: "Explore Playbook",
+    href: "/content/ai-2026-autonomous-ops-playbook",
+    emoji: "🛠️",
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-observability-guide-2026",
+    title: "AI 2026: Enterprise Agent Observability Guide",
+    description:
+      "Traces, evals, and safety telemetry to operate autonomous agents in production.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-enterprise-agent-observability-guide",
+    emoji: "👀",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "ai-content-studio",
     title: "AI Content Studio v2",
     description:
