@@ -96,10 +96,11 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
             <div>
               <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Real‑Time RAG + Agents‑On‑Call</h2>
-              <p className="text-gray-600 mt-2">Low‑latency retrieval architectures and autonomous incident handling with eval‑gated playbooks.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Agents‑On‑Call Runbook + Real‑Time RAG</h2>
+              <p className="text-gray-600 mt-2">Operate autonomous on‑call safely with eval gates, plus low‑latency retrieval patterns.</p>
             </div>
             <div className="flex gap-3">
+              <Link href="/content/ai-2026-agents-oncall-runbook" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Agents‑On‑Call Runbook</Link>
               <Link href="/blog/ai-2026-real-time-retrieval-architectures" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Real‑Time RAG</Link>
               <Link href="/blog/ai-2026-agents-oncall-automation" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agents‑On‑Call</Link>
             </div>
@@ -175,6 +176,16 @@ export default function HomePage() {
                 </div>
                 <div className="mt-4">
                   <Link href="/blog/ai-2026-secure-agent-architecture" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Ops</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Agents‑On‑Call Runbook (2026)</h3>
+                  <p className="text-gray-600">Triage → mitigate → escalate with eval‑gated automation and guardrails.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/content/ai-2026-agents-oncall-runbook" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
                 </div>
               </div>
             </div>
