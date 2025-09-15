@@ -37,12 +37,11 @@ import RevolutionaryContent2026Banner from './components/RevolutionaryContent202
 import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 
 // Import new promotional components
+import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
 import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
+import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
-import SuccessMetricsShowcase2026 from './components/SuccessMetricsShowcase2026';
-import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
-import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from './components/AI2025BreakthroughBanner';
@@ -324,12 +323,26 @@ export default function HomePage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Featured Content Grid */}
+        {/* Latest Content Showcase 2025 - NEW FEATURED */}
+        <LatestContentShowcase2025 />
+
+        {/* Featured Content Grid - Updated with new content */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Content</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <article className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="text-sm font-semibold text-emerald-700 mb-2">Governance</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI Governance Blueprint 2026</h3>
+                <p className="text-gray-600 mb-4">Evaluation-first, policy-as-code, and monitoring to scale AI safely.</p>
+                <Link href="/content/ai-governance-blueprint-2026" className="text-emerald-600 font-semibold hover:text-emerald-800">Read Blueprint →</Link>
+              </article>
+              <article className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="text-sm font-semibold text-orange-700 mb-2">Operating Model</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI Operating Model 2026</h3>
+                <p className="text-gray-600 mb-4">Teams, processes, and platforms for sustained AI outcomes.</p>
+                <Link href="/content/ai-operating-model-2026" className="text-orange-600 font-semibold hover:text-orange-800">Read Guide →</Link>
+              </article>
               <article className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="text-sm font-semibold text-purple-700 mb-2">Guide</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Hyperautomation Blueprint 2026</h3>
@@ -345,10 +358,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-=======
-        {/* Latest Content Showcase 2025 - NEW FEATURED */}
-        <LatestContentShowcase2025 />
->>>>>>> cursor/create-and-deploy-new-content-47bb
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
@@ -420,6 +429,22 @@ export default function HomePage() {
         <UltimateContentShowcase2025 />
         <NewContent2025PromotionBanner />
         <LatestContentShowcase2025 />
+        {/* Promote new governance and operating model content */}
+        <section className="py-10 bg-gradient-to-r from-emerald-50 to-orange-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-emerald-700">Just published</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">AI Governance Blueprint & AI Operating Model (2026)</h2>
+                <p className="text-gray-600 mt-2">Ship reliable AI and organize for outcomes with two practical guides.</p>
+              </div>
+              <div className="flex gap-3">
+                <Link href="/content/ai-governance-blueprint-2026" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Governance</Link>
+                <Link href="/content/ai-operating-model-2026" className="inline-block border border-orange-600 text-orange-700 px-5 py-3 rounded-lg font-semibold hover:bg-orange-50">Operating Model</Link>
+              </div>
+            </div>
+          </div>
+        </section>
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
         <FeaturedContentShowcase2026 />
