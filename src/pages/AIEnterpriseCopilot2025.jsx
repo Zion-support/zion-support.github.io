@@ -2,8 +2,6 @@ import React from 'react';
 
 const AIEnterpriseCopilot2025 = () => {
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -37,7 +35,6 @@ const AIEnterpriseCopilot2025 = () => {
               Intelligent automation of business processes.
             </p>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
         </div>
       </div>
     </div>

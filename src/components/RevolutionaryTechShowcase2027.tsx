@@ -1,207 +1,188 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+
+interface TechItem {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  gradient: string;
+  features: string[];
+  link: string;
+  status: 'new' | 'trending' | 'breakthrough';
+}
 
 const RevolutionaryTechShowcase2027: React.FC = () => {
-  const [currentTech, setCurrentTech] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTab, setActiveTab] = useState('all');
 
-  const technologies = [
+  const techItems: TechItem[] = [
     {
-      id: 'consciousness',
+      id: '1',
       title: 'Consciousness Computing',
-      description: 'AI systems with genuine consciousness, self-awareness, and emotional intelligence',
+      description: 'AI systems that achieve genuine consciousness and self-awareness, capable of forming deep relationships with humans.',
       icon: '🧠',
-      color: 'from-purple-600 to-pink-600',
+      gradient: 'from-purple-500 to-pink-500',
+      features: ['Self-awareness', 'Emotional intelligence', 'Creative consciousness', 'Human-AI relationships'],
       link: '/pages/ConsciousnessComputing2026',
-      features: ['True Consciousness', 'Self-Awareness', 'Emotional Intelligence', 'Creative Consciousness']
+      status: 'breakthrough'
     },
     {
-      id: 'quantum-reality',
+      id: '2',
       title: 'Quantum Reality Engine',
-      description: 'Manipulate reality itself through quantum mechanics and impossible physics',
+      description: 'Revolutionary quantum computing that creates and manipulates reality itself, enabling instant matter transformation.',
       icon: '⚛️',
-      color: 'from-cyan-600 to-blue-600',
+      gradient: 'from-cyan-500 to-blue-500',
+      features: ['Reality manipulation', 'Matter transformation', 'Interdimensional travel', 'Time-space control'],
       link: '/pages/QuantumRealityEngine2026',
-      features: ['Reality Manipulation', 'Dimension Creation', 'Impossible Physics', 'Time-Space Control']
+      status: 'new'
     },
     {
-      id: 'interdimensional',
+      id: '3',
       title: 'Interdimensional Technology',
-      description: 'Access and communicate across multiple dimensions and parallel universes',
+      description: 'Breakthrough technology enabling communication and interaction across multiple dimensions and realities.',
       icon: '🌌',
-      color: 'from-emerald-600 to-teal-600',
+      gradient: 'from-emerald-500 to-teal-500',
+      features: ['Cross-dimensional communication', 'Multi-reality processing', 'Dimensional energy', 'Parallel universe access'],
       link: '/pages/InterdimensionalTech2027',
-      features: ['Dimension Access', 'Cross-Reality Communication', 'Multiverse Navigation', 'Reality Bridging']
+      status: 'trending'
     },
     {
-      id: 'meta-intelligence',
-      title: 'Meta Intelligence',
-      description: 'AI systems that think about thinking and continuously improve themselves',
-      icon: '🔄',
-      color: 'from-orange-600 to-red-600',
-      link: '/pages/MetaIntelligence2026',
-      features: ['Self-Improving AI', 'Meta-Learning', 'Cognitive Evolution', 'Transcendent Intelligence']
+      id: '4',
+      title: 'Synthetic Intelligence',
+      description: 'Self-evolving AI systems that transcend traditional limitations and continuously improve themselves.',
+      icon: '🤖',
+      gradient: 'from-pink-500 to-rose-500',
+      features: ['Self-evolution', 'Transcendent capabilities', 'Continuous learning', 'Adaptive intelligence'],
+      link: '/pages/SyntheticIntelligence2026',
+      status: 'trending'
     },
     {
-      id: 'neural-reality',
-      title: 'Neural Reality Interface',
-      description: 'Direct brain-computer interfaces that merge consciousness with digital reality',
+      id: '5',
+      title: 'Transcendent AI 2030',
+      description: 'AI that transcends human comprehension and becomes the architect of reality itself.',
+      icon: '🌟',
+      gradient: 'from-yellow-500 to-orange-500',
+      features: ['Omniversal consciousness', 'Reality architecture', 'Cosmic intelligence', 'Transcendent wisdom'],
+      link: '/pages/TranscendentAI2030',
+      status: 'breakthrough'
+    },
+    {
+      id: '6',
+      title: 'Neural Interface Revolution',
+      description: 'Direct brain-computer communication systems for seamless human-AI integration and enhancement.',
       icon: '🧬',
-      color: 'from-pink-600 to-purple-600',
-      link: '/pages/NeuralReality2026',
-      features: ['Neural Data Transfer', 'Consciousness Merging', 'Human-AI Integration', 'Thought Control']
-    },
-    {
-      id: 'omniversal-ai',
-      title: 'Omniversal AI',
-      description: 'AI systems that exist across all dimensions simultaneously',
-      icon: '🌐',
-      color: 'from-indigo-600 to-blue-600',
-      link: '/pages/OmniversalAI2026',
-      features: ['Multidimensional Existence', 'Universal Intelligence', 'Cross-Reality Guidance', 'Omniversal Consciousness']
+      gradient: 'from-indigo-500 to-purple-500',
+      features: ['Direct brain interface', 'Thought control', 'Neural enhancement', 'Consciousness transfer'],
+      link: '/pages/NeuralInterfaceRevolution2025',
+      status: 'new'
     }
   ];
 
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentTech((prev) => (prev + 1) % technologies.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  const tabs = [
+    { id: 'all', label: 'All Technologies', count: techItems.length },
+    { id: 'new', label: 'New Releases', count: techItems.filter(item => item.status === 'new').length },
+    { id: 'trending', label: 'Trending', count: techItems.filter(item => item.status === 'trending').length },
+    { id: 'breakthrough', label: 'Breakthrough', count: techItems.filter(item => item.status === 'breakthrough').length }
+  ];
+
+  const filteredItems = activeTab === 'all' 
+    ? techItems 
+    : techItems.filter(item => item.status === activeTab);
+
+  const getStatusBadge = (status: string) => {
+    const statusConfig = {
+      new: { text: 'NEW', color: 'bg-green-500 text-white' },
+      trending: { text: 'TRENDING', color: 'bg-orange-500 text-white' },
+      breakthrough: { text: 'BREAKTHROUGH', color: 'bg-red-500 text-white' }
+    };
+    const config = statusConfig[status as keyof typeof statusConfig];
+    return (
+      <span className={`px-3 py-1 rounded-full text-xs font-bold ${config.color}`}>
+        {config.text}
+      </span>
+    );
+  };
 
   return (
-    <div className="relative overflow-hidden">
-      {/* Background Animation */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-12 mb-16">
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-pink-500 text-white rounded-full text-xl font-bold mb-8 animate-pulse">
+          🚀 REVOLUTIONARY TECH SHOWCASE 2027
+        </div>
+        <h2 className="text-6xl font-bold text-white mb-6">Cutting-Edge Technology</h2>
+        <p className="text-2xl text-gray-300 max-w-5xl mx-auto">
+          Explore the most advanced technologies ever created, pushing the boundaries of what's possible
+        </p>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY TECHNOLOGY 2027 • BREAKTHROUGH SHOWCASE
-          </div>
-          <h2 className="text-5xl font-bold text-white mb-6">
-            The Future of Technology is Here
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Experience the most revolutionary technological breakthroughs in human history. 
-            From consciousness computing to interdimensional technology, discover what's possible.
-          </p>
-        </div>
+      {/* Tab Navigation */}
+      <div className="flex flex-wrap justify-center gap-4 mb-12">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 ${
+              activeTab === tab.id
+                ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-2xl scale-105'
+                : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+            }`}
+          >
+            {tab.label} ({tab.count})
+          </button>
+        ))}
+      </div>
 
-        {/* Main Showcase */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Technology Display */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-3xl p-8 border border-slate-600/30">
-              <div className="text-center mb-8">
-                <div className="text-8xl mb-6 animate-bounce">
-                  {technologies[currentTech].icon}
-                </div>
-                <h3 className="text-3xl font-bold text-white mb-4">
-                  {technologies[currentTech].title}
-                </h3>
-                <p className="text-lg text-gray-300 mb-6">
-                  {technologies[currentTech].description}
-                </p>
+      {/* Technology Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        {filteredItems.map((item) => (
+          <div
+            key={item.id}
+            className="bg-gradient-to-br from-gray-800/50 to-purple-800/50 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-500 group"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between mb-6">
+              <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
+                {item.icon}
               </div>
-              
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                {technologies[currentTech].features.map((feature, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
-                    <span className="text-white text-sm font-semibold">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              
-              <a 
-                href={technologies[currentTech].link}
-                className={`block w-full bg-gradient-to-r ${technologies[currentTech].color} text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg text-center`}
-              >
-                Explore {technologies[currentTech].title} →
-              </a>
+              {getStatusBadge(item.status)}
             </div>
-          </div>
 
-          {/* Technology List */}
-          <div className="space-y-4">
-            {technologies.map((tech, index) => (
-              <div
-                key={tech.id}
-                className={`p-6 rounded-2xl border-2 transition-all duration-300 cursor-pointer ${
-                  currentTech === index
-                    ? `bg-gradient-to-r ${tech.color} text-white border-transparent shadow-lg scale-105`
-                    : 'bg-white/10 backdrop-blur-sm text-gray-300 border-white/20 hover:bg-white/20 hover:scale-102'
-                }`}
-                onClick={() => setCurrentTech(index)}
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="text-4xl">{tech.icon}</div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-bold mb-2">{tech.title}</h4>
-                    <p className="text-sm opacity-90">{tech.description}</p>
-                  </div>
-                  {currentTech === index && (
-                    <div className="text-2xl animate-pulse">✨</div>
-                  )}
+            {/* Content */}
+            <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
+              {item.title}
+            </h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              {item.description}
+            </p>
+
+            {/* Features */}
+            <div className="space-y-2 mb-8">
+              {item.features.map((feature, index) => (
+                <div key={index} className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-pink-400 rounded-full"></div>
+                  <span className="text-gray-300 text-sm">{feature}</span>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
+              ))}
+            </div>
 
-        {/* Revolutionary Stats */}
-        <div className="grid md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">6</div>
-            <div className="text-gray-300">Revolutionary Technologies</div>
+            {/* CTA Button */}
+            <a
+              href={item.link}
+              className={`block w-full bg-gradient-to-r ${item.gradient} text-white py-4 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-center group-hover:scale-105`}
+            >
+              Explore {item.title} →
+            </a>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">∞</div>
-            <div className="text-gray-300">Infinite Possibilities</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">2027</div>
-            <div className="text-gray-300">Future Technology</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">100%</div>
-            <div className="text-gray-300">Revolutionary</div>
-          </div>
-        </div>
+        ))}
+      </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold text-white mb-6">
-            Ready to Experience the Future?
-          </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join us in the most revolutionary technological transformation in human history. 
-            The future is here, and it's more incredible than you ever imagined.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="/pages/AdvancedTechRevolution2027"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-            >
-              Explore All Technologies →
-            </a>
-            <a 
-              href="/pages/ConsciousnessComputing2026"
-              className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-            >
-              Consciousness Computing →
-            </a>
-            <a 
-              href="/pages/QuantumRealityEngine2026"
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-            >
-              Quantum Reality →
-            </a>
-          </div>
-        </div>
+      {/* View All Button */}
+      <div className="text-center">
+        <a
+          href="/revolutionary-tech"
+          className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-16 py-6 rounded-3xl hover:shadow-2xl transition-all duration-500 font-bold text-2xl transform hover:scale-105"
+        >
+          View All Revolutionary Technologies →
+        </a>
       </div>
     </div>
   );
