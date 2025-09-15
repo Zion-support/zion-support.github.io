@@ -1,25 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const EnhancedContentShowcase: React.FC = () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return (
-    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ENHANCED CONTENT SHOWCASE • JANUARY 2025
-          </div>
-          <h2 className="text-5xl font-bold mb-6">Enhanced Technology Showcase</h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Discover our enhanced technology solutions and cutting-edge innovations
-          </p>
-        </div>
-        
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -288,10 +270,6 @@ const EnhancedContentShowcase: React.FC = () => {
           </a>
         </div>
       </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-d3a3
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     </div>
   );
 };
