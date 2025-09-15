@@ -120,14 +120,15 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <FeatureCard
-                key={index}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-                features={feature.features}
-                gradient={feature.gradient}
-              />
+              <div key={index}>
+                <FeatureCard
+                  icon={feature.icon}
+                  title={feature.title}
+                  description={feature.description}
+                  features={feature.features}
+                  gradient={feature.gradient}
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -148,18 +149,8 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <a href="/blog/agentic-safety-patterns-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: Agentic Safety Patterns 2025
-=======
-              <a href="/blog/agent-safety-guardrails-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: Agent Safety Guardrails 2025
->>>>>>> cursor/create-and-deploy-new-content-4789
-=======
-              <a href="/blog/agentic-supply-chains-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: Agentic Supply Chains 2025
->>>>>>> 2445d7df832b351361c2d9a20e071d592355fcda
+              <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Foundation Models 2025
               </a>
             </div>
           </div>
