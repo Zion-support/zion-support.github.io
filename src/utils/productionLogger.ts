@@ -1,53 +1,133 @@
-// Production logger utility
-interface LogLevel {
-  ERROR: 'error';
-  WARN: 'warn';
-  INFO: 'info';
-  DEBUG: 'debug';
-}
+// Production-safe logging utility
 
-const LOG_LEVELS: LogLevel = {
-  ERROR: 'error',
-  WARN: 'warn',
-  INFO: 'info',
-  DEBUG: 'debug',
-};
+type LogLevel = 'debug' | 'info' | 'warn' | 'error';
+
+interface LogEntry {
+  level: LogLevel;
+  message: string;
+  data?: any;
+  timestamp: string;
+  url?: string;
+  userAgent?: string;
+}
 
 class ProductionLogger {
-  private isDevelopment = process.env.NODE_ENV === 'development';
-  private logLevel = this.isDevelopment ? 'debug' : 'info';
+  private isDevelopment: boolean;
+  private logLevel: LogLevel;
 
-  private shouldLog(level: string): boolean {
-    const levels = ['error', 'warn', 'info', 'debug'];
-    const currentLevelIndex = levels.indexOf(this.logLevel);
-    const messageLevelIndex = levels.indexOf(level);
-    return messageLevelIndex <= currentLevelIndex;
+  constructor() {
+    this.isDevelopment = process.env.NODE_ENV === 'development';
+    this.logLevel = this.isDevelopment ? 'debug' : 'warn';
   }
 
-  error(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.ERROR)) {
-      console.error(`[ERROR] ${message}`, ...args);
+  private shouldLog(level: LogLevel): boolean {
+    const levels: Record<LogLevel, number> = {
+      debug: 0,
+      info: 1,
+      warn: 2,
+      error: 3,
+    };
+    return levels[level] >= levels[this.logLevel];
+  }
+
+  private createLogEntry(level: LogLevel, message: string, data?: any): LogEntry {
+    return {
+      level,
+      message,
+      data,
+      timestamp: new Date().toISOString(),
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      userAgent: typeof window !== 'undefined' ? navigator.userAgent : undefined,
+    };
+  }
+
+  private log(level: LogLevel, message: string, data?: any): void {
+    if (!this.shouldLog(level)) return;
+
+    const logEntry = this.createLogEntry(level, message, data);
+
+    if (this.isDevelopment) {
+      // In development, use console methods with colors
+      const colors: Record<LogLevel, string> = {
+        debug: '#6B7280',
+        info: '#3B82F6',
+        warn: '#F59E0B',
+        error: '#EF4444',
+      };
+
+      const style = `color: ${colors[level]}; font-weight: bold;`;
+      console[level](`%c[${level.toUpperCase()}] ${message}`, style, data || '');
+    } else {
+      // In production, send to logging service or store locally
+      this.sendToLoggingService(logEntry);
     }
   }
 
-  warn(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.WARN)) {
-      console.warn(`[WARN] ${message}`, ...args);
+  private sendToLoggingService(logEntry: LogEntry): void {
+    // In production, you would typically send logs to a service like:
+    // - Sentry
+    // - LogRocket
+    // - DataDog
+    // - Custom logging endpoint
+
+    // For now, we'll store in localStorage as a fallback
+    try {
+      const logs = JSON.parse(localStorage.getItem('app_logs') || '[]');
+      logs.push(logEntry);
+      
+      // Keep only last 100 logs
+      if (logs.length > 100) {
+        logs.splice(0, logs.length - 100);
+      }
+      
+      localStorage.setItem('app_logs', JSON.stringify(logs));
+    } catch (error) {
+      // Silently fail if localStorage is not available
     }
   }
 
-  info(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.INFO)) {
-      console.info(`[INFO] ${message}`, ...args);
+  debug(message: string, data?: any): void {
+    this.log('debug', message, data);
+  }
+
+  info(message: string, data?: any): void {
+    this.log('info', message, data);
+  }
+
+  warn(message: string, data?: any): void {
+    this.log('warn', message, data);
+  }
+
+  error(message: string, data?: any): void {
+    this.log('error', message, data);
+  }
+
+  // Get stored logs (useful for debugging in production)
+  getStoredLogs(): LogEntry[] {
+    try {
+      return JSON.parse(localStorage.getItem('app_logs') || '[]');
+    } catch {
+      return [];
     }
   }
 
-  debug(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.DEBUG)) {
-      console.debug(`[DEBUG] ${message}`, ...args);
+  // Clear stored logs
+  clearStoredLogs(): void {
+    try {
+      localStorage.removeItem('app_logs');
+    } catch {
+      // Silently fail
     }
+  }
+
+  // Set log level dynamically
+  setLogLevel(level: LogLevel): void {
+    this.logLevel = level;
   }
 }
 
-export const productionLogger = new ProductionLogger();
+// Create singleton instance
+const productionLogger = new ProductionLogger();
+
 export default productionLogger;
+export { ProductionLogger, type LogLevel, type LogEntry };
