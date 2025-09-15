@@ -25,7 +25,6 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   },
-<<<<<<< HEAD
   // Newly added 2025-09-15 (to advertise on homepage)
   {
     title: 'Report: Enterprise Retrieval Observability (2026)',
@@ -40,7 +39,6 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
-=======
   {
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
