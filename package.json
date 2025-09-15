@@ -46,9 +46,13 @@
   },
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@esbuild/linux-x64": "^0.25.9",
 =======
 >>>>>>> cursor/create-and-deploy-new-content-c934
+=======
+    "@esbuild/linux-x64": "^0.25.9",
+>>>>>>> cursor/create-and-deploy-new-content-7720
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",

@@ -445,7 +445,10 @@ const InteractiveTechShowcase: React.FC = () => {
               </button>
             </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7720
           </div>
         </div>
       </div>
