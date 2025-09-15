@@ -1537,3 +1537,32 @@ zion-os/src/app/page.tsx
 [2025-09-15 15:46:30] 🔧 Resolving conflicts in zion-os/src/app/page.tsx for branch content/ai-regulatory-post...
 [2025-09-15 15:46:30] 🧩 Generic file: prefer main version
 [2025-09-15 15:46:30] ✅ Resolved conflicts in zion-os/src/app/page.tsx
+[2025-09-15 15:46:31] ✅ Successfully resolved conflicts and merged content/ai-regulatory-post
+[2025-09-15 15:46:31] ✅ Branch content/ai-regulatory-post processed successfully
+[2025-09-15 15:46:31] 📊 Batch progress: 48 successful, 1 failed
+[2025-09-15 15:46:31] 📊 Overall progress: 48 successful, 1 failed, 207 conflicts resolved
+[2025-09-15 15:46:31] 📋 Processing branch 50: content/ai-safety-benchmarks-2025
+[2025-09-15 15:46:32] 🔄 Attempting to merge content/ai-safety-benchmarks-2025...
+[2025-09-15 15:46:35] ⚠️  Merge conflicts detected in content/ai-safety-benchmarks-2025, resolving...
+[2025-09-15 15:46:35] 📋 Conflicted files: .eslintrc.cjs
+.eslintrc.js
+zion-os/.eslintrc.cjs
+zion-os/src/app/blog/[id]/page.tsx
+zion-os/src/app/blog/page.tsx
+zion-os/src/app/page.tsx
+[2025-09-15 15:46:35] 🔧 Resolving conflicts in .eslintrc.cjs for branch content/ai-safety-benchmarks-2025...
+[2025-09-15 15:46:35] 🧩 Generic file: prefer main version
+[2025-09-15 15:46:35] ✅ Resolved conflicts in .eslintrc.cjs
+[2025-09-15 15:46:35] 🔧 Resolving conflicts in .eslintrc.js for branch content/ai-safety-benchmarks-2025...
+[2025-09-15 15:46:35] 🔧 Resolving conflicts in zion-os/.eslintrc.cjs for branch content/ai-safety-benchmarks-2025...
+[2025-09-15 15:46:35] 🧩 Generic file: prefer main version
+[2025-09-15 15:46:36] ✅ Resolved conflicts in zion-os/.eslintrc.cjs
+[2025-09-15 15:46:36] 🔧 Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch content/ai-safety-benchmarks-2025...
+[2025-09-15 15:46:36] 🧩 Generic file: prefer main version
+[2025-09-15 15:46:36] ✅ Resolved conflicts in zion-os/src/app/blog/[id]/page.tsx
+[2025-09-15 15:46:36] 🔧 Resolving conflicts in zion-os/src/app/blog/page.tsx for branch content/ai-safety-benchmarks-2025...
+[2025-09-15 15:46:36] 🧩 Generic file: prefer main version
+[2025-09-15 15:46:36] ✅ Resolved conflicts in zion-os/src/app/blog/page.tsx
+[2025-09-15 15:46:36] 🔧 Resolving conflicts in zion-os/src/app/page.tsx for branch content/ai-safety-benchmarks-2025...
+[2025-09-15 15:46:36] 🧩 Generic file: prefer main version
+[2025-09-15 15:46:36] ✅ Resolved conflicts in zion-os/src/app/page.tsx
