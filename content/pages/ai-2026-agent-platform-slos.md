@@ -1,5 +1,29 @@
 ---
 title: "AI 2026: Agent Platform SLOs That Matter"
+description: "A concise SLO set for safety, quality, reliability, and cost—ready to adopt."
+date: 2025-09-15
+tags: [SLOs, Reliability, Observability, Operations, 2026]
+featured: true
+---
+
+# Agent Platform SLOs That Matter
+
+This reference set focuses on outcomes: safe autonomy, high quality, predictable latency, and efficient cost. Copy, adapt, and enforce via policy-as-code and live eval gates.
+
+## Core SLOs
+
+- Reliability: 99.9% success for critical actions; MTTR < 10 min
+- Quality: eval-gated thresholds per scenario; regression budget protected
+- Latency: p95 < 250ms for interactive flows; p95 < 2s for complex
+- Cost: tokens/request within budget; routing respects cost ceilings
+
+## Implementation
+
+- Attach eval IDs to traces and decisions
+- Enforce via CI/CD gates and runtime policies
+- Emit evidence for audits and approvals
+---
+title: "AI 2026: Agent Platform SLOs That Matter"
 description: "A focused set of SLOs to run agent platforms safely and efficiently."
 date: 2025-09-15
 tags:
