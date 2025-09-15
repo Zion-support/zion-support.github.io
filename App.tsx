@@ -48,7 +48,11 @@ import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
 import AdvancedAISystems2026 from './src/pages/AdvancedAISystems2026';
 import SpaceTechAI2025 from './src/pages/SpaceTechAI2025';
 import BiotechAIRevolution2025 from './src/pages/BiotechAIRevolution2025';
+import AdvancedBiotechAI2026 from './src/pages/AdvancedBiotechAI2026';
+import AdvancedRobotics2026 from './src/pages/AdvancedRobotics2026';
+import AdvancedCybersecuritySuite2026 from './src/pages/AdvancedCybersecuritySuite2026';
 import InnovationShowcase2026 from './src/components/InnovationShowcase2026';
+import RevolutionaryTechShowcase2026 from './src/components/RevolutionaryTechShowcase2026';
 
 export default function App(): JSX.Element {
   return (
@@ -71,39 +75,27 @@ export default function App(): JSX.Element {
                       <span className="text-3xl animate-bounce">🚀</span>
                     </div>
                     <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-<<<<<<< HEAD
                       Experience the future of technology with our groundbreaking new content on Advanced AI Transformation, 
-                      Quantum Computing Revolution, Neural Interface Technology, and Next-Gen Tech Showcase
+                      Quantum Computing Revolution, Neural Interface Technology, Advanced Biotech AI, Robotics, and Cybersecurity
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
                       <a href="/pages/AdvancedAITransformation2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🤖 Advanced AI Transformation →
-=======
-<<<<<<< HEAD
-                      Experience the future of technology with our groundbreaking new content on Synthetic Intelligence, 
-                      Quantum-Neural Fusion, AI Revolution, and Neural Interface Technology
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-6 gap-4 max-w-7xl mx-auto">
-                      <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧠 Synthetic Intelligence →
-=======
-                      Experience the future of technology with our groundbreaking new content on Advanced AI Transformation, 
-                      Quantum-Neural Fusion, Next-Gen Tech Showcase, and Revolutionary Neural Interfaces
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
-                      <a href="/pages/AdvancedAITransformation2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧠 AI Transformation →
->>>>>>> main
                       </a>
                       <a href="/pages/QuantumComputingRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         ⚛️ Quantum Computing Revolution →
                       </a>
-<<<<<<< HEAD
                       <a href="/pages/NeuralInterfaceRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧬 Neural Interface Revolution →
                       </a>
-                      <a href="/pages/NextGenTechShowcase2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🚀 Next-Gen Tech Showcase →
+                      <a href="/pages/AdvancedBiotechAI2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🧬 Advanced Biotech AI →
+                      </a>
+                      <a href="/pages/AdvancedRobotics2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🤖 Advanced Robotics →
+                      </a>
+                      <a href="/pages/AdvancedCybersecuritySuite2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🛡️ Cybersecurity Suite →
                       </a>
                     </div>
                   </div>
@@ -407,6 +399,11 @@ export default function App(): JSX.Element {
                 {/* Innovation Showcase 2026 */}
                 <div className="mb-12">
                   <InnovationShowcase2026 />
+                </div>
+
+                {/* Revolutionary Tech Showcase 2026 */}
+                <div className="mb-12">
+                  <RevolutionaryTechShowcase2026 />
                 </div>
 
                 {/* Enhanced Content Showcase */}
@@ -839,15 +836,14 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
-<<<<<<< HEAD
-=======
           <Route path="/pages/AdvancedAITransformation2026" element={<AdvancedAITransformation2026 />} />
           <Route path="/pages/NextGenTechShowcase2026" element={<NextGenTechShowcase2026 />} />
           <Route path="/pages/AdvancedAISystems2026" element={<AdvancedAISystems2026 />} />
           <Route path="/pages/SpaceTechAI2025" element={<SpaceTechAI2025 />} />
           <Route path="/pages/BiotechAIRevolution2025" element={<BiotechAIRevolution2025 />} />
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> main
+          <Route path="/pages/AdvancedBiotechAI2026" element={<AdvancedBiotechAI2026 />} />
+          <Route path="/pages/AdvancedRobotics2026" element={<AdvancedRobotics2026 />} />
+          <Route path="/pages/AdvancedCybersecuritySuite2026" element={<AdvancedCybersecuritySuite2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">

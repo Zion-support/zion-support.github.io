@@ -1,185 +1,319 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AdvancedBiotechAI2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🧬 ADVANCED BIOTECH AI • 2026
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-white text-sm font-bold mb-6">
+            🧬 BREAKTHROUGH BIOTECH AI • 2026
           </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-            Advanced Biotech AI 2026
+          <h1 className="text-6xl font-bold text-gray-900 mb-6">
+            Advanced Biotech AI Revolution
           </h1>
-          <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary biotechnology powered by artificial intelligence, 
-            transforming healthcare, agriculture, and life sciences with unprecedented precision.
+          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
+            Discover how artificial intelligence is revolutionizing biotechnology, 
+            drug discovery, personalized medicine, and genetic engineering
           </p>
-        </div>
-
-        {/* Revolutionary Features */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🧬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">AI-Powered Gene Editing</h3>
-            <p className="text-green-100 mb-6 text-center">
-              Precision gene editing with AI-guided CRISPR technology for targeted therapeutic interventions
-            </p>
-            <ul className="text-green-200 space-y-2 text-sm">
-              <li>• AI-guided CRISPR targeting</li>
-              <li>• Precision gene therapy</li>
-              <li>• Personalized medicine</li>
-            </ul>
+          <div className="flex justify-center space-x-4">
+            <a href="#overview" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              Explore Biotech AI →
+            </a>
+            <a href="#applications" className="border-2 border-emerald-600 text-emerald-600 px-8 py-4 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
+              View Applications
+            </a>
           </div>
+        </motion.div>
 
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🔬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Synthetic Biology AI</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              AI-driven synthetic biology for creating custom organisms and biological systems
-            </p>
-            <ul className="text-emerald-200 space-y-2 text-sm">
-              <li>• Custom organism design</li>
-              <li>• Biological circuit engineering</li>
-              <li>• Synthetic protein creation</li>
-            </ul>
-          </div>
-
-          <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">💊</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">AI Drug Discovery</h3>
-            <p className="text-teal-100 mb-6 text-center">
-              Accelerated drug discovery using AI to predict molecular interactions and drug efficacy
-            </p>
-            <ul className="text-teal-200 space-y-2 text-sm">
-              <li>• Molecular interaction prediction</li>
-              <li>• Drug efficacy modeling</li>
-              <li>• Side effect prediction</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Technology Applications */}
-        <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">🌱 Biotech AI Applications</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transforming multiple industries with AI-powered biotechnology solutions
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-green-400">Healthcare Revolution</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <span>Personalized cancer treatment</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <span>AI-guided surgery</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <span>Real-time health monitoring</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <span>Predictive disease diagnosis</span>
-                </div>
+        {/* Overview Section */}
+        <section id="overview" className="mb-16">
+          <div className="bg-white rounded-3xl p-12 shadow-2xl">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+              🧬 The Future of Biotechnology with AI
+            </h2>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4">Revolutionary Capabilities</h3>
+                <ul className="space-y-4 text-gray-600">
+                  <li className="flex items-start space-x-3">
+                    <span className="text-emerald-500 text-xl">✓</span>
+                    <span>AI-powered drug discovery and development</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-emerald-500 text-xl">✓</span>
+                    <span>Personalized medicine and treatment optimization</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-emerald-500 text-xl">✓</span>
+                    <span>Genetic engineering and CRISPR optimization</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-emerald-500 text-xl">✓</span>
+                    <span>Protein folding prediction and analysis</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-emerald-500 text-xl">✓</span>
+                    <span>Biomarker discovery and disease prediction</span>
+                  </li>
+                </ul>
               </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-emerald-400">Agricultural Innovation</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
-                  <span>Climate-resistant crops</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
-                  <span>Precision agriculture</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
-                  <span>AI-powered pest control</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
-                  <span>Sustainable farming solutions</span>
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4">Impact & Benefits</h3>
+                <div className="space-y-4">
+                  <div className="bg-gradient-to-r from-emerald-100 to-teal-100 p-4 rounded-lg">
+                    <h4 className="font-semibold text-emerald-800">90% Faster Drug Discovery</h4>
+                    <p className="text-emerald-700">AI reduces drug development time from 10+ years to 2-3 years</p>
+                  </div>
+                  <div className="bg-gradient-to-r from-teal-100 to-cyan-100 p-4 rounded-lg">
+                    <h4 className="font-semibold text-teal-800">95% Accuracy in Diagnosis</h4>
+                    <p className="text-teal-700">AI-powered diagnostic tools achieve unprecedented accuracy</p>
+                  </div>
+                  <div className="bg-gradient-to-r from-cyan-100 to-blue-100 p-4 rounded-lg">
+                    <h4 className="font-semibold text-cyan-800">$2.5T Market Value</h4>
+                    <p className="text-cyan-700">Biotech AI market projected to reach $2.5 trillion by 2030</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Breakthrough Technologies */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-8 border border-green-400/30">
-            <h3 className="text-2xl font-bold mb-6 text-green-400">🧠 Neural-Biological Interface</h3>
-            <p className="text-green-100 mb-4">
-              Direct connection between AI systems and biological neural networks, enabling real-time communication and control.
-            </p>
-            <ul className="text-green-200 space-y-2 text-sm">
-              <li>• Brain-computer interfaces</li>
-              <li>• Neural signal processing</li>
-              <li>• Cognitive enhancement</li>
-            </ul>
-          </div>
+        {/* Applications Section */}
+        <section id="applications" className="mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+            🚀 Advanced Biotech AI Applications
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="text-5xl mb-4">💊</div>
+              <h3 className="text-2xl font-bold mb-4">Drug Discovery AI</h3>
+              <p className="text-emerald-100 mb-6">
+                AI algorithms analyze molecular structures, predict drug interactions, 
+                and accelerate the discovery of new therapeutic compounds.
+              </p>
+              <ul className="text-emerald-200 space-y-2 text-sm">
+                <li>• Molecular property prediction</li>
+                <li>• Drug-target interaction modeling</li>
+                <li>• Side effect prediction</li>
+                <li>• Clinical trial optimization</li>
+              </ul>
+            </motion.div>
 
-          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-            <h3 className="text-2xl font-bold mb-6 text-emerald-400">🔬 Quantum Biology</h3>
-            <p className="text-emerald-100 mb-4">
-              Quantum effects in biological systems harnessed by AI for unprecedented precision in biological processes.
-            </p>
-            <ul className="text-emerald-200 space-y-2 text-sm">
-              <li>• Quantum photosynthesis</li>
-              <li>• Quantum enzyme catalysis</li>
-              <li>• Quantum sensing in cells</li>
-            </ul>
-          </div>
-        </div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="text-5xl mb-4">🧬</div>
+              <h3 className="text-2xl font-bold mb-4">Genetic Engineering</h3>
+              <p className="text-teal-100 mb-6">
+                AI-powered CRISPR optimization and gene editing tools for 
+                precise genetic modifications and therapeutic applications.
+              </p>
+              <ul className="text-teal-200 space-y-2 text-sm">
+                <li>• CRISPR guide RNA design</li>
+                <li>• Off-target prediction</li>
+                <li>• Gene therapy optimization</li>
+                <li>• Synthetic biology design</li>
+              </ul>
+            </motion.div>
 
-        {/* Impact Metrics */}
-        <div className="grid md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-green-400 mb-2">95%</div>
-            <div className="text-gray-300">Treatment success rate</div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="text-5xl mb-4">🏥</div>
+              <h3 className="text-2xl font-bold mb-4">Personalized Medicine</h3>
+              <p className="text-cyan-100 mb-6">
+                AI analyzes patient data to create personalized treatment plans 
+                and predict individual responses to medications.
+              </p>
+              <ul className="text-cyan-200 space-y-2 text-sm">
+                <li>• Genomic analysis</li>
+                <li>• Treatment response prediction</li>
+                <li>• Dosage optimization</li>
+                <li>• Risk assessment</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="text-5xl mb-4">🔬</div>
+              <h3 className="text-2xl font-bold mb-4">Protein Folding</h3>
+              <p className="text-blue-100 mb-6">
+                AI models predict protein structures and folding patterns, 
+                revolutionizing our understanding of biological systems.
+              </p>
+              <ul className="text-blue-200 space-y-2 text-sm">
+                <li>• 3D structure prediction</li>
+                <li>• Folding pathway analysis</li>
+                <li>• Function prediction</li>
+                <li>• Drug binding sites</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="text-5xl mb-4">🧠</div>
+              <h3 className="text-2xl font-bold mb-4">Neural Interfaces</h3>
+              <p className="text-indigo-100 mb-6">
+                AI-powered brain-computer interfaces for medical applications 
+                and cognitive enhancement technologies.
+              </p>
+              <ul className="text-indigo-200 space-y-2 text-sm">
+                <li>• Neural signal processing</li>
+                <li>• Brain activity mapping</li>
+                <li>• Cognitive enhancement</li>
+                <li>• Medical rehabilitation</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="text-5xl mb-4">🔬</div>
+              <h3 className="text-2xl font-bold mb-4">Biomarker Discovery</h3>
+              <p className="text-purple-100 mb-6">
+                AI identifies novel biomarkers for early disease detection 
+                and personalized treatment monitoring.
+              </p>
+              <ul className="text-purple-200 space-y-2 text-sm">
+                <li>• Disease biomarker identification</li>
+                <li>• Early detection algorithms</li>
+                <li>• Treatment monitoring</li>
+                <li>• Prognosis prediction</li>
+              </ul>
+            </motion.div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-emerald-400 mb-2">10x</div>
-            <div className="text-gray-300">Faster drug discovery</div>
+        </section>
+
+        {/* Technology Stack */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 text-white">
+            <h2 className="text-4xl font-bold mb-8 text-center">
+              🛠️ Advanced Biotech AI Technology Stack
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-xl font-semibold mb-2">Machine Learning</h3>
+                <p className="text-gray-300 text-sm">
+                  Deep learning models for pattern recognition and prediction
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">🧬</div>
+                <h3 className="text-xl font-semibold mb-2">Bioinformatics</h3>
+                <p className="text-gray-300 text-sm">
+                  Computational analysis of biological data and sequences
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>
+                <p className="text-gray-300 text-sm">
+                  Quantum algorithms for complex molecular simulations
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">☁️</div>
+                <h3 className="text-xl font-semibold mb-2">Cloud Computing</h3>
+                <p className="text-gray-300 text-sm">
+                  Scalable infrastructure for massive data processing
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-teal-400 mb-2">50%</div>
-            <div className="text-gray-300">Reduction in side effects</div>
+        </section>
+
+        {/* Future Outlook */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 rounded-3xl p-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+              🌟 The Future of Biotech AI
+            </h2>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-800 mb-6">2026-2030 Roadmap</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-emerald-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">AI-Designed Drugs</h4>
+                      <p className="text-gray-600 text-sm">First AI-designed drugs enter clinical trials</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">Personalized Medicine</h4>
+                      <p className="text-gray-600 text-sm">Widespread adoption of AI-powered personalized treatments</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-cyan-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">Gene Therapy Revolution</h4>
+                      <p className="text-gray-600 text-sm">AI-optimized gene therapies for genetic diseases</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-800 mb-6">Market Impact</h3>
+                <div className="space-y-4">
+                  <div className="bg-white p-4 rounded-lg shadow-md">
+                    <h4 className="font-semibold text-gray-800">$2.5T Market Size</h4>
+                    <p className="text-gray-600 text-sm">Global biotech AI market by 2030</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow-md">
+                    <h4 className="font-semibold text-gray-800">50% Cost Reduction</h4>
+                    <p className="text-gray-600 text-sm">Average drug development costs</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow-md">
+                    <h4 className="font-semibold text-gray-800">90% Success Rate</h4>
+                    <p className="text-gray-600 text-sm">AI-optimized clinical trials</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">∞</div>
-            <div className="text-gray-300">Life possibilities</div>
-          </div>
-        </div>
+        </section>
 
         {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12">
-            <h2 className="text-4xl font-bold mb-6">Transform Life with Biotech AI</h2>
-            <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-              Join the biotech AI revolution and unlock the potential of life sciences for humanity's benefit
+        <section className="text-center">
+          <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-3xl p-12 text-white">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Transform Biotechnology with AI?
+            </h2>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+              Join the biotech AI revolution and discover how artificial intelligence 
+              can accelerate your research, improve patient outcomes, and drive innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-green-600 px-8 py-4 rounded-lg hover:bg-green-50 transition-colors font-semibold text-lg">
-                Explore Biotech AI
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-green-600 transition-colors font-semibold text-lg">
-                Get Started
-              </button>
+            <div className="flex justify-center space-x-4">
+              <a href="/contact" className="bg-white text-emerald-600 px-8 py-4 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
+                Get Started Today
+              </a>
+              <a href="/pages/ComprehensiveTechInsights2026" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors font-semibold">
+                Learn More
+              </a>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );
