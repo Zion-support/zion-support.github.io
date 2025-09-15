@@ -19,10 +19,19 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     excerpt:
       'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
     category: 'AI Safety',
+=======
+  'enterprise-agent-safety-2025': {
+    id: 'enterprise-agent-safety-2025',
+    title: 'Enterprise Agent Safety 2025: Guardrails for Autonomy at Scale',
+    excerpt:
+      'A practical playbook for deploying autonomous agents with policy guardrails, human-in-the-loop controls, and auditable operations.',
+    category: 'AI Governance',
+>>>>>>> cursor/create-and-deploy-new-content-1633
     author: 'Dr. Emily Watson',
     date: '2025-09-15',
     readTime: '9 min read',
     content: [
+<<<<<<< HEAD
       'As autonomous agents proliferate in production, organizations need reusable safety patterns beyond ad-hoc checks. We present a catalog including Budget Caps, Sensitive-Action Handshakes, Reputation-Gated Autonomy, and Deferred Execution Queues.',
       'Each pattern includes preconditions, failure modes, and observability hooks. We also provide a rollout playbook to incrementally raise autonomy while preserving safety and accountability.'
     ]
@@ -39,6 +48,11 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     content: [
       'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
       'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
+=======
+      'Enterprises are moving beyond pilots to production-scale autonomous agents. Safety must progress from guidelines to executable controls.',
+      'This playbook introduces an agent safety stack: identity and permissions, intent verification, bounded tools, rate limits, escalation paths, and forensic logging.',
+      'We outline a phased rollout with measurable KPIs and show how to blend policy-as-code with exception workflows to preserve velocity without sacrificing safety.'
+>>>>>>> cursor/create-and-deploy-new-content-1633
     ]
   },
   'ai-governance-blueprint-2025': {
