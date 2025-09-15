@@ -1,87 +1,88 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const EnhancedContentShowcase: React.FC = () => {
+const NewContentPromotionalBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const contentSlides = [
+  const newContent = [
     {
-      id: 1,
-      title: "Advanced AI Transformation 2026",
-      description: "Revolutionary AI systems with consciousness and autonomous decision-making capabilities.",
-      image: "🧠",
+      title: "Advanced Tech Innovation 2026",
+      description: "Revolutionary technologies that are reshaping our understanding of what's possible",
+      icon: "🚀",
+      link: "/pages/AdvancedTechInnovation2026",
       gradient: "from-purple-600 to-pink-600",
-      link: "/pages/AdvancedAITransformation2026",
-      features: ["Consciousness AI", "Autonomous Systems", "Quantum Processing", "Neural Networks"]
+      features: ["Autonomous AI Ecosystems", "Quantum-Neural Hybrid", "Consciousness Interface", "Synthetic Reality"]
     },
     {
-      id: 2,
-      title: "Quantum Computing Revolution",
-      description: "Exponential computing power that solves impossible problems with quantum supremacy.",
-      image: "⚡",
+      title: "Quantum AI Revolution 2026",
+      description: "Experience the convergence of quantum computing and artificial intelligence",
+      icon: "⚛️",
+      link: "/pages/QuantumAIRevolution2026",
       gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/QuantumComputingRevolution2026",
-      features: ["Quantum Supremacy", "Molecular Simulation", "Unbreakable Encryption", "Climate Modeling"]
+      features: ["Quantum Neural Networks", "Quantum Machine Learning", "Consciousness Interface", "Exponential Processing"]
     },
     {
-      id: 3,
-      title: "Neural Interface Technology",
-      description: "Direct brain-computer communication enabling thought control and memory enhancement.",
-      image: "🧬",
+      title: "Revolutionary Tech Trends 2026",
+      description: "Cutting-edge technologies that are defining the future of innovation",
+      icon: "📈",
+      link: "/pages/RevolutionaryTechTrends2026",
       gradient: "from-emerald-600 to-teal-600",
-      link: "/pages/NeuralInterfaceRevolution2026",
-      features: ["Thought Control", "Memory Enhancement", "Neural Networking", "Medical Applications"]
-    },
-    {
-      id: 4,
-      title: "Synthetic Intelligence",
-      description: "AI systems with synthetic consciousness and autonomous creative capabilities.",
-      image: "🤖",
-      gradient: "from-orange-600 to-red-600",
-      link: "/pages/SyntheticIntelligence2026",
-      features: ["Synthetic Consciousness", "Creative AI", "Autonomous Systems", "Human-AI Collaboration"]
+      features: ["Synthetic Intelligence", "Quantum-Neural Fusion", "Holographic Reality", "Autonomous Ecosystems"]
     }
   ];
 
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-      }, 5000);
+        setCurrentSlide((prev) => (prev + 1) % newContent.length);
+      }, 4000);
       return () => clearInterval(interval);
     }
-  }, [isAutoPlaying, contentSlides.length]);
+  }, [isAutoPlaying, newContent.length]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
+    setCurrentSlide((prev) => (prev + 1) % newContent.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
+    setCurrentSlide((prev) => (prev - 1 + newContent.length) % newContent.length);
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+    <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-16 overflow-hidden">
+      {/* Background Animation */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full animate-pulse"></div>
+          <div className="absolute top-32 right-20 w-16 h-16 bg-pink-500/20 rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-cyan-500/20 rounded-full animate-pulse delay-2000"></div>
+          <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-emerald-500/20 rounded-full animate-pulse delay-3000"></div>
+        </div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 ENHANCED CONTENT SHOWCASE • 2026
+            🌟 BRAND NEW CONTENT • JANUARY 2026
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Revolutionary Technology Experience
+            Revolutionary New Content
           </h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience our most advanced technologies with immersive interactive features 
-            and cutting-edge demonstrations.
+            Discover our latest breakthrough content featuring cutting-edge AI, quantum computing, 
+            neural interfaces, and revolutionary technologies that are reshaping our world.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Main Showcase Carousel */}
+        {/* Main Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl">
             <AnimatePresence mode="wait">
@@ -93,15 +94,15 @@ const EnhancedContentShowcase: React.FC = () => {
                 transition={{ duration: 0.5 }}
                 className="relative"
               >
-                <div className={`bg-gradient-to-br ${contentSlides[currentSlide].gradient} p-12 rounded-2xl`}>
+                <div className={`bg-gradient-to-br ${newContent[currentSlide].gradient} p-12 rounded-2xl`}>
                   <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                      <div className="text-8xl mb-6">{contentSlides[currentSlide].image}</div>
-                      <h3 className="text-4xl font-bold mb-6">{contentSlides[currentSlide].title}</h3>
-                      <p className="text-xl opacity-90 mb-8">{contentSlides[currentSlide].description}</p>
+                      <div className="text-8xl mb-6">{newContent[currentSlide].icon}</div>
+                      <h3 className="text-4xl font-bold mb-6">{newContent[currentSlide].title}</h3>
+                      <p className="text-xl opacity-90 mb-8">{newContent[currentSlide].description}</p>
                       
                       <div className="grid grid-cols-2 gap-4 mb-8">
-                        {contentSlides[currentSlide].features.map((feature, index) => (
+                        {newContent[currentSlide].features.map((feature, index) => (
                           <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
                             <span className="text-sm font-semibold">{feature}</span>
                           </div>
@@ -110,7 +111,7 @@ const EnhancedContentShowcase: React.FC = () => {
                       
                       <div className="flex gap-4">
                         <a
-                          href={contentSlides[currentSlide].link}
+                          href={newContent[currentSlide].link}
                           className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
                         >
                           Explore Now →
@@ -123,7 +124,7 @@ const EnhancedContentShowcase: React.FC = () => {
                     
                     <div className="relative">
                       <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-                        <h4 className="text-2xl font-bold mb-4">Key Highlights</h4>
+                        <h4 className="text-2xl font-bold mb-4">Why This Matters</h4>
                         <ul className="space-y-3">
                           <li className="flex items-center space-x-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
@@ -188,10 +189,10 @@ const EnhancedContentShowcase: React.FC = () => {
 
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-3 mt-8">
-          {contentSlides.map((_, index) => (
+          {newContent.map((_, index) => (
             <button
               key={index}
-              onClick={() => goToSlide(index)}
+              onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide ? 'bg-white' : 'bg-white/30'
               }`}
@@ -201,18 +202,18 @@ const EnhancedContentShowcase: React.FC = () => {
 
         {/* Quick Access Grid */}
         <div className="mt-16">
-          <h3 className="text-3xl font-bold text-center mb-8">Quick Access to All Content</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {contentSlides.map((item, index) => (
+          <h3 className="text-3xl font-bold text-center mb-8">Quick Access to All New Content</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {newContent.map((item, index) => (
               <motion.div
-                key={item.id}
+                key={item.title}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-gradient-to-br ${item.gradient} p-6 rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer`}
-                onClick={() => goToSlide(index)}
+                onClick={() => setCurrentSlide(index)}
               >
-                <div className="text-4xl mb-4 text-center">{item.image}</div>
+                <div className="text-4xl mb-4 text-center">{item.icon}</div>
                 <h4 className="text-xl font-bold mb-3 text-center">{item.title}</h4>
                 <p className="text-sm opacity-90 text-center mb-4">{item.description}</p>
                 <a
@@ -225,9 +226,35 @@ const EnhancedContentShowcase: React.FC = () => {
             ))}
           </div>
         </div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mt-12"
+        >
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Ready to Explore the Future?</h3>
+            <p className="text-lg opacity-90 mb-6">
+              Join thousands of innovators who are already experiencing the next generation of technology.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <a
+                href="/pages/AdvancedTechInnovation2026"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Start Exploring →
+              </a>
+              <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                Get Notifications
+              </button>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
 };
 
-export default EnhancedContentShowcase;
+export default NewContentPromotionalBanner2026;
