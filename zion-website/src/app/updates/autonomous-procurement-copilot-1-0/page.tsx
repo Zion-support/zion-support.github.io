@@ -1,36 +1,36 @@
-
-export default function AutonomousProcurementCopilot10() {
+export default function Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 lg:px-8">
-        <div className="mb-6 flex items-center gap-3 text-xs text-gray-400">
-          <span className="rounded-full bg-blue-500/10 px-2 py-0.5 text-blue-300">Launch</span>
-          <time dateTime="2025-09-15">September 15, 2025</time>
-        </div>
-        <h1 className="text-4xl font-bold tracking-tight text-white">Autonomous Procurement Copilot v1.0</h1>
-        <p className="mt-4 text-lg leading-8 text-gray-300">
-          Accelerate sourcing, RFPs, contract analysis, and approvals with policy-as-code guardrails and
-          real-time cost benchmarks. Built for compliance, speed, and measurable savings.
-        </p>
-        <div className="mt-10 space-y-6 text-gray-300">
-          <ul className="list-disc list-inside space-y-2">
-            <li>Vendor discovery and shortlist generation with sourcing policies applied</li>
-            <li>RFP generation, scoring rubrics, and evidence capture for audits</li>
-            <li>Contract review with clause detection, risks, and recommended redlines</li>
-            <li>Approval workflows with live budget and cost benchmarks</li>
-          </ul>
+      <div className="mx-auto max-w-3xl px-6 pt-28 pb-24 lg:px-8">
+        <p className="text-sm font-semibold leading-6 text-blue-400">Launch</p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Launch: Autonomous Procurement Copilot v1.0
+        </h1>
+        <p className="mt-2 text-gray-400">2025-09-15</p>
+        <div className="prose prose-invert mt-8">
           <p>
-            Ship faster with governance by default. Evidence bundles are exportable for procurement and audit teams.
+            The Autonomous Procurement Copilot streamlines vendor sourcing, RFP workflows, contract
+            analysis, and approvals. It embeds policy-as-code, evaluation gates, and live cost
+            benchmarks to ensure compliant, cost‑effective decisions.
           </p>
-        </div>
-        <div className="mt-10">
-          <a href="/contact" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
-            Request a demo →
-          </a>
+          <h2>Highlights</h2>
+          <ul>
+            <li>Smart vendor discovery with deduplication and risk signals</li>
+            <li>RFP drafting, scoring rubrics, and side‑by‑side vendor comparisons</li>
+            <li>Contract clause extraction with policy checks and exception workflows</li>
+            <li>Automated approvals with audit‑ready evidence bundles</li>
+          </ul>
+          <h2>Get started</h2>
+          <p>
+            Ready to modernize procurement? Our team can deploy a pilot in weeks with measurable ROI.
+          </p>
+          <p className="mt-8">
+            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+              Talk to us
+            </a>
+          </p>
         </div>
       </div>
     </div>
   )
 }
-
-
