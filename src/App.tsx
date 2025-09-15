@@ -39,6 +39,9 @@ import UltimateContentShowcase2026 from './components/UltimateContentShowcase202
 import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
 import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
 import InterdimensionalTechShowcase2027 from './components/InterdimensionalTechShowcase2027';
+import TranscendentTechnologyShowcase2028 from './components/TranscendentTechnologyShowcase2028';
+import NewsletterSignup from './components/NewsletterSignup';
+import PromotionalBanner from './components/PromotionalBanner';
 import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import AdvancedBiotechRevolution2026 from './pages/AdvancedBiotechRevolution2026';
@@ -195,6 +198,11 @@ export default function App(): JSX.Element {
                 {/* Interdimensional Tech Showcase 2027 */}
                 <div className="mb-12">
                   <InterdimensionalTechShowcase2027 />
+                </div>
+
+                {/* Transcendent Technology Showcase 2028 */}
+                <div className="mb-12">
+                  <TranscendentTechnologyShowcase2028 />
                 </div>
 
                 {/* Hero Section with New Content Promotions */}
@@ -426,6 +434,16 @@ export default function App(): JSX.Element {
                       </a>
                     </div>
                   </div>
+                </div>
+
+                {/* Promotional Banner */}
+                <div className="mb-12">
+                  <PromotionalBanner />
+                </div>
+
+                {/* Newsletter Signup */}
+                <div className="mb-12">
+                  <NewsletterSignup />
                 </div>
 
                 {/* Interactive Technology Showcase */}
