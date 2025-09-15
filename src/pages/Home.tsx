@@ -374,6 +374,24 @@ export default function Home() {
         {/* Hero Section */}
         <HeroSection />
 
+        {/* Promo: Policy-as-Code in Production */}
+        <motion.section 
+          className="py-6 px-4 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="rounded-2xl border border-emerald-400/30 bg-emerald-500/10 p-4 sm:p-5 text-center">
+              <p className="text-sm sm:text-base font-semibold text-emerald-200">
+                New: AI 2026 — Policy‑as‑Code in Production
+                <Link to="/blog/ai-2026-policy-as-code-in-production" className="underline decoration-emerald-300/60 underline-offset-4 hover:text-white ml-2">read the blueprint</Link>
+              </p>
+            </div>
+          </div>
+        </motion.section>
+
         {/* New Content Showcase Banner */}
         <motion.section 
           className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-cyan/10"
