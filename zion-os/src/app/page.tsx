@@ -79,6 +79,20 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      {/* Promo Ribbon */}
+      <section className="py-3 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto">
+          <a href="/blog/autonomous-it-ops-2025" className="flex items-center justify-between gap-3 text-blue-900">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center justify-center w-8 h-8 rounded-md bg-blue-600 text-white text-sm font-bold">AO</span>
+              <p className="text-sm md:text-base">
+                New: Autonomous IT Operations in 2025 — self-healing, policy-driven, AI-orchestrated ops. <span className="underline">Read more</span>
+              </p>
+            </div>
+            <span className="hidden md:block text-blue-700">→</span>
+          </a>
+        </div>
+      </section>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -150,6 +164,14 @@ export default function HomePage() {
               </a>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+              <a href="/blog/agentic-supply-chains-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Agentic Supply Chains 2025
+=======
+              <a href="/blog/enterprise-agent-safety-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Enterprise Agent Safety 2025
+>>>>>>> cursor/create-and-deploy-new-content-1633
+=======
               <a href="/blog/agentic-safety-patterns-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Agentic Safety Patterns 2025
 =======
@@ -160,6 +182,7 @@ export default function HomePage() {
               <a href="/blog/agentic-supply-chains-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Agentic Supply Chains 2025
 >>>>>>> 2445d7df832b351361c2d9a20e071d592355fcda
+>>>>>>> 7628bd3f9c6fdd87749ce79d345f9b0dcea6b009
               </a>
             </div>
           </div>

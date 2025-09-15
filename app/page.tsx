@@ -191,7 +191,49 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Promo: New Article - Autonomous Finance Agents 2026 */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">New on the blog</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Autonomous Finance Agents — From FP&A to Real-Time Treasury</h3>
+                <p className="text-gray-600 max-w-2xl">Autonomous agents are transforming finance with continuous close, real-time forecasting, and risk-aware treasury automation.</p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/blog/ai-2026-autonomous-finance-agents" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+                  Read Article
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
         
+        {/* New Blog Highlights - September 2025 */}
+        <section className="py-12 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-gray-900">New on the blog</h2>
+              <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">View all →</Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-gray-50 rounded-xl p-6 shadow hover:shadow-md transition">
+                <div className="text-sm font-semibold text-purple-700 mb-2">Governance & Risk</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2025: Agent Safety Engineering Blueprint</h3>
+                <p className="text-gray-600 mb-4">Guardrails, evaluations, and runtime controls to deploy safe, reliable enterprise AI agents.</p>
+                <Link href="/blog/ai-2025-agent-safety-engineering-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-6 shadow hover:shadow-md transition">
+                <div className="text-sm font-semibold text-purple-700 mb-2">Data Platforms</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2025: Data Products for the AI Era</h3>
+                <p className="text-gray-600 mb-4">Build reliable, reusable, monetizable data products that power enterprise AI.</p>
+                <Link href="/blog/ai-2025-data-products-for-the-ai-era" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* AI 2026 Quantum Revolution Ultimate Banner - NEW FEATURED */}
         <AI2026QuantumRevolutionUltimateBanner />
         
