@@ -838,6 +838,36 @@ content_index:
         rollback_time: "< 5 min"
         conversion_lift: "+8%"
 
+    - id: "ai-2026-eval-gated-cicd-for-agents"
+      type: "blog"
+      title: "AI 2026: Eval-Gated CI/CD for Agents — Safer, Faster Releases"
+      file_path: "/content/blog/ai-2026-eval-gated-cicd-for-agents.md"
+      url: "/blog/ai-2026-eval-gated-cicd-for-agents"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evaluations", "CI/CD", "Reliability", "Governance", "Autonomous Agents", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        rollback_time: "< 5 min"
+        incident_reduction: "40%+"
+
+    - id: "ai-2026-agent-change-management-blueprint"
+      type: "blog"
+      title: "AI 2026: Agent Change Management Blueprint — Approvals, Rollouts, Evidence"
+      file_path: "/content/blog/ai-2026-agent-change-management-blueprint.md"
+      url: "/blog/ai-2026-agent-change-management-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Change Management", "Governance", "Approvals", "Progressive Delivery", "Evidence", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incidents: "-35%"
+        rollback_time: "< 5 min"
+        audit: "continuous"
+
     - id: "ai-2026-trustworthy-model-routing"
       type: "blog"
       title: "AI 2026: Trustworthy Model Routing — Eval‑Gated Decisions"
@@ -1118,7 +1148,7 @@ content_index:
     expected_roi_mentions: 50
     success_stories: 8
     implementation_guides: 6
-    blog_posts: 15
+    blog_posts: 17
     total_word_count: "~88,500 words"
     estimated_reading_time: "~375 minutes"
     new_content_roi_highlights: "600% ROI featured prominently across all content"

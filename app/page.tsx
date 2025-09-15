@@ -417,6 +417,12 @@ export default function HomePage() {
               <p className="text-gray-600 mb-4">Design agents that respond safely with eval gates and observability.</p>
               <Link href="/blog/ai-2026-agents-oncall-automation" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
             </div>
+            <div className="bg-gray-50 rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">Delivery</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Eval‑Gated CI/CD for Agents</h3>
+              <p className="text-gray-600 mb-4">Add offline and live eval gates to ship safer agent updates.</p>
+              <Link href="/blog/ai-2026-eval-gated-cicd-for-agents" className="text-emerald-700 font-semibold hover:text-emerald-800">Read →</Link>
+            </div>
           </div>
         </div>
       </section>
@@ -875,6 +881,7 @@ export default function HomePage() {
               <div className="flex gap-3">
                 <Link href="/content/hyperautomation-blueprint-2026" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Hyperautomation</Link>
                 <Link href="/content/ai-agents-roi-playbook-2026" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">ROI Playbook</Link>
+                <Link href="/blog/ai-2026-agent-change-management-blueprint" className="hidden md:inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Change Mgmt</Link>
               </div>
             </div>
           </div>
