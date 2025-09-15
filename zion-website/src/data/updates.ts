@@ -10,6 +10,12 @@ export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (latest content)
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
     summary:
       'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
@@ -32,12 +38,21 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-testing-framework-1-0',
     date: '2025-09-15',
     tag: 'Launch'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
 >>>>>>> cursor/create-and-deploy-new-content-8472
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -47,40 +62,6 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/incident-simulation-toolkit-1-1',
     date: '2025-09-15',
     tag: 'Launch'
-  },
-  {
-    title: 'Guide: Evaluating Real-Time Retrieval in Production (2026)',
-    summary:
-      'Streaming metrics, budgeted latency, and rollout playbooks to harden real-time retrieval.',
-    href: '/updates/evaluating-real-time-retrieval-2026',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  // Added 2025-09-15 (brand new content)
-  {
-    title: 'Launch: Autonomous Data Quality Copilot 1.0',
-    summary:
-      'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
-    href: '/updates/autonomous-data-quality-copilot-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  // Added 2025-09-15 (new content created now)
-  {
-    title: 'Launch: Autonomous Security Copilot v1.0',
-    summary:
-      'Proactive threat modeling, policy-aware detections, and incident evidence bundles for AI systems.',
-    href: '/updates/autonomous-security-copilot-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Guide: Production Guardrails for Tool Use (2026)',
-    summary:
-      'Design runtime policies, sandboxing, and least-privilege adapters with live eval gates.',
-    href: '/updates/production-guardrails-tool-use-2026',
-    date: '2025-09-15',
-    tag: 'Guide'
   },
   // Added 2025-09-15 (brand new content)
   {
@@ -92,6 +73,31 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   // Added 2025-09-15 (brand new content)
+  {
+    title: 'Launch: AI Autonomous Workflow Engine v1.0',
+    summary:
+      'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
+    href: '/updates/ai-autonomous-workflow-engine-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  // Newly added 2025-09-15 (to advertise on homepage)
+  {
+    title: 'Report: Enterprise Retrieval Observability (2026)',
+    summary:
+      'Metrics, traces, and dashboards to monitor retrieval quality, drift, and SLIs at scale.',
+    href: '/updates/enterprise-retrieval-observability-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Launch: AI Lab Open Benchmarks Portal',
+    summary:
+      'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
+    href: '/updates/ai-lab-open-benchmarks-portal',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
   {
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:

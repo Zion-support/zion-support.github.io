@@ -108,6 +108,23 @@ export const safeStorage = {
         return false;
       }
     }
+  },
+  
+  // Convenience methods for direct access
+  getItem: (key) => {
+    return safeStorage.localStorage.getItem(key);
+  },
+  
+  setItem: (key, value) => {
+    return safeStorage.localStorage.setItem(key, value);
+  },
+  
+  removeItem: (key) => {
+    return safeStorage.localStorage.removeItem(key);
+  },
+  
+  clear: () => {
+    return safeStorage.localStorage.clear();
   }
 };
 
