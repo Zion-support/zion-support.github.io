@@ -87,6 +87,11 @@ const Support = React.lazy(() => import('./pages/Support'));
 const Investors = React.lazy(() => import('./pages/Investors'));
 const Press = React.lazy(() => import('./pages/Press'));
 
+// New content showcase pages
+const NewContentShowcase = React.lazy(() => import('./pages/NewContentShowcase'));
+const AIInnovationHub = React.lazy(() => import('./pages/AIInnovationHub'));
+const BlogPostNewContent = React.lazy(() => import('./pages/BlogPostNewContent'));
+
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -176,6 +181,11 @@ function App() {
                 <Route path="/investors" element={<Investors />} />
                 <Route path="/legal" element={<Legal />} />
                 <Route path="/press" element={<Press />} />
+                
+                {/* New content showcase routes */}
+                <Route path="/new-content-showcase" element={<NewContentShowcase />} />
+                <Route path="/ai-innovation-hub" element={<AIInnovationHub />} />
+                <Route path="/blog/new-ai-services-announcement" element={<BlogPostNewContent />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
