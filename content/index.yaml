@@ -399,6 +399,35 @@ content_index:
         payback: "3.8 months"
 
   newly_added_september_2025:
+    - id: "ai-2026-evidence-driven-release-checklists"
+      type: "blog"
+      title: "AI 2026: Evidence‑Driven Release Checklists — Gates, Rollbacks, and Audit"
+      file_path: "/content/blog/ai-2026-evidence-driven-release-checklists.md"
+      url: "/blog/ai-2026-evidence-driven-release-checklists"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evaluations", "Reliability", "Governance", "Progressive Delivery", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        rollback_time: "< 5 min"
+        audit_ready: true
+
+    - id: "ai-2026-agent-platform-health-dashboard-starter"
+      type: "resource"
+      title: "AI 2026: Agent Platform Health Dashboard — Starter Kit"
+      file_path: "/content/resources/ai-2026-agent-platform-health-dashboard-starter.md"
+      url: "/resources/ai-2026-agent-platform-health-dashboard-starter"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Observability", "SLOs", "Reliability", "Operations", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        availability: "99.9%"
+        eval_pass_rate: "> 95%"
+        cost_per_task: "tracked"
     - id: "ai-2026-agent-red-teaming-field-guide"
       type: "blog"
       title: "AI 2026: Agent Red‑Teaming Field Guide"
