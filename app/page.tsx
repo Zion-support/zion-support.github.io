@@ -37,12 +37,11 @@ import RevolutionaryContent2026Banner from './components/RevolutionaryContent202
 import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 
 // Import new promotional components
+import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
 import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
+import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
-import SuccessMetricsShowcase2026 from './components/SuccessMetricsShowcase2026';
-import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
-import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from './components/AI2025BreakthroughBanner';
@@ -117,6 +116,44 @@ export default function HomePage() {
         {/* New Content 2026 Autonomous Revenue Agents Promo - NEW */}
         <NewAutonomousRevenueAgentsPromo />
         
+        {/* New Content Promo: Risk Management & Compliance (2026) */}
+        <section className="py-10 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-xl shadow p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Risk</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Risk Management Blueprint (2026)</h3>
+                  <p className="text-gray-600">Mitigate safety, security, and reliability risks with policy-as-code and evals.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/content/ai-2026-agent-risk-management" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-xl shadow p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Compliance</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Autonomous Compliance Operating Model (2026)</h3>
+                  <p className="text-gray-600">Automate controls, evidence, and tests for audit-ready AI operations.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/content/ai-2026-autonomous-compliance" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                </div>
+              </div>
+              <div className="bg-gray-50 rounded-xl shadow p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Playbook</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Risk Mitigation Playbook (2026)</h3>
+                  <p className="text-gray-600">Safeguards, monitoring, and adoption checklist for enterprise agent systems.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/blog/ai-2026-agent-risk-mitigation-playbook" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Analytics Content Showcase 2025 - NEW FEATURED */}
         <AnalyticsContentShowcase2025 />
         
