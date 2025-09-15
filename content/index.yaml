@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-09-15"
-  total_content_pieces: 32
+  total_content_pieces: 33
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -399,6 +399,20 @@ content_index:
         payback: "3.8 months"
 
   newly_added_september_2025:
+    - id: "ai-2026-policy-as-code-in-production"
+      type: "blog"
+      title: "AI 2026: Policy‑as‑Code in Production — Guardrails, Gates, and Evidence"
+      file_path: "/app/blog/ai-2026-policy-as-code-in-production/page.tsx"
+      url: "/blog/ai-2026-policy-as-code-in-production"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Policy-as-Code", "Governance", "Reliability", "Evals", "Autonomous Agents", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        incident_reduction: "40%+"
+        rollback_time: "< 5 min"
     - id: "ai-2026-sovereign-ai-commerce"
       type: "blog"
       title: "AI 2026: Sovereign AI Commerce — Autonomous Marketplaces"
@@ -1004,7 +1018,7 @@ content_index:
     expected_roi_mentions: 50
     success_stories: 8
     implementation_guides: 6
-    blog_posts: 14
+    blog_posts: 15
     total_word_count: "~88,500 words"
     estimated_reading_time: "~375 minutes"
     new_content_roi_highlights: "600% ROI featured prominently across all content"
