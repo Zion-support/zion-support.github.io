@@ -18,6 +18,40 @@ export const updates: UpdateItem[] = [
     tag: 'Course',
   },
   {
+    id: 'genai-systems-design-bootcamp',
+    title: 'Bootcamp: Generative AI Systems Design',
+    summary:
+      'Hands-on bootcamp covering RAG, agents, evaluation, and production GenAI systems.',
+    href: '/updates/genai-systems-design-bootcamp',
+    date: '2025-09-14',
+    tag: 'Course',
+  },
+  {
+    id: 'enterprise-ai-governance-framework',
+    title: 'Announcement: Enterprise AI Governance Framework',
+    summary:
+      'Introducing our comprehensive framework for responsible AI with policy tooling.',
+    href: '/updates/enterprise-ai-governance-framework',
+    date: '2025-09-13',
+    tag: 'Announcement',
+  },
+  {
+    id: 'mlops-observability-challenge',
+    title: 'Community Challenge: MLOps Observability Dashboards',
+    summary: 'Build dashboards for tracing, drift detection, and model health insights.',
+    href: '/updates/mlops-observability-challenge',
+    date: '2025-09-12',
+    tag: 'Challenge',
+  },
+  {
+    id: 'agentic-automation-research',
+    title: 'Research Release: Agentic Automation Patterns',
+    summary: 'Field-tested design patterns for robust autonomous workflows in enterprises.',
+    href: '/updates/agentic-automation-patterns',
+    date: '2025-09-11',
+    tag: 'Research',
+  },
+  {
     id: 'web3-fundamentals-path',
     title: 'New Learning Path: Web3 Fundamentals',
     summary:
