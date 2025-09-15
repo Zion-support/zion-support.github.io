@@ -13,8 +13,13 @@ import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
 import AdvancedAITransformation2026 from './src/pages/AdvancedAITransformation2026';
 import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
+import UltimateTechShowcase2026 from './src/pages/UltimateTechShowcase2026';
+import ComprehensiveAISolutions2026 from './src/pages/ComprehensiveAISolutions2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
+import PromotionalBanner from './src/components/PromotionalBanner';
+import NewsletterSignup from './src/components/NewsletterSignup';
+import LeadGenerationForm from './src/components/LeadGenerationForm';
 
 export default function App(): JSX.Element {
   return (
@@ -23,6 +28,9 @@ export default function App(): JSX.Element {
         <Routes>
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+              {/* Promotional Banner */}
+              <PromotionalBanner />
+              
               <main className="container mx-auto px-4 py-8">
                 {/* NEW: Revolutionary 2026 Content Banner */}
                 <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
@@ -84,11 +92,11 @@ export default function App(): JSX.Element {
                     <a href="/pages/NextGenAIRevolution2026" className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🚀 Next-Gen AI Revolution
                     </a>
-                    <a href="/pages/RevolutionaryTechBlog2026" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      📚 Revolutionary Tech Blog
+                    <a href="/pages/UltimateTechShowcase2026" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🌟 Ultimate Tech Showcase
                     </a>
-                    <a href="/pages/ComprehensiveTechInsights2026" className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-                      🔍 Tech Insights 2026
+                    <a href="/pages/ComprehensiveAISolutions2026" className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🏢 AI Solutions
                     </a>
                   </div>
                 </div>
@@ -139,6 +147,20 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
+                {/* Newsletter Signup */}
+                <div className="mb-12">
+                  <NewsletterSignup />
+                </div>
+
+                {/* Lead Generation Form */}
+                <div className="mb-12">
+                  <LeadGenerationForm 
+                    title="Get Your Free AI Consultation"
+                    subtitle="Discover how our revolutionary AI solutions can transform your business"
+                    variant="default"
+                  />
+                </div>
+
                 {/* Call to Action */}
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -149,9 +171,12 @@ export default function App(): JSX.Element {
                     solutions that drive real business value. Our team of experts is dedicated 
                     to helping you succeed in the digital age.
                   </p>
-                  <div className="flex justify-center space-x-4">
-                    <a href="/pages/AIRevolutionaryBreakthrough2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                      Start Your Journey
+                  <div className="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="/pages/UltimateTechShowcase2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                      Explore All Technologies
+                    </a>
+                    <a href="/pages/ComprehensiveAISolutions2026" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                      AI Solutions
                     </a>
                     <a href="/contact" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                       Contact Us
@@ -173,6 +198,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
           <Route path="/pages/AdvancedAITransformation2026" element={<AdvancedAITransformation2026 />} />
           <Route path="/pages/NextGenTechShowcase2026" element={<NextGenTechShowcase2026 />} />
+          <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
+          <Route path="/pages/ComprehensiveAISolutions2026" element={<ComprehensiveAISolutions2026 />} />
           
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
