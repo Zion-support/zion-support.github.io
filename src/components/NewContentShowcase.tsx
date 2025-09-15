@@ -53,7 +53,7 @@ const NewContentShowcase: React.FC = () => {
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-2xl p-8 mb-12 text-white">
       <div className="text-center mb-8">
         <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
-          🚀 JUST PUBLISHED • JANUARY 2025
+          🚀 JUST PUBLISHED • SEPTEMBER 2025
         </div>
         <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary New Content</h2>
         <p className="text-xl opacity-90">Discover our latest insights on cutting-edge technologies</p>
