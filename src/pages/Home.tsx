@@ -26,15 +26,11 @@ import {
   Network,
   Lock,
   Gauge,
-  BarChart3,
-  Mail,
-  Play,
-  Lightbulb
+  BarChart3
 } from 'lucide-react';
 import type { ComponentType, SyntheticEvent } from 'react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { NewContentPromoBanner } from "@/components/NewContentPromoBanner";
 
 // Lazy load heavy components
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
@@ -373,27 +369,8 @@ export default function Home() {
       />
       
       <div className="min-h-screen bg-futuristic">
-        <NewContentPromoBanner variant="top" />
         {/* Hero Section */}
         <HeroSection />
-
-        {/* Promo: Policy-as-Code in Production */}
-        <motion.section 
-          className="py-6 px-4 sm:px-6 lg:px-8"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="max-w-7xl mx-auto">
-            <div className="rounded-2xl border border-emerald-400/30 bg-emerald-500/10 p-4 sm:p-5 text-center">
-              <p className="text-sm sm:text-base font-semibold text-emerald-200">
-                New: AI 2026 — Policy‑as‑Code in Production
-                <Link to="/blog/ai-2026-policy-as-code-in-production" className="underline decoration-emerald-300/60 underline-offset-4 hover:text-white ml-2">read the blueprint</Link>
-              </p>
-            </div>
-          </div>
-        </motion.section>
 
         {/* New Content Showcase Banner */}
         <motion.section 
@@ -502,7 +479,7 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0 }}
                 className="bg-slate-800/50 rounded-xl overflow-hidden border border-zion-cyan/50 hover:border-zion-cyan transition-all duration-300 md:col-span-1"
               >
-                <Link to="/blog/ai-2026-trusted-genai-patterns-regulated-enterprises" className="block">
+                <Link to="/blog/new-ai-services-announcement" className="block">
                   <div className="aspect-[16/9] bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 flex items-center justify-center">
                     <div className="text-center">
                       <Brain className="w-16 h-16 text-zion-cyan mx-auto mb-2" />
@@ -512,10 +489,10 @@ export default function Home() {
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">AI Innovation</span>
-                      <span className="text-xs text-zion-slate-light">Sep 15, 2025 • 8 min read</span>
+                      <span className="text-xs text-zion-slate-light">Jan 20, 2025 • 15 min read</span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">Trusted GenAI Patterns for Regulated Enterprises</h3>
-                    <p className="text-zion-slate-light line-clamp-3">Blueprint for compliant GenAI with policy-as-code, evals, audit logs, and cost-aware routing.</p>
+                    <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">Revolutionary AI Services: Transforming Business in 2025</h3>
+                    <p className="text-zion-slate-light line-clamp-3">Discover our latest AI-powered solutions including quantum analytics, autonomous cloud infrastructure, and neural security networks.</p>
                   </div>
                 </Link>
               </motion.article>
@@ -734,90 +711,6 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* New Content Showcase */}
-        <motion.section 
-          className="py-20 px-4 sm:px-6 lg:px-8"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <div className="mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wider">
-                  🆕 Fresh Content
-                </span>
-              </div>
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Latest Technology Solutions & Insights
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover our newest services, cutting-edge solutions, and expert insights that are shaping the future of technology
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-8 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-              >
-                <div className="text-center">
-                  <div className="text-4xl mb-4">⚛️</div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing Solutions</h3>
-                  <p className="text-gray-300 mb-6">Revolutionary quantum computing solutions with quantum algorithms, machine learning, and cryptography services.</p>
-                  <Link to="/services/quantum-computing-solutions">
-                    <button className="w-full bg-gradient-to-r from-cyan-500/20 to-blue-600/20 text-cyan-400 border border-cyan-400/30 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-lg">
-                      Explore Quantum Solutions
-                    </button>
-                  </Link>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-8 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <div className="text-center">
-                  <div className="text-4xl mb-4">🤖</div>
-                  <h3 className="text-2xl font-bold text-white mb-4">The Future of AI in Business</h3>
-                  <p className="text-gray-300 mb-6">Expert insights on how AI is revolutionizing business operations with autonomous decision-making and predictive analytics.</p>
-                  <Link to="/blog/the-future-of-ai-in-business-2025">
-                    <button className="w-full bg-gradient-to-r from-cyan-500/20 to-blue-600/20 text-cyan-400 border border-cyan-400/30 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-lg">
-                      Read Article
-                    </button>
-                  </Link>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-8 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              >
-                <div className="text-center">
-                  <div className="text-4xl mb-4">🚀</div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Ultimate Services Showcase 2025</h3>
-                  <p className="text-gray-300 mb-6">Comprehensive overview of our latest technology solutions including AI, quantum computing, and innovative platforms.</p>
-                  <Link to="/ultimate-services-showcase-2025">
-                    <button className="w-full bg-gradient-to-r from-cyan-500/20 to-blue-600/20 text-cyan-400 border border-cyan-400/30 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 hover:text-white transition-all duration-300 px-6 py-3 rounded-lg">
-                      View Showcase
-                    </button>
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </motion.section>
-
         {/* Micro-SaaS Solutions */}
         <motion.section 
           className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30"
@@ -862,171 +755,6 @@ export default function Home() {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </motion.section>
-
-        {/* Featured Content Showcase */}
-        <motion.section 
-          className="py-20 px-4 sm:px-6 lg:px-8"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <div className="flex items-center justify-center mb-6">
-                <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full">
-                  <Lightbulb className="w-5 h-5" />
-                  <span className="font-semibold">Featured Content</span>
-                </div>
-              </div>
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Explore Our Latest Innovations
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover cutting-edge solutions, expert insights, and interactive demos showcasing the future of technology
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Ultimate Services Showcase */}
-              <motion.div
-                className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-              >
-                <div className="flex items-center space-x-3 mb-6">
-                  <div className="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
-                    <Rocket className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold">Ultimate Services 2025</h3>
-                    <p className="text-purple-100 text-sm">Next-Generation Solutions</p>
-                  </div>
-                </div>
-                <p className="text-purple-100 mb-6">
-                  Experience our comprehensive suite of AI, cybersecurity, cloud, and blockchain solutions designed for the digital age.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm bg-white bg-opacity-20 px-3 py-1 rounded-full">50+ Services</span>
-                  <Link
-                    to="/ultimate-services-showcase-2025"
-                    className="flex items-center space-x-2 text-white hover:text-purple-200 transition-colors"
-                  >
-                    <span>Explore Now</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Content Showcase */}
-              <motion.div
-                className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <div className="flex items-center space-x-3 mb-6">
-                  <div className="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
-                    <BookOpen className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold">Knowledge Hub</h3>
-                    <p className="text-blue-100 text-sm">Expert Insights & Resources</p>
-                  </div>
-                </div>
-                <p className="text-blue-100 mb-6">
-                  Access our latest blog posts, case studies, webinars, and white papers from industry experts.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm bg-white bg-opacity-20 px-3 py-1 rounded-full">100+ Articles</span>
-                  <Link
-                    to="/content-showcase"
-                    className="flex items-center space-x-2 text-white hover:text-blue-200 transition-colors"
-                  >
-                    <span>Read More</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Interactive Demos */}
-              <motion.div
-                className="bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              >
-                <div className="flex items-center space-x-3 mb-6">
-                  <div className="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
-                    <Play className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold">Interactive Demos</h3>
-                    <p className="text-green-100 text-sm">Experience Technology</p>
-                  </div>
-                </div>
-                <p className="text-green-100 mb-6">
-                  Try our interactive demos to see how our AI, security, and cloud solutions work in real-time.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm bg-white bg-opacity-20 px-3 py-1 rounded-full">Live Demos</span>
-                  <Link
-                    to="/interactive-demos"
-                    className="flex items-center space-x-2 text-white hover:text-green-200 transition-colors"
-                  >
-                    <span>Try Now</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Newsletter Signup with Content Promo */}
-        <motion.section 
-          className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full">
-                <Mail className="w-5 h-5" />
-                <span className="font-semibold">Stay Updated</span>
-              </div>
-            </div>
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Get Exclusive Access to Our Latest Content
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of professionals who receive our weekly insights on AI, cybersecurity, cloud computing, and emerging technologies.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto mb-8">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-              >
-                Subscribe
-              </motion.button>
-            </div>
-            <p className="text-sm text-gray-400">
-              Get instant access to our latest whitepapers, case studies, and exclusive content. No spam, unsubscribe anytime.
-            </p>
           </div>
         </motion.section>
 

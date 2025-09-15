@@ -1,11 +1,16 @@
+<<<<<<< HEAD:zion-website/src/app/services/page.tsx
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8472:zion-website/src/app/services/page.tsx.backup.1757951019
 import { LightBulbIcon, CogIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const services = [
   { name: 'AI Consulting', description: 'Strategy, readiness, and roadmap for AI adoption.', icon: LightBulbIcon },
   { name: 'Managed AI Operations', description: 'Operate and optimize AI systems with SLAs.', icon: CogIcon },
   { name: 'Enterprise Enablement', description: 'Training, governance, and change management.', icon: UserGroupIcon }
+<<<<<<< HEAD:zion-website/src/app/services/page.tsx
+=======
 =======
 import { 
   UserGroupIcon, 
@@ -157,22 +162,26 @@ const services = [
   { title: 'Platform Engineering', desc: 'Reliable infrastructure and DevOps at scale.', icon: Cog6ToothIcon },
   { title: 'Security & Compliance', desc: 'Protect data and meet regulatory standards.', icon: ShieldCheckIcon },
 >>>>>>> origin/backup-main-20250915-074228
+>>>>>>> cursor/create-and-deploy-new-content-8472:zion-website/src/app/services/page.tsx.backup.1757951019
 ]
 
 export default function ServicesPage() {
   return (
-<<<<<<< HEAD
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-7xl px-6 pt-24">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Services</h1>
-          <p className="mt-4 text-lg leading-8 text-gray-300">From strategy to production, we partner across your AI journey.</p>
+          <p className="mt-4 text-lg leading-8 text-gray-300">Comprehensive AI solutions for enterprise transformation.</p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-none">
           <dl className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-            {services.map((s) => (
-              <div key={s.name} className="rounded-2xl bg-white/5 p-6">
+            {services.map((service) => (
+              <div key={service.name} className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+<<<<<<< HEAD:zion-website/src/app/services/page.tsx
+                  <service.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+                  {service.name}
+=======
                   <s.icon className="h-5 w-5 text-blue-400" />
                   {s.name}
 =======
@@ -291,13 +300,21 @@ export default function ServicesPage() {
                   <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {reason.name}
 >>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
+>>>>>>> cursor/create-and-deploy-new-content-8472:zion-website/src/app/services/page.tsx.backup.1757951019
                 </dt>
-                <dd className="mt-3 text-sm text-gray-300">{s.description}</dd>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                  <p className="flex-auto">{service.description}</p>
+                </dd>
               </div>
             ))}
           </dl>
         </div>
       </div>
+<<<<<<< HEAD:zion-website/src/app/services/page.tsx
+    </div>
+  )
+}
+=======
 <<<<<<< HEAD
 =======
 
@@ -348,3 +365,4 @@ export default function ServicesPage() {
 =======
 }
 >>>>>>> origin/backup-main-20250915-074228
+>>>>>>> cursor/create-and-deploy-new-content-8472:zion-website/src/app/services/page.tsx.backup.1757951019
