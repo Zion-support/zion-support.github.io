@@ -65,6 +65,32 @@ export default function ContentIndexPage() {
           </p>
           <Link href="/content/ai-operating-model-2026" className="text-orange-600 font-semibold">Read Guide →</Link>
         </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/genai-governance-2026" className="hover:underline">
+              GenAI Governance 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Policies, controls, and guardrails to deploy GenAI responsibly across the enterprise.
+          </p>
+          <Link href="/content/genai-governance-2026" className="text-indigo-700 font-semibold">Explore Framework →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-green-700 mb-2">Guide</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/agent-observability-2026" className="hover:underline">
+              Agent Observability 2026
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Build an end-to-end observability stack for AI agents with metrics, tracing, and evals.
+          </p>
+          <Link href="/content/agent-observability-2026" className="text-green-700 font-semibold">Read Guide →</Link>
+        </article>
       </div>
     </main>
   );
