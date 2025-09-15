@@ -102,11 +102,12 @@ export default function HomePage() {
               <div>
                 <p className="text-sm font-semibold text-purple-700">Just published</p>
                 <h2 className="text-2xl font-bold text-gray-900 mt-1">Explore our newest guides</h2>
-                <p className="text-gray-600 mt-2">Now featuring Operational Excellence 2026 and Agent Risk Management 2026.</p>
+                <p className="text-gray-600 mt-2">Now featuring Evals Maturity Model 2026, Agent Safety Certification, and Policy-as-Code.</p>
               </div>
               <div className="flex gap-3">
-                <Link href="/content/ai-2026-operational-excellence-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Operational Excellence</Link>
-                <Link href="/content/ai-2026-agent-risk-management-framework" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agent Risk Management</Link>
+                <Link href="/content/ai-2026-evals-maturity-model" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Evals Maturity</Link>
+                <Link href="/content/ai-2026-agent-safety-certification" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Safety Certification</Link>
+                <Link href="/content/ai-2026-agent-governance-policy-as-code" className="hidden md:inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Policy-as-Code</Link>
               </div>
             </div>
           </div>
