@@ -9,6 +9,22 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (new content created now)
   {
+    title: 'Launch: AI Platform 2.0',
+    summary:
+      'Realtime reasoning, tool-use, retrieval observability, and eval-backed releases baked in.',
+    href: '/updates/ai-platform-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Customer Win: Finance - MTTR -42%',
+    summary:
+      'How a Fortune 100 finance org cut MTTR and boosted FCR with real-time RAG + guardrails.',
+    href: '/updates/customer-win-finance',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
     title: 'Launch: Autonomous Security Copilot v1.0',
     summary:
       'Proactive threat modeling, policy-aware detections, and incident evidence bundles for AI systems.',
