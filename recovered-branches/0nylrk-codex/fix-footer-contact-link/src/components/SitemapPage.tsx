@@ -1,14 +1,5 @@
 
 import React from 'react';
-<<<<<<< HEAD
-import { completeSitemapdynamicPaths } from '@/config/sitemap';
-import { Link } from 'react-router-dom';
-ChevronRight
-=======
-import { completeSitemap, dynamicPaths } from '@/config/sitemap';
-import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import { SEO } from './SEO';
 import { AppLayout } from '@/layout/AppLayout';
 
@@ -18,11 +9,6 @@ export const SitemapPage: React.FC = () => {
       <SEO
         title="Sitemap | Zion AI Marketplace"
         description="Complete sitemap of the Zion AI Marketplace"
-<<<<<<< HEAD
-        keywords="sitemapzionai marketplacenavigation"
-=======
-        keywords="sitemap, zion, ai marketplace, navigation"
->>>>>>> origin/auto/autonomy-17186719616
         canonical="https://app.ziontechgroup.com/sitemap-page"
       />
       <div className="container mx-auto px-4 py-12">
@@ -154,11 +140,6 @@ export const SitemapPage: React.FC = () => {
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
             <ul className="space-y-2">
-<<<<<<< HEAD
-              {Object.entries(dynamicPaths).map(([keypath]) => (
-=======
-              {Object.entries(dynamicPaths).map(([key, path]) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <li key={key}>
                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />

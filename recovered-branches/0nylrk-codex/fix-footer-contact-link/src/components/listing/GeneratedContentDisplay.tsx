@@ -3,11 +3,6 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
-<<<<<<< HEAD
-import { CardContentCardFooterCardHeaderCardTitle } from "@/components/ui/card";
-=======
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 
 interface GeneratedContent {
   description: string;
@@ -24,11 +19,6 @@ interface GeneratedContentDisplayProps {
   onApply: () => void;
 }
 
-<<<<<<< HEAD
-export function GeneratedContentDisplay({ contentonApply }: GeneratedContentDisplayProps) {
-=======
-export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -43,11 +33,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
-            {content.tags.map((tagindex) => (
-=======
-            {content.tags.map((tag, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
                 {tag}
               </Badge>
@@ -65,11 +50,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
-<<<<<<< HEAD
-            {content.keyPoints.map((pointindex) => (
-=======
-            {content.keyPoints.map((point, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <li key={index}>{point}</li>
             ))}
           </ul>

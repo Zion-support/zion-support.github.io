@@ -1,48 +1,7 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-=======
-import React, { useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  UsersRocketBrainGlobeAwardZap
-  HeartStarArrowRightCheckCircleBriefcase
-} from 'lucide-react';
-
-export default function Careers() {
-  const [selectedDepartmentsetSelectedDepartment] = useState('all');
-
-  const departments = [
-    { id: ''all', 'name: 'All Departments' },
-    { id: ''engineering', 'name: 'Engineering' },
-    { id: 'ai-'research', 'name: 'AI Research' },
-    { id: ''quantum', 'name: 'Quantum Computing' },
-    { id: 'space-'tech', 'name: 'Space Technology' },
-    { id: ''sales', 'name: 'Sales & Business Development' },
-    { id: ''marketing', 'name: 'Marketing' },
-    { id: ''operations', 'name: 'Operations' }
-=======
-  Users, Rocket, Brain, Globe, Award, Zap, 
-  Heart, Star, ArrowRight, CheckCircle, Briefcase
-} from 'lucide-react';
-
-export default function Careers() {
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-
-  const departments = [
-    { id: 'all', name: 'All Departments' },
-    { id: 'engineering', name: 'Engineering' },
-    { id: 'ai-research', name: 'AI Research' },
-    { id: 'quantum', name: 'Quantum Computing' },
-    { id: 'space-tech', name: 'Space Technology' },
-    { id: 'sales', name: 'Sales & Business Development' },
-    { id: 'marketing', name: 'Marketing' },
-    { id: 'operations', name: 'Operations' }
->>>>>>> origin/auto/autonomy-17186719616
   ];
 
   const jobOpenings = [
@@ -50,22 +9,10 @@ export default function Careers() {
       id: 1,
       title: 'Senior AI Engineer',
       department: 'ai-research',
-<<<<<<< HEAD
-      location: 'Remote / MiddletownDE',
-=======
-      location: 'Remote / Middletown, DE',
->>>>>>> origin/auto/autonomy-17186719616
       type: 'Full-time',
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
       requirements: [
-<<<<<<< HEAD
-        'Advanced degree in Computer ScienceAIor related field',
-        'Expertise in PythonTensorFlowPyTorch',
-=======
-        'Advanced degree in Computer Science, AI, or related field',
-        'Expertise in Python, TensorFlow, PyTorch',
->>>>>>> origin/auto/autonomy-17186719616
         'Experience with large language models and neural networks',
         'Strong problem-solving and analytical skills'
       ]
@@ -74,22 +21,10 @@ export default function Careers() {
       id: 2,
       title: 'Quantum Computing Researcher',
       department: 'quantum',
-<<<<<<< HEAD
-      location: 'Remote / MiddletownDE',
-=======
-      location: 'Remote / Middletown, DE',
->>>>>>> origin/auto/autonomy-17186719616
       type: 'Full-time',
       experience: '3+ years',
       description: 'Research and develop quantum algorithms and quantum computing solutions.',
       requirements: [
-<<<<<<< HEAD
-        'PhD in PhysicsComputer Scienceor related field',
-        'Experience with quantum programming languages (QiskitCirq)',
-=======
-        'PhD in Physics, Computer Science, or related field',
-        'Experience with quantum programming languages (Qiskit, Cirq)',
->>>>>>> origin/auto/autonomy-17186719616
         'Knowledge of quantum algorithms and quantum information theory',
         'Strong mathematical and theoretical background'
       ]
@@ -98,20 +33,10 @@ export default function Careers() {
       id: 3,
       title: 'Space Technology Engineer',
       department: 'space-tech',
-<<<<<<< HEAD
-      location: 'Remote / MiddletownDE',
-=======
-      location: 'Remote / Middletown, DE',
->>>>>>> origin/auto/autonomy-17186719616
       type: 'Full-time',
       experience: '4+ years',
       description: 'Design and develop innovative space technology solutions and satellite systems.',
       requirements: [
-<<<<<<< HEAD
-        'Degree in Aerospace EngineeringPhysicsor related field',
-=======
-        'Degree in Aerospace Engineering, Physics, or related field',
->>>>>>> origin/auto/autonomy-17186719616
         'Experience with satellite design and space systems',
         'Knowledge of orbital mechanics and space environment',
         'Familiarity with space industry standards and regulations'
@@ -121,20 +46,10 @@ export default function Careers() {
       id: 4,
       title: 'Full Stack Developer',
       department: 'engineering',
-<<<<<<< HEAD
-      location: 'Remote / MiddletownDE',
-=======
-      location: 'Remote / Middletown, DE',
->>>>>>> origin/auto/autonomy-17186719616
       type: 'Full-time',
       experience: '3+ years',
       description: 'Build scalable web applications and cloud-based solutions.',
       requirements: [
-<<<<<<< HEAD
-        'Experience with ReactNode.jsand cloud platforms',
-=======
-        'Experience with React, Node.js, and cloud platforms',
->>>>>>> origin/auto/autonomy-17186719616
         'Knowledge of modern web technologies and APIs',
         'Understanding of software architecture and design patterns',
         'Experience with DevOps and CI/CD practices'
@@ -144,11 +59,6 @@ export default function Careers() {
       id: 5,
       title: 'Business Development Manager',
       department: 'sales',
-<<<<<<< HEAD
-      location: 'Remote / MiddletownDE',
-=======
-      location: 'Remote / Middletown, DE',
->>>>>>> origin/auto/autonomy-17186719616
       type: 'Full-time',
       experience: '5+ years',
       description: 'Drive business growth through strategic partnerships and client relationships.',
@@ -170,11 +80,6 @@ export default function Careers() {
     {
       icon: <Heart className="w-8 h-8" />,
       title: 'People Matter',
-<<<<<<< HEAD
-      description: 'Our team is our greatest assetand we invest in their growth and well-being.'
-=======
-      description: 'Our team is our greatest asset, and we invest in their growth and well-being.'
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       icon: <Globe className="w-8 h-8" />,
@@ -190,11 +95,6 @@ export default function Careers() {
 
   const benefits = [
     'Competitive salary and equity packages',
-<<<<<<< HEAD
-    'Comprehensive healthdentaland vision insurance',
-=======
-    'Comprehensive health, dental, and vision insurance',
->>>>>>> origin/auto/autonomy-17186719616
     'Flexible work arrangements and remote work options',
     'Professional development and training programs',
     'Generous paid time off and holidays',
@@ -212,11 +112,6 @@ export default function Careers() {
       <div className="min-h-screen">
         <Head>
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
-<<<<<<< HEAD
-          <meta name="description" content="Join Zion Tech 'Group', 's team of innovators. Explore career opportunities in AIquantum computingand emerging technologies. Remote workcompetitive benefitsand cutting-edge projects." />
-=======
-          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
->>>>>>> origin/auto/autonomy-17186719616
         </Head>
 
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -231,11 +126,6 @@ export default function Careers() {
             Join Our Team
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-            Be part of a team 'that', 's revolutionizing technology through AIquantum computing
-=======
-            Be part of a team that's revolutionizing technology through AI, quantum computing, 
->>>>>>> origin/auto/autonomy-17186719616
             and space technology. Help us build the future.
           </p>
         </motion.div>
@@ -244,20 +134,10 @@ export default function Careers() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.6delay: 0.2 }}
-=======
-          transition={{ duration: 0.6, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our Culture & Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-            {companyValues.map((valueindex) => (
-=======
-            {companyValues.map((value, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <div key={index} className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 text-center">
                 <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400">
                   {value.icon}
@@ -273,21 +153,11 @@ export default function Careers() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.6delay: 0.4 }}
-=======
-          transition={{ duration: 0.6, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
           <div className="bg-gradient-to-br from-gray-900/40 to-purple-900/20 p-8 rounded-2xl border border-gray-600/20 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-6">
-<<<<<<< HEAD
-              {benefits.map((benefitindex) => (
-=======
-              {benefits.map((benefit, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <div key={index} className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
@@ -301,11 +171,6 @@ export default function Careers() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.6delay: 0.6 }}
-=======
-          transition={{ duration: 0.6, delay: 0.6 }}
->>>>>>> origin/auto/autonomy-17186719616
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>
@@ -368,11 +233,6 @@ export default function Careers() {
                 <div>
                   <h4 className="text-white font-semibold mb-2">Requirements:</h4>
                   <ul className="space-y-1">
-<<<<<<< HEAD
-                    {job.requirements.map((reqindex) => (
-=======
-                    {job.requirements.map((req, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                       <li key={index} className="flex items-start text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                         {req}
@@ -389,11 +249,6 @@ export default function Careers() {
               <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No Open Positions</h3>
               <p className="text-gray-500">
-<<<<<<< HEAD
-                We 'don', 't have any open positions in this department at the moment. 
-=======
-                We don't have any open positions in this department at the moment. 
->>>>>>> origin/auto/autonomy-17186719616
                 Check back later or send us your resume for future opportunities.
               </p>
             </div>
@@ -404,25 +259,6 @@ export default function Careers() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.6delay: 0.8 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">'Don', 't See the Right Fit?</h2>
-            <p className="text-gray-300 mb-6">
-              'We', 're always looking for talented individuals to join our team. 
-              Send us your resume and 'let', 's discuss how you can contribute to our mission.
-=======
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Don't See the Right Fit?</h2>
-            <p className="text-gray-300 mb-6">
-              We're always looking for talented individuals to join our team. 
-              Send us your resume and let's discuss how you can contribute to our mission.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
