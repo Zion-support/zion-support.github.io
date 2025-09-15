@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Support Copilot v1.2',
+    summary:
+      'Faster triage, safer tool use, and improved retrieval observability with new eval gates.',
+    href: '/updates/autonomous-support-copilot-1-2',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: AI Compliance Readiness 2026',
+    summary:
+      'Benchmarks, controls, and audit evidence patterns to meet emerging AI regulations.',
+    href: '/updates/ai-compliance-readiness-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Launch: Agentic Ops Control Center v2.2',
+    summary:
+      'Deeper incident drilldowns, runbook automation, and cross-environment policy status.',
+    href: '/updates/agentic-ops-control-center-2-2',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Blueprint: Sovereign AI Commerce (2026)',
     summary:
       'Reference architecture and rollout checklist for launching autonomous AI marketplaces with policy gates and evals.',

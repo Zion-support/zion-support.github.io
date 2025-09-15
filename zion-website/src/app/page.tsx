@@ -127,10 +127,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/agentic-ops-control-center-2-1"
+                href="/updates/agentic-ops-control-center-2-2"
                 className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
               >
-                Launch: Ops Control Center v2.1
+                Launch: Ops Control Center v2.2
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -190,10 +190,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/autonomous-support-copilot-1-1"
+                href="/updates/autonomous-support-copilot-1-2"
                 className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
               >
-                Launch: Support Copilot v1.1
+                Launch: Support Copilot v1.2
                 <span aria-hidden>→</span>
               </a>
               <a
