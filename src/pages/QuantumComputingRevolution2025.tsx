@@ -25,6 +25,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
             Quantum Computing Revolution 2025
           </h1>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e9dc
+<<<<<<< HEAD
           <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
             Experience exponential computing power with our quantum solutions that solve impossible problems and unlock new possibilities across industries.
           </p>
@@ -159,6 +163,14 @@ const QuantumComputingRevolution2025: React.FC = () => {
           <p className="text-2xl text-cyan-200 max-w-4xl mx-auto mb-8">
             Experience the future of computing with quantum technology that solves impossible problems, 
             breaks encryption, and revolutionizes industries across the globe.
+<<<<<<< HEAD
+=======
+=======
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Experience the next generation of quantum computing with unprecedented processing power, 
+            quantum supremacy, and revolutionary applications that will transform industries.
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> cursor/create-and-deploy-new-content-e9dc
           </p>
         </motion.div>
 
@@ -295,6 +307,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e9dc
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-6">⚛️</div>
@@ -666,10 +682,57 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <div className="text-4xl mb-3">🌐</div>
               <h3 className="font-bold text-gray-900 mb-2">Quantum Cloud</h3>
               <p className="text-sm text-gray-600">Scalable access</p>
+<<<<<<< HEAD
+=======
+=======
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
+          >
+            <div className="text-5xl mb-4 text-center">🔮</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum AI</h3>
+            <p className="text-emerald-100 text-center">
+              Combine quantum computing with artificial intelligence for 
+              revolutionary machine learning capabilities.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Applications */}
+        <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 rounded-3xl p-12 mb-16">
+          <h2 className="text-4xl font-bold text-white text-center mb-12">Quantum Applications</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl mb-4">🏥</div>
+              <h3 className="text-xl font-bold mb-2 text-white">Drug Discovery</h3>
+              <p className="text-gray-300 text-sm">Accelerate pharmaceutical research with quantum molecular modeling</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🔐</div>
+              <h3 className="text-xl font-bold mb-2 text-white">Cryptography</h3>
+              <p className="text-gray-300 text-sm">Revolutionary quantum encryption and security protocols</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🌍</div>
+              <h3 className="text-xl font-bold mb-2 text-white">Climate Modeling</h3>
+              <p className="text-gray-300 text-sm">Advanced climate simulation and environmental research</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold mb-2 text-white">Space Exploration</h3>
+              <p className="text-gray-300 text-sm">Quantum navigation and space mission optimization</p>
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> cursor/create-and-deploy-new-content-e9dc
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-e9dc
         {/* Call to Action */}
         <div id="contact" className="text-center bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12 text-white">
           <h2 className="text-4xl font-bold mb-4">Ready for Quantum Revolution?</h2>
@@ -692,6 +755,27 @@ const QuantumComputingRevolution2025: React.FC = () => {
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+<<<<<<< HEAD
+=======
+=======
+        {/* CTA Section */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready for Quantum Revolution?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join the quantum computing revolution and unlock unprecedented computational power 
+            for your business and research needs.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Quantum Journey
+            </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+              Contact Quantum Experts
+            </button>
+          </div>
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> cursor/create-and-deploy-new-content-e9dc
       </div>
     </div>
   );
