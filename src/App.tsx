@@ -9,9 +9,7 @@ import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { PromotionalBanner } from './components/PromotionalBanner';
-import { NewContentPromotionalBanner } from './components/NewContentPromotionalBanner';
-import { ContentShowcase } from './components/ContentShowcase';
-import { NewContentShowcase } from './components/NewContentShowcase';
+// Removed direct import to avoid name collision with lazy import below
 import { ServicesHighlight } from './components/ServicesHighlight';
 
 // Lazy load pages - only import existing ones
@@ -66,9 +64,7 @@ const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovati
 // New content showcase components
 const UltimateServicesShowcase2025 = React.lazy(() => import('./components/UltimateServicesShowcase2025'));
 const ContentShowcase = React.lazy(() => import('./components/ContentShowcase'));
-const NewContentShowcase = React.lazy(() => import('./components/NewContentShowcase'));
 const InteractiveDemoShowcase = React.lazy(() => import('./components/InteractiveDemoShowcase'));
-const InteractiveDemo = React.lazy(() => import('./pages/InteractiveDemo'));
 
 // Service pages with enhanced error boundaries
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -88,12 +84,9 @@ const AIPoweredMarketingAutomation = React.lazy(() => import('./pages/services/A
 
 // New content pages
 const InnovativeTechSolutions2025 = React.lazy(() => import('./pages/InnovativeTechSolutions2025'));
-const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
+const UltimateServicesShowcase2025Page = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
 const TheFutureOfAIInBusiness2025 = React.lazy(() => import('./pages/blog/TheFutureOfAIInBusiness2025'));
-const AIRevolution2025 = React.lazy(() => import('./pages/blog/AIRevolution2025'));
-const QuantumComputingBusiness = React.lazy(() => import('./pages/blog/QuantumComputingBusiness'));
 const QuantumComputingSolutions = React.lazy(() => import('./pages/services/QuantumComputingSolutions'));
-const AIPoweredCustomerSuccessPlatform = React.lazy(() => import('./pages/services/AI-Powered-Customer-Success-Platform'));
 
 // Additional pages from remote
 const Legal = React.lazy(() => import('./pages/Legal'));
@@ -151,7 +144,6 @@ function App() {
         <div className="min-h-screen bg-futuristic">
           <AppHeader />
           <PromotionalBanner />
-          <NewContentPromotionalBanner />
           
           <main className="flex-1">
             <Suspense fallback={<LoadingSpinner />}>
@@ -204,10 +196,9 @@ function App() {
                 <Route path="/training" element={<Training />} />
                 <Route path="/support" element={<Support />} />
                 <Route path="/demo" element={<Demo />} />
-                <Route path="/interactive-demo" element={<InteractiveDemo />} />
                 
                 {/* New Content Showcase Routes */}
-                <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
+                <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025Page />} />
                 <Route path="/content-showcase" element={<ContentShowcase />} />
                 <Route path="/interactive-demos" element={<InteractiveDemoShowcase />} />
 
@@ -220,10 +211,6 @@ function App() {
                 <Route path="/new-content-showcase" element={<NewContentShowcase />} />
                 <Route path="/ai-innovation-hub" element={<AIInnovationHub />} />
                 <Route path="/blog/new-ai-services-announcement" element={<BlogPostNewContent />} />
-                
-                {/* New blog posts */}
-                <Route path="/blog/ai-revolution-2025" element={<AIRevolution2025 />} />
-                <Route path="/blog/quantum-computing-business" element={<QuantumComputingBusiness />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
@@ -238,11 +225,9 @@ function App() {
                 <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnosticsPlatform />} />
                 <Route path="/services/blockchain-supply-chain-transparency" element={<BlockchainSupplyChainTransparency />} />
                 <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
-                <Route path="/services/ai-powered-customer-success-platform" element={<AIPoweredCustomerSuccessPlatform />} />
 
                 {/* New content routes */}
                 <Route path="/innovative-tech-solutions-2025" element={<InnovativeTechSolutions2025 />} />
-                <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
                 <Route path="/blog/the-future-of-ai-in-business-2025" element={<TheFutureOfAIInBusiness2025 />} />
 
                 {/* New AI-powered service routes */}
