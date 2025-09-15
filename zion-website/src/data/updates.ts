@@ -7,12 +7,38 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (new content)
+  {
+    title: 'Blueprint: Agent Budgeting & Cost Controls (2026)',
+    summary:
+      'Set budgets, enforce spend guardrails, and route by cost-quality tradeoffs with audit evidence.',
+    href: '/updates/agent-budgeting-blueprint-2026',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
   // Added 2025-09-15 (brand new content)
   {
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary:
       'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  // Newly added 2025-09-15 (to advertise on homepage)
+  {
+    title: 'Report: Enterprise Retrieval Observability (2026)',
+    summary:
+      'Metrics, traces, and dashboards to monitor retrieval quality, drift, and SLIs at scale.',
+    href: '/updates/enterprise-retrieval-observability-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Launch: AI Lab Open Benchmarks Portal',
+    summary:
+      'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
+    href: '/updates/ai-lab-open-benchmarks-portal',
     date: '2025-09-15',
     tag: 'Launch'
   },

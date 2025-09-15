@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 import {
   ChartBarIcon,
   CpuChipIcon,
   GlobeAltIcon,
   LightBulbIcon,
-=======
-import React from 'react'
-import { 
-  LightBulbIcon, 
-  CpuChipIcon, 
-  GlobeAltIcon, 
->>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
   ShieldCheckIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
@@ -118,10 +110,11 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-              New: Autonomous Data Quality Copilot 1.0 —
-              <a href="/updates/autonomous-data-quality-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read launch</a>
+              New: Enterprise Retrieval Observability 2026 —
+              <a href="/updates/enterprise-retrieval-observability-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read report</a>
               <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates/enterprise-retrieval-latency-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see latency benchmarks 2026</a>
+              AI Lab Open Benchmarks Portal —
+              <a href="/updates/ai-lab-open-benchmarks-portal" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
@@ -425,15 +418,12 @@ export default function HomePage() {
         </div>
       </div>
 
-<<<<<<< HEAD
-      {/* What's New section */}
+      {/* What's New section (Latest Updates from data) */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Fresh content, announcements, and courses from Zion Academy. Visit the Updates page for more.
-          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">Fresh content and announcements. Visit Updates for more.</p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
@@ -454,63 +444,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
-      {/* Latest on the blog */}
-      <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Latest on the blog</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Just published</p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            New articles on enterprise AI, security, and autonomous systems.
-          </p>
-        </div>
-        <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-            {[
-              {
-                title: 'AI 2026: Trustworthy Model Routing',
-                summary:
-                  'Policy‑aware, evaluation‑driven routing balancing quality, latency, and cost with audit evidence.',
-                href: '/blog/ai-2026-trustworthy-model-routing'
-              },
-              {
-                title: 'AI 2026: Policy‑as‑Code in Production — Blueprint',
-                summary:
-                  'Operationalize governance with executable policies, CI/CD gates, and audit‑ready evidence.',
-                href: '/blog/ai-2026-policy-as-code-production-blueprint'
-              },
-              {
-                title: 'AI 2026: Generative AI Risk Register',
-                summary:
-                  'Templates, owners, mitigations, and audit evidence to operationalize AI risk.',
-                href: '/blog/ai-2026-generative-ai-risk-register'
-              },
-              {
-                title: 'AI 2026: Real‑Time Retrieval Architectures',
-                summary:
-                  'Low‑latency hybrid retrieval patterns with grounding, evals, and rollout controls.',
-                href: '/blog/ai-2026-real-time-retrieval-architectures'
-              }
-            ].map((item) => (
-              <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-                <h3 className="text-lg font-semibold leading-6 text-white">
-                  <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
-                    <span className="absolute inset-0" />
-                    {item.title}
-                  </a>
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-gray-300">{item.summary}</p>
-                <a href={item.href} className="mt-6 text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
-                  Read more <span aria-hidden="true">→</span>
-                </a>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-=======
->>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
       {/* Features section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
