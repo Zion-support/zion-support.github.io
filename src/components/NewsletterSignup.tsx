@@ -1,21 +1,17 @@
-"use client";
-import React{ useState } from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
-interface NewsletterSignupProps {
-  variant?: 'default' | 'compact' | 'hero';
-  className?: string;
-}
-
-export default function NewsletterSignup({ variant = ', 'default', 'className = ', ' }: NewsletterSignupProps) {
-  const [emailsetEmail] = useState('');
-  const [isSubmittingsetIsSubmitting] = useState(false);
-  const [isSubscribedsetIsSubscribed] = useState(false);
+const NewsletterSignup: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setIsLoading(true);
     
     // Simulate API call
+<<<<<<< HEAD
     await new Promise(resolve => setTimeout(resolve1000));
     
     setIsSubscribed(true);
@@ -34,16 +30,22 @@ const NewsletterSignup: React.FC = () => {
     setIsLoading(true);
     
     // Simulate API call
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
     setTimeout(() => {
       setIsSubscribed(true);
       setIsLoading(false);
       setEmail('');
     }, 2000);
+<<<<<<< HEAD
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
   };
 
   if (isSubscribed) {
     return (
+<<<<<<< HEAD
       <div className={`text-center p-6 bg-green-50 border border-green-200 rounded-lg ${className}`}>
         <div className="text-green-600 text-4xl mb-4">✅</div>
         <h3 className="text-lg font-semibold text-green-800 mb-2">Successfully Subscribed!</h3>
@@ -61,6 +63,8 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
             Get exclusive access to breakthrough AI contentcase studiesand implementation guides.
           </p>
         </div>
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -98,7 +102,10 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
           </p>
         </div>
 
+<<<<<<< HEAD
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
           <div className="flex flex-col sm:flex-row gap-4">
             <input
@@ -144,44 +151,9 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
           </div>
         </div>
       </div>
-    );
-  }
-
-  return (
-    <div className={`bg-white border border-gray-200 rounded-xl p-8 ${className}`}>
-      <div className="text-center mb-6">
-        <div className="text-4xl mb-4">📧</div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Get Our AI Newsletter</h2>
-        <p className="text-gray-600">
-          Weekly insights on AI trendscase studiesand implementation strategies. 
-          Join 25,000+ professionals transforming their businesses.
-        </p>
-      </div>
-      
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-        <div className="mb-4">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email address"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            required
-          />
-        </div>
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50"
-        >
-          {isSubmitting ? 'Subscribing...' : 'Subscribe Free'}
-        </button>
-        <p className="text-xs text-gray-500 mt-3 text-center">
-          No spam. Unsubscribe anytime. We respect your privacy.
-        </p>
-      </form>
-    </div>
+    </motion.div>
   );
+<<<<<<< HEAD
 }
     </motion.div>
   );
@@ -189,3 +161,8 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
 
 export default NewsletterSignup;
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+=======
+};
+
+export default NewsletterSignup;
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a

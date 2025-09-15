@@ -1,7 +1,7 @@
-"use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 const EnhancedContentShowcase = () => {
   const [activeTab, setActiveTab] = useState('breakthroughs');
   const [isVisible, setIsVisible] = useState(false);
@@ -93,6 +93,8 @@ const EnhancedContentShowcase = () => {
         }
       ]
     }
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
 const EnhancedContentShowcase: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -737,6 +739,11 @@ cursor/create-and-deploy-new-content-f175
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20 text-center">
         <h2 className="text-4xl font-bold text-white mb-4">Ready to Explore the Future?</h2>
@@ -785,8 +792,15 @@ cursor/create-and-deploy-new-content-f175
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 cursor/create-and-deploy-new-content-3afb
 cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f175
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
       {/* Quick Access Grid */}
       <div className="mt-12 grid md:grid-cols-3 gap-6">
         {contentSlides.map((slide, index) => (
@@ -809,11 +823,20 @@ cursor/create-and-deploy-new-content-f175
             </a>
           </motion.div>
         ))}
+<<<<<<< HEAD
 cursor/create-and-deploy-new-content-634d
 cursor/create-and-deploy-new-content-f175
       </div>
     </div>
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f175
+      </div>
+    </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
   );
 };
 

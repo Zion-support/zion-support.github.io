@@ -1,13 +1,83 @@
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+<<<<<<< HEAD
+// Fetch utility with retry logic and error handling
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Fetch with retry utility for handling network requests with automatic retries
+
+interface FetchWithRetryOptions {
+  retries?: number;
+  delay?: number;
+  backoff?: 'linear' | 'exponential';
+  timeout?: number;
+}
+
+const defaultOptions: Required<FetchWithRetryOptions> = {
+  retries: 3,
+  delay: 1000,
+  backoff: 'exponential',
+  timeout: 10000
+};
+
+=======
+// Fetch with retry utility for better error handling
+interface FetchWithRetryOptions {
+  retries?: number;
+  delay?: number;
+  timeout?: number;
+}
+
+>>>>>>> main
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
 export const fetchWithRetry = async (
   url: string,
   options: RequestInit & FetchWithRetryOptions = {}
 ): Promise<Response> => {
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+<<<<<<< HEAD
+  const { retries, delay, backoff, timeout, ...fetchOptions } = {
+    ...defaultOptions,
+    ...options
+  };
+
+  let lastError: Error | null = null;
+
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      // Create abort controller for timeout
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+      const response = await fetch(url, {
+        ...fetchOptions,
+        signal: controller.signal
+      });
+
+      clearTimeout(timeoutId);
+
+      // Check if response is ok
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+=======
+  const { retries = 3, delay = 1000, timeout = 10000, ...fetchOptions } = options;
+  
+=======
+/**
+ * Fetch utility with retry logic and error handling
+ */
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
 
 interface FetchWithRetryOptions {
   retries?: number;
@@ -52,15 +122,49 @@ export const fetchWithRetry = async (
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+<<<<<<< HEAD
+
+      return response;
+=======
+<<<<<<< HEAD
+      
+>>>>>>> main
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
       return response;
     } catch (error) {
       lastError = error as Error;
       
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+<<<<<<< HEAD
+      // Don't retry on the last attempt
+      if (attempt === retries) {
+        break;
+      }
+
+      // Calculate delay based on backoff strategy
+      const currentDelay = backoff === 'exponential' 
+        ? delay * Math.pow(2, attempt)
+        : delay * (attempt + 1);
+
+      // Wait before retrying
+      await new Promise(resolve => setTimeout(resolve, currentDelay));
+    }
+  }
+
+  throw lastError || new Error('Fetch failed after all retries');
+=======
+      if (attempt === retries) {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
     } catch (error) {
       clearTimeout(timeoutId);
 
@@ -177,10 +281,13 @@ export const del = (url: string, options: Omit<FetchOptions, 'method'> = {}): Pr
   return fetchWithRetry(url, { ...options, method: 'DELETE' });
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
 };
 
 export default fetchWithRetry;

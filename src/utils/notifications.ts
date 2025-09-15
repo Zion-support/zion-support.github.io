@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 =======
@@ -16,14 +17,22 @@ interface NotificationOptions {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+// Notification utilities
+interface NotificationOptions {
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+  data?: any;
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
   requireInteraction?: boolean;
   silent?: boolean;
   timestamp?: number;
@@ -44,6 +53,7 @@ class NotificationManager {
       this.permission = await Notification.requestPermission();
     }
     return this.permission;
+<<<<<<< HEAD
   }
 
   async showNotification(options: NotificationOptions): Promise<Notification | null> {
@@ -85,6 +95,8 @@ class NotificationManager {
     return this.permission;
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
   }
 
   async showNotification(options: NotificationOptions): Promise<Notification | null> {
@@ -99,6 +111,7 @@ class NotificationManager {
         console.warn('Notification permission denied');
         return null;
       }
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
@@ -109,6 +122,8 @@ class NotificationManager {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
     }
 
     try {
@@ -117,13 +132,17 @@ class NotificationManager {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
         data: options.data,
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions || [],
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
@@ -135,6 +154,8 @@ class NotificationManager {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -176,6 +197,7 @@ class NotificationManager {
 
   showError(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
+<<<<<<< HEAD
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
@@ -183,15 +205,20 @@ class NotificationManager {
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 =======
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
       requireInteraction: true,
     });
   }
@@ -216,6 +243,7 @@ class NotificationManager {
 }
 
 export const notificationManager = new NotificationManager();
+<<<<<<< HEAD
 >>>>>>> main
 =======
 export default notificationManager;
@@ -227,3 +255,6 @@ export default notificationManager;
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+export default notificationManager;
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a

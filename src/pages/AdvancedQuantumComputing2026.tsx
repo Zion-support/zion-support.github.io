@@ -1,4 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -172,6 +182,11 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       <Footer />
 =======
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
 >>>>>>> cursor/create-and-deploy-new-content-f175
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
@@ -245,6 +260,18 @@ const AdvancedQuantumComputing2026: React.FC = () => {
         </div>
       </div>
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 989864ad5ef118804be96b17356deb0745379eba
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
 =======

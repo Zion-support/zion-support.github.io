@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 export const safeStorage = {
   // Safe localStorage operations
@@ -55,6 +56,8 @@ export const safeStorage = {
   },
 =======
 =======
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key: string): string | null => {
@@ -89,6 +92,7 @@ export const safeStorage = {
       localStorage.clear();
     } catch (error) {
       console.warn('localStorage not available:', error);
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
@@ -99,6 +103,8 @@ export const safeStorage = {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
     }
   }
 };

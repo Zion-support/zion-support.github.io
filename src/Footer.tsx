@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { 
   Mail, 
@@ -221,6 +222,9 @@ const Footer: React.FC = () => {
           </div>
 import { Link } from 'react-router-dom';
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
 
 const Footer: React.FC = () => {
   return (
@@ -381,7 +385,10 @@ cursor/create-and-deploy-new-content-7857
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
         </div>
       </div>
     </footer>

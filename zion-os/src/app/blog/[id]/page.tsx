@@ -12,10 +12,17 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-2def
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+<<<<<<< HEAD
+  'agentic-safety-patterns-2025': {
+    id: 'agentic-safety-patterns-2025',
+    title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
     excerpt:
       'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
     category: 'AI Safety',
@@ -39,11 +46,14 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     content: [
       'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
       'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-7857
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
 =======
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
@@ -61,14 +71,17 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Key components include AI ethics committees, risk assessment protocols, bias detection systems, and audit trails for AI decisions.',
       'The framework addresses regulatory requirements including EU AI Act, NIST AI Risk Management Framework, and industry-specific guidelines.',
       'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
+<<<<<<< HEAD
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
 >>>>>>> cursor/create-and-deploy-new-content-7857
+=======
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
     ]
   },
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
   'agent-safety-red-teaming-2025': {
     id: 'agent-safety-red-teaming-2025',
     title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',

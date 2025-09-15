@@ -112,8 +112,17 @@ const NewContentShowcase: React.FC = () => {
 >>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 export { NewContentShowcase };
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 export { NewContentShowcase };
 >>>>>>> cursor/create-and-deploy-new-content-8735
 export default NewContentShowcase;
+=======
+<<<<<<< HEAD
+export default NewContentShowcase;
+>>>>>>> cursor/create-and-deploy-new-content-7857
+=======
+export default NewContentShowcase;
+>>>>>>> cursor/create-and-deploy-new-content-45eb
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a

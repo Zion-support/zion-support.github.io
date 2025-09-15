@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -154,6 +155,10 @@ import React from 'react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -221,7 +226,10 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
             </svg>
           </button>
         </div>
+<<<<<<< HEAD
 cursor/create-and-deploy-new-content-7857
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -272,7 +280,10 @@ cursor/create-and-deploy-new-content-7857
             </nav>
           </div>
         )}
+<<<<<<< HEAD
 e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
       </div>
     </header>
   );
