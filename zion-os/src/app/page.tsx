@@ -791,6 +791,22 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
+          {/* What's New Teaser */}
+          <div className="mb-16">
+            <div className="glass-effect rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div>
+                <p className="text-sm text-white/60 mb-1">What's New</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Agent Safety Eval Suite 2025</h3>
+                <p className="text-white/70 max-w-2xl">
+                  New evaluation framework for multi-agent safety with CI integration and policy gating.
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <a href="/blog/agent-safety-eval-suite-2025" className="btn-primary hover-lift">Read Article</a>
+                <a href="/news" className="btn-secondary hover-lift">More Updates</a>
+              </div>
+            </div>
+          </div>
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Everything You Need to Build the Future</h2>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
