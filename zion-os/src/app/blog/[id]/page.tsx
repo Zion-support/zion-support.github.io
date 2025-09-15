@@ -11,6 +11,36 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-governance-safety-2025': {
+    id: 'ai-governance-safety-2025',
+    title: 'AI Governance in 2025: Safe Autonomy with Policy and Human Oversight',
+    excerpt:
+      'A pragmatic framework for governing autonomous AI systems with verifiable policy, guardrails, and human-in-the-loop controls.',
+    category: 'AI Ethics',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'As organizations scale autonomous AI, safety moves from aspiration to implementation. Effective governance combines verifiable identity, transparent policy, and context-aware oversight.',
+      'We outline a layered model: capability caps and allowlists, policy engines with simulation, intervention tiers for sensitive actions, and post-incident learning loops.',
+      'Success metrics include reduced critical incidents, faster safe rollout, and auditable decision trails that satisfy regulators and customers alike.'
+    ]
+  },
+  'edge-ai-infrastructure-2025': {
+    id: 'edge-ai-infrastructure-2025',
+    title: 'Edge AI Infrastructure: Low-Latency Intelligence at Global Scale',
+    excerpt:
+      'Designing an edge-first AI platform with secure model distribution, event streams, and policy-aware execution.',
+    category: 'Infrastructure',
+    author: 'Michael Rodriguez',
+    date: '2025-09-14',
+    readTime: '9 min read',
+    content: [
+      'Latency, data residency, and cost efficiency make edge AI inevitable. The winning pattern blends regional inference, centralized coordination, and secure update channels.',
+      'We cover deployment topologies, streaming backbones, model lifecycle, and observability. A reference stack includes CDN package channels, WebAssembly sandboxes, and signed policy bundles.',
+      'Outcomes: faster UX, lower egress costs, and resilient operation during network partitions.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',

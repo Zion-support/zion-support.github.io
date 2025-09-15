@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'ai-governance-safety-2025',
+      title: 'AI Governance in 2025: Safe Autonomy with Policy and Human Oversight',
+      excerpt: 'A pragmatic framework for governing autonomous AI systems with verifiable policy and HITL.',
+      category: 'AI Ethics',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-governance.jpg',
+      featured: true
+    },
+    {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -65,6 +76,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'edge-ai-infrastructure-2025',
+      title: 'Edge AI Infrastructure: Low-Latency Intelligence at Global Scale',
+      excerpt: 'Design patterns for global edge inference with secure updates and policy-aware execution.',
+      category: 'Infrastructure',
+      author: 'Michael Rodriguez',
+      date: '2025-09-14',
+      readTime: '9 min read',
+      image: '/blog/edge-ai.jpg'
+    },
     {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
