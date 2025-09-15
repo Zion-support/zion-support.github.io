@@ -38,7 +38,11 @@
     "src/**/*",
     "src/types/offline-shims.d.ts",
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
     "**/*.ts",
     "**/*.tsx",
     "tailwind.config.js",
@@ -56,6 +60,10 @@
     "**/*.spec.tsx"
 =======
     "coverage"
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
   ]
 }
