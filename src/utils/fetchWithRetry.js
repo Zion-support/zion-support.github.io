@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Fetch with retry utility
 export const fetchWithRetry = async (url, options = {}, maxRetries = 3) => {
   let lastError;
@@ -23,33 +24,32 @@ export const fetchWithRetry = async (url, options = {}, maxRetries = 3) => {
 =======
 // Fetch with retry utility for robust API calls
 
+=======
+// Fetch with retry utility
+>>>>>>> origin/cursor/create-and-deploy-new-content-7d6d
 export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 1000) => {
-  const defaultOptions = {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    ...options,
-  };
-
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      const response = await fetch(url, defaultOptions);
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      const response = await fetch(url, options);
+      if (response.ok) {
+        return response;
       }
       
-      return response;
-    } catch (error) {
-      console.warn(`Fetch attempt ${attempt} failed:`, error.message);
+      // If not the last attempt, wait and retry
+      if (attempt < maxRetries) {
+        await new Promise(resolve => setTimeout(resolve, delay * attempt));
+        continue;
+      }
       
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    } catch (error) {
+      // If this is the last attempt, throw the error
       if (attempt === maxRetries) {
         throw error;
       }
       
-      // Wait before retrying with exponential backoff
-      await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt - 1)));
+      // Wait before retrying
+      await new Promise(resolve => setTimeout(resolve, delay * attempt));
     }
   }
 >>>>>>> cursor/create-and-deploy-new-content-d952
