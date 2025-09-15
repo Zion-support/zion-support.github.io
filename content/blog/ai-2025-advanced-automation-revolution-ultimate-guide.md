@@ -157,13 +157,15 @@ This comprehensive guide reveals the strategies, technologies, and implementatio
 - Error reduction savings: $400K annually
 - Infrastructure optimization: $400K annually
 
-### Return Components
+### Revenue Generation
+- Increased productivity: $600K annually
+- Faster time-to-market: $500K annually
+- Improved customer satisfaction: $300K annually
+- New business opportunities: $200K annually
 
-#### 1. Direct Cost Savings
-- **Labor Cost Reduction**: 60-80% reduction in manual processes
-- **Error Reduction**: 95% reduction in costly errors
-- **Efficiency Gains**: 300-500% improvement in process speed
-- **Resource Optimization**: 40-60% reduction in resource waste
+### Total Annual Value: $4.2M
+### Implementation Cost: $700K
+### **Net ROI: 500%**
 
 ## Case Study: Fortune 500 Manufacturing Success
 
