@@ -275,5 +275,26 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     highlight: true,
     date: "2025-09-15",
   },
+  {
+    id: "genai-risk-register-2026",
+    title: "AI 2026: Generative AI Risk Register",
+    description:
+      "A living risk register template with example entries and governance linkages.",
+    ctaLabel: "Use Template",
+    href: "/blog/ai-2026-generative-ai-risk-register",
+    emoji: "📋",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-cost-optimization-2026",
+    title: "AI 2026: Agent Cost Optimization Guide",
+    description:
+      "Cut spend with routing, caching, batching, and benchmark-driven model selection.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agent-cost-optimization",
+    emoji: "💸",
+    date: "2025-09-15",
+  },
 ];
 

@@ -108,6 +108,33 @@ export default function HomePage() {
       </section>
       {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={6} />
+      {/* Quick promos for new items */}
+      <section className="py-6 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+              <div className="text-sm font-semibold text-purple-700 mb-1">Risk</div>
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900">GenAI Risk Register (2026)</h3>
+                  <p className="text-gray-600 text-sm mt-1">Template + examples tied to eval gates and governance.</p>
+                </div>
+                <Link href="/blog/ai-2026-generative-ai-risk-register" className="shrink-0 inline-block bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-700">Read</Link>
+              </div>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+              <div className="text-sm font-semibold text-green-700 mb-1">FinOps</div>
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900">Agent Cost Optimization (2026)</h3>
+                  <p className="text-gray-600 text-sm mt-1">Routing, caching, batching, and benchmark-driven savings.</p>
+                </div>
+                <Link href="/blog/ai-2026-agent-cost-optimization" className="shrink-0 inline-block border border-green-600 text-green-700 px-4 py-2 rounded-lg font-semibold hover:bg-green-50">Explore</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <div className='min-h-screen bg-white'>
         <WhatsNewStrip />

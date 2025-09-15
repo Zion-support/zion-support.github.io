@@ -1,16 +1,22 @@
-import { toast  } from 'react-hot-toast.ts'
+import { toast as hotToast } from 'react-hot-toast'
 
-interface ToastOptions {
+type Variant = 'default' | 'destructive'
 
-duration?: number;
-position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left";
-
+type AppToastArgs = {
+  title: string
+  description?: string
+  variant?: Variant
 }
 
-export function useToast(...args: any[]): any {
-  const showToast = (message: anystring, options?: ToastOptions)  => {
-    return toast(message, options)
+export const toast = ({ title, description, variant = 'default' }: AppToastArgs) => {
+  const message = description ? `${title}\n${description}` : title
+  if (variant === 'destructive') {
+    return hotToast.error(message)
   }
+  return hotToast(message)
+}
 
+export function useToast() {
+  const showToast = (message: string) => hotToast(message)
   return { showToast }
 }

@@ -15,6 +15,31 @@ export default function ContentIndexPage() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Risk</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-generative-ai-risk-register" className="hover:underline">
+              Generative AI Risk Register (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            A living risk register template with owners, mitigations, and links to eval gates.
+          </p>
+          <Link href="/blog/ai-2026-generative-ai-risk-register" className="text-purple-600 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-green-700 mb-2">FinOps</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-agent-cost-optimization" className="hover:underline">
+              Agent Cost Optimization (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Cut agent TCO with routing, caching, batching, and benchmark-driven model choices.
+          </p>
+          <Link href="/blog/ai-2026-agent-cost-optimization" className="text-green-700 font-semibold">Explore →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-emerald-700 mb-2">Blueprint</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/ai-governance-blueprint-2026" className="hover:underline">

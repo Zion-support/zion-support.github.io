@@ -1,12 +1,12 @@
-import React from 'react.ts';
-import { AlertTriangle, RefreshCw  } from 'lucide-react.ts';
+import React from 'react';
+import { AlertTriangle, RefreshCw  } from 'lucide-react';
+
 interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
-
-  error: anyError;
-  resetErrorBoundary: ()  => void;
-
+  error: Error & { message?: string };
+  resetErrorBoundary: () => void;
 }
-export default function LoginErrorFallback(...args: any[]): any {
+
+export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginErrorFallbackProps) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-futuristic p-4">
       <div className="max-w-md w-full bg-zion-slate-dark rounded-xl border border-zion-cyan/20 p-8 text-center">
@@ -24,9 +24,7 @@ export default function LoginErrorFallback(...args: any[]): any {
             <summary className="text-zion-cyan cursor-pointer text-sm">
               Error details
             </summary>
-            <pre className="text-xs text-zion-slate-light mt-2 p-3 bg-zion-slate rounded overflow-auto">
-              {error.message}
-            </pre>
+            <pre className="text-xs text-zion-slate-light mt-2 p-3 bg-zion-slate rounded overflow-auto">{error?.message || 'Unknown error'}</pre>
           </details>
         )}
         <button
