@@ -3,20 +3,9 @@
     "composite": true,
     "skipLibCheck": true,
     "module": "ESNext",
-<<<<<<< HEAD
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.js"],
+  "exclude": ["./dist", "./node_modules", "./src"]
 }
-=======
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true
-  },
-  "exclude": ["./dist", "./node_modules", "./src"], // Explicitly exclude src
-  "include": [
-    "vite.config.ts"
-    // Add any other Node-specific .ts files here if necessary, e.g., scripts at the root
-  ]
-}
->>>>>>> origin/auto/autonomy-17186719616
