@@ -1,49 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { Button } from "@/components/ui/button",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Textarea } from "@/components/ui/textarea",
-import { Input } from "@/components/ui/input",
-import { Switch } from "@/components/ui/switch",
-import { Label } from "@/components/ui/label",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { toast } from "sonner",
-import { Loader2 } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { ScrollArea } from "@/components/ui/scroll-area",
-import { useRouter } from 'next/router',
-import {logErrorToProduction} from '@/utils/productionLogger',
-
-export default function ContentGenerator() {
-
-  const { user, isLoading } = useAuth(),
-  const router = useRouter(),
-  const [contentType, setContentType] = useState<'blog' | 'newsletter' | 'serviceDescription' | 'faq'>('blog'),
-  const [customPrompt, setCustomPrompt] = useState(''),
-  const [topic, setTopic] = useState(''),
-  const [keywords, setKeywords] = useState(''),
-  const [autoPublish, setAutoPublish] = useState(false),
-  const [includeImage, setIncludeImage] = useState(true),
-  const [isGenerating, setIsGenerating] = useState(false),
-  const [previewContent, setPreviewContent] = useState<any>(null),
-  const [testEmail, setTestEmail] = useState(''),
-
-  useEffect(() => {
-    if (!isLoading && !user) {
-      router.push("/login?redirect=/content-generator"),
-    }
-  }, [user, isLoading, router]),
-
-  const generateContent = async () => {
-    setIsGenerating(true),
-    setPreviewContent(null),
-    
-    try {
-      const keywordsArray = keywords.split().map(k => k.trim()).filter(k => k.length > 0),
-=======
 import React, { useState, useEffect } from 'react';
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
@@ -88,42 +42,12 @@ export default function ContentGenerator() {
     
     try {
       const keywordsArray = keywords.split(',').map(k => k.trim()).filter(k => k.length > 0);
->>>>>>> origin/auto/autonomy-17186719616
       const { data, error } = await supabase.functions.invoke('generate-seo-content', {
         body: {
           contentType,
           userPrompt: customPrompt || topic, // Use customPrompt if available, else topic
           keywords: keywordsArray,
           // autoPublish and includeImage are not explicitly used by 'generate-seo-content'
-<<<<<<< HEAD
-          // but we can leave them here, the backend will ignore them if not needed.
-          autoPublish,
-          includeImage: contentType === 'blog' ? includeImage : false
-        }
-      }),
-      
-      if (error) throw error,
-      
-      setPreviewContent(data), // Expecting { generatedContent: "..." }
-      toast.success(`Content for "${contentType}" generated successfully!`),
-    } catch (error) {
-      logErrorToProduction('Error generating content:', { data: error }),
-      toast.error("Failed to generate content. Please try again."),
-    } finally {
-      setIsGenerating(false),
-    }
-  },
-
-  const sendTestNewsletter = async () => {
-    if (!testEmail) {
-      toast.error("Please enter a test email address"),
-      return,
-    }
-    
-    if (!previewContent) {
-      toast.error("Generate newsletter content first"),
-      return,
-=======
           // but we can leave them here; the backend will ignore them if not needed.
           autoPublish,
           includeImage: contentType === 'blog' ? includeImage : false
@@ -151,7 +75,6 @@ export default function ContentGenerator() {
     if (!previewContent) {
       toast.error("Generate newsletter content first");
       return;
->>>>>>> origin/auto/autonomy-17186719616
     }
     
     try {
@@ -163,18 +86,6 @@ export default function ContentGenerator() {
           testMode: true,
           testEmail
         }
-<<<<<<< HEAD
-      }),
-      
-      if (error) throw error,
-      
-      toast.success(`Test newsletter sent to ${testEmail}!`),
-    } catch (error) {
-      logErrorToProduction('Error sending test newsletter:', { data: error }),
-      toast.error("Failed to send test newsletter. Please try again."),
-    }
-  },
-=======
       });
       
       if (error) throw error;
@@ -185,7 +96,6 @@ export default function ContentGenerator() {
       toast.error("Failed to send test newsletter. Please try again.");
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   // Check if user is still loading
   if (isLoading) {
@@ -196,11 +106,7 @@ export default function ContentGenerator() {
           <div className="animate-pulse text-white">Loading...</div>
         </div>
       </>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -396,9 +302,5 @@ export default function ContentGenerator() {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

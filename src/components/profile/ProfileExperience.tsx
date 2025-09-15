@@ -1,17 +1,9 @@
 
-<<<<<<< HEAD
-import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
-import { Briefcase } from 'lucide-react'
-
-interface ProfileExperienceProps {
-  experience: ProfileExperienceType[]
-=======
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
 import { Briefcase } from 'lucide-react'
 
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function ProfileExperience({ experience }: ProfileExperienceProps) {
@@ -40,9 +32,5 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

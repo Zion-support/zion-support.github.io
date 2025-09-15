@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-import { useState } from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-import { TemplateManager } from "./templates/TemplateManager",
-import { SmartContractBuilder } from "./SmartContractBuilder",
-
-interface ContractBuilderProps {
-  isOpen: boolean,
-  onClose: () => void,
-  talent: TalentProfile,
-  clientName: string,
-  onContractGenerated?: (contractContent: string) => void
-}
-
-
-
-  const handleContractGenerated = (contract: string) => {
-    setGeneratedContract(contract),
-    setActiveTab("preview"),
-    if (onContractGenerated) {
-      onContractGenerated(contract)
-    }
-  },
-=======
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -73,30 +43,20 @@ export function ContractBuilder({
       onContractGenerated(contract);
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   if (showSmartContractBuilder) {
     return (
       <SmartContractBuilder
         isOpen={isOpen}
         onClose={() => {
-<<<<<<< HEAD
-          setShowSmartContractBuilder(false),
-          onClose(),
-=======
           setShowSmartContractBuilder(false);
           onClose();
->>>>>>> origin/auto/autonomy-17186719616
         }}
         talent={talent}
         clientName={clientName}
         onContractGenerated={onContractGenerated}
       />
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -113,17 +73,10 @@ export function ContractBuilder({
             </TabsList>
             
             <div className="flex gap-2">
-<<<<<<< HEAD
-              <Button
-                variant="outline"
-                size="sm"
-                onClick = {(,) => setTemplateManagerOpen(true),}
-=======
               <Button 
                 variant="outline" 
                 size="sm"
                 onClick={() => setTemplateManagerOpen(true)}
->>>>>>> origin/auto/autonomy-17186719616
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
@@ -131,11 +84,7 @@ export function ContractBuilder({
               </Button>
               
               <Button
-<<<<<<< HEAD
-                variant="outline" 
-=======
                 variant="secondary"
->>>>>>> origin/auto/autonomy-17186719616
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}
               >
@@ -174,9 +123,5 @@ export function ContractBuilder({
         />
       </DialogContent>
     </Dialog>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

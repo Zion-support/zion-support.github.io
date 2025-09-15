@@ -1,23 +1,4 @@
 
-<<<<<<< HEAD
-import { useState } from "react",
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from 'lucide-react'
-import { formatDistanceToNow, format } from "date-fns",
-import { ForumPost, ForumReply } from "@/types/community",
-import { useAuth } from "@/hooks/useAuth",
-import ReplyCard from "@/components/community/ReplyCard",
-import ReplyForm from "@/components/community/ReplyForm",
-import { useToast } from "@/hooks/use-toast",
-=======
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -35,7 +16,6 @@ import { useAuth } from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
->>>>>>> origin/auto/autonomy-17186719616
 
 // Mock data for a forum post
 const mockPost: ForumPost = {
@@ -55,11 +35,7 @@ const mockPost: ForumPost = {
   replyCount: 4,
   isAnswered: true,
   isFeatured: true
-<<<<<<< HEAD
-},
-=======
 };
->>>>>>> origin/auto/autonomy-17186719616
 
 // Mock data for replies
 const mockReplies: ForumReply[] = [
@@ -78,11 +54,7 @@ const mockReplies: ForumReply[] = [
   {
     id: "reply2",
     postId: "1",
-<<<<<<< HEAD
-    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.performance.",
-=======
     content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance.",
->>>>>>> origin/auto/autonomy-17186719616
     authorId: "user3",
     authorName: "Michael Wong",
     authorRole: "AI Engineer",
@@ -115,30 +87,12 @@ const mockReplies: ForumReply[] = [
     upvotes: 4,
     downvotes: 0
   }
-<<<<<<< HEAD
-],
-=======
 ];
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
   // Cast the result instead to provide the expected shape.
-<<<<<<< HEAD
-  const router = useRouter(),
-  const postId = router.query.postId as string,
-  const { user } = useAuth(),
-  const { toast } = useToast(),
-  const [post, setPost] = useState(mockPost),
-  const [replies, setReplies] = useState(mockReplies),
-  
-  // Check if this is the user's own post
-  const isAuthor = user?.id === post?.authorId,
-  
-  // Check if user is admin/mod
-  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
-=======
   const router = useRouter();
   const postId = router.query.postId as string;
   const { user } = useAuth();
@@ -151,7 +105,6 @@ export default function ForumPostPage() {
   
   // Check if user is admin/mod
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
->>>>>>> origin/auto/autonomy-17186719616
   
   // For this demo, we'll assume the post is found
   if (!post) {
@@ -162,30 +115,13 @@ export default function ForumPostPage() {
           <Link href="/community">Back to Community</Link>
         </Button>
       </div>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   const handleUpvote = () => {
     if (!user) {
       toast({
         title: "Authentication required",
-<<<<<<< HEAD
-        description: "Please sign in to vote on posts"}),
-      const returnTo = encodeURIComponent(router.asPath),
-      router.push(`/auth/login?returnTo=${returnTo}`),
-      return,
-    }
-    
-    setPost({ ...post, upvotes: post.upvotes + 1 }),
-    toast({
-      title: "Vote recorded",
-      description: "You upvoted this post"}),
-  },
-=======
         description: "Please sign in to vote on posts",
       });
       const returnTo = encodeURIComponent(router.asPath);
@@ -199,25 +135,11 @@ export default function ForumPostPage() {
       description: "You upvoted this post",
     });
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleDownvote = () => {
     if (!user) {
       toast({
         title: "Authentication required",
-<<<<<<< HEAD
-        description: "Please sign in to vote on posts"}),
-      const returnTo = encodeURIComponent(router.asPath),
-      router.push(`/auth/login?returnTo=${returnTo}`),
-      return,
-    }
-    
-    setPost({ ...post, downvotes: post.downvotes + 1 }),
-    toast({
-      title: "Vote recorded",
-      description: "You downvoted this post"}),
-  },
-=======
         description: "Please sign in to vote on posts",
       });
       const returnTo = encodeURIComponent(router.asPath);
@@ -231,24 +153,16 @@ export default function ForumPostPage() {
       description: "You downvoted this post",
     });
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
         title: "Authentication required",
-<<<<<<< HEAD
-        description: "Please sign in to reply"}),
-      const returnTo = encodeURIComponent(router.asPath),
-      router.push(`/auth/login?returnTo=${returnTo}`),
-      return,
-=======
         description: "Please sign in to reply",
       });
       const returnTo = encodeURIComponent(router.asPath);
       router.push(`/auth/login?returnTo=${returnTo}`);
       return;
->>>>>>> origin/auto/autonomy-17186719616
     }
     
     // Create a new reply
@@ -263,17 +177,6 @@ export default function ForumPostPage() {
       updatedAt: new Date().toISOString(),
       upvotes: 0,
       downvotes: 0
-<<<<<<< HEAD
-    },
-    
-    setReplies([...replies, newReply]),
-    setPost({ ...post, replyCount: post.replyCount + 1 }),
-    
-    toast({
-      title: "Reply posted",
-      description: "Your reply has been added to the discussion"}),
-  },
-=======
     };
     
     setReplies([...replies, newReply]);
@@ -284,7 +187,6 @@ export default function ForumPostPage() {
       description: "Your reply has been added to the discussion",
     });
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
@@ -293,30 +195,14 @@ export default function ForumPostPage() {
         title: "Permission denied",
         description: "Only the original poster or moderators can mark answers",
         variant: "destructive"
-<<<<<<< HEAD
-      }),
-      return,
-=======
       });
       return;
->>>>>>> origin/auto/autonomy-17186719616
     }
     
     // Update the replies
     const updatedReplies = replies.map(reply => ({
       ...reply,
       isAnswer: reply.id === replyId
-<<<<<<< HEAD
-    })),
-    
-    setReplies(updatedReplies),
-    setPost({ ...post, isAnswered: true }),
-    
-    toast({
-      title: "Answer marked",
-      description: "The reply has been marked as the accepted answer"}),
-  },
-=======
     }));
     
     setReplies(updatedReplies);
@@ -327,55 +213,20 @@ export default function ForumPostPage() {
       description: "The reply has been marked as the accepted answer",
     });
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleReportPost = () => {
     if (!user) {
       toast({
         title: "Authentication required",
-<<<<<<< HEAD
-        description: "Please sign in to report content"}),
-      const returnTo = encodeURIComponent(router.asPath),
-      router.push(`/auth/login?returnTo=${returnTo}`),
-      return,
-=======
         description: "Please sign in to report content",
       });
       const returnTo = encodeURIComponent(router.asPath);
       router.push(`/auth/login?returnTo=${returnTo}`);
       return;
->>>>>>> origin/auto/autonomy-17186719616
     }
     
     toast({
       title: "Report submitted",
-<<<<<<< HEAD
-      description: "A moderator will review this content"}),
-  },
-
-  const handlePinPost = () => {
-    if (!isAdminOrMod) return,
-    
-    setPost({ ...post, isPinned: !post.isPinned }),
-    
-    toast({
-      title: post.isPinned ? "Post unpinned" : "Post pinned",
-      description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"}),
-  },
-
-  const handleLockPost = () => {
-    if (!isAdminOrMod) return,
-    
-    setPost({ ...post, isLocked: !post.isLocked }),
-    
-    toast({
-      title: post.isLocked ? "Post unlocked" : "Post locked",
-      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"}),
-  },
-  
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
-=======
       description: "A moderator will review this content",
     });
   };
@@ -404,18 +255,13 @@ export default function ForumPostPage() {
   
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
->>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <>
       <SEO
         title={`${post.title} | Community Forum | Zion AI Marketplace`}
         description={post.content.substring(0, 160)}
-<<<<<<< HEAD
-        keywords={`community, forum, discussion, ${post.tags.join()}`}
-=======
         keywords={`community, forum, discussion, ${post.tags.join(', ')}`}
->>>>>>> origin/auto/autonomy-17186719616
         canonical={`https://app.ziontechgroup.com/community/post/${post.id}`}
       />
       
@@ -594,9 +440,5 @@ export default function ForumPostPage() {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

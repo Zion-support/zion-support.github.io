@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
-import { supabase } from '@/integrations/supabase/client',
-import { ModelConfig } from '@/utils/zion-gpt',
-import {logErrorToProduction} from '@/utils/productionLogger',
-
-
-interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
-  errorMessage?: string
-}
-
-export function ZionGPTModelManager() {
-  const [models, setModels] = useState<ModelVersionData[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
-
-  // Fetch model data on component mount
-  useEffect(() => {
-    fetchModels(),
-  }, []),
-
-  const fetchModels = async () => {
-    try {
-      setIsLoading(true),
-      const { data, error } = await supabase
-        .from('model_versions')
-        .select('*')
-        .order('createdAt', { ascending: false }),
-      
-      if (error) throw error,
-=======
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -70,7 +33,6 @@ export function ZionGPTModelManager() {
         .order('createdAt', { ascending: false });
       
       if (error) throw error;
->>>>>>> origin/auto/autonomy-17186719616
       
       // Map the data to our component state
       setModels(data.map((model: any) => ({
@@ -82,19 +44,6 @@ export function ZionGPTModelManager() {
         active: model.active,
         trainingStatus: model.training_status,
         errorMessage: model.error_message
-<<<<<<< HEAD
-      }))),
-    } catch (error) {
-      logErrorToProduction('Error fetching models:', { data: error }),
-    } finally {
-      setIsLoading(false),
-    }
-  },
-
-  const checkTrainingStatus = async (modelId: string) => {
-    try {
-      setActiveJobs(prev => ({ ...prev, [modelId]: true })),
-=======
       })));
     } catch (error) {
       logErrorToProduction('Error fetching models:', { data: error });
@@ -106,20 +55,13 @@ export function ZionGPTModelManager() {
   const checkTrainingStatus = async (modelId: string) => {
     try {
       setActiveJobs(prev => ({ ...prev, [modelId]: true }));
->>>>>>> origin/auto/autonomy-17186719616
       
       // Call an edge function that checks the OpenAI fine-tuning job status
       const { data, error } = await supabase.functions.invoke('check-training-status', {
         body: { modelId }
-<<<<<<< HEAD
-      }),
-      
-      if (error) throw error,
-=======
       });
       
       if (error) throw error;
->>>>>>> origin/auto/autonomy-17186719616
       
       // Update the local model status
       setModels(prev => 
@@ -128,11 +70,7 @@ export function ZionGPTModelManager() {
             ? { ...model, trainingStatus: (data as any)?.status || 'failed', errorMessage: (data as any)?.error || 'Unknown error' } 
             : model
         )
-<<<<<<< HEAD
-      ),
-=======
       );
->>>>>>> origin/auto/autonomy-17186719616
       
       // Also update in the database
       await supabase
@@ -143,16 +81,6 @@ export function ZionGPTModelManager() {
           // If training succeeded, automatically set to active
           ...((data as any)?.status === 'succeeded' ? { active: true } : {})
         })
-<<<<<<< HEAD
-        .eq('id', modelId),
-      
-    } catch (error) {
-      logErrorToProduction('Error checking status for model ${modelId}:', { data: error }),
-    } finally {
-      setActiveJobs(prev => ({ ...prev, [modelId]: false })),
-    }
-  },
-=======
         .eq('id', modelId);
       
     } catch (error) {
@@ -161,7 +89,6 @@ export function ZionGPTModelManager() {
       setActiveJobs(prev => ({ ...prev, [modelId]: false }));
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
     try {
@@ -170,27 +97,13 @@ export function ZionGPTModelManager() {
         await supabase
           .from('model_versions')
           .update({ active: false })
-<<<<<<< HEAD
-          .eq('purpose', purpose),
-=======
           .eq('purpose', purpose);
->>>>>>> origin/auto/autonomy-17186719616
       }
       
       // Update this model
       await supabase
         .from('model_versions')
         .update({ active: !currentActive })
-<<<<<<< HEAD
-        .eq('id', modelId),
-      
-      // Refresh the model list
-      fetchModels(),
-    } catch (error) {
-      logErrorToProduction('Error toggling model active state:', { data: error }),
-    }
-  },
-=======
         .eq('id', modelId);
       
       // Refresh the model list
@@ -199,7 +112,6 @@ export function ZionGPTModelManager() {
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Card className="w-full">
@@ -253,21 +165,6 @@ export function ZionGPTModelManager() {
                   </TableCell>
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
-<<<<<<< HEAD
-                    {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick = {(,) => checkTrainingStatus(model && model.id),}
-                        disabled = {activeJobs[model && model.id],}
-                      >;
-                        {activeJobs[model && model.id] ? (;
-                          <Loader2 className="h-4 w-4 animate-spin" />;
-                        ) : (;
-                          <RefreshCw className="h-4 w-4" />;
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                     {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
                       <Button
                         variant="ghost"
@@ -280,20 +177,10 @@ export function ZionGPTModelManager() {
                         ) : (
                           <RefreshCw className="h-4 w-4" />
                         )}
-<<<<<<< HEAD
-                        <span className="ml-1">Check</span>;
-                      </Button>;
-                    ) : model && model.trainingStatus === 'succeeded' ? (;
-                      <Button
-                        variant = {model.active ? "outline" : "default",}
-                        size="sm"
-                        onClick = {(,) => toggleModelActive(model.id, model.active, model.purpose),}
-=======
                         <span className="ml-1">Check</span>
                       </Button>
                     ) : model.trainingStatus === 'succeeded' ? (
                       <Button
->>>>>>> origin/auto/autonomy-17186719616
                         variant={model.active ? "outline" : "default"}
                         size="sm"
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
@@ -307,13 +194,8 @@ export function ZionGPTModelManager() {
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
                         )}
-<<<<<<< HEAD
-                      </Button>;
-                    ) : (;
-=======
                       </Button>
                     ) : (
->>>>>>> origin/auto/autonomy-17186719616
                       <Button
                         variant="ghost"
                         size="sm"
@@ -331,9 +213,5 @@ export function ZionGPTModelManager() {
         )}
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
