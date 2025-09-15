@@ -60,6 +60,11 @@ import RevolutionaryContentShowcase2027 from './src/components/RevolutionaryCont
 import UltimateTechRevolution2027 from './src/pages/UltimateTechRevolution2027';
 import ConsciousnessTransfer2027 from './src/pages/ConsciousnessTransfer2027';
 import QuantumConsciousnessRevolution2027 from './src/pages/QuantumConsciousnessRevolution2027';
+import AIFutureTrends2025 from './src/pages/AIFutureTrends2025';
+import AdvancedAnalyticsInsights2025 from './src/pages/AdvancedAnalyticsInsights2025';
+import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
+import InteractiveContentShowcase2025 from './src/components/InteractiveContentShowcase2025';
+import RevolutionaryTechBlog2025 from './src/pages/RevolutionaryTechBlog2025';
 
 export default function App(): JSX.Element {
   return (
@@ -320,49 +325,71 @@ export default function App(): JSX.Element {
                 {/* NEW CONTENT SHOWCASE BANNER */}
                 <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+                  <div className="absolute top-0 left-0 w-full h-full">
+                    {[...Array(60)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="absolute w-1 h-1 bg-white rounded-full opacity-30 animate-pulse"
+                        style={{
+                          left: `${Math.random() * 100}%`,
+                          top: `${Math.random() * 100}%`,
+                          animationDelay: `${Math.random() * 3}s`,
+                        }}
+                      />
+                    ))}
+                  </div>
                   <div className="relative z-10">
                     <div className="text-center mb-8">
-                      <div className="inline-flex items-center px-6 py-3 bg-white/20 rounded-full text-sm font-bold mb-4 animate-pulse">
-                        🆕 NEW CONTENT • JANUARY 2025
+                      <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-sm font-bold mb-4 animate-pulse">
+                        🌟 BRAND NEW CONTENT • JANUARY 2025
                       </div>
-                      <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary New Content Available Now!</h2>
+                      <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent">
+                        🚀 Revolutionary New Content Available Now!
+                      </h2>
                       <p className="text-xl opacity-95 max-w-4xl mx-auto">
-                        Explore our latest groundbreaking content on AI Future Trends, Advanced Analytics, and Innovation Showcases
+                        Explore our latest groundbreaking content on AI Future Trends, Advanced Analytics, and Innovation Showcases - 
+                        the most revolutionary technology insights of 2025
                       </p>
                     </div>
                     
                     <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/30 hover:scale-105 transition-all duration-300">
-                        <div className="text-4xl mb-3 text-center">🔮</div>
+                      <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/30 hover:scale-105 transition-all duration-300 hover:bg-white/20">
+                        <div className="text-5xl mb-3 text-center animate-bounce">🔮</div>
                         <h3 className="text-xl font-bold mb-3 text-center">AI Future Trends 2025</h3>
                         <p className="text-indigo-100 mb-4 text-center text-sm">
                           Discover the AI trends that will reshape industries and transform businesses in 2025 and beyond
                         </p>
-                        <a href="/pages/AIFutureTrends2025" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
-                          Explore AI Trends →
+                        <a href="/pages/AIFutureTrends2025" className="block w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 font-semibold text-center hover:shadow-lg">
+                          🚀 Explore AI Trends →
                         </a>
                       </div>
                       
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/30 hover:scale-105 transition-all duration-300">
-                        <div className="text-4xl mb-3 text-center">📊</div>
+                      <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/30 hover:scale-105 transition-all duration-300 hover:bg-white/20">
+                        <div className="text-5xl mb-3 text-center animate-bounce">📊</div>
                         <h3 className="text-xl font-bold mb-3 text-center">Advanced Analytics Insights</h3>
                         <p className="text-purple-100 mb-4 text-center text-sm">
                           Transform your data into actionable insights with cutting-edge analytics solutions and AI-powered predictions
                         </p>
-                        <a href="/pages/AdvancedAnalyticsInsights2025" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-                          View Analytics →
+                        <a href="/pages/AdvancedAnalyticsInsights2025" className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 font-semibold text-center hover:shadow-lg">
+                          📈 View Analytics →
                         </a>
                       </div>
                       
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/30 hover:scale-105 transition-all duration-300">
-                        <div className="text-4xl mb-3 text-center">🚀</div>
+                      <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/30 hover:scale-105 transition-all duration-300 hover:bg-white/20">
+                        <div className="text-5xl mb-3 text-center animate-bounce">🚀</div>
                         <h3 className="text-xl font-bold mb-3 text-center">Innovation Showcase 2025</h3>
                         <p className="text-pink-100 mb-4 text-center text-sm">
                           Explore breakthrough technologies and innovations that are defining the future of business and society
                         </p>
-                        <a href="/pages/InnovationShowcase2025" className="block w-full bg-white text-pink-600 py-2 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center">
-                          See Innovations →
+                        <a href="/pages/InnovationShowcase2025" className="block w-full bg-gradient-to-r from-pink-500 to-red-500 text-white py-3 rounded-lg hover:from-pink-600 hover:to-red-600 transition-all duration-300 font-semibold text-center hover:shadow-lg">
+                          🌟 See Innovations →
                         </a>
+                      </div>
+                    </div>
+                    
+                    <div className="text-center mt-8">
+                      <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 transform">
+                        🎯 LIMITED TIME: Get Early Access to Revolutionary Content →
                       </div>
                     </div>
                   </div>
@@ -395,6 +422,11 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
                   </div>
                   <DynamicContentCarousel />
+                </div>
+
+                {/* NEW: Interactive Content Showcase 2025 */}
+                <div className="mb-12">
+                  <InteractiveContentShowcase2025 />
                 </div>
 
                 {/* Enhanced Content Advertising */}
@@ -776,15 +808,12 @@ export default function App(): JSX.Element {
           <Route path="/pages/UltimateTechRevolution2027" element={<UltimateTechRevolution2027 />} />
           <Route path="/pages/ConsciousnessTransfer2027" element={<ConsciousnessTransfer2027 />} />
           <Route path="/pages/QuantumConsciousnessRevolution2027" element={<QuantumConsciousnessRevolution2027 />} />
+          <Route path="/pages/AIFutureTrends2025" element={<AIFutureTrends2025 />} />
+          <Route path="/pages/AdvancedAnalyticsInsights2025" element={<AdvancedAnalyticsInsights2025 />} />
+          <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
+          <Route path="/pages/RevolutionaryTechBlog2025" element={<RevolutionaryTechBlog2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
-          <Route path="/blog" element={
-            <main className="container mx-auto px-4 py-16">
-              <div className="text-center">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>
-                <p className="text-xl text-gray-600">Coming soon - Latest insights and updates</p>
-              </div>
-            </main>
-          } />
+          <Route path="/blog" element={<RevolutionaryTechBlog2025 />} />
           <Route path="/contact" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">
