@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "ai-2026-evaluation-hub",
+    title: "AI 2026: Evaluation Hub",
+    description:
+      "Central hub for eval harnesses, scenario suites, and governance gates for autonomous AI.",
+    ctaLabel: "Explore Hub",
+    href: "/content/ai-2026-evaluation-hub",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "ai-2026-operational-guardrails",
+    title: "AI 2026: Operational Guardrails",
+    description:
+      "Practical runtime safeguards, policy gates, and response patterns for safe AI operations.",
+    ctaLabel: "Read Guide",
+    href: "/content/ai-2026-operational-guardrails",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "llm-evals-maturity-model-2026-content",
     title: "AI 2026: LLM Evals Maturity Model",
     description:
