@@ -15,6 +15,21 @@ export const blogPosts = [
     slug: "future-of-it-asset-management-ai-powered-solutions"
   },
   {
+    id: 10,
+    title: "Enterprise AI Governance Blueprint (2026)",
+    excerpt: "Policy-as-code, model risk tiers, and runtime monitoring to scale AI safely.",
+    content: "Enterprises need executable governance that integrates with data pipelines, model lifecycle, and runtime. This blueprint details reference controls, risk tiers, and monitoring to operationalize safe, compliant AI at scale.",
+    author: "Alexandra Patel",
+    authorRole: "Chief Governance Architect",
+    publishDate: "2025-09-15",
+    readTime: "10 min read",
+    category: "Governance",
+    tags: ["Governance", "Policy-as-Code", "Risk", "Compliance"],
+    featured: true,
+    imageUrl: "/images/blog/ai-governance-blueprint-2026.jpg",
+    slug: "ai-2026-enterprise-ai-governance-blueprint"
+  },
+  {
     id: 2,
     title: "Best Practices for Enterprise IT Asset Tracking",
     excerpt: "Learn the essential strategies and tools for effective IT asset tracking in large-scale enterprise environments.",
