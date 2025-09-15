@@ -107,6 +107,13 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
+                href="/updates/ai-research-assistant-2-0"
+                className="inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-500/10 px-4 py-2 text-sm font-semibold text-teal-200 hover:bg-teal-500/20 transition-colors duration-200"
+              >
+                Launch: AI Research Assistant 2.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
                 href="/updates/ai-agent-safety-certification-beta"
                 className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
               >
