@@ -93,6 +93,12 @@ const posts = [
       'From offline suites to live canaries and deployment gates with auto rollback.'
   },
   {
+    slug: 'ai-2026-eval-driven-finops-blueprint',
+    title: 'AI 2026: Eval‑Driven FinOps — Blueprint',
+    summary:
+      'Unify cost, quality, and latency with eval signals to drive routing and budgets.'
+  },
+  {
     slug: 'ai-2026-agentic-evals-blueprint',
     title: 'AI 2026: Agentic Evals Blueprint',
     summary:
@@ -168,6 +174,11 @@ const posts = [
     summary: 'Reduce hallucinations with retrieval, constraints, and eval gates.'
   }
   ,
+  {
+    slug: 'ai-2026-autonomous-agent-runbooks',
+    title: 'AI 2026: Autonomous Agent Runbooks — Operations Handbook',
+    summary: 'Standardize safe operations with approvals, drills, and audit‑ready checklists.'
+  },
   {
     slug: 'ai-2026-generative-ai-risk-register',
     title: 'AI 2026: Generative AI Risk Register',

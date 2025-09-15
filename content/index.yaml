@@ -899,6 +899,36 @@ content_index:
         rollback: "automatic"
         audit_ready: true
 
+    - id: "ai-2026-eval-driven-finops-blueprint"
+      type: "blog"
+      title: "AI 2026: Eval‑Driven FinOps — Blueprint"
+      file_path: "/content/blog/ai-2026-eval-driven-finops-blueprint.md"
+      url: "/blog/ai-2026-eval-driven-finops-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["FinOps", "Evaluations", "Routing", "Costs", "Reliability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "20-40%"
+        reliability: "99.9% gates"
+        rollback: "automatic"
+
+    - id: "ai-2026-autonomous-agent-runbooks"
+      type: "blog"
+      title: "AI 2026: Autonomous Agent Runbooks — Operations Handbook"
+      file_path: "/content/blog/ai-2026-autonomous-agent-runbooks.md"
+      url: "/blog/ai-2026-autonomous-agent-runbooks"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Operations", "Runbooks", "SLOs", "Agents", "Reliability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        mttr: "< 10 min"
+        audit_ready: true
+
     - id: "ai-2026-operational-excellence-handbook"
       type: "page"
       title: "AI 2026: Operational Excellence Handbook"

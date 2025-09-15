@@ -436,10 +436,10 @@ export default function HomePage() {
                 href: '/blog/ai-2026-real-time-retrieval-architectures'
               },
               {
-                title: 'AI 2026: Generative AI Risk Register',
+                title: 'AI 2026: Eval‑Driven FinOps — Blueprint',
                 summary:
-                  'Templates, owners, mitigations, and audit evidence to operationalize AI risk.',
-                href: '/blog/ai-2026-generative-ai-risk-register'
+                  'Unify cost, quality, and latency with eval signals to drive routing and budgets.',
+                href: '/blog/ai-2026-eval-driven-finops-blueprint'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">

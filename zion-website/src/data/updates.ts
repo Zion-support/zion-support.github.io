@@ -818,6 +818,22 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Report'
   }
   ,
+  {
+    title: 'Blueprint: Eval‑Driven FinOps (2026)',
+    summary:
+      'Unify cost, quality, and latency with eval signals to drive routing and budgets.',
+    href: '/blog/ai-2026-eval-driven-finops-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Guide: Autonomous Agent Runbooks (2026)',
+    summary:
+      'Standardize safe operations with approvals, drills, and audit‑ready checklists.',
+    href: '/blog/ai-2026-autonomous-agent-runbooks',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
   // New updates added by automation on 2025-09-15
   {
     title: 'Launch: Agent Policy-as-Code Starter Kit',
