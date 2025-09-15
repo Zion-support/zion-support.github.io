@@ -19,6 +19,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'ai-safety-architecture-2025',
+      title: 'AI Safety Architecture 2025: Patterns for Verifiable Autonomy',
+      excerpt: 'Engineering patterns and controls that make autonomous systems measurable, auditable, and safe-by-default.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/ai-safety-architecture.jpg',
+      featured: true
+    },
+    {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -85,6 +96,16 @@ export default function BlogPage() {
       date: '2025-09-14',
       readTime: '7 min read',
       image: '/blog/edge-ai-marketplaces.jpg'
+    },
+    {
+      id: 'sovereign-data-mesh',
+      title: 'Sovereign Data Mesh: Policy-Aware Sharing Across Autonomous Units',
+      excerpt: 'Build a decentralized data mesh that preserves sovereignty and accelerates collaboration.',
+      category: 'Data Architecture',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-12',
+      readTime: '8 min read',
+      image: '/blog/sovereign-data-mesh.jpg'
     },
     {
       id: 'autonomous-it-operations',
@@ -213,13 +234,13 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/ai-governance-blueprint-2025"
+            href="/blog/ai-safety-architecture-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy"
+            aria-label="Read: AI Safety Architecture 2025: Patterns for Verifiable Autonomy"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                AG
+                AS
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -227,10 +248,10 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy
+                  AI Safety Architecture 2025: Patterns for Verifiable Autonomy
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A pragmatic framework for blending automated policy engines with human oversight for AI at scale.
+                  Engineering patterns and controls that make autonomous systems measurable, auditable, and safe-by-default.
                 </p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>

@@ -121,20 +121,20 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-                title: 'New Course: Advanced Blockchain Development',
+                title: 'New: AI Safety Architecture 2025',
                 summary:
-                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
-                href: '/updates'
+                  'Patterns for verifiable autonomy: capability bounding, graded privileges, and auditability.',
+                href: '/zion-os/blog/ai-safety-architecture-2025'
               },
               {
-                title: 'Community Challenge: Build a DApp',
-                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-                href: '/updates'
+                title: 'Guide: Sovereign Data Mesh',
+                summary: 'Build a policy-aware decentralized data mesh for governed collaboration.',
+                href: '/zion-os/blog/sovereign-data-mesh'
               },
               {
-                title: 'New Learning Path: Web3 Fundamentals',
-                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
-                href: '/updates'
+                title: 'Update: Quantum Risk Modeling 2025',
+                summary: 'Pragmatic quantum methods improving risk analytics and portfolio construction.',
+                href: '/zion-os/blog/quantum-risk-modeling-2025'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">

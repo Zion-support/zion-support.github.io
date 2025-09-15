@@ -11,6 +11,34 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-safety-architecture-2025': {
+    id: 'ai-safety-architecture-2025',
+    title: 'AI Safety Architecture 2025: Patterns for Verifiable Autonomy',
+    excerpt:
+      'Engineering patterns and controls that make autonomous systems measurable, auditable, and safe-by-default.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Safety is not a feature; it is an architecture property. This article consolidates safety patterns such as capability bounding, graded privileges, red-team loops, and verifiable action logs.',
+      'We include implementation checklists, reference diagrams, and a rollout plan that lets teams raise autonomy safely while maintaining human override for sensitive actions.'
+    ]
+  },
+  'sovereign-data-mesh': {
+    id: 'sovereign-data-mesh',
+    title: 'Sovereign Data Mesh: Policy-Aware Sharing Across Autonomous Units',
+    excerpt:
+      'A practical guide to building a policy-aware, decentralized data mesh that preserves sovereignty and accelerates collaboration.',
+    category: 'Data Architecture',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-12',
+    readTime: '8 min read',
+    content: [
+      'Enterprises need collaboration without central bottlenecks. A sovereign data mesh enables autonomous units to publish and consume governed data products with embedded policy.',
+      'We cover identity, policy evaluation, lineage, and marketplace-style discovery, with migration steps from centralized lakes to federated meshes.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
