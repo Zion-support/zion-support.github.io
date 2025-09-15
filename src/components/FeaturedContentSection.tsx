@@ -37,6 +37,18 @@ const FeaturedContentSection: React.FC = () => {
       readTime: '12 min read',
       featured: true
     }
+    ,
+    {
+      id: 4,
+      type: 'Blueprint',
+      title: 'Autonomous Ops Blueprint 2026',
+      description: 'A pragmatic framework for reliable, observable, and governed agent operations at scale.',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop',
+      category: 'AI Operations',
+      readTime: '10 min read',
+      featured: true,
+      stats: { efficiency: '99.9%', costSavings: '$1.2M', satisfaction: '97%' }
+    }
   ];
 
   const latestBlogs = [
@@ -72,6 +84,29 @@ const FeaturedContentSection: React.FC = () => {
       image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop',
       slug: 'cloud-migration-guide',
       category: 'Cloud'
+    }
+    ,
+    {
+      id: 39,
+      title: 'Operationalizing Live Evals in Production — Deep Dive (2026)',
+      excerpt: 'Move quality gates to runtime with eval-driven progressive delivery and auto rollback.',
+      author: 'Noah Patel',
+      date: '2025-09-15',
+      readTime: '16 min read',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop',
+      slug: 'ai-2026-operationalizing-live-evals-in-production-deep-dive',
+      category: 'Reliability'
+    },
+    {
+      id: 40,
+      title: 'Agent Reliability Field Guide (2026)',
+      excerpt: 'SLOs, guardrails, and telemetry to reach 99.9% reliability for autonomous agents.',
+      author: 'Maya Chen',
+      date: '2025-09-15',
+      readTime: '12 min read',
+      image: 'https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?w=400&h=250&fit=crop',
+      slug: 'ai-2026-agent-reliability-field-guide',
+      category: 'Operations'
     }
   ];
 

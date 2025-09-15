@@ -29,6 +29,7 @@ import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import './src/index.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
+import NewShowcase2025 from './src/pages/NewShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -115,6 +116,9 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/AIEnterpriseCopilot2025" className="border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50 transition-colors text-center font-semibold">
                       🧭 Enterprise Copilot 2025
+                    </a>
+                    <a href="/pages/NewShowcase2025" className="bg-gradient-to-r from-fuchsia-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🌟 Autonomous AI 2025
                     </a>
                   </div>
                 </div>
@@ -397,6 +401,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
+<<<<<<< HEAD
+=======
+          <Route path="/pages/NewShowcase2025" element={<NewShowcase2025 />} />
+>>>>>>> 2be4054f23b02095453a9f94539a375759a8c720
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">

@@ -1,34 +1,34 @@
-
 export default function StateOfAgentTooling2026() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
-        <div className="mb-8">
-          <div className="flex items-center gap-3 text-xs text-gray-400">
-            <span className="rounded-full bg-teal-500/10 px-2 py-0.5 text-teal-300">Report</span>
-            <time dateTime="2025-09-15">{new Date('2025-09-15').toLocaleDateString()}</time>
-          </div>
-          <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            State of Agent Tooling (2026 Preview)
-          </h1>
-          <p className="mt-4 text-lg leading-8 text-gray-300">
-            A data-driven preview of frameworks, tracing, evals, and policy enforcement for agentic systems in 2026.
-          </p>
-        </div>
-
-        <div className="prose prose-invert prose-lg max-w-none">
-          <h2>Highlights</h2>
-          <ul>
-            <li>Convergence on standard tracing and telemetry schemas</li>
-            <li>Eval-native development workflows become mainstream</li>
-            <li>Policy-as-code runtime enforcement gains adoption</li>
-            <li>Model routing governed by quality and cost SLIs</li>
-          </ul>
-
-          <h2>Download</h2>
+      <div className="mx-auto max-w-3xl px-6 pt-28 pb-24 lg:px-8">
+        <p className="text-sm font-semibold leading-6 text-blue-400">Report</p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Report: State of Agent Tooling 2026
+        </h1>
+        <p className="mt-2 text-gray-400">2025-09-15</p>
+        <div className="prose prose-invert mt-8">
           <p>
-            Full report available upon request.
-            <a href="/contact" className="text-blue-400 hover:text-blue-300"> Request access →</a>
+            This report surveys the enterprise agent tooling landscape: debugging, evaluation,
+            governance, and compliance. We identify maturity gaps and provide a roadmap for
+            adopting safe, observable, and cost‑aware agent operations in 2026.
+          </p>
+          <h2>Key Findings</h2>
+          <ul>
+            <li>Growing adoption of live evals and canary gates in CI/CD</li>
+            <li>Audit‑ready evidence bundles becoming a compliance standard</li>
+            <li>Retrieval observability as a core SLI for agent quality</li>
+            <li>Model routing increasingly driven by cost‑quality‑latency tradeoffs</li>
+          </ul>
+          <h2>Next Steps</h2>
+          <p>
+            Use our starter kits and policy packs to bootstrap governance, then scale with
+            telemetry‑driven release practices and risk dashboards.
+          </p>
+          <p className="mt-8">
+            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+              Request a briefing
+            </a>
           </p>
         </div>
       </div>
@@ -36,3 +36,4 @@ export default function StateOfAgentTooling2026() {
   )
 }
 
+//

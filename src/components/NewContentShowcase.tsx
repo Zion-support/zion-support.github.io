@@ -3,6 +3,24 @@ import React from 'react';
 const NewContentShowcase: React.FC = () => {
   const newContent = [
     {
+      title: "Trustworthy Model Routing",
+      description: "Eval‑gated routing with cost, latency, and safety evidence",
+      category: "AI Operations",
+      date: "September 15, 2025",
+      link: "/blog/ai-2026-trustworthy-model-routing",
+      featured: true,
+      badge: "NEW"
+    },
+    {
+      title: "Agent Benchmark Suite",
+      description: "Scenario packs, harnesses, and scorecards for agents",
+      category: "Evaluations",
+      date: "September 15, 2025",
+      link: "/blog/ai-2026-agent-benchmark-suite",
+      featured: true,
+      badge: "NEW"
+    },
+    {
       title: "Revolutionary AI Business Automation",
       description: "Discover how AI automation is transforming enterprises in 2025",
       category: "AI & Automation",

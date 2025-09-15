@@ -70,6 +70,35 @@ const DynamicContentCarousel: React.FC = () => {
       category: 'Edge Computing',
       badge: 'INNOVATIVE'
     }
+    ,
+    {
+      id: '7',
+      title: 'Live Evals in Production',
+      description: 'Eval-driven release engineering: runtime gates, rollback-on-fail, trusted delivery.',
+      link: '/blog/ai-2026-operationalizing-live-evals-in-production-deep-dive',
+      image: '🧪',
+      category: 'Reliability',
+      badge: 'NEW'
+    },
+    {
+      id: '8',
+      title: 'Agent Reliability Guide',
+      description: 'SLOs, guardrails, and telemetry to reach 99.9% reliability.',
+      link: '/blog/ai-2026-agent-reliability-field-guide',
+      image: '✅',
+      category: 'Operations',
+      badge: 'FEATURED'
+    }
+    ,
+    {
+      id: '9',
+      title: 'Autonomous Ops Blueprint 2026',
+      description: 'Eval-driven delivery, runtime gates, and policy-as-code for safe agent ops.',
+      link: '/pages/AutonomousOpsBlueprint2026',
+      image: '🧪',
+      category: 'Governance',
+      badge: 'NEW'
+    }
   ];
 
   useEffect(() => {

@@ -118,6 +118,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: September 2025 Innovation + Executive Briefing */}
+      <section className="py-8 bg-gradient-to-r from-fuchsia-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-fuchsia-100">
+            <div>
+              <p className="text-sm font-semibold text-fuchsia-700">Just published</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">September 2025: Innovation Highlights + Exec Briefing</h2>
+              <p className="text-gray-600 mt-2">Eval-first operations, policy-as-code, and measurable SLOs you can adopt now.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2025-2026-september-innovation-highlights" className="inline-block bg-fuchsia-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-fuchsia-700">Innovation Highlights</Link>
+              <Link href="/blog/ai-2025-2026-september-exec-briefing" className="inline-block border border-fuchsia-600 text-fuchsia-700 px-5 py-3 rounded-lg font-semibold hover:bg-fuchsia-50">Executive Briefing</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -209,7 +225,62 @@ export default function HomePage() {
             </div>
             <div className="flex gap-3">
               <Link href="/content/ai-2026-evidence-driven-operations" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Guide</Link>
-              <Link href="/content/ai-2026-agent-platform-slos" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Platform SLOs</Link>
+              <Link href="/blog/ai-2026-trustworthy-model-routing" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Model Routing</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Compact Promo: New — Agent SLOs Guide + Evidence Hub Starter */}
+      <section className="py-6 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-white p-5 rounded-xl shadow border border-emerald-100 flex items-center justify-between">
+              <div>
+                <div className="text-xs font-semibold text-emerald-700">New • Guide</div>
+                <h3 className="text-lg font-bold text-gray-900">AI 2026: Implementing Agent SLOs</h3>
+                <p className="text-gray-600 text-sm">Define, monitor, and enforce SLOs with eval gates and policy‑as‑code.</p>
+              </div>
+              <Link href="/blog/ai-2026-agent-slos-implementation-guide" className="shrink-0 inline-block bg-emerald-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-emerald-700">Read</Link>
+            </div>
+            <div className="bg-white p-5 rounded-xl shadow border border-emerald-100 flex items-center justify-between">
+              <div>
+                <div className="text-xs font-semibold text-emerald-700">New • Starter Kit</div>
+                <h3 className="text-lg font-bold text-gray-900">Agentic Evidence Hub</h3>
+                <p className="text-gray-600 text-sm">Centralize evals, incidents, approvals, and change records for audit‑readiness.</p>
+              </div>
+              <Link href="/content/ai-2026-agentic-evidence-hub-starter" className="shrink-0 inline-block border border-emerald-600 text-emerald-700 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50">Explore</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Policy-as-Code in Production (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-cyan-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Policy‑as‑Code in Production</h2>
+              <p className="text-gray-600 mt-2">Executable policies, eval gates, and audit‑ready evidence for safe autonomy.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-policy-as-code-in-production" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Article</Link>
+              <Link href="/resources/ai-2026-agent-risk-metrics-starter-kit" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Starter Kit</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Risk‑Tiered Tool Use (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Risk‑Tiered Tool Use</h2>
+              <p className="text-gray-600 mt-2">Permissioned tool execution with policy‑as‑code, isolation domains, and runtime checks.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-risk-tiered-tool-use" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Overview</Link>
+              <Link href="/content/ai-2026-risk-tiered-tool-use-blueprint" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Read Blueprint</Link>
             </div>
           </div>
         </div>
@@ -278,6 +349,23 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Promo: Trusted GenAI Patterns (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-cyan-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-cyan-100">
+            <div>
+              <p className="text-sm font-semibold text-cyan-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Trusted GenAI Patterns for Regulated Enterprises</h2>
+              <p className="text-gray-600 mt-2">Evaluation-first GenAI with policy‑as‑code, risk‑tiered tools, and audit evidence.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/content/ai-2026-trusted-genai-patterns-regulated-enterprises" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Read Guide</Link>
+              <Link href="/blog/ai-2026-trusted-genai-patterns-regulated-enterprises-overview" className="inline-block border border-cyan-600 text-cyan-700 px-5 py-3 rounded-lg font-semibold hover:bg-cyan-50">Overview</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Agent Risk Metrics + Governed Tool Use + Starter Kit (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -297,6 +385,22 @@ export default function HomePage() {
       </section>
       {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={8} />
+      {/* New: Promote Trustworthy Model Routing + Agent Benchmark Suite */}
+      <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
+            <div>
+              <p className="text-sm font-semibold text-purple-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Trustworthy Model Routing + Agent Benchmarks</h2>
+              <p className="text-gray-600 mt-2">Eval-gated routing and scenario suites to ship safe, high-quality agents.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-trustworthy-model-routing" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Model Routing</Link>
+              <Link href="/blog/ai-2026-agent-benchmark-suite" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Benchmark Suite</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Quick new content spotlight */}
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
