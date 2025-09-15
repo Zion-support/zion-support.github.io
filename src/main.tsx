@@ -1,10 +1,16 @@
 import React from 'react';
+<<<<<<< HEAD
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App';
+=======
+import { createRoot } from 'react-dom/client';
+import App from '../App.tsx';
+>>>>>>> cursor/create-and-deploy-new-content-764d
 import './index.css';
 
 const rootElement = document.getElementById('root');
 
+<<<<<<< HEAD
 function renderApp() {
     const app = (
         <React.StrictMode>
@@ -40,3 +46,13 @@ window.addEventListener('error', (e) => {
     console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
 });
+=======
+if (rootElement) {
+  const root = createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}
+>>>>>>> cursor/create-and-deploy-new-content-764d
