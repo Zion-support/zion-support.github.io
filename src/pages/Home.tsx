@@ -19,7 +19,14 @@ import {
   Target,
   TrendingUp,
   Users,
-  Zap
+  Zap,
+  Rocket,
+  BookOpen,
+  HelpCircle,
+  Network,
+  Lock,
+  Gauge,
+  BarChart3
 } from 'lucide-react';
 import type { ComponentType, SyntheticEvent } from 'react';
 import React, { useEffect, useState } from 'react';
@@ -365,6 +372,90 @@ export default function Home() {
         {/* Hero Section */}
         <HeroSection />
 
+        {/* New Content Showcase Banner */}
+        <motion.section 
+          className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-cyan/10"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-4">
+                <Rocket className="w-4 h-4 mr-2" />
+                NEW CONTENT & SERVICES
+              </div>
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Revolutionary AI Solutions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Discover our latest AI-powered services including quantum analytics, autonomous cloud infrastructure, and neural security networks.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/new-content-showcase"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                >
+                  Explore New Services
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link
+                  to="/ai-innovation-hub"
+                  className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300"
+                >
+                  AI Innovation Hub
+                  <Brain className="w-5 h-5 ml-2" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Featured New Services */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">
+                    <Brain className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">Quantum Analytics</h3>
+                  <p className="text-sm text-gray-300 mb-3">Revolutionary quantum computing meets AI</p>
+                  <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">NEW</span>
+                </div>
+              </div>
+              <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">
+                    <Cloud className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">Autonomous Cloud</h3>
+                  <p className="text-sm text-gray-300 mb-3">Self-healing cloud infrastructure</p>
+                  <span className="inline-block px-3 py-1 bg-red-500/20 text-red-400 text-xs rounded-full">HOT</span>
+                </div>
+              </div>
+              <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">
+                    <Shield className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">Neural Security</h3>
+                  <p className="text-sm text-gray-300 mb-3">AI-powered threat detection</p>
+                  <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">TRENDING</span>
+                </div>
+              </div>
+              <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">
+                    <Zap className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">Hyper Automation</h3>
+                  <p className="text-sm text-gray-300 mb-3">End-to-end process automation</p>
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">POPULAR</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
         {/* Latest from the Blog */}
         <motion.section 
           className="py-14 px-4 sm:px-6 lg:px-8 bg-slate-800/30"
@@ -380,13 +471,39 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {getRecentBlogPosts(3).map((post, index) => (
+              {/* Featured new blog post */}
+              <motion.article
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0 }}
+                className="bg-slate-800/50 rounded-xl overflow-hidden border border-zion-cyan/50 hover:border-zion-cyan transition-all duration-300 md:col-span-1"
+              >
+                <Link to="/blog/new-ai-services-announcement" className="block">
+                  <div className="aspect-[16/9] bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <Brain className="w-16 h-16 text-zion-cyan mx-auto mb-2" />
+                      <span className="text-white font-semibold">Featured Article</span>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">AI Innovation</span>
+                      <span className="text-xs text-zion-slate-light">Jan 20, 2025 • 15 min read</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">Revolutionary AI Services: Transforming Business in 2025</h3>
+                    <p className="text-zion-slate-light line-clamp-3">Discover our latest AI-powered solutions including quantum analytics, autonomous cloud infrastructure, and neural security networks.</p>
+                  </div>
+                </Link>
+              </motion.article>
+
+              {getRecentBlogPosts(2).map((post, index) => (
                 <motion.article
                   key={post.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
                   className="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300"
                 >
                   <Link to={`/blog/${post.slug}`} className="block">
