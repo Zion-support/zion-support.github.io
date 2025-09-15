@@ -82,28 +82,8 @@ export default function App(): JSX.Element {
                       <a href="/pages/QuantumNeuralFusion2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         ⚛️ Quantum-Neural Fusion →
                       </a>
-<<<<<<< HEAD
-                      <a href="/pages/AIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🤖 AI Revolution 2025 →
-                      </a>
-                      <a href="/pages/QuantumComputingBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        ⚡ Quantum Breakthrough →
-                      </a>
-                      <a href="/pages/NeuralInterfaceFuture" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧬 Neural Interface →
-                      </a>
-                      <a href="/pages/AIEnterpriseCopilot2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧭 Enterprise Copilot →
-                      </a>
-                      <a href="/pages/AdvancedAITransformation2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🤖 AI Transformation →
-                      </a>
-                      <a href="/pages/NextGenTechShowcase2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🚀 Next-Gen Tech →
-=======
                       <a href="/pages/TechTrendsBlog2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         📰 Tech Trends Blog →
->>>>>>> cursor/create-and-deploy-new-content-1ea1
                       </a>
                     </div>
                   </div>
