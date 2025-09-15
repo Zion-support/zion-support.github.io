@@ -34,6 +34,14 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Case Study'
   },
   {
+    title: 'Blueprint: Policy‑as‑Code in Production (2026)',
+    summary:
+      'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
+    href: '/blog/ai-2026-policy-as-code-production-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
     title: 'Launch: Autonomous Sales Copilot v1.0',
     summary:
       'Pipeline insights, meeting prep, and safe CRM automation with policy-as-code and live evals.',
