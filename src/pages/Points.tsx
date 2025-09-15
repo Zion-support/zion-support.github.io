@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth',
-import { usePoints } from '@/hooks/usePoints',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { ScrollArea } from '@/components/ui/scroll-area',
-import { formatDistanceToNow } from 'date-fns',
-import Link from 'next/link',
-import { LoginModal } from '@/components/auth/LoginModal',
-
-export default function PointsPage() {
-  const { isAuthenticated, user } = useAuth(),
-  const { ledger, balance, loading, fetchLedger } = usePoints(),
-  const [loginOpen, setLoginOpen] = useState(false),
-  const [redeeming, setRedeeming] = useState(false),
-
-  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
-    if (!user?.id) return,
-    setRedeeming(true),
-=======
 import React, { useState } from 'react';
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth';
@@ -32,36 +9,25 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { formatDistanceToNow } from 'date-fns';
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
-
 export default function PointsPage() {
   const { isAuthenticated, user } = useAuth();
   const { ledger, balance, loading, fetchLedger } = usePoints();
   const [loginOpen, setLoginOpen] = useState(false);
   const [redeeming, setRedeeming] = useState(false);
-
   async function handleRedeem(reward: { id: string; cost: number; title: string }) {
     if (!user?.id) return;
     setRedeeming(true);
->>>>>>> origin/auto/autonomy-17186719616
     try {
       await fetch('/api/points/redeem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })
-<<<<<<< HEAD
-      }),
-      await fetchLedger(),
-    } finally {
-      setRedeeming(false),
-=======
       });
       await fetchLedger();
     } finally {
       setRedeeming(false);
->>>>>>> origin/auto/autonomy-17186719616
     }
   }
-
   const earningOpportunities = [
     {
       icon: <Users className="h-5 w-5" />,
@@ -91,24 +57,14 @@ export default function PointsPage() {
       points: "200 pts per referral",
       action: "Share Referral Link"
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
-
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
     { id: 'premium1', title: 'Premium Features (1 month)', cost: 1000, category: 'Subscription' },
     { id: 'swag', title: 'Zion Swag Pack', cost: 1500, category: 'Merchandise' },
     { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' },
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
-
   if (!isAuthenticated) {
     return (
       <>
@@ -123,7 +79,6 @@ export default function PointsPage() {
               Join Now to Start Earning
             </Button>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <Card>
               <CardHeader>
@@ -148,7 +103,6 @@ export default function PointsPage() {
                 ))}
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -172,7 +126,6 @@ export default function PointsPage() {
               </CardContent>
             </Card>
           </div>
-
           <Card className="text-center">
             <CardContent className="pt-6">
               <Star className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -188,13 +141,8 @@ export default function PointsPage() {
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   return (
     <div className="container py-10 max-w-4xl">
       <div className="text-center mb-8">
@@ -211,7 +159,6 @@ export default function PointsPage() {
           </p>
         )}
       </div>
-
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         <Card>
           <CardHeader>
@@ -239,7 +186,6 @@ export default function PointsPage() {
             ))}
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -272,7 +218,6 @@ export default function PointsPage() {
           </CardContent>
         </Card>
       </div>
-
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -309,7 +254,6 @@ export default function PointsPage() {
           )}
         </CardContent>
       </Card>
-
       <Card className="text-center">
         <CardContent className="pt-6">
           <Star className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -328,9 +272,5 @@ export default function PointsPage() {
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

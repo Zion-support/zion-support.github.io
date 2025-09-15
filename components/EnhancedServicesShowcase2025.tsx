@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useStateuseEffectuseMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  FaRocket
-  FaBrain
-  FaCloud
-  FaShieldAlt
-  FaChartLine
-=======
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -17,7 +6,6 @@ import {
   FaCloud, 
   FaShieldAlt, 
   FaChartLine, 
->>>>>>> origin/auto/autonomy-17186719616
   FaCogs,
   FaLightbulb,
   FaGlobe,
@@ -28,15 +16,9 @@ import {
   FaSearch
 } from 'react-icons/fa';
 import { 
-<<<<<<< HEAD
-  SiNextdotjs
-  SiReact
-  SiTypescript
-=======
   SiNextdotjs, 
   SiReact, 
   SiTypescript, 
->>>>>>> origin/auto/autonomy-17186719616
   SiTailwindcss,
   SiPrisma,
   SiSupabase,
@@ -47,7 +29,6 @@ import {
   SiGooglecloud,
   SiMicrosoftazure
 } from 'react-icons/si';
-
 interface Service {
   id: string;
   title: string;
@@ -63,7 +44,6 @@ interface Service {
   technologies: string[];
   benefits: string[];
 }
-
 interface ServiceCategory {
   id: string;
   name: string;
@@ -71,7 +51,6 @@ interface ServiceCategory {
   icon: React.ReactNode;
   color: string;
 }
-
 const serviceCategories: ServiceCategory[] = [
   {
     id: 'ai-ml',
@@ -116,7 +95,6 @@ const serviceCategories: ServiceCategory[] = [
     color: 'from-yellow-500 to-orange-500'
   }
 ];
-
 const services: Service[] = [
   {
     id: 'ai-automation-suite',
@@ -137,11 +115,7 @@ const services: Service[] = [
       professional: 799,
       enterprise: 1999
     },
-<<<<<<< HEAD
-    technologies: [', 'TensorFlow', 'PyTorch', 'OpenAI', 'LangChain', 'React', 'Node.js'],
-=======
     technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'LangChain', 'React', 'Node.js'],
->>>>>>> origin/auto/autonomy-17186719616
     benefits: [
       'Reduce manual tasks by 80%',
       'Improve accuracy by 95%',
@@ -168,11 +142,7 @@ const services: Service[] = [
       professional: 2499,
       enterprise: 4999
     },
-<<<<<<< HEAD
-    technologies: [', 'Qiskit', 'Cirq', 'PennyLane', 'Python'C++'CUDA'],
-=======
     technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
->>>>>>> origin/auto/autonomy-17186719616
     benefits: [
       'Solve previously impossible problems',
       'Exponential speed improvements',
@@ -199,11 +169,7 @@ const services: Service[] = [
       professional: 599,
       enterprise: 1499
     },
-<<<<<<< HEAD
-    technologies: ['TensorFlow 'Lite', 'ONNX 'Runtime', 'Edge 'TPU', 'Raspberry 'Pi', 'Arduino'],
-=======
     technologies: ['TensorFlow Lite', 'ONNX Runtime', 'Edge TPU', 'Raspberry Pi', 'Arduino'],
->>>>>>> origin/auto/autonomy-17186719616
     benefits: [
       'Reduced latency by 90%',
       'Lower bandwidth costs',
@@ -230,11 +196,7 @@ const services: Service[] = [
       professional: 999,
       enterprise: 2499
     },
-<<<<<<< HEAD
-    technologies: ['NIST 'PQC', 'QKD 'protocols', 'Zero 'Trust', 'SIEM'SOAR'],
-=======
     technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
->>>>>>> origin/auto/autonomy-17186719616
     benefits: [
       'Future-proof security',
       'Quantum-resistant encryption',
@@ -261,11 +223,7 @@ const services: Service[] = [
       professional: 799,
       enterprise: 1999
     },
-<<<<<<< HEAD
-    technologies: ['Apache 'Kafka', 'Apache 'Spark', 'Snowflake', 'Databricks', 'Airflow'],
-=======
     technologies: ['Apache Kafka', 'Apache Spark', 'Snowflake', 'Databricks', 'Airflow'],
->>>>>>> origin/auto/autonomy-17186719616
     benefits: [
       'Unified data view',
       'Real-time insights',
@@ -292,11 +250,7 @@ const services: Service[] = [
       professional: 599,
       enterprise: 1499
     },
-<<<<<<< HEAD
-    technologies: [', 'Kubernetes', 'Docker', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana'],
-=======
     technologies: ['Kubernetes', 'Docker', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana'],
->>>>>>> origin/auto/autonomy-17186719616
     benefits: [
       'Faster deployment',
       'Improved scalability',
@@ -305,27 +259,16 @@ const services: Service[] = [
     ]
   }
 ];
-
 const EnhancedServicesShowcase2025: React.FC = () => {
-<<<<<<< HEAD
-  const [selectedCategorysetSelectedCategory] = useState<string>('all');
-  const [selectedServicesetSelectedService] = useState<Service | null>(null);
-  const [searchTermsetSearchTerm] = useState('');
-  const [sortBysetSortBy] = useState<'name' | 'price' | 'category'>('name');
-=======
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
->>>>>>> origin/auto/autonomy-17186719616
-
   const filteredServices = useMemo(() => {
     let filtered = services;
-    
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
     }
-    
     if (searchTerm) {
       filtered = filtered.filter(service => 
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -333,12 +276,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
-    
-<<<<<<< HEAD
-    return filtered.sort((ab) => {
-=======
     return filtered.sort((a, b) => {
->>>>>>> origin/auto/autonomy-17186719616
       switch (sortBy) {
         case 'price':
           return a.pricing.starter - b.pricing.starter;
@@ -348,20 +286,13 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           return a.title.localeCompare(b.title);
       }
     });
-<<<<<<< HEAD
-  }[selectedCategorysearchTermsortBy]);
-=======
   }, [selectedCategory, searchTerm, sortBy]);
->>>>>>> origin/auto/autonomy-17186719616
-
   const handleServiceSelect = (service: Service) => {
     setSelectedService(service);
   };
-
   const closeModal = () => {
     setSelectedService(null);
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Header */}
@@ -377,41 +308,27 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover our cutting-edge technology solutions designed for the future. 
-<<<<<<< HEAD
-            From AI-powered automation to quantum 'computingwe', 're building 'tomorrow', 's innovations today.
-=======
             From AI-powered automation to quantum computing, we're building tomorrow's innovations today.
->>>>>>> origin/auto/autonomy-17186719616
           </p>
         </motion.div>
-
         {/* Search and Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.8delay: 0.2 }}
-=======
           transition={{ duration: 0.8, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
           className="mb-12"
         >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             <div className="relative flex-1 max-w-md">
               <input
                 type="text"
-<<<<<<< HEAD
-                placeholder="Search servicestechnologiesor features..."
-=======
                 placeholder="Search services, technologies, or features..."
->>>>>>> origin/auto/autonomy-17186719616
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
             </div>
-            
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
@@ -423,16 +340,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </select>
           </div>
         </motion.div>
-
         {/* Category Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.8delay: 0.4 }}
-=======
           transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4">
@@ -462,33 +374,20 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.8delay: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {filteredServices.map((serviceindex) => (
-=======
           transition={{ duration: 0.8, delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.6delay: index * 0.1 }}
-              whileHover={{ y: -5scale: 1.02 }}
-=======
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
->>>>>>> origin/auto/autonomy-17186719616
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300"
               onClick={() => handleServiceSelect(service)}
             >
@@ -501,15 +400,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   <p className="text-sm text-gray-400">{serviceCategories.find(c => c.id === service.category)?.name}</p>
                 </div>
               </div>
-              
               <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-              
               <div className="flex flex-wrap gap-2 mb-4">
-<<<<<<< HEAD
-                {service.technologies.slice(03).map((tech) => (
-=======
                 {service.technologies.slice(0, 3).map((tech) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <span
                     key={tech}
                     className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300"
@@ -523,7 +416,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   </span>
                 )}
               </div>
-              
               <div className="flex items-center justify-between">
                 <div className="text-2xl font-bold text-blue-400">
                   ${service.pricing.starter}
@@ -536,7 +428,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div
@@ -550,7 +441,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           </motion.div>
         )}
       </div>
-
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && (
@@ -585,19 +475,13 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   <span className="text-2xl">×</span>
                 </button>
               </div>
-
               <p className="text-gray-300 text-lg mb-8">{selectedService.description}</p>
-
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Features */}
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
                   <ul className="space-y-2">
-<<<<<<< HEAD
-                    {selectedService.features.map((featureindex) => (
-=======
                     {selectedService.features.map((feature, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                       <li key={index} className="flex items-center gap-2 text-gray-300">
                         <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                         {feature}
@@ -605,16 +489,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 {/* Benefits */}
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4">Key Benefits</h3>
                   <ul className="space-y-2">
-<<<<<<< HEAD
-                    {selectedService.benefits.map((benefitindex) => (
-=======
                     {selectedService.benefits.map((benefit, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                       <li key={index} className="flex items-center gap-2 text-gray-300">
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                         {benefit}
@@ -623,7 +502,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   </ul>
                 </div>
               </div>
-
               {/* Technologies */}
               <div className="mt-8">
                 <h3 className="text-xl font-bold text-white mb-4">Technologies</h3>
@@ -638,16 +516,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Pricing */}
               <div className="mt-8">
                 <h3 className="text-xl font-bold text-white mb-4">Pricing Plans</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-<<<<<<< HEAD
-                  {Object.entries(selectedService.pricing).map(([planprice]) => (
-=======
                   {Object.entries(selectedService.pricing).map(([plan, price]) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <div
                       key={plan}
                       className="p-4 bg-white/5 border border-white/20 rounded-lg text-center"
@@ -671,5 +544,4 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     </div>
   );
 };
-
 export default EnhancedServicesShowcase2025;

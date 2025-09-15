@@ -1,37 +1,16 @@
-
-<<<<<<< HEAD
-
-interface RewardsCardProps {
-
-  rewards: ReferralReward[]
-
-  isLoading: boolean
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from 'lucide-react'
-
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean;
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
-<<<<<<< HEAD
-
     return (
       <Card>
         <CardHeader>
-          <CardTitle className='flex items-center gap-2'>
-            <BadgeDollarSign className='h-5 w-5' />
-=======
-    return (
-      <Card>
-        <CardHeader>
->>>>>>> origin/auto/autonomy-17186719616
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
             Your Rewards
@@ -44,13 +23,8 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   if (rewards.length === 0) {
     return (
       <Card>
@@ -70,31 +44,11 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
-    ),
-  }
-
-
-    )
-
-
-
-
-  }
-  return (
-    <Card>
-      <CardHeader>
-
-        <CardTitle className='flex items-center gap-2'>
-          <BadgeDollarSign className='h-5 w-5' />
-=======
     );
   }
-
   return (
     <Card>
       <CardHeader>
->>>>>>> origin/auto/autonomy-17186719616
         <CardTitle className="flex items-center gap-2">
           <BadgeDollarSign className="h-5 w-5" />
           Your Rewards
@@ -137,9 +91,5 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

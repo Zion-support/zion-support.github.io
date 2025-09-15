@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-"use client";
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import React, { useState, useEffect, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -16,13 +12,8 @@ import {
 import { 
   emergingTechServicesEnhanced2025 
 } from '../data/2025-emerging-tech-services-enhanced';
-<<<<<<< HEAD
-import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
-import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
-=======
 import { advancedAIAutomationServices2026 as advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
 import { advancedCybersecurityServices2026 as advancedCybersecurityServices } from '../data/2026-advanced-cybersecurity-services';
->>>>>>> origin/auto/autonomy-17186719616
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
 import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
@@ -34,15 +25,12 @@ import {
   Users, Globe, TrendingUp, Rocket, Cpu, Lock,
   BarChart3, Cloud
 } from 'lucide-react';
-
 interface Homepage2025Props { showInternalNav?: boolean }
-
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
   const [activeSection, setActiveSection] = useState('hero');
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -50,7 +38,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -59,25 +46,18 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       setIsMobileMenuOpen(false);
     }
   };
-
   const allServices = [
     ...innovativeRealMicroSaasServices2025,
     ...innovativeAIServicesEnhanced2025,
     ...innovativeITServicesEnhanced2025,
     ...emergingTechServicesEnhanced2025,
     ...advancedAIAutomationServices,
-<<<<<<< HEAD
-    ...quantumCybersecurityServices,
-=======
     ...advancedCybersecurityServices,
->>>>>>> origin/auto/autonomy-17186719616
     ...innovativeMicroSaasServices2026,
     ...specializedITSolutions2026,
     ...emergingTechServices2026
   ];
-
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
-
   const navigationSections = [
     { id: 'hero', label: 'Home', icon: '🏠' },
     { id: 'services', label: 'Micro SAAS', icon: '🚀' },
@@ -88,7 +68,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
     { id: 'contact', label: 'Contact', icon: '📞' }
   ];
-
   const features = [
     {
       title: "AI-Powered Innovation",
@@ -111,13 +90,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       icon: Zap
     }
   ];
-
   const itemVariants = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
   };
-
   const staggerContainer = {
     initial: {},
     animate: {
@@ -126,7 +103,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       }
     }
   };
-
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
       {showInternalNav && (
@@ -143,7 +119,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
                   <span className="text-white font-bold text-xl">ZionTech Group</span>
                 </motion.div>
-                
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex space-x-8">
                   {navigationSections.map((section) => (
@@ -161,7 +136,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     </button>
                   ))}
                 </div>
-
                 {/* Contact Info */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -181,7 +155,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     Contact Us
                   </a>
                 </motion.div>
-
                 {/* Mobile Menu Button */}
                 <button
                   className="lg:hidden text-white p-2"
@@ -192,7 +165,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   </svg>
                 </button>
               </div>
-
               {/* Mobile Navigation Menu */}
               <AnimatePresence>
                 {isMobileMenuOpen && (
@@ -241,7 +213,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </nav>
         </>
       )}
-
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
@@ -265,14 +236,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <Star className="w-5 h-5" />
                 <span>Innovation Leader 2025-2026</span>
               </motion.div>
-              
               <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
               </h1>
               <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
                 Pioneering the future of technology with innovative solutions that drive business transformation
               </p>
-              
               {/* Enhanced CTA Section */}
               <motion.div 
                 variants={itemVariants}
@@ -297,7 +266,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   </button>
                 </Link>
               </motion.div>
-              
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -322,7 +290,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
@@ -340,7 +307,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               From AI-powered automation to quantum computing, we provide the tools you need to stay ahead of the competition.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
@@ -365,7 +331,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </div>
         </div>
       </section>
-
       {/* Enhanced Services Preview */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -383,7 +348,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-500 to-pink-500", link: "/comprehensive-services-showcase-2026" },
@@ -417,7 +381,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               </motion.div>
             ))}
           </div>
-
           {/* Call to Action for Services Showcase */}
           <motion.div
             className="text-center mt-16"
@@ -437,24 +400,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
         </div>
       </section>
-
-<<<<<<< HEAD
-              href='/comprehensive-services-showcase-2026'
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25'
-            >
-              <Rocket className='w-5 h-5 mr-2' />
-              View All 2026 Services
-              <ArrowRight className='w-5 h-5 ml-2' />            </a>            >
-              <Rocket className="w-5 h-5 mr-2" />
-              View All 2026 Services
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -472,7 +417,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               Get in touch with our team to discuss how our innovative services can help you achieve your goals.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -496,7 +440,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <p className="text-gray-300 text-sm">Round-the-clock assistance</p>
             </div>
           </div>
-
           <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 20 }}
@@ -521,7 +464,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="py-12 px-4 border-t border-white/10">
         <div className="max-w-6xl mx-auto text-center">
@@ -549,5 +491,4 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     </UltraFuturisticBackground2026>
   );
 };
-
 export default Homepage2025;

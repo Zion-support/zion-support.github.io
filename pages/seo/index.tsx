@@ -1,25 +1,10 @@
-<<<<<<< HEAD
-import React from 'react',
-
-export default function SEOIndex() {
-  const [slugs, setSlugs] = React.useState<string[]>([]),
-
-  React.useEffect(() => {
-    // In a real app, list from API or build-time, here we rely on directory hint not available at runtime.
-    setSlugs([]),
-  }, []),
-=======
 import React from 'react';
-
 export default function SEOIndex() {
   const [slugs, setSlugs] = React.useState<string[]>([]);
-
   React.useEffect(() => {
     // In a real app, list from API or build-time; here we rely on directory hint not available at runtime.
     setSlugs([]);
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div>
       <h1 className="text-2xl font-semibold mb-4">SEO Landing Pages</h1>
@@ -33,9 +18,5 @@ export default function SEOIndex() {
         </ul>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

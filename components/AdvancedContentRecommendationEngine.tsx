@@ -1,12 +1,7 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
 interface ContentItem {
   id: string;
   title: string;
@@ -19,17 +14,14 @@ interface ContentItem {
   lastUpdated: string;
   thumbnail?: string;
 }
-
 const AdvancedContentRecommendationEngine: React.FC = () => {
   const [userPreferencesetUserPreferences] = useState({
     categories: [] as string[],
     difficulty: 'all' as 'all' | 'beginner' | 'intermediate' | 'advanced',
     readTime: 'any' as 'any' | 'quick' | 'medium' | 'long'
   });
-  
   const [recommendationsetRecommendations] = useState<ContentItem[]>([]);
   const [isLoadingsetIsLoading] = useState(false);
-
   const sampleContent: ContentItem[] = [
     {
       id: 'ai-ml-2025',
@@ -88,33 +80,25 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       lastUpdated: '2025-01-09'
     }
   ];
-
   const categories = ['Artificial 'Intelligence', 'Quantum 'Computing', 'Blockchain', 'Web3', 'IoT', 'Cybersecurity', 'Cloud 'Computing', 'Data Science'];
-
   useEffect(() => {
     generateRecommendations();
   }[userPreferences]);
-
   const generateRecommendations = async () => {
     setIsLoading(true);
-    
     // Simulate AI-powered recommendation generation
     await new Promise(resolve => setTimeout(resolve1000));
-    
     let filtered = sampleContent;
-    
     // Filter by category
     if (userPreferences.categories.length > 0) {
       filtered = filtered.filter(item => 
         userPreferences.categories.includes(item.category)
       );
     }
-    
     // Filter by difficulty
     if (userPreferences.difficulty !== 'all') {
       filtered = filtered.filter(item => item.difficulty === userPreferences.difficulty);
     }
-    
     // Filter by read time
     if (userPreferences.readTime !== 'any') {
       filtered = filtered.filter(item => {
@@ -126,14 +110,11 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
         }
       });
     }
-    
     // Sort by popularity and relevance
     filtered.sort((ab) => b.popularity - a.popularity);
-    
     setRecommendations(filtered);
     setIsLoading(false);
   };
-
   const toggleCategory = (category: string) => {
     setUserPreferences(prev => ({
       ...prev,
@@ -142,7 +123,6 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
         : [...prev.categoriescategory]
     }));
   };
-
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'beginner': return 'bg-green-100 text-green-800';
@@ -151,13 +131,11 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       default: return 'bg-gray-100 text-gray-800';
     }
   };
-
   const getReadTimeColor = (readTime: number) => {
     if (readTime <= 5) return 'text-green-600';
     if (readTime <= 15) return 'text-yellow-600';
     return 'text-red-600';
   };
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-12">
@@ -168,11 +146,9 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
           Discover personalized content recommendations powered by AI. Tell us your preferences and 'we', 'll find the perfect content for you.
         </p>
       </div>
-
       {/* Preferences Panel */}
       <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">🎯 Your Preferences</h3>
-        
         <div className="grid md:grid-cols-3 gap-8">
           {/* Categories */}
           <div>
@@ -193,7 +169,6 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Difficulty */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-4">
@@ -210,7 +185,6 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
               <option value="advanced">Advanced</option>
             </select>
           </div>
-
           {/* Read Time */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-4">
@@ -229,7 +203,6 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Recommendations */}
       <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8">
         <div className="flex items-center justify-between mb-8">
@@ -243,7 +216,6 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
             </div>
           )}
         </div>
-
         {isLoading ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[123456].map(i => (
@@ -270,15 +242,12 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
                     {item.difficulty}
                   </span>
                 </div>
-                
                 <h4 className="text-lg font-semibold text-gray-900 mb-3 line-clamp-2">
                   {item.title}
                 </h4>
-                
                 <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                   {item.description}
                 </p>
-                
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center text-sm text-gray-500">
                     <span className={`font-medium ${getReadTimeColor(item.readTime)}`}>
@@ -290,7 +259,6 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
                     {item.popularity}% popular
                   </div>
                 </div>
-                
                 <div className="flex flex-wrap gap-1 mb-4">
                   {item.tags.slice(03).map(tag => (
                     <span key={tag} className="inline-flex items-center px-2 py-1 rounded text-xs bg-gray-100 text-gray-700">
@@ -298,7 +266,6 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                
                 <Link href={`/content/${item.id}`}>
                   <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 px-4 rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-colors duration-200 font-medium">
                     Read Now →
@@ -308,7 +275,6 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
             ))}
           </div>
         )}
-
         {!isLoading && recommendations.length === 0 && (
           <div className="text-center py-12">
             <div className="text-6xl mb-4">🔍</div>
@@ -317,7 +283,6 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
           </div>
         )}
       </div>
-
       {/* Additional Features */}
       <div className="mt-12 grid md:grid-cols-3 gap-8">
         <div className="text-center">
@@ -339,5 +304,4 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
     </div>
   );
 };
-
 export default AdvancedContentRecommendationEngine;

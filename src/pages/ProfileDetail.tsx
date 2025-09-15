@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { useRouter } from "next/router",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { SEO } from "@/components/SEO",
-import { Header } from "@/components/Header",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
-import { HireNowCTA } from "@/components/profile/HireNowCTA",
-=======
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { supabase } from "@/integrations/supabase/client";
@@ -24,33 +10,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
->>>>>>> origin/auto/autonomy-17186719616
-
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
-<<<<<<< HEAD
-  const router = useRouter(),
-  const profileId = router.query.profileId as string,
-  const [profileData, setProfileData] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-
-  useEffect(() => {
-    const fetchProfile = async () => {
-      setIsLoading(true),
-      setError(null),
-      try {
-        if (!profileId) {
-          setError("Profile ID is missing."),
-          return,
-=======
   const router = useRouter();
   const profileId = router.query.profileId as string;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     const fetchProfile = async () => {
       setIsLoading(true);
@@ -59,51 +26,19 @@ export default function ProfileDetail() {
         if (!profileId) {
           setError("Profile ID is missing.");
           return;
->>>>>>> origin/auto/autonomy-17186719616
         }
-
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-<<<<<<< HEAD
-          .single(),
-
-        if (error) {
-          throw new Error(error.message),
-        }
-
-        if (!data) {
-          setError("Profile not found."),
-          return,
-        }
-
-        setProfileData(data),
-      } catch (err: any) {
-        setError(err.message || "Failed to fetch profile."),
-        toast({
-          title: "Error",
-          description: err.message || "Failed to fetch profile.",
-          variant: "destructive"}),
-      } finally {
-        setIsLoading(false),
-      }
-    },
-
-    fetchProfile(),
-  }, [profileId]),
-=======
           .single();
-
         if (error) {
           throw new Error(error.message);
         }
-
         if (!data) {
           setError("Profile not found.");
           return;
         }
-
         setProfileData(data);
       } catch (err: any) {
         setError(err.message || "Failed to fetch profile.");
@@ -116,47 +51,29 @@ export default function ProfileDetail() {
         setIsLoading(false);
       }
     };
-
     fetchProfile();
   }, [profileId]);
->>>>>>> origin/auto/autonomy-17186719616
-
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
       </div>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   if (error) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p>Error: {error}</p>
       </div>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   if (!profileData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   return (
     <>
       <SEO
@@ -213,7 +130,6 @@ export default function ProfileDetail() {
                 </div>
               </CardContent>
             </Card>
-
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -223,7 +139,6 @@ export default function ProfileDetail() {
                 <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
               </CardContent>
             </Card>
-
             {/* Skills Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -237,7 +152,6 @@ export default function ProfileDetail() {
                 </div>
               </CardContent>
             </Card>
-
             {/* Experience Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -258,7 +172,6 @@ export default function ProfileDetail() {
                 )}
               </CardContent>
             </Card>
-
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -286,7 +199,6 @@ export default function ProfileDetail() {
               </CardContent>
             </Card>
           </div>
-
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
@@ -323,7 +235,6 @@ export default function ProfileDetail() {
                 )}
               </div>
             </div>
-
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>
@@ -373,9 +284,5 @@ export default function ProfileDetail() {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

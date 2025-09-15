@@ -1,10 +1,6 @@
 import * as React from "react"
 import * as SelectPrimitive from "@radix-ui/react-select"
-<<<<<<< HEAD
-import { CheckChevronDownChevronUp } from "lucide-react"
-=======
 import { Check, ChevronDown, ChevronUp } from "lucide-react"
->>>>>>> origin/auto/autonomy-17186719616
 
 import { cn } from "@/lib/utils"
 
@@ -17,11 +13,7 @@ const SelectValue = SelectPrimitive.Value
 const SelectTrigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
-<<<<<<< HEAD
->(({ classNamechildren...props }ref) => (
-=======
 >(({ className, children, ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
@@ -41,11 +33,7 @@ SelectTrigger.displayName = SelectPrimitive.Trigger.displayName
 const SelectScrollUpButton = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.ScrollUpButton>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollUpButton>
-<<<<<<< HEAD
->(({ className...props }ref) => (
-=======
 >(({ className, ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <SelectPrimitive.ScrollUpButton
     ref={ref}
     className={cn(
@@ -62,11 +50,7 @@ SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName
 const SelectScrollDownButton = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.ScrollDownButton>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollDownButton>
-<<<<<<< HEAD
->(({ className...props }ref) => (
-=======
 >(({ className, ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <SelectPrimitive.ScrollDownButton
     ref={ref}
     className={cn(
@@ -84,11 +68,7 @@ SelectScrollDownButton.displayName =
 const SelectContent = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
-<<<<<<< HEAD
->(({ classNamechildrenposition = "popper"...props }ref) => (
-=======
 >(({ className, children, position = "popper", ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <SelectPrimitive.Portal>
     <SelectPrimitive.Content
       ref={ref}
@@ -120,17 +100,10 @@ SelectContent.displayName = SelectPrimitive.Content.displayName
 const SelectLabel = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Label>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>
-<<<<<<< HEAD
->(({ className...props }ref) => (
-  <SelectPrimitive.Label
-    ref={ref}
-    className={cn("py-1.5 pl-8 pr-2 text-sm font-semibold"className)}
-=======
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Label
     ref={ref}
     className={cn("py-1.5 pl-8 pr-2 text-sm font-semibold", className)}
->>>>>>> origin/auto/autonomy-17186719616
     {...props}
   />
 ))
@@ -139,11 +112,7 @@ SelectLabel.displayName = SelectPrimitive.Label.displayName
 const SelectItem = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
-<<<<<<< HEAD
->(({ classNamechildren...props }ref) => (
-=======
 >(({ className, children, ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
@@ -166,17 +135,10 @@ SelectItem.displayName = SelectPrimitive.Item.displayName
 const SelectSeparator = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
-<<<<<<< HEAD
->(({ className...props }ref) => (
-  <SelectPrimitive.Separator
-    ref={ref}
-    className={cn("-mx-1 my-1 h-px bg-muted"className)}
-=======
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Separator
     ref={ref}
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
->>>>>>> origin/auto/autonomy-17186719616
     {...props}
   />
 ))
@@ -192,9 +154,5 @@ export {
   SelectItem,
   SelectSeparator,
   SelectScrollUpButton,
-<<<<<<< HEAD
-  SelectScrollDownButton}
-=======
   SelectScrollDownButton,
 }
->>>>>>> origin/auto/autonomy-17186719616

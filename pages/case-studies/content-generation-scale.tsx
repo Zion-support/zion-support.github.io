@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
-
 export default function CaseStudyPage() {
   const caseStudy = {
     id: 'content-generation-scale',
@@ -17,16 +10,6 @@ export default function CaseStudyPage() {
     challenge: 'Unable to meet client demand for high-quality content at scale',
     solution: 'Deployed autonomous content generation systems with human oversight and quality control',
     results: [
-<<<<<<< HEAD
-      '10x increase in content output85% improvement in engagement metrics',
-      '70% reduction in content creation time95% client satisfaction rate'
-    ],
-    technologies: ['Natural Language ProcessingContent Optimization', 'SEO AutomationAnalytics'],
-    duration: '4 months',
-    teamSize: '5 engineers + 3 content specialists',
-    featured: false
-  },
-=======
       '10x increase in content output',
       '85% improvement in engagement metrics',
       '70% reduction in content creation time',
@@ -37,8 +20,6 @@ export default function CaseStudyPage() {
     teamSize: '5 engineers + 3 content specialists',
     featured: false
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <>
       <Head>
@@ -46,7 +27,6 @@ export default function CaseStudyPage() {
         <meta name="description" content={`Learn how ${caseStudy.company} achieved ${caseStudy.results[0]} with AI automation.`} />
         <meta name="keywords" content="AI automation, content generation, marketing, case study, NLP, SEO automation" />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
         <main className="pt-20 pb-16">
           <div className="max-w-4xl mx-auto px-6">
@@ -56,7 +36,6 @@ export default function CaseStudyPage() {
                 ← Back to Case Studies
               </Link>
             </nav>
-
             {/* Header */}
             <header className="mb-12 text-center">
               <div className="mb-4">
@@ -71,7 +50,6 @@ export default function CaseStudyPage() {
                 <span>Team: {caseStudy.teamSize}</span>
               </div>
             </header>
-
             {/* Challenge */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>
@@ -79,7 +57,6 @@ export default function CaseStudyPage() {
                 <p className="text-white/90 text-lg">{caseStudy.challenge}</p>
               </div>
             </section>
-
             {/* Solution */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>
@@ -87,7 +64,6 @@ export default function CaseStudyPage() {
                 <p className="text-white/90 text-lg">{caseStudy.solution}</p>
               </div>
             </section>
-
             {/* Technologies */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
@@ -99,7 +75,6 @@ export default function CaseStudyPage() {
                 ))}
               </div>
             </section>
-
             {/* Results */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
@@ -116,7 +91,6 @@ export default function CaseStudyPage() {
                 ))}
               </div>
             </section>
-
             {/* Call to Action */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
@@ -125,11 +99,7 @@ export default function CaseStudyPage() {
                   This case study demonstrates the real impact of AI automation in content generation. 
                   Let's discuss how we can help you achieve similar results.
                 </p>
-<<<<<<< HEAD
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">
-=======
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> origin/auto/autonomy-17186719616
                   <Link 
                     href="/contact"
                     className="bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300"
@@ -149,9 +119,5 @@ export default function CaseStudyPage() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,29 +1,12 @@
-<<<<<<< HEAD
-"use client";
-import { useEffectuseState } from 'react';
-import Head from 'next/head';
-
-export default function AutomationInsightsPage() {
-  const [intelsetIntel] = useState<any>(null);
-  const [talentMdsetTalentMd] = useState<string>(', ');
-=======
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-
 export default function AutomationInsightsPage() {
   const [intel, setIntel] = useState<any>(null);
   const [talentMd, setTalentMd] = useState<string>('');
->>>>>>> origin/auto/autonomy-17186719616
-
   useEffect(() => {
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {});
-<<<<<<< HEAD
-  }[]);
-=======
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div>
       <Head><title>Automation Insights — Zion</title></Head>
@@ -38,11 +21,7 @@ export default function AutomationInsightsPage() {
             <div className="mt-3">
               <h3 className="font-medium">Top Keywords</h3>
               <ul className="list-disc list-inside">
-<<<<<<< HEAD
-                {Object.entries(intel.insights.keywordCounts).map(([kv]: any) => (
-=======
                 {Object.entries(intel.insights.keywordCounts).map(([k, v]: any) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <li key={k}>{k}: {v as any}</li>
                 ))}
               </ul>
@@ -58,7 +37,6 @@ export default function AutomationInsightsPage() {
           </div>
         )}
       </section>
-
       <section id="talent" className="mb-8">
         <h2 className="font-medium">Talent Highlights</h2>
         {!talentMd ? (

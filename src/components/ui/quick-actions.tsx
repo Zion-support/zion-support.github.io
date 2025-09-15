@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import { useAuth } from '@/hooks/useAuth',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import {logErrorToProduction} from '@/utils/productionLogger',
-import { Zap, Download, Trash2, RefreshCw, Settings, Activity, Package, Monitor } from 'lucide-react'
-
-interface QuickAction {
-  id: string,
-  label: string,
-  description: string,
-  icon: React.ReactNode,
-  action: () => void,
-  category: 'performance' | 'development' | 'maintenance',
-  dangerous?: boolean
-}
-
-export function QuickActions() {
-  const { user } = useAuth(),
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,
-
-  if (!isAllowed) {
-    return null,
-  }
-
-  const [isVisible, setIsVisible] = useState(false),
-  const [isProcessing, setIsProcessing] = useState<string | null>(null),
-
-  const executeAction = async (actionId: string, action: () => void) => {
-    setIsProcessing(actionId),
-    try {
-      await action()
-    } catch (error) {
-      logErrorToProduction(`Failed to execute action ${actionId}:`, { data: error }),
-    } finally {
-      setIsProcessing(null),
-    }
-  },
-=======
 import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -47,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { Zap, Download, Trash2, RefreshCw, Settings, Activity, Package, Monitor } from 'lucide-react'
-
 interface QuickAction {
   id: string;
   label: string;
@@ -57,19 +14,15 @@ interface QuickAction {
   category: 'performance' | 'development' | 'maintenance';
   dangerous?: boolean;
 }
-
 export function QuickActions() {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
   const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
-
   if (!isAllowed) {
     return null;
   }
-
   const [isVisible, setIsVisible] = useState(false);
   const [isProcessing, setIsProcessing] = useState<string | null>(null);
-
   const executeAction = async (actionId: string, action: () => void) => {
     setIsProcessing(actionId);
     try {
@@ -80,31 +33,19 @@ export function QuickActions() {
       setIsProcessing(null);
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   const actions: QuickAction[] = [
     // Performance Actions
     {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
       id: 'enable-performance-monitor',
       label: 'Enable Performance Monitor',
       description: 'Show real-time performance metrics',
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-<<<<<<< HEAD
-        localStorage.setItem('performance-monitoringtrue'),
-        window.location.reload(),
-      }},
-=======
         localStorage.setItem('performance-monitoring', 'true');
         window.location.reload();
       },
     },
->>>>>>> origin/auto/autonomy-17186719616
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -112,16 +53,10 @@ export function QuickActions() {
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-<<<<<<< HEAD
-        localStorage.setItem('bundle-analyzertrue'),
-        window.location.reload(),
-      }},
-=======
         localStorage.setItem('bundle-analyzer', 'true');
         window.location.reload();
       },
     },
->>>>>>> origin/auto/autonomy-17186719616
     {
       id: 'clear-cache',
       label: 'Clear Cache',
@@ -132,15 +67,6 @@ export function QuickActions() {
       action: () => {
         if ('caches' in window) {
           caches.keys().then(names => {
-<<<<<<< HEAD
-            names.forEach(name => caches.delete(name))
-          }),
-        }
-        localStorage.clear(),
-        sessionStorage.clear(),
-        window.location.reload(),
-      }},
-=======
             names.forEach(name => caches.delete(name));
           });
         }
@@ -149,7 +75,6 @@ export function QuickActions() {
         window.location.reload();
       },
     },
->>>>>>> origin/auto/autonomy-17186719616
     {
       id: 'preload-critical-resources',
       label: 'Preload Critical Resources',
@@ -159,38 +84,9 @@ export function QuickActions() {
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
-<<<<<<< HEAD
-          '/fonts/inter-var.woff2/fonts/cal-sans.woff2'
-        ],
-        
-        criticalFonts.forEach(font => {
-          const link = document.createElement('link'),
-          link.rel = 'preload',
-          link.as = 'font',
-          link.type = 'font/woff2',
-          link.crossOrigin = 'anonymous',
-          link.href = font,
-          document.head.appendChild(link),
-        }),
-
-        // Preload critical images
-        const criticalImages = [
-          '/logos/zion-logo.png/images/hero-bg.webp'
-        ],
-        
-        criticalImages.forEach(img => {
-          const link = document.createElement('link'),
-          link.rel = 'preload',
-          link.as = 'image',
-          link.href = img,
-          document.head.appendChild(link),
-        }),
-      }},
-=======
           '/fonts/inter-var.woff2',
           '/fonts/cal-sans.woff2'
         ];
-        
         criticalFonts.forEach(font => {
           const link = document.createElement('link');
           link.rel = 'preload';
@@ -200,13 +96,11 @@ export function QuickActions() {
           link.href = font;
           document.head.appendChild(link);
         });
-
         // Preload critical images
         const criticalImages = [
           '/logos/zion-logo.png',
           '/images/hero-bg.webp'
         ];
-        
         criticalImages.forEach(img => {
           const link = document.createElement('link');
           link.rel = 'preload';
@@ -216,7 +110,6 @@ export function QuickActions() {
         });
       },
     },
->>>>>>> origin/auto/autonomy-17186719616
     {
       id: 'download-performance-report',
       label: 'Download Performance Report',
@@ -226,13 +119,8 @@ export function QuickActions() {
       action: () => {
         const metrics = {
           timestamp: new Date().toISOString(),
-<<<<<<< HEAD
-          performance: window.window.window.performance.getEntriesByType('navigation')[0],
-          resources: window.window.window.performance.getEntriesByType('resource').slice(0, 20),
-=======
           performance: performance.getEntriesByType('navigation')[0],
           resources: performance.getEntriesByType('resource').slice(0, 20),
->>>>>>> origin/auto/autonomy-17186719616
           memory: (performance as any).memory || {},
           userAgent: navigator.userAgent,
           screen: {
@@ -240,40 +128,10 @@ export function QuickActions() {
             height: screen.height,
             colorDepth: screen.colorDepth
           }
-<<<<<<< HEAD
-        },
-
-        const blob = new Blob([JSON.stringify(metrics, null, 2)], {
-          type: 'application/json'
-        }),
-        
-        const url = URL.createObjectURL(blob),
-        const a = document.createElement('a'),
-        a.href = url,
-        a.download = `performance-report-${Date.now()}.json`,
-        document.body.appendChild(a),
-        a.click(),
-        document.body.removeChild(a),
-        URL.revokeObjectURL(url),
-      }},
-        throw new Error(
-          'Test error for Sentry integration - this is intentional!'
-        )
-      },
-    },
-        throw new Error('Test error for Sentry integration - this is intentional!')
-      }},
-
-
-
-
-=======
         };
-
         const blob = new Blob([JSON.stringify(metrics, null, 2)], {
           type: 'application/json'
         });
-        
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
@@ -284,7 +142,6 @@ export function QuickActions() {
         URL.revokeObjectURL(url);
       },
     },
->>>>>>> origin/auto/autonomy-17186719616
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -293,14 +150,9 @@ export function QuickActions() {
       category: 'development',
       dangerous: true,
       action: () => {
-<<<<<<< HEAD
-        throw new Error('Test error for Sentry integration - this is intentional!')
-      }},
-=======
         throw new Error('Test error for Sentry integration - this is intentional!');
       },
     },
->>>>>>> origin/auto/autonomy-17186719616
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -308,45 +160,24 @@ export function QuickActions() {
       icon: <RefreshCw className="w-4 h-4" />,
       category: 'maintenance',
       action: () => {
-<<<<<<< HEAD
-        window.location.reload()
-      }}],
-
-=======
         window.location.reload();
       },
     },
   ];
-
   const categorizedActions = {
     performance: actions.filter(a => a.category === 'performance'),
     development: actions.filter(a => a.category === 'development'),
     maintenance: actions.filter(a => a.category === 'maintenance'),
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   const categoryColors = {
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
-<<<<<<< HEAD
-    maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
-=======
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
-<<<<<<< HEAD
-          variant='outline'
-          size='sm'
-          onClick={() => setIsVisible(true)}
-          className='bg-background/80 backdrop-blur-sm'        >
-          <Settings className='w-4 h-4 mr-2' />
-=======
->>>>>>> origin/auto/autonomy-17186719616
           variant="outline"
           size="sm"
           onClick={() => setIsVisible(true)}
@@ -356,13 +187,8 @@ export function QuickActions() {
           Quick Actions
         </Button>
       </div>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   return (
     <div className="fixed bottom-4 left-4 z-50 w-80">
       <Card className="bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto">
@@ -373,11 +199,6 @@ export function QuickActions() {
               Quick Actions
             </CardTitle>
             <Button
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
               variant="ghost"
               size="sm"
               onClick={() => setIsVisible(false)}
@@ -429,10 +250,5 @@ export function QuickActions() {
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
-  ),
-} 
-=======
   );
 } 
->>>>>>> origin/auto/autonomy-17186719616

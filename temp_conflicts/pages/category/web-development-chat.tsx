@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import Link from 'next/link',
-=======
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
 
 const WebDevelopmentChat = () => {
   return (
@@ -21,14 +16,7 @@ const WebDevelopmentChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default WebDevelopmentChat,
-=======
   );
 };
 
 export default WebDevelopmentChat;
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,11 +1,6 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect } from 'react';
-
 interface PerformanceMetric {
   id: string;
   name: string;
@@ -16,7 +11,6 @@ interface PerformanceMetric {
   status: 'excellent' | 'good' | 'warning' | 'critical';
   lastUpdated: string;
 }
-
 interface SystemHealth {
   cpu: number;
   memory: number;
@@ -27,7 +21,6 @@ interface SystemHealth {
   requestsPerMinute: number;
   errorRate: number;
 }
-
 const RealTimePerformanceDashboard: React.FC = () => {
   const [metricsetMetrics] = useState<PerformanceMetric[]>([]);
   const [systemHealthsetSystemHealth] = useState<SystemHealth>({
@@ -42,7 +35,6 @@ const RealTimePerformanceDashboard: React.FC = () => {
   });
   const [isLoadingsetIsLoading] = useState(true);
   const [autoRefreshsetAutoRefresh] = useState(true);
-
   useEffect(() => {
     const generateMockData = () => {
       // Simulate real-time data generation
@@ -108,7 +100,6 @@ const RealTimePerformanceDashboard: React.FC = () => {
           lastUpdated: new Date().toISOString()
         }
       ];
-
       const newSystemHealth: SystemHealth = {
         cpu: Math.random() * 30 + 40,
         memory: Math.random() * 25 + 65,
@@ -119,20 +110,16 @@ const RealTimePerformanceDashboard: React.FC = () => {
         requestsPerMinute: Math.floor(Math.random() * 5000) + 2000,
         errorRate: Math.random() * 1.5
       };
-
       setMetrics(newMetrics);
       setSystemHealth(newSystemHealth);
       setIsLoading(false);
     };
-
     generateMockData();
-
     if (autoRefresh) {
       const interval = setInterval(generateMockData3000); // Update every 3 seconds
       return () => clearInterval(interval);
     }
   }[autoRefresh]);
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'excellent': return 'text-green-600 bg-green-100';
@@ -142,7 +129,6 @@ const RealTimePerformanceDashboard: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '📈';
@@ -151,7 +137,6 @@ const RealTimePerformanceDashboard: React.FC = () => {
       default: return '➡️';
     }
   };
-
   const getHealthColor = (value: numbertype: string) => {
     if (type === 'cpu' || type === 'memory' || type === 'disk') {
       if (value > 90) return 'text-red-600';
@@ -165,7 +150,6 @@ const RealTimePerformanceDashboard: React.FC = () => {
     }
     return 'text-gray-600';
   };
-
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -184,7 +168,6 @@ const RealTimePerformanceDashboard: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="flex items-center justify-between mb-8">
@@ -212,7 +195,6 @@ const RealTimePerformanceDashboard: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* System Health Overview */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white mb-12">
         <h3 className="text-2xl font-bold mb-6">🖥️ System Health Overview</h3>
@@ -267,7 +249,6 @@ const RealTimePerformanceDashboard: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Performance Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {metrics.map((metric) => (
@@ -278,14 +259,12 @@ const RealTimePerformanceDashboard: React.FC = () => {
                 {metric.status}
               </span>
             </div>
-            
             <div className="flex items-baseline mb-4">
               <span className="text-3xl font-bold text-gray-900">
                 {metric.value.toFixed(metric.unit === '%' ? 1 : 0)}
               </span>
               <span className="text-lg text-gray-500 ml-2">{metric.unit}</span>
             </div>
-            
             <div className="flex items-center justify-between">
               <div className="flex items-center text-sm">
                 <span className="mr-1">{getTrendIcon(metric.trend)}</span>
@@ -301,7 +280,6 @@ const RealTimePerformanceDashboard: React.FC = () => {
           </div>
         ))}
       </div>
-
       {/* Performance Trends Chart Placeholder */}
       <div className="bg-white rounded-2xl p-8 shadow-lg">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">📈 Performance Trends</h3>
@@ -316,7 +294,6 @@ const RealTimePerformanceDashboard: React.FC = () => {
           </button>
         </div>
       </div>
-
       {/* Alerts and Notifications */}
       <div className="mt-12 bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-xl">
         <div className="flex items-center">
@@ -332,5 +309,4 @@ const RealTimePerformanceDashboard: React.FC = () => {
     </div>
   );
 };
-
 export default RealTimePerformanceDashboard;

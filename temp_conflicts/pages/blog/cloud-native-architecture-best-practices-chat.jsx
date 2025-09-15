@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import Link from 'next/link',
-=======
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
 
 const CloudNativeArchitectureBestPracticesChat = () => {
   return (
@@ -21,14 +16,7 @@ const CloudNativeArchitectureBestPracticesChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default CloudNativeArchitectureBestPracticesChat,
-=======
   );
 };
 
 export default CloudNativeArchitectureBestPracticesChat;
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function Security() {
   const securityMeasures = [
@@ -21,15 +12,10 @@ export default function Security() {
       title: 'Data Protection',
       icon: Database,
       features: [
-<<<<<<< HEAD
-        'End-to-end encryption for all data in transitAES-256 encryption for data at rest',
-        'Regular automated backups with encryptionSecure data centers with 24/7 monitoring',
-=======
         'End-to-end encryption for all data in transit',
         'AES-256 encryption for data at rest',
         'Regular automated backups with encryption',
         'Secure data centers with 24/7 monitoring',
->>>>>>> origin/auto/autonomy-17186719616
         'Data residency compliance for global clients'
       ]
     },
@@ -38,15 +24,10 @@ export default function Security() {
       title: 'Access Control',
       icon: Key,
       features: [
-<<<<<<< HEAD
-        'Multi-factor authentication (MFA) requiredRole-based access control (RBAC)',
-        'Principle of least privilege implementationRegular access reviews and deprovisioning',
-=======
         'Multi-factor authentication (MFA) required',
         'Role-based access control (RBAC)',
         'Principle of least privilege implementation',
         'Regular access reviews and deprovisioning',
->>>>>>> origin/auto/autonomy-17186719616
         'Single sign-on (SSO) integration'
       ]
     },
@@ -55,15 +36,10 @@ export default function Security() {
       title: 'Infrastructure Security',
       icon: Server,
       features: [
-<<<<<<< HEAD
-        'Network segmentation and firewallsIntrusion detection and prevention systems',
-        'Regular vulnerability assessmentsAutomated security patching',
-=======
         'Network segmentation and firewalls',
         'Intrusion detection and prevention systems',
         'Regular vulnerability assessments',
         'Automated security patching',
->>>>>>> origin/auto/autonomy-17186719616
         'DDoS protection and rate limiting'
       ]
     },
@@ -72,14 +48,6 @@ export default function Security() {
       title: 'Security Monitoring',
       icon: Eye,
       features: [
-<<<<<<< HEAD
-        '24/7 security operations center (SOC)Real-time threat detection and response',
-        'Comprehensive audit loggingSecurity incident response team',
-        'Continuous security monitoring tools'
-      ]
-    }
-  ],
-=======
         '24/7 security operations center (SOC)',
         'Real-time threat detection and response',
         'Comprehensive audit logging',
@@ -88,7 +56,6 @@ export default function Security() {
       ]
     }
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
@@ -96,11 +63,7 @@ export default function Security() {
     { name: 'GDPR', status: 'Compliant' },
     { name: 'HIPAA', status: 'Compliant' },
     { name: 'PCI DSS', status: 'Compliant' }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -306,12 +269,8 @@ export default function Security() {
               </h3>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-<<<<<<< HEAD
-                If you discover a security vulnerability, please report it to our security team immediately: </p>
-=======
                 If you discover a security vulnerability, please report it to our security team immediately:
               </p>
->>>>>>> origin/auto/autonomy-17186719616
               
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="flex items-center">
@@ -345,9 +304,5 @@ export default function Security() {
         <EnhancedFooter />
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

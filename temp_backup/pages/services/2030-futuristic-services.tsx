@@ -1,13 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Clock, Users, Phone, Mail, MapPin, Brain, Atom, Globe, Rocket, Target, Microscope, TrendingUp, Zap, Shield } from 'lucide-react';
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031';
 import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031';
 import UltraFuturisticFooter2030 from '../../components/layout/UltraFuturisticFooter2030';
@@ -26,9 +20,6 @@ export default function FuturisticServices2030Page() {
     website: 'https://ziontechgroup.com'
   };
 
-<<<<<<< HEAD
-
-=======
   const all2030Services = [
     ...futuristicAIServices2030,
     ...quantumEmergingTechServices2030,
@@ -37,7 +28,6 @@ export default function FuturisticServices2030Page() {
     ...innovativeMicroSaasServices2030,
     ...researchDevelopmentServices2030
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const serviceCategories = [
     {
@@ -45,11 +35,7 @@ export default function FuturisticServices2030Page() {
       icon: Brain,
       color: 'from-cyan-500 to-blue-500',
       services: futuristicAIServices2030,
-<<<<<<< HEAD
-      description: 'ArrowRight-generation AI consciousness and autonomous systems'
-=======
       description: 'Next-generation AI consciousness and autonomous systems'
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       title: '⚛️ Quantum & Emerging Tech 2030',
@@ -90,15 +76,6 @@ export default function FuturisticServices2030Page() {
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO 
-        title="2030 Futuristic Technology Services | Zion Tech Group - Revolutionary AI, Quantum, Space Tech" 
-        description="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development - we're building tomorrow's solutions today." 
-        url="https://ziontechgroup.com/services/2030-futuristic-services/"
-        section="2030 Futuristic Services"
-        tags={['AI Consciousness', 'Quantum Computing', 'Space Mining', 'Metaverse Development', 'Biotechnology']}
-      />
-=======
       <Head>
         <title>2030 Futuristic Technology Services | Zion Tech Group - Revolutionary AI, Quantum, Space Tech</title>
         <meta name="description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development - we're building tomorrow's solutions today." />
@@ -148,7 +125,6 @@ export default function FuturisticServices2030Page() {
           }}
         />
       </Head>
->>>>>>> origin/auto/autonomy-17186719616
 
       <UltraFuturisticBackground2031>
         {/* Ultra Advanced Navigation */}
@@ -162,13 +138,7 @@ export default function FuturisticServices2030Page() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16]}
-            >
-=======
               transition={{ duration: 0.8 }} className="text-center mb-16">
->>>>>>> origin/auto/autonomy-17186719616
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   2030 Futuristic
@@ -186,24 +156,12 @@ export default function FuturisticServices2030Page() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200]}
-                >
-=======
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200">
->>>>>>> origin/auto/autonomy-17186719616
                   Get Started Today
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200]}
-                >
-=======
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
->>>>>>> origin/auto/autonomy-17186719616
                   View Pricing
                 </motion.button>
               </div>
@@ -222,13 +180,7 @@ export default function FuturisticServices2030Page() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-=======
                   viewport={{ once: true }} className="text-center">
->>>>>>> origin/auto/autonomy-17186719616
                   <div className={`text-4xl mb-2 ${stat.color}`}>
                     <stat.icon className="w-12 h-12 mx-auto mb-4" />
                   </div>
@@ -241,11 +193,7 @@ export default function FuturisticServices2030Page() {
         </section>
 
         {/* Services by Category */}
-<<<<<<< HEAD
-        {serviceCategories.map((category) => (
-=======
         {serviceCategories.map((category, categoryIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
           <section key={category.title} className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-800/10"></div>
             
@@ -254,13 +202,7 @@ export default function FuturisticServices2030Page() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-                viewport={{ once: true }}
-                className="text-center mb-16"
-              >
-=======
                 viewport={{ once: true }} className="text-center mb-16">
->>>>>>> origin/auto/autonomy-17186719616
                 <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <category.icon className="w-10 h-10 text-white" />
                 </div>
@@ -282,13 +224,7 @@ export default function FuturisticServices2030Page() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
-                    whileHover={{ y: -5 }}
-                    className="group cursor-pointer"
-                  >
-=======
                     whileHover={{ y: -5 }} className="group cursor-pointer">
->>>>>>> origin/auto/autonomy-17186719616
                     <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
@@ -296,11 +232,7 @@ export default function FuturisticServices2030Page() {
                       
                       <div className="space-y-3 mb-4">
                         <div className="flex items-center justify-between">
-<<<<<<< HEAD
-                          <span className="text-cyan-400 font-semibold">${service.price?.monthly || service.price}{service.period || '/month'}</span>
-=======
                           <span className="text-cyan-400 font-semibold">{service.price}{service.period}</span>
->>>>>>> origin/auto/autonomy-17186719616
                           <span className="text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded-full">
                             {service.innovationLevel}
                           </span>
@@ -357,24 +289,12 @@ export default function FuturisticServices2030Page() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200"
-                >
-=======
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
->>>>>>> origin/auto/autonomy-17186719616
                   Schedule Consultation
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200"
-                >
-=======
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
->>>>>>> origin/auto/autonomy-17186719616
                   View Pricing
                 </motion.button>
               </div>

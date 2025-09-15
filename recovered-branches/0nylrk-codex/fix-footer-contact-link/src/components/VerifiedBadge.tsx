@@ -1,23 +1,14 @@
 
 import React from 'react';
-<<<<<<< HEAD
-CheckCircle
-import { TooltipContentTooltipProviderTooltipTrigger } from '@/components/ui/tooltip';
-=======
 import { CheckCircle } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
->>>>>>> origin/auto/autonomy-17186719616
 
 interface VerifiedBadgeProps {
   verified: boolean;
   size?: 'sm' | 'md' | 'lg';
 }
 
-<<<<<<< HEAD
-export function VerifiedBadge({ verifiedsize = 'sm' }: VerifiedBadgeProps) {
-=======
 export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
->>>>>>> origin/auto/autonomy-17186719616
   if (!verified) return null;
   
   const sizeClasses = {

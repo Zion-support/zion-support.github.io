@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react',
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function Custom404() {
   const quickLinks = [
@@ -18,12 +10,8 @@ export default function Custom404() {
     { href: '/services', label: '🚀 Services', icon: Rocket },
     { href: '/explore', label: '🔍 Explore', icon: Search },
     { href: '/about', label: '👥 About', icon: Users },
-<<<<<<< HEAD
-    { href: '/sitemap', label: '🗺️ Sitemap', icon: Map }],
-=======
     { href: '/sitemap', label: '🗺️ Sitemap', icon: Map },
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center px-6">
@@ -100,12 +88,8 @@ export default function Custom404() {
             {[
               { href: '/ai-business-intelligence', label: 'AI Business Intelligence', desc: 'Transform data into actionable insights' },
               { href: '/quantum-cybersecurity', label: 'Quantum Cybersecurity', desc: 'Future-proof security solutions' },
-<<<<<<< HEAD
-              { href: '/edge-computing-orchestration', label: 'Edge Computing', desc: 'Advanced edge optimization platform' }].map((service, index) => (
-=======
               { href: '/edge-computing-orchestration', label: 'Edge Computing', desc: 'Advanced edge optimization platform' },
             ].map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={service.href}
                 initial={{ opacity: 0, y: 20 }}
@@ -157,11 +141,7 @@ export default function Custom404() {
           <p className="text-white/60 mb-4">
             Can't find what you're looking for? We're here to help!
           </p>
-<<<<<<< HEAD
-          <div className="flex flex-col sm: flex-row gap-4 justify-center text-sm">
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
->>>>>>> origin/auto/autonomy-17186719616
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -184,9 +164,5 @@ export default function Custom404() {
         </motion.div>
       </div>
     </div>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

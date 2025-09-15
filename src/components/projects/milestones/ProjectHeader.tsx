@@ -1,30 +1,12 @@
-
-<<<<<<< HEAD
-import React from 'react',
-import { useRouter } from 'next/router',
-import { Button } from '@/components/ui/button',
-import { ArrowLeft } from 'lucide-react'
-
-interface ProjectHeaderProps {
-  title: string
-}
-
-export function ProjectHeader({ title }: ProjectHeaderProps) {
-  const router = useRouter(), // Changed from useNavigate to useRouter
-=======
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react'
-
 interface ProjectHeaderProps {
   title: string;
 }
-
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const router = useRouter(); // Changed from useNavigate to useRouter
->>>>>>> origin/auto/autonomy-17186719616
-  
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
       <div className="flex items-center">
@@ -40,9 +22,5 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
         <h1 className="text-2xl md:text-3xl font-bold truncate max-w-xl">{title}</h1>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

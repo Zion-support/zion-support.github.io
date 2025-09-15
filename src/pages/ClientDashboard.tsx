@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { JobsList } from "@/components/jobs/JobsList",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import Link from "next/link",
-import { JobStatus } from "@/types/jobs",
-import { SEO } from "@/components/SEO",
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents",
-import { useJobs } from "@/hooks/useJobs",
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps",
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-import { useIsMobile } from "@/hooks/use-mobile",
-
-function ClientDashboardContent() {
-  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
-  const { jobs, isLoading } = useJobs(),
-  const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
-  const isMobile = useIsMobile(),
-  const onboardingStatus = useOnboardingStatus(),
-  const showAdvanced =
-    onboardingStatus.jobPosted &&
-    onboardingStatus.inviteSent &&
-    onboardingStatus.responseReceived,
-=======
 import { useState, useEffect } from "react";
 import { JobsList } from "@/components/jobs/JobsList";
 import { Button } from "@/components/ui/button";
@@ -46,7 +15,6 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 import { useIsMobile } from "@/hooks/use-mobile";
-
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -58,25 +26,9 @@ function ClientDashboardContent() {
     onboardingStatus.jobPosted &&
     onboardingStatus.inviteSent &&
     onboardingStatus.responseReceived;
->>>>>>> origin/auto/autonomy-17186719616
-
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
-<<<<<<< HEAD
-      const firstJob = jobs[0],
-      if (firstJob) {
-        setSelectedJobId(firstJob.id),
-        setSelectedJobTitle(firstJob.title),
-      }
-    }
-  }, [jobs, selectedJobId]),
-
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId),
-    setSelectedJobTitle(jobTitle)
-  },
-=======
       const firstJob = jobs[0];
       if (firstJob) {
         setSelectedJobId(firstJob.id);
@@ -84,13 +36,10 @@ function ClientDashboardContent() {
       }
     }
   }, [jobs, selectedJobId]);
-
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId);
     setSelectedJobTitle(jobTitle);
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <>
       <SEO 
@@ -116,7 +65,6 @@ function ClientDashboardContent() {
             </Button>
           </div>
         </div>
-
         {/* New Onboarding Steps */}
         <div className="mb-8">
           <ClientOnboardingSteps />
@@ -126,7 +74,6 @@ function ClientDashboardContent() {
             </div>
           )}
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>
@@ -137,7 +84,6 @@ function ClientDashboardContent() {
                 <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
               </TabsList>
-              
               <TabsContent value="all" className="mt-0">
                 <JobsList onSelectJob={handleJobSelect} />
               </TabsContent>
@@ -155,22 +101,18 @@ function ClientDashboardContent() {
               </TabsContent>
             </Tabs>
           </div>
-          
           <div>
             <div className="sticky top-4 space-y-6">
               {/* Active Projects Card */}
               <ActiveProjectsCard />
-              
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />
-              
               {/* AI Talent Suggestions */}
               <div>
                 <h2 className="text-xl font-semibold mb-4 flex items-center">
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />
                   AI Talent Suggestions
                 </h2>
-                
                 {selectedJobId ? (
                   <SuggestedTalents jobId={selectedJobId} />
                 ) : (
@@ -186,21 +128,12 @@ function ClientDashboardContent() {
         </div>
       </main>
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export default function ClientDashboard() {
   return (
     <ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,11 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-ArrowRightStarUsersTrendingUpZapShieldGlobeRocket
-=======
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
-
 interface ServiceCardProps {
   service: {
     id: string;
@@ -47,12 +42,7 @@ interface ServiceCardProps {
   };
   index: number;
 }
-
-<<<<<<< HEAD
-const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ serviceindex }) => {
-=======
 const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, index }) => {
->>>>>>> origin/auto/autonomy-17186719616
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
       case 'ai & consciousness':
@@ -69,31 +59,20 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
         return <Zap className="w-5 h-5" />;
     }
   };
-
   const getGradientClass = (color: string) => {
     if (color.includes('from-') && color.includes('to-')) {
       return color;
     }
     return 'from-cyan-500 to-blue-500';
   };
-
   return (
     <motion.div
-<<<<<<< HEAD
-      initial={{ opacity: 0, y: 50scale: 0.9 }}
-      animate={{ opacity: 1, y: 0scale: 1 }}
-      transition={{
-        duration: 0.6,
-        delay: index * 0.1,
-        ease: [0.250.460.450.94]
-=======
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{
         duration: 0.6,
         delay: index * 0.1,
         ease: [0.25, 0.46, 0.45, 0.94]
->>>>>>> origin/auto/autonomy-17186719616
       }}
       whileHover={{
         y: -10,
@@ -104,7 +83,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
     >
       {/* Glow effect */}
       <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-      
       {/* Main card */}
       <div className="relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden">
         {/* Background pattern */}
@@ -112,7 +90,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]"></div>
         </div>
-
         {/* Header */}
         <div className="relative z-10 mb-6">
           <div className="flex items-start justify-between mb-4">
@@ -127,16 +104,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
                 </div>
               </div>
             </div>
-            
             {service.popular && (
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
-<<<<<<< HEAD
-                transition={{ delay: 0.5type: "spring"stiffness: 200 }}
-=======
                 transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full"
               >
                 <Star className="w-3 h-3 fill-current" />
@@ -144,16 +116,13 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
               </motion.div>
             )}
           </div>
-
           <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300">
             {service.name}
           </h3>
-          
           <p className="text-gray-300 text-sm leading-relaxed">
             {service.tagline}
           </p>
         </div>
-
         {/* Stats */}
         <div className="relative z-10 mb-6">
           <div className="grid grid-cols-3 gap-4">
@@ -171,7 +140,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
             </div>
           </div>
         </div>
-
         {/* Pricing */}
         <div className="relative z-10 mb-6">
           <div className="bg-gray-800/50 rounded-xl p-4 border border-gray-600/30">
@@ -200,24 +168,15 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
             )}
           </div>
         </div>
-
         {/* Features preview */}
         <div className="relative z-10 mb-6">
           <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features</h4>
           <div className="space-y-2">
-<<<<<<< HEAD
-            {service.features.slice(03).map((featureidx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0x: -20 }}
-                animate={{ opacity: 1x: 0 }}
-=======
             {service.features.slice(0, 3).map((feature, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
->>>>>>> origin/auto/autonomy-17186719616
                 transition={{ delay: 0.6 + idx * 0.1 }}
                 className="flex items-center space-x-2 text-sm"
               >
@@ -232,24 +191,15 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
             )}
           </div>
         </div>
-
         {/* Benefits */}
         <div className="relative z-10 mb-6">
           <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>
           <div className="space-y-2">
-<<<<<<< HEAD
-            {service.benefits.slice(02).map((benefitidx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0x: -20 }}
-                animate={{ opacity: 1x: 0 }}
-=======
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
->>>>>>> origin/auto/autonomy-17186719616
                 transition={{ delay: 0.8 + idx * 0.1 }}
                 className="flex items-center space-x-2 text-sm"
               >
@@ -259,7 +209,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
             ))}
           </div>
         </div>
-
         {/* Market info */}
         {service.marketSize && service.growthRate && (
           <div className="relative z-10 mb-6">
@@ -275,7 +224,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
             </div>
           </div>
         )}
-
         {/* CTA Button */}
         <div className="relative z-10">
           <motion.a
@@ -288,12 +236,10 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
               <span>Learn More</span>
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
             </span>
-            
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
           </motion.a>
         </div>
-
         {/* Hover overlay */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -304,5 +250,4 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
     </motion.div>
   );
 };
-
 export default UltraFuturisticServiceCardV2;

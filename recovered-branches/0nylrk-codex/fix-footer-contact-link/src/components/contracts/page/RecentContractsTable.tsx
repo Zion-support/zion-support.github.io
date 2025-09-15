@@ -15,11 +15,7 @@ interface RecentContractsTableProps {
   onViewContract: (contractId: string) => void;
 }
 
-<<<<<<< HEAD
-export function RecentContractsTable({ contractsonViewContract }: RecentContractsTableProps) {
-=======
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <>
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>

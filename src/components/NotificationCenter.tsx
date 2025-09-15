@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-// Use the shared icon wrapper
-import { Bell } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover',
-import { useNotifications } from '@/context/notifications/NotificationContext',
-import { useEnqueueSnackbar } from '@/context',
-import {logErrorToProduction} from '@/utils/productionLogger',
-import { 
-  NotificationFilter,
-  NotificationHeader, 
-  NotificationList, 
-  NotificationFooter 
-} from '@/components/notifications',
-import { FilterType } from '@/components/notifications/NotificationFilter',
-
-export const NotificationCenter: React.FC = () => {
-  const { 
-    filteredNotifications,
-=======
 import React, { useState, useEffect } from 'react';
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
@@ -34,11 +13,9 @@ import {
   NotificationFooter 
 } from '@/components/notifications';
 import { FilterType } from '@/components/notifications/NotificationFilter';
-
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications, 
->>>>>>> origin/auto/autonomy-17186719616
     unreadCount, 
     markAsRead, 
     markAllAsRead,
@@ -47,57 +24,16 @@ export const NotificationCenter: React.FC = () => {
     filter,
     setFilter,
     fetchNotifications
-<<<<<<< HEAD
-  } = useNotifications(),
-  
-  const [open, setOpen] = useState(false),
-  const [error, setError] = useState<string | null>(null),
-  const [loadedOnce, setLoadedOnce] = useState(false),
-  const enqueueSnackbar = useEnqueueSnackbar(),
-=======
   } = useNotifications();
-  
   const [open, setOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loadedOnce, setLoadedOnce] = useState(false);
   const enqueueSnackbar = useEnqueueSnackbar();
->>>>>>> origin/auto/autonomy-17186719616
-
   // Refresh notifications when popover opens, but avoid duplicate
   useEffect(() => {
     if (open && !loadedOnce) {
       const loadNotifications = async () => {
         try {
-<<<<<<< HEAD
-          await fetchNotifications(),
-          setError(null),
-        } catch (err) {
-          logErrorToProduction('Failed to fetch notifications:', { data: err }),
-          setError("Couldn't load notifications"),
-          enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' }),
-        } finally {
-          setLoadedOnce(true),
-        }
-      },
-
-      loadNotifications(),
-    }
-  }, [open, loadedOnce, fetchNotifications]),
-
-  const handleMarkAllAsRead = async () => {
-    try {
-      await markAllAsRead(),
-      enqueueSnackbar("All notifications marked as read", { variant: 'success' }),
-    } catch (err) {
-      logErrorToProduction('Failed to mark notifications as read:', { data: err }),
-      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' }),
-    }
-  },
-
-  const handleFilterChange = (newFilter: FilterType) => {
-    setFilter(newFilter as any)
-  },
-=======
           await fetchNotifications();
           setError(null);
         } catch (err) {
@@ -108,11 +44,9 @@ export const NotificationCenter: React.FC = () => {
           setLoadedOnce(true);
         }
       };
-
       loadNotifications();
     }
   }, [open, loadedOnce, fetchNotifications]);
-
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead();
@@ -122,12 +56,9 @@ export const NotificationCenter: React.FC = () => {
       enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' });
     }
   };
-
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any);
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
       <PopoverTrigger asChild>
@@ -145,12 +76,10 @@ export const NotificationCenter: React.FC = () => {
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
         />
-        
         <NotificationFilter 
           filter={filter as FilterType} 
           onFilterChange={handleFilterChange} 
         />
-        
         <NotificationList 
           loading={loading}
           error={error}
@@ -159,14 +88,8 @@ export const NotificationCenter: React.FC = () => {
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
         />
-        
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
     </Popover>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

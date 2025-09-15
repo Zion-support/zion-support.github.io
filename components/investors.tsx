@@ -1,12 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-=======
 import Head from 'next/head';
->>>>>>> origin/auto/autonomy-17186719616
-
 export default function InvestorsPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">

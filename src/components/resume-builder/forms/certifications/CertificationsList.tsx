@@ -1,39 +1,17 @@
-
-<<<<<<< HEAD
-import { Certification } from '@/types/resume',
-import { Card, CardContent } from '@/components/ui/card',
-import { Button } from '@/components/ui/button',
-import { Edit, Trash2 } from 'lucide-react'
-import { format } from 'date-fns',
-
-interface CertificationsListProps {
-  certifications: Certification[],
-  onEdit: (cert: Certification) => void,
-  onDelete: (id: string) => void
-=======
 import { Certification } from '@/types/resume';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Edit, Trash2 } from 'lucide-react'
 import { format } from 'date-fns';
-
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
   if (certifications.length === 0) {
-<<<<<<< HEAD
-    return null,
-  }
-=======
     return null;
   }
-
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Certifications</h3>
@@ -91,9 +69,5 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
         </Card>
       ))}
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

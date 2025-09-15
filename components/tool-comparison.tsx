@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-"use client";
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-<<<<<<< HEAD
-  Search
-  Filter
-  TrendingUp
-  DollarSign
-  Users
-=======
   Search, 
   Filter, 
   TrendingUp, 
   DollarSign, 
   Users, 
->>>>>>> origin/auto/autonomy-17186719616
   Star,
   Check,
   X,
@@ -30,18 +18,10 @@ import {
   Globe,
   Rocket
 } from 'lucide-react';
-
 export default function ToolComparisonPage() {
-<<<<<<< HEAD
-  const [searchTermsetSearchTerm] = React.useState('');
-  const [selectedCategorysetSelectedCategory] = React.useState('All');
-  const [sortBysetSortBy] = React.useState('rating');
-=======
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
->>>>>>> origin/auto/autonomy-17186719616
-
   const allTools = [
     // AI Tools
     {
@@ -50,15 +30,9 @@ export default function ToolComparisonPage() {
       pricing: 'Free - $20/month',
       rating: 4.8,
       users: '100M+',
-<<<<<<< HEAD
-      bestFor: 'Content creatorsdevelopersresearchers',
-      pros: ['Powerful 'capabilities', 'Easy to 'use', 'Regular 'updates', 'Good free tier'],
-      cons: ['Sometimes 'inaccurate', 'Limited 'context', 'Privacy concerns'],
-=======
       bestFor: 'Content creators, developers, researchers',
       pros: ['Powerful capabilities', 'Easy to use', 'Regular updates', 'Good free tier'],
       cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns'],
->>>>>>> origin/auto/autonomy-17186719616
       website: 'https://chat.openai.com',
       icon: <Brain className="w-6 h-6" />,
       color: 'text-green-400'
@@ -69,15 +43,9 @@ export default function ToolComparisonPage() {
       pricing: '$10 - $30/month',
       rating: 4.7,
       users: '1M+',
-<<<<<<< HEAD
-      bestFor: 'Designersmarketerscontent creators',
-      pros: ['High-quality 'output', 'Creative 'control', 'Commercial 'rights', 'Active community'],
-      cons: ['Discord-only 'interface', 'Limited 'customization', 'Monthly subscription'],
-=======
       bestFor: 'Designers, marketers, content creators',
       pros: ['High-quality output', 'Creative control', 'Commercial rights', 'Active community'],
       cons: ['Discord-only interface', 'Limited customization', 'Monthly subscription'],
->>>>>>> origin/auto/autonomy-17186719616
       website: 'https://midjourney.com',
       icon: <Zap className="w-6 h-6" />,
       color: 'text-purple-400'
@@ -88,15 +56,9 @@ export default function ToolComparisonPage() {
       pricing: '$39 - $125/month',
       rating: 4.6,
       users: '100K+',
-<<<<<<< HEAD
-      bestFor: 'Marketing teamscontent creatorsbusinesses',
-      pros: ['Specialized for 'marketing', 'Brand voice 'training', 'SEO 'optimization', 'Team features'],
-      cons: [', 'Expensive', 'Limited free 'trial', 'Can be repetitive'],
-=======
       bestFor: 'Marketing teams, content creators, businesses',
       pros: ['Specialized for marketing', 'Brand voice training', 'SEO optimization', 'Team features'],
       cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],
->>>>>>> origin/auto/autonomy-17186719616
       website: 'https://jasper.ai',
       icon: <Brain className="w-6 h-6" />,
       color: 'text-blue-400'
@@ -109,13 +71,8 @@ export default function ToolComparisonPage() {
       rating: 4.8,
       users: '2M+',
       bestFor: 'Businesses looking to automate workflows',
-<<<<<<< HEAD
-      pros: ['Easy to 'use', 'Extensive 'integrations', 'Reliable'Great support'],
-      cons: ['Can get 'expensive', 'Limited customization'],
-=======
       pros: ['Easy to use', 'Extensive integrations', 'Reliable', 'Great support'],
       cons: ['Can get expensive', 'Limited customization'],
->>>>>>> origin/auto/autonomy-17186719616
       website: 'https://zapier.com',
       icon: <Zap className="w-6 h-6" />,
       color: 'text-orange-400'
@@ -127,13 +84,8 @@ export default function ToolComparisonPage() {
       rating: 4.7,
       users: '20M+',
       bestFor: 'Teams that need flexible workspace',
-<<<<<<< HEAD
-      pros: ['Highly 'flexible', 'Beautiful 'interface', 'Great 'templates', 'Free tier'],
-      cons: ['Learning 'curve', 'Limited offline 'access', 'Can be overwhelming'],
-=======
       pros: ['Highly flexible', 'Beautiful interface', 'Great templates', 'Free tier'],
       cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming'],
->>>>>>> origin/auto/autonomy-17186719616
       website: 'https://notion.so',
       icon: <Globe className="w-6 h-6" />,
       color: 'text-gray-400'
@@ -144,15 +96,9 @@ export default function ToolComparisonPage() {
       pricing: '2.9% + 30¢ per transaction',
       rating: 4.9,
       users: '1M+',
-<<<<<<< HEAD
-      bestFor: 'Online businessesSaaS companiese-commerce',
-      pros: ['Developer-'friendly', 'Global 'reach', 'Excellent 'docs', 'Reliable'],
-      cons: ['Higher fees than some 'alternatives', 'Complex for 'beginners', 'Strict requirements'],
-=======
       bestFor: 'Online businesses, SaaS companies, e-commerce',
       pros: ['Developer-friendly', 'Global reach', 'Excellent docs', 'Reliable'],
       cons: ['Higher fees than some alternatives', 'Complex for beginners', 'Strict requirements'],
->>>>>>> origin/auto/autonomy-17186719616
       website: 'https://stripe.com',
       icon: <DollarSign className="w-6 h-6" />,
       color: 'text-blue-400'
@@ -164,15 +110,9 @@ export default function ToolComparisonPage() {
       pricing: 'Free - $45/month',
       rating: 4.7,
       users: '135K+',
-<<<<<<< HEAD
-      bestFor: 'B2B startupsSaaS companiesmarketing teams',
-      pros: ['Free 'tier', 'All-in-one 'solution', 'Great for 'beginners', 'Excellent support'],
-      cons: ['Can get 'expensive', 'Complex for small 'teams', 'Limited customization'],
-=======
       bestFor: 'B2B startups, SaaS companies, marketing teams',
       pros: ['Free tier', 'All-in-one solution', 'Great for beginners', 'Excellent support'],
       cons: ['Can get expensive', 'Complex for small teams', 'Limited customization'],
->>>>>>> origin/auto/autonomy-17186719616
       website: 'https://hubspot.com',
       icon: <TrendingUp className="w-6 h-6" />,
       color: 'text-orange-400'
@@ -183,15 +123,9 @@ export default function ToolComparisonPage() {
       pricing: 'Free - $59/month',
       rating: 4.5,
       users: '12M+',
-<<<<<<< HEAD
-      bestFor: 'E-commercecontent creatorsmall businesses',
-      pros: ['Free 'tier', 'Easy to 'use', 'Good 'templates', 'Affordable'],
-      cons: ['Limited free 'features', 'Basic 'automation', 'Can be expensive'],
-=======
       bestFor: 'E-commerce, content creators, small businesses',
       pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
       cons: ['Limited free features', 'Basic automation', 'Can be expensive'],
->>>>>>> origin/auto/autonomy-17186719616
       website: 'https://mailchimp.com',
       icon: <Users className="w-6 h-6" />,
       color: 'text-yellow-400'
@@ -202,27 +136,15 @@ export default function ToolComparisonPage() {
       pricing: 'Free - $12/month',
       rating: 4.8,
       users: '10M+',
-<<<<<<< HEAD
-      bestFor: 'Sales teamsconsultantsremote teams',
-      pros: ['Free 'tier', 'Easy 'integration', 'Professional 'appearance', 'Time-saving'],
-      cons: ['Limited free 'features', 'Basic 'customization', 'Can be expensive'],
-=======
       bestFor: 'Sales teams, consultants, remote teams',
       pros: ['Free tier', 'Easy integration', 'Professional appearance', 'Time-saving'],
       cons: ['Limited free features', 'Basic customization', 'Can be expensive'],
->>>>>>> origin/auto/autonomy-17186719616
       website: 'https://calendly.com',
       icon: <Globe className="w-6 h-6" />,
       color: 'text-blue-400'
     }
   ];
-
-<<<<<<< HEAD
-  const categories = [', 'All', 'AI 'Assistant', 'AI 'Art', 'AI 'Writing', 'Automation', 'Productivity', 'Payments'Marketing & 'Sales', 'Email Marketing'];
-=======
   const categories = ['All', 'AI Assistant', 'AI Art', 'AI Writing', 'Automation', 'Productivity', 'Payments', 'Marketing & Sales', 'Email Marketing'];
->>>>>>> origin/auto/autonomy-17186719616
-
   const filteredTools = allTools.filter(tool => {
     const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          tool.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -230,52 +152,32 @@ export default function ToolComparisonPage() {
     const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-
-<<<<<<< HEAD
-  const sortedTools = [...filteredTools].sort((ab) => {
-=======
   const sortedTools = [...filteredTools].sort((a, b) => {
->>>>>>> origin/auto/autonomy-17186719616
     switch (sortBy) {
       case 'rating':
         return b.rating - a.rating;
       case 'users':
-<<<<<<< HEAD
-        return parseInt(b.users.replace(/[^0-9]/g', ')) - parseInt(a.users.replace(/[^0-9]/g', '));
-=======
         return parseInt(b.users.replace(/[^0-9]/g, '')) - parseInt(a.users.replace(/[^0-9]/g, ''));
->>>>>>> origin/auto/autonomy-17186719616
       case 'name':
         return a.name.localeCompare(b.name);
       default:
         return 0;
     }
   });
-
   const getPricingColor = (pricing: string) => {
     if (pricing.includes('Free')) return 'text-green-400';
     if (pricing.includes('$')) return 'text-blue-400';
     return 'text-gray-400';
   };
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <>
       <Head>
         <title>Tool Comparison - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Compare SaaS toolsAI servicesand business solutions. Find the perfect tools for your business needs with our comprehensive comparison." />
-=======
         <meta name="description" content="Compare SaaS tools, AI services, and business solutions. Find the perfect tools for your business needs with our comprehensive comparison." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="Tool Comparison - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive comparison of SaaS tools and AI services to help you make informed decisions." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0">
@@ -283,9 +185,7 @@ export default function ToolComparisonPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />
         </div>
-
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-20 animate-fade-in">
             <div className="mb-8">
@@ -294,19 +194,13 @@ export default function ToolComparisonPage() {
                 Smart Tool Selection
               </div>
             </div>
-            
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
               Tool Comparison
             </h1>
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
-<<<<<<< HEAD
-              Compare SaaS toolsAI servicesand business solutions. 
-=======
               Compare SaaS tools, AI services, and business solutions. 
->>>>>>> origin/auto/autonomy-17186719616
               Make informed decisions with our comprehensive analysis and expert insights.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
               <Button
                 href="#comparison"
@@ -328,7 +222,6 @@ export default function ToolComparisonPage() {
               </Button>
             </div>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
@@ -358,7 +251,6 @@ export default function ToolComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* Filters and Search */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -368,17 +260,12 @@ export default function ToolComparisonPage() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-<<<<<<< HEAD
-                placeholder="Search toolscategoriesor use cases..."
-=======
                 placeholder="Search tools, categories, or use cases..."
->>>>>>> origin/auto/autonomy-17186719616
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
-
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -395,7 +282,6 @@ export default function ToolComparisonPage() {
                 </button>
               ))}
             </div>
-
             {/* Sort */}
             <div className="flex items-center space-x-2">
               <Filter className="w-5 h-5 text-gray-400" />
@@ -412,7 +298,6 @@ export default function ToolComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* Comparison Table */}
       <section id="comparison" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -421,14 +306,9 @@ export default function ToolComparisonPage() {
               Tool Comparison
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-              Compare featurespricingand user ratings to find the perfect tools for your business needs.
-=======
               Compare features, pricing, and user ratings to find the perfect tools for your business needs.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
-
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
@@ -443,11 +323,7 @@ export default function ToolComparisonPage() {
                 </tr>
               </thead>
               <tbody>
-<<<<<<< HEAD
-                {sortedTools.map((toolindex) => (
-=======
                 {sortedTools.map((tool, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <tr key={index} className="border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200">
                     <td className="py-4 px-6">
                       <div className="flex items-center space-x-3">
@@ -491,11 +367,7 @@ export default function ToolComparisonPage() {
                           <ExternalLink className="w-3 h-3 ml-1" />
                         </Button>
                         <Button
-<<<<<<< HEAD
-                          href={`/tool-details/${tool.name.toLowerCase().replace(/\s+/g'-')}`}
-=======
                           href={`/tool-details/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
->>>>>>> origin/auto/autonomy-17186719616
                           variant="ghost"
                           size="sm"
                           className="text-xs"
@@ -509,7 +381,6 @@ export default function ToolComparisonPage() {
               </tbody>
             </table>
           </div>
-
           {sortedTools.length === 0 && (
             <div className="text-center py-20">
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
@@ -519,7 +390,6 @@ export default function ToolComparisonPage() {
           )}
         </div>
       </section>
-
       {/* Detailed Comparison Cards */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -528,20 +398,11 @@ export default function ToolComparisonPage() {
               Detailed Analysis
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-              Deep dive into each 'tool', 's prosconsand use cases to make the best decision for your business.
-=======
               Deep dive into each tool's pros, cons, and use cases to make the best decision for your business.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {sortedTools.slice(06).map((toolindex) => (
-=======
             {sortedTools.slice(0, 6).map((tool, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
@@ -564,12 +425,10 @@ export default function ToolComparisonPage() {
                     </div>
                   </div>
                 </div>
-
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-300 mb-2">Best For:</h4>
                   <p className="text-sm text-gray-400">{tool.bestFor}</p>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
                     <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
@@ -577,11 +436,7 @@ export default function ToolComparisonPage() {
                       Pros
                     </h4>
                     <ul className="space-y-1">
-<<<<<<< HEAD
-                      {tool.pros.slice(03).map((proIndex) => (
-=======
                       {tool.pros.slice(0, 3).map((pro, proIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <li key={proIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0" />
                           {pro}
@@ -595,11 +450,7 @@ export default function ToolComparisonPage() {
                       Cons
                     </h4>
                     <ul className="space-y-1">
-<<<<<<< HEAD
-                      {tool.cons.slice(03).map((conIndex) => (
-=======
                       {tool.cons.slice(0, 3).map((con, conIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <li key={conIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />
                           {con}
@@ -608,7 +459,6 @@ export default function ToolComparisonPage() {
                     </ul>
                   </div>
                 </div>
-
                 <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
                     {tool.pricing}
@@ -628,7 +478,6 @@ export default function ToolComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />

@@ -1,48 +1,3 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { NextSeo } from '@/components/NextSeo',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { getStripe } from "@/utils/getStripe",
-import { useCart } from '@/context/CartContext',
-import { ImageWithRetry } from '@/components/ui/ImageWithRetry',
-import { equipmentListings } from '@/data/equipmentData',
-import { ProductListing } from '@/types/listings',
-import { motion } from 'framer-motion',
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
-
-
-interface EquipmentSpecification {
-  name: string,
-  value: string
-}
-
-interface EquipmentDetails {
-  id: string,
-  name: string,
-  description: string,
-  brand: string,
-  category: string,
-  subcategory?: string,
-  images: string[],
-  price: number,
-  currency: string,
-  rating?: number,
-  reviewCount?: number,
-  inStock: boolean,
-  expectedShipping?: string,
-  specifications: EquipmentSpecification[],
-  features: string[],
-  warranty?: string,
-  returnPolicy?: string
-=======
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import { NextSeo } from '@/components/NextSeo';
@@ -61,13 +16,10 @@ import { ProductListing } from '@/types/listings';
 import { motion } from 'framer-motion';
 import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface EquipmentSpecification {
   name: string;
   value: string;
 }
-
 interface EquipmentDetails {
   id: string;
   name: string;
@@ -86,9 +38,7 @@ interface EquipmentDetails {
   features: string[];
   warranty?: string;
   returnPolicy?: string;
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 // Convert ProductListing to EquipmentDetails format
 function convertProductListingToEquipmentDetails(item: ProductListing): EquipmentDetails {
   return {
@@ -112,39 +62,14 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy'
-<<<<<<< HEAD
-  },
-=======
   };
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce((acc, item) => {
-<<<<<<< HEAD
-    acc[item.id] = convertProductListingToEquipmentDetails(item),
-    return acc,
-  }, {} as { [key: string]: EquipmentDetails }),
-
-export default function EquipmentDetail() {
-  const router = useRouter(),
-  const { id } = router.query as { id?: string },
-  const { isAuthenticated, user } = useAuth(),
-  const { items, dispatch } = useCart(),
-  const { formatPrice } = useCurrency(),
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
-  const [quantity, setQuantity] = useState(1),
-  const [isAdding, setIsAdding] = useState(false),
-  const [loading, setLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-
-  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>(),
-=======
     acc[item.id] = convertProductListingToEquipmentDetails(item);
     return acc;
   }, {} as { [key: string]: EquipmentDetails });
-
 export default function EquipmentDetail() {
   const router = useRouter();
   const { id } = router.query as { id?: string };
@@ -156,77 +81,30 @@ export default function EquipmentDetail() {
   const [isAdding, setIsAdding] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
->>>>>>> origin/auto/autonomy-17186719616
-
   useEffect(() => {
     async function loadEquipment() {
       if (!id) {
-<<<<<<< HEAD
-        setLoading(false),
-        setError('No equipment ID provided'),
-        return,
-      }
-
-      try {
-        setLoading(true),
-        setError(null),
-
-        // Try to find in static data first
-        const equipmentFromSample = SAMPLE_EQUIPMENT[id],
-        if (equipmentFromSample) {
-          setEquipment(equipmentFromSample),
-          setLoading(false),
-          return,
-=======
         setLoading(false);
         setError('No equipment ID provided');
         return;
       }
-
       try {
         setLoading(true);
         setError(null);
-
         // Try to find in static data first
         const equipmentFromSample = SAMPLE_EQUIPMENT[id];
         if (equipmentFromSample) {
           setEquipment(equipmentFromSample);
           setLoading(false);
           return;
->>>>>>> origin/auto/autonomy-17186719616
         }
-
         // Try to get from sessionStorage (for dynamically generated equipment)
         if (typeof window !== 'undefined') {
           try {
-<<<<<<< HEAD
-            const stored = sessionStorage.getItem(`equipment:${id}`),
-            if (stored) {
-              const storedData = JSON.parse(stored),
-              
-              // Check if it's already in EquipmentDetails format or needs conversion
-              let equipmentData: EquipmentDetails,
-              if (storedData.name) {
-                // Already in EquipmentDetails format
-                equipmentData = storedData
-              } else {
-                // It's a ProductListing, convert it
-                equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing),
-              }
-              
-              setEquipment(equipmentData),
-              setLoading(false),
-              return,
-            }
-          } catch (storageError) {
-            logErrorToProduction('Error reading from sessionStorage:', { data: storageError }),
-=======
             const stored = sessionStorage.getItem(`equipment:${id}`);
             if (stored) {
               const storedData = JSON.parse(stored);
-              
               // Check if it's already in EquipmentDetails format or needs conversion
               let equipmentData: EquipmentDetails;
               if (storedData.name) {
@@ -236,31 +114,15 @@ export default function EquipmentDetail() {
                 // It's a ProductListing, convert it
                 equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing);
               }
-              
               setEquipment(equipmentData);
               setLoading(false);
               return;
             }
           } catch (storageError) {
             logErrorToProduction('Error reading from sessionStorage:', { data: storageError });
->>>>>>> origin/auto/autonomy-17186719616
           }
         }
-
         // If not found anywhere, set error
-<<<<<<< HEAD
-        setError('Equipment not found'),
-        setLoading(false),
-      } catch (error) {
-        logErrorToProduction('Error loading equipment:', { data: error }),
-        setError('Failed to load equipment details'),
-        setLoading(false),
-      }
-    }
-
-    loadEquipment(),
-  }, [id]),
-=======
         setError('Equipment not found');
         setLoading(false);
       } catch (error) {
@@ -269,30 +131,18 @@ export default function EquipmentDetail() {
         setLoading(false);
       }
     }
-
     loadEquipment();
   }, [id]);
->>>>>>> origin/auto/autonomy-17186719616
-
   const handleAddToCart = async () => {
     if (!equipment || !isAuthenticated) {
       toast({
         title: "Authentication Required",
         description: "Please log in to add items to cart",
-<<<<<<< HEAD
-        variant: "destructive"}),
-      return,
-    }
-
-    setIsAdding(true),
-=======
         variant: "destructive",
       });
       return;
     }
-
     setIsAdding(true);
->>>>>>> origin/auto/autonomy-17186719616
     try {
       dispatch({
         type: 'ADD_ITEM',
@@ -300,45 +150,24 @@ export default function EquipmentDetail() {
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
-<<<<<<< HEAD
-          quantity}}),
-
-      toast({
-        title: "Added to Cart",
-        description: `${equipment.name} has been added to your cart.`}),
-=======
           quantity,
         },
       });
-
       toast({
         title: "Added to Cart",
         description: `${equipment.name} has been added to your cart.`,
       });
->>>>>>> origin/auto/autonomy-17186719616
     } catch (error) {
       toast({
         title: "Error",
         description: "Failed to add item to cart. Please try again.",
-<<<<<<< HEAD
-        variant: "destructive"}),
-    } finally {
-      setIsAdding(false),
-    }
-  },
-
-  const inCart = items.some(item => item.id === equipment?.id),
-=======
         variant: "destructive",
       });
     } finally {
       setIsAdding(false);
     }
   };
-
   const inCart = items.some(item => item.id === equipment?.id);
->>>>>>> origin/auto/autonomy-17186719616
-
   // Loading state
   if (loading) {
     return (
@@ -353,13 +182,8 @@ export default function EquipmentDetail() {
           </div>
         </div>
       </>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   // Error state
   if (error || !equipment) {
     return (
@@ -396,11 +220,7 @@ export default function EquipmentDetail() {
                 </Button>
                 <Button 
                   onClick={() => router.push('/equipment')}
-<<<<<<< HEAD
-                  className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
-=======
                   className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
->>>>>>> origin/auto/autonomy-17186719616
                 >
                   Browse Equipment
                 </Button>
@@ -409,13 +229,8 @@ export default function EquipmentDetail() {
           </div>
         </div>
       </>
-<<<<<<< HEAD
-    )
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   return (
     <>
       <NextSeo
@@ -444,7 +259,6 @@ export default function EquipmentDetail() {
             <span className="mx-2 text-zion-slate-light">/</span>
             <span className="text-zion-slate-light">{equipment.name}</span>
           </motion.nav>
-
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Images */}
             <motion.div 
@@ -460,7 +274,6 @@ export default function EquipmentDetail() {
                   className="object-cover"
                 />
               </AspectRatio>
-              
               {equipment.images.length > 1 && (
                 <div className="grid grid-cols-4 gap-2">
                   {equipment.images.map((image, index) => (
@@ -483,7 +296,6 @@ export default function EquipmentDetail() {
                 </div>
               )}
             </motion.div>
-
             {/* Product Details */}
             <motion.div 
               className="space-y-6"
@@ -501,9 +313,7 @@ export default function EquipmentDetail() {
                     {equipment.brand}
                   </Badge>
                 </div>
-                
                 <h1 className="text-3xl font-bold text-white">{equipment.name}</h1>
-                
                 {equipment.rating && (
                   <div className="flex items-center gap-2">
                     <div className="flex items-center">
@@ -524,7 +334,6 @@ export default function EquipmentDetail() {
                   </div>
                 )}
               </div>
-
               {/* Price */}
               <div className="bg-zion-blue-light rounded-lg p-4">
                 <div className="text-3xl font-bold text-zion-cyan mb-2">
@@ -537,13 +346,11 @@ export default function EquipmentDetail() {
                   </span>
                 </div>
               </div>
-
               {/* Description */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white">Description</h3>
                 <p className="text-zion-slate-light leading-relaxed">{equipment.description}</p>
               </div>
-
               {/* Specifications */}
               {equipment.specifications.length > 0 && (
                 <div className="space-y-4">
@@ -558,7 +365,6 @@ export default function EquipmentDetail() {
                   </div>
                 </div>
               )}
-
               {/* Add to Cart */}
               <div className="space-y-4 pt-6 border-t border-zion-blue-light">
                 <div className="flex items-center gap-4">
@@ -583,7 +389,6 @@ export default function EquipmentDetail() {
                     </Button>
                   </div>
                 </div>
-                
                 <Button
                   onClick={handleAddToCart}
                   disabled={isAdding || !equipment.inStock}
@@ -596,7 +401,6 @@ export default function EquipmentDetail() {
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
                 </Button>
               </div>
-              
               {/* Additional Info */}
               <div className="space-y-4 border-t border-zion-blue-light pt-4">
                 {/* Shipping */}
@@ -607,7 +411,6 @@ export default function EquipmentDetail() {
                     <p className="text-xs">For orders over $100 within the US</p>
                   </div>
                 </div>
-                
                 {/* Warranty */}
                 {equipment.warranty && (
                   <div className="flex gap-3 text-zion-slate-light">
@@ -618,7 +421,6 @@ export default function EquipmentDetail() {
                     </div>
                   </div>
                 )}
-                
                 {/* Return Policy */}
                 {equipment.returnPolicy && (
                   <div className="flex gap-3 text-zion-slate-light">
@@ -635,10 +437,5 @@ export default function EquipmentDetail() {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
-

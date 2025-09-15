@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-"use client";
-import React{ useEffectuseState } from 'react';
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import Link from 'next/link';
-
 type EpisodeListItem = {
   id: string;
   title: string;
@@ -18,16 +12,9 @@ type EpisodeListItem = {
     mp4Url?: string;
   };
 };
-
 export default function PodcastIndexPage() {
-<<<<<<< HEAD
-  const [episodesetEpisodes] = useState<EpisodeListItem[]>([]);
-  const [loadingsetLoading] = useState<boolean>(true);
-=======
   const [episodes, setEpisodes] = useState<EpisodeListItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
->>>>>>> origin/auto/autonomy-17186719616
-
   useEffect(() => {
     const load = async () => {
       try {
@@ -41,14 +28,8 @@ export default function PodcastIndexPage() {
       }
     };
     load();
-<<<<<<< HEAD
-  }[]);
-=======
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
-
   if (loading) return <div>Loading episodes…</div>;
-
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">

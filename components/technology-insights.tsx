@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function TechnologyInsightsPage() {
   const technologyTrends = [
     {
@@ -29,40 +28,26 @@ export default function TechnologyInsightsPage() {
       featured: false
     }
   ];
-
   const researchAreas = [
     {
       title: 'Autonomous Systems Research',
       description: 'Pioneering research in building truly autonomous systems that can operate independently.',
-<<<<<<< HEAD
-      focus: ['Decision 'Making', 'Self-'Learning', 'Adaptive 'Behavior', 'System Integration'],
-=======
       focus: ['Decision Making', 'Self-Learning', 'Adaptive Behavior', 'System Integration'],
->>>>>>> origin/auto/autonomy-17186719616
       icon: '🔬'
     },
     {
       title: 'AI Ethics & Governance',
       description: 'Research into responsible AI development and ethical considerations for autonomous systems.',
-<<<<<<< HEAD
-      focus: ['Ethical 'AI', 'Bias 'Detection', 'Transparency'Accountability'],
-=======
       focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability'],
->>>>>>> origin/auto/autonomy-17186719616
       icon: '⚖️'
     },
     {
       title: 'Human-AI Collaboration',
       description: 'Exploring how humans and AI can work together effectively and safely.',
-<<<<<<< HEAD
-      focus: ['Human-AI 'Interface', 'Collaborative Decision 'Making', 'Safety 'Protocols', 'Trust Building'],
-=======
       focus: ['Human-AI Interface', 'Collaborative Decision Making', 'Safety Protocols', 'Trust Building'],
->>>>>>> origin/auto/autonomy-17186719616
       icon: '🤝'
     }
   ];
-
   const whitepapers = [
     {
       id: 'autonomous-systems-whitepaper',
@@ -89,23 +74,15 @@ export default function TechnologyInsightsPage() {
       downloadUrl: '/whitepapers/automation-roi-guide.pdf'
     }
   ];
-
   return (
     <>
       <Head>
         <title>Technology Insights | Zion Tech Group - Research & Innovation</title>
-<<<<<<< HEAD
-        <meta name="description" content="Explore Zion Tech 'Group', 's technology insightsresearchand thought leadership in AIautomationand emerging technologies." />
-        <meta property="og:title" content="Technology Insights | Zion Tech Group" />
-        <meta property="og:description" content="Research insightstechnology trendsand thought leadership in AI and automation." />
-=======
         <meta name="description" content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies." />
         <meta property="og:title" content="Technology Insights | Zion Tech Group" />
         <meta property="og:description" content="Research insights, technology trends, and thought leadership in AI and automation." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
@@ -113,24 +90,15 @@ export default function TechnologyInsightsPage() {
               Technology Insights
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              Research insightstechnology trendsand thought leadership in AIautomationand emerging technologies
-=======
               Research insights, technology trends, and thought leadership in AI, automation, and emerging technologies
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </section>
-
           <section className="mx-auto max-w-7xl">
             {/* Technology Trends */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Latest Technology Trends</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
-                {technologyTrends.map((trendindex) => (
-=======
                 {technologyTrends.map((trend, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{trend.category}</span>
@@ -148,26 +116,17 @@ export default function TechnologyInsightsPage() {
                 ))}
               </div>
             </div>
-
             {/* Research Areas */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Research Focus Areas</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-<<<<<<< HEAD
-                {researchAreas.map((areaindex) => (
-=======
                 {researchAreas.map((area, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="text-4xl mb-4">{area.icon}</div>
                     <h3 className="text-xl font-bold mb-3 text-white">{area.title}</h3>
                     <p className="text-white/70 mb-4">{area.description}</p>
                     <ul className="space-y-2">
-<<<<<<< HEAD
-                      {area.focus.map((focusIndex) => (
-=======
                       {area.focus.map((focus, focusIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <li key={focusIndex} className="text-sm text-white/60 flex items-center">
                           <span className="text-cyan-400 mr-2">•</span>
                           {focus}
@@ -178,16 +137,11 @@ export default function TechnologyInsightsPage() {
                 ))}
               </div>
             </div>
-
             {/* Whitepapers */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Research Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-<<<<<<< HEAD
-                {whitepapers.map((paperindex) => (
-=======
                 {whitepapers.map((paper, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
@@ -205,7 +159,6 @@ export default function TechnologyInsightsPage() {
                 ))}
               </div>
             </div>
-
             {/* Innovation Lab */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">Innovation Lab</h2>
@@ -214,13 +167,8 @@ export default function TechnologyInsightsPage() {
                   <div>
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
                     <p className="text-white/80 mb-6">
-<<<<<<< HEAD
-                      Our innovation lab is dedicated to exploring the frontiers of technologyconducting research in autonomous systems
-                      AI ethicsand human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
-=======
                       Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, 
                       AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
->>>>>>> origin/auto/autonomy-17186719616
                     </p>
                     <ul className="space-y-2 text-white/70">
                       <li>• Advanced AI research and development</li>
@@ -236,7 +184,6 @@ export default function TechnologyInsightsPage() {
                 </div>
               </div>
             </div>
-
             {/* Call to Action */}
             <div className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center">
               <h2 className="text-3xl font-bold mb-4 text-white">Join the Innovation Journey</h2>

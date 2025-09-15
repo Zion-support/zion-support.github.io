@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
 import React from 'react';
->>>>>>> origin/auto/autonomy-17186719616
   const featuredNews = [
     {
       title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
@@ -12,11 +8,7 @@ import React from 'react';
       author: 'Dr. Kleber',
       featured: true,
       image: '/api/placeholder/600/400',
-<<<<<<< HEAD
-      tags: ['AI ConsciousnessBreakthrough', 'Innovation'],
-=======
       tags: ['AI Consciousness', 'Breakthrough', 'Innovation'],
->>>>>>> origin/auto/autonomy-17186719616
       readTime: '5 min read'
     },
     {
@@ -27,11 +19,7 @@ import React from 'react';
       category: 'Research',
       readTime: '6 min read',
       image: '/news/quantum-breakthrough.jpg',
-<<<<<<< HEAD
-      tags: ['Quantum ComputingResearch', 'Breakthrough'],
-=======
       tags: ['Quantum Computing', 'Research', 'Breakthrough'],
->>>>>>> origin/auto/autonomy-17186719616
       icon: <Atom className="w-6 h-6" />,
       featured: true
     },
@@ -40,15 +28,9 @@ import React from 'react';
       excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.',
       author: 'Partnerships Team',
       date: '2025-01-10',
-<<<<<<< HEAD
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedYear, setSelectedYear] = useState('all'),
-=======
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedYear, setSelectedYear] = useState('all');
->>>>>>> origin/auto/autonomy-17186719616
 
   const categories = [
     { id: 'all', name: 'All News', icon: Newspaper, count: 45 },
@@ -56,34 +38,21 @@ import React from 'react';
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12 },
     { id: 'space', name: 'Space Technology', icon: Rocket, count: 8 },
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 7 }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const years = [
     { id: 'all', name: 'All Years' },
     { id: '2025', name: '2025' },
     { id: '2024', name: '2024' },
     { id: '2023', name: '2023' }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink,
   TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap,
   Clock, BookOpen, Video, Podcast, FileText, Search
-<<<<<<< HEAD
-} from 'lucide-react',
-import Link from 'next/link',
-=======
 } from 'lucide-react';
 import Link from 'next/link';
 =======
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <UltraFuturisticBackground>
       <div className="min-h-screen">
@@ -156,10 +125,7 @@ import Link from 'next/link';
       readTime: "3 min read",
       image: "/images/news/financial-award.jpg",
       tags: ["Awards", "Financial Services", "Quantum Computing"]
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/auto/autonomy-17186719616
 export default function News() {
   const featuredNews = [
     {
@@ -171,14 +137,9 @@ export default function News() {
       date: '2024-01-15',
       readTime: '5 min read',
       image: '/api/placeholder/600/400',
-<<<<<<< HEAD
-      tags: ['AIQuantum Computing', 'Innovation'],
-import Head from 'next/head',
-=======
       tags: ['AI', 'Quantum Computing', 'Innovation'],
 =======
 import Head from 'next/head';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function NewsPage() {
   const newsArticles = [
@@ -199,11 +160,8 @@ export default function NewsPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> origin/auto/autonomy-17186719616
         {/* Featured Article */}
         {featuredArticle && (
           <section className="py-20">
@@ -279,10 +237,7 @@ export default function NewsPage() {
           </section>
         )}
 
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/auto/autonomy-17186719616
         {/* Category Filter */}
         <section className="py-12 bg-black/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -376,10 +331,7 @@ export default function NewsPage() {
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                   </div>
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/auto/autonomy-17186719616
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -390,10 +342,7 @@ export default function NewsPage() {
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
                 <Newspaper className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/auto/autonomy-17186719616
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-6xl">
             <motion.div
@@ -430,33 +379,19 @@ export default function NewsPage() {
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
-=======
 =======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> origin/auto/autonomy-17186719616
 import { 
   Search, Calendar, Clock, User, Tag, 
   ArrowRight, ExternalLink, TrendingUp, 
   BookOpen, Globe, Video
-<<<<<<< HEAD
-} from 'lucide-react',
-import Link from 'next/link',
-
-export default function News() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-=======
 } from 'lucide-react';
 import Link from 'next/link';
 
 export default function News() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> origin/auto/autonomy-17186719616
 
   const categories = [
     { id: 'all', name: 'All News', count: 24 },
@@ -465,11 +400,7 @@ export default function News() {
     { id: 'enterprise', name: 'Enterprise IT', count: 5 },
     { id: 'research', name: 'Research & Development', count: 3 },
     { id: 'industry', name: 'Industry Insights', count: 2 }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const featuredNews = [
     {
@@ -482,11 +413,7 @@ export default function News() {
       readTime: '5 min read',
       image: '/images/news/ai-consciousness-launch.jpg',
       featured: true,
-<<<<<<< HEAD
-      tags: ['AI ConsciousnessPlatform Launch', 'Innovation']
-=======
       tags: ['AI Consciousness', 'Platform Launch', 'Innovation']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 2,
@@ -498,15 +425,9 @@ export default function News() {
       readTime: '7 min read',
       image: '/images/news/quantum-breakthrough.jpg',
       featured: true,
-<<<<<<< HEAD
-      tags: ['Quantum ComputingResearch', 'Breakthrough']
-    }
-  ],
-=======
       tags: ['Quantum Computing', 'Research', 'Breakthrough']
     }
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const latestNews = [
     {
@@ -518,11 +439,7 @@ export default function News() {
       date: '2024-01-10',
       readTime: '4 min read',
       image: '/images/news/enterprise-ai-trends.jpg',
-<<<<<<< HEAD
-      tags: ['Enterprise AIBest Practices', '2024 Trends']
-=======
       tags: ['Enterprise AI', 'Best Practices', '2024 Trends']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 4,
@@ -533,11 +450,7 @@ export default function News() {
       date: '2024-01-08',
       readTime: '6 min read',
       image: '/images/news/autonomous-systems.jpg',
-<<<<<<< HEAD
-      tags: ['Autonomous SystemsFuture of Work', 'Innovation']
-=======
       tags: ['Autonomous Systems', 'Future of Work', 'Innovation']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 5,
@@ -548,11 +461,7 @@ export default function News() {
       date: '2024-01-05',
       readTime: '5 min read',
       image: '/images/news/ai-cybersecurity.jpg',
-<<<<<<< HEAD
-      tags: ['CybersecurityAI Security', 'Digital Protection']
-=======
       tags: ['Cybersecurity', 'AI Security', 'Digital Protection']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 6,
@@ -563,15 +472,9 @@ export default function News() {
       date: '2024-01-03',
       readTime: '8 min read',
       image: '/images/news/quantum-ml.jpg',
-<<<<<<< HEAD
-      tags: ['Quantum MLResearch', 'Technology Convergence']
-    }
-  ],
-=======
       tags: ['Quantum ML', 'Research', 'Technology Convergence']
     }
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const industryInsights = [
     {
@@ -582,11 +485,7 @@ export default function News() {
       author: 'Dr. Robert Chang',
       date: '2024-01-01',
       readTime: '6 min read',
-<<<<<<< HEAD
-      tags: ['AI EthicsBusiness Impact', 'Consciousness']
-=======
       tags: ['AI Ethics', 'Business Impact', 'Consciousness']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 8,
@@ -596,15 +495,9 @@ export default function News() {
       author: 'Lisa Wang',
       date: '2023-12-28',
       readTime: '4 min read',
-<<<<<<< HEAD
-      tags: ['Micro-SaaSStartups', 'Software Industry']
-    }
-  ],
-=======
       tags: ['Micro-SaaS', 'Startups', 'Software Industry']
     }
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const upcomingEvents = [
     {
@@ -627,39 +520,23 @@ export default function News() {
       description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.',
       registration: 'https://ziontechgroup.com/events/quantum-workshop'
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const filteredNews = [...featuredNews, ...latestNews, ...industryInsights].filter(article => {
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-<<<<<<< HEAD
-                         article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory,
-    return matchesSearch && matchesCategory,
-  }),
-=======
                          article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
->>>>>>> origin/auto/autonomy-17186719616
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-<<<<<<< HEAD
-    }),
-  },
-=======
     });
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const getCategoryColor = (category: string) => {
     const colors = {
@@ -668,15 +545,9 @@ export default function News() {
       enterprise: 'from-green-500 to-emerald-500',
       research: 'from-orange-500 to-red-500',
       industry: 'from-indigo-500 to-purple-500'
-<<<<<<< HEAD
-    },
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600',
-  },
-=======
     };
     return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -742,17 +613,6 @@ export default function News() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
-<<<<<<< HEAD
-    'All NewsCompany News',
-    'PartnershipsAI & Ethics',
-    'Quantum TechnologySpace Technology',
-    'Micro SAASIT Services',
-    'MetaverseIndustry Insights'
-  ],
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString),
-=======
 =======
     'All News',
     'Company News',
@@ -768,18 +628,12 @@ export default function News() {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
->>>>>>> origin/auto/autonomy-17186719616
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-<<<<<<< HEAD
-    }),
-  },
-=======
     });
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -1066,10 +920,7 @@ export default function News() {
       </section>
 
 }
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/auto/autonomy-17186719616
                     <div className="flex items-center gap-3 mb-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(article.category)} text-white`}>
                         {categories.find(c => c.id === article.category)?.name}
@@ -1332,10 +1183,7 @@ export default function News() {
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
                 Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing.
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/auto/autonomy-17186719616
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1505,10 +1353,7 @@ export default function News() {
               <p className="text-xl text-gray-300 mb-8">
                 For press inquiries, media interviews, or additional information, 
                 please contact our communications team.
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/auto/autonomy-17186719616
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -1523,10 +1368,7 @@ export default function News() {
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
                 >
                   Press Kit
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/auto/autonomy-17186719616
                 </a>
               </div>
             </motion.div>
@@ -1534,10 +1376,7 @@ export default function News() {
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/auto/autonomy-17186719616
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -1554,11 +1393,7 @@ export default function News() {
               Explore our latest research, industry insights, and technology breakthroughs 
               that are shaping the future of AI and quantum computing.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> origin/auto/autonomy-17186719616
               <Link 
                 href="/blog"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -1577,14 +1412,9 @@ export default function News() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  )
-}
-=======
   );
 }
 =======
->>>>>>> origin/auto/autonomy-17186719616
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1601,11 +1431,7 @@ export default function News() {
               Have questions about our news or want to learn more about our latest developments? Contact our team.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-<<<<<<< HEAD
-              <a href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
-=======
               <a href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
->>>>>>> origin/auto/autonomy-17186719616
                 <span>Contact Us</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
@@ -1617,14 +1443,9 @@ export default function News() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  )
-}
-=======
   );
 }
 =======
->>>>>>> origin/auto/autonomy-17186719616
       title: "Partnership with TechCorp Announced for Cloud Infrastructure",
       excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.",
       date: "2025-01-18",
@@ -1656,11 +1477,7 @@ export default function News() {
     {
       id: 5,
       title: "Machine Learning Model Achieves 99.7% Accuracy",
-<<<<<<< HEAD
-      excerpt: "Breakthrough in predictive analytics demonstrates our commitment to pushing the boundaries of AI window.window.window.performance.",
-=======
       excerpt: "Breakthrough in predictive analytics demonstrates our commitment to pushing the boundaries of AI performance.",
->>>>>>> origin/auto/autonomy-17186719616
       date: "2025-01-15",
       category: "Technology",
       author: "Dr. James Wilson",
@@ -1697,15 +1514,9 @@ export default function News() {
       readTime: "7 min read",
       image: "📚"
     }
-<<<<<<< HEAD
-  ],
-
-  const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"],
-=======
   ];
 
   const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -1817,11 +1628,7 @@ export default function News() {
                 <p className="text-white/70 mb-6">
                   Get the latest news and updates delivered directly to your inbox. Never miss an important announcement.
                 </p>
-<<<<<<< HEAD
-                <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">
-=======
                 <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
->>>>>>> origin/auto/autonomy-17186719616
                   <input
                     type="email"
                     placeholder="Enter your email"
@@ -1837,9 +1644,5 @@ export default function News() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -15,12 +15,8 @@ serve(async (req) => {
     const headers = {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-<<<<<<< HEAD
-      "Content-Type": "application/json"};
-=======
       "Content-Type": "application/json",
     };
->>>>>>> origin/auto/autonomy-17186719616
 
     // Handle CORS preflight request
     if (req.method === "OPTIONS") {
@@ -34,12 +30,8 @@ serve(async (req) => {
     if (!providerData || !providerData.bio) {
       return new Response(
         JSON.stringify({
-<<<<<<< HEAD
-          error: "Missing required service provider data"}),
-=======
           error: "Missing required service provider data",
         }),
->>>>>>> origin/auto/autonomy-17186719616
         { headers, status: 400 }
       );
     }
@@ -49,12 +41,8 @@ serve(async (req) => {
     if (!apiKey) {
       return new Response(
         JSON.stringify({
-<<<<<<< HEAD
-          error: "OpenAI API key not configured"}),
-=======
           error: "OpenAI API key not configured",
         }),
->>>>>>> origin/auto/autonomy-17186719616
         { headers, status: 500 }
       );
     }
@@ -84,25 +72,13 @@ serve(async (req) => {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
-<<<<<<< HEAD
-        "Content-Type": "application/json"},
-=======
         "Content-Type": "application/json",
       },
->>>>>>> origin/auto/autonomy-17186719616
       body: JSON.stringify({
         model: "gpt-4",
         messages: [
           {
             role: "system",
-<<<<<<< HEAD
-            content: "You are an expert at creating professional service descriptions for marketplaces."},
-          {
-            role: "user",
-            content: prompt}],
-        temperature: 0.7,
-        max_tokens: 800})});
-=======
             content: "You are an expert at creating professional service descriptions for marketplaces.",
           },
           {
@@ -114,7 +90,6 @@ serve(async (req) => {
         max_tokens: 800,
       }),
     });
->>>>>>> origin/auto/autonomy-17186719616
 
     const responseData = await response.json();
     
@@ -123,12 +98,8 @@ serve(async (req) => {
       return new Response(
         JSON.stringify({
           error: "Failed to generate enhanced profile content",
-<<<<<<< HEAD
-          details: responseData}),
-=======
           details: responseData,
         }),
->>>>>>> origin/auto/autonomy-17186719616
         { headers, status: 500 }
       );
     }
@@ -140,12 +111,8 @@ serve(async (req) => {
       return new Response(
         JSON.stringify({
           summary: parsedContent.summary,
-<<<<<<< HEAD
-          services: parsedContent.services}),
-=======
           services: parsedContent.services,
         }),
->>>>>>> origin/auto/autonomy-17186719616
         { headers, status: 200 }
       );
     } catch (error) {
@@ -153,12 +120,8 @@ serve(async (req) => {
       return new Response(
         JSON.stringify({
           error: "Failed to parse AI response",
-<<<<<<< HEAD
-          raw: responseData.choices[0]?.message?.content}),
-=======
           raw: responseData.choices[0]?.message?.content,
         }),
->>>>>>> origin/auto/autonomy-17186719616
         { headers, status: 500 }
       );
     }
@@ -166,13 +129,6 @@ serve(async (req) => {
     console.error("Function error:", error);
     return new Response(
       JSON.stringify({
-<<<<<<< HEAD
-        error: "Internal server error"}),
-      { 
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"}, 
-=======
         error: "Internal server error",
       }),
       { 
@@ -180,7 +136,6 @@ serve(async (req) => {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
         }, 
->>>>>>> origin/auto/autonomy-17186719616
         status: 500 
       }
     );

@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-
-export default function SummitPage() {
-  return (
-    <>
-      <Head>
-        <title>Summit - Zion Tech Group</title>
-        <meta name="description" content="summit page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Summit</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
-        </div>
-      </div>
-=======
 import Head from 'next/head';
 import React from 'react';
 
@@ -322,7 +301,6 @@ export default function SummitPage() {
         <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
       </section>
->>>>>>> origin/auto/autonomy-17186719616
     </>
   );
 }

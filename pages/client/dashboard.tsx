@@ -1,45 +1,19 @@
-<<<<<<< HEAD
-import useSWR from 'swr',
-import Link from 'next/link',
-
-const fetcher = (url: string) => fetch(url).then((r) => r.json()),
-
-export default function ClientDashboard() {
-  const { data, error, mutate } = useSWR('/api/jobs', fetcher),
-
-  if (error) return <div className="text-red-600">Failed to load</div>,
-  if (!data) return <div>Loading…</div>,
-
-  const jobs = data.jobs as any[],
-=======
 import useSWR from 'swr';
 import Link from 'next/link';
-
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
-
 export default function ClientDashboard() {
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
-
   if (error) return <div className="text-red-600">Failed to load</div>;
   if (!data) return <div>Loading…</div>;
-
   const jobs = data.jobs as any[];
->>>>>>> origin/auto/autonomy-17186719616
-
   async function closeJob(id: string) {
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-      body: JSON.stringify({ status: 'Closed' })}),
-    mutate(),
-=======
       body: JSON.stringify({ status: 'Closed' }),
     });
     mutate();
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -72,9 +46,5 @@ export default function ClientDashboard() {
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

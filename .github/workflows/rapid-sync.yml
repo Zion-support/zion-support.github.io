@@ -1,23 +1,15 @@
-<<<<<<< HEAD
----
-=======
->>>>>>> origin/auto/autonomy-17186719616
 name: Rapid Sync
-
 on:
   push:
     branches: [ main ]
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 concurrency:
   group: rapid-sync-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -25,19 +17,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-
       - name: Install deps
         run: npm ci --ignore-scripts
-
       - name: Run rapid sync
         run: node automation/rapid-sync.cjs | cat
-
       - name: Commit and push changes
         run: |
           if [ -n "$(git status --porcelain)" ]; then

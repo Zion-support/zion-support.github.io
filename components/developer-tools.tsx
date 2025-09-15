@@ -3,21 +3,12 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-<<<<<<< HEAD
-  Code
-  GitBranch
-  Database
-  Cloud
-  Shield
-  Zap
-=======
   Code, 
   GitBranch, 
   Database, 
   Cloud, 
   Shield, 
   Zap, 
->>>>>>> origin/auto/autonomy-17186719616
   Star,
   ExternalLink,
   CheckCircle,
@@ -25,7 +16,6 @@ import {
   Cpu,
   Globe
 } from 'lucide-react';
-
 export default function DeveloperToolsPage() {
   const developerTools = [
     {
@@ -51,11 +41,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <GitBranch className="w-8 h-8 text-white" />,
       title: 'GitHub Pro',
-<<<<<<< HEAD
-      description: 'Advanced GitHub features for professional developers including private repositoriesadvanced toolsand priority support.',
-=======
       description: 'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.',
->>>>>>> origin/auto/autonomy-17186719616
       features: [
         'Unlimited private repositories',
         'Advanced code review tools',
@@ -75,11 +61,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <Database className="w-8 h-8 text-white" />,
       title: 'MongoDB Atlas',
-<<<<<<< HEAD
-      description: 'Fully managed cloud database service with automatic scalingbackupand monitoring for modern applications.',
-=======
       description: 'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.',
->>>>>>> origin/auto/autonomy-17186719616
       features: [
         'Fully managed MongoDB',
         'Auto-scaling & optimization',
@@ -99,11 +81,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: 'Vercel Pro',
-<<<<<<< HEAD
-      description: 'Next.js deployment platform with automatic deploymentspreview deploymentsand advanced analytics.',
-=======
       description: 'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.',
->>>>>>> origin/auto/autonomy-17186719616
       features: [
         'Zero-config deployments',
         'Preview deployments',
@@ -123,11 +101,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Snyk',
-<<<<<<< HEAD
-      description: 'Developer security platform that finds and fixes vulnerabilities in codependenciesand containers.',
-=======
       description: 'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.',
->>>>>>> origin/auto/autonomy-17186719616
       features: [
         'Vulnerability scanning',
         'Dependency monitoring',
@@ -147,11 +121,7 @@ export default function DeveloperToolsPage() {
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'Postman',
-<<<<<<< HEAD
-      description: 'Complete API development platform for buildingtestingand documenting APIs with team collaboration.',
-=======
       description: 'Complete API development platform for building, testing, and documenting APIs with team collaboration.',
->>>>>>> origin/auto/autonomy-17186719616
       features: [
         'API design & testing',
         'Team collaboration',
@@ -169,7 +139,6 @@ export default function DeveloperToolsPage() {
       category: 'API Development'
     }
   ];
-
   const devMarketStats = [
     {
       title: 'Dev Tools Market',
@@ -196,7 +165,6 @@ export default function DeveloperToolsPage() {
       description: 'Average productivity improvement'
     }
   ];
-
   const devCategories = [
     {
       name: 'Code Generation',
@@ -230,75 +198,47 @@ export default function DeveloperToolsPage() {
     },
     {
       name: 'API Development',
-<<<<<<< HEAD
-      description: 'Tools for buildingtestingand managing APIs',
-=======
       description: 'Tools for building, testing, and managing APIs',
->>>>>>> origin/auto/autonomy-17186719616
       tools: 1,
       avgPrice: '$55/month'
     }
   ];
-
   const devWorkflow = [
     {
       phase: 'Development',
-<<<<<<< HEAD
-      tools: ['GitHub 'Copilot', 'VS 'Code', 'Git'],
-=======
       tools: ['GitHub Copilot', 'VS Code', 'Git'],
->>>>>>> origin/auto/autonomy-17186719616
       description: 'Write and manage code with AI assistance'
     },
     {
       phase: 'Testing',
-<<<<<<< HEAD
-      tools: [', 'Jest', 'Cypress'Postman'],
-=======
       tools: ['Jest', 'Cypress', 'Postman'],
->>>>>>> origin/auto/autonomy-17186719616
       description: 'Test code quality and API functionality'
     },
     {
       phase: 'Security',
-<<<<<<< HEAD
-      tools: [', 'Snyk', 'GitHub Advanced Security'],
-=======
       tools: ['Snyk', 'GitHub Advanced Security'],
->>>>>>> origin/auto/autonomy-17186719616
       description: 'Scan for vulnerabilities and security issues'
     },
     {
       phase: 'Deployment',
-<<<<<<< HEAD
-      tools: [', 'Vercel', 'GitHub 'Actions', 'Docker'],
-=======
       tools: ['Vercel', 'GitHub Actions', 'Docker'],
->>>>>>> origin/auto/autonomy-17186719616
       description: 'Deploy and host applications'
     }
   ];
-
   return (
     <>
       <Head>
         <title>Developer Tools & Services | Zion Tech Group - Real Dev Tools with Pricing</title>
-<<<<<<< HEAD
-        <meta name="description" content="Discover real developer tools and services including GitHub CopilotMongoDB AtlasVerceland more. All tools include pricingfeaturesand direct links." />
-=======
         <meta name="description" content="Discover real developer tools and services including GitHub Copilot, MongoDB Atlas, Vercel, and more. All tools include pricing, features, and direct links." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="Developer Tools & Services | Zion Tech Group" />
         <meta property="og:description" content="Real developer tools with pricing and direct links to boost your development workflow." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
         <div className="absolute inset-0 bg-grid opacity-10" />
-        
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
             <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
@@ -313,7 +253,6 @@ export default function DeveloperToolsPage() {
           </p>
         </div>
       </section>
-
       {/* Developer Market Statistics */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
@@ -325,13 +264,8 @@ export default function DeveloperToolsPage() {
               Understanding the developer tools landscape helps you make informed decisions about your development stack.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-<<<<<<< HEAD
-            {devMarketStats.map((statindex) => (
-=======
             {devMarketStats.map((stat, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
@@ -348,7 +282,6 @@ export default function DeveloperToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Developer Tools Grid */}
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
@@ -357,20 +290,11 @@ export default function DeveloperToolsPage() {
               Curated Developer Tools & Services
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-              Each tool has been carefully selected based on performancereliabilityand real-world developer usage.
-=======
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {developerTools.map((toolindex) => (
-=======
             {developerTools.map((tool, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${
@@ -386,7 +310,6 @@ export default function DeveloperToolsPage() {
                     </div>
                   </div>
                 )}
-
                 <div className="flex items-start space-x-6">
                   <div className="relative">
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
@@ -394,7 +317,6 @@ export default function DeveloperToolsPage() {
                     </div>
                     <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
                   </div>
-                  
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className={`text-2xl font-bold ${tool.textColor}`}>
@@ -404,11 +326,9 @@ export default function DeveloperToolsPage() {
                         {tool.category}
                       </span>
                     </div>
-                    
                     <p className="text-gray-400 leading-relaxed mb-6">
                       {tool.description}
                     </p>
-                    
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-sm text-gray-500">Service Price:</span>
@@ -419,33 +339,17 @@ export default function DeveloperToolsPage() {
                         <span className="text-sm text-gray-400">{tool.marketPrice}</span>
                       </div>
                     </div>
-
                     <ul className="space-y-2 mb-6">
-<<<<<<< HEAD
-                      {tool.features.map((featureIndex) => (
-=======
                       {tool.features.map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
-
-<<<<<<< HEAD
-
                     <div className="flex items-center justify-between">
                       <Button
                         href={tool.website}
-
-
-
-=======
-                    <div className="flex items-center justify-between">
-                      <Button
-                        href={tool.website}
->>>>>>> origin/auto/autonomy-17186719616
                         variant="primary"
                         size="sm"
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"
@@ -465,7 +369,6 @@ export default function DeveloperToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Developer Workflow */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
@@ -477,13 +380,8 @@ export default function DeveloperToolsPage() {
               Build a complete development pipeline with these essential tools that work together seamlessly.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-            {devWorkflow.map((phaseindex) => (
-=======
             {devWorkflow.map((phase, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
@@ -496,11 +394,7 @@ export default function DeveloperToolsPage() {
                   <h3 className="text-xl font-semibold text-white mb-3">{phase.phase}</h3>
                   <p className="text-gray-400 mb-4">{phase.description}</p>
                   <div className="space-y-1">
-<<<<<<< HEAD
-                    {phase.tools.map((toolIndex) => (
-=======
                     {phase.tools.map((tool, toolIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                       <div key={toolIndex} className="text-sm text-cursor-blue font-medium">
                         {tool}
                       </div>
@@ -512,7 +406,6 @@ export default function DeveloperToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Tool Categories */}
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
@@ -524,13 +417,8 @@ export default function DeveloperToolsPage() {
               Understanding the different types of developer tools helps you build a comprehensive development stack.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
-            {devCategories.map((categoryindex) => (
-=======
             {devCategories.map((category, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
@@ -549,7 +437,6 @@ export default function DeveloperToolsPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor text-center">
@@ -569,10 +456,6 @@ export default function DeveloperToolsPage() {
             >
               Explore AI Tools
             </Button>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
             <Button
               href="/contact"
               variant="outline"

@@ -1,31 +1,64 @@
-name: Fast Auto Push to Main
+<<<<<<< HEAD
+name: fast-auto-push-to-main
+on:
+  workflow_dispatch: {}
+  schedule:
+  - cron: '0 2 * * *'
+permissions:
+  contents: read
+  actions: read
+  
+jobs:
+  main:
+    name: Fast Auto Push To Main Job
+=======
+name: Fast Auto Push To Main
 
 on:
-  push:
-    branches-ignore:
-      - main
-  schedule:
-    - cron: '0 0 * * *'
   workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
 
-concurrency:
-  group: "fast-auto-push-${{ github.ref }}"
-  cancel-in-progress: true
-
+permissions:
   contents: write
+  actions: read
 
 jobs:
-
-  fast-push:
-      - name: Checkout
+  main:
+    name: Main Job
+>>>>>>> origin/auto/autonomy-17186719616
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
           fetch-depth: 0
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Setup Node.js
         uses: actions/setup-node@v4
-          node-version: 20
+        with:
+          node-version: '20'
+<<<<<<< HEAD
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"
+concurrency:
+  group: fast-auto-push-to-main.yml-${{ github.ref }}
+  cancel-in-progress: true
+=======
+          cache: 'npm'
 
-      - name: Push HEAD to main fast
-        env:
-          TARGET_BRANCH: main
-          PUSH_TO_MAIN: 'true'
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+>>>>>>> origin/auto/autonomy-17186719616

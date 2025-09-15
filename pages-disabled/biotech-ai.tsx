@@ -1,10 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-ActivityPhoneMailMapPinCheckArrowRight
-=======
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import { Button } from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -31,11 +27,7 @@ export default function IncidentAutomationSuitePage() {
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-<<<<<<< HEAD
-                {service.features.slice(012).map((feati) => (
-=======
                 {service.features.slice(0, 12).map((feat, i) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /><span>{feat}</span></li>
                 ))}
               </ul>

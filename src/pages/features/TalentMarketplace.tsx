@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
-=======
 import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
-
 export default function TalentMarketplace() {
   const schema = {
     "@context": "https://schema.org",
@@ -21,12 +11,7 @@ export default function TalentMarketplace() {
     "name": "Talent Marketplace",
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-<<<<<<< HEAD
-  },
-=======
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <>
       <SEO
@@ -49,20 +34,12 @@ export default function TalentMarketplace() {
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
-<<<<<<< HEAD
-              src="https: //placehold.co/800x400"
-=======
               src="https://placehold.co/800x400"
->>>>>>> origin/auto/autonomy-17186719616
               alt="Screenshot of talent directory"
               className="object-cover"
             />
           </div>
-<<<<<<< HEAD
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-=======
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
->>>>>>> origin/auto/autonomy-17186719616
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Find pre-screened experts for short or long term projects.</li>
             <li>AI-powered matching recommends the best candidates for your needs.</li>
@@ -87,9 +64,5 @@ export default function TalentMarketplace() {
         </div>
       </main>
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

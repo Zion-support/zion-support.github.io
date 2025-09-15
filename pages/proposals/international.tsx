@@ -1,24 +1,5 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-
-type ProposalListItem = {
-  id: string,
-  title: string,
-  targetInstitution: string,
-  regionalScope: string,
-  type: string,
-  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
-  createdAt: string
-},
-
-export default function InternationalProposalsPage() {
-  const [items, setItems] = useState<ProposalListItem[]>([]),
-  const [filter, setFilter] = useState('All'),
-=======
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-
 type ProposalListItem = {
   id: string;
   title: string;
@@ -28,28 +9,16 @@ type ProposalListItem = {
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted';
   createdAt: string;
 };
-
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([]);
   const [filter, setFilter] = useState('All');
->>>>>>> origin/auto/autonomy-17186719616
-
   useEffect(() => {
     fetch('/api/proposals')
       .then((r) => r.json())
       .then((d) => setItems(d.items || []))
-<<<<<<< HEAD
-      .catch(() => setItems([])),
-  }, []),
-
-  const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter)),
-=======
       .catch(() => setItems([]));
   }, []);
-
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter));
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <EnhancedLayout>
       <div className="space-y-4">
@@ -86,9 +55,5 @@ export default function InternationalProposalsPage() {
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

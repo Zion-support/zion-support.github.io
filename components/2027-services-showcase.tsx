@@ -1,207 +1,8 @@
-<<<<<<< HEAD
-"use client";
-'use client';
-
-import React{ useState } from 'react';
-=======
 import React, { useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  SearchStarUsersTrendingUpDollarSignClock
-  CheckCircleArrowRightZapBrainShieldGlobe
-  SparklesDatabaseCloud
-  LockEyeHeartShare2DownloadPhoneMailMapPin
-} from 'lucide-react';
-
-export default function ServicesShowcase2027() {
-  const [searchTermsetSearchTerm] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-
-  const services = [
-    {
-      id: 'ai-automation-2027',
-      name: 'AI Automation 2027',
-      description: 'Next-generation AI automation with quantum-enhanced processing and neural interfaces.',
-      icon: Brain,
-      category: 'ai',
-      features: ['Quantum AI 'Processing', 'Neural Interface 'Integration', 'Predictive Automation'],
-      pricing: 'Starting at $299/month'
-    },
-    {
-      id: 'quantum-security-2027',
-      name: 'Quantum Security 2027',
-      description: 'Revolutionary quantum encryption and AI-powered threat detection systems.',
-      icon: Shield,
-      category: 'security',
-      features: ['Quantum 'Encryption', 'AI Threat 'Detection', 'Zero Trust Architecture'],
-      pricing: 'Starting at $499/month'
-    },
-    {
-      id: 'advanced-infrastructure-2027',
-      name: 'Advanced Infrastructure 2027',
-      description: 'Cutting-edge cloud infrastructure with AI optimization and autonomous management.',
-      icon: Zap,
-      category: 'infrastructure',
-      features: ['AI 'Optimization', 'Autonomous 'Scaling', 'Real-time Monitoring'],
-      pricing: 'Starting at $199/month'
-    }
-  ];
-
-  const categories = [
-    { id: ''all', 'name: 'All 'Services', 'icon: Globe },
-    { id: ''ai', 'name: 'AI & 'ML', 'icon: Brain },
-    { id: ''security', 'name: ''Security', 'icon: Shield },
-    { id: ''infrastructure', 'name: ''Infrastructure', 'icon: Zap }
-  ];
-
-  const filteredServices = services.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      <Head>
-        <title>Advanced Services 2027 - Zion Tech Group</title>
-        <meta name="description" content="Discover our revolutionary AI-powered services for 2027. Transform your business with cutting-edge technology." />
-      </Head>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Advanced Services
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              {' '}2027
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience the future of technology with our revolutionary AI-powered services 
-            designed for the next generation of business.
-          </p>
-        </motion.div>
-
-        {/* Search and Filter */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">
-          <div className="flex flex-col lg:flex-row gap-4">
-            <div className="flex-1 relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-              />
-            </div>
-            
-            <div className="flex gap-4">
-              {categories.map(category => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-3 rounded-lg transition-all duration-200 flex items-center gap-2 ${
-                    selectedCategory === category.id
-                      ? 'bg-purple-600 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  <category.icon className="w-4 h-4" />
-                  {category.name}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {filteredServices.map((serviceindex) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
-                  <service.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
-                  {service.name}
-                </h3>
-              </div>
-              
-              <p className="text-gray-300 mb-6">
-                {service.description}
-              </p>
-              
-              <div className="space-y-2 mb-6">
-                {service.features.map((featureIndex) => (
-                  <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    {feature}
-                  </div>
-                ))}
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <div className="text-lg font-bold text-purple-400">
-                  {service.pricing}
-                </div>
-                <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-2">
-                  Learn More
-                  <TrendingUp className="w-4 h-4" />
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* CTA Section */}
-        <motion.div 
-          className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
-        >
-          <h2 className="text-3xl font-bold text-white mb-4">Ready for the Future?</h2>
-          <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
-            Contact us today to learn more about our advanced 2027 services and 
-            how they can transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              <Phone className="w-4 h-4" />
-              Call Now
-            </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              <Mail className="w-4 h-4" />
-              Email Us
-            </a>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-=======
   Search, Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, 
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud, 
@@ -211,41 +12,33 @@ import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovation
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
-
 export default function ServicesShowcase2027() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
-
   // Sort options
   const sortOptions = [
     { value: 'name', label: 'Sort by Name' },
     { value: 'price', label: 'Sort by Price' },
     { value: 'roi', label: 'Sort by ROI' }
   ];
-
   const allServices = [
     ...cuttingEdge2027Innovations,
     ...practicalMicroSaas2027
   ];
-
   // Filter services based on search and category
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
     const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-    
     const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
                         (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) ||
                         (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
-
     return matchesSearch && matchesCategory && matchesPrice;
   });
-
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -259,7 +52,6 @@ export default function ServicesShowcase2027() {
         return 0;
     }
   });
-
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
     { id: 'AI Consciousness Evolution', name: 'AI Consciousness', icon: '🧠', count: allServices.filter(s => s.category.includes('AI Consciousness')).length },
@@ -273,21 +65,18 @@ export default function ServicesShowcase2027() {
     { id: 'HR Automation', name: 'HR Automation', icon: '👥', count: allServices.filter(s => s.category.includes('HR Automation')).length },
     { id: 'Financial Automation', name: 'Financial Automation', icon: '💰', count: allServices.filter(s => s.category.includes('Financial Automation')).length }
   ];
-
   const priceRanges = [
     { id: 'all', name: 'All Prices', count: allServices.length },
     { id: 'low', name: 'Under $1K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000).length },
     { id: 'medium', name: '$1K - $10K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(s.price.replace(/[^0-9]/g, '')) < 10000).length },
     { id: 'high', name: '$10K+/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000).length }
   ];
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   return (
     <UltraFuturisticMatrixBackground2027>
       <Head>
@@ -295,21 +84,17 @@ export default function ServicesShowcase2027() {
         <meta name="description" content="Explore Zion Tech Group's revolutionary 2027 services showcase featuring cutting-edge AI consciousness evolution, quantum computing, autonomous AI civilizations, and practical micro SAAS solutions for businesses." />
         <meta name="keywords" content="2027 services, AI consciousness evolution, quantum computing, autonomous AI civilizations, micro SAAS, business automation, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/2027-services-showcase/" />
-        
         {/* Open Graph */}
         <meta property="og:title" content="2027 Services Showcase - Zion Tech Group" />
         <meta property="og:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />
         <meta property="og:url" content="https://ziontechgroup.com/2027-services-showcase" />
         <meta property="og:type" content="website" />
-        
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2027 Services Showcase - Zion Tech Group" />
         <meta name="twitter:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />
       </Head>
-
       <UltraFuturisticNavigation2027 />
-
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -326,7 +111,6 @@ export default function ServicesShowcase2027() {
             <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">
               Experience the future of technology with our revolutionary 2027 services. From AI consciousness evolution to practical micro SAAS solutions.
             </p>
-            
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="text-center">
@@ -354,7 +138,6 @@ export default function ServicesShowcase2027() {
                 <div className="text-green-300">Rating</div>
               </div>
             </div>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -375,7 +158,6 @@ export default function ServicesShowcase2027() {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
@@ -393,7 +175,6 @@ export default function ServicesShowcase2027() {
                 />
               </div>
             </div>
-
             {/* Filters */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Category Filter */}
@@ -411,7 +192,6 @@ export default function ServicesShowcase2027() {
                   ))}
                 </select>
               </div>
-
               {/* Price Range Filter */}
               <div>
                 <label className="block text-cyan-400 font-medium mb-2">Price Range</label>
@@ -427,7 +207,6 @@ export default function ServicesShowcase2027() {
                   ))}
                 </select>
               </div>
-
               {/* Sort By */}
               <div>
                 <label className="block text-cyan-400 font-medium mb-2">Sort By</label>
@@ -445,7 +224,6 @@ export default function ServicesShowcase2027() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
@@ -465,7 +243,6 @@ export default function ServicesShowcase2027() {
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-4xl">🚀</div>
                     </div>
-
                     {/* Service Info */}
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
                       {service.name}
@@ -473,14 +250,12 @@ export default function ServicesShowcase2027() {
                     <p className="text-cyan-300 text-sm mb-4 line-clamp-3">
                       {service.description}
                     </p>
-
                     {/* Price */}
                     <div className="mb-4">
                       <div className="text-2xl font-bold text-white">
                         {service.price}
                       </div>
                     </div>
-
                     {/* Features */}
                     <div className="mb-6">
                       <h4 className="text-cyan-400 font-semibold mb-3">Key Features:</h4>
@@ -498,13 +273,11 @@ export default function ServicesShowcase2027() {
                         )}
                       </div>
                     </div>
-
                     {/* ROI */}
                     <div className="mb-6 text-center">
                       <div className="text-green-400 font-semibold text-lg">ROI: {service.roi}</div>
                       <div className="text-gray-400 text-xs">Return on Investment</div>
                     </div>
-
                     {/* Actions */}
                     <div className="flex space-x-3">
                       <Link
@@ -520,7 +293,6 @@ export default function ServicesShowcase2027() {
                         Contact
                       </Link>
                     </div>
-
                     {/* Category Badge */}
                     <div className="mt-4">
                       <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30">
@@ -532,7 +304,6 @@ export default function ServicesShowcase2027() {
               ))}
             </AnimatePresence>
           </div>
-
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
@@ -557,7 +328,6 @@ export default function ServicesShowcase2027() {
           )}
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-4xl mx-auto">
@@ -568,7 +338,6 @@ export default function ServicesShowcase2027() {
             <p className="text-cyan-300 mb-8 text-lg">
               Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3">
                 <Phone className="w-5 h-5 text-cyan-400" />
@@ -583,7 +352,6 @@ export default function ServicesShowcase2027() {
                 <span className="text-white">{contactInfo.address}</span>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
@@ -601,7 +369,6 @@ export default function ServicesShowcase2027() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="px-4 sm:px-6 lg:px-8 py-12 border-t border-cyan-500/30">
         <div className="max-w-7xl mx-auto text-center">
@@ -614,7 +381,6 @@ export default function ServicesShowcase2027() {
             </h3>
             <p className="text-cyan-300">2027 Innovation Hub</p>
           </div>
-          
           <div className="text-cyan-300 text-sm">
             <p>&copy; 2027 Zion Tech Group. All rights reserved.</p>
             <p className="mt-2">
@@ -628,6 +394,5 @@ export default function ServicesShowcase2027() {
         </div>
       </footer>
     </UltraFuturisticMatrixBackground2027>
->>>>>>> origin/auto/autonomy-17186719616
   );
 }

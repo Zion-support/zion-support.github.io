@@ -1,42 +1,13 @@
-
-<<<<<<< HEAD
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { ShieldAlert } from 'lucide-react'
-
-interface EmptyFraudStateProps {
-  hasFilters: boolean,
-  onResetFilters: () => void
-}
-
-
-
-
-
-
-
-interface EmptyFraudStateProps {
-
-  hasFilters: boolean
-  onResetFilters: () => void
-}
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
-  hasFilters
-  onResetFilters
-=======
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from 'lucide-react'
-
 interface EmptyFraudStateProps {
   hasFilters: boolean;
   onResetFilters: () => void;
 }
-
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
   hasFilters, 
   onResetFilters 
->>>>>>> origin/auto/autonomy-17186719616
 }) => {
   return (
     <div className="text-center py-12">
@@ -51,10 +22,5 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

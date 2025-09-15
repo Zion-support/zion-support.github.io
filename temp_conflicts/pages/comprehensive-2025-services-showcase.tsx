@@ -1,28 +1,10 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { motion, AnimatePresence } from 'framer-motion',
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> origin/auto/autonomy-17186719616
 import { 
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom,
   Search, Filter, ArrowRight, Award, Target, Cpu, Database
-<<<<<<< HEAD
-} from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
-import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-2025',
-
-export default function Comprehensive2025ServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedService, setSelectedService] = useState<string | null>(null),
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),
-=======
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
@@ -33,7 +15,6 @@ export default function Comprehensive2025ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
->>>>>>> origin/auto/autonomy-17186719616
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: enhancedMicroSaasServices.length },
@@ -50,11 +31,7 @@ export default function Comprehensive2025ServicesShowcase() {
     { id: 'Climate Technology', name: 'Climate Tech', icon: '🌍', count: enhancedMicroSaasServices.filter(s => s.category === 'Climate Technology').length },
     { id: 'Education Technology', name: 'EdTech', icon: '🎓', count: enhancedMicroSaasServices.filter(s => s.category === 'Education Technology').length },
     { id: 'Manufacturing Technology', name: 'Manufacturing', icon: '🏭', count: enhancedMicroSaasServices.filter(s => s.category === 'Manufacturing Technology').length }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const filteredServices = enhancedMicroSaasServices
     .filter(service => 
@@ -67,29 +44,6 @@ export default function Comprehensive2025ServicesShowcase() {
     .sort((a, b) => {
       switch (sortBy) {
         case 'name':
-<<<<<<< HEAD
-          return a.name.localeCompare(b.name),
-        case 'price':
-          return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', '')),
-        case 'rating':
-          return b.rating - a.rating,
-        case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
-        default: return 0
-      }
-    }),
-
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category),
-    return categoryData?.icon || '🚀'
-  },
-
-  const getAnnualPrice = (monthlyPrice: string) => {
-    const price = parseFloat(monthlyPrice.replace('$', '')),
-    const annualPrice = price * 12 * 0.8, // 20% discount for annual
-    return `$${Math.round(annualPrice)}`,
-  },
-=======
           return a.name.localeCompare(b.name);
         case 'price':
           return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
@@ -112,7 +66,6 @@ export default function Comprehensive2025ServicesShowcase() {
     const annualPrice = price * 12 * 0.8; // 20% discount for annual
     return `$${Math.round(annualPrice)}`;
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -339,13 +292,8 @@ export default function Comprehensive2025ServicesShowcase() {
               <p className="text-white/70 mb-6">Try adjusting your search or filter criteria</p>
               <button
                 onClick={() => {
-<<<<<<< HEAD
-                  setSearchTerm(''),
-                  setSelectedCategory('all'),
-=======
                   setSearchTerm('');
                   setSelectedCategory('all');
->>>>>>> origin/auto/autonomy-17186719616
                 }}
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300"
               >
@@ -366,11 +314,7 @@ export default function Comprehensive2025ServicesShowcase() {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl rounded-3xl p-12 border border-blue-500/30"
           >
-<<<<<<< HEAD
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-=======
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
->>>>>>> origin/auto/autonomy-17186719616
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
@@ -398,9 +342,5 @@ export default function Comprehensive2025ServicesShowcase() {
 
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,46 +1,22 @@
-
-<<<<<<< HEAD
-import React from 'react',
-import { Milestone } from '@/hooks/useMilestones',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { CreditCard } from 'lucide-react'
-
-interface PaymentSummaryProps {
-  milestones: Milestone[],
-  paymentTerms: string | null
-=======
 import React from 'react';
 import { Milestone } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CreditCard } from 'lucide-react'
-
 interface PaymentSummaryProps {
   milestones: Milestone[];
   paymentTerms: string | null;
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
   const totalPayment = milestones.reduce(
     (sum, m) => sum + parseFloat(m.amount.toString()), 
     0
-<<<<<<< HEAD
-  ).toFixed(2),
-=======
   ).toFixed(2);
->>>>>>> origin/auto/autonomy-17186719616
-  
   const paidAmount = milestones
     .filter(m => m.status === 'paid')
     .reduce(
       (sum, m) => sum + parseFloat(m.amount.toString()), 
       0
-<<<<<<< HEAD
-    ).toFixed(2),
-=======
     ).toFixed(2);
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <Card className="mb-8 bg-muted/30">
       <CardHeader className="pb-3">
@@ -56,18 +32,12 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
               ${totalPayment}
             </p>
           </div>
-          
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
-<<<<<<< HEAD
-              {paymentTerms |"Not specified"}
-=======
               {paymentTerms || "Not specified"}
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
-          
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
@@ -77,10 +47,5 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

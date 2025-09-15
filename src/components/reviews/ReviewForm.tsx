@@ -1,49 +1,14 @@
-
-<<<<<<< HEAD
-import { useState } from "react",
-import { Star } from 'lucide-react'
-import { useForm } from "react-hook-form",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-=======
 import { useState } from "react";
 import { Star } from 'lucide-react'
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
->>>>>>> origin/auto/autonomy-17186719616
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
-  FormMessage} from "@/components/ui/form",
-import {
-  RadioGroup,
-  RadioGroupItem} from "@/components/ui/radio-group",
-import { Switch } from "@/components/ui/switch",
-import { Review } from "@/types/reviews",
-
-interface ReviewFormValues {
-  rating?: number,
-  review_text?: string,
-  communication_rating?: number,
-  quality_rating?: number,
-  timeliness_rating?: number,
-  would_work_again?: boolean,
-  is_anonymous?: boolean,
-}
-
-interface ReviewFormProps {
-  projectId: string,
-  revieweeId: string,
-  revieweeName: string,
-  onSubmit: (data: any) => Promise<boolean>, 
-  defaultValues?: Review,
-  isSubmitting: boolean
-=======
   FormMessage,
 } from "@/components/ui/form";
 import {
@@ -52,7 +17,6 @@ import {
 } from "@/components/ui/radio-group";
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
-
 interface ReviewFormValues {
   rating?: number;
   review_text?: string;
@@ -62,7 +26,6 @@ interface ReviewFormValues {
   would_work_again?: boolean;
   is_anonymous?: boolean;
 }
-
 interface ReviewFormProps {
   projectId: string;
   revieweeId: string;
@@ -70,24 +33,16 @@ interface ReviewFormProps {
   onSubmit: (data: any) => Promise<boolean>; 
   defaultValues?: Review;
   isSubmitting: boolean;
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export function ReviewForm({
   projectId,
   revieweeId,
   revieweeName,
   onSubmit,
   defaultValues,
-<<<<<<< HEAD
-  isSubmitting}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number>(0),
-=======
   isSubmitting,
 }: ReviewFormProps) {
   const [hoveredStar, setHoveredStar] = useState<number>(0);
->>>>>>> origin/auto/autonomy-17186719616
-  
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
       rating: defaultValues.rating,
@@ -96,54 +51,29 @@ export function ReviewForm({
       quality_rating: defaultValues.quality_rating,
       timeliness_rating: defaultValues.timeliness_rating,
       would_work_again: defaultValues.would_work_again,
-<<<<<<< HEAD
-      is_anonymous: defaultValues.is_anonymous} : {
-=======
       is_anonymous: defaultValues.is_anonymous,
     } : {
->>>>>>> origin/auto/autonomy-17186719616
       rating: 0,
       review_text: "",
       communication_rating: undefined,
       quality_rating: undefined,
       timeliness_rating: undefined,
       would_work_again: undefined,
-<<<<<<< HEAD
-      is_anonymous: false}
-  }),
-=======
       is_anonymous: false,
     }
   });
->>>>>>> origin/auto/autonomy-17186719616
-  
   const handleSubmit = async (values: ReviewFormValues) => {
     const formattedData = {
       ...values,
       project_id: projectId,
-<<<<<<< HEAD
-      reviewee_id: revieweeId},
-    
-    const success = await onSubmit(formattedData),
-    if (success) {
-      form.reset(),
-    }
-  },
-  
-  const watchRating = form.watch("rating"),
-=======
       reviewee_id: revieweeId,
     };
-    
     const success = await onSubmit(formattedData);
     if (success) {
       form.reset();
     }
   };
-  
   const watchRating = form.watch("rating");
->>>>>>> origin/auto/autonomy-17186719616
-  
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
@@ -186,7 +116,6 @@ export function ReviewForm({
             </FormItem>
           )}
         />
-        
         {/* Review Text */}
         <FormField
           control={form.control}
@@ -195,13 +124,9 @@ export function ReviewForm({
             required: "Please provide feedback",
             minLength: {
               value: 20,
-<<<<<<< HEAD
-              message: "Review must be at least 20 characters"}}}
-=======
               message: "Review must be at least 20 characters",
             },
           }}
->>>>>>> origin/auto/autonomy-17186719616
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Your Review</FormLabel>
@@ -216,12 +141,10 @@ export function ReviewForm({
             </FormItem>
           )}
         />
-        
         {/* Additional Rating Categories (only shown if main rating is provided) */}
         {(watchRating ?? 0) > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
-            
             {/* Communication */}
             <FormField
               control={form.control}
@@ -254,7 +177,6 @@ export function ReviewForm({
                 </FormItem>
               )}
             />
-            
             {/* Quality */}
             <FormField
               control={form.control}
@@ -287,7 +209,6 @@ export function ReviewForm({
                 </FormItem>
               )}
             />
-            
             {/* Timeliness */}
             <FormField
               control={form.control}
@@ -320,7 +241,6 @@ export function ReviewForm({
                 </FormItem>
               )}
             />
-            
             {/* Would Work Again */}
             <FormField
               control={form.control}
@@ -348,7 +268,6 @@ export function ReviewForm({
             />
           </div>
         )}
-        
         {/* Anonymous Review */}
         <FormField
           control={form.control}
@@ -374,7 +293,6 @@ export function ReviewForm({
             </FormItem>
           )}
         />
-        
         <Button
           type="submit"
           className="w-full"
@@ -384,9 +302,5 @@ export function ReviewForm({
         </Button>
       </form>
     </Form>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

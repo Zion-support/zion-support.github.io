@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import { CategoryCard } from "@/components/CategoryCard",
-import { GradientHeading } from "@/components/GradientHeading",
-import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
-=======
 import { CategoryCard } from "@/components/CategoryCard";
 import { GradientHeading } from "@/components/GradientHeading";
 import ErrorBoundary from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
->>>>>>> origin/auto/autonomy-17186719616
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
 const categories = [
@@ -39,13 +32,8 @@ const categories = [
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/innovation",
     color: undefined, // Let CategoryCard use default color
-<<<<<<< HEAD
-  }],
-=======
   },
 ];
->>>>>>> origin/auto/autonomy-17186719616
-
 export default function AllCategoriesPage() {
   return (
     <div className="min-h-screen bg-zion-blue">
@@ -59,7 +47,6 @@ export default function AllCategoriesPage() {
             Find exactly what you're looking for to enhance your business or personal projects.
           </p>
         </div>
-
         <ErrorBoundary>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category) => (
@@ -77,9 +64,5 @@ export default function AllCategoriesPage() {
         </ErrorBoundary>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

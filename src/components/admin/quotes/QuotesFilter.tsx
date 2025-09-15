@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import React from "react",
-import { Calendar, RefreshCw } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Button } from "@/components/ui/button",
-import { Calendar as CalendarComponent } from "@/components/ui/calendar",
-import { format } from "date-fns",
-import type { DateRange } from "react-day-picker",
-import type { QuoteStatus } from "@/types/quotes",
-
-interface QuotesFilterProps {
-  searchQuery: string,
-  setSearchQuery: (value: string) => void,
-  statusFilter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archiveFilter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
-  dateRange: DateRange | undefined,
-  setDateRange: (range: DateRange | undefined) => void,
-  onReset: () => void
-=======
 import React from "react";
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card";
@@ -33,7 +9,6 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar";
 import { format } from "date-fns";
 import type { DateRange } from "react-day-picker";
 import type { QuoteStatus } from "@/types/quotes";
-
 interface QuotesFilterProps {
   searchQuery: string;
   setSearchQuery: (value: string) => void;
@@ -44,9 +19,7 @@ interface QuotesFilterProps {
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
   onReset: () => void;
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery,
   setSearchQuery,
@@ -70,7 +43,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Status</p>
             <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>
@@ -87,7 +59,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-          
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Archive</p>
             <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>
@@ -101,15 +72,10 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-          
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Date Range</p>
             <Popover>
               <PopoverTrigger asChild>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                 <Button
                   variant="outline"
                   className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white"
@@ -134,10 +100,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   initialFocus
                   mode="range"
                   defaultMonth={dateRange?.from}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
@@ -146,7 +108,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             </Popover>
           </div>
         </div>
-        
         <div className="mt-4 flex justify-end">
           <Button 
             variant="outline" 
@@ -158,10 +119,5 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

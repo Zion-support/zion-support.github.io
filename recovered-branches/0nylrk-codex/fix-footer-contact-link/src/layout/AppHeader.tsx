@@ -4,27 +4,16 @@ import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation';
 import { Logo } from '@/components/header/Logo';
 import { ModeToggle } from '@/components/ModeToggle';
-<<<<<<< HEAD
-MenuX
-=======
 import { Menu, X } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 
 export function AppHeader() {
-<<<<<<< HEAD
-  const [mobileMenuOpensetMobileMenuOpen] = useState(false);
-  const isMobile = useIsMobile();
-  
-  // Try to access the messaging contextbut provide a fallback value if it's not available
-=======
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
   
   // Try to access the messaging context, but provide a fallback value if it's not available
->>>>>>> origin/auto/autonomy-17186719616
   let unreadCount = 0;
   try {
     const { unreadCount: count } = useMessaging();

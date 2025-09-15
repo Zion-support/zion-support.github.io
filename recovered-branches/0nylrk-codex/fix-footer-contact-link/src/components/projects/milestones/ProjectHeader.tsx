@@ -2,11 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-ArrowLeft
-=======
 import { ArrowLeft } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 interface ProjectHeaderProps {
   title: string;

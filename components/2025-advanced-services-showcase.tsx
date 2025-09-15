@@ -1,61 +1,31 @@
-<<<<<<< HEAD
-"use client";
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-<<<<<<< HEAD
-  SearchListStarCheckCircleArrowRightCheck,
-  BrainShieldBuildingGlobe,
-  UsersTrendingUpAwardPhoneMailMapPin
-} from 'lucide-react';
-
-// Import our new service data
-// import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
-import { innovativeMicroSaasExpansionServices } from '../data/2025-innovative-micro-saas-expansion';
-import { cuttingEdgeITInfrastructure2025 } from '../data/2025-cutting-edge-it-infrastructure';
-=======
   Search, Grid, List, Star, CheckCircle, ArrowRight, Check,
   Brain, Atom, Shield, Building, Globe,
   Users, TrendingUp, Award, Phone, Mail, MapPin
 } from 'lucide-react';
-
 // Import our new service data
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
->>>>>>> origin/auto/autonomy-17186719616
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const allServices = [
-<<<<<<< HEAD
-  // ...advancedEnterpriseServices2025,
-      ...innovativeMicroSaasExpansionServices,
-      ...cuttingEdgeITInfrastructure2025
-=======
   ...advancedEnterpriseServices2025,
       ...innovativeMicroSaasExpansion2025,
   ...cuttingEdgeITInfrastructureServices
->>>>>>> origin/auto/autonomy-17186719616
 ];
-
 const categories = [
   {
     id: 'all',
     name: 'All Services',
-<<<<<<< HEAD
-    icon: <List className="w-6 h-6" />,
-=======
     icon: <Grid className="w-6 h-6" />,
->>>>>>> origin/auto/autonomy-17186719616
     color: 'from-gray-500 to-slate-500',
     description: 'Complete portfolio of advanced services'
   },
@@ -90,52 +60,33 @@ const categories = [
   {
     id: 'quantum',
     name: 'Quantum Computing',
-<<<<<<< HEAD
-    icon: <Brain className="w-6 h-6" />,
-=======
     icon: <Atom className="w-6 h-6" />,
->>>>>>> origin/auto/autonomy-17186719616
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions'
   }
 ];
-
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
   return 'Other';
 };
-
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
   return 'Contact for pricing';
 };
-
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features;
   if (service.keyFeatures) return service.keyFeatures;
   return [];
 };
-
-
-
 export default function AdvancedServicesShowcase() {
-<<<<<<< HEAD
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [searchTermsetSearchTerm] = useState('');
-  const [viewModesetViewMode] = useState<'grid' | 'list'>('grid');
-  const [filteredServicesetFilteredServices] = useState(allServices);
-=======
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] = useState(allServices);
->>>>>>> origin/auto/autonomy-17186719616
-
   useEffect(() => {
     let filtered = allServices;
-
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
@@ -148,7 +99,6 @@ export default function AdvancedServicesShowcase() {
         return false;
       });
     }
-
     // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(service =>
@@ -158,14 +108,8 @@ export default function AdvancedServicesShowcase() {
         getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-
     setFilteredServices(filtered);
-<<<<<<< HEAD
-  }[selectedCategorysearchTerm]);
-=======
   }, [selectedCategory, searchTerm]);
->>>>>>> origin/auto/autonomy-17186719616
-
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -181,22 +125,18 @@ export default function AdvancedServicesShowcase() {
           Popular
         </div>
       )}
-      
       <div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>
         <span className="text-4xl">{service.icon}</span>
       </div>
-      
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
             {service.name}
           </h3>
         </div>
-        
         <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
           {service.tagline}
         </p>
-        
         <div className="flex items-center justify-between mb-4">
           <span className="text-2xl font-bold text-gray-900 dark:text-white">
             {getServicePricing(service)}
@@ -205,7 +145,6 @@ export default function AdvancedServicesShowcase() {
             {service.trialDays} day trial
           </span>
         </div>
-        
         <div className="space-y-3 mb-6">
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-500" />
@@ -226,15 +165,10 @@ export default function AdvancedServicesShowcase() {
             </span>
           </div>
         </div>
-        
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
           <div className="space-y-1">
-<<<<<<< HEAD
-            {getServiceFeatures(service).slice(03).map((feature: stringindex: number) => (
-=======
             {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (
->>>>>>> origin/auto/autonomy-17186719616
               <div key={index} className="flex items-center gap-2">
                 <Check className="w-3 h-3 text-green-500" />
                 <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
@@ -247,21 +181,18 @@ export default function AdvancedServicesShowcase() {
             )}
           </div>
         </div>
-        
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {service.roi}
           </p>
         </div>
-        
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {service.marketPosition}
           </p>
         </div>
-        
         <div className="flex items-center justify-between">
           <a
             href={service.link}
@@ -270,7 +201,6 @@ export default function AdvancedServicesShowcase() {
             Learn More
             <ArrowRight className="w-4 h-4" />
           </a>
-          
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -281,16 +211,10 @@ export default function AdvancedServicesShowcase() {
       </div>
     </motion.div>
   );
-
   const ServiceList = ({ service }: { service: any }) => (
     <motion.div
-<<<<<<< HEAD
-      initial={{ opacity: 0x: -20 }}
-      animate={{ opacity: 1x: 0 }}
-=======
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
->>>>>>> origin/auto/autonomy-17186719616
       transition={{ duration: 0.5 }}
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
         service.popular ? 'ring-2 ring-blue-500' : ''
@@ -301,7 +225,6 @@ export default function AdvancedServicesShowcase() {
           <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
             <span className="text-3xl">{service.icon}</span>
           </div>
-          
           <div className="flex-1">
             <div className="flex items-start justify-between mb-3">
               <div>
@@ -317,7 +240,6 @@ export default function AdvancedServicesShowcase() {
                   {service.tagline}
                 </p>
               </div>
-              
               <div className="text-right">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">
                   {getServicePricing(service)}
@@ -327,7 +249,6 @@ export default function AdvancedServicesShowcase() {
                 </div>
               </div>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500" />
@@ -348,16 +269,11 @@ export default function AdvancedServicesShowcase() {
                 </span>
               </div>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
                 <div className="space-y-1">
-<<<<<<< HEAD
-                  {getServiceFeatures(service).slice(04).map((feature: stringindex: number) => (
-=======
                   {getServiceFeatures(service).slice(0, 4).map((feature: string, index: number) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <div key={index} className="flex items-center gap-2">
                       <Check className="w-3 h-3 text-green-500" />
                       <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
@@ -365,20 +281,17 @@ export default function AdvancedServicesShowcase() {
                   ))}
                 </div>
               </div>
-              
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                   {service.roi}
                 </p>
-                
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   {service.marketPosition}
                 </p>
               </div>
             </div>
-            
             <div className="flex items-center gap-4">
               <a
                 href={service.link}
@@ -387,7 +300,6 @@ export default function AdvancedServicesShowcase() {
                 Learn More
                 <ArrowRight className="w-4 h-4" />
               </a>
-              
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                 className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -400,20 +312,13 @@ export default function AdvancedServicesShowcase() {
       </div>
     </motion.div>
   );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <SEO 
         title="2025 Advanced Services Showcase - Zion Tech Group"
-<<<<<<< HEAD
-        description="Discover our comprehensive portfolio of advanced AI servicesmicro SAAS solutionsand cutting-edge IT infrastructure. Realinnovativeand market-ready solutions for modern businesses."
-        keywords="AI servicesmicro SAASIT infrastructurequantum computingenterprise solutionsZion Tech Group"
-=======
         description="Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses."
         keywords={["AI services", "micro SAAS", "IT infrastructure", "quantum computing", "enterprise solutions", "Zion Tech Group"]}
->>>>>>> origin/auto/autonomy-17186719616
       />
-      
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
         <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -430,27 +335,16 @@ export default function AdvancedServicesShowcase() {
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8delay: 0.2 }}
-              className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
-            >
-              Discover our comprehensive portfolio of realinnovativeand market-ready solutions. 
-=======
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
             >
               Discover our comprehensive portfolio of real, innovative, and market-ready solutions. 
->>>>>>> origin/auto/autonomy-17186719616
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8delay: 0.4 }}
-=======
               transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <div className="flex items-center gap-2 text-white">
@@ -469,7 +363,6 @@ export default function AdvancedServicesShowcase() {
           </div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -508,7 +401,6 @@ export default function AdvancedServicesShowcase() {
           </div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Filters and Search */}
@@ -526,7 +418,6 @@ export default function AdvancedServicesShowcase() {
                 />
               </div>
             </div>
-            
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <button
@@ -537,11 +428,7 @@ export default function AdvancedServicesShowcase() {
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
-<<<<<<< HEAD
-                  <List className="w-5 h-5" />
-=======
                   <Grid className="w-5 h-5" />
->>>>>>> origin/auto/autonomy-17186719616
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -556,7 +443,6 @@ export default function AdvancedServicesShowcase() {
               </div>
             </div>
           </div>
-          
           {/* Category Filters */}
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
@@ -577,7 +463,6 @@ export default function AdvancedServicesShowcase() {
             </div>
           </div>
         </div>
-
         {/* Results Summary */}
         <div className="mb-8">
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
@@ -591,7 +476,6 @@ export default function AdvancedServicesShowcase() {
                   {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>
               </div>
-              
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />
@@ -605,21 +489,9 @@ export default function AdvancedServicesShowcase() {
             </div>
           </div>
         </div>
-
         {/* Services Grid/List */}
         <div className="space-y-6">
           {filteredServices.length === 0 ? (
-<<<<<<< HEAD
-            <div className='text-center py-12'>
-              <div className='text-gray-400 dark:text-gray-500 text-6xl mb-4'>
-                🔍
-              </div>
-              <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>
-                No services found
-              </h3>
-              <p className='text-gray-600 dark:text-gray-400'>                Try adjusting your search terms or category filters.          {filteredServices.length === 0 ? (
-=======
->>>>>>> origin/auto/autonomy-17186719616
             <div className="text-center py-12">
               <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -647,7 +519,6 @@ export default function AdvancedServicesShowcase() {
             </AnimatePresence>
           )}
         </div>
-
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">

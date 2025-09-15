@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
-=======
 import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
-
 export default function Ecommerce() {
   const schema = {
     "@context": "https://schema.org",
@@ -21,12 +11,7 @@ export default function Ecommerce() {
     "name": "E-commerce Platform",
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
     "url": "https://app.ziontechgroup.com/features/e-commerce"
-<<<<<<< HEAD
-  },
-=======
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <>
       <SEO
@@ -42,11 +27,7 @@ export default function Ecommerce() {
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-<<<<<<< HEAD
-        <div className="container mx-auto px-4 md: px-6">
-=======
         <div className="container mx-auto px-4 md:px-6">
->>>>>>> origin/auto/autonomy-17186719616
           <GradientHeading className="mb-4 text-center">E-commerce Platform</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Showcase your products with rich media listings and accept payments with Stripe-powered checkout.
@@ -58,11 +39,7 @@ export default function Ecommerce() {
               className="object-cover"
             />
           </div>
-<<<<<<< HEAD
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-=======
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
->>>>>>> origin/auto/autonomy-17186719616
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Support for videos and 3D models to highlight your offerings.</li>
             <li>Secure transactions with Stripe and fraud protection.</li>
@@ -87,9 +64,5 @@ export default function Ecommerce() {
         </div>
       </main>
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

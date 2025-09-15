@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-
-export default function RoadmapPage() {
-  return (
-    <>
-      <Head>
-        <title>Roadmap - Zion Tech Group</title>
-        <meta name="description" content="roadmap page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Roadmap</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
-        </div>
-      </div>
-=======
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 
@@ -256,7 +235,6 @@ export default function RoadmapPage(): JSX.Element {
           </section>
         </div>
       </main>
->>>>>>> origin/auto/autonomy-17186719616
     </>
   );
 }

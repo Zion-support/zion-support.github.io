@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  BrainAtomShieldRocketStarAwardTrendingUp,
-  CheckCircleArrowRightZapTargetMicroscope,
-  LockCloudBarChart3SettingsEyeCodePalette,
-  SearchFilterGridListExternalLinkPhoneMailMapPin
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -17,35 +6,24 @@ import {
   CheckCircle, ArrowRight, Zap, Target, Microscope,
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette,
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const heroStats = [
-<<<<<<< HEAD
-  { label: 'Cutting-Edge 'Services', 'value: '25+'icon: <Star className="w-5 h-5" /> },
-  { label: 'Innovation 'Areas', 'value: '8+'icon: <Brain className="w-5 h-5" /> },
-  { label: 'Market 'Coverage', 'value: '$500B+'icon: <TrendingUp className="w-5 h-5" /> },
-  { label: 'Success 'Rate', 'value: '99.9%'icon: <Award className="w-5 h-5" /> }
-=======
   { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> },
   { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },
   { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
->>>>>>> origin/auto/autonomy-17186719616
 ];
-
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
@@ -84,25 +62,16 @@ const serviceCategories = [
     count: cuttingEdgeMicroSaasServices2025.length
   }
 ];
-
 export default function CuttingEdgeServicesShowcase2025() {
-<<<<<<< HEAD
-  const [searchTermsetSearchTerm] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [viewModesetViewMode] = useState<'grid' | 'list'>('grid');
-=======
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
->>>>>>> origin/auto/autonomy-17186719616
-
   const allServices = [
     ...cuttingEdgeAIServices2025,
     ...cuttingEdgeQuantumServices2025,
     ...cuttingEdgeEnterpriseITServices2025,
     ...cuttingEdgeMicroSaasServices2025
   ];
-
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -110,7 +79,6 @@ export default function CuttingEdgeServicesShowcase2025() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -120,13 +88,8 @@ export default function CuttingEdgeServicesShowcase2025() {
       }
     }
   };
-
   const itemVariants = {
-<<<<<<< HEAD
-    hidden: { y: 20opacity: 0 },
-=======
     hidden: { y: 20, opacity: 0 },
->>>>>>> origin/auto/autonomy-17186719616
     visible: {
       y: 0,
       opacity: 1,
@@ -135,23 +98,15 @@ export default function CuttingEdgeServicesShowcase2025() {
       }
     }
   };
-
   return (
     <>
       <Head>
         <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions</title>
-<<<<<<< HEAD
-        <meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousnessquantum computingspace miningand advanced enterprise solutions. Transform your business with future technology." />
-        <meta name="keywords" content="cutting-edge servicesAI consciousnessquantum computingspace miningenterprise ITmicro SAASfuture technology" />
-        <meta name="viewport" content="width=device-widthinitial-scale=1" />
-=======
         <meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />
         <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
->>>>>>> origin/auto/autonomy-17186719616
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Layout>
         {/* Hero Section */}
         <section className="relative overflow-hidden">
@@ -165,53 +120,32 @@ export default function CuttingEdgeServicesShowcase2025() {
             >
               <motion.h1 
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
-<<<<<<< HEAD
-                initial={{ opacity: 0scale: 0.9 }}
-                animate={{ opacity: 1scale: 1 }}
-                transition={{ duration: 1delay: 0.2 }}
-=======
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
               >
                 Cutting-Edge Services
                 <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
                   Showcase 2025
                 </span>
               </motion.h1>
-              
               <motion.p 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.4 }}
-              >
-                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
-                From AI consciousness to space miningexperience the cutting edge of innovation.
-=======
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 Discover revolutionary technology solutions that are reshaping industries and defining the future. 
                 From AI consciousness to space mining, experience the cutting edge of innovation.
->>>>>>> origin/auto/autonomy-17186719616
               </motion.p>
-
               {/* Hero Stats */}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.6 }}
-              >
-                {heroStats.map((statindex) => (
-=======
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 {heroStats.map((stat, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <div key={index} className="text-center">
                     <div className="flex justify-center mb-2">
                       <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
@@ -223,17 +157,12 @@ export default function CuttingEdgeServicesShowcase2025() {
                   </div>
                 ))}
               </motion.div>
-
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.8 }}
-=======
                 transition={{ duration: 0.8, delay: 0.8 }}
->>>>>>> origin/auto/autonomy-17186719616
               >
                 <a
                   href="#services"
@@ -252,7 +181,6 @@ export default function CuttingEdgeServicesShowcase2025() {
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filter Section */}
         <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -274,7 +202,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   className="w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
                 />
               </div>
-
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
                 <button
@@ -301,7 +228,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   </button>
                 ))}
               </div>
-
               {/* View Mode Toggle */}
               <div className="flex items-center gap-2">
                 <button
@@ -328,7 +254,6 @@ export default function CuttingEdgeServicesShowcase2025() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section id="services" className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -339,11 +264,7 @@ export default function CuttingEdgeServicesShowcase2025() {
               viewport={{ once: true }}
               className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
             >
-<<<<<<< HEAD
-              {filteredServices.map((serviceindex) => (
-=======
               {filteredServices.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -368,14 +289,9 @@ export default function CuttingEdgeServicesShowcase2025() {
                         </div>
                       </div>
                     </div>
-
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
-<<<<<<< HEAD
-                      {service.tags.slice(03).map((tagIndex) => (
-=======
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
@@ -384,14 +300,12 @@ export default function CuttingEdgeServicesShowcase2025() {
                         </span>
                       ))}
                     </div>
-
                     {/* Market Info */}
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <span>Market: {service.marketSize}</span>
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
                   </div>
-
                   {/* Service Details */}
                   <div className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}>
                     {/* Features */}
@@ -400,11 +314,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                         Key Features
                       </h4>
                       <ul className="space-y-2">
-<<<<<<< HEAD
-                        {service.features.slice(03).map((featureIndex) => (
-=======
                         {service.features.slice(0, 3).map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                           <li key={featureIndex} className="flex items-start text-sm text-white/80">
                             <CheckCircle className="w-4 h-4 text-cyan-400 mt-0.5 mr-2 flex-shrink-0" />
                             <span>{feature}</span>
@@ -412,7 +322,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                         ))}
                       </ul>
                     </div>
-
                     {/* Pricing */}
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider">
@@ -423,7 +332,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                         <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>
                       </div>
                     </div>
-
                     {/* CTA */}
                     <div className="flex items-center justify-between">
                       <a
@@ -442,13 +350,11 @@ export default function CuttingEdgeServicesShowcase2025() {
                       </a>
                     </div>
                   </div>
-
                   {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
               ))}
             </motion.div>
-
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -461,11 +367,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
                 <button
                   onClick={() => {
-<<<<<<< HEAD
-                    setSearchTerm(', ');
-=======
                     setSearchTerm('');
->>>>>>> origin/auto/autonomy-17186719616
                     setSelectedCategory('all');
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -476,7 +378,6 @@ export default function CuttingEdgeServicesShowcase2025() {
             )}
           </div>
         </section>
-
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -491,13 +392,8 @@ export default function CuttingEdgeServicesShowcase2025() {
               </h2>
               <p className="text-xl text-white/80 mb-8 leading-relaxed">
                 Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape. 
-<<<<<<< HEAD
-                'Let', 's discuss how we can help you achieve your goals.
-=======
                 Let's discuss how we can help you achieve your goals.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a
                   href="/contact"
@@ -514,7 +410,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   Call Now
                 </a>
               </div>
-
               {/* Contact Info */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div className="flex flex-col items-center">

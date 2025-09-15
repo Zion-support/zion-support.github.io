@@ -1,56 +1,27 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-=======
 import React, { useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
-
 type PersonaConfig = {
   voice: 'Visionary' | 'Grounded' | 'Technical';
   language: string;
   cloneStyleText?: string;
 };
-
 export default function StudioHostPage() {
-<<<<<<< HEAD
-  const [personasetPersona] = useState<PersonaConfig>({ voice: ''Visionary', 'language: 'English' });
-  const [inviteeNamesetInviteeName] = useState('');
-  const [inviteeBiosetInviteeBio] = useState('');
-  const [topicsetTopic] = useState('');
-  const [operatorPromptsetOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questionsplus a CTA.');
-
-  const [generatingsetGenerating] = useState(false);
-  const [episodesetEpisode] = useState<any>(null);
-  const [synthesizingsetSynthesizing] = useState(false);
-  const [publishingsetPublishing] = useState(false);
-=======
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
   const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
-
   const [generating, setGenerating] = useState(false);
   const [episode, setEpisode] = useState<any>(null);
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
-
   const handleGenerate = async () => {
     setGenerating(true);
     try {
-<<<<<<< HEAD
-      const res = await fetch('/api/podcast/generate'{
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ personainvitee: { name: inviteeNamebio: inviteeBio }topicoperatorPrompt })});
-=======
       const res = await fetch('/api/podcast/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio }, topic, operatorPrompt }),
       });
->>>>>>> origin/auto/autonomy-17186719616
       const data = await res.json();
       setEpisode(data.episode);
     } catch (e) {
@@ -60,23 +31,15 @@ export default function StudioHostPage() {
       setGenerating(false);
     }
   };
-
   const handleSynthesize = async () => {
     if (!episode?.id) return;
     setSynthesizing(true);
     try {
-<<<<<<< HEAD
-      const res = await fetch('/api/podcast/synthesize'{
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ episodeId: episode.idpersona })});
-=======
       const res = await fetch('/api/podcast/synthesize', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ episodeId: episode.id, persona }),
       });
->>>>>>> origin/auto/autonomy-17186719616
       const data = await res.json();
       setEpisode(data.episode);
     } catch (e) {
@@ -86,16 +49,11 @@ export default function StudioHostPage() {
       setSynthesizing(false);
     }
   };
-
   const handlePublishRss = async () => {
     if (!episode?.id) return;
     setPublishing(true);
     try {
-<<<<<<< HEAD
-      const res = await fetch('/api/podcast/rss'{ method: 'POST' });
-=======
       const res = await fetch('/api/podcast/rss', { method: 'POST' });
->>>>>>> origin/auto/autonomy-17186719616
       await res.json();
       alert('RSS feed updated. Platforms will pull on next refresh.');
     } catch (e) {
@@ -105,11 +63,9 @@ export default function StudioHostPage() {
       setPublishing(false);
     }
   };
-
   return (
     <div className="space-y-8">
       <h1 className="text-3xl font-bold">Podcast Studio Host</h1>
-
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">AI Persona</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -118,11 +74,7 @@ export default function StudioHostPage() {
             <select
               className="mt-1 w-full border rounded p-2"
               value={persona.voice}
-<<<<<<< HEAD
-              onChange={(e) => setPersona({ ...personavoice: e.target.value as any })}
-=======
               onChange={(e) => setPersona({ ...persona, voice: e.target.value as any })}
->>>>>>> origin/auto/autonomy-17186719616
             >
               <option value="Visionary">Visionary</option>
               <option value="Grounded">Grounded</option>
@@ -131,23 +83,14 @@ export default function StudioHostPage() {
           </div>
           <div>
             <label className="block text-sm font-medium">Language</label>
-<<<<<<< HEAD
-            <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...personalanguage: e.target.value })} />
-          </div>
-          <div>
-            <label className="block text-sm font-medium">Clone Style (optional)</label>
-            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ', '} onChange={(e) => setPersona({ ...personacloneStyleText: e.target.value })} />
-=======
             <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...persona, language: e.target.value })} />
           </div>
           <div>
             <label className="block text-sm font-medium">Clone Style (optional)</label>
             <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
->>>>>>> origin/auto/autonomy-17186719616
           </div>
         </div>
       </section>
-
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">Episode Generator</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -172,7 +115,6 @@ export default function StudioHostPage() {
           {generating ? 'Generating…' : 'Generate Episode'}
         </button>
       </section>
-
       {episode && (
         <section className="space-y-4">
           <h2 className="text-xl font-semibold">Episode Draft</h2>
@@ -182,11 +124,7 @@ export default function StudioHostPage() {
             <div>
               <h4 className="font-semibold">Questions</h4>
               <ol className="list-decimal list-inside space-y-1">
-<<<<<<< HEAD
-                {episode.questions?.map((q: stringidx: number) => (
-=======
                 {episode.questions?.map((q: string, idx: number) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <li key={idx}>{q}</li>
                 ))}
               </ol>

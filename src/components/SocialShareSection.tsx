@@ -1,86 +1,40 @@
-
-<<<<<<< HEAD
-import { Button } from "./ui/button",
-import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
-import { toast } from "./ui/use-toast",
-import { useTranslation } from 'react-i18next',
-
-export function SocialShareSection() {
-  const { t } = useTranslation(),
-=======
 import { Button } from "./ui/button";
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
 import { toast } from "./ui/use-toast";
 import { useTranslation } from 'react-i18next';
-
 export function SocialShareSection() {
   const { t } = useTranslation();
->>>>>>> origin/auto/autonomy-17186719616
-  
   // Current URL is not available during SSR, guard with typeof check
   const shareUrl = typeof window !== 'undefined'
     ? encodeURIComponent(window.location.href)
-<<<<<<< HEAD
-    : '',
-  const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace"),
-  
-  // Social sharing functions
-  const shareToTwitter = () => {
-    window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank"),
-  },
-  
-  const shareToFacebook = () => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank"),
-  },
-  
-  const shareToLinkedIn = () => {
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank"),
-  },
-=======
     : '';
   const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
-  
   // Social sharing functions
   const shareToTwitter = () => {
     window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank");
   };
-  
   const shareToFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank");
   };
-  
   const shareToLinkedIn = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank");
   };
->>>>>>> origin/auto/autonomy-17186719616
-  
   const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
       .then(() => {
         toast({
           title: "Link Copied!",
-<<<<<<< HEAD
-          description: "The link has been copied to your clipboard"}),
-=======
           description: "The link has been copied to your clipboard",
         });
->>>>>>> origin/auto/autonomy-17186719616
       })
       .catch(() => {
         toast({
           title: t('errors.failed_to_copy'),
           description: "Please try again or copy the URL manually",
           variant: "destructive"
-<<<<<<< HEAD
-        }),
-      }),
-  },
-=======
         });
       });
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   const shareLinks = [
     {
       name: "Twitter",
@@ -105,13 +59,8 @@ export function SocialShareSection() {
       icon: <Link className="h-5 w-5" aria-hidden="true" />,
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
       onClick: copyLinkToClipboard
-<<<<<<< HEAD
-    }],
-=======
     },
   ];
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <section className="py-12 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -139,9 +88,5 @@ export function SocialShareSection() {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

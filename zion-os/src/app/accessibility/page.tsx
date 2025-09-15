@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-export default function AccessibilityPage() {return (;
-export default function AccessibilityPage() {;
-  return (;
-    <div className="min-h-screen bg-white">;
-
-export default /**
- * AccessibilityPage - Function description
- */
-function AccessibilityPage() {
-  return (
-    <div className="min - h-screen bg - white">;
-
-export default function AccessibilityPage() {;
-  return (;
-=======
 
 
 =======
@@ -629,4 +612,3 @@ export default function AccessibilityPage() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

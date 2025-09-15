@@ -1,25 +1,7 @@
-
-<<<<<<< HEAD
-import React, { forwardRef } from "react",
-import { ChevronDown } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { SafeRef } from "@/types/ref-types",
-
-interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
-  icon?: React.ReactNode,
-  active?: boolean,
-  href?: string,
-  target?: string,
-  badge?: React.ReactNode,
-}
-
-const SidebarMenuItem = forwardRef<HTMLButtonElement SidebarMenuItemProps>(
-=======
 import React, { forwardRef } from "react";
 import { ChevronDown } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
-
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode;
   active?: boolean;
@@ -27,9 +9,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   target?: string;
   badge?: React.ReactNode;
 }
-
 const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
->>>>>>> origin/auto/autonomy-17186719616
   ({ icon, active, children, href, target, badge, className, ...props }, ref) => {
     if (href) {
       return (
@@ -49,13 +29,8 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
           </div>
           {badge && <span>{badge}</span>}
         </a>
-<<<<<<< HEAD
-      ),
-=======
       );
->>>>>>> origin/auto/autonomy-17186719616
     }
-
     return (
       <button
         ref={ref}
@@ -73,43 +48,20 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
         </div>
         {badge && <span>{badge}</span>}
       </button>
-<<<<<<< HEAD
-    ),
-  }
-),
-
-SidebarMenuItem.displayName = "SidebarMenuItem",
-
-interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-  title: string,
-  children: React.ReactNode
-=======
     );
   }
 );
-
 SidebarMenuItem.displayName = "SidebarMenuItem";
-
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   children: React.ReactNode;
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {
   return (
     <div className="space-y-1" {...props}>
       <div className="rounded-md px-3 py-2 text-sm font-medium">{title}</div>
       <div className="pl-2">{children}</div>
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export { SidebarMenuItem, SidebarMenuGroup },
-=======
   );
 };
-
 export { SidebarMenuItem, SidebarMenuGroup };
->>>>>>> origin/auto/autonomy-17186719616

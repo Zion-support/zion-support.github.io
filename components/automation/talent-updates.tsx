@@ -1,26 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { TALENT_PROFILES } from '../../data/talent';
-
 type TalentSummary = { slug: string; summary: string };
-
 export async function getServerSideProps() {
-<<<<<<< HEAD
-  const file = path.join(process.cwd()', 'data', 'talent_ai.json');
-  let generatedAt = ', ';
-  let summaries: TalentSummary[] = [];
-  try {
-    const raw = fs.readFileSync('file', 'utf-8');
-    const json = JSON.parse(raw);
-    generatedAt = json.generatedAt || ', ';
-    summaries = json.summaries || [];
-  } catch {}
-  return { props: { generatedAtsummaries } };
-}
-
-export default function TalentUpdatesPage({ generatedAtsummaries }: { generatedAt: string; summaries: TalentSummary[] }) {
-  const map = new Map(summaries.map(s => [s.slugs.summary]));
-=======
   const file = path.join(process.cwd(), 'data', 'talent_ai.json');
   let generatedAt = '';
   let summaries: TalentSummary[] = [];
@@ -32,10 +14,8 @@ export default function TalentUpdatesPage({ generatedAtsummaries }: { generatedA
   } catch {}
   return { props: { generatedAt, summaries } };
 }
-
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string; summaries: TalentSummary[] }) {
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>

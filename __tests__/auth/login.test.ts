@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-describe('Login', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
-const { describe,it,expect } from "vitest"; describe("Login",() => { it("should work",() => { expect(true).toBe(true)})});''"
-import { describe,it,expect } from 'vitest'; describe('Login',() => { it('should work',() => { expect(true).toBe(true)})}
-});''
-});''
-=======
 import { describe, it, expect, vi, beforeEach, afterEach } from vitest';import { loginUser } from @/services/authService';import { NextApiRequest, NextApiResponse } from 'next';;
 const mockSignInWithPassword = vi.fn();
 
@@ -216,4 +205,3 @@ describe('loginUser Service', () => {'  let _originalFetch: typeof global.fetch;
       expect(e.message).toBe('Network failed');    }
   });
 });
->>>>>>> origin/auto/autonomy-17186719616

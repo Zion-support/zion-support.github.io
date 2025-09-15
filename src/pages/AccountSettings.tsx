@@ -1,31 +1,3 @@
-
-<<<<<<< HEAD
-import { useState } from 'react',
-import { useLocalStorage } from '@/hooks',
-import { Header } from '@/components/Header',
-import { SEO } from '@/components/SEO',
-import { useAuth } from '@/hooks/useAuth',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Wallet, Database, Save } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Separator } from '@/components/ui/separator',
-import { Switch } from '@/components/ui/switch',
-import { Label } from '@/components/ui/label',
-import { toast } from 'sonner',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-export default function AccountSettings() {
-
-  const { user } = useAuth(),
-  const [displayWeb3, setDisplayWeb3] = useLocalStorage('display_web3', false),
-  const [didHandle, setDidHandle] = useLocalStorage('did_handle', ''),
-  const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-
-  const handleSave = () => {
-    setIsSubmitting(true),
-=======
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
@@ -40,37 +12,17 @@ import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
 export default function AccountSettings() {
-
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useLocalStorage('display_web3', false);
   const [didHandle, setDidHandle] = useLocalStorage('did_handle', '');
   const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSave = () => {
     setIsSubmitting(true);
->>>>>>> origin/auto/autonomy-17186719616
-
     // Simulate API call
     setTimeout(() => {
       try {
-<<<<<<< HEAD
-        setDisplayWeb3(displayWeb3),
-        setDidHandle(didHandle),
-        setEnableBackup(enableBackup),
-        logInfo('Saved settings', { displayWeb3, didHandle, enableBackup }),
-        toast.success('Account settings updated successfully'),
-      } catch (e) {
-        logErrorToProduction('Failed to save settings', { data:  e }),
-        toast.error('Failed to save settings'),
-      } finally {
-        setIsSubmitting(false),
-      }
-    }, 1000),
-  },
-=======
         setDisplayWeb3(displayWeb3);
         setDidHandle(didHandle);
         setEnableBackup(enableBackup);
@@ -84,63 +36,23 @@ export default function AccountSettings() {
       }
     }, 1000);
   };
->>>>>>> origin/auto/autonomy-17186719616
-  
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
-<<<<<<< HEAD
-      const ethereum = (window as any).ethereum,
-      if (!ethereum) {
-        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.'),
-        return,
-      }
-      
-      // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
-      const address = accounts[0],
-      
-      // Sign message to verify ownership
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
-      await ethereum.request({
-        method: 'personal_sign',
-        params: [address, message]
-      }),
-      
-      // Auto-set DID handle if ENS is available
-      try {
-        const provider = new (window as any).ethers.providers.Web3Provider(ethereum),
-        const ensName = await provider.lookupAddress(address),
-        if (ensName) {
-          setDidHandle(ensName),
-        }
-      } catch (error) {
-        logErrorToProduction('ENS lookup error:', { data: error }),
-      }
-      
-      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`),
-    } catch (error: any) {
-      toast.error(error.message || 'Failed to connect wallet')
-    }
-  },
-=======
       const ethereum = (window as any).ethereum;
       if (!ethereum) {
         toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
         return;
       }
-      
       // Request accounts
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
       const address = accounts[0];
-      
       // Sign message to verify ownership
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
       await ethereum.request({
         method: 'personal_sign',
         params: [address, message]
       });
-      
       // Auto-set DID handle if ENS is available
       try {
         const provider = new (window as any).ethers.providers.Web3Provider(ethereum);
@@ -151,21 +63,17 @@ export default function AccountSettings() {
       } catch (error) {
         logErrorToProduction('ENS lookup error:', { data: error });
       }
-      
       toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
     } catch (error: any) {
       toast.error(error.message || 'Failed to connect wallet');
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />
       <Header />
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
-        
         <div className="grid gap-6 md:grid-cols-2">
           <Card>
             <CardHeader>
@@ -182,7 +90,6 @@ export default function AccountSettings() {
                   className="bg-gray-100"
                 />
               </div>
-              
               <div className="space-y-2">
                 <Label htmlFor="didHandle">Web3 Identity Handle</Label>
                 <div className="flex gap-2">
@@ -206,7 +113,6 @@ export default function AccountSettings() {
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
-              
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="displayWeb3">Display Web3 Identity</Label>
@@ -218,9 +124,7 @@ export default function AccountSettings() {
                   onCheckedChange={setDisplayWeb3}
                 />
               </div>
-              
               <Separator />
-              
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
@@ -237,13 +141,11 @@ export default function AccountSettings() {
                   onCheckedChange={setEnableBackup}
                 />
               </div>
-              
               {enableBackup && (
                 <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">
                   Data will be backed up to decentralized storage. This feature is in beta.
                 </div>
               )}
-              
               <Button 
                 onClick={handleSave}
                 disabled={isSubmitting}
@@ -254,7 +156,6 @@ export default function AccountSettings() {
               </Button>
             </CardContent>
           </Card>
-          
           <Card>
             <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
@@ -303,7 +204,6 @@ export default function AccountSettings() {
                   </div>
                 )}
               </div>
-              
               <div>
                 <h3 className="font-medium mb-2">Backup Status</h3>
                 <div className="grid grid-cols-2 gap-2">
@@ -333,7 +233,6 @@ export default function AccountSettings() {
                   </div>
                 </div>
               </div>
-              
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>
                 <Button 
@@ -354,9 +253,5 @@ export default function AccountSettings() {
         </div>
       </main>
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

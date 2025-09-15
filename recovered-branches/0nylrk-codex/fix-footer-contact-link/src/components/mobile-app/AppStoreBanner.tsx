@@ -1,18 +1,10 @@
 
-<<<<<<< HEAD
-import React{ useStateuseEffect } from "react";
-=======
 import React, { useState, useEffect } from "react";
->>>>>>> origin/auto/autonomy-17186719616
 import { X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export const AppStoreBanner: React.FC = () => {
-<<<<<<< HEAD
-  const [isVisiblesetIsVisible] = useState(false);
-=======
   const [isVisible, setIsVisible] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
   const isMobile = useIsMobile();
   
   useEffect(() => {
@@ -21,17 +13,6 @@ export const AppStoreBanner: React.FC = () => {
       // Delay showing the banner by 2 seconds
       const timer = setTimeout(() => {
         setIsVisible(true);
-<<<<<<< HEAD
-      }2000);
-      
-      return () => clearTimeout(timer);
-    }
-  }[isMobile]);
-  
-  const dismissBanner = () => {
-    setIsVisible(false);
-    localStorage.setItem("appBannerDismissed"true");
-=======
       }, 2000);
       
       return () => clearTimeout(timer);
@@ -41,7 +22,6 @@ export const AppStoreBanner: React.FC = () => {
   const dismissBanner = () => {
     setIsVisible(false);
     localStorage.setItem("appBannerDismissed", "true");
->>>>>>> origin/auto/autonomy-17186719616
   };
   
   // Only render on mobile devices

@@ -1,12 +1,8 @@
 import React from "react";
 import {
   useToast as useToastHook,
-<<<<<<< HEAD
-  Toast} from "@/components/ui/toast";
-=======
   Toast,
 } from "@/components/ui/toast";
->>>>>>> origin/auto/autonomy-17186719616
 
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {

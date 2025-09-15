@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useRef } from 'react.ts';
-import { X, Send  } from 'lucide-react.ts';
-export interface Message {
-
-  id: anystring;
-=======
 import React, {
   useState,
   useEffect,
@@ -20,138 +13,13 @@ import { ChatInput } from './ChatInput';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react'
-
 export interface Message {
   id: string;
->>>>>>> origin/auto/autonomy-17186719616
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
   read?: boolean;
-<<<<<<< HEAD
-
 }
-export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
-
-  isOpen?: boolean;
-  onClose?: ()  => void;
-
-}
-export function ChatAssistant(...args: any[]): any {
-  const [isChatOpen, setIsChatOpen] = useState(isOpen);
-  const [messages, setMessages] = useState<any>([]);
-  const [inputMessage, setInputMessage] = useState('');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const handleSendMessage = async (message: anystring)  => {
-    if (!message.trim()) return;
-    const userMessage: Message = {
-      id: anyDate.now().toString(),
-      role: 'user',
-      message: message.trim(),
-      timestamp: new Date(),
-    };
-    setMessages(prev  => [...prev, userMessage]);
-    setInputMessage('');
-    // Simulate AI response
-    setTimeout(() => {
-      const aiMessage: Message = {
-        id: any(Date.now() + 1).toString(),
-        role: 'assistant',
-        message: 'Thank you for your message! Our team will get back to you soon.',
-        timestamp: new Date(),
-      };
-      setMessages(prev  => [...prev, aiMessage]);
-    }, 1000);
-  };
-  const handleSubmit = (e: anyReact.FormEvent)  => {
-    e.preventDefault();
-    handleSendMessage(inputMessage);
-  };
-  const toggleChat = () => {
-    setIsChatOpen(!isChatOpen);
-  };
-  const closeChat = () => {
-    setIsChatOpen(false);
-    if (onClose) onClose();
-  };
-  if (!isChatOpen) {
-    return (
-      <button
-        onClick={toggleChat}
-        className="fixed bottom-6 right-6 bg-zion-cyan text-zion-blue-dark p-4 rounded-full shadow-lg hover:bg-zion-cyan-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 z-50"
-        aria-label="Open chat"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-        </svg>
-      </button>
-    );
-  }
-  return (
-    <div className="fixed bottom-6 right-6 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50 flex flex-col">
-      {/* Header */}
-      <div className="bg-zion-cyan text-zion-blue-dark p-4 rounded-t-lg flex items-center justify-between">
-        <h3 className="font-semibold">Chat with Zion Tech Group</h3>
-        <button
-          onClick={closeChat}
-          className="text-zion-blue-dark hover:text-zion-blue-dark/80 transition-colors"
-        >
-          <X size={20} />
-        </button>
-      </div>
-      {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {messages.length === 0 ? (
-          <div className="text-center text-gray-500 mt-8">
-            <p>How can we help you today?</p>
-          </div>
-        ) : (
-          messages.map((message) => (
-            <div
-              key={message.id}
-              className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
-            >
-              <div
-                className={`max-w-xs px-4 py-2 rounded-lg ${
-                  message.role === 'user'
-                    ? 'bg-zion-cyan text-zion-blue-dark'
-                    : 'bg-gray-100 text-gray-800'
-                }`}
-              >
-                <p className="text-sm">{message.message}</p>
-                <p className="text-xs opacity-70 mt-1">
-                  {message.timestamp.toLocaleTimeString()}
-                </p>
-              </div>
-            </div>
-          ))
-        )}
-        <div ref={messagesEndRef} />
-      </div>
-      {/* Input */}
-      <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">
-        <div className="flex space-x-2">
-          <input
-            type="text"
-            value={inputMessage}
-            onChange={(e) => setInputMessage(e.target.value)}
-            placeholder="Type your message..."
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          />
-          <button
-            type="submit"
-            className="bg-zion-cyan text-zion-blue-dark p-2 rounded-lg hover:bg-zion-cyan-light transition-colors"
-          >
-            <Send size={20} />
-          </button>
-        </div>
-      </form>
-    </div>
-  );
-}
-=======
-}
-
 export interface ChatAssistantProps {
   isOpen: boolean;
   onClose: () => void;
@@ -168,7 +36,6 @@ export interface ChatAssistantProps {
   /** Optional canned questions shown when the chat is empty */
   starterQuestions?: string[];
 }
-
 export function ChatAssistant({
   isOpen,
   onClose,
@@ -181,7 +48,6 @@ export function ChatAssistant({
 }: ChatAssistantProps) {
   const auth = useContext(AuthContext);
   const isGuest = !auth?.isAuthenticated;
-
   // Hooks called unconditionally at the top
   const localStorageKey = `chatHistory-${recipient.id}`; // Key is always generated
   const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<
@@ -195,7 +61,6 @@ export function ChatAssistant({
   );
   const [loggedInMessages, setLoggedInMessages] =
     useState<Message[]>(initialMessages);
-
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   const [pendingApiCallParams, setPendingApiCallParams] = useState<{
     message: string;
@@ -203,7 +68,6 @@ export function ChatAssistant({
   } | null>(null);
   const [showGuestModal, setShowGuestModal] = useState(false);
   const [guestMessage, setGuestMessage] = useState<string | null>(null);
-
   // Effect for guest user messages
   useEffect(() => {
     if (isGuest) {
@@ -222,7 +86,6 @@ export function ChatAssistant({
     setStoredGuestMessages,
     recipient.id,
   ]);
-
   // Effect for logged-in user messages
   useEffect(() => {
     if (!isGuest) {
@@ -230,7 +93,6 @@ export function ChatAssistant({
       setLoggedInMessages(initialMessages);
     }
   }, [isGuest, initialMessages, recipient.id]);
-
   // Determine currentMessages and setCurrentMessages based on isGuest
   const currentMessages = isGuest ? displayGuestMessages : loggedInMessages;
   const setCurrentMessages = (
@@ -249,9 +111,7 @@ export function ChatAssistant({
       setLoggedInMessages(newMessages);
     }
   };
-
   const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
-
   useEffect(() => {
     if (debouncedApiCallParams) {
       onSendMessage(
@@ -260,18 +120,14 @@ export function ChatAssistant({
       );
     }
   }, [debouncedApiCallParams, onSendMessage]);
-
   useEffect(() => {
     scrollToBottom();
   }, [currentMessages]); // currentMessages will correctly refer to either guest or logged-in state
-
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
-
   const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return;
-
     if (!isGuest) {
       // Logged-in user
       const newMessage: Message = {
@@ -288,10 +144,8 @@ export function ChatAssistant({
       setShowGuestModal(true);
     }
   };
-
   const handleModalSendConfirm = () => {
     if (!guestMessage) return;
-
     const newMessage: Message = {
       id: Date.now().toString(),
       role: 'user',
@@ -300,16 +154,13 @@ export function ChatAssistant({
     };
     setCurrentMessages((prev: Message[]) => [...prev, newMessage]); // This will now use the guest-aware setCurrentMessages
     setPendingApiCallParams({ message: guestMessage, conversationId });
-
     setShowGuestModal(false);
     setGuestMessage(null);
   };
-
   const handleModalCancel = () => {
     setShowGuestModal(false);
     setGuestMessage(null);
   };
-
   useEffect(() => {
     if (!isOpen) return;
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -321,9 +172,7 @@ export function ChatAssistant({
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
-
   if (!isOpen) return null;
-
   return (
     <div
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
@@ -360,14 +209,12 @@ export function ChatAssistant({
             <X className="h-5 w-5" />
           </Button>
         </div>
-
         {/* Context Header (Optional) */}
         {contextHeader && (
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
             {contextHeader}
           </div>
         )}
-
         {/* Messages */}
         <div
           className="flex-1 overflow-y-auto p-4 space-y-4"
@@ -398,13 +245,11 @@ export function ChatAssistant({
           )}
           <div ref={messagesEndRef} />
         </div>
-
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />
         </div>
       </div>
-
       {showGuestModal && guestMessage && (
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
@@ -443,4 +288,3 @@ export function ChatAssistant({
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

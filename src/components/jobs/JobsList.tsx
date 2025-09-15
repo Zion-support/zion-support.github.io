@@ -1,46 +1,3 @@
-
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { Job, JobStatus } from "@/types/jobs",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Loader2, Edit, X, Eye } from 'lucide-react'
-import { format } from "date-fns",
-import Link from "next/link";
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface JobsListProps {
-
-  filter?: JobStatus
-  onSelectJob?: (jobId: string, jobTitle: string) => void}
-export function JobsList({ filter, onSelectJob }: JobsListProps) {
-  const { user } = useAuth()
-  const [jobs, setJobs] = useState<Job[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  useEffect((,) => {
-    const fetchJobs = async () => {
-      if (!user) return
-import Link from "next/link",
-import {logErrorToProduction} from '@/utils/productionLogger',
-
-
-interface JobsListProps {
-  filter?: JobStatus,
-  onSelectJob?: (jobId: string, jobTitle: string) => void
-}
-
-  filter?: JobStatus
-  onSelectJob?: (jobId: string, jobTitle: string) => void}
-export function JobsList({ filter, onSelectJob }: JobsListProps) {
-  const { user } = useAuth()
-  const [jobs, setJobs] = useState<Job[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  useEffect((,) => {
-    const fetchJobs = async () => {
-      if (!user) return,
-=======
 import { useState, useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -52,57 +9,27 @@ import { Loader2, Edit, X, Eye } from 'lucide-react'
 import { format } from "date-fns";
 import Link from "next/link";
 import {logErrorToProduction} from '@/utils/productionLogger';
-
-
 interface JobsListProps {
   filter?: JobStatus;
   onSelectJob?: (jobId: string, jobTitle: string) => void;
 }
-
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const fetchJobs = async () => {
       if (!user) return;
->>>>>>> origin/auto/autonomy-17186719616
-
       try {
         let query = supabase
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
-<<<<<<< HEAD
-          .order("created_at", { ascending: false }),
-
-        if (filter) {
-          query = query.eq("status", filter),
-        }
-
-        const { data, error } = await query,
-
-        if (error) throw error,
-        setJobs(data as Job[]),
-      } catch (error) {
-        logErrorToProduction('Error fetching jobs:', { data: error }),
-      } finally {
-        setIsLoading(false),
-      }
-    },
-
-    fetchJobs(),
-  }, [user, filter]),
-=======
           .order("created_at", { ascending: false });
-
         if (filter) {
           query = query.eq("status", filter);
         }
-
         const { data, error } = await query;
-
         if (error) throw error;
         setJobs(data as Job[]);
       } catch (error) {
@@ -111,34 +38,19 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         setIsLoading(false);
       }
     };
-
     fetchJobs();
   }, [user, filter]);
->>>>>>> origin/auto/autonomy-17186719616
-
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
-<<<<<<< HEAD
-    ),
-  }
-=======
     );
   }
-
->>>>>>> origin/auto/autonomy-17186719616
   if (jobs.length === 0) {
     return (
       <div className="text-center p-8 border rounded-md bg-muted/20">
         <p className="text-lg text-muted-foreground">
-<<<<<<< HEAD
-          {filter
-            ? `No jobs with status "${filter}" found.`
-            : "You haven't posted any jobs yet.", }
-=======
->>>>>>> origin/auto/autonomy-17186719616
           {filter 
             ? `No jobs with status "${filter}" found.` 
             : "You haven't posted any jobs yet."
@@ -148,64 +60,10 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           <Link href="/post-job">Post Your First Job</Link>
         </Button>
       </div>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   const getStatusColor = (status: JobStatus) => {
     switch (status) {
-<<<<<<< HEAD
-      case "new": return "bg-blue-100 text-blue-800",
-      case "in_progress":
-        return "bg-yellow-100 text-yellow-800",
-      case "filled":
-        return "bg-green-100 text-green-800",
-      case "closed":
-        return "bg-gray-100 text-gray-800"
-      default:
-        return "bg-gray-100 text-gray-800"
-
-
-interface JobsListProps {;
-  filter?: JobStatus;
-  onSelectJob?: (jobId: string, jobTitle: string) => void}
-
-export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
-  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect((,) => {;
-    const fetchJobs = async () => {;
-      if (!user) return;
-
-      try {;
-        let query = supabase;
-          .from("jobs");
-          .select("*");
-          .eq("client_id", user && user.id);
-          .order("created_at", { ascending: false }),;
-        if (filter) {;
-          query = query && query.eq("status", filter);
-        }
-
-        const { data, error } = await query;
-
-        if (error) throw error;
-        setJobs(data as Job[]);
-      } catch (error) {;
-        logErrorToProduction('Error fetching jobs:', { data: error });
-      } finally {;
-        setIsLoading(false);
-      }
-    };
-
-    }
-  },
-=======
       case "new":
         return "bg-blue-100 text-blue-800";
       case "in_progress":
@@ -218,8 +76,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
         return "bg-gray-100 text-gray-800";
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (
@@ -248,11 +104,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
               {job.description}
             </p>
             <div className="flex flex-wrap gap-1 mt-2">
-<<<<<<< HEAD
-              {job.skills.slice(0, 3).map((skill, index,) => (
-                <Badge key={index} variant="outline" className="text-xs">
-=======
->>>>>>> origin/auto/autonomy-17186719616
               {job.skills.slice(0, 3).map((skill, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
                   {skill}
@@ -287,17 +138,9 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
                 <X className="h-4 w-4" />
               </Button>
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
           </CardFooter>
         </Card>
       ))}
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

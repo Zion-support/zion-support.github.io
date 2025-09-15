@@ -1,48 +1,28 @@
-<<<<<<< HEAD
-"use client";
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  PhoneMailMapPinGlobeRocketBrainAtom
-  CpuTargetMicroscopeShieldZapSparkles,
-  MenuXSearchChevronDownHomeBriefcase
-  DollarSignBookOpenUsersMessageCircle
-=======
   Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
   Cpu, Target, Microscope, Shield, Zap, Sparkles,
   Menu, X, Search, ChevronDown, Home, Briefcase, 
   DollarSign, BookOpen, Users, MessageCircle
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     title: '🧠 Revolutionary AI',
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
     services: [
-<<<<<<< HEAD
-      { name: 'AI Consciousness 'Evolution', 'href: '/ai-consciousness-evolution-'platform', 'description: 'Advanced AI 'consciousness', 'price: '$2,999/month' },
-      { name: 'AI Emotional 'Intelligence', 'href: '/ai-emotional-intelligence-'platform', 'description: 'Emotional AI 'platform', 'price: '$1,999/month' },
-      { name: 'AI Creativity 'Orchestrator', 'href: '/ai-creativity-'orchestrator', 'description: 'Creative AI 'solutions', 'price: '$1,499/month' },
-      { name: 'AI Autonomous Business 'Manager', 'href: '/ai-autonomous-business-'manager', 'description: 'Autonomous business 'AI', 'price: '$3,999/month' }
-=======
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Advanced AI consciousness', price: '$2,999/month' },
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform', price: '$1,999/month' },
       { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Creative AI solutions', price: '$1,499/month' },
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business AI', price: '$3,999/month' }
->>>>>>> origin/auto/autonomy-17186719616
     ]
   },
   {
@@ -50,21 +30,12 @@ const serviceCategories = [
     icon: Atom,
     color: 'from-indigo-500 to-blue-600',
     services: [
-<<<<<<< HEAD
-      { name: 'Quantum Internet 'Security', 'href: '/quantum-internet-security-'gateway', 'description: 'Quantum 'security', 'price: '$4,999/month' },
-      { name: 'Biotech DNA 'Computing', 'href: '/biotech-dna-computing-'platform', 'description: 'DNA computing 'platform', 'price: '$3,999/month' },
-      { name: 'Quantum Financial 'Trading', 'href: '/quantum-financial-trading-'platform', 'description: 'Quantum 'trading', 'price: '$5,999/month' },
-      { name: 'DNA Computing 'Platform', 'href: '/dna-computing-'platform', 'description: 'Molecular 'computing', 'price: '$1,299/month' },
-      { name: 'Photonic Computing 'Infrastructure', 'href: '/photonic-computing-'infrastructure', 'description: 'Light-speed 'computing', 'price: '$699/month' },
-      { name: 'Swarm Robotics 'Platform', 'href: '/swarm-robotics-'platform', 'description: 'Collective robot 'intelligence', 'price: '$1,199/month' }
-=======
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Quantum security', price: '$4,999/month' },
       { name: 'Biotech DNA Computing', href: '/biotech-dna-computing-platform', description: 'DNA computing platform', price: '$3,999/month' },
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum trading', price: '$5,999/month' },
       { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,299/month' },
       { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' },
       { name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Collective robot intelligence', price: '$1,199/month' }
->>>>>>> origin/auto/autonomy-17186719616
     ]
   },
   {
@@ -72,17 +43,10 @@ const serviceCategories = [
     icon: Cpu,
     color: 'from-blue-500 to-cyan-600',
     services: [
-<<<<<<< HEAD
-      { name: 'Autonomous DevOps 'Platform', 'href: '/autonomous-devops-'platform', 'description: 'Self-managing 'DevOps', 'price: '$2,499/month' },
-      { name: 'Zero Trust Network 'Architecture', 'href: '/zero-trust-network-'architecture', 'description: 'Zero trust 'security', 'price: '$1,999/month' },
-      { name: 'Edge Computing 'Orchestration', 'href: '/edge-computing-'orchestration', 'description: 'Edge computing 'platform', 'price: '$1,799/month' },
-      { name: 'AI IT Operations 'Center', 'href: '/ai-it-operations-'center', 'description: 'AI-powered IT 'ops', 'price: '$2,999/month' }
-=======
       { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Self-managing DevOps', price: '$2,499/month' },
       { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Zero trust security', price: '$1,999/month' },
       { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Edge computing platform', price: '$1,799/month' },
       { name: 'AI IT Operations Center', href: '/ai-it-operations-center', description: 'AI-powered IT ops', price: '$2,999/month' }
->>>>>>> origin/auto/autonomy-17186719616
     ]
   },
   {
@@ -90,34 +54,13 @@ const serviceCategories = [
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
     services: [
-<<<<<<< HEAD
-      { name: 'Space Mining 'Automation', 'href: '/space-mining-automation-'platform', 'description: 'Space mining 'platform', 'price: '$9,999/month' },
-      { name: 'Metaverse 'Development', 'href: '/metaverse-development-'platform', 'description: 'Metaverse 'platform', 'price: '$3,999/month' },
-      { name: 'Virtual Event 'Holograms', 'href: '/virtual-event-hologram-'platform', 'description: 'Holographic 'events', 'price: '$2,499/month' }
-=======
       { name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Space mining platform', price: '$9,999/month' },
       { name: 'Metaverse Development', href: '/metaverse-development-platform', description: 'Metaverse platform', price: '$3,999/month' },
       { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events', price: '$2,499/month' }
->>>>>>> origin/auto/autonomy-17186719616
     ]
   }
 ];
-
 const quickLinks = [
-<<<<<<< HEAD
-  { name: 'Services 'Overview', 'href: '/enhanced-services-'overview', 'icon: Globecolor: 'from-cyan-500 to-blue-600' },
-  { name: 'AI 'Services', 'href: '/ai-'services', 'icon: Braincolor: 'from-violet-500 to-purple-600' },
-  { name: 'Quantum 'Tech', 'href: '/quantum-'services', 'icon: Atomcolor: 'from-indigo-500 to-blue-600' },
-  { name: 'Space 'Tech', 'href: '/space-'technology', 'icon: Rocketcolor: 'from-teal-500 to-emerald-600' },
-  { name: 'Enterprise 'IT', 'href: '/enterprise-'it', 'icon: Cpucolor: 'from-blue-500 to-cyan-600' },
-  { name: 'Micro 'SAAS', 'href: '/enhanced-micro-saas-'showcase', 'icon: Targetcolor: 'from-green-500 to-yellow-600' }
-];
-
-export default function UltraFuturisticNavigation2033() {
-  const [isOpensetIsOpen] = useState(false);
-  const [activeCategorysetActiveCategory] = useState<string | null>(null);
-  const [searchQuerysetSearchQuery] = useState('');
-=======
   { name: 'Services Overview', href: '/enhanced-services-overview', icon: Globe, color: 'from-cyan-500 to-blue-600' },
   { name: 'AI Services', href: '/ai-services', icon: Brain, color: 'from-violet-500 to-purple-600' },
   { name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' },
@@ -125,31 +68,20 @@ export default function UltraFuturisticNavigation2033() {
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
 ];
-
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
->>>>>>> origin/auto/autonomy-17186719616
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
   // Close menu on escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') closeMenu();
     };
-<<<<<<< HEAD
-    document.addEventListener(', 'keydown', 'handleEscape);
-    return () => document.removeEventListener(', 'keydown', 'handleEscape);
-  }[]);
-=======
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape);
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <>
       {/* Top Contact Bar */}
@@ -179,7 +111,6 @@ export default function UltraFuturisticNavigation2033() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav className="bg-gradient-to-r from-black via-gray-900/95 to-black border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -188,11 +119,7 @@ export default function UltraFuturisticNavigation2033() {
             <motion.div 
               className="flex items-center space-x-3"
               whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
-              transition={{ type: "spring"stiffness: 400damping: 10 }}
-=======
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
->>>>>>> origin/auto/autonomy-17186719616
             >
               <Link href="/" className="flex items-center space-x-3">
                 <div className="relative">
@@ -211,7 +138,6 @@ export default function UltraFuturisticNavigation2033() {
                 </div>
               </Link>
             </motion.div>
-
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {/* Services Mega Menu */}
@@ -224,20 +150,13 @@ export default function UltraFuturisticNavigation2033() {
                   <span>Services</span>
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
-
                 {/* Mega Menu */}
                 <AnimatePresence>
                   {activeCategory === 'services' && (
                     <motion.div
-<<<<<<< HEAD
-                      initial={{ opacity: 0, y: 10scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0scale: 1 }}
-                      exit={{ opacity: 0, y: 10scale: 0.95 }}
-=======
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
->>>>>>> origin/auto/autonomy-17186719616
                       transition={{ duration: 0.2 }}
                       onMouseEnter={() => setActiveCategory('services')}
                       onMouseLeave={() => setActiveCategory(null)}
@@ -280,7 +199,6 @@ export default function UltraFuturisticNavigation2033() {
                   )}
                 </AnimatePresence>
               </div>
-
               {/* Quick Links */}
               {quickLinks.map((link) => (
                 <Link
@@ -291,7 +209,6 @@ export default function UltraFuturisticNavigation2033() {
                   {link.name}
                 </Link>
               ))}
-
               {/* Contact Button */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -305,7 +222,6 @@ export default function UltraFuturisticNavigation2033() {
                 </Link>
               </motion.div>
             </div>
-
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
               <button
@@ -317,20 +233,13 @@ export default function UltraFuturisticNavigation2033() {
             </div>
           </div>
         </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0height: 0 }}
-              animate={{ opacity: 1height: 'auto' }}
-              exit={{ opacity: 0height: 0 }}
-=======
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
->>>>>>> origin/auto/autonomy-17186719616
               transition={{ duration: 0.3 }}
               className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20"
             >
@@ -356,7 +265,6 @@ export default function UltraFuturisticNavigation2033() {
                     </div>
                   ))}
                 </div>
-
                 {/* Mobile Quick Links */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white">Quick Links</h3>
@@ -373,7 +281,6 @@ export default function UltraFuturisticNavigation2033() {
                     ))}
                   </div>
                 </div>
-
                 {/* Mobile Contact Button */}
                 <div className="pt-4">
                   <Link

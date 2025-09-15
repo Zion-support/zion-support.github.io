@@ -1,25 +1,3 @@
-
-<<<<<<< HEAD
-import { useState } from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { supabase } from "@/integrations/supabase/client",
-import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'
-import { toast } from "sonner",
-import { JobApplication } from "@/types/jobs",
-
-interface ApplicationScoreCardProps {
-  application: JobApplication,
-  onScoreUpdated?: (updatedApplication: JobApplication) => void
-}
-
-export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
-  const [isScoring, setIsScoring] = useState(false),
-
-  // Determine if application has been scored
-  const hasScore = typeof application.match_score === 'number',
-=======
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -28,43 +6,21 @@ import { supabase } from "@/integrations/supabase/client";
 import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'
 import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
-
 interface ApplicationScoreCardProps {
   application: JobApplication;
   onScoreUpdated?: (updatedApplication: JobApplication) => void;
 }
-
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
   const [isScoring, setIsScoring] = useState(false);
-
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number';
->>>>>>> origin/auto/autonomy-17186719616
-  
   // Format the date when the application was scored
   const scoredDate = application.scored_at 
     ? new Date(application.scored_at).toLocaleDateString() 
-<<<<<<< HEAD
-    : null,
-=======
     : null;
->>>>>>> origin/auto/autonomy-17186719616
-
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
-<<<<<<< HEAD
-      case "Strongly Recommended": return "bg-green-100 text-green-800",
-
-      case "Recommended for Review":
-        return "bg-blue-100 text-blue-800"
-      case "Low Match":
-        return "bg-orange-100 text-orange-800"
-      default:
-        return "bg-gray-100 text-gray-800"
-    }
-  },
-=======
       case "Strongly Recommended":
         return "bg-green-100 text-green-800";
       case "Recommended for Review":
@@ -75,164 +31,38 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-gray-100 text-gray-800";
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   // Trigger the scoring process
   const handleScore = async () => {
     try {
-<<<<<<< HEAD
-      setIsScoring(true),
-=======
       setIsScoring(true);
->>>>>>> origin/auto/autonomy-17186719616
-      
       // Call the trigger_resume_scoring function
       const { error } = await supabase.rpc(
         'trigger_resume_scoring',
         { application_id: application.id }
-<<<<<<< HEAD
-      )
-      if (error) throw error
-      toast.success("Resume scoring has been initiated")
-
-      ),
-      
-      if (error) throw error,
-      
-      toast.success("Resume scoring has been initiated"),
-      
-      // Poll for results every 3 seconds for up to 30 seconds
-      let attempts = 0
-      const maxAttempts = 10
-      const checkScore = async () => {
-        attempts++
-=======
       );
-      
       if (error) throw error;
-      
       toast.success("Resume scoring has been initiated");
-      
       // Poll for results every 3 seconds for up to 30 seconds
       let attempts = 0;
       const maxAttempts = 10;
-      
       const checkScore = async () => {
         attempts++;
-        
->>>>>>> origin/auto/autonomy-17186719616
         const { data, error } = await supabase
           .from("job_applications")
           .select("*")
           .eq("id", application.id)
-<<<<<<< HEAD
-          .single()
-        if (error) {
-          setIsScoring(false),
-          toast.error("Failed to check scoring status"),
-          return,
-        }
-        
-        if (data.scored_at) {
-          setIsScoring(false),
-          toast.success("Resume scoring completed"),
-          if (onScoreUpdated) onScoreUpdated(data as JobApplication),
-          return,
-        }
-        if (attempts < maxAttempts) {
-          setTimeout(checkScore, 3000)
-        } else {
-          setIsScoring(false)
-          toast.info("Scoring is taking longer than expected. Check back later.")
-        }
-      }
-      setTimeout(checkScore, 3000)
-    } catch (error: any) {
-      setIsScoring(false)
-      toast.error(`Failed to score resume: ${error.message}`)
-    }
-  }
-        
-        if (attempts < maxAttempts) {
-          setTimeout(checkScore, 3000),
-        } else {
-          setIsScoring(false),
-          toast.info("Scoring is taking longer than expected. Check back later."),
-        }
-      },
-      
-      setTimeout(checkScore, 3000),
-      
-    } catch (error: any) {
-      setIsScoring(false),
-      toast.error(`Failed to score resume: ${error.message}`),
-    }
-  },
-
-
-      setTimeout(checkScore, 3000);
-
-    } catch (error: any) {;
-      setIsScoring(false),;
-      toast && toast.error(`Failed to score resume: ${error && error.message}`);
-    }
-  },;
-
-  // Render the score result or button to score;
-  return (
-    <Card className="overflow-hidden">;
-      <CardHeader className="pb-3">;
-        <CardTitle className="text-lg font-medium flex items-center justify-between">;
-          Resume Match Score;
-          <Badge variant={hasScore ? "default" : "outline"} className="ml-2">;
-            {hasScore ? "SCORED" : "NOT SCORED"}
-
-          </Badge>;
-        </CardTitle>;
-      </CardHeader>;
-
-      <CardContent>;
-        {hasScore ? (;
-          <div>;
-            {/* Score */}
-            <div className="flex items-center mb-4">;
-              <div className="p-2 bg-primary/10 rounded-full mr-3">;
-                <Star className="h-5 w-5 text-primary" />;
-              </div>;
-              <div>;
-                <div className="text-sm text-muted-foreground">Match Score</div>;
-                <div className="font-semibold text-xl">{application && application.match_score}/100</div>;
-              </div>;
-            </div>;
-
-            {/* Summary */}
-            <div className="flex items-start mb-4">;
-              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
-                <BarChart2 className="h-5 w-5 text-primary" />;
-              </div>;
-              <div>;
-                <div className="text-sm text-muted-foreground">Summary</div>;
-                <div className="font-medium">{application && application.match_summary}</div>;
-              </div>;
-            </div>;
-
-
-=======
           .single();
-          
         if (error) {
           setIsScoring(false);
           toast.error("Failed to check scoring status");
           return;
         }
-        
         if (data.scored_at) {
           setIsScoring(false);
           toast.success("Resume scoring completed");
           if (onScoreUpdated) onScoreUpdated(data as JobApplication);
           return;
         }
-        
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000);
         } else {
@@ -240,15 +70,12 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           toast.info("Scoring is taking longer than expected. Check back later.");
         }
       };
-      
       setTimeout(checkScore, 3000);
-      
     } catch (error: any) {
       setIsScoring(false);
       toast.error(`Failed to score resume: ${error.message}`);
     }
   };
-
   // Render the score result or button to score
   return (
     <Card className="overflow-hidden">
@@ -260,7 +87,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           </Badge>
         </CardTitle>
       </CardHeader>
-      
       <CardContent>
         {hasScore ? (
           <div>
@@ -274,7 +100,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                 <div className="font-semibold text-xl">{application.match_score}/100</div>
               </div>
             </div>
-            
             {/* Summary */}
             <div className="flex items-start mb-4">
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">
@@ -285,8 +110,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                 <div className="font-medium">{application.match_summary}</div>
               </div>
             </div>
-            
->>>>>>> origin/auto/autonomy-17186719616
             {/* Suggestion */}
             <div className="flex items-start">
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">
@@ -304,7 +127,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                 )}
               </div>
             </div>
-            
             {/* Breakdown (Collapsible) */}
             {application.match_breakdown && (
               <div className="mt-4 pt-4 border-t">
@@ -324,14 +146,12 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         )}
                       </div>
                     )}
-                    
                     {application.match_breakdown.experience_match && (
                       <div>
                         <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
                         <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
                     )}
-
                     {application.match_breakdown.certifications_match && (
                       <div>
                         <p className="font-medium">Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>
@@ -343,7 +163,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         )}
                       </div>
                     )}
-                    
                     {application.match_breakdown.education_match && (
                       <div>
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
@@ -378,9 +197,5 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         )}
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

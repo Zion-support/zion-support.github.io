@@ -1,21 +1,8 @@
-<<<<<<< HEAD
-"use client";
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-<<<<<<< HEAD
-  Rocket
-  DollarSign
-  Users
-  BarChart3
-  Mail
-  Calendar
-  Shield
-=======
   Rocket, 
   DollarSign, 
   Users, 
@@ -23,7 +10,6 @@ import {
   Mail, 
   Calendar, 
   Shield, 
->>>>>>> origin/auto/autonomy-17186719616
   Globe,
   ArrowRight,
   Star,
@@ -35,16 +21,11 @@ import {
   Lightbulb,
   BookOpen
 } from 'lucide-react';
-
 export default function StartupToolsPage() {
   const startupTools = [
     {
       name: 'HubSpot',
-<<<<<<< HEAD
-      description: 'All-in-one inbound marketingsalesand customer service platform designed to help businesses grow better.',
-=======
       description: 'All-in-one inbound marketing, sales, and customer service platform designed to help businesses grow better.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'Marketing & Sales',
       pricing: 'Free - $45/month',
       rating: 4.7,
@@ -61,15 +42,6 @@ export default function StartupToolsPage() {
       ],
       website: 'https://hubspot.com',
       useCase: 'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.',
-<<<<<<< HEAD
-      pros: ['Free 'tier', 'All-in-one 'solution', 'Great for 'beginners', 'Excellent support'],
-      cons: ['Can get 'expensive', 'Complex for small 'teams', 'Limited customization'],
-      bestFor: 'B2B startupsSaaS companiesmarketing teams'
-    },
-    {
-      name: 'Mailchimp',
-      description: 'Email marketing platform that helps businesses createsendand track email campaigns with ease.',
-=======
       pros: ['Free tier', 'All-in-one solution', 'Great for beginners', 'Excellent support'],
       cons: ['Can get expensive', 'Complex for small teams', 'Limited customization'],
       bestFor: 'B2B startups, SaaS companies, marketing teams'
@@ -77,7 +49,6 @@ export default function StartupToolsPage() {
     {
       name: 'Mailchimp',
       description: 'Email marketing platform that helps businesses create, send, and track email campaigns with ease.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'Email Marketing',
       pricing: 'Free - $59/month',
       rating: 4.5,
@@ -93,17 +64,10 @@ export default function StartupToolsPage() {
         'Free tier available'
       ],
       website: 'https://mailchimp.com',
-<<<<<<< HEAD
-      useCase: 'Ideal for startups that need to build email listsnurture leadsand communicate with customers.',
-      pros: ['Free 'tier', 'Easy to 'use', 'Good 'templates', 'Affordable'],
-      cons: ['Limited free 'features', 'Basic 'automation', 'Can be expensive'],
-      bestFor: 'E-commercecontent creatorsmall businesses'
-=======
       useCase: 'Ideal for startups that need to build email lists, nurture leads, and communicate with customers.',
       pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
       cons: ['Limited free features', 'Basic automation', 'Can be expensive'],
       bestFor: 'E-commerce, content creators, small businesses'
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Calendly',
@@ -123,17 +87,10 @@ export default function StartupToolsPage() {
         'Free tier available'
       ],
       website: 'https://calendly.com',
-<<<<<<< HEAD
-      useCase: 'Essential for startups that need to schedule sales callsinvestor meetingsand team collaborations efficiently.',
-      pros: ['Free 'tier', 'Easy 'integration', 'Professional 'appearance', 'Time-saving'],
-      cons: ['Limited free 'features', 'Basic 'customization', 'Can be expensive'],
-      bestFor: 'Sales teamsconsultantsremote teams'
-=======
       useCase: 'Essential for startups that need to schedule sales calls, investor meetings, and team collaborations efficiently.',
       pros: ['Free tier', 'Easy integration', 'Professional appearance', 'Time-saving'],
       cons: ['Limited free features', 'Basic customization', 'Can be expensive'],
       bestFor: 'Sales teams, consultants, remote teams'
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Canva',
@@ -153,16 +110,6 @@ export default function StartupToolsPage() {
         'Free tier available'
       ],
       website: 'https://canva.com',
-<<<<<<< HEAD
-      useCase: 'Perfect for startups that need to create marketing materialsocial media contentand presentations.',
-      pros: ['Free 'tier', 'Easy to 'use', 'Great 'templates', 'Affordable'],
-      cons: ['Limited 'customization', 'Watermark on 'free', 'Basic features'],
-      bestFor: 'Marketing teamscontent creatorsmall businesses'
-    },
-    {
-      name: 'Buffer',
-      description: 'Social media management platform that helps businesses schedule postsanalyze performanceand manage multiple accounts.',
-=======
       useCase: 'Perfect for startups that need to create marketing materials, social media content, and presentations.',
       pros: ['Free tier', 'Easy to use', 'Great templates', 'Affordable'],
       cons: ['Limited customization', 'Watermark on free', 'Basic features'],
@@ -171,7 +118,6 @@ export default function StartupToolsPage() {
     {
       name: 'Buffer',
       description: 'Social media management platform that helps businesses schedule posts, analyze performance, and manage multiple accounts.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'Social Media',
       pricing: 'Free - $15/month',
       rating: 4.4,
@@ -188,15 +134,6 @@ export default function StartupToolsPage() {
       ],
       website: 'https://buffer.com',
       useCase: 'Ideal for startups that want to maintain a consistent social media presence and grow their audience.',
-<<<<<<< HEAD
-      pros: ['Free 'tier', 'Easy to 'use', 'Good 'analytics', 'Affordable'],
-      cons: ['Limited free 'features', 'Basic 'scheduling', 'Limited platforms'],
-      bestFor: 'Social media managersmall businessescontent creators'
-    },
-    {
-      name: 'Notion',
-      description: 'All-in-one workspace for notesdocsprojectsand team collaboration. Organize everything in one place.',
-=======
       pros: ['Free tier', 'Easy to use', 'Good analytics', 'Affordable'],
       cons: ['Limited free features', 'Basic scheduling', 'Limited platforms'],
       bestFor: 'Social media managers, small businesses, content creators'
@@ -204,7 +141,6 @@ export default function StartupToolsPage() {
     {
       name: 'Notion',
       description: 'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'Productivity',
       pricing: 'Free - $8/month',
       rating: 4.7,
@@ -220,16 +156,6 @@ export default function StartupToolsPage() {
         'API integration'
       ],
       website: 'https://notion.so',
-<<<<<<< HEAD
-      useCase: 'Perfect for startup teams that need a flexible workspace for documentationproject managementand knowledge sharing.',
-      pros: ['Highly 'flexible', 'Beautiful 'interface', 'Great 'templates', 'Free tier'],
-      cons: ['Learning 'curve', 'Limited offline 'access', 'Can be overwhelming'],
-      bestFor: 'Remote teamsproject managersknowledge workers'
-    },
-    {
-      name: 'Stripe',
-      description: 'Complete payment processing platform for online businesses. Accept paymentsmanage subscriptionsand handle compliance.',
-=======
       useCase: 'Perfect for startup teams that need a flexible workspace for documentation, project management, and knowledge sharing.',
       pros: ['Highly flexible', 'Beautiful interface', 'Great templates', 'Free tier'],
       cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming'],
@@ -238,7 +164,6 @@ export default function StartupToolsPage() {
     {
       name: 'Stripe',
       description: 'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'Payments',
       pricing: '2.9% + 30¢ per transaction',
       rating: 4.9,
@@ -254,17 +179,10 @@ export default function StartupToolsPage() {
         'Analytics dashboard'
       ],
       website: 'https://stripe.com',
-<<<<<<< HEAD
-      useCase: 'Essential for any startup that needs to accept paymentsespecially SaaS companies and e-commerce businesses.',
-      pros: ['Developer-'friendly', 'Global 'reach', 'Excellent 'docs', 'Reliable'],
-      cons: ['Higher fees than some 'alternatives', 'Complex for 'beginners', 'Strict requirements'],
-      bestFor: 'SaaS companiese-commerceonline businesses'
-=======
       useCase: 'Essential for any startup that needs to accept payments, especially SaaS companies and e-commerce businesses.',
       pros: ['Developer-friendly', 'Global reach', 'Excellent docs', 'Reliable'],
       cons: ['Higher fees than some alternatives', 'Complex for beginners', 'Strict requirements'],
       bestFor: 'SaaS companies, e-commerce, online businesses'
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Intercom',
@@ -285,15 +203,9 @@ export default function StartupToolsPage() {
       ],
       website: 'https://intercom.com',
       useCase: 'Perfect for SaaS startups and online businesses that want to provide excellent customer support and user engagement.',
-<<<<<<< HEAD
-      pros: ['Great 'UX', 'Powerful 'features', 'Good 'integrations', 'Mobile apps'],
-      cons: [', 'Expensive', 'Complex 'pricing', 'Can be overwhelming'],
-      bestFor: 'SaaS companiesonline businessescustomer support teams'
-=======
       pros: ['Great UX', 'Powerful features', 'Good integrations', 'Mobile apps'],
       cons: ['Expensive', 'Complex pricing', 'Can be overwhelming'],
       bestFor: 'SaaS companies, online businesses, customer support teams'
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Mixpanel',
@@ -313,16 +225,6 @@ export default function StartupToolsPage() {
         'Mobile analytics'
       ],
       website: 'https://mixpanel.com',
-<<<<<<< HEAD
-      useCase: 'Essential for product teams that need to understand user behavioroptimize conversion funnelsand make data-driven decisions.',
-      pros: ['Powerful 'analytics', 'Real-time 'data', 'Good 'documentation', 'Flexible'],
-      cons: ['Complex 'setup', 'Expensive at 'scale', 'Steep learning curve'],
-      bestFor: 'Product teamsgrowth hackersdata analysts'
-    },
-    {
-      name: 'Vercel',
-      description: 'Platform for deploying and hosting frontend applications with automatic scalinglobal CDNand zero configuration.',
-=======
       useCase: 'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.',
       pros: ['Powerful analytics', 'Real-time data', 'Good documentation', 'Flexible'],
       cons: ['Complex setup', 'Expensive at scale', 'Steep learning curve'],
@@ -331,7 +233,6 @@ export default function StartupToolsPage() {
     {
       name: 'Vercel',
       description: 'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'Development',
       pricing: 'Free - $20/month',
       rating: 4.8,
@@ -348,30 +249,16 @@ export default function StartupToolsPage() {
       ],
       website: 'https://vercel.com',
       useCase: 'Ideal for startup development teams that want to deploy modern web applications quickly with excellent performance.',
-<<<<<<< HEAD
-      pros: ['Zero 'config', 'Excellent 'performance', 'Great 'DX', 'Free tier'],
-      cons: ['Limited backend 'features', 'Can be expensive for high 'traffic', 'Vendor lock-in'],
-      bestFor: 'Frontend developerstartup teamsmodern web apps'
-    }
-  ];
-
-  const categories = [', 'All', 'Marketing & 'Sales', 'Email 'Marketing', 'Productivity', 'Design', 'Social 'Media', 'Payments'Customer 'Support', 'Analytics'Development'];
-  const [selectedCategorysetSelectedCategory] = React.useState('All');
-=======
       pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier'],
       cons: ['Limited backend features', 'Can be expensive for high traffic', 'Vendor lock-in'],
       bestFor: 'Frontend developers, startup teams, modern web apps'
     }
   ];
-
   const categories = ['All', 'Marketing & Sales', 'Email Marketing', 'Productivity', 'Design', 'Social Media', 'Payments', 'Customer Support', 'Analytics', 'Development'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
->>>>>>> origin/auto/autonomy-17186719616
-
   const filteredTools = selectedCategory === 'All' 
     ? startupTools 
     : startupTools.filter(tool => tool.category === selectedCategory);
-
   return (
     <>
       <Head>
@@ -381,7 +268,6 @@ export default function StartupToolsPage() {
         <meta property="og:description" content="Essential tools and resources for startups and entrepreneurs to accelerate growth." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0">
@@ -389,9 +275,7 @@ export default function StartupToolsPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />
         </div>
-
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-20 animate-fade-in">
             <div className="mb-8">
@@ -400,7 +284,6 @@ export default function StartupToolsPage() {
                 Startup Growth Tools
               </div>
             </div>
-            
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
               Startup Tools & Resources
             </h1>
@@ -408,7 +291,6 @@ export default function StartupToolsPage() {
               Essential tools and resources to help your startup grow faster. 
               Expert-curated selection of SaaS services for entrepreneurs and growing businesses.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
               <Button
                 href="#tools"
@@ -430,7 +312,6 @@ export default function StartupToolsPage() {
               </Button>
             </div>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
@@ -460,7 +341,6 @@ export default function StartupToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -481,7 +361,6 @@ export default function StartupToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Tools Grid */}
       <section id="tools" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -492,21 +371,12 @@ export default function StartupToolsPage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               {selectedCategory === 'All' 
                 ? 'Discover the essential tools that successful startups use to grow and scale their businesses.'
-<<<<<<< HEAD
-                : `Explore the best ${selectedCategory.toLowerCase()} tools to accelerate your 'startup', 's growth.`
-=======
                 : `Explore the best ${selectedCategory.toLowerCase()} tools to accelerate your startup's growth.`
->>>>>>> origin/auto/autonomy-17186719616
               }
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {filteredTools.map((toolindex) => (
-=======
             {filteredTools.map((tool, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-orange-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
@@ -528,25 +398,18 @@ export default function StartupToolsPage() {
                         <span className="text-sm text-gray-300">{tool.rating}</span>
                       </div>
                     </div>
-                    
                     <div className="flex items-center space-x-4 mb-3 text-sm text-gray-400">
                       <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>
                       <span>{tool.users} users</span>
                       <span className="text-green-400">{tool.pricing}</span>
                     </div>
-
                     <p className="text-gray-400 leading-relaxed mb-4">
                       {tool.description}
                     </p>
-
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                       <div className="grid grid-cols-2 gap-2">
-<<<<<<< HEAD
-                        {tool.features.slice(04).map((featureIndex) => (
-=======
                         {tool.features.slice(0, 4).map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                           <div key={featureIndex} className="flex items-center text-sm text-gray-400">
                             <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                             {feature}
@@ -554,12 +417,10 @@ export default function StartupToolsPage() {
                         ))}
                       </div>
                     </div>
-
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Best For:</h4>
                       <p className="text-sm text-gray-400">{tool.bestFor}</p>
                     </div>
-
                     <div className="flex items-center justify-between">
                       <Button
                         href={tool.website}
@@ -570,7 +431,6 @@ export default function StartupToolsPage() {
                         Visit Website
                         <ExternalLink className="w-4 h-4 ml-2" />
                       </Button>
-                      
                       <div className="text-right">
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>
                         <div className="text-sm text-gray-300 max-w-xs">{tool.useCase}</div>
@@ -583,7 +443,6 @@ export default function StartupToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Startup Resources Section */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -592,14 +451,9 @@ export default function StartupToolsPage() {
               Additional Startup Resources
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-              Beyond toolshere are additional resources to help your startup succeed.
-=======
               Beyond tools, here are additional resources to help your startup succeed.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">
@@ -607,34 +461,24 @@ export default function StartupToolsPage() {
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">Startup Communities</h3>
               <p className="text-gray-400 mb-4">
-<<<<<<< HEAD
-                Join startup communities like Y Combinator Startup SchoolIndie Hackersand local startup meetups.
-=======
                 Join startup communities like Y Combinator Startup School, Indie Hackers, and local startup meetups.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
               <Button href="https://www.startupschool.org" variant="outline" size="sm">
                 Explore Communities
               </Button>
             </Card>
-
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600">
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">Educational Resources</h3>
               <p className="text-gray-400 mb-4">
-<<<<<<< HEAD
-                Access free courses from platforms like CourseraedXand startup-specific learning resources.
-=======
                 Access free courses from platforms like Coursera, edX, and startup-specific learning resources.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
               <Button href="https://www.coursera.org" variant="outline" size="sm">
                 Start Learning
               </Button>
             </Card>
-
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600">
                 <TrendingUp className="w-8 h-8 text-white" />
@@ -650,7 +494,6 @@ export default function StartupToolsPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-orange-600 to-orange-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
@@ -659,11 +502,7 @@ export default function StartupToolsPage() {
             Ready to Scale Your Startup?
           </h2>
           <p className="text-xl text-orange-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-            Our startup experts can help you choose the right toolsimplement growth strategiesand accelerate your business growth.
-=======
             Our startup experts can help you choose the right tools, implement growth strategies, and accelerate your business growth.
->>>>>>> origin/auto/autonomy-17186719616
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button

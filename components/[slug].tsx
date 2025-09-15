@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React{ useMemo } from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-PhoneMailMapPinCheckArrowRightStar
-=======
 import React, { useMemo } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -32,11 +25,9 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
 import { industryRealServices } from '../data/industry-real-services';
 import { professionalServices } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
-
 export default function DynamicServicePage() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
-
   const service = useMemo(() => {
     if (!slug) return undefined;
     const all: any[] = ([] as any[])
@@ -71,11 +62,7 @@ export default function DynamicServicePage() {
     const byLink = all.find(s => {
       try {
         const url = new URL(s.link);
-<<<<<<< HEAD
-        return url.pathname.replace(/^\/+|\/+$/g', ') === slug.replace(/^\/+|\/+$/g', ');
-=======
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
->>>>>>> origin/auto/autonomy-17186719616
       } catch {
         return false;
       }
@@ -84,32 +71,21 @@ export default function DynamicServicePage() {
     const byId = enhancedRealMicroSaasServices.find(s => s.id === slug);
     if (byId) return byId;
     return undefined;
-<<<<<<< HEAD
-  }[slug]);
-=======
   }, [slug]);
->>>>>>> origin/auto/autonomy-17186719616
-
   if (!service) {
     return (
       <UltraAdvancedFuturisticBackground>
         <div className="min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>
-<<<<<<< HEAD
-            <p className="text-gray-300 mb-8">We 'couldn', 't find the service you were looking for. Explore all services below.</p>
-=======
             <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>
->>>>>>> origin/auto/autonomy-17186719616
             <Button href="/services" variant="quantum" size="lg">Browse Services</Button>
           </div>
         </div>
       </UltraAdvancedFuturisticBackground>
     );
   }
-
   const canonicalUrl = `https://ziontechgroup.com/${slug}`;
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -125,17 +101,12 @@ export default function DynamicServicePage() {
             </h1>
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-4">What you get</h2>
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-<<<<<<< HEAD
-                {service.features.slice(016).map((feati) => (
-=======
                 {service.features.slice(0, 16).map((feat, i) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>
                 ))}
               </ul>
@@ -161,10 +132,8 @@ export default function DynamicServicePage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-
 // Static export support: generate root-level pages for service slugs
 type Svc = typeof enhancedRealMicroSaasServices[number];
-
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices
     .concat(
@@ -184,24 +153,14 @@ function collectAllServices(): Svc[] {
       realVerifiedServices as unknown as Svc[]
     );
 }
-
 function normalizeSlug(value: string): string {
-<<<<<<< HEAD
-  return value.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g', ');
-=======
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 function extractRootSlugFromLink(link?: string): string | null {
   if (!link) return null;
   try {
     const url = new URL(link);
-<<<<<<< HEAD
-    const path = url.pathname.replace(/^\/+|\/+$/g', ');
-=======
     const path = url.pathname.replace(/^\/+|\/+$/g, '');
->>>>>>> origin/auto/autonomy-17186719616
     // Accept root-level slugs like "/ai-energy-management"; ignore nested like "services/..."
     if (path && !path.includes('/')) return path;
     return null;
@@ -209,21 +168,10 @@ function extractRootSlugFromLink(link?: string): string | null {
     return null;
   }
 }
-
 export const getStaticPaths: GetStaticPaths = async () => {
   const services = collectAllServices();
   const candidateSlugs = new Set<string>();
-
   // Gather existing root-level page slugs to avoid conflicts
-<<<<<<< HEAD
-  const pagesDir = path.join(process.cwd()'pages');
-  const staticSlugs = new Set<string>();
-  try {
-    const entries = fs.readdirSync(pagesDir{ withFileTypes: true });
-    for (const entry of entries) {
-      if (entry.isFile() && /\.tsx?$/.test(entry.name)) {
-        const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/i', ');
-=======
   const pagesDir = path.join(process.cwd(), 'pages');
   const staticSlugs = new Set<string>();
   try {
@@ -231,14 +179,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
     for (const entry of entries) {
       if (entry.isFile() && /\.tsx?$/.test(entry.name)) {
         const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/i, '');
->>>>>>> origin/auto/autonomy-17186719616
         if (base !== 'index' && base !== '[slug]' && !base.startsWith('_')) {
           staticSlugs.add(base.toLowerCase());
         }
       }
     }
   } catch {}
-
   for (const s of services) {
     const fromLink = extractRootSlugFromLink((s as any).link);
     const slugCandidate = fromLink || (s.id ? normalizeSlug(s.id) : (s.name ? normalizeSlug(s.name) : ''));
@@ -246,16 +192,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
     if (reservedTopLevelSlugs.has(slugCandidate)) continue; // skip conflicts
     candidateSlugs.add(slugCandidate);
   }
-
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
-
   return {
     paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
     fallback: true
   };
 };
-
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed; the component resolves the service client-side.
   return { props: {} };

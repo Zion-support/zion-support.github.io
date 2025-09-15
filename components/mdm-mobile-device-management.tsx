@@ -1,20 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import Head from 'next/head';
-PhoneMailMapPinCheckArrowRightSmartphone
-=======
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-
 export default function MDMPage() {
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
   if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -33,11 +25,7 @@ export default function MDMPage() {
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-<<<<<<< HEAD
-                {service.features.slice(012).map((feati) => (
-=======
                 {service.features.slice(0, 12).map((feat, i) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /><span>{feat}</span></li>
                 ))}
               </ul>
@@ -49,19 +37,12 @@ export default function MDMPage() {
                   <div className="text-slate-400">{service.trialDays ? `${service.trialDays}-day free trial • ` : ''}Setup: {service.setupTime}</div>
                 </div>
               </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-<<<<<<< HEAD
-=======
               </div>
->>>>>>> origin/auto/autonomy-17186719616
             </div>
           </div>
         </div>
@@ -69,4 +50,3 @@ export default function MDMPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-

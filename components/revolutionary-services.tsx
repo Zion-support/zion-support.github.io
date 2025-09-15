@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-import Head from 'next/head';
-CheckStarZapShieldUsersGlobeArrowRightExternalLinkTrendingUpClockTargetBuildingRocketAwardDollarSignChartBarLockCpuDatabaseCloudSmartphonePaletteSearchMessageSquareFileTextCalendarCreditCardBarChart3SettingsZap as ZapIconCodeBookOpenActivityDatabase as DatabaseIconPlayMailPhoneMapPinFilterGridListChevronDownChevronUpSparklesFlaskConicalDnaCarLeafFactoryTruckMicroscopeGraduationCapShieldCheckBrainAtomGlobe2BotEyeTrophyFlaskConical as FlaskIconDna as DnaIconCar as CarIconLeaf as LeafIconFactory as FactoryIconTruck as TruckIconMicroscope as MicroscopeIconGraduationCap as GraduationCapIconShieldCheck as ShieldCheckIcon
-import Button from '../components/ui/Button';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { revolutionaryMicroSaasServicesrevolutionaryServiceCategoriesgetRevolutionaryServicesByCategorygetPopularRevolutionaryServicesgetRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
-import { motion, AnimatePresence } from 'framer-motion';
-
-export default function RevolutionaryServicesPage() {
-  const [selectedCategorysetSelectedCategory] = useState('All');
-  const [viewModesetViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRangesetPriceRange] = useState('All');
-  const [searchQuerysetSearchQuery] = useState('');
-  const [sortBysetSortBy] = useState('name');
-  const [showFiltersetShowFilters] = useState(false);
-  const [selectedServicesetSelectedService] = useState<any>(null);
-
-  const priceRanges = [
-    { value: ''All', 'label: 'All Prices' },
-    { value: '0-1000'label: '$0 - $1,000' },
-    { value: '1001-2500'label: '$1,001 - $2,500' },
-    { value: '2501-5000'label: '$2,501 - $5,000' },
-    { value: '5001+'label: '$5,001+' }
-  ];
-
-  const sortOptions = [
-    { value: ''name', 'label: 'Name A-Z' },
-    { value: ''price', 'label: 'Price Low-High' },
-    { value: ''popularity', 'label: 'Most Popular' },
-    { value: ''category', 'label: 'Category' },
-    { value: ''roi', 'label: 'Highest ROI' }
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
@@ -41,7 +6,6 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
-
 export default function RevolutionaryServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -50,7 +14,6 @@ export default function RevolutionaryServicesPage() {
   const [sortBy, setSortBy] = useState('name');
   const [showFilters, setShowFilters] = useState(false);
   const [selectedService, setSelectedService] = useState<any>(null);
-
   const priceRanges = [
     { value: 'All', label: 'All Prices' },
     { value: '0-1000', label: '$0 - $1,000' },
@@ -58,35 +21,24 @@ export default function RevolutionaryServicesPage() {
     { value: '2501-5000', label: '$2,501 - $5,000' },
     { value: '5001+', label: '$5,001+' }
   ];
-
   const sortOptions = [
     { value: 'name', label: 'Name A-Z' },
     { value: 'price', label: 'Price Low-High' },
     { value: 'popularity', label: 'Most Popular' },
     { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
->>>>>>> origin/auto/autonomy-17186719616
   ];
-
   // Filter and sort services
   let filteredServices = revolutionaryMicroSaasServices;
-
   // Category filter
   if (selectedCategory !== 'All') {
     filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
   }
-
   // Price range filter
   if (priceRange !== 'All') {
-<<<<<<< HEAD
-    const [minmax] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
-    filteredServices = getRevolutionaryServicesByPriceRange(minmax);
-=======
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(service =>
@@ -96,19 +48,11 @@ export default function RevolutionaryServicesPage() {
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
   }
-
   // Sort services
-<<<<<<< HEAD
-  filteredServices.sort((ab) => {
-    switch (sortBy) {
-      case 'price':
-        return parseFloat(a.price.replace('$', ').replace(',', ')) - parseFloat(b.price.replace('$', ').replace(',', '));
-=======
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
         return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
->>>>>>> origin/auto/autonomy-17186719616
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
@@ -121,16 +65,13 @@ export default function RevolutionaryServicesPage() {
         return a.name.localeCompare(b.name);
     }
   });
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   const popularServices = getPopularRevolutionaryServices();
-
   // Enhanced service categories with better descriptions
   const enhancedCategories = [
     {
@@ -204,7 +145,6 @@ export default function RevolutionaryServicesPage() {
       color: 'from-yellow-500 to-orange-600'
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -214,13 +154,8 @@ export default function RevolutionaryServicesPage() {
       }
     }
   };
-
   const itemVariants = {
-<<<<<<< HEAD
-    hidden: { y: 20opacity: 0 },
-=======
     hidden: { y: 20, opacity: 0 },
->>>>>>> origin/auto/autonomy-17186719616
     visible: {
       y: 0,
       opacity: 1,
@@ -229,31 +164,20 @@ export default function RevolutionaryServicesPage() {
       }
     }
   };
-
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <div className="min-h-screen">
         <Head>
-<<<<<<< HEAD
-          <title>Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AIAutonomous SystemsSpace Technology</title>
-          <meta name="description" content="Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AIautonomous manufacturingspace technologybiomedical researchand cutting-edge solutions. Start your free trial today." />
-          <meta name="keywords" content="revolutionary micro SaaSquantum AIautonomous manufacturingspace technologybiomedical researchquantum cybersecurityblockchainautonomous vehiclesmart energy" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta property="og:title" content="Revolutionary Micro SaaS Services | Zion Tech Group" />
-          <meta property="og:description" content="Cutting-edge micro SaaS platform with quantum AIautonomous systemsand revolutionary technology solutions." />
-=======
           <title>Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI, Autonomous Systems, Space Technology</title>
           <meta name="description" content="Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AI, autonomous manufacturing, space technology, biomedical research, and cutting-edge solutions. Start your free trial today." />
           <meta name="keywords" content="revolutionary micro SaaS, quantum AI, autonomous manufacturing, space technology, biomedical research, quantum cybersecurity, blockchain, autonomous vehicles, smart energy" />
           <meta name="author" content="Zion Tech Group" />
           <meta property="og:title" content="Revolutionary Micro SaaS Services | Zion Tech Group" />
           <meta property="og:description" content="Cutting-edge micro SaaS platform with quantum AI, autonomous systems, and revolutionary technology solutions." />
->>>>>>> origin/auto/autonomy-17186719616
           <meta property="og:url" content="https://ziontechgroup.com/revolutionary-services" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-services" />
         </Head>
-
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 text-center">
@@ -274,29 +198,17 @@ export default function RevolutionaryServicesPage() {
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.2 }}
-              >
-                Experience the future of technology with our revolutionary micro SaaS platform. 
-                Quantum AIautonomous systemspace technologyand cutting-edge solutions that redefine 'what', 's possible.
-=======
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Experience the future of technology with our revolutionary micro SaaS platform. 
                 Quantum AI, autonomous systems, space technology, and cutting-edge solutions that redefine what's possible.
->>>>>>> origin/auto/autonomy-17186719616
               </motion.p>
-              
               {/* Service Count Stats */}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.4 }}
-=======
                 transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
               >
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{revolutionaryMicroSaasServices.length}+</div>
@@ -315,17 +227,12 @@ export default function RevolutionaryServicesPage() {
                   <div className="text-gray-400">Average ROI</div>
                 </div>
               </motion.div>
-
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.6 }}
-=======
                 transition={{ duration: 0.8, delay: 0.6 }}
->>>>>>> origin/auto/autonomy-17186719616
               >
                 <Button 
                   variant="primary" 
@@ -338,11 +245,7 @@ export default function RevolutionaryServicesPage() {
                 <Button 
                   variant="futuristic" 
                   size="lg"
-<<<<<<< HEAD
-                  onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
-=======
                   onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
->>>>>>> origin/auto/autonomy-17186719616
                 >
                   Get Started
                   <Rocket className="ml-2 w-5 h-5" />
@@ -351,7 +254,6 @@ export default function RevolutionaryServicesPage() {
             </div>
           </div>
         </section>
-
         {/* Contact Information Banner */}
         <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20">
           <div className="container mx-auto px-4">
@@ -371,7 +273,6 @@ export default function RevolutionaryServicesPage() {
             </div>
           </div>
         </section>
-
         {/* Category Navigation */}
         <section className="py-12">
           <div className="container mx-auto px-4">
@@ -382,11 +283,7 @@ export default function RevolutionaryServicesPage() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-              {enhancedCategories.map((categoryindex) => (
-=======
               {enhancedCategories.map((category, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={category.name}
                   variants={itemVariants}
@@ -412,7 +309,6 @@ export default function RevolutionaryServicesPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Popular Services Showcase */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -434,7 +330,6 @@ export default function RevolutionaryServicesPage() {
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
               </p>
             </motion.div>
-
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
@@ -442,11 +337,7 @@ export default function RevolutionaryServicesPage() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-              {popularServices.slice(06).map((serviceindex) => (
-=======
               {popularServices.slice(0, 6).map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -465,33 +356,19 @@ export default function RevolutionaryServicesPage() {
                       <div className="text-3xl font-bold text-cyan-400 mb-2">{service.price}</div>
                       <div className="text-sm text-gray-400">{service.period}</div>
                     </div>
-                    
                     <div className="space-y-3 mb-6">
-<<<<<<< HEAD
-                      {service.features.slice(04).map((featureidx) => (
-=======
                       {service.features.slice(0, 4).map((feature, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <div key={idx} className="flex items-center gap-2">
                           <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </div>
                       ))}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                     </div>
-
                     <div className="text-center">
                                                  <Button 
                              variant="primary" 
                              size="md"
-<<<<<<< HEAD
-                             onClick={() => window.open(service.'link', '_blank')}
-=======
                              onClick={() => window.open(service.link, '_blank')}
->>>>>>> origin/auto/autonomy-17186719616
                              className="w-full"
                            >
                              Learn More
@@ -504,7 +381,6 @@ export default function RevolutionaryServicesPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section id="services-grid" className="py-16">
           <div className="container mx-auto px-4">
@@ -528,7 +404,6 @@ export default function RevolutionaryServicesPage() {
                       <option key={category} value={category}>{category}</option>
                     ))}
                   </select>
-                  
                   <select
                     value={priceRange}
                     onChange={(e) => setPriceRange(e.target.value)}
@@ -538,7 +413,6 @@ export default function RevolutionaryServicesPage() {
                       <option key={range.value} value={range.value}>{range.label}</option>
                     ))}
                   </select>
-                  
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
@@ -549,7 +423,6 @@ export default function RevolutionaryServicesPage() {
                     ))}
                   </select>
                 </div>
-                
                 <div className="flex items-center gap-4">
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -561,7 +434,6 @@ export default function RevolutionaryServicesPage() {
                       className="pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64"
                     />
                   </div>
-                  
                   <div className="flex border border-gray-600 rounded-lg overflow-hidden">
                     <button
                       onClick={() => setViewMode('grid')}
@@ -579,7 +451,6 @@ export default function RevolutionaryServicesPage() {
                 </div>
               </div>
             </motion.div>
-
             {/* Services Display */}
             <motion.div 
               className={viewMode === 'grid' 
@@ -591,11 +462,7 @@ export default function RevolutionaryServicesPage() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-              {filteredServices.map((serviceindex) => (
-=======
               {filteredServices.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -615,29 +482,19 @@ export default function RevolutionaryServicesPage() {
                         <p className="text-gray-300 mb-4 text-sm">{service.tagline}</p>
                         <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                         <div className="text-sm text-gray-400 mb-4">{service.period}</div>
-                        
                         <div className="space-y-2 mb-6">
-<<<<<<< HEAD
-                          {service.features.slice(03).map((featureidx) => (
-=======
                           {service.features.slice(0, 3).map((feature, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                             <div key={idx} className="flex items-center gap-2 text-sm">
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                               <span className="text-gray-300">{feature}</span>
                             </div>
                           ))}
                         </div>
-
                         <div className="text-center">
                           <Button 
                             variant="primary" 
                             size="sm"
-<<<<<<< HEAD
-                            onClick={() => window.open(service.'link', '_blank')}
-=======
                             onClick={() => window.open(service.link, '_blank')}
->>>>>>> origin/auto/autonomy-17186719616
                             className="w-full"
                           >
                             Learn More
@@ -660,16 +517,11 @@ export default function RevolutionaryServicesPage() {
                               <div className="text-sm text-gray-400">{service.period}</div>
                             </div>
                           </div>
-                          
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
                               <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features</h4>
                               <div className="space-y-1">
-<<<<<<< HEAD
-                                {service.features.slice(04).map((featureidx) => (
-=======
                                 {service.features.slice(0, 4).map((feature, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                                   <div key={idx} className="flex items-center gap-2 text-sm">
                                     <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                                     <span className="text-gray-300">{feature}</span>
@@ -686,16 +538,11 @@ export default function RevolutionaryServicesPage() {
                               </div>
                             </div>
                           </div>
-                          
                           <div className="flex gap-2">
                                                          <Button 
                                variant="primary" 
                                size="sm"
-<<<<<<< HEAD
-                               onClick={() => window.open(service.'link', '_blank')}
-=======
                                onClick={() => window.open(service.link, '_blank')}
->>>>>>> origin/auto/autonomy-17186719616
                              >
                                Learn More
                                <ExternalLink className="ml-2 w-4 h-4" />
@@ -716,7 +563,6 @@ export default function RevolutionaryServicesPage() {
                 </motion.div>
               ))}
             </motion.div>
-
             {filteredServices.length === 0 && (
               <motion.div 
                 className="text-center py-16"
@@ -730,11 +576,7 @@ export default function RevolutionaryServicesPage() {
                                          <Button 
                            variant="primary"
                            onClick={() => {
-<<<<<<< HEAD
-                             setSearchQuery(', ');
-=======
                              setSearchQuery('');
->>>>>>> origin/auto/autonomy-17186719616
                              setSelectedCategory('All');
                              setPriceRange('All');
                            }}
@@ -745,7 +587,6 @@ export default function RevolutionaryServicesPage() {
             )}
           </div>
         </section>
-
         {/* Service Details Modal */}
         <AnimatePresence>
           {selectedService && (
@@ -779,19 +620,16 @@ export default function RevolutionaryServicesPage() {
                       ×
                     </button>
                   </div>
-
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div>
                       <h3 className="text-xl font-semibold text-cyan-400 mb-4">Service Details</h3>
                       <p className="text-gray-300 mb-6">{selectedService.description}</p>
-                      
                       <div className="space-y-4">
                         <div>
                           <h4 className="text-sm font-semibold text-purple-400 mb-2">Pricing</h4>
                           <div className="text-2xl font-bold text-white">{selectedService.price}{selectedService.period}</div>
                           <div className="text-sm text-gray-400">{selectedService.marketPrice}</div>
                         </div>
-                        
                         <div>
                           <h4 className="text-sm font-semibold text-green-400 mb-2">ROI & Market</h4>
                           <div className="text-sm text-gray-300 space-y-1">
@@ -802,19 +640,13 @@ export default function RevolutionaryServicesPage() {
                         </div>
                       </div>
                     </div>
-
                     <div>
                       <h3 className="text-xl font-semibold text-cyan-400 mb-4">Features & Capabilities</h3>
-                      
                       <div className="space-y-4">
                         <div>
                           <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>
                           <div className="space-y-2">
-<<<<<<< HEAD
-                            {selectedService.features.map((featureidx) => (
-=======
                             {selectedService.features.map((feature, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                               <div key={idx} className="flex items-center gap-2 text-sm">
                                 <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                                 <span className="text-gray-300">{feature}</span>
@@ -822,15 +654,10 @@ export default function RevolutionaryServicesPage() {
                             ))}
                           </div>
                         </div>
-                        
                         <div>
                           <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>
                           <div className="space-y-2">
-<<<<<<< HEAD
-                            {selectedService.benefits.map((benefitidx) => (
-=======
                             {selectedService.benefits.map((benefit, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                               <div key={idx} className="flex items-center gap-2 text-sm">
                                 <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
                                 <span className="text-gray-300">{benefit}</span>
@@ -838,15 +665,10 @@ export default function RevolutionaryServicesPage() {
                             ))}
                           </div>
                         </div>
-                        
                         <div>
                           <h4 className="text-sm font-semibold text-blue-400 mb-2">Capabilities</h4>
                           <div className="space-y-2">
-<<<<<<< HEAD
-                            {selectedService.capabilities.map((capabilityidx) => (
-=======
                             {selectedService.capabilities.map((capability, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                               <div key={idx} className="flex items-center gap-2 text-sm">
                                 <Zap className="w-3 h-3 text-cyan-400 flex-shrink-0" />
                                 <span className="text-gray-300">{capability}</span>
@@ -857,33 +679,23 @@ export default function RevolutionaryServicesPage() {
                       </div>
                     </div>
                   </div>
-
                   <div className="mt-8 pt-6 border-t border-gray-700">
                     <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
                       <div className="text-sm text-gray-400">
                         <div>Setup Time: {selectedService.setupTime}</div>
                         <div>Trial: {selectedService.trialDays} days</div>
                       </div>
-                      
                       <div className="flex gap-4">
                                                  <Button 
                            variant="primary"
-<<<<<<< HEAD
-                           onClick={() => window.open(selectedService.'link', '_blank')}
-=======
                            onClick={() => window.open(selectedService.link, '_blank')}
->>>>>>> origin/auto/autonomy-17186719616
                          >
                            Visit Service
                            <ExternalLink className="ml-2 w-4 h-4" />
                          </Button>
                          <Button 
                            variant="futuristic"
-<<<<<<< HEAD
-                           onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
-=======
                            onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
->>>>>>> origin/auto/autonomy-17186719616
                          >
                            Contact Sales
                            <Mail className="ml-2 w-4 h-4" />
@@ -896,7 +708,6 @@ export default function RevolutionaryServicesPage() {
             </motion.div>
           )}
         </AnimatePresence>
-
         {/* Contact Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
@@ -913,16 +724,11 @@ export default function RevolutionaryServicesPage() {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of companies already transforming their business with our revolutionary micro SaaS services.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                                  <Button 
                    variant="primary" 
                    size="lg"
-<<<<<<< HEAD
-                   onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
-=======
                    onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
->>>>>>> origin/auto/autonomy-17186719616
                  >
                    Start Free Trial
                    <Rocket className="ml-2 w-5 h-5" />
@@ -930,17 +736,12 @@ export default function RevolutionaryServicesPage() {
                  <Button 
                    variant="futuristic" 
                    size="lg"
-<<<<<<< HEAD
-                   onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
-=======
                    onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
->>>>>>> origin/auto/autonomy-17186719616
                  >
                    Schedule Demo
                    <Calendar className="ml-2 w-5 h-5" />
                  </Button>
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div>
                   <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />

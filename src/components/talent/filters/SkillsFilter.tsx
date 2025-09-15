@@ -1,15 +1,7 @@
-
 import { ChevronDown, ChevronUp } from 'lucide-react'
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",
-import { Checkbox } from "@/components/ui/checkbox",
-import { SkillsFilterProps } from "@/types/filters",
-=======
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
->>>>>>> origin/auto/autonomy-17186719616
-
 // Common skills in AI and tech
 const POPULAR_SKILLS = [
   "Machine Learning",
@@ -28,12 +20,7 @@ const POPULAR_SKILLS = [
   "TypeScript",
   "DevOps",
   "Security"
-<<<<<<< HEAD
-],
-=======
 ];
->>>>>>> origin/auto/autonomy-17186719616
-
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -48,7 +35,6 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-      
       {expanded && (
         <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
@@ -70,9 +56,5 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

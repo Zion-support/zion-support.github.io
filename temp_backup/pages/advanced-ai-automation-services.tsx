@@ -3,19 +3,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, 
-  Brain, Sparkles, Users, 
-  BarChart3, Settings, 
-  Award, Code, TestTube, Server, Database, Shield as Shield, Mail
-=======
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, 
   Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, 
   Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
   Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
@@ -176,11 +169,7 @@ export default function AdvancedAIAutomationServices() {
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-=======
               <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
->>>>>>> origin/auto/autonomy-17186719616
                 Explore Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -224,11 +213,7 @@ export default function AdvancedAIAutomationServices() {
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
                     <div className="text-center">
-<<<<<<< HEAD
-                      <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-=======
                       <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
->>>>>>> origin/auto/autonomy-17186719616
                         <feature.icon className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -301,13 +286,8 @@ export default function AdvancedAIAutomationServices() {
                           <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
                           <div className="flex items-center justify-between mb-4">
-<<<<<<< HEAD
-                            <span className="text-2xl font-bold text-white">${service.price.monthly}</span>
-                            <span className="text-gray-400">/month</span>
-=======
                             <span className="text-2xl font-bold text-white">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
->>>>>>> origin/auto/autonomy-17186719616
                           </div>
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                           <div className="space-y-2 mb-6">
@@ -412,11 +392,7 @@ export default function AdvancedAIAutomationServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href={`tel:${contactInfo.mobile}`}
-<<<<<<< HEAD
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-=======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
->>>>>>> origin/auto/autonomy-17186719616
               >
                 <Phone className="mr-2 w-5 h-5" />
                 Call Now: {contactInfo.mobile}

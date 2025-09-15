@@ -1,10 +1,6 @@
 
 import { Button } from "./ui/button";
-<<<<<<< HEAD
-import { TwitterFacebookLinkedinLink } from "@/components/icons";
-=======
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
->>>>>>> origin/auto/autonomy-17186719616
 import { toast } from "./ui/use-toast";
 
 export function SocialShareSection() {
@@ -14,17 +10,6 @@ export function SocialShareSection() {
   
   // Social sharing functions
   const shareToTwitter = () => {
-<<<<<<< HEAD
-    window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`"_blank");
-  };
-  
-  const shareToFacebook = () => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`"_blank");
-  };
-  
-  const shareToLinkedIn = () => {
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`"_blank");
-=======
     window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank");
   };
   
@@ -34,7 +19,6 @@ export function SocialShareSection() {
   
   const shareToLinkedIn = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank");
->>>>>>> origin/auto/autonomy-17186719616
   };
   
   const copyLinkToClipboard = () => {
@@ -42,12 +26,8 @@ export function SocialShareSection() {
       .then(() => {
         toast({
           title: "Link Copied!",
-<<<<<<< HEAD
-          description: "The link has been copied to your clipboard"});
-=======
           description: "The link has been copied to your clipboard",
         });
->>>>>>> origin/auto/autonomy-17186719616
       })
       .catch(() => {
         toast({
@@ -82,12 +62,8 @@ export function SocialShareSection() {
       icon: <Link className="h-5 w-5" />,
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
       onClick: copyLinkToClipboard
-<<<<<<< HEAD
-    }];
-=======
     },
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <section className="py-12 bg-zion-blue">
@@ -98,11 +74,7 @@ export function SocialShareSection() {
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
           <div className="flex flex-wrap gap-3">
-<<<<<<< HEAD
-            {shareLinks.map((linkindex) => (
-=======
             {shareLinks.map((link, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Button
                 key={index}
                 className={`${link.color} text-white`}

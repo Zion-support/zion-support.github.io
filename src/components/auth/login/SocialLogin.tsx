@@ -1,33 +1,14 @@
-
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",
-import { Web3Login } from "./Web3Login",
-import { useState } from "react",
-import { openAuthPopup } from "@/api/authSocial",
-
-export function SocialLogin() {
-  const [isLoading, setIsLoading] = useState(false),
-
-  const handleGoogle = () => {
-    setIsLoading(true),
-    window.location.href = '/auth/google',
-  },
-=======
 import { Button } from "@/components/ui/button";
 import { Web3Login } from "./Web3Login";
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
-
 export function SocialLogin() {
   const [isLoading, setIsLoading] = useState(false);
-
   const handleGoogle = () => {
     setIsLoading(true);
     window.location.href = '/auth/google';
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div className="mt-6">
       <div className="relative">
@@ -38,20 +19,11 @@ export function SocialLogin() {
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>
         </div>
       </div>
-
       <div className="mt-6 grid grid-cols-4 gap-3">
         <Button
-<<<<<<< HEAD
-
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-
-=======
-          type="button"
-          variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
->>>>>>> origin/auto/autonomy-17186719616
           onClick={handleGoogle}
           disabled={isLoading}
         >
@@ -90,9 +62,5 @@ export function SocialLogin() {
         <Web3Login />
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

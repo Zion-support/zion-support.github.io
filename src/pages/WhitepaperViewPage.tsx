@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-import { useRouter } from 'next/router', // Changed from useParams
-import { supabase } from '@/integrations/supabase/client',
-import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel
-import { Button } from '@/components/ui/button',
-import { ArrowLeft } from 'lucide-react'
-import Link from 'next/link', // For a back button, changed from react-router-dom
-import {logErrorToProduction} from '@/utils/productionLogger',
-=======
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useParams
 import { supabase } from '@/integrations/supabase/client';
@@ -16,44 +6,13 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'; // For a back button, changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/auto/autonomy-17186719616
-
-
 // Placeholder for user context/role checking
 // In a real app, this would come from an auth context
 const useAuth = () => {
-<<<<<<< HEAD
-    // const { user } = useUserContext(), // Example from a real app
-    // return { isAdmin: user?.role === 'admin', isAuthenticated: !!user },
-    return { isAdmin: false, isAuthenticated: false }, // Default to non-admin, not authenticated for this example
-},
-
-interface SharedWhitepaper {
-  whitepaper_data: {
-    tokenName: string,
-    tokenSupply: string,
-    sections: Array<{ id: string, title: string, content: string }>,
-    distributionChartData: Array<{ name: string, value: number }>,
-    distributionBreakdown?: string,
-  },
-  created_at: string,
-  is_public: boolean
-}
-
-const WhitepaperViewPage: React.FC = () => {
-  const router = useRouter(),
-  const { id: rawId } = router.query,
-  const id = typeof rawId === 'string' ? rawId : undefined,
-  const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null),
-  const [loading, setLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-  const { isAdmin } = useAuth(), // Get admin status
-=======
     // const { user } = useUserContext(); // Example from a real app
     // return { isAdmin: user?.role === 'admin', isAuthenticated: !!user };
     return { isAdmin: false, isAuthenticated: false }; // Default to non-admin, not authenticated for this example
 };
-
 interface SharedWhitepaper {
   whitepaper_data: {
     tokenName: string;
@@ -65,7 +24,6 @@ interface SharedWhitepaper {
   created_at: string;
   is_public: boolean;
 }
-
 const WhitepaperViewPage: React.FC = () => {
   const router = useRouter();
   const { id: rawId } = router.query;
@@ -74,43 +32,9 @@ const WhitepaperViewPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const { isAdmin } = useAuth(); // Get admin status
->>>>>>> origin/auto/autonomy-17186719616
-
   useEffect(() => {
     const fetchWhitepaper = async () => {
       if (!id) {
-<<<<<<< HEAD
-        setError("No whitepaper ID provided."),
-        setLoading(false),
-        return,
-      }
-      setLoading(true),
-      setError(null),
-      try {
-        const { data: responseData, error: funcError } = await supabase.functions.invoke('get-shared-whitepaper', {
-          body: { id }}),
-
-        if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),
-        if (responseData && (responseData as any).error) throw new Error((responseData as any).error),
-        if (!responseData || !(responseData as any).whitepaper_data) {
-          throw new Error('Shared whitepaper not found or data is invalid.'),
-        }
-
-        setSharedData(responseData as SharedWhitepaper),
-
-      } catch (e: any) {
-        logErrorToProduction('Error fetching shared whitepaper:', { data:  e }),
-        setError(e.message || 'An unexpected error occurred.'),
-      } finally {
-        setLoading(false),
-      }
-    },
-    fetchWhitepaper(),
-  }, [id]),
-
-  if (loading) {
-    return <div className="flex justify-center items-center h-screen"><p>Loading whitepaper...</p></div>,
-=======
         setError("No whitepaper ID provided.");
         setLoading(false);
         return;
@@ -121,15 +45,12 @@ const WhitepaperViewPage: React.FC = () => {
         const { data: responseData, error: funcError } = await supabase.functions.invoke('get-shared-whitepaper', {
           body: { id },
         });
-
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`);
         if (responseData && (responseData as any).error) throw new Error((responseData as any).error);
         if (!responseData || !(responseData as any).whitepaper_data) {
           throw new Error('Shared whitepaper not found or data is invalid.');
         }
-
         setSharedData(responseData as SharedWhitepaper);
-
       } catch (e: any) {
         logErrorToProduction('Error fetching shared whitepaper:', { data:  e });
         setError(e.message || 'An unexpected error occurred.');
@@ -139,12 +60,9 @@ const WhitepaperViewPage: React.FC = () => {
     };
     fetchWhitepaper();
   }, [id]);
-
   if (loading) {
     return <div className="flex justify-center items-center h-screen"><p>Loading whitepaper...</p></div>;
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   if (error) {
     return (
       <div className="flex flex-col justify-center items-center h-screen text-red-600">
@@ -153,13 +71,8 @@ const WhitepaperViewPage: React.FC = () => {
           <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
         </Button>
       </div>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   if (!sharedData) { // Check sharedData which includes the is_public flag
     return (
          <div className="flex flex-col justify-center items-center h-screen">
@@ -168,13 +81,8 @@ const WhitepaperViewPage: React.FC = () => {
               <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
             </Button>
         </div>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   // Access control based on is_public and admin role
   if (!sharedData.is_public && !isAdmin) {
     return (
@@ -185,18 +93,9 @@ const WhitepaperViewPage: React.FC = () => {
           <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
         </Button>
       </div>
-<<<<<<< HEAD
-    ),
-  }
-
-  const { whitepaper_data: whitepaper } = sharedData,
-=======
     );
   }
-
   const { whitepaper_data: whitepaper } = sharedData;
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">
         <div className="mb-6 flex justify-between items-center">
@@ -218,14 +117,6 @@ const WhitepaperViewPage: React.FC = () => {
         tokenSupply={whitepaper.tokenSupply}
       />
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default WhitepaperViewPage,
-=======
   );
 };
-
 export default WhitepaperViewPage;
->>>>>>> origin/auto/autonomy-17186719616

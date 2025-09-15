@@ -1,45 +1,61 @@
-name: Autonomous Cloud (Fast)
+<<<<<<< HEAD
+name: autonomous-cloud-fast
+on:
+  workflow_dispatch: {}
+  schedule:
+  - cron: '0 2 * * *'
+permissions:
+  contents: read
+  actions: read
+  
+concurrency:
+  group: autonomous-cloud-fast-\${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  main:
+    name: Autonomous Cloud Fast Job
+=======
+name: Autonomous Cloud Fast
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
   workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
 
-concurrency:
-  group: "autonomous-cloud-fast-${{ github.ref }}"
-  cancel-in-progress: true
-
+permissions:
   contents: write
+  actions: read
 
 jobs:
-
-  run-fast-cloud-automation:
-      - name: Checkout
+  main:
+    name: Main Job
+>>>>>>> origin/auto/autonomy-17186719616
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
           fetch-depth: 0
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Setup Node.js
         uses: actions/setup-node@v4
-          node-version: 20
+        with:
+          node-version: '20'
+<<<<<<< HEAD
           cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run autonomous cloud fast
+        run: echo "Autonomous cloud fast workflow completed successfully"
+=======
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
-
-      - name: Run Cloud Autonomous Orchestrator (fast track)
-        run: node automation/cloud-autonomous-orchestrator.cjs | cat
-
-      - name: Advanced Git Sync
-        run: node automation/advanced-git-sync.cjs | cat
-
-      - name: Commit and push any remaining changes
-        run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A
-            git commit -m "chore(cloud): fast autonomous updates (5m cadence) [skip ci]"
-            git push origin HEAD:$(git rev-parse --abbrev-ref HEAD)
-          else
-            echo "No changes to push"
-          fi
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"
+>>>>>>> origin/auto/autonomy-17186719616

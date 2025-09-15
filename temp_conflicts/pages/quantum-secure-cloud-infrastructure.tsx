@@ -1,34 +1,9 @@
-<<<<<<< HEAD
-import React from 'react',
-import { motion } from 'framer-motion',
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react',
-import SEO from '../components/SEO',
-
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import SEO from '../components/SEO';
 
-<<<<<<< HEAD
->>>>>>> origin/auto/autonomy-17186719616
-const QuantumSecureCloudInfrastructure: React.FC = () => {
-  const features = [
-    "Quantum-resistant encryption protocols",
-    "Post-quantum cryptography implementation",
-    "Quantum key distribution (QKD)",
-    "Quantum-secure authentication systems",
-    "Quantum-resistant digital signatures",
-    "Quantum-safe communication channels",
-    "Quantum-resistant hash functions",
-    "Quantum-secure access controls",
-    "Quantum-resistant certificate management",
-    "Quantum-safe data transmission"
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const benefits = [
     "Future-proof security against quantum attacks",
@@ -36,21 +11,13 @@ const QuantumSecureCloudInfrastructure: React.FC = () => {
     "Compliance with quantum security regulations",
     "Enhanced data protection",
     "Competitive security advantage"
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const pricing = {
     starter: "$1,499/month",
     professional: "$2,999/month",
     enterprise: "Custom pricing"
-<<<<<<< HEAD
-  },
-=======
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -245,11 +212,7 @@ const QuantumSecureCloudInfrastructure: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-              className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl hover: from-emerald-600 hover:to-teal-600 transition-all duration-300 shadow-2xl shadow-emerald-500/25"
-=======
               className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 shadow-2xl shadow-emerald-500/25"
->>>>>>> origin/auto/autonomy-17186719616
             >
               Secure Your Cloud Today
             </motion.button>
@@ -257,18 +220,11 @@ const QuantumSecureCloudInfrastructure: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  )
-},
-
-export default QuantumSecureCloudInfrastructure,
-=======
   );
 };
 
 export default QuantumSecureCloudInfrastructure;
 =======
->>>>>>> origin/auto/autonomy-17186719616
 export default function QuantumSecureCloudInfrastructure() {
 	return (
 		<ServiceLanding
@@ -287,15 +243,7 @@ export default function QuantumSecureCloudInfrastructure() {
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
-<<<<<<< HEAD
-			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"
-		/>
-	)
-}
-=======
 			url="https://ziontechgroup.com/quantum-secure-cloud-infrastructure"
 		/>
 	);
 }
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
->>>>>>> origin/auto/autonomy-17186719616

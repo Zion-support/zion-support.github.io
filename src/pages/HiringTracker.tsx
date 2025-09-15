@@ -1,19 +1,3 @@
-
-<<<<<<< HEAD
-import { useState } from "react",
-import { useRouter } from "next/router",
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { Briefcase } from 'lucide-react'
-
-function HiringTrackerContent() {
-  const router = useRouter(),
-  const jobId = router.query.jobId as string,
-  const [activeTab, setActiveTab] = useState<string>("kanban"),
-=======
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
@@ -22,13 +6,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from 'lucide-react'
-
 function HiringTrackerContent() {
   const router = useRouter();
   const jobId = router.query.jobId as string;
   const [activeTab, setActiveTab] = useState<string>("kanban");
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <>
       <SEO 
@@ -47,38 +28,26 @@ function HiringTrackerContent() {
             </p>
           </div>
         </div>
-
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
           <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
-          
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
           </TabsContent>
-          
           <TabsContent value="analytics" className="mt-6">
             <HiringAnalytics jobId={jobId} />
           </TabsContent>
         </Tabs>
       </main>
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

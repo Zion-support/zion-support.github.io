@@ -1,27 +1,11 @@
-
-<<<<<<< HEAD
-import React from "react",
-import { QrCodeIcon } from 'lucide-react'
-import { AppStoreButtons } from "./AppStoreButtons",
-import { logInfo } from '@/utils/productionLogger',
-=======
 import React from "react";
 import { QrCodeIcon } from 'lucide-react'
 import { AppStoreButtons } from "./AppStoreButtons";
 import { logInfo } from '@/utils/productionLogger';
->>>>>>> origin/auto/autonomy-17186719616
-
 export const DownloadSection: React.FC = () => {
-
   // These would typically come from environment variables or a config
-<<<<<<< HEAD
-  const appStoreUrl = "#", // Replace with actual App Store URL when available
-  const googlePlayUrl = "#", // Replace with actual Google Play URL when available
-=======
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
   const googlePlayUrl = "#"; // Replace with actual Google Play URL when available
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -32,7 +16,6 @@ export const DownloadSection: React.FC = () => {
               <p className="text-lg text-gray-300 mb-8">
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.
               </p>
-              
               <AppStoreButtons 
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
@@ -40,17 +23,11 @@ export const DownloadSection: React.FC = () => {
                 onAppStoreClick={() => logInfo("App Store button clicked")}
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />
-              
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
                 <p>Free download, in-app purchases available</p>
               </div>
-<<<<<<< HEAD
-              <p className="text-center text-xs mt-2 text-zion-blue-dark">Scan to download</p>
-=======
->>>>>>> origin/auto/autonomy-17186719616
             </div>
-            
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                 <QrCodeIcon className="w-full h-full p-2" />
@@ -62,10 +39,5 @@ export const DownloadSection: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

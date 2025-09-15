@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import { useEffect, useMemo, useState } from 'react',
-import type { BlogPost } from '@/utils/types/blog',
-=======
 import { useEffect, useMemo, useState } from 'react';
 import type { BlogPost } from '@/utils/types/blog';
->>>>>>> origin/auto/autonomy-17186719616
 
 const emptyPost: Partial<BlogPost> = {
   title: '',
@@ -15,50 +10,6 @@ const emptyPost: Partial<BlogPost> = {
   topics: [],
   seo: { metaTitle: '', metaDescription: '', ogImageUrl: '' },
   body: '',
-<<<<<<< HEAD
-  status: 'draft'},
-
-export default function AdminBlog() {
-  const [token, setToken] = useState(''),
-  const [posts, setPosts] = useState<BlogPost[]>([]),
-  const [editing, setEditing] = useState<Partial<BlogPost>>(emptyPost),
-
-  useEffect(() => {
-    const t = localStorage.getItem('adminToken') || '',
-    setToken(t),
-    fetch('/api/blog/posts?status=draft').then((r) => r.json()).then((d) => setPosts(d.items || [])).catch(() => {}),
-    fetch('/api/blog/posts?status=published').then((r) => r.json()).then((d) => setPosts((p) => [...p, ...(d.items || [])])).catch(() => {}),
-  }, []),
-
-  const saveToken = () => {
-    localStorage.setItem('adminToken', token),
-  },
-
-  const save = async (publish = false) => {
-    const payload = { ...editing, status: publish ? 'published' : (editing.status || 'draft') } as Partial<BlogPost>,
-    const isCreate = !payload.id,
-    const res = await fetch(isCreate ? '/api/blog/posts' : `/api/blog/posts/${payload.id}`, {
-      method: isCreate ? 'POST' : 'PUT',
-      headers: { 'Content-Type': 'application/jsonx-admin-token': token },
-      body: JSON.stringify(payload)}),
-    if (res.ok) {
-      const saved = await res.json(),
-      setEditing(saved),
-      // refresh list
-      const list = await fetch('/api/blog/posts').then((r) => r.json()),
-      setPosts(list.items || []),
-      alert('Saved'),
-    } else {
-      const err = await res.json().catch(() => ({})),
-      alert('Error: ' + (err.error || res.statusText))
-    }
-  },
-
-  const startEdit = (p?: BlogPost) => {
-    if (p) setEditing(p),
-    else setEditing({ ...emptyPost }),
-  },
-=======
   status: 'draft',
 };
 
@@ -103,7 +54,6 @@ export default function AdminBlog() {
     if (p) setEditing(p);
     else setEditing({ ...emptyPost });
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="mx-auto max-w-5xl">
@@ -136,13 +86,8 @@ export default function AdminBlog() {
             <input className="border rounded px-3 py-2" placeholder="Cover Image URL" value={editing.coverImageUrl || ''} onChange={(e) => setEditing((s) => ({ ...s, coverImageUrl: e.target.value }))} />
             <input className="border rounded px-3 py-2" placeholder="Author" value={editing.author || ''} onChange={(e) => setEditing((s) => ({ ...s, author: e.target.value }))} />
             <input type="date" className="border rounded px-3 py-2" value={(editing.publishDate || '').slice(0, 10)} onChange={(e) => setEditing((s) => ({ ...s, publishDate: new Date(e.target.value).toISOString() }))} />
-<<<<<<< HEAD
-            <input className="border rounded px-3 py-2" placeholder="Tags (comma separated)" value={(editing.tags || []).join()} onChange={(e) => setEditing((s) => ({ ...s, tags: e.target.value.split(',').map((x) => x.trim()).filter(Boolean) }))} />
-            <input className="border rounded px-3 py-2" placeholder="Topics (comma separated)" value={(editing.topics || []).join()} onChange={(e) => setEditing((s) => ({ ...s, topics: e.target.value.split(',').map((x) => x.trim()).filter(Boolean) }))} />
-=======
             <input className="border rounded px-3 py-2" placeholder="Tags (comma separated)" value={(editing.tags || []).join(', ')} onChange={(e) => setEditing((s) => ({ ...s, tags: e.target.value.split(',').map((x) => x.trim()).filter(Boolean) }))} />
             <input className="border rounded px-3 py-2" placeholder="Topics (comma separated)" value={(editing.topics || []).join(', ')} onChange={(e) => setEditing((s) => ({ ...s, topics: e.target.value.split(',').map((x) => x.trim()).filter(Boolean) }))} />
->>>>>>> origin/auto/autonomy-17186719616
             <input className="border rounded px-3 py-2" placeholder="SEO Meta Title" value={editing.seo?.metaTitle || ''} onChange={(e) => setEditing((s) => ({ ...s, seo: { ...(s.seo || {} as any), metaTitle: e.target.value } }))} />
             <input className="border rounded px-3 py-2" placeholder="SEO Meta Description" value={editing.seo?.metaDescription || ''} onChange={(e) => setEditing((s) => ({ ...s, seo: { ...(s.seo || {} as any), metaDescription: e.target.value } }))} />
           </div>
@@ -155,9 +100,5 @@ export default function AdminBlog() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

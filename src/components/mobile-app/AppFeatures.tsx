@@ -1,14 +1,6 @@
-
-<<<<<<< HEAD
-import React from "react",
-import { Brain, Clock, Award, Zap } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-=======
 import React from "react";
 import { Brain, Clock, Award, Zap } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
-
 const features = [
   {
     icon: <Brain className="h-10 w-10 text-zion-cyan" />,
@@ -23,17 +15,6 @@ const features = [
   {
     icon: <Award className="h-10 w-10 text-zion-cyan" />,
     title: "Resume Builder",
-<<<<<<< HEAD
-
-    description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
-  },
-  {
-    icon: <Zap className="h - 10 w - 10 text - zion - cyan" />,
-    title: "Real - time Notifications",
-    description: "Get instant alerts about new job opportunities, messages, and hiring requests.";
-  }
-],
-=======
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
   },
   {
@@ -42,8 +23,6 @@ const features = [
     description: "Get instant alerts about new job opportunities, messages, and hiring requests." 
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616
-
 export const AppFeatures: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -54,13 +33,6 @@ export const AppFeatures: React.FC = () => {
             Everything you love about Zion, now in your pocket. Our mobile app brings all the powerful features you need to succeed.
           </p>
         </div>
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover: border-zion-cyan transition-colors duration-300">              <CardHeader>
-=======
->>>>>>> origin/auto/autonomy-17186719616
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover:border-zion-cyan transition-colors duration-300">
@@ -76,10 +48,5 @@ export const AppFeatures: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

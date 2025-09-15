@@ -1,26 +1,12 @@
-<<<<<<< HEAD
-import React from 'react',
-import { format } from 'date-fns',
-import { PaperclipIcon } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { Message } from '@/types/messaging',
-
-interface MessageBubbleProps {
-  message: Message,
-  isUserMessage: boolean
-=======
 import React from 'react';
 import { format } from 'date-fns';
 import { PaperclipIcon } from 'lucide-react'
 import { cn } from '@/lib/utils';
 import { Message } from '@/types/messaging';
-
 interface MessageBubbleProps {
   message: Message;
   isUserMessage: boolean;
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
     <div className={cn(
@@ -34,7 +20,6 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
           : "bg-zion-blue-dark text-white"
       )}>
         <div className="whitespace-pre-wrap">{message.content}</div>
-        
         {message.attachment_url && (
           <a 
             href={message.attachment_url}
@@ -46,15 +31,10 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
             {message.attachment_name || 'Attachment'}
           </a>
         )}
-        
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

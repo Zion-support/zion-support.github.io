@@ -1,26 +1,8 @@
-
-<<<<<<< HEAD
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
-import { toast } from '@/hooks/use-toast',
-
-interface AIEnhancementButtonProps {
-  options: AIEnhancementOptions,
-  onEnhanced: (enhancedContent: string) => void,
-  buttonText?: string,
-  className?: string,
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
-  size?: "default" | "sm" | "lg" | "icon",
-  contentLength?: number
-=======
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 import { toast } from '@/hooks/use-toast';
-
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions;
   onEnhanced: (enhancedContent: string) => void;
@@ -29,9 +11,7 @@ interface AIEnhancementButtonProps {
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   contentLength?: number;
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export function AIEnhancementButton({
   options,
   onEnhanced,
@@ -41,16 +21,9 @@ export function AIEnhancementButton({
   size = "sm",
   contentLength = 10
 }: AIEnhancementButtonProps) {
-<<<<<<< HEAD
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
-  const [showActions, setShowActions] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null),
-=======
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const [showActions, setShowActions] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<string | null>(null);
->>>>>>> origin/auto/autonomy-17186719616
-  
   const handleEnhance = async () => {
     if ((!options.content || options.content.trim().length < contentLength) && 
         (!options.context || options.context.trim().length < contentLength)) {
@@ -58,51 +31,15 @@ export function AIEnhancementButton({
         title: "Not enough content",
         description: `Please enter at least ${contentLength} characters before enhancing.`,
         variant: "destructive"
-<<<<<<< HEAD
-      }),
-      return,
-    }
-    
-    const enhancedContent = await enhanceContent(options),
-    
-    if (enhancedContent) {
-      setGeneratedContent(enhancedContent),
-      setShowActions(true),
-    }
-  },
-  
-  const handleAccept = () => {
-    if (generatedContent) {
-      onEnhanced(generatedContent),
-      setShowActions(false),
-      setGeneratedContent(null),
-      toast({
-        title: "Content applied",
-        description: "AI-enhanced content has been applied."}),
-    }
-  },
-  
-  const handleRegenerate = async () => {
-    await handleEnhance(),
-  },
-  
-  const handleCancel = () => {
-    setShowActions(false),
-    setGeneratedContent(null),
-  },
-=======
       });
       return;
     }
-    
     const enhancedContent = await enhanceContent(options);
-    
     if (enhancedContent) {
       setGeneratedContent(enhancedContent);
       setShowActions(true);
     }
   };
-  
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent);
@@ -114,17 +51,13 @@ export function AIEnhancementButton({
       });
     }
   };
-  
   const handleRegenerate = async () => {
     await handleEnhance();
   };
-  
   const handleCancel = () => {
     setShowActions(false);
     setGeneratedContent(null);
   };
->>>>>>> origin/auto/autonomy-17186719616
-  
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -158,23 +91,14 @@ export function AIEnhancementButton({
           variant="ghost"
           size="sm"
           onClick={handleCancel}
-<<<<<<< HEAD
-          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20"
-=======
           className="text-gray-500 hover:text-gray-700 hover:bg-gray-100/20"
->>>>>>> origin/auto/autonomy-17186719616
         >
           <X className="h-4 w-4 mr-1" />
           Cancel
         </Button>
       </div>
-<<<<<<< HEAD
-    )
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
-  
   return (
     <Button
       type="button"
@@ -189,14 +113,7 @@ export function AIEnhancementButton({
       ) : (
         <Sparkles className="h-4 w-4" />
       )}
-<<<<<<< HEAD
-
-      <span className="text-xs">{buttonText}</span>
-    </Button>
-  ),
-=======
       <span className="text-xs">{buttonText}</span>
     </Button>
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

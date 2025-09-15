@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-export default function AIAutonomousResearchAssistantPage() {return (;
-export default function AIAutonomousResearchAssistantPage() {;
-  return (;
-    <div className="min-h-screen bg-white">;
-
-export default /**
- * AIAutonomousResearchAssistantPage - Function description
- */
-function AIAutonomousResearchAssistantPage() {
-  return (
-    <div className="min - h-screen bg - white">;
-
-export default function AIAutonomousResearchAssistantPage() {;
-  return (;
-=======
 
 
 =======
@@ -609,4 +592,3 @@ export default function AIAutonomousResearchAssistantPage() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

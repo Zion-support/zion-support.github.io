@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { 
-  FileText, CheckCircle, AlertTriangle, Shield, Users, 
-  Globe, Lock, Database, Info, AlertCircle
-} from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
-
-export default function TermsPage() {
-  const lastUpdated = 'January 15, 2025',
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -24,37 +10,26 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 export default function TermsPage() {
   const lastUpdated = 'January 15, 2025';
->>>>>>> origin/auto/autonomy-17186719616
 
   const sections = [
     {
       title: 'Acceptance of Terms',
       icon: <CheckCircle className="w-6 h-6" />,
       content: [
-<<<<<<< HEAD
-        'By accessing or using our services, you agree to be bound by these termsIf you do not agree to these terms, do not use our services',
-        'We may modify these terms at any time with noticeContinued use after changes constitutes acceptance of new terms'
-=======
         'By accessing or using our services, you agree to be bound by these terms',
         'If you do not agree to these terms, do not use our services',
         'We may modify these terms at any time with notice',
         'Continued use after changes constitutes acceptance of new terms'
->>>>>>> origin/auto/autonomy-17186719616
       ]
     },
     {
       title: 'Service Description',
       icon: <Info className="w-6 h-6" />,
       content: [
-<<<<<<< HEAD
-        'AI and machine learning platforms and servicesQuantum computing solutions and infrastructure',
-        'Cybersecurity and data protection servicesConsulting and professional services',
-=======
         'AI and machine learning platforms and services',
         'Quantum computing solutions and infrastructure',
         'Cybersecurity and data protection services',
         'Consulting and professional services',
->>>>>>> origin/auto/autonomy-17186719616
         'Technical support and maintenance'
       ]
     },
@@ -62,15 +37,10 @@ export default function TermsPage() {
       title: 'User Responsibilities',
       icon: <Users className="w-6 h-6" />,
       content: [
-<<<<<<< HEAD
-        'Provide accurate and complete informationMaintain security of your account credentials',
-        'Comply with applicable laws and regulationsUse services for lawful purposes only',
-=======
         'Provide accurate and complete information',
         'Maintain security of your account credentials',
         'Comply with applicable laws and regulations',
         'Use services for lawful purposes only',
->>>>>>> origin/auto/autonomy-17186719616
         'Respect intellectual property rights'
       ]
     },
@@ -78,15 +48,10 @@ export default function TermsPage() {
       title: 'Intellectual Property',
       icon: <Shield className="w-6 h-6" />,
       content: [
-<<<<<<< HEAD
-        'Our services and content are protected by copyrightYou retain rights to your data and content',
-        'You grant us license to use your content for service provisionNo transfer of intellectual property rights',
-=======
         'Our services and content are protected by copyright',
         'You retain rights to your data and content',
         'You grant us license to use your content for service provision',
         'No transfer of intellectual property rights',
->>>>>>> origin/auto/autonomy-17186719616
         'Respect for third-party intellectual property'
       ]
     },
@@ -94,15 +59,10 @@ export default function TermsPage() {
       title: 'Privacy and Data',
       icon: <Lock className="w-6 h-6" />,
       content: [
-<<<<<<< HEAD
-        'Collection and use of data as described in Privacy PolicyImplementation of appropriate security measures',
-        'Compliance with data protection regulationsData retention and deletion policies',
-=======
         'Collection and use of data as described in Privacy Policy',
         'Implementation of appropriate security measures',
         'Compliance with data protection regulations',
         'Data retention and deletion policies',
->>>>>>> origin/auto/autonomy-17186719616
         'Your rights regarding your personal data'
       ]
     },
@@ -110,14 +70,6 @@ export default function TermsPage() {
       title: 'Limitation of Liability',
       icon: <AlertTriangle className="w-6 h-6" />,
       content: [
-<<<<<<< HEAD
-        'Services provided "as is" without warrantiesLimitation of liability to extent permitted by law',
-        'No liability for indirect or consequential damagesForce majeure events and circumstances',
-        'Your responsibility for backup and data protection'
-      ]
-    }
-  ],
-=======
         'Services provided "as is" without warranties',
         'Limitation of liability to extent permitted by law',
         'No liability for indirect or consequential damages',
@@ -126,7 +78,6 @@ export default function TermsPage() {
       ]
     }
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -177,13 +128,8 @@ export default function TermsPage() {
           >
             <h2 className="text-3xl font-bold text-white mb-6">Agreement to Terms</h2>
             <p className="text-gray-300 leading-relaxed mb-6">
-<<<<<<< HEAD
-              These Terms of Service ("Terms") govern your use of Zion Tech Group's services, including our website, 
-              applications, and any related services (collectively, the "Services").
-=======
               These Terms of Service (&quot;Terms&quot;) govern your use of Zion Tech Group&apos;s services, including our website, 
               applications, and any related services (collectively, the &quot;Services&quot;).
->>>>>>> origin/auto/autonomy-17186719616
             </p>
             <p className="text-gray-300 leading-relaxed">
               By accessing or using our Services, you agree to be bound by these Terms. If you disagree with any part 
@@ -333,11 +279,7 @@ export default function TermsPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Questions About These Terms?</h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-              We're here to help clarify any questions you may have about our terms of service.
-=======
               We&apos;re here to help clarify any questions you may have about our terms of service.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -367,9 +309,5 @@ export default function TermsPage() {
 
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

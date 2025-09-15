@@ -1,24 +1,15 @@
 name: Homepage Auto-Updater
-
 on:
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
-
 permissions:
   contents: write
-<<<<<<< HEAD
-
-concurrency:
-  group: homepage-updater
-=======
   pull-requests: write
   actions: read
 concurrency:
   group: "cursor-rules-auto-update-${{ github.ref }}"
->>>>>>> origin/auto/autonomy-17186719616
   cancel-in-progress: true
-
 jobs:
   update-homepage:
     runs-on: ubuntu-latest

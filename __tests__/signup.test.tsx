@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import signup from '../components/signup';
-
-describe('signup', () => {
-  test('renders without crashing', () => {
-    render(<signup />);
-    expect(screen.getByTestId('signup')).toBeInTheDocument();
-  });
-  
-  test('displays correct content', () => {
-    render(<signup />);
-  });
-  
-  test('handles user interactions', () => {
-    render(<signup />);
-  });
-  
-  test('applies correct styling', () => {
-    render(<signup />);
-  });
-});
-=======
 import { render, screen, fireEvent } from @testing-library/react';import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider';import Signup from @/src/pages/Signup';import * as toastHook from @/hooks/use-toast';import { useRouter } from next/router';import { vi, expect, test } from vitest';import mockNextRouter from next-router-mock';
 vi.mock('@/hooks/useAuth', () => ({'  useAuth: () => ({
     loginWithGoogle: vi.fn(),
@@ -76,4 +51,3 @@ test('successful registration redirects to dashboard', async () => {'  const nav
   fireEvent.submit(screen.getByRole('button', { name: /create account/i }));
   await screen.findByRole('button', { name: /create account/i });  expect(toastHook.toast.success).toHaveBeenCalledWith('Welcome to ZionAI 🎉');  expect(localStorage.getItem('token')).toBe('jwt');  expect(navigateMock).toHaveBeenCalledWith('/dashboard');});
 
->>>>>>> origin/auto/autonomy-17186719616

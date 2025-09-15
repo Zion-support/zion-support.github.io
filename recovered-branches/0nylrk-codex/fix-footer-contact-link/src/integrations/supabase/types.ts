@@ -38,12 +38,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       analytics_events: {
         Row: {
@@ -80,12 +76,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       api_keys: {
         Row: {
@@ -131,12 +123,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       api_logs: {
         Row: {
@@ -189,12 +177,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       certifications: {
         Row: {
@@ -237,12 +221,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       content: {
         Row: {
@@ -291,12 +271,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       contract_templates: {
         Row: {
@@ -333,12 +309,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       education: {
         Row: {
@@ -393,12 +365,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       fraud_detection_reports: {
         Row: {
@@ -511,12 +479,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       hire_requests: {
         Row: {
@@ -702,12 +666,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       jobs: {
         Row: {
@@ -756,12 +716,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       milestone_activities: {
         Row: {
@@ -808,12 +764,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       notification_preferences: {
         Row: {
@@ -847,12 +799,8 @@ export type Database = {
             isOneToOne: true
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       notifications: {
         Row: {
@@ -895,12 +843,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       partner_payouts: {
         Row: {
@@ -943,12 +887,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       partner_profiles: {
         Row: {
@@ -1006,12 +946,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       partner_referral_links: {
         Row: {
@@ -1054,12 +990,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       portfolio_projects: {
         Row: {
@@ -1108,12 +1040,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       profiles: {
         Row: {
@@ -1187,12 +1115,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "whitelabel_tenants"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       project_milestones: {
         Row: {
@@ -1248,12 +1172,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       project_notes: {
         Row: {
@@ -1291,12 +1211,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       projects: {
         Row: {
@@ -1359,12 +1275,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       quote_requests: {
         Row: {
@@ -1444,12 +1356,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       referral_codes: {
         Row: {
@@ -1480,12 +1388,8 @@ export type Database = {
             isOneToOne: true
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       referral_rewards: {
         Row: {
@@ -1539,12 +1443,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       referrals: {
         Row: {
@@ -1623,12 +1523,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       reminder_logs: {
         Row: {
@@ -1668,12 +1564,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       resume_skills: {
         Row: {
@@ -1710,12 +1602,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       review_reports: {
         Row: {
@@ -1759,12 +1647,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "reviews"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       reviews: {
         Row: {
@@ -1842,12 +1726,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       scheduled_jobs: {
         Row: {
@@ -1926,12 +1806,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       talent_resumes: {
         Row: {
@@ -1971,12 +1847,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       tenant_administrators: {
         Row: {
@@ -2011,12 +1883,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       user_onboarding: {
         Row: {
@@ -2107,12 +1975,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       user_privacy_settings: {
         Row: {
@@ -2143,12 +2007,8 @@ export type Database = {
             isOneToOne: true
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       webhook_configs: {
         Row: {
@@ -2194,12 +2054,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       whitelabel_tenants: {
         Row: {
@@ -2257,12 +2113,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
       work_history: {
         Row: {
@@ -2314,12 +2166,8 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-          }]
-=======
           },
         ]
->>>>>>> origin/auto/autonomy-17186719616
       }
     }
     Views: {
@@ -2483,10 +2331,6 @@ export type Database = {
   }
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 type DefaultSchema = Database[Extract<keyof Database, "public">]
 
 export type Tables<
@@ -2600,13 +2444,8 @@ export const Constants = {
         "jobs:write",
         "talent:read",
         "quotes:write",
-<<<<<<< HEAD
-
-        "webhooks:manage"],
-=======
         "webhooks:manage",
       ],
->>>>>>> origin/auto/autonomy-17186719616
       fraud_severity: ["safe", "suspicious", "dangerous"],
       quote_request_status: [
         "new",
@@ -2614,14 +2453,9 @@ export const Constants = {
         "accepted",
         "responded",
         "closed",
-<<<<<<< HEAD
-        "archived"],
-      referral_status: ["pending", "completed", "expired"]}}} as const
-=======
         "archived",
       ],
       referral_status: ["pending", "completed", "expired"],
     },
   },
 } as const
->>>>>>> origin/auto/autonomy-17186719616

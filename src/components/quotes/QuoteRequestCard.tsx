@@ -1,47 +1,22 @@
-
-<<<<<<< HEAD
-import React from "react",
-import { format } from "date-fns",
-import { 
-  Card,
-=======
 import React from "react";
 import { format } from "date-fns";
 import { 
   Card, 
->>>>>>> origin/auto/autonomy-17186719616
   CardContent, 
   CardHeader, 
   CardTitle, 
   CardDescription
-<<<<<<< HEAD
-} from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes",
-
-type QuoteRequestCardProps = {
-  quote: QuoteRequest,
-  onViewDetails: (quote: QuoteRequest) => void,
-  onMarkAsResponded?: (id: string) => void,
-  onToggleArchive: (id: string, isArchived: boolean) => void
-},
-=======
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
-
 type QuoteRequestCardProps = {
   quote: QuoteRequest;
   onViewDetails: (quote: QuoteRequest) => void;
   onMarkAsResponded?: (id: string) => void;
   onToggleArchive: (id: string, isArchived: boolean) => void;
 };
->>>>>>> origin/auto/autonomy-17186719616
-
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote,
   onViewDetails,
@@ -51,21 +26,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   // Format date for display
   const formatDate = (dateString: string) => {
     try {
-<<<<<<< HEAD
-      return format(new Date(dateString), 'PP'),
-    } catch (e) {
-      return dateString,
-    }
-  }
-  },
-=======
       return format(new Date(dateString), 'PP');
     } catch (e) {
       return dateString;
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -84,24 +49,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           <span className="text-white font-medium">From: </span>
           {quote.requester_name}
         </div>
-<<<<<<< HEAD
         <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
-=======
->>>>>>> origin/auto/autonomy-17186719616
-        
-        <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
-        
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
         </div>
-<<<<<<< HEAD
-
-    <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
-        
         <div className="flex justify-between items-center mt-4">
           <Button
             variant="outline"
@@ -112,7 +64,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
             <Eye className="h-4 w-4" />
             View Details
           </Button>
-          
           <div className="flex items-center">
             {quote.status !== 'responded' && onMarkAsResponded && (
               <Button
@@ -125,7 +76,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
                 Mark Responded
               </Button>
             )}
-            
             <Button
               variant="ghost"
               size="sm"
@@ -142,10 +92,5 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

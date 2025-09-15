@@ -1,252 +1,4 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
-=======
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
-
-const ProductsPage: NextPage = () => {
-  const products = [
-    // AI & Automation Tools
-    {
-      category: "AI & Automation Tools",
-      products: [
-        {
-          name: "ZionAI Analytics Platform",
-          description: "Enterprise-grade AI-powered analytics platform for real-time business intelligence and predictive insights.",
-          features: ["Real-time data processing", "AI-powered forecasting", "Custom dashboards", "API integration", "Multi-tenant support"],
-          pricing: "$299/month",
-          link: "https://ziontechgroup.com/products/ai-analytics",
-          icon: "🤖",
-          type: "SAAS Platform"
-        },
-        {
-          name: "SmartBot Builder",
-          description: "No-code chatbot development platform with advanced NLP capabilities and multi-channel deployment.",
-          features: ["Visual bot builder", "Multi-language support", "Integration APIs", "Analytics dashboard", "Custom training"],
-          pricing: "$99/month",
-          link: "https://ziontechgroup.com/products/smartbot-builder",
-          icon: "💬",
-          type: "SAAS Tool"
-        },
-        {
-          name: "AutoML Studio",
-          description: "Automated machine learning platform for building and deploying ML models without coding expertise.",
-          features: ["Drag-and-drop interface", "Auto-model selection", "One-click deployment", "Performance monitoring", "Model versioning"],
-          pricing: "$199/month",
-          link: "https://ziontechgroup.com/products/automl-studio",
-          icon: "🧠",
-          type: "SAAS Platform"
-        }
-      ]
-    },
-    // Cloud & Infrastructure Solutions
-    {
-      category: "Cloud & Infrastructure Solutions",
-      products: [
-        {
-          name: "CloudCost Optimizer",
-          description: "Intelligent cloud cost management and optimization platform for multi-cloud environments.",
-          features: ["Cost tracking", "Resource optimization", "Budget alerts", "Multi-cloud support", "ROI analysis"],
-          pricing: "$149/month",
-          link: "https://ziontechgroup.com/products/cloudcost-optimizer",
-          icon: "☁️",
-          type: "SAAS Tool"
-        },
-        {
-          name: "DevOps Pipeline Manager",
-          description: "Comprehensive CI/CD pipeline management platform with automated testing and deployment.",
-          features: ["Pipeline automation", "Git integration", "Testing automation", "Deployment tracking", "Performance metrics"],
-          pricing: "$179/month",
-          link: "https://ziontechgroup.com/products/devops-pipeline",
-          icon: "🔄",
-          type: "SAAS Platform"
-        },
-        {
-          name: "InfraGuard Security",
-          description: "Cloud infrastructure security monitoring and threat detection platform.",
-          features: ["Real-time monitoring", "Threat detection", "Compliance reporting", "Security scoring", "Incident response"],
-          pricing: "$249/month",
-          link: "https://ziontechgroup.com/products/infraguard",
-          icon: "🛡️",
-          type: "SAAS Security"
-        }
-      ]
-    },
-    // Data & Analytics Products
-    {
-      category: "Data & Analytics Products",
-      products: [
-        {
-          name: "DataFlow Pipeline",
-          description: "Enterprise data pipeline orchestration platform for ETL processes and real-time streaming.",
-          features: ["Visual pipeline builder", "Real-time processing", "Data quality checks", "Scalable architecture", "Monitoring dashboard"],
-          pricing: "$399/month",
-          link: "https://ziontechgroup.com/products/dataflow-pipeline",
-          icon: "📊",
-          type: "SAAS Platform"
-        },
-        {
-          name: "InsightHub BI",
-          description: "Business intelligence platform with interactive dashboards and advanced analytics capabilities.",
-          features: ["Interactive dashboards", "Data visualization", "Report automation", "KPI tracking", "Mobile access"],
-          pricing: "$199/month",
-          link: "https://ziontechgroup.com/products/insighthub-bi",
-          icon: "📈",
-          type: "SAAS BI Tool"
-        },
-        {
-          name: "DataVault Manager",
-          description: "Secure data warehouse management platform with advanced security and compliance features.",
-          features: ["Data encryption", "Access controls", "Audit logging", "Compliance reporting", "Backup automation"],
-          pricing: "$299/month",
-          link: "https://ziontechgroup.com/products/datavault-manager",
-          icon: "🗄️",
-          type: "SAAS Platform"
-        }
-      ]
-    },
-    // Web & Mobile Development Tools
-    {
-      category: "Web & Mobile Development Tools",
-      products: [
-        {
-          name: "AppBuilder Pro",
-          description: "Low-code mobile app development platform for creating native and cross-platform applications.",
-          features: ["Visual app builder", "Cross-platform support", "Template library", "API integration", "App store deployment"],
-          pricing: "$129/month",
-          link: "https://ziontechgroup.com/products/appbuilder-pro",
-          icon: "📱",
-          type: "SAAS Development Tool"
-        },
-        {
-          name: "WebFlow Accelerator",
-          description: "Rapid web application development platform with pre-built components and templates.",
-          features: ["Component library", "Template marketplace", "Drag-and-drop builder", "Responsive design", "SEO optimization"],
-          pricing: "$89/month",
-          link: "https://ziontechgroup.com/products/webflow-accelerator",
-          icon: "🌐",
-          type: "SAAS Development Tool"
-        },
-        {
-          name: "API Gateway Pro",
-          description: "Enterprise API management platform with security, monitoring, and developer portal features.",
-          features: ["API security", "Rate limiting", "Analytics dashboard", "Developer portal", "Documentation tools"],
-          pricing: "$159/month",
-          link: "https://ziontechgroup.com/products/api-gateway",
-          icon: "🔌",
-          type: "SAAS Platform"
-        }
-      ]
-    },
-    // Security & Compliance Tools
-    {
-      category: "Security & Compliance Tools",
-      products: [
-        {
-          name: "SecureScan Pro",
-          description: "Automated security scanning and vulnerability assessment platform for applications and infrastructure.",
-          features: ["Automated scanning", "Vulnerability database", "Compliance reporting", "Remediation guidance", "Integration APIs"],
-          pricing: "$199/month",
-          link: "https://ziontechgroup.com/products/securescan-pro",
-          icon: "🔍",
-          type: "SAAS Security Tool"
-        },
-        {
-          name: "Compliance Manager",
-          description: "Comprehensive compliance management platform for GDPR, SOC 2, HIPAA, and other standards.",
-          features: ["Compliance tracking", "Audit preparation", "Policy management", "Risk assessment", "Reporting tools"],
-          pricing: "$299/month",
-          link: "https://ziontechgroup.com/products/compliance-manager",
-          icon: "📋",
-          type: "SAAS Compliance Tool"
-        },
-        {
-          name: "IdentityGuard",
-          description: "Advanced identity and access management platform with multi-factor authentication and SSO.",
-          features: ["Multi-factor auth", "Single sign-on", "Role-based access", "Audit logging", "Integration APIs"],
-          pricing: "$179/month",
-          link: "https://ziontechgroup.com/products/identityguard",
-          icon: "🔐",
-          type: "SAAS Security Platform"
-        }
-      ]
-    },
-    // Blockchain & Emerging Tech
-    {
-      category: "Blockchain & Emerging Tech",
-      products: [
-        {
-          name: "Blockchain Studio",
-          description: "Comprehensive blockchain development platform for creating DApps and smart contracts.",
-          features: ["Smart contract builder", "DApp templates", "Blockchain integration", "Testing tools", "Deployment automation"],
-          pricing: "$399/month",
-          link: "https://ziontechgroup.com/products/blockchain-studio",
-          icon: "⛓️",
-          type: "SAAS Development Platform"
-        },
-        {
-          name: "IoT Platform Pro",
-          description: "Enterprise IoT platform for managing connected devices and collecting sensor data.",
-          features: ["Device management", "Data collection", "Real-time monitoring", "Analytics dashboard", "Alert system"],
-          pricing: "$249/month",
-          link: "https://ziontechgroup.com/products/iot-platform",
-          icon: "🌐",
-          type: "SAAS IoT Platform"
-        },
-        {
-          name: "AR/VR Creator",
-          description: "Platform for building immersive augmented and virtual reality experiences.",
-          features: ["3D model library", "Interactive builder", "Multi-platform support", "Performance optimization", "Analytics tools"],
-          pricing: "$299/month",
-          link: "https://ziontechgroup.com/products/ar-vr-creator",
-          icon: "🥽",
-          type: "SAAS Development Tool"
-        }
-      ]
-    },
-    // Business & Productivity Tools
-    {
-      category: "Business & Productivity Tools",
-      products: [
-        {
-          name: "ProjectFlow Manager",
-          description: "Advanced project management platform with AI-powered insights and team collaboration features.",
-          features: ["Task management", "Team collaboration", "AI insights", "Resource planning", "Progress tracking"],
-          pricing: "$79/month",
-          link: "https://ziontechgroup.com/products/projectflow-manager",
-          icon: "📋",
-          type: "SAAS Project Management"
-        },
-        {
-          name: "Customer360 CRM",
-          description: "Comprehensive customer relationship management platform with AI-powered analytics.",
-          features: ["Contact management", "Sales tracking", "Marketing automation", "AI insights", "Integration APIs"],
-          pricing: "$149/month",
-          link: "https://ziontechgroup.com/products/customer360-crm",
-          icon: "👥",
-          type: "SAAS CRM Platform"
-        },
-        {
-          name: "Workflow Automation Hub",
-          description: "No-code workflow automation platform for business process optimization.",
-          features: ["Visual workflow builder", "Integration connectors", "Automation templates", "Analytics dashboard", "Custom triggers"],
-          pricing: "$119/month",
-          link: "https://ziontechgroup.com/products/workflow-automation",
-          icon: "⚙️",
-          type: "SAAS Automation Tool"
-        }
-      ]
-    }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50">
@@ -361,11 +113,7 @@ const ProductsPage: NextPage = () => {
           <div className="flex justify-center gap-4 mb-8">
             <Link 
               href="/contact"
-<<<<<<< HEAD
-              className="bg-green-600 hover: bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-=======
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
->>>>>>> origin/auto/autonomy-17186719616
             >
               Start Free Trial
             </Link>
@@ -393,34 +141,18 @@ const ProductsPage: NextPage = () => {
         </div>
       </main>
     </div>
-<<<<<<< HEAD
-  )
-},
-
-export default ProductsPage,
-import React from 'react',
-=======
   );
 };
 
 export default ProductsPage;
 =======
 import React from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function ProductsIndexPage() {
   return (
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Products</h1>
-<<<<<<< HEAD
-      <p className="mt-2 text-gray-600 dark: text-gray-300">Browse Zion products.</p>
-    </div>
-  )
-}
-=======
       <p className="mt-2 text-gray-600 dark:text-gray-300">Browse Zion products.</p>
     </div>
   );
 }
->>>>>>> 3c1dda747d3aa200ea8a4e49d78b84af83a4d328
->>>>>>> origin/auto/autonomy-17186719616

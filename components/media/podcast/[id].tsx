@@ -1,20 +1,9 @@
-<<<<<<< HEAD
-"use client";
-import React{ useEffectuseState } from 'react';
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import { useRouter } from 'next/router';
-
 export default function EpisodePage() {
   const router = useRouter();
   const { id } = router.query as { id?: string };
-<<<<<<< HEAD
-  const [episodesetEpisode] = useState<any>(null);
-=======
   const [episode, setEpisode] = useState<any>(null);
->>>>>>> origin/auto/autonomy-17186719616
-
   useEffect(() => {
     if (!id) return;
     (async () => {
@@ -22,14 +11,8 @@ export default function EpisodePage() {
       const data = await res.json();
       setEpisode(data.episode);
     })();
-<<<<<<< HEAD
-  }[id]);
-=======
   }, [id]);
->>>>>>> origin/auto/autonomy-17186719616
-
   if (!episode) return <div>Loading…</div>;
-
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-bold">{episode.title}</h1>

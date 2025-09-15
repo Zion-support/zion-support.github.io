@@ -8,11 +8,7 @@ import { cn } from "@/lib/utils"
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
-<<<<<<< HEAD
->(({ classNamechildren...props }ref) => (
-=======
 >(({ className, children, ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <NavigationMenuPrimitive.Root
     ref={ref}
     className={cn(
@@ -30,11 +26,7 @@ NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName
 const NavigationMenuList = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>
-<<<<<<< HEAD
->(({ className...props }ref) => (
-=======
 >(({ className, ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <NavigationMenuPrimitive.List
     ref={ref}
     className={cn(
@@ -55,17 +47,10 @@ const navigationMenuTriggerStyle = cva(
 const NavigationMenuTrigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
-<<<<<<< HEAD
->(({ classNamechildren...props }ref) => (
-  <NavigationMenuPrimitive.Trigger
-    ref={ref}
-    className={cn(navigationMenuTriggerStyle()"group"className)}
-=======
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger
     ref={ref}
     className={cn(navigationMenuTriggerStyle(), "group", className)}
->>>>>>> origin/auto/autonomy-17186719616
     {...props}
   >
     {children}{" "}
@@ -80,11 +65,7 @@ NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName
 const NavigationMenuContent = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
-<<<<<<< HEAD
->(({ className...props }ref) => (
-=======
 >(({ className, ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
@@ -101,11 +82,7 @@ const NavigationMenuLink = NavigationMenuPrimitive.Link
 const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
-<<<<<<< HEAD
->(({ className...props }ref) => (
-=======
 >(({ className, ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <div className={cn("absolute left-0 top-full flex justify-center")}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
@@ -123,11 +100,7 @@ NavigationMenuViewport.displayName =
 const NavigationMenuIndicator = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator>
-<<<<<<< HEAD
->(({ className...props }ref) => (
-=======
 >(({ className, ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <NavigationMenuPrimitive.Indicator
     ref={ref}
     className={cn(
@@ -151,9 +124,5 @@ export {
   NavigationMenuTrigger,
   NavigationMenuLink,
   NavigationMenuIndicator,
-<<<<<<< HEAD
-  NavigationMenuViewport}
-=======
   NavigationMenuViewport,
 }
->>>>>>> origin/auto/autonomy-17186719616

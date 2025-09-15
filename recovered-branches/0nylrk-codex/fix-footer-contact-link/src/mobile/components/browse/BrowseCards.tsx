@@ -1,19 +1,10 @@
 
-<<<<<<< HEAD
-import React{ useState } from "react";
-import { CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { BookmarkCheckChevronRightMapPinClockDollarSign } from "lucide-react";
-import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
-=======
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
->>>>>>> origin/auto/autonomy-17186719616
 
 interface BrowseItem {
   id: string;
@@ -34,23 +25,14 @@ interface BrowseCardsProps {
   onViewDetails: (id: string) => void;
 }
 
-<<<<<<< HEAD
-export function BrowseCards({ itemstypeonViewDetails }: BrowseCardsProps) {
-  const [savedItemsetSavedItems] = useState<string[]>([]);
-=======
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]);
->>>>>>> origin/auto/autonomy-17186719616
   
   const toggleSaved = (id: string) => {
     setSavedItems(prev => 
       prev.includes(id) 
         ? prev.filter(itemId => itemId !== id)
-<<<<<<< HEAD
-        : [...previd]
-=======
         : [...prev, id]
->>>>>>> origin/auto/autonomy-17186719616
     );
   };
   
@@ -91,11 +73,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
               </div>
               
               <div className="mt-3 flex flex-wrap gap-1">
-<<<<<<< HEAD
-                {item.badges.map((badgeindex) => (
-=======
                 {item.badges.map((badge, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <Badge 
                     key={index} 
                     variant="outline" 

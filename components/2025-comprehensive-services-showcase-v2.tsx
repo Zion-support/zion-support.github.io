@@ -2,38 +2,21 @@ import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  BrainShieldCheckCircleZap,
-  ArrowRightCheckStarTrendingUpUsers,
-  GlobeLockCloudSmartphoneBuildingPhoneMailMapPin
-} from 'lucide-react';
-
-// Import our new 2025 V2 innovative services
-// import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
-// import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
-// import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
-// import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2';
-// import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
-=======
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Star, TrendingUp, Users,
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
 } from 'lucide-react';
-
 // Import our new 2025 V2 innovative services
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
 import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
 import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2';
 import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
->>>>>>> origin/auto/autonomy-17186719616
-
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 }
 };
-
 const staggerContainer = {
   animate: {
     transition: {
@@ -41,64 +24,14 @@ const staggerContainer = {
     }
   }
 };
-
 export default function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [
-<<<<<<< HEAD
-    // ...innovativeMicroSaas2025ExpansionV2,
-    // ...innovativeITServices2025ExpansionV2,
-    // ...innovativeAIServices2025ExpansionV2,
-    // ...industrySpecificSolutions2025V2,
-    // ...emergingTechBreakthroughs2025V2
-  ];
-
-  const serviceCategories = [
-    // {
-    //   id: 'micro-saas',
-    //   name: 'Innovative Micro SAAS',
-    //   icon: <Smartphone className="w-8 h-8" />,
-    //   color: 'from-blue-500 to-cyan-500',
-    //   services: innovativeMicroSaas2025ExpansionV2,
-    //   description: 'Cutting-edge micro SAAS solutions for modern businesses'
-    // },
-    // {
-    //   id: 'it-infrastructure',
-    //   name: 'IT Infrastructure Services',
-    //   icon: <Cloud className="w-8 h-8" />,
-    //   color: 'from-purple-500 to-pink-500',
-    //   services: innovativeITServices2025ExpansionV2,
-    //   description: 'Advanced IT infrastructure and security solutions'
-    // },
-    // {
-    //   id: 'ai-services',
-    //   name: 'AI & Machine Learning',
-    //   icon: <Brain className="w-8 h-8" />,
-    //   color: 'from-green-500 to-emerald-500',
-    //   services: innovativeAIServices2025ExpansionV2,
-    //   description: 'Intelligent AI solutions for business transformation'
-    // },
-    // {
-    //   id: 'industry-solutions',
-    //   name: 'Industry Solutions',
-    //   icon: <Building className="w-8 h-8" />,
-    //   color: 'from-orange-500 to-red-500',
-    //   services: industrySpecificSolutions2025V2,
-    //   description: 'Specialized solutions for specific industries'
-    // },
-    {
-      id: 'emerging-tech',
-      name: 'Emerging Technology',
-      icon: <Brain className="w-8 h-8" />,
-      color: 'from-indigo-500 to-purple-500',
-      services: [] as any[],
-=======
     ...innovativeMicroSaas2025ExpansionV2,
     ...innovativeITServices2025ExpansionV2,
     ...innovativeAIServices2025ExpansionV2,
     ...industrySpecificSolutions2025V2,
     ...emergingTechBreakthroughs2025V2
   ];
-
   const serviceCategories = [
     {
       id: 'micro-saas',
@@ -138,30 +71,21 @@ export default function ComprehensiveServicesShowcase2025V2() {
       icon: <Atom className="w-8 h-8" />,
       color: 'from-indigo-500 to-purple-500',
       services: emergingTechBreakthroughs2025V2,
->>>>>>> origin/auto/autonomy-17186719616
       description: 'Breakthrough technologies of the future'
     }
   ];
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
         title="2025 Comprehensive Services Showcase V2 | Zion Tech Group"
-<<<<<<< HEAD
-        description="Discover our comprehensive portfolio of innovative micro SAASIT infrastructureAI servicesindustry solutionsand emerging technology breakthroughs. Transform your business with cutting-edge solutions."
-        keywords="micro SAASIT infrastructureAI servicesindustry solutionsemerging technologyZion Tech Group"
-=======
         description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions."
         keywords={["micro SAAS", "IT infrastructure", "AI services", "industry solutions", "emerging technology", "Zion Tech Group"]}
->>>>>>> origin/auto/autonomy-17186719616
       />
-      
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
@@ -179,27 +103,16 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.2 }}
-          >
-            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS
-            IT infrastructureAI servicesindustry solutionsand emerging technology breakthroughs.
-=======
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Experience the future of technology with our revolutionary portfolio of innovative micro SAAS, 
             IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
->>>>>>> origin/auto/autonomy-17186719616
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.4 }}
-=======
             transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
           >
             <a 
               href="#services" 
@@ -216,7 +129,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section id="contact" className="py-16 px-4 bg-black/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -234,11 +146,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            transition={{ duration: 0.6delay: 0.2 }}
-=======
             transition={{ duration: 0.6, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
           >
             <div className="text-center">
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -258,7 +166,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.div>
         </div>
       </section>
-
       {/* Services by Category */}
       <section id="services" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -271,7 +178,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           >
             Our Comprehensive Service Portfolio
           </motion.h2>
-          
           <motion.div 
             className="space-y-20"
             variants={staggerContainer}
@@ -292,7 +198,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                     {category.description}
                   </p>
                 </div>
-                
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service) => (
                     <motion.div
@@ -306,7 +211,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       <p className="text-gray-300 mb-4">
                         {service.description}
                       </p>
-                      
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center text-sm text-cyan-400">
                           <TrendingUp className="w-4 h-4 mr-2" />
@@ -317,7 +221,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                           {service.growthRate}
                         </div>
                       </div>
-                      
                       <div className="mb-6">
                         <div className="text-2xl font-bold text-white mb-2">
                           Starting at {(service as any).pricing?.starter || service.price}
@@ -329,7 +232,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                           }
                         </div>
                       </div>
-                      
                       <a
                         href={`/services/${service.slug}`}
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
@@ -344,7 +246,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.div>
         </div>
       </section>
-
       {/* Market Statistics */}
       <section className="py-20 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto">
@@ -357,17 +258,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
           >
             Market Impact & Growth
           </motion.h2>
-          
           <motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            transition={{ duration: 0.6delay: 0.2 }}
-=======
             transition={{ duration: 0.6, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
           >
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">25+</div>
@@ -388,7 +284,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -406,11 +301,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            transition={{ duration: 0.6delay: 0.2 }}
-=======
             transition={{ duration: 0.6, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
           >
             Join thousands of businesses already transforming their operations with our cutting-edge solutions.
           </motion.p>
@@ -419,11 +310,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            transition={{ duration: 0.6delay: 0.4 }}
-=======
             transition={{ duration: 0.6, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
           >
             <a 
               href={`mailto:${contactInfo.email}`}

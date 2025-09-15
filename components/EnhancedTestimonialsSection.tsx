@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-StarQuoteUsersAwardTrendingUpCheckCircle
-=======
 import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
-
 interface Testimonial {
   id: string;
   name: string;
@@ -15,7 +10,6 @@ interface Testimonial {
   avatar: string;
   category: string;
 }
-
 const EnhancedTestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
@@ -73,37 +67,20 @@ const EnhancedTestimonialsSection: React.FC = () => {
       name: 'Robert Kim',
       title: 'Head of Digital Transformation',
       company: 'Global Innovations Corp',
-<<<<<<< HEAD
-      content: 'Implementing Zion Tech Group\'s AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departmentsleading to 35% faster market response and 28% cost optimization.',
-=======
       content: 'Implementing Zion Tech Group\'s AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departments, leading to 35% faster market response and 28% cost optimization.',
->>>>>>> origin/auto/autonomy-17186719616
       rating: 5,
       avatar: 'RK',
       category: 'AI & Analytics'
     }
   ];
-
   const stats = [
-<<<<<<< HEAD
-    { number: '500+'label: 'Projects 'Delivered', 'icon: CheckCircle },
-    { number: '50+'label: 'Enterprise 'Clients', 'icon: Users },
-    { number: '99.9%'label: 'Client 'Satisfaction', 'icon: Award },
-    { number: '4.9/5'label: 'Average 'Rating', 'icon: Star }
-  ];
-
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }(_i) => (
-=======
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle },
     { number: '50+', label: 'Enterprise Clients', icon: Users },
     { number: '99.9%', label: 'Client Satisfaction', icon: Award },
     { number: '4.9/5', label: 'Average Rating', icon: Star }
   ];
-
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -112,7 +89,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
       />
     ));
   };
-
   return (
     <section className="py-24 px-6 relative overflow-hidden">
       {/* Background */}
@@ -120,7 +96,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]" />
       </div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
@@ -133,14 +108,9 @@ const EnhancedTestimonialsSection: React.FC = () => {
             Discover why leading companies trust Zion Tech Group to transform their business with cutting-edge technology solutions
           </p>
         </div>
-
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-<<<<<<< HEAD
-          {stats.map((statindex) => (
-=======
           {stats.map((stat, index) => (
->>>>>>> origin/auto/autonomy-17186719616
             <div key={index} className="text-center group">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <stat.icon className="w-10 h-10 text-blue-400" />
@@ -150,7 +120,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
@@ -162,19 +131,16 @@ const EnhancedTestimonialsSection: React.FC = () => {
               <div className="absolute top-4 right-4 text-blue-400/20 group-hover:text-blue-400/40 transition-colors duration-300">
                 <Quote className="w-8 h-8" />
               </div>
-
               {/* Content */}
               <div className="p-8">
                 {/* Rating */}
                 <div className="flex items-center gap-1 mb-4">
                   {renderStars(testimonial.rating)}
                 </div>
-
                 {/* Testimonial Text */}
                 <p className="text-white/80 text-sm leading-relaxed mb-6">
                   "{testimonial.content}"
                 </p>
-
                 {/* Author Info */}
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
@@ -186,7 +152,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
                     <div className="text-xs text-blue-400">{testimonial.company}</div>
                   </div>
                 </div>
-
                 {/* Category Badge */}
                 <div className="mt-4">
                   <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
@@ -194,22 +159,11 @@ const EnhancedTestimonialsSection: React.FC = () => {
                   </span>
                 </div>
               </div>
-
               {/* Hover Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
             </div>
           ))}
         </div>
-
-<<<<<<< HEAD
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20">
@@ -218,11 +172,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
             </h3>
             <p className="text-white/70 mb-6 max-w-2xl mx-auto">
               Experience the same transformative results that our clients have achieved. 
-<<<<<<< HEAD
-              'Let', 's discuss how Zion Tech Group can accelerate your innovation journey.
-=======
               Let's discuss how Zion Tech Group can accelerate your innovation journey.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -240,7 +190,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Trust Indicators */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-8 text-white/60 text-sm">
@@ -256,22 +205,10 @@ const EnhancedTestimonialsSection: React.FC = () => {
               <Users className="w-4 h-4 text-purple-400" />
               <span>Global support</span>
             </div>
-<<<<<<< HEAD
-
-            <button
-              onClick={nextTestimonial}
-              onMouseEnter={() => setIsAutoPlaying(false)}
-              className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-300"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-=======
->>>>>>> origin/auto/autonomy-17186719616
           </div>
         </div>
       </div>
     </section>
   );
 };
-
 export default EnhancedTestimonialsSection;

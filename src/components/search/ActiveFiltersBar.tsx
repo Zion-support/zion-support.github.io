@@ -1,26 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { X } from 'lucide-react';
-
-interface Filter {
-  key: string;
-  value: string;
-  label: string;
-}
-
-interface ActiveFiltersBarProps {
-  filters: Filter[];
-  onRemoveFilter: (key: string) => void;
-  onClearAll: () => void;
-}
-
-export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: ActiveFiltersBarProps) {
-  if (filters.length === 0) {
-=======
 import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-
 interface SearchFilters {
   types: string[];
   category: string;
@@ -29,14 +10,12 @@ interface SearchFilters {
   minRating: number;
   sort: string;
 }
-
 interface ActiveFiltersBarProps {
   filters: SearchFilters;
   onFiltersChange: (filters: SearchFilters) => void;
   onClearAll: () => void;
   className?: string;
 }
-
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
   filters,
   onFiltersChange,
@@ -44,7 +23,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
   className = ''
 }) => {
   const activeFilters: Array<{ key: string; label: string; value: string }> = [];
-
   // Add type filters
   filters.types.forEach(type => {
     const labels: Record<string, string> = {
@@ -60,7 +38,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       value: labels[type] || type
     });
   });
-
   // Add category filter
   if (filters.category) {
     activeFilters.push({
@@ -69,7 +46,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       value: filters.category
     });
   }
-
   // Add price filter
   if (filters.minPrice > 0 || filters.maxPrice < 10000) {
     activeFilters.push({
@@ -78,7 +54,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       value: `$${filters.minPrice} - $${filters.maxPrice}`
     });
   }
-
   // Add rating filter
   if (filters.minRating > 0) {
     activeFilters.push({
@@ -87,7 +62,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       value: `${filters.minRating}+ stars`
     });
   }
-
   // Add sort filter (only if not default)
   if (filters.sort !== 'relevance') {
     const sortLabels: Record<string, string> = {
@@ -101,7 +75,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       value: sortLabels[filters.sort] || filters.sort
     });
   }
-
   const removeFilter = (filterKey: string) => {
     if (filterKey.startsWith('type-')) {
       const typeToRemove = filterKey.replace('type-', '');
@@ -117,45 +90,12 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       onFiltersChange({ ...filters, sort: 'relevance' });
     }
   };
-
   if (activeFilters.length === 0) {
->>>>>>> origin/auto/autonomy-17186719616
     return null;
   }
-
   return (
-<<<<<<< HEAD
-    <div className="flex flex-wrap items-center gap-2 p-4 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light/20">
-      <span className="text-sm text-zion-slate-light mr-2">Active filters:</span>
-
-      {filters.map((filter) => (
-        <div
-          key={filter.key}
-          className="inline-flex items-center gap-2 px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30"
-        >
-          <span>{filter.label}: {filter.value}</span>
-          <button
-            onClick={() => onRemoveFilter(filter.key)}
-            className="hover:bg-zion-cyan/30 rounded-full p-1 transition-colors"
-          >
-            <X className="w-3 h-3" />
-          </button>
-        </div>
-      ))}
-
-      <button
-        onClick={onClearAll}
-        className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors underline"
-      >
-        Clear all
-      </button>
-    </div>
-  );
-}
-=======
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
-      
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
@@ -176,7 +116,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
           </Button>
         </Badge>
       ))}
-
       <Button
         variant="ghost"
         size="sm"
@@ -188,6 +127,4 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     </div>
   );
 };
-
 export default ActiveFiltersBar;
->>>>>>> origin/auto/autonomy-17186719616

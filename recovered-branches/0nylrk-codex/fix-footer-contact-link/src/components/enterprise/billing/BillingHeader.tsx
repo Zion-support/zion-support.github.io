@@ -1,11 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { DownloadFileTextMailBarChart3 } from "lucide-react";
-=======
 import { Download, FileText, Mail, BarChart3 } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 import { Link } from "react-router-dom";
 
 export function BillingHeader() {
@@ -31,11 +27,7 @@ export function BillingHeader() {
         </div>
       </div>
       <p className="text-muted-foreground">
-<<<<<<< HEAD
-        Manage your subscriptionview invoice historyand update payment methods.
-=======
         Manage your subscription, view invoice history, and update payment methods.
->>>>>>> origin/auto/autonomy-17186719616
       </p>
     </div>
   );

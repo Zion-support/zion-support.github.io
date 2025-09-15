@@ -1,38 +1,9 @@
-
-<<<<<<< HEAD
-import React from "react",
-=======
 import React from "react";
->>>>>>> origin/auto/autonomy-17186719616
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
-
 const features = [
   {
     title: "Private Hiring Portal",
     description: "Create a secure, private hiring portal accessible only to your team members.",
-<<<<<<< HEAD
-    icon: Shield},
-  {
-    title: "Dedicated Talent Pool",
-    description: "Access to a curated pool of pre-vetted talent matched to your industry and needs.",
-    icon: Users},
-  {
-    title: "Custom SLA",
-    description: "Get guaranteed response times and dedicated support with our custom SLAs.",
-    icon: Award},
-  {
-    title: "Branded Onboarding",
-    description: "Customize the onboarding experience with your company branding and messaging.",
-    icon: Briefcase},
-  {
-    title: "Admin Dashboards",
-    description: "Powerful analytics and management tools for team leaders and administrators.",
-    icon: Settings},
-  {
-    title: "Global Access",
-    description: "Connect with talent across multiple regions with localized interfaces.",
-    icon: Globe}],
-=======
     icon: Shield,
   },
   {
@@ -61,8 +32,6 @@ const features = [
     icon: Globe,
   },
 ];
->>>>>>> origin/auto/autonomy-17186719616
-
 export function EnterpriseFeatures() {
   return (
     <section id="features" className="py-20 px-4 md:px-6 bg-muted/50">
@@ -75,14 +44,9 @@ export function EnterpriseFeatures() {
             Our enterprise solutions offer powerful tools designed for large teams and complex hiring needs
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
             <div
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
               key={feature.title}
               className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md"
             >
@@ -96,9 +60,5 @@ export function EnterpriseFeatures() {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

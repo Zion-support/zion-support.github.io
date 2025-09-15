@@ -4,13 +4,8 @@ import { UseFormReturn } from "react-hook-form";
 import { AppMetadataValues } from "./MetadataManager";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
-import { CardHeaderCardTitleCardContent } from "@/components/ui/card";
-import { FormControlFormDescriptionFormFieldFormItemFormLabelFormMessage } from "@/components/ui/form";
-=======
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
->>>>>>> origin/auto/autonomy-17186719616
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
 
@@ -19,11 +14,7 @@ interface MetadataFormProps {
 }
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
-<<<<<<< HEAD
-  const { controlregisterwatchsetValue } = form;
-=======
   const { control, register, watch, setValue } = form;
->>>>>>> origin/auto/autonomy-17186719616
   const keywords = watch("keywords");
   const platform = watch("platform");
   
@@ -33,11 +24,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       const value = e.currentTarget.value.trim();
       
       if (value && !keywords.includes(value)) {
-<<<<<<< HEAD
-        setValue("keywords"[...keywordsvalue]);
-=======
         setValue("keywords", [...keywords, value]);
->>>>>>> origin/auto/autonomy-17186719616
         e.currentTarget.value = "";
       }
     }
@@ -132,11 +119,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
               />
               
               <div className="flex flex-wrap gap-2 mt-2">
-<<<<<<< HEAD
-                {keywords.map((keywordindex) => (
-=======
                 {keywords.map((keyword, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
                     {keyword}
                     <button 
@@ -162,11 +145,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
                     <Input 
-<<<<<<< HEAD
-                      placeholder="e.g.1.0.0"
-=======
                       placeholder="e.g., 1.0.0"
->>>>>>> origin/auto/autonomy-17186719616
                       {...field}
                     />
                   </FormControl>

@@ -1,24 +1,10 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> origin/auto/autonomy-17186719616
 import { 
   Code, Search, FileText, Database, Server, Shield, 
   Brain, Rocket, Globe, ArrowRight, Copy, Check,
   Download, Bookmark, Share2, Clock, User, Tag,
   Zap, Lock, Globe2, Cpu
-<<<<<<< HEAD
-} from 'lucide-react',
-import Link from 'next/link',
-
-const APIDocs: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedAPI, setSelectedAPI] = useState('all'),
-  const [copiedEndpoint, setCopiedEndpoint] = useState(''),
-=======
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -26,7 +12,6 @@ const APIDocs: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedAPI, setSelectedAPI] = useState('all');
   const [copiedEndpoint, setCopiedEndpoint] = useState('');
->>>>>>> origin/auto/autonomy-17186719616
 
   const apiCategories = [
     { id: 'all', name: 'All APIs', icon: <Code className="w-4 h-4" /> },
@@ -35,11 +20,7 @@ const APIDocs: React.FC = () => {
     { id: 'space', name: 'Space Technology', icon: <Rocket className="w-4 h-4" /> },
     { id: 'metaverse', name: 'Metaverse', icon: <Globe className="w-4 h-4" /> },
     { id: 'security', name: 'Security', icon: <Shield className="w-4 h-4" /> }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const apis = [
     {
@@ -122,11 +103,7 @@ const APIDocs: React.FC = () => {
       icon: <Shield className="w-8 h-8" />,
       color: 'from-yellow-500 to-orange-500'
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const authenticationMethods = [
     {
@@ -147,11 +124,7 @@ const APIDocs: React.FC = () => {
       example: 'Authorization: Bearer JWT_TOKEN',
       security: 'High'
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const rateLimits = [
     {
@@ -172,11 +145,7 @@ const APIDocs: React.FC = () => {
       burst: 'Custom',
       description: 'High-volume enterprise applications'
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const codeExamples = [
     {
@@ -202,28 +171,6 @@ print(f"Consciousness Level: {result['consciousness_score']}")`
     {
       language: 'JavaScript',
       title: 'Quantum Circuit Execution',
-<<<<<<< HEAD
-      code: `const axios = require('axios'),
-
-const url = 'https://api.ziontechgroup.com/quantum/v1/circuit/execute',
-const headers = {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-},
-
-const data = {
-    qubits: 2,
-    gates: ['HCNOT', 'H'],
-    measurements: [0, 1]
-},
-
-axios.post(url, data, { headers })
-    .then(response => {
-        // // // console.log('Result:', response.data.result),
-    })
-    .catch(error => {
-        console.error('Error:', error.response.data),
-    }),`
-=======
       code: `const axios = require('axios');
 
 const url = 'https://api.ziontechgroup.com/quantum/v1/circuit/execute';
@@ -245,7 +192,6 @@ axios.post(url, data, { headers })
     .catch(error => {
         console.error('Error:', error.response.data);
     });`
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       language: 'cURL',
@@ -262,24 +208,6 @@ axios.post(url, data, { headers })
     "analysis_type": "mineral_detection"
   }'`
     }
-<<<<<<< HEAD
-  ],
-
-  const filteredAPIs = apis.filter(api => {
-    if (selectedAPI === 'all') return true,
-    return api.category === selectedAPI,
-  }),
-
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text),
-    setCopiedEndpoint(text),
-    setTimeout(() => setCopiedEndpoint(''), 2000),
-  },
-
-export default function ApiDocs() {
-	return (
-		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
-=======
   ];
 
   const filteredAPIs = apis.filter(api => {
@@ -296,7 +224,6 @@ export default function ApiDocs() {
 export default function ApiDocs() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
->>>>>>> origin/auto/autonomy-17186719616
 			<Head>
 				<title>API Docs | Zion Tech Group</title>
 				<link rel="canonical" href="https://ziontechgroup.com/api-docs" />
@@ -306,9 +233,5 @@ export default function ApiDocs() {
 				<p className="text-slate-300">See the <a className="text-cyan-400 underline" href="/api-documentation">API Reference</a> for full details. This page exists to support existing links.</p>
 			</div>
 		</div>
-<<<<<<< HEAD
-	)
-=======
 	);
->>>>>>> origin/auto/autonomy-17186719616
 }

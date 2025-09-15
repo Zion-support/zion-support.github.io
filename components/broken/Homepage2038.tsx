@@ -4,36 +4,20 @@ import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038'
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  ArrowRightStar
-  BrainAtomShieldZapTrendingUpGlobe,
-  RocketTargetCpuCloudLockUsersAward,
-  CheckCircleSparklesInfinityZap as Lightning
-=======
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe,
   Rocket, Target, Cpu, Cloud, Lock, Users, Award,
   CheckCircle, Sparkles, Infinity, Zap as Lightning
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
-
 // Import new services
 import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services';
 import { innovative2038ITServices } from '../data/innovative-2038-it-services';
 import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
-
 const Homepage2038: React.FC = () => {
   // Get featured services from each category
-<<<<<<< HEAD
-  const featuredMicroSaas = innovative2038MicroSaasServices.filter(s => s.popular).slice(03);
-  const featuredIT = innovative2038ITServices.filter(s => s.popular).slice(03);
-  const featuredAI = innovative2038AIServices.filter(s => s.popular).slice(03);
-=======
   const featuredMicroSaas = innovative2038MicroSaasServices.filter(s => s.popular).slice(0, 3);
   const featuredIT = innovative2038ITServices.filter(s => s.popular).slice(0, 3);
   const featuredAI = innovative2038AIServices.filter(s => s.popular).slice(0, 3);
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <Layout>
       {/* Main Content */}
@@ -48,7 +32,6 @@ const Homepage2038: React.FC = () => {
             <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-1500"></div>
             <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500"></div>
           </div>
-          
           <div className="text-center max-w-5xl mx-auto relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -58,33 +41,21 @@ const Homepage2038: React.FC = () => {
             >
               {/* Company Badge */}
               <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={{ opacity: 1scale: 1 }}
-                transition={{ duration: 0.6delay: 0.2 }}
-=======
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm"
               >
                 <Star className="w-4 h-4" />
                 <span>Innovation Leader 2038</span>
                 <Sparkles className="w-4 h-4" />
               </motion.div>
-              
               <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight">
                 Zion Tech Group
               </h1>
               <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-                Pioneering the future of technology with revolutionary AIquantum computingand consciousness evolution solutions
-=======
                 Pioneering the future of technology with revolutionary AI, quantum computing, and consciousness evolution solutions
->>>>>>> origin/auto/autonomy-17186719616
               </p>
-              
               {/* Enhanced CTA Section */}
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10">
                 <Link href="/get-started">
@@ -109,16 +80,11 @@ const Homepage2038: React.FC = () => {
                   </motion.button>
                 </Link>
               </div>
-              
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.4 }}
-=======
                 transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400"
               >
                 <div className="flex items-center space-x-2">
@@ -141,7 +107,6 @@ const Homepage2038: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Company Stats */}
         <section className="py-24 px-4 bg-black/30 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
@@ -188,7 +153,6 @@ const Homepage2038: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Featured AI Services */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
@@ -206,22 +170,13 @@ const Homepage2038: React.FC = () => {
                 Experience the next evolution of artificial intelligence with our consciousness evolution and quantum AI platforms
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-<<<<<<< HEAD
-              {featuredAI.map((serviceindex) => (
-=======
               {featuredAI.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                 >
                   <UltraFuturisticServiceCard2038
@@ -231,7 +186,6 @@ const Homepage2038: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
             <div className="text-center">
               <Link href="/ai-services">
                 <motion.button
@@ -245,7 +199,6 @@ const Homepage2038: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Featured Micro SAAS Services */}
         <section className="py-24 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -263,22 +216,13 @@ const Homepage2038: React.FC = () => {
                 Transform your business with our cutting-edge micro SAAS solutions designed for the future
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-<<<<<<< HEAD
-              {featuredMicroSaas.map((serviceindex) => (
-=======
               {featuredMicroSaas.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                 >
                   <UltraFuturisticServiceCard2038
@@ -288,7 +232,6 @@ const Homepage2038: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
             <div className="text-center">
               <Link href="/services">
                 <motion.button
@@ -302,7 +245,6 @@ const Homepage2038: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Featured IT Services */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
@@ -320,22 +262,13 @@ const Homepage2038: React.FC = () => {
                 Build the future with our quantum cloud infrastructure and AI-powered DevOps automation
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-<<<<<<< HEAD
-              {featuredIT.map((serviceindex) => (
-=======
               {featuredIT.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                 >
                   <UltraFuturisticServiceCard2038
@@ -345,7 +278,6 @@ const Homepage2038: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
             <div className="text-center">
               <Link href="/it-services">
                 <motion.button
@@ -359,7 +291,6 @@ const Homepage2038: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Why Choose Us */}
         <section className="py-24 px-4 bg-black/30">
           <div className="max-w-7xl mx-auto">
@@ -374,14 +305,9 @@ const Homepage2038: React.FC = () => {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-<<<<<<< HEAD
-                'We', 're not just building technology - 'we', 're shaping the future of human consciousness and computing
-=======
                 We're not just building technology - we're shaping the future of human consciousness and computing
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -405,11 +331,7 @@ const Homepage2038: React.FC = () => {
                 {
                   icon: <Rocket className="w-12 h-12" />,
                   title: "Innovation First",
-<<<<<<< HEAD
-                  description: "Constantly pushing the boundaries of 'what', 's possible in technology",
-=======
                   description: "Constantly pushing the boundaries of what's possible in technology",
->>>>>>> origin/auto/autonomy-17186719616
                   color: "from-green-500 to-emerald-500"
                 },
                 {
@@ -424,20 +346,12 @@ const Homepage2038: React.FC = () => {
                   description: "Track record of delivering transformative solutions to leading organizations",
                   color: "from-yellow-500 to-orange-500"
                 }
-<<<<<<< HEAD
-              ].map((featureindex) => (
-=======
               ].map((feature, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="text-center p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
@@ -454,7 +368,6 @@ const Homepage2038: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -469,15 +382,9 @@ const Homepage2038: React.FC = () => {
                 Ready to Shape the Future?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                Join the revolution in AI consciousnessquantum computingand next-generation technology. 
-                'Let', 's build the future together.
-=======
                 Join the revolution in AI consciousness, quantum computing, and next-generation technology. 
                 Let's build the future together.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link href="/contact">
                   <motion.button
@@ -508,5 +415,4 @@ const Homepage2038: React.FC = () => {
     </Layout>
   );
 };
-
 export default Homepage2038;

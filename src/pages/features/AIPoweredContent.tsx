@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect } from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
-import { useFeatureUsage } from "@/hooks/useFeatureUsage",
-import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus",
-
-export default function AIPoweredContent() {
-  useFeatureUsage('ZionGPT'),
-=======
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -19,34 +6,19 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { useFeatureUsage } from "@/hooks/useFeatureUsage";
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
-
 export default function AIPoweredContent() {
   useFeatureUsage('ZionGPT');
->>>>>>> origin/auto/autonomy-17186719616
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "AI Content Generation",
     "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.",
     "url": "https://app.ziontechgroup.com/features/ai-content-generation"
-<<<<<<< HEAD
-  },
-
-  const { markAiExplored } = useAdvancedOnboardingStatus(),
-
-  useEffect(() => {
-    markAiExplored(),
-  }, [markAiExplored]),
-=======
   };
-
   const { markAiExplored } = useAdvancedOnboardingStatus();
-
   useEffect(() => {
     markAiExplored();
   }, [markAiExplored]);
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <>
       <SEO
@@ -69,20 +41,12 @@ export default function AIPoweredContent() {
           </p>
           <div className="relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden">
             <img
-<<<<<<< HEAD
-              src="https: //placehold.co/800x400"
-=======
               src="https://placehold.co/800x400"
->>>>>>> origin/auto/autonomy-17186719616
               alt="Screenshot of ZionGPT content tool"
               className="object-cover"
             />
           </div>
-<<<<<<< HEAD
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-=======
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
->>>>>>> origin/auto/autonomy-17186719616
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Save time drafting marketing content for your products or services.</li>
             <li>Improve search rankings with keyword optimized text.</li>
@@ -107,9 +71,5 @@ export default function AIPoweredContent() {
         </div>
       </main>
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,46 +1,19 @@
-
-<<<<<<< HEAD
-import { useState } from 'react',
-import { Check, Copy } from 'lucide-react'
-import { cn } from "@/lib/utils",
-
-interface CodeBlockProps {
-  code: string,
-  language?: string,
-  showLineNumbers?: boolean,
-  className?: string
-=======
 import { useState } from 'react';
 import { Check, Copy } from 'lucide-react'
 import { cn } from "@/lib/utils";
-
 interface CodeBlockProps {
   code: string;
   language?: string;
   showLineNumbers?: boolean;
   className?: string;
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export function CodeBlock({ 
   code,
   language = 'bash',
   showLineNumbers = false,
   className
 }: CodeBlockProps) {
-<<<<<<< HEAD
-  const [copied, setCopied] = useState(false),
-
-  const handleCopyClick = async () => {
-    await navigator.clipboard.writeText(code),
-    setCopied(true),
-    setTimeout(() => {
-      setCopied(false),
-    }, 2000),
-  },
-=======
   const [copied, setCopied] = useState(false);
-
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
@@ -48,8 +21,6 @@ export function CodeBlock({
       setCopied(false);
     }, 2000);
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div className={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto",
@@ -83,14 +54,6 @@ export function CodeBlock({
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-}
-
-export default CodeBlock,
-=======
   );
 }
-
 export default CodeBlock;
->>>>>>> origin/auto/autonomy-17186719616

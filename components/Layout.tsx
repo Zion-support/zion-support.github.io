@@ -1,33 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
-import EnhancedNavigation2025 from './layout/EnhancedNavigation2025';
-import EnhancedFooter from './layout/EnhancedFooter';
-
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-export default function Layout({ children }: LayoutProps) {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <EnhancedNavigation2025 />
-      <main className="flex-grow">
-        {children}
-      </main>
-      <EnhancedFooter />
-    </div>
-  );
-}
-=======
 import Head from 'next/head';
 import Link from 'next/link';
-
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
 }
-
 export default function Layout({ children, title = 'Zion Tech Group', description = 'Autonomous, cloud-native app with self-running automations' }: LayoutProps) {
   return (
     <>
@@ -37,14 +15,12 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
       <header className="bg-slate-900/50 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
               Zion Tech
             </Link>
-            
             <div className="hidden md:flex space-x-8">
               <Link href="/about" className="text-white/70 hover:text-white transition-colors">
                 About
@@ -65,11 +41,9 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
           </div>
         </nav>
       </header>
-      
       <main className="min-h-screen">
         {children}
       </main>
-      
       <footer className="bg-slate-900/50 backdrop-blur-xl border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -79,7 +53,6 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
                 Autonomous, cloud-native app with self-running automations.
               </p>
             </div>
-            
             <div>
               <h4 className="text-white font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
@@ -89,7 +62,6 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
                 <li><Link href="/blog" className="text-white/70 hover:text-white transition-colors">Blog</Link></li>
               </ul>
             </div>
-            
             <div>
               <h4 className="text-white font-semibold mb-4">Support</h4>
               <ul className="space-y-2">
@@ -98,7 +70,6 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
                 <li><a href="https://github.com/Zion-Holdings/zion.app" className="text-white/70 hover:text-white transition-colors">GitHub</a></li>
               </ul>
             </div>
-            
             <div>
               <h4 className="text-white font-semibold mb-4">Connect</h4>
               <p className="text-white/70 mb-4">
@@ -112,7 +83,6 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
               </Link>
             </div>
           </div>
-          
           <div className="border-t border-white/10 mt-8 pt-8 text-center">
             <p className="text-white/50">
               © 2025 Zion Tech Group. All rights reserved.
@@ -123,4 +93,3 @@ export default function Layout({ children, title = 'Zion Tech Group', descriptio
     </>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

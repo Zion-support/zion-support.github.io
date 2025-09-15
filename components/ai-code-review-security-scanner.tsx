@@ -2,33 +2,20 @@ import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  BrainShieldCodeCheckCircleZap
-  ArrowRightStarTrendingUpUsers
-  LockEyeBarChart3GlobeAward
-=======
   Brain, Shield, Code, CheckCircle, Zap, 
   ArrowRight, Star, TrendingUp, Users, 
   Lock, Eye, BarChart3, Globe, Award
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
-
 const AICodeReviewSecurityScanner = () => {
   return (
     <>
       <SEO 
         title="AI-Powered Code Review & Security Scanner | Zion Tech Group"
-<<<<<<< HEAD
-        description="Advanced AI-powered platform that automatically reviews codetects security vulnerabilitiesuggests improvementsand ensures code quality across multiple programming languages."
-        keywords={["AI code review"security scanner"vulnerability detection"code quality"automated code analysis"security testing"DevOps security"]}
-=======
         description="Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, suggests improvements, and ensures code quality across multiple programming languages."
         keywords={["AI code review", "security scanner", "vulnerability detection", "code quality", "automated code analysis", "security testing", "DevOps security"]}
->>>>>>> origin/auto/autonomy-17186719616
         ogImage="https://ziontechgroup.com/og-ai-code-review.jpg"
         canonical="https://ziontechgroup.com/ai-code-review-security-scanner"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
@@ -44,22 +31,14 @@ const AICodeReviewSecurityScanner = () => {
                 <Brain className="w-4 h-4 mr-2" />
                 AI-Powered Development Security
               </div>
-              
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 AI-Powered Code Review & 
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Security Scanner</span>
               </h1>
-              
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD
-                Advanced AI-powered platform that automatically reviews codetects security vulnerabilities
-                suggests improvementsand ensures code quality across multiple programming languages.
-=======
                 Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, 
                 suggests improvements, and ensures code quality across multiple programming languages.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -69,7 +48,6 @@ const AICodeReviewSecurityScanner = () => {
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </motion.button>
-                
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -78,7 +56,6 @@ const AICodeReviewSecurityScanner = () => {
                   Schedule Demo
                 </motion.button>
               </div>
-              
               <div className="flex flex-wrap justify-center gap-8 text-gray-400">
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
@@ -96,7 +73,6 @@ const AICodeReviewSecurityScanner = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,52 +86,31 @@ const AICodeReviewSecurityScanner = () => {
                 Comprehensive Code Security & Quality
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                Our AI-powered platform provides end-to-end code analysisecurity scanningand quality assurance 
-=======
                 Our AI-powered platform provides end-to-end code analysis, security scanning, and quality assurance 
->>>>>>> origin/auto/autonomy-17186719616
                 to protect your applications and improve development efficiency.
               </p>
             </motion.div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: <Code className="w-8 h-8" />,
                   title: "Multi-Language Support",
-<<<<<<< HEAD
-                  description: "Support for PythonJavaScriptJavaGoRustand more with language-specific security rules and best practices."
-=======
                   description: "Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices."
->>>>>>> origin/auto/autonomy-17186719616
                 },
                 {
                   icon: <Shield className="w-8 h-8" />,
                   title: "AI-Powered Vulnerability Detection",
-<<<<<<< HEAD
-                  description: "Advanced machine learning algorithms that detect security vulnerabilitiescode smellsand potential security risks."
-=======
                   description: "Advanced machine learning algorithms that detect security vulnerabilities, code smells, and potential security risks."
->>>>>>> origin/auto/autonomy-17186719616
                 },
                 {
                   icon: <Eye className="w-8 h-8" />,
                   title: "Automated Code Review",
-<<<<<<< HEAD
-                  description: "Intelligent code analysis with detailed feedbackimprovement suggestionsand automated quality checks."
-=======
                   description: "Intelligent code analysis with detailed feedback, improvement suggestions, and automated quality checks."
->>>>>>> origin/auto/autonomy-17186719616
                 },
                 {
                   icon: <Lock className="w-8 h-8" />,
                   title: "Security Best Practices",
-<<<<<<< HEAD
-                  description: "Enforce security standardscompliance requirementsand industry best practices automatically."
-=======
                   description: "Enforce security standards, compliance requirements, and industry best practices automatically."
->>>>>>> origin/auto/autonomy-17186719616
                 },
                 {
                   icon: <BarChart3 className="w-8 h-8" />,
@@ -165,24 +120,14 @@ const AICodeReviewSecurityScanner = () => {
                 {
                   icon: <Globe className="w-8 h-8" />,
                   title: "Integration & APIs",
-<<<<<<< HEAD
-                  description: "Seamless integration with GitHubGitLabBitbucketand CI/CD pipelines with custom API access."
-                }
-              ].map((featureindex) => (
-=======
                   description: "Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access."
                 }
               ].map((feature, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.8delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6">
@@ -195,7 +140,6 @@ const AICodeReviewSecurityScanner = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -213,7 +157,6 @@ const AICodeReviewSecurityScanner = () => {
                 All plans include our core AI-powered security scanning capabilities.
               </p>
             </motion.div>
-            
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -266,20 +209,12 @@ const AICodeReviewSecurityScanner = () => {
                   ],
                   popular: false
                 }
-<<<<<<< HEAD
-              ].map((planindex) => (
-=======
               ].map((plan, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.8delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
                     plan.popular 
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10' 
@@ -293,7 +228,6 @@ const AICodeReviewSecurityScanner = () => {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-4">
@@ -302,20 +236,14 @@ const AICodeReviewSecurityScanner = () => {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  
                   <ul className="space-y-4 mb-8">
-<<<<<<< HEAD
-                    {plan.features.map((featureIndex) => (
-=======
                     {plan.features.map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -332,7 +260,6 @@ const AICodeReviewSecurityScanner = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -346,27 +273,17 @@ const AICodeReviewSecurityScanner = () => {
                 Why Choose Our AI Code Security Platform?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                Our platform delivers measurable results that improve your security posture
-                development efficiencyand code quality while reducing costs and risks.
-=======
                 Our platform delivers measurable results that improve your security posture, 
                 development efficiency, and code quality while reducing costs and risks.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </motion.div>
-            
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-8">
                 {[
                   {
                     icon: <Shield className="w-8 h-8" />,
                     title: "Reduce Security Vulnerabilities by 85%",
-<<<<<<< HEAD
-                    description: "Our AI algorithms detect security issues that traditional scanners missignificantly reducing your attack surface."
-=======
                     description: "Our AI algorithms detect security issues that traditional scanners miss, significantly reducing your attack surface."
->>>>>>> origin/auto/autonomy-17186719616
                   },
                   {
                     icon: <Zap className="w-8 h-8" />,
@@ -378,21 +295,12 @@ const AICodeReviewSecurityScanner = () => {
                     title: "Improve Code Quality & Maintainability",
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health."
                   }
-<<<<<<< HEAD
-                ].map((benefitindex) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0x: -20 }}
-                    whileInView={{ opacity: 1x: 0 }}
-                    transition={{ duration: 0.8delay: index * 0.1 }}
-=======
                 ].map((benefit, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                     className="flex items-start"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
@@ -405,17 +313,12 @@ const AICodeReviewSecurityScanner = () => {
                   </motion.div>
                 ))}
               </div>
-              
               <div className="space-y-8">
                 {[
                   {
                     icon: <CheckCircle className="w-8 h-8" />,
                     title: "Ensure Compliance with Security Standards",
-<<<<<<< HEAD
-                    description: "Meet SOC2ISO27001and other compliance requirements with automated security testing and reporting."
-=======
                     description: "Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting."
->>>>>>> origin/auto/autonomy-17186719616
                   },
                   {
                     icon: <Users className="w-8 h-8" />,
@@ -427,21 +330,12 @@ const AICodeReviewSecurityScanner = () => {
                     title: "Enable Faster Development Cycles",
                     description: "Confident code deployment with automated security validation accelerates your development and release processes."
                   }
-<<<<<<< HEAD
-                ].map((benefitindex) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0x: 20 }}
-                    whileInView={{ opacity: 1x: 0 }}
-                    transition={{ duration: 0.8delay: index * 0.1 }}
-=======
                 ].map((benefit, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                     className="flex items-start"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
@@ -457,7 +351,6 @@ const AICodeReviewSecurityScanner = () => {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -475,7 +368,6 @@ const AICodeReviewSecurityScanner = () => {
                 to protect their applications and improve code quality.
               </p>
             </motion.div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 "Software Development Teams",
@@ -486,20 +378,12 @@ const AICodeReviewSecurityScanner = () => {
                 "Government Software Projects",
                 "Educational Institutions",
                 "Startups & Enterprises"
-<<<<<<< HEAD
-              ].map((useCaseindex) => (
-=======
               ].map((useCase, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.8delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
@@ -511,7 +395,6 @@ const AICodeReviewSecurityScanner = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -527,7 +410,6 @@ const AICodeReviewSecurityScanner = () => {
                 Join thousands of development teams who trust our AI-powered platform to protect their applications 
                 and improve code quality. Start your free trial today.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -537,7 +419,6 @@ const AICodeReviewSecurityScanner = () => {
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </motion.button>
-                
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -546,14 +427,12 @@ const AICodeReviewSecurityScanner = () => {
                   Contact Sales
                 </motion.button>
               </div>
-              
               <div className="mt-8 text-gray-400">
                 <p>14-day free trial • No credit card required • Cancel anytime</p>
               </div>
             </motion.div>
           </div>
         </section>
-
         {/* Contact Information */}
         <section className="py-16 bg-white/5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -572,7 +451,6 @@ const AICodeReviewSecurityScanner = () => {
                   <p>Mobile: +1 302 464 0950</p>
                   <p>Email: kleber@ziontechgroup.com</p>
                 </div>
-                
                 <div>
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                     <Globe className="w-6 h-6" />
@@ -580,7 +458,6 @@ const AICodeReviewSecurityScanner = () => {
                   <h4 className="text-white font-semibold mb-2">Visit Our Website</h4>
                   <p>https://ziontechgroup.com</p>
                 </div>
-                
                 <div>
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                     <Award className="w-6 h-6" />
@@ -597,5 +474,4 @@ const AICodeReviewSecurityScanner = () => {
     </>
   );
 };
-
 export default AICodeReviewSecurityScanner;

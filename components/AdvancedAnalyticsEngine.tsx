@@ -1,11 +1,6 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect } from 'react';
-
 interface AnalyticsData {
   id: string;
   metric: string;
@@ -16,7 +11,6 @@ interface AnalyticsData {
   period: string;
   category: 'traffic' | 'conversion' | 'engagement' | 'revenue' | 'performance';
 }
-
 interface UserSegment {
   id: string;
   name: string;
@@ -27,7 +21,6 @@ interface UserSegment {
   avgValue: number;
   growth: number;
 }
-
 interface ConversionFunnel {
   stage: string;
   visitors: number;
@@ -35,7 +28,6 @@ interface ConversionFunnel {
   dropoff: number;
   optimization: string;
 }
-
 const AdvancedAnalyticsEngine: React.FC = () => {
   const [analyticsDatasetAnalyticsData] = useState<AnalyticsData[]>([]);
   const [userSegmentsetUserSegments] = useState<UserSegment[]>([]);
@@ -43,16 +35,12 @@ const AdvancedAnalyticsEngine: React.FC = () => {
   const [selectedPeriodsetSelectedPeriod] = useState('30d');
   const [selectedMetricsetSelectedMetric] = useState('all');
   const [isLoadingsetIsLoading] = useState(true);
-
   useEffect(() => {
     generateMockData();
   }[selectedPeriod]);
-
   const generateMockData = async () => {
     setIsLoading(true);
-    
     await new Promise(resolve => setTimeout(resolve1200));
-
     const mockAnalytics: AnalyticsData[] = [
       {
         id: 'page-views',
@@ -135,7 +123,6 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         category: 'traffic'
       }
     ];
-
     const mockSegments: UserSegment[] = [
       {
         id: 'new-visitors',
@@ -188,7 +175,6 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         growth: 22.1
       }
     ];
-
     const mockFunnel: ConversionFunnel[] = [
       {
         stage: 'Landing Page',
@@ -226,13 +212,11 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         optimization: 'Add trust signals and payment options'
       }
     ];
-
     setAnalyticsData(mockAnalytics);
     setUserSegments(mockSegments);
     setConversionFunnel(mockFunnel);
     setIsLoading(false);
   };
-
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'traffic': return 'bg-blue-100 text-blue-800';
@@ -243,7 +227,6 @@ const AdvancedAnalyticsEngine: React.FC = () => {
       default: return 'bg-gray-100 text-gray-800';
     }
   };
-
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '📈';
@@ -252,14 +235,12 @@ const AdvancedAnalyticsEngine: React.FC = () => {
       default: return '➡️';
     }
   };
-
   const getTrendColor = (trend: stringmetric: string) => {
     if (metric.includes('bounce') || metric.includes('load time')) {
       return trend === 'down' ? 'text-green-600' : 'text-red-600';
     }
     return trend === 'up' ? 'text-green-600' : 'text-red-600';
   };
-
   const formatValue = (value: numberunit: string) => {
     if (unit === '$') {
       return new Intl.NumberFormat('en-US'{
@@ -277,11 +258,9 @@ const AdvancedAnalyticsEngine: React.FC = () => {
     }
     return value.toLocaleString();
   };
-
   const filteredData = selectedMetric === 'all' 
     ? analyticsData 
     : analyticsData.filter(item => item.category === selectedMetric);
-
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -300,7 +279,6 @@ const AdvancedAnalyticsEngine: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="flex items-center justify-between mb-8">
@@ -340,7 +318,6 @@ const AdvancedAnalyticsEngine: React.FC = () => {
           </button>
         </div>
       </div>
-
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {filteredData.map((metric) => (
@@ -351,15 +328,12 @@ const AdvancedAnalyticsEngine: React.FC = () => {
               </span>
               <span className="text-sm text-gray-500">{metric.period}</span>
             </div>
-            
             <h3 className="text-lg font-semibold text-gray-900 mb-3">{metric.metric}</h3>
-            
             <div className="flex items-baseline mb-4">
               <span className="text-3xl font-bold text-gray-900">
                 {formatValue(metric.valuemetric.unit)}
               </span>
             </div>
-            
             <div className="flex items-center justify-between">
               <div className="flex items-center text-sm">
                 <span className="mr-1">{getTrendIcon(metric.trend)}</span>
@@ -372,12 +346,10 @@ const AdvancedAnalyticsEngine: React.FC = () => {
           </div>
         ))}
       </div>
-
       <div className="grid lg:grid-cols-2 gap-8 mb-12">
         {/* User Segments */}
         <div className="bg-white rounded-2xl shadow-xl p-6">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">👥 User Segments Analysis</h3>
-          
           <div className="space-y-4">
             {userSegments.map((segment) => (
               <div key={segment.id} className="border border-gray-200 rounded-xl p-4">
@@ -385,7 +357,6 @@ const AdvancedAnalyticsEngine: React.FC = () => {
                   <h4 className="font-semibold text-gray-900">{segment.name}</h4>
                   <span className="text-sm text-gray-500">{segment.percentage}%</span>
                 </div>
-                
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-2xl font-bold text-blue-600">
                     {segment.size.toLocaleString()}
@@ -394,7 +365,6 @@ const AdvancedAnalyticsEngine: React.FC = () => {
                     {segment.growth > 0 ? '+' : ''}{segment.growth.toFixed(1)}% growth
                   </span>
                 </div>
-                
                 <div className="mb-3">
                   <div className="flex justify-between text-sm text-gray-600 mb-1">
                     <span>Conversion Rate</span>
@@ -407,7 +377,6 @@ const AdvancedAnalyticsEngine: React.FC = () => {
                     ></div>
                   </div>
                 </div>
-                
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-gray-600">{segment.behavior}</span>
                   <span className="font-medium text-gray-900">
@@ -418,11 +387,9 @@ const AdvancedAnalyticsEngine: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Conversion Funnel */}
         <div className="bg-white rounded-2xl shadow-xl p-6">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">🎯 Conversion Funnel</h3>
-          
           <div className="space-y-4">
             {conversionFunnel.map((stageindex) => (
               <div key={stage.stage} className="relative">
@@ -445,7 +412,6 @@ const AdvancedAnalyticsEngine: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 {index < conversionFunnel.length - 1 && (
                   <div className="flex justify-center my-2">
                     <div className="w-px h-8 bg-gray-300 relative">
@@ -461,11 +427,9 @@ const AdvancedAnalyticsEngine: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Performance Insights */}
       <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">💡 Performance Insights & Recommendations</h3>
-        
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-white rounded-xl p-6 shadow-lg">
             <h4 className="font-semibold text-gray-900 mb-3">🚀 Optimization Opportunities</h4>
@@ -476,7 +440,6 @@ const AdvancedAnalyticsEngine: React.FC = () => {
               <li>• Optimize page load times for mobile users</li>
             </ul>
           </div>
-          
           <div className="bg-white rounded-xl p-6 shadow-lg">
             <h4 className="font-semibold text-gray-900 mb-3">📈 Growth Strategies</h4>
             <ul className="space-y-2 text-sm text-gray-600">
@@ -491,5 +454,4 @@ const AdvancedAnalyticsEngine: React.FC = () => {
     </div>
   );
 };
-
 export default AdvancedAnalyticsEngine;

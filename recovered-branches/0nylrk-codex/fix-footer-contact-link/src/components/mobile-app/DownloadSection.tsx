@@ -29,11 +29,7 @@ export const DownloadSection: React.FC = () => {
               
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
-<<<<<<< HEAD
-                <p>Free downloadin-app purchases available</p>
-=======
                 <p>Free download, in-app purchases available</p>
->>>>>>> origin/auto/autonomy-17186719616
               </div>
             </div>
             

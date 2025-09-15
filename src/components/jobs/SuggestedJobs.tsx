@@ -1,89 +1,31 @@
-
-<<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth",
-import { Loader2 } from 'lucide-react'
-import { Badge } from "@/components/ui/badge",
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",
-import { JobMatchesCard } from "./JobMatchesCard",
-import { NoJobsCard } from "./NoJobsCard",
-
-interface SuggestedJobsProps {
-  talentId?: string,
-}
-
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-  const { user } = useAuth(),
-  const currentTalentId = talentId || user?.id,
-  const { 
-    isLoading,
-=======
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2 } from 'lucide-react'
 import { Badge } from "@/components/ui/badge";
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
-
 interface SuggestedJobsProps {
   talentId?: string;
 }
-
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
   const { 
     isLoading, 
->>>>>>> origin/auto/autonomy-17186719616
     updateJobMatchStatus, 
     categorizedMatches: { 
       newMatches, 
       viewedMatches, 
       appliedMatches 
     } 
-<<<<<<< HEAD
-  } = useJobSuggestions(currentTalentId),
-
-
-
-
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined'),
-  },
-
-  if (isLoading) {
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-
-
-    updateJobMatchStatus, ;
-import { useAuth } from "@/hooks/useAuth";
-import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
-import { useJobSuggestions } from "@/hooks/useJobSuggestions";
-import { JobMatchesCard } from "./JobMatchesCard";
-import { NoJobsCard } from "./NoJobsCard";
-      <div className="flex items-center justify-center p-6">
-        <Loader2 className="w-6 h-6 animate-spin text-primary" />
-      </div>
-    ),
-  }
-
-  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
-    return <NoJobsCard />,
-=======
   } = useJobSuggestions(currentTalentId);
-
   const handleApply = (matchId: string, jobId: string) => {
     updateJobMatchStatus(matchId, 'applied');
     // In a real app, this might redirect to application form or open a modal
   };
-
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined');
   };
-
   if (isLoading) {
     return (
       <div className="flex items-center justify-center p-6">
@@ -91,12 +33,9 @@ import { NoJobsCard } from "./NoJobsCard";
       </div>
     );
   }
-
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />;
->>>>>>> origin/auto/autonomy-17186719616
   }
-  
   return (
     <div className="space-y-6">
       {/* New Matches Section */}
@@ -108,7 +47,6 @@ import { NoJobsCard } from "./NoJobsCard";
               {newMatches.length} New
             </Badge>
           </div>
-          
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -121,14 +59,12 @@ import { NoJobsCard } from "./NoJobsCard";
           </div>
         </div>
       )}
-      
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
-          
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -141,14 +77,12 @@ import { NoJobsCard } from "./NoJobsCard";
           </div>
         </div>
       )}
-      
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Applied Jobs</h3>
           </div>
-          
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
               <JobMatchesCard 
@@ -163,9 +97,5 @@ import { NoJobsCard } from "./NoJobsCard";
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

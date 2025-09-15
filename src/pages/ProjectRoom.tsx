@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import { useRouter } from 'next/router', // Changed from useParams
-import { Header } from '@/components/Header',
-import { SEO } from '@/components/SEO',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
-import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react'
-import { VideoCallRoom } from '@/components/video/VideoCallRoom',
-import { toast } from 'sonner',
-
-export default function ProjectRoom() {
-  const router = useRouter(),
-  const { projectId: rawProjectId } = router.query,
-  const projectId = typeof rawProjectId === 'string' ? rawProjectId : '', // Ensure string, default to empty if not
-  const [activeTab, setActiveTab] = useState('chat'),
-  const [isInCall, setIsInCall] = useState(false),
-  const [callParticipants, setCallParticipants] = useState<Array<{
-    id: string,
-    name: string,
-    avatar?: string,
-    isMuted?: boolean,
-    isVideoEnabled?: boolean,
-    isScreenSharing?: boolean,
-    isHost?: boolean
-=======
 import React, { useState } from 'react';
 import { useRouter } from 'next/router'; // Changed from useParams
 import { Header } from '@/components/Header';
@@ -35,7 +8,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react'
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
-
 export default function ProjectRoom() {
   const router = useRouter();
   const { projectId: rawProjectId } = router.query;
@@ -50,7 +22,6 @@ export default function ProjectRoom() {
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
     isHost?: boolean;
->>>>>>> origin/auto/autonomy-17186719616
   }>>([
     {
       id: 'user-1',
@@ -59,29 +30,7 @@ export default function ProjectRoom() {
       isVideoEnabled: true,
       isMuted: false
     }
-<<<<<<< HEAD
-  ]),
-  
-  const startVideoCall = () => {
-    setIsInCall(true),
-    toast.success("Video call started", {
-      description: "Others can join with the project room link"
-    }),
-    // Switch to video tab if not already there
-    if (activeTab !== 'video') {
-      setActiveTab('video'),
-    }
-  },
-  
-  const endVideoCall = () => {
-    setIsInCall(false),
-    toast.info("Video call ended", {
-      description: "Call duration and participants will be logged"
-    }),
-  },
-=======
   ]);
-  
   const startVideoCall = () => {
     setIsInCall(true);
     toast.success("Video call started", {
@@ -92,43 +41,25 @@ export default function ProjectRoom() {
       setActiveTab('video');
     }
   };
-  
   const endVideoCall = () => {
     setIsInCall(false);
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     });
   };
->>>>>>> origin/auto/autonomy-17186719616
-  
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-<<<<<<< HEAD
-    ],
-    
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],
-    
-    if (randomUser && !callParticipants.find(p => p.id === randomUser.id)) {
-      setCallParticipants(prev => [...prev, randomUser]),
-      toast(`${randomUser.name} joined the call`),
-    }
-  },
-=======
     ];
-    
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-    
     if (randomUser && !callParticipants.find(p => p.id === randomUser.id)) {
       setCallParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser.name} joined the call`);
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
-  
   return (
     <>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />
@@ -146,7 +77,6 @@ export default function ProjectRoom() {
             <Button variant="outline">Invite Team Member</Button>
           </div>
         </div>
-        
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
           <TabsList className="grid grid-cols-6 md:w-fit">
             <TabsTrigger value="chat" className="flex items-center gap-2">
@@ -180,7 +110,6 @@ export default function ProjectRoom() {
               <span className="hidden sm:inline">Settings</span>
             </TabsTrigger>
           </TabsList>
-          
           <TabsContent value="chat" className="space-y-4">
             <Card>
               <CardHeader>
@@ -194,7 +123,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="files" className="space-y-4">
             <Card>
               <CardHeader>
@@ -208,7 +136,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="video" className="space-y-4">
             <Card>
               <CardHeader>
@@ -223,7 +150,6 @@ export default function ProjectRoom() {
                       participants={callParticipants}
                       onLeave={endVideoCall}
                     />
-                    
                     {/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">
                       <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
@@ -249,7 +175,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="calendar" className="space-y-4">
             <Card>
               <CardHeader>
@@ -263,7 +188,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="team" className="space-y-4">
             <Card>
               <CardHeader>
@@ -277,7 +201,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="settings" className="space-y-4">
             <Card>
               <CardHeader>
@@ -294,9 +217,5 @@ export default function ProjectRoom() {
         </Tabs>
       </main>
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,20 +1,3 @@
-
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
-import { PlusCircle, Save, Trash } from 'lucide-react'
-import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { toast } from "sonner",
-
-export function WebhookManager() {
-  const { 
-    webhooks,
-=======
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -25,11 +8,9 @@ import { PlusCircle, Save, Trash } from 'lucide-react'
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
-
 export function WebhookManager() {
   const { 
     webhooks, 
->>>>>>> origin/auto/autonomy-17186719616
     loading, 
     error,
     testResult,
@@ -38,106 +19,52 @@ export function WebhookManager() {
     toggleWebhook,
     deleteWebhook,
     testWebhook
-<<<<<<< HEAD
-  } = useWebhooks(),
-=======
   } = useWebhooks();
->>>>>>> origin/auto/autonomy-17186719616
-  
   const [newWebhook, setNewWebhook] = useState({
     name: "",
     url: "",
     selectedEvent: "" as WebhookEventType,
     eventTypes: [] as WebhookEventType[],
     secret: ""
-<<<<<<< HEAD
-  }),
-  
-  const eventOptions: { value: WebhookEventType, label: string }[] = [
-=======
   });
-  
   const eventOptions: { value: WebhookEventType; label: string }[] = [
->>>>>>> origin/auto/autonomy-17186719616
     { value: "new_application", label: "New Application Received" },
     { value: "quote_received", label: "Quote Request Received" },
     { value: "milestone_approved", label: "Milestone Approved" },
     { value: "talent_hired", label: "Talent Hired" }
-<<<<<<< HEAD
-  ],
-  
-  useEffect(() => {
-    fetchWebhooks(),
-  }, []),
-  
-  const handleAddEvent = () => {
-    if (!newWebhook.selectedEvent) return,
-    
-    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
-      toast.error("This event is already added"),
-      return,
-=======
   ];
-  
   useEffect(() => {
     fetchWebhooks();
   }, []);
-  
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return;
-    
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added");
       return;
->>>>>>> origin/auto/autonomy-17186719616
     }
-    
     setNewWebhook({
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
       selectedEvent: "" as WebhookEventType
-<<<<<<< HEAD
-    }),
-  },
-=======
     });
   };
->>>>>>> origin/auto/autonomy-17186719616
-  
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
       ...newWebhook,
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
-<<<<<<< HEAD
-    }),
-  },
-  
-  const handleCreateWebhook = async () => {
-    if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
-      toast.error("Please fill in all required fields"),
-      return,
-=======
     });
   };
-  
   const handleCreateWebhook = async () => {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields");
       return;
->>>>>>> origin/auto/autonomy-17186719616
     }
-    
     await createWebhook(
       newWebhook.name, 
       newWebhook.url, 
       newWebhook.eventTypes, 
       newWebhook.secret || undefined
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
-    
     // Reset form
     setNewWebhook({
       name: "",
@@ -145,22 +72,11 @@ export function WebhookManager() {
       selectedEvent: "" as WebhookEventType,
       eventTypes: [],
       secret: ""
-<<<<<<< HEAD
-    }),
-  },
-  
-  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
-    await testWebhook(webhookId, eventType),
-  },
-=======
     });
   };
-  
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType);
   };
->>>>>>> origin/auto/autonomy-17186719616
-  
   return (
     <div className="space-y-8">
       <Card>
@@ -170,16 +86,6 @@ export function WebhookManager() {
             Define webhooks to notify external systems when events occur in Zion.
           </CardDescription>
         </CardHeader>
-<<<<<<< HEAD
-        <CardContent className='space-y-4'>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            <div className='space-y-2'>
-              <Label htmlFor='webhook-name'>Webhook Name</Label>
-              <Input
-                id='webhook-name'
-                placeholder='e.g., Job Postings Webhook'
-=======
->>>>>>> origin/auto/autonomy-17186719616
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
@@ -188,16 +94,9 @@ export function WebhookManager() {
                 id="webhook-name" 
                 placeholder="e.g., Job Postings Webhook"
                 value={newWebhook.name}
-<<<<<<< HEAD
-                onChange={e =>
-                  setNewWebhook({ ...newWebhook, name: e.target.value })
-                }
-=======
                 onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
->>>>>>> origin/auto/autonomy-17186719616
               />
             </div>
-            
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
               <Input 
@@ -208,7 +107,6 @@ export function WebhookManager() {
               />
             </div>
           </div>
-          
           <div className="space-y-2">
             <Label>Events</Label>
             <div className="flex flex-wrap gap-2 mb-2">
@@ -242,7 +140,6 @@ export function WebhookManager() {
               </Button>
             </div>
           </div>
-          
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
             <Input 
@@ -262,10 +159,8 @@ export function WebhookManager() {
           </Button>
         </CardFooter>
       </Card>
-      
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
-        
         {loading ? (
           <p>Loading webhooks...</p>
         ) : error ? (
@@ -289,16 +184,6 @@ export function WebhookManager() {
                         <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' : 'bg-gray-400'}`}></div>
                         <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
                       </div>
-<<<<<<< HEAD
-                      <div className='flex-shrink-0'>
-                        <Button
-                          variant='outline'
-                          size='sm'
-                          onClick={() =>
-                            toggleWebhook(webhook.id, !webhook.is_active)
-                          }                        >
-=======
->>>>>>> origin/auto/autonomy-17186719616
                       <div className="flex-shrink-0">
                         <Button 
                           variant="outline" 
@@ -338,7 +223,6 @@ export function WebhookManager() {
                   >
                     <Trash className="h-4 w-4 mr-2" /> Delete
                   </Button>
-                  
                   <Select
                     onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
                   >
@@ -359,7 +243,6 @@ export function WebhookManager() {
             ))}
           </div>
         )}
-        
         {testResult && (
           <Card className="mt-4 border-blue-200">
             <CardHeader>
@@ -385,9 +268,5 @@ export function WebhookManager() {
         )}
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

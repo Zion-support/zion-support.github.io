@@ -1,26 +1,14 @@
-
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",
-import { Loader2 } from 'lucide-react'
-import { NavigationButtonsProps } from "./types",
-=======
 import { Button } from "@/components/ui/button";
 import { Loader2 } from 'lucide-react'
 import { NavigationButtonsProps } from "./types";
->>>>>>> origin/auto/autonomy-17186719616
-
 export const NavigationButtons = ({
   onBack,
   onNext,
   isNextDisabled = false,
   backLabel = "Back",
   nextLabel = "Next",
-<<<<<<< HEAD
-  isLoading = false}: NavigationButtonsProps) => {
-=======
   isLoading = false,
 }: NavigationButtonsProps) => {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="flex justify-between">
       {onBack && (
@@ -35,10 +23,5 @@ export const NavigationButtons = ({
         </Button>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

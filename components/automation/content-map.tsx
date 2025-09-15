@@ -1,43 +1,22 @@
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
-
 type Entry = { route: string; file: string };
-<<<<<<< HEAD
-interface Report { generatedAt: string; totalPages: number; bySection: Record<stringnumber>; pages: Entry[] }
-=======
 interface Report { generatedAt: string; totalPages: number; bySection: Record<string, number>; pages: Entry[] }
->>>>>>> origin/auto/autonomy-17186719616
-
 type Props = { report: Report | null };
-
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-<<<<<<< HEAD
-    const file = path.join(process.cwd()', 'public', 'automation'content-map.json');
-    const raw = fs.readFileSync('file', 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { report: data }revalidate: 21600 };
-  } catch {
-    return { props: { report: null }revalidate: 21600 };
-=======
     const file = path.join(process.cwd(), 'public', 'automation', 'content-map.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
     return { props: { report: data }, revalidate: 21600 };
   } catch {
     return { props: { report: null }, revalidate: 21600 };
->>>>>>> origin/auto/autonomy-17186719616
   }
 };
-
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
-<<<<<<< HEAD
-  const sections = Object.entries(report.bySection).sort((ab) => b[1] - a[1]);
-=======
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -51,11 +30,7 @@ export default function ContentMap({ report }: Props) {
       <section>
         <h2 className="font-semibold mb-2">Pages by Section</h2>
         <ul className="text-sm space-y-1">
-<<<<<<< HEAD
-          {sections.map(([secn]) => (
-=======
           {sections.map(([sec, n]) => (
->>>>>>> origin/auto/autonomy-17186719616
             <li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>
           ))}
         </ul>
@@ -63,11 +38,7 @@ export default function ContentMap({ report }: Props) {
       <section>
         <h2 className="font-semibold mb-2">All Pages</h2>
         <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
-<<<<<<< HEAD
-          {report.pages.map((pi) => (
-=======
           {report.pages.map((p, i) => (
->>>>>>> origin/auto/autonomy-17186719616
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>
           ))}
         </ul>

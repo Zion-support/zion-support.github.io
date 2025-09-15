@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-=======
 import React, { useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import StarRating from './StarRating';
-
 export type ReviewFormValues = {
   projectId: string;
   fromRole: 'client' | 'talent';
@@ -20,26 +14,9 @@ export type ReviewFormValues = {
   };
   anonymous?: boolean;
 };
-
 type Props = {
-<<<<<<< HEAD
-  initial: Pick<'ReviewFormValues', 'projectId' | 'fromRole' | 'fromId'>;
-};
-
-const ReviewForm: React.FC<Props> = ({ initial }) => {
-  const [ratingsetRating] = useState(0);
-  const [textsetText] = useState('');
-  const [anonymousetAnonymous] = useState(false);
-  const [communicationsetCommunication] = useState<number | undefined>();
-  const [qualityOfWorksetQualityOfWork] = useState<number | undefined>();
-  const [timelinessetTimeliness] = useState<number | undefined>();
-  const [wouldWorkWithAgainsetWouldWorkWithAgain] = useState<boolean>(false);
-  const [submittingsetSubmitting] = useState(false);
-  const [messagesetMessage] = useState<string | null>(null);
-=======
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 };
-
 const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
@@ -50,18 +27,12 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
->>>>>>> origin/auto/autonomy-17186719616
-
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSubmitting(true);
     setMessage(null);
     try {
-<<<<<<< HEAD
-      const res = await fetch('/api/reviews/submit'{
-=======
       const res = await fetch('/api/reviews/submit', {
->>>>>>> origin/auto/autonomy-17186719616
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -75,14 +46,10 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
             communication,
             qualityOfWork,
             timeliness,
-<<<<<<< HEAD
-            wouldWorkWithAgain}})});
-=======
             wouldWorkWithAgain,
           },
         }),
       });
->>>>>>> origin/auto/autonomy-17186719616
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to submit');
       setMessage('Review submitted! Pending admin approval.');
@@ -92,14 +59,12 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
       setSubmitting(false);
     }
   }
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <label className="block text-sm font-medium mb-2">Overall Rating</label>
         <StarRating value={rating} onChange={setRating} />
       </div>
-
       <div>
         <label className="block text-sm font-medium mb-2">Your Review</label>
         <textarea
@@ -110,12 +75,10 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
           required
         />
       </div>
-
       <div className="flex items-center gap-3">
         <input id="anonymous" type="checkbox" checked={anonymous} onChange={(e) => setAnonymous(e.target.checked)} />
         <label htmlFor="anonymous">Submit anonymously</label>
       </div>
-
       <div className="grid md:grid-cols-2 gap-4">
         <div className="enhanced-card">
           <div className="flex items-center justify-between mb-2">
@@ -146,7 +109,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
           <span className="pill">Optional</span>
         </div>
       </div>
-
       <button
         type="submit"
         className="enhanced-button enhanced-button-primary"
@@ -154,10 +116,8 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>
-
       {message && <p className="text-sm">{message}</p>}
     </form>
   );
 };
-
 export default ReviewForm;

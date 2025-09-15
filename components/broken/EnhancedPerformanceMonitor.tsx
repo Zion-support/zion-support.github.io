@@ -1,24 +1,14 @@
-<<<<<<< HEAD
-"use client";
-import React{ useStateuseEffectuseCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity
-  AlertTriangle
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Activity, 
   AlertTriangle, 
->>>>>>> origin/auto/autonomy-17186719616
   CheckCircle,
   X,
   RefreshCw,
   BarChart3,
   Gauge
 } from 'lucide-react';
-
 interface PerformanceMetrics {
   fcp: number;
   lcp: number;
@@ -38,7 +28,6 @@ interface PerformanceMetrics {
     rtt: number;
   };
 }
-
 interface PerformanceRecommendation {
   id: string;
   title: string;
@@ -48,25 +37,14 @@ interface PerformanceRecommendation {
   solution: string;
   category: 'performance' | 'accessibility' | 'seo' | 'user-experience';
 }
-
 const EnhancedPerformanceMonitor: React.FC = () => {
-<<<<<<< HEAD
-  const [isVisiblesetIsVisible] = useState(false);
-  const [metricsetMetrics] = useState<PerformanceMetrics | null>(null);
-  const [recommendationsetRecommendations] = useState<PerformanceRecommendation[]>([]);
-  const [isMonitoringsetIsMonitoring] = useState(false);
-  const [lastUpdatesetLastUpdate] = useState<Date | null>(null);
-=======
   const [isVisible, setIsVisible] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [recommendations, setRecommendations] = useState<PerformanceRecommendation[]>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
->>>>>>> origin/auto/autonomy-17186719616
-
   const generateRecommendations = useCallback((metrics: PerformanceMetrics): PerformanceRecommendation[] => {
     const recs: PerformanceRecommendation[] = [];
-
     // FCP recommendations
     if (metrics.fcp > 2000) {
       recs.push({
@@ -75,15 +53,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         description: 'FCP is above the recommended 2-second threshold',
         priority: 'high',
         impact: 'High impact on user perception of site speed',
-<<<<<<< HEAD
-        solution: 'Optimize critical rendering pathreduce server response timeliminate render-blocking resources',
-=======
         solution: 'Optimize critical rendering path, reduce server response time, eliminate render-blocking resources',
->>>>>>> origin/auto/autonomy-17186719616
         category: 'performance'
       });
     }
-
     // LCP recommendations
     if (metrics.lcp > 2500) {
       recs.push({
@@ -92,15 +65,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         description: 'LCP is above the recommended 2.5-second threshold',
         priority: 'high',
         impact: 'High impact on user experience and Core Web Vitals',
-<<<<<<< HEAD
-        solution: 'Optimize imagesimplement lazy loadinguse CDNoptimize server response time',
-=======
         solution: 'Optimize images, implement lazy loading, use CDN, optimize server response time',
->>>>>>> origin/auto/autonomy-17186719616
         category: 'performance'
       });
     }
-
     // CLS recommendations
     if (metrics.cls > 0.1) {
       recs.push({
@@ -109,15 +77,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         description: 'CLS is above the recommended 0.1 threshold',
         priority: 'medium',
         impact: 'Medium impact on user experience and visual stability',
-<<<<<<< HEAD
-        solution: 'Set explicit dimensions for images and videosavoid inserting content above existing content',
-=======
         solution: 'Set explicit dimensions for images and videos, avoid inserting content above existing content',
->>>>>>> origin/auto/autonomy-17186719616
         category: 'user-experience'
       });
     }
-
     // Memory usage recommendations
     if (metrics.memoryUsage && metrics.memoryUsage.usedJSHeapSize > 50 * 1024 * 1024) {
       recs.push({
@@ -126,67 +89,37 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         description: 'JavaScript heap usage is above 50MB',
         priority: 'medium',
         impact: 'Medium impact on long-term performance and stability',
-<<<<<<< HEAD
-        solution: 'Implement memory cleanupoptimize component lifecycleuse React.memo and useMemo',
-=======
         solution: 'Implement memory cleanup, optimize component lifecycle, use React.memo and useMemo',
->>>>>>> origin/auto/autonomy-17186719616
         category: 'performance'
       });
     }
-
     // Network recommendations
     if (metrics.networkInfo && metrics.networkInfo.effectiveType === 'slow-2g') {
       recs.push({
         id: 'network-optimization',
         title: 'Network Performance Optimization',
-<<<<<<< HEAD
-        description: 'Network connection is slowaffecting user experience',
-        priority: 'high',
-        impact: 'High impact on all performance metrics',
-        solution: 'Implement service workersoptimize bundle sizeuse progressive loading',
-=======
         description: 'Network connection is slow, affecting user experience',
         priority: 'high',
         impact: 'High impact on all performance metrics',
         solution: 'Implement service workers, optimize bundle size, use progressive loading',
->>>>>>> origin/auto/autonomy-17186719616
         category: 'performance'
       });
     }
-
     return recs;
-<<<<<<< HEAD
-  }[]);
-=======
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
-
   const measurePerformance = useCallback(async () => {
     try {
       setIsMonitoring(true);
-      
       // Wait for page to be fully loaded
       if (document.readyState !== 'complete') {
         await new Promise(resolve => {
-<<<<<<< HEAD
-          window.addEventListener(', 'load', 'resolve{ once: true });
-=======
           window.addEventListener('load', resolve, { once: true });
->>>>>>> origin/auto/autonomy-17186719616
         });
       }
-
       // Wait a bit more for any async operations
-<<<<<<< HEAD
-      await new Promise(resolve => setTimeout(resolve1000));
-=======
       await new Promise(resolve => setTimeout(resolve, 1000));
->>>>>>> origin/auto/autonomy-17186719616
-
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
-      
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
       const lcp = await new Promise<number>((resolve) => {
         if ('PerformanceObserver' in window) {
@@ -196,35 +129,23 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             resolve(lastEntry.startTime);
           });
           observer.observe({ entryTypes: ['largest-contentful-paint'] });
-          
           // Fallback timeout
-<<<<<<< HEAD
-          setTimeout(() => resolve(0)5000);
-=======
           setTimeout(() => resolve(0), 5000);
->>>>>>> origin/auto/autonomy-17186719616
         } else {
           resolve(0);
         }
       });
-
       const metrics: PerformanceMetrics = {
         fcp,
         lcp,
-<<<<<<< HEAD
-        fid: 0// Would need user interaction to measure
-        cls: 0// Would need PerformanceObserver for CLS
-=======
         fid: 0, // Would need user interaction to measure
         cls: 0, // Would need PerformanceObserver for CLS
->>>>>>> origin/auto/autonomy-17186719616
         ttfb: navigation.responseStart - navigation.requestStart,
         domLoad: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         windowLoad: navigation.loadEventEnd - navigation.loadEventStart,
         memoryUsage: 'memory' in performance ? (performance as any).memory : undefined,
         networkInfo: 'connection' in navigator ? (navigator as any).connection : undefined
       };
-
       setMetrics(metrics);
       setRecommendations(generateRecommendations(metrics));
       setLastUpdate(new Date());
@@ -233,39 +154,25 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     } finally {
       setIsMonitoring(false);
     }
-<<<<<<< HEAD
-  }[generateRecommendations]);
-=======
   }, [generateRecommendations]);
->>>>>>> origin/auto/autonomy-17186719616
-
   const getPerformanceScore = (metrics: PerformanceMetrics): number => {
     let score = 100;
-    
     if (metrics.fcp > 2000) score -= 20;
     if (metrics.lcp > 2500) score -= 25;
     if (metrics.cls > 0.1) score -= 15;
     if (metrics.ttfb > 600) score -= 20;
-    
-<<<<<<< HEAD
-    return Math.max(0score);
-=======
     return Math.max(0, score);
->>>>>>> origin/auto/autonomy-17186719616
   };
-
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
     return 'text-red-400';
   };
-
   const getOverallScoreBg = (score: number) => {
     if (score >= 90) return 'bg-green-500/20';
     if (score >= 70) return 'bg-yellow-500/20';
     return 'bg-red-500/20';
   };
-
   if (!performanceData) {
     return (
       <div className={`p-4 bg-gray-900 rounded-lg border border-gray-700 ${className}`}>
@@ -280,7 +187,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       </div>
     );
   }
-
   return (
     <motion.div
       className={`bg-gray-900 rounded-lg border border-gray-700 overflow-hidden ${className}`}
@@ -327,7 +233,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Overall Score */}
       <div className="p-4">
         <div className="text-center mb-6">
@@ -342,7 +247,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
              performanceData.overallScore >= 70 ? 'Good' : 'Needs Improvement'}
           </p>
         </div>
-
               {/* Metrics */}
               {metrics && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
@@ -375,7 +279,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               )}
-
               {/* Memory Usage */}
               {metrics?.memoryUsage && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
@@ -404,7 +307,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               )}
-
               {/* Network Info */}
               {metrics?.networkInfo && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
@@ -431,7 +333,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               )}
-
               {/* Recommendations */}
               {recommendations.length > 0 && (
                 <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
@@ -456,7 +357,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               )}
-
               {/* Action Buttons */}
               <div className="flex space-x-3">
                 <button
@@ -479,5 +379,4 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     </>
   );
 };
-
 export default EnhancedPerformanceMonitor;

@@ -1,12 +1,6 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-
-import React{ useStateuseEffectuseRef } from 'react';
-=======
 import React, { useState, useEffect, useRef } from 'react';
->>>>>>> origin/new-content-and-promotional-components
-
 interface SearchResult {
   id: string;
   title: string;
@@ -18,14 +12,12 @@ interface SearchResult {
   tags: string[];
   url: string;
 }
-
 interface SearchSuggestion {
   id: string;
   text: string;
   type: 'suggestion' | 'recent' | 'trending';
   count?: number;
 }
-
 const IntelligentSearchEngine: React.FC = () => {
   const [querysetQuery] = useState('');
   const [resultsetResults] = useState<SearchResult[]>([]);
@@ -38,7 +30,6 @@ const IntelligentSearchEngine: React.FC = () => {
     category: 'all' as string | 'all'
   });
   const searchRef = useRef<HTMLInputElement>(null);
-
   const mockResults: SearchResult[] = [
     {
       id: '1',
@@ -96,7 +87,6 @@ const IntelligentSearchEngine: React.FC = () => {
       url: '/faq/ai-integration'
     }
   ];
-
   const mockSuggestions: SearchSuggestion[] = [
     { id: '1'text: 'AI 'automation', 'type: ''trending', 'count: 1250 },
     { id: '2'text: 'machine learning 'services', 'type: ''trending', 'count: 980 },
@@ -105,9 +95,7 @@ const IntelligentSearchEngine: React.FC = () => {
     { id: '5'text: 'business 'automation', 'type: 'recent' },
     { id: '6'text: 'AI implementation 'guide', 'type: 'recent' }
   ];
-
   const categories = ['AI & 'Automation', 'AI 'Services', 'Technology', 'API', 'Integration', 'Blockchain', 'IoT'Cybersecurity'];
-
   useEffect(() => {
     // Load search history from localStorage
     const savedHistory = localStorage.getItem('searchHistory');
@@ -115,7 +103,6 @@ const IntelligentSearchEngine: React.FC = () => {
       setSearchHistory(JSON.parse(savedHistory));
     }
   }[]);
-
   useEffect(() => {
     if (query.length > 2) {
       generateSuggestions();
@@ -124,64 +111,50 @@ const IntelligentSearchEngine: React.FC = () => {
       setShowSuggestions(false);
     }
   }[query]);
-
   const generateSuggestions = () => {
     const filteredSuggestions = mockSuggestions.filter(suggestion =>
       suggestion.text.toLowerCase().includes(query.toLowerCase())
     );
     setSuggestions(filteredSuggestions);
   };
-
   const handleSearch = async (searchQuery: string = query) => {
     if (!searchQuery.trim()) return;
-
     setIsLoading(true);
     setShowSuggestions(false);
-
     // Add to search history
     const newHistory = [searchQuery...searchHistory.filter(item => item !== searchQuery)].slice(010);
     setSearchHistory(newHistory);
     localStorage.setItem(', 'searchHistory', 'JSON.stringify(newHistory));
-
     // Simulate AI-powered search
     await new Promise(resolve => setTimeout(resolve800));
-
     let filteredResults = mockResults;
-
     // Apply type filter
     if (filters.type !== 'all') {
       filteredResults = filteredResults.filter(result => result.type === filters.type);
     }
-
     // Apply category filter
     if (filters.category !== 'all') {
       filteredResults = filteredResults.filter(result => result.category === filters.category);
     }
-
     // Simulate relevance scoring based on query
     filteredResults = filteredResults.map(result => ({
       ...result,
       relevanceScore: Math.max(60result.relevanceScore - Math.random() * 20)
     }));
-
     // Sort by relevance
     filteredResults.sort((ab) => b.relevanceScore - a.relevanceScore);
-
     setResults(filteredResults);
     setIsLoading(false);
   };
-
   const handleSuggestionClick = (suggestion: SearchSuggestion) => {
     setQuery(suggestion.text);
     handleSearch(suggestion.text);
   };
-
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       handleSearch();
     }
   };
-
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'content': return '📄';
@@ -192,7 +165,6 @@ const IntelligentSearchEngine: React.FC = () => {
       default: return '📄';
     }
   };
-
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'content': return 'bg-blue-100 text-blue-800';
@@ -203,14 +175,12 @@ const IntelligentSearchEngine: React.FC = () => {
       default: return 'bg-gray-100 text-gray-800';
     }
   };
-
   const getRelevanceColor = (score: number) => {
     if (score >= 90) return 'text-green-600';
     if (score >= 75) return 'text-yellow-600';
     if (score >= 60) return 'text-orange-600';
     return 'text-red-600';
   };
-
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-12">
@@ -221,7 +191,6 @@ const IntelligentSearchEngine: React.FC = () => {
           Powered by advanced AI algorithms to find exactly what 'you', 're looking for across our entire knowledge base.
         </p>
       </div>
-
       {/* Search Input */}
       <div className="relative mb-8">
         <div className="relative">
@@ -242,7 +211,6 @@ const IntelligentSearchEngine: React.FC = () => {
             Search
           </button>
         </div>
-
         {/* Search Suggestions */}
         {showSuggestions && (
           <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-xl shadow-lg mt-2 z-10 max-h-80 overflow-y-auto">
@@ -267,7 +235,6 @@ const IntelligentSearchEngine: React.FC = () => {
           </div>
         )}
       </div>
-
       {/* Search History */}
       {searchHistory.length > 0 && !showSuggestions && (
         <div className="mb-8">
@@ -288,7 +255,6 @@ const IntelligentSearchEngine: React.FC = () => {
           </div>
         </div>
       )}
-
       {/* Filters */}
       <div className="flex flex-wrap gap-4 mb-8">
         <select
@@ -303,7 +269,6 @@ const IntelligentSearchEngine: React.FC = () => {
           <option value="documentation">Documentation</option>
           <option value="faq">FAQ</option>
         </select>
-
         <select
           value={filters.category}
           onChange={(e) => setFilters(prev => ({ ...prevcategory: e.target.value }))}
@@ -315,7 +280,6 @@ const IntelligentSearchEngine: React.FC = () => {
           ))}
         </select>
       </div>
-
       {/* Search Results */}
       {isLoading ? (
         <div className="space-y-4">
@@ -341,7 +305,6 @@ const IntelligentSearchEngine: React.FC = () => {
               Sorted by relevance
             </div>
           </div>
-
           {results.map((result) => (
             <div key={result.id} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-start justify-between mb-3">
@@ -353,9 +316,7 @@ const IntelligentSearchEngine: React.FC = () => {
                   {result.type}
                 </span>
               </div>
-
               <p className="text-gray-600 mb-4">{result.description}</p>
-
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-4">
                   <span className="text-sm text-gray-500">
@@ -369,7 +330,6 @@ const IntelligentSearchEngine: React.FC = () => {
                   </span>
                 </div>
               </div>
-
               <div className="flex items-center justify-between">
                 <div className="flex flex-wrap gap-1">
                   {result.tags.map(tag => (
@@ -407,7 +367,6 @@ const IntelligentSearchEngine: React.FC = () => {
           <p className="text-gray-600">Enter a search term to find relevant content across our platform.</p>
         </div>
       )}
-
       {/* Search Tips */}
       <div className="mt-12 bg-blue-50 rounded-2xl p-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">💡 Search Tips</h3>
@@ -429,5 +388,4 @@ const IntelligentSearchEngine: React.FC = () => {
     </div>
   );
 };
-
 export default IntelligentSearchEngine;

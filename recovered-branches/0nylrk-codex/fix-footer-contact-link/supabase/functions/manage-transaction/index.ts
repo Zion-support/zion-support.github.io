@@ -5,12 +5,8 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
->>>>>>> origin/auto/autonomy-17186719616
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -68,12 +64,8 @@ serve(async (req) => {
     }
 
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
-<<<<<<< HEAD
-      apiVersion: "2023-10-16"});
-=======
       apiVersion: "2023-10-16",
     });
->>>>>>> origin/auto/autonomy-17186719616
 
     let result;
     
@@ -153,21 +145,13 @@ serve(async (req) => {
 
     return new Response(JSON.stringify(result), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
-      status: 200});
-=======
       status: 200,
     });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error("Transaction management error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
-      status: 500});
-=======
       status: 500,
     });
->>>>>>> origin/auto/autonomy-17186719616
   }
 });

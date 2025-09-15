@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-"use client";
 import React, { useState, useEffect } from 'react';
-
-const ScrollToTop: React.FC = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-=======
-import React, { useState, useEffect } from 'react';
-
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
-
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
@@ -19,28 +9,15 @@ const ScrollToTop: React.FC = () => {
         setIsVisible(false);
       }
     };
-
-<<<<<<< HEAD
-    window.addEventListener(', 'scroll', 'toggleVisibility);
-    return () => window.removeEventListener(', 'scroll', 'toggleVisibility);
-  }[]);
-=======
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-<<<<<<< HEAD
-      behavior: 'smooth'});
-=======
       behavior: 'smooth',
     });
->>>>>>> origin/auto/autonomy-17186719616
   };
-
   return (
     <>
       {isVisible && (
@@ -68,5 +45,4 @@ const ScrollToTop: React.FC = () => {
     </>
   );
 };
-
 export default ScrollToTop;

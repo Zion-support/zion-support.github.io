@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface InnovativeAgricultureService {
   id: string;
   name: string;
@@ -43,20 +39,12 @@ export interface InnovativeAgricultureService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
     id: 'ai-powered-precision-agriculture',
@@ -139,11 +127,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     competitors: ['D-Wave, Rigetti, IBM Quantum, Google Quantum'],
     marketSize: '$9.8B+ quantum agriculture market',
     growthRate: '380% YoY',
-<<<<<<< HEAD
-    variant: 'quantum',
-=======
     variant: 'ai-futuristic',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Quantum agriculture optimization platform with advanced algorithms and resource allocation capabilities.',
@@ -233,11 +217,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'],
     marketSize: '$18.4B+ food traceability market',
     growthRate: '320% YoY',
-<<<<<<< HEAD
-    variant: 'default',
-=======
     variant: 'ai-futuristic',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Blockchain food traceability platform with supply chain tracking and product authentication capabilities.',

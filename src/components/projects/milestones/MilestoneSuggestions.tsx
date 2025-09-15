@@ -1,21 +1,3 @@
-
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Loader2, Sparkles, Check } from 'lucide-react'
-import { Badge } from '@/components/ui/badge',
-import { format, parseISO } from 'date-fns',
-
-interface MilestoneSuggestionsProps {
-  projectName: string,
-  scopeSummary: string,
-  startDate: Date,
-  endDate?: Date,
-  projectType: string,
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
-=======
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
@@ -23,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Sparkles, Check } from 'lucide-react'
 import { Badge } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
-
 interface MilestoneSuggestionsProps {
   projectName: string;
   scopeSummary: string;
@@ -31,9 +12,7 @@ interface MilestoneSuggestionsProps {
   endDate?: Date;
   projectType: string;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export function MilestoneSuggestions({
   projectName,
   scopeSummary,
@@ -42,45 +21,16 @@ export function MilestoneSuggestions({
   projectType,
   onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
-<<<<<<< HEAD
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
-  const [showSuggestions, setShowSuggestions] = useState(false),
-=======
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
   const [showSuggestions, setShowSuggestions] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
-
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
       projectType: projectType || "Other"
-<<<<<<< HEAD
-    },
-
-    const milestones = await generateMilestones(input),
-    
-    if (milestones.length > 0) {
-      setShowSuggestions(true),
-      if (onMilestonesGenerated) {
-        onMilestonesGenerated(milestones),
-      }
-    }
-  },
-
-  const formatDate = (dateString: string) => {
-    try {
-      return format(parseISO(dateString), 'MMM dd, yyyy'),
-    } catch (error) {
-      return dateString,
-    }
-  },
-=======
     };
-
     const milestones = await generateMilestones(input);
-    
     if (milestones.length > 0) {
       setShowSuggestions(true);
       if (onMilestonesGenerated) {
@@ -88,7 +38,6 @@ export function MilestoneSuggestions({
       }
     }
   };
-
   const formatDate = (dateString: string) => {
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy');
@@ -96,33 +45,13 @@ export function MilestoneSuggestions({
       return dateString;
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div className="space-y-4">
       {!showSuggestions && (
         <Button
-<<<<<<< HEAD
-          variant='outline'
-          onClick={handleGenerateMilestones}
-          disabled={isGenerating |!scopeSummary |!startDate}
-          className='w-full'        >
-          {isGenerating ? (
-            <>
-              <Loader2 className='mr-2 h-4 w-4 animate-spin' />              Generating milestones...
-            </>
-          ) : (
-            <>
-              <Sparkles className='mr-2 h-4 w-4' />              Suggest Project Milestones with AI
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          variant="outline"
-          onClick={handleGenerateMilestones}
-          disabled={isGenerating |!scopeSummary |!startDate}
-=======
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scopeSummary || !startDate}
->>>>>>> origin/auto/autonomy-17186719616
           className="w-full"
         >
           {isGenerating ? (
@@ -138,7 +67,6 @@ export function MilestoneSuggestions({
           )}
         </Button>
       )}
-
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -168,7 +96,6 @@ export function MilestoneSuggestions({
                   </div>
                 </div>
               ))}
-
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
                 <Check className="h-4 w-4 mr-1 text-green-500" />
                 These milestones will be added to your contract
@@ -178,9 +105,5 @@ export function MilestoneSuggestions({
         </Card>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

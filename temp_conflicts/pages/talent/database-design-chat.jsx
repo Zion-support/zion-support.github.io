@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import Link from 'next/link',
-=======
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
 
 const DatabaseDesignChat = () => {
   return (
@@ -21,14 +16,7 @@ const DatabaseDesignChat = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default DatabaseDesignChat,
-=======
   );
 };
 
 export default DatabaseDesignChat;
->>>>>>> origin/auto/autonomy-17186719616

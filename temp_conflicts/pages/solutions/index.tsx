@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { 
-  Shield, ArrowRight, CheckCircle, Zap, Target, Users, 
-  TrendingUp, Globe, Cpu, Database, Star, Building, Rocket, Factory
-} from 'lucide-react',
-import EnhancedNavigation from '../../components/EnhancedNavigation',
-import EnhancedFooter from '../../components/EnhancedFooter',
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -18,7 +7,6 @@ import {
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function SolutionsPage() {
   const solutionCategories = [
@@ -61,11 +49,7 @@ export default function SolutionsPage() {
         "Domain knowledge"
       ]
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const benefits = [
     {
@@ -88,11 +72,7 @@ export default function SolutionsPage() {
       title: "Proven Results",
       description: "Track record of successful implementations and transformations"
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -168,11 +148,7 @@ export default function SolutionsPage() {
                 viewport={{ once: true }}
                 className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105"
               >
-<<<<<<< HEAD
-                <div className={`pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r ${category.color.replace('from-from-').replace('to-to-')}/0 via-${category.color.split('-')[1]}-400/10 to-${category.color.split('-')[3]}-500/0 opacity-0 blur-2xl transition-opacity hover:opacity-100`} />
-=======
                 <div className={`pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r ${category.color.replace('from-', 'from-').replace('to-', 'to-')}/0 via-${category.color.split('-')[1]}-400/10 to-${category.color.split('-')[3]}-500/0 opacity-0 blur-2xl transition-opacity hover:opacity-100`} />
->>>>>>> origin/auto/autonomy-17186719616
                 
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${category.color} p-4 mb-6`}>
                   <category.icon className="w-8 h-8 text-white" />
@@ -264,11 +240,7 @@ export default function SolutionsPage() {
               href="mailto:kleber@ziontechgroup.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover: from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-=======
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
->>>>>>> origin/auto/autonomy-17186719616
             >
               <span>Get Started</span>
               <ArrowRight className="w-5 h-5" />
@@ -279,9 +251,5 @@ export default function SolutionsPage() {
 
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,15 +1,8 @@
 
-<<<<<<< HEAD
-import React{ useState } from "react";
-import { Button } from "@/components/ui/button";
-import { CardContent } from "@/components/ui/card";
-import { BriefcaseUsersCheck } from "lucide-react";
-=======
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, Check } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 
 type UserRole = "talent" | "client" | null;
 
@@ -18,11 +11,7 @@ interface RolePickerProps {
 }
 
 export function RolePicker({ onSelect }: RolePickerProps) {
-<<<<<<< HEAD
-  const [selectedRolesetSelectedRole] = useState<UserRole>(null);
-=======
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleSelect = (role: UserRole) => {
     setSelectedRole(role);

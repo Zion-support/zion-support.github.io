@@ -1,29 +1,3 @@
-
-<<<<<<< HEAD
-import { Header } from "@/components/Header",
-import { TrustedBySection } from "@/components/TrustedBySection",
-import { TestimonialCarousel } from "@/components/TestimonialCarousel",
-import { FloatingCTA } from "@/components/FloatingCTA",
-import { HeroSection } from "@/components/HeroSection",
-import { CategoriesSection } from "@/components/CategoriesSection",
-import { BenefitsSection } from "@/components/BenefitsSection",
-import { HowItWorksSection } from "@/components/HowItWorksSection",
-import { WaitlistSection } from "@/components/WaitlistSection",
-import { BlogSection } from "@/components/BlogSection",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
-import { FeaturesGuideSection } from "@/components/FeaturesGuideSection",
-import { SocialShareSection } from "@/components/SocialShareSection",
-import { useTranslation } from "react-i18next",
-import { useLanguage } from "@/context/LanguageContext",
-import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
-
-export default function LandingPage() {
-  const { t } = useTranslation(),
-  const { isRTL } = useLanguage(),
-=======
 import { Header } from "@/components/Header";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
@@ -43,12 +17,9 @@ import { SocialShareSection } from "@/components/SocialShareSection";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
-
 export default function LandingPage() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
->>>>>>> origin/auto/autonomy-17186719616
-  
   // Tools and features showcase
   const toolsFeatures = [
     {
@@ -87,12 +58,7 @@ export default function LandingPage() {
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
       link: "/mobile-launch"
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div className="min-h-screen bg-zion-blue text-white">
       <SEO 
@@ -103,7 +69,6 @@ export default function LandingPage() {
       />
       <Header />
       <HeroSection />
-      
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -115,7 +80,6 @@ export default function LandingPage() {
               {t("home.tools_description")}
             </p>
           </div>
-          
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index) => (
               <Link 
@@ -137,28 +101,19 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-      
       <CategoriesSection />
       <BenefitsSection />
-      
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
-      
       <HowItWorksSection />
       <FeaturedListingsSection />
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
-      
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
-      
       <WaitlistSection />
       <FloatingCTA />
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

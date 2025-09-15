@@ -1,21 +1,3 @@
-
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',
-import { Textarea } from '@/components/ui/textarea',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
-
-interface AIEnhancementPanelProps {
-  title: string,
-  defaultOptions: AIEnhancementOptions,
-  onApply: (content: string) => void,
-  onClose?: () => void,
-  showInstructions?: boolean,
-  initialContent?: string
-=======
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
@@ -23,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-
 interface AIEnhancementPanelProps {
   title: string;
   defaultOptions: AIEnhancementOptions;
@@ -31,9 +12,7 @@ interface AIEnhancementPanelProps {
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export function AIEnhancementPanel({
   title,
   defaultOptions,
@@ -44,73 +23,35 @@ export function AIEnhancementPanel({
 }: AIEnhancementPanelProps) {
   const [options, setOptions] = useState<AIEnhancementOptions>({
     ...defaultOptions,
-<<<<<<< HEAD
-    content: initialContent || defaultOptions.content}),
-  const [generatedContent, setGeneratedContent] = useState<string>(''),
-  const [copied, setCopied] = useState(false),
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
-
-  const handleGenerate = async () => {
-    const result = await enhanceContent(options),
-    if (result) {
-      setGeneratedContent(result),
-    }
-  },
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-=======
     content: initialContent || defaultOptions.content,
   });
   const [generatedContent, setGeneratedContent] = useState<string>('');
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-
   const handleGenerate = async () => {
     const result = await enhanceContent(options);
     if (result) {
       setGeneratedContent(result);
     }
   };
-
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
->>>>>>> origin/auto/autonomy-17186719616
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
       ...options,
-<<<<<<< HEAD
-      [field]: e.target.value}),
-  },
-
-  const handleApply = () => {
-    onApply(generatedContent),
-    if (onClose) onClose(),
-  },
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent),
-    setCopied(true),
-    setTimeout(() => setCopied(false), 2000),
-  },
-=======
       [field]: e.target.value,
     });
   };
-
   const handleApply = () => {
     onApply(generatedContent);
     if (onClose) onClose();
   };
-
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
@@ -124,30 +65,12 @@ export function AIEnhancementPanel({
         <div className="space-y-2">
           <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
-<<<<<<< HEAD
-            placeholder='Enter your content to enhance...'
-            className='min-h-[100px]'
-            value={options.content}
-            onChange={e => handleInputChange(e, 'content')}          />
-        </div>
-        {/* Context input */}
-        <div className='space-y-2'>
-          <label className='text-sm font-medium'>Context (optional)</label>
-          <Textarea
-            placeholder='Add any relevant context to guide the AI...'
-            className='min-h-[60px]'
-            value={options.context}
-            onChange={e => handleInputChange(e, 'context')}          />
-        </div>
-=======
->>>>>>> origin/auto/autonomy-17186719616
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
             onChange={(e) => handleInputChange(e, 'content')}
           />
         </div>
-
         {/* Context input */}
         <div className="space-y-2">
           <label className="text-sm font-medium">Context (optional)</label>
@@ -158,7 +81,6 @@ export function AIEnhancementPanel({
             onChange={(e) => handleInputChange(e, 'context')}
           />
         </div>
-
         {/* Instructions input (optional) */}
         {showInstructions && (
           <div className="space-y-2">
@@ -170,7 +92,6 @@ export function AIEnhancementPanel({
             />
           </div>
         )}
-
         {/* Generate button */}
         <Button 
           onClick={handleGenerate} 
@@ -189,7 +110,6 @@ export function AIEnhancementPanel({
             </>
           )}
         </Button>
-
         {/* Output area */}
         {generatedContent && (
           <div className="space-y-2 mt-4">
@@ -206,21 +126,11 @@ export function AIEnhancementPanel({
                 ) : (
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>
                 )}
-<<<<<<< HEAD
-              </Button>;
-            </div>;
-            <div className='relative'>;
-              <Textarea
-                value={generatedContent}
-                onChange={e => setGeneratedContent(e.target.value)}
-                className='min-h-[200px]'              />
-=======
               </Button>
             </div>
             <div className="relative">
               <Textarea
                 value={generatedContent}
->>>>>>> origin/auto/autonomy-17186719616
                 onChange={(e) => setGeneratedContent(e.target.value)}
                 className="min-h-[200px]"
               />
@@ -228,7 +138,6 @@ export function AIEnhancementPanel({
           </div>
         )}
       </CardContent>
-      
       {generatedContent && (
         <CardFooter className="flex justify-between">
           {onClose && (
@@ -242,9 +151,5 @@ export function AIEnhancementPanel({
         </CardFooter>
       )}
     </Card>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

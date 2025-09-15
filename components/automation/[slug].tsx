@@ -2,14 +2,11 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
-
 const AutomationDetail: NextPage = () => {
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
-
   let title = 'Automation Report';
   let data: any = null;
-
   try {
     if (slug === 'marketplace-insights') {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -23,7 +20,6 @@ const AutomationDetail: NextPage = () => {
   } catch (e) {
     data = null;
   }
-
   return (
     <EnhancedLayout>
       <Head>
@@ -33,14 +29,9 @@ const AutomationDetail: NextPage = () => {
       {!data ? (
         <div className="opacity-70">No report found.</div>
       ) : (
-<<<<<<< HEAD
-        <pre className="text-xs whitespace-pre-wrap break-words rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white dark:bg-zinc-900 overflow-x-auto">{JSON.stringify(datanull2)}</pre>
-=======
         <pre className="text-xs whitespace-pre-wrap break-words rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white dark:bg-zinc-900 overflow-x-auto">{JSON.stringify(data, null, 2)}</pre>
->>>>>>> origin/auto/autonomy-17186719616
       )}
     </EnhancedLayout>
   );
 };
-
 export default AutomationDetail;

@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import { useRef, useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Copy, Download, Link, Plus } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { useReferrals } from "@/hooks/useReferrals",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Label } from "@/components/ui/label",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-
-export function PartnerReferralLinks() {
-  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
-  const [isDialogOpen, setIsDialogOpen] = useState(false),
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
-  const [customParam, setCustomParam] = useState<string>(""),
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
-  
-  // Get the base referral link
-  const baseLink = getReferralLink(),
-  
-  const handleCopyLink = (link: string) => {
-    navigator.clipboard.writeText(link),
-=======
 import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -33,108 +8,51 @@ import { useReferrals } from "@/hooks/useReferrals";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]);
-  
   // Get the base referral link
   const baseLink = getReferralLink();
-  
   const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link);
->>>>>>> origin/auto/autonomy-17186719616
     toast({
       title: "Link copied!",
       description: "The referral link has been copied to your clipboard",
       variant: "default"
-<<<<<<< HEAD
-    }),
-  },
-  
-  const handleGenerateLink = () => {
-    if (baseLink) {
-      const url = new URL(baseLink),
-      
-      // Add custom campaign parameter if selected
-      if (selectedCampaign !== "default") {
-        url.searchParams.append("campaign", selectedCampaign),
-=======
     });
   };
-  
   const handleGenerateLink = () => {
     if (baseLink) {
       const url = new URL(baseLink);
-      
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
         url.searchParams.append("campaign", selectedCampaign);
->>>>>>> origin/auto/autonomy-17186719616
       }
-      
       // Add custom parameter if provided
       if (customParam) {
-<<<<<<< HEAD
-        url.searchParams.append("source", customParam),
-=======
         url.searchParams.append("source", customParam);
->>>>>>> origin/auto/autonomy-17186719616
       }
-      
       const newLink = {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
         link: url.toString()
-<<<<<<< HEAD
-      },
-      
-      setGeneratedLinks(prev => [...prev, newLink]),
-      setIsDialogOpen(false),
-      setCustomParam(""),
-    }
-  },
-=======
       };
-      
       setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);
       setCustomParam("");
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
-  
   const handleDownloadLinks = () => {
     const allLinks = [
       { name: "Default", link: baseLink },
       ...generatedLinks
-<<<<<<< HEAD
-    ],
-=======
     ];
->>>>>>> origin/auto/autonomy-17186719616
-    
     const csvContent = [
       "Name,Link",
       ...allLinks.map(l => `${l.name},${l.link}`)
-<<<<<<< HEAD
-    ].join("\n"),
-    
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
-    const url = URL.createObjectURL(blob),
-    const link = document.createElement("a"),
-    link.setAttribute("href", url),
-    link.setAttribute("download", "zion_referral_links.csv"),
-    link.style.visibility = 'hidden',
-    document.body.appendChild(link),
-    link.click(),
-    document.body.removeChild(link),
-  },
-=======
     ].join("\n");
-    
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
@@ -145,43 +63,12 @@ export function PartnerReferralLinks() {
     link.click();
     document.body.removeChild(link);
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
-<<<<<<< HEAD
-            <Button
-              variant='outline'
-              size='sm'
-              onClick={handleDownloadLinks}
-              className='flex items-center gap-2'            >
-              <Download className='h-4 w-4' />
-              Export Links
-            </Button>
-          </CardTitle>
-          <CardDescription>
-            Share this link with your audience to earn rewards
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className='flex space-x-2'>
-            <Input value={baseLink} readOnly className='font-mono text-sm' />
-            <Button variant='outline' onClick={() => handleCopyLink(baseLink)}>
-              <Copy className='h-4 w-4' />
-              <span className='sr-only'>Copy</span>            </Button>
-          </div>
-        </CardContent>
-      </Card>
-      <div className='flex justify-between items-center'>
-        <h3 className='text-lg font-semibold text-white'>
-          Custom Campaign Links
-        </h3>
-=======
->>>>>>> origin/auto/autonomy-17186719616
             <Button 
               variant="outline" 
               size="sm" 
@@ -208,7 +95,6 @@ export function PartnerReferralLinks() {
           </div>
         </CardContent>
       </Card>
-
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
@@ -245,15 +131,6 @@ export function PartnerReferralLinks() {
                   </SelectContent>
                 </Select>
               </div>
-<<<<<<< HEAD
-            </div>
-            <DialogFooter>
-              <Button
-                type='button'
-                variant='secondary'
-                onClick={() => setIsDialogOpen(false)}
-=======
->>>>>>> origin/auto/autonomy-17186719616
               <div className="grid gap-2">
                 <Label htmlFor="custom">Custom Parameter (Optional)</Label>
                 <Input 
@@ -283,7 +160,6 @@ export function PartnerReferralLinks() {
           </DialogContent>
         </Dialog>
       </div>
-
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
           generatedLinks.map((item, index) => (
@@ -296,45 +172,6 @@ export function PartnerReferralLinks() {
                   </div>
                 </CardTitle>
               </CardHeader>
-<<<<<<< HEAD
-              <CardContent className='pb-4'>
-                <div className='flex space-x-2'>
-                className='bg-zion-purple hover:bg-zion-purple-dark'>;
-                Generate Link;
-              </Button>;
-            </DialogFooter>;
-          </DialogContent>;
-        </Dialog>;
-      </div>;
-
-      <div className='grid gap-4'>;
-        {generatedLinks && generatedLinks.length > 0 ? (;
-          generatedLinks && generatedLinks.map((item, index) => (;
-            <Card
-              key={index}
-              className='bg-zion-blue-dark border-zion-blue-light'>;
-              <CardHeader className='pb-2'>;
-                <CardTitle className='text-base flex items-center justify-between'>;
-                  <div className='flex items-center gap-2'>;
-                    <Link className='h-4 w-4 text-zion-purple' />;
-                    <span>{item && item.name || 'Campaign Link'}</span>                  </div>;
-                </CardTitle>;
-              </CardHeader>;
-              <CardContent className='pb-4'>;
-                <div className='flex space-x-2'>;
-                  <Input
-                    value={item.link}
-                    readOnly
-
-                    className="font-mono text-xs"
-                  />
-                  <Button
-                    variant='outline'
-                    size='sm'
-                    onClick={() => handleCopyLink(item.link)}                  >
-                    <Copy className='h-4 w-4' />
-                    <span className='sr-only'>Copy</span>
-=======
               <CardContent className="pb-4">
                 <div className="flex space-x-2">
                   <Input
@@ -342,7 +179,6 @@ export function PartnerReferralLinks() {
                     readOnly
                     className="font-mono text-xs"
                   />
->>>>>>> origin/auto/autonomy-17186719616
                   <Button 
                     variant="outline" 
                     size="sm" 
@@ -374,10 +210,5 @@ export function PartnerReferralLinks() {
         )}
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-}
-=======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

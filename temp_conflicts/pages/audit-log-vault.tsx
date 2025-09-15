@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import { Button } from '../components/ui/Button',
-import Card from '../components/ui/Card',
-import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react',
-=======
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import { Button } from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function AuditLogVaultPage() {
   const contactInfo = {
@@ -20,15 +11,6 @@ export default function AuditLogVaultPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-  },
-
-  const features = [
-    'Append-only, tamper-evident storageFlexible retention and legal holds',
-    'Cryptographic digests and attestationsFine-grained search and export bundles',
-    'Chain-of-custody and access reviewsAlerts for risky access patterns'
-  ],
-=======
   };
 
   const features = [
@@ -39,7 +21,6 @@ export default function AuditLogVaultPage() {
     'Chain-of-custody and access reviews',
     'Alerts for risky access patterns'
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
@@ -87,10 +68,6 @@ export default function AuditLogVaultPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
 

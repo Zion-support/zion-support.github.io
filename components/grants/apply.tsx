@@ -1,33 +1,8 @@
-<<<<<<< HEAD
-"use client";
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import { useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
-
-<<<<<<< HEAD
-const categories: GrantCategory[] = ['Ecosystem 'Tools', 'Talent 'Development', 'Regional 'Expansion', 'Research Grants'];
-
-export default function ApplyGrantPage() {
-  const router = useRouter();
-  const [programsetProgram] = useState<'grant' | 'incubator'>('grant');
-  const [projectNamesetProjectName] = useState('');
-  const [teamInfosetTeamInfo] = useState('');
-  const [proposalSummarysetProposalSummary] = useState('');
-  const [timelinesetTimeline] = useState('');
-  const [budgetAmountsetBudgetAmount] = useState<number>(0);
-  const [budgetCurrencysetBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
-  const [supportingLinksetSupportingLinks] = useState<string>(', ');
-  const [pitchDeckUrlsetPitchDeckUrl] = useState('');
-  const [regionsetRegion] = useState('');
-  const [sectorsetSector] = useState<string>(', ');
-  const [loadingsetLoading] = useState(false);
-  const [errorsetError] = useState<string | null>(null);
-=======
 const categories: GrantCategory[] = ['Ecosystem Tools', 'Talent Development', 'Regional Expansion', 'Research Grants'];
-
 export default function ApplyGrantPage() {
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
@@ -43,17 +18,11 @@ export default function ApplyGrantPage() {
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
->>>>>>> origin/auto/autonomy-17186719616
-
   const save = async (submit: boolean) => {
     try {
       setLoading(true);
       setError(null);
-<<<<<<< HEAD
-      const resp = await fetch('/api/grants'{
-=======
       const resp = await fetch('/api/grants', {
->>>>>>> origin/auto/autonomy-17186719616
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -71,13 +40,9 @@ export default function ApplyGrantPage() {
           pitchDeckUrl,
           region,
           sector: (sector as any) || undefined,
-<<<<<<< HEAD
-          submit})});
-=======
           submit,
         }),
       });
->>>>>>> origin/auto/autonomy-17186719616
       const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error || 'Failed');
       router.push(`/grants/${data.id}`);
@@ -87,7 +52,6 @@ export default function ApplyGrantPage() {
       setLoading(false);
     }
   };
-
   return (
     <EnhancedLayout>
       <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
@@ -129,11 +93,7 @@ export default function ApplyGrantPage() {
             </select>
           </label>
           <label className="text-sm">Region
-<<<<<<< HEAD
-            <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e.target.value)} placeholder="e.g.LATAMEUGlobal" />
-=======
             <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e.target.value)} placeholder="e.g., LATAM, EU, Global" />
->>>>>>> origin/auto/autonomy-17186719616
           </label>
         </div>
         <label className="text-sm">Supporting Links (one per line)
@@ -142,9 +102,7 @@ export default function ApplyGrantPage() {
         <label className="text-sm">Pitch Deck URL
           <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e.target.value)} />
         </label>
-
         {error && <div className="text-sm text-red-600">{error}</div>}
-
         <div className="flex gap-3">
           <button disabled={loading} onClick={() => save(false)} className="px-4 py-2 border rounded disabled:opacity-50">Save Draft</button>
           <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50">Submit for Review</button>

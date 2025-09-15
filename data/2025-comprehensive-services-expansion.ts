@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface ComprehensiveService {
   id: string;
   name: string;
@@ -43,20 +39,12 @@ export interface ComprehensiveService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
     id: 'ai-powered-code-review-assistant',
@@ -274,11 +262,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     competitors: ['AWS IoT Greengrass, Azure IoT Edge, Google Edge TPU'],
     marketSize: '$12B edge AI',
     growthRate: '38% YoY',
-<<<<<<< HEAD
-    variant: 'edge-futuristic',
-=======
     variant: 'edge-computing-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Edge deployment framework with model optimization and device management capabilities.',
@@ -413,11 +397,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     competitors: ['IBM Quantum, Google Quantum, Rigetti'],
     marketSize: '$3B quantum computing',
     growthRate: '55% YoY',
-<<<<<<< HEAD
-    variant: 'quantum',
-=======
     variant: 'quantum-ai-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Quantum algorithm library with hybrid classical-quantum optimization capabilities.',

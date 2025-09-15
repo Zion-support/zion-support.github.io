@@ -1,33 +1,21 @@
 'use client'
-
 import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
-<<<<<<< HEAD
-import {logErrorToProduction} from '@/utils/productionLogger',
-=======
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/auto/autonomy-17186719616
-
-
 interface LoadingState {
   isLoading: boolean
   error: Error | null
   retryCount: number
   isOnline: boolean
 }
-
 interface DynamicLoaderProps {
   importFn: () => Promise<{ default: ComponentType<any> }>
   fallback?: React.ReactNode
-<<<<<<< HEAD
-  errorFallback?: React.ComponentType<{ error: Error, retry: () => void }>
-=======
   errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
->>>>>>> origin/auto/autonomy-17186719616
   loadingComponent?: React.ComponentType
   enableRetry?: boolean
   maxRetries?: number
@@ -36,18 +24,13 @@ interface DynamicLoaderProps {
   children?: React.ReactNode
   [key: string]: any
 }
-
 // Enhanced Loading Component
 const EnhancedLoading: React.FC<{ 
   progress?: number
   message?: string
   showProgress?: boolean
 }> = ({ 
-<<<<<<< HEAD
-  progress = 0,
-=======
   progress = 0, 
->>>>>>> origin/auto/autonomy-17186719616
   message = 'Loading component...', 
   showProgress = true 
 }) => (
@@ -80,7 +63,6 @@ const EnhancedLoading: React.FC<{
     </CardContent>
   </Card>
 )
-
 // Enhanced Error Component
 const EnhancedError: React.FC<{
   error: Error
@@ -130,26 +112,20 @@ const EnhancedError: React.FC<{
     </CardContent>
   </Card>
 )
-
 // Network Status Hook
 const useNetworkStatus = () => {
   const [isOnline, setIsOnline] = useState(true)
-
   useEffect(() => {
     const updateOnlineStatus = () => setIsOnline(navigator.onLine)
-    
     window.addEventListener('online', updateOnlineStatus)
     window.addEventListener('offline', updateOnlineStatus)
-    
     return () => {
       window.removeEventListener('online', updateOnlineStatus)
       window.removeEventListener('offline', updateOnlineStatus)
     }
   }, [])
-
   return isOnline
 }
-
 // Advanced Dynamic Component Loader
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   importFn,
@@ -172,7 +148,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   const [progress, setProgress] = useState(0)
   const [DynamicComponent, setDynamicComponent] = useState<ComponentType<any> | null>(null)
   const isOnline = useNetworkStatus()
-
   // Simulate loading progress for better UX
   useEffect(() => {
     if (loadingState.isLoading && !loadingState.error) {
@@ -182,27 +157,21 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
           return prev + Math.random() * 10
         })
       }, 100)
-
       return () => clearInterval(interval)
     }
-    
     return () => {} // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
-
   // Load component
   const loadComponent = async () => {
     try {
       setLoadingState(prev => ({ ...prev, isLoading: true, error: null, isOnline }))
       setProgress(0)
-
       const component = await importFn()
       setDynamicComponent(() => component.default)
       setProgress(100)
-      
       setTimeout(() => {
         setLoadingState(prev => ({ ...prev, isLoading: false }))
       }, 300) // Small delay for smoother transition
-
     } catch (error) {
       logErrorToProduction('Dynamic component loading failed:', { data: error })
       setLoadingState(prev => ({
@@ -214,39 +183,33 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       }))
     }
   }
-
   // Retry functionality
   const retry = () => {
     if (loadingState.retryCount < maxRetries) {
       loadComponent()
     }
   }
-
   // Prefetch on hover/focus
   useEffect(() => {
     if (prefetch) {
       const prefetchTimer = setTimeout(() => {
         loadComponent()
       }, 100)
-
       return () => clearTimeout(prefetchTimer)
     } else {
       loadComponent()
       return () => {} // Return empty cleanup function
     }
   }, [])
-
   // Update online status
   useEffect(() => {
     setLoadingState(prev => ({ ...prev, isOnline }))
   }, [isOnline])
-
   // Loading state
   if (loadingState.isLoading) {
     if (loadingComponent) {
       return React.createElement(loadingComponent)
     }
-
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -261,7 +224,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       </motion.div>
     )
   }
-
   // Error state
   if (loadingState.error) {
     if (errorFallback) {
@@ -270,7 +232,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
         retry 
       })
     }
-
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -287,7 +248,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       </motion.div>
     )
   }
-
   // Success state
   if (DynamicComponent) {
     return (
@@ -308,18 +268,12 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       </Suspense>
     )
   }
-
   return null
 }
-
 // HOC for creating dynamic components easily
 export const createDynamicComponent = <T extends ComponentType<any>>(
   importFn: () => Promise<{ default: T }>,
-<<<<<<< HEAD
-  options?: Omit<DynamicLoaderProps 'importFn' | 'children'>
-=======
   options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>
->>>>>>> origin/auto/autonomy-17186719616
 ) => {
   return (props: React.ComponentProps<T> & { children?: React.ReactNode }) => (
     <DynamicComponentLoader
@@ -329,10 +283,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
     />
   )
 }
-
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
-
 // export const DynamicChartComponent = createDynamicComponent(
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
 //   {
@@ -344,7 +296,6 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //     prefetch: true
 //   }
 // )
-
 // export const DynamicThreeComponent = createDynamicComponent(
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
 //   {
@@ -355,9 +306,4 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //     )
 //   }
 // )
-
-<<<<<<< HEAD
 export default DynamicComponentLoader 
-=======
-export default DynamicComponentLoader 
->>>>>>> origin/auto/autonomy-17186719616

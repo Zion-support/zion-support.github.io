@@ -1,33 +1,11 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { motion, AnimatePresence } from 'framer-motion',
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> origin/auto/autonomy-17186719616
 import { 
   ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
   TrendingUp, Award, Clock, CheckCircle, ExternalLink,
   Brain, Atom, Rocket, Cpu, Database, Target, Sparkles,
   ChevronRight, Search, Filter, Grid, List
-<<<<<<< HEAD
-} from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
-import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion',
-import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions',
-
-export default function Comprehensive2026ServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [selectedService, setSelectedService] = useState<string | null>(null),
-
-  // Combine all services
-  const allServices = [...advancedMicroSaasServices2026, ...specializedIndustrySolutions2026],
-=======
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
@@ -42,7 +20,6 @@ export default function Comprehensive2026ServicesShowcase() {
 
   // Combine all services
   const allServices = [...advancedMicroSaasServices2026, ...specializedIndustrySolutions2026];
->>>>>>> origin/auto/autonomy-17186719616
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
@@ -62,22 +39,6 @@ export default function Comprehensive2026ServicesShowcase() {
     { id: 'Real Estate Technology', name: 'PropTech', icon: '🏠', count: allServices.filter(s => s.category === 'Real Estate Technology').length },
     { id: 'Legal Technology', name: 'LegalTech', icon: '⚖️', count: allServices.filter(s => s.category === 'Legal Technology').length },
     { id: 'Manufacturing Technology', name: 'Manufacturing', icon: '🏭', count: allServices.filter(s => s.category === 'Manufacturing Technology').length }
-<<<<<<< HEAD
-  ],
-
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
-  }),
-
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category),
-    return categoryData?.icon || '🚀'
-  },
-=======
   ];
 
   const filteredServices = allServices.filter(service => {
@@ -92,7 +53,6 @@ export default function Comprehensive2026ServicesShowcase() {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.icon || '🚀';
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -102,11 +62,7 @@ export default function Comprehensive2026ServicesShowcase() {
         staggerChildren: 0.1
       }
     }
-<<<<<<< HEAD
-  },
-=======
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -117,11 +73,7 @@ export default function Comprehensive2026ServicesShowcase() {
         duration: 0.5
       }
     }
-<<<<<<< HEAD
-  },
-=======
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -406,13 +358,8 @@ export default function Comprehensive2026ServicesShowcase() {
               onClick={(e) => e.stopPropagation()}
             >
               {selectedService && (() => {
-<<<<<<< HEAD
-                const service = allServices.find(s => s.id === selectedService),
-                if (!service) return null,
-=======
                 const service = allServices.find(s => s.id === selectedService);
                 if (!service) return null;
->>>>>>> origin/auto/autonomy-17186719616
 
                 return (
                   <div className="p-8">
@@ -571,21 +518,13 @@ export default function Comprehensive2026ServicesShowcase() {
                       </a>
                       <button
                         onClick={() => setSelectedService(null)}
-<<<<<<< HEAD
-                        className="px-8 py-4 border border-white/20 text-white hover: border-cyan-400 transition-all duration-300 rounded-lg"
-=======
                         className="px-8 py-4 border border-white/20 text-white hover:border-cyan-400 transition-all duration-300 rounded-lg"
->>>>>>> origin/auto/autonomy-17186719616
                       >
                         Close
                       </button>
                     </div>
                   </div>
-<<<<<<< HEAD
-                )
-=======
                 );
->>>>>>> origin/auto/autonomy-17186719616
               })()}
             </motion.div>
           </motion.div>
@@ -594,9 +533,5 @@ export default function Comprehensive2026ServicesShowcase() {
 
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

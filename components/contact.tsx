@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-"use client";
 export default function Page(){return null}
 import React from 'react';
-import React{ useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  PhoneMailMapPinGlobeClockUsers
-  MessageSquareSendCheckCircleStar
-  RocketBrainAtomShieldZap
-=======
-export default function Page(){return null}
-=======
-=======
-import React from 'react';
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -22,24 +7,17 @@ import {
   Phone, Mail, MapPin, Globe, Clock, Users, 
   MessageSquare, Send, CheckCircle, Star, 
   Rocket, Brain, Atom, Shield, Zap
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-
 // Import service data for showcase
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
-
 export default function ContactPage() {
-<<<<<<< HEAD
-  const [formDatasetFormData] = useState({
-=======
   const [formData, setFormData] = useState({
->>>>>>> origin/auto/autonomy-17186719616
     name: '',
     email: '',
     company: '',
@@ -47,15 +25,8 @@ export default function ContactPage() {
     service: '',
     message: ''
   });
-
-<<<<<<< HEAD
-  const [isSubmittingsetIsSubmitting] = useState(false);
-  const [submitSuccessetSubmitSuccess] = useState(false);
-=======
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -64,40 +35,26 @@ export default function ContactPage() {
     hours: '24/7 Support Available',
     timezone: 'Eastern Time (ET)'
   };
-
   // Get popular services for showcase
   const popularServices = [
     ...innovativeAIServices2029.filter(s => s.popular),
     ...quantumSpaceInnovations2029.filter(s => s.popular),
     ...enterpriseITInnovations2029.filter(s => s.popular),
     ...innovativeMicroSaas2029.filter(s => s.popular)
-<<<<<<< HEAD
-  ].slice(06);
-=======
   ].slice(0, 6);
->>>>>>> origin/auto/autonomy-17186719616
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     // Simulate form submission
-<<<<<<< HEAD
-    await new Promise(resolve => setTimeout(resolve2000));
-=======
     await new Promise(resolve => setTimeout(resolve, 2000));
->>>>>>> origin/auto/autonomy-17186719616
-    
     setIsSubmitting(false);
     setSubmitSuccess(true);
-    
     // Reset form after 3 seconds
     setTimeout(() => {
       setSubmitSuccess(false);
@@ -109,21 +66,8 @@ export default function ContactPage() {
         service: '',
         message: ''
       });
-<<<<<<< HEAD
-    }3000);
-  };
-
-  const stats = [
-    { value: '500+'label: 'Micro SaaS 'Services', 'icon: <Zap className="w-6 h-6" />color: 'text-cyan-400' },
-    { value: '99.99%'label: 'Uptime 'Guarantee', 'icon: <Shield className="w-6 h-6" />color: 'text-fuchsia-400' },
-    { value: '30'label: 'Day Free 'Trials', 'icon: <Star className="w-6 h-6" />color: 'text-blue-400' },
-    { value: '24/7'label: 'AI 'Support', 'icon: <Brain className="w-6 h-6" />color: 'text-green-400' },
-    { value: '$1B+'label: 'Market 'Value', 'icon: <DollarSign className="w-6 h-6" />color: 'text-yellow-400' },
-    { value: '2500%+'label: 'Average 'ROI', 'icon: <TrendingUp className="w-6 h-6" />color: 'text-purple-400' }
-=======
     }, 3000);
   };
-
   const stats = [
     { value: '500+', label: 'Micro SaaS Services', icon: <Zap className="w-6 h-6" />, color: 'text-cyan-400' },
     { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" />, color: 'text-fuchsia-400' },
@@ -131,26 +75,19 @@ export default function ContactPage() {
     { value: '24/7', label: 'AI Support', icon: <Brain className="w-6 h-6" />, color: 'text-green-400' },
     { value: '$1B+', label: 'Market Value', icon: <DollarSign className="w-6 h-6" />, color: 'text-yellow-400' },
     { value: '2500%+', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" />, color: 'text-purple-400' }
->>>>>>> origin/auto/autonomy-17186719616
   ];
-
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <Head>
         <title>Contact Us - Zion Tech Group | Get Started with Revolutionary Micro SaaS Services</title>
         <meta name="description" content="Contact Zion Tech Group to get started with our revolutionary micro SaaS services. Get a free consultation and discover how our AI and quantum computing solutions can transform your business." />
-<<<<<<< HEAD
-        <meta name="keywords" content="contact Zion Tech Groupmicro SaaS consultationAI services consultationquantum computing servicesbusiness transformation" />
-=======
         <meta name="keywords" content="contact Zion Tech Group, micro SaaS consultation, AI services consultation, quantum computing services, business transformation" />
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="Contact Us - Zion Tech Group" />
         <meta property="og:description" content="Get started with our revolutionary micro SaaS services. Free consultation available." />
         <meta property="og:url" content="https://ziontechgroup.com/contact" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Head>
-
       <UltraFuturisticBackground>
         {/* Hero Section */}
       <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -162,36 +99,17 @@ export default function ContactPage() {
             className="mb-8"
           >
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
-<<<<<<< HEAD
-              'Let', 's Transform Your Business
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Ready to leverage the power of AIquantum computingand cutting-edge technology? 
-=======
               Let's Transform Your Business
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Ready to leverage the power of AI, quantum computing, and cutting-edge technology? 
->>>>>>> origin/auto/autonomy-17186719616
               Contact us today for a free consultation and discover how our revolutionary micro SaaS services can accelerate your growth.
             </p>
           </motion.div>
-
           {/* Stats Grid */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto mb-12"
-          >
-            {stats.map((statindex) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={{ opacity: 1scale: 1 }}
-                transition={{ duration: 0.5delay: 0.4 + index * 0.1 }}
-=======
             transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto mb-12"
           >
@@ -201,7 +119,6 @@ export default function ContactPage() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="text-center group"
               >
                 <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/70 transition-all duration-300 hover:scale-105">
@@ -222,20 +139,14 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Form Section */}
       <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0x: -30 }}
-              whileInView={{ opacity: 1x: 0 }}
-=======
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
->>>>>>> origin/auto/autonomy-17186719616
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -243,54 +154,32 @@ export default function ContactPage() {
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
                   Get Free Consultation
                 </h2>
-                
                 {isSubmitted ? (
                   <motion.div
-<<<<<<< HEAD
-                    initial={{ opacity: 0scale: 0.8 }}
-                    animate={{ opacity: 1scale: 1 }}
-=======
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
->>>>>>> origin/auto/autonomy-17186719616
                     className="text-center py-12"
                   >
                     <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
                     <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-                      Your message has been sent successfully. 'We', 'll get back to you within 24 hours.
-=======
                       Your message has been sent successfully. We'll get back to you within 24 hours.
->>>>>>> origin/auto/autonomy-17186719616
                     </p>
                     <div className="text-sm text-gray-400">
                       <p>✓ Free consultation scheduled</p>
                       <p>✓ Service recommendations prepared</p>
                       <p>✓ ROI analysis in progress</p>
                     </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <UltraFuturisticBackground2029>
       <Head>
         <title>Contact Zion Tech Group | Revolutionary 2029 Technology Services</title>
-<<<<<<< HEAD
-        <meta name="description" content="Contact Zion Tech Group for revolutionary 2029 technology services including AI consciousnessquantum computingspace miningand advanced biotechnology. Get in touch today!" />
-        <meta name="keywords" content="contactZion Tech GroupAI servicesquantum computingspace technologybiotechnology2029 technology" />
-        <meta name="viewport" content="width=device-widthinitial-scale=1" />
-=======
         <meta name="description" content="Contact Zion Tech Group for revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology. Get in touch today!" />
         <meta name="keywords" content="contact, Zion Tech Group, AI services, quantum computing, space technology, biotechnology, 2029 technology" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
->>>>>>> origin/auto/autonomy-17186719616
         <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Head>
-
       <UltraFuturisticNavigation2029 />
-
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
@@ -313,7 +202,6 @@ export default function ContactPage() {
             </p>
           </motion.div>
         </section>
-
         {/* Contact Information Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -336,16 +224,11 @@ export default function ContactPage() {
                   <p className="text-sm text-gray-400">{contactInfo.hours}</p>
                 </div>
               </motion.div>
-
               {/* Email Contact */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6delay: 0.1 }}
-=======
                 transition={{ duration: 0.6, delay: 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
@@ -359,16 +242,11 @@ export default function ContactPage() {
                   <p className="text-sm text-gray-400">Response time: &lt;2 hours</p>
                 </div>
               </motion.div>
-
               {/* Address Contact */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6delay: 0.2 }}
-=======
                 transition={{ duration: 0.6, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
@@ -383,7 +261,6 @@ export default function ContactPage() {
                 </div>
               </motion.div>
             </div>
-
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -397,24 +274,14 @@ export default function ContactPage() {
                   Start Your Transformation Journey
                 </h2>
                 <p className="text-xl text-gray-300">
-<<<<<<< HEAD
-                  Tell us about your project and 'we', 'll connect you with the perfect revolutionary technology solution
-=======
                   Tell us about your project and we'll connect you with the perfect revolutionary technology solution
->>>>>>> origin/auto/autonomy-17186719616
                 </p>
               </div>
-
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/20">
                 {submitSuccess ? (
                   <motion.div
-<<<<<<< HEAD
-                    initial={{ opacity: 0scale: 0.9 }}
-                    animate={{ opacity: 1scale: 1 }}
-=======
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
->>>>>>> origin/auto/autonomy-17186719616
                     className="text-center py-12"
                   >
                     <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
@@ -441,7 +308,6 @@ export default function ContactPage() {
                           placeholder="Enter your full name"
                         />
                       </div>
-                      
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                           Email Address *
@@ -458,7 +324,6 @@ export default function ContactPage() {
                         />
                       </div>
                     </div>
-
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -474,7 +339,6 @@ export default function ContactPage() {
                           placeholder="Enter your company name"
                         />
                       </div>
-                      
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                           Phone Number
@@ -490,7 +354,6 @@ export default function ContactPage() {
                         />
                       </div>
                     </div>
-
                     <div>
                       <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                         Service of Interest
@@ -511,7 +374,6 @@ export default function ContactPage() {
                         <option value="custom-solution">Custom Solution Development</option>
                       </select>
                     </div>
-
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                         Project Details *
@@ -524,14 +386,9 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-gray-800/50 border border-cyan-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20 resize-none"
-<<<<<<< HEAD
-                        placeholder="Tell us about your projectgoalsand how we can help transform your business with revolutionary technology..."
-=======
                         placeholder="Tell us about your project, goals, and how we can help transform your business with revolutionary technology..."
->>>>>>> origin/auto/autonomy-17186719616
                       />
                     </div>
-
                     <div className="text-center">
                       <button
                         type="submit"
@@ -557,7 +414,6 @@ export default function ContactPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Popular Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -575,34 +431,21 @@ export default function ContactPage() {
                 Explore some of our most sought-after 2029 technology solutions
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-              {popularServices.map((serviceindex) => (
-=======
               {popularServices.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="group cursor-pointer"
                 >
                   <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">
                     {/* Service Icon */}
-<<<<<<< HEAD
-=======
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <span className="text-2xl">{service.icon}</span>
                     </div>
->>>>>>> origin/auto/autonomy-17186719616
-
                     {/* Popular Badge */}
                     {service.popular && (
                       <div className="flex items-center space-x-2 mb-4">
@@ -610,16 +453,13 @@ export default function ContactPage() {
                         <span className="text-sm text-yellow-400 font-medium">Popular</span>
                       </div>
                     )}
-
                     {/* Service Title and Tagline */}
                     <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                     <p className="text-sm text-cyan-400 mb-3">{service.tagline}</p>
-                    
                     {/* Description */}
                     <p className="text-gray-300 leading-relaxed mb-4 line-clamp-3">
                       {service.description}
                     </p>
-
                     {/* Price */}
                     <div className="mb-4">
                       <span className={`${service.textColor} font-semibold text-lg`}>
@@ -627,7 +467,6 @@ export default function ContactPage() {
                       </span>
                       <span className="text-gray-400 text-sm">{service.period}</span>
                     </div>
-
                     {/* CTA */}
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-400">Setup: {service.setupTime}</span>
@@ -639,7 +478,6 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
-
         {/* Why Choose Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -654,26 +492,16 @@ export default function ContactPage() {
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-12">
-<<<<<<< HEAD
-                'We', 're not just another technology company - 'we', 're your partners in building the future
-=======
                 We're not just another technology company - we're your partners in building the future
->>>>>>> origin/auto/autonomy-17186719616
               </p>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Rocket className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3>
-<<<<<<< HEAD
-                  <p className="text-gray-300">Access to cutting-edge 2029 technology 'that', 's already operational and delivering results</p>
-=======
                   <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p>
->>>>>>> origin/auto/autonomy-17186719616
                 </div>
-                
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Brain className="w-8 h-8 text-white" />
@@ -681,7 +509,6 @@ export default function ContactPage() {
                   <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
                   <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Shield className="w-8 h-8 text-white" />
@@ -694,7 +521,6 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
   );

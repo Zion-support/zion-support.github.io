@@ -1,42 +1,19 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  TrendingUpTrendingDownDollarSignTarget
-  ArrowRightCheckStarBarChart3
-  GlobeZapShieldCrownBrainAtom
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   TrendingUp, TrendingDown, DollarSign, Target, 
   ArrowRight, Check, Star, BarChart3, 
   Globe, Zap, Shield, Crown, Brain, Atom
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import Link from 'next/link';
-
 export default function MarketPricing() {
-<<<<<<< HEAD
-  const [selectedMarketsetSelectedMarket] = useState('ai-consciousness');
-
-  const markets = [
-    { id: 'ai-'consciousness', 'name: 'AI 'Consciousness', 'icon: <Brain className="w-6 h-6" /> },
-    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: <Atom className="w-6 h-6" /> },
-    { id: 'autonomous-'systems', 'name: 'Autonomous 'Systems', 'icon: <Zap className="w-6 h-6" /> },
-    { id: 'enterprise-'it', 'name: 'Enterprise 'IT', 'icon: <Shield className="w-6 h-6" /> }
-=======
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
-
   const markets = [
     { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },
     { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },
     { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
->>>>>>> origin/auto/autonomy-17186719616
   ];
-
   const marketData = {
     'ai-consciousness': {
       marketSize: '$45.2B',
@@ -48,39 +25,24 @@ export default function MarketPricing() {
           name: 'OpenAI',
           marketShare: '32%',
           pricing: '$0.002-$0.02 per 1K tokens',
-<<<<<<< HEAD
-          strengths: ['Advanced language 'models', 'Strong brand 'recognition', 'Large user base'],
-          weaknesses: ['Limited consciousness 'features', 'High API 'costs', 'Privacy concerns'],
-=======
           strengths: ['Advanced language models', 'Strong brand recognition', 'Large user base'],
           weaknesses: ['Limited consciousness features', 'High API costs', 'Privacy concerns'],
->>>>>>> origin/auto/autonomy-17186719616
           rating: 4.2
         },
         {
           name: 'Anthropic',
           marketShare: '18%',
           pricing: '$0.015-$0.03 per 1K tokens',
-<<<<<<< HEAD
-          strengths: ['Safety-focused 'approach', 'Constitutional 'AI', 'Research-driven'],
-          weaknesses: ['Smaller model 'variety', 'Limited enterprise 'features', 'Higher pricing'],
-=======
           strengths: ['Safety-focused approach', 'Constitutional AI', 'Research-driven'],
           weaknesses: ['Smaller model variety', 'Limited enterprise features', 'Higher pricing'],
->>>>>>> origin/auto/autonomy-17186719616
           rating: 4.0
         },
         {
           name: 'Zion Tech Group',
           marketShare: '12%',
           pricing: '$0.008-$0.015 per 1K tokens',
-<<<<<<< HEAD
-          strengths: ['True AI 'consciousness', 'Enterprise-grade 'security', 'Competitive pricing'],
-          weaknesses: ['Smaller market 'presence', 'Limited brand 'recognition', 'Newer player'],
-=======
           strengths: ['True AI consciousness', 'Enterprise-grade security', 'Competitive pricing'],
           weaknesses: ['Smaller market presence', 'Limited brand recognition', 'Newer player'],
->>>>>>> origin/auto/autonomy-17186719616
           rating: 4.8
         }
       ],
@@ -101,39 +63,24 @@ export default function MarketPricing() {
           name: 'IBM',
           marketShare: '28%',
           pricing: '$1.60 per quantum hour',
-<<<<<<< HEAD
-          strengths: ['Established 'infrastructure', 'Qiskit 'ecosystem', 'Research partnerships'],
-          weaknesses: ['Limited qubit 'count', 'High 'costs', 'Complex access'],
-=======
           strengths: ['Established infrastructure', 'Qiskit ecosystem', 'Research partnerships'],
           weaknesses: ['Limited qubit count', 'High costs', 'Complex access'],
->>>>>>> origin/auto/autonomy-17186719616
           rating: 4.1
         },
         {
           name: 'Google',
           marketShare: '22%',
           pricing: '$2.00 per quantum hour',
-<<<<<<< HEAD
-          strengths: ['Quantum 'supremacy', 'Advanced 'algorithms', 'Research focus'],
-          weaknesses: ['Limited commercial 'access', 'High 'pricing', 'Complex setup'],
-=======
           strengths: ['Quantum supremacy', 'Advanced algorithms', 'Research focus'],
           weaknesses: ['Limited commercial access', 'High pricing', 'Complex setup'],
->>>>>>> origin/auto/autonomy-17186719616
           rating: 4.3
         },
         {
           name: 'Zion Tech Group',
           marketShare: '8%',
           pricing: '$1.20 per quantum hour',
-<<<<<<< HEAD
-          strengths: ['Competitive 'pricing', 'Enterprise 'focus', 'Simplified access'],
-          weaknesses: ['Smaller 'infrastructure', 'Limited qubit 'variety', 'Newer platform'],
-=======
           strengths: ['Competitive pricing', 'Enterprise focus', 'Simplified access'],
           weaknesses: ['Smaller infrastructure', 'Limited qubit variety', 'Newer platform'],
->>>>>>> origin/auto/autonomy-17186719616
           rating: 4.5
         }
       ],
@@ -154,39 +101,24 @@ export default function MarketPricing() {
           name: 'UiPath',
           marketShare: '25%',
           pricing: '$420-$1,200 per user/month',
-<<<<<<< HEAD
-          strengths: ['Market 'leader', 'Comprehensive 'platform', 'Strong partnerships'],
-          weaknesses: ['High 'costs', 'Complex 'implementation', 'Limited AI features'],
-=======
           strengths: ['Market leader', 'Comprehensive platform', 'Strong partnerships'],
           weaknesses: ['High costs', 'Complex implementation', 'Limited AI features'],
->>>>>>> origin/auto/autonomy-17186719616
           rating: 4.0
         },
         {
           name: 'Automation Anywhere',
           marketShare: '20%',
           pricing: '$750-$1,500 per user/month',
-<<<<<<< HEAD
-          strengths: ['Enterprise 'focus', 'Cloud-'native', 'Security features'],
-          weaknesses: [', 'Expensive', 'Steep learning 'curve', 'Limited customization'],
-=======
           strengths: ['Enterprise focus', 'Cloud-native', 'Security features'],
           weaknesses: ['Expensive', 'Steep learning curve', 'Limited customization'],
->>>>>>> origin/auto/autonomy-17186719616
           rating: 3.8
         },
         {
           name: 'Zion Tech Group',
           marketShare: '6%',
           pricing: '$350-$800 per user/month',
-<<<<<<< HEAD
-          strengths: ['AI-powered 'automation', 'Competitive 'pricing', 'Easy implementation'],
-          weaknesses: ['Smaller 'ecosystem', 'Limited 'integrations', 'Newer platform'],
-=======
           strengths: ['AI-powered automation', 'Competitive pricing', 'Easy implementation'],
           weaknesses: ['Smaller ecosystem', 'Limited integrations', 'Newer platform'],
->>>>>>> origin/auto/autonomy-17186719616
           rating: 4.4
         }
       ],
@@ -207,39 +139,24 @@ export default function MarketPricing() {
           name: 'Microsoft',
           marketShare: '35%',
           pricing: '$22-$57 per user/month',
-<<<<<<< HEAD
-          strengths: ['Market 'dominance', 'Integrated 'ecosystem', 'Global presence'],
-          weaknesses: ['Complex 'licensing', 'High 'costs', 'Vendor lock-in'],
-=======
           strengths: ['Market dominance', 'Integrated ecosystem', 'Global presence'],
           weaknesses: ['Complex licensing', 'High costs', 'Vendor lock-in'],
->>>>>>> origin/auto/autonomy-17186719616
           rating: 4.2
         },
         {
           name: 'Salesforce',
           marketShare: '18%',
           pricing: '$25-$300 per user/month',
-<<<<<<< HEAD
-          strengths: ['CRM 'leadership', 'Cloud-'native', 'Extensive integrations'],
-          weaknesses: [', 'Expensive', 'Complex 'pricing', 'Implementation costs'],
-=======
           strengths: ['CRM leadership', 'Cloud-native', 'Extensive integrations'],
           weaknesses: ['Expensive', 'Complex pricing', 'Implementation costs'],
->>>>>>> origin/auto/autonomy-17186719616
           rating: 4.1
         },
         {
           name: 'Zion Tech Group',
           marketShare: '3%',
           pricing: '$18-$45 per user/month',
-<<<<<<< HEAD
-          strengths: ['AI-powered 'features', 'Competitive 'pricing', 'Modern architecture'],
-          weaknesses: ['Smaller 'ecosystem', 'Limited 'integrations', 'Newer player'],
-=======
           strengths: ['AI-powered features', 'Competitive pricing', 'Modern architecture'],
           weaknesses: ['Smaller ecosystem', 'Limited integrations', 'Newer player'],
->>>>>>> origin/auto/autonomy-17186719616
           rating: 4.3
         }
       ],
@@ -251,37 +168,25 @@ export default function MarketPricing() {
       }
     }
   };
-
   const currentMarket = marketData[selectedMarket as keyof typeof marketData];
-
   const getGrowthIcon = (trend: string) => {
     return trend === 'up' ? 
       <TrendingUp className="w-5 h-5 text-green-400" /> : 
       <TrendingDown className="w-5 h-5 text-red-400" />;
   };
-
   const getRatingStars = (rating: number) => {
-<<<<<<< HEAD
-    return Array.from({ length: 5 }(_i) => (
-=======
     return Array.from({ length: 5 }, (_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
       <Star 
         key={i} 
         className={`w-4 h-4 ${i < Math.floor(rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} 
       />
     ));
   };
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Market Pricing & Competitor References | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Transparent market pricing references and competitor links for AIsecurityanalyticsand cloud services." />
-=======
         <meta name="description" content="Transparent market pricing references and competitor links for AI, security, analytics, and cloud services." />
->>>>>>> origin/auto/autonomy-17186719616
         <link rel="canonical" href="https://ziontechgroup.com/market-pricing" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -295,7 +200,6 @@ export default function MarketPricing() {
             </ul>
             <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $0–$300/month depending on incidents and subscribers.</div>
           </div>
-
           <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">
             <h2 className="text-2xl font-semibold mb-2">DNS Monitoring & Hygiene</h2>
             <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -306,14 +210,9 @@ export default function MarketPricing() {
           </div>
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Market Pricing & References</h1>
           <p className="text-slate-300">Below are easy-to-verify vendor references and typical pricing ranges to help you benchmark our offerings.</p>
-
           <div className="space-y-6">
             <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">
-<<<<<<< HEAD
-              <h2 className="text-2xl font-semibold mb-2">MLOpsPrompting & Evaluation</h2>
-=======
               <h2 className="text-2xl font-semibold mb-2">MLOps, Prompting & Evaluation</h2>
->>>>>>> origin/auto/autonomy-17186719616
               <ul className="list-disc list-inside text-slate-300 space-y-1">
                 <li>Weights & Biases: <a className="text-cyan-400 underline" href={`https://wandb.ai/site/pricing`} target="_blank" rel="noopener noreferrer">wandb.ai/site/pricing</a></li>
                 <li>Humanloop: <a className="text-cyan-400 underline" href={`https://humanloop.com/pricing`} target="_blank" rel="noopener noreferrer">humanloop.com/pricing</a></li>
@@ -333,7 +232,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month depending on traffic and model choice.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Security & Compliance</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -344,7 +242,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$5,000/month based on scale and compliance scope.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Data & Analytics</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -354,13 +251,8 @@ export default function MarketPricing() {
                 <li>dbt Cloud: <a className="text-cyan-400 underline" href={`https://www.getdbt.com/pricing`} target="_blank" rel="noopener noreferrer">getdbt.com/pricing</a></li>
                 <li>ClickHouse Cloud: <a className="text-cyan-400 underline" href={`https://clickhouse.com/pricing`} target="_blank" rel="noopener noreferrer">clickhouse.com/pricing</a></li>
               </ul>
-<<<<<<< HEAD
-              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$3,000/month depending on storagequeriesand concurrency.</div>
-=======
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$3,000/month depending on storage, queries, and concurrency.</div>
->>>>>>> origin/auto/autonomy-17186719616
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Cloud & Edge</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -371,7 +263,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$10,000/month depending on traffic and workloads.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-pink-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Contact Center & Voice AI</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -379,13 +270,8 @@ export default function MarketPricing() {
                 <li>Deepgram: <a className="text-cyan-400 underline" href={`https://deepgram.com/pricing`} target="_blank" rel="noopener noreferrer">deepgram.com/pricing</a></li>
                 <li>ElevenLabs: <a className="text-cyan-400 underline" href={`https://elevenlabs.io/pricing`} target="_blank" rel="noopener noreferrer">elevenlabs.io/pricing</a></li>
               </ul>
-<<<<<<< HEAD
-              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,500/month by minuteslanguagesand concurrency.</div>
-=======
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,500/month by minutes, languages, and concurrency.</div>
->>>>>>> origin/auto/autonomy-17186719616
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Email Deliverability & Warmup</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -397,7 +283,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$300/month for warmup and monitoring; ESP fees separate.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Product Analytics & Personalization</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -407,7 +292,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Vector Search & Retrieval</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -417,7 +301,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month depending on index size and QPS.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">API Security & Edge</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -427,13 +310,8 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month based on traffic and protections.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-slate-500/30 p-6">
-<<<<<<< HEAD
-              <h2 className="text-2xl font-semibold mb-2">PrivacyPII & DSAR</h2>
-=======
               <h2 className="text-2xl font-semibold mb-2">Privacy, PII & DSAR</h2>
->>>>>>> origin/auto/autonomy-17186719616
               <ul className="list-disc list-inside text-slate-300 space-y-1">
                 <li>Skyflow pricing: <a className="text-cyan-400 underline" href={`https://www.skyflow.com/pricing`} target="_blank" rel="noopener noreferrer">skyflow.com/pricing</a></li>
                 <li>VGS pricing: <a className="text-cyan-400 underline" href={`https://www.verygoodsecurity.com/pricing`} target="_blank" rel="noopener noreferrer">verygoodsecurity.com/pricing</a></li>
@@ -441,7 +319,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month by data volume and systems.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Identity & SSO/SCIM</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -452,15 +329,10 @@ export default function MarketPricing() {
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
             </div>
           </div>
-          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.4 }}
-=======
             transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
             viewport={{ once: true }}
             className="text-center"
           >
@@ -470,7 +342,6 @@ export default function MarketPricing() {
           </motion.div>
         </div>
       </section>
-
       {/* Competitive Analysis Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -483,22 +354,13 @@ export default function MarketPricing() {
           >
             Competitive Analysis
           </motion.h2>
-          
           <div className="space-y-8">
-<<<<<<< HEAD
-            {currentMarket.competitors.map((competitorindex) => (
-=======
             {currentMarket.competitors.map((competitor, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={competitor.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: index * 0.1 }}
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
               >
@@ -511,7 +373,6 @@ export default function MarketPricing() {
                         <span className="text-sm text-gray-400">({competitor.rating})</span>
                       </div>
                     </div>
-                    
                     <div className="grid md:grid-cols-2 gap-4 mb-4">
                       <div>
                         <span className="text-sm text-gray-400">Market Share:</span>
@@ -522,16 +383,11 @@ export default function MarketPricing() {
                         <p className="font-semibold text-green-400">{competitor.pricing}</p>
                       </div>
                     </div>
-                    
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <h4 className="font-semibold text-green-400 mb-2">Strengths</h4>
                         <ul className="space-y-1">
-<<<<<<< HEAD
-                          {competitor.strengths.map((strengthidx) => (
-=======
                           {competitor.strengths.map((strength, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                               {strength}
@@ -539,15 +395,10 @@ export default function MarketPricing() {
                           ))}
                         </ul>
                       </div>
-                      
                       <div>
                         <h4 className="font-semibold text-red-400 mb-2">Weaknesses</h4>
                         <ul className="space-y-1">
-<<<<<<< HEAD
-                          {competitor.weaknesses.map((weaknessidx) => (
-=======
                           {competitor.weaknesses.map((weakness, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                               <div className="w-3 h-3 bg-red-400 rounded-full flex-shrink-0" />
                               {weakness}
@@ -557,7 +408,6 @@ export default function MarketPricing() {
                       </div>
                     </div>
                   </div>
-                  
                   {competitor.name === 'Zion Tech Group' && (
                     <div className="lg:w-48 flex-shrink-0">
                       <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 text-center">
@@ -571,7 +421,6 @@ export default function MarketPricing() {
               </motion.div>
             ))}
           </div>
-
           <div className="space-y-6">
             <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Monitoring & Incident Response</h2>
@@ -582,7 +431,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month depending on host count and alerting.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Feature Flags & Progressive Delivery</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -592,7 +440,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$800/month by environments and MAUs.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-teal-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">CI/CD & Platforms</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -602,7 +449,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $0–$500/month for moderate pipelines and environments.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Feature Flags & Experimentation</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -612,7 +458,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,500/month depending on MAUs and flags.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-green-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">A/B Testing & CRO</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -622,7 +467,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $49–$499/month based on visitors and experiments.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-red-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Incident Management & On-Call</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -632,7 +476,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $10–$500/month per responder depending on features.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">SEO & Content</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -642,7 +485,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$500/month depending on seats and projects.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Ecommerce Reviews & UGC</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -652,7 +494,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $9–$199/month based on features and order volume.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Scheduling & Appointments</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -662,7 +503,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $10–$200/month depending on calendars and reminders.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Learning Management (LMS)</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -672,7 +512,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $60–$600/month depending on seats and content.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Developer Productivity</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -683,7 +522,6 @@ export default function MarketPricing() {
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $0–$300/month per team depending on usage.</div>
             </div>
           </div>
-
           {/* New categories with verified links */}
           <div className="space-y-6">
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">
@@ -695,7 +533,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $49–$500/month by affiliates and orders.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Returns & Post‑Purchase</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -705,7 +542,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $29–$299/month by orders and features.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Helpdesk & ITSM</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -716,7 +552,6 @@ export default function MarketPricing() {
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $19–$1,000/month based on agents and SLAs.</div>
             </div>
           </div>
-
           <div className="space-y-6">
             <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">CDP & Reverse ETL</h2>
@@ -726,13 +561,8 @@ export default function MarketPricing() {
                 <li>Hightouch (Reverse ETL): <a className="text-cyan-400 underline" href={`https://hightouch.com/pricing`} target="_blank" rel="noopener noreferrer">hightouch.com/pricing</a></li>
                 <li>Census (Reverse ETL): <a className="text-cyan-400 underline" href={`https://www.getcensus.com/pricing`} target="_blank" rel="noopener noreferrer">getcensus.com/pricing</a></li>
               </ul>
-<<<<<<< HEAD
-              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on sourcesdestinationsand MAUs.</div>
-=======
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on sources, destinations, and MAUs.</div>
->>>>>>> origin/auto/autonomy-17186719616
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Returns & Logistics</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -741,7 +571,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $29–$299/month depending on orders and policies.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Feature Flags & Experiments</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -752,7 +581,6 @@ export default function MarketPricing() {
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$800/month depending on flags and MAUs.</div>
             </div>
           </div>
-
           <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
             <h2 className="text-2xl font-semibold mb-2">Synthetic Monitoring & Browser Automation</h2>
             <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -760,13 +588,8 @@ export default function MarketPricing() {
               <li>Browserless pricing: <a className="text-cyan-400 underline" href={`https://www.browserless.io/pricing`} target="_blank" rel="noopener noreferrer">browserless.io/pricing</a></li>
               <li>Grafana Cloud k6: <a className="text-cyan-400 underline" href={`https://grafana.com/products/cloud/k6/`} target="_blank" rel="noopener noreferrer">grafana.com/products/cloud/k6</a></li>
             </ul>
-<<<<<<< HEAD
-            <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $20–$500/month depending on checksregionsand concurrency.</div>
-=======
             <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $20–$500/month depending on checks, regions, and concurrency.</div>
->>>>>>> origin/auto/autonomy-17186719616
           </div>
-
           <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6">
             <h2 className="text-2xl font-semibold mb-2">Email Deliverability & Monitoring</h2>
             <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -776,7 +599,6 @@ export default function MarketPricing() {
             </ul>
             <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $15–$300/month plus ESP fees depending on volumes.</div>
           </div>
-
           <div className="bg-black/30 rounded-2xl border border-teal-500/30 p-6">
             <h2 className="text-2xl font-semibold mb-2">Secrets Management & Rotation</h2>
             <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -786,7 +608,6 @@ export default function MarketPricing() {
             </ul>
             <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $0–$1,000/month depending on key volume and audit needs.</div>
           </div>
-
           <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">
             <h2 className="text-2xl font-semibold mb-2">PDF Generation & Processing</h2>
             <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -796,15 +617,9 @@ export default function MarketPricing() {
             </ul>
             <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $15–$200/month depending on pages and concurrency.</div>
           </div>
-
           <div className="text-center text-slate-400 mt-10">
-<<<<<<< HEAD
-            Need help benchmarking? <a href="/contact" className="text-cyan-400 underline">Contact us</a> — we align to transparentvendor-verifiable pricing.
-=======
             Need help benchmarking? <a href="/contact" className="text-cyan-400 underline">Contact us</a> — we align to transparent, vendor-verifiable pricing.
->>>>>>> origin/auto/autonomy-17186719616
           </div>
-
           <div className="space-y-6">
             <div className="bg-black/30 rounded-2xl border border-teal-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Observability & Monitoring</h2>
@@ -813,13 +628,8 @@ export default function MarketPricing() {
                 <li>New Relic pricing: <a className="text-cyan-400 underline" href={`https://newrelic.com/pricing`} target="_blank" rel="noopener noreferrer">newrelic.com/pricing</a></li>
                 <li>Grafana Cloud pricing: <a className="text-cyan-400 underline" href={`https://grafana.com/pricing/`} target="_blank" rel="noopener noreferrer">grafana.com/pricing</a></li>
               </ul>
-<<<<<<< HEAD
-              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$2,000/month by host countmetricsand retention.</div>
-=======
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$2,000/month by host count, metrics, and retention.</div>
->>>>>>> origin/auto/autonomy-17186719616
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-lime-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Website Performance & RUM</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -829,7 +639,6 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $0–$500/month depending on synthetic runs and MAUs.</div>
             </div>
-
             <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Data Labeling & Enrichment</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -842,7 +651,6 @@ export default function MarketPricing() {
           </div>
         </div>
       </section>
-
       {/* Pricing Analysis Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -855,31 +663,18 @@ export default function MarketPricing() {
           >
             Pricing Analysis
           </motion.h2>
-          
           <div className="grid lg:grid-cols-4 gap-6 mb-12">
             {[
-<<<<<<< HEAD
-              { label: 'Low 'End', 'price: currentMarket.pricingAnalysis.lowEndcolor: 'from-green-500 to-emerald-600' },
-              { label: 'Mid 'Range', 'price: currentMarket.pricingAnalysis.midRangecolor: 'from-yellow-500 to-orange-600' },
-              { label: 'High 'End', 'price: currentMarket.pricingAnalysis.highEndcolor: 'from-red-500 to-pink-600' },
-              { label: 'Our 'Position', 'price: currentMarket.pricingAnalysis.ourPositioncolor: 'from-cyan-500 to-blue-600' }
-            ].map((tierindex) => (
-=======
               { label: 'Low End', price: currentMarket.pricingAnalysis.lowEnd, color: 'from-green-500 to-emerald-600' },
               { label: 'Mid Range', price: currentMarket.pricingAnalysis.midRange, color: 'from-yellow-500 to-orange-600' },
               { label: 'High End', price: currentMarket.pricingAnalysis.highEnd, color: 'from-red-500 to-pink-600' },
               { label: 'Our Position', price: currentMarket.pricingAnalysis.ourPosition, color: 'from-cyan-500 to-blue-600' }
             ].map((tier, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={tier.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: index * 0.1 }}
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -891,15 +686,10 @@ export default function MarketPricing() {
               </motion.div>
             ))}
           </div>
-          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.5 }}
-=======
             transition={{ duration: 0.8, delay: 0.5 }}
->>>>>>> origin/auto/autonomy-17186719616
             viewport={{ once: true }}
             className="text-center"
           >
@@ -916,15 +706,9 @@ export default function MarketPricing() {
                 },
                 {
                   title: 'Enterprise Focus',
-<<<<<<< HEAD
-                  description: 'Built specifically for enterprise needs with securityscalabilityand compliance features.'
-                }
-              ].map((advantageindex) => (
-=======
                   description: 'Built specifically for enterprise needs with security, scalability, and compliance features.'
                 }
               ].map((advantage, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <div key={index} className="p-4 rounded-xl bg-white/5 border border-white/10">
                   <h4 className="font-semibold text-cyan-400 mb-2">{advantage.title}</h4>
                   <p className="text-sm text-gray-300">{advantage.description}</p>
@@ -934,7 +718,6 @@ export default function MarketPricing() {
           </motion.div>
         </div>
       </section>
-
       {/* Market Trends Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -947,16 +730,10 @@ export default function MarketPricing() {
           >
             Market Trends & Opportunities
           </motion.h2>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0x: -20 }}
-              whileInView={{ opacity: 1x: 0 }}
-=======
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
->>>>>>> origin/auto/autonomy-17186719616
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="p-6 rounded-2xl bg-white/5 border border-white/10"
@@ -969,11 +746,7 @@ export default function MarketPricing() {
                   'Automation needs in post-pandemic business operations',
                   'Digital transformation initiatives across industries',
                   'Growing focus on AI ethics and responsible development'
-<<<<<<< HEAD
-                ].map((driverindex) => (
-=======
                 ].map((driver, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <li key={index} className="flex items-start gap-3">
                     <TrendingUp className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-300">{driver}</span>
@@ -981,15 +754,9 @@ export default function MarketPricing() {
                 ))}
               </ul>
             </motion.div>
-            
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0x: 20 }}
-              whileInView={{ opacity: 1x: 0 }}
-=======
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
->>>>>>> origin/auto/autonomy-17186719616
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="p-6 rounded-2xl bg-white/5 border border-white/10"
@@ -1002,11 +769,7 @@ export default function MarketPricing() {
                   'Custom AI consciousness solutions for specific industries',
                   'Partnerships with research institutions and universities',
                   'White-label solutions for enterprise software providers'
-<<<<<<< HEAD
-                ].map((opportunityindex) => (
-=======
                 ].map((opportunity, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <li key={index} className="flex items-start gap-3">
                     <Target className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-300">{opportunity}</span>
@@ -1017,7 +780,6 @@ export default function MarketPricing() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -1032,11 +794,7 @@ export default function MarketPricing() {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Our competitive pricing and unique AI consciousness features give you the edge 
-<<<<<<< HEAD
-              you need to succeed in 'today', 's rapidly evolving technology landscape.
-=======
               you need to succeed in today's rapidly evolving technology landscape.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -1059,5 +817,4 @@ export default function MarketPricing() {
     </div>
   );
 };
-
 export default MarketPricing;

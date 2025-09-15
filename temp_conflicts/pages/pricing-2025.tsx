@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { 
-  Brain, Shield, Rocket, Cpu, Database, Globe, 
-  CheckCircle, Star, TrendingUp, Zap, Users
-} from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -18,7 +7,6 @@ import {
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function PricingPage() {
   const plans = [
@@ -74,11 +62,7 @@ export default function PricingPage() {
       popular: false,
       color: "from-green-500 to-emerald-500"
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const addOns = [
     {
@@ -113,11 +97,7 @@ export default function PricingPage() {
       features: ["Edge orchestration", "IoT management", "Real-time processing"],
       icon: Cpu
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const faqs = [
     {
@@ -144,11 +124,7 @@ export default function PricingPage() {
       question: "Do you offer discounts for annual billing?",
       answer: "Yes! We offer a 20% discount for annual billing on all plans. This is applied automatically when you choose annual billing."
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -434,11 +410,7 @@ export default function PricingPage() {
             <p className="text-xl text-blue-100 mb-8">
               Choose the plan that fits your needs and start transforming your business with cutting-edge technology.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> origin/auto/autonomy-17186719616
               <a
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
@@ -458,9 +430,5 @@ export default function PricingPage() {
 
       <EnhancedFooter />
     </>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,93 +1,10 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface SelectProps {
-  children: React.ReactNode;
-  className?: string;
-  value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  disabled?: boolean;
-}
-
-export function Select({
-  children,
-  className = '',
-  value,
-  onChange,
-  disabled = false
-}: SelectProps) {
-  const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
-
-  return (
-    <select
-      className={`${baseClasses} ${className}`}
-      value={value}
-      onChange={onChange}
-      disabled={disabled}
-    >
-      {children}
-    </select>
-  );
-}
-
-interface SelectItemProps {
-  children: React.ReactNode;
-  value: string;
-  className?: string;
-}
-
-export function SelectItem({ children, value, className = '' }: SelectItemProps) {
-  return (
-    <option
-      value={value}
-      className={`px-3 py-2 text-sm ${className}`}
-    >
-      {children}
-    </option>
-  );
-}
-
-interface SelectTriggerProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export function SelectTrigger({ children, className = '' }: SelectTriggerProps) {
-  return (
-    <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}>
-      {children}
-    </div>
-  );
-}
-
-interface SelectValueProps {
-  placeholder?: string;
-}
-
-export function SelectValue({ placeholder }: SelectValueProps) {
-  return <span className="text-sm">{placeholder || 'Select an option'}</span>;
-}
-
-interface SelectContentProps {
-  children: React.ReactNode;
-}
-
-export function SelectContent({ children }: SelectContentProps) {
-  return <div className="relative">{children}</div>;
-}
-=======
 import * as React from "react"
 import * as SelectPrimitive from "@radix-ui/react-select"
 import { Check, ChevronDown, ChevronUp } from 'lucide-react'
-
 import { cn } from "@/lib/utils"
-
 const Select = SelectPrimitive.Root
-
 const SelectGroup = SelectPrimitive.Group
-
 const SelectValue = SelectPrimitive.Value
-
 const SelectTrigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
@@ -107,7 +24,6 @@ const SelectTrigger = React.forwardRef<
   </SelectPrimitive.Trigger>
 ))
 SelectTrigger.displayName = SelectPrimitive.Trigger.displayName
-
 const SelectScrollUpButton = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.ScrollUpButton>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollUpButton>
@@ -124,7 +40,6 @@ const SelectScrollUpButton = React.forwardRef<
   </SelectPrimitive.ScrollUpButton>
 ))
 SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName
-
 const SelectScrollDownButton = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.ScrollDownButton>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollDownButton>
@@ -142,7 +57,6 @@ const SelectScrollDownButton = React.forwardRef<
 ))
 SelectScrollDownButton.displayName =
   SelectPrimitive.ScrollDownButton.displayName
-
 const SelectContent = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
@@ -174,7 +88,6 @@ const SelectContent = React.forwardRef<
   </SelectPrimitive.Portal>
 ))
 SelectContent.displayName = SelectPrimitive.Content.displayName
-
 const SelectLabel = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Label>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>
@@ -186,7 +99,6 @@ const SelectLabel = React.forwardRef<
   />
 ))
 SelectLabel.displayName = SelectPrimitive.Label.displayName
-
 const SelectItem = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
@@ -204,12 +116,10 @@ const SelectItem = React.forwardRef<
         <Check className="h-4 w-4" />
       </SelectPrimitive.ItemIndicator>
     </span>
-
     <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
   </SelectPrimitive.Item>
 ))
 SelectItem.displayName = SelectPrimitive.Item.displayName
-
 const SelectSeparator = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
@@ -221,7 +131,6 @@ const SelectSeparator = React.forwardRef<
   />
 ))
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName
-
 export {
   Select,
   SelectGroup,
@@ -234,4 +143,3 @@ export {
   SelectScrollUpButton,
   SelectScrollDownButton,
 }
->>>>>>> origin/auto/autonomy-17186719616

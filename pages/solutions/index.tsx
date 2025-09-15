@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
-
 const SolutionsPage: NextPage = () => {
   const solutions = [
     // Healthcare Solutions
@@ -208,12 +201,7 @@ const SolutionsPage: NextPage = () => {
         }
       ]
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
       <Head>
@@ -221,7 +209,6 @@ const SolutionsPage: NextPage = () => {
         <meta name="description" content="Discover industry-specific technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors. Tailored solutions for your business needs." />
         <meta name="keywords" content="healthcare solutions, fintech, manufacturing 4.0, retail technology, education tech, government solutions, industry solutions" />
       </Head>
-      
       <main className="container mx-auto px-4 py-16">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -234,7 +221,6 @@ const SolutionsPage: NextPage = () => {
             and drive measurable results.
           </p>
         </div>
-
         {/* Solutions Grid */}
         <div className="space-y-16">
           {solutions.map((category, categoryIndex) => (
@@ -252,7 +238,6 @@ const SolutionsPage: NextPage = () => {
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {solution.description}
                     </p>
-                    
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-800 mb-2">Use Cases:</h4>
                       <ul className="space-y-1">
@@ -264,7 +249,6 @@ const SolutionsPage: NextPage = () => {
                         ))}
                       </ul>
                     </div>
-
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-800 mb-2">Key Benefits:</h4>
                       <ul className="space-y-1">
@@ -276,13 +260,11 @@ const SolutionsPage: NextPage = () => {
                         ))}
                       </ul>
                     </div>
-
                     <div className="mb-4">
                       <span className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
                         Starting at {solution.pricing}
                       </span>
                     </div>
-
                     <Link 
                       href={solution.link}
                       className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
@@ -295,7 +277,6 @@ const SolutionsPage: NextPage = () => {
             </div>
           ))}
         </div>
-
         {/* Success Stories Section */}
         <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 mt-16 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">
@@ -325,7 +306,6 @@ const SolutionsPage: NextPage = () => {
             View Case Studies
           </Link>
         </div>
-
         {/* Custom Solutions Section */}
         <div className="mt-16 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
@@ -359,7 +339,6 @@ const SolutionsPage: NextPage = () => {
             Discuss Custom Solutions
           </Link>
         </div>
-
         {/* Contact Section */}
         <div className="mt-16 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
@@ -372,11 +351,7 @@ const SolutionsPage: NextPage = () => {
           <div className="flex justify-center gap-4 mb-8">
             <Link 
               href="/contact"
-<<<<<<< HEAD
-              className="bg-purple-600 hover: bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-=======
               className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
->>>>>>> origin/auto/autonomy-17186719616
             >
               Schedule Consultation
             </Link>
@@ -404,14 +379,6 @@ const SolutionsPage: NextPage = () => {
         </div>
       </main>
     </div>
-<<<<<<< HEAD
-  )
-},
-
-export default SolutionsPage,
-=======
   );
 };
-
 export default SolutionsPage;
->>>>>>> origin/auto/autonomy-17186719616

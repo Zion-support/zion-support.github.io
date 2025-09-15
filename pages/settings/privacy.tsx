@@ -1,55 +1,9 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react',
-
-export default function PrivacySettingsPage() {
-  const [userId, setUserId] = useState(''),
-  const [optOut, setOptOut] = useState(false),
-  const [loading, setLoading] = useState(false),
-  const [message, setMessage] = useState(''),
-
-  const load = async () => {
-    if (!userId) return,
-    setLoading(true),
-    setMessage(''),
-    const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`),
-    const json = await res.json(),
-    if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut),
-    else setMessage(json.error || 'Failed to load'),
-    setLoading(false),
-  },
-
-  const save = async () => {
-    if (!userId) return,
-    setLoading(true),
-    setMessage(''),
-    const res = await fetch('/api/fraud/settings/opt-out', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, optOut })}),
-    const json = await res.json(),
-    if (res.ok) setMessage('Saved'),
-    else setMessage(json.error || 'Save failed'),
-    setLoading(false),
-  },
-
-  useEffect(() => {
-    const savedUser = localStorage.getItem('user-id'),
-    if (savedUser) setUserId(savedUser),
-  }, []),
-
-  const onSaveUser = () => {
-    localStorage.setItem('user-id', userId),
-    load(),
-  },
-=======
 import React, { useEffect, useState } from 'react';
-
 export default function PrivacySettingsPage() {
   const [userId, setUserId] = useState('');
   const [optOut, setOptOut] = useState(false);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
-
   const load = async () => {
     if (!userId) return;
     setLoading(true);
@@ -60,7 +14,6 @@ export default function PrivacySettingsPage() {
     else setMessage(json.error || 'Failed to load');
     setLoading(false);
   };
-
   const save = async () => {
     if (!userId) return;
     setLoading(true);
@@ -75,18 +28,14 @@ export default function PrivacySettingsPage() {
     else setMessage(json.error || 'Save failed');
     setLoading(false);
   };
-
   useEffect(() => {
     const savedUser = localStorage.getItem('user-id');
     if (savedUser) setUserId(savedUser);
   }, []);
-
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId);
     load();
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
@@ -106,9 +55,5 @@ export default function PrivacySettingsPage() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,40 +1,9 @@
-
-<<<<<<< HEAD
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Sparkles } from 'lucide-react'
-import { Star } from 'lucide-react';
-
-interface AIListingFormProps {
-  onSubmit: (formData: {
-    title: string,
-    category: string,
-    keyFeatures: string,
-    targetAudience: string
-  }) => void,
-  isLoading: boolean,
-  initialValues?: {
-    title?: string,
-    category?: string,
-    keyFeatures?: string,
-    targetAudience?: string
-  },
-}
-
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
-  const { toast } = useToast(),
-  const [title, setTitle] = useState(initialValues.title || ""),
-  const [category, setCategory] = useState(initialValues.category || ""),
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
-=======
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from 'lucide-react'
-
 interface AIListingFormProps {
   onSubmit: (formData: {
     title: string;
@@ -50,43 +19,28 @@ interface AIListingFormProps {
     targetAudience?: string;
   };
 }
-
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title || "");
   const [category, setCategory] = useState(initialValues.category || "");
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
->>>>>>> origin/auto/autonomy-17186719616
-
   const handleSubmit = () => {
     if (!title || !category) {
       toast({
         title: "Missing required fields",
         description: "Please provide at least a title and category.",
         variant: "destructive"
-<<<<<<< HEAD
-      }),
-      return,
-=======
       });
       return;
->>>>>>> origin/auto/autonomy-17186719616
     }
-
     onSubmit({
       title,
       category,
       keyFeatures,
       targetAudience
-<<<<<<< HEAD
-    }),
-  },
-=======
     });
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div className="space-y-4">
       <div className="space-y-2">
@@ -135,13 +89,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       </div>
       <Button 
         onClick={handleSubmit}
-<<<<<<< HEAD
-        disabled={isLoading |!title |!category}
         disabled={isLoading || !title || !category}
-
-=======
-        disabled={isLoading || !title || !category}
->>>>>>> origin/auto/autonomy-17186719616
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (
@@ -154,9 +102,5 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         )}
       </Button>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

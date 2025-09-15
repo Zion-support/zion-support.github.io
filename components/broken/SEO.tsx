@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-"use client";
-import React{ useEffect } from 'react';
-=======
 import React, { useEffect } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import Head from 'next/head';
-
 interface SEOProps {
   title?: string;
   description?: string;
@@ -22,17 +16,10 @@ interface SEOProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
-
 const SEO: React.FC<SEOProps> = ({
-<<<<<<< HEAD
-  title = 'Zion Tech Group - Revolutionary AIQuantum Computing & Space Technology Solutions',
-  description = 'Pioneering the future of technology with revolutionary AI consciousnessquantum computingand autonomous solutions that transform businesses worldwide. Leading-edge services in AIcybersecurityspace techand quantum solutions.',
-  keywords = 'AIartificial intelligencequantum computingspace technologycybersecuritymachine learningautomationZion Tech Grouptechnology solutionsenterprise softwarecloud computingblockchainIoTrobotics',
-=======
   title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.',
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics',
->>>>>>> origin/auto/autonomy-17186719616
   image = '/images/zion-tech-group-og-image.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website',
@@ -43,39 +30,24 @@ const SEO: React.FC<SEOProps> = ({
   tags = [],
   structuredData,
   noindex = false,
-<<<<<<< HEAD
-  nofollow = false}) => {
-=======
   nofollow = false,
 }) => {
->>>>>>> origin/auto/autonomy-17186719616
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-
   return (
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-<<<<<<< HEAD
-      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(') : keywords} />
-=======
       <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
->>>>>>> origin/auto/autonomy-17186719616
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex' : 'index'} />
       {nofollow && <meta name="robots" content="nofollow" />}
-      
       {/* Robots Meta */}
       {noindex && <meta name="robots" content="noindex" />}
       {nofollow && <meta name="robots" content="nofollow" />}
-<<<<<<< HEAD
-      {!noindex && !nofollow && <meta name="robots" content="indexfollow" />}
-=======
       {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
->>>>>>> origin/auto/autonomy-17186719616
-      
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -84,7 +56,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={fullImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@ziontechgroup" />
@@ -92,7 +63,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImage} />
-      
       {/* Article Specific Meta Tags */}
       {type === 'article' && (
         <>
@@ -100,28 +70,18 @@ const SEO: React.FC<SEOProps> = ({
           {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
           {author && <meta property="article:author" content={author} />}
           {section && <meta property="article:section" content={section} />}
-<<<<<<< HEAD
-          {tags.map((tagindex) => (
-=======
           {tags.map((tag, index) => (
->>>>>>> origin/auto/autonomy-17186719616
             <meta key={index} property="article:tag" content={tag} />
           ))}
         </>
       )}
-      
       {/* Additional Meta Tags */}
-<<<<<<< HEAD
-      <meta name="viewport" content="width=device-widthinitial-scale=1shrink-to-fit=no" />
-=======
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
->>>>>>> origin/auto/autonomy-17186719616
       <meta name="theme-color" content="#000000" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -179,27 +139,22 @@ const SEO: React.FC<SEOProps> = ({
           })
         }}
       />
-      
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />
-      
       {/* Favicon and App Icons */}
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
-      
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
-      
       {/* Additional Meta Tags for SEO */}
       <meta name="google-site-verification" content="your-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />
       <meta name="yandex-verification" content="your-yandex-verification-code" />
-      
       {/* Custom Meta Tags */}
       {structuredData && (
         <script
@@ -212,5 +167,4 @@ const SEO: React.FC<SEOProps> = ({
     </Head>
   );
 };
-
 export default SEO;

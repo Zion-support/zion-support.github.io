@@ -1,43 +1,18 @@
-<<<<<<< HEAD
-"use client";
-import { useEffectuseState } from 'react';
-=======
 import { useEffect, useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import { useRouter } from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
-
 export default function GrantDetailPage() {
   const router = useRouter();
   const { id } = router.query as { id: string };
-<<<<<<< HEAD
-  const [itemsetItem] = useState<GrantApplication | null>(null);
-  const [loadingsetLoading] = useState(true);
-  const [updateContentsetUpdateContent] = useState('');
-=======
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
->>>>>>> origin/auto/autonomy-17186719616
-
   useEffect(() => {
     if (!id) return;
     setLoading(true);
     fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false));
-<<<<<<< HEAD
-  }[id]);
-
-  const addUpdate = async () => {
-    if (!id || !updateContent.trim()) return;
-    const resp = await fetch(`/api/grants/${id}/updates`{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ content: updateContent }) });
-    if (resp.ok) {
-      const u = await resp.json();
-      setItem((prev) => prev ? { ...prevupdates: [...(prev.updates || [])u.update] } : prev);
-      setUpdateContent(', ');
-=======
   }, [id]);
-
   const addUpdate = async () => {
     if (!id || !updateContent.trim()) return;
     const resp = await fetch(`/api/grants/${id}/updates`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: updateContent }) });
@@ -45,13 +20,10 @@ export default function GrantDetailPage() {
       const u = await resp.json();
       setItem((prev) => prev ? { ...prev, updates: [...(prev.updates || []), u.update] } : prev);
       setUpdateContent('');
->>>>>>> origin/auto/autonomy-17186719616
     }
   };
-
   if (loading) return <EnhancedLayout><div>Loading...</div></EnhancedLayout>;
   if (!item) return <EnhancedLayout><div>Not found</div></EnhancedLayout>;
-
   return (
     <EnhancedLayout>
       <div className="flex items-center justify-between mb-4">
@@ -65,7 +37,6 @@ export default function GrantDetailPage() {
           <span className="px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800">{item.status}</span>
         </div>
       </div>
-
       <div className="grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2 space-y-4">
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
@@ -77,16 +48,11 @@ export default function GrantDetailPage() {
               <div className="mt-2">
                 <div className="text-sm font-medium">Supporting Links</div>
                 <ul className="list-disc list-inside text-sm">
-<<<<<<< HEAD
-                  {item.supportingLinks.map((li) => <li key={i}><a className="text-blue-600" href={l} target="_blank" rel="noreferrer">{l}</a></li>)}
-=======
                   {item.supportingLinks.map((l, i) => <li key={i}><a className="text-blue-600" href={l} target="_blank" rel="noreferrer">{l}</a></li>)}
->>>>>>> origin/auto/autonomy-17186719616
                 </ul>
               </div>
             )}
           </section>
-
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h2 className="font-medium mb-2">Updates</h2>
             <div className="space-y-3">
@@ -104,7 +70,6 @@ export default function GrantDetailPage() {
             </div>
           </section>
         </div>
-
         <aside className="space-y-4">
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h3 className="font-medium mb-2">Milestones</h3>
@@ -124,7 +89,6 @@ export default function GrantDetailPage() {
             </ul>
             <div className="mt-3 text-sm">Funds Released: {item.fundsReleased || 0}</div>
           </section>
-
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h3 className="font-medium mb-2">Team</h3>
             <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>

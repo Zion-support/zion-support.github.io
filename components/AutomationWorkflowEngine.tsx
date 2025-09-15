@@ -1,11 +1,6 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect } from 'react';
-
 interface Workflow {
   id: string;
   name: string;
@@ -19,7 +14,6 @@ interface Workflow {
   category: 'marketing' | 'sales' | 'support' | 'operations' | 'security';
   priority: 'low' | 'medium' | 'high' | 'critical';
 }
-
 interface AutomationRule {
   id: string;
   name: string;
@@ -30,7 +24,6 @@ interface AutomationRule {
   executions: number;
   category: string;
 }
-
 interface WorkflowExecution {
   id: string;
   workflowId: string;
@@ -42,7 +35,6 @@ interface WorkflowExecution {
   errors?: string[];
   logs: string[];
 }
-
 const AutomationWorkflowEngine: React.FC = () => {
   const [workflowsetWorkflows] = useState<Workflow[]>([]);
   const [automationRulesetAutomationRules] = useState<AutomationRule[]>([]);
@@ -50,23 +42,17 @@ const AutomationWorkflowEngine: React.FC = () => {
   const [selectedCategorysetSelectedCategory] = useState('all');
   const [isLoadingsetIsLoading] = useState(true);
   const [showCreateWorkflowsetShowCreateWorkflow] = useState(false);
-
   useEffect(() => {
     generateMockData();
-    
     // Simulate real-time execution updates
     const interval = setInterval(() => {
       updateExecutions();
     }5000);
-
     return () => clearInterval(interval);
   }[]);
-
   const generateMockData = async () => {
     setIsLoading(true);
-    
     await new Promise(resolve => setTimeout(resolve1000));
-
     const mockWorkflows: Workflow[] = [
       {
         id: '1',
@@ -147,7 +133,6 @@ const AutomationWorkflowEngine: React.FC = () => {
         priority: 'low'
       }
     ];
-
     const mockRules: AutomationRule[] = [
       {
         id: '1',
@@ -180,7 +165,6 @@ const AutomationWorkflowEngine: React.FC = () => {
         category: 'monitoring'
       }
     ];
-
     const mockExecutions: WorkflowExecution[] = [
       {
         id: '1',
@@ -212,13 +196,11 @@ const AutomationWorkflowEngine: React.FC = () => {
         logs: ['Starting support ticket 'escalation', 'Processing 8 high-priority 'tickets', 'Error: Email service unavailable']
       }
     ];
-
     setWorkflows(mockWorkflows);
     setAutomationRules(mockRules);
     setExecutions(mockExecutions);
     setIsLoading(false);
   };
-
   const updateExecutions = () => {
     setExecutions(prev => prev.map(execution => {
       if (execution.status === 'running') {
@@ -228,7 +210,6 @@ const AutomationWorkflowEngine: React.FC = () => {
       return execution;
     }));
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-600 bg-green-100';
@@ -238,7 +219,6 @@ const AutomationWorkflowEngine: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'critical': return 'text-red-600 bg-red-100';
@@ -248,7 +228,6 @@ const AutomationWorkflowEngine: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getExecutionStatusColor = (status: string) => {
     switch (status) {
       case 'completed': return 'text-green-600 bg-green-100';
@@ -258,7 +237,6 @@ const AutomationWorkflowEngine: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'marketing': return '📢';
@@ -269,21 +247,17 @@ const AutomationWorkflowEngine: React.FC = () => {
       default: return '🔧';
     }
   };
-
   const formatTimeAgo = (timestamp: Date) => {
     const now = new Date();
     const diffInMinutes = Math.floor((now.getTime() - timestamp.getTime()) / (1000 * 60));
-    
     if (diffInMinutes < 1) return 'Just now';
     if (diffInMinutes < 60) return `${diffInMinutes}m ago`;
     if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`;
     return `${Math.floor(diffInMinutes / 1440)}d ago`;
   };
-
   const filteredWorkflows = selectedCategory === 'all' 
     ? workflows 
     : workflows.filter(workflow => workflow.category === selectedCategory);
-
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -302,7 +276,6 @@ const AutomationWorkflowEngine: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="flex items-center justify-between mb-8">
@@ -335,7 +308,6 @@ const AutomationWorkflowEngine: React.FC = () => {
           </select>
         </div>
       </div>
-
       {/* Workflow Overview */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {filteredWorkflows.map((workflow) => (
@@ -351,10 +323,8 @@ const AutomationWorkflowEngine: React.FC = () => {
                 {workflow.priority}
               </span>
             </div>
-            
             <h3 className="text-lg font-semibold text-gray-900 mb-2">{workflow.name}</h3>
             <p className="text-gray-600 text-sm mb-4">{workflow.description}</p>
-            
             <div className="space-y-3">
               <div>
                 <h4 className="text-sm font-medium text-gray-700 mb-1">Triggers:</h4>
@@ -366,7 +336,6 @@ const AutomationWorkflowEngine: React.FC = () => {
                   ))}
                 </div>
               </div>
-              
               <div>
                 <h4 className="text-sm font-medium text-gray-700 mb-1">Actions:</h4>
                 <div className="flex flex-wrap gap-1">
@@ -378,7 +347,6 @@ const AutomationWorkflowEngine: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
               <div className="text-sm">
                 <div className="text-gray-600">Executions: {workflow.executions.toLocaleString()}</div>
@@ -391,11 +359,9 @@ const AutomationWorkflowEngine: React.FC = () => {
           </div>
         ))}
       </div>
-
       {/* Recent Executions */}
       <div className="bg-white rounded-2xl shadow-xl p-6 mb-12">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">⚡ Recent Executions</h3>
-        
         <div className="space-y-4">
           {executions.map((execution) => (
             <div key={execution.id} className="border border-gray-200 rounded-xl p-4">
@@ -412,7 +378,6 @@ const AutomationWorkflowEngine: React.FC = () => {
                   {formatTimeAgo(execution.startTime)}
                 </div>
               </div>
-              
               <div className="grid md:grid-cols-4 gap-4 text-sm">
                 <div>
                   <span className="text-gray-600">Records Processed:</span>
@@ -435,7 +400,6 @@ const AutomationWorkflowEngine: React.FC = () => {
                   </span>
                 </div>
               </div>
-              
               {execution.errors && execution.errors.length > 0 && (
                 <div className="mt-3 p-3 bg-red-50 border border-red-200 rounded-lg">
                   <h5 className="font-medium text-red-900 mb-1">Errors:</h5>
@@ -444,7 +408,6 @@ const AutomationWorkflowEngine: React.FC = () => {
                   ))}
                 </div>
               )}
-              
               <div className="mt-3">
                 <details className="text-sm">
                   <summary className="cursor-pointer text-gray-600 hover:text-gray-900">
@@ -463,11 +426,9 @@ const AutomationWorkflowEngine: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Automation Rules */}
       <div className="bg-white rounded-2xl shadow-xl p-6 mb-12">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">📋 Automation Rules</h3>
-        
         <div className="grid md:grid-cols-3 gap-6">
           {automationRules.map((rule) => (
             <div key={rule.id} className="border border-gray-200 rounded-xl p-4">
@@ -475,7 +436,6 @@ const AutomationWorkflowEngine: React.FC = () => {
                 <h4 className="font-semibold text-gray-900">{rule.name}</h4>
                 <span className={`w-3 h-3 rounded-full ${rule.enabled ? 'bg-green-500' : 'bg-gray-400'}`}></span>
               </div>
-              
               <div className="space-y-2 text-sm">
                 <div>
                   <span className="text-gray-600">Condition:</span>
@@ -498,11 +458,9 @@ const AutomationWorkflowEngine: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Performance Metrics */}
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">📊 Automation Performance</h3>
-        
         <div className="grid md:grid-cols-4 gap-6">
           <div className="bg-white rounded-xl p-6 text-center shadow-lg">
             <div className="text-3xl font-bold text-blue-600 mb-2">
@@ -510,21 +468,18 @@ const AutomationWorkflowEngine: React.FC = () => {
             </div>
             <div className="text-sm text-gray-600">Total Executions</div>
           </div>
-          
           <div className="bg-white rounded-xl p-6 text-center shadow-lg">
             <div className="text-3xl font-bold text-green-600 mb-2">
               {(workflows.reduce((sum, w) => sum + w.successRate, 0) / workflows.length).toFixed(1)}%
             </div>
             <div className="text-sm text-gray-600">Avg Success Rate</div>
           </div>
-          
           <div className="bg-white rounded-xl p-6 text-center shadow-lg">
             <div className="text-3xl font-bold text-purple-600 mb-2">
               {workflows.filter(w => w.status === 'active').length}
             </div>
             <div className="text-sm text-gray-600">Active Workflows</div>
           </div>
-          
           <div className="bg-white rounded-xl p-6 text-center shadow-lg">
             <div className="text-3xl font-bold text-orange-600 mb-2">
               {executions.filter(e => e.status === 'running').length}
@@ -536,5 +491,4 @@ const AutomationWorkflowEngine: React.FC = () => {
     </div>
   );
 };
-
 export default AutomationWorkflowEngine;

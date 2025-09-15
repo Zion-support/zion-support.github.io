@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-
-const ext = (url: string) => (
-	<a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{url.replace('https://', '')}</a>
-),
-=======
 import React from 'react';
 import Head from 'next/head';
 
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{url.replace('https://', '')}</a>
 );
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function ServicesAdvertisingPage() {
 	return (
@@ -143,9 +134,5 @@ export default function ServicesAdvertisingPage() {
 				</section>
 			</div>
 		</div>
-<<<<<<< HEAD
-	),
-=======
 	);
->>>>>>> origin/auto/autonomy-17186719616
 }

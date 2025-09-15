@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-"use client";
-=======
 'use client';
-
 'use client';
->>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect } from 'react';
-
 interface APIEndpoint {
   id: string;
   name: string;
@@ -21,7 +15,6 @@ interface APIEndpoint {
   documentation: string;
   rateLimit: number;
 }
-
 interface APIKey {
   id: string;
   name: string;
@@ -34,7 +27,6 @@ interface APIKey {
   expiresAt?: Date;
   lastUsed: Date;
 }
-
 interface APIMetric {
   id: string;
   name: string;
@@ -44,30 +36,23 @@ interface APIMetric {
   change: number;
   timestamp: Date;
 }
-
 const APIManagementSystem: React.FC = () => {
   const [endpointsetEndpoints] = useState<APIEndpoint[]>([]);
   const [apiKeysetApiKeys] = useState<APIKey[]>([]);
   const [metricsetMetrics] = useState<APIMetric[]>([]);
   const [selectedViewsetSelectedView] = useState<'overview' | 'endpoints' | 'keys' | 'analytics'>('overview');
   const [isLoadingsetIsLoading] = useState(true);
-
   useEffect(() => {
     generateMockData();
-    
     // Simulate real-time updates
     const interval = setInterval(() => {
       updateRealTimeData();
     }3000);
-
     return () => clearInterval(interval);
   }[]);
-
   const generateMockData = async () => {
     setIsLoading(true);
-    
     await new Promise(resolve => setTimeout(resolve1000));
-
     const mockEndpoints: APIEndpoint[] = [
       {
         id: '1',
@@ -140,7 +125,6 @@ const APIManagementSystem: React.FC = () => {
         rateLimit: 2000
       }
     ];
-
     const mockApiKeys: APIKey[] = [
       {
         id: '1',
@@ -189,7 +173,6 @@ const APIManagementSystem: React.FC = () => {
         lastUsed: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
       }
     ];
-
     const mockMetrics: APIMetric[] = [
       {
         id: '1',
@@ -246,13 +229,11 @@ const APIManagementSystem: React.FC = () => {
         timestamp: new Date()
       }
     ];
-
     setEndpoints(mockEndpoints);
     setApiKeys(mockApiKeys);
     setMetrics(mockMetrics);
     setIsLoading(false);
   };
-
   const updateRealTimeData = () => {
     // Update metrics with real-time changes
     setMetrics(prev => prev.map(metric => ({
@@ -260,7 +241,6 @@ const APIManagementSystem: React.FC = () => {
       value: metric.value + Math.floor(Math.random() * 100 - 50),
       timestamp: new Date()
     })));
-
     // Update endpoint metrics
     setEndpoints(prev => prev.map(endpoint => ({
       ...endpoint,
@@ -268,7 +248,6 @@ const APIManagementSystem: React.FC = () => {
       requestsPerMinute: Math.max(0endpoint.requestsPerMinute + Math.floor(Math.random() * 100 - 50))
     })));
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-600 bg-green-100';
@@ -280,7 +259,6 @@ const APIManagementSystem: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getMethodColor = (method: string) => {
     switch (method) {
       case 'GET': return 'text-green-600 bg-green-100';
@@ -291,7 +269,6 @@ const APIManagementSystem: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '📈';
@@ -300,24 +277,20 @@ const APIManagementSystem: React.FC = () => {
       default: return '➡️';
     }
   };
-
   const formatTimeAgo = (timestamp: Date) => {
     const now = new Date();
     const diffInMinutes = Math.floor((now.getTime() - timestamp.getTime()) / (1000 * 60));
-    
     if (diffInMinutes < 1) return 'Just now';
     if (diffInMinutes < 60) return `${diffInMinutes}m ago`;
     if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`;
     return `${Math.floor(diffInMinutes / 1440)}d ago`;
   };
-
   const formatValue = (value: numberunit: string) => {
     if (unit === 'ms') return `${value}ms`;
     if (unit === '%') return `${value.toFixed(1)}%`;
     if (unit === ', ') return value.toLocaleString();
     return `${value}${unit}`;
   };
-
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -336,7 +309,6 @@ const APIManagementSystem: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="flex items-center justify-between mb-8">
@@ -358,7 +330,6 @@ const APIManagementSystem: React.FC = () => {
           </button>
         </div>
       </div>
-
       {/* Navigation Tabs */}
       <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg mb-8">
         {[
@@ -381,7 +352,6 @@ const APIManagementSystem: React.FC = () => {
           </button>
         ))}
       </div>
-
       {/* Overview */}
       {selectedView === 'overview' && (
         <div className="space-y-8">
@@ -398,18 +368,15 @@ const APIManagementSystem: React.FC = () => {
                     </span>
                   </span>
                 </div>
-                
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   {formatValue(metric.valuemetric.unit)}
                 </div>
-                
                 <div className="text-sm text-gray-500">
                   Updated: {formatTimeAgo(metric.timestamp)}
                 </div>
               </div>
             ))}
           </div>
-
           {/* API Status Overview */}
           <div className="bg-white rounded-2xl shadow-xl p-6">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">🚦 API Status Overview</h3>
@@ -442,7 +409,6 @@ const APIManagementSystem: React.FC = () => {
           </div>
         </div>
       )}
-
       {/* API Endpoints */}
       {selectedView === 'endpoints' && (
         <div className="space-y-6">
@@ -465,9 +431,7 @@ const APIManagementSystem: React.FC = () => {
                   <span className="text-sm text-gray-500">v{endpoint.version}</span>
                 </div>
               </div>
-              
               <p className="text-gray-600 mb-4">{endpoint.documentation}</p>
-              
               <div className="grid md:grid-cols-4 gap-4">
                 <div>
                   <span className="text-sm text-gray-600">Response Time:</span>
@@ -486,7 +450,6 @@ const APIManagementSystem: React.FC = () => {
                   <div className="font-medium">{endpoint.rateLimit.toLocaleString()}/min</div>
                 </div>
               </div>
-              
               <div className="mt-4 text-sm text-gray-500">
                 Last updated: {formatTimeAgo(endpoint.lastUpdated)}
               </div>
@@ -494,7 +457,6 @@ const APIManagementSystem: React.FC = () => {
           ))}
         </div>
       )}
-
       {/* API Keys */}
       {selectedView === 'keys' && (
         <div className="space-y-6">
@@ -509,7 +471,6 @@ const APIManagementSystem: React.FC = () => {
                   {key.status}
                 </span>
               </div>
-              
               <div className="grid md:grid-cols-3 gap-4 mb-4">
                 <div>
                   <span className="text-sm text-gray-600">Usage:</span>
@@ -530,7 +491,6 @@ const APIManagementSystem: React.FC = () => {
                   <div className="font-medium">{formatTimeAgo(key.lastUsed)}</div>
                 </div>
               </div>
-              
               <div>
                 <span className="text-sm text-gray-600 mb-2 block">Permissions:</span>
                 <div className="flex flex-wrap gap-1">
@@ -541,7 +501,6 @@ const APIManagementSystem: React.FC = () => {
                   ))}
                 </div>
               </div>
-              
               {key.expiresAt && (
                 <div className="mt-4 text-sm text-gray-500">
                   Expires: {key.expiresAt.toLocaleDateString()}
@@ -551,7 +510,6 @@ const APIManagementSystem: React.FC = () => {
           ))}
         </div>
       )}
-
       {/* Analytics */}
       {selectedView === 'analytics' && (
         <div className="space-y-8">
@@ -569,7 +527,6 @@ const APIManagementSystem: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Top Endpoints */}
           <div className="bg-white rounded-2xl shadow-xl p-6">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">🔥 Top Performing Endpoints</h3>
@@ -605,5 +562,4 @@ const APIManagementSystem: React.FC = () => {
     </div>
   );
 };
-
 export default APIManagementSystem;

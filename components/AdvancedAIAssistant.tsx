@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-"use client";
-=======
 'use client';
-
 'use client';
->>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect, useRef } from 'react';
-
 interface Message {
   id: string;
   text: string;
@@ -14,7 +8,6 @@ interface Message {
   timestamp: Date;
   type: 'text' | 'code' | 'analysis' | 'recommendation';
 }
-
 interface AICapability {
   id: string;
   name: string;
@@ -22,14 +15,12 @@ interface AICapability {
   icon: string;
   category: 'analysis' | 'automation' | 'optimization' | 'insights';
 }
-
 const AdvancedAIAssistant: React.FC = () => {
   const [messagesetMessages] = useState<Message[]>([]);
   const [inputTextsetInputText] = useState('');
   const [isLoadingsetIsLoading] = useState(false);
   const [activeCapabilitysetActiveCapability] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-
   const capabilities: AICapability[] = [
     {
       id: 'business-analysis',
@@ -74,12 +65,10 @@ const AdvancedAIAssistant: React.FC = () => {
       category: 'insights'
     }
   ];
-
   useEffect(() => {
     // Scroll to bottom when new messages arrive
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }[messages]);
-
   useEffect(() => {
     // Add welcome message
     const welcomeMessage: Message = {
@@ -91,10 +80,8 @@ const AdvancedAIAssistant: React.FC = () => {
     };
     setMessages([welcomeMessage]);
   }[]);
-
   const handleSendMessage = async () => {
     if (!inputText.trim()) return;
-
     const userMessage: Message = {
       id: Date.now().toString(),
       text: inputText,
@@ -102,14 +89,11 @@ const AdvancedAIAssistant: React.FC = () => {
       timestamp: new Date(),
       type: 'text'
     };
-
     setMessages(prev => [...prevuserMessage]);
     setInputText(', ');
     setIsLoading(true);
-
     // Simulate AI processing
     await new Promise(resolve => setTimeout(resolve1500));
-
     const aiResponse: Message = {
       id: (Date.now() + 1).toString(),
       text: generateAIResponse(inputText),
@@ -117,144 +101,113 @@ const AdvancedAIAssistant: React.FC = () => {
       timestamp: new Date(),
       type: determineResponseType(inputText)
     };
-
     setMessages(prev => [...prevaiResponse]);
     setIsLoading(false);
   };
-
   const generateAIResponse = (input: string): string => {
     const lowerInput = input.toLowerCase();
-    
     if (lowerInput.includes('business') || lowerInput.includes('analysis')) {
       return `Based on your business analysis requesthere are my key insights:
-
 📊 **Business Performance Metrics:**
 - Revenue growth: +23% YoY
 - Customer acquisition cost: -15% improvement
 - Market share: Expanding in 3 new segments
-
 🎯 **Strategic Recommendations:**
 1. Focus on high-value customer segments
 2. Implement AI-driven personalization
 3. Expand into emerging markets
-
 💡 **Next Steps:**
 - Conduct deeper customer behavior analysis
 - Implement predictive analytics
 - Consider strategic partnerships
-
 Would you like me to dive deeper into any specific area?`;
     }
-    
     if (lowerInput.includes('code') || lowerInput.includes('review')) {
       return `🔍 **Code Review Analysis:**
-
 **Strengths:**
 ✅ Clean architecture and separation of concerns
 ✅ Good error handling implementation
 ✅ Comprehensive test coverage (87%)
-
 **Areas for Improvement:**
 ⚠️ Some functions exceed 50 lines (consider refactoring)
 ⚠️ Missing JSDoc comments for complex functions
 ⚠️ Potential memory leaks in event listeners
-
 **Security Considerations:**
 🔒 Input validation looks solid
 🔒 No sensitive data exposure detected
 🔒 CSRF protection implemented correctly
-
 **Performance Optimization:**
 ⚡ Database queries could be optimized with indexing
 ⚡ Consider implementing caching for frequently accessed data
 ⚡ Image compression could reduce bundle size by ~30%`;
     }
-    
     if (lowerInput.includes('performance') || lowerInput.includes('optimize')) {
       return `⚡ **Performance Optimization Analysis:**
-
 **Current Metrics:**
 - Page load time: 2.3s (Target: <2s)
 - Core Web Vitals: Good
 - Bundle size: 1.2MB (Could be reduced by 25%)
-
 **Optimization Recommendations:**
 1. **Code Splitting**: Implement lazy loading for non-critical components
 2. **Image Optimization**: Use WebP format and responsive images
 3. **Caching Strategy**: Implement Redis for API responses
 4. **CDN**: Deploy static assets to global CDN
-
 **Immediate Actions:**
 - Enable gzip compression
 - Implement service worker for offline functionality
 - Optimize database queries with proper indexing
-
 **Expected Results:**
 - 40% faster page load times
 - 60% reduction in server load
 - Improved user experience scores`;
     }
-    
     if (lowerInput.includes('security') || lowerInput.includes('audit')) {
       return `🔒 **Security Audit Results:**
-
 **Overall Security Score: 8.5/10** ✅
-
 **Strengths:**
 ✅ HTTPS enforcement implemented
 ✅ Strong password policies in place
 ✅ Regular security updates applied
 ✅ Input sanitization working correctly
-
 **Vulnerabilities Found:**
 ⚠️ **Medium Risk**: Missing rate limiting on API endpoints
 ⚠️ **Low Risk**: Some third-party dependencies need updates
 ⚠️ **Low Risk**: Session timeout could be optimized
-
 **Recommendations:**
 1. Implement API rate limiting (Redis-based)
 2. Update dependencies to latest secure versions
 3. Add security headers (CSPHSTSX-Frame-Options)
 4. Conduct penetration testing quarterly
-
 **Compliance Status:**
 - GDPR: ✅ Compliant
 - SOC 2: ✅ Compliant
 - ISO 27001: In progress`;
     }
-    
     if (lowerInput.includes('automation') || lowerInput.includes('automate')) {
       return `🤖 **Automation Opportunities Analysis:**
-
 **High-Impact Automation Targets:**
 1. **Customer Onboarding** (Save 15 hours/week)
    - Automated welcome emails
    - Document verification
    - Account setup workflows
-
 2. **Report Generation** (Save 8 hours/week)
    - Automated weekly performance reports
    - Client dashboards
    - Data visualization
-
 3. **Content Management** (Save 12 hours/week)
    - SEO optimization
    - Social media scheduling
    - Content categorization
-
 **Implementation Roadmap:**
 - Phase 1: Email automation (2 weeks)
 - Phase 2: Report automation (3 weeks)
 - Phase 3: Content automation (4 weeks)
-
 **ROI Projection:**
 - Time savings: 35 hours/week
 - Cost savings: $3,500/month
 - Payback period: 2.5 months`;
     }
-    
     return `I understand 'you', 're asking about "${input}". 'Here', 's what I can help you with:
-
 🎯 **My Capabilities:**
 - Business analysis and strategic insights
 - Code review and technical recommendations
@@ -262,10 +215,8 @@ Would you like me to dive deeper into any specific area?`;
 - Security audit and compliance
 - Process automation suggestions
 - Market research and competitive analysis
-
 Could you provide more specific details about what 'you', 'd like me to analyze or help you with? I can dive deeper into any of these areas to give you actionable insights and recommendations.`;
   };
-
   const determineResponseType = (input: string): 'text' | 'code' | 'analysis' | 'recommendation' => {
     const lowerInput = input.toLowerCase();
     if (lowerInput.includes('code')) return 'code';
@@ -273,7 +224,6 @@ Could you provide more specific details about what 'you', 'd like me to analyze 
     if (lowerInput.includes('recommend') || lowerInput.includes('suggest')) return 'recommendation';
     return 'text';
   };
-
   const handleCapabilityClick = (capability: AICapability) => {
     setActiveCapability(capability.id);
     const capabilityMessage: Message = {
@@ -286,11 +236,9 @@ Could you provide more specific details about what 'you', 'd like me to analyze 
     setMessages(prev => [...prevcapabilityMessage]);
     setInputText(`Help me with ${capability.name.toLowerCase()}`);
   };
-
   const formatTimestamp = (timestamp: Date) => {
     return timestamp.toLocaleTimeString([]{ hour: '2-'digit', 'minute: '2-digit' });
   };
-
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center mb-12">
@@ -302,7 +250,6 @@ Could you provide more specific details about what 'you', 'd like me to analyze 
           I can help with business analysiscode reviewperformance optimizationand much more.
         </p>
       </div>
-
       <div className="grid lg:grid-cols-3 gap-8">
         {/* AI Capabilities Panel */}
         <div className="lg:col-span-1">
@@ -331,7 +278,6 @@ Could you provide more specific details about what 'you', 'd like me to analyze 
             </div>
           </div>
         </div>
-
         {/* Chat Interface */}
         <div className="lg:col-span-2">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -353,7 +299,6 @@ Could you provide more specific details about what 'you', 'd like me to analyze 
                 </div>
               </div>
             </div>
-
             {/* Messages */}
             <div className="h-96 overflow-y-auto p-6 space-y-4">
               {messages.map((message) => (
@@ -377,7 +322,6 @@ Could you provide more specific details about what 'you', 'd like me to analyze 
                   </div>
                 </div>
               ))}
-              
               {isLoading && (
                 <div className="flex justify-start">
                   <div className="bg-gray-100 text-gray-900 px-4 py-3 rounded-2xl">
@@ -392,10 +336,8 @@ Could you provide more specific details about what 'you', 'd like me to analyze 
                   </div>
                 </div>
               )}
-              
               <div ref={messagesEndRef} />
             </div>
-
             {/* Input */}
             <div className="border-t border-gray-200 p-6">
               <div className="flex space-x-4">
@@ -419,7 +361,6 @@ Could you provide more specific details about what 'you', 'd like me to analyze 
           </div>
         </div>
       </div>
-
       {/* Quick Actions */}
       <div className="mt-12 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">🚀 Quick Actions</h3>
@@ -432,7 +373,6 @@ Could you provide more specific details about what 'you', 'd like me to analyze 
             <h4 className="font-semibold text-gray-900 mb-2">Business Analysis</h4>
             <p className="text-gray-600 text-sm">Get comprehensive business insights and strategic recommendations</p>
           </button>
-          
           <button
             onClick={() => setInputText('Review my code quality and suggest optimizations')}
             className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 text-left"
@@ -441,7 +381,6 @@ Could you provide more specific details about what 'you', 'd like me to analyze 
             <h4 className="font-semibold text-gray-900 mb-2">Code Review</h4>
             <p className="text-gray-600 text-sm">Get expert code analysis and improvement suggestions</p>
           </button>
-          
           <button
             onClick={() => setInputText('Suggest automation opportunities for my business')}
             className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 text-left"
@@ -455,5 +394,4 @@ Could you provide more specific details about what 'you', 'd like me to analyze 
     </div>
   );
 };
-
 export default AdvancedAIAssistant;

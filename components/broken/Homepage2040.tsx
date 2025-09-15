@@ -1,60 +1,30 @@
-<<<<<<< HEAD
-"use client";
-import React{ SuspenselazyuseStateuseEffect } from 'react';
-=======
 import React, { Suspense, lazy, useState, useEffect } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import Layout from './layout/Layout';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  ArrowRightStar
-  BrainAtomShieldZapTrendingUpGlobe,
-  RocketTargetUsersCpuEyeNetwork,
-  CarSearchTestTubeGlobe as PlanetIconLockPalette,
-  FileTextBarChart3HeartTruckShieldCheck,
-  SparklesInfinity as InfinityIconZap as Lightning
-=======
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe,
   Rocket, Target, Users, Cpu, Eye, Network,
   Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette,
   FileText, BarChart3, Heart, Truck, ShieldCheck,
   Sparkles, Infinity as InfinityIcon, Zap as Lightning
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
-
 // Import new service data
 import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
-
 // Lazy load heavy components for better performance
 const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
-
 const Homepage2040: React.FC = () => {
-<<<<<<< HEAD
-  const [currentServiceIndexsetCurrentServiceIndex] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-=======
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length);
-<<<<<<< HEAD
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
-=======
     }, 5000);
     return () => clearInterval(interval);
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
-
   // Enhanced animation variants for better performance
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -66,7 +36,6 @@ const Homepage2040: React.FC = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -78,14 +47,9 @@ const Homepage2040: React.FC = () => {
       }
     }
   };
-
   const floatingVariants = {
     float: {
-<<<<<<< HEAD
-      y: [-10-10],
-=======
       y: [-10, 10, -10],
->>>>>>> origin/auto/autonomy-17186719616
       transition: {
         duration: 3,
         repeat: -1,
@@ -93,7 +57,6 @@ const Homepage2040: React.FC = () => {
       }
     }
   };
-
   const statsData = [
     {
       number: "100+",
@@ -128,16 +91,9 @@ const Homepage2040: React.FC = () => {
       hoverColor: "group-hover:text-green-300"
     }
   ];
-
   // Combine all services for showcase
-<<<<<<< HEAD
-  const allServices = [...innovativeMicroSaasServices2025V2...emergingTechServices2025V2];
-  const featuredServices = allServices.filter(service => service.popular).slice(06);
-=======
   const allServices = [...innovativeMicroSaasServices2025V2, ...emergingTechServices2025V2];
   const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
->>>>>>> origin/auto/autonomy-17186719616
-
   const serviceCategories = [
     {
       name: "AI & Machine Learning",
@@ -164,7 +120,6 @@ const Homepage2040: React.FC = () => {
       color: "from-green-500 to-emerald-600"
     }
   ];
-
   return (
     <Layout>
       {/* Main Content */}
@@ -194,14 +149,9 @@ const Homepage2040: React.FC = () => {
               style={{ animationDelay: '2s' }}
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
             ></motion.div>
-            
             {/* Quantum particle effects */}
             <div className="absolute inset-0">
-<<<<<<< HEAD
-              {[...Array(20)].map((_i) => (
-=======
               {[...Array(20)].map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
@@ -211,14 +161,9 @@ const Homepage2040: React.FC = () => {
                     animationDelay: `${Math.random() * 3}s`
                   }}
                   animate={{
-<<<<<<< HEAD
-                    scale: [010],
-                    opacity: [010]}}
-=======
                     scale: [0, 1, 0],
                     opacity: [0, 1, 0],
                   }}
->>>>>>> origin/auto/autonomy-17186719616
                   transition={{
                     duration: 3,
                     repeat: Infinity,
@@ -228,7 +173,6 @@ const Homepage2040: React.FC = () => {
               ))}
             </div>
           </div>
-          
           <div className="text-center max-w-6xl mx-auto relative z-10">
             <motion.div
               variants={containerVariants}
@@ -247,7 +191,6 @@ const Homepage2040: React.FC = () => {
                 <span>Innovation Leader 2040</span>
                 <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" />
               </motion.div>
-              
               <motion.h1 
                 variants={itemVariants}
                 id="hero-heading"
@@ -255,18 +198,12 @@ const Homepage2040: React.FC = () => {
               >
                 Zion Tech Group
               </motion.h1>
-              
               <motion.p 
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
               >
-<<<<<<< HEAD
-                Pioneering the future of technology with revolutionary AIquantum computingand autonomous solutions that transform businesses worldwide
-=======
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
->>>>>>> origin/auto/autonomy-17186719616
               </motion.p>
-              
               {/* Enhanced CTA Section */}
               <motion.div 
                 variants={itemVariants}
@@ -291,7 +228,6 @@ const Homepage2040: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
-              
               {/* Enhanced Trust Indicators */}
               <motion.div
                 variants={itemVariants}
@@ -313,14 +249,12 @@ const Homepage2040: React.FC = () => {
                   <Star className="w-5 h-5 text-yellow-400" />
                   <span>4.9/5 Rating</span>
                 </div>
-
                 {/* SVG Pattern Background */}
                 <div className="absolute inset-0 bg-gray-800/20"></div>
               </motion.div>
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced Stats Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
@@ -331,11 +265,7 @@ const Homepage2040: React.FC = () => {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
-<<<<<<< HEAD
-              {statsData.map((statindex) => (
-=======
               {statsData.map((stat, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={stat.label}
                   variants={itemVariants}
@@ -354,7 +284,6 @@ const Homepage2040: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced Service Categories */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
@@ -378,7 +307,6 @@ const Homepage2040: React.FC = () => {
                 Explore our cutting-edge technology solutions across multiple domains
               </motion.p>
             </motion.div>
-
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -386,11 +314,7 @@ const Homepage2040: React.FC = () => {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
-<<<<<<< HEAD
-              {serviceCategories.map((categoryindex) => (
-=======
               {serviceCategories.map((category, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={category.name}
                   variants={itemVariants}
@@ -410,7 +334,6 @@ const Homepage2040: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
@@ -434,7 +357,6 @@ const Homepage2040: React.FC = () => {
                 Discover our most popular and innovative technology solutions
               </motion.p>
             </motion.div>
-
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -442,11 +364,7 @@ const Homepage2040: React.FC = () => {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-<<<<<<< HEAD
-              {featuredServices.map((serviceindex) => (
-=======
               {featuredServices.map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -460,10 +378,8 @@ const Homepage2040: React.FC = () => {
                       </div>
                     )}
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-400 mb-4">{service.tagline}</p>
-                  
                   <div className="flex items-center justify-between mb-6">
                     <div className="text-3xl font-bold text-cyan-400">
                       ${service.price.monthly}
@@ -473,25 +389,18 @@ const Homepage2040: React.FC = () => {
                       {service.rating} ⭐ ({service.reviews})
                     </div>
                   </div>
-                  
                   <div className="space-y-3 mb-6">
-<<<<<<< HEAD
-                    {service.features.slice(03).map((featureidx) => (
-=======
                     {service.features.slice(0, 3).map((feature, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                       <div key={idx} className="flex items-center gap-3 text-gray-300">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                         <span className="text-sm">{feature}</span>
                       </div>
-
                       {/* Service Price */}
                       <div className="mb-6">
                         <span className="text-2xl font-bold text-cyan-400">
                           {service.price}
                         </span>
                       </div>
-
                       {/* CTA Button */}
                       <Link 
                         href={service.link}
@@ -503,17 +412,12 @@ const Homepage2040: React.FC = () => {
                     </motion.div>
                   ))}
                 </motion.div>
-
                 {/* View All Services Button */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.8delay: 0.4 }}
-=======
                   transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
                   className="text-center mt-12"
                 >
                   <Link 
@@ -525,13 +429,9 @@ const Homepage2040: React.FC = () => {
                   </Link>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-=======
             </motion.div>
           </div>
         </section>
->>>>>>> origin/auto/autonomy-17186719616
-
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
@@ -554,7 +454,6 @@ const Homepage2040: React.FC = () => {
               >
                 Join thousands of companies already leveraging our revolutionary technology solutions
               </motion.p>
-              
               <motion.div 
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center"
@@ -570,7 +469,6 @@ const Homepage2040: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
-              
               <motion.div
                 variants={itemVariants}
                 className="flex items-center justify-center gap-8 text-sm text-gray-400"
@@ -595,5 +493,4 @@ const Homepage2040: React.FC = () => {
     </Layout>
   );
 };
-
 export default Homepage2040;

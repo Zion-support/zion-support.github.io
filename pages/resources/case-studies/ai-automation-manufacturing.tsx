@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
-
 export default function ResourceCaseStudyPage() {
   const caseStudy = {
     id: 'ai-automation-manufacturing',
@@ -16,12 +9,7 @@ export default function ResourceCaseStudyPage() {
     industry: 'Manufacturing',
     results: '40% increase in production efficiency, 60% reduction in downtime',
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
-<<<<<<< HEAD
-  },
-=======
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <>
       <Head>
@@ -29,7 +17,6 @@ export default function ResourceCaseStudyPage() {
         <meta name="description" content={caseStudy.description} />
         <meta name="keywords" content="AI automation, manufacturing, resource, case study, predictive maintenance" />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
@@ -39,7 +26,6 @@ export default function ResourceCaseStudyPage() {
                 ← Back to Resources
               </Link>
             </nav>
-
             {/* Header */}
             <header className="mb-12 text-center">
               <div className="mb-4">
@@ -51,7 +37,6 @@ export default function ResourceCaseStudyPage() {
               <p className="text-xl text-cyan-400 font-semibold mb-4">{caseStudy.company}</p>
               <p className="text-white/80 text-lg max-w-3xl mx-auto">{caseStudy.description}</p>
             </header>
-
             {/* Key Results */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Key Results</h2>
@@ -59,7 +44,6 @@ export default function ResourceCaseStudyPage() {
                 <p className="text-white/90 text-lg">{caseStudy.results}</p>
               </div>
             </section>
-
             {/* Detailed Analysis */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Detailed Analysis</h2>
@@ -72,7 +56,6 @@ export default function ResourceCaseStudyPage() {
                     sharing data for comprehensive insights.
                   </p>
                 </div>
-                
                 <div className="bg-purple-500/10 rounded-lg p-6 border border-purple-500/20">
                   <h3 className="text-xl font-semibold text-purple-400 mb-3">Technology Stack</h3>
                   <p className="text-white/90">
@@ -81,7 +64,6 @@ export default function ResourceCaseStudyPage() {
                     production requirements.
                   </p>
                 </div>
-                
                 <div className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20">
                   <h3 className="text-xl font-semibold text-yellow-400 mb-3">Business Impact</h3>
                   <p className="text-white/90">
@@ -92,7 +74,6 @@ export default function ResourceCaseStudyPage() {
                 </div>
               </div>
             </section>
-
             {/* Related Resources */}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
@@ -104,7 +85,6 @@ export default function ResourceCaseStudyPage() {
                   <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Full Case Study</h3>
                   <p className="text-white/80 text-sm">Read the complete case study with detailed implementation insights.</p>
                 </Link>
-                
                 <Link 
                   href="/resources/whitepapers/autonomous-systems-guide.pdf"
                   className="bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300"
@@ -114,7 +94,6 @@ export default function ResourceCaseStudyPage() {
                 </Link>
               </div>
             </section>
-
             {/* Call to Action */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
@@ -123,11 +102,7 @@ export default function ResourceCaseStudyPage() {
                   This resource demonstrates the real impact of AI automation in manufacturing. 
                   Let's discuss how we can help you achieve similar results.
                 </p>
-<<<<<<< HEAD
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">
-=======
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> origin/auto/autonomy-17186719616
                   <Link 
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
@@ -147,9 +122,5 @@ export default function ResourceCaseStudyPage() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

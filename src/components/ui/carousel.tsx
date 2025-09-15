@@ -1,37 +1,20 @@
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react"
-<<<<<<< HEAD
-
 import { ArrowLeft, ArrowRight } from 'lucide-react'
-import { cn } from &quot;@/lib/utils&quot;
-import { Button } from &quot;@/components/ui/button&quot;
-=======
-import { ArrowLeft, ArrowRight } from 'lucide-react'
->>>>>>> origin/auto/autonomy-17186719616
-
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type CarouselOptions = {
   axis?: 'x' | 'y'
   [key: string]: any
 }
 type CarouselPlugin = any
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 type CarouselProps = {
   opts?: CarouselOptions
   plugins?: CarouselPlugin
   orientation?: "horizontal" | "vertical"
   setApi?: (api: CarouselApi) => void
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 type CarouselContextProps = {
   carouselRef: ReturnType<typeof useEmblaCarousel>[0]
   api: ReturnType<typeof useEmblaCarousel>[1]
@@ -40,24 +23,15 @@ type CarouselContextProps = {
   canScrollPrev: boolean
   canScrollNext: boolean
   orientation: "horizontal" | "vertical"
-<<<<<<< HEAD
-} & Omit<CarouselProps "orientation">
-=======
 } & Omit<CarouselProps, "orientation">
->>>>>>> origin/auto/autonomy-17186719616
-
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
-
 function useCarousel(): CarouselContextProps {
   const context = React.useContext(CarouselContext) as CarouselContextProps | null
-
   if (!context) {
     throw new Error("useCarousel must be used within a <Carousel />")
   }
-
   return context as CarouselContextProps
 }
-
 const Carousel = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CarouselProps
@@ -71,64 +45,31 @@ const Carousel = React.forwardRef<
       className,
       children,
       ...props
-<<<<<<< HEAD
-    }
-=======
     },
->>>>>>> origin/auto/autonomy-17186719616
     ref
   ) => {
     const [carouselRef, api] = useEmblaCarousel(
       {
-<<<<<<< HEAD
-        ...(opts |{})
-        axis: orientation === &quot;horizontal&quot; ? &quot;x&quot; : &quot;y&quot;}
-
-        ...(opts || {}),
-        axis: orientation === "horizontal" ? "x" : "y"},
-=======
         ...(opts || {}),
         axis: orientation === "horizontal" ? "x" : "y",
       },
->>>>>>> origin/auto/autonomy-17186719616
       plugins
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
     const [canScrollNext, setCanScrollNext] = React.useState(false)
-<<<<<<< HEAD
-    const onSelect = React.useCallback((api: CarouselApi) => {
-      if (!api) {
-        return;
-      }
-      setCanScrollPrev(api.canScrollPrev())
-      setCanScrollNext(api.canScrollNext())
-    }, [])
-    const scrollPrev = React.useCallback(() => {
-      api?.scrollPrev()
-    }, [api])
-    const scrollNext = React.useCallback(() => {
-      api?.scrollNext()
-    }, [api])
-=======
-
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
         return
       }
-
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
     }, [])
-
     const scrollPrev = React.useCallback(() => {
       api?.scrollPrev()
     }, [api])
-
     const scrollNext = React.useCallback(() => {
       api?.scrollNext()
     }, [api])
-
->>>>>>> origin/auto/autonomy-17186719616
     const handleKeyDown = React.useCallback(
       (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key === "ArrowLeft") {
@@ -141,31 +82,23 @@ const Carousel = React.forwardRef<
       },
       [scrollPrev, scrollNext]
     )
-
     React.useEffect(() => {
       if (!api || !setApi) {
         return
       }
-
       setApi(api)
     }, [api, setApi])
-
     React.useEffect(() => {
       if (!api) {
         return
       }
-
-<<<<<<< HEAD
-=======
       onSelect(api)
       api.on("reInit", onSelect)
       api.on("select", onSelect)
-
       return () => {
         api?.off("select", onSelect)
       }
     }, [api, onSelect])
-
     return (
       <CarouselContext.Provider
         value={{
@@ -173,18 +106,12 @@ const Carousel = React.forwardRef<
           api: api,
           opts,
           orientation:
->>>>>>> origin/auto/autonomy-17186719616
             orientation || (opts && opts.axis === "y" ? "vertical" : "horizontal"),
           scrollPrev,
           scrollNext,
           canScrollPrev,
-<<<<<<< HEAD
-
-          canScrollNext}}
-=======
           canScrollNext,
         }}
->>>>>>> origin/auto/autonomy-17186719616
       >
         <div
           ref={ref}
@@ -199,32 +126,18 @@ const Carousel = React.forwardRef<
       </CarouselContext.Provider>
     )
   }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 )
 Carousel.displayName = "Carousel"
-
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel()
-
   return (
     <div ref={carouselRef} className="overflow-hidden">
       <div
         ref={ref}
         className={cn(
-<<<<<<< HEAD
-          &quot;flex&quot;
-          orientation === &quot;horizontal&quot;
-            ? &quot;-ml-4 snap-x snap-mandatory&quot;
-            : &quot;-mt-4 flex-col snap-y snap-mandatory&quot;
-=======
->>>>>>> origin/auto/autonomy-17186719616
           "flex",
           orientation === "horizontal"
             ? "-ml-4 snap-x snap-mandatory"
@@ -237,27 +150,17 @@ const CarouselContent = React.forwardRef<
   )
 })
 CarouselContent.displayName = "CarouselContent"
-
-<<<<<<< HEAD
-      role="group"
-      aria-roledescription="slide"
-      className={cn(
-        &quot;min-w-0 shrink-0 grow-0 basis-full snap-start&quot;
-        orientation === &quot;horizontal&quot; ? &quot;pl-4&quot; : &quot;pt-4&quot;
-=======
 const CarouselItem = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const { orientation } = useCarousel()
-
   return (
     <div
       ref={ref}
       role="group"
       aria-roledescription="slide"
       className={cn(
->>>>>>> origin/auto/autonomy-17186719616
         "min-w-0 shrink-0 grow-0 basis-full snap-start",
         orientation === "horizontal" ? "pl-4" : "pt-4",
         className
@@ -267,26 +170,16 @@ const CarouselItem = React.forwardRef<
   )
 })
 CarouselItem.displayName = "CarouselItem"
-
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
-
   return (
-<<<<<<< HEAD
-    <Button;
-      ref={ref}
-      variant={variant}
-      size={size}
-
-=======
     <Button
       ref={ref}
       variant={variant}
       size={size}
->>>>>>> origin/auto/autonomy-17186719616
       className={cn(
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
@@ -304,26 +197,16 @@ const CarouselPrevious = React.forwardRef<
   )
 })
 CarouselPrevious.displayName = "CarouselPrevious"
-
 const CarouselNext = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
-
   return (
-<<<<<<< HEAD
-    <Button;
-      ref={ref}
-      variant={variant}
-      size={size}
-
-=======
     <Button
       ref={ref}
       variant={variant}
       size={size}
->>>>>>> origin/auto/autonomy-17186719616
       className={cn(
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
@@ -340,24 +223,12 @@ const CarouselNext = React.forwardRef<
     </Button>
   )
 })
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 CarouselNext.displayName = "CarouselNext"
-
 export {
   type CarouselApi,
   Carousel,
   CarouselContent,
   CarouselItem,
-<<<<<<< HEAD
-  CarouselPrevious,;
-  CarouselNext};
-  CarouselPrevious,
-  CarouselNext}
-=======
   CarouselPrevious,
   CarouselNext,
 }
->>>>>>> origin/auto/autonomy-17186719616

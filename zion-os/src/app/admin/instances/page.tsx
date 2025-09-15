@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-
-// import { prisma } from "@/lib/prisma";
-interface InstanceWithCounts {id: string;
-=======
 // import { prisma } from "@/lib/prisma";
 
 interface InstanceWithCounts {
   id: string;
->>>>>>> origin/auto/autonomy-17186719616
   name: string;
   slug: string;
   domain: string | null;
@@ -22,207 +16,6 @@ interface InstanceWithCounts {
   createdAt: Date;
   updatedAt: Date;
   daoConfig: any | null;
-<<<<<<< HEAD
-  _count: {;
-    deployments: number;
-    features: number;
-  }
-}
-export default function InstancesPage() {const instances: any[] = [], // Temporary empty array;
-  const error: string | null = null;
-// import { prisma } from "@/lib/prisma",;
-interface InstanceWithCounts {;
-  id: string,;
-  name: string,;
-  slug: string,;
-  domain: string | null,;
-  subdomain: string | null,;
-  vertical: string,;
-  defaultLanguage: string,;
-  tokenSystem: string,;
-  governanceType: string,;
-  isPublic: boolean,;
-  region: string | null,;
-  country: string | null,;
-  createdAt: Date,;
-  updatedAt: Date,;
-  daoConfig: any | null,;
-  _count: {;
-    deployments: number,;
-    features: number;
-  }
-}
-;
-export default function InstancesPage() {;
-  const instances: any[] = [], // Temporary empty array;
-  const error: string | null = null,;
-  return (;
-    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
-
-// import { prisma  } from '@/lib / prisma';,
-interface InstanceWithCounts {
-  id: string,
-  name: string,
-  slug: string,
-  domain: string | null,
-  subdomain: string | null,
-  vertical: string,
-  default_language: string,
-  token_system: string,
-  governance_type: string,
-  is_public: boolean,
-  region: string | null,
-  country: string | null,
-  created_at: Date,
-  updated_at: Date,
-  dao_config: any | null,
-  _count: {
-    deployments: number,
-    features: number;
-  }
-}
-export default /**
- * InstancesPage - Function description
- */
-function InstancesPage() {
-  const instances: any[] = [], // Temporary empty array;
-  const error: string | null = null,
-  return (
-    <div className="min - h-screen py - 8 px - 4 sm:px - 6 lg:px - 8">;
-      <div className="max - w-7xl mx - auto">;
-// import { prisma } from "@/lib/prisma",;
-interface InstanceWithCounts {;
-  id: string,;
-  name: string,;
-  slug: string,;
-  domain: string | null,;
-  subdomain: string | null,;
-  vertical: string,;
-  defaultLanguage: string,;
-  tokenSystem: string,;
-  governanceType: string,;
-  isPublic: boolean,;
-  region: string | null,;
-  country: string | null,;
-  createdAt: Date,;
-  updatedAt: Date,;
-  daoConfig: any | null,;
-  _count: {;
-    deployments: number,;
-    features: number;
-  }
-}
-;
-export default function InstancesPage() {;
-  const instances: any[] = [], // Temporary empty array;
-  const error: string | null = null,;
-
-  return (;
-    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
-        {/* Header */}
-        <div className="text - center mb - 12">;
-          <h1 className="text - 4xl font - bold mb - 4"> Manage Your Instances</h1>;
-          <p className="text - xl text - white / 70 max - w-2xl mx - auto">;
-            Monitor and manage your deployed digital economies, track performance, and access configuration settings.;
-          </p>;
-        </div>;
-        {/* Error State */}
-        {error && (
-          <div className="mb - 8 p - 6 bg - red - 900 / 20 border border - red - 500 / 20 rounded - xl text - center">;
-            <div className="text - red - 400 mb - 2"> Database Connection Error</div>;
-            <p className="text - white / 70 mb - 4">{error}</p>;
-            <p className="text - sm text - white / 50">;
-              Please ensure your database is properly configured and the DATABASE_URL environment variable is set.;
-            </p>;
-          </div>;
-        )}
-
-;
-
-        {/* Stats Overview */}
-        <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6 mb - 8">;
-          <div className="glass - effect rounded - xl p - 6 text - center">;
-            <div className="text - 3xl font - bold text - blue - 400 mb - 2">{instances.length}</div>;
-            <div className="text - white / 70">Total Instances</div>;
-          </div>;
-          <div className="glass - effect rounded - xl p - 6 text - center">;
-            <div className="text - 3xl font - bold text - green - 400 mb - 2">;
-              {instances.filter (index => i.is_public).length}
-            </div>;
-            <div className="text - white / 70">Public Instances</div>;
-          </div>;
-          <div className="glass - effect rounded - xl p - 6 text - center">;
-            <div className="text - 3xl font - bold text - purple - 400 mb - 2">;
-              {instances.reduce ((sum, i) => sum + i._count.deployments, 0)}
-            </div>;
-            <div className="text - white / 70">Total Deployments</div>;
-          </div>;
-          <div className="glass - effect rounded - xl p - 6 text - center">;
-            <div className="text - 3xl font - bold text - orange - 400 mb - 2">;
-              {instances.reduce ((sum, i) => sum + i._count.features, 0)}
-            </div>;
-            <div className="text - white / 70">Active Features</div>;
-          </div>;
-        </div>;
-        {/* Instances Grid */}
-        {instances.length > 0 && (;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {instances.map((inst) => (;
-              <div key={inst.id} className="feature-card group hover-lift">;
-                <div className="flex items-start justify-between mb-4">;
-                  <div className="flex items-center gap-3">;
-
-                    <div className={`w-3 h-3 rounded-full ${inst.isPublic ? 'bg-green-500' : 'bg-yellow-500';
-                    <div className={`w-3 h-3 rounded-full ${;
-                      inst.isPublic ? 'bg-green-500' : 'bg-yellow-500';
-
-                    }`}></div>;
-                    <div className="font - semibold text - lg text - white group - hover:text - blue - 400 transition - colors">;
-                      {inst.name}
-                    </div>;
-                  </div>;
-                  <span className="text - xs px - 2 py - 1 rounded - full bg - white / 10 text - white / 70">;
-                    {inst.vertical}
-                  </span>;
-                </div>;
-                <div className="space - y-3 mb - 4">;
-                  <div className="flex items - center gap - 2 text - sm text - white / 70">;
-                    <span className="w - 4 h - 4"></span>;
-                    <span className="truncate">;
-
-                      {inst.domain |inst.subdomain |inst.slug}
-                      {inst.domain || inst.subdomain || inst.slug}
-
-                    </span>;
-                  </div>;
-                  <div className="flex items - center gap - 2 text - sm text - white / 70">;
-                    <span className="w - 4 h - 4"></span>;
-                    <span > Governance: {getGovernanceLabel (inst.governance_type)}</span>;
-                  </div>;
-                  {inst.region && (
-                    <div className="flex items - center gap - 2 text - sm text - white / 70">;
-                      <span className="w - 4 h - 4"></span>;
-                      <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
-                    </div>;
-                  )}
-
-;
-                  <div className="flex items-center gap-2 text-sm text-white/70">;
-                    <span className="w-4 h-4">🔧</span>;
-                    <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
-
-                    </div>)}
-                  <div className="flex items - center gap - 2 text - sm text - white / 70">;
-                    <span className="w - 4 h - 4">🔧</span>;
-                    <span > Token: {getTokenSystemLabel (inst.token_system)}</span>;
-                    </div>;
-                  )}
-
-
-
-=======
 ;
 
                   <div className="flex items-center gap-2 text-sm text-white/70">;
@@ -1139,40 +932,17 @@ export default function InstancesPage() {
 
 function getGovernanceLabel(type: string) {
   switch (type) {
->>>>>>> origin/auto/autonomy-17186719616
     case "ADMIN": return "Admin Control";
     case "DAO_LITE": return "DAO-lite";
     case "DAO_FULL": return "Full DAO";
     default: return type;
   }
 }
-<<<<<<< HEAD
-function getTokenSystemLabel(type: string) {switch (type) {;
-;
-function getGovernanceLabel(type: string) {;
-  switch (type) {;
-    case "ADMIN": return "Admin Control",;
-    case "DAO_LITE": return "DAO-lite",;
-    case "DAO_FULL": return "Full DAO",;
-    default: return type;
-  }
-}
-;
-function getTokenSystemLabel(type: string) {;
-  switch (type) {;
-
-=======
 
 function getTokenSystemLabel(type: string) {
   switch (type) {
->>>>>>> origin/auto/autonomy-17186719616
     case "SHARED": return "ZION$ Shared";
     case "LOCAL": return "Local Token";
     default: return type;
   }
-<<<<<<< HEAD
 }
-}
-=======
-}
->>>>>>> origin/auto/autonomy-17186719616

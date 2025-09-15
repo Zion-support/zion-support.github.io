@@ -1,36 +1,3 @@
-
-<<<<<<< HEAD
-import { useState, useEffect } from 'react',
-import { useRouter } from 'next/router',
-import { useAuth } from '@/hooks/useAuth',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',
-import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
-import { cn } from '@/lib/utils',
-
-interface WizardStep {
-  title: string,
-  description: string,
-  icon: React.ReactNode,
-  action: {
-    text: string,
-    url: string
-  },
-  skipText?: string,
-}
-
-interface OnboardingWizardProps {
-  type: 'client' | 'talent',
-  onComplete: () => void,
-  onSkip: () => void,
-  className?: string
-}
-
-export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0),
-  const router = useRouter(), // Changed from useNavigate to useRouter
-  const { user } = useAuth(),
-=======
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '@/hooks/useAuth';
@@ -38,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils';
-
 interface WizardStep {
   title: string;
   description: string;
@@ -49,20 +15,16 @@ interface WizardStep {
   };
   skipText?: string;
 }
-
 interface OnboardingWizardProps {
   type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
   className?: string;
 }
-
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const router = useRouter(); // Changed from useNavigate to useRouter
   const { user } = useAuth();
->>>>>>> origin/auto/autonomy-17186719616
-  
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -94,12 +56,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         url: "/talent"
       }
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
-
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",
@@ -140,35 +97,12 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         url: "/talent-dashboard"
       }
     }
-<<<<<<< HEAD
-  ],
-  
-  const steps = type === 'client' ? clientSteps : talentSteps,
-
-  // Navigate to the specified URL
-  const handleAction = () => {
-    const currentStepData = steps[currentStep],
-    if (!currentStepData) return,
-    
-    if (currentStep < steps.length - 1) {
-      router.push(currentStepData.action.url), // Changed to router.push
-      setCurrentStep(currentStep + 1),
-    } else {
-      // Last step
-      router.push(currentStepData.action.url), // Changed to router.push
-      onComplete(),
-    }
-  },
-=======
   ];
-  
   const steps = type === 'client' ? clientSteps : talentSteps;
-
   // Navigate to the specified URL
   const handleAction = () => {
     const currentStepData = steps[currentStep];
     if (!currentStepData) return;
-    
     if (currentStep < steps.length - 1) {
       router.push(currentStepData.action.url); // Changed to router.push
       setCurrentStep(currentStep + 1);
@@ -178,42 +112,18 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       onComplete();
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
-  
   // Skip the current step
   const handleSkip = () => {
     if (currentStep < steps.length - 1) {
-<<<<<<< HEAD
-      setCurrentStep(currentStep + 1),
-    } else {
-      // Last step
-      onSkip(),
-    }
-  },
-=======
       setCurrentStep(currentStep + 1);
     } else {
       // Last step
       onSkip();
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
-  
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
-<<<<<<< HEAD
-        <CardTitle className='text-center text-white'>
-          {type === 'client'
-            ? 'Ready to find top IT talent?'
-            : "Let's build your professional profile"}
-        </CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <div className='flex items-center mb-6'>;
-          {/* Step dots */}
-          <div className='flex items-center justify-center flex-1'>
-=======
         <CardTitle className="text-center text-white">
           {type === 'client' ? 
             "Ready to find top IT talent?" : 
@@ -223,7 +133,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       <CardContent>
         <div className="flex items-center mb-6">
           {/* Step dots */}
->>>>>>> origin/auto/autonomy-17186719616
           <div className="flex items-center justify-center flex-1">
             {steps.map((_, index) => (
               <div
@@ -240,7 +149,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             ))}
           </div>
         </div>
-
         <div className="flex flex-col items-center text-center p-4">
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
             {steps[currentStep]?.icon}
@@ -256,7 +164,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         >
           {steps[currentStep]?.action.text}
         </Button>
-        
         {steps[currentStep]?.skipText && (
           <Button
             variant="ghost"
@@ -268,9 +175,5 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         )}
       </CardFooter>
     </Card>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,47 +1,25 @@
-
-<<<<<<< HEAD
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { toast } from "@/hooks/use-toast",
-=======
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
->>>>>>> origin/auto/autonomy-17186719616
 import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-<<<<<<< HEAD
-  CardTitle} from "@/components/ui/card",
-import { Sparkles } from 'lucide-react'
-import { Progress } from "@/components/ui/progress",
-=======
   CardTitle,
 } from "@/components/ui/card";
 import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
->>>>>>> origin/auto/autonomy-17186719616
-
 export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
       title: "Limits updated",
-<<<<<<< HEAD
-      description: "The new usage limits have been saved successfully."}),
-  },
-=======
       description: "The new usage limits have been saved successfully.",
     });
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div className="space-y-8">
       <div>
@@ -50,7 +28,6 @@ export function UsageStats() {
           Configure usage limits for your team to manage your subscription resources.
         </p>
       </div>
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
@@ -80,7 +57,6 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
-        
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -109,7 +85,6 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
-        
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -138,7 +113,6 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
-        
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -179,7 +153,6 @@ export function UsageStats() {
           </CardFooter>
         </Card>
       </div>
-      
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -195,9 +168,5 @@ export function UsageStats() {
         <Button>Contact Us</Button>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

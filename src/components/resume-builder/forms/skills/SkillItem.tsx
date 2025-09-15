@@ -1,16 +1,7 @@
-
-<<<<<<< HEAD
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
-import { Trash2 } from 'lucide-react'
-import { SkillItemProps } from './types',
-=======
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Trash2 } from 'lucide-react'
 import { SkillItemProps } from './types';
->>>>>>> origin/auto/autonomy-17186719616
-
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
   return (
     <Badge 
@@ -32,10 +23,5 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
         <Trash2 className="h-3 w-3" />
       </Button>
     </Badge>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

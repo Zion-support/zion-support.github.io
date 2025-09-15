@@ -1,21 +1,10 @@
-<<<<<<< HEAD
-"use client";
-import React{ useStateuseEffectuseCallbackuseRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ActivityZapClockTrendingUpTrendingDown
-  AlertTriangleCheckCircleXSettingsRefreshCw,
-  BarChart3GaugeHardDriveWifiCpu
-=======
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Activity, Zap, Clock, TrendingUp, TrendingDown, 
   AlertTriangle, CheckCircle, X, Settings, RefreshCw,
   BarChart3, Gauge, HardDrive, Wifi, Cpu
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
-
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -26,23 +15,17 @@ interface PerformanceMetrics {
   memoryUsage?: number;
   networkLatency?: number;
 }
-
 interface PerformanceMonitorProps {
   showUI?: boolean;
   autoRefresh?: boolean;
   refreshInterval?: number;
 }
-
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   showUI = false,
   autoRefresh = false,
   refreshInterval = 30000
 }) => {
-<<<<<<< HEAD
-  const [metricsetMetrics] = useState<PerformanceMetrics>({
-=======
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
->>>>>>> origin/auto/autonomy-17186719616
     loadTime: 0,
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
@@ -50,20 +33,11 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     firstInputDelay: 0,
     timeToInteractive: 0
   });
-<<<<<<< HEAD
-  const [isVisiblesetIsVisible] = useState(showUI);
-  const [isExpandedsetIsExpanded] = useState(false);
-  const [lastUpdatesetLastUpdate] = useState<Date>(new Date());
-  const [isLoadingsetIsLoading] = useState(false);
-  const [alertsetAlerts] = useState<string[]>([]);
-=======
   const [isVisible, setIsVisible] = useState(showUI);
   const [isExpanded, setIsExpanded] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date());
   const [isLoading, setIsLoading] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
->>>>>>> origin/auto/autonomy-17186719616
-
   const getPerformanceMetrics = useCallback(async (): Promise<PerformanceMetrics> => {
     return new Promise((resolve) => {
       if (typeof window !== 'undefined' && 'performance' in window) {
@@ -71,40 +45,26 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         if (document.readyState === 'complete') {
           const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           const paintEntries = performance.getEntriesByType('paint');
-          
           const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
           const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-          
           const metrics: PerformanceMetrics = {
             loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             firstContentfulPaint: fcp ? fcp.startTime : 0,
             largestContentfulPaint: lcp ? lcp.startTime : 0,
-<<<<<<< HEAD
-            cumulativeLayoutShift: 0// Would need to be calculated from LayoutShift API
-            firstInputDelay: 0// Would need to be calculated from FirstInput API
-=======
             cumulativeLayoutShift: 0, // Would need to be calculated from LayoutShift API
             firstInputDelay: 0, // Would need to be calculated from FirstInput API
->>>>>>> origin/auto/autonomy-17186719616
             timeToInteractive: navigation.domInteractive - navigation.fetchStart
           };
-
           // Add memory usage if available
           if ('memory' in performance) {
             const memory = (performance as any).memory;
             metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
           }
-
           resolve(metrics);
         } else {
           // Wait for page to load
-<<<<<<< HEAD
-          window.addEventListener('load'() => {
-            setTimeout(() => getPerformanceMetrics().then(resolve)100);
-=======
           window.addEventListener('load', () => {
             setTimeout(() => getPerformanceMetrics().then(resolve), 100);
->>>>>>> origin/auto/autonomy-17186719616
           });
         }
       } else {
@@ -118,19 +78,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
       }
     });
-<<<<<<< HEAD
-  }[]);
-=======
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
-
   const refreshMetrics = useCallback(async () => {
     setIsLoading(true);
     try {
       const newMetrics = await getPerformanceMetrics();
       setMetrics(newMetrics);
       setLastUpdate(new Date());
-      
       // Check for performance issues and add alerts
       const newAlerts: string[] = [];
       if (newMetrics.loadTime > 3000) {
@@ -142,68 +96,40 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       if (newMetrics.largestContentfulPaint > 4000) {
         newAlerts.push('Largest contentful paint is slow (>4s)');
       }
-      
       setAlerts(newAlerts);
     } catch (error) {
-<<<<<<< HEAD
-      console.error('Failed to get performance metrics:'error);
-    } finally {
-      setIsLoading(false);
-    }
-  }[getPerformanceMetrics]);
-=======
       console.error('Failed to get performance metrics:', error);
     } finally {
       setIsLoading(false);
     }
   }, [getPerformanceMetrics]);
->>>>>>> origin/auto/autonomy-17186719616
-
   // Auto-refresh functionality
   useEffect(() => {
     if (showUI) {
       refreshMetrics();
     }
-<<<<<<< HEAD
-  }[showUIrefreshMetrics]);
-
-  useEffect(() => {
-    if (autoRefresh && showUI) {
-      const interval = setInterval(refreshMetricsrefreshInterval);
-      return () => clearInterval(interval);
-    }
-  }[autoRefreshowUIrefreshIntervalrefreshMetrics]);
-=======
   }, [showUI, refreshMetrics]);
-
   useEffect(() => {
     if (autoRefresh && showUI) {
       const interval = setInterval(refreshMetrics, refreshInterval);
       return () => clearInterval(interval);
     }
   }, [autoRefresh, showUI, refreshInterval, refreshMetrics]);
->>>>>>> origin/auto/autonomy-17186719616
-
-
-
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
     return 'text-red-400';
   };
-
   const getScoreIcon = (score: number) => {
     if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
     if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
     return <AlertTriangle className="w-5 h-5 text-red-400" />;
   };
-
   const formatTime = (ms: number): string => {
     if (ms === 0) return 'N/A';
     if (ms < 1000) return `${Math.round(ms)}ms`;
     return `${(ms / 1000).toFixed(2)}s`;
   };
-
   // Get device icon
   const getDeviceIcon = (deviceType: string) => {
     switch (deviceType) {
@@ -212,11 +138,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       default: return Laptop;
     }
   };
-
   const getPerformanceScore = () => {
     let score = 0;
     let totalMetrics = 0;
-
     // FCP scoring (0-100)
     if (metrics.fcp !== null) {
       totalMetrics++;
@@ -225,7 +149,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       else if (metrics.fcp < 4000) score += 50;
       else score += 25;
     }
-
     // LCP scoring (0-100)
     if (metrics.lcp !== null) {
       totalMetrics++;
@@ -234,7 +157,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       else if (metrics.lcp < 6000) score += 50;
       else score += 25;
     }
-
     // FID scoring (0-100)
     if (metrics.fid !== null) {
       totalMetrics++;
@@ -243,7 +165,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       else if (metrics.fid < 500) score += 50;
       else score += 25;
     }
-
     // CLS scoring (0-100)
     if (metrics.cls !== null) {
       totalMetrics++;
@@ -252,37 +173,22 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       else if (metrics.cls < 0.4) score += 50;
       else score += 25;
     }
-
     return totalMetrics > 0 ? Math.round(score / totalMetrics) : 0;
   };
-
-<<<<<<< HEAD
-  // 'Don', 't render anything in production
-=======
   // Don't render anything in production
->>>>>>> origin/auto/autonomy-17186719616
   if (process.env.NODE_ENV === 'production') {
     return null;
   }
-
   const performanceScore = getPerformanceScore();
-
   const performanceStatus = metrics ? getPerformanceStatus(performanceScore) : null;
   const StatusIcon = performanceStatus?.icon || Activity;
-
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20scale: 0.95 }}
-          animate={{ opacity: 1, y: 0scale: 1 }}
-          exit={{ opacity: 0, y: 20scale: 0.95 }}
-=======
           initial={{ opacity: 0, y: 20, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.95 }}
->>>>>>> origin/auto/autonomy-17186719616
           className="fixed bottom-4 left-4 z-50"
         >
           {/* Performance Monitor Panel */}
@@ -318,7 +224,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 </button>
               </div>
             </div>
-
             {/* Performance Score */}
             <div className="p-4 border-b border-gray-700/50">
               <div className="flex items-center justify-between mb-2">
@@ -330,12 +235,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   {getPerformanceScore()}
                 </div>
               </div>
-              
               <div className="text-xs text-gray-400 text-center">
                 Last updated: {lastUpdate.toLocaleTimeString()}
               </div>
             </div>
-
             {/* Key Metrics */}
             <div className="p-4 space-y-3">
               <div className="grid grid-cols-2 gap-3">
@@ -353,20 +256,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 </div>
               </div>
             </div>
-
             {/* Expanded View */}
             <AnimatePresence>
               {isExpanded && (
                 <motion.div
-<<<<<<< HEAD
-                  initial={{ height: 0opacity: 0 }}
-                  animate={{ height: ''auto', 'opacity: 1 }}
-                  exit={{ height: 0opacity: 0 }}
-=======
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
->>>>>>> origin/auto/autonomy-17186719616
                   transition={{ duration: 0.3 }}
                   className="border-t border-gray-700/50"
                 >
@@ -374,7 +270,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                     {/* Detailed Metrics */}
                     <div className="space-y-3">
                       <h4 className="text-sm font-semibold text-white">Detailed Metrics</h4>
-                      
                       <div className="space-y-2">
                         <div className="flex justify-between text-sm">
                           <span className="text-gray-400">Largest Contentful Paint:</span>
@@ -392,17 +287,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                         )}
                       </div>
                     </div>
-
                     {/* Alerts */}
                     {alerts.length > 0 && (
                       <div className="space-y-2">
                         <h4 className="text-sm font-semibold text-white">Performance Alerts</h4>
                         <div className="space-y-1">
-<<<<<<< HEAD
-                          {alerts.map((alertindex) => (
-=======
                           {alerts.map((alert, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                             <div key={index} className="flex items-center space-x-2 text-xs text-yellow-400">
                               <AlertTriangle className="w-3 h-3" />
                               <span>{alert}</span>
@@ -411,7 +301,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                         </div>
                       </div>
                     )}
-
                     {/* Recommendations */}
                     <div className="space-y-2">
                       <h4 className="text-sm font-semibold text-white">Recommendations</h4>
@@ -438,19 +327,16 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     </AnimatePresence>
   );
 };
-
 // Helper functions
 const getScoreIcon = (score: number) => {
   if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
   if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
   return <AlertTriangle className="w-5 h-5 text-red-400" />;
 };
-
 const getScoreLabel = (score: number) => {
   if (score >= 90) return 'Excellent';
   if (score >= 70) return 'Good';
   if (score >= 50) return 'Needs Improvement';
   return 'Poor';
 };
-
 export default PerformanceMonitor;

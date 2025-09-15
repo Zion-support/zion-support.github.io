@@ -1,21 +1,8 @@
-<<<<<<< HEAD
-"use client";
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { 
-<<<<<<< HEAD
-  Brain
-  MessageSquare
-  Image
-  Video
-  FileText
-  BarChart3
-  Users
-=======
   Brain, 
   MessageSquare, 
   Image, 
@@ -23,7 +10,6 @@ import {
   FileText, 
   BarChart3, 
   Users, 
->>>>>>> origin/auto/autonomy-17186719616
   Zap,
   ArrowRight,
   Star,
@@ -33,16 +19,11 @@ import {
   Shield,
   Globe
 } from 'lucide-react';
-
 export default function AIBusinessToolsPage() {
   const aiTools = [
     {
       name: 'ChatGPT',
-<<<<<<< HEAD
-      description: 'Advanced AI language model that can help with writinganalysiscodingand creative tasks. Perfect for content creation and problem-solving.',
-=======
       description: 'Advanced AI language model that can help with writing, analysis, coding, and creative tasks. Perfect for content creation and problem-solving.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'AI Assistant',
       pricing: 'Free - $20/month',
       rating: 4.8,
@@ -58,16 +39,6 @@ export default function AIBusinessToolsPage() {
         'Multi-language support'
       ],
       website: 'https://chat.openai.com',
-<<<<<<< HEAD
-      useCase: 'Ideal for writersdevelopersresearchersand anyone who needs AI assistance with complex tasks.',
-      pros: ['Powerful 'capabilities', 'Easy to 'use', 'Regular 'updates', 'Good free tier'],
-      cons: ['Sometimes 'inaccurate', 'Limited 'context', 'Privacy concerns'],
-      bestFor: 'Content creatorsdevelopersresearchers'
-    },
-    {
-      name: 'Midjourney',
-      description: 'AI-powered image generation tool that creates stunning artworkillustrationsand designs from text descriptions.',
-=======
       useCase: 'Ideal for writers, developers, researchers, and anyone who needs AI assistance with complex tasks.',
       pros: ['Powerful capabilities', 'Easy to use', 'Regular updates', 'Good free tier'],
       cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns'],
@@ -76,7 +47,6 @@ export default function AIBusinessToolsPage() {
     {
       name: 'Midjourney',
       description: 'AI-powered image generation tool that creates stunning artwork, illustrations, and designs from text descriptions.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'AI Art',
       pricing: '$10 - $30/month',
       rating: 4.7,
@@ -92,16 +62,6 @@ export default function AIBusinessToolsPage() {
         'Discord integration'
       ],
       website: 'https://midjourney.com',
-<<<<<<< HEAD
-      useCase: 'Perfect for designersmarketerscontent creatorsand businesses needing custom visual content.',
-      pros: ['High-quality 'output', 'Creative 'control', 'Commercial 'rights', 'Active community'],
-      cons: ['Discord-only 'interface', 'Limited 'customization', 'Monthly subscription'],
-      bestFor: 'Designersmarketerscontent creators'
-    },
-    {
-      name: 'Jasper',
-      description: 'AI writing assistant that helps create marketing copyblog postsocial media contentand more.',
-=======
       useCase: 'Perfect for designers, marketers, content creators, and businesses needing custom visual content.',
       pros: ['High-quality output', 'Creative control', 'Commercial rights', 'Active community'],
       cons: ['Discord-only interface', 'Limited customization', 'Monthly subscription'],
@@ -110,7 +70,6 @@ export default function AIBusinessToolsPage() {
     {
       name: 'Jasper',
       description: 'AI writing assistant that helps create marketing copy, blog posts, social media content, and more.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'AI Writing',
       pricing: '$39 - $125/month',
       rating: 4.6,
@@ -126,17 +85,10 @@ export default function AIBusinessToolsPage() {
         'Team collaboration'
       ],
       website: 'https://jasper.ai',
-<<<<<<< HEAD
-      useCase: 'Essential for marketing teamscontent creatorsand businesses that need high-quality written content at scale.',
-      pros: ['Specialized for 'marketing', 'Brand voice 'training', 'SEO 'optimization', 'Team features'],
-      cons: [', 'Expensive', 'Limited free 'trial', 'Can be repetitive'],
-      bestFor: 'Marketing teamscontent creatorsbusinesses'
-=======
       useCase: 'Essential for marketing teams, content creators, and businesses that need high-quality written content at scale.',
       pros: ['Specialized for marketing', 'Brand voice training', 'SEO optimization', 'Team features'],
       cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],
       bestFor: 'Marketing teams, content creators, businesses'
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Synthesia',
@@ -156,16 +108,6 @@ export default function AIBusinessToolsPage() {
         'API access'
       ],
       website: 'https://synthesia.io',
-<<<<<<< HEAD
-      useCase: 'Perfect for creating training videosmarketing contentand presentations without hiring actors or video crews.',
-      pros: ['Professional 'quality', 'Multiple 'languages', 'Custom 'avatars', 'Easy to use'],
-      cons: ['Limited avatar 'options', 'Expensive'Subscription required'],
-      bestFor: 'Training departmentsmarketerseducators'
-    },
-    {
-      name: 'Copy.ai',
-      description: 'AI copywriting tool that generates marketing copyproduct descriptionsand creative content for businesses.',
-=======
       useCase: 'Perfect for creating training videos, marketing content, and presentations without hiring actors or video crews.',
       pros: ['Professional quality', 'Multiple languages', 'Custom avatars', 'Easy to use'],
       cons: ['Limited avatar options', 'Expensive', 'Subscription required'],
@@ -174,7 +116,6 @@ export default function AIBusinessToolsPage() {
     {
       name: 'Copy.ai',
       description: 'AI copywriting tool that generates marketing copy, product descriptions, and creative content for businesses.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'AI Copywriting',
       pricing: 'Free - $49/month',
       rating: 4.4,
@@ -190,16 +131,6 @@ export default function AIBusinessToolsPage() {
         'Free tier available'
       ],
       website: 'https://copy.ai',
-<<<<<<< HEAD
-      useCase: 'Great for small businessesentrepreneursand marketers who need quality copy without hiring writers.',
-      pros: ['Free 'tier', 'Easy to 'use', 'Good 'templates', 'Affordable'],
-      cons: ['Limited 'customization', 'Quality 'varies', 'Basic features'],
-      bestFor: 'Small businessesentrepreneursmarketers'
-    },
-    {
-      name: 'Grammarly',
-      description: 'AI-powered writing assistant that checks grammarspellingtoneand style to improve your writing.',
-=======
       useCase: 'Great for small businesses, entrepreneurs, and marketers who need quality copy without hiring writers.',
       pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
       cons: ['Limited customization', 'Quality varies', 'Basic features'],
@@ -208,7 +139,6 @@ export default function AIBusinessToolsPage() {
     {
       name: 'Grammarly',
       description: 'AI-powered writing assistant that checks grammar, spelling, tone, and style to improve your writing.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'AI Writing',
       pricing: 'Free - $12/month',
       rating: 4.7,
@@ -224,17 +154,10 @@ export default function AIBusinessToolsPage() {
         'Mobile apps'
       ],
       website: 'https://grammarly.com',
-<<<<<<< HEAD
-      useCase: 'Essential for anyone who writes professionallyincluding studentsprofessionalsand content creators.',
-      pros: ['Excellent 'accuracy', 'Multiple 'platforms', 'Free 'tier', 'User-friendly'],
-      cons: ['Limited free 'features', 'Privacy 'concerns', 'Can be overzealous'],
-      bestFor: 'Studentsprofessionalscontent creators'
-=======
       useCase: 'Essential for anyone who writes professionally, including students, professionals, and content creators.',
       pros: ['Excellent accuracy', 'Multiple platforms', 'Free tier', 'User-friendly'],
       cons: ['Limited free features', 'Privacy concerns', 'Can be overzealous'],
       bestFor: 'Students, professionals, content creators'
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Lumen5',
@@ -254,17 +177,10 @@ export default function AIBusinessToolsPage() {
         'Free tier available'
       ],
       website: 'https://lumen5.com',
-<<<<<<< HEAD
-      useCase: 'Perfect for marketersocial media managersand businesses that want to create video content from existing text.',
-      pros: ['Free 'tier', 'Easy to 'use', 'Good 'templates', 'Affordable'],
-      cons: ['Limited 'customization', 'Basic 'features', 'Watermark on free'],
-      bestFor: 'Marketersocial media managersmall businesses'
-=======
       useCase: 'Perfect for marketers, social media managers, and businesses that want to create video content from existing text.',
       pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
       cons: ['Limited customization', 'Basic features', 'Watermark on free'],
       bestFor: 'Marketers, social media managers, small businesses'
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Surfer SEO',
@@ -284,46 +200,26 @@ export default function AIBusinessToolsPage() {
         'Rank tracking'
       ],
       website: 'https://surferseo.com',
-<<<<<<< HEAD
-      useCase: 'Essential for content marketersSEO specialistsand businesses that want to improve their search rankings.',
-      pros: ['Data-driven 'insights', 'Content 'optimization', 'Competitor 'analysis', 'Good support'],
-      cons: [', 'Expensive', 'Complex 'interface', 'Steep learning curve'],
-      bestFor: 'SEO specialistscontent marketersbusinesses'
-    }
-  ];
-
-  const categories = [', 'All', 'AI 'Assistant', 'AI 'Art', 'AI 'Writing', 'AI 'Video', 'AI 'Copywriting', 'AI SEO'];
-  const [selectedCategorysetSelectedCategory] = React.useState('All');
-=======
       useCase: 'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.',
       pros: ['Data-driven insights', 'Content optimization', 'Competitor analysis', 'Good support'],
       cons: ['Expensive', 'Complex interface', 'Steep learning curve'],
       bestFor: 'SEO specialists, content marketers, businesses'
     }
   ];
-
   const categories = ['All', 'AI Assistant', 'AI Art', 'AI Writing', 'AI Video', 'AI Copywriting', 'AI SEO'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
->>>>>>> origin/auto/autonomy-17186719616
-
   const filteredTools = selectedCategory === 'All' 
     ? aiTools 
     : aiTools.filter(tool => tool.category === selectedCategory);
-
   return (
     <>
       <Head>
         <title>AI Business Tools - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Discover the best AI-powered business tools for automationcontent creationand productivity. Expert-curated selection of AI SaaS services." />
-=======
         <meta name="description" content="Discover the best AI-powered business tools for automation, content creation, and productivity. Expert-curated selection of AI SaaS services." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="AI Business Tools - Zion Tech Group" />
         <meta property="og:description" content="Expert-curated selection of AI-powered business tools and SaaS services." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0">
@@ -331,9 +227,7 @@ export default function AIBusinessToolsPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />
         </div>
-
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-20 animate-fade-in">
             <div className="mb-8">
@@ -342,7 +236,6 @@ export default function AIBusinessToolsPage() {
                 AI-Powered Business Solutions
               </div>
             </div>
-            
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
               AI Business Tools
             </h1>
@@ -350,7 +243,6 @@ export default function AIBusinessToolsPage() {
               Transform your business with cutting-edge AI tools. 
               Expert-curated selection of the best AI-powered SaaS services for modern enterprises.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
               <Button
                 href="#tools"
@@ -372,7 +264,6 @@ export default function AIBusinessToolsPage() {
               </Button>
             </div>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
@@ -402,7 +293,6 @@ export default function AIBusinessToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -423,7 +313,6 @@ export default function AIBusinessToolsPage() {
           </div>
         </div>
       </section>
-
       {/* Tools Grid */}
       <section id="tools" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -438,13 +327,8 @@ export default function AIBusinessToolsPage() {
               }
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {filteredTools.map((toolindex) => (
-=======
             {filteredTools.map((tool, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
@@ -466,25 +350,18 @@ export default function AIBusinessToolsPage() {
                         <span className="text-sm text-gray-300">{tool.rating}</span>
                       </div>
                     </div>
-                    
                     <div className="flex items-center space-x-4 mb-3 text-sm text-gray-400">
                       <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>
                       <span>{tool.users} users</span>
                       <span className="text-green-400">{tool.pricing}</span>
                     </div>
-
                     <p className="text-gray-400 leading-relaxed mb-4">
                       {tool.description}
                     </p>
-
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                       <div className="grid grid-cols-2 gap-2">
-<<<<<<< HEAD
-                        {tool.features.slice(04).map((featureIndex) => (
-=======
                         {tool.features.slice(0, 4).map((feature, featureIndex) => (
->>>>>>> origin/auto/autonomy-17186719616
                           <div key={featureIndex} className="flex items-center text-sm text-gray-400">
                             <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                             {feature}
@@ -492,12 +369,10 @@ export default function AIBusinessToolsPage() {
                         ))}
                       </div>
                     </div>
-
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Best For:</h4>
                       <p className="text-sm text-gray-400">{tool.bestFor}</p>
                     </div>
-
                     <div className="flex items-center justify-between">
                       <Button
                         href={tool.website}
@@ -508,7 +383,6 @@ export default function AIBusinessToolsPage() {
                         Visit Website
                         <ExternalLink className="w-4 h-4 ml-2" />
                       </Button>
-                      
                       <div className="text-right">
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>
                         <div className="text-sm text-gray-300 max-w-xs">{tool.useCase}</div>
@@ -521,7 +395,6 @@ export default function AIBusinessToolsPage() {
           </div>
         </div>
       </section>
-
       {/* AI Benefits Section */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -530,14 +403,9 @@ export default function AIBusinessToolsPage() {
               Why Choose AI Tools?
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-              AI-powered tools are revolutionizing how businesses operatecreate contentand serve customers.
-=======
               AI-powered tools are revolutionizing how businesses operate, create content, and serve customers.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">
@@ -545,45 +413,30 @@ export default function AIBusinessToolsPage() {
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">10x Productivity</h3>
               <p className="text-gray-400">
-<<<<<<< HEAD
-                AI tools can automate repetitive tasksgenerate contentand provide insights that would take humans hours or days to complete.
-=======
                 AI tools can automate repetitive tasks, generate content, and provide insights that would take humans hours or days to complete.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </Card>
-
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">Data-Driven Decisions</h3>
               <p className="text-gray-400">
-<<<<<<< HEAD
-                AI analytics provide deep insights into customer behaviormarket trendsand business performance for better decision-making.
-=======
                 AI analytics provide deep insights into customer behavior, market trends, and business performance for better decision-making.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </Card>
-
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">Enhanced Customer Experience</h3>
               <p className="text-gray-400">
-<<<<<<< HEAD
-                AI-powered chatbotspersonalizationand automation create seamlesspersonalized experiences for your customers.
-=======
                 AI-powered chatbots, personalization, and automation create seamless, personalized experiences for your customers.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </Card>
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
@@ -592,11 +445,7 @@ export default function AIBusinessToolsPage() {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-            Our AI experts can help you identify the right toolsimplement them effectivelyand maximize their impact on your business.
-=======
             Our AI experts can help you identify the right tools, implement them effectively, and maximize their impact on your business.
->>>>>>> origin/auto/autonomy-17186719616
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button

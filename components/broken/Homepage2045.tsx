@@ -1,40 +1,23 @@
-<<<<<<< HEAD
-"use client";
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  ArrowRightPlayStarUsersAwardTrendingUpBrainShieldRocket
-  Loader2ChevronDownZapGlobeLockCpuDatabaseCloudPaletteHeart,
-  PhoneMailMapPinSearchGridListAtomTargetSparkles
-=======
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import Link from 'next/link';
-
 // Import our new innovative services
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
-
 // Loading fallback component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
     <motion.div
-<<<<<<< HEAD
-      initial={{ opacity: 0scale: 0.5 }}
-      animate={{ opacity: 1scale: 1 }}
-=======
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
->>>>>>> origin/auto/autonomy-17186719616
       transition={{ duration: 0.5 }}
       className="text-center"
     >
@@ -47,35 +30,18 @@ const LoadingFallback = () => (
     </motion.div>
   </div>
 );
-
 const Homepage2045: React.FC = () => {
-<<<<<<< HEAD
-  const [isLoadingsetIsLoading] = useState(true);
-  const [isVisiblesetIsVisible] = useState(false);
-  const [activeSectionsetActiveSection] = useState('hero');
-=======
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
->>>>>>> origin/auto/autonomy-17186719616
-
   useEffect(() => {
     // Simulate content loading with better timing
     const timer = setTimeout(() => {
       setIsLoading(false);
       setIsVisible(true);
-<<<<<<< HEAD
-    }800);
-
-    return () => clearTimeout(timer);
-  }[]);
-=======
     }, 800);
-
     return () => clearTimeout(timer);
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
-
   // Intersection Observer for better performance
   useEffect(() => {
     if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
@@ -87,59 +53,31 @@ const Homepage2045: React.FC = () => {
             }
           });
         },
-<<<<<<< HEAD
-        { threshold: 0.3rootMargin: '-100px' }
-=======
         { threshold: 0.3, rootMargin: '-100px' }
->>>>>>> origin/auto/autonomy-17186719616
       );
-
       const sections = document.querySelectorAll('section[id]');
       sections.forEach((section) => observer.observe(section));
-
       return () => observer.disconnect();
     }
-<<<<<<< HEAD
-  }[]);
-=======
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
-
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
-<<<<<<< HEAD
-    transition: { duration: 0.6ease: "easeOut" }
-=======
     transition: { duration: 0.6, ease: "easeOut" }
->>>>>>> origin/auto/autonomy-17186719616
   };
-
   const staggerContainer = {
     animate: {
       transition: {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
         staggerChildren: 0.1,
         delayChildren: 0.2
       }
     }
   };
-
   const backgroundVariants = {
-<<<<<<< HEAD
-    initial: { opacity: 0scale: 0.8 },
-    animate: { opacity: 1scale: 1 },
-    transition: { duration: 1.2ease: "easeOut" }
-=======
     initial: { opacity: 0, scale: 0.8 },
     animate: { opacity: 1, scale: 1 },
     transition: { duration: 1.2, ease: "easeOut" }
->>>>>>> origin/auto/autonomy-17186719616
   };
-
   const getColorClasses = (index: number) => {
     const colors = [
       'from-cyan-400 to-blue-500',
@@ -151,7 +89,6 @@ const Homepage2045: React.FC = () => {
     ];
     return colors[index % colors.length];
   };
-
   if (isLoading) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
@@ -162,7 +99,6 @@ const Homepage2045: React.FC = () => {
       </div>
     );
   }
-
   return (
     <Layout>
       <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
@@ -173,16 +109,10 @@ const Homepage2045: React.FC = () => {
             <motion.div
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
               animate={{
-<<<<<<< HEAD
-                rotate: [0360],
-                scale: [1.1],
-                opacity: [0.30.60.3]}}
-=======
                 rotate: [0, 360],
                 scale: [1, 1.1, 1],
                 opacity: [0.3, 0.6, 0.3],
               }}
->>>>>>> origin/auto/autonomy-17186719616
               transition={{
                 duration: 8,
                 repeat: Infinity,
@@ -192,16 +122,10 @@ const Homepage2045: React.FC = () => {
             <motion.div
               className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
               animate={{
-<<<<<<< HEAD
-                rotate: [360],
-                scale: [1.21],
-                opacity: [0.30.70.3]}}
-=======
                 rotate: [360, 0],
                 scale: [1, 1.2, 1],
                 opacity: [0.3, 0.7, 0.3],
               }}
->>>>>>> origin/auto/autonomy-17186719616
               transition={{
                 duration: 6,
                 repeat: Infinity,
@@ -211,16 +135,10 @@ const Homepage2045: React.FC = () => {
             <motion.div
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
               animate={{
-<<<<<<< HEAD
-                rotate: [45405],
-                scale: [1.151],
-                opacity: [0.30.50.3]}}
-=======
                 rotate: [45, 405],
                 scale: [1, 1.15, 1],
                 opacity: [0.3, 0.5, 0.3],
               }}
->>>>>>> origin/auto/autonomy-17186719616
               transition={{
                 duration: 10,
                 repeat: Infinity,
@@ -228,7 +146,6 @@ const Homepage2045: React.FC = () => {
               }}
             />
           </div>
-
           {/* Hero Content */}
           <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -240,11 +157,7 @@ const Homepage2045: React.FC = () => {
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.2 }}
-=======
                 transition={{ duration: 0.8, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
                 className="text-5xl md:text-7xl font-bold mb-6"
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -254,29 +167,17 @@ const Homepage2045: React.FC = () => {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.4 }}
-                className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-              >
-                Transform your business with Zion Tech 'Group', 's revolutionary AI servicesquantum computingand cutting-edge emerging technologies. Leading the future of technology innovation.
-=======
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
               >
                 Transform your business with Zion Tech Group's revolutionary AI services, quantum computing, and cutting-edge emerging technologies. Leading the future of technology innovation.
->>>>>>> origin/auto/autonomy-17186719616
               </motion.p>
             </motion.div>
-
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8delay: 0.6 }}
-=======
               transition={{ duration: 0.8, delay: 0.6 }}
->>>>>>> origin/auto/autonomy-17186719616
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <Link
@@ -292,16 +193,11 @@ const Homepage2045: React.FC = () => {
                 Explore Services
               </Link>
             </motion.div>
-
             {/* Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8delay: 0.8 }}
-=======
               transition={{ duration: 0.8, delay: 0.8 }}
->>>>>>> origin/auto/autonomy-17186719616
               className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
             >
               <div className="text-center">
@@ -319,7 +215,6 @@ const Homepage2045: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Featured Services Section */}
         <section id="featured-services" className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -336,14 +231,9 @@ const Homepage2045: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of 'what', 's possible with technology.
-=======
                 Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </motion.div>
-
             {/* Service Categories Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
@@ -389,20 +279,12 @@ const Homepage2045: React.FC = () => {
                   color: "from-yellow-400 to-orange-500",
                   href: "/emerging-tech"
                 }
-<<<<<<< HEAD
-              ].map((serviceindex) => (
-=======
               ].map((service, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={service.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="group"
                 >
@@ -424,7 +306,6 @@ const Homepage2045: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Latest Innovations Section */}
         <section id="latest-innovations" className="py-20 relative bg-gray-900/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -444,24 +325,14 @@ const Homepage2045: React.FC = () => {
                 Explore our newest revolutionary services that are setting new standards in technology innovation.
               </p>
             </motion.div>
-
             {/* Featured New Services */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<<<<<<< HEAD
-              {revolutionary2043AdvancedServices.slice(04).map((serviceindex) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1x: 0 }}
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
               {revolutionary2043AdvancedServices.slice(0, 4).map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="group"
                 >
@@ -491,7 +362,6 @@ const Homepage2045: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
             {/* View All Services CTA */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -510,7 +380,6 @@ const Homepage2045: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Contact CTA Section */}
         <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -526,11 +395,7 @@ const Homepage2045: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-                'Let', 's discuss how our revolutionary technology solutions can drive your business into the future.
-=======
                 Let's discuss how our revolutionary technology solutions can drive your business into the future.
->>>>>>> origin/auto/autonomy-17186719616
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
@@ -553,5 +418,4 @@ const Homepage2045: React.FC = () => {
     </Layout>
   );
 };
-
 export default Homepage2045;

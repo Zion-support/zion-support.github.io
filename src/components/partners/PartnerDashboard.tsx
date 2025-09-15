@@ -1,13 +1,6 @@
-
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
->>>>>>> origin/auto/autonomy-17186719616
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
-
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -17,12 +10,7 @@ export function PartnerDashboard() {
     conversionRate: 18.5,
     totalRevenue: 850.00,
     pendingRevenue: 200.00
-<<<<<<< HEAD
-  },
-=======
   };
->>>>>>> origin/auto/autonomy-17186719616
-  
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -33,36 +21,12 @@ export function PartnerDashboard() {
             <Users className="h-4 w-4 text-zion-cyan" />
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
-            <div className='text-2xl font-bold'>{stats.totalReferrals}</div>
-            <p className='text-xs text-zion-slate-light'>
-              {stats.completedReferrals} completed, {stats.pendingReferrals}{' '}
-              pending
-            </p>
-          </CardContent>
-        </Card>
-        <Card className='bg-zion-blue-dark border-zion-blue-light'>
-          <CardHeader className='flex flex-row items-center justify-between pb-2'>
-            <CardTitle className='text-sm font-medium'>
-              Conversion Rate
-            </CardTitle>
-            <TrendingUp className='h-4 w-4 text-zion-purple' />
-          </CardHeader>
-          <CardContent>
-            <div className='text-2xl font-bold'>{stats.conversionRate}%</div>
-            <p className='text-xs text-zion-slate-light'>              Of clicks that convert to sign-ups
-            </p>
-          </CardContent>
-        </Card>            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
-=======
->>>>>>> origin/auto/autonomy-17186719616
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
             <p className="text-xs text-zion-slate-light">
               {stats.completedReferrals} completed, {stats.pendingReferrals} pending
             </p>
           </CardContent>
         </Card>
-        
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
@@ -75,7 +39,6 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>
-        
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Total Earnings</CardTitle>
@@ -89,7 +52,6 @@ export function PartnerDashboard() {
           </CardContent>
         </Card>
       </div>
-      
       {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -103,18 +65,6 @@ export function PartnerDashboard() {
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
-
-      {/* Recent Referrals */}
-      <Card className='bg-zion-blue-dark border-zion-blue-light'>
-        <CardHeader>
-          <CardTitle>Performance Overview</CardTitle>
-          <CardDescription>
-            Track your referral performance over time
-          </CardDescription>
-=======
->>>>>>> origin/auto/autonomy-17186719616
-      
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
@@ -130,21 +80,10 @@ export function PartnerDashboard() {
             <p className="text-zion-slate-light mb-4">No referrals yet</p>
             <p className="text-xs text-zion-slate-light">
               Start sharing your referral links to earn rewards
-<<<<<<< HEAD
-
-            </p>
-          </div>
-        </CardContent>
-
-      </Card>
-    </div>
-  ),
-=======
             </p>
           </div>
         </CardContent>
       </Card>
     </div>
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

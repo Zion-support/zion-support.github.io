@@ -1,33 +1,8 @@
-
-<<<<<<< HEAD
-import React from 'react',
-import { FileText } from 'lucide-react'
-import { ResumeOption } from '../resume-selector/types',
-import { ResumePreviewCard } from './ResumePreviewCard',
-import { Resume } from '@/types/resume',
-
-interface SelectResumeSectionProps {
-  resumeOptions: ResumeOption[],
-  selectedResume: ResumeOption | null,
-  handleResumeSelect: (resumeId: string) => void,
-  handleDownloadResume: () => void,
-  isLoading: boolean
-}
-
-export function SelectResumeSection({
-  resumeOptions;
-  selectedResume;
-  handleResumeSelect;
-  handleDownloadResume;
-
-
-=======
 import React from 'react';
 import { FileText } from 'lucide-react'
 import { ResumeOption } from '../resume-selector/types';
 import { ResumePreviewCard } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
-
 interface SelectResumeSectionProps {
   resumeOptions: ResumeOption[];
   selectedResume: ResumeOption | null;
@@ -35,13 +10,11 @@ interface SelectResumeSectionProps {
   handleDownloadResume: () => void;
   isLoading: boolean;
 }
-
 export function SelectResumeSection({
   resumeOptions,
   selectedResume,
   handleResumeSelect,
   handleDownloadResume,
->>>>>>> origin/auto/autonomy-17186719616
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -50,17 +23,6 @@ export function SelectResumeSection({
         <p className="text-sm text-zion-slate">No saved resumes found.</p>
       ) : (
         <>
-<<<<<<< HEAD
-          {resumeOptions.map(option => (            <button
-              key = {option.id,}
-              className={`w-full text-left p-3 rounded-md transition ${
-                selectedResume?.id === option.id
-                  ? 'bg-zion-purple/20 border border-zion-purple'
-                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
-              }`}
-              onClick = {(,) => handleResumeSelect(option.id),}
-=======
->>>>>>> origin/auto/autonomy-17186719616
           {resumeOptions.map((option) => (
             <button
               key={option.id}
@@ -77,7 +39,6 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
-          
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
             <ResumePreviewCard
               resume={selectedResume.resume as Resume}
@@ -88,9 +49,5 @@ export function SelectResumeSection({
         </>
       )}
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

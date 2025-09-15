@@ -1,16 +1,7 @@
-
-<<<<<<< HEAD
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Download, Mail, BarChart3 } from 'lucide-react'
-import Link from "next/link",
-=======
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Mail, BarChart3 } from 'lucide-react'
 import Link from "next/link";
->>>>>>> origin/auto/autonomy-17186719616
-
 export function BillingHeader() {
   return (
     <div className="space-y-2">
@@ -37,9 +28,5 @@ export function BillingHeader() {
         Manage your subscription, view invoice history, and update payment methods.
       </p>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,65 +1,28 @@
-
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Dispute, DisputeStatus } from "@/types/disputes",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import {
-
-=======
 import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
->>>>>>> origin/auto/autonomy-17186719616
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-  TableRow} from "@/components/ui/table",
-import Skeleton from "@/components/ui/skeleton",
-import { formatDistanceToNow } from "date-fns",
-import { ShieldAlert } from 'lucide-react'
-import Link from "next/link",
-
-type DisputesListProps = {
-  disputes: Dispute[],
-  isLoading: boolean
-},
-
-      case "closed":;
-        return "outline";
-      default:;
-        return "default";
-
-
-
-
-
-
-=======
   TableRow,
 } from "@/components/ui/table";
 import Skeleton from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 import { ShieldAlert } from 'lucide-react'
 import Link from "next/link";
-
 type DisputesListProps = {
   disputes: Dispute[];
   isLoading: boolean;
 };
-
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
-
   const filteredDisputes = statusFilter === "all" 
     ? disputes 
     : disputes.filter(dispute => dispute.status === statusFilter);
-
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open":
@@ -74,8 +37,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         return "default";
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -111,13 +72,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           </Table>
         </div>
       </div>
-<<<<<<< HEAD
-    ),
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   if (disputes.length === 0) {
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">
@@ -127,16 +83,9 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           No active disputes match the selected filter
         </p>
       </div>
-<<<<<<< HEAD
-    ),
-  }
-
-=======
     );
   }
-
   return (
->>>>>>> origin/auto/autonomy-17186719616
     <div className="space-y-4">
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         <Button
@@ -175,7 +124,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           Closed
         </Button>
       </div>
-
       <div className="border rounded-md overflow-hidden">
         <Table>
           <TableHeader>
@@ -195,14 +143,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
-<<<<<<< HEAD
-
-                    addSuffix: true,
-                  })}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                   {dispute.project?.title || "Unknown Project"}
                 </TableCell>
                 <TableCell>
@@ -220,11 +160,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                 </TableCell>
                 <TableCell>
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>
-<<<<<<< HEAD
-                    {dispute.status.replace('_ ')}
-=======
                     {dispute.status.replace('_', ' ')}
->>>>>>> origin/auto/autonomy-17186719616
                   </Badge>
                 </TableCell>
                 <TableCell className="text-right">
@@ -238,9 +174,5 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         </Table>
       </div>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

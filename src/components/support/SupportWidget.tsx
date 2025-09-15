@@ -1,18 +1,3 @@
-
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useRouter } from "next/router",
-import { Button } from "@/components/ui/button",
-import { ChatBotPanel } from "./ChatBotPanel",
-import { MessageSquare, Info, X } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useTheme } from "@/hooks/useTheme",
-
-export function SupportWidget() {
-  const [isOpen, setIsOpen] = useState(false),
-  const { theme } = useTheme(),
-  const router = useRouter(),
-=======
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
@@ -20,13 +5,10 @@ import { ChatBotPanel } from "./ChatBotPanel";
 import { MessageSquare, Info, X } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/hooks/useTheme";
-
 export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
   const router = useRouter();
->>>>>>> origin/auto/autonomy-17186719616
-  
   return (
     <>
       {/* Fixed button in the bottom right */}
@@ -40,7 +22,6 @@ export function SupportWidget() {
           <MessageSquare className="h-6 w-6" />
         </Button>
       )}
-      
       {/* Support panel */}
       {isOpen && (
         <div 
@@ -80,14 +61,9 @@ export function SupportWidget() {
               </Button>
             </div>
           </div>
-          
           <ChatBotPanel />
         </div>
       )}
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

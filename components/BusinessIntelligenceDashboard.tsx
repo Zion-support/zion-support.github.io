@@ -1,11 +1,6 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect } from 'react';
-
 interface Metric {
   id: string;
   name: string;
@@ -16,7 +11,6 @@ interface Metric {
   target?: number;
   status: 'excellent' | 'good' | 'warning' | 'critical';
 }
-
 interface ChartData {
   labels: string[];
   datasets: {
@@ -26,7 +20,6 @@ interface ChartData {
     backgroundColor: string;
   }[];
 }
-
 interface BusinessInsight {
   id: string;
   title: string;
@@ -36,23 +29,18 @@ interface BusinessInsight {
   recommendation: string;
   priority: number;
 }
-
 const BusinessIntelligenceDashboard: React.FC = () => {
   const [metricsetMetrics] = useState<Metric[]>([]);
   const [insightsetInsights] = useState<BusinessInsight[]>([]);
   const [selectedPeriodsetSelectedPeriod] = useState('30d');
   const [isLoadingsetIsLoading] = useState(true);
-
   useEffect(() => {
     generateMockData();
   }[selectedPeriod]);
-
   const generateMockData = async () => {
     setIsLoading(true);
-    
     // Simulate data loading
     await new Promise(resolve => setTimeout(resolve1000));
-
     const mockMetrics: Metric[] = [
       {
         id: 'revenue',
@@ -115,7 +103,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         status: 'warning'
       }
     ];
-
     const mockInsights: BusinessInsight[] = [
       {
         id: '1',
@@ -163,12 +150,10 @@ const BusinessIntelligenceDashboard: React.FC = () => {
         priority: 5
       }
     ];
-
     setMetrics(mockMetrics);
     setInsights(mockInsights);
     setIsLoading(false);
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'excellent': return 'text-green-600 bg-green-100';
@@ -178,7 +163,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '📈';
@@ -187,7 +171,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
       default: return '➡️';
     }
   };
-
   const getImpactColor = (impact: string) => {
     switch (impact) {
       case 'high': return 'text-red-600 bg-red-100';
@@ -196,7 +179,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'revenue': return '💰';
@@ -206,7 +188,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
       default: return '📊';
     }
   };
-
   const formatValue = (value: numberunit: string) => {
     if (unit === '$') {
       return new Intl.NumberFormat('en-US'{
@@ -224,7 +205,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
     }
     return value.toLocaleString();
   };
-
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -243,7 +223,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="flex items-center justify-between mb-8">
@@ -271,7 +250,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
           </button>
         </div>
       </div>
-
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {metrics.map((metric) => (
@@ -282,7 +260,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
                 {metric.status}
               </span>
             </div>
-            
             <div className="flex items-baseline mb-4">
               <span className="text-3xl font-bold text-gray-900">
                 {formatValue(metric.valuemetric.unit)}
@@ -293,7 +270,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
                 </span>
               )}
             </div>
-            
             <div className="flex items-center justify-between">
               <div className="flex items-center text-sm">
                 <span className="mr-1">{getTrendIcon(metric.trend)}</span>
@@ -303,7 +279,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
                 <span className="text-gray-500 ml-1">vs last period</span>
               </div>
             </div>
-            
             {/* Progress bar for targets */}
             {metric.target && (
               <div className="mt-4">
@@ -325,14 +300,12 @@ const BusinessIntelligenceDashboard: React.FC = () => {
           </div>
         ))}
       </div>
-
       {/* Business Insights */}
       <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
         <div className="flex items-center justify-between mb-8">
           <h3 className="text-2xl font-bold text-gray-900">💡 Business Insights & Recommendations</h3>
           <span className="text-sm text-gray-500">{insights.length} insights</span>
         </div>
-        
         <div className="space-y-6">
           {insights.map((insight) => (
             <div key={insight.id} className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-200">
@@ -351,7 +324,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
                   <span className="text-xs text-gray-500">#{insight.priority}</span>
                 </div>
               </div>
-              
               <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
                 <h5 className="font-semibold text-blue-900 mb-2">💡 Recommendation:</h5>
                 <p className="text-blue-800">{insight.recommendation}</p>
@@ -360,7 +332,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Performance Trends Chart */}
       <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">📈 Performance Trends</h3>
@@ -386,7 +357,6 @@ const BusinessIntelligenceDashboard: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Action Items */}
       <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">🎯 Priority Action Items</h3>
@@ -414,5 +384,4 @@ const BusinessIntelligenceDashboard: React.FC = () => {
     </div>
   );
 };
-
 export default BusinessIntelligenceDashboard;

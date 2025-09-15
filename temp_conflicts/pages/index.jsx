@@ -1,13 +1,7 @@
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import Link from 'next/link',
-import EnhancedLayout from '../components/layout/EnhancedLayout',
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
->>>>>>> origin/auto/autonomy-17186719616
 
 const Home = () => {
   const features = [
@@ -29,22 +23,14 @@ const Home = () => {
       icon: "🚀",
       href: "/services"
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const stats = [
     { number: "100+", label: "Happy Clients" },
     { number: "500+", label: "Projects Completed" },
     { number: "50+", label: "Team Members" },
     { number: "5+", label: "Years of Excellence" }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <EnhancedLayout>
@@ -127,11 +113,7 @@ const Home = () => {
             Let's discuss how our technology solutions can help you achieve your goals 
             and stay ahead of the competition.
           </p>
-<<<<<<< HEAD
-          <div className="flex flex-col sm: flex-row justify-center gap-6">
-=======
           <div className="flex flex-col sm:flex-row justify-center gap-6">
->>>>>>> origin/auto/autonomy-17186719616
             <Link href="/contact" className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
               Start Your Project
             </Link>
@@ -142,14 +124,7 @@ const Home = () => {
         </div>
       </section>
     </EnhancedLayout>
-<<<<<<< HEAD
-  )
-},
-
-export default Home,
-=======
   );
 };
 
 export default Home;
->>>>>>> origin/auto/autonomy-17186719616

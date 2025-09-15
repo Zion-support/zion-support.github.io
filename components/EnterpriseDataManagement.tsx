@@ -1,11 +1,6 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect } from 'react';
-
 interface DataSource {
   id: string;
   name: string;
@@ -16,7 +11,6 @@ interface DataSource {
   size: string;
   health: 'excellent' | 'good' | 'warning' | 'critical';
 }
-
 interface DataPipeline {
   id: string;
   name: string;
@@ -29,7 +23,6 @@ interface DataPipeline {
   endTime?: Date;
   progress: number;
 }
-
 interface DataQualityMetric {
   id: string;
   name: string;
@@ -39,30 +32,23 @@ interface DataQualityMetric {
   trend: 'up' | 'down' | 'stable';
   lastChecked: Date;
 }
-
 const EnterpriseDataManagement: React.FC = () => {
   const [dataSourcesetDataSources] = useState<DataSource[]>([]);
   const [pipelinesetPipelines] = useState<DataPipeline[]>([]);
   const [qualityMetricsetQualityMetrics] = useState<DataQualityMetric[]>([]);
   const [selectedViewsetSelectedView] = useState<'overview' | 'sources' | 'pipelines' | 'quality'>('overview');
   const [isLoadingsetIsLoading] = useState(true);
-
   useEffect(() => {
     generateMockData();
-    
     // Simulate real-time updates
     const interval = setInterval(() => {
       updateRealTimeData();
     }5000);
-
     return () => clearInterval(interval);
   }[]);
-
   const generateMockData = async () => {
     setIsLoading(true);
-    
     await new Promise(resolve => setTimeout(resolve1000));
-
     const mockDataSources: DataSource[] = [
       {
         id: '1',
@@ -115,7 +101,6 @@ const EnterpriseDataManagement: React.FC = () => {
         health: 'critical'
       }
     ];
-
     const mockPipelines: DataPipeline[] = [
       {
         id: '1',
@@ -164,7 +149,6 @@ const EnterpriseDataManagement: React.FC = () => {
         progress: 45
       }
     ];
-
     const mockQualityMetrics: DataQualityMetric[] = [
       {
         id: '1',
@@ -212,13 +196,11 @@ const EnterpriseDataManagement: React.FC = () => {
         lastChecked: new Date(Date.now() - 8 * 60 * 1000)
       }
     ];
-
     setDataSources(mockDataSources);
     setPipelines(mockPipelines);
     setQualityMetrics(mockQualityMetrics);
     setIsLoading(false);
   };
-
   const updateRealTimeData = () => {
     // Update pipeline progress
     setPipelines(prev => prev.map(pipeline => {
@@ -232,7 +214,6 @@ const EnterpriseDataManagement: React.FC = () => {
       }
       return pipeline;
     }));
-
     // Update data source sync times
     setDataSources(prev => prev.map(source => {
       if (source.status === 'syncing') {
@@ -245,7 +226,6 @@ const EnterpriseDataManagement: React.FC = () => {
       return source;
     }));
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'connected': return 'text-green-600 bg-green-100';
@@ -262,7 +242,6 @@ const EnterpriseDataManagement: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getHealthColor = (health: string) => {
     switch (health) {
       case 'excellent': return 'text-green-600 bg-green-100';
@@ -272,7 +251,6 @@ const EnterpriseDataManagement: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'database': return '🗄️';
@@ -283,26 +261,21 @@ const EnterpriseDataManagement: React.FC = () => {
       default: return '📊';
     }
   };
-
   const formatTimeAgo = (timestamp: Date) => {
     const now = new Date();
     const diffInMinutes = Math.floor((now.getTime() - timestamp.getTime()) / (1000 * 60));
-    
     if (diffInMinutes < 1) return 'Just now';
     if (diffInMinutes < 60) return `${diffInMinutes}m ago`;
     if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`;
     return `${Math.floor(diffInMinutes / 1440)}d ago`;
   };
-
   const formatDuration = (startTime: DatendTime?: Date) => {
     const end = endTime || new Date();
     const diffInMinutes = Math.floor((end.getTime() - startTime.getTime()) / (1000 * 60));
-    
     if (diffInMinutes < 60) return `${diffInMinutes}m`;
     if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ${diffInMinutes % 60}m`;
     return `${Math.floor(diffInMinutes / 1440)}d ${Math.floor((diffInMinutes % 1440) / 60)}h`;
   };
-
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -321,7 +294,6 @@ const EnterpriseDataManagement: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="flex items-center justify-between mb-8">
@@ -343,7 +315,6 @@ const EnterpriseDataManagement: React.FC = () => {
           </button>
         </div>
       </div>
-
       {/* Navigation Tabs */}
       <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg mb-8">
         {[
@@ -366,7 +337,6 @@ const EnterpriseDataManagement: React.FC = () => {
           </button>
         ))}
       </div>
-
       {/* Overview */}
       {selectedView === 'overview' && (
         <div className="space-y-8">
@@ -385,7 +355,6 @@ const EnterpriseDataManagement: React.FC = () => {
                 {dataSources.reduce((sum, s) => sum + s.recordCount, 0).toLocaleString()} total records
               </div>
             </div>
-
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-2xl">🔄</span>
@@ -399,7 +368,6 @@ const EnterpriseDataManagement: React.FC = () => {
                 {pipelines.reduce((sum, p) => sum + p.recordsProcessed, 0).toLocaleString()} records processed
               </div>
             </div>
-
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-2xl">✅</span>
@@ -413,7 +381,6 @@ const EnterpriseDataManagement: React.FC = () => {
                 {(qualityMetrics.reduce((sum, m) => sum + m.value, 0) / qualityMetrics.length).toFixed(1)}% avg score
               </div>
             </div>
-
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-2xl">💾</span>
@@ -426,7 +393,6 @@ const EnterpriseDataManagement: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Recent Activity */}
           <div className="bg-white rounded-2xl shadow-xl p-6">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">📈 Recent Activity</h3>
@@ -460,7 +426,6 @@ const EnterpriseDataManagement: React.FC = () => {
           </div>
         </div>
       )}
-
       {/* Data Sources */}
       {selectedView === 'sources' && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -478,7 +443,6 @@ const EnterpriseDataManagement: React.FC = () => {
                   {source.status}
                 </span>
               </div>
-              
               <div className="space-y-3">
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600">Health:</span>
@@ -486,17 +450,14 @@ const EnterpriseDataManagement: React.FC = () => {
                     {source.health}
                   </span>
                 </div>
-                
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600">Records:</span>
                   <span className="font-medium">{source.recordCount.toLocaleString()}</span>
                 </div>
-                
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600">Size:</span>
                   <span className="font-medium">{source.size}</span>
                 </div>
-                
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600">Last Sync:</span>
                   <span className="font-medium">{formatTimeAgo(source.lastSync)}</span>
@@ -506,7 +467,6 @@ const EnterpriseDataManagement: React.FC = () => {
           ))}
         </div>
       )}
-
       {/* Data Pipelines */}
       {selectedView === 'pipelines' && (
         <div className="space-y-6">
@@ -523,7 +483,6 @@ const EnterpriseDataManagement: React.FC = () => {
                   Started: {formatTimeAgo(pipeline.startTime)}
                 </div>
               </div>
-              
               <div className="mb-4">
                 <div className="flex justify-between text-sm text-gray-600 mb-1">
                   <span>Progress</span>
@@ -540,7 +499,6 @@ const EnterpriseDataManagement: React.FC = () => {
                   ></div>
                 </div>
               </div>
-              
               <div className="grid md:grid-cols-4 gap-4 text-sm">
                 <div>
                   <span className="text-gray-600">Source:</span>
@@ -563,7 +521,6 @@ const EnterpriseDataManagement: React.FC = () => {
           ))}
         </div>
       )}
-
       {/* Data Quality */}
       {selectedView === 'quality' && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -575,7 +532,6 @@ const EnterpriseDataManagement: React.FC = () => {
                   {metric.status}
                 </span>
               </div>
-              
               <div className="mb-4">
                 <div className="flex items-baseline mb-2">
                   <span className="text-3xl font-bold text-gray-900">{metric.value.toFixed(1)}</span>
@@ -595,7 +551,6 @@ const EnterpriseDataManagement: React.FC = () => {
                   ></div>
                 </div>
               </div>
-              
               <div className="text-sm text-gray-500">
                 Last checked: {formatTimeAgo(metric.lastChecked)}
               </div>
@@ -606,5 +561,4 @@ const EnterpriseDataManagement: React.FC = () => {
     </div>
   );
 };
-
 export default EnterpriseDataManagement;

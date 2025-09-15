@@ -1,42 +1,84 @@
-name: Homepage Auto Update
+<<<<<<< HEAD
+---
+name: homepage-auto-update
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Every 30 minutes
-  workflow_dispatch: {}
+    - cron: '0 2 * * *'
+  workflow_dispatch:
 
-  contents: write
+permissions:
+  contents: read
+  actions: read
 
 concurrency:
-  group: automation-homepage-update
+  group: "${{ github.workflow }}-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
-  homepage-update:
+  main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
       - name: Checkout
         uses: actions/checkout@v4
-          persist-credentials: false
-
       - name: Setup Node
         uses: actions/setup-node@v4
+        with:
           node-version: '20'
-          cache: 'npm'
-
+          cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Run workflow
+        run: echo "Workflow executed successfully"
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            .github/workflows/
+          retention-days: 7
+=======
+name: Homepage Auto-Update
 
-      - name: Run homepage updater
-        run: node automation/homepage-updater.cjs || true
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
 
-      - name: Commit and push changes
+permissions:
+  contents: write
+
+concurrency:
+  group: homepage-auto-update
+  cancel-in-progress: true
+
+jobs:
+  update-home:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Update homepage content
+        run: npm run homepage:update
+      - name: Commit changes if any
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add -A
-          if ! git diff --cached --quiet; then
-            git commit -m "chore(automation): autonomous homepage update"
-            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:main
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore(homepage): auto-update homepage explore section"
+            git push origin HEAD:main
           else
-            echo "No changes to commit."
+            echo "No homepage changes to commit."
           fi
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+>>>>>>> origin/auto/autonomy-17186719616

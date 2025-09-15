@@ -1,15 +1,6 @@
 
 import React from "react";
 import { BadgeEarned } from "./BadgeEarned";
-<<<<<<< HEAD
-import { badgeListBadgeKey } from "./badgeConfig";
-
-// Dummy data for demo: what badges this user earned (with fake dates)
-const earnedBadges: { badge: BadgeKey; date: string }[] = [
-  { badge: "first_listing"date: "2024-12-16" },
-  { badge: "profile_complete"date: "2024-11-22" },
-  { badge: "first_action"date: "2024-09-08" }];
-=======
 import { badgeList, BadgeKey } from "./badgeConfig";
 
 // Dummy data for demo: what badges this user earned (with fake dates)
@@ -18,7 +9,6 @@ const earnedBadges: { badge: BadgeKey; date: string }[] = [
   { badge: "profile_complete", date: "2024-11-22" },
   { badge: "first_action", date: "2024-09-08" },
 ];
->>>>>>> origin/auto/autonomy-17186719616
 
 export const MyBadgesPreview: React.FC = () => {
   return (
@@ -30,11 +20,7 @@ export const MyBadgesPreview: React.FC = () => {
         </span>
       </div>
       <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
-        {earnedBadges.map(({ badgedate }) => (
-=======
         {earnedBadges.map(({ badge, date }) => (
->>>>>>> origin/auto/autonomy-17186719616
           <BadgeEarned key={badge} badge={badge} earnedDate={date} />
         ))}
       </div>

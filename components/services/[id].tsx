@@ -4,16 +4,10 @@ import { useRouter } from 'next/router';
 import { getServiceById } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail';
 import Button from '../../components/ui/Button';
-<<<<<<< HEAD
-ArrowLeftExternalLink
-=======
 import { ArrowLeft, ExternalLink } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
-
 export default function ServiceDetailPage() {
   const router = useRouter();
   const { id } = router.query;
-  
   if (!id || typeof id !== 'string') {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
@@ -28,9 +22,7 @@ export default function ServiceDetailPage() {
       </div>
     );
   }
-
   const service = getServiceById(id);
-
   if (!service) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
@@ -45,7 +37,6 @@ export default function ServiceDetailPage() {
       </div>
     );
   }
-
   return (
     <>
       <Head>
@@ -55,7 +46,6 @@ export default function ServiceDetailPage() {
         <meta property="og:description" content={service.description} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
       <div className="min-h-screen bg-black">
         {/* Navigation */}
         <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
@@ -81,10 +71,8 @@ export default function ServiceDetailPage() {
             </div>
           </div>
         </nav>
-
         {/* Service Detail Content */}
         <ServiceDetail service={service} />
-
         {/* Related Services CTA */}
         <section className="py-16 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

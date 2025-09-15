@@ -1,11 +1,6 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect } from 'react';
-
 interface SecurityEvent {
   id: string;
   type: 'threat' | 'vulnerability' | 'breach' | 'compliance' | 'access';
@@ -17,7 +12,6 @@ interface SecurityEvent {
   status: 'active' | 'investigating' | 'resolved' | 'false_positive';
   affectedSystems: string[];
 }
-
 interface SecurityMetric {
   id: string;
   name: string;
@@ -27,7 +21,6 @@ interface SecurityMetric {
   status: 'secure' | 'warning' | 'critical';
   lastUpdated: Date;
 }
-
 interface ComplianceStatus {
   framework: string;
   status: 'compliant' | 'partial' | 'non_compliant';
@@ -35,30 +28,23 @@ interface ComplianceStatus {
   lastAudit: Date;
   issues: number;
 }
-
 const AdvancedSecurityMonitor: React.FC = () => {
   const [eventsetEvents] = useState<SecurityEvent[]>([]);
   const [metricsetMetrics] = useState<SecurityMetric[]>([]);
   const [compliancesetCompliance] = useState<ComplianceStatus[]>([]);
   const [isLoadingsetIsLoading] = useState(true);
   const [filtersetFilter] = useState<'all' | 'critical' | 'high' | 'medium' | 'low'>('all');
-
   useEffect(() => {
     generateMockData();
-    
     // Simulate real-time updates
     const interval = setInterval(() => {
       generateNewEvent();
     }10000); // New event every 10 seconds
-
     return () => clearInterval(interval);
   }[]);
-
   const generateMockData = async () => {
     setIsLoading(true);
-    
     await new Promise(resolve => setTimeout(resolve1000));
-
     const mockEvents: SecurityEvent[] = [
       {
         id: '1',
@@ -116,7 +102,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
         affectedSystems: ['File 'Storage', 'Upload Service']
       }
     ];
-
     const mockMetrics: SecurityMetric[] = [
       {
         id: 'threats-blocked',
@@ -173,7 +158,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
         lastUpdated: new Date()
       }
     ];
-
     const mockCompliance: ComplianceStatus[] = [
       {
         framework: 'GDPR',
@@ -204,17 +188,14 @@ const AdvancedSecurityMonitor: React.FC = () => {
         issues: 1
       }
     ];
-
     setEvents(mockEvents);
     setMetrics(mockMetrics);
     setCompliance(mockCompliance);
     setIsLoading(false);
   };
-
   const generateNewEvent = () => {
     const eventTypes: SecurityEvent['type'][] = [', 'threat', 'vulnerability', 'breach', 'compliance'access'];
     const severities: SecurityEvent['severity'][] = [', 'critical', 'high', 'medium', 'low'];
-    
     const newEvent: SecurityEvent = {
       id: Date.now().toString(),
       type: eventTypes[Math.floor(Math.random() * eventTypes.length)],
@@ -226,10 +207,8 @@ const AdvancedSecurityMonitor: React.FC = () => {
       status: 'active',
       affectedSystems: ['System 'A', 'System B']
     };
-
     setEvents(prev => [newEvent...prev.slice(09)]);
   };
-
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical': return 'text-red-600 bg-red-100 border-red-200';
@@ -239,7 +218,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100 border-gray-200';
     }
   };
-
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'threat': return '🚨';
@@ -250,7 +228,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
       default: return '⚠️';
     }
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'secure': return 'text-green-600 bg-green-100';
@@ -259,7 +236,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getComplianceStatusColor = (status: string) => {
     switch (status) {
       case 'compliant': return 'text-green-600 bg-green-100';
@@ -268,21 +244,17 @@ const AdvancedSecurityMonitor: React.FC = () => {
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const formatTimeAgo = (timestamp: Date) => {
     const now = new Date();
     const diffInMinutes = Math.floor((now.getTime() - timestamp.getTime()) / (1000 * 60));
-    
     if (diffInMinutes < 1) return 'Just now';
     if (diffInMinutes < 60) return `${diffInMinutes}m ago`;
     if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`;
     return `${Math.floor(diffInMinutes / 1440)}d ago`;
   };
-
   const filteredEvents = filter === 'all' 
     ? events 
     : events.filter(event => event.severity === filter);
-
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -301,7 +273,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="flex items-center justify-between mb-8">
@@ -323,7 +294,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
           </button>
         </div>
       </div>
-
       {/* Security Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {metrics.map((metric) => (
@@ -334,13 +304,11 @@ const AdvancedSecurityMonitor: React.FC = () => {
                 {metric.status}
               </span>
             </div>
-            
             <div className="flex items-baseline mb-4">
               <span className="text-3xl font-bold text-gray-900">
                 {metric.value.toLocaleString()}{metric.unit}
               </span>
             </div>
-            
             <div className="flex items-center justify-between">
               <div className="flex items-center text-sm">
                 <span className="mr-1">
@@ -357,7 +325,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
           </div>
         ))}
       </div>
-
       <div className="grid lg:grid-cols-3 gap-8 mb-12">
         {/* Security Events */}
         <div className="lg:col-span-2">
@@ -380,7 +347,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
                 ))}
               </div>
             </div>
-            
             <div className="space-y-4">
               {filteredEvents.map((event) => (
                 <div key={event.id} className={`border-l-4 p-4 rounded-r-xl ${getSeverityColor(event.severity)}`}>
@@ -391,9 +357,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
                     </div>
                     <span className="text-sm text-gray-500">{formatTimeAgo(event.timestamp)}</span>
                   </div>
-                  
                   <p className="text-gray-600 mb-3">{event.description}</p>
-                  
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4 text-sm">
                       <span className="text-gray-500">Source: {event.source}</span>
@@ -418,12 +382,10 @@ const AdvancedSecurityMonitor: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Compliance Status */}
         <div className="lg:col-span-1">
           <div className="bg-white rounded-2xl shadow-xl p-6">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">📋 Compliance Status</h3>
-            
             <div className="space-y-4">
               {compliance.map((item) => (
                 <div key={item.framework} className="border border-gray-200 rounded-xl p-4">
@@ -433,7 +395,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
                       {item.status.replace('_' ')}
                     </span>
                   </div>
-                  
                   <div className="mb-3">
                     <div className="flex justify-between text-sm text-gray-600 mb-1">
                       <span>Score</span>
@@ -449,7 +410,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
                       ></div>
                     </div>
                   </div>
-                  
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <span>{item.issues} issues</span>
                     <span>{formatTimeAgo(item.lastAudit)}</span>
@@ -460,7 +420,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Security Actions */}
       <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">🛡️ Security Actions & Recommendations</h3>
@@ -488,5 +447,4 @@ const AdvancedSecurityMonitor: React.FC = () => {
     </div>
   );
 };
-
 export default AdvancedSecurityMonitor;

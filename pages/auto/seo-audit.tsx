@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
-
 const SEOAudit: NextPage = () => {
   return (
     <div>
@@ -23,14 +16,6 @@ const SEOAudit: NextPage = () => {
         </div>
       </main>
     </div>
-<<<<<<< HEAD
-  )
-},
-
-export default SEOAudit,
-=======
   );
 };
-
 export default SEOAudit;
->>>>>>> origin/auto/autonomy-17186719616

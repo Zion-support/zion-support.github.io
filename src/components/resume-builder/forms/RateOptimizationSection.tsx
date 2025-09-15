@@ -1,19 +1,3 @@
-
-<<<<<<< HEAD
-
-
-
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
-import { Card, CardContent } from "@/components/ui/card",
-
-interface RateOptimizationSectionProps {
-  control: Control<any>,
-  setValue: UseFormSetValue<any>,
-  skills: string[],
-  yearsExperience: number,
-  location?: string,
-  rateType: "hourly" | "fixed"
-=======
 import React, { useState } from "react";
 import { Control, UseFormSetValue } from "react-hook-form";
 import {
@@ -27,7 +11,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
 import { Card, CardContent } from "@/components/ui/card";
-
 interface RateOptimizationSectionProps {
   control: Control<any>;
   setValue: UseFormSetValue<any>;
@@ -35,9 +18,7 @@ interface RateOptimizationSectionProps {
   yearsExperience: number;
   location?: string;
   rateType: "hourly" | "fixed";
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
   control,
   setValue,
@@ -47,14 +28,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   rateType
 }) => {
   const handleSuggestionApplied = (rate: number) => {
-<<<<<<< HEAD
-    setValue("hourlyRate", rate),
-  },
-=======
     setValue("hourlyRate", rate);
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <div className="space-y-4">
       <FormField
@@ -78,7 +53,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
           </FormItem>
         )}
       />
-
       <Card>
         <CardContent className="pt-4">
           <TalentRateRecommender
@@ -91,10 +65,5 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

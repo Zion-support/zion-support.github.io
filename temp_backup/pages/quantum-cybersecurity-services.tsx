@@ -29,16 +29,9 @@ export default function QuantumCybersecurityServices() {
         <meta name="contact:website" content="https://ziontechgroup.com" />
       </Head>
 
-<<<<<<< HEAD
-      <UltraFuturisticBackground2026 intensity="high" />
-      
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
-=======
       <UltraFuturisticBackground2026 intensity="high" theme="cyberpunk">
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
->>>>>>> origin/auto/autonomy-17186719616
           <div className="text-center z-10 max-w-6xl mx-auto">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -68,21 +61,13 @@ export default function QuantumCybersecurityServices() {
             >
               <a
                 href="#services"
-<<<<<<< HEAD
-                className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
-=======
                 className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-indigo-500/25"
->>>>>>> origin/auto/autonomy-17186719616
               >
                 View Services
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-<<<<<<< HEAD
-                className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-=======
                 className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
->>>>>>> origin/auto/autonomy-17186719616
               >
                 Get Started
               </a>
@@ -145,11 +130,7 @@ export default function QuantumCybersecurityServices() {
                   <UltraFuturisticServiceCard2026 
                     service={service} 
                     variant="premium"
-<<<<<<< HEAD
-
-=======
                     theme="cyberpunk"
->>>>>>> origin/auto/autonomy-17186719616
                   />
                 </motion.div>
               ))}
@@ -329,21 +310,13 @@ export default function QuantumCybersecurityServices() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-<<<<<<< HEAD
-                  className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-=======
                   className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
->>>>>>> origin/auto/autonomy-17186719616
                 >
                   Start Your Security Assessment
                 </a>
                 <a
                   href="https://ziontechgroup.com"
-<<<<<<< HEAD
-                  className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-=======
                   className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
->>>>>>> origin/auto/autonomy-17186719616
                 >
                   Visit Our Website
                 </a>
@@ -351,10 +324,7 @@ export default function QuantumCybersecurityServices() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
       </UltraFuturisticBackground2026>
->>>>>>> origin/auto/autonomy-17186719616
     </>
   );
 }

@@ -1,45 +1,12 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
-import { motion, AnimatePresence } from 'framer-motion',
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> origin/auto/autonomy-17186719616
 import { 
   Search, Filter, Grid3X3, List, 
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings,
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3,
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
-<<<<<<< HEAD
-} from 'lucide-react',
-
-// Import service data
-import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services',
-import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced',
-import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced',
-import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services',
-
-interface Service {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  description: string,
-  features: string[],
-  category: string,
-  rating: number,
-  reviews: number,
-  customers: number,
-  marketSize: string,
-  growthRate: string,
-  launchDate: string,
-  badge?: string,
-  icon?: React.ReactNode
-=======
 } from 'lucide-react';
 
 // Import service data
@@ -64,7 +31,6 @@ interface Service {
   launchDate: string;
   badge?: string;
   icon?: React.ReactNode;
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 const allServices: Service[] = [
@@ -88,11 +54,7 @@ const allServices: Service[] = [
     category: 'Quantum & Emerging Tech',
     icon: <Atom className="w-6 h-6" />
   }))
-<<<<<<< HEAD
-],
-=======
 ];
->>>>>>> origin/auto/autonomy-17186719616
 
 const categories = [
   { name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices.length },
@@ -100,11 +62,7 @@ const categories = [
   { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025.length },
   { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025.length },
   { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025.length }
-<<<<<<< HEAD
-],
-=======
 ];
->>>>>>> origin/auto/autonomy-17186719616
 
 const priceRanges = [
   { label: 'All Prices', value: 'all' },
@@ -112,11 +70,7 @@ const priceRanges = [
   { label: '$50 - $200/month', value: '50-200' },
   { label: '$200 - $500/month', value: '200-500' },
   { label: 'Over $500/month', value: 'over-500' }
-<<<<<<< HEAD
-],
-=======
 ];
->>>>>>> origin/auto/autonomy-17186719616
 
 const sortOptions = [
   { label: 'Most Popular', value: 'popular' },
@@ -124,20 +78,6 @@ const sortOptions = [
   { label: 'Newest', value: 'newest' },
   { label: 'Price: Low to High', value: 'price-low' },
   { label: 'Price: High to Low', value: 'price-high' }
-<<<<<<< HEAD
-],
-
-export default function ComprehensiveServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('All Services'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
-  const [sortBy, setSortBy] = useState('popular'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [filteredServices, setFilteredServices] = useState<Service[]>(allServices),
-
-  useEffect(() => {
-    let filtered = allServices,
-=======
 ];
 
 export default function ComprehensiveServicesShowcase2025() {
@@ -150,7 +90,6 @@ export default function ComprehensiveServicesShowcase2025() {
 
   useEffect(() => {
     let filtered = allServices;
->>>>>>> origin/auto/autonomy-17186719616
 
     // Filter by search term
     if (searchTerm) {
@@ -158,36 +97,17 @@ export default function ComprehensiveServicesShowcase2025() {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-<<<<<<< HEAD
-      ),
-=======
       );
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Filter by category
     if (selectedCategory !== 'All Services') {
-<<<<<<< HEAD
-      filtered = filtered.filter(service => service.category === selectedCategory),
-=======
       filtered = filtered.filter(service => service.category === selectedCategory);
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Filter by price range
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
-<<<<<<< HEAD
-        const price = parseFloat(service.price.replace(/[^0-9.]/g, '')),
-        switch (selectedPriceRange) {
-          case 'under-50': return price < 50,
-          case '50-200': return price >= 50 && price <= 200,
-          case '200-500': return price > 200 && price <= 500,
-          case 'over-500': return price > 500,
-          default: return true
-        }
-      }),
-=======
         const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
         switch (selectedPriceRange) {
           case 'under-50': return price < 50;
@@ -197,50 +117,12 @@ export default function ComprehensiveServicesShowcase2025() {
           default: return true;
         }
       });
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'popular':
-<<<<<<< HEAD
-          return b.customers - a.customers,
-        case 'rating':
-          return b.rating - a.rating,
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
-        case 'price-low':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
-        case 'price-high':
-          return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),
-        default: return 0
-      }
-    }),
-
-    setFilteredServices(filtered),
-  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]),
-
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'Micro SAAS': return 'from-blue-500 to-cyan-500',
-      case 'AI & Consciousness': return 'from-purple-500 to-pink-500',
-      case 'Enterprise IT': return 'from-green-500 to-emerald-500',
-      case 'Quantum & Emerging Tech': return 'from-orange-500 to-red-500',
-      default: return 'from-gray-500 to-slate-500'
-    }
-  },
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Micro SAAS': return <Rocket className="w-5 h-5" />,
-      case 'AI & Consciousness': return <Brain className="w-5 h-5" />,
-      case 'Enterprise IT': return <Shield className="w-5 h-5" />,
-      case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />,
-      default: return <Globe className="w-5 h-5" />
-    }
-  },
-=======
           return b.customers - a.customers;
         case 'rating':
           return b.rating - a.rating;
@@ -277,7 +159,6 @@ export default function ComprehensiveServicesShowcase2025() {
       default: return <Globe className="w-5 h-5" />;
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Layout>
@@ -304,16 +185,6 @@ export default function ComprehensiveServicesShowcase2025() {
               animate={{
                 x: [0, 100, 0],
                 y: [0, -100, 0],
-<<<<<<< HEAD
-                opacity: [0.2, 0.8, 0.2]}}
-              transition={{
-                duration: 10 + i * 2,
-                repeat: Infinity,
-                delay: i * 0.5}}
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`}}
-=======
                 opacity: [0.2, 0.8, 0.2],
               }}
               transition={{
@@ -325,7 +196,6 @@ export default function ComprehensiveServicesShowcase2025() {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
->>>>>>> origin/auto/autonomy-17186719616
             />
           ))}
         </div>
@@ -672,15 +542,9 @@ export default function ComprehensiveServicesShowcase2025() {
             </p>
             <button
               onClick={() => {
-<<<<<<< HEAD
-                setSearchTerm(''),
-                setSelectedCategory('All Services'),
-                setSelectedPriceRange('all'),
-=======
                 setSearchTerm('');
                 setSelectedCategory('All Services');
                 setSelectedPriceRange('all');
->>>>>>> origin/auto/autonomy-17186719616
               }}
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
             >
@@ -706,11 +570,7 @@ export default function ComprehensiveServicesShowcase2025() {
               Our team of experts is ready to help you implement the perfect solution for your needs. 
               Get in touch today and discover how our innovative services can drive your success.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-=======
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
->>>>>>> origin/auto/autonomy-17186719616
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
@@ -728,9 +588,5 @@ export default function ComprehensiveServicesShowcase2025() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

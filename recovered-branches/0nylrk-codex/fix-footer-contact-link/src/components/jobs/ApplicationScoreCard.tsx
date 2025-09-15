@@ -2,15 +2,9 @@
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { CardHeaderCardTitleCardContentCardFooter } from "@/components/ui/card";
-import { supabase } from "@/integrations/supabase/client";
-import { Loader2StarBarChart2Lightbulb } from "lucide-react";
-=======
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
 import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 
@@ -19,13 +13,8 @@ interface ApplicationScoreCardProps {
   onScoreUpdated?: (updatedApplication: JobApplication) => void;
 }
 
-<<<<<<< HEAD
-export function ApplicationScoreCard({ applicationScoreUpdated }: ApplicationScoreCardProps) {
-  const [isScoringsetIsScoring] = useState(false);
-=======
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
   const [isScoring, setIsScoring] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
 
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number';
@@ -71,17 +60,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       const checkScore = async () => {
         attempts++;
         
-<<<<<<< HEAD
-        const { dataerror } = await supabase
-          .from("job_applications")
-          .select("*")
-          .eq("id"application.id)
-=======
         const { data, error } = await supabase
           .from("job_applications")
           .select("*")
           .eq("id", application.id)
->>>>>>> origin/auto/autonomy-17186719616
           .single();
           
         if (error) {
@@ -97,22 +79,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         }
         
         if (attempts < maxAttempts) {
-<<<<<<< HEAD
-          setTimeout(checkScore3000);
-=======
           setTimeout(checkScore, 3000);
->>>>>>> origin/auto/autonomy-17186719616
         } else {
           setIsScoring(false);
           toast.info("Scoring is taking longer than expected. Check back later.");
         }
       };
       
-<<<<<<< HEAD
-      setTimeout(checkScore3000);
-=======
       setTimeout(checkScore, 3000);
->>>>>>> origin/auto/autonomy-17186719616
       
     } catch (error: any) {
       setIsScoring(false);
@@ -187,17 +161,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                       <div>
                         <p className="font-medium">Skills Match: {application.match_breakdown.skills_match.score}/100</p>
                         {application.match_breakdown.skills_match.matching && (
-<<<<<<< HEAD
-                          <p>Matching skills: {application.match_breakdown.skills_match.matching.join(")}</p>
-                        )}
-                        {application.match_breakdown.skills_match.missing && (
-                          <p>Missing skills: {application.match_breakdown.skills_match.missing.join(")}</p>
-=======
                           <p>Matching skills: {application.match_breakdown.skills_match.matching.join(", ")}</p>
                         )}
                         {application.match_breakdown.skills_match.missing && (
                           <p>Missing skills: {application.match_breakdown.skills_match.missing.join(", ")}</p>
->>>>>>> origin/auto/autonomy-17186719616
                         )}
                       </div>
                     )}

@@ -1,17 +1,3 @@
-
-<<<<<<< HEAD
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Filter } from 'lucide-react'
-import { SearchFilter } from "./filters/SearchFilter",
-import { SortFilter } from "./filters/SortFilter",
-import { SkillsFilter } from "./filters/SkillsFilter",
-import { AvailabilityFilter } from "./filters/AvailabilityFilter",
-import { RegionFilter } from "./filters/RegionFilter",
-import { ExperienceFilter } from "./filters/ExperienceFilter",
-import { PriceFilter } from "./filters/PriceFilter",
-import { FilterSidebarProps } from "@/types/filters",
-=======
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Filter } from 'lucide-react'
@@ -23,8 +9,6 @@ import { RegionFilter } from "./filters/RegionFilter";
 import { ExperienceFilter } from "./filters/ExperienceFilter";
 import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
->>>>>>> origin/auto/autonomy-17186719616
-
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -62,13 +46,10 @@ export function FilterSidebar({
           Clear All
         </Button>
       </div>
-      
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
-      
       {/* Skills */}
       <SkillsFilter 
         selectedSkills={selectedSkills} 
@@ -77,7 +58,6 @@ export function FilterSidebar({
         toggleSection={() => toggleSection('skills')}
         isMobileFilterOpen={isMobileFilterOpen}
       />
-      
       {/* Availability */}
       <AvailabilityFilter 
         selectedAvailability={selectedAvailability} 
@@ -86,7 +66,6 @@ export function FilterSidebar({
         toggleSection={() => toggleSection('availability')}
         isMobileFilterOpen={isMobileFilterOpen}
       />
-      
       {/* Region */}
       <RegionFilter 
         selectedRegions={selectedRegions} 
@@ -95,7 +74,6 @@ export function FilterSidebar({
         toggleSection={() => toggleSection('region')}
         isMobileFilterOpen={isMobileFilterOpen}
       />
-      
       {/* Years of Experience */}
       <ExperienceFilter 
         experienceRange={experienceRange} 
@@ -104,7 +82,6 @@ export function FilterSidebar({
         toggleSection={() => toggleSection('experience')}
         isMobileFilterOpen={isMobileFilterOpen}
       />
-      
       {/* Price Range */}
       <PriceFilter 
         priceRange={priceRange} 
@@ -113,7 +90,6 @@ export function FilterSidebar({
         toggleSection={() => toggleSection('price')}
         isMobileFilterOpen={isMobileFilterOpen}
       />
-      
       {isMobileFilterOpen && (
         <Button 
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
@@ -123,9 +99,5 @@ export function FilterSidebar({
         </Button>
       )}
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

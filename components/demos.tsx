@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-"use client";
-import React{ useState } from 'react';
-=======
 import React, { useState } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -11,28 +6,9 @@ import EmailValidatorDemo from '../components/demos/EmailValidatorDemo';
 import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo';
 import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
-<<<<<<< HEAD
-MailLockLinkFileTextCheckCircleZapBarChart3CodePlay
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-export default function DemosPage() {
-  const [activeDemosetActiveDemo] = useState<string>('email-validator');
-=======
 import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
-
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
->>>>>>> origin/auto/autonomy-17186719616
-
   const demos = [
     {
       id: 'email-validator',
@@ -67,23 +43,16 @@ export default function DemosPage() {
       component: <TextAnalyzerDemo />
     }
   ];
-
   const activeDemoData = demos.find(demo => demo.id === activeDemo);
-
   return (
     <>
       <Head>
         <title>Interactive Demos | Zion Tech Group - Test Our Micro SaaS Services</title>
-<<<<<<< HEAD
-        <meta name="description" content="Try our professional micro SaaS services with interactive demos. Test email validationpassword strengthURL shorteningand text analysis in real-time." />
-=======
         <meta name="description" content="Try our professional micro SaaS services with interactive demos. Test email validation, password strength, URL shortening, and text analysis in real-time." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:title" content="Interactive Demos | Zion Tech Group" />
         <meta property="og:description" content="Test our micro SaaS services with interactive demos." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0">
@@ -91,9 +60,7 @@ export default function DemosPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />
         </div>
-
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-20 animate-fade-in">
             <div className="mb-8">
@@ -102,7 +69,6 @@ export default function DemosPage() {
                 Interactive Demos
               </div>
             </div>
-            
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
               Try Our
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
@@ -111,13 +77,8 @@ export default function DemosPage() {
             </h1>
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
               Experience our professional-grade micro SaaS services firsthand with interactive demos. 
-<<<<<<< HEAD
-              Testexploreand see the power of our APIs in action.
-=======
               Test, explore, and see the power of our APIs in action.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
-
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
               <Button
                 href="#demos"
@@ -140,7 +101,6 @@ export default function DemosPage() {
               </Button>
             </div>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
@@ -170,7 +130,6 @@ export default function DemosPage() {
           </div>
         </div>
       </section>
-
       {/* Demo Navigation */}
       <section id="demos" className="py-16 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
@@ -183,7 +142,6 @@ export default function DemosPage() {
               Each demo showcases a different micro SaaS service with full functionality
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {demos.map((demo) => (
               <button
@@ -215,7 +173,6 @@ export default function DemosPage() {
           </div>
         </div>
       </section>
-
       {/* Active Demo */}
       <section className="py-16 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -231,13 +188,11 @@ export default function DemosPage() {
               {activeDemoData?.description}
             </p>
           </div>
-
           <div className="animate-fade-in">
             {activeDemoData?.component}
           </div>
         </div>
       </section>
-
       {/* Features */}
       <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
@@ -250,7 +205,6 @@ export default function DemosPage() {
               Experience the quality and reliability of our services before integrating them into your applications
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -263,7 +217,6 @@ export default function DemosPage() {
                 Test actual API endpoints with real data processing and response times
               </p>
             </Card>
-
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <CheckCircle className="w-8 h-8 text-green-400" />
@@ -272,14 +225,9 @@ export default function DemosPage() {
                 Full Functionality
               </h3>
               <p className="text-gray-400 leading-relaxed">
-<<<<<<< HEAD
-                Experience complete service capabilitiesnot just mock responses
-=======
                 Experience complete service capabilities, not just mock responses
->>>>>>> origin/auto/autonomy-17186719616
               </p>
             </Card>
-
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Code className="w-8 h-8 text-purple-400" />
@@ -291,7 +239,6 @@ export default function DemosPage() {
                 See exact request/response formats for easy integration
               </p>
             </Card>
-
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <BarChart3 className="w-8 h-8 text-orange-400" />
@@ -303,7 +250,6 @@ export default function DemosPage() {
                 Get comprehensive analysis and insights from each service
               </p>
             </Card>
-
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-cyan-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Play className="w-8 h-8 text-cyan-400" />
@@ -315,7 +261,6 @@ export default function DemosPage() {
                 No signup required - start testing immediately
               </p>
             </Card>
-
             <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-pink-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-pink-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <CheckCircle className="w-8 h-8 text-pink-400" />
@@ -330,7 +275,6 @@ export default function DemosPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
@@ -339,11 +283,7 @@ export default function DemosPage() {
             Ready to Integrate?
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-            After testing our demosintegrate these professional services into your applications 
-=======
             After testing our demos, integrate these professional services into your applications 
->>>>>>> origin/auto/autonomy-17186719616
             with our comprehensive APIs and documentation.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

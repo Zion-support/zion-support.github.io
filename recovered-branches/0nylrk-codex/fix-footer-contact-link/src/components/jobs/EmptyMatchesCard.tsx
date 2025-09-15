@@ -1,22 +1,14 @@
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { SparklesRefreshCcw } from "lucide-react";
-=======
 import { Sparkles, RefreshCcw } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 
 export interface EmptyMatchesCardProps {
   onRefresh: () => void;
   isProcessing: boolean;
 }
 
-<<<<<<< HEAD
-export function EmptyMatchesCard({ onRefreshisProcessing }: EmptyMatchesCardProps) {
-=======
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">

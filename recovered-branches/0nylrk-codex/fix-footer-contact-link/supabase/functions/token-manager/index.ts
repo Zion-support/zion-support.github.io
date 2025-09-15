@@ -18,13 +18,9 @@ serve(async (req) => {
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
-<<<<<<< HEAD
-        'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}});
-=======
         'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
       },
     });
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   const url = new URL(req.url);
@@ -76,12 +72,8 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     user_id: userId,
     amount: Math.abs(delta),
     transaction_type: type,
-<<<<<<< HEAD
-    reason});
-=======
     reason,
   });
->>>>>>> origin/auto/autonomy-17186719616
   if (txError) return new Response(JSON.stringify({ error: txError.message }), { status: 500 });
 
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 });

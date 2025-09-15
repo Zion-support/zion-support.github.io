@@ -1,11 +1,5 @@
-
-<<<<<<< HEAD
-import React from "react",
-=======
 import React from "react";
->>>>>>> origin/auto/autonomy-17186719616
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
-
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
     {
@@ -33,12 +27,7 @@ export const MobileFeatureShowcase: React.FC = () => {
       title: "Biometric Security",
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <section id="features" className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -50,7 +39,6 @@ export const MobileFeatureShowcase: React.FC = () => {
             The Zion mobile app brings the power of our AI marketplace to your pocket with these key features
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <div 
@@ -67,10 +55,5 @@ export const MobileFeatureShowcase: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import Link from 'next/link',
-=======
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
 
 const FiveGTechnologyAndItsImpactOnIotChat = () => {
   return (
@@ -21,14 +16,7 @@ const FiveGTechnologyAndItsImpactOnIotChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
-<<<<<<< HEAD
-  ),
-},
-
-export default Chat5gTechnologyAndItsImpactOnIotChat,
-=======
   );
 };
 
 export default Chat5gTechnologyAndItsImpactOnIotChat;
->>>>>>> origin/auto/autonomy-17186719616

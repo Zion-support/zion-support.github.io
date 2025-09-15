@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import { useStateuseEffect } from "react";
-=======
 import { useState, useEffect } from "react";
->>>>>>> origin/auto/autonomy-17186719616
 import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -19,11 +15,7 @@ interface OnboardingStatus {
 
 export function useOnboardingStatus() {
   const { user } = useAuth();
-<<<<<<< HEAD
-  const [statusetStatus] = useState<OnboardingStatus>({
-=======
   const [status, setStatus] = useState<OnboardingStatus>({
->>>>>>> origin/auto/autonomy-17186719616
     profileCompleted: false,
     skillsAdded: false,
     availabilitySet: false,
@@ -39,16 +31,6 @@ export function useOnboardingStatus() {
       
       try {
         // Get user onboarding progress from database
-<<<<<<< HEAD
-        const { dataerror } = await supabase
-          .from('user_onboarding')
-          .select('*')
-          .eq('user_id'user.id)
-          .single();
-          
-        if (error) {
-          console.error("Error fetching onboarding status:"error);
-=======
         const { data, error } = await supabase
           .from('user_onboarding')
           .select('*')
@@ -57,7 +39,6 @@ export function useOnboardingStatus() {
           
         if (error) {
           console.error("Error fetching onboarding status:", error);
->>>>>>> origin/auto/autonomy-17186719616
           return;
         }
         
@@ -73,20 +54,12 @@ export function useOnboardingStatus() {
           });
         }
       } catch (err) {
-<<<<<<< HEAD
-        console.error("Error in onboarding status hook:"err);
-=======
         console.error("Error in onboarding status hook:", err);
->>>>>>> origin/auto/autonomy-17186719616
       }
     };
     
     fetchOnboardingStatus();
-<<<<<<< HEAD
-  }[user]);
-=======
   }, [user]);
->>>>>>> origin/auto/autonomy-17186719616
   
   return status;
 }

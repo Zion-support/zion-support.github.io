@@ -1,46 +1,3 @@
-
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO",
-import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { useState, useEffect } from "react",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Star, AlertTriangle } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { logErrorToProduction } from '@/utils/productionLogger',
-
-function ReviewsModerationContent() {
-  const [activeTab, setActiveTab] = useState("pending"),
-  const [reviews, setReviews] = useState([]),
-  const [isLoading, setIsLoading] = useState(true),
-  
-  const fetchReviews = async () => {
-    setIsLoading(true),
-    try {
-      // In a real application, you would fetch reviews from an API
-      // For now, let's simulate a delay and return empty data
-      await new Promise(resolve => setTimeout(resolve, 1000)),
-      setReviews([]),
-      setIsLoading(false),
-    } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' }),
-      toast({
-        title: "Error",
-        description: "Failed to load reviews. Please try again later.",
-        variant: "destructive"}),
-      setIsLoading(false),
-    }
-  },
-
-  useEffect(() => {
-    fetchReviews(),
-  }, [activeTab]),
-
-  const handleRefresh = () => {
-    fetchReviews(),
-  },
-=======
 import { SEO } from "@/components/SEO";
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -50,12 +7,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Star, AlertTriangle } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { logErrorToProduction } from '@/utils/productionLogger';
-
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  
   const fetchReviews = async () => {
     setIsLoading(true);
     try {
@@ -74,16 +29,12 @@ function ReviewsModerationContent() {
       setIsLoading(false);
     }
   };
-
   useEffect(() => {
     fetchReviews();
   }, [activeTab]);
-
   const handleRefresh = () => {
     fetchReviews();
   };
->>>>>>> origin/auto/autonomy-17186719616
-  
   return (
     <>
       <SEO
@@ -97,7 +48,6 @@ function ReviewsModerationContent() {
             <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>
           </div>
         </div>
-        
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -114,7 +64,6 @@ function ReviewsModerationContent() {
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
               </TabsList>
-              
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable 
                   reviews={reviews}
@@ -122,7 +71,6 @@ function ReviewsModerationContent() {
                   onRefresh={handleRefresh}
                 />
               </TabsContent>
-              
               <TabsContent value="reported" className="mt-0">
                 <div className="text-center py-12 border rounded-lg">
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
@@ -137,21 +85,12 @@ function ReviewsModerationContent() {
         </Card>
       </main>
     </>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
-
 export default function ReviewsModeration() {
   return (
     <ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

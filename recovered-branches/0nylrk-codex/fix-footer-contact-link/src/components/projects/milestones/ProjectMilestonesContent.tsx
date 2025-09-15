@@ -1,19 +1,11 @@
 
-<<<<<<< HEAD
-import React{ useStateuseEffect } from 'react';
-=======
 import React, { useState, useEffect } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import { useParams } from 'react-router-dom';
 import { useProjects } from '@/hooks/useProjects';
 import { useMilestones } from '@/hooks/useMilestones';
 import { useJobDetails } from '@/hooks/useJobDetails';
 import { useAuth } from '@/hooks/useAuth';
-<<<<<<< HEAD
-import { TabsContentTabsListTabsTrigger } from '@/components/ui/tabs';
-=======
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
->>>>>>> origin/auto/autonomy-17186719616
 import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 
 import { 
@@ -29,15 +21,9 @@ export function ProjectMilestonesContent() {
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const { 
-<<<<<<< HEAD
-    milestones
-    activities,
-    isLoading: milestonesLoading
-=======
     milestones, 
     activities,
     isLoading: milestonesLoading, 
->>>>>>> origin/auto/autonomy-17186719616
     createMilestone,
     updateMilestoneStatus,
     deleteMilestone,
@@ -45,21 +31,12 @@ export function ProjectMilestonesContent() {
     isSubmitting,
     refetch
   } = useMilestones(projectId);
-<<<<<<< HEAD
-  const [projectsetProject] = useState<any>(null);
-  const [isLoadingsetIsLoading] = useState(true);
-  const [activeTabsetActiveTab] = useState('milestones');
-  const { jobisLoading: jobLoading } = useJobDetails(project?.job_id);
-  
-  const { isUnderDisputedisputeId } = useDisputeCheck(projectId);
-=======
   const [project, setProject] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('milestones');
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id);
   
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
->>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     async function loadProject() {
@@ -72,11 +49,7 @@ export function ProjectMilestonesContent() {
           setProject(projectData);
         }
       } catch (error) {
-<<<<<<< HEAD
-        console.error("Error loading project:"error);
-=======
         console.error("Error loading project:", error);
->>>>>>> origin/auto/autonomy-17186719616
       } finally {
         setIsLoading(false);
       }
@@ -84,11 +57,7 @@ export function ProjectMilestonesContent() {
     
     loadProject();
     refetch();
-<<<<<<< HEAD
-  }[projectIdgetProjectByIdrefetch]);
-=======
   }, [projectId, getProjectById, refetch]);
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleMilestoneCreated = async () => {
     await refetch();

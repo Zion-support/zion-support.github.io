@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-name: codeql-analysis
-on:
-  workflow_dispatch: {}
-  schedule:
-  - cron: '0 2 * * *'
-permissions:
-  contents: read
-  actions: read
-  
-concurrency:
-  group: codeql-analysis-\${{ github.ref }}
-  cancel-in-progress: false
-jobs:
-  main:
-    name: Codeql Analysis Job
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-=======
 name: CodeQL
-
 on:
   push:
     branches: [ main ]
@@ -26,11 +6,9 @@ on:
     branches: [ main ]
   schedule:
     - cron: '0 2 * * 1'
-
 permissions:
   contents: read
   security-events: write
-
 jobs:
   analyze:
     runs-on: ubuntu-latest
@@ -41,8 +19,6 @@ jobs:
       fail-fast: false
       matrix:
         language: [ 'javascript' ]
-
->>>>>>> origin/auto/autonomy-17186719616
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

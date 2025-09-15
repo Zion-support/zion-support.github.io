@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Loader, Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { useForm } from "react-hook-form",
-import z from "zod",
-import { zodResolver } from "@hookform/resolvers/zod",
-import {logErrorToProduction} from '@/utils/productionLogger',
-=======
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -26,84 +11,28 @@ import { useForm } from "react-hook-form";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/auto/autonomy-17186719616
-
-
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
-<<<<<<< HEAD
-  targetAudience: z.string()}),
-
-const form_schema = z.object ({
-  title: z.string ().min (3, "Title must be at least 3 characters");
-  key_features: z.string (),
-  target_audience: z.string ()}),
-type FormData = z.infer < typeof form_schema>;
-      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high - quality solutions tailored to your specific needs.";
-;
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Loader, Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { useForm } from "react-hook-form",
-import z from "zod",
-import { zodResolver } from "@hookform/resolvers/zod",
-import {logErrorToProduction} from '@/utils/productionLogger',
-const formSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters"),
-  keyFeatures: z.string(),
-  targetAudience: z.string()}),
-
-
-type FormData = z.infer<typeof formSchema>,
-
-interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void
-}
-
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-  const { toast } = useToast(),
-  const [isLoading, setIsLoading] = useState(false),
-=======
   targetAudience: z.string(),
 });
-
 type FormData = z.infer<typeof formSchema>;
-
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void;
 }
-
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
-  
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       title: "",
       keyFeatures: "",
-<<<<<<< HEAD
-      targetAudience: ""}}),
-
-  const handleSubmit = async (data: FormData) => {
-    setIsLoading(true),
-=======
       targetAudience: "",
     },
   });
-
   const handleSubmit = async (data: FormData) => {
     setIsLoading(true);
->>>>>>> origin/auto/autonomy-17186719616
-    
     try {
       const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
         body: { 
@@ -111,66 +40,30 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
           keyFeatures: data.keyFeatures, 
           targetAudience: data.targetAudience 
         }
-<<<<<<< HEAD
-      }),
-
-      if (error) {
-        throw new Error(error.message),
-      }
-      
-      if (response && (response as any).error) {
-        throw new Error((response as any).error),
-      }
-
-      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.",
-      
-      onDescriptionGenerated(description),
-=======
       });
-
       if (error) {
         throw new Error(error.message);
       }
-      
       if (response && (response as any).error) {
         throw new Error((response as any).error);
       }
-
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";
-      
       onDescriptionGenerated(description);
->>>>>>> origin/auto/autonomy-17186719616
-      
       toast({
         title: "Description Generated",
         description: "Your professional service description has been created."
-<<<<<<< HEAD
-      }),
-    } catch (error) {
-      logErrorToProduction('Error generating description:', { data: error }),
-=======
       });
     } catch (error) {
       logErrorToProduction('Error generating description:', { data: error });
->>>>>>> origin/auto/autonomy-17186719616
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",
         variant: "destructive"
-<<<<<<< HEAD
-      }),
-    } finally {
-      setIsLoading(false),
-    }
-  },
-=======
       });
     } finally {
       setIsLoading(false);
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
-
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -203,7 +96,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                 </FormItem>
               )}
             />
-            
             <FormField
               control={form.control}
               name="keyFeatures"
@@ -222,7 +114,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                 </FormItem>
               )}
             />
-            
             <FormField
               control={form.control}
               name="targetAudience"
@@ -241,7 +132,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                 </FormItem>
               )}
             />
-            
             <Button 
               type="submit"
               disabled={isLoading}
@@ -263,9 +153,5 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         </Form>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
