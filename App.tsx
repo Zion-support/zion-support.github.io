@@ -18,6 +18,10 @@ import AIInnovationPlaybook2025 from './src/pages/AIInnovationPlaybook2025';
 import TechnologyInsights2025 from './src/pages/TechnologyInsights2025';
 import AITransformationGuide2025 from './src/pages/AITransformationGuide2025';
 import QuantumComputingSolutions2025 from './src/pages/QuantumComputingSolutions2025';
+import RevolutionaryTechSolutions2025 from './src/pages/RevolutionaryTechSolutions2025';
+import AIBusinessTransformation2025 from './src/pages/AIBusinessTransformation2025';
+import UltimateTechTrends2025 from './src/pages/UltimateTechTrends2025';
+import NewContentPromotionalBanner from './src/components/NewContentPromotionalBanner';
 import './src/index.css';
 
 export default function App(): JSX.Element {
@@ -31,6 +35,9 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* New Content Promotional Banner */}
+                <NewContentPromotionalBanner />
+                
                 {/* Promotional Banner */}
                 <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 mb-8 text-white text-center">
                   <div className="flex items-center justify-center space-x-2 mb-2">
@@ -335,6 +342,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/TechnologyInsights2025" element={<TechnologyInsights2025 />} />
           <Route path="/pages/AITransformationGuide2025" element={<AITransformationGuide2025 />} />
           <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
+          <Route path="/pages/RevolutionaryTechSolutions2025" element={<RevolutionaryTechSolutions2025 />} />
+          <Route path="/pages/AIBusinessTransformation2025" element={<AIBusinessTransformation2025 />} />
+          <Route path="/pages/UltimateTechTrends2025" element={<UltimateTechTrends2025 />} />
           <Route path="/pages/NewAIUseCases2025" element={<NewAIUseCases2025 />} />
           <Route path="/pages/EdgeAIandIoT2025" element={<EdgeAIandIoT2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
