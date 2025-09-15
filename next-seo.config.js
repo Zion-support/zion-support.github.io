@@ -5,7 +5,11 @@ const config = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
+<<<<<<< HEAD
     url: 'https://ziontechgroup.com',
+=======
+    url: 'https://app.ziontechgroup.com',
+>>>>>>> origin/auto/autonomy-17186719616
     siteName: 'Zion Tech Marketplace',
     images: [
       {

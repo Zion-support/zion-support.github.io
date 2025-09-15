@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react",
 import { useRouter } from 'next/router',
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
@@ -12,6 +13,22 @@ interface MobileHeaderProps {
   className?: string,
   onNotificationsClick?: () => void,
   onSettingsClick?: () => void
+=======
+import React from "react";
+import { useRouter } from 'next/router';
+import { ChevronLeft, Bell, Settings } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+
+interface MobileHeaderProps {
+  title: string;
+  showBack?: boolean;
+  showNotifications?: boolean;
+  showSettings?: boolean;
+  className?: string;
+  onNotificationsClick?: () => void;
+  onSettingsClick?: () => void;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function MobileHeader({
@@ -21,8 +38,14 @@ export function MobileHeader({
   showSettings = false,
   className,
   onNotificationsClick,
+<<<<<<< HEAD
   onSettingsClick}: MobileHeaderProps) {
   const router = useRouter(),
+=======
+  onSettingsClick,
+}: MobileHeaderProps) {
+  const router = useRouter();
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <header className={cn(
@@ -32,12 +55,15 @@ export function MobileHeader({
       <div className="flex items-center justify-between h-14 px-4">
         <div className="flex items-center">
           {showBack && (
+<<<<<<< HEAD
             <Button
               variant="ghost"
               size="icon"
               className="mr-2"
               onClick = {(,) => router.back(),}
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
             <Button 
               variant="ghost" 
               size="icon" 
@@ -76,5 +102,9 @@ export function MobileHeader({
         </div>
       </div>
     </header>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

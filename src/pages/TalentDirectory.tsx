@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import Link from 'next/link',
@@ -14,12 +15,31 @@ import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button',
 import Image from 'next/image',
 import { TalentProfile } from '@/types/talent',
+=======
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'; // Changed from useNavigate
+import Link from 'next/link';
+import { useAuth } from '@/hooks/useAuth';
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
+import { FilterSidebar } from '@/components/talent/FilterSidebar';
+import { TalentResults } from '@/components/talent/TalentResults';
+import { TalentSkeleton } from '@/components/talent/TalentSkeleton';
+import { ErrorBanner } from '@/components/talent/ErrorBanner';
+import ErrorBoundary from '@/components/GlobalErrorBoundary'; // Import ErrorBoundary
+import { useTalentDirectory } from '@/hooks/useTalentDirectory';
+import { SORT_OPTIONS } from '@/data/sortOptions';
+import { X } from 'lucide-react'
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import { TalentProfile } from '@/types/talent';
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationButton,
   PaginationNext,
+<<<<<<< HEAD
   PaginationPrevious} from '@/components/ui/pagination',
 
 export default function TalentDirectory() {
@@ -33,6 +53,22 @@ export default function TalentDirectory() {
     setInitialized(false),
     setCurrentPage(1),
   }),
+=======
+  PaginationPrevious,
+} from '@/components/ui/pagination';
+
+export default function TalentDirectory() {
+  const router = useRouterReady(); // Use our custom hook
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+  const [initialized, setInitialized] = useState(false);
+
+  // Force re-render and reset state when route changes
+  const routeKey = useRouteChange(() => {
+    setInitialized(false);
+    setCurrentPage(1);
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Use our custom hook to manage state
   const {
@@ -63,6 +99,7 @@ export default function TalentDirectory() {
     toggleAvailability,
     toggleRegion,
     clearFilters,
+<<<<<<< HEAD
     toggleSection} = useTalentDirectory(currentPage, itemsPerPage),
 
   const { user } = useAuth(),
@@ -78,6 +115,24 @@ export default function TalentDirectory() {
   // Load filters from query parameters on first load
   useEffect(() => {
     if (!router.isReady || initialized) return,
+=======
+    toggleSection,
+  } = useTalentDirectory(currentPage, itemsPerPage);
+
+  const { user } = useAuth();
+  const isAdmin = user?.userType === 'admin';
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filteredTalents, total]);
+
+  const totalPages = Math.ceil(total / itemsPerPage);
+  const paginatedTalents = filteredTalents;
+
+  // Load filters from query parameters on first load
+  useEffect(() => {
+    if (!router.isReady || initialized) return;
+>>>>>>> origin/auto/autonomy-17186719616
     
     const {
       search,
@@ -89,6 +144,7 @@ export default function TalentDirectory() {
       expMin,
       expMax,
       sort,
+<<<<<<< HEAD
       page} = router.query as Record<string string>,
 
     if (page) setCurrentPage(parseInt(page, 10) || 1),
@@ -129,6 +185,50 @@ export default function TalentDirectory() {
     
     router.replace({ pathname: router.pathname, query }, undefined, {
       shallow: true}),
+=======
+      page,
+    } = router.query as Record<string, string>;
+
+    if (page) setCurrentPage(parseInt(page, 10) || 1);
+    if (search) setSearchTerm(search);
+    if (skills) skills.split(',').forEach((s) => toggleSkill(s));
+    if (availability)
+      availability.split(',').forEach((a) => toggleAvailability(a));
+    if (regions) regions.split(',').forEach((r) => toggleRegion(r));
+    if (priceMin && priceMax)
+      setPriceRange([Number(priceMin), Number(priceMax)]);
+    if (expMin && expMax)
+      setExperienceRange([Number(expMin), Number(expMax)]);
+    if (sort && SORT_OPTIONS.some((o) => o.value === sort))
+      setSortOption(sort);
+    setInitialized(true);
+  }, [router.isReady, router.query, initialized]); // Fixed dependencies
+
+  // Persist filters to query parameters
+  useEffect(() => {
+    if (!initialized || !router.isReady) return;
+    
+    const query: Record<string, string> = {};
+    if (searchTerm) query.search = searchTerm;
+    if (selectedSkills.length) query.skills = selectedSkills.join(',');
+    if (selectedAvailability.length)
+      query.availability = selectedAvailability.join(',');
+    if (selectedRegions.length) query.regions = selectedRegions.join(',');
+    if (priceRange[0] !== 50 || priceRange[1] !== 200) {
+      query.priceMin = String(priceRange[0]);
+      query.priceMax = String(priceRange[1]);
+    }
+    if (experienceRange[0] !== 0 || experienceRange[1] !== 15) {
+      query.expMin = String(experienceRange[0]);
+      query.expMax = String(experienceRange[1]);
+    }
+    if (sortOption !== 'relevance') query.sort = sortOption;
+    if (currentPage > 1) query.page = String(currentPage);
+    
+    router.replace({ pathname: router.pathname, query }, undefined, {
+      shallow: true,
+    });
+>>>>>>> origin/auto/autonomy-17186719616
   }, [
     router.isReady,
     searchTerm,
@@ -139,6 +239,7 @@ export default function TalentDirectory() {
     experienceRange,
     sortOption,
     currentPage,
+<<<<<<< HEAD
     initialized]), // Fixed dependencies
 
   const handleRequestHire = (talent: TalentProfile) => {
@@ -153,12 +254,30 @@ export default function TalentDirectory() {
 
   // Add key prop to force re-render when route changes
   const pageKey = `talent-directory-${routeKey}-${router.asPath}`,
+=======
+    initialized,
+  ]); // Fixed dependencies
+
+  const handleRequestHire = (talent: TalentProfile) => {
+    setSelectedTalent(talent);
+    setIsHireModalOpen(true);
+  };
+
+  const viewProfile = (id: string) => {
+    // Navigate to the talent profile page
+    router.push(`/talent/${id}`); // Changed to router.push
+  };
+
+  // Add key prop to force re-render when route changes
+  const pageKey = `talent-directory-${routeKey}-${router.asPath}`;
+>>>>>>> origin/auto/autonomy-17186719616
 
   if (isLoading) {
     return (
       <div key={pageKey} className="container mx-auto px-4 py-8">
         <TalentSkeleton />
       </div>
+<<<<<<< HEAD
     ),
   }
 
@@ -174,15 +293,30 @@ export default function TalentDirectory() {
   // Condition for "Talent Directory Truly Empty"
   if (
     // !isLoading is implied as we passed the first check
+=======
+    );
+  }
+
+  if (
+    !isLoading &&
+    !error &&
+>>>>>>> origin/auto/autonomy-17186719616
     filteredTalents.length === 0 &&
     !searchTerm &&
     selectedSkills.length === 0 &&
     selectedAvailability.length === 0 &&
     selectedRegions.length === 0 &&
+<<<<<<< HEAD
     priceRange[0] === 50 && // Assuming these are the correct initial default values
     priceRange[1] === 200 && // from useFilterTalents
     experienceRange[0] === 0 && // from useFilterTalents
     experienceRange[1] === 15 // from useFilterTalents
+=======
+    priceRange[0] === 50 &&
+    priceRange[1] === 200 &&
+    experienceRange[0] === 0 &&
+    experienceRange[1] === 15
+>>>>>>> origin/auto/autonomy-17186719616
   ) {
     return (
       <div key={pageKey} className="container mx-auto px-4 py-8">
@@ -207,7 +341,11 @@ export default function TalentDirectory() {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
     ),
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   if (error) {
@@ -215,7 +353,11 @@ export default function TalentDirectory() {
       <div key={pageKey} className="container mx-auto px-4 py-8">
         <ErrorBanner msg="Unable to load talent profiles." />
       </div>
+<<<<<<< HEAD
     ),
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -300,7 +442,12 @@ export default function TalentDirectory() {
                   setPriceRange,
                   experienceRange,
                   setExperienceRange,
+<<<<<<< HEAD
                   clearFilters}}
+=======
+                  clearFilters,
+                }}
+>>>>>>> origin/auto/autonomy-17186719616
               />
 
               {totalPages > 1 && (
@@ -311,8 +458,13 @@ export default function TalentDirectory() {
                         <PaginationPrevious
                           href={`?page=${currentPage - 1}`}
                           onClick={(e) => {
+<<<<<<< HEAD
                             e.preventDefault(),
                             setCurrentPage(Math.max(1, currentPage - 1)),
+=======
+                            e.preventDefault();
+                            setCurrentPage(Math.max(1, currentPage - 1));
+>>>>>>> origin/auto/autonomy-17186719616
                           }}
                         />
                       </PaginationItem>
@@ -323,8 +475,13 @@ export default function TalentDirectory() {
                               page={page}
                               isActive={page === currentPage}
                               onClick={(e) => {
+<<<<<<< HEAD
                                 e.preventDefault(),
                                 setCurrentPage(page),
+=======
+                                e.preventDefault();
+                                setCurrentPage(page);
+>>>>>>> origin/auto/autonomy-17186719616
                               }}
                             />
                           </PaginationItem>
@@ -334,10 +491,17 @@ export default function TalentDirectory() {
                         <PaginationNext
                           href={`?page=${currentPage + 1}`}
                           onClick={(e) => {
+<<<<<<< HEAD
                             e.preventDefault(),
                             setCurrentPage(
                               Math.min(totalPages, currentPage + 1)
                             ),
+=======
+                            e.preventDefault();
+                            setCurrentPage(
+                              Math.min(totalPages, currentPage + 1)
+                            );
+>>>>>>> origin/auto/autonomy-17186719616
                           }}
                         />
                       </PaginationItem>
@@ -390,5 +554,9 @@ export default function TalentDirectory() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

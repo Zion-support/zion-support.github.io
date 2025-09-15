@@ -1,4 +1,8 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export interface Revolutionary2026AIAutomationService {
   id: string;
   name: string;
@@ -39,6 +43,10 @@ export interface Revolutionary2026AIAutomationService {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomationService[] = [
   // AI Consciousness Orchestration Platform
   {
@@ -92,6 +100,10 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     rating: 4.9,
     reviews: 89
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
   // Autonomous AI Business Ecosystem
   {
     id: 'autonomous-ai-business-ecosystem',
@@ -144,6 +156,10 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     rating: 4.8,
     reviews: 156
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
   // Quantum AI Memory Fabric
   {
     id: 'quantum-ai-memory-fabric',
@@ -196,6 +212,10 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     rating: 4.9,
     reviews: 67
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
   // AI Time Manipulation Platform
   {
     id: 'ai-time-manipulation-platform',
@@ -248,6 +268,10 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     rating: 4.9,
     reviews: 45
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
   // Neural Interface Development Platform
   {
     id: 'neural-interface-development-platform',

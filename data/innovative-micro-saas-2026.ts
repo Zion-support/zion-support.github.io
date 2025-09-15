@@ -1,4 +1,8 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export interface InnovativeMicroSaas2026 {
   id: string;
   name: string;
@@ -39,12 +43,20 @@ export interface InnovativeMicroSaas2026 {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
   {
     id: 'ai-powered-customer-feedback-analyzer',

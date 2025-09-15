@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const ProductManagementChat = () => {
   return (
@@ -16,7 +21,14 @@ const ProductManagementChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
+<<<<<<< HEAD
   ),
 },
 
 export default ProductManagementChat,
+=======
+  );
+};
+
+export default ProductManagementChat;
+>>>>>>> origin/auto/autonomy-17186719616

@@ -22,6 +22,10 @@ export type InnovativeMicroSaas = {
 	rating?: number;
 	launchDate?: string;
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	{
 		id: 'podcast-transcription-seo-suite',

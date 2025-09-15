@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import { Input } from "@/components/ui/input",
 import { SearchIcon } from 'lucide-react'
 import { SearchFilterProps } from "@/types/filters",
+=======
+import { Input } from "@/components/ui/input";
+import { SearchIcon } from 'lucide-react'
+import { SearchFilterProps } from "@/types/filters";
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
   return (
@@ -14,8 +20,13 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           id="talent-search"
           type="text"
           placeholder="Search talents..."
+<<<<<<< HEAD
           value = {searchTerm,}
           onChange = {(e,) => setSearchTerm(e.target.value),}
+=======
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+>>>>>>> origin/auto/autonomy-17186719616
           aria-describedby="talent-search-help"
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light"
         />
@@ -24,5 +35,9 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
         </p>
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

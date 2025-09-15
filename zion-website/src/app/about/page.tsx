@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -26,10 +27,21 @@ const values = [;
   RocketLaunchIcon
 } from '@heroicons/react/24/outline'
 import React from 'react';
+=======
+import { 
+  UserGroupIcon, 
+  LightBulbIcon, 
+  GlobeAltIcon, 
+  ShieldCheckIcon,
+  AcademicCapIcon,
+  RocketLaunchIcon
+} from '@heroicons/react/24/outline'
+>>>>>>> origin/auto/autonomy-17186719616
 
 const values = [
   {
     name: 'Innovation First',
+<<<<<<< HEAD
     description: 'We push the boundaries of what's possibleconstantly exploring new frontiers in AI and technology.',
     icon: LightBulbIcon},
   {
@@ -51,10 +63,40 @@ const team = [;
     role: 'Chief Executive Officer',
     bio: 'Former AI researcher at Stanfordleading Zion Tech Group's vision for the future of technology.',
     image: '/images / team / sarah - chen.jpg'},
+=======
+    description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.',
+    icon: LightBulbIcon,
+  },
+  {
+    name: 'Global Impact',
+    description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.',
+    icon: GlobeAltIcon,
+  },
+  {
+    name: 'Trust & Security',
+    description: 'We maintain the highest standards of security and ethical AI development.',
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: 'Research Excellence',
+    description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.',
+    icon: AcademicCapIcon,
+  },
+]
+
+const team = [
+  {
+    name: 'Dr. Sarah Chen',
+    role: 'Chief Executive Officer',
+    bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision for the future of technology.',
+    image: '/images/team/sarah-chen.jpg',
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   {
     name: 'Dr. Marcus Rodriguez',
     role: 'Chief Technology Officer',
     bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.',
+<<<<<<< HEAD
     image: '/images / team / marcus - rodriguez.jpg'},
   {
     name: 'Dr. Elena Petrov',
@@ -253,6 +295,23 @@ const team = [;
     role: 'Chief Operations Officer'
     bio: 'Former Fortune 500 executivespecializing in scaling AI operations and enterprise deployment.'
     image: '/images/team/james-kim.jpg'}]
+=======
+    image: '/images/team/marcus-rodriguez.jpg',
+  },
+  {
+    name: 'Dr. Elena Petrov',
+    role: 'Head of Research',
+    bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.',
+    image: '/images/team/elena-petrov.jpg',
+  },
+  {
+    name: 'James Kim',
+    role: 'Chief Operations Officer',
+    bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.',
+    image: '/images/team/james-kim.jpg',
+  },
+]
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function AboutPage() {
   return (
@@ -268,12 +327,20 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
               We are pioneers in artificial intelligencequantum computingand autonomous systems
+=======
+              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
+>>>>>>> origin/auto/autonomy-17186719616
               dedicated to transforming industries and advancing human potential through technology.
             </p>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
       {/* Mission & Vision */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -300,13 +367,22 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-white">Our Vision</h3>
               </div>
               <p className="text-gray-300">
+<<<<<<< HEAD
                 A future where AI and technology seamlessly enhance human capabilitiescreating a more 
                 intelligentefficientand sustainable world for generations to come.
+=======
+                A future where AI and technology seamlessly enhance human capabilities, creating a more 
+                intelligent, efficient, and sustainable world for generations to come.
+>>>>>>> origin/auto/autonomy-17186719616
               </p>
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
       {/* Company Story */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -318,11 +394,16 @@ export default function AboutPage() {
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
             <p className="text-lg text-gray-300 mb-6">
+<<<<<<< HEAD
               Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs
+=======
+              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, 
+>>>>>>> origin/auto/autonomy-17186719616
               Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge 
               research and real-world applications.
             </p>
             <p className="text-lg text-gray-300 mb-6">
+<<<<<<< HEAD
               What started as a small research lab has grown into a global technology powerhouse
               with offices in Silicon ValleyLondonTokyoand Singapore. Our team of 200+ 
               researchersengineersand business professionals work tirelessly to push the 
@@ -331,11 +412,25 @@ export default function AboutPage() {
             <p className="text-lg text-gray-300">
               Todaywe serve over 1,000 clients worldwidefrom Fortune 500 companies to innovative 
               startupshelping them harness the power of AI to transform their operations and 
+=======
+              What started as a small research lab has grown into a global technology powerhouse, 
+              with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ 
+              researchers, engineers, and business professionals work tirelessly to push the 
+              boundaries of what's possible.
+            </p>
+            <p className="text-lg text-gray-300">
+              Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative 
+              startups, helping them harness the power of AI to transform their operations and 
+>>>>>>> origin/auto/autonomy-17186719616
               accelerate their growth.
             </p>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
       {/* Values */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -357,6 +452,7 @@ export default function AboutPage() {
                 </dd>
               </div>
             ))}
+<<<<<<< HEAD
           </dl>;
         </div>;
       </div>;
@@ -463,6 +559,13 @@ export default function AboutPage() {
       </div>;
     </div>);
 }
+=======
+          </dl>
+        </div>
+      </div>
+
+      {/* Leadership Team */}
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
@@ -470,7 +573,11 @@ export default function AboutPage() {
             Meet Our Team
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
             World-class researchersengineersand business leaders driving innovation at Zion Tech Group.
+=======
+            World-class researchers, engineers, and business leaders driving innovation at Zion Tech Group.
+>>>>>>> origin/auto/autonomy-17186719616
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -499,8 +606,14 @@ export default function AboutPage() {
               </div>
             </article>
           ))}
+<<<<<<< HEAD
         </div>;
       </div>;
+=======
+        </div>
+      </div>
+
+>>>>>>> origin/auto/autonomy-17186719616
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -517,15 +630,27 @@ export default function AboutPage() {
               className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
             >
               Get in Touch
+<<<<<<< HEAD
             </Link>
             <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Careers <span aria-hidden="true">→</span>
             </Link>
+=======
+            </a>
+            <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              View Careers <span aria-hidden="true">→</span>
+            </a>
+>>>>>>> origin/auto/autonomy-17186719616
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 };
 
 export default Page;
+=======
+  )
+}
+>>>>>>> origin/auto/autonomy-17186719616

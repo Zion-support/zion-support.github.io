@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
@@ -15,6 +16,25 @@ export default function HomePage() {
   useEffect(() => {
     setIsVisible(true),
   }, []),
+=======
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  ExternalLink
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
+import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
+
+export default function HomePage() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const services = [
     {
@@ -86,6 +106,10 @@ export default function HomePage() {
             }
           })}
         </script>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/auto/autonomy-17186719616
       title: "AI Customer Experience",
       description: "Deliver personalized customer experiences with intelligent automation",
       icon: "🤖",
@@ -94,14 +118,22 @@ export default function HomePage() {
       price: "$599/month",
       features: ["Chatbot automation", "Personalized recommendations", "Customer journey optimization"]
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const stats = [
     { number: "500+", label: "Projects Delivered", icon: "✅" },
     { number: "50+", label: "Enterprise Clients", icon: "👥" },
     { number: "99.9%", label: "Uptime Guarantee", icon: "🔒" },
     { number: "24/7", label: "Support Available", icon: "⏰" }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const features = [
     {
@@ -124,7 +156,11 @@ export default function HomePage() {
       description: "24/7 technical support with dedicated account managers",
       icon: "💬"
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -567,7 +603,11 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+=======
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+>>>>>>> origin/auto/autonomy-17186719616
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
@@ -593,5 +633,9 @@ export default function HomePage() {
 
       <EnhancedFooter />
     </>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

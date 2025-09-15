@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react'
@@ -16,6 +17,25 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+=======
+import { useState, useEffect } from "react";
+import { format } from "date-fns";
+import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react'
+import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function WebhooksManager() {
   const {
@@ -28,6 +48,7 @@ export function WebhooksManager() {
     deleteWebhook,
     testWebhook,
     clearTestResult
+<<<<<<< HEAD
   } = useWebhooks(),
   
   const [showCreateDialog, setShowCreateDialog] = useState(false),
@@ -49,12 +70,36 @@ export function WebhooksManager() {
 
   const handleCreateWebhook = async () => {
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
+=======
+  } = useWebhooks();
+  
+  const [showCreateDialog, setShowCreateDialog] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
+  const [showTestDialog, setShowTestDialog] = useState<string | null>(null);
+  const [showTestResult, setShowTestResult] = useState(false);
+
+  // Create webhook form state
+  const [webhookName, setWebhookName] = useState("");
+  const [webhookUrl, setWebhookUrl] = useState("");
+  const [webhookSecret, setWebhookSecret] = useState("");
+  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]);
+  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application');
+
+  // Load webhooks on mount
+  useEffect(() => {
+    fetchWebhooks();
+  }, []);
+
+  const handleCreateWebhook = async () => {
+    if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return;
+>>>>>>> origin/auto/autonomy-17186719616
     
     await createWebhook(
       webhookName, 
       webhookUrl, 
       selectedEvents, 
       webhookSecret.trim() === "" ? undefined : webhookSecret
+<<<<<<< HEAD
     ),
     
     setShowCreateDialog(false),
@@ -94,6 +139,42 @@ export function WebhooksManager() {
     currentStatus: boolean;
   ) => {;
     await toggleWebhook(webhookId, !currentStatus);  };
+=======
+    );
+    
+    setShowCreateDialog(false);
+    resetWebhookForm();
+  };
+
+  const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
+    await toggleWebhook(webhookId, !currentStatus);
+  };
+
+  const handleDeleteWebhook = async (webhookId: string) => {
+    await deleteWebhook(webhookId);
+    setShowDeleteConfirm(null);
+  };
+
+  const handleTestWebhook = async (webhookId: string) => {
+    await testWebhook(webhookId, testEventType);
+    setShowTestResult(true);
+  };
+
+  const resetWebhookForm = () => {
+    setWebhookName("");
+    setWebhookUrl("");
+    setWebhookSecret("");
+    setSelectedEvents([]);
+  };
+
+  // Event type options
+  const eventOptions: { value: WebhookEventType; label: string; description: string }[] = [
+    { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },
+    { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },
+    { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },
+    { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' },
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Toggle an event selection
   const toggleEvent = (event: WebhookEventType) => {
@@ -101,8 +182,13 @@ export function WebhooksManager() {
       prev.includes(event) 
         ? prev.filter(e => e !== event) 
         : [...prev, event]
+<<<<<<< HEAD
     ),
   },
+=======
+    );
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -153,7 +239,11 @@ export function WebhooksManager() {
                     id="webhook-url"
                     value={webhookUrl}
                     onChange={(e) => setWebhookUrl(e.target.value)}
+<<<<<<< HEAD
                     placeholder="https: //example.com/webhook"
+=======
+                    placeholder="https://example.com/webhook"
+>>>>>>> origin/auto/autonomy-17186719616
                     className="bg-zinc-800 border-zinc-700"
                   />
                   <p className="text-xs text-zinc-500">
@@ -182,9 +272,12 @@ export function WebhooksManager() {
                   <div className="grid gap-2 pt-2">
                     {eventOptions.map((event) => (
                       <div key={event.value} className="flex items-center space-x-2">
+<<<<<<< HEAD
 
                         <Checkbox
                           id={event.value}
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                         <Checkbox 
                           id={event.value} 
                           checked={selectedEvents.includes(event.value)}
@@ -196,7 +289,10 @@ export function WebhooksManager() {
                         >
                           {event.label}
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
+<<<<<<< HEAD
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                         </Label>
                       </div>
                     ))}
@@ -206,15 +302,24 @@ export function WebhooksManager() {
               
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
+<<<<<<< HEAD
                   setShowCreateDialog(false),
                   resetWebhookForm(),
+=======
+                  setShowCreateDialog(false);
+                  resetWebhookForm();
+>>>>>>> origin/auto/autonomy-17186719616
                 }}>
                   Cancel
                 </Button>
                 <Button onClick={handleCreateWebhook} disabled={
                   webhookName.trim() === "" || 
                   webhookUrl.trim() === "" || 
+<<<<<<< HEAD
                   selectedEvents.length === 0;
+=======
+                  selectedEvents.length === 0
+>>>>>>> origin/auto/autonomy-17186719616
                 }>
                   Create Webhook
                 </Button>
@@ -234,12 +339,15 @@ export function WebhooksManager() {
               <p className="text-sm mt-1">Create one to receive event notifications.</p>
             </div>
           ) : (
+<<<<<<< HEAD
             webhooks.map(webhook => (
               <div
                 key={webhook.id}
                 className='p-4 border border-zinc-800 rounded-lg'
               >
                 <div className='flex items-center justify-between'>              <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
+=======
+>>>>>>> origin/auto/autonomy-17186719616
             webhooks.map((webhook) => (
               <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
                 <div className="flex items-center justify-between">
@@ -250,6 +358,7 @@ export function WebhooksManager() {
                       <span className="max-w-md truncate">{webhook.url}</span>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div className='flex items-center space-x-2'>
                     <div className='flex items-center mr-2'>
                       <Switch
@@ -263,6 +372,8 @@ export function WebhooksManager() {
                       </span>
                     </div>
                     <DropdownMenu>
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                   
                   <div className="flex items-center space-x-2">
                     <div className="flex items-center mr-2">
@@ -317,7 +428,10 @@ export function WebhooksManager() {
                   {webhook.last_triggered_at && (
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>
                   )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                 </div>
               </div>
             ))
@@ -339,11 +453,19 @@ export function WebhooksManager() {
         open={showTestDialog !== null} 
         onOpenChange={(open) => {
           if (!open) {
+<<<<<<< HEAD
             setShowTestDialog(null),
             setTestEventType('new_application'),
             if (showTestResult) {
               setShowTestResult(false),
               clearTestResult(),
+=======
+            setShowTestDialog(null);
+            setTestEventType('new_application');
+            if (showTestResult) {
+              setShowTestResult(false);
+              clearTestResult();
+>>>>>>> origin/auto/autonomy-17186719616
             }
           }
         }}
@@ -365,6 +487,7 @@ export function WebhooksManager() {
                     value={testEventType}
                     onValueChange={(value) => setTestEventType(value as WebhookEventType)}
                   >
+<<<<<<< HEAD
                     <SelectTrigger className='bg-zinc-800 border-zinc-700'>
                       <SelectValue placeholder='Select an event type' />
                     <SelectTrigger className="bg-zinc-800 border-zinc-700">
@@ -376,6 +499,10 @@ export function WebhooksManager() {
 
 
 
+=======
+                    <SelectTrigger className="bg-zinc-800 border-zinc-700">
+                      <SelectValue placeholder="Select an event type" />
+>>>>>>> origin/auto/autonomy-17186719616
                     </SelectTrigger>
                     <SelectContent className="bg-zinc-900 border-zinc-800">
                       {eventOptions.map((option) => (
@@ -383,6 +510,7 @@ export function WebhooksManager() {
                           {option.label}
                         </SelectItem>
                       ))}
+<<<<<<< HEAD
 
                     </SelectContent>;
                   </Select>;
@@ -430,6 +558,10 @@ export function WebhooksManager() {
 
 
 
+=======
+                    </SelectContent>
+                  </Select>
+>>>>>>> origin/auto/autonomy-17186719616
                   <p className="text-xs text-zinc-500">
                     The event type will determine the structure of the test payload.
                   </p>
@@ -466,7 +598,10 @@ export function WebhooksManager() {
                     <Label>Response Body</Label>
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">
+<<<<<<< HEAD
                         {testResult?.responseBody |"No response body"}
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                         {testResult?.responseBody || "No response body"}
                       </pre>
                     </ScrollArea>
@@ -476,15 +611,26 @@ export function WebhooksManager() {
               
               <DialogFooter>
                 <Button variant="default" onClick={() => {
+<<<<<<< HEAD
                   setShowTestDialog(null),
                   setShowTestResult(false),
                   clearTestResult(),
+=======
+                  setShowTestDialog(null);
+                  setShowTestResult(false);
+                  clearTestResult();
+>>>>>>> origin/auto/autonomy-17186719616
                 }}>
                   Close
                 </Button>
                 <Button variant="outline" onClick={() => {
+<<<<<<< HEAD
                   setShowTestResult(false),
                   clearTestResult(),
+=======
+                  setShowTestResult(false);
+                  clearTestResult();
+>>>>>>> origin/auto/autonomy-17186719616
                 }}>
                   Test Another Event
                 </Button>
@@ -513,7 +659,11 @@ export function WebhooksManager() {
             </AlertDialogCancel>
             <AlertDialogAction 
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
+<<<<<<< HEAD
               className="bg-red-600 hover: bg-red-700"
+=======
+              className="bg-red-600 hover:bg-red-700"
+>>>>>>> origin/auto/autonomy-17186719616
             >
               Delete
             </AlertDialogAction>
@@ -521,5 +671,9 @@ export function WebhooksManager() {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

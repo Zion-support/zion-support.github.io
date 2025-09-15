@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { useRouter } from "next/router",
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
@@ -12,6 +13,21 @@ function HiringTrackerContent() {
   const router = useRouter(),
   const jobId = router.query.jobId as string,
   const [activeTab, setActiveTab] = useState<string>("kanban"),
+=======
+import { useState } from "react";
+import { useRouter } from "next/router";
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Briefcase } from 'lucide-react'
+
+function HiringTrackerContent() {
+  const router = useRouter();
+  const jobId = router.query.jobId as string;
+  const [activeTab, setActiveTab] = useState<string>("kanban");
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -48,7 +64,11 @@ function HiringTrackerContent() {
         </Tabs>
       </main>
     </>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export default function HiringTracker() {
@@ -56,5 +76,9 @@ export default function HiringTracker() {
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

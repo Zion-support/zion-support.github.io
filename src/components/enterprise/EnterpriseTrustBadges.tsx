@@ -1,13 +1,20 @@
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
 export function EnterpriseTrustBadges() {
   return (
+<<<<<<< HEAD
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
+=======
+    <section className="py-10 px-4 md:px-6 border-t border-b border-border">
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-8">
           <h3 className="text-xl font-medium mb-2">Enterprise-Grade Security & Compliance</h3>
@@ -33,5 +40,9 @@ export function EnterpriseTrustBadges() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

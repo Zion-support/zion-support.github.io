@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const AutoUpdate20250808t163819257z: NextPage = () => {
   return (
@@ -14,7 +19,14 @@ const AutoUpdate20250808t163819257z: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
   )
 },
 
 export default AutoUpdate20250808t163819257z,
+=======
+  );
+};
+
+export default AutoUpdate20250808t163819257z;
+>>>>>>> origin/auto/autonomy-17186719616

@@ -51,9 +51,13 @@ const BreadcrumbLink = React.forwardRef<
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<"a"> & {
     asChild?: boolean
+<<<<<<< HEAD
 
   }
 
+=======
+  }
+>>>>>>> origin/auto/autonomy-17186719616
 >(({ className, asChild = false, ...props }, ref) => {
   const Comp = asChild ? Slot : "a"
  
@@ -93,6 +97,7 @@ const BreadcrumbEllipsis = ({
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
+<<<<<<< HEAD
 
     &#8230,
   </span>;
@@ -106,6 +111,9 @@ const BreadcrumbEllipsis = ({
     {...props}
   >
     &#8230,
+=======
+    &#8230;
+>>>>>>> origin/auto/autonomy-17186719616
   </span>
 )
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
@@ -116,8 +124,13 @@ export {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
+<<<<<<< HEAD
 
 
 
   BreadcrumbEllipsis}
   BreadcrumbEllipsis}
+=======
+  BreadcrumbEllipsis,
+}
+>>>>>>> origin/auto/autonomy-17186719616

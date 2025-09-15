@@ -1,7 +1,11 @@
 
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+<<<<<<< HEAD
 import { HomeSearchBriefcaseIconMessageSquareUserXMessageCircle } from "lucide-react";
+=======
+import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -11,7 +15,11 @@ export interface MobileMenuProps {
   onClose: () => void;
 }
 
+<<<<<<< HEAD
 export function MobileMenu({ unreadCount = 0onClose }: MobileMenuProps) {
+=======
+export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;

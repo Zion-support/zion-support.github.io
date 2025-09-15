@@ -1,12 +1,17 @@
 
 import { GradientHeading } from "./GradientHeading";
+<<<<<<< HEAD
 import { ServerHardDriveNetworkClockRecycleTruck } from "@/components/icons";
+=======
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "./ui/button";
 
 const services = [
   {
     title: "Servers",
     description: "Enterprise-grade servers for any workload with 24/7 maintenance and support",
+<<<<<<< HEAD
     icon: <Server className="h-10 w-10" />},
   {
     title: "Storage",
@@ -29,6 +34,36 @@ const services = [
     description: "Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10" />}];
 
+=======
+    icon: <Server className="h-10 w-10" />,
+  },
+  {
+    title: "Storage",
+    description: "Scalable storage solutions from SSDs to large-scale enterprise storage systems",
+    icon: <HardDrive className="h-10 w-10" />,
+  },
+  {
+    title: "Networking",
+    description: "Connectivity solutions including switches, routers, and network security devices",
+    icon: <Network className="h-10 w-10" />,
+  },
+  {
+    title: "24x7x365 Support",
+    description: "Around-the-clock technical support with rapid response times guaranteed",
+    icon: <Clock className="h-10 w-10" />,
+  },
+  {
+    title: "Recycling Services",
+    description: "Sustainable disposal and recycling of IT equipment following eco-friendly practices",
+    icon: <Recycle className="h-10 w-10" />,
+  },
+  {
+    title: "Equipment Rentals",
+    description: "Flexible rental options for temporary projects and scaling requirements",
+    icon: <Truck className="h-10 w-10" />,
+  },
+];
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function GlobalServiceSection() {
   return (
@@ -42,7 +77,11 @@ export function GlobalServiceSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
           {services.map((serviceindex) => (
+=======
+          {services.map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
               <div className="text-zion-cyan mb-4">
                 {service.icon}

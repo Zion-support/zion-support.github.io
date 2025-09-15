@@ -14,6 +14,10 @@ export interface QuantumSpaceService {
     address: string;
   };
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export const quantumSpaceServices: QuantumSpaceService[] = [
   {
     id: "quantum-computing-platform",

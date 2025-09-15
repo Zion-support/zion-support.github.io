@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
@@ -10,12 +11,27 @@ import { useDebounce } from "@/hooks/useDebounce",
 import { useIsMounted } from "@/hooks/useIsMounted",
 import { z } from "zod",
 import {logErrorToProduction} from '@/utils/productionLogger',
+=======
+import { useEffect, useState } from "react";
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
+import { Input } from "@/components/ui/input";
+import { Card } from "@/components/ui/card";
+import { Search } from 'lucide-react'
+import { ListingScoreCard } from "@/components/ListingScoreCard";
+import { captureException } from "@/utils/sentry";
+import Skeleton from "@/components/ui/skeleton";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useIsMounted } from "@/hooks/useIsMounted";
+import { z } from "zod";
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/auto/autonomy-17186719616
 
 
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
   category: z.string(),
+<<<<<<< HEAD
   image: z.string().optional()}),
 
 const listingsSchema = z.array(listingSchema),
@@ -23,20 +39,40 @@ const listingsSchema = z.array(listingSchema),
 interface ServiceTypeStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
+=======
+  image: z.string().optional(),
+});
+
+const listingsSchema = z.array(listingSchema);
+
+interface ServiceTypeStepProps {
+  formData: QuoteFormData;
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
+<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState(""),
   const debouncedQuery = useDebounce(searchQuery, 300),
   const [listings, setListings] = useState<ListingItem[]>([]),
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const isMounted = useIsMounted(),
+=======
+  const [searchQuery, setSearchQuery] = useState("");
+  const debouncedQuery = useDebounce(searchQuery, 300);
+  const [listings, setListings] = useState<ListingItem[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const isMounted = useIsMounted();
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Fetch services when the service type or query changes
   useEffect(() => {
     if (!formData.serviceType) {
+<<<<<<< HEAD
       setListings([]),
       return,
     }
@@ -87,20 +123,80 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type }),
   },
+=======
+      setListings([]);
+      return;
+    }
+
+    const fetchServices = async () => {
+      setLoading(true);
+      setError(null);
+      const url = `/api/public/services?category=${encodeURIComponent(
+        formData.serviceType
+      )}&q=${encodeURIComponent(debouncedQuery)}`;
+      const maxRetries = 3;
+
+      for (let attempt = 0; attempt < maxRetries; attempt++) {
+        try {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error('Failed to fetch');
+          const data = await response.json();
+          const parsed = listingsSchema.safeParse(data);
+          if (!parsed.success) throw new Error('Invalid response');
+          if (isMounted.current) {
+            setListings(parsed.data as ListingItem[]);
+            setError(null);
+          }
+          return;
+        } catch (err) {
+          if (attempt === maxRetries - 1) {
+            if (process.env.NODE_ENV === 'development') {
+              logErrorToProduction('Failed to load services:', { data: err });
+            } else {
+              captureException(err);
+            }
+            if (isMounted.current) {
+              setListings([]);
+              setError('Failed to load services');
+            }
+          } else {
+            await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
+          }
+        } finally {
+          if (isMounted.current) setLoading(false);
+        }
+      }
+    };
+
+    fetchServices();
+  }, [formData.serviceType, debouncedQuery, isMounted]);
+  
+  const handleTypeSelect = (type: ServiceType) => {
+    updateFormData({ serviceType: type });
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({ 
       specificItem: item,
       serviceCategory: item.category,
       serviceType: item.category.toLowerCase() as ServiceType
+<<<<<<< HEAD
     }),
   },
   
   const sourceListings = listings,
+=======
+    });
+  };
+  
+  const sourceListings = listings;
+>>>>>>> origin/auto/autonomy-17186719616
 
   const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
+<<<<<<< HEAD
       const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),
       if (!categoryMatch) return false,
     }
@@ -109,6 +205,16 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
            item.category.toLowerCase().includes(searchQuery.toLowerCase()),
   }),
+=======
+      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
+      if (!categoryMatch) return false;
+    }
+    
+    if (searchQuery.trim() === "") return true;
+    return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+           item.category.toLowerCase().includes(searchQuery.toLowerCase());
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6">
@@ -207,5 +313,9 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         </div>
       )}
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

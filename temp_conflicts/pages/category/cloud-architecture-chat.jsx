@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const CloudArchitectureChat = () => {
   return (
@@ -16,7 +21,14 @@ const CloudArchitectureChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
+<<<<<<< HEAD
   ),
 },
 
 export default CloudArchitectureChat,
+=======
+  );
+};
+
+export default CloudArchitectureChat;
+>>>>>>> origin/auto/autonomy-17186719616

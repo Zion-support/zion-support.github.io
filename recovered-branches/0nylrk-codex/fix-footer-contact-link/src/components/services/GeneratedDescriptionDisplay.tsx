@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -57,10 +58,29 @@ export function GeneratedDescriptionDisplay({
 
 }: GeneratedDescriptionDisplayProps) {;
 
+=======
+import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import { Check, Pencil } from "lucide-react";
+
+interface GeneratedDescriptionDisplayProps {
+  description: string;
+  onSave: (editedDescription: string) => void;
+}
+
+export function GeneratedDescriptionDisplay({ 
+  description, 
+  onSave 
+}: GeneratedDescriptionDisplayProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
 
+<<<<<<< HEAD
 
 
 
@@ -90,17 +110,33 @@ export function GeneratedDescriptionDisplay({
 
 
 
+=======
+  const handleSave = () => {
+    onSave(editedDescription);
+    setIsEditing(false);
+    toast({
+      title: "Description Saved",
+      description: "Your edited description has been saved."
+    });
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
         <CardTitle className="text-white flex items-center justify-between">
           Generated Description
+<<<<<<< HEAD
           <Button
             variant="outline"
             size="sm"
 
 
+=======
+          <Button 
+            variant="outline" 
+            size="sm" 
+>>>>>>> origin/auto/autonomy-17186719616
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white"
           >
@@ -114,6 +150,7 @@ export function GeneratedDescriptionDisplay({
                 <Pencil className="h-4 w-4 mr-1" />
                 Edit
               </>
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -264,3 +301,35 @@ function GeneratedDescriptionDisplay() {
     </Card>);
 }
 
+=======
+            )}
+          </Button>
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        {isEditing ? (
+          <Textarea
+            value={editedDescription}
+            onChange={(e) => setEditedDescription(e.target.value)}
+            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none"
+          />
+        ) : (
+          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
+            {editedDescription}
+          </div>
+        )}
+      </CardContent>
+      {isEditing && (
+        <CardFooter>
+          <Button 
+            onClick={handleSave}
+            className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
+          >
+            Save Changes
+          </Button>
+        </CardFooter>
+      )}
+    </Card>
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

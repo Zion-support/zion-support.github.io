@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -18,6 +19,27 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   const job = match.job,
   
   if (!job) return null,
+=======
+import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
+import { format } from "date-fns";
+import { JobMatch } from "@/types/jobs";
+
+interface JobMatchCardProps {
+  match: JobMatch;
+  onApply: (matchId: string, jobId: string) => void;
+  onDecline: (matchId: string) => void;
+  showApplied?: boolean;
+}
+
+export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
+  const job = match.job;
+  
+  if (!job) return null;
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
@@ -43,6 +65,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
           {job.description}
         </p>
+<<<<<<< HEAD
 
         {match.matched_skills?.length > 0 && (
           <div className='mb-3'>
@@ -56,6 +79,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               ))}
               {match.matched_skills.length > 5 && (
                 <Badge variant='secondary' className='text-xs'>
+=======
+>>>>>>> origin/auto/autonomy-17186719616
         
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
@@ -66,7 +91,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                   {skill}
                 </Badge>
               ))}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               {match.matched_skills.length > 5 && (
                 <Badge variant="secondary" className="text-xs">
                   +{match.matched_skills.length - 5}
@@ -81,6 +109,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
           </div>
+<<<<<<< HEAD
           <div className='flex items-center text-sm'>
             <Calendar className='h-4 w-4 mr-1 text-muted-foreground' />
             Due: {format(new Date(job.deadline), 'MMM d, yyyy')}
@@ -92,6 +121,14 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className='w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md'>
             <CheckCircle className='h-4 w-4 mr-2' />
 
+=======
+          <div className="flex items-center text-sm">
+            <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
+            Due: {format(new Date(job.deadline), "MMM d, yyyy")}
+          </div>
+        </div>
+      </CardContent>
+>>>>>>> origin/auto/autonomy-17186719616
       <CardFooter className="p-4 pt-0">
         {match.status === 'applied' || showApplied ? (
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
@@ -99,6 +136,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             Applied
           </div>
         ) : match.status === 'declined' ? (
+<<<<<<< HEAD
           <div className='w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md'>
             <XCircle className='h-4 w-4 mr-2' />
             Declined
@@ -121,6 +159,13 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         )}
 
 
+=======
+          <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">
+            <XCircle className="h-4 w-4 mr-2" />
+            Declined
+          </div>
+        ) : (
+>>>>>>> origin/auto/autonomy-17186719616
           <div className="flex gap-2 w-full">
             <Button 
               className="flex-1" 
@@ -139,5 +184,9 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         )}
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

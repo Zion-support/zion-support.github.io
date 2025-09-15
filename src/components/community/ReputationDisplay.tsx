@@ -1,5 +1,6 @@
 
 import { Trophy } from 'lucide-react'
+<<<<<<< HEAD
 import { Progress } from "@/components/ui/progress",
 
 interface ReputationDisplayProps {
@@ -10,6 +11,17 @@ interface ReputationDisplayProps {
 
 export const ReputationDisplay = ({ 
   reputation,
+=======
+import { Progress } from "@/components/ui/progress";
+
+interface ReputationDisplayProps {
+  reputation: number;
+  size?: 'sm' | 'md' | 'lg';
+}
+
+export const ReputationDisplay = ({ 
+  reputation, 
+>>>>>>> origin/auto/autonomy-17186719616
   size = 'md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone
@@ -34,6 +46,7 @@ export const ReputationDisplay = ({
       icon: "w-5 h-5",
       progress: "h-3"
     }
+<<<<<<< HEAD
     md: {
       container: "text-sm"
       icon: "w-4 h-4"
@@ -84,6 +97,11 @@ export const ReputationDisplay = ({
   }
   return (
 
+=======
+  };
+  
+  return (
+>>>>>>> origin/auto/autonomy-17186719616
     <div className="space-y-1">
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>
         <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />
@@ -95,7 +113,14 @@ export const ReputationDisplay = ({
         Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up
       </div>
     </div>
+<<<<<<< HEAD
   ),
 },
 
 export default ReputationDisplay,
+=======
+  );
+};
+
+export default ReputationDisplay;
+>>>>>>> origin/auto/autonomy-17186719616

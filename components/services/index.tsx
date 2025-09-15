@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 "use client";
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -27,6 +30,7 @@ const mapLocalToServiceItem = (item: any): ServiceItem => ({
   provider: 'Zion Provider',
   priceRangeUSD: item.priceRangeUSD,
   categories: [item.category],
+<<<<<<< HEAD
   rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10});
 
 const ServicesPage: NextPage = () => {
@@ -35,6 +39,17 @@ const ServicesPage: NextPage = () => {
   const [filtersetFilters] = React.useState<Filters>({ categories: [] });
   const [modalOpensetModalOpen] = React.useState(false);
   const [selectedsetSelected] = React.useState<ServiceItem | null>(null);
+=======
+  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10,
+});
+
+const ServicesPage: NextPage = () => {
+  const [services, setServices] = React.useState<ServiceItem[]>([]);
+  const [filtered, setFiltered] = React.useState<ServiceItem[]>([]);
+  const [filters, setFilters] = React.useState<Filters>({ categories: [] });
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const [selected, setSelected] = React.useState<ServiceItem | null>(null);
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
@@ -52,10 +67,17 @@ export default function ServicesIndexPage() {
       realServicesQ12025 as any[],
       newVerifiedServicesQ22025 as any[]
     );
+<<<<<<< HEAD
   const byCategory: Record<stringunknown[]> = {};
   for (const c of categories) byCategory[c] = [];
   // Normalize various category labels into our main buckets
   const categoryAliases: Record<string> = {
+=======
+  const byCategory: Record<string, unknown[]> = {};
+  for (const c of categories) byCategory[c] = [];
+  // Normalize various category labels into our main buckets
+  const categoryAliases: Record<string, string> = {
+>>>>>>> origin/auto/autonomy-17186719616
     'AI & Data': 'AI & Data',
     'AI & Machine Learning': 'AI & Data',
     'GenAI': 'AI & Data',
@@ -72,7 +94,11 @@ export default function ServicesIndexPage() {
   };
   for (const s of all) {
     const service = s as { category?: string };
+<<<<<<< HEAD
     const rawCat = (service.category || ', ').trim();
+=======
+    const rawCat = (service.category || '').trim();
+>>>>>>> origin/auto/autonomy-17186719616
     const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
     byCategory[mapped].push(s);
   }
@@ -92,13 +118,21 @@ export default function ServicesIndexPage() {
       return true;
     });
     setFiltered(next);
+<<<<<<< HEAD
   }[filterservices]);
+=======
+  }, [filters, services]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const availableCategories = React.useMemo(() => {
     const set = new Set<string>();
     services.forEach((s) => s.categories.forEach((c) => set.add(c)));
     return Array.from(set);
+<<<<<<< HEAD
   }[services]);
+=======
+  }, [services]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleRequestQuote = (service: ServiceItem) => {
     setSelected(service);
@@ -106,15 +140,27 @@ export default function ServicesIndexPage() {
   };
 
   const handleSubmit = async (values: QuoteFormValues) => {
+<<<<<<< HEAD
     const res = await fetch('/api/quote-request'{
+=======
+    const res = await fetch('/api/quote-request', {
+>>>>>>> origin/auto/autonomy-17186719616
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         service: values.serviceTitle,
         description: values.projectDescription,
+<<<<<<< HEAD
         timeline: { start: values.timelineStartend: values.timelineEnd },
         budgetRange: values.budgetRange,
         email: values.email})});
+=======
+        timeline: { start: values.timelineStart, end: values.timelineEnd },
+        budgetRange: values.budgetRange,
+        email: values.email,
+      }),
+    });
+>>>>>>> origin/auto/autonomy-17186719616
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
       throw new Error(err?.message || 'Failed to submit');

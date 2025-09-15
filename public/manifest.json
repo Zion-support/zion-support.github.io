@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "Zion Tech Group - AI-Powered Business Solutions",
   "short_name": "Zion Tech",
   "description": "Leading provider of AI-powered business solutions, quantum computing, and innovative IT services for digital transformation.",
@@ -22,24 +23,79 @@
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
+=======
+  "name": "Zion Tech Group",
+  "short_name": "Zion Tech",
+  "description": "Leading-edge technology solutions and autonomous innovation platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "productivity", "technology"],
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+>>>>>>> origin/auto/autonomy-17186719616
     }
   ],
   "shortcuts": [
     {
+<<<<<<< HEAD
       "name": "AI Solutions",
       "short_name": "AI",
       "description": "Explore our AI-powered business solutions",
       "url": "/ai-solutions"
+=======
+      "name": "Launch Economy",
+      "short_name": "Launch",
+      "description": "Quick access to launch your digital economy",
+      "url": "/multiverse/launch",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+>>>>>>> origin/auto/autonomy-17186719616
     },
     {
       "name": "Services",
       "short_name": "Services",
+<<<<<<< HEAD
       "description": "View our comprehensive service offerings",
       "url": "/services"
+=======
+      "description": "View our technology services",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+>>>>>>> origin/auto/autonomy-17186719616
     },
     {
       "name": "Contact",
       "short_name": "Contact",
+<<<<<<< HEAD
       "description": "Get in touch with our team",
       "url": "/contact"
     },
@@ -115,3 +171,30 @@
     "url": "https://ziontechgroup.com"
   }
 }
+=======
+      "description": "Get in touch with us",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
+>>>>>>> origin/auto/autonomy-17186719616

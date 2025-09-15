@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function GovernanceTrustPage() {
   return (
@@ -26,7 +31,11 @@ export default function GovernanceTrustPage() {
               desc: 'Member association model with global neutrality and flexible local chapters.'
             }, {
               title: 'US 501(c)(6)',
+<<<<<<< HEAD
               desc: 'Business league for industry coordination and standards, disclosure-focused.'
+=======
+              desc: 'Business league for industry coordination and standards; disclosure-focused.'
+>>>>>>> origin/auto/autonomy-17186719616
             }, {
               title: 'DAO-native Wrapper',
               desc: 'LLC/wrapper (e.g., Otoco) for on-chain governance with minimized off-chain overhead.'
@@ -41,10 +50,17 @@ export default function GovernanceTrustPage() {
 
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Governance</h2>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Core Stewards</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Appointed via DAO ratification, accountable to publish roadmaps, risk registers, and post-mortems.</div>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <div className="font-medium mb-1">Core Stewards</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Appointed via DAO ratification; accountable to publish roadmaps, risk registers, and post-mortems.</div>
+>>>>>>> origin/auto/autonomy-17186719616
             </div>
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Delegated Voting</div>
@@ -68,5 +84,9 @@ export default function GovernanceTrustPage() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,16 +1,29 @@
 
+<<<<<<< HEAD
 import React from "react",
+=======
+import React from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { CalendarIcon, Search } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
+=======
+  TableRow,
+} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+import { CalendarIcon, Search } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function TeamActivity() {
   // Mock activity data
@@ -21,41 +34,67 @@ export function TeamActivity() {
       action: "Posted a job",
       target: "Senior AI Engineer",
       timestamp: new Date(Date.now() - 1000 * 60 * 30),
+<<<<<<< HEAD
       category: "jobs"},
+=======
+      category: "jobs",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 2,
       user: "Jamie Smith",
       action: "Contacted candidate",
       target: "Michael Chen",
       timestamp: new Date(Date.now() - 1000 * 60 * 120),
+<<<<<<< HEAD
       category: "candidates"},
+=======
+      category: "candidates",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 3,
       user: "Sam Williams",
       action: "Updated job",
       target: "Frontend Developer",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5),
+<<<<<<< HEAD
       category: "jobs"},
+=======
+      category: "jobs",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 4,
       user: "Alex Johnson",
       action: "Added team member",
       target: "Chris Rodriguez",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24),
+<<<<<<< HEAD
       category: "team"},
+=======
+      category: "team",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 5,
       user: "Taylor Brown",
       action: "Viewed candidate profile",
       target: "Sarah Kim",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2),
+<<<<<<< HEAD
       category: "candidates"},
+=======
+      category: "candidates",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
       target: "Monthly spending cap",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
+<<<<<<< HEAD
       category: "billing"}],
 
   // Function to format the date in a readable way
@@ -87,6 +126,42 @@ export function TeamActivity() {
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>,
   },
+=======
+      category: "billing",
+    },
+  ];
+
+  // Function to format the date in a readable way
+  const formatDate = (date: Date) => {
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffMins = Math.floor(diffMs / (1000 * 60));
+    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+    if (diffMins < 60) {
+      return `${diffMins} minutes ago`;
+    } else if (diffHrs < 24) {
+      return `${diffHrs} hours ago`;
+    } else if (diffDays < 7) {
+      return `${diffDays} days ago`;
+    } else {
+      return date.toLocaleDateString();
+    }
+  };
+
+  const getCategoryBadge = (category: string) => {
+    const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
+      jobs: { variant: "default" },
+      candidates: { variant: "outline" },
+      team: { variant: "secondary" },
+      billing: { variant: "destructive" },
+    };
+
+    const style = categoryStyles[category] || { variant: "default" as const };
+    return <Badge variant={style.variant}>{category}</Badge>;
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6">
@@ -148,5 +223,9 @@ export function TeamActivity() {
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

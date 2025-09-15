@@ -1,6 +1,10 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { HandshakeMessageSquareStar } from "lucide-react";
+=======
+import { Handshake, MessageSquare, Star } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 
 import { HireNowCTA } from "./HireNowCTA";
@@ -22,7 +26,11 @@ interface TalentProfileProps {
 }
 
 export function TalentProfile({ 
+<<<<<<< HEAD
   profile
+=======
+  profile, 
+>>>>>>> origin/auto/autonomy-17186719616
   onRequestHire,
   onMessageTalent
 }: TalentProfileProps) {
@@ -42,7 +50,11 @@ export function TalentProfile({
   })) || [];
   
   // Create proper projects array for ProfileProjects component
+<<<<<<< HEAD
   const projectsArray = profile.key_projects?.map((proji) => ({
+=======
+  const projectsArray = profile.key_projects?.map((proj, i) => ({
+>>>>>>> origin/auto/autonomy-17186719616
     id: `project-${i}`,
     title: proj.title,
     description: proj.description,

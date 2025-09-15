@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: release
 on:
   workflow_dispatch: {}
@@ -17,6 +18,24 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     
+=======
+name: Release
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+>>>>>>> origin/auto/autonomy-17186719616
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,6 +48,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+<<<<<<< HEAD
       - name: Get version
         id: version
         run: |
@@ -128,3 +148,9 @@ jobs:
               body: message,
               labels: ['release', 'deployment']
             });
+=======
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"
+>>>>>>> origin/auto/autonomy-17186719616

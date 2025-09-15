@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -64,6 +65,16 @@ function FuturisticCard() {
 
 }
 
+=======
+import React from 'react';
+
+type Props = {
+  title: string;
+  description: string;
+  cta?: React.ReactNode;
+};
+
+>>>>>>> origin/auto/autonomy-17186719616
 export default function FuturisticCard({ title, description, cta }: Props) {
   return (
     <div className="futuristic-card">
@@ -73,6 +84,7 @@ export default function FuturisticCard({ title, description, cta }: Props) {
         <p className="text-sm text-gray-300 mt-1">{description}</p>
         {cta && <div className="mt-3">{cta}</div>}
       </div>
+<<<<<<< HEAD
 
     </div>;
     </div>
@@ -80,3 +92,8 @@ export default function FuturisticCard({ title, description, cta }: Props) {
 }
 }
 
+=======
+    </div>
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

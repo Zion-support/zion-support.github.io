@@ -42,7 +42,11 @@ class Course(db.Model):
     enrollments = db.relationship('Enrollment', back_populates='course', cascade="all, delete-orphan")
     certificates = db.relationship('Certificate', backref='course', lazy=True)
     analytics_events = db.relationship('AnalyticsEvent', backref='course', lazy='dynamic', cascade="all, delete-orphan")
+<<<<<<< HEAD
     # Feedback submissions are linked via generic content_type/content_id on FeedbackSubmission
+=======
+    feedback_submissions = db.relationship('FeedbackSubmission', backref='course', lazy='dynamic', cascade="all, delete-orphan")
+>>>>>>> origin/auto/autonomy-17186719616
 
     def __repr__(self):
         return f'<Course {self.title}>'
@@ -58,7 +62,11 @@ class Lesson(db.Model):
 
     completions = db.relationship('LessonCompletion', backref='lesson', lazy='dynamic', cascade="all, delete-orphan")
     analytics_events = db.relationship('AnalyticsEvent', backref='lesson', lazy='dynamic', cascade="all, delete-orphan")
+<<<<<<< HEAD
     # Feedback submissions are linked via generic content_type/content_id on FeedbackSubmission
+=======
+    feedback_submissions = db.relationship('FeedbackSubmission', backref='lesson', lazy='dynamic', cascade="all, delete-orphan")
+>>>>>>> origin/auto/autonomy-17186719616
 
     def __repr__(self):
         return f'<Lesson {self.title} - Course {self.course_id}>'
@@ -136,11 +144,14 @@ class Update(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     
+<<<<<<< HEAD
     # Admin response
     admin_response = db.Column(db.Text, nullable=True)
     resolved_at = db.Column(db.DateTime, nullable=True)
     
     # No direct FK relationships; linked generically by content_type/content_id
+=======
+>>>>>>> origin/auto/autonomy-17186719616
     # Relationships
     reactions = db.relationship('UpdateReaction', backref='update', lazy='dynamic', cascade="all, delete-orphan")
     comments = db.relationship('UpdateComment', backref='update', lazy='dynamic', cascade="all, delete-orphan")

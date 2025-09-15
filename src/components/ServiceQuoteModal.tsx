@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -21,6 +22,31 @@ interface ServiceQuoteModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
   service: ProductListing | null
+=======
+import { useState } from 'react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { Slider } from "@/components/ui/slider";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { format } from "date-fns";
+import { CalendarIcon } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { ProductListing } from "@/types/listings";
+import { toast } from '@/hooks/use-toast';
+import { supabase } from "@/integrations/supabase/client";
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+
+interface ServiceQuoteModalProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  service: ProductListing | null;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 const BUDGET_RANGES = [
@@ -28,19 +54,30 @@ const BUDGET_RANGES = [
   { label: "$5,000 - $10,000", value: "5000-10000" },
   { label: "$10,000 - $25,000", value: "10000-25000" },
   { label: "$25,000 - $50,000", value: "25000-50000" },
+<<<<<<< HEAD
   { label: "$50,000+", value: "50000+" }],
+=======
+  { label: "$50,000+", value: "50000+" },
+];
+>>>>>>> origin/auto/autonomy-17186719616
 
 const TIMELINE_OPTIONS = [
   { label: "Less than 1 month", value: "lt-1month" },
   { label: "1-3 months", value: "1-3months" },
   { label: "3-6 months", value: "3-6months" },
+<<<<<<< HEAD
   { label: "6+ months", value: "6+months" }],
+=======
+  { label: "6+ months", value: "6+months" },
+];
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
     description: '',
     email: '',
     budget: BUDGET_RANGES[0]?.value || '0-5000',
+<<<<<<< HEAD
     timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),
   const [startDate, setStartDate] = useState<Date | undefined>(new Date()),
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
@@ -55,6 +92,23 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(),
     setIsSubmitting(true),
+=======
+    timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month',
+  });
+  const [startDate, setStartDate] = useState<Date | undefined>(new Date());
+  const [endDate, setEndDate] = useState<Date | undefined>(undefined);
+  const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+>>>>>>> origin/auto/autonomy-17186719616
 
     try {
       // Call Supabase function to process the quote
@@ -63,6 +117,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
           service: service ? {
             id: service.id,
             title: service.title,
+<<<<<<< HEAD
             category: service.category} : null,
           quoteDetails: {
             ...formData,
@@ -72,18 +127,40 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       }),
 
       if (error) throw error,
+=======
+            category: service.category,
+          } : null,
+          quoteDetails: {
+            ...formData,
+            startDate: startDate?.toISOString(),
+            endDate: endDate?.toISOString(),
+          }
+        }
+      });
+
+      if (error) throw error;
+>>>>>>> origin/auto/autonomy-17186719616
 
       // Show success message
       toast({
         title: "Quote Request Submitted!",
+<<<<<<< HEAD
         description: "We've sent your request to the service provider. They will contact you soon."}),
 
       // Close the modal and reset form
       onOpenChange(false),
+=======
+        description: "We've sent your request to the service provider. They will contact you soon.",
+      });
+
+      // Close the modal and reset form
+      onOpenChange(false);
+>>>>>>> origin/auto/autonomy-17186719616
       setFormData({
         description: '',
         email: '',
         budget: BUDGET_RANGES[0]?.value || '0-5000',
+<<<<<<< HEAD
         timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),
       setStartDate(new Date()),
       setEndDate(undefined),
@@ -108,6 +185,34 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     if (currentStep === 'timeline') setCurrentStep('details'),
     else if (currentStep === 'contact') setCurrentStep('timeline'),
   },
+=======
+        timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month',
+      });
+      setStartDate(new Date());
+      setEndDate(undefined);
+      setCurrentStep('details');
+    } catch (error) {
+      logErrorToProduction('Error submitting quote:', { data: error });
+      toast({
+        title: "Error",
+        description: "There was an error submitting your quote request. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const nextStep = () => {
+    if (currentStep === 'details') setCurrentStep('timeline');
+    else if (currentStep === 'timeline') setCurrentStep('contact');
+  };
+
+  const prevStep = () => {
+    if (currentStep === 'timeline') setCurrentStep('details');
+    else if (currentStep === 'contact') setCurrentStep('timeline');
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -336,5 +441,9 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         </form>
       </DialogContent>
     </Dialog>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

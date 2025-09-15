@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -15,10 +16,18 @@ import {
   FormField
   FormItem
   FormMessage
+=======
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+>>>>>>> origin/auto/autonomy-17186719616
   Form,
   FormControl,
   FormField,
   FormItem,
+<<<<<<< HEAD
 FormMessage,;
 } from "@/components/ui/form";
 
@@ -27,17 +36,35 @@ interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>,
   parentId?: string
 }
+=======
+  FormMessage
+} from "@/components/ui/form";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string;
+}
+
+>>>>>>> origin/auto/autonomy-17186719616
 interface ReplyFormValues {
   content: string;
 }
 
+<<<<<<< HEAD
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
   const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+>>>>>>> origin/auto/autonomy-17186719616
   const form = useForm<ReplyFormValues>({
     defaultValues: {
       content: ""
     }
   });
+<<<<<<< HEAD
   const handleSubmit = async (values: ReplyFormValues) => {
     setIsSubmitting(true);
     try {
@@ -176,6 +203,32 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
 
 
 
+=======
+
+  const handleSubmit = async (values: ReplyFormValues) => {
+    setIsSubmitting(true);
+    try {
+      await onSubmit(values.content);
+      form.reset();
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <Card>
+      <CardContent className="pt-6">
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(handleSubmit)}>
+            <FormField
+              control={form.control}
+              name="content"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Textarea
+                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
+>>>>>>> origin/auto/autonomy-17186719616
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -193,6 +246,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
         </Form>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
   );
 }
@@ -214,3 +268,9 @@ export default ReplyForm;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
+=======
+  );
+};
+
+export default ReplyForm;
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { BadgeCheck } from 'lucide-react'
 import { TalentCardAvatar } from "./TalentCardAvatar",
@@ -14,6 +15,23 @@ interface TalentCardHeaderProps {
 
 export function TalentCardHeader({ 
   fullName,
+=======
+import React from "react";
+import { BadgeCheck } from 'lucide-react'
+import { TalentCardAvatar } from "./TalentCardAvatar";
+import { TalentCardAvailability } from "./TalentCardAvailability";
+
+interface TalentCardHeaderProps {
+  fullName: string;
+  professionalTitle: string;
+  profilePicture?: string;
+  availabilityType: string;
+  yearsExperience: number;
+}
+
+export function TalentCardHeader({ 
+  fullName, 
+>>>>>>> origin/auto/autonomy-17186719616
   professionalTitle, 
   profilePicture, 
   availabilityType,
@@ -31,7 +49,10 @@ export function TalentCardHeader({
             {yearsExperience > 5 && (
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
             )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           </h3>
           
           <TalentCardAvailability availabilityType={availabilityType} />
@@ -40,5 +61,9 @@ export function TalentCardHeader({
         <p className="text-zion-cyan text-sm">{professionalTitle}</p>
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export type ProjectStatus = 'InProgress' | 'Completed',;
 export type Project = {;
@@ -11,6 +12,10 @@ export type Project = {;
 export type ReviewRole = 'client' | 'talent',;
 export type ReviewCategoryScores = {;
 export type ProjectStatus = 'InProgress' | 'Completed';
+=======
+export type ProjectStatus = 'InProgress' | 'Completed';
+
+>>>>>>> origin/auto/autonomy-17186719616
 export type Project = {
   id: string;
   clientId: string; // slug for client/user
@@ -18,13 +23,21 @@ export type Project = {
   title: string;
   status: ProjectStatus;
   completedAt?: string; // ISO string
+<<<<<<< HEAD
 }
 export type ReviewRole = 'client' | 'talent';
+=======
+};
+
+export type ReviewRole = 'client' | 'talent';
+
+>>>>>>> origin/auto/autonomy-17186719616
 export type ReviewCategoryScores = {
   communication?: number; // 1-5 optional
   qualityOfWork?: number; // 1-5 optional
   timeliness?: number; // 1-5 optional
   wouldWorkWithAgain?: boolean; // optional
+<<<<<<< HEAD
 }
   clientId: string, // slug for client/user;
   talentSlug: string, // slug from TALENT_PROFILES;
@@ -45,13 +58,18 @@ export type Review = {;
   id: string,;
   projectId: string,;
   fromRole: ReviewRole,;
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 };
 
 export type Review = {
   id: string;
   projectId: string;
   fromRole: ReviewRole;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
   fromId: string; // clientId or talentSlug depending on fromRole
   toRole: ReviewRole; // opposite of fromRole
   toId: string; // target id (talentSlug or clientId)
@@ -64,6 +82,7 @@ export type Review = {
   reports?: { reason: string; reportedAt: string }[];
   removed?: boolean;
   createdAt: string; // ISO
+<<<<<<< HEAD
 }
 export type PublicReview = Omit<Review, 'fromId'> & { authorName: string }
 
@@ -98,11 +117,17 @@ export type ReviewsSummary = {;
   totalReviews: number,;
   totalCompletedProjects: number,;
 export type PublicReview = Omit<Review 'fromId'> & { authorName: string };
+=======
+};
+
+export type PublicReview = Omit<Review, 'fromId'> & { authorName: string };
+>>>>>>> origin/auto/autonomy-17186719616
 
 export type ReviewsSummary = {
   averageRating: number;
   totalReviews: number;
   totalCompletedProjects: number;
+<<<<<<< HEAD
 
 
 
@@ -158,3 +183,7 @@ export type ReviewsSummary = {
 }
 };
 
+=======
+  mostRecent: PublicReview[];
+};
+>>>>>>> origin/auto/autonomy-17186719616

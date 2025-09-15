@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Badge } from "@/components/ui/badge",
@@ -18,6 +19,37 @@ interface ProfileHeroProps {
 }
 
 
+=======
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Badge } from "@/components/ui/badge";
+import { Star } from 'lucide-react'
+import { cn } from "@/lib/utils";
+
+interface ProfileHeroProps {
+  name: string;
+  title: string;
+  avatarUrl?: string;
+  coverImageUrl?: string;
+  location?: string;
+  rating?: number;
+  reviewCount?: number;
+  aiScore?: number;
+  profileType: 'service' | 'talent';
+}
+
+export function ProfileHero({
+  name,
+  title,
+  avatarUrl,
+  coverImageUrl,
+  location,
+  rating,
+  reviewCount,
+  aiScore,
+  profileType
+}: ProfileHeroProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="w-full overflow-hidden">
       <div className="relative">
@@ -30,6 +62,7 @@ interface ProfileHeroProps {
               loading="lazy"
             />
           ) : (
+<<<<<<< HEAD
             <div className='w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark' />
           )}
         </AspectRatio>
@@ -59,6 +92,12 @@ interface ProfileHeroProps {
 
 
 
+=======
+            <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />
+          )}
+        </AspectRatio>
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">
             <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">
@@ -70,6 +109,7 @@ interface ProfileHeroProps {
                 </AvatarFallback>
               )}
             </Avatar>
+<<<<<<< HEAD
             <div className='mt-4 md:mt-0 md:ml-6 md:mb-1'>
               <div className='flex flex-wrap items-center gap-2 mb-1'>
                 <h1 className='text-2xl md:text-3xl font-bold text-white'>
@@ -171,11 +211,19 @@ export function ProfileHero({;
                     profileType === 'service'
                       ? 'bg-zion-purple/10'
 
+=======
+            
+            <div className="mt-4 md:mt-0 md:ml-6 md:mb-1">
+              <div className="flex flex-wrap items-center gap-2 mb-1">
+                <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
+                <Badge 
+>>>>>>> origin/auto/autonomy-17186719616
                   variant="outline" 
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan",
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
+<<<<<<< HEAD
                 >;
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
 
@@ -183,12 +231,17 @@ export function ProfileHero({;
               </div>;
 
 
+=======
+                >
+                  {profileType === 'service' ? 'Service Provider' : 'Talent'}
+>>>>>>> origin/auto/autonomy-17186719616
                 </Badge>
               </div>
               
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
               
               <div className="flex flex-wrap items-center gap-3 mt-2">
+<<<<<<< HEAD
 
 
 
@@ -201,6 +254,12 @@ export function ProfileHero({;
 
 
 
+=======
+                {location && (
+                  <span className="text-sm text-zion-slate-light">{location}</span>
+                )}
+                
+>>>>>>> origin/auto/autonomy-17186719616
                 {rating && (
                   <div className="flex items-center gap-1">
                     <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />
@@ -222,5 +281,9 @@ export function ProfileHero({;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,8 +1,14 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileTextPlusUsersSearchCalendar } from "lucide-react";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function QuickActions() {
   const actions = [

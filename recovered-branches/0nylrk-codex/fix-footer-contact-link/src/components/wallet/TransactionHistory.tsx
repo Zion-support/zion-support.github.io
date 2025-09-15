@@ -1,14 +1,23 @@
 
 import React from "react";
 import { useWallet } from "@/hooks/useWallet";
+<<<<<<< HEAD
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+>>>>>>> origin/auto/autonomy-17186719616
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { formatDistanceToNow } from "date-fns";
 
 export function TransactionHistory() {
+<<<<<<< HEAD
   const { transactionsloading } = useWallet();
+=======
+  const { transactions, loading } = useWallet();
+>>>>>>> origin/auto/autonomy-17186719616
 
   if (loading) {
     return (
@@ -47,7 +56,11 @@ export function TransactionHistory() {
                       <div>
                         <p className="font-medium">{tx.reason || "Token reward"}</p>
                         <p className="text-xs text-muted-foreground">
+<<<<<<< HEAD
                           {formatDistanceToNow(new Date(tx.created_at){ addSuffix: true })}
+=======
+                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
+>>>>>>> origin/auto/autonomy-17186719616
                         </p>
                       </div>
                       <Badge variant="outline" className="bg-green-100 text-green-800">
@@ -70,7 +83,11 @@ export function TransactionHistory() {
                       <div>
                         <p className="font-medium">{tx.reason || "Feature purchase"}</p>
                         <p className="text-xs text-muted-foreground">
+<<<<<<< HEAD
                           {formatDistanceToNow(new Date(tx.created_at){ addSuffix: true })}
+=======
+                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
+>>>>>>> origin/auto/autonomy-17186719616
                         </p>
                       </div>
                       <Badge variant="outline" className="bg-red-100 text-red-800">

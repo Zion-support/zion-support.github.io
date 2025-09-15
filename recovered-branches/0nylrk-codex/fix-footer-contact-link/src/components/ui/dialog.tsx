@@ -15,7 +15,11 @@ const DialogClose = DialogPrimitive.Close
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
+<<<<<<< HEAD
 >(({ className...props }ref) => (
+=======
+>(({ className, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <DialogPrimitive.Overlay
     ref={ref}
     className={cn(
@@ -30,7 +34,11 @@ DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
 const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
+<<<<<<< HEAD
 >(({ classNamechildren...props }ref) => (
+=======
+>(({ className, children, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <DialogPortal>
     <DialogOverlay />
     <DialogPrimitive.Content
@@ -82,7 +90,11 @@ DialogFooter.displayName = "DialogFooter"
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
+<<<<<<< HEAD
 >(({ className...props }ref) => (
+=======
+>(({ className, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <DialogPrimitive.Title
     ref={ref}
     className={cn(
@@ -97,10 +109,17 @@ DialogTitle.displayName = DialogPrimitive.Title.displayName
 const DialogDescription = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
+<<<<<<< HEAD
 >(({ className...props }ref) => (
   <DialogPrimitive.Description
     ref={ref}
     className={cn("text-sm text-muted-foreground"className)}
+=======
+>(({ className, ...props }, ref) => (
+  <DialogPrimitive.Description
+    ref={ref}
+    className={cn("text-sm text-muted-foreground", className)}
+>>>>>>> origin/auto/autonomy-17186719616
     {...props}
   />
 ))
@@ -116,4 +135,9 @@ export {
   DialogHeader,
   DialogFooter,
   DialogTitle,
+<<<<<<< HEAD
   DialogDescription}
+=======
+  DialogDescription,
+}
+>>>>>>> origin/auto/autonomy-17186719616

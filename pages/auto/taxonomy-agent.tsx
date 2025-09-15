@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const TaxonomyAgent: NextPage = () => {
   return (
@@ -15,7 +21,14 @@ const TaxonomyAgent: NextPage = () => {
         <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</a></Link>
       </main>
     </div>
+<<<<<<< HEAD
   )
 },
 
 export default TaxonomyAgent,
+=======
+  );
+};
+
+export default TaxonomyAgent;
+>>>>>>> origin/auto/autonomy-17186719616

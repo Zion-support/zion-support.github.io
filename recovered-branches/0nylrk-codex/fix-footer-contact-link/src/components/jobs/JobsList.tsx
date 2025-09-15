@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useStateuseEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -7,11 +8,22 @@ import { Button } from "@/components/ui/button";
 import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Loader2EditXEye } from "lucide-react";
+=======
+import { useState, useEffect } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { Job, JobStatus } from "@/types/jobs";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Loader2, Edit, X, Eye } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
 
 interface JobsListProps {
   filter?: JobStatus;
+<<<<<<< HEAD
   onSelectJob?: (jobId: stringjobTitle: string) => void;
 }
 
@@ -19,6 +31,15 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {
   const { user } = useAuth();
   const [jobsetJobs] = useState<Job[]>([]);
   const [isLoadingsetIsLoading] = useState(true);
+=======
+  onSelectJob?: (jobId: string, jobTitle: string) => void;
+}
+
+export function JobsList({ filter, onSelectJob }: JobsListProps) {
+  const { user } = useAuth();
+  const [jobs, setJobs] = useState<Job[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -28,6 +49,7 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {
         let query = supabase
           .from("jobs")
           .select("*")
+<<<<<<< HEAD
           .eq("client_id"user.id)
           .order("created_at"{ ascending: false });
 
@@ -36,18 +58,36 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {
         }
 
         const { dataerror } = await query;
+=======
+          .eq("client_id", user.id)
+          .order("created_at", { ascending: false });
+
+        if (filter) {
+          query = query.eq("status", filter);
+        }
+
+        const { data, error } = await query;
+>>>>>>> origin/auto/autonomy-17186719616
 
         if (error) throw error;
         setJobs(data as Job[]);
       } catch (error) {
+<<<<<<< HEAD
         console.error("Error fetching jobs:"error);
+=======
+        console.error("Error fetching jobs:", error);
+>>>>>>> origin/auto/autonomy-17186719616
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchJobs();
+<<<<<<< HEAD
   }[userfilter]);
+=======
+  }, [user, filter]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   if (isLoading) {
     return (
@@ -96,18 +136,30 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
+<<<<<<< HEAD
           onClick={() => onSelectJob?.(job.idjob.title)}
+=======
+          onClick={() => onSelectJob?.(job.id, job.title)}
+>>>>>>> origin/auto/autonomy-17186719616
         >
           <CardHeader className="p-4">
             <div className="flex justify-between items-start">
               <div>
                 <CardTitle className="text-xl">{job.title}</CardTitle>
                 <CardDescription className="mt-1">
+<<<<<<< HEAD
                   Posted {format(new Date(job.created_at)"PPP")}
                 </CardDescription>
               </div>
               <Badge className={getStatusColor(job.status)}>
                 {job.status.replace("_" ").toUpperCase()}
+=======
+                  Posted {format(new Date(job.created_at), "PPP")}
+                </CardDescription>
+              </div>
+              <Badge className={getStatusColor(job.status)}>
+                {job.status.replace("_", " ").toUpperCase()}
+>>>>>>> origin/auto/autonomy-17186719616
               </Badge>
             </div>
           </CardHeader>
@@ -116,7 +168,11 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {
               {job.description}
             </p>
             <div className="flex flex-wrap gap-1 mt-2">
+<<<<<<< HEAD
               {job.skills.slice(03).map((skillindex) => (
+=======
+              {job.skills.slice(0, 3).map((skill, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <Badge key={index} variant="outline" className="text-xs">
                   {skill}
                 </Badge>
@@ -131,7 +187,11 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {
               <span className="font-medium">Budget:</span> ${job.budget.min} - ${job.budget.max}
             </div>
             <div className="mt-1 text-sm">
+<<<<<<< HEAD
               <span className="font-medium">Deadline:</span> {format(new Date(job.deadline)"PPP")}
+=======
+              <span className="font-medium">Deadline:</span> {format(new Date(job.deadline), "PPP")}
+>>>>>>> origin/auto/autonomy-17186719616
             </div>
           </CardContent>
           <CardFooter className="flex justify-between p-4 pt-0 gap-2">

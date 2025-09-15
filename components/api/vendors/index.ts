@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 import { listVendors } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -55,3 +56,11 @@ function handler() {
 
 
 
+=======
+import { listVendors } from '../../../utils/vendor-store';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const vendors = listVendors();
+  res.status(200).json({ vendors });
+}
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
@@ -7,6 +8,17 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
+=======
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  Brain, Shield, Rocket, Cpu, Database, Atom, Users, Award, 
+  Globe, Target, Star, CheckCircle, TrendingUp, Lightbulb
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function AboutPage() {
   const values = [
@@ -30,7 +42,11 @@ export default function AboutPage() {
       title: "Global Impact",
       description: "Solutions that address real-world challenges across industries and borders"
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const milestones = [
     {
@@ -53,7 +69,11 @@ export default function AboutPage() {
       title: "Company Foundation",
       description: "Zion Tech Group established with vision for autonomous innovation"
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const team = [
     {
@@ -76,7 +96,11 @@ export default function AboutPage() {
       role: "Chief Innovation Officer",
       expertise: "Emerging Technologies, Strategic Innovation, R&D"
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -316,7 +340,11 @@ export default function AboutPage() {
                 Ready to explore the possibilities of autonomous AI and quantum innovation? 
                 Let's collaborate to build tomorrow's technology today.
               </p>
+<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
+=======
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> origin/auto/autonomy-17186719616
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
@@ -337,5 +365,9 @@ export default function AboutPage() {
 
       <EnhancedFooter />
     </>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,13 +1,21 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
 import { 
   Table,
+=======
+import React from "react";
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
+import { 
+  Table, 
+>>>>>>> origin/auto/autonomy-17186719616
   TableBody, 
   TableCell, 
   TableHead, 
   TableHeader, 
   TableRow 
+<<<<<<< HEAD
 } from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { 
@@ -28,6 +36,28 @@ interface QuotesTableProps {
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
   onViewDetails: (quote: QuoteRequest) => void
+=======
+} from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import { 
+  DropdownMenu, 
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu";
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import { formatDate } from "@/utils/dateUtils";
+
+interface QuotesTableProps {
+  quotes: QuoteRequest[];
+  isArchived?: boolean;
+  isLoading: boolean;
+  updateStatus: (id: string, status: QuoteStatus) => void;
+  toggleArchive: (id: string, isArchived: boolean) => void;
+  deleteQuote: (id: string) => void;
+  onViewDetails: (quote: QuoteRequest) => void;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({
@@ -63,8 +93,13 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
           ) : quotes.length === 0 ? (
             <TableRow>
               <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
+<<<<<<< HEAD
                 {isArchived
                   ? "No archived quote requests found."
+=======
+                {isArchived 
+                  ? "No archived quote requests found." 
+>>>>>>> origin/auto/autonomy-17186719616
                   : "No quote requests found."}
               </TableCell>
             </TableRow>
@@ -127,7 +162,11 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           className="text-red-500"
                           onClick={() => {
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
+<<<<<<< HEAD
                               deleteQuote(quote.id),
+=======
+                              deleteQuote(quote.id);
+>>>>>>> origin/auto/autonomy-17186719616
                             }
                           }}
                         >
@@ -163,6 +202,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             <Archive className="h-4 w-4 mr-2" />
                             Archive
                           </DropdownMenuItem>
+<<<<<<< HEAD
                           <DropdownMenuItem
                             onClick = {() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
@@ -172,6 +212,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id),
+=======
+                          <DropdownMenuItem 
+                            onClick={() => {
+                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
+                                deleteQuote(quote.id);
+>>>>>>> origin/auto/autonomy-17186719616
                               }
                             }}
                             className="text-red-500"
@@ -190,5 +236,10 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
         </TableBody>
       </Table>
     </div>
+<<<<<<< HEAD
   ),
 },
+=======
+  );
+};
+>>>>>>> origin/auto/autonomy-17186719616

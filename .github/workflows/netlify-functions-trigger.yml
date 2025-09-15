@@ -1,15 +1,26 @@
+<<<<<<< HEAD
 ---
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 name: Netlify Functions Trigger
 
 on:
   schedule:
+<<<<<<< HEAD
     - cron: '*/30 * * * *' # every 30 minutes
   workflow_dispatch: {}
+=======
+    - cron: '*/10 * * * *' # every 10 minutes
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
+>>>>>>> origin/auto/autonomy-17186719616
 
 permissions:
   contents: write
   actions: read
 
+<<<<<<< HEAD
 concurrency:
   group: netlify-functions-trigger
   cancel-in-progress: false
@@ -26,11 +37,27 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: true
+=======
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NETLIFY_BASE_URL: ${{ vars.NETLIFY_BASE_URL }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
+<<<<<<< HEAD
       - name: Install dependencies
         run: npm ci
       - name: Configure Git identity
@@ -60,3 +87,13 @@ jobs:
           else
             echo "No changes to commit"
           fi
+=======
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+>>>>>>> origin/auto/autonomy-17186719616

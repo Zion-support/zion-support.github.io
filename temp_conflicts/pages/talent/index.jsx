@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const Services = () => {
   const services = [
@@ -47,7 +53,11 @@ const Services = () => {
       href: "/services/mobile-development",
       features: ["iOS Development", "Android Development", "Cross-Platform Apps", "App Store Optimization"]
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <EnhancedLayout>
@@ -94,13 +104,24 @@ const Services = () => {
           <p className="text-blue-100 mb-6">
             Let's discuss how our technology services can transform your business.
           </p>
+<<<<<<< HEAD
           <Link href="/contact" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors">
+=======
+          <Link href="/contact" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+>>>>>>> origin/auto/autonomy-17186719616
             Contact Us Today
           </Link>
         </div>
       </main>
     </EnhancedLayout>
+<<<<<<< HEAD
   )
 },
 
 export default Services,
+=======
+  );
+};
+
+export default Services;
+>>>>>>> origin/auto/autonomy-17186719616

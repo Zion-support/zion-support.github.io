@@ -11,10 +11,17 @@ interface ActiveFiltersProps {
   toggleAvailability: (status: string) => void;
   selectedRegions: string[];
   toggleRegion: (region: string) => void;
+<<<<<<< HEAD
   priceRange: [number];
   setPriceRange: (range: [number]) => void;
   experienceRange: [number];
   setExperienceRange: (range: [number]) => void;
+=======
+  priceRange: [number, number];
+  setPriceRange: (range: [number, number]) => void;
+  experienceRange: [number, number];
+  setExperienceRange: (range: [number, number]) => void;
+>>>>>>> origin/auto/autonomy-17186719616
   clearFilters: () => void;
 }
 
@@ -85,7 +92,11 @@ export function ActiveFilters({
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+<<<<<<< HEAD
           onClick={() => setPriceRange([50200])}
+=======
+          onClick={() => setPriceRange([50, 200])}
+>>>>>>> origin/auto/autonomy-17186719616
         >
           ${priceRange[0]}-${priceRange[1]}/hr
           <X className="h-3 w-3" />
@@ -95,7 +106,11 @@ export function ActiveFilters({
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+<<<<<<< HEAD
           onClick={() => setExperienceRange([015])}
+=======
+          onClick={() => setExperienceRange([0, 15])}
+>>>>>>> origin/auto/autonomy-17186719616
         >
           {experienceRange[0]}-{experienceRange[1]} years
           <X className="h-3 w-3" />

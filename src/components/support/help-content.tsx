@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { HelpCategory } from "./types",
+=======
+import React from "react";
+import { HelpCategory } from "./types";
+>>>>>>> origin/auto/autonomy-17186719616
 import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from 'lucide-react'
 
 export const HELP_CATEGORIES: HelpCategory[] = [
@@ -156,4 +161,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       }
     ]
   }
+<<<<<<< HEAD
 ],
+=======
+];
+>>>>>>> origin/auto/autonomy-17186719616

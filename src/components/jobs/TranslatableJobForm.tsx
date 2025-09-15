@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -27,24 +28,69 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   
   // Form fields with translations
   const [title, setTitle] = useState<Record<SupportedLanguage string>>({
+=======
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Loader2, Globe } from 'lucide-react'
+import { useTranslation } from "react-i18next";
+import { useTranslationService } from "@/hooks/useTranslationService";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+import { toast } from "@/components/ui/use-toast";
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+
+interface TranslatableJobFormProps {
+  onSubmit: (formData: any) => void;
+  isSubmitting?: boolean;
+}
+
+export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
+  const { t } = useTranslation();
+  const { translateContent, isTranslating } = useTranslationService();
+  const { supportedLanguages, currentLanguage } = useLanguage();
+  
+  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage);
+  
+  // Form fields with translations
+  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
+>>>>>>> origin/auto/autonomy-17186719616
     en: "",
     es: "",
     fr: "",
     pt: "",
+<<<<<<< HEAD
     ar: ""}),
   
   const [description, setDescription] = useState<Record<SupportedLanguage string>>({
+=======
+    ar: "",
+  });
+  
+  const [description, setDescription] = useState<Record<SupportedLanguage, string>>({
+>>>>>>> origin/auto/autonomy-17186719616
     en: "",
     es: "",
     fr: "",
     pt: "",
+<<<<<<< HEAD
     ar: ""}),
   
   const [requirements, setRequirements] = useState<Record<SupportedLanguage string>>({
+=======
+    ar: "",
+  });
+  
+  const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({
+>>>>>>> origin/auto/autonomy-17186719616
     en: "",
     es: "",
     fr: "",
     pt: "",
+<<<<<<< HEAD
     ar: ""}),
   
   const [budget, setBudget] = useState(""),
@@ -69,12 +115,40 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     
     // Complete any missing translations with auto-translation
     await ensureAllTranslations(),
+=======
+    ar: "",
+  });
+  
+  const [budget, setBudget] = useState("");
+  const [deadline, setDeadline] = useState("");
+  
+  // Handle text changes
+  const handleTitleChange = (value: string) => {
+    setTitle({ ...title, [activeTab]: value });
+  };
+  
+  const handleDescriptionChange = (value: string) => {
+    setDescription({ ...description, [activeTab]: value });
+  };
+  
+  const handleRequirementsChange = (value: string) => {
+    setRequirements({ ...requirements, [activeTab]: value });
+  };
+  
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Complete any missing translations with auto-translation
+    await ensureAllTranslations();
+>>>>>>> origin/auto/autonomy-17186719616
     
     onSubmit({
       title,
       description,
       requirements,
       budget,
+<<<<<<< HEAD
       deadline}),
   },
   
@@ -90,10 +164,29 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {
     let sourceLanguage: SupportedLanguage = 'en',
     let content = '',
+=======
+      deadline,
+    });
+  };
+  
+  // Auto translate content when language tab changes
+  const handleTabChange = async (tab: string) => {
+    const selectedLanguage = tab as SupportedLanguage;
+    if (selectedLanguage !== activeTab) {
+      setActiveTab(selectedLanguage);
+    }
+  };
+  
+  // Auto translate function
+  const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {
+    let sourceLanguage: SupportedLanguage = 'en';
+    let content = '';
+>>>>>>> origin/auto/autonomy-17186719616
     
     // Find first non-empty content to translate
     for (const lang of supportedLanguages.map(l => l.code)) {
       if (field === 'title' && title[lang]) {
+<<<<<<< HEAD
         content = title[lang],
         sourceLanguage = lang,
         break
@@ -105,6 +198,19 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         content = requirements[lang],
         sourceLanguage = lang,
         break,
+=======
+        content = title[lang];
+        sourceLanguage = lang;
+        break;
+      } else if (field === 'description' && description[lang]) {
+        content = description[lang];
+        sourceLanguage = lang;
+        break;
+      } else if (field === 'requirements' && requirements[lang]) {
+        content = requirements[lang];
+        sourceLanguage = lang;
+        break;
+>>>>>>> origin/auto/autonomy-17186719616
       }
     }
     
@@ -112,17 +218,28 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       toast({
         title: t('translation.no_content'),
         description: t('translation.add_content_first'),
+<<<<<<< HEAD
         variant: "destructive"}),
       return,
     }
     
     try {
       const { translations, error } = await translateContent(content, 'job', sourceLanguage),
+=======
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    try {
+      const { translations, error } = await translateContent(content, 'job', sourceLanguage);
+>>>>>>> origin/auto/autonomy-17186719616
       
       if (error) {
         toast({
           title: t('translation.translation_failed'),
           description: error,
+<<<<<<< HEAD
           variant: "destructive"}),
         return,
       }
@@ -133,10 +250,24 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         setDescription(translations),
       } else if (field === 'requirements') {
         setRequirements(translations),
+=======
+          variant: "destructive",
+        });
+        return;
+      }
+      
+      if (field === 'title') {
+        setTitle(translations);
+      } else if (field === 'description') {
+        setDescription(translations);
+      } else if (field === 'requirements') {
+        setRequirements(translations);
+>>>>>>> origin/auto/autonomy-17186719616
       }
       
       toast({
         title: t('translation.translation_success'),
+<<<<<<< HEAD
         description: t('translation.content_translated')}),
     } catch (error) {
       logErrorToProduction('Error translating ${field}:', { data: error }),
@@ -157,15 +288,44 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     // Title translations
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {
       promises.push(autoTranslate('title')),
+=======
+        description: t('translation.content_translated'),
+      });
+    } catch (error) {
+      logErrorToProduction('Error translating ${field}:', { data: error });
+      toast({
+        title: t('translation.translation_failed'),
+        description: error instanceof Error ? error.message : t('translation.unknown_error'),
+        variant: "destructive",
+      });
+    }
+  };
+  
+  // Ensure all translations are available
+  const ensureAllTranslations = async () => {
+    const promises = [];
+    
+    if (!title.en && !title.es && !title.fr && !title.pt && !title.ar) return;
+    if (!description.en && !description.es && !description.fr && !description.pt && !description.ar) return;
+    
+    // Title translations
+    if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {
+      promises.push(autoTranslate('title'));
+>>>>>>> origin/auto/autonomy-17186719616
     }
     
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
+<<<<<<< HEAD
       promises.push(autoTranslate('description')),
+=======
+      promises.push(autoTranslate('description'));
+>>>>>>> origin/auto/autonomy-17186719616
     }
     
     // Requirements translations
     if (Object.values(requirements).some(val => val) && Object.values(requirements).some(val => !val)) {
+<<<<<<< HEAD
       promises.push(autoTranslate('requirements')),
     }
     
@@ -173,6 +333,15 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       await Promise.all(promises),
     }
   },
+=======
+      promises.push(autoTranslate('requirements'));
+    }
+    
+    if (promises.length) {
+      await Promise.all(promises);
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -366,5 +535,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         </Button>
       </div>
     </form>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

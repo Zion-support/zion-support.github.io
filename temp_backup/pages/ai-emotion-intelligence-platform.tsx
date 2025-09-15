@@ -136,7 +136,12 @@ export default function AIEmotionIntelligencePlatform() {
         <title>AI Emotion Intelligence Platform - Zion Tech Group</title>
         <meta name="description" content="Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights." />
         <meta name="keywords" content="AI emotion detection, sentiment analysis, customer experience, emotion AI, real-time analysis" />
+<<<<<<< HEAD
         <link rel="icon" href="/favicon.svg" />
+=======
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+>>>>>>> origin/auto/autonomy-17186719616
       </Head>
 
       <UltraFuturisticBackground2030>
@@ -148,6 +153,7 @@ export default function AIEmotionIntelligencePlatform() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
@@ -157,6 +163,13 @@ export default function AIEmotionIntelligencePlatform() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6"
               >
+=======
+              transition={{ duration: 0.8 }} className="mb-8">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
+>>>>>>> origin/auto/autonomy-17186719616
                 <Sparkles className="w-4 h-4 mr-2" />
                 AI & Customer Experience
               </motion.div>
@@ -164,9 +177,13 @@ export default function AIEmotionIntelligencePlatform() {
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-5xl md:text-7xl font-bold mb-6"
               >
+=======
+                transition={{ duration: 0.8, delay: 0.4 }} className="text-5xl md:text-7xl font-bold mb-6">
+>>>>>>> origin/auto/autonomy-17186719616
                 <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                   AI Emotion Intelligence Platform
                 </span>
@@ -175,18 +192,26 @@ export default function AIEmotionIntelligencePlatform() {
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               >
+=======
+                transition={{ duration: 0.8, delay: 0.6 }} className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+>>>>>>> origin/auto/autonomy-17186719616
                 Real-time emotion analysis and response for customer interactions
               </motion.p>
 
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
               >
+=======
+                transition={{ duration: 0.8, delay: 0.8 }} className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+>>>>>>> origin/auto/autonomy-17186719616
                 Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights for better customer experience.
               </motion.p>
             </motion.div>
@@ -195,6 +220,7 @@ export default function AIEmotionIntelligencePlatform() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8, delay: 1.0 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16"
             >
@@ -202,6 +228,11 @@ export default function AIEmotionIntelligencePlatform() {
                 href="/contact"
                 className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25"
               >
+=======
+              transition={{ duration: 0.8, delay: 1.0 }} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+              <Link
+                href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25">
+>>>>>>> origin/auto/autonomy-17186719616
                 <span className="relative z-10 flex items-center">
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -210,9 +241,13 @@ export default function AIEmotionIntelligencePlatform() {
               </Link>
 
               <Link
+<<<<<<< HEAD
                 href="#pricing"
                 className="group px-8 py-4 border-2 border-pink-500/30 text-pink-300 font-semibold rounded-2xl text-lg hover:bg-pink-500/10 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105"
               >
+=======
+                href="#pricing" className="group px-8 py-4 border-2 border-pink-500/30 text-pink-300 font-semibold rounded-2xl text-lg hover:bg-pink-500/10 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105">
+>>>>>>> origin/auto/autonomy-17186719616
                 <span className="flex items-center">
                   View Pricing
                   <DollarSign className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
@@ -224,9 +259,13 @@ export default function AIEmotionIntelligencePlatform() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8, delay: 1.2 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
             >
+=======
+              transition={{ duration: 0.8, delay: 1.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+>>>>>>> origin/auto/autonomy-17186719616
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">27</div>
                 <div className="text-gray-400 text-sm">Emotions Detected</div>
@@ -254,9 +293,13 @@ export default function AIEmotionIntelligencePlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+=======
+              viewport={{ once: true }} className="text-center mb-16">
+>>>>>>> origin/auto/autonomy-17186719616
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Features for Emotion Intelligence
               </h2>
@@ -272,9 +315,13 @@ export default function AIEmotionIntelligencePlatform() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
                   viewport={{ once: true }}
                   className="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10"
                 >
+=======
+                  viewport={{ once: true }} className="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
+>>>>>>> origin/auto/autonomy-17186719616
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -293,9 +340,13 @@ export default function AIEmotionIntelligencePlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+=======
+              viewport={{ once: true }} className="text-center mb-16">
+>>>>>>> origin/auto/autonomy-17186719616
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Business with Emotion AI
               </h2>
@@ -311,9 +362,13 @@ export default function AIEmotionIntelligencePlatform() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
                   viewport={{ once: true }}
                   className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300"
                 >
+=======
+                  viewport={{ once: true }} className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
+>>>>>>> origin/auto/autonomy-17186719616
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
@@ -332,9 +387,13 @@ export default function AIEmotionIntelligencePlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               viewport={{ once: true }}
               className="text-center mb-16"
             >
+=======
+              viewport={{ once: true }} className="text-center mb-16">
+>>>>>>> origin/auto/autonomy-17186719616
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Choose Your Plan
               </h2>
@@ -417,9 +476,13 @@ export default function AIEmotionIntelligencePlatform() {
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
                 <Link
+<<<<<<< HEAD
                   href="/contact"
                   className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25"
                 >
+=======
+                  href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25">
+>>>>>>> origin/auto/autonomy-17186719616
                   <span className="relative z-10 flex items-center">
                     Start Free Trial
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -428,9 +491,13 @@ export default function AIEmotionIntelligencePlatform() {
                 </Link>
 
                 <Link
+<<<<<<< HEAD
                   href="/contact"
                   className="group px-8 py-4 border-2 border-pink-500/30 text-pink-300 font-semibold rounded-2xl text-lg hover:bg-pink-500/10 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105"
                 >
+=======
+                  href="/contact" className="group px-8 py-4 border-2 border-pink-500/30 text-pink-300 font-semibold rounded-2xl text-lg hover:bg-pink-500/10 hover:border-pink-500/50 transition-all duration-300 transform hover:scale-105">
+>>>>>>> origin/auto/autonomy-17186719616
                   <span className="flex items-center">
                     Schedule Demo
                     <MessageCircle className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-200" />

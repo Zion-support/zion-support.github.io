@@ -4,8 +4,14 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
+<<<<<<< HEAD
   CarouselPrevious} from "@/components/ui/carousel";
 import { CardContent } from "@/components/ui/card";
+=======
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Avatar } from "@/components/ui/avatar";
 import { Quote } from "lucide-react";
 
@@ -13,6 +19,7 @@ const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
     author: "Sarah Chen",
+<<<<<<< HEAD
     role: "CTODataMind Solutions",
     avatar: "https://i.pravatar.cc/150?img=32",
     company: "DataMind"},
@@ -34,6 +41,34 @@ const testimonials = [
     role: "Operations ManagerEcoTech Systems",
     avatar: "https://i.pravatar.cc/150?img=67",
     company: "EcoTech"}];
+=======
+    role: "CTO, DataMind Solutions",
+    avatar: "https://i.pravatar.cc/150?img=32",
+    company: "DataMind",
+  },
+  {
+    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.",
+    author: "Michael Rodriguez",
+    role: "IT Director, GlobalTech",
+    avatar: "https://i.pravatar.cc/150?img=12",
+    company: "GlobalTech",
+  },
+  {
+    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.",
+    author: "Aanya Patel",
+    role: "Independent AI Consultant",
+    avatar: "https://i.pravatar.cc/150?img=28",
+    company: "AI Systems",
+  },
+  {
+    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.",
+    author: "Thomas Klein",
+    role: "Operations Manager, EcoTech Systems",
+    avatar: "https://i.pravatar.cc/150?img=67",
+    company: "EcoTech",
+  },
+];
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function TestimonialCarousel() {
   return (
@@ -50,11 +85,20 @@ export function TestimonialCarousel() {
           <Carousel
             opts={{
               align: "start",
+<<<<<<< HEAD
               loop: true}}
             className="w-full"
           >
             <CarouselContent>
               {testimonials.map((testimonialindex) => (
+=======
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6">

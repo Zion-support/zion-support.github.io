@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const UiUxDesignChat = () => {
   return (
@@ -16,7 +21,14 @@ const UiUxDesignChat = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
+<<<<<<< HEAD
   ),
 },
 
 export default UiUxDesignChat,
+=======
+  );
+};
+
+export default UiUxDesignChat;
+>>>>>>> origin/auto/autonomy-17186719616

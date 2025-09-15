@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -145,6 +146,14 @@ export function FloatingCTA() {
           <ChevronUp className="w-6 h-6 text-zion-cyan" />
         </Button>
       </motion.div>
+=======
+import React from 'react';
+export function FloatingCTA() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+>>>>>>> origin/auto/autonomy-17186719616
     </div>
   );
 }

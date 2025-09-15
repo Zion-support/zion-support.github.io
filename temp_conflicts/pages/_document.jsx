@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Html, Head, Main, NextScript } from 'next/document',
+=======
+import { Html, Head, Main, NextScript } from 'next/document';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function Document() {
   return (
@@ -9,5 +13,9 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

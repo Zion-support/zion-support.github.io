@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react'
 import { useMessaging } from '@/context/MessagingContext',
@@ -10,25 +11,50 @@ import { Button } from '@/components/ui/button',
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
 import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger',
+=======
+import React, { useEffect, useState } from 'react';
+import { MessageSquare, Video } from 'lucide-react'
+import { useMessaging } from '@/context/MessagingContext';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { ConversationsList, ConversationDetailView } from '@/components/messaging';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { toast } from 'sonner';
+import { Button } from '@/components/ui/button';
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
+import { useRouter } from 'next/router'; // Changed from react-router-dom
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function MessagingInbox() {
 
   const { 
+<<<<<<< HEAD
     conversations,
+=======
+    conversations, 
+>>>>>>> origin/auto/autonomy-17186719616
     activeConversation, 
     setActiveConversation, 
     markAsRead,
     fetchConversations,
     isLoading
+<<<<<<< HEAD
   } = useMessaging(),
   const isMobile = useIsMobile(),
   const router = useRouter(), // Changed from navigate
   const [activeCall, setActiveCall] = useState<string | null>(null),
+=======
+  } = useMessaging();
+  const isMobile = useIsMobile();
+  const router = useRouter(); // Changed from navigate
+  const [activeCall, setActiveCall] = useState<string | null>(null);
+>>>>>>> origin/auto/autonomy-17186719616
   
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
       try {
+<<<<<<< HEAD
         await fetchConversations(),
       } catch (error) {
         logErrorToProduction('Failed to load conversations:', { data: error }),
@@ -47,15 +73,43 @@ export default function MessagingInbox() {
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
+=======
+        await fetchConversations();
+      } catch (error) {
+        logErrorToProduction('Failed to load conversations:', { data: error });
+        toast.error("Failed to load messages. Please try again.");
+      }
+    };
+    
+    loadData();
+  }, [fetchConversations]);
+  
+  const startVideoCall = () => {
+    if (!activeConversation) {
+      toast.error("Please select a conversation first");
+      return;
+    }
+    
+    const roomId = `msg-${activeConversation.id}`;
+    setActiveCall(roomId);
+>>>>>>> origin/auto/autonomy-17186719616
     
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
+<<<<<<< HEAD
     }),
     
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   },
+=======
+    });
+    
+    // Navigate to video call page
+    router.push(`/call/${roomId}`); // Changed from navigate
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <ProtectedRoute>
@@ -104,5 +158,9 @@ export default function MessagingInbox() {
         {isMobile && <div className="h-16"></div>}
       </div>
     </ProtectedRoute>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

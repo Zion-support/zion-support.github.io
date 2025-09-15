@@ -1,7 +1,11 @@
 
 import * as React from "react"
 import type { CSSProperties } from "react"
+<<<<<<< HEAD
 import { SheetContent } from "@/components/ui/sheet"
+=======
+import { Sheet, SheetContent } from "@/components/ui/sheet"
+>>>>>>> origin/auto/autonomy-17186719616
 import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
 import type { SafeRef } from "../sidebar.types"
@@ -12,8 +16,13 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
   collapsible?: "offcanvas" | "icon" | "none"
 }
 
+<<<<<<< HEAD
 export const Sidebar = React.forwardRef<HTMLDivElementSidebarProps>((propsref) => {
   const { isMobilestateopenMobilesetOpenMobile } = useSidebar()
+=======
+export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>((props, ref) => {
+  const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
+>>>>>>> origin/auto/autonomy-17186719616
 
   if (props.collapsible === "none") {
     return (
@@ -39,7 +48,12 @@ export const Sidebar = React.forwardRef<HTMLDivElementSidebarProps>((propsref) =
           className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
           style={
             {
+<<<<<<< HEAD
               "--sidebar-width": "18rem"} as CSSProperties
+=======
+              "--sidebar-width": "18rem",
+            } as CSSProperties
+>>>>>>> origin/auto/autonomy-17186719616
           }
           side={props.side}
         >
@@ -98,7 +112,11 @@ Sidebar.displayName = "Sidebar"
 export const SidebarRail = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<"button">
+<<<<<<< HEAD
 >((propsref) => {
+=======
+>((props, ref) => {
+>>>>>>> origin/auto/autonomy-17186719616
   const { toggleSidebar } = useSidebar()
 
   return (
@@ -127,7 +145,11 @@ SidebarRail.displayName = "SidebarRail"
 export const SidebarInset = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"main">
+<<<<<<< HEAD
 >((propsref) => {
+=======
+>((props, ref) => {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <main
       ref={ref as SafeRef<HTMLDivElement>}

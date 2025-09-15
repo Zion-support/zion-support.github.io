@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Image, { type ImageProps } from 'next/image',
 import { cn } from '@/lib/utils',
@@ -9,6 +10,19 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {
   fallbackSrc?: string,
   /** CSS class for the retry button */
   retryClassName?: string
+=======
+import React, { useState } from 'react';
+import Image, { type ImageProps } from 'next/image';
+import { cn } from '@/lib/utils';
+
+interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
+  src: string;
+  alt?: string;
+  /** Source to use if the main src fails */
+  fallbackSrc?: string;
+  /** CSS class for the retry button */
+  retryClassName?: string;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 /**
@@ -22,6 +36,7 @@ export function ImageWithRetry({
   retryClassName,
   ...props
 }: ImageWithRetryProps) {
+<<<<<<< HEAD
   const [currentSrc, setCurrentSrc] = useState(src),
   const [failed, setFailed] = useState(false),
 
@@ -38,6 +53,23 @@ export function ImageWithRetry({
   const fill = !('width' in props) && !('height' in props),
 
   const fill = !('width' in props) && !('height' in props);
+=======
+  const [currentSrc, setCurrentSrc] = useState(src);
+  const [failed, setFailed] = useState(false);
+
+  const handleError = () => {
+    setFailed(true);
+    setCurrentSrc(fallbackSrc);
+  };
+
+  const handleRetry = () => {
+    setFailed(false);
+    setCurrentSrc(src);
+  };
+
+  const fill = !('width' in props) && !('height' in props);
+
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="relative inline-block">
       <Image
@@ -58,7 +90,14 @@ export function ImageWithRetry({
         </button>
       )}
     </div>
+<<<<<<< HEAD
   ),
 }
 
 export default ImageWithRetry,
+=======
+  );
+}
+
+export default ImageWithRetry;
+>>>>>>> origin/auto/autonomy-17186719616

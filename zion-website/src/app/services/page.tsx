@@ -1,43 +1,91 @@
+<<<<<<< HEAD
 import {
 
   UserGroupIcon,
   LightBulbIcon,
   CogIcon,
+=======
+import { 
+  UserGroupIcon, 
+  LightBulbIcon, 
+  CogIcon, 
+>>>>>>> origin/auto/autonomy-17186719616
   ShieldCheckIcon,
   ChartBarIcon,
   RocketLaunchIcon,
   AcademicCapIcon,
+<<<<<<< HEAD
   GlobeAltIcon;
 } from '@heroicons / react / 24 / outline';
 const professional_services = [;
+=======
+  GlobeAltIcon
+} from '@heroicons/react/24/outline'
+
+const professionalServices = [
+>>>>>>> origin/auto/autonomy-17186719616
   {
     name: 'AI Strategy & Consulting',
     description: 'Comprehensive assessment and strategic planning for AI transformation initiatives.',
     icon: LightBulbIcon,
+<<<<<<< HEAD
     features: [;
       'Technology AssessmentROI AnalysisImplementation RoadmapChange Management Planning';
     ],
     duration: '4 - 8 weeks'},
+=======
+    features: [
+      'Technology Assessment',
+      'ROI Analysis',
+      'Implementation Roadmap',
+      'Change Management Planning'
+    ],
+    duration: '4-8 weeks',
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   {
     name: 'Custom AI Development',
     description: 'Tailored AI solutions built specifically for your business needs and objectives.',
     icon: CogIcon,
+<<<<<<< HEAD
     features: [;
       'Custom Algorithm DevelopmentIntegration ServicesTesting & ValidationDocumentation & Training';
     ],
     duration: '8 - 24 weeks'},
+=======
+    features: [
+      'Custom Algorithm Development',
+      'Integration Services',
+      'Testing & Validation',
+      'Documentation & Training'
+    ],
+    duration: '8-24 weeks',
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   {
     name: 'AI Integration & Deployment',
     description: 'Seamless integration of AI solutions into your existing infrastructure and workflows.',
     icon: RocketLaunchIcon,
+<<<<<<< HEAD
     features: [;
       'System IntegrationAPI DevelopmentPerformance OptimizationGo - live Support';
     ],
     duration: '4 - 12 weeks'},
+=======
+    features: [
+      'System Integration',
+      'API Development',
+      'Performance Optimization',
+      'Go-live Support'
+    ],
+    duration: '4-12 weeks',
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   {
     name: 'AI Training & Education',
     description: 'Comprehensive training programs to ensure your team maximizes AI solution value.',
     icon: AcademicCapIcon,
+<<<<<<< HEAD
     features: [;
       'Technical TrainingBest PracticesOngoing SupportCertification Programs';
     ],
@@ -50,10 +98,33 @@ const professional_services = [;
       '24 / 7 MonitoringPerformance OptimizationSecurity UpdatesTechnical Support';
     ],
     duration: 'Ongoing'},
+=======
+    features: [
+      'Technical Training',
+      'Best Practices',
+      'Ongoing Support',
+      'Certification Programs'
+    ],
+    duration: '2-4 weeks',
+  },
+  {
+    name: 'AI Maintenance & Support',
+    description: 'Continuous monitoring, optimization, and support for your AI solutions.',
+    icon: ShieldCheckIcon,
+    features: [
+      '24/7 Monitoring',
+      'Performance Optimization',
+      'Security Updates',
+      'Technical Support'
+    ],
+    duration: 'Ongoing',
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   {
     name: 'AI Audit & Compliance',
     description: 'Comprehensive audits to ensure your AI systems meet regulatory and ethical standards.',
     icon: ChartBarIcon,
+<<<<<<< HEAD
     features: [;
       'Compliance AssessmentEthical AI ReviewSecurity AuditsRisk Mitigation';
     ],
@@ -118,11 +189,98 @@ const reasonsToChoose = [;
               From strategy to implementationour comprehensive AI services help you navigate 
 
 
+=======
+    features: [
+      'Compliance Assessment',
+      'Ethical AI Review',
+      'Security Audits',
+      'Risk Mitigation'
+    ],
+    duration: '2-6 weeks',
+  },
+]
+
+const serviceProcess = [
+  {
+    step: '01',
+    title: 'Discovery & Assessment',
+    description: 'We begin by understanding your business challenges, current technology stack, and AI objectives.',
+    icon: LightBulbIcon,
+  },
+  {
+    step: '02',
+    title: 'Solution Design',
+    description: 'Our experts design a comprehensive solution that addresses your specific needs and goals.',
+    icon: CogIcon,
+  },
+  {
+    step: '03',
+    title: 'Development & Testing',
+    description: 'We develop and rigorously test your solution to ensure optimal performance and reliability.',
+    icon: RocketLaunchIcon,
+  },
+  {
+    step: '04',
+    title: 'Deployment & Training',
+    description: 'Seamless deployment with comprehensive training to maximize adoption and value.',
+    icon: AcademicCapIcon,
+  },
+  {
+    step: '05',
+    title: 'Ongoing Support',
+    description: 'Continuous monitoring, optimization, and support to ensure lasting success.',
+    icon: ShieldCheckIcon,
+  },
+]
+
+const reasonsToChoose = [
+  {
+    name: 'Expert Team',
+    description: 'World-class AI researchers and engineers with decades of combined experience.',
+    icon: UserGroupIcon,
+  },
+  {
+    name: 'Proven Track Record',
+    description: 'Successfully delivered 500+ AI solutions across diverse industries worldwide.',
+    icon: ChartBarIcon,
+  },
+  {
+    name: 'Cutting-Edge Technology',
+    description: 'Access to the latest AI research and technology innovations.',
+    icon: LightBulbIcon,
+  },
+  {
+    name: 'Global Support',
+    description: '24/7 support and maintenance services across multiple time zones.',
+    icon: GlobeAltIcon,
+  },
+]
+
+export default function ServicesPage() {
+  return (
+    <div className="bg-black">
+      {/* Hero section */}
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              Professional{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                AI Services
+              </span>
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              From strategy to implementation, our comprehensive AI services help you navigate 
+>>>>>>> origin/auto/autonomy-17186719616
               the complexities of artificial intelligence and achieve transformative results.
             </p>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
       {/* Professional Services */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -130,12 +288,17 @@ const reasonsToChoose = [;
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Comprehensive AI Solutions
           </p>
+<<<<<<< HEAD
 
 
           <p className="mt-6 text-lg leading-8 text-gray-300">
             We offer end-to-end AI services designed to accelerate your digital transformation 
 
 
+=======
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            We offer end-to-end AI services designed to accelerate your digital transformation 
+>>>>>>> origin/auto/autonomy-17186719616
             and drive measurable business outcomes.
           </p>
         </div>
@@ -167,6 +330,7 @@ const reasonsToChoose = [;
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 AI Services;
               </span>;
@@ -345,6 +509,13 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   <p className=&quot;text - sm text - gray - 300 & quot;>{step.description}</p>;
                 </div>;
               </div>))}
+=======
+          </div>
+        </div>
+      </div>
+
+      {/* Service Process */}
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
@@ -358,7 +529,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5">
+<<<<<<< HEAD
             {serviceProcess.map((stepindex) => (
+=======
+            {serviceProcess.map((step, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <div key={step.step} className="relative">
                 {index < serviceProcess.length - 1 && (
                   <div className="hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700"></div>
@@ -373,6 +548,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
 
           </div>;
         </div>;
@@ -402,6 +578,13 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   <p className=&quot;flex - auto & quot;>{reason.description}</p>;
                 </dd>;
               </div>))}
+=======
+          </div>
+        </div>
+      </div>
+
+      {/* Why Choose Us */}
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Us</h2>
@@ -425,6 +608,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </dd>
               </div>
             ))}
+<<<<<<< HEAD
           </dl>;
         </div>;
       </div>;
@@ -436,6 +620,16 @@ const Page: React.FC<PageProps> = ({ className }) => {
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
 
+=======
+          </dl>
+        </div>
+      </div>
+
+      {/* CTA section */}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+>>>>>>> origin/auto/autonomy-17186719616
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -447,15 +641,27 @@ const Page: React.FC<PageProps> = ({ className }) => {
               className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
             >
               Schedule Consultation
+<<<<<<< HEAD
             </Link>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </Link>
+=======
+            </a>
+            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              View Solutions <span aria-hidden="true">→</span>
+            </a>
+>>>>>>> origin/auto/autonomy-17186719616
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 };
 
 export default Page;
+=======
+  )
+}
+>>>>>>> origin/auto/autonomy-17186719616

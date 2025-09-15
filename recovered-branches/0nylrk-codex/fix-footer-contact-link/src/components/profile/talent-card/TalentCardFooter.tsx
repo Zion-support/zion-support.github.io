@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import React{ useState } from "react";
+=======
+import React, { useState } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
@@ -15,8 +19,13 @@ interface TalentCardFooterProps {
   onRequestHire?: (profile: TalentProfile) => void;
 }
 
+<<<<<<< HEAD
 export function TalentCardFooter({ profileonViewProfileonRequestHire }: TalentCardFooterProps) {
   const [isHireModalOpensetIsHireModalOpen] = useState(false);
+=======
+export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
   const { userDetails } = useAuthStatus();
   const navigate = useNavigate();
 

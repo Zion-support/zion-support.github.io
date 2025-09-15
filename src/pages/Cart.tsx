@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button',
 import Link from 'next/link',
 import { useSelector, useDispatch } from 'react-redux',
@@ -40,10 +41,56 @@ export default function CartPage() {
   const removeItem = (id: string) => {
     const item = items.find(i => i.id === id),
     dispatch(removeItemAction(id)),
+=======
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useAuth } from '@/hooks/useAuth';
+import type { RootState, AppDispatch } from '@/store';
+import {
+  removeItem as removeItemAction,
+  updateQuantity as updateQuantityAction,
+} from '@/store/cartSlice';
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
+import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
+// CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
+// import { CartItem as CartItemType } from '@/types/cart';
+// safeStorage is no longer needed here for reading
+// import { safeStorage } from '@/utils/safeStorage';
+import { getStripe } from '@/utils/getStripe';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { ShoppingCart, User, CreditCard, ArrowRight, Package, Shield } from 'lucide-react'
+import { useWishlist } from '@/hooks/useWishlist';
+import { toast } from '@/hooks/use-toast';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+
+export default function CartPage() {
+  const { t } = useTranslation();
+  const items = useSelector((s: RootState) => s.cart.items);
+  const dispatch = useDispatch<AppDispatch>();
+  const { user, isAuthenticated } = useAuth();
+  const [loading, setLoading] = useState(false);
+  const [guestOpen, setGuestOpen] = useState(false);
+  const { toggle: toggleWishlist, isWishlisted } = useWishlist();
+
+  const updateQuantity = (id: string, qty: number) => {
+    dispatch(updateQuantityAction({ id, quantity: qty }));
+  };
+
+  const removeItem = (id: string) => {
+    const item = items.find(i => i.id === id);
+    dispatch(removeItemAction(id));
+>>>>>>> origin/auto/autonomy-17186719616
     
     if (item) {
       toast({
         title: "Item removed",
+<<<<<<< HEAD
         description: `${item.name} has been removed from your cart`}),
     }
   },
@@ -51,10 +98,21 @@ export default function CartPage() {
   const saveForLater = (id: string, name: string) => {
     const wasWishlisted = isWishlisted(id),
     toggleWishlist(id),
+=======
+        description: `${item.name} has been removed from your cart`,
+      });
+    }
+  };
+
+  const saveForLater = (id: string, name: string) => {
+    const wasWishlisted = isWishlisted(id);
+    toggleWishlist(id);
+>>>>>>> origin/auto/autonomy-17186719616
     toast({
       title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist',
       description: wasWishlisted
         ? `${name} has been removed from your wishlist`
+<<<<<<< HEAD
         : `${name} has been added to your wishlist`}),
   },
 
@@ -63,10 +121,22 @@ export default function CartPage() {
     try {
       const stripe = await getStripe(),
       if (!stripe) throw new Error('Stripe.js failed to load'),
+=======
+        : `${name} has been added to your wishlist`,
+    });
+  };
+
+  const handleCheckout = async (details?: { email?: string; address?: string }) => {
+    setLoading(true);
+    try {
+      const stripe = await getStripe();
+      if (!stripe) throw new Error('Stripe.js failed to load');
+>>>>>>> origin/auto/autonomy-17186719616
 
       const { data } = await axios.post('/api/checkout-session', {
         cartItems: items,
         customer_email: details?.email || user?.email,
+<<<<<<< HEAD
         shipping_address: details?.address}),
 
       const sessionId = data.sessionId as string | undefined,
@@ -92,13 +162,47 @@ export default function CartPage() {
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0),
   const tax = subtotal * 0.08, // 8% tax estimate
+=======
+        shipping_address: details?.address,
+      });
+
+      const sessionId = data.sessionId as string | undefined;
+      if (!sessionId) throw new Error('Session ID missing in response');
+
+      const { error } = await stripe.redirectToCheckout({ sessionId });
+      if (error) logErrorToProduction('Stripe redirect error:', { data: error.message });
+    } catch (err: any) {
+      logErrorToProduction('Checkout error:', { data: err });
+      alert(err.message || 'Checkout failed');
+    } finally {
+      setLoading(false);
+    }
+  }; 
+
+  const startCheckout = () => {
+    if (!isAuthenticated) {
+      setGuestOpen(true);
+    } else {
+      handleCheckout();
+    }
+  };
+
+  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  const tax = subtotal * 0.08; // 8% tax estimate
+>>>>>>> origin/auto/autonomy-17186719616
   
   // Only add shipping for physical items
   const hasPhysicalItems = items.some(item => 
     !item.type || item.type === 'physical' // Default to physical if type not specified
+<<<<<<< HEAD
   ),
   const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0,
   const total = subtotal + tax + shipping,
+=======
+  );
+  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
+  const total = subtotal + tax + shipping;
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Empty cart state
   if (items.length === 0) {
@@ -119,7 +223,11 @@ export default function CartPage() {
             </div>
             
             <div className="space-y-4">
+<<<<<<< HEAD
               <Button asChild size="lg" className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue">
+=======
+              <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue">
+>>>>>>> origin/auto/autonomy-17186719616
                 <Link href="/equipment">
                   <Package className="h-4 w-4 mr-2" />
                   Browse Equipment
@@ -147,7 +255,11 @@ export default function CartPage() {
           </motion.div>
         </div>
       </div>
+<<<<<<< HEAD
     )
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -341,5 +453,9 @@ export default function CartPage() {
         />
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

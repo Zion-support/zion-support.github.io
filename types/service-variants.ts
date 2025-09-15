@@ -4,7 +4,11 @@ export type ServiceVariant =
   | 'quantum'
   | 'cyberpunk'
   | 'neural'
+<<<<<<< HEAD
   | 'quantum-holographic'
+=======
+  | 'quantum-hologographic'
+>>>>>>> origin/auto/autonomy-17186719616
   | 'quantum-advanced'
   | 'holographic-advanced'
   | 'neural-quantum'
@@ -50,6 +54,7 @@ export type ServiceVariant =
   | 'autonomous-futuristic'
   | 'enterprise-futuristic'
   | 'holographic-futuristic'
+<<<<<<< HEAD
   | 'biotech-futuristic'
   | 'simulation-futuristic'
   | 'micro-saas-futuristic'
@@ -70,6 +75,8 @@ export type ServiceVariant =
   | 'ai-consciousness'
   | 'healthcare-futuristic'
   | 'cybersecurity'
+=======
+>>>>>>> origin/auto/autonomy-17186719616
   | 'ai-revolutionary'
   | 'quantum-revolutionary'
   | 'ai-quantum-revolutionary'
@@ -97,7 +104,37 @@ export type ServiceVariant =
   | 'monitoring-futuristic'
   | 'backup-futuristic'
   | 'analytics-futuristic'
+<<<<<<< HEAD
   | 'emerging-tech'
   | 'space-tech'
   | 'autonomous-systems'
   | 'quantum-futuristic';
+=======
+  | 'it-futuristic'
+  | 'saas-futuristic'
+  | 'micro-saas-futuristic'
+  | 'business-intelligence-futuristic'
+  | 'customer-service-futuristic'
+  | 'marketing-futuristic'
+  | 'sales-futuristic'
+  | 'hr-futuristic'
+  | 'finance-futuristic'
+  | 'project-management-futuristic'
+  | 'supply-chain-futuristic'
+  | 'legal-futuristic'
+  | 'healthcare-futuristic'
+  | 'biotech-futuristic'
+  | 'simulation-futuristic'
+  | 'space-futuristic'
+  | 'neuromorphic-futuristic'
+  | 'bio-futuristic'
+  | 'fusion-futuristic'
+  | 'automation-futuristic'
+  | 'retail-futuristic'
+  | 'energy-futuristic'
+  | 'transportation-futuristic'
+  | 'education-futuristic'
+  | 'real-estate-futuristic'
+  | 'industrial-futuristic'
+  | 'neural-futuristic';
+>>>>>>> origin/auto/autonomy-17186719616

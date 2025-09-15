@@ -19,12 +19,21 @@ interface ListingScoreCardProps {
 }
 
 export function ListingScoreCard({ 
+<<<<<<< HEAD
   title
   description
   image
   category
   tags,
   author
+=======
+  title, 
+  description, 
+  image, 
+  category, 
+  tags,
+  author, 
+>>>>>>> origin/auto/autonomy-17186719616
   authorImage,
   aiScore = 0,
   rating = 0,
@@ -64,11 +73,19 @@ export function ListingScoreCard({
         {rating > 0 && (
           <div className="flex items-center gap-1 mb-4">
             <div className="flex">
+<<<<<<< HEAD
               {[12345].map((star) => (
                 <StarIcon 
                   key={star}
                   className={cn(
                     "h-4 w-4"
+=======
+              {[1, 2, 3, 4, 5].map((star) => (
+                <StarIcon 
+                  key={star}
+                  className={cn(
+                    "h-4 w-4", 
+>>>>>>> origin/auto/autonomy-17186719616
                     star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
@@ -84,7 +101,11 @@ export function ListingScoreCard({
         
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-4">
+<<<<<<< HEAD
             {tags.map((tagi) => (
+=======
+            {tags.map((tag, i) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
               </Badge>

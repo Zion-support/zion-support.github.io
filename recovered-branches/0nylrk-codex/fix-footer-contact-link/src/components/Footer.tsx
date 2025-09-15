@@ -1,5 +1,9 @@
 import { NewsletterForm } from "@/components/NewsletterForm";
+<<<<<<< HEAD
 import { TwitterLinkedinFacebookInstagramGithub } from "lucide-react";
+=======
+import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Link } from "react-router-dom";
 
 export function Footer() {
@@ -60,7 +64,11 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Subscribe to our newsletter</h3>
             <p className="text-zion-slate mb-4">
+<<<<<<< HEAD
               Stay updated with the latest news on techAIand marketplace opportunities.
+=======
+              Stay updated with the latest news on tech, AI, and marketplace opportunities.
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
             <NewsletterForm />
           </div>

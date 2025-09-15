@@ -5,7 +5,11 @@ import { useForm } from "react-hook-form";
 import type { ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+<<<<<<< HEAD
 import { LogInUserEyeOff } from "lucide-react";
+=======
+import { LogIn, User, Eye, EyeOff } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 
 import { useAuth } from "@/hooks/useAuth";
 import { loginUser } from "@/services/authService";
@@ -17,37 +21,68 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage} from "@/components/ui/form";
 import { AlertDescription } from "@/components/ui/alert";
 import { LinkuseNavigate } from "react-router-dom";
+=======
+  FormMessage,
+} from "@/components/ui/form";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Link, useNavigate } from "react-router-dom";
+>>>>>>> origin/auto/autonomy-17186719616
 import { LoadingOverlay } from "@/components/LoadingOverlay";
 
 // Form validation schema
 const loginSchema = z.object({
+<<<<<<< HEAD
   email: z.string().email("Please enter a valid email").min(1"Email is required"),
   password: z.string().min(6"Password must be at least 6 characters")});
+=======
+  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
+  password: z.string().min(6, "Password must be at least 6 characters"),
+});
+>>>>>>> origin/auto/autonomy-17186719616
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
 export function LoginForm() {
+<<<<<<< HEAD
   const { isLoadinglogin } = useAuth();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const [showPasswordsetShowPassword] = useState(false);
   const [isSubmittingsetIsSubmitting] = useState(false);
+=======
+  const { isLoading, login } = useAuth();
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
   
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
       email: "",
+<<<<<<< HEAD
       password: ""}});
+=======
+      password: "",
+    },
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return;
 
     try {
       setIsSubmitting(true);
+<<<<<<< HEAD
       const { resdata: resData } = await loginUser(data.emaildata.password);
+=======
+      const { res, data: resData } = await loginUser(data.email, data.password);
+>>>>>>> origin/auto/autonomy-17186719616
       if (!res.ok) {
         toast.error(resData?.error || "Invalid credentials");
         return;
@@ -72,7 +107,11 @@ export function LoginForm() {
         </Alert>
       )}
       <form
+<<<<<<< HEAD
         onSubmit={form.handleSubmit(onSubmit(errors) => {
+=======
+        onSubmit={form.handleSubmit(onSubmit, (errors) => {
+>>>>>>> origin/auto/autonomy-17186719616
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
           if (firstError) {
             form.setFocus(firstError);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 class ErrorBoundary extends React.Component {
@@ -31,10 +32,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+=======
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Phone, Mail, MapPin, Globe, 
+  Clock, ChevronDown, ChevronUp,
+  MessageCircle, Calendar, Star
+} from 'lucide-react';
+
+const contactInfo = {
+>>>>>>> origin/auto/autonomy-17186719616
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
+<<<<<<< HEAD
 
 
 import {;
@@ -107,24 +120,69 @@ export default function TopContactBar() {;
 
               <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
 
+=======
+  hours: 'Mon-Fri: 9AM-6PM EST',
+  rating: '4.9/5 (200+ Reviews)'
+};
+
+const quickActions = [
+  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },
+  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },
+  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
+];
+
+export default function TopContactBar() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <div className="relative z-40">
+      {/* Main Contact Bar */}
+      <div className="bg-gradient-to-r from-gray-900 via-black to-gray-900 border-b border-cyan-500/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-12">
+            {/* Left Side - Contact Info */}
+            <div className="hidden md:flex items-center space-x-6 text-sm">
+              {/* Phone */}
+              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
+                <Phone className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
+                <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-200">
+                  {contactInfo.mobile}
+                </a>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
+>>>>>>> origin/auto/autonomy-17186719616
                 <Mail className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
                 <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">
                   {contactInfo.email}
                 </a>
               </div>
+<<<<<<< HEAD
               {/* Address */}
 
               <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
 
+=======
+
+              {/* Address */}
+              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
+>>>>>>> origin/auto/autonomy-17186719616
                 <MapPin className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
                 <span className="hover:text-cyan-400 transition-colors duration-200">
                   {contactInfo.address}
                 </span>
               </div>
+<<<<<<< HEAD
               {/* Website */}
 
               <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
 
+=======
+
+              {/* Website */}
+              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
+>>>>>>> origin/auto/autonomy-17186719616
                 <Globe className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
                 <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-200">
                   {contactInfo.website.replace('https://', '')}
@@ -132,6 +190,7 @@ export default function TopContactBar() {;
               </div>
             </div>
 
+<<<<<<< HEAD
                   className='hover:text-cyan-400 transition-colors duration-200'>                  {contactInfo && contactInfo.website.replace('https://', '')}              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">;
                 <Globe className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />;
                 <a href={contactInfo && contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-200">;
@@ -165,11 +224,24 @@ export default function TopContactBar() {;
 
               <div className="flex items-center space-x-2 text-gray-300">
 
+=======
+            {/* Center - Business Hours & Rating */}
+            <div className="hidden lg:flex items-center space-x-6 text-sm">
+              {/* Business Hours */}
+              <div className="flex items-center space-x-2 text-gray-300">
+                <Clock className="w-4 h-4 text-cyan-400" />
+                <span>{contactInfo.hours}</span>
+              </div>
+
+              {/* Rating */}
+              <div className="flex items-center space-x-2 text-gray-300">
+>>>>>>> origin/auto/autonomy-17186719616
                 <Star className="w-4 h-4 text-yellow-400 fill-current" />
                 <span>{contactInfo.rating}</span>
               </div>
             </div>
 
+<<<<<<< HEAD
               <div className="flex items-center space-x-2 text-gray-300">;
                 <Clock className="w-4 h-4 text-cyan-400" />;
               </div>;
@@ -199,6 +271,11 @@ export default function TopContactBar() {;
                     href={action.href}
 
                     className='flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'                  >              {/* Quick Actions */}
+=======
+            {/* Right Side - Quick Actions & Expand Button */}
+            <div className="flex items-center space-x-4">
+              {/* Quick Actions */}
+>>>>>>> origin/auto/autonomy-17186719616
               <div className="hidden sm:flex items-center space-x-2">
                 {quickActions.map((action) => (
                   <a
@@ -206,6 +283,7 @@ export default function TopContactBar() {;
                     href={action.href}
                     className="flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30"
                   >
+<<<<<<< HEAD
                     className='flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'                  >
 
                   >
@@ -214,12 +292,15 @@ export default function TopContactBar() {;
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                     {action.icon}
                     <span>{action.name}</span>
                   </a>
                 ))}
               </div>
 
+<<<<<<< HEAD
 
 
 
@@ -278,10 +359,20 @@ export default function TopContactBar() {;
                   <ChevronDown className='w-4 h-4' />                )}              >
                 <span>More Info</span>
                 {isExpanded ? (
+=======
+              {/* Expand/Collapse Button */}
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30"
+              >
+                <span>More Info</span>
+                {isExpanded ? (
+>>>>>>> origin/auto/autonomy-17186719616
                   <ChevronUp className="w-4 h-4" />
                 ) : (
                   <ChevronDown className="w-4 h-4" />
                 )}
+<<<<<<< HEAD
                   <ChevronDown className='w-4 h-4' />                )}
 
                 )}
@@ -297,12 +388,15 @@ export default function TopContactBar() {;
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               </button>
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 
 
 
@@ -317,10 +411,17 @@ export default function TopContactBar() {;
       <AnimatePresence>;
         {isExpanded && (;
           <motion&& motion.div
+=======
+      {/* Expanded Information Panel */}
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+>>>>>>> origin/auto/autonomy-17186719616
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
+<<<<<<< HEAD
             className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden'
 
 
@@ -372,12 +473,17 @@ export default function TopContactBar() {;
                 {/* Contact Details */}
 
             transition={{ duration: 0.3 }}
+=======
+>>>>>>> origin/auto/autonomy-17186719616
             className="bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden"
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Contact Details */}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
                     <Phone className="w-5 h-5 text-cyan-400" />
@@ -402,6 +508,7 @@ export default function TopContactBar() {;
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <div className="space-y-4">;
                   <h3 className="text-lg font-semibold text-white flex items-center space-x-2">;
                     <Phone className="w-5 h-5 text-cyan-400" />;
@@ -429,11 +536,18 @@ export default function TopContactBar() {;
 
                 {/* Business Information */}
 
+=======
+
+                {/* Business Information */}
+>>>>>>> origin/auto/autonomy-17186719616
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
                     <Clock className="w-5 h-5 text-cyan-400" />
                     <span>Business Info</span>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                   </h3>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3 text-gray-300">
@@ -453,6 +567,7 @@ export default function TopContactBar() {;
                   </div>
                 </div>
 
+<<<<<<< HEAD
                         className='hover:text-cyan-400 transition-colors duration-200'>                        Visit Website                    <span>Business Info</span>;
                   </h3>;
                   <div className="space-y-3">;
@@ -634,6 +749,14 @@ export default function TopContactBar() {;
 
                         <span className='font-medium'>{action.name}</span>                      </a>                    <span>Quick Actions</span>
                   </h3>
+=======
+                {/* Quick Actions */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
+                    <MessageCircle className="w-5 h-5 text-cyan-400" />
+                    <span>Quick Actions</span>
+                  </h3>
+>>>>>>> origin/auto/autonomy-17186719616
                   <div className="space-y-3">
                     {quickActions.map((action) => (
                       <a
@@ -649,6 +772,7 @@ export default function TopContactBar() {;
                     ))}
                   </div>
                 </div>
+<<<<<<< HEAD
                         <span className='font-medium'>{action.name}</span>                      </a>
 
                       </a>
@@ -712,6 +836,15 @@ export default function TopContactBar() {;
                         Round-the-clock technical assistance
                       </div>                    </div>                    <span>Why Choose Us</span>
                   </h3>
+=======
+
+                {/* Company Highlights */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
+                    <Star className="w-5 h-5 text-cyan-400" />
+                    <span>Why Choose Us</span>
+                  </h3>
+>>>>>>> origin/auto/autonomy-17186719616
                   <div className="space-y-3">
                     <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg">
                       <div className="text-sm font-medium text-white mb-1">15+ Years Experience</div>
@@ -729,6 +862,7 @@ export default function TopContactBar() {;
                 </div>
               </div>
 
+<<<<<<< HEAD
 
 
 </div>;
@@ -875,11 +1009,15 @@ export default function TopContactBar() {;
             </div>;
 
 
+=======
+              {/* Call to Action */}
+>>>>>>> origin/auto/autonomy-17186719616
               <div className="mt-6 pt-6 border-t border-cyan-500/30">
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-white mb-3">
                     Ready to Transform Your Business?
                   </h3>
+<<<<<<< HEAD
               {/* Call to Action */}
               <div className='mt-6 pt-6 border-t border-cyan-500/30'>
                 <div className='text-center'>
@@ -902,6 +1040,8 @@ export default function TopContactBar() {;
                       className='px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10'                    >                    Ready to Transform Your Business?
                   </h3>
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                   <p className="text-gray-400 mb-4 max-w-2xl mx-auto">
                     Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward.
                   </p>
@@ -923,6 +1063,7 @@ export default function TopContactBar() {;
               </div>
             </div>
           </motion.div>
+<<<<<<< HEAD
 
         )}
       </AnimatePresence>;
@@ -953,4 +1094,11 @@ export default function TopContactBar() {;
 
 
 
+=======
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616
 

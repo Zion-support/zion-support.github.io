@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react',
 import Link from 'next/link';
@@ -135,12 +136,38 @@ export default function FuturisticFooter() {;
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' }],
+=======
+import React from 'react';
+import Link from 'next/link';
+import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
+
+export default function FuturisticFooter() {
+  const currentYear = new Date().getFullYear();
+  
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
+  const quickLinks = [
+    { name: 'Services', href: '/services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+  ];
+
+>>>>>>> origin/auto/autonomy-17186719616
   const serviceCategories = [
     { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' },
     { name: 'Cloud & Infrastructure', href: '/services?category=Cloud%20%26%20Infrastructure' },
     { name: 'Cybersecurity', href: '/services?category=Cybersecurity' },
     { name: 'Analytics & Business Intelligence', href: '/services?category=Analytics%20%26%20Business%20Intelligence' },
     { name: 'Robotics & Automation', href: '/services?category=Robotics%20%26%20Automation' },
+<<<<<<< HEAD
     { name: 'Blockchain & Web3', href: '/services?category=Blockchain%20%26%20Web3' }],
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: '' }
@@ -160,6 +187,17 @@ export default function FuturisticFooter() {;
     { name: 'LinkedIn', href: 'https://www && www.linkedin.com/company/zion-tech-group', icon: '' },;
     { name: 'X', href: 'https://x && x.com/ziontechgroup', icon: '' },;
     { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: '' }],;
+=======
+    { name: 'Blockchain & Web3', href: '/services?category=Blockchain%20%26%20Web3' },
+  ];
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: '💼' },
+    { name: 'X', href: 'https://x.com/ziontechgroup', icon: '🐦' },
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' },
+  ];
+
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
       {/* Animated background elements */}
@@ -168,6 +206,10 @@ export default function FuturisticFooter() {;
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -199,6 +241,7 @@ export default function FuturisticFooter() {;
             </div>
           </div>
 
+<<<<<<< HEAD
 
 
 
@@ -215,6 +258,14 @@ export default function FuturisticFooter() {;
                     href={link.href}
                     className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                  >              Quick Links
             </h3>
+=======
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
+              <ArrowRight className="w-5 h-5 text-blue-400 mr-2" />
+              Quick Links
+            </h3>
+>>>>>>> origin/auto/autonomy-17186719616
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -229,6 +280,7 @@ export default function FuturisticFooter() {;
             </ul>
           </div>
 
+<<<<<<< HEAD
 
 
 
@@ -251,6 +303,14 @@ export default function FuturisticFooter() {;
                     href={service.href}
                     className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                  >              Services
             </h3>
+=======
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
+              <Cloud className="w-5 h-5 text-green-400 mr-2" />
+              Services
+            </h3>
+>>>>>>> origin/auto/autonomy-17186719616
             <ul className="space-y-3">
               {serviceCategories.map((service) => (
                 <li key={service.name}>
@@ -265,6 +325,7 @@ export default function FuturisticFooter() {;
             </ul>
           </div>
 
+<<<<<<< HEAD
 
 
 
@@ -309,13 +370,24 @@ export default function FuturisticFooter() {;
               <Shield className='w-5 h-5 text-purple-400 mr-2' />
               Contact Us
 
+=======
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
+              <Shield className="w-5 h-5 text-purple-400 mr-2" />
+              Contact Us
+>>>>>>> origin/auto/autonomy-17186719616
             </h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-white font-medium">Phone</p>
+<<<<<<< HEAD
                   <a
+=======
+                  <a 
+>>>>>>> origin/auto/autonomy-17186719616
                     href={`tel:${contactInfo.mobile}`}
                     className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
                   >
@@ -323,14 +395,22 @@ export default function FuturisticFooter() {;
                   </a>
                 </div>
               </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                 <div>
+<<<<<<< HEAD
 
                   <p className="text-white font-medium">Email</p>
                   <a
+=======
+                  <p className="text-white font-medium">Email</p>
+                  <a 
+>>>>>>> origin/auto/autonomy-17186719616
                     href={`mailto:${contactInfo.email}`}
                     className="text-gray-400 hover:text-green-400 transition-colors duration-200"
                   >
@@ -338,7 +418,10 @@ export default function FuturisticFooter() {;
                   </a>
                 </div>
               </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
@@ -348,11 +431,15 @@ export default function FuturisticFooter() {;
                     {contactInfo.address}
                   </p>
                 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         {/* Bottom section */}
 
                     href={`tel:${contactInfo && contactInfo.mobile}`}
@@ -418,12 +505,21 @@ export default function FuturisticFooter() {;
               <Link
                 href='/cookies'
 
+=======
+
+        {/* Bottom section */}
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
+<<<<<<< HEAD
 
             </div>
+=======
+            </div>
+            
+>>>>>>> origin/auto/autonomy-17186719616
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Privacy Policy
@@ -438,6 +534,7 @@ export default function FuturisticFooter() {;
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       {/* Floating elements */}
 
       <div className="absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
@@ -493,3 +590,13 @@ export default function FuturisticFooter() {;
 
 
 
+=======
+
+      {/* Floating elements */}
+      <div className="absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
+      <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
+      <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
+    </footer>
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

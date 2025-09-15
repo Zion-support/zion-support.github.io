@@ -1,19 +1,33 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import {logErrorToProduction} from '@/utils/productionLogger',
 import { 
   Table,
+=======
+import React, { useState, useEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { 
+  Table, 
+>>>>>>> origin/auto/autonomy-17186719616
   TableBody, 
   TableCell, 
   TableHead, 
   TableHeader, 
   TableRow 
+<<<<<<< HEAD
 } from '@/components/ui/table',
 import { Button } from '@/components/ui/button',
+=======
+} from '@/components/ui/table';
+import { Button } from '@/components/ui/button';
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
 import { Badge } from '@/components/ui/badge',
 import { toast } from '@/hooks/use-toast',
@@ -49,19 +63,65 @@ export function TenantsList() {
       setIsLoading(false),
     }
   },
+=======
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { Badge } from '@/components/ui/badge';
+import { toast } from '@/hooks/use-toast';
+import { WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
+import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from 'lucide-react'
+import { format } from 'date-fns';
+
+export function TenantsList() {
+  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    loadTenants();
+  }, []);
+
+  const loadTenants = async () => {
+    try {
+      setIsLoading(true);
+      const { data, error } = await supabase
+        .from('whitelabel_tenants')
+        .select('*')
+        .order('created_at', { ascending: false });
+        
+      if (error) throw error;
+      setTenants(data as WhitelabelTenant[]);
+    } catch (error: any) {
+      logErrorToProduction('Error loading tenants:', { data: error });
+      toast({
+        variant: 'destructive',
+        title: 'Failed to load tenants',
+        description: error.message,
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
     try {
       const { error } = await supabase
         .from('whitelabel_tenants')
         .update({ is_active: !(tenant as any).is_active })
+<<<<<<< HEAD
         .eq('id', (tenant as any).id),
         
       if (error) throw error,
+=======
+        .eq('id', (tenant as any).id);
+        
+      if (error) throw error;
+>>>>>>> origin/auto/autonomy-17186719616
       
       // Update local state
       setTenants(tenants.map(t => 
         (t as any).id === (tenant as any).id ? { ...t, is_active: !(t as any).is_active } : t
+<<<<<<< HEAD
       )),
       
       toast({
@@ -75,6 +135,23 @@ export function TenantsList() {
         description: error.message}),
     }
   },
+=======
+      ));
+      
+      toast({
+        title: `Tenant ${(tenant as any).is_active ? 'deactivated' : 'activated'}`,
+        description: `${(tenant as any).brand_name} has been ${(tenant as any).is_active ? 'deactivated' : 'activated'} successfully.`,
+      });
+    } catch (error: any) {
+      logErrorToProduction('Error toggling tenant status:', { data: error });
+      toast({
+        variant: 'destructive',
+        title: 'Failed to update tenant',
+        description: error.message,
+      });
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   const verifyDns = async (tenant: WhitelabelTenant) => {
     try {
@@ -83,13 +160,20 @@ export function TenantsList() {
       const { error } = await supabase
         .from('whitelabel_tenants')
         .update({ dns_verified: true })
+<<<<<<< HEAD
         .eq('id', (tenant as any).id),
         
       if (error) throw error,
+=======
+        .eq('id', (tenant as any).id);
+        
+      if (error) throw error;
+>>>>>>> origin/auto/autonomy-17186719616
       
       // Update local state
       setTenants(tenants.map(t => 
         (t as any).id === (tenant as any).id ? { ...t, dns_verified: true } : t
+<<<<<<< HEAD
       )),
       
       toast({
@@ -104,6 +188,33 @@ export function TenantsList() {
     }
   },
 
+=======
+      ));
+      
+      toast({
+        title: 'DNS verified',
+        description: `Custom domain for ${(tenant as any).brand_name} has been verified.`,
+      });
+    } catch (error: any) {
+      logErrorToProduction('Error verifying DNS:', { data: error });
+      toast({
+        variant: 'destructive',
+        title: 'Failed to verify DNS',
+        description: error.message,
+      });
+    }
+  };
+
+  return (
+    <div className="space-y-4">
+      <div className="flex justify-between items-center">
+        <h2 className="text-xl font-semibold">White-Label Tenants</h2>
+        <Button onClick={loadTenants} variant="outline" size="sm">
+          <RefreshCcw className="mr-2 h-4 w-4" />
+          Refresh
+        </Button>
+      </div>
+>>>>>>> origin/auto/autonomy-17186719616
 
       {isLoading ? (
         <div className="flex justify-center p-8">
@@ -224,5 +335,9 @@ export function TenantsList() {
         </div>
       )}
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

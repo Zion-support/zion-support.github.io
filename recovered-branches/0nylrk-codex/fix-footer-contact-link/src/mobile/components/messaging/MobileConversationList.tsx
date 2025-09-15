@@ -2,7 +2,11 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
 import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
+=======
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";

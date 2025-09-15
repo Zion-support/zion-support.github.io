@@ -39,6 +39,10 @@ export interface EmergingTechService2029V2 {
     address: string;
   };
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
   {
     id: 'quantum-internet-security-gateway',

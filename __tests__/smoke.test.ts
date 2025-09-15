@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -21,3 +22,10 @@ describe('smoke.ts', () => {
     render(<smoke.ts />);
   });
 });
+=======
+import { add } from '../utils/smoke';
+
+test('add adds two numbers', () => {
+  expect(add(1, 2)).toBe(3);
+});
+>>>>>>> origin/auto/autonomy-17186719616

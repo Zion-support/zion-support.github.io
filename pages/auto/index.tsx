@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const AutoIndex: NextPage = () => {
   return (
@@ -12,7 +18,11 @@ const AutoIndex: NextPage = () => {
       <main className="space-y-6">
         <h1 className="text-2xl font-bold">Autonomous Cloud Agents</h1>
         <p className="text-gray-600">These agents run on schedules in the cloud and sync results back to the repository automatically.</p>
+<<<<<<< HEAD
         <ul className="grid md: grid-cols-2 gap-4">
+=======
+        <ul className="grid md:grid-cols-2 gap-4">
+>>>>>>> origin/auto/autonomy-17186719616
           <li className="border rounded p-4">
             <h2 className="font-semibold text-lg"><Link href="/auto/language-sync">Global Language Sync Agent</Link></h2>
             <p className="text-sm text-gray-600">Backfills missing translations using AI and keeps locale files up to date.</p>
@@ -28,7 +38,14 @@ const AutoIndex: NextPage = () => {
         </ul>
       </main>
     </div>
+<<<<<<< HEAD
   )
 },
 
 export default AutoIndex,
+=======
+  );
+};
+
+export default AutoIndex;
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {
 
@@ -8,10 +9,15 @@ import {
   DialogHeader
   DialogTitle
 
+=======
+import React from 'react';
+import {
+>>>>>>> origin/auto/autonomy-17186719616
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
+<<<<<<< HEAD
 DialogTitle,;
 
 
@@ -32,6 +38,14 @@ export function ApplyToJobModal({
   onApplySuccess
 }: ApplyToJobModalProps) {
 
+=======
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { ApplyForm } from './ApplyForm';
+import { ApplyToJobModalProps } from './types';
+
+export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess }: ApplyToJobModalProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[600px]">
@@ -41,14 +55,20 @@ export function ApplyToJobModal({
             Complete your application for this position
           </DialogDescription>
         </DialogHeader>
+<<<<<<< HEAD
 
         <ApplyForm
+=======
+        
+        <ApplyForm 
+>>>>>>> origin/auto/autonomy-17186719616
           job={job}
           onClose={onClose}
           onApplySuccess={onApplySuccess}
         />
       </DialogContent>
     </Dialog>
+<<<<<<< HEAD
 
 
 
@@ -104,3 +124,7 @@ function ApplyToJobModal() {
 
 
 }
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

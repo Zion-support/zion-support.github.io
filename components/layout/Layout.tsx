@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 "use client";
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 import React, { useState } from 'react';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
+<<<<<<< HEAD
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -29,11 +33,24 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Footer */}
       <UltraFuturisticFooter2034 />
       
+=======
+export default function Layout({ children }: LayoutProps) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+      {/* Main Content */}
+      <main className="relative z-10 pt-24 lg:pt-28 min-h-screen">
+        {children}
+      </main>
+      
+>>>>>>> origin/auto/autonomy-17186719616
       {/* Floating Elements */}
       <div className="fixed top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse z-50"></div>
       <div className="fixed top-40 right-20 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000 z-50"></div>
       <div className="fixed bottom-40 left-20 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse delay-2000 z-50"></div>
       <div className="fixed bottom-20 right-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-3000 z-50"></div>
+<<<<<<< HEAD
       
       {/* Mobile Sidebar Toggle */}
       <button
@@ -147,3 +164,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
+=======
+    </div>
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,6 +1,7 @@
 
 import React from "react";
 import { 
+<<<<<<< HEAD
   Dialog
   DialogContent
   DialogHeader
@@ -10,6 +11,17 @@ import {
 import { Button } from "@/components/ui/button";
 import { CalendarUserMailClockDollarSign } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
+=======
+  Dialog, 
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription 
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
@@ -21,13 +33,21 @@ interface QuoteDetailsProps {
   onClose: () => void;
 }
 
+<<<<<<< HEAD
 export const QuoteDetails = ({ quoteisOpenonClose }: QuoteDetailsProps) => {
+=======
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
+>>>>>>> origin/auto/autonomy-17186719616
   if (!quote) return null;
 
   const formatDate = (dateString?: string) => {
     if (!dateString) return 'Not specified';
     try {
+<<<<<<< HEAD
       return format(new Date(dateString)'PPP');
+=======
+      return format(new Date(dateString), 'PPP');
+>>>>>>> origin/auto/autonomy-17186719616
     } catch (e) {
       return dateString;
     }

@@ -1,21 +1,38 @@
 
+<<<<<<< HEAD
 import React from "react",
+=======
+import React from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { Switch } from "@/components/ui/switch",
 import { toast } from "@/hooks/use-toast",
+=======
+  TableRow,
+} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
+import { toast } from "@/hooks/use-toast";
+>>>>>>> origin/auto/autonomy-17186719616
 import { InfoIcon } from 'lucide-react'
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
+<<<<<<< HEAD
   TooltipTrigger} from "@/components/ui/tooltip",
+=======
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function RoleManagement() {
   // Mock team members data
@@ -31,7 +48,13 @@ export function RoleManagement() {
         createJobs: true,
         manageTeam: true,
         viewBilling: true,
+<<<<<<< HEAD
         manageBilling: true}},
+=======
+        manageBilling: true,
+      },
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 2,
       name: "Jamie Smith",
@@ -43,7 +66,13 @@ export function RoleManagement() {
         createJobs: true,
         manageTeam: false,
         viewBilling: false,
+<<<<<<< HEAD
         manageBilling: false}},
+=======
+        manageBilling: false,
+      },
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 3,
       name: "Sam Williams",
@@ -55,7 +84,13 @@ export function RoleManagement() {
         createJobs: true,
         manageTeam: false,
         viewBilling: true,
+<<<<<<< HEAD
         manageBilling: false}},
+=======
+        manageBilling: false,
+      },
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 4,
       name: "Taylor Brown",
@@ -67,12 +102,20 @@ export function RoleManagement() {
         createJobs: false,
         manageTeam: false,
         viewBilling: false,
+<<<<<<< HEAD
         manageBilling: false}}],
+=======
+        manageBilling: false,
+      },
+    },
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {
     // In a real app, this would make an API call to update permissions
     toast({
       title: "Permission updated",
+<<<<<<< HEAD
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`}),
   },
 
@@ -81,10 +124,23 @@ export function RoleManagement() {
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"},
+=======
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`,
+    });
+  };
+
+  const roleDescriptions: Record<string, string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates",
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6">
       <div>
+<<<<<<< HEAD
         <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
           {Object.entries(roleDescriptions).map(([role, description]) => (
@@ -97,6 +153,8 @@ export function RoleManagement() {
                   {role}
                 </Badge>              </div>
               <p className='text-sm text-muted-foreground'>{description}</p>
+=======
+>>>>>>> origin/auto/autonomy-17186719616
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           {Object.entries(roleDescriptions).map(([role, description]) => (
@@ -116,13 +174,22 @@ export function RoleManagement() {
             <TableRow>
               <TableHead>Team Member</TableHead>
               <TableHead>Role</TableHead>
+<<<<<<< HEAD
               <TableHead className='text-center'>
                 <div className='flex items-center justify-center gap-1'>
+=======
+              <TableHead className="text-center">
+                <div className="flex items-center justify-center gap-1">
+>>>>>>> origin/auto/autonomy-17186719616
                   View Candidates
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
+<<<<<<< HEAD
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />
+=======
+                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
+>>>>>>> origin/auto/autonomy-17186719616
                       </TooltipTrigger>
                       <TooltipContent>
                         Can view candidate profiles and applications
@@ -131,13 +198,22 @@ export function RoleManagement() {
                   </TooltipProvider>
                 </div>
               </TableHead>
+<<<<<<< HEAD
               <TableHead className='text-center'>
                 <div className='flex items-center justify-center gap-1'>
+=======
+              <TableHead className="text-center">
+                <div className="flex items-center justify-center gap-1">
+>>>>>>> origin/auto/autonomy-17186719616
                   Edit Candidates
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
+<<<<<<< HEAD
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />
+=======
+                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
+>>>>>>> origin/auto/autonomy-17186719616
                       </TooltipTrigger>
                       <TooltipContent>
                         Can edit candidate information and status
@@ -146,13 +222,22 @@ export function RoleManagement() {
                   </TooltipProvider>
                 </div>
               </TableHead>
+<<<<<<< HEAD
               <TableHead className='text-center'>
                 <div className='flex items-center justify-center gap-1'>
+=======
+              <TableHead className="text-center">
+                <div className="flex items-center justify-center gap-1">
+>>>>>>> origin/auto/autonomy-17186719616
                   Create Jobs
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
+<<<<<<< HEAD
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />
+=======
+                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
+>>>>>>> origin/auto/autonomy-17186719616
                       </TooltipTrigger>
                       <TooltipContent>
                         Can create and publish job listings
@@ -161,13 +246,22 @@ export function RoleManagement() {
                   </TooltipProvider>
                 </div>
               </TableHead>
+<<<<<<< HEAD
               <TableHead className='text-center'>
                 <div className='flex items-center justify-center gap-1'>
+=======
+              <TableHead className="text-center">
+                <div className="flex items-center justify-center gap-1">
+>>>>>>> origin/auto/autonomy-17186719616
                   Manage Team
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
+<<<<<<< HEAD
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />
+=======
+                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
+>>>>>>> origin/auto/autonomy-17186719616
                       </TooltipTrigger>
                       <TooltipContent>
                         Can add, edit, and remove team members
@@ -176,13 +270,22 @@ export function RoleManagement() {
                   </TooltipProvider>
                 </div>
               </TableHead>
+<<<<<<< HEAD
               <TableHead className='text-center'>
                 <div className='flex items-center justify-center gap-1'>
+=======
+              <TableHead className="text-center">
+                <div className="flex items-center justify-center gap-1">
+>>>>>>> origin/auto/autonomy-17186719616
                   Billing Access
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
+<<<<<<< HEAD
                         <InfoIcon className='h-4 w-4 text-muted-foreground' />
+=======
+                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
+>>>>>>> origin/auto/autonomy-17186719616
                       </TooltipTrigger>
                       <TooltipContent>
                         Can view and manage billing information
@@ -194,18 +297,29 @@ export function RoleManagement() {
             </TableRow>
           </TableHeader>
           <TableBody>
+<<<<<<< HEAD
             {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
                 <TableCell>
                   <div className='font-medium'>{member.name}</div>
                   <div className='text-sm text-muted-foreground'>
+=======
+            {teamMembers.map((member) => (
+              <TableRow key={member.id}>
+                <TableCell>
+                  <div className="font-medium">{member.name}</div>
+                  <div className="text-sm text-muted-foreground">
+>>>>>>> origin/auto/autonomy-17186719616
                     {member.email}
                   </div>
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                   <select 
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     defaultValue={member.role}
@@ -218,8 +332,11 @@ export function RoleManagement() {
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch
+<<<<<<< HEAD
 
                     aria-label='View candidates'
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                     aria-label="View candidates"
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={(checked) =>
@@ -269,5 +386,9 @@ export function RoleManagement() {
         </Table>
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

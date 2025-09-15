@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { NavigateRoutes } from "react-router-dom";
+=======
+import { Navigate, Route, Routes } from "react-router-dom";
+>>>>>>> origin/auto/autonomy-17186719616
 import DeveloperPortal from "../pages/DeveloperPortal";
 import ApiDocsHub from "../pages/ApiDocsHub";
 import ApiReference from "../pages/ApiReference";

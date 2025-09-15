@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react',
@@ -6,6 +7,16 @@ import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, 
 
 export default function MicroSaasPage() {
   const [selectedCategory, setSelectedCategory] = useState('All'),
+=======
+import React from 'react';
+import Head from 'next/head';
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react';
+import Button from '../components/ui/Button';
+import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
+
+export default function MicroSaasPage() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+>>>>>>> origin/auto/autonomy-17186719616
   
   const microSaasServices = [
     {
@@ -15,10 +26,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Create high-quality, SEO-optimized content at scale with our advanced AI writing assistant.',
       features: [
+<<<<<<< HEAD
         'SEO-optimized content generationMulti-language support (15+ languages)',
         'Brand voice customizationContent templates library (100+ templates)',
         'Plagiarism-free writing guaranteeAdvanced content analytics',
         'Team collaboration toolsAPI access for integrations'
+=======
+        'SEO-optimized content generation',
+        'Multi-language support (15+ languages)',
+        'Brand voice customization',
+        'Content templates library (100+ templates)',
+        'Plagiarism-free writing guarantee',
+        'Advanced content analytics',
+        'Team collaboration tools',
+        'API access for integrations'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true,
       icon: '📝',
@@ -37,10 +59,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Build and maintain consistent design systems with automated component generation and team collaboration.',
       features: [
+<<<<<<< HEAD
         'Component library managementDesign token automation',
         'Style guide generationDesign-to-code workflow',
         'Team collaboration toolsVersion control & history',
         'Design system analyticsIntegration with Figma, Sketch, Adobe XD'
+=======
+        'Component library management',
+        'Design token automation',
+        'Style guide generation',
+        'Design-to-code workflow',
+        'Team collaboration tools',
+        'Version control & history',
+        'Design system analytics',
+        'Integration with Figma, Sketch, Adobe XD'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🎨',
@@ -59,10 +92,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Monitor and optimize your web and mobile applications with real-time performance insights.',
       features: [
+<<<<<<< HEAD
         'Performance metrics trackingError monitoring & alerting',
         'User experience analyticsAutomated optimization',
         'Custom dashboardsReal-time alerts',
         'Performance budgetsIntegration with popular frameworks'
+=======
+        'Performance metrics tracking',
+        'Error monitoring & alerting',
+        'User experience analytics',
+        'Automated optimization',
+        'Custom dashboards',
+        'Real-time alerts',
+        'Performance budgets',
+        'Integration with popular frameworks'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📱',
@@ -82,10 +126,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered knowledge base that helps businesses organize, search, and share company knowledge.',
       features: [
+<<<<<<< HEAD
         'Intelligent organizationAdvanced search',
         'Knowledge graphsCollaboration tools',
         'Integration capabilitiesAnalytics & reporting',
         'Mobile app accessAPI access'
+=======
+        'Intelligent organization',
+        'Advanced search',
+        'Knowledge graphs',
+        'Collaboration tools',
+        'Integration capabilities',
+        'Analytics & reporting',
+        'Mobile app access',
+        'API access'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📚',
@@ -105,10 +160,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Professional email marketing platform with AI-powered personalization, automation, and advanced analytics.',
       features: [
+<<<<<<< HEAD
         'AI-powered personalizationAdvanced automation workflows',
         'Behavioral targetingA/B testing automation',
         'Predictive analyticsAdvanced segmentation',
         'Revenue attributionIntegration with major platforms'
+=======
+        'AI-powered personalization',
+        'Advanced automation workflows',
+        'Behavioral targeting',
+        'A/B testing automation',
+        'Predictive analytics',
+        'Advanced segmentation',
+        'Revenue attribution',
+        'Integration with major platforms'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true,
       icon: '📧',
@@ -128,10 +194,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'All-in-one SEO platform with AI-powered keyword research, content optimization, and technical SEO tools.',
       features: [
+<<<<<<< HEAD
         'AI keyword researchContent optimization',
         'Technical SEO auditRanking tracking',
         'Competitor analysisLocal SEO tools',
         'Schema markup generatorPerformance reporting'
+=======
+        'AI keyword research',
+        'Content optimization',
+        'Technical SEO audit',
+        'Ranking tracking',
+        'Competitor analysis',
+        'Local SEO tools',
+        'Schema markup generator',
+        'Performance reporting'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true,
       icon: '🔍',
@@ -151,10 +228,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered social media management with content creation, scheduling, and performance optimization.',
       features: [
+<<<<<<< HEAD
         'AI content generationSmart scheduling',
         'Performance analyticsHashtag optimization',
         'Competitor monitoringMulti-platform management',
         'Content calendarTeam collaboration'
+=======
+        'AI content generation',
+        'Smart scheduling',
+        'Performance analytics',
+        'Hashtag optimization',
+        'Competitor monitoring',
+        'Multi-platform management',
+        'Content calendar',
+        'Team collaboration'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📱',
@@ -174,10 +262,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Advanced e-commerce analytics platform with AI-powered insights for conversion optimization.',
       features: [
+<<<<<<< HEAD
         'Conversion funnel analysisCustomer behavior tracking',
         'Product performance insightsA/B testing tools',
         'Revenue attributionCustomer lifetime value',
         'Predictive analyticsIntegration with major platforms'
+=======
+        'Conversion funnel analysis',
+        'Customer behavior tracking',
+        'Product performance insights',
+        'A/B testing tools',
+        'Revenue attribution',
+        'Customer lifetime value',
+        'Predictive analytics',
+        'Integration with major platforms'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🛒',
@@ -197,10 +296,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered customer support chatbot that handles inquiries, tickets, and escalations automatically.',
       features: [
+<<<<<<< HEAD
         'Natural language processingMulti-language support',
         'Ticket automationKnowledge base integration',
         'Escalation managementPerformance analytics',
         'Custom brandingIntegration with help desks'
+=======
+        'Natural language processing',
+        'Multi-language support',
+        'Ticket automation',
+        'Knowledge base integration',
+        'Escalation management',
+        'Performance analytics',
+        'Custom branding',
+        'Integration with help desks'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🤖',
@@ -220,10 +330,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered project management platform with smart task allocation, progress tracking, and resource optimization.',
       features: [
+<<<<<<< HEAD
         'AI task prioritizationResource optimization',
         'Progress trackingRisk assessment',
         'Team collaborationTime tracking',
         'Reporting & analyticsIntegration with popular tools'
+=======
+        'AI task prioritization',
+        'Resource optimization',
+        'Progress tracking',
+        'Risk assessment',
+        'Team collaboration',
+        'Time tracking',
+        'Reporting & analytics',
+        'Integration with popular tools'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📋',
@@ -243,10 +364,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered financial planning platform for businesses with budgeting, forecasting, and financial analysis.',
       features: [
+<<<<<<< HEAD
         'AI-powered budgetingFinancial forecasting',
         'Cash flow analysisExpense tracking',
         'Financial reportingTax planning',
         'Investment analysisIntegration with accounting software'
+=======
+        'AI-powered budgeting',
+        'Financial forecasting',
+        'Cash flow analysis',
+        'Expense tracking',
+        'Financial reporting',
+        'Tax planning',
+        'Investment analysis',
+        'Integration with accounting software'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '💰',
@@ -266,10 +398,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered content calendar with content ideation, scheduling, and performance optimization.',
       features: [
+<<<<<<< HEAD
         'AI content ideationSmart scheduling',
         'Performance trackingContent templates',
         'Team collaborationMulti-platform publishing',
         'Analytics & insightsIntegration with CMS platforms'
+=======
+        'AI content ideation',
+        'Smart scheduling',
+        'Performance tracking',
+        'Content templates',
+        'Team collaboration',
+        'Multi-platform publishing',
+        'Analytics & insights',
+        'Integration with CMS platforms'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📅',
@@ -289,10 +432,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered performance monitoring for web applications, servers, and infrastructure.',
       features: [
+<<<<<<< HEAD
         'Real-time monitoringPerformance alerts',
         'Root cause analysisCapacity planning',
         'Custom dashboardsAPI monitoring',
         'Mobile app monitoringIntegration with DevOps tools'
+=======
+        'Real-time monitoring',
+        'Performance alerts',
+        'Root cause analysis',
+        'Capacity planning',
+        'Custom dashboards',
+        'API monitoring',
+        'Mobile app monitoring',
+        'Integration with DevOps tools'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📊',
@@ -312,10 +466,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered data visualization platform that transforms complex data into actionable insights.',
       features: [
+<<<<<<< HEAD
         'AI chart recommendationsInteractive dashboards',
         'Real-time data updatesCustom branding',
         'Export capabilitiesTeam collaboration',
         'Mobile responsivenessAPI integration'
+=======
+        'AI chart recommendations',
+        'Interactive dashboards',
+        'Real-time data updates',
+        'Custom branding',
+        'Export capabilities',
+        'Team collaboration',
+        'Mobile responsiveness',
+        'API integration'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📈',
@@ -335,10 +500,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered customer onboarding platform that guides new users through product adoption.',
       features: [
+<<<<<<< HEAD
         'Interactive product toursProgress tracking',
         'Personalized guidanceSuccess metrics',
         'Integration with productsAnalytics & reporting',
         'Custom workflowsMulti-language support'
+=======
+        'Interactive product tours',
+        'Progress tracking',
+        'Personalized guidance',
+        'Success metrics',
+        'Integration with products',
+        'Analytics & reporting',
+        'Custom workflows',
+        'Multi-language support'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🚀',
@@ -358,10 +534,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered A/B testing platform with statistical analysis and optimization recommendations.',
       features: [
+<<<<<<< HEAD
         'Statistical significance testingAI optimization suggestions',
         'Multivariate testingReal-time results',
         'Integration capabilitiesAdvanced analytics',
         'Custom goalsTeam collaboration'
+=======
+        'Statistical significance testing',
+        'AI optimization suggestions',
+        'Multivariate testing',
+        'Real-time results',
+        'Integration capabilities',
+        'Advanced analytics',
+        'Custom goals',
+        'Team collaboration'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🧪',
@@ -381,10 +568,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered customer feedback platform that collects, analyzes, and acts on customer insights.',
       features: [
+<<<<<<< HEAD
         'Multi-channel feedback collectionAI sentiment analysis',
         'Feedback categorizationAction item tracking',
         'Integration with toolsReal-time dashboards',
         'Team collaborationExport capabilities'
+=======
+        'Multi-channel feedback collection',
+        'AI sentiment analysis',
+        'Feedback categorization',
+        'Action item tracking',
+        'Integration with tools',
+        'Real-time dashboards',
+        'Team collaboration',
+        'Export capabilities'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '💬',
@@ -404,10 +602,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered inventory forecasting that predicts demand and optimizes stock levels.',
       features: [
+<<<<<<< HEAD
         'Demand forecastingSeasonal analysis',
         'Supplier optimizationCost optimization',
         'Real-time trackingIntegration with ERP systems',
         'Mobile app accessAdvanced analytics'
+=======
+        'Demand forecasting',
+        'Seasonal analysis',
+        'Supplier optimization',
+        'Cost optimization',
+        'Real-time tracking',
+        'Integration with ERP systems',
+        'Mobile app access',
+        'Advanced analytics'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📦',
@@ -427,10 +636,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered lead generation platform that finds and qualifies prospects automatically.',
       features: [
+<<<<<<< HEAD
         'AI prospect discoveryLead qualification',
         'Contact enrichmentIntegration with CRM systems',
         'Campaign automationPerformance analytics',
         'Team collaborationExport capabilities'
+=======
+        'AI prospect discovery',
+        'Lead qualification',
+        'Contact enrichment',
+        'Integration with CRM systems',
+        'Campaign automation',
+        'Performance analytics',
+        'Team collaboration',
+        'Export capabilities'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true,
       icon: '🎯',
@@ -450,10 +670,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered churn prediction platform that identifies at-risk customers and suggests retention strategies.',
       features: [
+<<<<<<< HEAD
         'Churn risk scoringBehavioral analysis',
         'Retention recommendationsEarly warning alerts',
         'Integration with CRM systemsPerformance analytics',
         'Team collaborationCustom models'
+=======
+        'Churn risk scoring',
+        'Behavioral analysis',
+        'Retention recommendations',
+        'Early warning alerts',
+        'Integration with CRM systems',
+        'Performance analytics',
+        'Team collaboration',
+        'Custom models'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📉',
@@ -470,10 +701,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-driven inventory management with demand forecasting, automated reordering, and optimization recommendations.',
       features: [
+<<<<<<< HEAD
         'AI demand forecastingAutomated reorder points',
         'Inventory optimizationMulti-location management',
         'Supplier performance trackingCost optimization',
         'Real-time analyticsIntegration with e-commerce platforms'
+=======
+        'AI demand forecasting',
+        'Automated reorder points',
+        'Inventory optimization',
+        'Multi-location management',
+        'Supplier performance tracking',
+        'Cost optimization',
+        'Real-time analytics',
+        'Integration with e-commerce platforms'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📦',
@@ -490,10 +732,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered social media analytics with sentiment analysis, trend prediction, and performance optimization.',
       features: [
+<<<<<<< HEAD
         'AI sentiment analysisTrend prediction',
         'Content performance analysisCompetitor benchmarking',
         'Optimal posting timeHashtag optimization',
         'ROI trackingMulti-platform analytics'
+=======
+        'AI sentiment analysis',
+        'Trend prediction',
+        'Content performance analysis',
+        'Competitor benchmarking',
+        'Optimal posting time',
+        'Hashtag optimization',
+        'ROI tracking',
+        'Multi-platform analytics'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📊',
@@ -510,10 +763,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered customer support analytics with automated insights, performance tracking, and optimization recommendations.',
       features: [
+<<<<<<< HEAD
         'AI-powered insightsSupport performance analytics',
         'Customer satisfaction trackingResponse time optimization',
         'Support ticket analysisAgent performance metrics',
         'Automated reportingIntegration with support tools'
+=======
+        'AI-powered insights',
+        'Support performance analytics',
+        'Customer satisfaction tracking',
+        'Response time optimization',
+        'Support ticket analysis',
+        'Agent performance metrics',
+        'Automated reporting',
+        'Integration with support tools'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📞',
@@ -530,10 +794,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-driven website performance optimization with automated testing, speed improvements, and SEO enhancements.',
       features: [
+<<<<<<< HEAD
         'AI performance analysisAutomated optimization',
         'Speed testing & monitoringSEO optimization',
         'Mobile optimizationCore Web Vitals tracking',
         'Performance analyticsIntegration with analytics tools'
+=======
+        'AI performance analysis',
+        'Automated optimization',
+        'Speed testing & monitoring',
+        'SEO optimization',
+        'Mobile optimization',
+        'Core Web Vitals tracking',
+        'Performance analytics',
+        'Integration with analytics tools'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true,
       icon: '⚡',
@@ -550,10 +825,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered sentiment analysis for customer feedback with automated insights and action recommendations.',
       features: [
+<<<<<<< HEAD
         'AI sentiment analysisFeedback categorization',
         'Trend identificationAutomated insights',
         'Action recommendationsReal-time monitoring',
         'Integration with feedback toolsCustom reporting'
+=======
+        'AI sentiment analysis',
+        'Feedback categorization',
+        'Trend identification',
+        'Automated insights',
+        'Action recommendations',
+        'Real-time monitoring',
+        'Integration with feedback tools',
+        'Custom reporting'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '💭',
@@ -570,10 +856,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered email marketing automation with intelligent segmentation, personalization, and optimization.',
       features: [
+<<<<<<< HEAD
         'AI-powered segmentationIntelligent personalization',
         'Automated workflowsA/B testing automation',
         'Send time optimizationPerformance analytics',
         'Template optimizationIntegration with marketing tools'
+=======
+        'AI-powered segmentation',
+        'Intelligent personalization',
+        'Automated workflows',
+        'A/B testing automation',
+        'Send time optimization',
+        'Performance analytics',
+        'Template optimization',
+        'Integration with marketing tools'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true,
       icon: '📧',
@@ -590,10 +887,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered customer journey mapping with automated insights, optimization recommendations, and performance tracking.',
       features: [
+<<<<<<< HEAD
         'AI journey mappingTouchpoint analysis',
         'Optimization recommendationsPerformance tracking',
         'Customer behavior insightsJourney analytics',
         'Integration with analytics toolsCustom reporting'
+=======
+        'AI journey mapping',
+        'Touchpoint analysis',
+        'Optimization recommendations',
+        'Performance tracking',
+        'Customer behavior insights',
+        'Journey analytics',
+        'Integration with analytics tools',
+        'Custom reporting'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🗺️',
@@ -610,10 +918,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered competitive intelligence with automated monitoring, analysis, and strategic insights.',
       features: [
+<<<<<<< HEAD
         'AI competitive monitoringMarket analysis',
         'Strategy insightsPerformance benchmarking',
         'Trend identificationAutomated alerts',
         'Custom reportingIntegration with analytics tools'
+=======
+        'AI competitive monitoring',
+        'Market analysis',
+        'Strategy insights',
+        'Performance benchmarking',
+        'Trend identification',
+        'Automated alerts',
+        'Custom reporting',
+        'Integration with analytics tools'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🔍',
@@ -630,10 +949,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered customer lifetime value optimization with predictive modeling and automated strategies.',
       features: [
+<<<<<<< HEAD
         'AI CLV predictionOptimization strategies',
         'Customer segmentationRetention optimization',
         'Upselling automationPerformance analytics',
         'Integration with CRMCustom reporting'
+=======
+        'AI CLV prediction',
+        'Optimization strategies',
+        'Customer segmentation',
+        'Retention optimization',
+        'Upselling automation',
+        'Performance analytics',
+        'Integration with CRM',
+        'Custom reporting'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '💰',
@@ -651,10 +981,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered contract analysis with risk assessment, compliance checking, and automated legal document review.',
       features: [
+<<<<<<< HEAD
         'AI contract analysisRisk assessment & scoring',
         'Compliance checkingAutomated legal review',
         'Contract template libraryVersion control & tracking',
         'Integration with legal toolsCustom compliance rules'
+=======
+        'AI contract analysis',
+        'Risk assessment & scoring',
+        'Compliance checking',
+        'Automated legal review',
+        'Contract template library',
+        'Version control & tracking',
+        'Integration with legal tools',
+        'Custom compliance rules'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true,
       icon: '⚖️',
@@ -671,10 +1012,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered sales forecasting with predictive analytics, pipeline optimization, and revenue prediction.',
       features: [
+<<<<<<< HEAD
         'AI sales forecastingPipeline optimization',
         'Revenue predictionSales trend analysis',
         'Performance benchmarkingCustom forecasting models',
         'Integration with CRM systemsReal-time analytics dashboard'
+=======
+        'AI sales forecasting',
+        'Pipeline optimization',
+        'Revenue prediction',
+        'Sales trend analysis',
+        'Performance benchmarking',
+        'Custom forecasting models',
+        'Integration with CRM systems',
+        'Real-time analytics dashboard'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true,
       icon: '📈',
@@ -691,10 +1043,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered customer service analytics with sentiment analysis, performance tracking, and optimization insights.',
       features: [
+<<<<<<< HEAD
         'AI sentiment analysisSupport performance tracking',
         'Customer satisfaction metricsResponse time optimization',
         'Agent performance analyticsAutomated insights',
         'Integration with support toolsCustom reporting dashboards'
+=======
+        'AI sentiment analysis',
+        'Support performance tracking',
+        'Customer satisfaction metrics',
+        'Response time optimization',
+        'Agent performance analytics',
+        'Automated insights',
+        'Integration with support tools',
+        'Custom reporting dashboards'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📊',
@@ -711,10 +1074,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered product recommendation engine with personalized suggestions, behavioral analysis, and conversion optimization.',
       features: [
+<<<<<<< HEAD
         'AI recommendation algorithmsPersonalized suggestions',
         'Behavioral analysisConversion optimization',
         'A/B testing automationReal-time recommendations',
         'Integration with e-commerce platformsPerformance analytics'
+=======
+        'AI recommendation algorithms',
+        'Personalized suggestions',
+        'Behavioral analysis',
+        'Conversion optimization',
+        'A/B testing automation',
+        'Real-time recommendations',
+        'Integration with e-commerce platforms',
+        'Performance analytics'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true,
       icon: '🎯',
@@ -731,10 +1105,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered fraud detection with real-time monitoring, risk assessment, and automated threat response.',
       features: [
+<<<<<<< HEAD
         'AI fraud detectionReal-time monitoring',
         'Risk assessmentAutomated threat response',
         'Pattern recognitionCompliance reporting',
         'Integration with payment systemsCustom security rules'
+=======
+        'AI fraud detection',
+        'Real-time monitoring',
+        'Risk assessment',
+        'Automated threat response',
+        'Pattern recognition',
+        'Compliance reporting',
+        'Integration with payment systems',
+        'Custom security rules'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🛡️',
@@ -751,10 +1136,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered inventory forecasting with demand prediction, optimization recommendations, and automated reordering.',
       features: [
+<<<<<<< HEAD
         'AI demand forecastingInventory optimization',
         'Automated reorderingSeasonal trend analysis',
         'Supplier performance trackingCost optimization',
         'Integration with ERP systemsReal-time analytics'
+=======
+        'AI demand forecasting',
+        'Inventory optimization',
+        'Automated reordering',
+        'Seasonal trend analysis',
+        'Supplier performance tracking',
+        'Cost optimization',
+        'Integration with ERP systems',
+        'Real-time analytics'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📦',
@@ -771,10 +1167,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered customer onboarding with personalized experiences, progress tracking, and activation optimization.',
       features: [
+<<<<<<< HEAD
         'AI onboarding personalizationProgress tracking',
         'Activation optimizationUser behavior analysis',
         'Automated workflowsIntegration with CRM systems',
         'Performance analyticsCustom onboarding paths'
+=======
+        'AI onboarding personalization',
+        'Progress tracking',
+        'Activation optimization',
+        'User behavior analysis',
+        'Automated workflows',
+        'Integration with CRM systems',
+        'Performance analytics',
+        'Custom onboarding paths'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🚀',
@@ -791,10 +1198,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered email deliverability optimization with real-time monitoring, reputation management, and automated improvements.',
       features: [
+<<<<<<< HEAD
         'AI deliverability optimizationReal-time monitoring',
         'Reputation managementSpam filter analysis',
         'Authentication setupPerformance analytics',
         'Integration with email platformsAutomated improvements'
+=======
+        'AI deliverability optimization',
+        'Real-time monitoring',
+        'Reputation management',
+        'Spam filter analysis',
+        'Authentication setup',
+        'Performance analytics',
+        'Integration with email platforms',
+        'Automated improvements'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true,
       icon: '📮',
@@ -811,10 +1229,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered social media management with content optimization, scheduling automation, and performance analytics.',
       features: [
+<<<<<<< HEAD
         'AI content optimizationAutomated scheduling',
         'Performance analyticsHashtag optimization',
         'Content recommendationsMulti-platform management',
         'Integration with social platformsCustom automation rules'
+=======
+        'AI content optimization',
+        'Automated scheduling',
+        'Performance analytics',
+        'Hashtag optimization',
+        'Content recommendations',
+        'Multi-platform management',
+        'Integration with social platforms',
+        'Custom automation rules'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📱',
@@ -831,10 +1260,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered customer feedback analysis with sentiment analysis, trend identification, and actionable insights.',
       features: [
+<<<<<<< HEAD
         'AI sentiment analysisTrend identification',
         'Actionable insightsFeedback categorization',
         'Real-time monitoringIntegration with feedback tools',
         'Custom reportingAutomated alerts'
+=======
+        'AI sentiment analysis',
+        'Trend identification',
+        'Actionable insights',
+        'Feedback categorization',
+        'Real-time monitoring',
+        'Integration with feedback tools',
+        'Custom reporting',
+        'Automated alerts'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '💭',
@@ -851,10 +1291,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Create and manage professional email signatures across your team. Ensure consistent branding and compliance.',
       features: [
+<<<<<<< HEAD
         'Professional signature templatesTeam signature management',
         'Compliance monitoringAnalytics & tracking',
         'Mobile optimizationIntegration with email clients',
         'Brand asset managementA/B testing'
+=======
+        'Professional signature templates',
+        'Team signature management',
+        'Compliance monitoring',
+        'Analytics & tracking',
+        'Mobile optimization',
+        'Integration with email clients',
+        'Brand asset management',
+        'A/B testing'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '✍️',
@@ -874,10 +1325,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Transform meetings with AI-powered transcription, action item tracking, and intelligent summaries.',
       features: [
+<<<<<<< HEAD
         'Real-time transcriptionAction item extraction',
         'Meeting summariesCalendar integration',
         'Team collaborationSearchable archives',
         'Analytics dashboardIntegration with Zoom, Teams'
+=======
+        'Real-time transcription',
+        'Action item extraction',
+        'Meeting summaries',
+        'Calendar integration',
+        'Team collaboration',
+        'Searchable archives',
+        'Analytics dashboard',
+        'Integration with Zoom, Teams'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🎤',
@@ -897,10 +1359,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Enterprise-grade password management with AI-powered security insights and team collaboration.',
       features: [
+<<<<<<< HEAD
         'Secure password storageTeam sharing & management',
         'Security breach monitoringPassword strength analysis',
         'Auto-fill capabilitiesMulti-device sync',
         'Admin controlsIntegration with SSO'
+=======
+        'Secure password storage',
+        'Team sharing & management',
+        'Security breach monitoring',
+        'Password strength analysis',
+        'Auto-fill capabilities',
+        'Multi-device sync',
+        'Admin controls',
+        'Integration with SSO'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🔐',
@@ -920,10 +1393,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Track time automatically with AI. Get insights into productivity patterns and optimize your workflow.',
       features: [
+<<<<<<< HEAD
         'Automatic time trackingProductivity analytics',
         'Project time allocationTeam collaboration',
         'Mobile appIntegration with project tools',
         'Custom reportingBilling automation'
+=======
+        'Automatic time tracking',
+        'Productivity analytics',
+        'Project time allocation',
+        'Team collaboration',
+        'Mobile app',
+        'Integration with project tools',
+        'Custom reporting',
+        'Billing automation'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '⏰',
@@ -943,10 +1427,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Create intelligent forms with AI-powered validation, conditional logic, and advanced analytics.',
       features: [
+<<<<<<< HEAD
         'Drag-and-drop builderAI-powered validation',
         'Conditional logicAdvanced analytics',
         'Multi-language supportMobile optimization',
         'Integration capabilitiesCustom branding'
+=======
+        'Drag-and-drop builder',
+        'AI-powered validation',
+        'Conditional logic',
+        'Advanced analytics',
+        'Multi-language support',
+        'Mobile optimization',
+        'Integration capabilities',
+        'Custom branding'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📝',
@@ -966,10 +1461,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Optimize your calendar with AI-powered scheduling suggestions, conflict resolution, and productivity insights.',
       features: [
+<<<<<<< HEAD
         'Smart scheduling suggestionsConflict detection',
         'Productivity analyticsTeam availability sync',
         'Integration with calendarsMobile app',
         'Custom preferencesAnalytics dashboard'
+=======
+        'Smart scheduling suggestions',
+        'Conflict detection',
+        'Productivity analytics',
+        'Team availability sync',
+        'Integration with calendars',
+        'Mobile app',
+        'Custom preferences',
+        'Analytics dashboard'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📅',
@@ -989,10 +1495,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Track and analyze your social media performance with AI-powered insights and competitor analysis.',
       features: [
+<<<<<<< HEAD
         'Multi-platform analyticsCompetitor monitoring',
         'Content performance trackingAudience insights',
         'Automated reportingROI measurement',
         'Trend analysisIntegration with social platforms'
+=======
+        'Multi-platform analytics',
+        'Competitor monitoring',
+        'Content performance tracking',
+        'Audience insights',
+        'Automated reporting',
+        'ROI measurement',
+        'Trend analysis',
+        'Integration with social platforms'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📱',
@@ -1012,10 +1529,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Build professional websites with AI assistance. Get personalized design suggestions and content optimization.',
       features: [
+<<<<<<< HEAD
         'AI-powered design suggestionsContent optimization',
         'SEO automationMobile-first design',
         'Template libraryE-commerce integration',
         'Analytics dashboardCustom domain support'
+=======
+        'AI-powered design suggestions',
+        'Content optimization',
+        'SEO automation',
+        'Mobile-first design',
+        'Template library',
+        'E-commerce integration',
+        'Analytics dashboard',
+        'Custom domain support'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🌐',
@@ -1035,10 +1563,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Provide instant customer support with AI-powered chatbots. Reduce response times and support costs.',
       features: [
+<<<<<<< HEAD
         'Natural language processingMulti-language support',
         'Integration with support toolsAnalytics dashboard',
         'Custom trainingEscalation to humans',
         'Mobile optimizationAPI access'
+=======
+        'Natural language processing',
+        'Multi-language support',
+        'Integration with support tools',
+        'Analytics dashboard',
+        'Custom training',
+        'Escalation to humans',
+        'Mobile optimization',
+        'API access'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🤖',
@@ -1058,10 +1597,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Process invoices automatically with AI. Extract data, validate information, and streamline accounts payable.',
       features: [
+<<<<<<< HEAD
         'OCR invoice processingData extraction',
         'Validation automationApproval workflows',
         'Integration with accountingMobile app access',
         'Custom reportingMulti-currency support'
+=======
+        'OCR invoice processing',
+        'Data extraction',
+        'Validation automation',
+        'Approval workflows',
+        'Integration with accounting',
+        'Mobile app access',
+        'Custom reporting',
+        'Multi-currency support'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🧾',
@@ -1081,10 +1631,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Identify and mitigate project risks with AI-powered analysis. Ensure project success and delivery.',
       features: [
+<<<<<<< HEAD
         'Risk identificationImpact assessment',
         'Mitigation strategiesReal-time monitoring',
         'Team collaborationReporting dashboard',
         'Integration with PM toolsMobile alerts'
+=======
+        'Risk identification',
+        'Impact assessment',
+        'Mitigation strategies',
+        'Real-time monitoring',
+        'Team collaboration',
+        'Reporting dashboard',
+        'Integration with PM tools',
+        'Mobile alerts'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '⚠️',
@@ -1104,10 +1665,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Automate employee onboarding with AI. Create personalized experiences and track progress efficiently.',
       features: [
+<<<<<<< HEAD
         'Personalized onboarding pathsProgress tracking',
         'Document managementTask automation',
         'Integration with HRISMobile app access',
         'Analytics dashboardCustom workflows'
+=======
+        'Personalized onboarding paths',
+        'Progress tracking',
+        'Document management',
+        'Task automation',
+        'Integration with HRIS',
+        'Mobile app access',
+        'Analytics dashboard',
+        'Custom workflows'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '👋',
@@ -1127,10 +1699,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Segment your customers with AI-powered analysis. Create targeted campaigns and improve customer experience.',
       features: [
+<<<<<<< HEAD
         'AI-powered segmentationBehavioral analysis',
         'Predictive modelingCampaign automation',
         'Integration with marketing toolsReal-time updates',
         'Custom dashboardsAPI access'
+=======
+        'AI-powered segmentation',
+        'Behavioral analysis',
+        'Predictive modeling',
+        'Campaign automation',
+        'Integration with marketing tools',
+        'Real-time updates',
+        'Custom dashboards',
+        'API access'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🎯',
@@ -1150,10 +1733,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Optimize your supply chain with AI. Reduce costs, improve efficiency, and enhance visibility.',
       features: [
+<<<<<<< HEAD
         'Demand forecastingInventory optimization',
         'Supplier managementRoute optimization',
         'Real-time trackingAnalytics dashboard',
         'Integration with ERPsMobile app access'
+=======
+        'Demand forecasting',
+        'Inventory optimization',
+        'Supplier management',
+        'Route optimization',
+        'Real-time tracking',
+        'Analytics dashboard',
+        'Integration with ERPs',
+        'Mobile app access'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🚚',
@@ -1173,10 +1767,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Monitor and maintain compliance with AI. Stay ahead of regulatory changes and reduce compliance risks.',
       features: [
+<<<<<<< HEAD
         'Regulatory monitoringCompliance assessment',
         'Risk identificationAutomated reporting',
         'Document managementIntegration with systems',
         'Custom dashboardsMobile alerts'
+=======
+        'Regulatory monitoring',
+        'Compliance assessment',
+        'Risk identification',
+        'Automated reporting',
+        'Document management',
+        'Integration with systems',
+        'Custom dashboards',
+        'Mobile alerts'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '✅',
@@ -1196,16 +1801,31 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Track and improve team performance with AI. Get insights into productivity patterns and optimization opportunities.',
       features: [
+<<<<<<< HEAD
         'Performance trackingGoal management',
         'Feedback automationAnalytics dashboard',
         'Team collaborationIntegration with HR tools',
         'Custom reportingMobile app access'
+=======
+        'Performance tracking',
+        'Goal management',
+        'Feedback automation',
+        'Analytics dashboard',
+        'Team collaboration',
+        'Integration with HR tools',
+        'Custom reporting',
+        'Mobile app access'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📊',
       color: 'from-orange-500 to-red-600',
       textColor: 'text-orange-400',
+<<<<<<< HEAD
       link: 'https://window.window.window.performance.ziontechgroup.com',
+=======
+      link: 'https://performance.ziontechgroup.com',
+>>>>>>> origin/auto/autonomy-17186719616
       marketPosition: 'Competitive with 15Five ($4-14), Lattice ($4-11), and Culture Amp ($3-11)',
       targetAudience: 'HR teams, managers, and performance-focused organizations',
       trialDays: 14,
@@ -1219,10 +1839,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Calculate and optimize customer lifetime value with AI. Make data-driven decisions to increase revenue.',
       features: [
+<<<<<<< HEAD
         'CLV calculationPredictive modeling',
         'Customer scoringCampaign optimization',
         'Integration with CRMsAnalytics dashboard',
         'Custom reportingAPI access'
+=======
+        'CLV calculation',
+        'Predictive modeling',
+        'Customer scoring',
+        'Campaign optimization',
+        'Integration with CRMs',
+        'Analytics dashboard',
+        'Custom reporting',
+        'API access'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '💰',
@@ -1242,10 +1873,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Automate complex workflows with AI. Streamline operations and reduce manual tasks across your organization.',
       features: [
+<<<<<<< HEAD
         'Visual workflow builderAI-powered optimization',
         'Integration capabilitiesAnalytics dashboard',
         'Team collaborationMobile app access',
         'Custom workflowsAPI access'
+=======
+        'Visual workflow builder',
+        'AI-powered optimization',
+        'Integration capabilities',
+        'Analytics dashboard',
+        'Team collaboration',
+        'Mobile app access',
+        'Custom workflows',
+        'API access'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🎯',
@@ -1263,10 +1905,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered landing page creation with conversion optimization and A/B testing capabilities.',
       features: [
+<<<<<<< HEAD
         'AI-powered page generationConversion optimization',
         'A/B testing automationMobile-responsive templates',
         'SEO optimizationAnalytics & heatmaps',
         'Integration with marketing toolsCustom domain support'
+=======
+        'AI-powered page generation',
+        'Conversion optimization',
+        'A/B testing automation',
+        'Mobile-responsive templates',
+        'SEO optimization',
+        'Analytics & heatmaps',
+        'Integration with marketing tools',
+        'Custom domain support'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true,
       icon: '🚀',
@@ -1283,10 +1936,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered website optimization for speed, SEO, and conversion rate improvement.',
       features: [
+<<<<<<< HEAD
         'Performance optimizationSEO enhancement',
         'Conversion rate optimizationMobile optimization',
         'Core Web Vitals monitoringAutomated fixes',
         'Performance reportingIntegration with analytics'
+=======
+        'Performance optimization',
+        'SEO enhancement',
+        'Conversion rate optimization',
+        'Mobile optimization',
+        'Core Web Vitals monitoring',
+        'Automated fixes',
+        'Performance reporting',
+        'Integration with analytics'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '⚡',
@@ -1303,10 +1967,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Advanced AI-powered churn prediction with automated retention strategies and customer insights.',
       features: [
+<<<<<<< HEAD
         'AI churn prediction modelsBehavioral pattern analysis',
         'Automated retention campaignsCustomer health scoring',
         'Real-time alertsROI tracking',
         'Integration with CRMsCustom prediction models'
+=======
+        'AI churn prediction models',
+        'Behavioral pattern analysis',
+        'Automated retention campaigns',
+        'Customer health scoring',
+        'Real-time alerts',
+        'ROI tracking',
+        'Integration with CRMs',
+        'Custom prediction models'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📉',
@@ -1323,10 +1998,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'Monitor and improve email deliverability with AI-powered insights and automated optimization.',
       features: [
+<<<<<<< HEAD
         'Deliverability monitoringSender reputation tracking',
         'Spam score analysisAutomated optimization',
         'Blacklist monitoringPerformance analytics',
         'Integration with ESPsReal-time alerts'
+=======
+        'Deliverability monitoring',
+        'Sender reputation tracking',
+        'Spam score analysis',
+        'Automated optimization',
+        'Blacklist monitoring',
+        'Performance analytics',
+        'Integration with ESPs',
+        'Real-time alerts'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📧',
@@ -1343,10 +2029,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered customer journey mapping with behavioral analysis and optimization recommendations.',
       features: [
+<<<<<<< HEAD
         'Journey mapping automationBehavioral analysis',
         'Touchpoint optimizationConversion funnel analysis',
         'Customer segmentationJourney analytics',
         'Integration with analytics toolsCustom journey templates'
+=======
+        'Journey mapping automation',
+        'Behavioral analysis',
+        'Touchpoint optimization',
+        'Conversion funnel analysis',
+        'Customer segmentation',
+        'Journey analytics',
+        'Integration with analytics tools',
+        'Custom journey templates'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🗺️',
@@ -1363,10 +2060,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered contract analysis with risk assessment, compliance checking, and automated insights.',
       features: [
+<<<<<<< HEAD
         'AI contract reviewRisk assessment',
         'Compliance checkingAutomated insights',
         'Contract templatesVersion control',
         'Integration with legal toolsCustom analysis rules'
+=======
+        'AI contract review',
+        'Risk assessment',
+        'Compliance checking',
+        'Automated insights',
+        'Contract templates',
+        'Version control',
+        'Integration with legal tools',
+        'Custom analysis rules'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📄',
@@ -1383,10 +2091,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered sales forecasting with predictive analytics and revenue optimization insights.',
       features: [
+<<<<<<< HEAD
         'AI sales forecastingPredictive analytics',
         'Revenue optimizationPipeline analysis',
         'Performance trackingCustom forecasting models',
         'Integration with CRMsReal-time insights'
+=======
+        'AI sales forecasting',
+        'Predictive analytics',
+        'Revenue optimization',
+        'Pipeline analysis',
+        'Performance tracking',
+        'Custom forecasting models',
+        'Integration with CRMs',
+        'Real-time insights'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📊',
@@ -1403,10 +2122,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered analytics for customer service optimization and performance improvement.',
       features: [
+<<<<<<< HEAD
         'Service performance analyticsCustomer satisfaction tracking',
         'Response time optimizationAgent performance metrics',
         'Automated insightsIntegration with help desks',
         'Custom reportingReal-time monitoring'
+=======
+        'Service performance analytics',
+        'Customer satisfaction tracking',
+        'Response time optimization',
+        'Agent performance metrics',
+        'Automated insights',
+        'Integration with help desks',
+        'Custom reporting',
+        'Real-time monitoring'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🎧',
@@ -1423,10 +2153,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered product recommendation engine for e-commerce and content platforms.',
       features: [
+<<<<<<< HEAD
         'AI recommendation algorithmsPersonalized suggestions',
         'Behavioral analysisA/B testing',
         'Performance analyticsIntegration with e-commerce platforms',
         'Custom recommendation rulesReal-time optimization'
+=======
+        'AI recommendation algorithms',
+        'Personalized suggestions',
+        'Behavioral analysis',
+        'A/B testing',
+        'Performance analytics',
+        'Integration with e-commerce platforms',
+        'Custom recommendation rules',
+        'Real-time optimization'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🎯',
@@ -1443,10 +2184,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered fraud detection with real-time monitoring and automated prevention measures.',
       features: [
+<<<<<<< HEAD
         'Real-time fraud detectionAI risk assessment',
         'Automated preventionTransaction monitoring',
         'Custom fraud rulesPerformance analytics',
         'Integration with payment systems24/7 monitoring'
+=======
+        'Real-time fraud detection',
+        'AI risk assessment',
+        'Automated prevention',
+        'Transaction monitoring',
+        'Custom fraud rules',
+        'Performance analytics',
+        'Integration with payment systems',
+        '24/7 monitoring'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '🛡️',
@@ -1463,10 +2215,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered inventory forecasting with demand prediction and optimization recommendations.',
       features: [
+<<<<<<< HEAD
         'AI demand forecastingInventory optimization',
         'Seasonal trend analysisAutomated reordering',
         'Cost optimizationIntegration with ERP systems',
         'Custom forecasting modelsReal-time insights'
+=======
+        'AI demand forecasting',
+        'Inventory optimization',
+        'Seasonal trend analysis',
+        'Automated reordering',
+        'Cost optimization',
+        'Integration with ERP systems',
+        'Custom forecasting models',
+        'Real-time insights'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📦',
@@ -1483,10 +2246,21 @@ export default function MicroSaasPage() {
       period: '/month',
       description: 'AI-powered social media automation with content scheduling and engagement optimization.',
       features: [
+<<<<<<< HEAD
         'AI content schedulingEngagement optimization',
         'Multi-platform managementContent calendar',
         'Performance analyticsHashtag optimization',
         'Integration with design toolsAutomated responses'
+=======
+        'AI content scheduling',
+        'Engagement optimization',
+        'Multi-platform management',
+        'Content calendar',
+        'Performance analytics',
+        'Hashtag optimization',
+        'Integration with design tools',
+        'Automated responses'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false,
       icon: '📱',
@@ -1496,7 +2270,11 @@ export default function MicroSaasPage() {
       marketPosition: 'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40)',
       targetAudience: 'Social media managers, marketers, and content creators'
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const industryTrends = [
     {
@@ -1519,9 +2297,15 @@ export default function MicroSaasPage() {
       description: 'Enterprise-grade security and compliance built into every service.',
       impact: 'High'
     }
+<<<<<<< HEAD
   ],
 
   const categories = [...new Set(microSaasServices.map(service => service.category))],
+=======
+  ];
+
+  const categories = [...new Set(microSaasServices.map(service => service.category))];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const competitiveAdvantages = [
     {
@@ -1554,7 +2338,11 @@ export default function MicroSaasPage() {
       title: 'Seamless Integration',
       description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -2121,5 +2909,9 @@ export default function MicroSaasPage() {
 
       {/* CTA Section */}
     </>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

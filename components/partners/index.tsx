@@ -1,29 +1,53 @@
+<<<<<<< HEAD
 "use client";
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 import { useState } from "react";
 import Head from "next/head";
 
 export default function Partners() {
+<<<<<<< HEAD
   const [formsetForm] = useState({
+=======
+  const [form, setForm] = useState({
+>>>>>>> origin/auto/autonomy-17186719616
     name: "",
     entityType: "",
     pocName: "",
     pocEmail: "",
+<<<<<<< HEAD
     useCaseType: "Education Partnership"});
   const [resultsetResult] = useState<any>(null);
   const [loadingsetLoading] = useState(false);
+=======
+    useCaseType: "Education Partnership",
+  });
+  const [result, setResult] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
     setResult(null);
+<<<<<<< HEAD
     const res = await fetch("/api/partners/register"{
+=======
+    const res = await fetch("/api/partners/register", {
+>>>>>>> origin/auto/autonomy-17186719616
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         name: form.name,
         entityType: form.entityType,
         useCaseType: form.useCaseType,
+<<<<<<< HEAD
         pointOfContact: { name: form.pocNamemail: form.pocEmail }})});
+=======
+        pointOfContact: { name: form.pocName, email: form.pocEmail },
+      }),
+    });
+>>>>>>> origin/auto/autonomy-17186719616
     const data = await res.json();
     setLoading(false);
     setResult(data);
@@ -36,11 +60,16 @@ export default function Partners() {
       </Head>
       <div className="max-w-4xl mx-auto py-12 px-4">
         <h1 className="text-3xl font-semibold mb-2">Integrate Zion</h1>
+<<<<<<< HEAD
         <p className="text-gray-600 mb-8">Trusted institutions can embed Zion into platformsprogramsor marketplaces.</p>
+=======
+        <p className="text-gray-600 mb-8">Trusted institutions can embed Zion into platforms, programs, or marketplaces.</p>
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="grid md:grid-cols-2 gap-8">
           <form onSubmit={submit} className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-xl font-medium mb-4">Partner Registration</h2>
             <label className="block text-sm mb-2">Name</label>
+<<<<<<< HEAD
             <input className="w-full border rounded px-3 py-2 mb-4" value={form.name} onChange={(e) => setForm({ ...formname: e.target.value })} required />
             <label className="block text-sm mb-2">Entity Type</label>
             <input className="w-full border rounded px-3 py-2 mb-4" value={form.entityType} onChange={(e) => setForm({ ...formentityType: e.target.value })} required />
@@ -51,6 +80,18 @@ export default function Partners() {
             </div>
             <label className="block text-sm mb-2">Use Case</label>
             <select className="w-full border rounded px-3 py-2 mb-6" value={form.useCaseType} onChange={(e) => setForm({ ...formuseCaseType: e.target.value })}>
+=======
+            <input className="w-full border rounded px-3 py-2 mb-4" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
+            <label className="block text-sm mb-2">Entity Type</label>
+            <input className="w-full border rounded px-3 py-2 mb-4" value={form.entityType} onChange={(e) => setForm({ ...form, entityType: e.target.value })} required />
+            <label className="block text-sm mb-2">Point of Contact</label>
+            <div className="grid grid-cols-2 gap-3 mb-4">
+              <input placeholder="Name" className="border rounded px-3 py-2" value={form.pocName} onChange={(e) => setForm({ ...form, pocName: e.target.value })} required />
+              <input placeholder="Email" type="email" className="border rounded px-3 py-2" value={form.pocEmail} onChange={(e) => setForm({ ...form, pocEmail: e.target.value })} required />
+            </div>
+            <label className="block text-sm mb-2">Use Case</label>
+            <select className="w-full border rounded px-3 py-2 mb-6" value={form.useCaseType} onChange={(e) => setForm({ ...form, useCaseType: e.target.value })}>
+>>>>>>> origin/auto/autonomy-17186719616
               <option>Education Partnership</option>
               <option>Workforce Development</option>
               <option>Token Integration</option>

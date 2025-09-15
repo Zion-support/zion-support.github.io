@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Jest configuration for comprehensive testing
 module.exports = {
   testEnvironment: 'jsdom',
@@ -29,4 +30,20 @@ module.exports = {
     }
   },
   testTimeout: 10000
+=======
+/** @type {import('jest').Config} */
+module.exports = {
+  testEnvironment: 'jsdom',
+  roots: ['<rootDir>/'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+  },
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  testMatch: ['**/__tests__/**/*.(spec|test).(ts|tsx|js)'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+  },
+>>>>>>> origin/auto/autonomy-17186719616
 };

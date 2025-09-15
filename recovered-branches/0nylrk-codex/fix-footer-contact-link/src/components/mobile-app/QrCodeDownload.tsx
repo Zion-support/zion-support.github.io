@@ -18,7 +18,11 @@ export const QrCodeDownload: React.FC = () => {
                 Download <span className="text-zion-cyan">Zion</span> to Your Device
               </h2>
               <p className="text-lg text-gray-300 mb-8">
+<<<<<<< HEAD
                 Scan the QR code with your phone camera to download the app instantlyor use the buttons below to get it from your app store of choice.
+=======
+                Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.
+>>>>>>> origin/auto/autonomy-17186719616
               </p>
               
               <AppStoreButtons 

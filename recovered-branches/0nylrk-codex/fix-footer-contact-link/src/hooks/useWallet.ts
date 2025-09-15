@@ -68,8 +68,15 @@ export function useWallet() {
         amount,
         transaction_type: 'earn',
         reason: reason || null,
+<<<<<<< HEAD
         created_at: new Date().toISOString()},
       ...prev]);
+=======
+        created_at: new Date().toISOString(),
+      },
+      ...prev,
+    ]);
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   async function spendTokens(amount: number, reason?: string) {
@@ -84,8 +91,15 @@ export function useWallet() {
         amount,
         transaction_type: 'burn',
         reason: reason || null,
+<<<<<<< HEAD
         created_at: new Date().toISOString()},
       ...prev]);
+=======
+        created_at: new Date().toISOString(),
+      },
+      ...prev,
+    ]);
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   useEffect(() => {
@@ -101,5 +115,10 @@ export function useWallet() {
     fetchWallet,
     fetchTransactions,
     earnTokens,
+<<<<<<< HEAD
     spendTokens};
+=======
+    spendTokens,
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 }

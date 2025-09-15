@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Get region flag based on country name (for demo purposes)
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -12,14 +13,35 @@ interface CountryServiceCardProps {
   onSelect: (country: CountryPricing) => void,
   onQuote?: (country: CountryPricing) => void,
   isPopular?: boolean
+=======
+
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+import { Badge } from "@/components/ui/badge";
+import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
+import { CountryPricing } from "@/data/onsiteServicePricing";
+
+interface CountryServiceCardProps {
+  country: CountryPricing;
+  onSelect: (country: CountryPricing) => void;
+  onQuote?: (country: CountryPricing) => void;
+  isPopular?: boolean;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
   const getRegionEmoji = (countryName: string | undefined): string => {
+<<<<<<< HEAD
     if (!countryName) return "🌐",
     
     const emojiMap: Record<string string> = {
+=======
+    if (!countryName) return "🌐";
+    
+    const emojiMap: Record<string, string> = {
+>>>>>>> origin/auto/autonomy-17186719616
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
       "Canada": "🇨🇦",
@@ -36,6 +58,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       "South Africa": "🇿🇦",
       // Default if no flag is found
       "default": "🌐"
+<<<<<<< HEAD
     },
     
     return emojiMap[countryName] || "🌐",
@@ -56,6 +79,28 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       return "8-24 hours",
     }
   },
+=======
+    };
+    
+    return emojiMap[countryName] || "🌐";
+  };
+  
+  // Get response time estimate based on country
+  const getResponseTime = (countryName: string | undefined): string => {
+    if (!countryName) return "8-24 hours";
+    
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
+    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
+    
+    if (tier1.includes(countryName)) {
+      return "4 hours";
+    } else if (tier2.includes(countryName)) {
+      return "6 hours";
+    } else {
+      return "8-24 hours";
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
@@ -78,19 +123,25 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         <p className="text-3xl font-bold text-zion-cyan mb-4">
           ${country.pricePerIncident.toFixed(2)}
         </p>
+<<<<<<< HEAD
         <div className='space-y-2 text-zion-slate-light'>
           <div className='flex items-start'>
             <Clock className='h-4 w-4 mr-2 text-zion-purple mt-1' />
             <span>
               Typical response time: {getResponseTime(country.country)}
             </span>
+=======
+>>>>>>> origin/auto/autonomy-17186719616
         
         <div className="space-y-2 text-zion-slate-light">
           <div className="flex items-start">
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />
             <span>Typical response time: {getResponseTime(country.country)}</span>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           </div>
           <div className="flex items-start">
             <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />
@@ -106,6 +157,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           </div>
         </div>
       </CardContent>
+<<<<<<< HEAD
 
 
 
@@ -317,6 +369,8 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
     </Card>);
 }
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
       <CardFooter className="flex flex-col space-y-2">
         <Button
           onClick={() => onSelect(country)}
@@ -329,15 +383,33 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           Select Service
         </Button>
         <Button
+<<<<<<< HEAD
           variant='outline'
           className='w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10'
           onClick={() => onQuote?.(country)}        >
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           variant="outline"
           className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           onClick={() => onQuote?.(country)}
         >
+<<<<<<< HEAD
 
 
 
 
+=======
+          Get Quote
+        </Button>
+        <Button
+          asChild
+          variant="ghost"
+          className="w-full text-zion-cyan hover:text-zion-purple"
+        >
+          <Link href="/contact">Contact Sales</Link>
+        </Button>
+      </CardFooter>
+    </Card>
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

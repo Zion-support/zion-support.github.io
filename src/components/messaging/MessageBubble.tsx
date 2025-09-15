@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import { format } from 'date-fns',
 import { PaperclipIcon } from 'lucide-react'
@@ -7,6 +8,17 @@ import { Message } from '@/types/messaging',
 interface MessageBubbleProps {
   message: Message,
   isUserMessage: boolean
+=======
+import React from 'react';
+import { format } from 'date-fns';
+import { PaperclipIcon } from 'lucide-react'
+import { cn } from '@/lib/utils';
+import { Message } from '@/types/messaging';
+
+interface MessageBubbleProps {
+  message: Message;
+  isUserMessage: boolean;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
@@ -40,5 +52,9 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

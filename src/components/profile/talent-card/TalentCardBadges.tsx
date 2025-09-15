@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Award } from 'lucide-react'
@@ -9,6 +10,18 @@ interface TalentCardBadgesProps {
 
 export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
   if (!featured) return null,
+=======
+import React from "react";
+import { Badge } from "@/components/ui/badge";
+import { Award } from 'lucide-react'
+
+interface TalentCardBadgesProps {
+  featured: boolean | undefined;
+}
+
+export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
+  if (!featured) return null;
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">
@@ -17,5 +30,9 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
         <span>Featured</span>
       </Badge>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

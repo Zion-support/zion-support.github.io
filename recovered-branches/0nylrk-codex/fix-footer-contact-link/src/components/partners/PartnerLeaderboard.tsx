@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
 import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { CrownMedalTrophy } from "lucide-react";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Crown, Medal, Trophy } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface LeaderboardEntry {
   id: string;
@@ -21,10 +28,17 @@ export function PartnerLeaderboard() {
       id: "1",
       rank: 1,
       name: "AI Tech Guru",
+<<<<<<< HEAD
       avatar: ""// URL would be here
       referrals: 178,
       earnings: 4500,
       badges: ["gold"trending"]
+=======
+      avatar: "", // URL would be here
+      referrals: 178,
+      earnings: 4500,
+      badges: ["gold", "trending"]
+>>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: "2",
@@ -106,7 +120,11 @@ export function PartnerLeaderboard() {
                     <Avatar className="h-10 w-10 border border-zion-blue-light">
                       <AvatarImage src={entry.avatar} />
                       <AvatarFallback className="bg-zion-blue text-zion-cyan">
+<<<<<<< HEAD
                         {entry.name.substring(02).toUpperCase()}
+=======
+                        {entry.name.substring(0, 2).toUpperCase()}
+>>>>>>> origin/auto/autonomy-17186719616
                       </AvatarFallback>
                     </Avatar>
                     <div>

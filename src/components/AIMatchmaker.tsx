@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -21,12 +22,37 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
 
+=======
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AIMatchingResults } from "@/components/AIMatchingResults";
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles, Search } from 'lucide-react'
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+
+
+interface AIMatchmakerProps {
+  serviceType?: string;
+  onMatchSelect?: (match: any) => void;
+  className?: string;
+}
+
+export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
+  const [query, setQuery] = useState("");
+  const [isMatchmaking, setIsMatchmaking] = useState(false);
+  const [matches, setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, setHasSearched] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
+<<<<<<< HEAD
         variant: "destructive"}),
       return,
     }
@@ -36,12 +62,25 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     
     try {
       logInfo("Starting AI matching", { data: { query, serviceType } }),
+=======
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsMatchmaking(true);
+    setHasSearched(true);
+    
+    try {
+      logInfo("Starting AI matching", { data: { query, serviceType } });
+>>>>>>> origin/auto/autonomy-17186719616
       
       // Get AI matches
       const results = await findMatches(
         query,
         serviceType,
         3
+<<<<<<< HEAD
       ),
       
       logInfo('AI matching results:', { data: results }),
@@ -62,10 +101,35 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       setIsMatchmaking(false),
     }
   },
+=======
+      );
+      
+      logInfo('AI matching results:', { data: results });
+      setMatches(results);
+      
+      toast({
+        title: "Matches Found",
+        description: `Found ${results.length} matches based on your description.`,
+      });
+    } catch (error) {
+      logErrorToProduction('Error during AI matching:', { data: error });
+      toast({
+        title: "Matching Error",
+        description: "We couldn't find matches for your request. Please try again.",
+        variant: "destructive",
+      });
+      // Set empty matches to show no results found UI
+      setMatches([]);
+    } finally {
+      setIsMatchmaking(false);
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   const handleItemSelect = (item: any) => {
     if (onMatchSelect) {
       // Find the original MatchResult that contains this item
+<<<<<<< HEAD
       const matchResult = matches.find(match => match.item.id === item.id),
       if (matchResult) {
         onMatchSelect(matchResult)
@@ -75,6 +139,17 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
+=======
+      const matchResult = matches.find(match => match.item.id === item.id);
+      if (matchResult) {
+        onMatchSelect(matchResult);
+      }
+    }
+  };
+  
+  // Extract just the items from each MatchResult
+  const matchItems = matches.map(match => match.item);
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
@@ -84,14 +159,22 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
+<<<<<<< HEAD
           Describe what you're looking for and our AI will find the best matches
+=======
+          Describe what you&apos;re looking for and our AI will find the best matches
+>>>>>>> origin/auto/autonomy-17186719616
         </p>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           <div className="space-y-2">
             <Textarea
+<<<<<<< HEAD
               placeholder="Describe what you need... (e && e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
+=======
+              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
+>>>>>>> origin/auto/autonomy-17186719616
               value={query}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e.target.value)}
               className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
@@ -124,5 +207,10 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   ),
 }
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

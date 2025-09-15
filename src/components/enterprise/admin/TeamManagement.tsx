@@ -1,12 +1,21 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
+=======
+import React, { useState } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table",
+=======
+  TableRow,
+} from "@/components/ui/table";
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Dialog,
   DialogContent,
@@ -14,6 +23,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -25,6 +35,20 @@ import { toast } from "@/hooks/use-toast",
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false),
   const [newMemberEmail, setNewMemberEmail] = useState(""),
+=======
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Trash, Mail, UserPlus } from 'lucide-react'
+import { toast } from "@/hooks/use-toast";
+
+export function TeamManagement() {
+  const [isAddingMember, setIsAddingMember] = useState(false);
+  const [newMemberEmail, setNewMemberEmail] = useState("");
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Mock team members data
   const teamMembers = [
@@ -34,28 +58,49 @@ export function TeamManagement() {
       email: "alex@example.com",
       role: "Admin",
       status: "active",
+<<<<<<< HEAD
       lastActive: "2 hours ago"},
+=======
+      lastActive: "2 hours ago",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 2,
       name: "Jamie Smith",
       email: "jamie@example.com",
       role: "Recruiter",
       status: "active",
+<<<<<<< HEAD
       lastActive: "Yesterday"},
+=======
+      lastActive: "Yesterday",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 3,
       name: "Sam Williams",
       email: "sam@example.com",
       role: "Manager",
       status: "pending",
+<<<<<<< HEAD
       lastActive: "Never"},
+=======
+      lastActive: "Never",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 4,
       name: "Taylor Brown",
       email: "taylor@example.com",
       role: "Viewer",
       status: "active",
+<<<<<<< HEAD
       lastActive: "3 days ago"}],
+=======
+      lastActive: "3 days ago",
+    },
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
@@ -63,31 +108,58 @@ export function TeamManagement() {
       toast({
         title: "Email required",
         description: "Please enter an email address for the new team member.",
+<<<<<<< HEAD
         variant: "destructive"}),
       return,
+=======
+        variant: "destructive",
+      });
+      return;
+>>>>>>> origin/auto/autonomy-17186719616
     }
 
     toast({
       title: "Invitation sent",
+<<<<<<< HEAD
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
     setNewMemberEmail(""),
     setIsAddingMember(false),
   },
+=======
+      description: `An invitation has been sent to ${newMemberEmail}`,
+    });
+
+    setNewMemberEmail("");
+    setIsAddingMember(false);
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleRemoveMember = (_memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed",
+<<<<<<< HEAD
       description: "The team member has been removed from your workspace."}),
   },
+=======
+      description: "The team member has been removed from your workspace.",
+    });
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent",
+<<<<<<< HEAD
       description: `A new invitation has been sent to ${memberEmail}`}),
   },
+=======
+      description: `A new invitation has been sent to ${memberEmail}`,
+    });
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6">
@@ -216,5 +288,9 @@ export function TeamManagement() {
         </Table>
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

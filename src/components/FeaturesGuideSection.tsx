@@ -1,16 +1,27 @@
+<<<<<<< HEAD
 import Link from "next/link",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from "./ui/button",
 import { fireEvent } from '@/lib/analytics',
+=======
+import Link from "next/link";
+import { GradientHeading } from "./GradientHeading";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "./ui/button";
+import { fireEvent } from '@/lib/analytics';
+>>>>>>> origin/auto/autonomy-17186719616
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
 
 export function FeaturesGuideSection() {
   const features = [
     {
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -123,7 +134,11 @@ export function FeaturesGuideSection() {
       link: "/help",
       buttonText: "View Resources"
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -144,6 +159,7 @@ export function FeaturesGuideSection() {
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
+<<<<<<< HEAD
 import Link from "next/link",;
 import { GradientHeading } from "./GradientHeading",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -1047,10 +1063,13 @@ function FeaturesGuideSection() {
               >;
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                 {feature.title}
               </TabsTrigger>
             ))}
           </TabsList>
+<<<<<<< HEAD
           <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
             {features.slice(4).map(feature => (
               <TabsTrigger
@@ -1063,11 +1082,14 @@ function FeaturesGuideSection() {
                 value={feature.id}
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (
               <TabsTrigger 
                 key={feature.id} 
                 value={feature.id}
+<<<<<<< HEAD
 
 
       link: "/help",
@@ -1124,6 +1146,16 @@ function FeaturesGuideSection() {
                   <p className='text - zion - slate - light mb - 6'>;
                     {feature.description}
 
+=======
+                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+              >
+                {feature.title}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
+          {features.map(feature => (
+>>>>>>> origin/auto/autonomy-17186719616
             <TabsContent key={feature.id} value={feature.id} className="mt-8">
               <div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">
                 <div className="md:w-1/3 flex flex-col items-center md:items-start">
@@ -1134,8 +1166,11 @@ function FeaturesGuideSection() {
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
                   <Button 
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                     asChild
                   >
                     <Link href={feature.link}>
@@ -1148,6 +1183,7 @@ function FeaturesGuideSection() {
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4">
+<<<<<<< HEAD
                     {feature.instructions.map((instruction, idx,) => (
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
@@ -1233,6 +1269,13 @@ function FeaturesGuideSection() {
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
                       </li>;
 
+=======
+                    {feature.instructions.map((instruction, idx) => (
+                      <li key={idx} className="text-zion-slate-light">
+                        <span className="text-zion-cyan mr-2">{idx + 1}.</span>
+                        {instruction}
+                      </li>
+>>>>>>> origin/auto/autonomy-17186719616
                     ))}
                   </ol>
                 </div>
@@ -1240,18 +1283,24 @@ function FeaturesGuideSection() {
             </TabsContent>
           ))}
         </Tabs>
+<<<<<<< HEAD
         <div className='mt-12 text-center'>
         
         <div className="mt-12 text-center">
 
 
 
+=======
+        
+        <div className="mt-12 text-center">
+>>>>>>> origin/auto/autonomy-17186719616
           <Button
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             asChild
           >
             <Link
+<<<<<<< HEAD
 
               href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
               href="/marketplace"
@@ -1259,18 +1308,28 @@ function FeaturesGuideSection() {
             >
               Explore Full Marketplace
               <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               href="/marketplace"
               onClick={() => fireEvent('explore_marketplace_click')}
             >
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
             </Link>
           </Button>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   ),
 }
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

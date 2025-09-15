@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 export function MobileJobPost() {
@@ -37,6 +38,65 @@ export function MobileJobPost() {
         return <DetailsStep />
     }
   },
+=======
+import React, { useState } from "react";
+import { MobileHeader } from "@/mobile/components/common/MobileHeader";
+import { BottomNavigation } from "@/mobile/components/common/BottomNavigation";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { 
+  Select, 
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue 
+} from "@/components/ui/select";
+import { Zap, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+
+type JobPostStep = "details" | "requirements" | "budget" | "preview";
+
+export function MobileJobPost() {
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+  
+  const goToNextStep = () => {
+    if (currentStep === "details") {
+      setCurrentStep("requirements");
+    } else if (currentStep === "requirements") {
+      setCurrentStep("budget");
+    } else if (currentStep === "budget") {
+      setCurrentStep("preview");
+    }
+  };
+  
+  const goToPrevStep = () => {
+    if (currentStep === "requirements") {
+      setCurrentStep("details");
+    } else if (currentStep === "budget") {
+      setCurrentStep("requirements");
+    } else if (currentStep === "preview") {
+      setCurrentStep("budget");
+    }
+  };
+  
+  const renderStepContent = () => {
+    switch (currentStep) {
+      case "details":
+        return <DetailsStep />;
+      case "requirements":
+        return <RequirementsStep />;
+      case "budget":
+        return <BudgetStep />;
+      case "preview":
+        return <PreviewStep />;
+      default:
+        return <DetailsStep />;
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -84,7 +144,11 @@ export function MobileJobPost() {
       
       <BottomNavigation />
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 function DetailsStep() {
@@ -140,12 +204,17 @@ function DetailsStep() {
         />
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
     "React", "TypeScript", "Node.js"
+<<<<<<< HEAD
   ]),
   const [newSkill, setNewSkill] = useState(""),
   
@@ -159,6 +228,21 @@ function RequirementsStep() {
   const removeSkill = (skill: string) => {
     setSkills(skills.filter(s => s !== skill))
   },
+=======
+  ]);
+  const [newSkill, setNewSkill] = useState("");
+  
+  const addSkill = () => {
+    if (newSkill && !skills.includes(newSkill)) {
+      setSkills([...skills, newSkill]);
+      setNewSkill("");
+    }
+  };
+  
+  const removeSkill = (skill: string) => {
+    setSkills(skills.filter(s => s !== skill));
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="space-y-4">
@@ -244,7 +328,11 @@ function RequirementsStep() {
         />
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 function BudgetStep() {
@@ -321,7 +409,11 @@ function BudgetStep() {
         />
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 function PreviewStep() {
@@ -364,5 +456,9 @@ function PreviewStep() {
       
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

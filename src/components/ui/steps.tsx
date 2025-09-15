@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 status;
   label;
   description;
@@ -14,18 +15,41 @@ interface StepProps {
   className?: string
 }
 export function Step({
+=======
+
+import React from "react";
+import { cn } from "@/lib/utils";
+import { CheckIcon } from 'lucide-react'
+
+interface StepProps {
+  status: "incomplete" | "current" | "complete";
+  label: string;
+  description?: string;
+  className?: string;
+}
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function Step({
   status,
   label,
   description,
+<<<<<<< HEAD
   className}: StepProps) {
+=======
+  className,
+}: StepProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <li
       className={cn(
         "relative flex items-center",
         {
+<<<<<<< HEAD
           "opacity-60": status === "incomplete"},
+=======
+          "opacity-60": status === "incomplete",
+        },
+>>>>>>> origin/auto/autonomy-17186719616
         className
       )}
     >
@@ -38,7 +62,12 @@ export function Step({
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
             "bg-zion-purple border-zion-purple text-white":
+<<<<<<< HEAD
               status === "complete"}
+=======
+              status === "complete",
+          }
+>>>>>>> origin/auto/autonomy-17186719616
         )}
       >
         {status === "complete" ? (
@@ -54,7 +83,12 @@ export function Step({
         <h3
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete",
+<<<<<<< HEAD
             "text-white": status === "current" || status === "complete"})}
+=======
+            "text-white": status === "current" || status === "complete",
+          })}
+>>>>>>> origin/auto/autonomy-17186719616
         >
           {label}
         </h3>
@@ -63,6 +97,7 @@ export function Step({
         )}
       </div>
     </li>
+<<<<<<< HEAD
   ),
 }
 
@@ -74,11 +109,25 @@ interface StepsProps {
 
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
+=======
+  );
+}
+
+interface StepsProps {
+  currentStep: number;
+  className?: string;
+  children: React.ReactNode;
+}
+
+export function Steps({ currentStep, className, children }: StepsProps) {
+  const childrenArray = React.Children.toArray(children);
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
+<<<<<<< HEAD
           if (!React.isValidElement(child)) return null,
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
@@ -87,6 +136,17 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status}),
+=======
+          if (!React.isValidElement(child)) return null;
+          
+          let status: "incomplete" | "current" | "complete" = "incomplete";
+          if (index < currentStep) status = "complete";
+          if (index === currentStep) status = "current";
+          
+          return React.cloneElement(child as React.ReactElement<StepProps>, {
+            status,
+          });
+>>>>>>> origin/auto/autonomy-17186719616
         })}
       </ol>
       
@@ -95,11 +155,17 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
+<<<<<<< HEAD
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+=======
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`,
+            }}
+>>>>>>> origin/auto/autonomy-17186719616
           />
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   ),
 }
 ;
@@ -385,3 +451,7 @@ if (status = "current") {
 
 
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

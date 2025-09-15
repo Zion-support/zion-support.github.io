@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: crawl-normalize
 on:
   workflow_dispatch: {}
@@ -15,16 +16,43 @@ jobs:
     name: Crawl Normalize Job
     runs-on: ubuntu-latest
     timeout-minutes: 20
+=======
+name: Crawl Normalize
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+>>>>>>> origin/auto/autonomy-17186719616
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+<<<<<<< HEAD
           cache: npm
+=======
+          cache: 'npm'
+
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run workflow

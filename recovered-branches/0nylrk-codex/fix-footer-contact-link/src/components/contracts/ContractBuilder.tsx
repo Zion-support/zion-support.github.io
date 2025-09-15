@@ -1,11 +1,20 @@
 
 import { useState } from "react";
+<<<<<<< HEAD
 import { DialogContent } from "@/components/ui/dialog";
 import { TabsListTabsTriggerTabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Save } from "lucide-react";
 import { TalentProfile } from "@/types/talent";
 import { ContractFormValues } from "./components/ContractForm";
+=======
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { Save } from "lucide-react";
+import { TalentProfile } from "@/types/talent";
+import { ContractForm, ContractFormValues } from "./components/ContractForm";
+>>>>>>> origin/auto/autonomy-17186719616
 import { ContractPreview } from "./components/ContractPreview";
 import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
@@ -25,6 +34,7 @@ export function ContractBuilder({
   clientName,
   onContractGenerated
 }: ContractBuilderProps) {
+<<<<<<< HEAD
   const [activeTabsetActiveTab] = useState<string>("form");
   const [generatedContractsetGeneratedContract] = useState<string | null>(null);
   const [formValuesetFormValues] = useState<ContractFormValues | undefined>(
@@ -32,6 +42,15 @@ export function ContractBuilder({
   );
   const [templateManagerOpensetTemplateManagerOpen] = useState(false);
   const [showSmartContractBuildersetShowSmartContractBuilder] = useState(false);
+=======
+  const [activeTab, setActiveTab] = useState<string>("form");
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
+    undefined
+  );
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData);

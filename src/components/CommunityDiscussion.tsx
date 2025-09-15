@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { MessageCircle } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -14,6 +15,24 @@ interface DiscussionPost {
   time: string,
   title: string,
   body: string
+=======
+import React, { useState } from "react";
+import { MessageCircle } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+
+interface DiscussionPost {
+  id: number;
+  author: string;
+  avatar?: string;
+  time: string;
+  title: string;
+  body: string;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 const initialPosts: DiscussionPost[] = [
@@ -22,12 +41,18 @@ const initialPosts: DiscussionPost[] = [
     author: "Anna Zhou",
     time: "2h ago",
     title: "What AI trends are you most excited for in 2025?",
+<<<<<<< HEAD
     body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
+=======
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   {
     id: 2,
     author: "David Kim",
     time: "50m ago",
     title: "Quick tip: How to rank your Zion listing higher",
+<<<<<<< HEAD
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
 
 export const CommunityDiscussion: React.FC = () => {
@@ -58,10 +83,30 @@ export const CommunityDiscussion: React.FC = () => {
         id: Date.now(),
         author: 'You',
         time: 'Now',
+=======
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",
+  },
+];
+
+export const CommunityDiscussion: React.FC = () => {
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+
+  const handleAddPost = () => {
+    if (!newTitle.trim() || !newBody.trim()) return;
+    setPosts([
+      {
+        id: Date.now(),
+        author: "You",
+        time: "Now",
+>>>>>>> origin/auto/autonomy-17186719616
         title: newTitle,
         body: newBody,
       },
       ...posts,
+<<<<<<< HEAD
     ])
     setNewTitle('')
     setNewBody('')
@@ -76,6 +121,13 @@ export const CommunityDiscussion: React.FC = () => {
     setNewBody(""),
     setShowNew(false),
   },
+=======
+    ]);
+    setNewTitle("");
+    setNewBody("");
+    setShowNew(false);
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
@@ -91,10 +143,13 @@ export const CommunityDiscussion: React.FC = () => {
       <Separator className="mb-6" />
       <div className="mb-4 flex justify-end">
         <Button
+<<<<<<< HEAD
           className='bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale'
           size='sm'
           onClick={() => setShowNew(v => !v)}        >
           {showNew ? 'Cancel' : 'New Post'}
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
           size="sm"
           onClick={() => setShowNew((v) => !v)}
@@ -106,12 +161,19 @@ export const CommunityDiscussion: React.FC = () => {
         <Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
             <Input
+<<<<<<< HEAD
               placeholder="Title (e && e.g., Share an AI tool, Ask for help...)"
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
               value={newTitle}
 
 
 
+=======
+              placeholder="Title (e.g., Share an AI tool, Ask for help...)"
+              className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
+              value={newTitle}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
+>>>>>>> origin/auto/autonomy-17186719616
               maxLength={80}
             />
             <Textarea
@@ -173,5 +235,10 @@ export const CommunityDiscussion: React.FC = () => {
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.
       </div>
     </div>
+<<<<<<< HEAD
   ),
 },
+=======
+  );
+};
+>>>>>>> origin/auto/autonomy-17186719616

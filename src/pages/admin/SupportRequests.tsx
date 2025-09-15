@@ -1,15 +1,27 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/Input";
+=======
+
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
 import { Search, Filter } from "lucide-react";
 import SEO from "@/components/SEO";
+=======
+import { Search, Filter } from 'lucide-react'
+import { SEO } from "@/components/SEO";
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
@@ -53,7 +65,11 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "API integration documentation is outdated",
     status: "open",
     priority: "low",
+<<<<<<< HEAD
     createdAt: "2023-12-13T16:45:00Z",
+=======
+    createdAt: "2023-12-13T16:45:00Z", 
+>>>>>>> origin/auto/autonomy-17186719616
     lastUpdated: "2023-12-13T16:45:00Z",
     category: "api"
   },
@@ -97,51 +113,89 @@ export default function SupportRequests() {
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+<<<<<<< HEAD
 
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
     if (searchQuery &&
+=======
+  
+  // Apply filters to the request data
+  const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
+    // Apply search query filter
+    if (searchQuery && 
+>>>>>>> origin/auto/autonomy-17186719616
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/auto/autonomy-17186719616
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
       return false;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/auto/autonomy-17186719616
     // Apply priority filter
     if (priorityFilter && request.priority !== priorityFilter) {
       return false;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/auto/autonomy-17186719616
     // Apply category filter
     if (categoryFilter && request.category !== categoryFilter) {
       return false;
     }
+<<<<<<< HEAD
 
     return true;
   });
 
+=======
+    
+    return true;
+  });
+  
+>>>>>>> origin/auto/autonomy-17186719616
   // Count by status for the summary dashboard
   const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
   const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
   const totalCount = MOCK_SUPPORT_REQUESTS.length;
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/auto/autonomy-17186719616
   const resetFilters = () => {
     setSearchQuery("");
     setStatusFilter(null);
     setPriorityFilter(null);
     setCategoryFilter(null);
   };
+<<<<<<< HEAD
 
   return (
     <>
       <SEO
+=======
+  
+  return (
+    <>
+      <SEO 
+>>>>>>> origin/auto/autonomy-17186719616
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
       />
@@ -155,14 +209,22 @@ export default function SupportRequests() {
               Manage and respond to user support requests and issues
             </p>
           </div>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/auto/autonomy-17186719616
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
               New Support Case
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card>
@@ -171,21 +233,33 @@ export default function SupportRequests() {
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/auto/autonomy-17186719616
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>
               <CardDescription>In Progress</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/auto/autonomy-17186719616
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/auto/autonomy-17186719616
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
@@ -193,7 +267,11 @@ export default function SupportRequests() {
             </CardHeader>
           </Card>
         </div>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <Tabs defaultValue="all" className="mb-8">
           <TabsList>
             <TabsTrigger value="all">All Requests</TabsTrigger>
@@ -201,7 +279,11 @@ export default function SupportRequests() {
             <TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>
             <TabsTrigger value="need-response">Need Response</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/auto/autonomy-17186719616
           <TabsContent value="all" className="mt-6">
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">
@@ -210,12 +292,21 @@ export default function SupportRequests() {
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
+<<<<<<< HEAD
                   onChange={(e: any) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
 
               <Select value={statusFilter || ""} onValueChange={(value: string) => setStatusFilter(value || null)}>
+=======
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10"
+                />
+              </div>
+              
+              <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+>>>>>>> origin/auto/autonomy-17186719616
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -226,8 +317,13 @@ export default function SupportRequests() {
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
 
               <Select value={priorityFilter || ""} onValueChange={(value: string) => setPriorityFilter(value || null)}>
+=======
+              
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+>>>>>>> origin/auto/autonomy-17186719616
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -238,8 +334,13 @@ export default function SupportRequests() {
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
 
               <Select value={categoryFilter || ""} onValueChange={(value: string) => setCategoryFilter(value || null)}>
+=======
+              
+              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
+>>>>>>> origin/auto/autonomy-17186719616
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -253,12 +354,20 @@ export default function SupportRequests() {
                   <SelectItem value="profile">Profile</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
 
+=======
+              
+>>>>>>> origin/auto/autonomy-17186719616
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters
               </Button>
             </div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/auto/autonomy-17186719616
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">
@@ -284,10 +393,17 @@ export default function SupportRequests() {
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
                           <Badge variant={
+<<<<<<< HEAD
                             request.status === 'open'
                               ? 'default'
                               : request.status === 'in-progress'
                               ? 'secondary'
+=======
+                            request.status === 'open' 
+                              ? 'default' 
+                              : request.status === 'in-progress' 
+                              ? 'secondary' 
+>>>>>>> origin/auto/autonomy-17186719616
                               : 'outline'
                           }>
                             {request.status}
@@ -295,10 +411,17 @@ export default function SupportRequests() {
                         </TableCell>
                         <TableCell>
                           <Badge variant={
+<<<<<<< HEAD
                             request.priority === 'high'
                               ? 'destructive'
                               : request.priority === 'medium'
                               ? 'default'
+=======
+                            request.priority === 'high' 
+                              ? 'destructive' 
+                              : request.priority === 'medium' 
+                              ? 'default' 
+>>>>>>> origin/auto/autonomy-17186719616
                               : 'outline'
                           }>
                             {request.priority}
@@ -318,7 +441,11 @@ export default function SupportRequests() {
               </CardContent>
             </Card>
           </TabsContent>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/auto/autonomy-17186719616
           <TabsContent value="escalated" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>
@@ -327,7 +454,11 @@ export default function SupportRequests() {
               </p>
             </div>
           </TabsContent>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/auto/autonomy-17186719616
           <TabsContent value="ai-flagged" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>
@@ -336,7 +467,11 @@ export default function SupportRequests() {
               </p>
             </div>
           </TabsContent>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/auto/autonomy-17186719616
           <TabsContent value="need-response" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>

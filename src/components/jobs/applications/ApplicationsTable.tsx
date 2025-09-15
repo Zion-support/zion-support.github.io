@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
 import { ClickableBadge } from "@/components/ui/clickable-badge",
+=======
+import { format } from "date-fns";
+import { JobApplication } from "@/types/jobs";
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar"; // Renamed
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+>>>>>>> origin/auto/autonomy-17186719616
 import { 
   Table,
   TableBody,
@@ -9,6 +16,7 @@ import {
   TableHead,
   TableHeader,
   TableRow
+<<<<<<< HEAD
 } from "@/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions",
 import { StatusBadge } from "./StatusBadge",
@@ -24,12 +32,34 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>,
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
   onViewScore: (application: JobApplication) => void
+=======
+} from "@/components/ui/table";
+import { ApplicationActions } from "./ApplicationActions";
+import { StatusBadge } from "./StatusBadge";
+import { Briefcase, User } from 'lucide-react'
+import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal";
+import React, { useState } from "react"; // Import React and useState
+import { toast } from "@/hooks/use-toast";
+import Image from 'next/image'; // Import next/image
+
+interface ApplicationsTableProps {
+  applications: JobApplication[];
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
+  onViewScore: (application: JobApplication) => void;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
+<<<<<<< HEAD
   const [avatarError, setAvatarError] = useState(false),
   const talentName = application.talent_profile?.full_name || "Candidate",
+=======
+  const [avatarError, setAvatarError] = useState(false);
+  const talentName = application.talent_profile?.full_name || "Candidate";
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
@@ -47,8 +77,13 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
         <User className="h-4 w-4" />
       )}
     </AvatarPrimitive>
+<<<<<<< HEAD
   ),
 },
+=======
+  );
+};
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function ApplicationsTable({ 
   applications, 
@@ -57,6 +92,7 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
+<<<<<<< HEAD
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
@@ -64,11 +100,21 @@ export function ApplicationsTable({
     setSelectedApplication(application),
     setHireModalOpen(true)
   },
+=======
+  const [hireModalOpen, setHireModalOpen] = useState(false);
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
+  
+  const handleHireClick = (application: JobApplication) => {
+    setSelectedApplication(application);
+    setHireModalOpen(true);
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   const handleHireConfirmed = () => {
     toast({
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
+<<<<<<< HEAD
     }),
   },
   
@@ -201,6 +247,11 @@ export function ApplicationsTable({
 
 
 
+=======
+    });
+  };
+  
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <>
       <div className="rounded-md border">
@@ -215,7 +266,10 @@ export function ApplicationsTable({
             </TableRow>
           </TableHeader>
           <TableBody>
+<<<<<<< HEAD
             {applications.map(application => (              <TableRow key={application.id}>
+=======
+>>>>>>> origin/auto/autonomy-17186719616
             {applications.map((application) => (
               <TableRow key={application.id}>
                 <TableCell>
@@ -260,10 +314,17 @@ export function ApplicationsTable({
                       <Briefcase className="h-3 w-3 mr-1" /> Hire
                     </ClickableBadge>
                     <ApplicationActions
+<<<<<<< HEAD
                       application = {application,}
                       processingId = {processingId,}
                       onViewApplication = {onViewApplication,}
                       onStatusChange = {onStatusChange,}
+=======
+                      application={application}
+                      processingId={processingId}
+                      onViewApplication={onViewApplication}
+                      onStatusChange={onStatusChange}
+>>>>>>> origin/auto/autonomy-17186719616
                     />
                   </div>
                 </TableCell>
@@ -274,6 +335,7 @@ export function ApplicationsTable({
       </div>
       
       <HireConfirmationModal
+<<<<<<< HEAD
         isOpen = {hireModalOpen,}
         onClose = {() => setHireModalOpen(false),}
         application = {selectedApplication |undefined,}
@@ -381,14 +443,21 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
         </Table>;
       </div>;
       <HireConfirmationModal;
+=======
+>>>>>>> origin/auto/autonomy-17186719616
         isOpen={hireModalOpen}
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication || undefined}
         onConfirm={handleHireConfirmed}
       />
     </>
+<<<<<<< HEAD
   ),
 }
 
 ;
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
@@ -118,12 +119,125 @@ export function SignUpForm() {
 
 
 
+=======
+import React, { useState } from "react";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { useAuth } from "@/context/auth/AuthProvider";
+import { AlertCircle } from 'lucide-react'
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+export function SignUpForm() {
+
+  const router = useRouter();
+  const { signUp, login, loginWithGoogle } = useAuth();
+  
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    name: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [signupMode, setSignupMode] = useState(true);
+  const [error, setError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string; password?: string; name?: string }>({});
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false);
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    setError("");
+    setFieldErrors(prev => ({ ...prev, [name]: "" }));
+  };
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError("");
+    setFieldErrors({});
+    setIsLoading(true);
+
+    const errors: { email?: string; password?: string; name?: string } = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+    if (signupMode && !formData.name.trim()) {
+      errors.name = 'Full name is required';
+    }
+
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required';
+    } else if (!emailRegex.test(formData.email)) {
+      errors.email = 'Invalid email address';
+    }
+
+    if (!formData.password) {
+      errors.password = 'Password is required';
+    } else if (!strongPasswordRegex.test(formData.password)) {
+      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.';
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      setIsLoading(false);
+      return;
+    }
+    
+    try {
+      setShowVerificationMessage(false); // Reset verification message
+      if (signupMode) {
+        const result = await signUp(formData.email, formData.password, {
+          name: formData.name,
+        });
+        
+        if (result?.error) {
+          throw new Error(result.error as any); // Cast to any if type is AuthError
+        }
+
+        if (result?.emailVerificationRequired) {
+          setShowVerificationMessage(true);
+        } else {
+          // Only navigate if email verification is not required
+          router.push("/mobile");
+        }
+      } else {
+        const { error } = await login(formData.email, formData.password);
+        
+        if (error) {
+          throw new Error(error);
+        }
+        
+        router.push("/mobile");
+      }
+    } catch (err: any) {
+      logErrorToProduction('Signup/Login error:', { data: err });
+      setError(err.message || 'An unexpected error occurred. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  
+  const handleGoogleLogin = async () => {
+    try {
+      await loginWithGoogle();
+    } catch (err: any) {
+      setError(err.message);
+    }
+  };
+  
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
       
+<<<<<<< HEAD
 
 
       <div className="space-y-2">
@@ -131,6 +245,13 @@ export function SignUpForm() {
           variant="outline"
           className="w-full py-6 relative"
           onClick = {handleGoogleLogin,}
+=======
+      <div className="space-y-2">
+        <Button 
+          variant="outline" 
+          className="w-full py-6 relative"
+          onClick={handleGoogleLogin}
+>>>>>>> origin/auto/autonomy-17186719616
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
@@ -141,9 +262,14 @@ export function SignUpForm() {
           Continue with Google
         </Button>
 
+<<<<<<< HEAD
 
 
 
+=======
+        <Button 
+          variant="outline" 
+>>>>>>> origin/auto/autonomy-17186719616
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -152,11 +278,16 @@ export function SignUpForm() {
           Continue with Facebook
         </Button>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="relative flex items-center">
         <div className="flex-grow border-t border-border"></div>
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
+<<<<<<< HEAD
 
       </h2>;
 
@@ -217,6 +348,9 @@ export function SignUpForm() {
 
 
 
+=======
+      
+>>>>>>> origin/auto/autonomy-17186719616
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -225,16 +359,30 @@ export function SignUpForm() {
         </Alert>
       )}
 
+<<<<<<< HEAD
 
 
       )}
 
       
 
+=======
+      {/* Verification Message */}
+      {showVerificationMessage && (
+        <Alert className="mb-4 border-blue-500 bg-blue-50">
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription>
+            Please check your email and click the verification link before signing in.
+          </AlertDescription>
+        </Alert>
+      )}
+      
+>>>>>>> origin/auto/autonomy-17186719616
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
+<<<<<<< HEAD
 
       <form onSubmit={handleSubmit} className="space-y-4">;
         {signupMode && (;
@@ -257,6 +405,15 @@ export function SignUpForm() {
 
 
 
+=======
+            <Input
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+              aria-invalid={!!fieldErrors.name}
+>>>>>>> origin/auto/autonomy-17186719616
               placeholder="Enter your full name"
             />
             {fieldErrors.name && (
@@ -265,6 +422,7 @@ export function SignUpForm() {
           </div>
         )}
 
+<<<<<<< HEAD
 
 
 
@@ -299,10 +457,15 @@ export function SignUpForm() {
 
         <div className="space-y-2">;
           <Label htmlFor="email">Email address</Label>;
+=======
+        <div className="space-y-2">
+          <Label htmlFor="email">Email address</Label>
+>>>>>>> origin/auto/autonomy-17186719616
           <Input
             id="email"
             name="email"
             type="email"
+<<<<<<< HEAD
             value = {formData.email,}
             onChange = {handleInputChange,}
             required
@@ -326,10 +489,26 @@ export function SignUpForm() {
         <div className="space-y-2">;
           <Label htmlFor="password">Password</Label>;
 
+=======
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            aria-invalid={!!fieldErrors.email}
+            placeholder="Enter your email"
+          />
+          {fieldErrors.email && (
+            <p className="text-red-500 text-sm">{fieldErrors.email}</p>
+          )}
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="password">Password</Label>
+>>>>>>> origin/auto/autonomy-17186719616
           <Input
             id="password"
             name="password"
             type="password"
+<<<<<<< HEAD
             value = {formData.password,}
             onChange = {handleInputChange,}
             required
@@ -357,10 +536,41 @@ export function SignUpForm() {
 
 
 
+=======
+            value={formData.password}
+            onChange={handleInputChange}
+            required
+            aria-invalid={!!fieldErrors.password}
+            placeholder="Create a password"
+          />
+          <PasswordStrengthMeter password={formData.password} />
+          {fieldErrors.password && (
+            <p className="text-red-500 text-sm">{fieldErrors.password}</p>
+          )}
+        </div>
+        
+        <Button
+          type="submit"
+          className="w-full py-6"
+          disabled={isLoading}
+        >
+          {isLoading ? (
+            <>
+              <LoadingSpinner size="sm" className="mr-2" />
+              Please wait...
+            </>
+          ) : (
+            signupMode ? "Create Account" : "Sign In"
+          )}
+        </Button>
+      </form>
+      
+>>>>>>> origin/auto/autonomy-17186719616
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "
           : "Don't have an account? "
+<<<<<<< HEAD
 
       <div className="relative flex items - center">;
         <div className="flex - grow border - t border - border"></div>;
@@ -458,11 +668,18 @@ export function SignUpForm() {
         <Link
           href="/login"
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer"
+=======
+        }
+        <Link
+          href="/login"
+          className="p-0 h-auto text-zion-cyan hover:text-zion-cyan-light cursor-pointer"
+>>>>>>> origin/auto/autonomy-17186719616
         >
           Sign In
         </Link>
       </p>
     </div>
+<<<<<<< HEAD
   )
 }
   throw new Error (error);
@@ -494,3 +711,7 @@ export function SignUpForm() {
 }
 ;
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,13 +1,18 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 
 /**
  * Footer Injector Script
  * Injects dynamic content into the footer after build
  */
+=======
+'use strict';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 console.log('🔧 Running footer injector...');
 
 try {
@@ -38,3 +43,33 @@ try {
   // Don't fail the build for this
   process.exit(0);
 }
+=======
+function safeRead(filePath) {
+	try {
+		return fs.readFileSync(filePath, 'utf8');
+	} catch {
+		return '';
+	}
+}
+
+(function main() {
+	const outDir = path.join(process.cwd(), 'out');
+	if (!fs.existsSync(outDir)) {
+		console.log('[footer:inject] No out/ directory; skipping.');
+		process.exit(0);
+	}
+	const files = fs.readdirSync(outDir).filter(f => f.endsWith('.html'));
+	for (const file of files) {
+		const full = path.join(outDir, file);
+		const html = safeRead(full);
+		if (!html) continue;
+		const footer = '\n<!-- automated footer -->\n';
+		const updated = html.includes('</body>') ? html.replace('</body>', `${footer}</body>`) : (html + footer);
+		try {
+			fs.writeFileSync(full, updated);
+		} catch {}
+	}
+	console.log('[footer:inject] Completed.');
+	process.exit(0);
+})();
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -9,6 +10,19 @@ export default function APITestingSuitePage() {
   const [testResults, setTestResults] = useState(null),
   const [apiEndpoint, setApiEndpoint] = useState(''),
   const [apiKey, setApiKey] = useState(''),
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+
+export default function APITestingSuitePage() {
+  const [isTesting, setIsTesting] = useState(false);
+  const [testResults, setTestResults] = useState(null);
+  const [apiEndpoint, setApiEndpoint] = useState('');
+  const [apiKey, setApiKey] = useState('');
+>>>>>>> origin/auto/autonomy-17186719616
 
   const features = [
     {
@@ -16,48 +30,87 @@ export default function APITestingSuitePage() {
       title: 'Comprehensive API Testing',
       description: 'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.',
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
+<<<<<<< HEAD
       gradient: 'from-indigo-400 to-purple-500'},
+=======
+      gradient: 'from-indigo-400 to-purple-500',
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'Performance Testing',
       description: 'Load testing, stress testing, and performance benchmarking for your APIs.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
+<<<<<<< HEAD
       gradient: 'from-orange-400 to-red-500'},
+=======
+      gradient: 'from-orange-400 to-red-500',
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Security Testing',
       description: 'Automated security testing including authentication, authorization, and vulnerability scanning.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+<<<<<<< HEAD
       gradient: 'from-green-400 to-emerald-500'},
+=======
+      gradient: 'from-green-400 to-emerald-500',
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'Real-Time Monitoring',
       description: '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+<<<<<<< HEAD
       gradient: 'from-blue-400 to-cyan-500'}],
+=======
+      gradient: 'from-blue-400 to-cyan-500',
+    },
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const testTypes = [
     {
       name: 'Functional Testing',
       description: 'Verify that your API endpoints work correctly and return expected responses.',
+<<<<<<< HEAD
       tests: ['Request/response validationStatus code verification', 'Data format checkingError handling']
+=======
+      tests: ['Request/response validation', 'Status code verification', 'Data format checking', 'Error handling']
+>>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Performance Testing',
       description: 'Ensure your APIs can handle expected load and perform under pressure.',
+<<<<<<< HEAD
       tests: ['Load testingStress testing', 'Response time analysisThroughput measurement']
+=======
+      tests: ['Load testing', 'Stress testing', 'Response time analysis', 'Throughput measurement']
+>>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Security Testing',
       description: 'Identify security vulnerabilities and ensure proper authentication and authorization.',
+<<<<<<< HEAD
       tests: ['Authentication testingAuthorization checks', 'Input validationSQL injection testing']
+=======
+      tests: ['Authentication testing', 'Authorization checks', 'Input validation', 'SQL injection testing']
+>>>>>>> origin/auto/autonomy-17186719616
     },
     {
       name: 'Integration Testing',
       description: 'Test how your APIs integrate with other systems and services.',
+<<<<<<< HEAD
       tests: ['End-to-end workflowsThird-party integrations', 'Data flow validationError propagation']
     }
   ],
+=======
+      tests: ['End-to-end workflows', 'Third-party integrations', 'Data flow validation', 'Error propagation']
+    }
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const pricing = [
     {
@@ -66,9 +119,18 @@ export default function APITestingSuitePage() {
       period: '/month',
       description: 'Perfect for developers and small teams',
       features: [
+<<<<<<< HEAD
         '100 API tests/monthBasic test scenarios',
         'Email notificationsBasic reporting',
         '5 API endpointsCommunity support'
+=======
+        '100 API tests/month',
+        'Basic test scenarios',
+        'Email notifications',
+        'Basic reporting',
+        '5 API endpoints',
+        'Community support'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: false
     },
@@ -78,10 +140,21 @@ export default function APITestingSuitePage() {
       period: '/month',
       description: 'Ideal for growing businesses and development teams',
       features: [
+<<<<<<< HEAD
         '500 API tests/monthAdvanced test scenarios',
         'SMS & email alertsAdvanced reporting',
         '25 API endpointsPerformance testing',
         'API accessPriority support'
+=======
+        '500 API tests/month',
+        'Advanced test scenarios',
+        'SMS & email alerts',
+        'Advanced reporting',
+        '25 API endpoints',
+        'Performance testing',
+        'API access',
+        'Priority support'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       popular: true
     },
@@ -91,6 +164,7 @@ export default function APITestingSuitePage() {
       period: '/month',
       description: 'For large organizations with complex API requirements',
       features: [
+<<<<<<< HEAD
         'Unlimited API testsCustom test scenarios',
         'Custom alerting rules24/7 dedicated support',
         'Unlimited endpointsAdvanced security testing',
@@ -104,6 +178,25 @@ export default function APITestingSuitePage() {
     if (!apiEndpoint.trim()) return,
     
     setIsTesting(true),
+=======
+        'Unlimited API tests',
+        'Custom test scenarios',
+        'Custom alerting rules',
+        '24/7 dedicated support',
+        'Unlimited endpoints',
+        'Advanced security testing',
+        'White-label options',
+        'Custom integrations'
+      ],
+      popular: false
+    }
+  ];
+
+  const handleTestAPI = async () => {
+    if (!apiEndpoint.trim()) return;
+    
+    setIsTesting(true);
+>>>>>>> origin/auto/autonomy-17186719616
     // Simulate API testing
     setTimeout(() => {
       setTestResults({
@@ -119,6 +212,7 @@ export default function APITestingSuitePage() {
           { name: 'Rate Limiting', status: 'pass', value: 'Within limits', threshold: 'No throttling' }
         ],
         recommendations: [
+<<<<<<< HEAD
           'Consider implementing response caching for better performanceMonitor response times during peak usage',
           'Implement rate limiting headers for better API documentation'
         ]
@@ -126,6 +220,16 @@ export default function APITestingSuitePage() {
       setIsTesting(false),
     }, 3000),
   },
+=======
+          'Consider implementing response caching for better performance',
+          'Monitor response times during peak usage',
+          'Implement rate limiting headers for better API documentation'
+        ]
+      });
+      setIsTesting(false);
+    }, 3000);
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -445,7 +549,11 @@ export default function APITestingSuitePage() {
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden">
+<<<<<<< HEAD
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
+=======
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
             Ready to Test Your APIs?
@@ -474,5 +582,9 @@ export default function APITestingSuitePage() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencies
 node_modules/
 npm-debug.log*
@@ -85,3 +86,18 @@ core
 # Build artifacts
 dist/
 out/
+=======
+.next
+node_modules
+.DS_Store
+.env*
+.next/
+tsconfig.tsbuildinfo
+core
+*.core
+out/
+dist/
+build/
+*.pack
+*.pack.gz
+>>>>>>> origin/auto/autonomy-17186719616

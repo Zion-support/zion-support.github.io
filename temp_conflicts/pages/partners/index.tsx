@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { useState } from "react",
 import Head from "next/head",
+=======
+import { useState } from "react";
+import Head from "next/head";
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function Partners() {
   const [form, setForm] = useState({
@@ -7,6 +12,7 @@ export default function Partners() {
     entityType: "",
     pocName: "",
     pocEmail: "",
+<<<<<<< HEAD
     useCaseType: "Education Partnership"}),
   const [result, setResult] = useState<any>(null),
   const [loading, setLoading] = useState(false),
@@ -15,6 +21,17 @@ export default function Partners() {
     e.preventDefault(),
     setLoading(true),
     setResult(null),
+=======
+    useCaseType: "Education Partnership",
+  });
+  const [result, setResult] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    setResult(null);
+>>>>>>> origin/auto/autonomy-17186719616
     const res = await fetch("/api/partners/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -22,10 +39,19 @@ export default function Partners() {
         name: form.name,
         entityType: form.entityType,
         useCaseType: form.useCaseType,
+<<<<<<< HEAD
         pointOfContact: { name: form.pocName, email: form.pocEmail }})}),
     const data = await res.json(),
     setLoading(false),
     setResult(data),
+=======
+        pointOfContact: { name: form.pocName, email: form.pocEmail },
+      }),
+    });
+    const data = await res.json();
+    setLoading(false);
+    setResult(data);
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -91,5 +117,9 @@ export default function Partners() {
         )}
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

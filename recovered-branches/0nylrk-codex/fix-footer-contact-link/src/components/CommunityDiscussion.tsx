@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 import React{ useState } from "react";
+=======
+import React, { useState } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+<<<<<<< HEAD
 import { AvatarFallback } from "@/components/ui/avatar";
 import { CardContent } from "@/components/ui/card";
+=======
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Separator } from "@/components/ui/separator";
 
 interface DiscussionPost {
@@ -22,12 +31,18 @@ const initialPosts: DiscussionPost[] = [
     author: "Anna Zhou",
     time: "2h ago",
     title: "What AI trends are you most excited for in 2025?",
+<<<<<<< HEAD
     body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
+=======
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   {
     id: 2,
     author: "David Kim",
     time: "50m ago",
     title: "Quick tip: How to rank your Zion listing higher",
+<<<<<<< HEAD
     body: "Fill out every profile detailadd strong tagsand post weekly! See results in a month."}];
 
 export const CommunityDiscussion: React.FC = () => {
@@ -35,6 +50,17 @@ export const CommunityDiscussion: React.FC = () => {
   const [showNewsetShowNew] = useState(false);
   const [newTitlesetNewTitle] = useState("");
   const [newBodysetNewBody] = useState("");
+=======
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",
+  },
+];
+
+export const CommunityDiscussion: React.FC = () => {
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleAddPost = () => {
     if (!newTitle.trim() || !newBody.trim()) return;
@@ -44,8 +70,15 @@ export const CommunityDiscussion: React.FC = () => {
         author: "You",
         time: "Now",
         title: newTitle,
+<<<<<<< HEAD
         body: newBody},
       ...posts]);
+=======
+        body: newBody,
+      },
+      ...posts,
+    ]);
+>>>>>>> origin/auto/autonomy-17186719616
     setNewTitle("");
     setNewBody("");
     setShowNew(false);
@@ -76,7 +109,11 @@ export const CommunityDiscussion: React.FC = () => {
         <Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
             <Input
+<<<<<<< HEAD
               placeholder="Title (e.g.Share an AI toolAsk for help...)"
+=======
+              placeholder="Title (e.g., Share an AI tool, Ask for help...)"
+>>>>>>> origin/auto/autonomy-17186719616
               className="mb-3 bg-zion-blue-light text-white placeholder:text-zion-slate"
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
@@ -122,7 +159,11 @@ export const CommunityDiscussion: React.FC = () => {
                     .map((s) => s[0])
                     .join("")
                     .toUpperCase()
+<<<<<<< HEAD
                     .slice(02)}
+=======
+                    .slice(0, 2)}
+>>>>>>> origin/auto/autonomy-17186719616
                 </AvatarFallback>
               </Avatar>
               <div>

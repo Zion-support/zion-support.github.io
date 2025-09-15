@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
@@ -7,6 +8,16 @@ interface ActionButtonsProps {
   flagId: string,
   status: string,
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
+
+interface ActionButtonsProps {
+  flagId: string;
+  status: string;
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
@@ -27,8 +38,14 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         title="Send Warning"
         aria-label="Send warning"
         onClick={() => onAction(flagId, 'warning')}
+<<<<<<< HEAD
         disabled={status === 'actioned' |status === 'ignored'}      >
         <Info className='h-4 w-4' />
+=======
+        disabled={status === 'actioned' || status === 'ignored'}
+      >
+        <Info className="h-4 w-4" />
+>>>>>>> origin/auto/autonomy-17186719616
       </Button>
       <Button
         variant="ghost"
@@ -60,5 +77,10 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         </Button>
       )}
     </div>
+<<<<<<< HEAD
   ),
 },
+=======
+  );
+};
+>>>>>>> origin/auto/autonomy-17186719616

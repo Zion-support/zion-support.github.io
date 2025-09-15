@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { useState, useMemo } from "react";
 import {
@@ -88,10 +89,40 @@ function ITServicePricingTable() {
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
+=======
+import { useState, useMemo } from "react";
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
+import { Input } from "@/components/ui/input";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Globe, Search, ArrowUpDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export function ITServicePricingTable() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortConfig, setSortConfig] = useState<{
+    key: keyof CountryPricing;
+    direction: "ascending" | "descending";
+  }>({
+    key: "country",
+    direction: "ascending",
+  });
+
+  const sortedData = useMemo(() => {
+    let filteredData = [...onsiteServicePricing];
+    
+    // Filter by search query
+    if (searchQuery) {
+      filteredData = filteredData.filter(item => 
+        item.country.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+    
+>>>>>>> origin/auto/autonomy-17186719616
     // Sort data
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? -1 : 1;
+<<<<<<< HEAD
 
     key: "country",
     direction: "ascending",
@@ -178,6 +209,17 @@ export function ITServicePricingTable() {;
     
     return filteredData
   }, [onsiteServicePricing, searchQuery, sortConfig]),
+=======
+      }
+      if (a[sortConfig.key] > b[sortConfig.key]) {
+        return sortConfig.direction === "ascending" ? 1 : -1;
+      }
+      return 0;
+    });
+    
+    return filteredData;
+  }, [onsiteServicePricing, searchQuery, sortConfig]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
@@ -185,6 +227,7 @@ export function ITServicePricingTable() {;
       direction: 
         sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 
+<<<<<<< HEAD
           : "ascending"})
   },
 
@@ -196,6 +239,17 @@ export function ITServicePricingTable() {;
       <div className="flex items-center mb-6">;
         <div className="relative flex-1">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
+=======
+          : "ascending",
+    });
+  };
+
+  return (
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
+      <div className="flex items-center mb-6">
+        <div className="relative flex-1">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+>>>>>>> origin/auto/autonomy-17186719616
           <Input
             placeholder="Search by country..."
             value={searchQuery}
@@ -204,13 +258,22 @@ export function ITServicePricingTable() {;
           />
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="rounded-md border border-zion-blue-light overflow-hidden">
         <Table>
           <TableHeader className="bg-zion-blue">
             <TableRow>
               <TableHead className="text-zion-cyan font-medium">
+<<<<<<< HEAD
                 <Button
                   variant="ghost"
+=======
+                <Button 
+                  variant="ghost" 
+>>>>>>> origin/auto/autonomy-17186719616
                   onClick={() => handleSort("country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
@@ -219,8 +282,13 @@ export function ITServicePricingTable() {;
                 </Button>
               </TableHead>
               <TableHead className="text-right text-zion-cyan font-medium">
+<<<<<<< HEAD
                 <Button
                   variant="ghost"
+=======
+                <Button 
+                  variant="ghost" 
+>>>>>>> origin/auto/autonomy-17186719616
                   onClick={() => handleSort("pricePerIncident")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
@@ -233,21 +301,30 @@ export function ITServicePricingTable() {;
           <TableBody className="bg-zion-blue-dark">
             {sortedData.length > 0 ? (
               sortedData.map((item) => (
+<<<<<<< HEAD
                 <TableRow
                   key={item.country}
                   className="border-b border-zion-blue-light hover:bg-zion-blue/50"
                 >
+=======
+                <TableRow key={item.country} className="border-b border-zion-blue-light hover:bg-zion-blue/50">
+>>>>>>> origin/auto/autonomy-17186719616
                   <TableCell className="flex items-center space-x-2">
                     <Globe className="h-4 w-4 text-zion-purple" />
                     <span className="text-white">{item.country}</span>
                   </TableCell>
+<<<<<<< HEAD
                   <TableCell className="text-right font-medium text-white">
                     ${item.pricePerIncident.toFixed(2)}
                   </TableCell>
+=======
+                  <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>
+>>>>>>> origin/auto/autonomy-17186719616
                 </TableRow>
               ))
             ) : (
               <TableRow>
+<<<<<<< HEAD
                 <TableCell
                   colSpan={2}
                   className="text-center py-10 text-zion-slate-light"
@@ -465,3 +542,16 @@ export function ITServicePricingTable() {;
     </div>);
 }
 
+=======
+                <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">
+                  No countries match your search
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

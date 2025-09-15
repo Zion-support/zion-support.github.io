@@ -38,6 +38,10 @@ export interface SpaceTechService {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export const spaceTechServices: SpaceTechService[] = [
   {
     id: 'space-mission-management-platform',

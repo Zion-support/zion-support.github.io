@@ -55,6 +55,7 @@ const EquipmentDetail: NextPage = () => {
   );
 };
 
+<<<<<<< HEAD
 
 
 };
@@ -62,4 +63,6 @@ const EquipmentDetail: NextPage = () => {
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 export default EquipmentDetail;

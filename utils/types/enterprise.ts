@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
 
@@ -27,10 +28,21 @@ export interface CompanyUsageLimits {;
 }
 ;
 export interface CompanyPlan {;
+=======
+export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
+
+export interface CompanyUsageLimits {
+  monthlyJobPosts: number;
+  budgetCapUsd: number;
+}
+
+export interface CompanyPlan {
+>>>>>>> origin/auto/autonomy-17186719616
   tier: 'teams' | 'business' | 'enterprise-custom';
   seatsPurchased: number;
   seatsUsed: number;
   usageLimits: CompanyUsageLimits;
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -50,10 +62,16 @@ export interface CompanyPlan {;
 }
 ;
 export interface CompanyMember {;
+=======
+}
+
+export interface CompanyMember {
+>>>>>>> origin/auto/autonomy-17186719616
   id: string;
   email: string;
   name: string;
   role: EnterpriseRole;
+<<<<<<< HEAD
 
   } catch (error) {
     console.error("Error:", error);
@@ -63,10 +81,16 @@ export interface CompanyMember {;
 }
 ;
 export interface CompanyActivityEvent {;
+=======
+}
+
+export interface CompanyActivityEvent {
+>>>>>>> origin/auto/autonomy-17186719616
   id: string;
   timestampIso: string;
   actorEmail: string;
   action: string;
+<<<<<<< HEAD
 
   meta?: Record<string unknown>;
   meta?: Record<string, unknown>;
@@ -81,12 +105,20 @@ export interface InvoiceRecord {;
   id: string;
 
 
+=======
+  meta?: Record<string, unknown>;
+}
+
+export interface InvoiceRecord {
+  id: string;
+>>>>>>> origin/auto/autonomy-17186719616
   companyId: string;
   number: string;
   amountUsd: number;
   periodStartIso: string;
   periodEndIso: string;
   status: 'paid' | 'open' | 'void' | 'past_due';
+<<<<<<< HEAD
 
 }
 export interface CompanyRecord {id: string;
@@ -139,12 +171,21 @@ export interface CompanyRecord {
   name: string,
   slug: string, // e.g. acme;
 
+=======
+}
+
+export interface CompanyRecord {
+  id: string;
+  name: string;
+  slug: string; // e.g. acme
+>>>>>>> origin/auto/autonomy-17186719616
   logoUrl?: string;
   brandColor?: string;
   plan: CompanyPlan;
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
+<<<<<<< HEAD
   logoUrl?: string,;
   brandColor?: string,;
   plan: CompanyPlan,;
@@ -168,3 +209,6 @@ export interface CompanyRecord {
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
+=======
+}
+>>>>>>> origin/auto/autonomy-17186719616

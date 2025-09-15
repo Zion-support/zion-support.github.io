@@ -1,3 +1,4 @@
+<<<<<<< HEAD
       res.statusCode = 400;
       res.json({ "error": 'Missing: required fields})';
       return}
@@ -23,3 +24,6 @@
 
 module.exports = withErrorLogging(handler);
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+const { withSentry } = require('./withSentry.cjs');;const fs = require('fs');;  if (req.method !== 'POST') {'';    res.setHeader('Allow', POST');;    res.end('Method Not Allowed');;      res.json({ error: Missing required fields' });;    fs.appendFileSync('quote_requests.log', JSON.stringify(logEntry) + \n');;    console.error('Quote API error:', err);;    res.json({ error: Quote submission failed' });
+>>>>>>> origin/auto/autonomy-17186719616

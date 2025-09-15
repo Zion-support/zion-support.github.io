@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React{ useStateuseRefuseEffectFormEventKeyboardEvent } from 'react';
+=======
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 
@@ -7,14 +11,23 @@ interface ChatInputProps {
   disabled?: boolean;
 }
 
+<<<<<<< HEAD
 export function ChatInput({ onSendisabled = false }: ChatInputProps) {
   const [messagesetMessage] = useState('');
+=======
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
+  const [message, setMessage] = useState('');
+>>>>>>> origin/auto/autonomy-17186719616
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     // Focus input when component mounts
     inputRef.current?.focus();
+<<<<<<< HEAD
   }[]);
+=======
+  }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

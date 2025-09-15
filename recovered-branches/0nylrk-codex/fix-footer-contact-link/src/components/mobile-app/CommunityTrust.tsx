@@ -5,10 +5,17 @@ import { Star } from "lucide-react";
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
+<<<<<<< HEAD
     { value: "4.8"label: "App Store Rating" },
     { value: "50K+"label: "Downloads" },
     { value: "96%"label: "User Satisfaction" },
     { value: "12M+"label: "Matches Made" }
+=======
+    { value: "4.8", label: "App Store Rating" },
+    { value: "50K+", label: "Downloads" },
+    { value: "96%", label: "User Satisfaction" },
+    { value: "12M+", label: "Matches Made" }
+>>>>>>> origin/auto/autonomy-17186719616
   ];
 
   return (
@@ -19,13 +26,21 @@ export const CommunityTrust: React.FC = () => {
             Trusted by the <span className="text-zion-cyan">Tech Community</span>
           </h2>
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+<<<<<<< HEAD
             Join thousands of professionals who are already using the Zion mobile app to connecthireand work
+=======
+            Join thousands of professionals who are already using the Zion mobile app to connect, hire, and work
+>>>>>>> origin/auto/autonomy-17186719616
           </p>
         </div>
         
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
+<<<<<<< HEAD
           {stats.map((statindex) => (
+=======
+          {stats.map((stat, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
             <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center">
               <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>
               <div className="text-zion-slate-light">{stat.label}</div>
@@ -36,7 +51,11 @@ export const CommunityTrust: React.FC = () => {
         {/* Rating display */}
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
           <div className="flex justify-center mb-4">
+<<<<<<< HEAD
             {[12345].map((star) => (
+=======
+            {[1, 2, 3, 4, 5].map((star) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />
             ))}
           </div>

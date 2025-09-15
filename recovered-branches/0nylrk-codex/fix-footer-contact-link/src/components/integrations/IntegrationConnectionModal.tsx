@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -18,10 +19,15 @@ import {;
 
 
 } from "@/components/ui/dialog";
+=======
+import React, { useState } from "react";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+<<<<<<< HEAD
 
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
@@ -140,18 +146,40 @@ interface Integration {;
 interface IntegrationConnectionModalProps {;
   isOpen: boolean,;
   onClose: () => void,;
+=======
+import { Switch } from "@/components/ui/switch";
+import { toast } from "sonner";
+
+interface Integration {
+  id: string;
+  name: string;
+  description: string;
+  logoUrl?: string;
+  status: "connected" | "warning" | "disconnected";
+  lastSync?: string;
+}
+
+interface IntegrationConnectionModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+>>>>>>> origin/auto/autonomy-17186719616
   integration: Integration;
 }
 
 export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {
+<<<<<<< HEAD
   const [isConnecting, setIsConnecting] = useState(false),
 
 
+=======
+  const [isConnecting, setIsConnecting] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
   const [syncSettings, setSyncSettings] = useState({
     autoCreateContacts: true,
     pushNotes: false,
     syncJobDetails: true,
     syncApplicantData: true
+<<<<<<< HEAD
   }),
   
   const handleConnectOAuth = () => {
@@ -192,11 +220,52 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             className="h-12 w-12 rounded"
             onError={(e) => {;
               (e && e.target as HTMLImageElement).src = "/placeholder && placeholder.svg";
+=======
+  });
+  
+  const handleConnectOAuth = () => {
+    setIsConnecting(true);
+    
+    // Simulate OAuth flow 
+    setTimeout(() => {
+      setIsConnecting(false);
+      toast.success(`Connected to ${integration.name} successfully`);
+      onClose();
+    }, 2000);
+    
+    // In a real application, this would open a popup for OAuth authentication
+    // window.open(`/api/oauth/${integration.id}`, 'oauth', 'width=600,height=600');
+  };
+  
+  const handleDisconnect = () => {
+    // In a real application, this would revoke the OAuth token
+    toast.info(`Disconnected from ${integration.name}`);
+    onClose();
+  };
+  
+  const handleSaveSettings = () => {
+    // In a real application, this would save the sync settings
+    toast.success("Integration settings saved");
+    onClose();
+  };
+  
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="sm:max-w-md">
+        <DialogHeader className="flex flex-row items-center gap-4">
+          <img 
+            src={integration.logoUrl} 
+            alt={`${integration.name} logo`} 
+            className="h-12 w-12 rounded" 
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = "/placeholder.svg";
+>>>>>>> origin/auto/autonomy-17186719616
             }}
           />
           <div>
             <DialogTitle>{integration.name} Integration</DialogTitle>
             <DialogDescription>
+<<<<<<< HEAD
 
               {integration.status === "connected" |
               integration.status === "warning"
@@ -204,10 +273,15 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
               {integration.status === "connected" || integration.status === "warning" 
                 ? "Manage your connection settings" 
 
+=======
+              {integration.status === "connected" || integration.status === "warning" 
+                ? "Manage your connection settings" 
+>>>>>>> origin/auto/autonomy-17186719616
                 : `Connect your ${integration.name} account`}
             </DialogDescription>
           </div>
         </DialogHeader>
+<<<<<<< HEAD
 
 
 
@@ -234,10 +308,15 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
+=======
+        
+        {(integration.status === "connected" || integration.status === "warning") ? (
+>>>>>>> origin/auto/autonomy-17186719616
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">Sync Settings</h3>
+<<<<<<< HEAD
 
                 <div className="flex items-center space-x-2">
                   <Checkbox
@@ -251,12 +330,16 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
                 
 
+=======
+                
+>>>>>>> origin/auto/autonomy-17186719616
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="autoCreateContacts" 
                     checked={syncSettings.autoCreateContacts} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, autoCreateContacts: checked as boolean})
+<<<<<<< HEAD
 
 
                     }
@@ -278,18 +361,29 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
                 
 
+=======
+                    }
+                  />
+                  <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
+                </div>
+                
+>>>>>>> origin/auto/autonomy-17186719616
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="pushNotes" 
                     checked={syncSettings.pushNotes} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, pushNotes: checked as boolean})
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                     }
                   />
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
                 </div>
+<<<<<<< HEAD
 
                 <div className="flex items-center space-x-2">
                   <Checkbox
@@ -303,18 +397,25 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
                 
 
+=======
+                
+>>>>>>> origin/auto/autonomy-17186719616
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="syncJobDetails" 
                     checked={syncSettings.syncJobDetails} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, syncJobDetails: checked as boolean})
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                     }
                   />
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
+<<<<<<< HEAD
 
                 <div className="flex items-center space-x-2">
                   <Checkbox
@@ -328,19 +429,26 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
                 
 
+=======
+                
+>>>>>>> origin/auto/autonomy-17186719616
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="syncApplicantData" 
                     checked={syncSettings.syncApplicantData} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, syncApplicantData: checked as boolean})
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                     }
                   />
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
               </div>
+<<<<<<< HEAD
 
               
 
@@ -432,10 +540,19 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                   Last synced:{" "}
                   {integration && integration.lastSync;
                     ? new Date(integration && integration.lastSync).toLocaleString();
+=======
+              
+              <div className="space-y-2">
+                <h3 className="text-sm font-medium">API Details</h3>
+                <p className="text-xs text-muted-foreground">
+                  Last synced: {integration.lastSync 
+                    ? new Date(integration.lastSync).toLocaleString() 
+>>>>>>> origin/auto/autonomy-17186719616
                     : "Never"}
                 </p>
               </div>
             </div>
+<<<<<<< HEAD
 
             
 
@@ -458,6 +575,11 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 onClick={handleDisconnect}
                 type="button"
               >
+=======
+            
+            <DialogFooter className="flex items-center justify-between">
+              <Button variant="outline" onClick={handleDisconnect} type="button">
+>>>>>>> origin/auto/autonomy-17186719616
                 Disconnect
               </Button>
               <Button onClick={handleSaveSettings} type="button">
@@ -469,6 +591,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
           <>
             <div className="space-y-4 py-4">
               <p className="text-sm">
+<<<<<<< HEAD
 
                 Connect your {integration.name} account to sync job contacts
                 applicants, and more. You'll be redirected to {integration.name}{" "}
@@ -490,6 +613,12 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
+=======
+                Connect your {integration.name} account to sync job contacts, applicants, and more. 
+                You'll be redirected to {integration.name} to authorize this connection.
+              </p>
+              
+>>>>>>> origin/auto/autonomy-17186719616
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">What will be synced:</h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">
@@ -500,6 +629,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 </ul>
               </div>
             </div>
+<<<<<<< HEAD
 
             
 
@@ -525,11 +655,21 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             </DialogFooter>
           </>
 
+=======
+            
+            <DialogFooter>
+              <Button onClick={handleConnectOAuth} disabled={isConnecting}>
+                {isConnecting ? "Connecting..." : `Connect to ${integration.name}`}
+              </Button>
+            </DialogFooter>
+          </>
+>>>>>>> origin/auto/autonomy-17186719616
         )}
       </DialogContent>
     </Dialog>
   );
 }
+<<<<<<< HEAD
 ;
 export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {;
   const [isConnecting, setIsConnecting] = useState(false),;
@@ -867,3 +1007,5 @@ function IntegrationConnectionModal() {
 }
 ;
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616

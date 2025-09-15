@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 import Head from 'next/head',
 import { useState } from 'react',
 import EnhancedLayout from '../components/layout/EnhancedLayout',
+=======
+import Head from 'next/head';
+import { useState } from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +17,7 @@ const Contact = () => {
     phone: '',
     service: '',
     message: ''
+<<<<<<< HEAD
   }),
 
   const handleSubmit = (e) => {
@@ -18,13 +25,27 @@ const Contact = () => {
     // Handle form submission here
     // // // console.log('Form submitted:', formData),
   },
+=======
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
+<<<<<<< HEAD
     }),
   },
+=======
+    });
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   const contactInfo = [
     {
@@ -42,7 +63,11 @@ const Contact = () => {
       email: "support@ziontechgroup.com",
       phone: "+1 (555) 123-4569"
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const offices = [
     {
@@ -60,7 +85,11 @@ const Contact = () => {
       address: "789 Digital Street, London, UK EC1A 1BB",
       phone: "+44 20 1234 5678"
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <EnhancedLayout>
@@ -249,13 +278,24 @@ const Contact = () => {
           <p className="text-blue-100 mb-6">
             Let's schedule a consultation to discuss your technology needs.
           </p>
+<<<<<<< HEAD
           <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors">
+=======
+          <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+>>>>>>> origin/auto/autonomy-17186719616
             Schedule a Call
           </button>
         </div>
       </main>
     </EnhancedLayout>
+<<<<<<< HEAD
   )
 },
 
 export default Contact,
+=======
+  );
+};
+
+export default Contact;
+>>>>>>> origin/auto/autonomy-17186719616

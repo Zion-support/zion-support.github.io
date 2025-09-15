@@ -1,10 +1,17 @@
 
 import { UseFormReturn } from "react-hook-form";
 import { 
+<<<<<<< HEAD
   FormField
   FormItem
   FormLabel
   FormControl
+=======
+  FormField, 
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+>>>>>>> origin/auto/autonomy-17186719616
   FormDescription 
 } from "@/components/ui/form";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -39,7 +46,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                       onCheckedChange={(checked) => {
                         const currentValues = field.value || [];
                         return checked
+<<<<<<< HEAD
                           ? field.onChange([...currentValues'nda'])
+=======
+                          ? field.onChange([...currentValues, 'nda'])
+>>>>>>> origin/auto/autonomy-17186719616
                           : field.onChange(
                               currentValues.filter((value) => value !== 'nda')
                             );
@@ -69,7 +80,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                       onCheckedChange={(checked) => {
                         const currentValues = field.value || [];
                         return checked
+<<<<<<< HEAD
                           ? field.onChange([...currentValues'ip'])
+=======
+                          ? field.onChange([...currentValues, 'ip'])
+>>>>>>> origin/auto/autonomy-17186719616
                           : field.onChange(
                               currentValues.filter((value) => value !== 'ip')
                             );
@@ -99,7 +114,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                       onCheckedChange={(checked) => {
                         const currentValues = field.value || [];
                         return checked
+<<<<<<< HEAD
                           ? field.onChange([...currentValues'termination'])
+=======
+                          ? field.onChange([...currentValues, 'termination'])
+>>>>>>> origin/auto/autonomy-17186719616
                           : field.onChange(
                               currentValues.filter((value) => value !== 'termination')
                             );
@@ -129,7 +148,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                       onCheckedChange={(checked) => {
                         const currentValues = field.value || [];
                         return checked
+<<<<<<< HEAD
                           ? field.onChange([...currentValues'revisions'])
+=======
+                          ? field.onChange([...currentValues, 'revisions'])
+>>>>>>> origin/auto/autonomy-17186719616
                           : field.onChange(
                               currentValues.filter((value) => value !== 'revisions')
                             );

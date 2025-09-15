@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 Loader2
+=======
+import { Loader2 } from 'lucide-react';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export interface LoadingOverlayProps {
   visible?: boolean;

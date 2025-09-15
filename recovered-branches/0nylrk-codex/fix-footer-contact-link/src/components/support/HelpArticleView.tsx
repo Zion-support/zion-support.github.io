@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -120,41 +121,97 @@ interface HelpArticleViewProps {;
   
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type),
+=======
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ThumbsUp, ThumbsDown } from "lucide-react";
+import { toast } from "@/components/ui/use-toast";
+import { HELP_CATEGORIES } from "./help-content";
+
+interface HelpArticleViewProps {
+  articleId: string;
+}
+
+export function HelpArticleView({ articleId }: HelpArticleViewProps) {
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+  
+  // Find the article in all categories
+  let article;
+  for (const category of HELP_CATEGORIES) {
+    const found = category.articles.find(a => a.id === articleId);
+    if (found) {
+      article = found;
+      break;
+    }
+  }
+  
+  if (!article) {
+    return <div>Article not found</div>;
+  }
+  
+  const handleFeedback = (type: "helpful" | "not-helpful") => {
+    setFeedbackGiven(type);
+>>>>>>> origin/auto/autonomy-17186719616
     
     // In a real implementation, this would send feedback to the server
     toast({
       title: "Thank you for your feedback!",
       description: type === "helpful" 
         ? "We're glad this article was helpful." 
+<<<<<<< HEAD
         : "We'll work on improving this article."})
   },
   
 
 
 
+=======
+        : "We'll work on improving this article.",
+    });
+  };
+  
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div>
       <Card className="p-6">
         <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
+<<<<<<< HEAD
         <div className="flex items-center text-sm text-zion-slate-light mb-6">
           <span>Last updated: {formatDate(article.lastUpdated)}</span>
         </div>
 
 
+=======
+        
+        <div className="flex items-center text-sm text-zion-slate-light mb-6">
+          <span>Last updated: {formatDate(article.lastUpdated)}</span>
+        </div>
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="prose dark:prose-invert max-w-none mb-8">
           {article.content.split("\n").map((paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
           ))}
         </div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">
           <div className="flex flex-col sm:flex-row items-center justify-between">
             <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">
               Was this article helpful?
             </div>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/auto/autonomy-17186719616
             <div className="flex items-center space-x-3">
               <Button
                 variant="outline"
                 size="sm"
+<<<<<<< HEAD
 
   // Check condition
 if ( {) {
@@ -200,12 +257,16 @@ if ( {) {
                     : "";
 
                 }
+=======
+                className={feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : ""}
+>>>>>>> origin/auto/autonomy-17186719616
                 onClick={() => handleFeedback("helpful")}
                 disabled={feedbackGiven !== null}
               >
                 <ThumbsUp className="h-4 w-4 mr-2" />
                 Yes
               </Button>
+<<<<<<< HEAD
               <Button
                 variant="outline"
                 size="sm"
@@ -214,6 +275,13 @@ if ( {) {
                     ? "bg-red-100 dark:bg-red-900/30"
                     : ""
                 }
+=======
+              
+              <Button
+                variant="outline"
+                size="sm"
+                className={feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}
+>>>>>>> origin/auto/autonomy-17186719616
                 onClick={() => handleFeedback("not-helpful")}
                 disabled={feedbackGiven !== null}
               >
@@ -222,6 +290,7 @@ if ( {) {
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
           {feedbackGiven === "not-helpful" && (
             <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">
               <p className="text-sm text-zion-slate-light mb-2">
@@ -307,10 +376,23 @@ if ( {) {
 
 
 
+=======
+          
+          {feedbackGiven === "not-helpful" && (
+            <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">
+              <p className="text-sm text-zion-slate-light mb-2">
+                We're sorry this article wasn't helpful. Please contact our support team for further assistance.
+              </p>
+              <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-light">
+                Contact Support
+              </Button>
+            </div>
+>>>>>>> origin/auto/autonomy-17186719616
           )}
         </div>
       </Card>
     </div>
+<<<<<<< HEAD
 
   );
 }
@@ -357,3 +439,15 @@ function formatDate(date: string): string {;
 }
 ;
 
+=======
+  );
+}
+
+function formatDate(date: string): string {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+}
+>>>>>>> origin/auto/autonomy-17186719616

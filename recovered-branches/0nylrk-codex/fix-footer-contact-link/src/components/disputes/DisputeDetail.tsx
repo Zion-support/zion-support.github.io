@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React{ useStateuseEffect } from "react";
 import { useParamsuseNavigate } from "react-router-dom";
 import { useDisputes } from "@/hooks/useDisputes";
@@ -13,15 +14,36 @@ import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
 import { formatDistanceToNow } from "date-fns";
 import { AlertDescriptionAlertTitle } from "@/components/ui/alert";
 import { ShieldAlertArrowDownCheckXMessageSquareDownload } from "lucide-react";
+=======
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useDisputes } from "@/hooks/useDisputes";
+import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { format, formatDistanceToNow } from "date-fns";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
 
 export function DisputeDetail() {
+<<<<<<< HEAD
   // useParams may be untyped in this environmentso avoid passing a
+=======
+  // useParams may be untyped in this environment, so avoid passing a
+>>>>>>> origin/auto/autonomy-17186719616
   // type argument and cast the result instead to prevent TS2347 errors.
   const { disputeId } = useParams() as { disputeId?: string };
   const navigate = useNavigate();
   const { user } = useAuth();
+<<<<<<< HEAD
   const { getDisputeByIdupdateDisputeStatusresolveDisputegetDisputeMessagesaddDisputeMessage } = useDisputes();
   
   const [disputesetDispute] = useState<any>(null);
@@ -33,6 +55,20 @@ export function DisputeDetail() {
     summary: "",
     resolution_type: "compromise"});
   const [activeTabsetActiveTab] = useState("overview");
+=======
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
+  
+  const [dispute, setDispute] = useState<any>(null);
+  const [messages, setMessages] = useState<DisputeMessage[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [message, setMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const [resolution, setResolution] = useState({
+    summary: "",
+    resolution_type: "compromise",
+  });
+  const [activeTab, setActiveTab] = useState("overview");
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Check if user is admin (placeholder - implement proper admin check)
   const isAdmin = user?.userType === "admin";
@@ -54,7 +90,11 @@ export function DisputeDetail() {
         const messagesData = await getDisputeMessages(disputeId);
         setMessages(messagesData);
       } catch (error) {
+<<<<<<< HEAD
         console.error("Error loading dispute data:"error);
+=======
+        console.error("Error loading dispute data:", error);
+>>>>>>> origin/auto/autonomy-17186719616
         toast.error("Failed to load dispute");
       } finally {
         setIsLoading(false);
@@ -62,14 +102,24 @@ export function DisputeDetail() {
     };
     
     loadDisputeData();
+<<<<<<< HEAD
   }[disputeIdnavigategetDisputeByIdgetDisputeMessages]);
+=======
+  }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleStatusChange = async (status: DisputeStatus) => {
     if (!disputeId) return;
     
+<<<<<<< HEAD
     const success = await updateDisputeStatus(disputeIdstatus);
     if (success && dispute) {
       setDispute({ ...disputestatus });
+=======
+    const success = await updateDisputeStatus(disputeId, status);
+    if (success && dispute) {
+      setDispute({ ...dispute, status });
+>>>>>>> origin/auto/autonomy-17186719616
     }
   };
 
@@ -81,11 +131,19 @@ export function DisputeDetail() {
       return;
     }
     
+<<<<<<< HEAD
     const success = await resolveDispute(disputeIdresolution);
     if (success && dispute) {
       setDispute({ 
         ...dispute
         status: "resolved"
+=======
+    const success = await resolveDispute(disputeId, resolution);
+    if (success && dispute) {
+      setDispute({ 
+        ...dispute, 
+        status: "resolved", 
+>>>>>>> origin/auto/autonomy-17186719616
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,
         resolved_at: new Date().toISOString()
@@ -98,7 +156,11 @@ export function DisputeDetail() {
     
     setIsSending(true);
     try {
+<<<<<<< HEAD
       const success = await addDisputeMessage(disputeIdmessageisAdmin);
+=======
+      const success = await addDisputeMessage(disputeId, message, isAdmin);
+>>>>>>> origin/auto/autonomy-17186719616
       if (success) {
         // Refresh messages
         const updatedMessages = await getDisputeMessages(disputeId);
@@ -106,7 +168,11 @@ export function DisputeDetail() {
         setMessage("");
       }
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error sending message:"error);
+=======
+      console.error("Error sending message:", error);
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsSending(false);
     }
@@ -149,11 +215,19 @@ export function DisputeDetail() {
           <div className="flex items-center gap-2">
             <h1 className="text-2xl font-bold">Dispute Case</h1>
             <Badge variant={getStatusBadgeVariant(dispute.status)}>
+<<<<<<< HEAD
               {dispute.status.replace('_' ')}
             </Badge>
           </div>
           <p className="text-muted-foreground">
             Reported {formatDistanceToNow(new Date(dispute.created_at){ addSuffix: true })}
+=======
+              {dispute.status.replace('_', ' ')}
+            </Badge>
+          </div>
+          <p className="text-muted-foreground">
+            Reported {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
+>>>>>>> origin/auto/autonomy-17186719616
           </p>
         </div>
         
@@ -224,7 +298,11 @@ export function DisputeDetail() {
                     <ul className="space-y-2 mt-2">
                       <li className="flex gap-2 items-center">
                         <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">1</Badge>
+<<<<<<< HEAD
                         <span>Created on {format(new Date(dispute.created_at)"MMM dyyyy 'at' h:mm a")}</span>
+=======
+                        <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>
+>>>>>>> origin/auto/autonomy-17186719616
                       </li>
                       
                       {dispute.status !== "open" && (
@@ -239,7 +317,11 @@ export function DisputeDetail() {
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
                             {dispute.status !== "open" ? "3" : "2"}
                           </Badge>
+<<<<<<< HEAD
                           <span>Resolved on {format(new Date(dispute.resolved_at)"MMM dyyyy 'at' h:mm a")}</span>
+=======
+                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>
+>>>>>>> origin/auto/autonomy-17186719616
                         </li>
                       )}
                     </ul>
@@ -258,7 +340,11 @@ export function DisputeDetail() {
                     {dispute.resolution_type && (
                       <div className="mt-4">
                         <Badge>
+<<<<<<< HEAD
                           Resolution: {dispute.resolution_type.replace('_' ')}
+=======
+                          Resolution: {dispute.resolution_type.replace('_', ' ')}
+>>>>>>> origin/auto/autonomy-17186719616
                         </Badge>
                       </div>
                     )}
@@ -308,7 +394,11 @@ export function DisputeDetail() {
                                     {msg.user_profile?.display_name || 'Unknown User'}
                                   </span>
                                   <span className="text-xs opacity-70">
+<<<<<<< HEAD
                                     {format(new Date(msg.created_at)'MMM dh:mm a')}
+=======
+                                    {format(new Date(msg.created_at), 'MMM d, h:mm a')}
+>>>>>>> origin/auto/autonomy-17186719616
                                   </span>
                                 </div>
                                 <p className="whitespace-pre-wrap">{msg.message}</p>
@@ -395,7 +485,11 @@ export function DisputeDetail() {
                           <Textarea
                             placeholder="Enter resolution summary..."
                             value={resolution.summary}
+<<<<<<< HEAD
                             onChange={(e) => setResolution({ ...resolutionsummary: e.target.value })}
+=======
+                            onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}
+>>>>>>> origin/auto/autonomy-17186719616
                             className="min-h-[100px]"
                           />
                           
@@ -405,7 +499,11 @@ export function DisputeDetail() {
                               <select 
                                 className="w-full p-2 border rounded"
                                 value={resolution.resolution_type}
+<<<<<<< HEAD
                                 onChange={(e) => setResolution({ ...resolution_type: e.target.value })}
+=======
+                                onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value })}
+>>>>>>> origin/auto/autonomy-17186719616
                               >
                                 <option value="client_favor">In Client's Favor</option>
                                 <option value="talent_favor">In Talent's Favor</option>
@@ -440,7 +538,11 @@ export function DisputeDetail() {
                                 </span>
                               </div>
                               <span className="text-xs opacity-70">
+<<<<<<< HEAD
                                 {format(new Date(msg.created_at)'MMM dh:mm a')}
+=======
+                                {format(new Date(msg.created_at), 'MMM d, h:mm a')}
+>>>>>>> origin/auto/autonomy-17186719616
                               </span>
                             </div>
                             <p className="whitespace-pre-wrap text-sm">{msg.message}</p>
@@ -462,7 +564,11 @@ export function DisputeDetail() {
                           variant="outline" 
                           onClick={() => {
                             if (message.trim()) {
+<<<<<<< HEAD
                               addDisputeMessage(disputeId!messagetrue).then(() => {
+=======
+                              addDisputeMessage(disputeId!, message, true).then(() => {
+>>>>>>> origin/auto/autonomy-17186719616
                                 getDisputeMessages(disputeId!).then(setMessages);
                                 setMessage("");
                               });
@@ -529,12 +635,20 @@ export function DisputeDetail() {
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Created:</span>
+<<<<<<< HEAD
                 <span>{format(new Date(dispute.created_at)"MMM dyyyy")}</span>
+=======
+                <span>{format(new Date(dispute.created_at), "MMM d, yyyy")}</span>
+>>>>>>> origin/auto/autonomy-17186719616
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Status:</span>
                 <Badge variant={getStatusBadgeVariant(dispute.status)}>
+<<<<<<< HEAD
                   {dispute.status.replace('_' ')}
+=======
+                  {dispute.status.replace('_', ' ')}
+>>>>>>> origin/auto/autonomy-17186719616
                 </Badge>
               </div>
               <div className="flex justify-between">

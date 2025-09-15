@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react',
 import { useRouter } from 'next/router',
 import { Search, X } from 'lucide-react'
@@ -8,6 +9,18 @@ import { SearchSuggestion } from '@/types/search',
 import { slugify } from '@/lib/slugify',
 import { useDebounce } from '@/hooks/useDebounce',
 import { useOnClickOutside } from '@/hooks/useOnClickOutside',
+=======
+import React, { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/router';
+import { Search, X } from 'lucide-react'
+import { Input } from '@/components/ui/input';
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
+import { fireEvent } from '@/lib/analytics';
+import { SearchSuggestion } from '@/types/search';
+import { slugify } from '@/lib/slugify';
+import { useDebounce } from '@/hooks/useDebounce';
+import { useOnClickOutside } from '@/hooks/useOnClickOutside';
+>>>>>>> origin/auto/autonomy-17186719616
 
 /**
  * SearchBar component props
@@ -16,27 +29,44 @@ interface SearchBarProps {
   /**
    * The current value of the search input
    */
+<<<<<<< HEAD
   value: string,
+=======
+  value: string;
+>>>>>>> origin/auto/autonomy-17186719616
   /**
    * Function to call when the search input changes
    * @param {string} val - The new value of the search input
    */
+<<<<<<< HEAD
   onChange: (val: string) => void,
+=======
+  onChange: (val: string) => void;
+>>>>>>> origin/auto/autonomy-17186719616
   /**
    * Function to call when a suggestion is selected
    * @param {SearchSuggestion} suggestion - The selected suggestion
    */
+<<<<<<< HEAD
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   /**
    * The placeholder text for the search input
    */
   placeholder?: string
+=======
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
+  /**
+   * The placeholder text for the search input
+   */
+  placeholder?: string;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 /**
  * SearchBar component that allows users to search for content.
  */
 export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
+<<<<<<< HEAD
   const router = useRouter(),
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]),
   const [focused, setFocused] = useState(false),
@@ -83,6 +113,57 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     setHighlightedIndex(-1),
     inputRef.current?.blur(),
   },
+=======
+  const router = useRouter();
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
+  const [focused, setFocused] = useState(false);
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
+  const listId = 'searchbar-autocomplete-list';
+  const debounced = useDebounce(value, 150);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!debounced) {
+      setSuggestions([]);
+      setHighlightedIndex(-1);
+      return;
+    }
+    const controller = new AbortController();
+    fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal })
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to fetch suggestions');
+        return res.json();
+      })
+      .then(data => {
+        if (Array.isArray(data)) {
+          setSuggestions(data.slice(0, 5));
+        } else {
+          setSuggestions([]);
+        }
+        setHighlightedIndex(-1);
+      })
+      .catch(() => setSuggestions([]));
+    return () => controller.abort();
+  }, [debounced]);
+
+  useOnClickOutside(containerRef, () => {
+    setFocused(false);
+    setHighlightedIndex(-1);
+  });
+
+  const handleSelect = (suggestion: SearchSuggestion) => {
+    onChange(suggestion.text);
+    if (onSelectSuggestion) onSelectSuggestion(suggestion);
+
+    const searchQuery = encodeURIComponent(suggestion.text);
+    router.push(`/search?q=${searchQuery}`);
+    fireEvent('search', { search_term: suggestion.text });
+    setFocused(false);
+    setHighlightedIndex(-1);
+    inputRef.current?.blur();
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div
@@ -104,6 +185,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onFocus={(e) => {
+<<<<<<< HEAD
             setFocused(true),
             // Ensure the input receives focus properly
             e.target.setSelectionRange(e.target.value.length, e.target.value.length),
@@ -114,6 +196,18 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
             if (!relatedTarget || !containerRef.current?.contains(relatedTarget)) {
               setFocused(false),
               setHighlightedIndex(-1),
+=======
+            setFocused(true);
+            // Ensure the input receives focus properly
+            e.target.setSelectionRange(e.target.value.length, e.target.value.length);
+          }}
+          onBlur={(e) => {
+            // Only blur if not clicking on suggestions
+            const relatedTarget = e.relatedTarget as HTMLElement;
+            if (!relatedTarget || !containerRef.current?.contains(relatedTarget)) {
+              setFocused(false);
+              setHighlightedIndex(-1);
+>>>>>>> origin/auto/autonomy-17186719616
             }
           }}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
@@ -123,6 +217,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           onKeyDown={(e) => {
             if (!focused || suggestions.length === 0) {
               if (e.key === 'Escape') {
+<<<<<<< HEAD
                 e.preventDefault(),
                 setFocused(false),
                 setHighlightedIndex(-1),
@@ -137,10 +232,27 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 inputRef.current?.blur(),
               }
               return,
+=======
+                e.preventDefault();
+                setFocused(false);
+                setHighlightedIndex(-1);
+                inputRef.current?.blur();
+              }
+              // If Enter is pressed and there's a value, navigate with query parameter
+              if (e.key === 'Enter' && value.trim()) {
+                e.preventDefault(); // Prevent form submission if SearchBar is in a form
+                fireEvent('search', { search_term: value });
+                router.push(`/search?q=${encodeURIComponent(value)}`);
+                setFocused(false);
+                inputRef.current?.blur();
+              }
+              return;
+>>>>>>> origin/auto/autonomy-17186719616
             }
 
             switch (e.key) {
               case 'ArrowDown':
+<<<<<<< HEAD
                 e.preventDefault(),
                 setHighlightedIndex((prev) => (prev + 1) % suggestions.length),
                 break,
@@ -169,6 +281,37 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 inputRef.current?.blur(),
                 break,
               default: break
+=======
+                e.preventDefault();
+                setHighlightedIndex((prev) => (prev + 1) % suggestions.length);
+                break;
+              case 'ArrowUp':
+                e.preventDefault();
+                setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length);
+                break;
+              case 'Enter':
+                if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
+                  e.preventDefault();
+                  handleSelect(suggestions[highlightedIndex]);
+                } else if (value.trim()) {
+                  // This case should ideally be handled by the form's onSubmit,
+                  // but if SearchBar is used standalone, this provides a fallback.
+                  e.preventDefault();
+                  fireEvent('search', { search_term: value });
+                  router.push(`/search?q=${encodeURIComponent(value)}`);
+                  setFocused(false);
+                  inputRef.current?.blur();
+                }
+                break;
+              case 'Escape':
+                e.preventDefault();
+                setFocused(false);
+                setHighlightedIndex(-1);
+                inputRef.current?.blur();
+                break;
+              default:
+                break;
+>>>>>>> origin/auto/autonomy-17186719616
             }
           }}
         />
@@ -191,5 +334,9 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
         listId={listId}
       />
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

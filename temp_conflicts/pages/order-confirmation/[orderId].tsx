@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { useRouter } from 'next/router',
@@ -5,6 +6,15 @@ import { useRouter } from 'next/router',
 export default function OrderConfirmationPage() {
   const router = useRouter(),
   const { orderId } = router.query,
+=======
+import React from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+
+export default function OrderConfirmationPage() {
+  const router = useRouter();
+  const { orderId } = router.query;
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -19,11 +29,19 @@ export default function OrderConfirmationPage() {
         )}
         <p className="text-lg mb-4">Your order has been confirmed and is being processed.</p>
         <div className="mt-4">
+<<<<<<< HEAD
           <a href="/" className="text-blue-600 hover: underline">
+=======
+          <a href="/" className="text-blue-600 hover:underline">
+>>>>>>> origin/auto/autonomy-17186719616
             ← Back to Home
           </a>
         </div>
       </div>
     </>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

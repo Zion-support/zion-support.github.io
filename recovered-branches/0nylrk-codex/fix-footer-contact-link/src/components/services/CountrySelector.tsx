@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -59,6 +60,35 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   }
   },
 
+=======
+import { useState, useEffect } from "react";
+import { Globe } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
+
+interface CountrySelectorProps {
+  onCountryChange: (country: CountryPricing | null) => void;
+  selectedCountry: CountryPricing | null;
+}
+
+export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {
+  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
+  
+  // Set top/popular countries
+  useEffect(() => {
+    const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"];
+    const top = onsiteServicePricing.filter(item => 
+      popular.includes(item.country)
+    ).sort((a, b) => a.country.localeCompare(b.country));
+    setTopCountries(top);
+  }, []);
+  
+  // Handle country selection
+  const handleCountryChange = (countryName: string) => {
+    const country = onsiteServicePricing.find(item => item.country === countryName) || null;
+    onCountryChange(country);
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="mb-6">
@@ -66,12 +96,18 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
         <Globe className="mr-2 h-5 w-5 text-zion-cyan" />
         {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` : "Select Country for IT Onsite Service"}
       </h3>
+<<<<<<< HEAD
 
       <Select
         onValueChange={handleCountryChange}
       <Select 
         onValueChange={handleCountryChange} 
 
+=======
+      
+      <Select 
+        onValueChange={handleCountryChange} 
+>>>>>>> origin/auto/autonomy-17186719616
         value={selectedCountry?.country}
       >
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
@@ -82,6 +118,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
             {topCountries.map((item) => (
               <SelectItem key={item.country} value={item.country} className="text-white">
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react",;
 import { Globe } from "lucide-react",;
@@ -152,11 +189,26 @@ export function CountrySelector(): any ({ onCountryChange, selectedCountry }: Co
               <SelectItem key={item && item.country} value={item && item.country} className="text-white">;
                 {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
               </SelectItem>;
+=======
+                {item.country} - ${item.pricePerIncident.toFixed(2)}
+              </SelectItem>
+            ))}
+          </div>
+          <div className="p-2">
+            <p className="text-sm text-zion-slate-light pb-1">All Countries</p>
+            {onsiteServicePricing
+              .sort((a, b) => a.country.localeCompare(b.country))
+              .map((item) => (
+              <SelectItem key={item.country} value={item.country} className="text-white">
+                {item.country} - ${item.pricePerIncident.toFixed(2)}
+              </SelectItem>
+>>>>>>> origin/auto/autonomy-17186719616
             ))}
           </div>
         </SelectContent>
       </Select>
     </div>
+<<<<<<< HEAD
   )
 }
 
@@ -229,3 +281,7 @@ function CountrySelector() {
     </div>);
 }
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

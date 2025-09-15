@@ -1,19 +1,31 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+>>>>>>> origin/auto/autonomy-17186719616
 import { 
   Brain, Star, Users, TrendingUp, Zap, Shield, 
   CheckCircle, Clock, Award, Target, Globe, Sparkles,
   Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb,
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
+<<<<<<< HEAD
 } from 'lucide-react',
+=======
+} from 'lucide-react';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 },
 
 const features = [
@@ -47,6 +59,61 @@ const integrations = [
   'Corporate wellness platformsSocial media networks',
   'Fitness trackersMeditation apps'
 ],
+=======
+};
+
+const features = [
+  'Emotional intelligence training modules',
+  'Consciousness expansion exercises',
+  'Self-awareness development tools',
+  'Empathy and compassion training',
+  'Mindfulness and meditation guidance',
+  'Cognitive enhancement techniques',
+  'Social intelligence development',
+  'Creative consciousness exploration',
+  'Spiritual growth pathways',
+  'Personal transformation tracking'
+];
+
+const useCases = [
+  'Personal development and growth',
+  'Professional leadership training',
+  'Therapeutic and healing practices',
+  'Educational enhancement',
+  'Corporate wellness programs',
+  'Mental health support',
+  'Spiritual development',
+  'Creative arts enhancement',
+  'Relationship improvement',
+  'Stress management and resilience'
+];
+
+const technology = [
+  'Advanced AI algorithms',
+  'Machine learning models',
+  'Natural language processing',
+  'Emotional recognition systems',
+  'Biometric feedback integration',
+  'Virtual reality experiences',
+  'Augmented reality overlays',
+  'Brain-computer interfaces',
+  'Quantum computing integration',
+  'Blockchain security'
+];
+
+const integrations = [
+  'Wearable devices',
+  'Mobile applications',
+  'Web platforms',
+  'Smart home systems',
+  'Healthcare platforms',
+  'Educational systems',
+  'Corporate wellness platforms',
+  'Social media networks',
+  'Fitness trackers',
+  'Meditation apps'
+];
+>>>>>>> origin/auto/autonomy-17186719616
 
 const testimonials = [
   {
@@ -73,7 +140,11 @@ const testimonials = [
     rating: 5,
     avatar: '👩‍🔬'
   }
+<<<<<<< HEAD
 ],
+=======
+];
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function AIConsciousnessEvolution2025() {
   return (
@@ -101,6 +172,7 @@ export default function AIConsciousnessEvolution2025() {
               animate={{
                 x: [0, 100, 0],
                 y: [0, -100, 0],
+<<<<<<< HEAD
                 opacity: [0.3, 0.8, 0.3]}}
               transition={{
                 duration: 8 + i * 2,
@@ -109,6 +181,19 @@ export default function AIConsciousnessEvolution2025() {
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`}}
+=======
+                opacity: [0.3, 0.8, 0.3],
+              }}
+              transition={{
+                duration: 8 + i * 2,
+                repeat: Infinity,
+                delay: i * 0.3,
+              }}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+>>>>>>> origin/auto/autonomy-17186719616
             />
           ))}
         </div>
@@ -462,8 +547,15 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Perfect for individuals beginning their consciousness journey',
                 features: [
+<<<<<<< HEAD
                   'Basic AI assessment10 consciousness exercises',
                   'Progress trackingEmail support',
+=======
+                  'Basic AI assessment',
+                  '10 consciousness exercises',
+                  'Progress tracking',
+                  'Email support',
+>>>>>>> origin/auto/autonomy-17186719616
                   'Mobile app access'
                 ],
                 popular: false
@@ -474,9 +566,18 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Advanced features for serious consciousness development',
                 features: [
+<<<<<<< HEAD
                   'Advanced AI assessmentUnlimited exercises',
                   'Personalized coachingPriority support',
                   'Advanced analyticsIntegration with wearables',
+=======
+                  'Advanced AI assessment',
+                  'Unlimited exercises',
+                  'Personalized coaching',
+                  'Priority support',
+                  'Advanced analytics',
+                  'Integration with wearables',
+>>>>>>> origin/auto/autonomy-17186719616
                   'Group sessions'
                 ],
                 popular: true
@@ -487,9 +588,18 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Complete solution for organizations and teams',
                 features: [
+<<<<<<< HEAD
                   'Everything in ProfessionalTeam management',
                   'Custom integrationsDedicated support',
                   'White-label optionsAdvanced reporting',
+=======
+                  'Everything in Professional',
+                  'Team management',
+                  'Custom integrations',
+                  'Dedicated support',
+                  'White-label options',
+                  'Advanced reporting',
+>>>>>>> origin/auto/autonomy-17186719616
                   'API access'
                 ],
                 popular: false
@@ -600,5 +710,9 @@ export default function AIConsciousnessEvolution2025() {
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

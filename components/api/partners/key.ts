@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -39,6 +40,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed" })
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
+import { v4 as uuidv4 } from "uuid";
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
+    return res.status(405).json({ error: "Method Not Allowed" });
+>>>>>>> origin/auto/autonomy-17186719616
   }
   const auth = await authenticateRequest(req);
   if (!auth) {
@@ -51,6 +62,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (existing) existing.active = false;
   // Create new key
   const now = new Date().toISOString();
+<<<<<<< HEAD
 
   const newKey = {
     id: uuidv4(), partnerId: auth.partner.id,
@@ -148,12 +160,15 @@ if (existing.active = false) {
   if (existing) existing.active = false,
   // Create new key
   const now = new Date().toISOString()
+=======
+>>>>>>> origin/auto/autonomy-17186719616
   const newKey = {
     id: uuidv4(),
     partnerId: auth.partner.id,
     key: uuidv4(),
     active: true,
     createdAt: now,
+<<<<<<< HEAD
     rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60},
   keys.push(newKey as any),
   await saveApiKeys(keys),
@@ -169,3 +184,11 @@ if (existing.active = false) {
 
 
 
+=======
+    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60,
+  };
+  keys.push(newKey as any);
+  await saveApiKeys(keys);
+  return res.status(201).json({ apiKey: newKey.key });
+}
+>>>>>>> origin/auto/autonomy-17186719616

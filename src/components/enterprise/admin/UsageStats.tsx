@@ -1,25 +1,46 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
+=======
+import React from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
   CardTitle} from "@/components/ui/card",
 import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress",
+=======
+  CardTitle,
+} from "@/components/ui/card";
+import { Sparkles } from 'lucide-react'
+import { Progress } from "@/components/ui/progress";
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
       title: "Limits updated",
+<<<<<<< HEAD
       description: "The new usage limits have been saved successfully."}),
   },
+=======
+      description: "The new usage limits have been saved successfully.",
+    });
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-8">
@@ -174,5 +195,9 @@ export function UsageStats() {
         <Button>Contact Us</Button>
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

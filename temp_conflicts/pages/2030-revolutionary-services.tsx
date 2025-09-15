@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
@@ -6,6 +7,16 @@ import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturi
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030',
 import { innovative2030Services } from '../data/2030-innovative-services',
+=======
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
+import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import { innovative2030Services } from '../data/2030-innovative-services';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
@@ -13,13 +24,21 @@ export default function Revolutionary2030ServicesPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
   },
+=======
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <UltraFuturisticBackground2030>
       <Head>
         <title>2030 Revolutionary Technology Services | Zion Tech Group | AI Consciousness, Quantum Computing, Space Mining</title>
+<<<<<<< HEAD
         <meta name="description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing, we're building tomorrow's solutions today." />
+=======
+        <meta name="description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing, we&apos;re building tomorrow&apos;s solutions today." />
+>>>>>>> origin/auto/autonomy-17186719616
         <meta name="keywords" content="2030 technology, AI consciousness, quantum computing, space mining, DNA computing, revolutionary services, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -116,7 +135,11 @@ export default function Revolutionary2030ServicesPage() {
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
           >
             Experience the next generation of revolutionary technology services. From AI consciousness 
+<<<<<<< HEAD
             and quantum computing to space mining and DNA computing, we're building the future today.
+=======
+            and quantum computing to space mining and DNA computing, we&apos;re building the future today.
+>>>>>>> origin/auto/autonomy-17186719616
           </motion.p>
 
           <motion.div
@@ -322,5 +345,9 @@ export default function Revolutionary2030ServicesPage() {
       {/* Footer */}
       <UltraFuturisticFooter2030 />
     </UltraFuturisticBackground2030>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

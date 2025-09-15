@@ -5,8 +5,13 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+<<<<<<< HEAD
 import { SelectTriggerSelectContentSelectItem } from "@/components/ui/select";
 import { SearchFilterArrowDownAZArrowUpZA } from "lucide-react";
+=======
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Example listing type
 interface Listing {
@@ -35,6 +40,7 @@ interface CategoryListingPageProps {
 }
 
 export function CategoryListingPage({ 
+<<<<<<< HEAD
   title
   description,
   listings: initialListings,
@@ -53,6 +59,28 @@ export function CategoryListingPage({
   const [searchQuerysetSearchQuery] = useState("");
   const [selectedSortsetSelectedSort] = useState(sortOptions[0].value);
   const [selectedFiltersetSelectedFilter] = useState(filterOptions[0].value);
+=======
+  title, 
+  description,
+  listings: initialListings,
+  sortOptions = [
+    { label: 'Newest First', value: 'newest' },
+    { label: 'Oldest First', value: 'oldest' },
+    { label: 'Highest Rating', value: 'rating-high' },
+    { label: 'Highest AI Match', value: 'ai-match' },
+    { label: 'A-Z', value: 'a-z' },
+    { label: 'Z-A', value: 'z-a' },
+  ],
+  filterOptions = [
+    { label: 'All', value: 'all' },
+    { label: 'Highly Rated', value: 'high-rating' },
+    { label: 'Best AI Match', value: 'best-match' },
+  ]
+}: CategoryListingPageProps) {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedSort, setSelectedSort] = useState(sortOptions[0].value);
+  const [selectedFilter, setSelectedFilter] = useState(filterOptions[0].value);
+>>>>>>> origin/auto/autonomy-17186719616
   
   // Process listings based on filters and search
   const processedListings = initialListings
@@ -72,7 +100,11 @@ export function CategoryListingPage({
       
       return matchesSearch;
     })
+<<<<<<< HEAD
     .sort((ab) => {
+=======
+    .sort((a, b) => {
+>>>>>>> origin/auto/autonomy-17186719616
       // Apply sorting
       switch (selectedSort) {
         case 'newest':

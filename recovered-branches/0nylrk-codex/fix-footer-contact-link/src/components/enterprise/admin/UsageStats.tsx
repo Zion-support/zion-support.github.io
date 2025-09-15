@@ -3,7 +3,10 @@ import React from "react";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import {
@@ -12,7 +15,12 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
   CardTitle} from "@/components/ui/card";
+=======
+  CardTitle,
+} from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Sparkles } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 
@@ -20,7 +28,12 @@ export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
       title: "Limits updated",
+<<<<<<< HEAD
       description: "The new usage limits have been saved successfully."});
+=======
+      description: "The new usage limits have been saved successfully.",
+    });
+>>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (

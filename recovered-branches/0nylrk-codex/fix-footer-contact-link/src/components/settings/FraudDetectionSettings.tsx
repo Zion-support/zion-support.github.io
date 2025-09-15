@@ -1,31 +1,53 @@
 
+<<<<<<< HEAD
 import React{ useState } from 'react';
 import { CardContentCardDescriptionCardHeaderCardTitle } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 ShieldAlertInfo
+=======
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Switch } from '@/components/ui/switch';
+import { Button } from '@/components/ui/button';
+import { Label } from '@/components/ui/label';
+import { ShieldAlert, Info } from 'lucide-react';
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
+<<<<<<< HEAD
   AccordionTrigger} from "@/components/ui/accordion";
+=======
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+>>>>>>> origin/auto/autonomy-17186719616
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 
 export function FraudDetectionSettings() {
   const { user } = useAuth();
+<<<<<<< HEAD
   const [messageScanningEnabledsetMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabledsetActivityMonitoringEnabled] = useState(true);
   const [aiAnalysisEnabledsetAiAnalysisEnabled] = useState(true);
   const [isSavingsetIsSaving] = useState(false);
+=======
+  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
+  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
+  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
   
   const handleSavePreferences = async () => {
     if (!user?.id) return;
     
     setIsSaving(true);
     try {
+<<<<<<< HEAD
       // In a real implementationwe would save these preferences to the database
       // For nowe'll just simulate a successful save
       await new Promise(resolve => setTimeout(resolve1000));
@@ -39,6 +61,23 @@ export function FraudDetectionSettings() {
         title: "Error",
         description: "Failed to save your preferences. Please try again.",
         variant: "destructive"});
+=======
+      // In a real implementation, we would save these preferences to the database
+      // For now, we'll just simulate a successful save
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Settings saved",
+        description: "Your fraud detection preferences have been updated.",
+      });
+    } catch (error) {
+      console.error('Error saving preferences:', error);
+      toast({
+        title: "Error",
+        description: "Failed to save your preferences. Please try again.",
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsSaving(false);
     }
@@ -125,7 +164,11 @@ export function FraudDetectionSettings() {
                   <li>Monitoring for suspicious account activities</li>
                 </ul>
                 <p>
+<<<<<<< HEAD
                   You can opt out of some of these protectionsbut this may limit your ability to use certain platform features. 
+=======
+                  You can opt out of some of these protections, but this may limit your ability to use certain platform features. 
+>>>>>>> origin/auto/autonomy-17186719616
                   We prioritize keeping our marketplace safe while respecting your privacy.
                 </p>
               </AccordionContent>

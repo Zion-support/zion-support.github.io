@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> origin/auto/autonomy-17186719616
 import { 
   Search, Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, 
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud, 
   Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin
+<<<<<<< HEAD
 } from 'lucide-react',
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations',
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas',
@@ -18,39 +26,74 @@ export default function ServicesShowcase2027() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<string>('name'),
+=======
+} from 'lucide-react';
+import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
+import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
+import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
+
+export default function ServicesShowcase2027() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('name');
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Sort options
   const sortOptions = [
     { value: 'name', label: 'Sort by Name' },
     { value: 'price', label: 'Sort by Price' },
     { value: 'roi', label: 'Sort by ROI' }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const allServices = [
     ...cuttingEdge2027Innovations,
     ...practicalMicroSaas2027
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Filter services based on search and category
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+<<<<<<< HEAD
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     
     const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
+=======
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+>>>>>>> origin/auto/autonomy-17186719616
     
     const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
                         (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) ||
+<<<<<<< HEAD
                         (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000),
 
     return matchesSearch && matchesCategory && matchesPrice,
   }),
+=======
+                        (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
+
+    return matchesSearch && matchesCategory && matchesPrice;
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
+<<<<<<< HEAD
         return a.name.localeCompare(b.name),
       case 'price':
         return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
@@ -59,6 +102,17 @@ export default function ServicesShowcase2027() {
       default: return 0
     }
   }),
+=======
+        return a.name.localeCompare(b.name);
+      case 'price':
+        return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+      case 'roi':
+        return parseInt(a.roi.replace(/[^0-9]/g, '')) - parseInt(b.roi.replace(/[^0-9]/g, ''));
+      default:
+        return 0;
+    }
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
@@ -72,21 +126,33 @@ export default function ServicesShowcase2027() {
     { id: 'Inventory Management', name: 'Inventory Management', icon: '📦', count: allServices.filter(s => s.category.includes('Inventory Management')).length },
     { id: 'HR Automation', name: 'HR Automation', icon: '👥', count: allServices.filter(s => s.category.includes('HR Automation')).length },
     { id: 'Financial Automation', name: 'Financial Automation', icon: '💰', count: allServices.filter(s => s.category.includes('Financial Automation')).length }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', count: allServices.length },
     { id: 'low', name: 'Under $1K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000).length },
     { id: 'medium', name: '$1K - $10K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(s.price.replace(/[^0-9]/g, '')) < 10000).length },
     { id: 'high', name: '$10K+/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000).length }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
   },
+=======
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <UltraFuturisticMatrixBackground2027>
@@ -343,9 +409,15 @@ export default function ServicesShowcase2027() {
               <p className="text-cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>
               <button
                 onClick={() => {
+<<<<<<< HEAD
                   setSearchTerm(''),
                   setSelectedCategory('all'),
                   setSelectedPriceRange('all'),
+=======
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                  setSelectedPriceRange('all');
+>>>>>>> origin/auto/autonomy-17186719616
                 }} className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Clear Filters
               </button>
@@ -395,7 +467,11 @@ export default function ServicesShowcase2027() {
       </section>
 
       {/* Footer */}
+<<<<<<< HEAD
       <footer className="px-4 sm: px-6 lg:px-8 py-12 border-t border-cyan-500/30">
+=======
+      <footer className="px-4 sm:px-6 lg:px-8 py-12 border-t border-cyan-500/30">
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 shadow-2xl shadow-cyan-500/50">
@@ -408,17 +484,29 @@ export default function ServicesShowcase2027() {
           </div>
           
           <div className="text-cyan-300 text-sm">
+<<<<<<< HEAD
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>
+=======
+            <p>&copy; 2027 Zion Tech Group. All rights reserved.</p>
+>>>>>>> origin/auto/autonomy-17186719616
             <p className="mt-2">
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link>
               {' • '}
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300">Terms of Service</Link>
               {' • '}
+<<<<<<< HEAD
               <Link href="/contact" className="hover: text-cyan-400 transition-colors duration-300">Contact Us</Link>
+=======
+              <Link href="/contact" className="hover:text-cyan-400 transition-colors duration-300">Contact Us</Link>
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
         </div>
       </footer>
     </UltraFuturisticMatrixBackground2027>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

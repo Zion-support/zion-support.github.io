@@ -2,6 +2,10 @@ import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+import { cn } from "@/lib/utils"
+>>>>>>> origin/auto/autonomy-17186719616
 
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>,

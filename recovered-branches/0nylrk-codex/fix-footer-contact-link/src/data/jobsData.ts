@@ -12,7 +12,12 @@ export const JOB_POSTS: Job[] = [
     deadline: "2024-07-01",
     status: "new",
     created_at: "2024-05-10",
+<<<<<<< HEAD
     updated_at: "2024-05-10"},
+=======
+    updated_at: "2024-05-10",
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   {
     id: "job-2",
     client_id: "client-2",
@@ -24,5 +29,10 @@ export const JOB_POSTS: Job[] = [
     deadline: "2024-06-15",
     status: "new",
     created_at: "2024-05-05",
+<<<<<<< HEAD
     updated_at: "2024-05-05"}
+=======
+    updated_at: "2024-05-05",
+  }
+>>>>>>> origin/auto/autonomy-17186719616
 ];

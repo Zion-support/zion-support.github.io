@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { SEO } from "@/components/SEO",
 import { TalentCard } from "@/components/talent/TalentCard",
@@ -17,10 +18,32 @@ export default function SavedTalentsPage() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const router = useRouter(),
+=======
+import { useState, useEffect } from "react";
+import { SEO } from "@/components/SEO";
+import { TalentCard } from "@/components/talent/TalentCard";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { TalentProfile } from "@/types/talent";
+import { toast } from "@/components/ui/use-toast";
+import { useRouter } from 'next/router';
+import { logErrorToProduction } from '@/utils/productionLogger';
+import { EmptyState } from "@/components/ui/empty-state";
+import { Heart } from 'lucide-react'
+import { logInfo, logWarn } from '@/utils/productionLogger';
+
+export default function SavedTalentsPage() {
+
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter();
+>>>>>>> origin/auto/autonomy-17186719616
   // Using router.asPath instead of useLocation
 
   useEffect(() => {
     if (!user) {
+<<<<<<< HEAD
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`),
     }
   }, [user, router]),
@@ -32,6 +55,19 @@ export default function SavedTalentsPage() {
         if (!user) {
           logWarn("User not authenticated."),
           return,
+=======
+      router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`);
+    }
+  }, [user, router]);
+
+  useEffect(() => {
+    const fetchSavedTalents = async () => {
+      setIsLoading(true);
+      try {
+        if (!user) {
+          logWarn("User not authenticated.");
+          return;
+>>>>>>> origin/auto/autonomy-17186719616
         }
 
         const { data, error } = await supabase
@@ -55,16 +91,24 @@ export default function SavedTalentsPage() {
             )
           `
           )
+<<<<<<< HEAD
           .eq("user_id", user.id),
 
         if (error) {
           throw error,
+=======
+          .eq("user_id", user.id);
+
+        if (error) {
+          throw error;
+>>>>>>> origin/auto/autonomy-17186719616
         }
 
         if (data) {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
             (item: any) => item.talent_profile as unknown as TalentProfile
+<<<<<<< HEAD
           ),
           setSavedTalents(talentProfiles)
         }
@@ -92,12 +136,48 @@ export default function SavedTalentsPage() {
       title: "Hire Request Sent",
       description: `A hire request has been sent to ${talent.full_name}.`}),
   },
+=======
+          );
+          setSavedTalents(talentProfiles);
+        }
+      } catch (error) {
+        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching saved talents' });
+        toast({
+          title: "Error",
+          description: "Failed to load saved talents. Please try again later.",
+          variant: "destructive",
+        });
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchSavedTalents();
+  }, [user]);
+
+  const handleViewProfile = (talentId: string) => {
+    router.push(`/talent/${talentId}`);
+  };
+
+  const handleRequestHire = (talent: TalentProfile) => {
+    logInfo('Request to hire:', { data: talent });
+    toast({
+      title: "Hire Request Sent",
+      description: `A hire request has been sent to ${talent.full_name}.`,
+    });
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
       if (!user) {
+<<<<<<< HEAD
         logWarn("User not authenticated."),
         return
+=======
+        logWarn("User not authenticated.");
+        return;
+>>>>>>> origin/auto/autonomy-17186719616
       }
   
       if (isCurrentlySaved) {
@@ -106,26 +186,48 @@ export default function SavedTalentsPage() {
           .from('saved_talents')
           .delete()
           .eq('user_id', user.id)
+<<<<<<< HEAD
           .eq('talent_id', talentId),
   
         if (error) {
           throw error,
+=======
+          .eq('talent_id', talentId);
+  
+        if (error) {
+          throw error;
+>>>>>>> origin/auto/autonomy-17186719616
         }
   
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
+<<<<<<< HEAD
         ),
         toast({
           title: "Talent Removed",
           description: "Talent removed from saved list."}),
+=======
+        );
+        toast({
+          title: "Talent Removed",
+          description: "Talent removed from saved list.",
+        });
+>>>>>>> origin/auto/autonomy-17186719616
       } else {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
+<<<<<<< HEAD
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
         if (error) {
           throw error,
+=======
+          .insert([{ user_id: user.id, talent_id: talentId }]);
+  
+        if (error) {
+          throw error;
+>>>>>>> origin/auto/autonomy-17186719616
         }
   
         // Fetch the updated talent profile and add it to the list
@@ -133,6 +235,7 @@ export default function SavedTalentsPage() {
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
+<<<<<<< HEAD
           .single(),
   
         if (talentError) {
@@ -159,6 +262,37 @@ export default function SavedTalentsPage() {
         variant: "destructive"}),
     }
   },
+=======
+          .single();
+  
+        if (talentError) {
+          logErrorToProduction(talentError instanceof Error ? talentError.message : String(talentError), talentError instanceof Error ? talentError : undefined, { message: 'Error fetching talent profile' });
+          toast({
+            title: "Error",
+            description: "Failed to update saved talents. Please try again later.",
+            variant: "destructive",
+          });
+          return;
+        }
+  
+        if (talentData) {
+          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]);
+          toast({
+            title: "Talent Saved",
+            description: "Talent saved to your list.",
+          });
+        }
+      }
+    } catch (error) {
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error toggling saved talent' });
+      toast({
+        title: "Error",
+        description: "Failed to update saved talents. Please try again later.",
+        variant: "destructive",
+      });
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -199,5 +333,9 @@ export default function SavedTalentsPage() {
         )}
       </div>
     </>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

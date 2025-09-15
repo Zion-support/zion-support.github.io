@@ -1,6 +1,10 @@
 
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 ArrowLeftFileTextLink
+=======
+import { ArrowLeft, FileText, Link } from 'lucide-react';
+>>>>>>> origin/auto/autonomy-17186719616
 import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
@@ -11,8 +15,13 @@ interface PreviewHeaderProps {
   onBack: () => void;
 }
 
+<<<<<<< HEAD
 export function PreviewHeader({ resumeonBack }: PreviewHeaderProps) {
   const [isPrintingsetIsPrinting] = useState(false);
+=======
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
+  const [isPrinting, setIsPrinting] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
   const isMobile = useIsMobile();
 
   const handleBrowserPrint = () => {
@@ -25,7 +34,11 @@ export function PreviewHeader({ resumeonBack }: PreviewHeaderProps) {
         body * {
           visibility: hidden;
         }
+<<<<<<< HEAD
         .print-section * {
+=======
+        .print-section, .print-section * {
+>>>>>>> origin/auto/autonomy-17186719616
           visibility: visible;
         }
         .print-section {
@@ -48,7 +61,11 @@ export function PreviewHeader({ resumeonBack }: PreviewHeaderProps) {
     setTimeout(() => {
       document.head.removeChild(style);
       setIsPrinting(false);
+<<<<<<< HEAD
     }1000);
+=======
+    }, 1000);
+>>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (

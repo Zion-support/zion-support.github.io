@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
@@ -20,10 +21,21 @@ export function ApiErrorCodes() {
   "message": "The request was invalid",
 
 
+=======
+import React from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
+
+export function ApiErrorCodes() {
+  const errorExample = `{
+  "error": "validation_error",
+  "message": "The request was invalid",
+>>>>>>> origin/auto/autonomy-17186719616
   "details": [
     {
       "field": "title",
       "error": "Title is required"
+<<<<<<< HEAD
 
     }
     },
@@ -37,11 +49,21 @@ export function ApiErrorCodes() {
 }`;
 }`,
 
+=======
+    },
+    {
+      "field": "budget.min",
+      "error": "Budget minimum must be greater than 0"
+    }
+  ]
+}`;
+>>>>>>> origin/auto/autonomy-17186719616
 
   const rateLimitExample = `{
   "error": "rate_limit_exceeded",
   "message": "Rate limit exceeded. Try again in 30 seconds",
   "retry_after": 30
+<<<<<<< HEAD
 
 }`;
 }`,
@@ -285,10 +307,110 @@ export function ApiErrorCodes() {
   ],
 
 
+=======
+}`;
+
+  const errorCodes = [
+    {
+      status: 400,
+      code: "validation_error",
+      message: "The request was invalid. Check the details for specific field errors.",
+      details: "Includes field-specific validation errors."
+    },
+    {
+      status: 400,
+      code: "invalid_request",
+      message: "The request is invalid or malformed.",
+      details: "The request could not be processed due to syntactical errors."
+    },
+    {
+      status: 401,
+      code: "invalid_token",
+      message: "Invalid or expired API key.",
+      details: "The provided API key is incorrect, expired, or revoked."
+    },
+    {
+      status: 403,
+      code: "forbidden",
+      message: "You don't have permission to access this resource.",
+      details: "Your API key doesn't have the required permissions for this operation."
+    },
+    {
+      status: 404,
+      code: "not_found",
+      message: "The requested resource was not found.",
+      details: "The specified ID does not exist or is not accessible."
+    },
+    {
+      status: 409,
+      code: "conflict",
+      message: "The request conflicts with the current state of the resource.",
+      details: "For example, trying to create a duplicate resource or updating a resource that has been modified."
+    },
+    {
+      status: 429,
+      code: "rate_limit_exceeded",
+      message: "Rate limit exceeded. Try again later.",
+      details: "Includes retry_after parameter indicating when to retry."
+    },
+    {
+      status: 500,
+      code: "internal_error",
+      message: "An unexpected error occurred.",
+      details: "Something went wrong on our end. If the problem persists, contact support."
+    },
+    {
+      status: 503,
+      code: "service_unavailable",
+      message: "Service temporarily unavailable.",
+      details: "The API is temporarily unavailable due to maintenance or high load."
+    }
+  ];
+
+  const rateLimits = [
+    {
+      endpoint: "All GET endpoints",
+      limit: "100 requests per minute",
+      notes: "Aggregate limit across all GET endpoints"
+    },
+    {
+      endpoint: "All POST endpoints",
+      limit: "30 requests per minute",
+      notes: "Aggregate limit across all POST endpoints"
+    },
+    {
+      endpoint: "All PUT/PATCH endpoints",
+      limit: "30 requests per minute",
+      notes: "Aggregate limit across all PUT/PATCH endpoints"
+    },
+    {
+      endpoint: "All DELETE endpoints",
+      limit: "15 requests per minute",
+      notes: "Aggregate limit across all DELETE endpoints"
+    },
+    {
+      endpoint: "/api/jobs (Search)",
+      limit: "50 requests per minute",
+      notes: "Higher limit for common search operations"
+    },
+    {
+      endpoint: "/api/talent (Search)",
+      limit: "50 requests per minute",
+      notes: "Higher limit for common search operations"
+    },
+    {
+      endpoint: "Webhook delivery",
+      limit: "N/A",
+      notes: "Webhooks don't count against your rate limits"
+    }
+  ];
+
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
         <h1>Error Codes & Rate Limits</h1>
+<<<<<<< HEAD
         <h2>Error Format</h2>
         <p>
           When an error occurs, the API will return an appropriate HTTP status code along with
@@ -298,12 +420,33 @@ export function ApiErrorCodes() {
         <p>
           Most errors include:
         </p>
+=======
+        
+        <h2>Error Format</h2>
+        <p>
+          When an error occurs, the API will return an appropriate HTTP status code along with 
+          a JSON response body containing details about the error.
+        </p>
+        
+        <CodeBlock code={errorExample} language="json" showLineNumbers={true} />
+        
+        <p>
+          Most errors include:
+        </p>
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <ul>
           <li><code>error</code>: A machine-readable error code</li>
           <li><code>message</code>: A human-readable description of the error</li>
           <li><code>details</code>: Additional context about the error (when available)</li>
         </ul>
+<<<<<<< HEAD
         <h2>Common Error Codes</h2>
+=======
+
+        <h2>Common Error Codes</h2>
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="overflow-x-auto mb-8">
           <table className="w-full border-collapse">
             <thead>
@@ -332,6 +475,7 @@ export function ApiErrorCodes() {
             </tbody>
           </table>
         </div>
+<<<<<<< HEAD
         <h2>Handling Errors</h2>
         <p>
           Your application should be prepared to handle error responses appropriately: </p>
@@ -340,16 +484,40 @@ export function ApiErrorCodes() {
           <li><strong>429 errors</strong>: Implement retry logic with backoff</li>
           <li><strong>5xx errors</strong>: These are server-side issues, retry with backoff</li>
         </ul>
+=======
+
+        <h2>Handling Errors</h2>
+        <p>
+          Your application should be prepared to handle error responses appropriately:
+        </p>
+        
+        <ul>
+          <li><strong>401 and 403 errors</strong>: Check your API key and permissions</li>
+          <li><strong>429 errors</strong>: Implement retry logic with backoff</li>
+          <li><strong>5xx errors</strong>: These are server-side issues; retry with backoff</li>
+        </ul>
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <h3>Rate Limiting</h3>
         <p>
           When you exceed the rate limit, you'll receive a 429 response with details on when to retry:
         </p>
+<<<<<<< HEAD
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />
+=======
+        
+        <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <h2>Rate Limits</h2>
         <p>
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.
           The limits are based on the number of requests per minute per API key.
         </p>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="overflow-x-auto mb-8">
           <table className="w-full border-collapse">
             <thead>
@@ -370,15 +538,27 @@ export function ApiErrorCodes() {
             </tbody>
           </table>
         </div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <h3>Rate Limit Headers</h3>
         <p>
           All API responses include headers to help you track your rate limit usage:
         </p>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <ul>
           <li><code>X-RateLimit-Limit</code>: The maximum number of requests allowed per minute</li>
           <li><code>X-RateLimit-Remaining</code>: The number of requests remaining in the current window</li>
           <li><code>X-RateLimit-Reset</code>: The time at which the current rate limit window resets (Unix timestamp)</li>
         </ul>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <h3>Best Practices for Rate Limits</h3>
         <ul>
           <li>Monitor the rate limit headers to avoid hitting limits</li>
@@ -386,6 +566,7 @@ export function ApiErrorCodes() {
           <li>Cache responses when possible to reduce API calls</li>
           <li>For high-volume needs, contact us about increased limits</li>
         </ul>
+<<<<<<< HEAD
         <h2>Need Help?</h2>
         <p>
 
@@ -601,3 +782,17 @@ export default ApiErrorCodes;
 ;
 export default ApiErrorCodes;
 
+=======
+        
+        <h2>Need Help?</h2>
+        <p>
+          If you're encountering persistent errors or need higher rate limits, please 
+          <a href="#" className="text-zion-cyan"> contact our support team</a>.
+        </p>
+      </div>
+    </ApiDocsLayout>
+  );
+}
+
+export default ApiErrorCodes;
+>>>>>>> origin/auto/autonomy-17186719616

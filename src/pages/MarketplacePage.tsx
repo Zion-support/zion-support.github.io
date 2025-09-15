@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { useTranslation } from 'react-i18next',
@@ -15,6 +16,25 @@ import { MARKETPLACE_LISTINGS } from '@/data/listingData',
 import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts',
 import { useCurrency } from '@/hooks/useCurrency',
 import {logErrorToProduction} from '@/utils/productionLogger',
+=======
+import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
+import { NextSeo } from '@/components/NextSeo';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { MARKETPLACE_LISTINGS } from '@/data/listingData';
+import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts';
+import { useCurrency } from '@/hooks/useCurrency';
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/auto/autonomy-17186719616
 
 
 // Market insights component
@@ -45,7 +65,11 @@ const MarketplaceInsights = ({ stats }: { stats: any }) => (
       </div>
     </CardContent>
   </Card>
+<<<<<<< HEAD
 ),
+=======
+);
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Filter controls
 const MarketplaceFilterControls = ({
@@ -76,6 +100,7 @@ const MarketplaceFilterControls = ({
       {showRecommended ? "All Products" : "Recommended"}
     </Button>
   </div>
+<<<<<<< HEAD
 ),
 
 import { useDispatch } from 'react-redux',
@@ -87,6 +112,19 @@ import { toast } from '@/hooks/use-toast',
 // Product card
 const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: () => void, onAddToCart: () => void }) => {
   const { formatPrice } = useCurrency(),
+=======
+);
+
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { toast } from '@/hooks/use-toast';
+
+// Product card
+const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing; onViewDetails: () => void; onAddToCart: () => void; }) => {
+  const { formatPrice } = useCurrency();
+>>>>>>> origin/auto/autonomy-17186719616
   return (
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
@@ -136,14 +174,20 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
       </div>
     </CardContent>
   </Card>
+<<<<<<< HEAD
   ),
 },
+=======
+  );
+};
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Loading grid
 const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
   </div>
+<<<<<<< HEAD
 ),
 
 // Main component
@@ -168,17 +212,48 @@ function MarketplacePageContent() {
       let processedDataset = fullDataset,
       if (filterCategory) {
         processedDataset = processedDataset.filter(p => p.category === filterCategory),
+=======
+);
+
+// Main component
+function MarketplacePageContent() {
+  const router = useRouter();
+  const { t } = useTranslation();
+  const dispatch = useDispatch<AppDispatch>();
+  const { isAuthenticated } = useAuth();
+  const [sortBy, setSortBy] = useState('newest');
+  const [filterCategory, setFilterCategory] = useState('');
+  const [showRecommended, setShowRecommended] = useState(false);
+
+  const fetchProducts = useCallback(async (page: number, limit: number) => {
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 300));
+
+    try {
+      // Combine initial products with marketplace listings
+      const fullDataset: ProductListing[] = [...INITIAL_MARKETPLACE_PRODUCTS, ...MARKETPLACE_LISTINGS];
+
+      // Apply category filtering
+      let processedDataset = fullDataset;
+      if (filterCategory) {
+        processedDataset = processedDataset.filter(p => p.category === filterCategory);
+>>>>>>> origin/auto/autonomy-17186719616
       }
 
       // Apply recommended filtering
       if (showRecommended) {
+<<<<<<< HEAD
         processedDataset = processedDataset.filter(p => (p.rating || 0) >= 4.5 || (p.aiScore || 0) >= 85),
+=======
+        processedDataset = processedDataset.filter(p => (p.rating || 0) >= 4.5 || (p.aiScore || 0) >= 85);
+>>>>>>> origin/auto/autonomy-17186719616
       }
 
       // Sort the processed dataset
       processedDataset.sort((a, b) => {
         switch (sortBy) {
           case 'price-low':
+<<<<<<< HEAD
             return (a.price || 0) - (b.price || 0),
           case 'price-high':
             return (b.price || 0) - (a.price || 0),
@@ -197,17 +272,46 @@ function MarketplacePageContent() {
       const startIndex = (page - 1) * limit,
       const endIndex = startIndex + limit,
       const items = processedDataset.slice(startIndex, endIndex),
+=======
+            return (a.price || 0) - (b.price || 0);
+          case 'price-high':
+            return (b.price || 0) - (a.price || 0);
+          case 'rating':
+            return (b.rating || 0) - (a.rating || 0);
+          case 'popular':
+            return (b.reviewCount || 0) - (a.reviewCount || 0);
+          case 'ai-score':
+            return (b.aiScore || 0) - (a.aiScore || 0);
+          default: // 'newest'
+            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
+        }
+      });
+
+      // Slice for pagination
+      const startIndex = (page - 1) * limit;
+      const endIndex = startIndex + limit;
+      const items = processedDataset.slice(startIndex, endIndex);
+>>>>>>> origin/auto/autonomy-17186719616
 
       return {
         items,
         hasMore: endIndex < processedDataset.length,
         total: processedDataset.length
+<<<<<<< HEAD
       },
     } catch (error) {
       logErrorToProduction('Error in fetchProducts:', { data: error }),
       throw new Error('Failed to load marketplace data. Please try again.'),
     }
   }, [sortBy, filterCategory, showRecommended]),
+=======
+      };
+    } catch (error) {
+      logErrorToProduction('Error in fetchProducts:', { data: error });
+      throw new Error('Failed to load marketplace data. Please try again.');
+    }
+  }, [sortBy, filterCategory, showRecommended]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const {
     items: products,
@@ -220,11 +324,16 @@ function MarketplacePageContent() {
     refresh,
     scrollToTop,
     loadMore
+<<<<<<< HEAD
   } = useInfiniteScrollPagination(fetchProducts, 12),
+=======
+  } = useInfiniteScrollPagination(fetchProducts, 12);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Refresh when filters change
   useEffect(() => {
     const timeoutId = setTimeout(() => {
+<<<<<<< HEAD
       refresh(),
     }, 100),
 
@@ -233,11 +342,22 @@ function MarketplacePageContent() {
 
   const marketStats = useMemo(() => {
     if (products.length === 0) return null,
+=======
+      refresh();
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, [sortBy, filterCategory, showRecommended, refresh]);
+
+  const marketStats = useMemo(() => {
+    if (products.length === 0) return null;
+>>>>>>> origin/auto/autonomy-17186719616
     return {
       averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
       averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
       availableCount: products.filter(p => p.availability === "Available").length
+<<<<<<< HEAD
     },
   }, [products]),
 
@@ -251,6 +371,21 @@ function MarketplacePageContent() {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll),
   }, []),
+=======
+    };
+  }, [products]);
+
+  const categories = useMemo(() => {
+    return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"];
+  }, []);
+
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Loading state
   if (loading && products.length === 0) {
@@ -271,7 +406,11 @@ function MarketplacePageContent() {
         <MarketplaceLoadingGrid />
       </div>
       </>
+<<<<<<< HEAD
     ),
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   // Error state
@@ -300,7 +439,11 @@ function MarketplacePageContent() {
         </div>
       </div>
       </>
+<<<<<<< HEAD
     ),
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -354,21 +497,38 @@ function MarketplacePageContent() {
                 onViewDetails={() => {
                   if (typeof window !== 'undefined') {
                     try {
+<<<<<<< HEAD
                       sessionStorage.setItem(`product:${item.id}`, JSON.stringify(item)),
+=======
+                      sessionStorage.setItem(`product:${item.id}`, JSON.stringify(item));
+>>>>>>> origin/auto/autonomy-17186719616
                     } catch {
                       // ignore storage errors
                     }
                   }
+<<<<<<< HEAD
                   router.push(`/marketplace/listing/${item.id}`),
                 }}
                 onAddToCart={() => {
                   dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),
+=======
+                  router.push(`/marketplace/listing/${item.id}`);
+                }}
+                onAddToCart={() => {
+                  dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 }));
+>>>>>>> origin/auto/autonomy-17186719616
                   toast({
                     title: 'Added to cart',
                     description: `${item.title} has been added to your cart`,
                     action: {
                       label: 'View Cart',
+<<<<<<< HEAD
                       onClick: () => router.push('/cart')}}),
+=======
+                      onClick: () => router.push('/cart'),
+                    },
+                  });
+>>>>>>> origin/auto/autonomy-17186719616
                 }}
               />
             </motion.div>
@@ -423,10 +583,18 @@ function MarketplacePageContent() {
       </AnimatePresence>
     </div>
     </>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 // Main export
 export default function MarketplacePage() {
+<<<<<<< HEAD
   return <MarketplacePageContent />,
+=======
+  return <MarketplacePageContent />;
+>>>>>>> origin/auto/autonomy-17186719616
 }

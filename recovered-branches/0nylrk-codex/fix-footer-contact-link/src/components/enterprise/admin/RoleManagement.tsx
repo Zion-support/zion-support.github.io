@@ -6,7 +6,12 @@ import {
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table";
+=======
+  TableRow,
+} from "@/components/ui/table";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "@/hooks/use-toast";
@@ -15,7 +20,12 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
+<<<<<<< HEAD
   TooltipTrigger} from "@/components/ui/tooltip";
+=======
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function RoleManagement() {
   // Mock team members data
@@ -31,7 +41,13 @@ export function RoleManagement() {
         createJobs: true,
         manageTeam: true,
         viewBilling: true,
+<<<<<<< HEAD
         manageBilling: true}},
+=======
+        manageBilling: true,
+      },
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 2,
       name: "Jamie Smith",
@@ -43,7 +59,13 @@ export function RoleManagement() {
         createJobs: true,
         manageTeam: false,
         viewBilling: false,
+<<<<<<< HEAD
         manageBilling: false}},
+=======
+        manageBilling: false,
+      },
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 3,
       name: "Sam Williams",
@@ -55,7 +77,13 @@ export function RoleManagement() {
         createJobs: true,
         manageTeam: false,
         viewBilling: true,
+<<<<<<< HEAD
         manageBilling: false}},
+=======
+        manageBilling: false,
+      },
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: 4,
       name: "Taylor Brown",
@@ -67,6 +95,7 @@ export function RoleManagement() {
         createJobs: false,
         manageTeam: false,
         viewBilling: false,
+<<<<<<< HEAD
         manageBilling: false}}];
 
   const handlePermissionChange = (memberId: numberpermission: stringvalue: boolean) => {
@@ -81,13 +110,38 @@ export function RoleManagement() {
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"};
+=======
+        manageBilling: false,
+      },
+    },
+  ];
+
+  const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {
+    // In a real app, this would make an API call to update permissions
+    toast({
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`,
+    });
+  };
+
+  const roleDescriptions: Record<string, string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates",
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6">
       <div>
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+<<<<<<< HEAD
           {Object.entries(roleDescriptions).map(([roledescription]) => (
+=======
+          {Object.entries(roleDescriptions).map(([role, description]) => (
+>>>>>>> origin/auto/autonomy-17186719616
             <div key={role} className="bg-card rounded-lg p-4 border border-border">
               <div className="flex items-center gap-2 mb-2">
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
@@ -158,7 +212,11 @@ export function RoleManagement() {
                         <InfoIcon className="h-4 w-4 text-muted-foreground" />
                       </TooltipTrigger>
                       <TooltipContent>
+<<<<<<< HEAD
                         Can addeditand remove team members
+=======
+                        Can add, edit, and remove team members
+>>>>>>> origin/auto/autonomy-17186719616
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -205,7 +263,11 @@ export function RoleManagement() {
                   <Switch 
                     checked={member.permissions.viewCandidates} 
                     onCheckedChange={(checked) => 
+<<<<<<< HEAD
                       handlePermissionChange(member.id"viewCandidates"checked)
+=======
+                      handlePermissionChange(member.id, "viewCandidates", checked)
+>>>>>>> origin/auto/autonomy-17186719616
                     }
                   />
                 </TableCell>
@@ -213,7 +275,11 @@ export function RoleManagement() {
                   <Switch 
                     checked={member.permissions.editCandidates} 
                     onCheckedChange={(checked) => 
+<<<<<<< HEAD
                       handlePermissionChange(member.id"editCandidates"checked)
+=======
+                      handlePermissionChange(member.id, "editCandidates", checked)
+>>>>>>> origin/auto/autonomy-17186719616
                     }
                   />
                 </TableCell>
@@ -221,7 +287,11 @@ export function RoleManagement() {
                   <Switch 
                     checked={member.permissions.createJobs} 
                     onCheckedChange={(checked) => 
+<<<<<<< HEAD
                       handlePermissionChange(member.id"createJobs"checked)
+=======
+                      handlePermissionChange(member.id, "createJobs", checked)
+>>>>>>> origin/auto/autonomy-17186719616
                     }
                   />
                 </TableCell>
@@ -229,7 +299,11 @@ export function RoleManagement() {
                   <Switch 
                     checked={member.permissions.manageTeam} 
                     onCheckedChange={(checked) => 
+<<<<<<< HEAD
                       handlePermissionChange(member.id"manageTeam"checked)
+=======
+                      handlePermissionChange(member.id, "manageTeam", checked)
+>>>>>>> origin/auto/autonomy-17186719616
                     }
                   />
                 </TableCell>
@@ -237,7 +311,11 @@ export function RoleManagement() {
                   <Switch 
                     checked={member.permissions.viewBilling} 
                     onCheckedChange={(checked) => 
+<<<<<<< HEAD
                       handlePermissionChange(member.id"viewBilling"checked)
+=======
+                      handlePermissionChange(member.id, "viewBilling", checked)
+>>>>>>> origin/auto/autonomy-17186719616
                     }
                   />
                 </TableCell>

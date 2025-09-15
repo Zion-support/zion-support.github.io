@@ -1,6 +1,7 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
+<<<<<<< HEAD
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js', '@testing-library/jest-dom'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
@@ -85,5 +86,23 @@ module.exports = {
   verbose: false,
   testEnvironmentOptions: {
     customExportConditions: ['node', 'node-addons']
+=======
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  moduleNameMapper: {
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(gif|ttf|eot|svg|png|jpg)$': '<rootDir>/__mocks__/fileMock.js'
+  },
+  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/out/'],
+  coverageDirectory: 'coverage',
+  collectCoverage: true,
+  coverageReporters: ['text', 'lcov'],
+  coverageThreshold: {
+    global: {
+      branches: 60,
+      functions: 60,
+      lines: 60,
+      statements: 60
+    }
+>>>>>>> origin/auto/autonomy-17186719616
   }
 };

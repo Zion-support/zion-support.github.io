@@ -2,22 +2,37 @@
 import React from "react";
 import { format } from "date-fns";
 import { 
+<<<<<<< HEAD
   Card
   CardContent
   CardHeader
   CardTitle
+=======
+  Card, 
+  CardContent, 
+  CardHeader, 
+  CardTitle, 
+>>>>>>> origin/auto/autonomy-17186719616
   CardDescription
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
+<<<<<<< HEAD
 import { EyeMessageSquareArchiveIconRefreshCwCalendarIcon } from "lucide-react";
+=======
+import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import type { QuoteRequest } from "@/types/quotes";
 
 type QuoteRequestCardProps = {
   quote: QuoteRequest;
   onViewDetails: (quote: QuoteRequest) => void;
   onMarkAsResponded?: (id: string) => void;
+<<<<<<< HEAD
   onToggleArchive: (id: stringisArchived: boolean) => void;
+=======
+  onToggleArchive: (id: string, isArchived: boolean) => void;
+>>>>>>> origin/auto/autonomy-17186719616
 };
 
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
@@ -29,7 +44,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   // Format date for display
   const formatDate = (dateString: string) => {
     try {
+<<<<<<< HEAD
       return format(new Date(dateString)'PP');
+=======
+      return format(new Date(dateString), 'PP');
+>>>>>>> origin/auto/autonomy-17186719616
     } catch (e) {
       return dateString;
     }
@@ -88,7 +107,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
             <Button
               variant="ghost"
               size="sm"
+<<<<<<< HEAD
               onClick={() => onToggleArchive(quote.id!quote.is_archived)}
+=======
+              onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
+>>>>>>> origin/auto/autonomy-17186719616
               className="flex items-center gap-1"
             >
               {quote.is_archived ? (

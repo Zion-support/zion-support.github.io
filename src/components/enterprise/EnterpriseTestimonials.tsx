@@ -1,12 +1,21 @@
 
+<<<<<<< HEAD
 import React from "react",
+=======
+import React from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Quote } from 'lucide-react'
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
+<<<<<<< HEAD
   CarouselPrevious} from "@/components/ui/carousel",
+=======
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+>>>>>>> origin/auto/autonomy-17186719616
 
 const testimonials = [
   {
@@ -14,19 +23,35 @@ const testimonials = [
     author: "Sarah Johnson",
     title: "VP of Talent Acquisition",
     company: "TechGlobal Inc.",
+<<<<<<< HEAD
     image: "/placeholder.svg"},
+=======
+    image: "/placeholder.svg",
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   {
     quote: "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",
     author: "Michael Chen",
     title: "Director of HR",
     company: "InnovateCorp",
+<<<<<<< HEAD
     image: "/placeholder.svg"},
+=======
+    image: "/placeholder.svg",
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   {
     quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
     author: "Elena Rodriguez",
     title: "CTO",
     company: "FutureTech Systems",
+<<<<<<< HEAD
     image: "/placeholder.svg"}],
+=======
+    image: "/placeholder.svg",
+  },
+];
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function EnterpriseTestimonials() {
   return (
@@ -40,6 +65,7 @@ export function EnterpriseTestimonials() {
             See how enterprise teams are transforming their hiring process
           </p>
         </div>
+<<<<<<< HEAD
         <Carousel className='w-full'>
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
@@ -48,6 +74,12 @@ export function EnterpriseTestimonials() {
                   <Quote className='h-10 w-10 text-primary/20 mb-4' />
                   <blockquote className='text-xl mb-6 italic'>
             {testimonials.map((testimonial, index,) => (
+=======
+
+        <Carousel className="w-full">
+          <CarouselContent>
+            {testimonials.map((testimonial, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />
@@ -59,12 +91,21 @@ export function EnterpriseTestimonials() {
                       <img
                         src={testimonial.image}
                         alt={testimonial.author}
+<<<<<<< HEAD
                         className='h-full w-full object-cover'
                         loading='lazy'                      />
                     </div>
                     <div>
                       <p className='font-bold'>{testimonial.author}</p>
                       <p className='text-sm text-muted-foreground'>                        {testimonial.title}, {testimonial.company}                      <p className="font-bold">{testimonial.author}</p>
+=======
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-bold">{testimonial.author}</p>
+>>>>>>> origin/auto/autonomy-17186719616
                       <p className="text-sm text-muted-foreground">
                         {testimonial.title}, {testimonial.company}
                       </p>
@@ -74,6 +115,7 @@ export function EnterpriseTestimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
+<<<<<<< HEAD
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">
             <CarouselPrevious />
 
@@ -101,11 +143,16 @@ export function EnterpriseTestimonials() {
 
 
 
+=======
+          <div className="flex justify-center gap-2 mt-8">
+            <CarouselPrevious />
+>>>>>>> origin/auto/autonomy-17186719616
             <CarouselNext />
           </div>
         </Carousel>
       </div>
     </section>
+<<<<<<< HEAD
   ),
 }
     </section>);
@@ -114,3 +161,7 @@ export function EnterpriseTestimonials() {
 }
 ;
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

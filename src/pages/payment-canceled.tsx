@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useRouter } from 'next/router', // Changed from useNavigate
@@ -6,6 +7,15 @@ import { XCircle } from 'lucide-react'
 
 export default function PaymentCanceled() {
   const router = useRouter(), // Changed from navigate
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/router'; // Changed from useNavigate
+import { XCircle } from 'lucide-react'
+
+export default function PaymentCanceled() {
+  const router = useRouter(); // Changed from navigate
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="flex flex-1 bg-zion-blue items-center justify-center p-4">
@@ -31,12 +41,20 @@ export default function PaymentCanceled() {
           <Button 
             variant="outline"
             onClick={() => router.push('/dashboard')} // Changed to router.push
+<<<<<<< HEAD
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
+=======
+            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+>>>>>>> origin/auto/autonomy-17186719616
           >
             Return to Dashboard
           </Button>
         </div>
         </div>
       </div>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

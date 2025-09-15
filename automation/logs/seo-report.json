@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-08-24T00:03:25.250Z",
+=======
+  "timestamp": "2025-08-23T23:59:59.120Z",
+>>>>>>> origin/auto/autonomy-17186719616
   "issues": [
     {
       "file": "/home/runner/work/zion.app/zion.app/pages/404.tsx",
@@ -27,6 +31,18 @@
         "missing-og",
         "missing-structured-data"
       ]
+<<<<<<< HEAD
+=======
+    },
+    {
+      "file": "/home/runner/work/zion.app/zion.app/pages/index.tsx",
+      "issues": [
+        "missing-title",
+        "missing-description",
+        "missing-og",
+        "missing-structured-data"
+      ]
+>>>>>>> origin/auto/autonomy-17186719616
     }
   ]
 }

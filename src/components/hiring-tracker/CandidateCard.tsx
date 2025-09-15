@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react",
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -9,11 +10,25 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
+=======
+import { useState } from "react";
+// Local stub is used in place of the @hello-pangea/dnd package which isn't
+// available in this environment.
+import { Draggable } from "@/lib/dnd-stub";
+import { formatDistanceToNow } from "date-fns";
+import Link from "next/link";
+import { JobApplication } from "@/types/jobs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar"; // Renamed to avoid conflict
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+>>>>>>> origin/auto/autonomy-17186719616
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",
@@ -30,11 +45,34 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   const [notes, setNotes] = useState(application.notes || ""),
   const [showHireModal, setShowHireModal] = useState(false),
   const [avatarError, setAvatarError] = useState(false),
+=======
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+import Image from 'next/image'; // Import next/image
+
+interface CandidateCardProps {
+  application: JobApplication;
+  index: number;
+}
+
+export function CandidateCard({ application, index }: CandidateCardProps) {
+  const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application.notes || "");
+  const [showHireModal, setShowHireModal] = useState(false);
+  const [avatarError, setAvatarError] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Check if application is stalled (no activity for 7 days)
   const isStalled = application.updated_at && 
     new Date(application.updated_at).getTime() < 
+<<<<<<< HEAD
     (Date.now() - 7 * 24 * 60 * 60 * 1000),
+=======
+    (Date.now() - 7 * 24 * 60 * 60 * 1000);
+>>>>>>> origin/auto/autonomy-17186719616
   
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
@@ -42,23 +80,37 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     toast({
       title: "Notes saved",
       description: "Your notes have been saved"
+<<<<<<< HEAD
     }),
     setShowNotes(false),
   },
+=======
+    });
+    setShowNotes(false);
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal
     toast({
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
+<<<<<<< HEAD
     }),
   },
 
   const candidateName = application.talent_profile?.full_name || "Candidate",
+=======
+    });
+  };
+
+  const candidateName = application.talent_profile?.full_name || "Candidate";
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
+<<<<<<< HEAD
         {provided => (
           <Card
             className='mb-2 p-0 shadow-sm border'
@@ -71,6 +123,16 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
             {...provided.dragHandleProps}
           >
             <CardContent className='p-3'>
+=======
+        {(provided) => (
+          <Card 
+            className="mb-2 p-0 shadow-sm border"
+            ref={provided.innerRef}
+            {...provided.draggableProps}
+            {...provided.dragHandleProps}
+          >
+            <CardContent className="p-3">
+>>>>>>> origin/auto/autonomy-17186719616
               {/* Candidate Header */}
               <div className="flex justify-between items-start mb-2">
                 <div className="flex items-center gap-2">
@@ -127,6 +189,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div>
+<<<<<<< HEAD
               {/* Application Info */}
               <div className='flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2'>
                 <div className='flex items-center'>
@@ -178,6 +241,48 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 
               <div className="flex justify-between mt-2 gap-1">
 
+=======
+              
+              {/* Application Info */}
+              <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">
+                <div className="flex items-center">
+                  <Calendar className="h-3 w-3 mr-1" />
+                  {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+                </div>
+                
+                {isStalled && (
+                  <div className="flex items-center text-amber-500">
+                    <AlertTriangle className="h-3 w-3 mr-1" />
+                    Stalled
+                  </div>
+                )}
+              </div>
+              
+              {/* Match Score */}
+              {application.match_score !== null && application.match_score !== undefined && (
+                <div className="mb-2">
+                  <ScoreBadge application={application} />
+                </div>
+              )}
+              
+              {/* Notes Section */}
+              {showNotes && (
+                <div className="mt-2">
+                  <Textarea 
+                    placeholder="Add private notes about this candidate..." 
+                    className="text-xs min-h-[60px]"
+                    value={notes}
+                    onChange={(e) => setNotes(e.target.value)}
+                  />
+                  <div className="flex justify-end mt-2">
+                    <Button size="sm" onClick={handleSaveNotes}>Save Notes</Button>
+                  </div>
+                </div>
+              )}
+              
+              {/* Action Buttons */}
+              <div className="flex justify-between mt-2 gap-1">
+>>>>>>> origin/auto/autonomy-17186719616
                 <Button 
                   variant="outline" 
                   size="sm" 
@@ -211,6 +316,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   size="sm" 
                   className="flex-1"
                   onClick={() => setShowHireModal(true)}
+<<<<<<< HEAD
                 >;
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;
                 </Button>;
@@ -616,14 +722,32 @@ function CandidateCard() {
       </Draggable>;
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
+=======
+                >
+                  <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+      </Draggable>
+      
+      {/* Hire Confirmation Modal */}
+      <HireConfirmationModal
+>>>>>>> origin/auto/autonomy-17186719616
         isOpen={showHireModal}
         onClose={() => setShowHireModal(false)}
         application={application}
         onConfirm={handleHireConfirmed}
       />
     </>
+<<<<<<< HEAD
   ),
 }
 
 ;
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

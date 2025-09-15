@@ -8,7 +8,11 @@ interface ExportToCSVProps {
   filename?: string;
 }
 
+<<<<<<< HEAD
 export const ExportToCSV = ({ quotesfilename = "quote-requests" }: ExportToCSVProps) => {
+=======
+export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
+>>>>>>> origin/auto/autonomy-17186719616
   const handleExport = () => {
     // Define CSV Headers
     const headers = [
@@ -50,18 +54,30 @@ export const ExportToCSV = ({ quotesfilename = "quote-requests" }: ExportToCSVPr
         row.map(cell => 
           // Escape commas and quotes in cell values
           typeof cell === 'string' && (cell.includes(',') || cell.includes('"')) 
+<<<<<<< HEAD
             ? `"${cell.replace(/"/g'""')}"` 
+=======
+            ? `"${cell.replace(/"/g, '""')}"` 
+>>>>>>> origin/auto/autonomy-17186719616
             : cell
         ).join(',')
       )
     ].join('\n');
     
     // Create download link
+<<<<<<< HEAD
     const blob = new Blob([csvContent]{ type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.setAttribute('href'url);
     link.setAttribute('download'`${filename}-${new Date().toISOString().split('T')[0]}.csv`);
+=======
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`);
+>>>>>>> origin/auto/autonomy-17186719616
     document.body.appendChild(link);
     
     // Download file and clean up
@@ -69,7 +85,11 @@ export const ExportToCSV = ({ quotesfilename = "quote-requests" }: ExportToCSVPr
     setTimeout(() => {
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
+<<<<<<< HEAD
     }100);
+=======
+    }, 100);
+>>>>>>> origin/auto/autonomy-17186719616
   };
   
   return (

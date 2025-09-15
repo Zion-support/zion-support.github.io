@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React from 'react',
 import { motion } from 'framer-motion',
 import { 
   CheckCircle,
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  CheckCircle, 
+>>>>>>> origin/auto/autonomy-17186719616
   Mail, 
   Clock, 
   Users, 
@@ -9,10 +16,17 @@ import {
   Home,
   Briefcase,
   Phone
+<<<<<<< HEAD
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
 import Link from 'next/link',
+=======
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import SEO from '../components/SEO';
+import Link from 'next/link';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function ThankYouPage() {
   const nextSteps = [
@@ -34,12 +48,20 @@ export default function ThankYouPage() {
       icon: <Phone className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-500'
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
 	return (
 		<>
 			<SEO title="Thank You" description="Thank you for your message" url="/thank-you" />
+<<<<<<< HEAD
 			<section className="relative pt-28 pb-16 md: pt-36 md:pb-24">
+=======
+			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
+>>>>>>> origin/auto/autonomy-17186719616
 				<div className="container mx-auto px-4 max-w-2xl text-center">
 					<h1 className="text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple">Thank you</h1>
 					<p className="mt-4 text-gray-300">Your message has been received. Our team will get back to you shortly.</p>
@@ -50,5 +72,9 @@ export default function ThankYouPage() {
 				</div>
 			</section>
 		</>
+<<<<<<< HEAD
 	)
+=======
+	);
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -37,6 +38,21 @@ export default function ServiceDescriptionGenerator() {
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
   
 
+=======
+import React, { useState } from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm";
+import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay";
+import { SEO } from "@/components/SEO";
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+
+export default function ServiceDescriptionGenerator() {
+  const { isAuthenticated, isLoading } = useAuth();
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+  
+>>>>>>> origin/auto/autonomy-17186719616
   // Show loading while checking authentication
   if (isLoading) {
     return (
@@ -45,6 +61,7 @@ export default function ServiceDescriptionGenerator() {
           Loading...
         </div>
       </div>
+<<<<<<< HEAD
     )
   }
   // Redirect to login if not authenticated
@@ -63,6 +80,25 @@ export default function ServiceDescriptionGenerator() {
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO
         title="Service Description Generator"
+=======
+    );
+  }
+  
+  // Redirect to login if not authenticated
+  if (!isAuthenticated) {
+    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
+  }
+
+  const handleDescriptionSave = (editedDescription: string) => {
+    setGeneratedDescription(editedDescription);
+    // Here you could also save to database if needed
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col bg-zion-blue">
+      <SEO 
+        title="Service Description Generator" 
+>>>>>>> origin/auto/autonomy-17186719616
         description="Generate professional service descriptions using AI"
         keywords="service description, AI content, professional description generator"
       />
@@ -73,6 +109,7 @@ export default function ServiceDescriptionGenerator() {
           <p className="text-zion-slate mb-8">
             Create professional service descriptions with the help of AI. Just provide basic details about your service.
           </p>
+<<<<<<< HEAD
           <div className="space-y-8">
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
             {generatedDescription && (
@@ -217,3 +254,22 @@ if ( {) {
     </div>);
 }
 
+=======
+          
+          <div className="space-y-8">
+            <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
+            
+            {generatedDescription && (
+              <GeneratedDescriptionDisplay 
+                description={generatedDescription}
+                onSave={handleDescriptionSave}
+              />
+            )}
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

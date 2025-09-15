@@ -14,7 +14,11 @@ interface PreviewResumeProps {
   onBack: () => void;
 }
 
+<<<<<<< HEAD
 export function PreviewResume({ resumeonBack }: PreviewResumeProps) {
+=======
+export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -483,4 +484,14 @@ export default function IntelligentProjectManagementSuite() {
       </section>
     </div>
   );
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+
+export async function getStaticProps() {
+	return (getSlugStaticProps as any)({ params: { slug: 'intelligent-project-management-suite' } });
+}
+
+export default function IntelligentProjectManagementSuite(props: any) {
+	return <ServicePage {...props} />;
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,13 +1,22 @@
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
+<<<<<<< HEAD
 import { Checkbox } from "@/components/ui/checkbox",
 import { AvailabilityFilterProps } from "@/types/filters",
+=======
+import { Checkbox } from "@/components/ui/checkbox";
+import { AvailabilityFilterProps } from "@/types/filters";
+>>>>>>> origin/auto/autonomy-17186719616
 
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
   { id: "project", label: "Project-based" }
+<<<<<<< HEAD
 ],
+=======
+];
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
@@ -42,10 +51,17 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
               </label>
             </div>
           ))}
+<<<<<<< HEAD
 
         </div>
 
       )}
     </div>
   ),
+=======
+        </div>
+      )}
+    </div>
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

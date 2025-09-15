@@ -1,15 +1,29 @@
 
+<<<<<<< HEAD
 import React{ useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { CardContent } from '@/components/ui/card';
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
+<<<<<<< HEAD
   AccordionTrigger} from '@/components/ui/accordion';
 Loader2SparklesPlusCalendar
 import { formatparseISO } from 'date-fns';
 import { MilestoneInputGeneratedMilestoneuseMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
+=======
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react';
+import { format, parseISO } from 'date-fns';
+import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
+>>>>>>> origin/auto/autonomy-17186719616
 import { Badge } from '@/components/ui/badge';
 
 interface AIMilestoneGeneratorProps {
@@ -29,8 +43,13 @@ export function AIMilestoneGenerator({
   onAddMilestones,
   onAddMilestone
 }: AIMilestoneGeneratorProps) {
+<<<<<<< HEAD
   const { generateMilestonesgeneratedMilestonesisGeneratingclearGeneratedMilestones } = useMilestoneGenerator();
   const [selectedMilestonesetSelectedMilestones] = useState<Record<stringboolean>>({});
+=======
+  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
+  const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleGenerateMilestones = async () => {
     if (!scope || !startDate || !projectType) {
@@ -47,14 +66,22 @@ export function AIMilestoneGenerator({
     await generateMilestones(input);
     // Initially select all milestones
     const initialSelection = {};
+<<<<<<< HEAD
     generatedMilestones.forEach((_index) => {
+=======
+    generatedMilestones.forEach((_, index) => {
+>>>>>>> origin/auto/autonomy-17186719616
       initialSelection[index] = true;
     });
     setSelectedMilestones(initialSelection);
   };
 
   const handleAddToProject = () => {
+<<<<<<< HEAD
     const selectedMilestonesList = generatedMilestones.filter((_index) => 
+=======
+    const selectedMilestonesList = generatedMilestones.filter((_, index) => 
+>>>>>>> origin/auto/autonomy-17186719616
       selectedMilestones[index]
     );
     
@@ -76,7 +103,11 @@ export function AIMilestoneGenerator({
 
   const formatDate = (dateString: string) => {
     try {
+<<<<<<< HEAD
       return format(parseISO(dateString)'MMM ddyyyy');
+=======
+      return format(parseISO(dateString), 'MMM dd, yyyy');
+>>>>>>> origin/auto/autonomy-17186719616
     } catch (error) {
       return dateString;
     }
@@ -124,7 +155,11 @@ export function AIMilestoneGenerator({
             </div>
 
             <Accordion type="multiple" className="w-full">
+<<<<<<< HEAD
               {generatedMilestones.map((milestoneindex) => (
+=======
+              {generatedMilestones.map((milestone, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center flex-1">

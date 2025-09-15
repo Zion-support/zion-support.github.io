@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 "use client";
 import React{ useState } from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> origin/auto/autonomy-17186719616
 
 type Question = {
   id: string;
@@ -13,9 +17,15 @@ type Props = {
   onComplete: (score: number) => void;
 };
 
+<<<<<<< HEAD
 export default function Quiz({ questionsonComplete }: Props) {
   const [answersetAnswers] = useState<Record<stringnumber>>({});
   const [submittedsetSubmitted] = useState(false);
+=======
+export default function Quiz({ questions, onComplete }: Props) {
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [submitted, setSubmitted] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0);
 
@@ -26,17 +36,29 @@ export default function Quiz({ questionsonComplete }: Props) {
 
   return (
     <div className="space-y-4">
+<<<<<<< HEAD
       {questions.map((qidx) => (
         <div key={q.id} className="border rounded p-3">
           <div className="font-medium">{idx + 1}. {q.question}</div>
           <div className="mt-2 grid gap-2">
             {q.options.map((opti) => (
+=======
+      {questions.map((q, idx) => (
+        <div key={q.id} className="border rounded p-3">
+          <div className="font-medium">{idx + 1}. {q.question}</div>
+          <div className="mt-2 grid gap-2">
+            {q.options.map((opt, i) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <label key={i} className="flex items-center gap-2">
                 <input
                   type="radio"
                   name={q.id}
                   checked={answers[q.id] === i}
+<<<<<<< HEAD
                   onChange={() => setAnswers({ ...answers[q.id]: i })}
+=======
+                  onChange={() => setAnswers({ ...answers, [q.id]: i })}
+>>>>>>> origin/auto/autonomy-17186719616
                 />
                 <span>{opt}</span>
               </label>

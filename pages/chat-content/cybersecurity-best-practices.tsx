@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const CybersecurityBestPractices: NextPage = () => {
   return (
@@ -14,7 +19,14 @@ const CybersecurityBestPractices: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
   )
 },
 
 export default CybersecurityBestPractices,
+=======
+  );
+};
+
+export default CybersecurityBestPractices;
+>>>>>>> origin/auto/autonomy-17186719616

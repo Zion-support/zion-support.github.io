@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Heart } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -11,6 +12,20 @@ interface TalentCardSaveButtonProps {
   isSaved: boolean,
   onToggleSave?: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
+=======
+import React from "react";
+import { Heart } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { useToast } from "@/hooks/use-toast";
+import { useRouter } from 'next/router';
+
+interface TalentCardSaveButtonProps {
+  profileId: string;
+  profileName: string;
+  isSaved: boolean;
+  onToggleSave?: (id: string, isSaved: boolean) => void;
+  isAuthenticated: boolean;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function TalentCardSaveButton({
@@ -20,6 +35,7 @@ export function TalentCardSaveButton({
   onToggleSave,
   isAuthenticated
 }: TalentCardSaveButtonProps) {
+<<<<<<< HEAD
   const { toast } = useToast(),
   const router = useRouter(),
   // Using router.asPath for current path
@@ -28,12 +44,23 @@ export function TalentCardSaveButton({
   // Handle save toggle
   const handleSaveToggle = (e: React.MouseEvent) => {
     e.stopPropagation(),
+=======
+  const { toast } = useToast();
+  const router = useRouter();
+  // Using router.asPath for current path
+  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
+  
+  // Handle save toggle
+  const handleSaveToggle = (e: React.MouseEvent) => {
+    e.stopPropagation();
+>>>>>>> origin/auto/autonomy-17186719616
 
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
         description: "Please log in to save talents to your favorites",
         variant: "destructive"
+<<<<<<< HEAD
       }),
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`/auth/login?returnTo=${returnTo}`),
@@ -43,6 +70,17 @@ export function TalentCardSaveButton({
     setLocalIsSaved(!localIsSaved),
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved),
+=======
+      });
+      const returnTo = encodeURIComponent(router.asPath);
+      router.push(`/auth/login?returnTo=${returnTo}`);
+      return;
+    }
+    
+    setLocalIsSaved(!localIsSaved);
+    if (onToggleSave) {
+      onToggleSave(profileId, !localIsSaved);
+>>>>>>> origin/auto/autonomy-17186719616
     }
     
     toast({
@@ -51,8 +89,13 @@ export function TalentCardSaveButton({
         ? `${profileName} has been removed from your favorites` 
         : `${profileName} has been added to your favorites`,
       variant: "default"
+<<<<<<< HEAD
     }),
   },
+=======
+    });
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <button 
@@ -67,5 +110,9 @@ export function TalentCardSaveButton({
         )} 
       />
     </button>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

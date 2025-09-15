@@ -2,7 +2,11 @@
 import { Progress } from "@/components/ui/progress";
 import { ResumeProgressProps } from "./types";
 
+<<<<<<< HEAD
 export const ResumeProgress = ({ resumeprogress }: ResumeProgressProps) => {
+=======
+export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="flex flex-col gap-1 w-full sm:w-auto">
       <div className="flex items-center gap-2">

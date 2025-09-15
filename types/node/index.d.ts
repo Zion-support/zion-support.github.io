@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type;
 interface Buffer {}
@@ -34,3 +35,10 @@ export {};
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
+=======
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface Buffer {}
+declare const __dirname: string;
+declare const __filename: string;
+export {};
+>>>>>>> origin/auto/autonomy-17186719616

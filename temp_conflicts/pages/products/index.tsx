@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
+=======
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const ProductsPage: NextPage = () => {
   const products = [
@@ -235,7 +242,11 @@ const ProductsPage: NextPage = () => {
         }
       ]
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50">
@@ -350,7 +361,11 @@ const ProductsPage: NextPage = () => {
           <div className="flex justify-center gap-4 mb-8">
             <Link 
               href="/contact"
+<<<<<<< HEAD
               className="bg-green-600 hover: bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+=======
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+>>>>>>> origin/auto/autonomy-17186719616
             >
               Start Free Trial
             </Link>
@@ -378,17 +393,34 @@ const ProductsPage: NextPage = () => {
         </div>
       </main>
     </div>
+<<<<<<< HEAD
   )
 },
 
 export default ProductsPage,
 import React from 'react',
+=======
+  );
+};
+
+export default ProductsPage;
+=======
+import React from 'react';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function ProductsIndexPage() {
   return (
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Products</h1>
+<<<<<<< HEAD
       <p className="mt-2 text-gray-600 dark: text-gray-300">Browse Zion products.</p>
     </div>
   )
 }
+=======
+      <p className="mt-2 text-gray-600 dark:text-gray-300">Browse Zion products.</p>
+    </div>
+  );
+}
+>>>>>>> 3c1dda747d3aa200ea8a4e49d78b84af83a4d328
+>>>>>>> origin/auto/autonomy-17186719616

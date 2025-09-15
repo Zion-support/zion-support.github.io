@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -19,6 +20,28 @@ export default function TenantOnboarding() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("company"),
   const [isSubmitting, setIsSubmitting] = useState(false),
+=======
+import React, { useState } from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { useAuth } from "@/hooks/useAuth";
+import { useRouter } from "next/router";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+import { Switch } from "@/components/ui/switch";
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+export default function TenantOnboarding() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("company");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
   const [formData, setFormData] = useState({
     brand_name: "",
     subdomain: "",
@@ -29,6 +52,7 @@ export default function TenantOnboarding() {
     industry: "",
     custom_domain: "",
     is_co_branded: true
+<<<<<<< HEAD
   }),
   
   // Check if user has admin role
@@ -58,13 +82,48 @@ export default function TenantOnboarding() {
     try {
       // Generate subdomain if not provided
       const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
+=======
+  });
+  
+  // Check if user has admin role
+  const isAdmin = user?.role === "admin";
+  
+  if (!isAdmin) {
+    return // Use router.push('/unauthorized') or redirect in getServerSideProps;
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+  
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+  
+  const handleSwitchChange = (name: string, checked: boolean) => {
+    setFormData(prev => ({ ...prev, [name]: checked }));
+  };
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      // Generate subdomain if not provided
+      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+>>>>>>> origin/auto/autonomy-17186719616
       
       // Create landing page copy
       const landingPageCopy = {
         headline: "AI Hiring Assistant",
         subtitle: `Find the best talent for your ${formData.industry || "company"}`,
         cta: "Get Started"
+<<<<<<< HEAD
       },
+=======
+      };
+>>>>>>> origin/auto/autonomy-17186719616
       
       // Submit to Supabase
       const { data, error } = await supabase
@@ -83,6 +142,7 @@ export default function TenantOnboarding() {
           email_template_override: null
         })
         .select('id, brand_name, subdomain')
+<<<<<<< HEAD
         .single(),
       
       if (error) throw error,
@@ -90,6 +150,15 @@ export default function TenantOnboarding() {
       toast.success("Tenant created successfully!", {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
       }),
+=======
+        .single();
+      
+      if (error) throw error;
+      
+      toast.success("Tenant created successfully!", {
+        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       
       // Reset form
       setFormData({
@@ -102,6 +171,7 @@ export default function TenantOnboarding() {
         industry: "",
         custom_domain: "",
         is_co_branded: true
+<<<<<<< HEAD
       }),
       
     } catch (error: any) {
@@ -113,6 +183,19 @@ export default function TenantOnboarding() {
       setIsSubmitting(false),
     }
   },
+=======
+      });
+      
+    } catch (error: any) {
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error creating tenant' });
+      toast.error("Failed to create tenant", {
+        description: error.message
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -324,5 +407,9 @@ export default function TenantOnboarding() {
         </div>
       </main>
     </>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,11 +1,19 @@
 
+<<<<<<< HEAD
 import { useStateuseEffect } from "react";
+=======
+import { useState, useEffect } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Star } from "lucide-react";
 import { ReviewStats } from "@/components/reviews/ReviewStats";
 import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { useReviews } from "@/hooks/useReviews";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
+=======
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface ProfileRatingsProps {
   userId: string;
@@ -13,14 +21,24 @@ interface ProfileRatingsProps {
   ratingCount?: number;
 }
 
+<<<<<<< HEAD
 export function ProfileRatings({ userIdaverageRating = 0ratingCount = 0 }: ProfileRatingsProps) {
   const { reviewsisLoadingfetchUserReviewsreportReview } = useReviews();
   const [ratingDistributionsetRatingDistribution] = useState<Record<number>>({});
+=======
+export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {
+  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
+  const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
+>>>>>>> origin/auto/autonomy-17186719616
   
   // Calculate rating distribution
   useEffect(() => {
     if (reviews.length > 0) {
+<<<<<<< HEAD
       const distribution: Record<number> = { 1: 02: 03: 04: 05: 0 };
+=======
+      const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+>>>>>>> origin/auto/autonomy-17186719616
       
       reviews.forEach((review) => {
         if (review.rating >= 1 && review.rating <= 5) {
@@ -30,12 +48,20 @@ export function ProfileRatings({ userIdaverageRating = 0ratingCount = 0 }: Profi
       
       setRatingDistribution(distribution);
     }
+<<<<<<< HEAD
   }[reviews]);
+=======
+  }, [reviews]);
+>>>>>>> origin/auto/autonomy-17186719616
   
   // Fetch reviews when component mounts
   useEffect(() => {
     fetchUserReviews(userId);
+<<<<<<< HEAD
   }[userId]);
+=======
+  }, [userId]);
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="space-y-6">

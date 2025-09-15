@@ -1,7 +1,12 @@
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
+<<<<<<< HEAD
 import { Checkbox } from "@/components/ui/checkbox",
 import { RegionFilterProps } from "@/types/filters",
+=======
+import { Checkbox } from "@/components/ui/checkbox";
+import { RegionFilterProps } from "@/types/filters";
+>>>>>>> origin/auto/autonomy-17186719616
 
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" },
@@ -10,7 +15,11 @@ const REGION_OPTIONS = [
   { id: "South America", label: "South America" },
   { id: "Australia", label: "Australia" },
   { id: "Africa", label: "Africa" }
+<<<<<<< HEAD
 ],
+=======
+];
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
   return (
@@ -25,9 +34,12 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
         ) : (
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
       </button>
       
       {expanded && (
@@ -48,8 +60,15 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
               </label>
             </div>
           ))}
+<<<<<<< HEAD
         </div>;
       )}
     </div>
   ),
+=======
+        </div>
+      )}
+    </div>
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

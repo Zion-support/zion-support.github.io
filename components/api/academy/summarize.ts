@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
+<<<<<<< HEAD
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
@@ -20,10 +21,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
   if (!apiKey) return fallback();
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+
+  const { moduleTitle, moduleContent } = req.body || {};
+  const apiKey = process.env.OPENAI_API_KEY;
+
+  const fallback = () => res.status(200).json({
+    summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`,
+  });
+
+  if (!apiKey) return fallback();
+
+>>>>>>> origin/auto/autonomy-17186719616
   try {
     const client = new OpenAI({ apiKey });
     const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
 
+<<<<<<< HEAD
 ;
 export default async /**
  * handler - Function description
@@ -92,12 +108,23 @@ function handler() {
 }
 
 
+=======
+    const completion = await client.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: 'You are a concise, practical course assistant.' },
+        { role: 'user', content: prompt },
+      ],
+      temperature: 0.3,
+    });
+>>>>>>> origin/auto/autonomy-17186719616
 
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ summary: text.trim() });
   } catch (err) {
     return fallback();
   }
+<<<<<<< HEAD
     const text = completion.choices?.[0]?.message?.content ?? '';
 
 
@@ -126,3 +153,6 @@ function handler() {
   }
   }
 
+=======
+}
+>>>>>>> origin/auto/autonomy-17186719616

@@ -191,15 +191,24 @@ export default function Services2026ShowcaseEnhancedPage() {
           <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
+<<<<<<< HEAD
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced/" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
           <meta property="og:image:type" content="image/svg+xml" />
+=======
+          <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+>>>>>>> origin/auto/autonomy-17186719616
           
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
+<<<<<<< HEAD
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+=======
+          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+>>>>>>> origin/auto/autonomy-17186719616
         </Head>
 
         {/* Enhanced Header Section */}

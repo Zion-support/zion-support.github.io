@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -9,11 +10,24 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "@/components/profile/HireNowCTA",
 import { logErrorToProduction } from '@/utils/productionLogger',
+=======
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/components/ui/use-toast";
+import { SEO } from "@/components/SEO";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
+import { logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> origin/auto/autonomy-17186719616
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
+<<<<<<< HEAD
   const router = useRouter(),
   const profileId = router.query.profileId as string,
   const [profileData, setProfileData] = useState<any>(null),
@@ -24,11 +38,24 @@ export default function ProfilePage() {
     const fetchProfile = async () => {
       setIsLoading(true),
       setIsError(false),
+=======
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      setIsLoading(true);
+      setIsError(false);
+>>>>>>> origin/auto/autonomy-17186719616
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
+<<<<<<< HEAD
           .single(),
 
         if (error) {
@@ -52,13 +79,43 @@ export default function ProfilePage() {
       fetchProfile(),
     }
   }, [profileId]),
+=======
+          .single();
+
+        if (error) {
+          throw error;
+        }
+
+        setProfileData(data);
+      } catch (error) {
+        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' });
+        setIsError(true);
+        toast({
+          title: "Error",
+          description: "Failed to load profile. Please try again later.",
+          variant: "destructive",
+        });
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    if (profileId) {
+      fetchProfile();
+    }
+  }, [profileId]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
       </div>
+<<<<<<< HEAD
     ),
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   if (isError || !profileData) {
@@ -66,7 +123,11 @@ export default function ProfilePage() {
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>
+<<<<<<< HEAD
     ),
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -233,5 +294,9 @@ export default function ProfilePage() {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

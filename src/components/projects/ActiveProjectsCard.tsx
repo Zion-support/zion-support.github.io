@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import Link from "next/link",
 import { BriefcaseIcon, Clock } from 'lucide-react'
@@ -21,6 +22,29 @@ export function ActiveProjectsCard() {
       setActiveProjects(active),
     }
   }, [projects, isLoading]),
+=======
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { BriefcaseIcon, Clock } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
+
+export function ActiveProjectsCard() {
+  const { projects, isLoading } = useProjects();
+  const [activeProjects, setActiveProjects] = useState<Project[]>([]);
+  
+  useEffect(() => {
+    if (projects && !isLoading) {
+      const active = projects.filter(p => 
+        ['offer_accepted', 'in_progress'].includes(p.status)
+      ).slice(0, 3); // Limit to 3 most recent projects
+      setActiveProjects(active);
+    }
+  }, [projects, isLoading]);
+>>>>>>> origin/auto/autonomy-17186719616
   
   if (isLoading) {
     return (
@@ -40,7 +64,11 @@ export function ActiveProjectsCard() {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
     ),
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
   
   if (activeProjects.length === 0) {
@@ -60,7 +88,11 @@ export function ActiveProjectsCard() {
           </Button>
         </CardContent>
       </Card>
+<<<<<<< HEAD
     ),
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
   
   return (
@@ -102,5 +134,9 @@ export function ActiveProjectsCard() {
         </CardFooter>
       )}
     </Card>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

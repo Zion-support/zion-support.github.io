@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -9,11 +10,24 @@ interface StepProgressProps {
 
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
+=======
+import { QuoteRequestSteps } from "../QuoteRequestForm";
+import { CheckIcon } from 'lucide-react'
+import { cn } from "@/lib/utils";
+
+interface StepProgressProps {
+  currentStep: QuoteRequestSteps;
+}
+
+export function StepProgress({ currentStep }: StepProgressProps) {
+  const steps: { id: QuoteRequestSteps; label: string }[] = [
+>>>>>>> origin/auto/autonomy-17186719616
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
     { id: "summary", label: "Summary" }
+<<<<<<< HEAD
   ],
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
@@ -24,6 +38,18 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     if (stepOrder === currentStepOrder) return "current",
     return "upcoming"
   },
+=======
+  ];
+
+  const getStepStatus = (stepId: QuoteRequestSteps) => {
+    const stepOrder = steps.findIndex(s => s.id === stepId);
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep);
+    
+    if (stepOrder < currentStepOrder) return "complete";
+    if (stepOrder === currentStepOrder) return "current";
+    return "upcoming";
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="relative">
@@ -38,7 +64,11 @@ export function StepProgress({ currentStep }: StepProgressProps) {
       
       <div className="flex justify-between relative">
         {steps.map((step) => {
+<<<<<<< HEAD
           const status = getStepStatus(step.id),
+=======
+          const status = getStepStatus(step.id);
+>>>>>>> origin/auto/autonomy-17186719616
           return (
             <div key={step.id} className="flex flex-col items-center relative">
               <div 
@@ -66,9 +96,17 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                 {step.label}
               </span>
             </div>
+<<<<<<< HEAD
           ),
         })}
       </div>
     </div>
   ),
+=======
+          );
+        })}
+      </div>
+    </div>
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

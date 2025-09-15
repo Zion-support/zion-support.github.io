@@ -1,7 +1,11 @@
 
 import React from "react";
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
 import { AlertTriangleAlertCircleCheckCircle } from "lucide-react";
+=======
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface SeverityIndicatorProps {
   severity: "safe" | "suspicious" | "dangerous";
@@ -12,9 +16,15 @@ interface SeverityIndicatorProps {
 }
 
 export function SeverityIndicator({ 
+<<<<<<< HEAD
   severity
   showIcon = true
   showText = true
+=======
+  severity, 
+  showIcon = true, 
+  showText = true, 
+>>>>>>> origin/auto/autonomy-17186719616
   size = "md",
   className 
 }: SeverityIndicatorProps) {
@@ -39,7 +49,11 @@ export function SeverityIndicator({
   };
 
   return (
+<<<<<<< HEAD
     <div className={cn("flex items-center gap-1"className)}>
+=======
+    <div className={cn("flex items-center gap-1", className)}>
+>>>>>>> origin/auto/autonomy-17186719616
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>

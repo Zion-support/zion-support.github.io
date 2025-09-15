@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 
@@ -64,3 +65,14 @@ export default function EnhancedCard({ children, className = '' }: { children: R
 }
 }
 
+=======
+import React from 'react';
+
+export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+  return (
+    <div className={["card-base p-4", className].join(' ')}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

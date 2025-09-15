@@ -1198,6 +1198,7 @@ p {
     .tech-grid {
         grid-template-columns: 1fr;
     }
+<<<<<<< HEAD
 }
 
 /* Performance Optimizations */
@@ -1363,4 +1364,6 @@ p {
     .promotion-banner .banner-features {
         grid-template-columns: 1fr;
     }
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 import {
 
   LightBulbIcon,
   CpuChipIcon,
   AcademicCapIcon,
+=======
+import { 
+  LightBulbIcon, 
+  CpuChipIcon, 
+  AcademicCapIcon, 
+>>>>>>> origin/auto/autonomy-17186719616
   GlobeAltIcon,
   ChartBarIcon,
   UserGroupIcon,
   RocketLaunchIcon,
+<<<<<<< HEAD
   ShieldCheckIcon;
 } from '@heroicons / react / 24 / outline';
 const research_areas = [;
@@ -17,24 +25,68 @@ const research_areas = [;
     topics: [;
       'Deep Learning & Neural NetworksNatural Language ProcessingComputer Vision & Image RecognitionReinforcement LearningFederated LearningExplainable AI';
     ]},
+=======
+  ShieldCheckIcon
+} from '@heroicons/react/24/outline'
+
+const researchAreas = [
+  {
+    name: 'Artificial Intelligence & Machine Learning',
+    description: 'Advancing the frontiers of AI through novel algorithms, neural architectures, and learning paradigms.',
+    icon: LightBulbIcon,
+    topics: [
+      'Deep Learning & Neural Networks',
+      'Natural Language Processing',
+      'Computer Vision & Image Recognition',
+      'Reinforcement Learning',
+      'Federated Learning',
+      'Explainable AI'
+    ],
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   {
     name: 'Quantum Computing & AI',
     description: 'Exploring the intersection of quantum mechanics and artificial intelligence for breakthrough computational capabilities.',
     icon: CpuChipIcon,
+<<<<<<< HEAD
     topics: [;
       'Quantum Neural NetworksQuantum Machine LearningQuantum - Classical Hybrid SystemsQuantum Error CorrectionQuantum Algorithms for AIQuantum Supremacy Applications';
     ]},
+=======
+    topics: [
+      'Quantum Neural Networks',
+      'Quantum Machine Learning',
+      'Quantum-Classical Hybrid Systems',
+      'Quantum Error Correction',
+      'Quantum Algorithms for AI',
+      'Quantum Supremacy Applications'
+    ],
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   {
     name: 'Autonomous Systems & Robotics',
     description: 'Developing intelligent systems that can operate independently and adapt to changing environments.',
     icon: RocketLaunchIcon,
+<<<<<<< HEAD
     topics: [;
       'Autonomous Decision MakingMulti - Agent SystemsRobotic Learning & AdaptationHuman - Robot InteractionAutonomous NavigationSwarm Intelligence';
     ]},
+=======
+    topics: [
+      'Autonomous Decision Making',
+      'Multi-Agent Systems',
+      'Robotic Learning & Adaptation',
+      'Human-Robot Interaction',
+      'Autonomous Navigation',
+      'Swarm Intelligence'
+    ],
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   {
     name: 'AI Ethics & Governance',
     description: 'Ensuring responsible AI development through ethical frameworks and governance mechanisms.',
     icon: ShieldCheckIcon,
+<<<<<<< HEAD
     topics: [;
       'AI Bias & FairnessPrivacy - Preserving AIAI Safety & AlignmentEthical AI GuidelinesAI Regulation & PolicyHuman - AI Collaboration';
     ]}];
@@ -209,6 +261,109 @@ function ResearchPage() {
     collaboration: 'Robotic learning and human-robot interaction'}]
 
 const Page: React.FC<PageProps> = ({ className }) => {
+=======
+    topics: [
+      'AI Bias & Fairness',
+      'Privacy-Preserving AI',
+      'AI Safety & Alignment',
+      'Ethical AI Guidelines',
+      'AI Regulation & Policy',
+      'Human-AI Collaboration'
+    ],
+  },
+]
+
+const recentPublications = [
+  {
+    title: 'Quantum Neural Networks: A New Paradigm for AI',
+    authors: 'Dr. Marcus Rodriguez, Dr. Elena Petrov, et al.',
+    journal: 'Nature Machine Intelligence',
+    year: '2024',
+    doi: '10.1038/s42256-024-00001-x',
+    abstract: 'We present a novel approach to neural network architecture that leverages quantum computing principles for unprecedented computational efficiency.',
+    impact: 'High Impact',
+  },
+  {
+    title: 'Autonomous Business Operations: AI-Driven Process Optimization',
+    authors: 'Dr. Sarah Chen, James Kim, et al.',
+    journal: 'Harvard Business Review',
+    year: '2024',
+    doi: '10.1000/hbr.2024.001',
+    abstract: 'This research demonstrates how autonomous AI systems can optimize business processes, reducing operational costs by 30% while improving efficiency.',
+    impact: 'Industry Leading',
+  },
+  {
+    title: 'Multi-Modal AI Research Assistant: Accelerating Scientific Discovery',
+    authors: 'Dr. Elena Petrov, Dr. Marcus Rodriguez, et al.',
+    journal: 'Science',
+    year: '2023',
+    doi: '10.1126/science.abc1234',
+    abstract: 'Our autonomous research assistant demonstrates the potential of AI to accelerate scientific discovery across multiple domains.',
+    impact: 'Breakthrough',
+  },
+  {
+    title: 'Ethical AI Development: A Framework for Responsible Innovation',
+    authors: 'Dr. Sarah Chen, Dr. Elena Petrov, et al.',
+    journal: 'AI Ethics Journal',
+    year: '2023',
+    doi: '10.1000/aie.2023.001',
+    abstract: 'We propose a comprehensive framework for developing AI systems that prioritize human values and ethical considerations.',
+    impact: 'Foundational',
+  },
+]
+
+const researchImpact = [
+  {
+    metric: 'Research Papers Published',
+    value: '150+',
+    description: 'Peer-reviewed publications in top-tier journals and conferences',
+  },
+  {
+    metric: 'Citations',
+    value: '10,000+',
+    description: 'Academic citations demonstrating research influence',
+  },
+  {
+    metric: 'Patents Filed',
+    value: '25+',
+    description: 'Intellectual property protecting our innovations',
+  },
+  {
+    metric: 'Research Collaborations',
+    value: '50+',
+    description: 'Partnerships with leading academic institutions',
+  },
+]
+
+const academicPartners = [
+  {
+    name: 'Stanford University',
+    location: 'Stanford, CA',
+    focus: 'AI & Machine Learning',
+    collaboration: 'Joint research programs and student exchanges',
+  },
+  {
+    name: 'MIT',
+    location: 'Cambridge, MA',
+    focus: 'Quantum Computing & AI',
+    collaboration: 'Shared research facilities and joint publications',
+  },
+  {
+    name: 'University of Oxford',
+    location: 'Oxford, UK',
+    focus: 'AI Ethics & Governance',
+    collaboration: 'Policy research and ethical AI development',
+  },
+  {
+    name: 'University of Tokyo',
+    location: 'Tokyo, Japan',
+    focus: 'Robotics & Autonomous Systems',
+    collaboration: 'Robotic learning and human-robot interaction',
+  },
+]
+
+export default function ResearchPage() {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="bg-black">
       {/* Hero section */}
@@ -222,12 +377,21 @@ const Page: React.FC<PageProps> = ({ className }) => {
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
               Pushing the boundaries of artificial intelligence through groundbreaking research
               innovative discoveriesand academic collaboration.
+=======
+              Pushing the boundaries of artificial intelligence through groundbreaking research, 
+              innovative discoveries, and academic collaboration.
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
       {/* Research Focus Areas */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -236,7 +400,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
             Focus Areas
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
             Our research spans the cutting edge of AI and technologydriving innovation 
+=======
+            Our research spans the cutting edge of AI and technology, driving innovation 
+>>>>>>> origin/auto/autonomy-17186719616
             and advancing the state of the art.
           </p>
         </div>
@@ -256,6 +424,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                       <span className="text-sm text-gray-400">{topic}</span>
                     </div>
                   ))}
+<<<<<<< HEAD
 
                 </div>;
                 <p className=&quot;text - gray - 300 mb - 6&quot;>{area.description}</p>;
@@ -315,6 +484,16 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   View Publication <span aria - hidden=&quot;true & quot;>→</span>;
                 </Link>;
               </div>))}
+=======
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Recent Publications */}
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
@@ -346,12 +525,16 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className="text-sm text-gray-300 mb-4">{publication.abstract}</p>
                 <a
                   href={`https://doi.org/${publication.doi}`}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                 >
                   View Publication <span aria-hidden="true">→</span>
+<<<<<<< HEAD
                 </Link>
               </div>
             ))}
@@ -362,10 +545,21 @@ const Page: React.FC<PageProps> = ({ className }) => {
 
 
 
+=======
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Research Impact */}
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
 
 
 
@@ -373,6 +567,12 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our research has made significant contributions to the field
+=======
+            Research Influence
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our research has made significant contributions to the field, 
+>>>>>>> origin/auto/autonomy-17186719616
             influencing both academia and industry.
           </p>
         </div>
@@ -385,6 +585,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className="mt-2 text-sm text-gray-400">{item.description}</p>
               </div>
             ))}
+<<<<<<< HEAD
 
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
@@ -489,6 +690,13 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   </p>;
                   <p className=&quot;flex items - center gap - 2&quot;>;
                     <UserGroupIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
+=======
+          </dl>
+        </div>
+      </div>
+
+      {/* Academic Collaborations */}
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
@@ -520,6 +728,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   <p className="flex items-center gap-2">
                     <UserGroupIcon className="h-5 w-5 text-blue-400" />
                     {partner.collaboration}
+<<<<<<< HEAD
                   </p>;
                 </div>;
               </div>))}
@@ -530,6 +739,17 @@ const Page: React.FC<PageProps> = ({ className }) => {
 
 
 
+=======
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* CTA section */}
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -537,7 +757,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Interested in collaborating on cutting-edge AI research? 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
             Let's explore opportunities to work together.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -555,6 +778,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
@@ -616,3 +840,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
 };
 
 export default Page;
+=======
+}
+>>>>>>> origin/auto/autonomy-17186719616

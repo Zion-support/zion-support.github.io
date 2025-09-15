@@ -1,16 +1,26 @@
 
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
+=======
+import { GradientHeading } from "./GradientHeading";
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
+<<<<<<< HEAD
   AccordionTrigger} from "@/components/ui/accordion",
+=======
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+>>>>>>> origin/auto/autonomy-17186719616
 import { FileText } from 'lucide-react'
 
 const faqs = [
   {
     question: "How do I publish my AI product or service?",
     answer:
+<<<<<<< HEAD
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."},
   {
     question: "What types of AI jobs can I find or post?",
@@ -40,6 +50,46 @@ const faqs = [
     question: "How do I contact support?",
     answer:
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}],
+=======
+      "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check.",
+  },
+  {
+    question: "What types of AI jobs can I find or post?",
+    answer:
+      "You can hire or apply for roles such as machine learning engineer, data scientist, AI researcher, computer vision expert and more.",
+  },
+  {
+    question: "What IT equipment is available to rent or buy?",
+    answer:
+      "Servers, storage solutions, networking gear, power supplies and complete rack setups are offered with flexible purchase or rental options.",
+  },
+  {
+    question: "How does Zion ensure 24x7x365 availability?",
+    answer:
+      "We use distributed data centers with automated failover and a global support team working in rotating shifts.",
+  },
+  {
+    question: "What is Zion's Green IT program?",
+    answer:
+      "Obsolete hardware is recycled or reused in line with WEEE, RoHS and e-Stewards standards, and we provide disposal certificates when required.",
+  },
+  {
+    question: "Are there fees for listing my products or services?",
+    answer:
+      "No. Listing products, services, jobs or CVs is free, with optional paid promotion for extra visibility.",
+  },
+  {
+    question: "How do I track my order status?",
+    answer:
+      "Check the Orders page in your account or ask our chatbot with your order ID for a quick update.",
+  },
+  {
+    question: "How do I contact support?",
+    answer:
+      "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime.",
+  },
+];
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function FaqSection() {
   return (
@@ -62,6 +112,7 @@ export function FaqSection() {
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
                 <AccordionTrigger className="text-white hover:text-zion-cyan">
+<<<<<<< HEAD
 
     question: "How do I publish my AI product or service?",
     answer:;
@@ -118,6 +169,9 @@ function FaqSection() {
                 <AccordionTrigger className="text - white hover:text - zion - cyan">;
                   {faq.question}
 
+=======
+                  {faq.question}
+>>>>>>> origin/auto/autonomy-17186719616
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
                   {faq.answer}
@@ -128,5 +182,9 @@ function FaqSection() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

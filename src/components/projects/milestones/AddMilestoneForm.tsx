@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from '@hookform/resolvers/zod',
@@ -8,12 +9,24 @@ import { format } from 'date-fns',
 
 import { Button } from '@/components/ui/button',
 import { Calendar } from '@/components/ui/calendar',
+=======
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { CalendarIcon, Loader2 } from 'lucide-react'
+import { format } from 'date-fns';
+
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage} from '@/components/ui/form',
 import { Input } from '@/components/ui/input',
 import { Textarea } from '@/components/ui/textarea',
@@ -23,11 +36,25 @@ import {
   PopoverTrigger} from '@/components/ui/popover',
 import { AIMilestoneGenerator } from './AIMilestoneGenerator',
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',
+=======
+  FormMessage,
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
+import { AIMilestoneGenerator } from './AIMilestoneGenerator';
+import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const formSchema = z.object({
   title: z.string().min(1, 'Title is required'),
   description: z.string().optional(),
   due_date: z.date().optional(),
+<<<<<<< HEAD
   amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),
 
 type MilestoneFormValues = z.infer<typeof formSchema>,
@@ -40,6 +67,21 @@ interface AddMilestoneFormProps {
   projectStartDate?: string,
   projectEndDate?: string,
   projectType?: string
+=======
+  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0'),
+});
+
+type MilestoneFormValues = z.infer<typeof formSchema>;
+
+interface AddMilestoneFormProps {
+  onSubmit: (data: MilestoneFormValues) => void;
+  isSubmitting: boolean;
+  onCancel?: () => void;
+  projectScope?: string;
+  projectStartDate?: string;
+  projectEndDate?: string;
+  projectType?: string;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function AddMilestoneForm({
@@ -56,23 +98,39 @@ export function AddMilestoneForm({
     defaultValues: {
       title: '',
       description: '',
+<<<<<<< HEAD
       amount: 0}}),
 
   const handleSubmit = (values: MilestoneFormValues) => {
     onSubmit(values),
     form.reset()
   },
+=======
+      amount: 0,
+    },
+  });
+
+  const handleSubmit = (values: MilestoneFormValues) => {
+    onSubmit(values);
+    form.reset();
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
     // If there's only one milestone, submit it directly
     if (milestones.length === 1) {
+<<<<<<< HEAD
       const milestone = milestones[0],
+=======
+      const milestone = milestones[0];
+>>>>>>> origin/auto/autonomy-17186719616
       if (milestone) {
         onSubmit({
           title: milestone.title,
           description: milestone.description,
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+<<<<<<< HEAD
         }),
         return,
       }
@@ -255,11 +313,15 @@ export function AddMilestoneForm({;
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,;
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
         }),;
+=======
+        });
+>>>>>>> origin/auto/autonomy-17186719616
         return;
       }
     }
 
     // If there are multiple milestones, submit them one by one
+<<<<<<< HEAD
 
     milestones.forEach(milestone => {
       onSubmit({
@@ -270,6 +332,17 @@ export function AddMilestoneForm({;
       }),
     }),
   },
+=======
+    milestones.forEach(milestone => {
+      onSubmit({
+        title: milestone.title,
+        description: milestone.description,
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
+        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+      });
+    });
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
@@ -277,6 +350,7 @@ export function AddMilestoneForm({;
       description: milestone.description,
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+<<<<<<< HEAD
     }),
   },
 
@@ -289,6 +363,13 @@ export function AddMilestoneForm({;
 
   return (
     <div className="space-y-6">;
+=======
+    });
+  };
+
+  return (
+    <div className="space-y-6">
+>>>>>>> origin/auto/autonomy-17186719616
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (
         <AIMilestoneGenerator
@@ -335,6 +416,7 @@ export function AddMilestoneForm({;
             )}
           />
 
+<<<<<<< HEAD
           />;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -343,6 +425,12 @@ export function AddMilestoneForm({;
               control={form.control}
               name="due_date"
 
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <FormField
+              control={form.control}
+              name="due_date"
+>>>>>>> origin/auto/autonomy-17186719616
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-col">
                   <FormLabel>Due Date (optional)</FormLabel>
@@ -425,5 +513,9 @@ export function AddMilestoneForm({;
         </form>
       </Form>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

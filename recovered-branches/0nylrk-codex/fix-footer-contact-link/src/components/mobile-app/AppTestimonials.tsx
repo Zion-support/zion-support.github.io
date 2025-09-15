@@ -1,7 +1,11 @@
 
 import React from "react";
 import { Star } from "lucide-react";
+<<<<<<< HEAD
 import { CardContentCardFooter } from "@/components/ui/card";
+=======
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 
 const testimonials = [
   {
@@ -14,7 +18,11 @@ const testimonials = [
   {
     name: "Sarah Williams",
     role: "Tech Recruiter",
+<<<<<<< HEAD
     text: "As a recruiterthis app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
+=======
+    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
+>>>>>>> origin/auto/autonomy-17186719616
     rating: 5,
     avatar: "/placeholder.svg"
   },
@@ -39,6 +47,7 @@ export const AppTestimonials: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<<<<<<< HEAD
           {testimonials.map((testimonialindex) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
               <CardContent className="pt-6">
@@ -47,6 +56,15 @@ export const AppTestimonials: React.FC = () => {
                     <Star 
                       key={i}
 
+=======
+          {testimonials.map((testimonial, index) => (
+            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
+              <CardContent className="pt-6">
+                <div className="flex mb-4">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star 
+                      key={i}
+>>>>>>> origin/auto/autonomy-17186719616
                       className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
                     />
                   ))}

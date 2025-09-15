@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "export": default async function handler(req, res) {
   if (req.method !==
   POST') {';
@@ -52,6 +53,9 @@
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
 async function handler(req, res) {
+=======
+export default async function handler(req, res) {
+>>>>>>> origin/auto/autonomy-17186719616
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
@@ -61,6 +65,7 @@ async function handler(req, res) {
 
   try {
     const { fromAddress, toAddress, parcel } = req.body || {};
+<<<<<<< HEAD
     
     if (!fromAddress || !toAddress || !parcel) {
       res.statusCode = 400;
@@ -100,3 +105,41 @@ async function handler(req, res) {
 
 module.exports = withErrorLogging(handler);
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+    const apiKey = process.env.EASYPOST_API_KEY;
+    if (!apiKey) {
+      res.statusCode = 500;
+      res.json({ error: 'Missing EasyPost API key' });
+      return;
+    }
+    const authHeader =
+      'Basic ' + Buffer.from(`${apiKey}:`).toString('base64');
+    const response = await fetch('https://api.easypost.com/v2/shipments', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: authHeader,
+      },
+      body: JSON.stringify({
+        shipment: {
+          to_address: toAddress,
+          from_address: fromAddress,
+          parcel,
+        },
+      }),
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      res.statusCode = 500;
+      res.json({ error: data.error || 'Failed to fetch rates' });
+      return;
+    }
+    res.statusCode = 200;
+    res.json({ rates: data.rates });
+  } catch (err) {
+    console.error('EasyPost error:', err);
+    res.statusCode = 500;
+    res.json({ error: err.message });
+  }
+}
+>>>>>>> origin/auto/autonomy-17186719616

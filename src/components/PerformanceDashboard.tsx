@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Badge } from '@/components/ui/badge',
@@ -18,6 +19,28 @@ interface Improvement {
   status: 'completed' | 'in-progress' | 'planned',
   impact: 'high' | 'medium' | 'low',
   category: 'performance' | 'security' | 'ux' | 'build'
+=======
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
+
+interface PerformanceMetrics {
+  buildSize: string;
+  pageCount: number;
+  loadTime: number;
+  healthStatus: 'healthy' | 'warning' | 'error';
+}
+
+interface Improvement {
+  id: string;
+  title: string;
+  description: string;
+  status: 'completed' | 'in-progress' | 'planned';
+  impact: 'high' | 'medium' | 'low';
+  category: 'performance' | 'security' | 'ux' | 'build';
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 const PerformanceDashboard: React.FC = () => {
@@ -26,7 +49,11 @@ const PerformanceDashboard: React.FC = () => {
     pageCount: 166,
     loadTime: 1.2,
     healthStatus: 'healthy'
+<<<<<<< HEAD
   }),
+=======
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 
   const improvements: Improvement[] = [
     {
@@ -77,6 +104,7 @@ const PerformanceDashboard: React.FC = () => {
       impact: 'medium',
       category: 'security'
     }
+<<<<<<< HEAD
   ],
 
   const getStatusIcon = (status: string) => {
@@ -108,6 +136,39 @@ const PerformanceDashboard: React.FC = () => {
   },
 
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
+=======
+  ];
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />;
+      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />;
+      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />;
+      default: return <AlertCircle className="h-4 w-4 text-gray-500" />;
+    }
+  };
+
+  const getImpactColor = (impact: string) => {
+    switch (impact) {
+      case 'high': return 'bg-red-100 text-red-800';
+      case 'medium': return 'bg-yellow-100 text-yellow-800';
+      case 'low': return 'bg-green-100 text-green-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'performance': return <Zap className="h-4 w-4" />;
+      case 'security': return <Shield className="h-4 w-4" />;
+      case 'ux': return <Search className="h-4 w-4" />;
+      case 'build': return <TrendingUp className="h-4 w-4" />;
+      default: return <CheckCircle className="h-4 w-4" />;
+    }
+  };
+
+  const completedImprovements = improvements.filter(imp => imp.status === 'completed');
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6 p-6">
@@ -205,7 +266,11 @@ const PerformanceDashboard: React.FC = () => {
 
       {/* Action Buttons */}
       <div className="flex space-x-4">
+<<<<<<< HEAD
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
+=======
+        <Button onClick={() => window.open('/api/health/environment', '_blank')} variant="outline">
+>>>>>>> origin/auto/autonomy-17186719616
           <Shield className="h-4 w-4 mr-2" />
           Check Health Status
         </Button>
@@ -215,7 +280,14 @@ const PerformanceDashboard: React.FC = () => {
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
   ),
 },
 
 export default PerformanceDashboard, 
+=======
+  );
+};
+
+export default PerformanceDashboard; 
+>>>>>>> origin/auto/autonomy-17186719616

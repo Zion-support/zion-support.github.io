@@ -1,4 +1,8 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export interface EnterpriseITService2030 {
   id: string;
   name: string;
@@ -39,6 +43,10 @@ export interface EnterpriseITService2030 {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export const enterpriseITServices2030: EnterpriseITService2030[] = [
   // Autonomous DevOps Platform 2030
   {

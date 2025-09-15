@@ -14,6 +14,10 @@ export interface EmergingTechnologyService {
     address: string;
   };
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export const emergingTechnologyServices: EmergingTechnologyService[] = [
   {
     id: "blockchain-platform",

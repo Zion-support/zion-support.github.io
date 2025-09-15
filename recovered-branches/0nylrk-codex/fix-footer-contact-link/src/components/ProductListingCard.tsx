@@ -2,7 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
+<<<<<<< HEAD
 import { StarDollarSign } from "lucide-react";
+=======
+import { Star, DollarSign } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface ProductListingCardProps {
   listing: ProductListing;
@@ -11,7 +15,11 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
+<<<<<<< HEAD
   listing
+=======
+  listing, 
+>>>>>>> origin/auto/autonomy-17186719616
   view = 'grid',
   onRequestQuote
 }: ProductListingCardProps) {
@@ -103,7 +111,11 @@ export function ProductListingCard({
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
+<<<<<<< HEAD
               {listing.tags.map((tagidx) => (
+=======
+              {listing.tags.map((tag, idx) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <span 
                   key={idx} 
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full"

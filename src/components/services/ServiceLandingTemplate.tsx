@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
@@ -30,11 +31,45 @@ interface ServiceLandingTemplateProps {
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 
+=======
+import React from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
+
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+}
+
+export interface Testimonial {
+  name: string;
+  role?: string;
+  text: string;
+  avatar?: string;
+}
+
+interface ServiceLandingTemplateProps {
+  title: string;
+  subtitle: string;
+  heroImage?: string;
+  description: string;
+  benefits: Benefit[];
+  testimonials: Testimonial[];
+  ctaText: string;
+  ctaLink: string;
+}
+
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
+>>>>>>> origin/auto/autonomy-17186719616
   title,
   subtitle,
   heroImage,
   description,
   benefits,
+<<<<<<< HEAD
 
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
@@ -54,6 +89,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
   testimonials,
   ctaText,
   ctaLink}) => {
+=======
+  testimonials,
+  ctaText,
+  ctaLink,
+}) => {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -64,7 +105,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
           </p>
+<<<<<<< HEAD
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           {heroImage && (
             <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
               <Image
@@ -160,5 +204,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
         </Button>
       </section>
     </div>
+<<<<<<< HEAD
   ),
 },
+=======
+  );
+};
+>>>>>>> origin/auto/autonomy-17186719616

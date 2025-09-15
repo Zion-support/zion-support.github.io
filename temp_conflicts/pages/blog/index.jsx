@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const Blog = () => {
   const featuredPosts = [
@@ -32,7 +38,11 @@ const Blog = () => {
       image: "🔗",
       href: "/blog/blockchain-business-applications"
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const recentPosts = [
     {
@@ -83,7 +93,11 @@ const Blog = () => {
       date: "December 20, 2023",
       href: "/blog/microservices-architecture-benefits-challenges"
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const categories = [
     { name: "Artificial Intelligence", count: 15, icon: "🤖" },
@@ -94,7 +108,11 @@ const Blog = () => {
     { name: "DevOps", count: 7, icon: "⚙️" },
     { name: "IoT", count: 6, icon: "🌐" },
     { name: "Machine Learning", count: 11, icon: "🧠" }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <EnhancedLayout>
@@ -229,13 +247,24 @@ const Blog = () => {
           <p className="text-gray-300 mb-6">
             We're always looking for guest contributors and industry experts to share their insights.
           </p>
+<<<<<<< HEAD
           <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">
+=======
+          <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+>>>>>>> origin/auto/autonomy-17186719616
             Submit a Guest Post
           </Link>
         </div>
       </main>
     </EnhancedLayout>
+<<<<<<< HEAD
   )
 },
 
 export default Blog,
+=======
+  );
+};
+
+export default Blog;
+>>>>>>> origin/auto/autonomy-17186719616

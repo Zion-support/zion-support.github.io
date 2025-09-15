@@ -7,7 +7,11 @@ interface BudgetStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 
+<<<<<<< HEAD
 export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
+=======
+export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {
     if (type === "range" && !formData.budget.maxAmount) {
       updateFormData({
@@ -28,7 +32,11 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
   };
 
   const formatCurrency = (value: number) => {
+<<<<<<< HEAD
     return new Intl.NumberFormat('en-US'{
+=======
+    return new Intl.NumberFormat('en-US', {
+>>>>>>> origin/auto/autonomy-17186719616
       style: 'currency',
       currency: 'USD',
       maximumFractionDigits: 0
@@ -89,7 +97,11 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
                 max={50000}
                 step={500}
                 onValueChange={(value) => updateFormData({
+<<<<<<< HEAD
                   budget: { ...formData.budgetamount: value[0] }
+=======
+                  budget: { ...formData.budget, amount: value[0] }
+>>>>>>> origin/auto/autonomy-17186719616
                 })}
                 className="py-4"
               />
@@ -110,7 +122,11 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
                 max={500}
                 step={5}
                 onValueChange={(value) => updateFormData({
+<<<<<<< HEAD
                   budget: { ...formData.budgetamount: value[0] }
+=======
+                  budget: { ...formData.budget, amount: value[0] }
+>>>>>>> origin/auto/autonomy-17186719616
                 })}
                 className="py-4"
               />
@@ -137,7 +153,11 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
                     
                     updateFormData({
                       budget: { 
+<<<<<<< HEAD
                         ...formData.budget
+=======
+                        ...formData.budget, 
+>>>>>>> origin/auto/autonomy-17186719616
                         amount: newAmount,
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount
                       }
@@ -161,7 +181,11 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
                   max={100000}
                   step={500}
                   onValueChange={(value) => updateFormData({
+<<<<<<< HEAD
                     budget: { ...formData.budgetmaxAmount: value[0] }
+=======
+                    budget: { ...formData.budget, maxAmount: value[0] }
+>>>>>>> origin/auto/autonomy-17186719616
                   })}
                   className="py-4"
                 />

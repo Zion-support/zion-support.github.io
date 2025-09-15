@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
@@ -92,6 +93,27 @@ export default function ReferralsPage() {
   const { isAuthenticated } = useAuth(),
 
 
+=======
+import { useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { useReferrals } from '@/hooks/useReferrals';
+import { ReferralStats } from '@/components/referrals/ReferralStats';
+import { ReferralLink } from '@/components/referrals/ReferralLink';
+import { ReferralTable } from '@/components/referrals/ReferralTable';
+import { RewardsCard } from '@/components/referrals/RewardsCard';
+import { ReferralGuide } from '@/components/referrals/ReferralGuide';
+import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from '@/components/ui/button';
+import { toast } from '@/hooks/use-toast';
+import { Share, Users } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+
+export default function ReferralsPage() {
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
+>>>>>>> origin/auto/autonomy-17186719616
   const {
     isLoading,
     referralCode,
@@ -100,11 +122,17 @@ export default function ReferralsPage() {
     stats,
     getReferralLink,
     copyReferralLink,
+<<<<<<< HEAD
     shareOnSocialMedia} = useReferrals(),
+=======
+    shareOnSocialMedia,
+  } = useReferrals();
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     if (!isAuthenticated) {
       toast({
+<<<<<<< HEAD
         title: "Authentication required"
         description: "Please login to access the referral program"
         variant: "destructive"})
@@ -119,6 +147,17 @@ export default function ReferralsPage() {
       navigate("/login");
     }
 
+=======
+        title: "Authentication required",
+        description: "Please login to access the referral program",
+        variant: "destructive",
+      });
+      navigate("/login");
+    }
+  }, [isAuthenticated, navigate]);
+
+  const referralLink = getReferralLink();
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="container max-w-7xl py-10">
@@ -134,6 +173,7 @@ export default function ReferralsPage() {
           Share Referral Link
         </Button>
       </div>
+<<<<<<< HEAD
       <ReferralStats stats={stats} isLoading={isLoading} />
       <div className="grid gap-6 mt-6 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-6">
@@ -142,6 +182,19 @@ export default function ReferralsPage() {
             onCopy={copyReferralLink}
             onShare={shareOnSocialMedia}
           />
+=======
+
+      <ReferralStats stats={stats} isLoading={isLoading} />
+      
+      <div className="grid gap-6 mt-6 lg:grid-cols-3">
+        <div className="lg:col-span-2 space-y-6">
+          <ReferralLink 
+            referralLink={referralLink} 
+            onCopy={copyReferralLink} 
+            onShare={shareOnSocialMedia}
+          />
+          
+>>>>>>> origin/auto/autonomy-17186719616
           <Tabs defaultValue="referrals" className="w-full">
             <TabsList className="w-full grid grid-cols-2">
               <TabsTrigger value="referrals" className="flex items-center gap-2">
@@ -161,12 +214,17 @@ export default function ReferralsPage() {
             </TabsContent>
           </Tabs>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="space-y-6">
           <ReferralGuide />
           <ReferralLeaderboard />
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 
 
@@ -338,3 +396,7 @@ if ( {) {
 }
 ;
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

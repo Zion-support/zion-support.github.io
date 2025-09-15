@@ -1,6 +1,10 @@
 
 import React from 'react';
+<<<<<<< HEAD
 import { TabsListTabsTrigger } from '@/components/ui/tabs';
+=======
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
 

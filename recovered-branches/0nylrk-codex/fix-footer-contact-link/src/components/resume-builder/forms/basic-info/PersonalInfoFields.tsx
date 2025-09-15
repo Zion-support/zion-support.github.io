@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
+=======
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
@@ -56,7 +60,10 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
       <FormField
         control={control}
         name="phone"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
         render={({ field }) => (
           <FormItem>
             <FormLabel>Phone</FormLabel>

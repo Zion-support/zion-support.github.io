@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+<<<<<<< HEAD
 
 echo "🔍 Running pre-commit checks..."
 
@@ -27,3 +28,8 @@ if git diff --cached --name-only | grep -E "package\.json|package-lock\.json" > 
 fi
 
 echo "✅ Pre-commit checks completed"
+=======
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx --yes lint-staged
+>>>>>>> origin/auto/autonomy-17186719616

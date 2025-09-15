@@ -1,19 +1,36 @@
+<<<<<<< HEAD
 import React{ useState } from 'react';
 import { 
   SERVICE_CATEGORIES
   ALL_SERVICES
   AI_SERVICES
   IT_SERVICES
+=======
+import React, { useState } from 'react';
+import { 
+  SERVICE_CATEGORIES, 
+  ALL_SERVICES, 
+  AI_SERVICES, 
+  IT_SERVICES, 
+>>>>>>> origin/auto/autonomy-17186719616
   MICRO_SAAS_SERVICES,
   CYBERSECURITY_SERVICES,
   DATA_ANALYTICS_SERVICES,
   CLOUD_SOLUTIONS
 } from '@/data/servicesData';
+<<<<<<< HEAD
 import { ServiceCategoryServiceSolution } from '@/types/services';
 
 export function ServicesPage() {
   const [selectedCategorysetSelectedCategory] = useState<string>('all');
   const [searchTermsetSearchTerm] = useState('');
+=======
+import { ServiceCategory, ServiceSolution } from '@/types/services';
+
+export function ServicesPage() {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState('');
+>>>>>>> origin/auto/autonomy-17186719616
 
   const filteredServices = ALL_SERVICES.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -38,7 +55,11 @@ export function ServicesPage() {
   const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+>>>>>>> origin/auto/autonomy-17186719616
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
         <div className="container mx-auto px-4 py-20">
@@ -47,7 +68,11 @@ export function ServicesPage() {
               Zion Tech Group Services
             </h1>
             <p className="text-xl mb-8 text-blue-100">
+<<<<<<< HEAD
               Comprehensive ITAIand Micro SAAS solutions to transform your business. 
+=======
+              Comprehensive IT, AI, and Micro SAAS solutions to transform your business. 
+>>>>>>> origin/auto/autonomy-17186719616
               From cutting-edge artificial intelligence to robust infrastructure support.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -74,7 +99,11 @@ export function ServicesPage() {
           <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
             <div className="flex items-center gap-2">
               <span className="text-blue-600">📍</span>
+<<<<<<< HEAD
               <span>364 E Main St STE 1008Middletown DE 19709</span>
+=======
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+>>>>>>> origin/auto/autonomy-17186719616
             </div>
             <div className="flex items-center gap-2">
               <span className="text-blue-600">📱</span>
@@ -148,7 +177,11 @@ export function ServicesPage() {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
               We deliver innovativereliableand cost-effective solutions that drive real business results
+=======
+              We deliver innovative, reliable, and cost-effective solutions that drive real business results
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
           
@@ -166,7 +199,11 @@ export function ServicesPage() {
                 <span className="text-2xl">🛡️</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+<<<<<<< HEAD
               <p className="text-gray-600">SOC 2HIPAAGDPR compliant solutions</p>
+=======
+              <p className="text-gray-600">SOC 2, HIPAA, GDPR compliant solutions</p>
+>>>>>>> origin/auto/autonomy-17186719616
             </div>
             
             <div className="text-center">
@@ -195,7 +232,11 @@ export function ServicesPage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+<<<<<<< HEAD
             Get started with Zion Tech Group today and discover how our innovative solutions can drive growthefficiencyand success for your organization.
+=======
+            Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
+>>>>>>> origin/auto/autonomy-17186719616
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
@@ -215,7 +256,11 @@ export function ServicesPage() {
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
               🌐 Visit Website
+<<<<<<< HEAD
             </Link>
+=======
+            </a>
+>>>>>>> origin/auto/autonomy-17186719616
           </div>
         </div>
       </div>
@@ -228,8 +273,12 @@ interface ServiceCardProps {
 }
 
 function ServiceCard({ service }: ServiceCardProps) {
+<<<<<<< HEAD
   const [showDetailsetShowDetails] = useState(false);
 
+=======
+  const [showDetails, setShowDetails] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const getPopularPlan = () => {
     if (service.pricing.professional.popular) return service.pricing.professional;
@@ -289,7 +338,10 @@ function ServiceCard({ service }: ServiceCardProps) {
           </div>
           {service.provider.verified && (
             <span className="text-blue-600 text-sm">✓ Verified</span>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           )}
         </div>
 
@@ -314,7 +366,11 @@ function ServiceCard({ service }: ServiceCardProps) {
         <div className="mb-4">
           <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
           <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
             {service.features.slice(03).map((featureindex) => (
+=======
+            {service.features.slice(0, 3).map((feature, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <span 
                 key={index}
                 className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
@@ -354,7 +410,11 @@ function ServiceCard({ service }: ServiceCardProps) {
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
                 <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+<<<<<<< HEAD
                   {service.benefits.slice(03).map((benefitindex) => (
+=======
+                  {service.benefits.slice(0, 3).map((benefit, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                     <li key={index}>{benefit}</li>
                   ))}
                 </ul>
@@ -364,7 +424,11 @@ function ServiceCard({ service }: ServiceCardProps) {
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Use Cases:</h4>
                 <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
                   {service.useCases.slice(03).map((useCaseindex) => (
+=======
+                  {service.useCases.slice(0, 3).map((useCase, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                     <span 
                       key={index}
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
@@ -379,7 +443,11 @@ function ServiceCard({ service }: ServiceCardProps) {
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                 <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
                   {service.technologies.slice(04).map((techindex) => (
+=======
+                  {service.technologies.slice(0, 4).map((tech, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                     <span 
                       key={index}
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
@@ -398,7 +466,11 @@ function ServiceCard({ service }: ServiceCardProps) {
                 </div>
                 <div>
                   <span className="font-medium text-gray-900">Support:</span>
+<<<<<<< HEAD
                   <p className="text-gray-600">{service.support.slice(02).join(')}</p>
+=======
+                  <p className="text-gray-600">{service.support.slice(0, 2).join(', ')}</p>
+>>>>>>> origin/auto/autonomy-17186719616
                 </div>
               </div>
 
@@ -406,7 +478,11 @@ function ServiceCard({ service }: ServiceCardProps) {
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Pricing Plans:</h4>
                 <div className="space-y-2">
+<<<<<<< HEAD
                   {Object.entries(service.pricing).map(([plandetails]) => (
+=======
+                  {Object.entries(service.pricing).map(([plan, details]) => (
+>>>>>>> origin/auto/autonomy-17186719616
                     <div key={plan} className="flex justify-between items-center text-sm">
                       <span className="capitalize font-medium">{plan}</span>
                       <span className="text-gray-600">

@@ -6,7 +6,11 @@ import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
+<<<<<<< HEAD
 import {logErrorToProduction} from '@/utils/productionLogger',
+=======
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/auto/autonomy-17186719616
 
 
 interface LoadingState {
@@ -19,7 +23,11 @@ interface LoadingState {
 interface DynamicLoaderProps {
   importFn: () => Promise<{ default: ComponentType<any> }>
   fallback?: React.ReactNode
+<<<<<<< HEAD
   errorFallback?: React.ComponentType<{ error: Error, retry: () => void }>
+=======
+  errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
+>>>>>>> origin/auto/autonomy-17186719616
   loadingComponent?: React.ComponentType
   enableRetry?: boolean
   maxRetries?: number
@@ -35,7 +43,11 @@ const EnhancedLoading: React.FC<{
   message?: string
   showProgress?: boolean
 }> = ({ 
+<<<<<<< HEAD
   progress = 0,
+=======
+  progress = 0, 
+>>>>>>> origin/auto/autonomy-17186719616
   message = 'Loading component...', 
   showProgress = true 
 }) => (
@@ -303,7 +315,11 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
 // HOC for creating dynamic components easily
 export const createDynamicComponent = <T extends ComponentType<any>>(
   importFn: () => Promise<{ default: T }>,
+<<<<<<< HEAD
   options?: Omit<DynamicLoaderProps 'importFn' | 'children'>
+=======
+  options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>
+>>>>>>> origin/auto/autonomy-17186719616
 ) => {
   return (props: React.ComponentProps<T> & { children?: React.ReactNode }) => (
     <DynamicComponentLoader
@@ -340,4 +356,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //   }
 // )
 
+<<<<<<< HEAD
 export default DynamicComponentLoader 
+=======
+export default DynamicComponentLoader 
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   const navigation = [;
@@ -160,6 +161,56 @@ export default function Header() {;
       aria-label="Main navigation"
       role="banner"
       aria-label="Main navigation"
+=======
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'Quantum Computing', href: '/quantum-computing' },
+    { name: 'Research & Development', href: '/research-development' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'News', href: '/news' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
+  const services = [
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
+    { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
+    { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' },
+    { name: 'Business Intelligence', href: '/ai-business-intelligence' },
+    { name: 'Content Generation', href: '/ai-content-generator' },
+    { name: 'Research Automation', href: '/ai-autonomous-research-assistant' },
+  ];
+
+  return (
+    <header 
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-black/90 backdrop-blur-xl border-b border-white/20 shadow-2xl' 
+          : 'bg-black/60 backdrop-blur-md border-b border-white/10'
+      }`}
+      role="banner"
+      aria-label="Main navigation"
+>>>>>>> origin/auto/autonomy-17186719616
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -169,11 +220,19 @@ export default function Header() {;
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
+<<<<<<< HEAD
               <span className=&quot;text-xl font-bold gradient-text text-shadow&quot;>
+=======
+              <span className="text-xl font-bold gradient-text text-shadow">
+>>>>>>> origin/auto/autonomy-17186719616
                 Zion Tech Group
               </span>
             </Link>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main menu">
             {navigation.map((item) => (
@@ -182,12 +241,21 @@ export default function Header() {;
                 href={item.href}
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium relative group"
                 aria-label={`Navigate to ${item.name} page`}
+<<<<<<< HEAD
               >;
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
+=======
+              >
+                {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            ))}
+            
+>>>>>>> origin/auto/autonomy-17186719616
             {/* Services Dropdown */}
             <div className="relative group">
               <button 
@@ -205,7 +273,10 @@ export default function Header() {;
                 <div className="p-6 grid grid-cols-1 gap-3">
                   {services.map((service) => (
                     <Link
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                       key={service.name}
                       href={service.href}
                       className="text-gray-300 hover:text-white p-3 rounded-lg hover:bg-white/10 transition-all duration-200 group/item"
@@ -219,6 +290,7 @@ export default function Header() {;
                       </div>
                     </Link>
                   ))}
+<<<<<<< HEAD
                 </div>;
               </div>;
             </div>;
@@ -247,6 +319,14 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
               {isMenuOpen ? (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
+=======
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          {/* CTA Button */}
+>>>>>>> origin/auto/autonomy-17186719616
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
@@ -256,11 +336,19 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
               Get Started
             </Link>
           </div>
+<<<<<<< HEAD
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
 
+=======
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
+>>>>>>> origin/auto/autonomy-17186719616
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-controls="mobile-menu"
@@ -271,15 +359,30 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
               ) : (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               )}
+<<<<<<< HEAD
             </svg>;
           </button>;
         </div>;
         {/* Mobile Navigation */}
 
+=======
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div 
+            id="mobile-menu"
+            className="lg:hidden border-t border-white/10 animate-fade-in"
+            role="navigation"
+            aria-label="Mobile menu"
+>>>>>>> origin/auto/autonomy-17186719616
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Link
+<<<<<<< HEAD
 
           <div;
             id=&quot;mobile - menu & quot;
@@ -291,11 +394,14 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
               {navigation.map ((item) => (
                 <Link;
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                   key={item.name}
                   href={item.href}
                   className="block px-3 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                   aria-label={`Navigate to ${item.name} page`}
+<<<<<<< HEAD
                 >;
                   {item.name}
                 </Link>;
@@ -303,10 +409,17 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
 
 <div className=&quot;px-3 py-2&quot;>
                 <div className=&quot;text-gray-400 text-sm font-medium mb-2&quot;>Services</div>
+=======
+                >
+                  {item.name}
+                </Link>
+              ))}
+>>>>>>> origin/auto/autonomy-17186719616
               <div className="px-3 py-2">
                 <div className="text-gray-400 text-sm font-medium mb-2">Services</div>
                 {services.map((service) => (
                   <Link
+<<<<<<< HEAD
 
                     key={service.name}
                     href={service.href}
@@ -324,6 +437,19 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
               </div>
               <div className="pt-4">
 
+=======
+                    key={service.name}
+                    href={service.href}
+                    className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                    aria-label={`Navigate to ${service.name} service page`}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+              <div className="pt-4">
+>>>>>>> origin/auto/autonomy-17186719616
                 <Link
                   href="/contact"
                   className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
@@ -336,6 +462,13 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
             </div>
           </div>
         )}
+<<<<<<< HEAD
       </div>;
     </header>);
 }
+=======
+      </div>
+    </header>
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

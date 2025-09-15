@@ -1,6 +1,10 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { CheckCircleArrowRight } from "lucide-react";
+=======
+import { CheckCircle, Circle, ArrowRight } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -20,15 +24,24 @@ interface OnboardingTrackerProps {
 }
 
 export function OnboardingTracker({ 
+<<<<<<< HEAD
   steps
   title = "Complete Your Profile"
+=======
+  steps, 
+  title = "Complete Your Profile", 
+>>>>>>> origin/auto/autonomy-17186719616
   className 
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length;
   const progress = Math.round((completedSteps / steps.length) * 100);
 
   return (
+<<<<<<< HEAD
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6"className)}>
+=======
+    <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-medium text-white">{title}</h3>
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { Phone, Mail, MapPin, Check, ArrowRight, Car, Star } from 'lucide-react',
@@ -8,6 +9,18 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 export default function AutonomousVehicleAIPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-vehicle-ai-platform')),
   if (!service) return null,
+=======
+import React from 'react';
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Car, Star } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+
+export default function AutonomousVehicleAIPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-vehicle-ai-platform'));
+  if (!service) return null;
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -51,5 +64,9 @@ export default function AutonomousVehicleAIPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

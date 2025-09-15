@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const MarketSignals: NextPage = () => {
   return (
@@ -17,7 +23,14 @@ const MarketSignals: NextPage = () => {
         </div>
       </main>
     </div>
+<<<<<<< HEAD
   )
 },
 
 export default MarketSignals,
+=======
+  );
+};
+
+export default MarketSignals;
+>>>>>>> origin/auto/autonomy-17186719616

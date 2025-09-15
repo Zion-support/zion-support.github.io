@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import React, { useMemo, useState } from 'react',
@@ -14,6 +15,24 @@ const NewProposal: NextPage = () => {
   const pitchPrompt = useMemo(() => (
     `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
   ), [jobBrief, relevantExperience, resumeSummary]),
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import React, { useMemo, useState } from 'react';
+import AIAssistant from '../../components/ui/AIAssistant';
+
+const NewProposal: NextPage = () => {
+  const [jobBrief, setJobBrief] = useState('');
+  const [resumeSummary, setResumeSummary] = useState('');
+  const [relevantExperience, setRelevantExperience] = useState('');
+  const [coverLetter, setCoverLetter] = useState('');
+
+  const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN;
+
+  const pitchPrompt = useMemo(() => (
+    `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
+  ), [jobBrief, relevantExperience, resumeSummary]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div>
@@ -46,7 +65,14 @@ const NewProposal: NextPage = () => {
       </div>
       <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
     </div>
+<<<<<<< HEAD
   ),
 },
 
 export default NewProposal,
+=======
+  );
+};
+
+export default NewProposal;
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from 'react';
 import { SEO  } from '@/components/SEO';
@@ -41,10 +42,20 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 
 
 
+=======
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { AppHeader } from '@/layout/AppHeader';
+import { Footer } from '@/components/Footer';
+import { DisputeDashboard } from '@/components/disputes';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+
+>>>>>>> origin/auto/autonomy-17186719616
 function DisputesPage() {
   return (
     <ProtectedRoute>
       <>
+<<<<<<< HEAD
 
         <SEO
           title="Dispute Resolution Center | Zion AI Marketplace"
@@ -107,3 +118,18 @@ export default DisputesPage;
 export default DisputesPage;
 
 
+=======
+        <SEO 
+          title="Dispute Resolution Center | Zion AI Marketplace" 
+          description="View and manage disputes between clients and talents"
+        />
+        <AppHeader />
+        <DisputeDashboard />
+        <Footer />
+      </>
+    </ProtectedRoute>
+  );
+}
+
+export default DisputesPage;
+>>>>>>> origin/auto/autonomy-17186719616

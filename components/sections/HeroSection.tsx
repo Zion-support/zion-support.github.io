@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -90,12 +91,24 @@ const HeroSection: React.FC = () => {
       </div>
 
         />;
+=======
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react';
+
+const HeroSection: React.FC = () => {
+  const stats = [
+>>>>>>> origin/auto/autonomy-17186719616
     { icon: Users, value: '500+', label: 'Happy Clients' },
     { icon: Award, value: '50+', label: 'Awards Won' },
     { icon: Star, value: '99%', label: 'Client Satisfaction' },
     { icon: Zap, value: '24/7', label: 'Support Available' }
   ];
 
+<<<<<<< HEAD
 
 
         {/* Grid Pattern */}
@@ -145,6 +158,8 @@ const HeroSection: React.FC = () => {
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />
       </div>
       <div className='relative container mx-auto px-4 text-center z-10'>        {/* Main Content */}  ];
+=======
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Animated Background Elements */}
@@ -153,6 +168,7 @@ const HeroSection: React.FC = () => {
         <motion.div
           className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"
           animate={{
+<<<<<<< HEAD
             scale: [1, 1.2, 1];
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
@@ -175,10 +191,21 @@ const HeroSection: React.FC = () => {
             opacity: [0 && 0.6, 0 && 0.3, 0 && 0.6]}}
           transition={{
 
+=======
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+>>>>>>> origin/auto/autonomy-17186719616
         />
         <motion.div
           className="absolute top-40 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
           animate={{
+<<<<<<< HEAD
             scale: [1.2, 1, 1.2];
             opacity: [0.6, 0.3, 0.6]}}
           transition={{
@@ -239,11 +266,36 @@ const HeroSection: React.FC = () => {
 
 
 
+=======
+            scale: [1.2, 1, 1.2],
+            opacity: [0.6, 0.3, 0.6],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
+      </div>
+
+      <div className="relative container mx-auto px-4 text-center z-10">
+        {/* Main Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-6xl mx-auto"
+        >
+>>>>>>> origin/auto/autonomy-17186719616
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
             className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8'
           >
             <Star className='w-5 h-5 text-yellow-400 fill-current' />
@@ -508,15 +560,27 @@ const HeroSection: React.FC = () => {
 
 
 
+=======
+            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
+          >
+            <Star className="w-5 h-5 text-yellow-400 fill-current" />
+            <span className="text-white font-medium">Leading Technology Solutions Provider</span>
+          </motion.div>
+
+>>>>>>> origin/auto/autonomy-17186719616
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
+<<<<<<< HEAD
 
 
 
             className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;
+=======
+            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+>>>>>>> origin/auto/autonomy-17186719616
           >
             Transform Your Business with
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -524,17 +588,21 @@ const HeroSection: React.FC = () => {
             </span>
           </motion.h1>
 
+<<<<<<< HEAD
           {_/* Subtitle */}
 
 
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+<<<<<<< HEAD
 
 
 
@@ -555,16 +623,28 @@ const HeroSection: React.FC = () => {
 
 
 
+=======
+            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+          >
+            From AI development to cloud architecture, we help companies revolutionize their digital presence 
+            and achieve sustainable growth in the modern technology landscape.
+          </motion.p>
+
+>>>>>>> origin/auto/autonomy-17186719616
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
+<<<<<<< HEAD
 
 
 
 
             className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center mb-16&quot;
+=======
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+>>>>>>> origin/auto/autonomy-17186719616
           >
             <Link
               href="/contact"
@@ -582,6 +662,7 @@ const HeroSection: React.FC = () => {
             </button>
           </motion.div>
 
+<<<<<<< HEAD
           {_/* Stats */}
 
 
@@ -643,11 +724,14 @@ const HeroSection: React.FC = () => {
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
 
 
 
@@ -681,10 +765,17 @@ const HeroSection: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">{stat && stat.value}</div>;
                 <div className="text-gray-400 font-medium">{stat && stat.label}</div>;
               </motion && motion.div>;
+=======
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+          >
+            {stats.map((stat, index) => (
+              <motion.div
+>>>>>>> origin/auto/autonomy-17186719616
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+<<<<<<< HEAD
 
 
 
@@ -700,6 +791,9 @@ const HeroSection: React.FC = () => {
 
 
 
+=======
+                className="text-center group"
+>>>>>>> origin/auto/autonomy-17186719616
               >
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">
                   <stat.icon className="w-8 h-8 text-blue-400" />
@@ -707,6 +801,7 @@ const HeroSection: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
               </motion.div>
+<<<<<<< HEAD
 
 
 
@@ -723,11 +818,14 @@ const HeroSection: React.FC = () => {
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
             ))}
           </motion.div>
         </motion.div>
       </div>
 
+<<<<<<< HEAD
 
 
 
@@ -800,15 +898,28 @@ export default HeroSection;        className="absolute bottom-8 left-1/2 transfo
 export default HeroSection;
 
 
+=======
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+>>>>>>> origin/auto/autonomy-17186719616
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
           className='w-6 h-10 border-2 border-white/30 rounded-full flex justify-center'          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
+=======
+          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
+>>>>>>> origin/auto/autonomy-17186719616
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
             className='w-1 h-3 bg-white/60 rounded-full mt-2'            className="w-1 h-3 bg-white/60 rounded-full mt-2"
           />
         </motion.div>
@@ -826,3 +937,14 @@ export default HeroSection;
     </section>
     </section>
 
+=======
+            className="w-1 h-3 bg-white/60 rounded-full mt-2"
+          />
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+};
+
+export default HeroSection;
+>>>>>>> origin/auto/autonomy-17186719616

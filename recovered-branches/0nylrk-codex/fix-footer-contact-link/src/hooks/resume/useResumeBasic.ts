@@ -16,6 +16,12 @@ export function useResumeBasic() {
     // From useResumeActions
     createResume: resumeActions.createResume,
     updateBasicInfo: resumeActions.updateBasicInfo,
+<<<<<<< HEAD
     setActiveResume: resumeActions.setActiveResume};
 }
 
+=======
+    setActiveResume: resumeActions.setActiveResume,
+  };
+}
+>>>>>>> origin/auto/autonomy-17186719616

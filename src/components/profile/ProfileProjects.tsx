@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <img
                   src={project && project.imageUrl}
                   alt={project && project.title}
@@ -39,6 +40,17 @@ import { FileText } from 'lucide-react'
 
 interface ProfileProjectsProps {
   projects: ProfileProject[]
+=======
+
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ProfileProject } from "@/types/profile";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { FileText } from 'lucide-react'
+
+interface ProfileProjectsProps {
+  projects: ProfileProject[];
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function ProfileProjects({ projects }: ProfileProjectsProps) {
@@ -48,6 +60,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
+<<<<<<< HEAD
 
 
 
@@ -57,10 +70,13 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
             {project.imageUrl ? (
               <AspectRatio ratio={16/9}>
                 <img
+<<<<<<< HEAD
 
                   src={project.imageUrl}
                   alt={project.title}
@@ -70,12 +86,20 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                   loading="lazy"
                 />
 
+=======
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+>>>>>>> origin/auto/autonomy-17186719616
               </AspectRatio>
             ) : (
               <div className="h-40 w-full flex items-center justify-center bg-zion-blue">
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
               </div>
             )}
+<<<<<<< HEAD
 
 
 
@@ -101,6 +125,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
             {project.imageUrl ? (
               <AspectRatio ratio={16/9}>
                 <img
+=======
+>>>>>>> origin/auto/autonomy-17186719616
             
             <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
@@ -110,6 +136,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <div className="flex flex-wrap gap-1 mb-2">
                   {project.tags.map((tag, i) => (
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { ProfileProject } from "@/types/profile",;
@@ -287,3 +314,21 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 
 
 
+=======
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              )}
+              
+              <div className="text-xs text-zion-slate-light mt-2">
+                {project.date}
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

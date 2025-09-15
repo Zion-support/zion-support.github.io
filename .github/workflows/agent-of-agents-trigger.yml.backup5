@@ -19,10 +19,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
           fetch-depth: 0
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Setup Node.js
         uses: actions/setup-node@v4
           node-version: '20'
           cache: 'npm'
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
 

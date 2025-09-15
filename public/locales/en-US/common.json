@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 {
   "general": {
     "app_name": "Zion AI Marketplace",
@@ -20,6 +24,7 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
+<<<<<<< HEAD
     "services": "Services",
     "talent": "Talent",
     "equipment": "Equipment",
@@ -40,6 +45,16 @@
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
     "sitemap": "Sitemap"
+=======
+    "categories": "Categories",
+    "talent": "Talent",
+    "equipment": "Equipment",
+    "community": "Community",
+    "dashboard": "Dashboard",
+    "messages": "Messages",
+    "post_job": "Post Job",
+    "analytics": "Analytics"
+>>>>>>> origin/auto/autonomy-17186719616
   },
   "auth": {
     "login": "Login",
@@ -94,6 +109,24 @@
     "subtotal": "Subtotal",
     "pay": "Pay with Stripe (test)"
   },
+<<<<<<< HEAD
+=======
+  "jobs": {
+    "post_job_title": "Post a Job",
+    "post_job_description": "Fill out the form below to post your job and find the perfect talent",
+    "job_title": "Job Title",
+    "job_description": "Job Description",
+    "skills_required": "Skills Required",
+    "budget": "Budget",
+    "deadline": "Deadline",
+    "job_posted": "Job posted successfully",
+    "title_placeholder": "Enter job title",
+    "description_placeholder": "Describe the job in detail",
+    "requirements_placeholder": "List required skills and qualifications",
+    "submitting": "Submitting...",
+    "post_job_button": "Post Job"
+  },
+>>>>>>> origin/auto/autonomy-17186719616
   "language": {
     "en": "English",
     "es": "Español",

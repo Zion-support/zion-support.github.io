@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import Link from 'next/link',
 import { useRouter } from 'next/router',
@@ -9,18 +10,41 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { Project, ProjectStatus } from "@/types/projects",
 import { Button } from "@/components/ui/button",
 import {logErrorToProduction} from '@/utils/productionLogger',
+=======
+import React, { useState, useEffect } from "react";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { format } from "date-fns";
+import { useAuth } from "@/hooks/useAuth";
+import { useProjects } from "@/hooks/useProjects";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Project, ProjectStatus } from "@/types/projects";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
   CardTitle} from "@/components/ui/card",
+=======
+  CardTitle,
+} from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Tabs,
   TabsContent,
   TabsList,
+<<<<<<< HEAD
   TabsTrigger} from "@/components/ui/tabs",
+=======
+  TabsTrigger,
+} from "@/components/ui/tabs";
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   AlertDialog,
   AlertDialogAction,
@@ -30,6 +54,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
+<<<<<<< HEAD
   AlertDialogTrigger} from "@/components/ui/alert-dialog",
 import { Avatar } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
@@ -52,10 +77,36 @@ function ProjectDetailsContent() {
   const [newNote, setNewNote] = useState(""),
   const [isSubmittingNote, setIsSubmittingNote] = useState(false),
   const [activeTab, setActiveTab] = useState("details"),
+=======
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { Avatar } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
+
+function ProjectDetailsContent() {
+  const router = useRouter();
+  // Get projectId from Next.js router query params
+  const { projectId } = router.query as { projectId?: string };
+  const { user } = useAuth();
+  const { getProjectById, updateProjectStatus } = useProjects();
+  
+  const [project, setProject] = useState<Project | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [notes, setNotes] = useState<any[]>([]);
+  const [newNote, setNewNote] = useState("");
+  const [isSubmittingNote, setIsSubmittingNote] = useState(false);
+  const [activeTab, setActiveTab] = useState("details");
+>>>>>>> origin/auto/autonomy-17186719616
   
   // Load project data
   useEffect(() => {
     async function loadProject() {
+<<<<<<< HEAD
       if (!projectId) return,
       
       setIsLoading(true),
@@ -66,10 +117,23 @@ function ProjectDetailsContent() {
         
         // Now fetch notes
         fetchProjectNotes(projectId),
+=======
+      if (!projectId) return;
+      
+      setIsLoading(true);
+      const projectData = await getProjectById(projectId);
+      
+      if (projectData) {
+        setProject(projectData);
+        
+        // Now fetch notes
+        fetchProjectNotes(projectId);
+>>>>>>> origin/auto/autonomy-17186719616
       } else {
         toast({
           title: "Project not found",
           description: "The requested project could not be found.",
+<<<<<<< HEAD
           variant: "destructive"}),
         router.push("/dashboard"),
       }
@@ -79,6 +143,18 @@ function ProjectDetailsContent() {
     
     loadProject(),
   }, [projectId]),
+=======
+          variant: "destructive",
+        });
+        router.push("/dashboard");
+      }
+      
+      setIsLoading(false);
+    }
+    
+    loadProject();
+  }, [projectId]);
+>>>>>>> origin/auto/autonomy-17186719616
   
   const fetchProjectNotes = async (projectId: string) => {
     try {
@@ -89,6 +165,7 @@ function ProjectDetailsContent() {
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
         .eq("project_id", projectId)
+<<<<<<< HEAD
         .order("created_at", { ascending: false }),
       
       if (error) throw error,
@@ -107,6 +184,27 @@ function ProjectDetailsContent() {
     if (!newNote.trim() || !project || !user) return,
     
     setIsSubmittingNote(true),
+=======
+        .order("created_at", { ascending: false });
+      
+      if (error) throw error;
+      
+      setNotes(data || []);
+    } catch (err: any) {
+      logErrorToProduction('Error fetching project notes:', { data: err });
+      toast({
+        title: "Failed to load notes",
+        description: err.message || "An error occurred while loading project notes.",
+        variant: "destructive",
+      });
+    }
+  };
+  
+  const handleSubmitNote = async () => {
+    if (!newNote.trim() || !project || !user) return;
+    
+    setIsSubmittingNote(true);
+>>>>>>> origin/auto/autonomy-17186719616
     
     try {
       const { data, error } = await supabase
@@ -114,6 +212,7 @@ function ProjectDetailsContent() {
         .insert({
           project_id: project.id,
           user_id: user.id,
+<<<<<<< HEAD
           content: newNote})
         .select(),
       
@@ -141,16 +240,54 @@ function ProjectDetailsContent() {
     if (!project) return,
     
     const success = await updateProjectStatus(project.id, newStatus),
+=======
+          content: newNote,
+        })
+        .select();
+      
+      if (error) throw error;
+      
+      // Refresh notes
+      fetchProjectNotes(project.id);
+      setNewNote("");
+      
+      toast({
+        title: "Note added",
+        description: "Your note has been added to the project.",
+      });
+    } catch (err: any) {
+      logErrorToProduction('Error adding note:', { data: err });
+      toast({
+        title: "Failed to add note",
+        description: err.message || "An error occurred while adding note.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmittingNote(false);
+    }
+  };
+  
+  const handleStatusChange = async (newStatus: ProjectStatus) => {
+    if (!project) return;
+    
+    const success = await updateProjectStatus(project.id, newStatus);
+>>>>>>> origin/auto/autonomy-17186719616
     
     if (success) {
       setProject({
         ...project,
+<<<<<<< HEAD
         status: newStatus}),
+=======
+        status: newStatus,
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
           title: "Offer Accepted! 🎉",
+<<<<<<< HEAD
           description: "The project is now in progress. Congratulations!"}),
       }
     }
@@ -173,6 +310,32 @@ function ProjectDetailsContent() {
         return <Badge variant="outline">{status}</Badge>,
     }
   },
+=======
+          description: "The project is now in progress. Congratulations!",
+        });
+      }
+    }
+  };
+  
+  const getStatusBadge = (status: ProjectStatus) => {
+    switch (status) {
+      case "offer_sent":
+        return <Badge variant="outline">Offer Sent</Badge>;
+      case "offer_accepted":
+        return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;
+      case "changes_requested":
+        return <Badge variant="secondary">Changes Requested</Badge>;
+      case "in_progress":
+        return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;
+      case "completed":
+        return <Badge variant="default">Completed</Badge>;
+      case "canceled":
+        return <Badge variant="destructive">Canceled</Badge>;
+      default:
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   if (isLoading) {
     return (
@@ -184,7 +347,11 @@ function ProjectDetailsContent() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     ),
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
   
   if (!project) {
@@ -203,6 +370,7 @@ function ProjectDetailsContent() {
           </CardContent>
         </Card>
       </div>
+<<<<<<< HEAD
     ),
   }
   
@@ -218,6 +386,23 @@ function ProjectDetailsContent() {
   const isOfferPending = project.status === "offer_sent",
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
+=======
+    );
+  }
+  
+  // Check if user is either the client or the talent
+  const isClient = user?.id === project.client_id;
+  const isTalent = user?.id === project.talent_id;
+  
+  if (!isClient && !isTalent) {
+    router.push("/unauthorized");
+    return null;
+  }
+  
+  const isOfferPending = project.status === "offer_sent";
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <>
@@ -660,7 +845,11 @@ function ProjectDetailsContent() {
         </div>
       </main>
     </>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export default function ProjectDetails() {
@@ -668,5 +857,9 @@ export default function ProjectDetails() {
     <ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

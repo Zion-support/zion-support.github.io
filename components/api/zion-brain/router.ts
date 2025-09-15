@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest
@@ -81,13 +82,19 @@ function handler() {
         payload: { text_length: String (text || "").length, routed },
       });
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
 
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
+<<<<<<< HEAD
   return !superToken || token === superToken
+=======
+  return !superToken || token === superToken;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -103,6 +110,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     appendLog({ module: 'router', type: result.intent, status: 'ok', latencyMs, payload: { textLength: String(text || '').length, routed } });
 
+<<<<<<< HEAD
 
     return res.status(200).json({ ...result, routed })
   } catch (e: any) {
@@ -136,3 +144,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Router failure" });
   }
 }
+=======
+    return res.status(200).json({ ...result, routed });
+  } catch (e: any) {
+    const latencyMs = Date.now() - started;
+    appendLog({ module: 'router', type: 'audit', status: 'error', latencyMs, payload: { error: e?.message || 'unknown' } });
+    return res.status(500).json({ error: 'Router failure' });
+  }
+}
+>>>>>>> origin/auto/autonomy-17186719616

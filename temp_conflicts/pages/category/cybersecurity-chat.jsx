@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const CybersecurityChat = () => {
   return (
@@ -16,7 +21,14 @@ const CybersecurityChat = () => {
         <a href="/blog">Back to Blog</a>
       </main>
     </div>
+<<<<<<< HEAD
   ),
 },
 
 export default CybersecurityChat,
+=======
+  );
+};
+
+export default CybersecurityChat;
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
@@ -6,6 +7,16 @@ import Card from '../components/ui/Card',
 const ext = (url: string, label?: string) => (
 	<a className="text-cyan-300 hover:text-cyan-200 underline" href={url} target="_blank" rel="noopener noreferrer">{label || url.replace('https://','')}</a>
 ),
+=======
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Card from '../components/ui/Card';
+
+const ext = (url: string, label?: string) => (
+	<a className="text-cyan-300 hover:text-cyan-200 underline" href={url} target="_blank" rel="noopener noreferrer">{label || url.replace('https://','')}</a>
+);
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function MarketPricingPage() {
 	return (
@@ -13,19 +24,33 @@ export default function MarketPricingPage() {
 			<Head>
 				<title>Market Pricing | Zion Tech Group</title>
 				<meta name="description" content="Average market prices and credible references for AI, cloud, IT, and micro SaaS services." />
+<<<<<<< HEAD
 				<link rel="canonical" href="https: //ziontechgroup.com/market-pricing" />
 			</Head>
 			<div className="container mx-auto px-4 py-16 text-white">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Market Pricing</h1>
 				<p className="text-gray-300 max-w-3xl mb-10">Benchmarks to guide budgeting and ROI. Prices are indicative, see vendor pages for current rates.</p>
+=======
+				<link rel="canonical" href="https://ziontechgroup.com/market-pricing" />
+			</Head>
+			<div className="container mx-auto px-4 py-16 text-white">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Market Pricing</h1>
+				<p className="text-gray-300 max-w-3xl mb-10">Benchmarks to guide budgeting and ROI. Prices are indicative; see vendor pages for current rates.</p>
+>>>>>>> origin/auto/autonomy-17186719616
 
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 					<Card className="p-6 bg-black/40 border border-gray-800">
 						<h2 className="text-xl font-semibold mb-2">AI Model APIs</h2>
 						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">
+<<<<<<< HEAD
 							<li>OpenAI: {ext('https://openai.com/api/pricingopenai.com/api/pricing')}</li>
 							<li>Anthropic: {ext('https://www.anthropic.com/pricinganthropic.com/pricing')}</li>
 							<li>OpenRouter: {ext('https://openrouter.ai/modelsopenrouter.ai/models')}</li>
+=======
+							<li>OpenAI: {ext('https://openai.com/api/pricing','openai.com/api/pricing')}</li>
+							<li>Anthropic: {ext('https://www.anthropic.com/pricing','anthropic.com/pricing')}</li>
+							<li>OpenRouter: {ext('https://openrouter.ai/models','openrouter.ai/models')}</li>
+>>>>>>> origin/auto/autonomy-17186719616
 						</ul>
 					</Card>
 
@@ -93,7 +118,11 @@ export default function MarketPricingPage() {
                 <li>Postmark pricing: <a className="text-cyan-400 underline" href={`https://postmarkapp.com/pricing`} target="_blank" rel="noopener noreferrer">postmarkapp.com/pricing</a></li>
                 <li>Folderly: <a className="text-cyan-400 underline" href={`https://folderly.com`} target="_blank" rel="noopener noreferrer">folderly.com</a></li>
               </ul>
+<<<<<<< HEAD
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$300/month for warmup and monitoring, ESP fees separate.</div>
+=======
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$300/month for warmup and monitoring; ESP fees separate.</div>
+>>>>>>> origin/auto/autonomy-17186719616
             </div>
 
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">
@@ -404,5 +433,9 @@ export default function MarketPricingPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

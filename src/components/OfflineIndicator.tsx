@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',
 
 import { WifiOff, Wifi } from 'lucide-react'
@@ -62,6 +63,41 @@ export const OfflineIndicator = () => {
 } }
   }, [showOfflineAlert]),
 
+=======
+import { useState, useEffect } from 'react';
+import { WifiOff, Wifi } from 'lucide-react'
+import { Alert, AlertDescription } from '@/components/ui/alert';
+
+export const OfflineIndicator = () => {
+  const [isOnline, setIsOnline] = useState(true);
+  const [showOfflineAlert, setShowOfflineAlert] = useState(false);
+
+  useEffect(() => {
+    const updateOnlineStatus = () => {
+      const online = navigator.onLine;
+      setIsOnline(online);
+      
+      if (!online) {
+        setShowOfflineAlert(true);
+      } else if (showOfflineAlert) {
+        // Show brief "back online" message then hide
+        setTimeout(() => setShowOfflineAlert(false), 3000);
+      }
+    };
+
+    // Set initial status
+    updateOnlineStatus();
+
+    // Listen for online/offline events
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+
+    return () => {
+      window.removeEventListener('online', updateOnlineStatus);
+      window.removeEventListener('offline', updateOnlineStatus);
+    };
+  }, [showOfflineAlert]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   if (!showOfflineAlert) return null;
 
@@ -84,5 +120,10 @@ export const OfflineIndicator = () => {
         </div>
       </Alert>
     </div>
+<<<<<<< HEAD
   ),
 }, 
+=======
+  );
+}; 
+>>>>>>> origin/auto/autonomy-17186719616

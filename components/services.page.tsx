@@ -1,5 +1,9 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 RocketShieldCheckBadgeCheck
+=======
+import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function ServicesPage() {
   return (
@@ -14,12 +18,20 @@ export default function ServicesPage() {
         <section id="security" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <ShieldCheck className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">Security & Compliance</div>
+<<<<<<< HEAD
           <p className="mt-1 text-sm opacity-80">Secure architectureauditsand compliance workflows (SOC2-ready).</p>
+=======
+          <p className="mt-1 text-sm opacity-80">Secure architecture, audits, and compliance workflows (SOC2-ready).</p>
+>>>>>>> origin/auto/autonomy-17186719616
         </section>
         <section id="ai" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <BadgeCheck className="h-6 w-6 text-indigo-500" />
           <div className="mt-3 text-lg font-semibold">AI Integrations</div>
+<<<<<<< HEAD
           <p className="mt-1 text-sm opacity-80">Copilotsagentsvector searchand automation tailored to your product.</p>
+=======
+          <p className="mt-1 text-sm opacity-80">Copilots, agents, vector search, and automation tailored to your product.</p>
+>>>>>>> origin/auto/autonomy-17186719616
         </section>
       </div>
     </EnhancedLayout>

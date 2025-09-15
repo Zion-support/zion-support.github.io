@@ -1,7 +1,11 @@
 
 import { Badge } from "@/components/ui/badge";
 import { ShieldAlert } from "lucide-react";
+<<<<<<< HEAD
 import { TooltipContentTooltipTrigger } from "@/components/ui/tooltip";
+=======
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed';

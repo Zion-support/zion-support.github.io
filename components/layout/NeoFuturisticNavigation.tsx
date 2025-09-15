@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 
@@ -1389,16 +1390,79 @@ import {
 	Link as LinkIcon
 } from 'lucide-react';
 import Button from '../ui/Button';
+=======
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { 
+	Menu, 
+	X, 
+	ChevronDown, 
+	ChevronRight,
+	Phone,
+	Mail,
+	MapPin,
+	Globe,
+	ArrowRight,
+	Sparkles,
+	Brain,
+	Atom,
+	Shield,
+	DollarSign,
+	FileText,
+	BarChart3,
+	MessageSquare,
+	Truck,
+	Users,
+	Database,
+	Cpu,
+	Cloud,
+	Play,
+	Search,
+	ShieldCheck,
+	TrendingUp,
+	Rocket,
+	Zap,
+	Check,
+	Star,
+	Clock,
+	Target,
+	Building,
+	Award,
+	ChartBar,
+	Lock,
+	Smartphone,
+	Palette,
+	Calendar,
+	CreditCard,
+	Settings,
+	Code,
+	BookOpen,
+	Activity,
+	Bot,
+	ChevronRight as ChevronRightIcon,
+	Eye,
+	FlaskConical,
+	Link as LinkIcon
+} from 'lucide-react';
+import Button from '../ui/Button';
+
+>>>>>>> origin/auto/autonomy-17186719616
 export default function NeoFuturisticNavigation() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 	const router = useRouter();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 };
 	useEffect(() => {
 		const handleScroll = () => {
@@ -1430,19 +1494,50 @@ export default function NeoFuturisticNavigation() {
 	},
 
 	const isActive = (path: string) => router.pathname === path
+=======
+	};
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 20);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
+
+	const toggleDropdown = (dropdown: string) => {
+		setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+	};
+
+	const closeMobileMenu = () => {
+		setIsOpen(false);
+		setActiveDropdown(null);
+	};
+
+	const isActive = (path: string) => router.pathname === path;
+>>>>>>> origin/auto/autonomy-17186719616
 
 	const serviceCategories = [
 		{
 			name: 'Quantum Computing',
 			description: 'Revolutionary quantum computing solutions',
+<<<<<<< HEAD
 icon: <Atom className="w-5 h-5" />,
+=======
+			icon: <Atom className="w-5 h-5" />,
+>>>>>>> origin/auto/autonomy-17186719616
 			color: 'from-purple-500 to-pink-500',
 			services: [
 				{ name: 'Quantum AI Platform', description: 'AI-powered quantum computing', price: '$299/month' },
 				{ name: 'Quantum Optimization', description: 'Quantum algorithms for complex problems', price: '$199/month' },
 				{ name: 'Quantum Simulation', description: 'Advanced quantum simulations', price: '$399/month' }
 			]
+<<<<<<< HEAD
 };
+=======
+		},
+>>>>>>> origin/auto/autonomy-17186719616
 		{
 			name: 'AI & Machine Learning',
 			description: 'Advanced artificial intelligence and ML platforms',
@@ -1453,7 +1548,11 @@ icon: <Atom className="w-5 h-5" />,
 				{ name: 'AI Analytics Platform', description: 'Advanced business intelligence', price: '$99/month' },
 				{ name: 'AI Automation Suite', description: 'Complete business automation', price: '$149/month' }
 			]
+<<<<<<< HEAD
 };
+=======
+		},
+>>>>>>> origin/auto/autonomy-17186719616
 		{
 			name: 'Cybersecurity',
 			description: 'Next-generation security solutions',
@@ -1464,7 +1563,11 @@ icon: <Atom className="w-5 h-5" />,
 				{ name: 'AI Threat Detection', description: 'Intelligent security monitoring', price: '$89/month' },
 				{ name: 'Zero-Trust Platform', description: 'Advanced access control', price: '$129/month' }
 			]
+<<<<<<< HEAD
 };
+=======
+		},
+>>>>>>> origin/auto/autonomy-17186719616
 		{
 			name: 'Blockchain & Web3',
 			description: 'Future-proof blockchain and decentralized solutions',
@@ -1475,7 +1578,11 @@ icon: <Atom className="w-5 h-5" />,
 				{ name: 'DeFi Protocol Suite', description: 'Complete DeFi solutions', price: '$199/month' },
 				{ name: 'NFT Marketplace', description: 'AI-curated NFT platform', price: '$99/month' }
 			]
+<<<<<<< HEAD
 };
+=======
+		},
+>>>>>>> origin/auto/autonomy-17186719616
 		{
 			name: 'IoT & Smart Cities',
 			description: 'Connected devices and intelligent infrastructure',
@@ -1486,7 +1593,11 @@ icon: <Atom className="w-5 h-5" />,
 				{ name: 'Smart City Suite', description: 'Complete urban intelligence', price: '$299/month' },
 				{ name: 'Industrial IoT', description: 'Manufacturing automation', price: '$249/month' }
 			]
+<<<<<<< HEAD
 };
+=======
+		},
+>>>>>>> origin/auto/autonomy-17186719616
 		{
 			name: 'Metaverse & VR/AR',
 			description: 'Immersive digital experiences and virtual worlds',
@@ -1497,7 +1608,11 @@ icon: <Atom className="w-5 h-5" />,
 				{ name: 'VR Development', description: 'Complete VR platform', price: '$299/month' },
 				{ name: 'AR Solutions', description: 'Augmented reality platform', price: '$199/month' }
 			]
+<<<<<<< HEAD
 };
+=======
+		},
+>>>>>>> origin/auto/autonomy-17186719616
 		{
 			name: 'Robotics & Automation',
 			description: 'Intelligent automation and robotic systems',
@@ -1508,7 +1623,11 @@ icon: <Atom className="w-5 h-5" />,
 				{ name: 'Manufacturing AI', description: 'Autonomous manufacturing', price: '$199/month' },
 				{ name: 'Service Robotics', description: 'Intelligent service automation', price: '$349/month' }
 			]
+<<<<<<< HEAD
 };
+=======
+		},
+>>>>>>> origin/auto/autonomy-17186719616
 		{
 			name: 'Energy & Sustainability',
 			description: 'Green technology and energy optimization',
@@ -1519,7 +1638,11 @@ icon: <Atom className="w-5 h-5" />,
 				{ name: 'Smart Grid', description: 'Intelligent energy distribution', price: '$199/month' },
 				{ name: 'Sustainability AI', description: 'Environmental impact optimization', price: '$149/month' }
 			]
+<<<<<<< HEAD
 };
+=======
+		},
+>>>>>>> origin/auto/autonomy-17186719616
 		{
 			name: 'Financial Technology',
 			description: 'Innovative fintech and trading solutions',
@@ -1530,7 +1653,11 @@ icon: <Atom className="w-5 h-5" />,
 				{ name: 'AI Risk Management', description: 'Intelligent financial risk analysis', price: '$399/month' },
 				{ name: 'Blockchain Finance', description: 'DeFi and blockchain solutions', price: '$199/month' }
 			]
+<<<<<<< HEAD
 };
+=======
+		},
+>>>>>>> origin/auto/autonomy-17186719616
 		{
 			name: 'Biotechnology & Healthcare',
 			description: 'AI-powered healthcare and biotech solutions',
@@ -1542,13 +1669,22 @@ icon: <Atom className="w-5 h-5" />,
 				{ name: 'Genomic AI', description: 'Advanced genetic analysis', price: '$399/month' }
 			]
 		}
+<<<<<<< HEAD
 ];
+=======
+	];
+
+>>>>>>> origin/auto/autonomy-17186719616
 	const companyInfo = [
 		{ name: 'About Zion Tech Group', description: 'Leading the global micro SaaS revolution', icon: <Rocket className="w-5 h-5" />, link: '/about' },
 		{ name: 'Careers', description: 'Join our revolutionary team', icon: <Star className="w-5 h-5" />, link: '/careers' },
 		{ name: 'News & Updates', description: 'Latest announcements and releases', icon: <TrendingUp className="w-5 h-5" />, link: '/news' },
 		{ name: 'Contact', description: 'Talk to our team 24/7', icon: <Phone className="w-5 h-5" />, link: '/contact' }
 	];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 	const resources = [
 		{ name: 'Documentation', description: 'Comprehensive service guides', icon: <BookOpen className="w-5 h-5" />, link: '/docs' },
 		{ name: 'Blog & Insights', description: 'Latest technology trends', icon: <FileText className="w-5 h-5" />, link: '/blog' },
@@ -1568,7 +1704,12 @@ icon: <Atom className="w-5 h-5" />,
 		{ name: 'AI IoT Platform', href: '/ai-iot-platform' },
 		{ name: 'AI Sales Automation', href: '/ai-sales-automation' },
 		{ name: 'AI Market Research', href: '/ai-market-research' }
+<<<<<<< HEAD
 ];
+=======
+	];
+
+>>>>>>> origin/auto/autonomy-17186719616
 	// Newly added real services quick links
 	const newServiceLinks = [
 		{ name: 'Email Deliverability Monitor', href: '/services/email-deliverability-monitor' },
@@ -1577,13 +1718,22 @@ icon: <Atom className="w-5 h-5" />,
 		{ name: 'GitHub Ops Health Dashboard', href: '/services/github-ops-health-dashboard' },
 		{ name: 'Error Budget Automation', href: '/services/error-budget-automation' },
 		{ name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
+<<<<<<< HEAD
 ];
+=======
+	];
+
+>>>>>>> origin/auto/autonomy-17186719616
 	return (
 		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 			isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-gray-700/50' : 'bg-transparent'
 		}`}> 
 			{/* Scroll Progress Bar */}
+<<<<<<< HEAD
 <div className="absolute top-0 left-0 h-1 w-full bg-transparent">
+=======
+			<div className="absolute top-0 left-0 h-1 w-full bg-transparent">
+>>>>>>> origin/auto/autonomy-17186719616
 				<div
 					className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600"
 					style={{ width: `${(typeof window !== 'undefined' && document.body.scrollHeight > 0) ? (Math.min(100, (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)) : 0}%` }}
@@ -1606,6 +1756,10 @@ icon: <Atom className="w-5 h-5" />,
 							<div className="text-xs text-gray-400">Revolutionary Technology</div>
 						</div>
 					</Link>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 					{/* Desktop Navigation */}
 					<div className="hidden lg:flex items-center space-x-8">
 						{/* Services Dropdown */}
@@ -1629,7 +1783,11 @@ icon: <Atom className="w-5 h-5" />,
 														{category.icon}
 													</div>
 													<div>
+<<<<<<< HEAD
 <h3 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
+=======
+														<h3 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
+>>>>>>> origin/auto/autonomy-17186719616
 															{category.name}
 														</h3>
 														<p className="text-gray-400 text-sm">{category.description}</p>
@@ -1649,7 +1807,11 @@ icon: <Atom className="w-5 h-5" />,
 											</div>
 									))}
 									</div>
+<<<<<<< HEAD
 <div className="mt-6 pt-6 border-t border-gray-700/50">
+=======
+									<div className="mt-6 pt-6 border-t border-gray-700/50">
+>>>>>>> origin/auto/autonomy-17186719616
 										<div className="flex items-center justify-between">
 											<div className="text-gray-400 text-sm">
 												<span className="text-cyan-400 font-semibold">500+</span> Revolutionary Services Available
@@ -1663,7 +1825,12 @@ icon: <Atom className="w-5 h-5" />,
 								</div>
 							)}
 						</div>
+<<<<<<< HEAD
 {/* Direct Links */}
+=======
+
+						{/* Direct Links */}
+>>>>>>> origin/auto/autonomy-17186719616
 						<Link href="/it-services" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">IT Services</Link>
 						<Link href="/ai-services" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">AI Services</Link>
 						<Link href="/micro-saas" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">Micro SaaS</Link>
@@ -1678,6 +1845,10 @@ icon: <Atom className="w-5 h-5" />,
 						<Link href="/data-pipeline-health" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">Data Pipeline Health</Link>
 						<Link href="/ai-code-review-copilot" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">AI Code Review</Link>
 						<Link href="/resources" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">Resources</Link>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 						{/* Popular Dropdown */}
 						<div className="relative group">
 							<button
@@ -1700,7 +1871,12 @@ icon: <Atom className="w-5 h-5" />,
 								</div>
 							)}
 						</div>
+<<<<<<< HEAD
 {/* New Dropdown */}
+=======
+
+						{/* New Dropdown */}
+>>>>>>> origin/auto/autonomy-17186719616
 						<div className="relative group">
 							<button
 								className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
@@ -1723,12 +1899,21 @@ icon: <Atom className="w-5 h-5" />,
 							)}
 						</div>
 					</div>
+<<<<<<< HEAD
 {/* Mobile Menu Button */}
+=======
+
+					{/* Mobile Menu Button */}
+>>>>>>> origin/auto/autonomy-17186719616
 					<button className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors" onClick={() => setIsOpen(!isOpen)}>
 						{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 					</button>
 				</div>
 			</div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 			{/* Mobile Menu */}
 			{isOpen && (
 				<div className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50">
@@ -1740,6 +1925,10 @@ icon: <Atom className="w-5 h-5" />,
 									<span>Services</span>
 									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}/>
 								</button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 								{activeDropdown === 'mobile-services' && (
 									<div className="ml-4 space-y-3">
 										{serviceCategories.map((category, index) => (
@@ -1753,7 +1942,11 @@ icon: <Atom className="w-5 h-5" />,
 												</div>
 											</div>
 										))}
+<<<<<<< HEAD
 <div className="pt-3">
+=======
+										<div className="pt-3">
+>>>>>>> origin/auto/autonomy-17186719616
 											<Button href="/services" variant="quantum" size="sm" className="w-full">
 												View All Services
 												<ArrowRight className="w-4 h-4 ml-2" />
@@ -1762,12 +1955,21 @@ icon: <Atom className="w-5 h-5" />,
 									</div>
 								)}
 							</div>
+<<<<<<< HEAD
 {/* Company Section */}
+=======
+
+							{/* Company Section */}
+>>>>>>> origin/auto/autonomy-17186719616
 							<div>
 								<button className="flex items-center justify-between w-full text-left text-white font-semibold mb-4" onClick={() => toggleDropdown('mobile-company')}>
 									<span>Company</span>
 									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-company' ? 'rotate-90' : ''}`}/>
 								</button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 								{activeDropdown === 'mobile-company' && (
 									<div className="ml-4 space-y-3">
 										{companyInfo.map((item, index) => (
@@ -1778,12 +1980,21 @@ icon: <Atom className="w-5 h-5" />,
 									</div>
 								)}
 							</div>
+<<<<<<< HEAD
 {/* Resources Section */}
+=======
+
+							{/* Resources Section */}
+>>>>>>> origin/auto/autonomy-17186719616
 							<div>
 								<button className="flex items-center justify-between w-full text-left text-white font-semibold mb-4" onClick={() => toggleDropdown('mobile-resources')}>
 									<span>Resources</span>
 									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}/>
 								</button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 								{activeDropdown === 'mobile-resources' && (
 									<div className="ml-4 space-y-3">
 										{resources.map((item, index) => (
@@ -1794,7 +2005,12 @@ icon: <Atom className="w-5 h-5" />,
 									</div>
 								)}
 							</div>
+<<<<<<< HEAD
 {/* Contact Info */}
+=======
+
+							{/* Contact Info */}
+>>>>>>> origin/auto/autonomy-17186719616
 							<div className="pt-6 border-t border-gray-700/50">
 								<div className="text-white font-semibold mb-4">Contact Information</div>
 								<div className="space-y-3">
@@ -1815,9 +2031,14 @@ icon: <Atom className="w-5 h-5" />,
 										<span className="text-gray-300">{contactInfo.website}</span>
 									</div>
 								</div>
+<<<<<<< HEAD
 								<div className="mt-6 space-y-3">
 
 
+=======
+
+								<div className="mt-6 space-y-3">
+>>>>>>> origin/auto/autonomy-17186719616
 									<Button href="/services" variant="quantum" size="lg" className="w-full">
 										Explore Services
 										<ArrowRight className="w-5 h-5 ml-2" />
@@ -1832,9 +2053,14 @@ icon: <Atom className="w-5 h-5" />,
 				</div>
 			)}
 		</nav>
+<<<<<<< HEAD
 
 );
 }
 	);
 }
 
+=======
+	);
+}
+>>>>>>> origin/auto/autonomy-17186719616

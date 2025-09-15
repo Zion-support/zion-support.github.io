@@ -6,7 +6,11 @@ import { cn } from "@/lib/utils"
 const Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
+<<<<<<< HEAD
 >(({ className...props }ref) => (
+=======
+>(({ className, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <SliderPrimitive.Root
     ref={ref}
     className={cn(

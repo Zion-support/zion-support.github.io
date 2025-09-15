@@ -4,6 +4,7 @@ import path from 'path';
 type RouteInfo = { path: string; lastModified: string };
 
 export async function getServerSideProps() {
+<<<<<<< HEAD
   const file = path.join(process.cwd()', 'data', 'site-map.json');
   let routes: RouteInfo[] = [];
   let generatedAt = ', ';
@@ -17,6 +18,21 @@ export async function getServerSideProps() {
 }
 
 export default function SiteMapIntelPage({ routesgeneratedAt }: { routes: RouteInfo[]; generatedAt: string }) {
+=======
+  const file = path.join(process.cwd(), 'data', 'site-map.json');
+  let routes: RouteInfo[] = [];
+  let generatedAt = '';
+  try {
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+    routes = json.routes || [];
+    generatedAt = json.generatedAt || '';
+  } catch {}
+  return { props: { routes, generatedAt } };
+}
+
+export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[]; generatedAt: string }) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Site Map Intelligence</h1>

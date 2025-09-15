@@ -4,6 +4,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 import { useCurrencySupportedCurrency } from '@/context/CurrencyContext';
 DollarSign
@@ -15,6 +16,21 @@ const SUPPORTED: { code: SupportedCurrency; symbol: string }[] = [
 
 export function CurrencySelector() {
   const { currencysetCurrency } = useCurrency();
+=======
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { useCurrency, SupportedCurrency } from '@/context/CurrencyContext';
+import { DollarSign } from 'lucide-react';
+
+const SUPPORTED: { code: SupportedCurrency; symbol: string }[] = [
+  { code: 'USD', symbol: '$' },
+  { code: 'EUR', symbol: '€' },
+  { code: 'GBP', symbol: '£' },
+];
+
+export function CurrencySelector() {
+  const { currency, setCurrency } = useCurrency();
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <DropdownMenu>

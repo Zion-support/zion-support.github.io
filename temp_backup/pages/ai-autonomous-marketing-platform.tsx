@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -295,4 +296,14 @@ export default function AIAutonomousMarketingPlatform() {
       </section>
     </div>
   );
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+
+export async function getStaticProps() {
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } });
+}
+
+export default function AIAutonomousMarketingPlatform(props: any) {
+	return <ServicePage {...props} />;
+>>>>>>> origin/auto/autonomy-17186719616
 }

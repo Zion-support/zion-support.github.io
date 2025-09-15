@@ -1,12 +1,19 @@
 
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
 import { Button } from "./ui/button",
+=======
+import { GradientHeading } from "./GradientHeading";
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
+import { Button } from "./ui/button";
+>>>>>>> origin/auto/autonomy-17186719616
 
 const services = [
   {
     title: "Servers",
     description: "Enterprise-grade servers for any workload with 24/7 maintenance and support",
+<<<<<<< HEAD
     icon: <Server className="h-10 w-10" />},
   {
     title: "Storage",
@@ -28,6 +35,36 @@ const services = [
     title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10" />}],
+=======
+    icon: <Server className="h-10 w-10" />,
+  },
+  {
+    title: "Storage",
+    description: "Scalable storage solutions from SSDs to large-scale enterprise storage systems",
+    icon: <HardDrive className="h-10 w-10" />,
+  },
+  {
+    title: "Networking",
+    description: "Connectivity solutions including switches, routers, and network security devices",
+    icon: <Network className="h-10 w-10" />,
+  },
+  {
+    title: "24x7x365 Support",
+    description: "Around-the-clock technical support with rapid response times guaranteed",
+    icon: <Clock className="h-10 w-10" />,
+  },
+  {
+    title: "Recycling Services",
+    description: "Sustainable disposal and recycling of IT equipment following eco-friendly practices",
+    icon: <Recycle className="h-10 w-10" />,
+  },
+  {
+    title: "Equipment Rentals",
+    description: "Flexible rental options for temporary projects and scaling requirements",
+    icon: <Truck className="h-10 w-10" />,
+  },
+];
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function GlobalServiceSection() {
   return (
@@ -38,6 +75,7 @@ export function GlobalServiceSection() {
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes
           </p>
+<<<<<<< HEAD
 
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -57,6 +95,9 @@ export function GlobalServiceSection() {
         </div>
         <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+        </div>
+>>>>>>> origin/auto/autonomy-17186719616
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
@@ -66,19 +107,30 @@ export function GlobalServiceSection() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
               <p className="text-zion-slate-light mb-4">{service.description}</p>
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
             </div>
           ))}
         </div>
 
         <div className="flex justify-center mt-12">
+<<<<<<< HEAD
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
+=======
+          <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
+>>>>>>> origin/auto/autonomy-17186719616
             Get Your Free Commercial Proposal
           </Button>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

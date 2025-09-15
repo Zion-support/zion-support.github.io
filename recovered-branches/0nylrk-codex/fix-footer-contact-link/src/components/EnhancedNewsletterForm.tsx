@@ -4,9 +4,15 @@ import { useState } from "react";
 import { Mail } from "lucide-react";
 
 export function EnhancedNewsletterForm() {
+<<<<<<< HEAD
   const [emailsetEmail] = useState("");
   const [isSubmittingsetIsSubmitting] = useState(false);
   const [isSubmittedsetIsSubmitted] = useState(false);
+=======
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,7 +23,11 @@ export function EnhancedNewsletterForm() {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setEmail("");
+<<<<<<< HEAD
     }1000);
+=======
+    }, 1000);
+>>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (
@@ -28,7 +38,11 @@ export function EnhancedNewsletterForm() {
         </div>
         <div>
           <h4 className="text-lg font-bold text-white">Stay Updated</h4>
+<<<<<<< HEAD
           <p className="text-zion-slate-light text-sm">Get exclusive offerstrending AI newsand early access to best deals</p>
+=======
+          <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
+>>>>>>> origin/auto/autonomy-17186719616
         </div>
       </div>
       
@@ -59,7 +73,11 @@ export function EnhancedNewsletterForm() {
       
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">
         <div className="flex -space-x-1 mr-2">
+<<<<<<< HEAD
           {[...Array(3)].map((_i) => (
+=======
+          {[...Array(3)].map((_, i) => (
+>>>>>>> origin/auto/autonomy-17186719616
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
               {String.fromCharCode(65 + i)}
             </div>

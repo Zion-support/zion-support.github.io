@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -58,3 +59,11 @@ export function isVersionEqual(a: string, b: string): boolean {
 
 }
 
+=======
+import { MultiverseState } from "./types";
+
+export function nextVersionFor(state: MultiverseState, entityKey: string): number {
+  const current = state.latestVersionByEntityId[entityKey] || 0;
+  return current + 1;
+}
+>>>>>>> origin/auto/autonomy-17186719616

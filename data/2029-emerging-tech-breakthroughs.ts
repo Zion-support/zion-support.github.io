@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 
 export interface EmergingTechBreakthrough2029 {
 export interface EmergingTechBreakthrough2029 {;
+=======
+export interface EmergingTechBreakthrough2029 {
+>>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -13,6 +17,7 @@ export interface EmergingTechBreakthrough2029 {;
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 
     address: string;
   }
@@ -221,6 +226,10 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     email: string,;
     address: string;
   }
+=======
+    address: string;
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
@@ -246,5 +255,9 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
+<<<<<<< HEAD
 ];
 
+=======
+];
+>>>>>>> origin/auto/autonomy-17186719616

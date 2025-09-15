@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 
 type PersonaConfig = {
@@ -20,10 +21,35 @@ export default function StudioHostPage() {
 
   const handleGenerate = async () => {
     setGenerating(true),
+=======
+import React, { useState } from 'react';
+
+type PersonaConfig = {
+  voice: 'Visionary' | 'Grounded' | 'Technical';
+  language: string;
+  cloneStyleText?: string;
+};
+
+export default function StudioHostPage() {
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' });
+  const [inviteeName, setInviteeName] = useState('');
+  const [inviteeBio, setInviteeBio] = useState('');
+  const [topic, setTopic] = useState('');
+  const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
+
+  const [generating, setGenerating] = useState(false);
+  const [episode, setEpisode] = useState<any>(null);
+  const [synthesizing, setSynthesizing] = useState(false);
+  const [publishing, setPublishing] = useState(false);
+
+  const handleGenerate = async () => {
+    setGenerating(true);
+>>>>>>> origin/auto/autonomy-17186719616
     try {
       const res = await fetch('/api/podcast/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+<<<<<<< HEAD
         body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio }, topic, operatorPrompt })}),
       const data = await res.json(),
       setEpisode(data.episode),
@@ -38,10 +64,28 @@ export default function StudioHostPage() {
   const handleSynthesize = async () => {
     if (!episode?.id) return,
     setSynthesizing(true),
+=======
+        body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio }, topic, operatorPrompt }),
+      });
+      const data = await res.json();
+      setEpisode(data.episode);
+    } catch (e) {
+      console.error(e);
+      alert('Failed to generate episode');
+    } finally {
+      setGenerating(false);
+    }
+  };
+
+  const handleSynthesize = async () => {
+    if (!episode?.id) return;
+    setSynthesizing(true);
+>>>>>>> origin/auto/autonomy-17186719616
     try {
       const res = await fetch('/api/podcast/synthesize', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+<<<<<<< HEAD
         body: JSON.stringify({ episodeId: episode.id, persona })}),
       const data = await res.json(),
       setEpisode(data.episode),
@@ -67,6 +111,34 @@ export default function StudioHostPage() {
       setPublishing(false),
     }
   },
+=======
+        body: JSON.stringify({ episodeId: episode.id, persona }),
+      });
+      const data = await res.json();
+      setEpisode(data.episode);
+    } catch (e) {
+      console.error(e);
+      alert('Failed to synthesize audio');
+    } finally {
+      setSynthesizing(false);
+    }
+  };
+
+  const handlePublishRss = async () => {
+    if (!episode?.id) return;
+    setPublishing(true);
+    try {
+      const res = await fetch('/api/podcast/rss', { method: 'POST' });
+      await res.json();
+      alert('RSS feed updated. Platforms will pull on next refresh.');
+    } catch (e) {
+      console.error(e);
+      alert('Failed to update RSS');
+    } finally {
+      setPublishing(false);
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-8">
@@ -174,5 +246,9 @@ export default function StudioHostPage() {
         </section>
       )}
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

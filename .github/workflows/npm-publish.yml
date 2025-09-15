@@ -6,6 +6,7 @@ on:
       - main
     paths-ignore:
       - '**/*.md'
+<<<<<<< HEAD
       - '.github/**'
       - 'docs/**'
 
@@ -23,11 +24,26 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+=======
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+>>>>>>> origin/auto/autonomy-17186719616
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm ci
 
+<<<<<<< HEAD
       - name: Check if package is private
         id: check-private
         run: |
@@ -60,3 +76,12 @@ jobs:
       - name: Publish success
         if: steps.check-private.outputs.private == 'false'
         run: echo "Package published successfully to npm"
+=======
+      - name: Run tests
+        run: npm test --if-present
+
+      - name: Publish to npm
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+>>>>>>> origin/auto/autonomy-17186719616

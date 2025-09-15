@@ -2,7 +2,11 @@
 import { SkillCategoryProps } from './types';
 import { SkillItem } from './SkillItem';
 
+<<<<<<< HEAD
 export const SkillCategory = ({ categoryskillsonDelete }: SkillCategoryProps) => {
+=======
+export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {
+>>>>>>> origin/auto/autonomy-17186719616
   if (!skills || skills.length === 0) return null;
   
   return (

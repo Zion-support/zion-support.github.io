@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import { useRouter } from 'next/router',
 import { useCurrentUser } from '../../hooks/useCurrentUser',
@@ -18,10 +19,33 @@ export default function ComposePage() {
   if (!user) return null,
 
   const headerTitle = type === 'invite' ? `Invite ${recipientName || talentName || 'Talent'}` : type === 'apply' ? `Apply to ${jobTitle || 'Job'}` : 'New Message',
+=======
+import React from 'react';
+import { useRouter } from 'next/router';
+import { useCurrentUser } from '../../hooks/useCurrentUser';
+
+export default function ComposePage() {
+  const router = useRouter();
+  const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
+  const { user, loading } = useCurrentUser();
+  const [message, setMessage] = React.useState('');
+  const [linkUrl, setLinkUrl] = React.useState('');
+  const [file, setFile] = React.useState<File | null>(null);
+  const [sending, setSending] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!loading && !user) router.replace('/auth');
+  }, [loading, user, router]);
+
+  if (!user) return null;
+
+  const headerTitle = type === 'invite' ? `Invite ${recipientName || talentName || 'Talent'}` : type === 'apply' ? `Apply to ${jobTitle || 'Job'}` : 'New Message';
+>>>>>>> origin/auto/autonomy-17186719616
   const context = type === 'invite'
     ? { type: 'invite', jobId, jobTitle, talentId, talentName }
     : type === 'apply'
     ? { type: 'application', jobId, jobTitle }
+<<<<<<< HEAD
     : { type: 'general' },
 
   const onSend = async () => {
@@ -34,6 +58,20 @@ export default function ComposePage() {
       const base64 = Buffer.from(buff).toString('base64'),
       const mime = file.type || 'application/octet-stream',
       attachmentBase64 = `data:${mime},base64,${base64}`,
+=======
+    : { type: 'general' };
+
+  const onSend = async () => {
+    if (!recipientId && !talentId) return alert('Missing recipient');
+    if (!message.trim() && !file && !linkUrl) return;
+    setSending(true);
+    let attachmentBase64: string | undefined;
+    if (file) {
+      const buff = await file.arrayBuffer();
+      const base64 = Buffer.from(buff).toString('base64');
+      const mime = file.type || 'application/octet-stream';
+      attachmentBase64 = `data:${mime};base64,${base64}`;
+>>>>>>> origin/auto/autonomy-17186719616
     }
     const res = await fetch('/api/messages/compose', {
       method: 'POST',
@@ -44,11 +82,21 @@ export default function ComposePage() {
         linkUrl: linkUrl || undefined,
         attachmentBase64,
         attachmentName: file?.name,
+<<<<<<< HEAD
         context})}),
     const data = await res.json(),
     setSending(false),
     if (data?.conversation?.id) router.replace(`/messages/${data.conversation.id}`),
   },
+=======
+        context,
+      }),
+    });
+    const data = await res.json();
+    setSending(false);
+    if (data?.conversation?.id) router.replace(`/messages/${data.conversation.id}`);
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -78,5 +126,9 @@ export default function ComposePage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

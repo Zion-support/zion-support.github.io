@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 name: Performance Monitoring
 
@@ -97,6 +98,29 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+=======
+name: Performance Monitoring
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+>>>>>>> origin/auto/autonomy-17186719616
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -107,6 +131,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
 
+<<<<<<< HEAD
       - name: Build with bundle analysis
         run: |
           echo "Building application with bundle analysis..."
@@ -122,3 +147,9 @@ jobs:
           name: bundle-analysis
           path: dist/
           retention-days: 7
+=======
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,17 +1,30 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Check, X } from 'lucide-react'
 import {
 
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Check, X } from 'lucide-react'
+import {
+>>>>>>> origin/auto/autonomy-17186719616
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table",
 
 import { Badge } from "@/components/ui/badge",
+=======
+  TableRow,
+} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function EnterprisePricingTable() {
   const plans = [
@@ -31,16 +44,26 @@ export function EnterprisePricingTable() {
         { name: "Team collaboration", included: true },
         { name: "API access", included: false },
         { name: "Custom integrations", included: false },
+<<<<<<< HEAD
         { name: "Dedicated success manager", included: false }]},
     {
 
       name: "Business",
       price: "$1,999";
+=======
+        { name: "Dedicated success manager", included: false },
+      ],
+    },
+    {
+      name: "Business",
+      price: "$1,999",
+>>>>>>> origin/auto/autonomy-17186719616
       billing: "/month",
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
       features: [
+<<<<<<< HEAD
 
         { name: 'Private hiring portal', included: true }
         { name: 'Dedicated talent pool', included: true }
@@ -60,6 +83,26 @@ export function EnterprisePricingTable() {
       description: 'For large organizations'
       users: 'Unlimited users'
       popular: false
+=======
+        { name: "Private hiring portal", included: true },
+        { name: "Dedicated talent pool", included: true },
+        { name: "Enhanced SLA (8h)", included: true },
+        { name: "Advanced branding", included: true },
+        { name: "Admin dashboard", included: true },
+        { name: "Team collaboration", included: true },
+        { name: "API access", included: true },
+        { name: "Custom integrations", included: false },
+        { name: "Dedicated success manager", included: false },
+      ],
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      billing: "",
+      description: "For large organizations",
+      users: "Unlimited users",
+      popular: false,
+>>>>>>> origin/auto/autonomy-17186719616
       features: [
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
@@ -69,7 +112,14 @@ export function EnterprisePricingTable() {
         { name: "Team collaboration", included: true },
         { name: "API access", included: true },
         { name: "Custom integrations", included: true },
+<<<<<<< HEAD
         { name: "Dedicated success manager", included: true }]}],
+=======
+        { name: "Dedicated success manager", included: true },
+      ],
+    },
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <section id="pricing" className="py-20 px-4 md:px-6">
@@ -77,6 +127,12 @@ export function EnterprisePricingTable() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+<<<<<<< HEAD
+=======
+            Choose the perfect plan for your team size and requirements
+          </p>
+        </div>
+>>>>>>> origin/auto/autonomy-17186719616
 
         <div className="overflow-x-auto">
           <Table className="border rounded-lg">
@@ -133,10 +189,16 @@ export function EnterprisePricingTable() {
         <div className="mt-8 text-center text-sm text-muted-foreground">
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>
+<<<<<<< HEAD
 
 
 
       </div>
     </section>
   ),
+=======
+      </div>
+    </section>
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -47,6 +48,18 @@ import {ForumPost} from "@/types/community";
 
 import { useAuth } from "@/hooks/useAuth",
 import { ForumPost } from "@/types/community",
+=======
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SEO } from "@/components/SEO";
+import { AppLayout } from "@/layout/AppLayout";
+import ForumCategories from "@/components/community/ForumCategories";
+import PostCard from "@/components/community/PostCard";
+import { useAuth } from "@/hooks/useAuth";
+import { ForumPost } from "@/types/community";
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
@@ -84,6 +97,7 @@ const featuredPosts: ForumPost[] = [
     replyCount: 8,
     isPinned: true,
     isFeatured: true
+<<<<<<< HEAD
 
   }
 ];
@@ -156,6 +170,70 @@ export default function CommunityPage() {
         keywords="community, forum, discussion, AI marketplace, questions, answers"
 
       />
+=======
+  }
+];
+
+// Mock data for recent posts
+const recentPosts: ForumPost[] = [
+  {
+    id: "3",
+    title: "Looking for feedback on my automated testing approach",
+    content: "I've set up a CI/CD pipeline with the following testing strategy...",
+    authorId: "user3",
+    authorName: "Michael Wong",
+    categoryId: "project-help",
+    tags: ["testing", "automation", "ci-cd"],
+    createdAt: "2025-04-10T14:30:00Z",
+    updatedAt: "2025-04-10T14:30:00Z",
+    upvotes: 5,
+    downvotes: 0,
+    replyCount: 2
+  },
+  {
+    id: "4",
+    title: "Feature request: Team collaboration tools",
+    content: "It would be really helpful if we could have built-in tools for team collaboration...",
+    authorId: "user4",
+    authorName: "Emma Davis",
+    categoryId: "feedback",
+    tags: ["feature-request", "teams", "collaboration"],
+    createdAt: "2025-04-09T18:45:00Z",
+    updatedAt: "2025-04-09T18:45:00Z",
+    upvotes: 12,
+    downvotes: 1,
+    replyCount: 3
+  },
+  {
+    id: "5",
+    title: "How to handle client scope creep?",
+    content: "I'm working on a project where the client keeps adding requirements...",
+    authorId: "user5",
+    authorName: "David Lin",
+    categoryId: "project-help",
+    tags: ["client-management", "scope", "projects"],
+    createdAt: "2025-04-08T10:20:00Z",
+    updatedAt: "2025-04-08T10:20:00Z",
+    upvotes: 24,
+    downvotes: 0,
+    replyCount: 7,
+    isAnswered: true
+  }
+];
+
+export default function CommunityPage() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("categories");
+  
+  return (
+    <AppLayout>
+      <SEO 
+        title="Community Forum | Zion AI Marketplace"
+        description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
+        keywords="community, forum, discussion, AI marketplace, questions, answers"
+      />
+      
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
           <div>
@@ -164,21 +242,37 @@ export default function CommunityPage() {
               Join the conversation, ask questions, and share your knowledge
             </p>
           </div>
+<<<<<<< HEAD
+=======
+          
+>>>>>>> origin/auto/autonomy-17186719616
           <Button asChild>
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>
               Create New Post
             </Link>
           </Button>
         </div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
           <TabsList className="mb-6">
             <TabsTrigger value="categories">Categories</TabsTrigger>
             <TabsTrigger value="featured">Featured</TabsTrigger>
             <TabsTrigger value="recent">Recent</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
           <TabsContent value="categories">
             <ForumCategories />
           </TabsContent>
+=======
+          
+          <TabsContent value="categories">
+            <ForumCategories />
+          </TabsContent>
+          
+>>>>>>> origin/auto/autonomy-17186719616
           <TabsContent value="featured">
             <div className="space-y-4">
               {featuredPosts.map((post) => (
@@ -186,17 +280,25 @@ export default function CommunityPage() {
               ))}
             </div>
           </TabsContent>
+<<<<<<< HEAD
+=======
+          
+>>>>>>> origin/auto/autonomy-17186719616
           <TabsContent value="recent">
             <div className="space-y-4">
               {recentPosts.map((post) => (
                 <PostCard key={post.id} post={post} />
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               ))}
             </div>
           </TabsContent>
         </Tabs>
       </div>
     </AppLayout>
+<<<<<<< HEAD
   )
 }
 
@@ -487,3 +589,7 @@ function CommunityPage() {
 }
 ;
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

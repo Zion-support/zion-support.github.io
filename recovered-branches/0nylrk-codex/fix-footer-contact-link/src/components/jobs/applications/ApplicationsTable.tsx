@@ -14,7 +14,11 @@ import {
 } from "@/components/ui/table";
 import { ApplicationActions } from "./ApplicationActions";
 import { StatusBadge } from "./StatusBadge";
+<<<<<<< HEAD
 import { BriefcaseUser } from "lucide-react";
+=======
+import { Briefcase, User } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
@@ -23,11 +27,16 @@ interface ApplicationsTableProps {
   applications: JobApplication[];
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
+<<<<<<< HEAD
   onStatusChange: (applicationId: stringnewStatus: string) => Promise<void>;
+=======
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
+>>>>>>> origin/auto/autonomy-17186719616
   onViewScore: (application: JobApplication) => void;
 }
 
 export function ApplicationsTable({ 
+<<<<<<< HEAD
   applications
   processingId
   onViewApplication
@@ -36,6 +45,16 @@ export function ApplicationsTable({
 }: ApplicationsTableProps) {
   const [hireModalOpensetHireModalOpen] = useState(false);
   const [selectedApplicationsetSelectedApplication] = useState<JobApplication | null>(null);
+=======
+  applications, 
+  processingId, 
+  onViewApplication, 
+  onStatusChange,
+  onViewScore
+}: ApplicationsTableProps) {
+  const [hireModalOpen, setHireModalOpen] = useState(false);
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
+>>>>>>> origin/auto/autonomy-17186719616
   
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application);
@@ -89,7 +108,11 @@ export function ApplicationsTable({
                   </div>
                 </TableCell>
                 <TableCell className="hidden md:table-cell">
+<<<<<<< HEAD
                   {format(new Date(application.created_at)"PP")}
+=======
+                  {format(new Date(application.created_at), "PP")}
+>>>>>>> origin/auto/autonomy-17186719616
                 </TableCell>
                 <TableCell className="hidden md:table-cell">
                   <StatusBadge status={application.status} />

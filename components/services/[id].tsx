@@ -4,7 +4,11 @@ import { useRouter } from 'next/router';
 import { getServiceById } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail';
 import Button from '../../components/ui/Button';
+<<<<<<< HEAD
 ArrowLeftExternalLink
+=======
+import { ArrowLeft, ExternalLink } from 'lucide-react';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function ServiceDetailPage() {
   const router = useRouter();

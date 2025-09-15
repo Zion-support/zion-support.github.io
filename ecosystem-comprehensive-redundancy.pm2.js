@@ -1,6 +1,12 @@
 module.exports = {
   apps: [
+<<<<<<< HEAD
     // 🚀 COMPREHENSIVE REDUNDANCY AUTOMATION SYSTEM
+=======
+    // ============================================================================
+    // 🚀 COMPREHENSIVE REDUNDANCY AUTOMATION SYSTEM
+    // ============================================================================
+>>>>>>> origin/auto/autonomy-17186719616
     
     // Primary Comprehensive Redundancy System
     {
@@ -29,7 +35,13 @@ module.exports = {
       exec_mode: "fork"
     },
 
+<<<<<<< HEAD
     // 🔄 PM2 AUTOMATION REDUNDANCY
+=======
+    // ============================================================================
+    // 🔄 PM2 AUTOMATION REDUNDANCY
+    // ============================================================================
+>>>>>>> origin/auto/autonomy-17186719616
     
     // Primary PM2 Auto-Sync
     {
@@ -131,7 +143,13 @@ module.exports = {
       time: true
     },
 
+<<<<<<< HEAD
     // 🎯 REDUNDANCY SYSTEM MANAGERS
+=======
+    // ============================================================================
+    // 🎯 REDUNDANCY SYSTEM MANAGERS
+    // ============================================================================
+>>>>>>> origin/auto/autonomy-17186719616
     
     // Master Redundancy Orchestrator
     {
@@ -309,7 +327,13 @@ module.exports = {
       exec_mode: "fork"
     },
 
+<<<<<<< HEAD
     // 🔨 BUILD AUTOMATION REDUNDANCY
+=======
+    // ============================================================================
+    // 🔨 BUILD AUTOMATION REDUNDANCY
+    // ============================================================================
+>>>>>>> origin/auto/autonomy-17186719616
     
     // Build Monitor (Primary)
     {
@@ -373,7 +397,13 @@ module.exports = {
       exec_mode: "fork"
     },
 
+<<<<<<< HEAD
     // 🔄 GIT SYNCHRONIZATION REDUNDANCY
+=======
+    // ============================================================================
+    // 🔄 GIT SYNCHRONIZATION REDUNDANCY
+    // ============================================================================
+>>>>>>> origin/auto/autonomy-17186719616
     
     // Git Sync (Primary)
     {
@@ -437,7 +467,13 @@ module.exports = {
       exec_mode: "fork"
     },
 
+<<<<<<< HEAD
     // 🛠️ NETLIFY HEALING REDUNDANCY
+=======
+    // ============================================================================
+    // 🛠️ NETLIFY HEALING REDUNDANCY
+    // ============================================================================
+>>>>>>> origin/auto/autonomy-17186719616
     
     // Netlify Healer (Primary)
     {
@@ -479,7 +515,13 @@ module.exports = {
       time: true
     },
 
+<<<<<<< HEAD
     // 📊 HEALTH MONITORING REDUNDANCY
+=======
+    // ============================================================================
+    // 📊 HEALTH MONITORING REDUNDANCY
+    // ============================================================================
+>>>>>>> origin/auto/autonomy-17186719616
     
     // Health Monitor (Primary)
     {

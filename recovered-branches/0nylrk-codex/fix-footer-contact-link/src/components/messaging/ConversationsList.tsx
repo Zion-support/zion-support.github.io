@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from 'react';
 import { User  } from 'lucide-react';
@@ -28,22 +29,44 @@ interface ConversationsListProps {;
   conversations: Conversation[],;
   activeConversation: Conversation | null,;
   setActiveConversation: (conversation: Conversation) => void,;
+=======
+import React from 'react';
+import { User } from 'lucide-react';
+import { Conversation } from '@/types/messaging';
+import { ConversationItem } from './ConversationItem';
+
+interface ConversationsListProps {
+  conversations: Conversation[];
+  activeConversation: Conversation | null;
+  setActiveConversation: (conversation: Conversation) => void;
+>>>>>>> origin/auto/autonomy-17186719616
   markAsRead: (conversationId: string) => Promise<void>;
 }
 
 export function ConversationsList({ 
+<<<<<<< HEAD
   conversations,
 
   activeConversation, 
   setActiveConversation, 
   markAsRead 
 
+=======
+  conversations, 
+  activeConversation, 
+  setActiveConversation, 
+  markAsRead 
+>>>>>>> origin/auto/autonomy-17186719616
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
       <div className="p-3 border-b border-zion-purple/20">
         <h3 className="font-medium text-white">Conversations</h3>
       </div>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/auto/autonomy-17186719616
       {conversations.length === 0 ? (
         <div className="p-8 text-center text-zion-slate">
           <User className="h-10 w-10 mx-auto mb-2 text-zion-purple/40" />
@@ -56,6 +79,7 @@ export function ConversationsList({
         <div>
           {conversations.map((conversation) => (
             <ConversationItem
+<<<<<<< HEAD
               key={conversation && conversation.id}
               conversation={conversation}
               isActive={activeConversation?.id === conversation.id}
@@ -132,3 +156,19 @@ function ConversationsList() {
     </div>);
 }
 
+=======
+              key={conversation.id}
+              conversation={conversation}
+              isActive={activeConversation?.id === conversation.id}
+              onClick={() => {
+                setActiveConversation(conversation);
+                markAsRead(conversation.id);
+              }}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

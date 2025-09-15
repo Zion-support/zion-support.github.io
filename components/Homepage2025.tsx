@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 "use client";
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 import React, { useState, useEffect, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -13,8 +16,13 @@ import {
 import { 
   emergingTechServicesEnhanced2025 
 } from '../data/2025-emerging-tech-services-enhanced';
+<<<<<<< HEAD
 import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
+=======
+import { advancedAIAutomationServices2026 as advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
+import { advancedCybersecurityServices2026 as advancedCybersecurityServices } from '../data/2026-advanced-cybersecurity-services';
+>>>>>>> origin/auto/autonomy-17186719616
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
 import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
@@ -58,7 +66,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     ...innovativeITServicesEnhanced2025,
     ...emergingTechServicesEnhanced2025,
     ...advancedAIAutomationServices,
+<<<<<<< HEAD
     ...quantumCybersecurityServices,
+=======
+    ...advancedCybersecurityServices,
+>>>>>>> origin/auto/autonomy-17186719616
     ...innovativeMicroSaasServices2026,
     ...specializedITSolutions2026,
     ...emergingTechServices2026
@@ -426,6 +438,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
+<<<<<<< HEAD
               href='/comprehensive-services-showcase-2026'
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25'
             >
@@ -440,6 +453,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         </div>
       </section>
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">

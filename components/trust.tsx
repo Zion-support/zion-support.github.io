@@ -1,21 +1,36 @@
+<<<<<<< HEAD
 "use client";
 import React{ useEffectuseState } from 'react';
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> origin/auto/autonomy-17186719616
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
 
 export default function TrustPage() {
+<<<<<<< HEAD
   const [userIdsetUserId] = useState<string>('demo-user');
   const [datasetData] = useState<any>(null);
   const [loadingsetLoading] = useState<boolean>(true);
   const [showLogicsetShowLogic] = useState<boolean>(false);
+=======
+  const [userId, setUserId] = useState<string>('demo-user');
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [showLogic, setShowLogic] = useState<boolean>(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const u = params.get('user');
     if (u) setUserId(u);
+<<<<<<< HEAD
   }[]);
+=======
+  }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     async function load() {
@@ -26,10 +41,17 @@ export default function TrustPage() {
       setLoading(false);
     }
     load();
+<<<<<<< HEAD
   }[userId]);
 
   async function submitPeer(type: 'endorse' | 'flag') {
     await fetch('/api/trust/peer'{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ userIdreviewerId: 'demo-'reviewer', 'type }) });
+=======
+  }, [userId]);
+
+  async function submitPeer(type: 'endorse' | 'flag') {
+    await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) });
+>>>>>>> origin/auto/autonomy-17186719616
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged');
   }
 
@@ -39,7 +61,11 @@ export default function TrustPage() {
     const formData = new FormData(form);
     const message = formData.get('message');
     const contactEmail = formData.get('email');
+<<<<<<< HEAD
     await fetch('/api/trust/appeal'{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ userIdmessagecontactEmail }) });
+=======
+    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
+>>>>>>> origin/auto/autonomy-17186719616
     alert('Appeal submitted');
     form.reset();
   }
@@ -64,7 +90,11 @@ export default function TrustPage() {
               </div>
               <div className="bg-white dark:bg-gray-900 rounded border p-4">
                 <h2 className="font-medium mb-2">Trust Metrics</h2>
+<<<<<<< HEAD
                 <TrustRadar metrics={(data.components || []).map((c: any) => ({ label: c.keyvalue: Math.round(c.raw * 100) }))} />
+=======
+                <TrustRadar metrics={(data.components || []).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
+>>>>>>> origin/auto/autonomy-17186719616
               </div>
               {showLogic && (
                 <div className="bg-white dark:bg-gray-900 rounded border p-4 text-sm">

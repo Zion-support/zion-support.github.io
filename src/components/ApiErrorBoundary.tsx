@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react',
 import { QueryClient } from '@tanstack/react-query',
 import * as Sentry from '@sentry/nextjs',
@@ -26,23 +27,64 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
 
   constructor(props: ApiErrorBoundaryProps) {
     super(props),
+=======
+import React, { Component, ReactNode } from 'react';
+import { QueryClient } from '@tanstack/react-query';
+import * as Sentry from '@sentry/nextjs';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { RefreshCw, WifiOff } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+
+interface ApiErrorBoundaryProps {
+  children: ReactNode;
+  queryClient?: QueryClient;
+  fallback?: ReactNode;
+}
+
+interface ApiErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: any;
+  isRetrying: boolean;
+  isOnline: boolean;
+}
+
+export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorBoundaryState> {
+  private retryTimeoutId: NodeJS.Timeout | null = null;
+
+  constructor(props: ApiErrorBoundaryProps) {
+    super(props);
+>>>>>>> origin/auto/autonomy-17186719616
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
       isRetrying: false,
+<<<<<<< HEAD
       isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true},
+=======
+      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,
+    };
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   static getDerivedStateFromError(error: Error): Partial<ApiErrorBoundaryState> {
     return {
       hasError: true,
+<<<<<<< HEAD
       error},
+=======
+      error,
+    };
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   componentDidCatch(error: Error, errorInfo: any) {
     // Log to Sentry
     Sentry.withScope((scope) => {
+<<<<<<< HEAD
       scope.setTag('errorBoundaryApiErrorBoundary'),
       scope.setContext('errorInfo', errorInfo),
       scope.setLevel('error'),
@@ -54,27 +96,55 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       errorInfo}),
 
     logErrorToProduction('ApiErrorBoundary caught an error:', error, errorInfo),
+=======
+      scope.setTag('errorBoundary', 'ApiErrorBoundary');
+      scope.setContext('errorInfo', errorInfo);
+      scope.setLevel('error');
+      Sentry.captureException(error);
+    });
+
+    this.setState({
+      error,
+      errorInfo,
+    });
+
+    logErrorToProduction('ApiErrorBoundary caught an error:', error, errorInfo);
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   componentDidMount() {
     // Listen for online/offline events
     if (typeof window !== 'undefined') {
+<<<<<<< HEAD
       window.addEventListener('online', this.handleOnline),
       window.addEventListener('offline', this.handleOffline),
+=======
+      window.addEventListener('online', this.handleOnline);
+      window.addEventListener('offline', this.handleOffline);
+>>>>>>> origin/auto/autonomy-17186719616
     }
   }
 
   componentWillUnmount() {
     if (typeof window !== 'undefined') {
+<<<<<<< HEAD
       window.removeEventListener('online', this.handleOnline),
       window.removeEventListener('offline', this.handleOffline),
     }
     if (this.retryTimeoutId) {
       clearTimeout(this.retryTimeoutId),
+=======
+      window.removeEventListener('online', this.handleOnline);
+      window.removeEventListener('offline', this.handleOffline);
+    }
+    if (this.retryTimeoutId) {
+      clearTimeout(this.retryTimeoutId);
+>>>>>>> origin/auto/autonomy-17186719616
     }
   }
 
   handleOnline = () => {
+<<<<<<< HEAD
     this.setState({ isOnline: true }),
     // Auto-retry when coming back online
     if (this.state.hasError) {
@@ -88,12 +158,32 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
 
   handleRetry = async () => {
     this.setState({ isRetrying: true }),
+=======
+    this.setState({ isOnline: true });
+    // Auto-retry when coming back online
+    if (this.state.hasError) {
+      this.handleRetry();
+    }
+  };
+
+  handleOffline = () => {
+    this.setState({ isOnline: false });
+  };
+
+  handleRetry = async () => {
+    this.setState({ isRetrying: true });
+>>>>>>> origin/auto/autonomy-17186719616
 
     try {
       // Invalidate all queries to force refetch
       if (this.props.queryClient) {
+<<<<<<< HEAD
         await this.props.queryClient.invalidateQueries(),
         await this.props.queryClient.refetchQueries(),
+=======
+        await this.props.queryClient.invalidateQueries();
+        await this.props.queryClient.refetchQueries();
+>>>>>>> origin/auto/autonomy-17186719616
       }
 
       // Reset error state after a brief delay
@@ -102,6 +192,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
           hasError: false,
           error: null,
           errorInfo: null,
+<<<<<<< HEAD
           isRetrying: false}),
       }, 500),
     } catch (retryError) {
@@ -110,6 +201,17 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       this.setState({ isRetrying: false }),
     }
   },
+=======
+          isRetrying: false,
+        });
+      }, 500);
+    } catch (retryError) {
+      logErrorToProduction('Retry failed:', { data: retryError });
+      Sentry.captureException(retryError);
+      this.setState({ isRetrying: false });
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   render() {
     if (this.state.hasError) {
@@ -117,11 +219,19 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       const isNetworkError = this.state.error?.message?.includes('fetch') ||
                            this.state.error?.message?.includes('network') ||
                            this.state.error?.message?.includes('timeout') ||
+<<<<<<< HEAD
                            !this.state.isOnline,
 
       // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback,
+=======
+                           !this.state.isOnline;
+
+      // Use custom fallback if provided
+      if (this.props.fallback) {
+        return this.props.fallback;
+>>>>>>> origin/auto/autonomy-17186719616
       }
 
       return (
@@ -132,12 +242,15 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
+<<<<<<< HEAD
                   <RefreshCw className='h-4 w-4' />
                 )}
                 <AlertTitle>
                   {isNetworkError
                     ? 'Connection Problem'
                     : 'Something went wrong'}
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                   <RefreshCw className="h-4 w-4" />
                 )}
                 <AlertTitle>
@@ -156,6 +269,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 )}
               </AlertDescription>
             </Alert>
+<<<<<<< HEAD
             <div className='flex flex-col gap-2'>
               <Button
                 onClick={this.handleRetry}
@@ -168,6 +282,13 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
 
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
+=======
+
+            <div className="flex flex-col gap-2">
+              <Button
+                onClick={this.handleRetry}
+                disabled={this.state.isRetrying}
+>>>>>>> origin/auto/autonomy-17186719616
                 className="w-full"
               >
                 {this.state.isRetrying ? (
@@ -182,10 +303,15 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                   </>
                 )}
               </Button>
+<<<<<<< HEAD
               <Button
                 variant='outline'
                 onClick={() => window.location.reload()}
                 className='w-full'              >
+=======
+
+              <Button
+>>>>>>> origin/auto/autonomy-17186719616
                 variant="outline"
                 onClick={() => window.location.reload()}
                 className="w-full"
@@ -214,10 +340,17 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
             )}
           </div>
         </div>
+<<<<<<< HEAD
       ),
     }
 
     return this.props.children,
+=======
+      );
+    }
+
+    return this.props.children;
+>>>>>>> origin/auto/autonomy-17186719616
   }
 }
 
@@ -225,6 +358,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
 export const useApiErrorHandler = () => {
   const handleApiError = (error: Error) => {
     Sentry.withScope((scope) => {
+<<<<<<< HEAD
       scope.setTag('sourceuseApiErrorHandler'),
       scope.setLevel('error'),
       Sentry.captureException(error),
@@ -233,3 +367,13 @@ export const useApiErrorHandler = () => {
 
   return { handleApiError },
 }, 
+=======
+      scope.setTag('source', 'useApiErrorHandler');
+      scope.setLevel('error');
+      Sentry.captureException(error);
+    });
+  };
+
+  return { handleApiError };
+}; 
+>>>>>>> origin/auto/autonomy-17186719616

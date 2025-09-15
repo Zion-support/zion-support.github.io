@@ -1,10 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
   const terms = readJsonFile('deal/terms && terms.json', {
+=======
+import { readJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+  const terms = readJsonFile('deal/terms.json', {
+>>>>>>> origin/auto/autonomy-17186719616
     round: 'Series A',
     target: '$10,000,000',
     valuationCap: '$80,000,000',
     discount: '20%',
+<<<<<<< HEAD
 
   const terms = readJsonFile('deal/terms.json', {
     round: 'Series A'
@@ -70,3 +80,9 @@ function handler() {
 
 
 
+=======
+    leadInvestor: 'TBD',
+  });
+  res.status(200).json(terms);
+}
+>>>>>>> origin/auto/autonomy-17186719616

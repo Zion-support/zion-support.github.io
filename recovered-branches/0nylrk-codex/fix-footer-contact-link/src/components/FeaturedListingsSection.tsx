@@ -17,7 +17,11 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: 4999,
       currency: "$",
       category: "AI Models",
+<<<<<<< HEAD
       tags: ["AI"NLP"Machine Learning"],
+=======
+      tags: ["AI", "NLP", "Machine Learning"],
+>>>>>>> origin/auto/autonomy-17186719616
       images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-11-15T14:48:00.000Z",
       rating: 4.8,
@@ -35,7 +39,11 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: 2499,
       currency: "$",
       category: "Content Creation",
+<<<<<<< HEAD
       tags: ["AI"Images"Generation"],
+=======
+      tags: ["AI", "Images", "Generation"],
+>>>>>>> origin/auto/autonomy-17186719616
       images: ["https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-10-20T11:15:00.000Z",
       rating: 4.7,
@@ -49,10 +57,17 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       id: "fullstack-ai-dev",
       title: "Full-Stack AI Development",
       description: "End-to-end development for AI-powered applications",
+<<<<<<< HEAD
       price: null// Custom pricing
       currency: "$",
       category: "Services",
       tags: ["Development"Full-stack"AI"],
+=======
+      price: null, // Custom pricing
+      currency: "$",
+      category: "Services",
+      tags: ["Development", "Full-stack", "AI"],
+>>>>>>> origin/auto/autonomy-17186719616
       images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-12-15T09:45:00.000Z",
       rating: 4.9,
@@ -69,7 +84,11 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: 1299,
       currency: "$",
       category: "APIs",
+<<<<<<< HEAD
       tags: ["API"Sentiment"Analytics"],
+=======
+      tags: ["API", "Sentiment", "Analytics"],
+>>>>>>> origin/auto/autonomy-17186719616
       images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2024-01-05T11:15:00.000Z",
       rating: 4.6,
@@ -78,7 +97,12 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         name: "SocialAI",
         id: "social-ai"
       }
+<<<<<<< HEAD
     }];
+=======
+    },
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <section id="featured" className="py-12 px-4 bg-zion-blue-dark">

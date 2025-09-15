@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React{ useState } from 'react';
 
@@ -5,18 +6,34 @@ export default function CoachWidget() {
   const [inputsetInput] = useState('');
   const [replysetReply] = useState<string | null>(null);
   const [loadingsetLoading] = useState(false);
+=======
+import React, { useState } from 'react';
+
+export default function CoachWidget() {
+  const [input, setInput] = useState('');
+  const [reply, setReply] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   async function ask() {
     if (!input.trim()) return;
     setLoading(true);
     try {
+<<<<<<< HEAD
       const resp = await fetch('/api/learn/coach'{
+=======
+      const resp = await fetch('/api/learn/coach', {
+>>>>>>> origin/auto/autonomy-17186719616
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: input })
       });
       const data = await resp.json();
+<<<<<<< HEAD
       setReply(data.text || ', ');
+=======
+      setReply(data.text || '');
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setLoading(false);
     }

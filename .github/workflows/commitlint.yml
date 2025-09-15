@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: commitlint
 on:
   workflow_dispatch: {}
@@ -22,6 +23,22 @@ jobs:
           fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v4
+=======
+name: Commitlint
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v6
+>>>>>>> origin/auto/autonomy-17186719616
         with:
           node-version: '20'
           cache: npm

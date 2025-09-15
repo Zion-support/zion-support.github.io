@@ -1,9 +1,16 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRightPlusUserCheckFileTextBell } from "lucide-react";
+=======
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Link } from "react-router-dom";
 
 export function ClientDashboard() {

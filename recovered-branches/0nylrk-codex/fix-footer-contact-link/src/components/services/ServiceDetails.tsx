@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
@@ -44,6 +45,20 @@ function ServiceDetails() {
       "Singapore": ["Singapore Central"];
       "Canada": ["Toronto", "Montreal", "Vancouver"];
     const dataCenters: Record<string string[]> = {
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Server, Clock, MapPin } from "lucide-react";
+
+interface ServiceDetailsProps {
+  country: string;
+}
+
+// Component to show service details for the selected country
+export function ServiceDetails({ country }: ServiceDetailsProps) {
+  // Get datacenters for regions (simplified - in production this would come from a real database)
+  const getDatacenters = (country: string): string[] => {
+    const dataCenters: Record<string, string[]> = {
+>>>>>>> origin/auto/autonomy-17186719616
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
       "Germany": ["Frankfurt", "Berlin", "Munich"],
@@ -53,6 +68,7 @@ function ServiceDetails() {
       "Canada": ["Toronto", "Montreal", "Vancouver"],
       // Default for other countries
       "default": ["Major metropolitan areas"]
+<<<<<<< HEAD
     }
     return dataCenters[country] |dataCenters["default"]
   }
@@ -62,10 +78,18 @@ function ServiceDetails() {
   },
   
 
+=======
+    };
+    
+    return dataCenters[country] || dataCenters["default"];
+  };
+  
+>>>>>>> origin/auto/autonomy-17186719616
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
     const regions: Record<string, string> = {
+<<<<<<< HEAD
       "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa";
       "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk";
       "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany";
@@ -88,6 +112,25 @@ function ServiceDetails() {
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
     const timeZones: Record<string string> = {
+=======
+      "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
+      "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",
+      "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",
+      "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan",
+      "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
+      "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
+      // Default placeholder
+      "default": "https://source.unsplash.com/featured/900x700/?datacenter"
+    };
+    
+    return regions[country] || regions["default"];
+  };
+  
+  // Get region-specific instructions
+  const getRegionalInstructions = (country: string): string => {
+    // In a real implementation, this would be much more detailed and specific
+    const timeZones: Record<string, string> = {
+>>>>>>> origin/auto/autonomy-17186719616
       "United States": "EST/CST/PST depending on location",
       "United Kingdom": "GMT/BST",
       "Germany": "CET/CEST",
@@ -95,6 +138,7 @@ function ServiceDetails() {
       "Australia": "AEST/ACDT/AWST depending on location",
       "Singapore": "SGT",
       "default": "Local timezone"
+<<<<<<< HEAD
 
     }
     const timezone = timeZones[country] |timeZones["default"];
@@ -116,10 +160,25 @@ function ServiceDetails() {
   const datacenters = getDatacenters(country),
   
 
+=======
+    };
+    
+    const timezone = timeZones[country] || timeZones["default"];
+    
+    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
+           `Response times are typically within 4 hours for metropolitan areas. ` +
+           `Please have site access permissions and contact details ready for our technicians. ` +
+           `For remote locations, additional travel fees may apply.`;
+  };
+  
+  const datacenters = getDatacenters(country);
+  
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-white flex items-center">
+<<<<<<< HEAD
           <Server className="mr-2 h-5 w-5 text-zion-cyan" />
 
       "default": "Local timezone";
@@ -152,11 +211,27 @@ function ServiceDetails() {
         <div className="overflow-hidden rounded-lg mb-4">;
 
           <img
+=======
+          <Server className="mr-2 h-5 w-5 text-zion-cyan" /> 
+          IT Onsite Service in {country}
+        </CardTitle>
+        <CardDescription className="text-zion-slate-light">
+          Details about our service locations and capabilities in {country}
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="overflow-hidden rounded-lg mb-4">
+          <img 
+>>>>>>> origin/auto/autonomy-17186719616
             src={getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
             className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
           />
         </div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="space-y-4">
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
@@ -165,6 +240,7 @@ function ServiceDetails() {
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {datacenters.map((dc, idx) => (
+<<<<<<< HEAD
                 <div
                   key={idx}
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
@@ -291,6 +367,28 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
               {getRegionalInstructions(country)}
             </p>
           </div>
+=======
+                <div 
+                  key={idx} 
+                  className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
+                >
+                  {dc}
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-medium text-white mb-2 flex items-center">
+              <Clock className="mr-2 h-4 w-4 text-zion-purple" />
+              Service Instructions
+            </h4>
+            <p className="text-zion-slate-light">
+              {getRegionalInstructions(country)}
+            </p>
+          </div>
+          
+>>>>>>> origin/auto/autonomy-17186719616
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">
@@ -309,9 +407,14 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
         </p>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 
 }
 }
 ;
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

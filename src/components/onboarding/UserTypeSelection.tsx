@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Briefcase, Star, User } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -13,6 +14,22 @@ interface UserTypeOption {
 interface UserTypeSelectionProps {
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void,
   selectedType: string | null
+=======
+import { useState } from "react";
+import { Briefcase, Star, User } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+
+interface UserTypeOption {
+  id: "serviceProvider" | "talent" | "client";
+  name: string;
+  description: string;
+  icon: React.ElementType;
+}
+
+interface UserTypeSelectionProps {
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
+  selectedType: string | null;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
@@ -35,7 +52,11 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       description: "I want to discover and hire talent or services",
       icon: User
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6">
@@ -46,10 +67,17 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
         </p>
       </div>
       
+<<<<<<< HEAD
       <div className="grid gap-4 md: grid-cols-3">
         {userTypes.map((type) => {
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
+=======
+      <div className="grid gap-4 md:grid-cols-3">
+        {userTypes.map((type) => {
+          const Icon = type.icon;
+          const isSelected = selectedType === type.id;
+>>>>>>> origin/auto/autonomy-17186719616
           
           return (
             <Button
@@ -72,9 +100,17 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
                 </p>
               </div>
             </Button>
+<<<<<<< HEAD
           ),
         })}
       </div>
     </div>
   ),
+=======
+          );
+        })}
+      </div>
+    </div>
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

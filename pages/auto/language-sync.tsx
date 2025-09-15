@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const LanguageSync: NextPage = () => {
   return (
@@ -20,7 +26,14 @@ const LanguageSync: NextPage = () => {
         </div>
       </main>
     </div>
+<<<<<<< HEAD
   ),
 },
 
 export default LanguageSync,
+=======
+  );
+};
+
+export default LanguageSync;
+>>>>>>> origin/auto/autonomy-17186719616

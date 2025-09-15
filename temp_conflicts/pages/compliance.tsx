@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import { Scale, CheckCircle, Globe, Shield, FileText, Users, Mail, Phone, MapPin } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
+=======
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Scale, CheckCircle, Globe, Shield, FileText, Users, Mail, Phone, MapPin } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function Compliance() {
   const complianceFrameworks = [
@@ -13,8 +22,15 @@ export default function Compliance() {
       icon: Shield,
       description: 'Annual audits of security, availability, and confidentiality controls',
       details: [
+<<<<<<< HEAD
         'Independent third-party auditingSecurity controls assessment',
         'Availability and processing integrityConfidentiality safeguards',
+=======
+        'Independent third-party auditing',
+        'Security controls assessment',
+        'Availability and processing integrity',
+        'Confidentiality safeguards',
+>>>>>>> origin/auto/autonomy-17186719616
         'Annual compliance reporting'
       ]
     },
@@ -24,8 +40,15 @@ export default function Compliance() {
       icon: Scale,
       description: 'International standard for information security management',
       details: [
+<<<<<<< HEAD
         'Information security management system (ISMS)Risk assessment and management',
         'Security policy implementationContinuous improvement processes',
+=======
+        'Information security management system (ISMS)',
+        'Risk assessment and management',
+        'Security policy implementation',
+        'Continuous improvement processes',
+>>>>>>> origin/auto/autonomy-17186719616
         'Regular certification audits'
       ]
     },
@@ -35,8 +58,15 @@ export default function Compliance() {
       icon: Globe,
       description: 'European Union data protection regulation compliance',
       details: [
+<<<<<<< HEAD
         'Data protection by design and defaultIndividual rights management',
         'Data processing agreementsPrivacy impact assessments',
+=======
+        'Data protection by design and default',
+        'Individual rights management',
+        'Data processing agreements',
+        'Privacy impact assessments',
+>>>>>>> origin/auto/autonomy-17186719616
         'Breach notification procedures'
       ]
     },
@@ -46,12 +76,23 @@ export default function Compliance() {
       icon: Users,
       description: 'Healthcare information privacy and security standards',
       details: [
+<<<<<<< HEAD
         'Protected health information (PHI) safeguardsBusiness associate agreements',
         'Access controls and audit logsWorkforce training programs',
         'Incident response procedures'
       ]
     }
   ],
+=======
+        'Protected health information (PHI) safeguards',
+        'Business associate agreements',
+        'Access controls and audit logs',
+        'Workforce training programs',
+        'Incident response procedures'
+      ]
+    }
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const additionalCompliance = [
     { name: 'PCI DSS', description: 'Payment card industry data security standard' },
@@ -59,7 +100,11 @@ export default function Compliance() {
     { name: 'FERPA', description: 'Family Educational Rights and Privacy Act' },
     { name: 'FISMA', description: 'Federal Information Security Management Act' },
     { name: 'FedRAMP', description: 'Federal Risk and Authorization Management Program' }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -243,7 +288,11 @@ export default function Compliance() {
                     <ul className="space-y-2 text-gray-300">
                       <li>• Right to access your personal data</li>
                       <li>• Right to rectification (correction)</li>
+<<<<<<< HEAD
                       <li>• Right to erasure ("right to be forgotten")</li>
+=======
+                      <li>• Right to erasure (&quot;right to be forgotten&quot;)</li>
+>>>>>>> origin/auto/autonomy-17186719616
                       <li>• Right to restrict processing</li>
                       <li>• Right to data portability</li>
                     </ul>
@@ -310,7 +359,12 @@ export default function Compliance() {
               </h3>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
+<<<<<<< HEAD
                 For questions about our compliance programs or to exercise your data protection rights: </p>
+=======
+                For questions about our compliance programs or to exercise your data protection rights:
+              </p>
+>>>>>>> origin/auto/autonomy-17186719616
               
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="flex items-center">
@@ -344,5 +398,9 @@ export default function Compliance() {
         <EnhancedFooter />
       </div>
     </>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

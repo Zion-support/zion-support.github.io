@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
@@ -7,6 +8,17 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
+=======
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  Factory, ArrowRight, CheckCircle, Zap, Target, Users, 
+  TrendingUp, Globe, Cpu, Database, Star, Shield, Building2, Car
+} from 'lucide-react';
+import EnhancedNavigation from '../../components/EnhancedNavigation';
+import EnhancedFooter from '../../components/EnhancedFooter';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function IndustrySolutionsPage() {
   const industries = [
@@ -46,7 +58,11 @@ export default function IndustrySolutionsPage() {
       icon: Factory,
       color: "from-orange-500 to-red-500"
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const benefits = [
     {
@@ -69,7 +85,11 @@ export default function IndustrySolutionsPage() {
       title: "Best Practices",
       description: "Proven solutions based on industry best practices and standards"
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -145,7 +165,11 @@ export default function IndustrySolutionsPage() {
                 viewport={{ once: true }}
                 className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-emerald-400/30 transition-all duration-300 transform hover:scale-105"
               >
+<<<<<<< HEAD
                 <div className={`pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r ${industry.color.replace('from-from-').replace('to-to-')}/0 via-${industry.color.split('-')[1]}-400/10 to-${industry.color.split('-')[3]}-500/0 opacity-0 blur-2xl transition-opacity hover:opacity-100`} />
+=======
+                <div className={`pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r ${industry.color.replace('from-', 'from-').replace('to-', 'to-')}/0 via-${industry.color.split('-')[1]}-400/10 to-${industry.color.split('-')[3]}-500/0 opacity-0 blur-2xl transition-opacity hover:opacity-100`} />
+>>>>>>> origin/auto/autonomy-17186719616
                 
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${industry.color} p-4 mb-6`}>
                   <industry.icon className="w-8 h-8 text-white" />
@@ -237,7 +261,11 @@ export default function IndustrySolutionsPage() {
               href="mailto:kleber@ziontechgroup.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+=======
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+>>>>>>> origin/auto/autonomy-17186719616
             >
               <span>Discuss Industry Needs</span>
               <ArrowRight className="w-5 h-5" />
@@ -248,5 +276,9 @@ export default function IndustrySolutionsPage() {
 
       <EnhancedFooter />
     </div>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

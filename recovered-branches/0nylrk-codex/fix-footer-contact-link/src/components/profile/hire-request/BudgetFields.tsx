@@ -1,7 +1,11 @@
 
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
+<<<<<<< HEAD
 import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
+=======
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Input } from "@/components/ui/input";
 import { TalentProfile } from "@/types/talent";
 import { FormValues } from "./useHireRequestForm";
@@ -11,7 +15,11 @@ interface BudgetFieldsProps {
   talent?: TalentProfile;
 }
 
+<<<<<<< HEAD
 export function BudgetFields({ formtalent }: BudgetFieldsProps) {
+=======
+export function BudgetFields({ form, talent }: BudgetFieldsProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <>
       <FormField

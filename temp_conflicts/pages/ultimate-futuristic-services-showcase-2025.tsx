@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
+=======
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> origin/auto/autonomy-17186719616
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   DollarSign, Clock, CheckCircle, ArrowRight,
@@ -9,6 +15,7 @@ import {
   Zap, Atom, Database, Cloud, Lock, Code,
   Sparkles, Target, Award, Lightbulb, Eye,
   Heart, Zap, Shield, Globe, Rocket, Star, Grid, List
+<<<<<<< HEAD
 } from 'lucide-react',
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground',
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard',
@@ -39,6 +46,38 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',
 import { quantumSpaceServices } from '../data/quantum-space-services',
 import { enterpriseITServices } from '../data/enterprise-it-services',
+=======
+} from 'lucide-react';
+import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
+import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
+
+// Import all the new 2025 service data
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
+import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
+import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
+import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
+import { additionalRealServices2025 } from '../data/2025-additional-real-services';
+import { innovativeAIServices2025 as newInnovativeAIServices } from '../data/2025-innovative-ai-it-services';
+
+// Import new innovative services
+import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services';
+import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services';
+import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services';
+import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services';
+import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services';
+
+// Import our new innovative service categories
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+import { blockchainWeb3Services2025 } from '../data/2025-blockchain-web3-services';
+import { cybersecurityQuantumServices2025 } from '../data/2025-cybersecurity-quantum-services';
+import { spaceMetaverseServices2025 } from '../data/2025-space-metaverse-services';
+
+// Import existing services for comprehensive coverage
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { quantumSpaceServices } from '../data/quantum-space-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const allServices = [
   ...realMicroSaasServices2025,
@@ -51,14 +90,22 @@ const allServices = [
   ...blockchainWeb3Services2025,
   ...cybersecurityQuantumServices2025,
   ...spaceMetaverseServices2025
+<<<<<<< HEAD
 ],
+=======
+];
+>>>>>>> origin/auto/autonomy-17186719616
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 },
+=======
+};
+>>>>>>> origin/auto/autonomy-17186719616
 
 const serviceCategories = [
   {
@@ -151,6 +198,7 @@ const serviceCategories = [
     services: [...innovativeLogisticsServices2025],
     gradient: 'from-orange-500/20 to-red-500/20'
   }
+<<<<<<< HEAD
 ],
 
 export default function UltimateFuturisticServicesShowcase2025() {
@@ -167,10 +215,29 @@ export default function UltimateFuturisticServicesShowcase2025() {
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     return matchesCategory && matchesSearch,
   }),
+=======
+];
+
+export default function UltimateFuturisticServicesShowcase2025() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('popularity');
+  const [viewMode, setViewMode] = useState('grid');
+
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || 
+      serviceCategories.find(cat => cat.id === selectedCategory)?.services.includes(service);
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
+<<<<<<< HEAD
         return a.price.monthly - b.price.monthly,
       case 'price-high':
         return b.price.monthly - a.price.monthly,
@@ -183,6 +250,21 @@ export default function UltimateFuturisticServicesShowcase2025() {
       default: return b.popular ? 1 : -1
     }
   }),
+=======
+        return a.price.monthly - b.price.monthly;
+      case 'price-high':
+        return b.price.monthly - a.price.monthly;
+      case 'rating':
+        return b.rating - a.rating;
+      case 'customers':
+        return b.customers - a.customers;
+      case 'newest':
+        return new Date(b.launchDate) - new Date(a.launchDate);
+      default:
+        return b.popular ? 1 : -1;
+    }
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -388,7 +470,11 @@ export default function UltimateFuturisticServicesShowcase2025() {
               </a>
               <a
                 href={`tel:${contactInfo.mobile}`}
+<<<<<<< HEAD
                 className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-lg border border-white/20 text-white font-semibold rounded-xl hover: bg-white/20 transition-all duration-300"
+=======
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-lg border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300"
+>>>>>>> origin/auto/autonomy-17186719616
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
@@ -398,5 +484,9 @@ export default function UltimateFuturisticServicesShowcase2025() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

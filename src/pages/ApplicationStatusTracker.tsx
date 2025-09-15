@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -8,6 +9,17 @@ import { useIsMobile } from "@/hooks/use-mobile",
 
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
+=======
+import { SEO } from "@/components/SEO";
+import { ApplicationsTracker } from "@/components/jobs/applications";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Briefcase, Inbox } from 'lucide-react'
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { useIsMobile } from "@/hooks/use-mobile";
+
+function ApplicationStatusTrackerContent() {
+  const isMobile = useIsMobile();
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <>
@@ -38,7 +50,11 @@ function ApplicationStatusTrackerContent() {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export default function ApplicationStatusTracker() {
@@ -46,5 +62,9 @@ export default function ApplicationStatusTracker() {
     <ProtectedRoute>
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

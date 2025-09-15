@@ -1,17 +1,31 @@
 
+<<<<<<< HEAD
 import React from "react",
+=======
+import React from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from 'lucide-react'
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
+=======
+  TableRow,
+} from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Download, FileText, Search } from 'lucide-react'
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function InvoiceHistory() {
   // Mock invoice data
@@ -21,42 +35,74 @@ export function InvoiceHistory() {
       date: "May 1, 2025",
       amount: "$1,999.00",
       status: "paid",
+<<<<<<< HEAD
       period: "May 2025"},
+=======
+      period: "May 2025",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: "INV-1233",
       date: "Apr 1, 2025",
       amount: "$1,999.00",
       status: "paid",
+<<<<<<< HEAD
       period: "Apr 2025"},
+=======
+      period: "Apr 2025",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: "INV-1232",
       date: "Mar 1, 2025",
       amount: "$1,999.00",
       status: "paid",
+<<<<<<< HEAD
       period: "Mar 2025"},
+=======
+      period: "Mar 2025",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: "INV-1231",
       date: "Feb 1, 2025",
       amount: "$1,999.00",
       status: "paid",
+<<<<<<< HEAD
       period: "Feb 2025"},
+=======
+      period: "Feb 2025",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: "INV-1230",
       date: "Jan 1, 2025",
       amount: "$1,999.00",
       status: "paid",
+<<<<<<< HEAD
       period: "Jan 2025"},
+=======
+      period: "Jan 2025",
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     {
       id: "INV-1229",
       date: "Dec 1, 2024",
       amount: "$1,999.00",
       status: "paid",
+<<<<<<< HEAD
       period: "Dec 2024"}],
+=======
+      period: "Dec 2024",
+    },
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleDownloadInvoice = (invoiceId: string) => {
     // In a real app, this would trigger a download of the invoice PDF
     toast({
       title: "Downloading invoice",
+<<<<<<< HEAD
       description: `Downloading invoice ${invoiceId} as PDF.`}),
   },
 
@@ -68,6 +114,24 @@ export function InvoiceHistory() {
         return <Badge variant="outline">{status}</Badge>,
     }
   },
+=======
+      description: `Downloading invoice ${invoiceId} as PDF.`,
+    });
+  };
+
+  const getBadgeForStatus = (status: string) => {
+    switch (status) {
+      case "paid":
+        return <Badge className="bg-green-500">Paid</Badge>;
+      case "pending":
+        return <Badge variant="outline">Pending</Badge>;
+      case "overdue":
+        return <Badge variant="destructive">Overdue</Badge>;
+      default:
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6">
@@ -142,5 +206,9 @@ export function InvoiceHistory() {
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -4,7 +4,11 @@
     "outDir": "dist",
     "rootDir": "src"
   },
+<<<<<<< HEAD
   "include": [
     "src"
   ]
+=======
+  "include": ["src"]
+>>>>>>> origin/auto/autonomy-17186719616
 }

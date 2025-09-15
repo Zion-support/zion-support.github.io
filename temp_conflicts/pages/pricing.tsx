@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+>>>>>>> origin/auto/autonomy-17186719616
 import { 
   Check, Star, Zap, Shield, Rocket, Brain, Atom, 
   Users, Globe, Code, Server, Cpu, ArrowRight,
   TrendingUp, Award, Clock, DollarSign
+<<<<<<< HEAD
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
@@ -12,6 +19,15 @@ import EnhancedFooter from '../components/EnhancedFooter',
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
+=======
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+
+export default function PricingPage() {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const pricingPlans = [
     {
@@ -25,9 +41,18 @@ export default function PricingPage() {
       textColor: 'text-blue-400',
       popular: false,
       features: [
+<<<<<<< HEAD
         'AI Business Intelligence BasicUp to 5 team members',
         'Basic analytics dashboardEmail support',
         '14-day free trialStandard integrations'
+=======
+        'AI Business Intelligence Basic',
+        'Up to 5 team members',
+        'Basic analytics dashboard',
+        'Email support',
+        '14-day free trial',
+        'Standard integrations'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       cta: 'Start Free Trial',
       ctaColor: 'from-blue-500 to-cyan-600'
@@ -43,10 +68,21 @@ export default function PricingPage() {
       textColor: 'text-purple-400',
       popular: true,
       features: [
+<<<<<<< HEAD
         'AI Business Intelligence ProAI Customer Experience',
         'Up to 25 team membersAdvanced analytics & reporting',
         'Priority support30-day free trial',
         'Custom integrationsAdvanced AI models'
+=======
+        'AI Business Intelligence Pro',
+        'AI Customer Experience',
+        'Up to 25 team members',
+        'Advanced analytics & reporting',
+        'Priority support',
+        '30-day free trial',
+        'Custom integrations',
+        'Advanced AI models'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       cta: 'Start Free Trial',
       ctaColor: 'from-purple-500 to-pink-600'
@@ -62,11 +98,24 @@ export default function PricingPage() {
       textColor: 'text-green-400',
       popular: false,
       features: [
+<<<<<<< HEAD
         'All Professional featuresQuantum Cybersecurity',
         'Edge Computing OrchestrationUnlimited team members',
         'Custom AI developmentDedicated support manager',
         '60-day free trialWhite-label solutions',
         'SLA guaranteesOn-premise deployment'
+=======
+        'All Professional features',
+        'Quantum Cybersecurity',
+        'Edge Computing Orchestration',
+        'Unlimited team members',
+        'Custom AI development',
+        'Dedicated support manager',
+        '60-day free trial',
+        'White-label solutions',
+        'SLA guarantees',
+        'On-premise deployment'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       cta: 'Contact Sales',
       ctaColor: 'from-green-500 to-emerald-600'
@@ -82,16 +131,33 @@ export default function PricingPage() {
       textColor: 'text-orange-400',
       popular: false,
       features: [
+<<<<<<< HEAD
         'Fully customized solutionsSpace technology integration',
         'Quantum computing accessDedicated development team',
         '24/7 premium supportCustom trial period',
         'Exclusive featuresStrategic partnership',
         'ROI optimizationFuture technology access'
+=======
+        'Fully customized solutions',
+        'Space technology integration',
+        'Quantum computing access',
+        'Dedicated development team',
+        '24/7 premium support',
+        'Custom trial period',
+        'Exclusive features',
+        'Strategic partnership',
+        'ROI optimization',
+        'Future technology access'
+>>>>>>> origin/auto/autonomy-17186719616
       ],
       cta: 'Get Custom Quote',
       ctaColor: 'from-orange-500 to-red-600'
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const addOns = [
     {
@@ -126,11 +192,16 @@ export default function PricingPage() {
       icon: Code,
       color: 'from-green-500 to-emerald-500'
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const savings = {
     monthly: 0,
     annual: 20
+<<<<<<< HEAD
   },
 
   const handlePlanSelect = (planId: string) => {
@@ -141,6 +212,18 @@ export default function PricingPage() {
       window.location.href = '/contact',
     }
   },
+=======
+  };
+
+  const handlePlanSelect = (planId: string) => {
+    setSelectedPlan(planId);
+    if (planId === 'custom') {
+      window.location.href = '/contact';
+    } else {
+      window.location.href = '/contact';
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -441,7 +524,11 @@ export default function PricingPage() {
                   AI, quantum computing, and space technology solutions.
                 </p>
                 
+<<<<<<< HEAD
                 <div className="flex flex-col sm: flex-row gap-6 justify-center">
+=======
+                <div className="flex flex-col sm:flex-row gap-6 justify-center">
+>>>>>>> origin/auto/autonomy-17186719616
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40"
@@ -467,5 +554,9 @@ export default function PricingPage() {
 
       <EnhancedFooter />
     </>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

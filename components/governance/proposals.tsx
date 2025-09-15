@@ -7,11 +7,19 @@ export async function getStaticProps(){
     const raw = fs.readFileSync(p,'utf8')
     return { props: { data: JSON.parse(raw) } }
   }catch{
+<<<<<<< HEAD
     return { props: { data: { updatedAt: nullproposals: [] } } }
   }
 }
 
 export default function Proposals({ data }: { data: { updatedAt: string|nullproposals: any[] } }){
+=======
+    return { props: { data: { updatedAt: null, proposals: [] } } }
+  }
+}
+
+export default function Proposals({ data }: { data: { updatedAt: string|null, proposals: any[] } }){
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-4">
       <h1 className="text-2xl font-semibold">DAO Proposals</h1>

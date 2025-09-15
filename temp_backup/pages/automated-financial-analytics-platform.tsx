@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -478,4 +479,14 @@ export default function AutomatedFinancialAnalyticsPlatform() {
       </section>
     </div>
   );
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+
+export async function getStaticProps() {
+	return (getSlugStaticProps as any)({ params: { slug: 'automated-financial-analytics-platform' } });
+}
+
+export default function AutomatedFinancialAnalyticsPlatform(props: any) {
+	return <ServicePage {...props} />;
+>>>>>>> origin/auto/autonomy-17186719616
 }

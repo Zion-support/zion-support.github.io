@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React{ useStateuseEffect } from 'react';
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons';
@@ -10,25 +11,51 @@ import {
   NotificationFilter
   NotificationHeader
   NotificationList
+=======
+import React, { useState, useEffect } from 'react';
+// Use the shared icon wrapper
+import { Bell } from '@/components/icons';
+import { Button } from '@/components/ui/button';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { useNotifications } from '@/context/notifications/NotificationContext';
+import { toast } from 'sonner';
+import { 
+  NotificationFilter, 
+  NotificationHeader, 
+  NotificationList, 
+>>>>>>> origin/auto/autonomy-17186719616
   NotificationFooter 
 } from '@/components/notifications';
 import { FilterType } from '@/components/notifications/NotificationFilter';
 
 export const NotificationCenter: React.FC = () => {
   const { 
+<<<<<<< HEAD
     filteredNotifications
     unreadCount
     markAsRead
     markAllAsRead,
     dismissNotification
+=======
+    filteredNotifications, 
+    unreadCount, 
+    markAsRead, 
+    markAllAsRead,
+    dismissNotification, 
+>>>>>>> origin/auto/autonomy-17186719616
     loading,
     filter,
     setFilter,
     fetchNotifications
   } = useNotifications();
   
+<<<<<<< HEAD
   const [opensetOpen] = useState(false);
   const [errorsetError] = useState<string | null>(null);
+=======
+  const [open, setOpen] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Refresh notifications when popover opens
   useEffect(() => {
@@ -38,7 +65,11 @@ export const NotificationCenter: React.FC = () => {
           await fetchNotifications();
           setError(null);
         } catch (err) {
+<<<<<<< HEAD
           console.error("Failed to fetch notifications:"err);
+=======
+          console.error("Failed to fetch notifications:", err);
+>>>>>>> origin/auto/autonomy-17186719616
           setError("Couldn't load notifications");
           toast.error("Failed to load notifications");
         }
@@ -46,14 +77,22 @@ export const NotificationCenter: React.FC = () => {
       
       loadNotifications();
     }
+<<<<<<< HEAD
   }[openfetchNotifications]);
+=======
+  }, [open, fetchNotifications]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead();
       toast.success("All notifications marked as read");
     } catch (err) {
+<<<<<<< HEAD
       console.error("Failed to mark notifications as read:"err);
+=======
+      console.error("Failed to mark notifications as read:", err);
+>>>>>>> origin/auto/autonomy-17186719616
       toast.error("Failed to update notifications");
     }
   };

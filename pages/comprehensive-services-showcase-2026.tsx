@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { motion } from 'framer-motion',
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion',
@@ -54,11 +55,70 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
   const [sortBy, setSortBy] = useState('popularity'),
+=======
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
+import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
+import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
+import { 
+  Search, Filter, Star, Users, TrendingUp, 
+  Clock, Zap, Shield, Cloud, Brain, 
+  Database, Globe, Cpu, Box, Sparkles
+} from 'lucide-react';
+
+interface Service {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+}
+
+const ComprehensiveServicesShowcase2026: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
+>>>>>>> origin/auto/autonomy-17186719616
 
   const allServices = [
     ...innovativeMicroSaasServices2026,
     ...specializedITSolutions2026,
     ...emergingTechServices2026
+<<<<<<< HEAD
   ],
 
   const categories = [
@@ -76,6 +136,37 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     'AR/VR & Immersive TechnologyRobotics & Automation',
     'Digital Twin & Simulation'
   ],
+=======
+  ];
+
+  const categories = [
+    'all',
+    'Business Intelligence & Analytics',
+    'Content Creation & Marketing',
+    'Customer Service & Support',
+    'E-commerce & Retail',
+    'HR & Recruitment',
+    'Financial Management',
+    'Project Management',
+    'Education & Training',
+    'Healthcare & Medical',
+    'Cloud Infrastructure & DevOps',
+    'Cybersecurity & Threat Intelligence',
+    'Data Engineering & Analytics',
+    'API Management & Integration',
+    'Network Monitoring & Management',
+    'Database Management & Optimization',
+    'IT Service Management',
+    'Backup & Disaster Recovery',
+    'Quantum Computing & AI',
+    'Blockchain & Web3',
+    'Internet of Things (IoT)',
+    'Edge Computing & 5G',
+    'AR/VR & Immersive Technology',
+    'Robotics & Automation',
+    'Digital Twin & Simulation'
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const priceRanges = [
     { value: 'all', label: 'All Prices' },
@@ -84,11 +175,16 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     { value: '200-400', label: '$200 - $400' },
     { value: '400-600', label: '$400 - $600' },
     { value: '600+', label: '$600+' }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+<<<<<<< HEAD
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
@@ -107,10 +203,31 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     
     return matchesSearch && matchesCategory && matchesPrice,
   }),
+=======
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    
+    const matchesPrice = selectedPriceRange === 'all' || (() => {
+      const price = parseInt(service.price.replace('$', ''));
+      switch (selectedPriceRange) {
+        case '0-100': return price <= 100;
+        case '100-200': return price > 100 && price <= 200;
+        case '200-400': return price > 200 && price <= 400;
+        case '400-600': return price > 400 && price <= 600;
+        case '600+': return price > 600;
+        default: return true;
+      }
+    })();
+    
+    return matchesSearch && matchesCategory && matchesPrice;
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
+<<<<<<< HEAD
         return b.popular ? 1 : -1,
       case 'price-low':
         return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')),
@@ -123,6 +240,21 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       default: return 0
     }
   }),
+=======
+        return b.popular ? 1 : -1;
+      case 'price-low':
+        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
+      case 'price-high':
+        return parseInt(b.price.replace('$', '')) - parseInt(a.price.replace('$', ''));
+      case 'rating':
+        return b.rating - a.rating;
+      case 'customers':
+        return b.customers - a.customers;
+      default:
+        return 0;
+    }
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
@@ -144,6 +276,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       'IT Service Management': <Users className="w-5 h-5" />,
       'Backup & Disaster Recovery': <Cloud className="w-5 h-5" />,
       'Quantum Computing & AI': <Brain className="w-5 h-5" />,
+<<<<<<< HEAD
       'Blockchain & Web3': <Cube className="w-5 h-5" />,
       'Internet of Things (IoT)': <Zap className="w-5 h-5" />,
       'Edge Computing & 5G': <Globe className="w-5 h-5" />,
@@ -153,6 +286,17 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     },
     return iconMap[category] || <Sparkles className="w-5 h-5" />,
   },
+=======
+      'Blockchain & Web3': <Box className="w-5 h-5" />,
+      'Internet of Things (IoT)': <Zap className="w-5 h-5" />,
+      'Edge Computing & 5G': <Globe className="w-5 h-5" />,
+      'AR/VR & Immersive Technology': <Box className="w-5 h-5" />,
+      'Robotics & Automation': <Cpu className="w-5 h-5" />,
+      'Digital Twin & Simulation': <Box className="w-5 h-5" />
+    };
+    return iconMap[category] || <Sparkles className="w-5 h-5" />;
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
@@ -368,7 +512,11 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         </div>
 
         {/* Contact Section */}
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
+=======
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+>>>>>>> origin/auto/autonomy-17186719616
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
             <div className="text-center">
               <h2 className="text-3xl font-bold text-white mb-4">
@@ -418,7 +566,14 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
   )
 },
 
 export default ComprehensiveServicesShowcase2026,
+=======
+  );
+};
+
+export default ComprehensiveServicesShowcase2026;
+>>>>>>> origin/auto/autonomy-17186719616

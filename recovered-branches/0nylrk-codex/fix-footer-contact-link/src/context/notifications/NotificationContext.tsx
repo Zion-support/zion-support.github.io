@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React{ createContextuseContextuseEffectReactNode } from 'react';
+=======
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+>>>>>>> origin/auto/autonomy-17186719616
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { useNotificationOperations } from './useNotificationOperations';
@@ -17,7 +21,12 @@ const defaultContext: NotificationContextType = {
   markAllAsRead: async () => {},
   dismissNotification: async () => {},
   setFilter: () => {},
+<<<<<<< HEAD
   fetchNotifications: async () => {}};
+=======
+  fetchNotifications: async () => {},
+};
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Cast the default context value to avoid issues when React types are missing.
 const NotificationContext = createContext(
@@ -44,15 +53,25 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
     if (user) {
       const channel = supabase
         .channel('notifications-changes')
+<<<<<<< HEAD
         .on('postgres_changes'
           {
             event: '*'
+=======
+        .on('postgres_changes', 
+          {
+            event: '*', 
+>>>>>>> origin/auto/autonomy-17186719616
             schema: 'public',
             table: 'notifications',
             filter: `user_id=eq.${user.id}`
           },
           (payload) => {
+<<<<<<< HEAD
             console.log('Notification change received:'payload);
+=======
+            console.log('Notification change received:', payload);
+>>>>>>> origin/auto/autonomy-17186719616
             notificationOps.fetchNotifications();
           }
         )
@@ -62,7 +81,11 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
         supabase.removeChannel(channel);
       };
     }
+<<<<<<< HEAD
   }[user]);
+=======
+  }, [user]);
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <NotificationContext.Provider value={notificationOps}>

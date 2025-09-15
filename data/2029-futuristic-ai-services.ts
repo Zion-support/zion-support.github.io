@@ -14,6 +14,10 @@ export interface FuturisticAiService2029 {
     address: string;
   };
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export const futuristicAIServices2029: FuturisticAiService2029[] = [
   {
     id: "2029-futuristic-ai",

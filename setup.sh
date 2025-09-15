@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env bash
+=======
+#!/bin/bash
+>>>>>>> origin/auto/autonomy-17186719616
 
 # Make sure the script fails if any command fails
 set -e

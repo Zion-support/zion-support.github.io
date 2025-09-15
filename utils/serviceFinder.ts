@@ -14,8 +14,14 @@ import { newOperationalServices2025 } from '../data/new-operational-services-202
 import { innovative2025Services } from '../data/innovative-2025-services';
 import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
 import { professionalServices } from '../data/professional-services';
+<<<<<<< HEAD
 import { real2029Q2Additions } from '../data/real-2029-q2-additions';
 export type ServiceRecord = any;
+=======
+
+export type ServiceRecord = any;
+
+>>>>>>> origin/auto/autonomy-17186719616
 const allServiceArrays: ServiceRecord[][] = [
 	enhancedRealMicroSaasServices,
 	innovativeMicroSaasServices,
@@ -33,8 +39,13 @@ const allServiceArrays: ServiceRecord[][] = [
 	innovative2025Services,
 	emergingTech2025Services,
 	professionalServices
+<<<<<<< HEAD
 	,real2029Q2Additions
 ];
+=======
+];
+
+>>>>>>> origin/auto/autonomy-17186719616
 export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 	for (const arr of allServiceArrays) {
 		const hit = arr.find((s: any) => {
@@ -54,6 +65,10 @@ export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 	}
 	return undefined;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export function listServicesByCategory(categoryIncludes: string): ServiceRecord[] {
 	const results: ServiceRecord[] = [];
 	for (const arr of allServiceArrays) {
@@ -72,3 +87,7 @@ export function listServicesByCategory(categoryIncludes: string): ServiceRecord[
 		return true;
 	});
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
@@ -31,6 +32,41 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         description: `Your message has been sent to ${profileName}.`}),
     }, 1000),
   },
+=======
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Send } from 'lucide-react'
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+
+interface ProfileContactProps {
+  email?: string;
+  profileName: string;
+  profileType: 'service' | 'talent';
+}
+
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSending(true);
+    
+    // Here would be the actual API call to send the message
+    setTimeout(() => {
+      setIsSending(false);
+      setMessage("");
+      setSubject("");
+      toast({
+        title: "Message Sent",
+        description: `Your message has been sent to ${profileName}.`,
+      });
+    }, 1000);
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -66,6 +102,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
             <Textarea
               placeholder={`Message to ${profileName}...`}
               value={message}
+<<<<<<< HEAD
               onChange={e => setMessage(e.target.value)}
               className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]'
               required
@@ -85,6 +122,8 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
             <Send className='mr-2 h-4 w-4' />
             {isSending ? 'Sending...' : 'Send Message'}          </Button>            disabled={isSending}
           >
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               onChange={(e) => setMessage(e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
               required
@@ -101,5 +140,9 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         </div>
       </form>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from 'lucide-react'
 import { Badge } from "@/components/ui/badge",
@@ -15,12 +16,31 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const currentTalentId = talentId || user?.id,
   const { 
     isLoading,
+=======
+import { useAuth } from "@/hooks/useAuth";
+import { Loader2 } from 'lucide-react'
+import { Badge } from "@/components/ui/badge";
+import { useJobSuggestions } from "@/hooks/useJobSuggestions";
+import { JobMatchesCard } from "./JobMatchesCard";
+import { NoJobsCard } from "./NoJobsCard";
+
+interface SuggestedJobsProps {
+  talentId?: string;
+}
+
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
+  const { user } = useAuth();
+  const currentTalentId = talentId || user?.id;
+  const { 
+    isLoading, 
+>>>>>>> origin/auto/autonomy-17186719616
     updateJobMatchStatus, 
     categorizedMatches: { 
       newMatches, 
       viewedMatches, 
       appliedMatches 
     } 
+<<<<<<< HEAD
   } = useJobSuggestions(currentTalentId),
 
 
@@ -52,6 +72,29 @@ import { NoJobsCard } from "./NoJobsCard";
 
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />,
+=======
+  } = useJobSuggestions(currentTalentId);
+
+  const handleApply = (matchId: string, jobId: string) => {
+    updateJobMatchStatus(matchId, 'applied');
+    // In a real app, this might redirect to application form or open a modal
+  };
+
+  const handleDecline = (matchId: string) => {
+    updateJobMatchStatus(matchId, 'declined');
+  };
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center p-6">
+        <Loader2 className="w-6 h-6 animate-spin text-primary" />
+      </div>
+    );
+  }
+
+  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
+    return <NoJobsCard />;
+>>>>>>> origin/auto/autonomy-17186719616
   }
   
   return (
@@ -120,5 +163,9 @@ import { NoJobsCard } from "./NoJobsCard";
         </div>
       )}
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

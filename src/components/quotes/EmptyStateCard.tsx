@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { MessageSquare, ArchiveIcon } from 'lucide-react'
@@ -9,6 +10,18 @@ type EmptyStateCardProps = {
 
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === 'active',
+=======
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { MessageSquare, ArchiveIcon } from 'lucide-react'
+
+type EmptyStateCardProps = {
+  type: 'active' | 'archived';
+};
+
+export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
+  const isActive = type === 'active';
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
@@ -31,5 +44,10 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
         </p>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   ),
 },
+=======
+  );
+};
+>>>>>>> origin/auto/autonomy-17186719616

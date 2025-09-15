@@ -698,6 +698,7 @@
 [2025-08-23T22:23:30.351Z]    Failed: 0
 [2025-08-23T22:23:30.351Z]    Build status: ✅ READY
 [2025-08-23T22:23:30.351Z] ✅ All pre-build health checks passed
+<<<<<<< HEAD
 [2025-08-24T01:22:49.090Z] 🔍 Starting pre-build health checks...
 [2025-08-24T01:22:49.090Z]   Running: Page Structure Validation
 [2025-08-24T01:22:49.329Z]     ❌ Page Structure Validation: FAIL - 403 critical issues found in pages
@@ -928,3 +929,15 @@
 [2025-08-24T03:23:13.143Z]    Failed: 0
 [2025-08-24T03:23:13.143Z]    Build status: ✅ READY
 [2025-08-24T03:23:13.143Z] ✅ All pre-build health checks passed
+=======
+[2025-08-23T23:43:39.480Z] 🔍 Starting pre-build health checks...
+[2025-08-23T23:43:39.480Z]   Running: Page Structure Validation
+[2025-08-23T23:43:39.818Z]     ❌ Page Structure Validation: FAIL - 402 critical issues found in pages
+[2025-08-23T23:43:39.818Z] 🚨 Critical check failed: Page Structure Validation
+[2025-08-23T23:43:39.818Z] ❌ Pre-build health check failed: 402 critical issues found in pages
+[2025-08-23T23:43:44.047Z] 🔍 Starting pre-build health checks...
+[2025-08-23T23:43:44.047Z]   Running: Page Structure Validation
+[2025-08-23T23:43:44.265Z]     ❌ Page Structure Validation: FAIL - 402 critical issues found in pages
+[2025-08-23T23:43:44.266Z] 🚨 Critical check failed: Page Structure Validation
+[2025-08-23T23:43:44.266Z] ❌ Pre-build health check failed: 402 critical issues found in pages
+>>>>>>> origin/auto/autonomy-17186719616

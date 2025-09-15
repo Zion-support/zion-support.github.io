@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
@@ -7,6 +8,17 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
+=======
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  Database, ArrowRight, CheckCircle, Zap, Target, Users, 
+  TrendingUp, Globe, Cpu, Server, Star, Network, Cloud
+} from 'lucide-react';
+import EnhancedNavigation from '../../components/EnhancedNavigation';
+import EnhancedFooter from '../../components/EnhancedFooter';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function EdgeComputingPage() {
   const services = [
@@ -46,7 +58,11 @@ export default function EdgeComputingPage() {
       price: "$599/month",
       icon: Server
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   const benefits = [
     {
@@ -69,16 +85,27 @@ export default function EdgeComputingPage() {
       title: "Scalable Architecture",
       description: "Easily scale your edge computing resources as needed"
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
         <title>Edge Computing Services - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Advanced edge computing solutions including orchestration, AI deployment, and IoT edge services for optimal window.window.window.performance." />
         <meta name="keywords" content="edge computing, edge orchestration, edge AI, IoT edge, distributed computing, Zion Tech Group" />
         <meta property="og:title" content="Edge Computing Services - Zion Tech Group" />
         <meta property="og:description" content="Advanced edge computing solutions for optimal window.window.window.performance." />
+=======
+        <meta name="description" content="Advanced edge computing solutions including orchestration, AI deployment, and IoT edge services for optimal performance." />
+        <meta name="keywords" content="edge computing, edge orchestration, edge AI, IoT edge, distributed computing, Zion Tech Group" />
+        <meta property="og:title" content="Edge Computing Services - Zion Tech Group" />
+        <meta property="og:description" content="Advanced edge computing solutions for optimal performance." />
+>>>>>>> origin/auto/autonomy-17186719616
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/services/edge-computing" />
         <link rel="canonical" href="https://ziontechgroup.com/services/edge-computing" />
@@ -239,7 +266,11 @@ export default function EdgeComputingPage() {
               href="mailto:kleber@ziontechgroup.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+=======
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+>>>>>>> origin/auto/autonomy-17186719616
             >
               <span>Start Optimizing</span>
               <ArrowRight className="w-5 h-5" />
@@ -250,5 +281,9 @@ export default function EdgeComputingPage() {
 
       <EnhancedFooter />
     </div>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

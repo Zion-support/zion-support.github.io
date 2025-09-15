@@ -1,6 +1,10 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { getBadgeMetaBadgeKey } from "./badgeConfig";
+=======
+import { getBadgeMeta, BadgeKey } from "./badgeConfig";
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface BadgeEarnedProps {
   badge: BadgeKey;
@@ -15,7 +19,12 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   size = 44,
   showName = true,
   showDesc = false,
+<<<<<<< HEAD
   earnedDate}) => {
+=======
+  earnedDate,
+}) => {
+>>>>>>> origin/auto/autonomy-17186719616
   const meta = getBadgeMeta(badge);
   if (!meta) return null;
   const Icon = meta.icon;
@@ -30,7 +39,12 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
           height: size,
           display: "flex",
           alignItems: "center",
+<<<<<<< HEAD
           justifyContent: "center"}}
+=======
+          justifyContent: "center",
+        }}
+>>>>>>> origin/auto/autonomy-17186719616
         className="shadow hover-scale"
         title={meta.name}
       >

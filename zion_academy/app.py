@@ -33,6 +33,7 @@ def init_db_command():
 @app.route('/academy')
 @app.route('/learn')
 def index():
+<<<<<<< HEAD
     """Homepage with featured and latest courses."""
     with app.app_context():
         latest_courses = Course.query.order_by(desc(Course.created_at)).limit(6).all()
@@ -43,6 +44,9 @@ def index():
         latest_courses=latest_courses,
         featured_courses=featured_courses,
     )
+=======
+    return render_template('index.html', title='Welcome to Zion Academy')
+>>>>>>> origin/auto/autonomy-17186719616
 
 @app.route('/academy/founder-course')
 @app.route('/learn/launch')

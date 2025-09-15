@@ -13,11 +13,15 @@
     "48": "icons/icon-48.png",
     "128": "icons/icon-128.png"
   },
+<<<<<<< HEAD
   "permissions": [
     "storage",
     "notifications",
     "identity"
   ],
+=======
+  "permissions": ["storage", "notifications", "identity"],
+>>>>>>> origin/auto/autonomy-17186719616
   "host_permissions": [
     "http://localhost:4000/*"
   ],

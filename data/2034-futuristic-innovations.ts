@@ -25,6 +25,10 @@ export interface Service2034 {
   contact: string;
   website: string;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export const futuristic2034Services: Service2034[] = [
   {
     id: 'ai-quantum-hybrid-brain',

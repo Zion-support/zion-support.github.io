@@ -1,12 +1,20 @@
 
+<<<<<<< HEAD
 import React{ useStateuseEffect } from "react";
+=======
+import React, { useState, useEffect } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { Card } from "@/components/ui/card";
 import { RateOptimizationSection } from "../RateOptimizationSection";
+<<<<<<< HEAD
 import { basicInfoSchemaBasicInfoFormData } from "./schema";
+=======
+import { basicInfoSchema, BasicInfoFormData } from "./schema";
+>>>>>>> origin/auto/autonomy-17186719616
 import { PersonalInfoFields } from "./PersonalInfoFields";
 import { ContactFields } from "./ContactFields";
 
@@ -39,6 +47,7 @@ export function BasicInfoForm({
       linkedin: "",
       github: "",
       hourlyRate: 0,
+<<<<<<< HEAD
       ...initialData}});
 
   useEffect(() => {
@@ -50,6 +59,21 @@ export function BasicInfoForm({
       });
     }
   }[initialDataform]);
+=======
+      ...initialData,
+    },
+  });
+
+  useEffect(() => {
+    if (initialData) {
+      Object.entries(initialData).forEach(([key, value]) => {
+        if (value !== undefined) {
+          form.setValue(key as keyof BasicInfoFormData, value as any);
+        }
+      });
+    }
+  }, [initialData, form]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleSubmit = (data: BasicInfoFormData) => {
     onSave(data);

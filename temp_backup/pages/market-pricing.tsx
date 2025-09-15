@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -191,6 +192,15 @@ export default function MarketPricing() {
 
   return (
     <UltraAdvancedFuturisticBackground>
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function MarketPricingPage() {
+  return (
+    <Layout>
+>>>>>>> origin/auto/autonomy-17186719616
       <Head>
         <title>Market Pricing & Competitor References | Zion Tech Group</title>
         <meta name="description" content="Transparent market pricing references and competitor links for AI, security, analytics, and cloud services." />
@@ -198,6 +208,7 @@ export default function MarketPricing() {
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-8">
+<<<<<<< HEAD
           <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">
             <h2 className="text-2xl font-semibold mb-2">Status Pages & Incident Comms</h2>
             <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -216,10 +227,13 @@ export default function MarketPricing() {
             </ul>
             <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $10–$100/month depending on domains and checks.</div>
           </div>
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Market Pricing & References</h1>
           <p className="text-slate-300">Below are easy-to-verify vendor references and typical pricing ranges to help you benchmark our offerings.</p>
 
           <div className="space-y-6">
+<<<<<<< HEAD
             <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">MLOps, Prompting & Evaluation</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -238,6 +252,15 @@ export default function MarketPricing() {
                 <li>OpenRouter model pricing: <a className="text-cyan-400 underline" href={`https://openrouter.ai/models`} target="_blank" rel="noopener noreferrer">openrouter.ai/models</a></li>
                 <li>Vercel AI SDK pricing notes: <a className="text-cyan-400 underline" href={`https://vercel.com/pricing`} target="_blank" rel="noopener noreferrer">vercel.com/pricing</a> (edge/function costs)</li>
                 <li>Groq API pricing: <a className="text-cyan-400 underline" href={`https://wow.groq.com/pricing`} target="_blank" rel="noopener noreferrer">wow.groq.com/pricing</a></li>
+=======
+            <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">LLM & AI Platforms</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>OpenAI API pricing: <a className="text-cyan-400 underline" href={`https://openai.com/api/pricing`} target="_blank" rel="noopener noreferrer">openai.com/api/pricing</a></li>
+                <li>Anthropic pricing: <a className="text-cyan-400 underline" href={`https://www.anthropic.com/pricing`} target="_blank" rel="noopener noreferrer">anthropic.com/pricing</a></li>
+                <li>Langfuse (observability) pricing: <a className="text-cyan-400 underline" href={`https://langfuse.com/pricing`} target="_blank" rel="noopener noreferrer">langfuse.com/pricing</a> (community + paid tiers)</li>
+                <li>Weights & Biases: <a className="text-cyan-400 underline" href={`https://wandb.ai/site/pricing`} target="_blank" rel="noopener noreferrer">wandb.ai/site/pricing</a></li>
+>>>>>>> origin/auto/autonomy-17186719616
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month depending on traffic and model choice.</div>
             </div>
@@ -246,9 +269,15 @@ export default function MarketPricing() {
               <h2 className="text-2xl font-semibold mb-2">Security & Compliance</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
                 <li>Wiz pricing overview: <a className="text-cyan-400 underline" href={`https://www.wiz.io/pricing`} target="_blank" rel="noopener noreferrer">wiz.io/pricing</a></li>
+<<<<<<< HEAD
                 <li>Prisma Cloud: <a className="text-cyan-400 underline" href={`https://www.paloaltonetworks.com/prisma/cloud`} target="_blank" rel="noopener noreferrer">paloaltonetworks.com/prisma/cloud</a></li>
                 <li>HashiCorp Vault: <a className="text-cyan-400 underline" href={`https://www.hashicorp.com/products/vault/pricing`} target="_blank" rel="noopener noreferrer">hashicorp.com/products/vault/pricing</a></li>
                 <li>Cloudflare Zero Trust: <a className="text-cyan-400 underline" href={`https://www.cloudflare.com/plans/`} target="_blank" rel="noopener noreferrer">cloudflare.com/plans</a></li>
+=======
+                <li>Prisma Cloud: <a className="text-cyan-400 underline" href={`https://www.paloaltonetworks.com/prisma/cloud/pricing`} target="_blank" rel="noopener noreferrer">paloaltonetworks.com/prisma/cloud/pricing</a></li>
+                <li>HashiCorp Vault: <a className="text-cyan-400 underline" href={`https://www.hashicorp.com/products/vault/pricing`} target="_blank" rel="noopener noreferrer">hashicorp.com/products/vault/pricing</a></li>
+                <li>Cloudflare Zero Trust: <a className="text-cyan-400 underline" href={`https://www.cloudflare.com/plans/zero-trust-services/`} target="_blank" rel="noopener noreferrer">cloudflare.com/plans/zero-trust-services</a></li>
+>>>>>>> origin/auto/autonomy-17186719616
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$5,000/month based on scale and compliance scope.</div>
             </div>
@@ -256,11 +285,18 @@ export default function MarketPricing() {
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Data & Analytics</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
+<<<<<<< HEAD
                 <li>Snowflake pricing: <a className="text-cyan-400 underline" href={`https://www.snowflake.com/en/pricing`} target="_blank" rel="noopener noreferrer">snowflake.com/en/pricing</a></li>
                 <li>BigQuery pricing: <a className="text-cyan-400 underline" href={`https://cloud.google.com/bigquery/pricing`} target="_blank" rel="noopener noreferrer">cloud.google.com/bigquery/pricing</a></li>
                 <li>Databricks: <a className="text-cyan-400 underline" href={`https://www.databricks.com/product/pricing`} target="_blank" rel="noopener noreferrer">databricks.com/product/pricing</a></li>
                 <li>dbt Cloud: <a className="text-cyan-400 underline" href={`https://www.getdbt.com/pricing`} target="_blank" rel="noopener noreferrer">getdbt.com/pricing</a></li>
                 <li>ClickHouse Cloud: <a className="text-cyan-400 underline" href={`https://clickhouse.com/pricing`} target="_blank" rel="noopener noreferrer">clickhouse.com/pricing</a></li>
+=======
+                <li>Snowflake pricing: <a className="text-cyan-400 underline" href={`https://www.snowflake.com/pricing/`} target="_blank" rel="noopener noreferrer">snowflake.com/pricing</a></li>
+                <li>BigQuery pricing: <a className="text-cyan-400 underline" href={`https://cloud.google.com/bigquery/pricing`} target="_blank" rel="noopener noreferrer">cloud.google.com/bigquery/pricing</a></li>
+                <li>Databricks: <a className="text-cyan-400 underline" href={`https://www.databricks.com/product/pricing`} target="_blank" rel="noopener noreferrer">databricks.com/product/pricing</a></li>
+                <li>ClickHouse Cloud: <a className="text-cyan-400 underline" href={`https://clickhouse.com/cloud/pricing`} target="_blank" rel="noopener noreferrer">clickhouse.com/cloud/pricing</a></li>
+>>>>>>> origin/auto/autonomy-17186719616
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$3,000/month depending on storage, queries, and concurrency.</div>
             </div>
@@ -271,6 +307,7 @@ export default function MarketPricing() {
                 <li>AWS pricing calculator: <a className="text-cyan-400 underline" href={`https://calculator.aws`} target="_blank" rel="noopener noreferrer">calculator.aws</a></li>
                 <li>Azure pricing: <a className="text-cyan-400 underline" href={`https://azure.microsoft.com/pricing`} target="_blank" rel="noopener noreferrer">azure.microsoft.com/pricing</a></li>
                 <li>Cloudflare plans: <a className="text-cyan-400 underline" href={`https://www.cloudflare.com/plans/`} target="_blank" rel="noopener noreferrer">cloudflare.com/plans</a></li>
+<<<<<<< HEAD
                 <li>Netlify plans: <a className="text-cyan-400 underline" href={`https://www.netlify.com/pricing/`} target="_blank" rel="noopener noreferrer">netlify.com/pricing</a></li>
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$10,000/month depending on traffic and workloads.</div>
@@ -285,6 +322,22 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,500/month by minutes, languages, and concurrency.</div>
             </div>
+=======
+                <li>Vercel pricing: <a className="text-cyan-400 underline" href={`https://vercel.com/pricing`} target="_blank" rel="noopener noreferrer">vercel.com/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$10,000/month depending on traffic and workloads.</div>
+            </div>
+<<<<<<< HEAD
+            <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">Vector Search & RAG Infra</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Pinecone pricing: <a className="text-cyan-400 underline" href={`https://www.pinecone.io/pricing/`} target="_blank" rel="noopener noreferrer">pinecone.io/pricing</a></li>
+                <li>Weaviate pricing: <a className="text-cyan-400 underline" href={`https://weaviate.io/pricing`} target="_blank" rel="noopener noreferrer">weaviate.io/pricing</a></li>
+                <li>Qdrant Cloud: <a className="text-cyan-400 underline" href={`https://qdrant.tech/pricing/`} target="_blank" rel="noopener noreferrer">qdrant.tech/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month based on dimensions, throughput, and replicas.</div>
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Email Deliverability & Warmup</h2>
@@ -292,8 +345,11 @@ export default function MarketPricing() {
                 <li>Google Postmaster Tools: <a className="text-cyan-400 underline" href={`https://postmaster.google.com`} target="_blank" rel="noopener noreferrer">postmaster.google.com</a></li>
                 <li>Mailgun pricing: <a className="text-cyan-400 underline" href={`https://www.mailgun.com/pricing/`} target="_blank" rel="noopener noreferrer">mailgun.com/pricing</a></li>
                 <li>SendGrid pricing: <a className="text-cyan-400 underline" href={`https://sendgrid.com/pricing/`} target="_blank" rel="noopener noreferrer">sendgrid.com/pricing</a></li>
+<<<<<<< HEAD
                 <li>Postmark pricing: <a className="text-cyan-400 underline" href={`https://postmarkapp.com/pricing`} target="_blank" rel="noopener noreferrer">postmarkapp.com/pricing</a></li>
                 <li>Folderly: <a className="text-cyan-400 underline" href={`https://folderly.com`} target="_blank" rel="noopener noreferrer">folderly.com</a></li>
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$300/month for warmup and monitoring; ESP fees separate.</div>
             </div>
@@ -333,7 +389,11 @@ export default function MarketPricing() {
               <ul className="list-disc list-inside text-slate-300 space-y-1">
                 <li>Skyflow pricing: <a className="text-cyan-400 underline" href={`https://www.skyflow.com/pricing`} target="_blank" rel="noopener noreferrer">skyflow.com/pricing</a></li>
                 <li>VGS pricing: <a className="text-cyan-400 underline" href={`https://www.verygoodsecurity.com/pricing`} target="_blank" rel="noopener noreferrer">verygoodsecurity.com/pricing</a></li>
+<<<<<<< HEAD
                 <li>Transcend: <a className="text-cyan-400 underline" href={`https://www.transcend.io/platform`} target="_blank" rel="noopener noreferrer">transcend.io/platform</a></li>
+=======
+                <li>Transcend: <a className="text-cyan-400 underline" href={`https://transcend.io/product/`} target="_blank" rel="noopener noreferrer">transcend.io/product</a></li>
+>>>>>>> origin/auto/autonomy-17186719616
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month by data volume and systems.</div>
             </div>
@@ -346,6 +406,7 @@ export default function MarketPricing() {
                 <li>Okta pricing: <a className="text-cyan-400 underline" href={`https://www.okta.com/pricing/`} target="_blank" rel="noopener noreferrer">okta.com/pricing</a></li>
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
+<<<<<<< HEAD
             </div>
           </div>
           
@@ -877,3 +938,14 @@ export default function MarketPricing() {
 };
 
 export default MarketPricing;
+=======
+>>>>>>> origin/main
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+
+>>>>>>> origin/auto/autonomy-17186719616

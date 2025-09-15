@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -23,6 +24,32 @@ interface MilestoneCardProps {
 
 export function MilestoneCard({ 
   id,
+=======
+import React from 'react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { format } from 'date-fns';
+import { Check, ArrowDown, X } from 'lucide-react'
+import { useDisputeCheck } from '@/hooks/useDisputeCheck';
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+
+interface MilestoneCardProps {
+  id: string;
+  projectId: string;
+  title: string;
+  description?: string;
+  amount: number;
+  status: string;
+  dueDate?: string;
+  onApprove?: (id: string) => Promise<void>;
+  onReject?: (id: string) => Promise<void>;
+}
+
+export function MilestoneCard({ 
+  id, 
+>>>>>>> origin/auto/autonomy-17186719616
   projectId,
   title, 
   description, 
@@ -32,11 +59,16 @@ export function MilestoneCard({
   onApprove,
   onReject
 }: MilestoneCardProps) {
+<<<<<<< HEAD
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id),
+=======
+  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
+>>>>>>> origin/auto/autonomy-17186719616
   
   function getStatusBadgeColor() {
     switch (status) {
       case 'completed':
+<<<<<<< HEAD
         return 'bg-green-500',
       case 'in_progress':
         return 'bg-blue-500',
@@ -45,6 +77,17 @@ export function MilestoneCard({
       case 'rejected':
         return 'bg-red-500',
       default: return 'bg-gray-500'
+=======
+        return 'bg-green-500';
+      case 'in_progress':
+        return 'bg-blue-500';
+      case 'pending':
+        return 'bg-yellow-500';
+      case 'rejected':
+        return 'bg-red-500';
+      default:
+        return 'bg-gray-500';
+>>>>>>> origin/auto/autonomy-17186719616
     }
   }
   
@@ -62,7 +105,11 @@ export function MilestoneCard({
           </div>
           <div className="flex gap-2">
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
+<<<<<<< HEAD
               {status.replace('_ ')}
+=======
+              {status.replace('_', ' ')}
+>>>>>>> origin/auto/autonomy-17186719616
             </Badge>
             
             {isUnderDispute && disputeStatus && (
@@ -78,6 +125,7 @@ export function MilestoneCard({
         )}
         <div className="mt-4">
           <p className="text-xl font-bold">${amount.toFixed(2)}</p>
+<<<<<<< HEAD
 
 
         </div>
@@ -109,6 +157,8 @@ export function MilestoneCard({
           <p className="text-xl font-bold">${amount.toFixed(2)}</p>
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
         </div>
       </CardContent>
       
@@ -145,5 +195,9 @@ export function MilestoneCard({
         </div>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -1,6 +1,10 @@
 
 import { Fragment } from "react";
+<<<<<<< HEAD
 import { Routes } from "react-router-dom";
+=======
+import { Route, Routes } from "react-router-dom";
+>>>>>>> origin/auto/autonomy-17186719616
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
 import ForgotPassword from "@/pages/ForgotPassword";

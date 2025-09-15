@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Handshake, MessageSquare, Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "./HireNowCTA",
@@ -94,19 +95,58 @@ export function TalentProfile({
   onMessageTalent
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth(),
+=======
+
+import React from "react";
+import { Handshake, MessageSquare, Star } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+
+import { HireNowCTA } from "./HireNowCTA";
+import { ProfileHero } from "./ProfileHero";
+import { ProfileSkills } from "./ProfileSkills";
+import { ProfileExperience } from "./ProfileExperience";
+import { ProfileProjects } from "./ProfileProjects";
+import { ProfileAvailability } from "./ProfileAvailability";
+import { ProfileContact } from "./ProfileContact";
+import { ProfileRatings } from "./ProfileRatings";
+import { TalentProfile as TalentProfileType } from "@/types/talent";
+import { useAuth } from "@/hooks/useAuth";
+import { Availability } from "@/types/profile";
+
+interface TalentProfileProps {
+  profile: TalentProfileType;
+  onRequestHire: () => void;
+  onMessageTalent?: () => void;
+}
+
+export function TalentProfile({ 
+  profile, 
+  onRequestHire,
+  onMessageTalent
+}: TalentProfileProps) {
+  const { isAuthenticated } = useAuth();
+>>>>>>> origin/auto/autonomy-17186719616
   
   // Create proper availability object from talent profile
   const availability: Availability = {
     status: profile.availability_type === 'full_time' ? 'available' : 
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
+<<<<<<< HEAD
   },
+=======
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill,
     level: 3 // Default level since we don't have this data
+<<<<<<< HEAD
   })) || [],
+=======
+  })) || [];
+>>>>>>> origin/auto/autonomy-17186719616
   
   // Create proper projects array for ProfileProjects component
   const projectsArray = profile.key_projects?.map((proj, i) => ({
@@ -114,6 +154,7 @@ export function TalentProfile({
     title: proj.title,
     description: proj.description,
     date: new Date().toISOString() // Default date since we don't have this data
+<<<<<<< HEAD
   })) || [],
   
   return (
@@ -166,6 +207,14 @@ export function TalentProfile({;
     <div className="container mx-auto px-4 py-8">;
       {/* Profile Header */}
       <ProfileHero;
+=======
+  })) || [];
+  
+  return (
+    <div className="container mx-auto px-4 py-8">
+      {/* Profile Header */}
+      <ProfileHero
+>>>>>>> origin/auto/autonomy-17186719616
         name={profile.full_name}
         title={profile.professional_title}
         avatarUrl={profile.profile_picture_url}
@@ -176,15 +225,19 @@ export function TalentProfile({;
       
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
         {/* Left Column - Skills & Info */}
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
           <ProfileAvailability availability={availability} />
+<<<<<<< HEAD
           <ProfileContact
             email={profile.user_id}
             profileName={profile.full_name}
@@ -216,6 +269,8 @@ export function TalentProfile({;
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}            />
           </div>
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           <ProfileContact 
             email={profile.user_id}
             profileName={profile.full_name}
@@ -234,7 +289,12 @@ export function TalentProfile({;
           </div>
           
           {/* Projects Section */}
+<<<<<<< HEAD
           <ProfileProjects projects={projectsArray} />;
+=======
+          <ProfileProjects projects={projectsArray} />
+          
+>>>>>>> origin/auto/autonomy-17186719616
           {/* Ratings Section */}
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
             <h2 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -286,7 +346,12 @@ export function TalentProfile({;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   ),
 }
 ;
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

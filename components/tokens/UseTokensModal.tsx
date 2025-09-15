@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 "use client";
 import React{ useEffectuseState } from 'react';
 import { connectMetaMaskgetAccounts } from '../../utils/wallet';
+=======
+import React, { useEffect, useState } from 'react';
+import { connectMetaMask, getAccounts } from '../../utils/wallet';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
 
@@ -8,16 +13,28 @@ export default function UseTokensModal({
   isOpen,
   onClose,
   serviceId,
+<<<<<<< HEAD
   defaultType}: {
+=======
+  defaultType,
+}: {
+>>>>>>> origin/auto/autonomy-17186719616
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {
+<<<<<<< HEAD
   const [accountsetAccount] = useState<string | null>(null);
   const [typesetType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
   const [tokensetTokens] = useState<number>(100);
   const [isSubmittingsetIsSubmitting] = useState(false);
+=======
+  const [account, setAccount] = useState<string | null>(null);
+  const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
+  const [tokens, setTokens] = useState<number>(100);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
   const usdValue = (tokens * 0.01).toFixed(2);
 
   useEffect(() => {
@@ -25,7 +42,11 @@ export default function UseTokensModal({
       const accs = await getAccounts();
       if (accs && accs.length > 0) setAccount(accs[0]);
     })();
+<<<<<<< HEAD
   }[]);
+=======
+  }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   async function connect() {
     const accs = await connectMetaMask();
@@ -35,10 +56,18 @@ export default function UseTokensModal({
   async function redeem() {
     setIsSubmitting(true);
     try {
+<<<<<<< HEAD
       const res = await fetch('/api/tokens/redeem'{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ accountamount: tokenstypeserviceId })});
+=======
+      const res = await fetch('/api/tokens/redeem', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ account, amount: tokens, type, serviceId }),
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       const data = await res.json();
       if (data?.ok) {
         onClose();
@@ -73,25 +102,38 @@ export default function UseTokensModal({
 
           <div className="text-sm">
             <div className="mb-1">Amount (ZION)</div>
+<<<<<<< HEAD
             <input type="number" min={1} value={tokens} onChange={(e) => setTokens(parseInt(e.target.value || '0'10))} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2" />
+=======
+            <input type="number" min={1} value={tokens} onChange={(e) => setTokens(parseInt(e.target.value || '0', 10))} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2" />
+>>>>>>> origin/auto/autonomy-17186719616
             <div className="opacity-70 mt-1">Approx. ${usdValue} USD</div>
           </div>
 
           <div className="text-sm">
             <div className="mb-1">Wallet</div>
             {account ? (
+<<<<<<< HEAD
               <div className="rounded border border-green-600 text-green-700 dark:text-green-400 px-2 py-2">Connected: {account.slice(06)}…{account.slice(-4)}</div>
+=======
+              <div className="rounded border border-green-600 text-green-700 dark:text-green-400 px-2 py-2">Connected: {account.slice(0, 6)}…{account.slice(-4)}</div>
+>>>>>>> origin/auto/autonomy-17186719616
             ) : (
               <button onClick={connect} className="enhanced-button enhanced-button-primary">Connect MetaMask</button>
             )}
           </div>
         </div>
 
+<<<<<<< HEAD
 
 
 
         <div className="mt-4 flex items-center justify-between">
           <div className="text-xs opacity-70">You can spend tokens to boost visibilitypromote listingsor access premium support.</div>
+=======
+        <div className="mt-4 flex items-center justify-between">
+          <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>
+>>>>>>> origin/auto/autonomy-17186719616
           <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className="enhanced-button enhanced-button-primary disabled:opacity-50">Redeem</button>
         </div>
       </div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 async function getFile(owner, repo, path, token) {
@@ -9,10 +10,22 @@ async function getFile(owner, repo, path, token) {
       Authorization: `token ${token}`,
       Accept: 'application/vnd && vnd.github+json',
     },
+=======
+const GITHUB_API = 'https://api.github.com';
+
+async function getFile(owner, repo, path, token) {
+  const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
+  const resp = await fetch(url, {
+    headers: {
+      'Authorization': `token ${token}`,
+      'Accept': 'application/vnd.github+json'
+    }
+>>>>>>> origin/auto/autonomy-17186719616
   });
   if (resp.status === 404) return null;
   if (!resp.ok) throw new Error(`GitHub getFile HTTP ${resp.status}`);
   return resp.json();
+<<<<<<< HEAD
 async function upsertFile({ owner, repo, path, content, message, token }) {
   if (!token |!owner |!repo) throw new Error('Missing GitHub credentials');
   const existing = await getFile(owner, repo, path, token);
@@ -37,12 +50,33 @@ function get_file() {
       Accept: 'application/vnd.github+json'
       'Content-Type': 'application/json'
     }
+=======
+}
+
+async function upsertFile({ owner, repo, path, content, message, token }) {
+  if (!token || !owner || !repo) throw new Error('Missing GitHub credentials');
+  const existing = await getFile(owner, repo, path, token);
+  const body = {
+    message: message || `chore(automation): update ${path}`,
+    content: Buffer.from(content).toString('base64'),
+  };
+  if (existing?.sha) body.sha = existing.sha;
+  const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
+  const resp = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      'Authorization': `token ${token}`,
+      'Accept': 'application/vnd.github+json',
+      'Content-Type': 'application/json'
+    },
+>>>>>>> origin/auto/autonomy-17186719616
     body: JSON.stringify(body)
   });
   if (!resp.ok) {
     const text = await resp.text();
     throw new Error(`GitHub upsertFile HTTP ${resp.status}: ${text}`);
   }
+<<<<<<< HEAD
   // Check condition
 if (body.sha = existing.sha) {
   $2
@@ -173,3 +207,9 @@ module.exports = { upsertFile },
 
 
 
+=======
+  return resp.json();
+}
+
+module.exports = { upsertFile };
+>>>>>>> origin/auto/autonomy-17186719616

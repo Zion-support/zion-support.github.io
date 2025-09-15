@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 
@@ -14,10 +15,24 @@ categories:
     labels:
       - 'perf'
       - 'performance'
+=======
+name-template: 'v$NEXT_PATCH_VERSION'
+tag-template: 'v$NEXT_PATCH_VERSION'
+categories:
+  - title: '🚀 Features'
+    labels:
+      - 'feature'
+      - 'enhancement'
+  - title: '🐛 Fixes'
+    labels:
+      - 'bug'
+      - 'fix'
+>>>>>>> origin/auto/autonomy-17186719616
   - title: '🧰 Maintenance'
     labels:
       - 'chore'
       - 'dependencies'
+<<<<<<< HEAD
   - title: '📝 Documentation'
     labels:
       - 'docs'
@@ -43,3 +58,7 @@ template: |
 
   ## Contributors
   $CONTRIBUTORS
+=======
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+no-changes-template: 'No user-facing changes.'
+>>>>>>> origin/auto/autonomy-17186719616

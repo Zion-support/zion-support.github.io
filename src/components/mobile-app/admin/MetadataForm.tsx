@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { AppMetadataValues } from "./MetadataManager",
@@ -29,16 +30,56 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       }
     }
   },
+=======
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
+import { AppMetadataValues } from "./MetadataManager";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Badge } from "@/components/ui/badge";
+import { X } from 'lucide-react'
+
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>;
+}
+
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+  const { control, register, watch, setValue } = form;
+  const keywords = watch("keywords");
+  const platform = watch("platform");
+  
+  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" || e.key === ",") {
+      e.preventDefault();
+      const value = e.currentTarget.value.trim();
+      
+      if (value && !keywords.includes(value)) {
+        setValue("keywords", [...keywords, value]);
+        e.currentTarget.value = "";
+      }
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   const removeKeyword = (keyword: string) => {
     setValue(
       "keywords",
       keywords.filter((k) => k !== keyword)
+<<<<<<< HEAD
     ),
   },
   
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000,
   const longDescription = watch("longDescription"),
+=======
+    );
+  };
+  
+  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
+  const longDescription = watch("longDescription");
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
@@ -124,7 +165,11 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     {keyword}
                     <button
                       type="button"
+<<<<<<< HEAD
                       onClick = {(,) => removeKeyword(keyword),}
+=======
+                      onClick={() => removeKeyword(keyword)}
+>>>>>>> origin/auto/autonomy-17186719616
                       className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
                       aria-label="Remove keyword"
                     >
@@ -132,6 +177,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     </button>
                   </Badge>
                 ))}
+<<<<<<< HEAD
 
               </div>;
               <FormDescription className="mt-2">;
@@ -196,6 +242,23 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                   <FormControl>;
                     <Input;
                       placeholder="e.g., 1.0.0";
+=======
+              </div>
+              <FormDescription className="mt-2">
+                Add keywords to improve discoverability (max 100 characters total)
+              </FormDescription>
+            </div>
+            
+            <FormField
+              control={control}
+              name="version"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+                  <FormLabel>App Version</FormLabel>
+                  <FormControl>
+                    <Input 
+                      placeholder="e.g., 1.0.0"
+>>>>>>> origin/auto/autonomy-17186719616
                       {...field}
                     />
                   </FormControl>
@@ -206,5 +269,10 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
         </Form>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   ),
 },
+=======
+  );
+};
+>>>>>>> origin/auto/autonomy-17186719616

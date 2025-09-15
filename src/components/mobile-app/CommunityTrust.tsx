@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import React from "react",
+=======
+import React from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Star } from 'lucide-react'
 
 export const CommunityTrust: React.FC = () => {
@@ -9,7 +13,11 @@ export const CommunityTrust: React.FC = () => {
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
     { value: "12M+", label: "Matches Made" }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <section className="py-16 bg-zion-blue">
@@ -50,5 +58,10 @@ export const CommunityTrust: React.FC = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   ),
 },
+=======
+  );
+};
+>>>>>>> origin/auto/autonomy-17186719616

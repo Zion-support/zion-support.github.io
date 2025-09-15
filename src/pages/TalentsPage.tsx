@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -11,6 +12,21 @@ import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 import Spinner from '@/components/ui/spinner',
+=======
+import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { generateAITalents, getTalentMarketStats, getRecommendedTalents } from '@/utils/talentAutoFeedAlgorithm';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { TalentProfile } from '@/types/talent';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
@@ -44,6 +60,7 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       </div>
     </CardContent>
   </Card>
+<<<<<<< HEAD
 ),
 
 // Filter and sort controls for talents
@@ -58,6 +75,22 @@ const TalentFilterControls: React.FC<{
   showRecommended: boolean,
   setShowRecommended: (show: boolean) => void,
   loading: boolean
+=======
+);
+
+// Filter and sort controls for talents
+const TalentFilterControls: React.FC<{
+  sortBy: string;
+  setSortBy: (sort: string) => void;
+  filterSpecialization: string;
+  setFilterSpecialization: (spec: string) => void;
+  filterAvailability: string;
+  setFilterAvailability: (avail: string) => void;
+  specializations: string[];
+  showRecommended: boolean;
+  setShowRecommended: (show: boolean) => void;
+  loading: boolean;
+>>>>>>> origin/auto/autonomy-17186719616
 }> = ({
   sortBy,
   setSortBy,
@@ -127,10 +160,17 @@ const TalentFilterControls: React.FC<{
       {showRecommended ? "All Talents" : "Recommended"}
     </Button>
   </div>
+<<<<<<< HEAD
 ),
 
 // Talent card component
 const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ talent, onHire }) => (
+=======
+);
+
+// Talent card component
+const TalentCard: React.FC<{ talent: TalentProfile; onHire: () => void }> = ({ talent, onHire }) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
@@ -195,7 +235,11 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
 
       <div className="flex items-center justify-between">
         <Badge variant={talent.availability_type === 'full_time' ? 'default' : 'outline'} className="text-xs">
+<<<<<<< HEAD
           {talent.availability_type?.replace('_ ').toUpperCase()}
+=======
+          {talent.availability_type?.replace('_', ' ').toUpperCase()}
+>>>>>>> origin/auto/autonomy-17186719616
         </Badge>
         <Button size="sm" onClick={onHire}>
           Hire Talent
@@ -203,7 +247,11 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
       </div>
     </CardContent>
   </Card>
+<<<<<<< HEAD
 ),
+=======
+);
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Loading skeleton for talent grid
 const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
@@ -212,6 +260,7 @@ const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
       <SkeletonCard key={i} />
     ))}
   </div>
+<<<<<<< HEAD
 ),
 
 // Main enhanced talents page with infinite scroll
@@ -222,10 +271,23 @@ export default function TalentsPage() {
   const [filterAvailability, setFilterAvailability] = useState(''),
   const [showRecommended, setShowRecommended] = useState(false),
   const [totalGenerated, setTotalGenerated] = useState(0),
+=======
+);
+
+// Main enhanced talents page with infinite scroll
+export default function TalentsPage() {
+  const router = useRouter();
+  const [sortBy, setSortBy] = useState('newest');
+  const [filterSpecialization, setFilterSpecialization] = useState('');
+  const [filterAvailability, setFilterAvailability] = useState('');
+  const [showRecommended, setShowRecommended] = useState(false);
+  const [totalGenerated, setTotalGenerated] = useState(0);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Fetch function for infinite scroll with AI talent generation
   const fetchTalents = useCallback(async (page: number, limit: number) => {
     // Add realistic loading delay
+<<<<<<< HEAD
     await new Promise(resolve => setTimeout(resolve, 300)),
 
     let allTalents: TalentProfile[] = [],
@@ -244,10 +306,31 @@ export default function TalentsPage() {
     
     // Apply filters
     let filteredTalents = allTalents,
+=======
+    await new Promise(resolve => setTimeout(resolve, 300));
+
+    let allTalents: TalentProfile[] = [];
+    
+    // Start with existing talent profiles
+    if (page === 1) {
+      allTalents = [...TALENT_PROFILES];
+    }
+    
+    // Generate new AI/IT talents using the auto-feed algorithm
+    const startId = TALENT_PROFILES.length + (page - 1) * limit + totalGenerated;
+    const newTalents = generateAITalents(limit, startId);
+    setTotalGenerated(prev => prev + newTalents.length);
+    
+    allTalents = [...allTalents, ...newTalents];
+    
+    // Apply filters
+    let filteredTalents = allTalents;
+>>>>>>> origin/auto/autonomy-17186719616
     
     if (filterSpecialization) {
       filteredTalents = filteredTalents.filter(t => 
         t.professional_title?.toLowerCase().includes(filterSpecialization.toLowerCase())
+<<<<<<< HEAD
       ),
     }
 
@@ -257,12 +340,24 @@ export default function TalentsPage() {
     
     if (showRecommended) {
       filteredTalents = getRecommendedTalents(filteredTalents),
+=======
+      );
+    }
+
+    if (filterAvailability) {
+      filteredTalents = filteredTalents.filter(t => t.availability_type === filterAvailability);
+    }
+    
+    if (showRecommended) {
+      filteredTalents = getRecommendedTalents(filteredTalents);
+>>>>>>> origin/auto/autonomy-17186719616
     }
     
     // Apply sorting
     filteredTalents.sort((a, b) => {
       switch (sortBy) {
         case 'hourly-rate-low':
+<<<<<<< HEAD
           return (a.hourly_rate || 0) - (b.hourly_rate || 0),
         case 'hourly-rate-high':
           return (b.hourly_rate || 0) - (a.hourly_rate || 0),
@@ -281,13 +376,39 @@ export default function TalentsPage() {
     const startIndex = (page - 1) * limit,
     const endIndex = startIndex + limit,
     const items = filteredTalents.slice(startIndex, endIndex),
+=======
+          return (a.hourly_rate || 0) - (b.hourly_rate || 0);
+        case 'hourly-rate-high':
+          return (b.hourly_rate || 0) - (a.hourly_rate || 0);
+        case 'rating':
+          return (b.average_rating || 0) - (a.average_rating || 0);
+        case 'experience':
+          return (b.years_experience || 0) - (a.years_experience || 0);
+        case 'verified':
+          return (b.is_verified ? 1 : 0) - (a.is_verified ? 1 : 0);
+        case 'newest':
+        default:
+          return new Date(b.id || '').getTime() - new Date(a.id || '').getTime();
+      }
+    });
+    
+    // Paginate results
+    const startIndex = (page - 1) * limit;
+    const endIndex = startIndex + limit;
+    const items = filteredTalents.slice(startIndex, endIndex);
+>>>>>>> origin/auto/autonomy-17186719616
     
     return {
       items,
       hasMore: endIndex < filteredTalents.length || page < 12, // Allow up to 12 pages
       total: filteredTalents.length
+<<<<<<< HEAD
     },
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]),
+=======
+    };
+  }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Use infinite scroll hook
   const {
@@ -301,6 +422,7 @@ export default function TalentsPage() {
     refresh,
     scrollToTop,
     loadMore
+<<<<<<< HEAD
   } = useInfiniteScrollPagination(fetchTalents, 16),
 
   // Refresh when filters change
@@ -329,6 +451,36 @@ export default function TalentsPage() {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll),
   }, []),
+=======
+  } = useInfiniteScrollPagination(fetchTalents, 16);
+
+  // Refresh when filters change
+  useEffect(() => {
+    refresh();
+    setTotalGenerated(0);
+  }, [sortBy, filterSpecialization, filterAvailability, showRecommended]);
+
+  // Calculate market stats
+  const marketStats = useMemo(() => {
+    if (talents.length === 0) return null;
+    return getTalentMarketStats(talents);
+  }, [talents]);
+
+  // Get unique specializations
+  const specializations = useMemo(() => {
+    return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean)));
+  }, [talents]);
+
+  // Show scroll to top button
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 800);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Loading state
   if (loading && talents.length === 0) {
@@ -348,7 +500,11 @@ export default function TalentsPage() {
         </motion.div>
         <TalentLoadingGrid />
       </div>
+<<<<<<< HEAD
     ),
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   // Error state
@@ -361,7 +517,11 @@ export default function TalentsPage() {
           <Button onClick={refresh}>Try Again</Button>
         </div>
       </div>
+<<<<<<< HEAD
     ),
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   // Main render
@@ -498,5 +658,9 @@ export default function TalentsPage() {
         )}
       </AnimatePresence>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

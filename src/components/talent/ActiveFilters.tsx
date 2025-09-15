@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { Button } from "@/components/ui/button",
@@ -16,6 +17,25 @@ interface ActiveFiltersProps {
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void,
   clearFilters: () => void
+=======
+import React from "react";
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { Button } from "@/components/ui/button";
+import { X } from 'lucide-react'
+
+interface ActiveFiltersProps {
+  selectedSkills: string[];
+  toggleSkill: (skill: string) => void;
+  selectedAvailability: string[];
+  toggleAvailability: (status: string) => void;
+  selectedRegions: string[];
+  toggleRegion: (region: string) => void;
+  priceRange: [number, number];
+  setPriceRange: (range: [number, number]) => void;
+  experienceRange: [number, number];
+  setExperienceRange: (range: [number, number]) => void;
+  clearFilters: () => void;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function ActiveFilters({
@@ -39,6 +59,7 @@ export function ActiveFilters({
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
+<<<<<<< HEAD
     priceRange[1] !== 200,
   
   if (!hasActiveFilters) return null,
@@ -53,6 +74,16 @@ export function ActiveFilters({
   return (
     <div className='mb-6 flex flex-wrap gap-2 items-center'>
       <span className='text-zion-slate-light text-sm'>Active filters:</span>
+=======
+    priceRange[1] !== 200;
+  
+  if (!hasActiveFilters) return null;
+
+  return (
+    <div className="mb-6 flex flex-wrap gap-2 items-center">
+      <span className="text-zion-slate-light text-sm">Active filters:</span>
+      
+>>>>>>> origin/auto/autonomy-17186719616
       {selectedSkills.map(skill => (
         <ClickableBadge 
           key={skill}
@@ -84,12 +115,15 @@ export function ActiveFilters({
           onClick={() => toggleRegion(region)}
         >
           {region}
+<<<<<<< HEAD
 
           onClick={() => setExperienceRange([0, 15])}        >;
           {experienceRange[0]}-{experienceRange[1]} years;
           <X className='h-3 w-3' />;
         </ClickableBadge>;
       )}
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
@@ -118,10 +152,18 @@ export function ActiveFilters({
         variant="ghost" 
         size="sm" 
         onClick={clearFilters}
+<<<<<<< HEAD
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
+=======
+        className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+>>>>>>> origin/auto/autonomy-17186719616
       >
         Clear All
       </Button>
     </div>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

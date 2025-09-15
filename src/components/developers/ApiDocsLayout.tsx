@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { SearchSuggestion } from "@/types/search",
 import React, { useState } from "react",
 import Link from 'next/link',
@@ -19,12 +20,35 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const router = useRouter(),
   const currentPath = router.pathname,
   const [searchValue, setSearchValue] = useState(""),
+=======
+import { SearchSuggestion } from "@/types/search";
+import React, { useState } from "react";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Search } from 'lucide-react'
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { cn } from "@/lib/utils";
+import {
+ getDocsSearchPath,
+ docsSearchSuggestions
+} from "@/data/docsSearchData";
+
+interface ApiDocsLayoutProps {
+  children: React.ReactNode;
+}
+
+export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+  const router = useRouter();
+  const currentPath = router.pathname;
+  const [searchValue, setSearchValue] = useState("");
+>>>>>>> origin/auto/autonomy-17186719616
 
   const navigationItems = [
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "Webhooks", path: "/developers/docs/webhooks" },
     { title: "Sample Code", path: "/docs/sample-code" },
+<<<<<<< HEAD
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
 
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
@@ -43,6 +67,27 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
       setSearchValue("")
     }
   },
+=======
+    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" },
+  ];
+
+  const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
+    const path = getDocsSearchPath(suggestion.text);
+    if (path) {
+      router.push(path);
+      setSearchValue("");
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const path = getDocsSearchPath(searchValue);
+    if (path) {
+      router.push(path);
+      setSearchValue("");
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="flex min-h-screen bg-zinc-950">
@@ -91,7 +136,14 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
       {children}
      </div>
     </div>
+<<<<<<< HEAD
   ),
 }
 
 export default ApiDocsLayout,
+=======
+  );
+}
+
+export default ApiDocsLayout;
+>>>>>>> origin/auto/autonomy-17186719616

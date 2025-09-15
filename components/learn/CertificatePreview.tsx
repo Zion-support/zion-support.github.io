@@ -1,6 +1,10 @@
 import React from 'react';
 
+<<<<<<< HEAD
 export default function CertificatePreview({ courseIduserId = 'demo-user' }: { courseId: string; userId?: string }) {
+=======
+export default function CertificatePreview({ courseId, userId = 'demo-user' }: { courseId: string; userId?: string }) {
+>>>>>>> origin/auto/autonomy-17186719616
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">

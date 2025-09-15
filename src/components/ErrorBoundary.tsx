@@ -1,18 +1,30 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+import React, { Component, ReactNode } from 'react';
+import { Button } from './ui/button';
+import { AlertTriangle } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+<<<<<<< HEAD
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   showErrorDetails?: boolean;
   enableRecovery?: boolean;
   maxRetries?: number;
   retryDelay?: number;
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 interface State {
   hasError: boolean;
+<<<<<<< HEAD
   error: Error | null;
   errorInfo: ErrorInfo | null;
   retryCount: number;
@@ -501,3 +513,42 @@ export function useErrorBoundary() {
     hasError: !!error
   };
 }
+=======
+  error?: Error;
+}
+
+export class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: any) {
+    logErrorToProduction('ErrorBoundary caught an error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div style={{ border: '5px solid red', padding: '20px', textAlign: 'center', backgroundColor: 'lightyellow' }}>
+          <h1>CUSTOM ERROR BOUNDARY (ErrorBoundary.tsx) TRIGGERED!</h1>
+          <p>If you see this, the page component crashed.</p>
+          {this.state.error && <pre>{this.state.error.message}</pre>}
+          <button onClick={() => window.location.reload()}>Refresh Page</button>
+          <button onClick={() => window.location.href = '/'}>Go Home</button>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+>>>>>>> origin/auto/autonomy-17186719616

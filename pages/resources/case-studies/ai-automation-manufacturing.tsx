@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function ResourceCaseStudyPage() {
   const caseStudy = {
@@ -10,7 +16,11 @@ export default function ResourceCaseStudyPage() {
     industry: 'Manufacturing',
     results: '40% increase in production efficiency, 60% reduction in downtime',
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
+<<<<<<< HEAD
   },
+=======
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -113,7 +123,11 @@ export default function ResourceCaseStudyPage() {
                   This resource demonstrates the real impact of AI automation in manufacturing. 
                   Let's discuss how we can help you achieve similar results.
                 </p>
+<<<<<<< HEAD
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
+=======
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> origin/auto/autonomy-17186719616
                   <Link 
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
@@ -133,5 +147,9 @@ export default function ResourceCaseStudyPage() {
         </main>
       </div>
     </>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

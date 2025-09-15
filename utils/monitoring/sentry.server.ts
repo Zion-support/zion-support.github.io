@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import * as Sentry from '@sentry/node';
 if (!Sentry.getCurrentHub().getClient()) {Sentry.init({;
@@ -28,3 +29,14 @@ if (!Sentry.getCurrentHub().getClient()) {;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
+=======
+import * as Sentry from '@sentry/node';
+
+if (!Sentry.getCurrentHub().getClient()) {
+  Sentry.init({
+    dsn: process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN || '',
+    tracesSampleRate: 0.1,
+    enabled: Boolean(process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN),
+  });
+}
+>>>>>>> origin/auto/autonomy-17186719616

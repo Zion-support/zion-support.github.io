@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/auto/autonomy-17186719616
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 
 export function PartnerDashboard() {
@@ -12,7 +17,11 @@ export function PartnerDashboard() {
     conversionRate: 18.5,
     totalRevenue: 850.00,
     pendingRevenue: 200.00
+<<<<<<< HEAD
   },
+=======
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="space-y-6">
@@ -24,6 +33,7 @@ export function PartnerDashboard() {
             <Users className="h-4 w-4 text-zion-cyan" />
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
             <div className='text-2xl font-bold'>{stats.totalReferrals}</div>
             <p className='text-xs text-zion-slate-light'>
               {stats.completedReferrals} completed, {stats.pendingReferrals}{' '}
@@ -44,6 +54,8 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
+=======
+>>>>>>> origin/auto/autonomy-17186719616
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
             <p className="text-xs text-zion-slate-light">
               {stats.completedReferrals} completed, {stats.pendingReferrals} pending
@@ -91,6 +103,7 @@ export function PartnerDashboard() {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
 
       {/* Recent Referrals */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
@@ -99,6 +112,8 @@ export function PartnerDashboard() {
           <CardDescription>
             Track your referral performance over time
           </CardDescription>
+=======
+>>>>>>> origin/auto/autonomy-17186719616
       
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -115,6 +130,7 @@ export function PartnerDashboard() {
             <p className="text-zion-slate-light mb-4">No referrals yet</p>
             <p className="text-xs text-zion-slate-light">
               Start sharing your referral links to earn rewards
+<<<<<<< HEAD
 
             </p>
           </div>
@@ -123,4 +139,12 @@ export function PartnerDashboard() {
       </Card>
     </div>
   ),
+=======
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

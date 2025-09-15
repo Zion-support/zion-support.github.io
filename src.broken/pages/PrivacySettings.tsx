@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -14,6 +15,24 @@ export default function PrivacySettings() {
   const handleSave = () => {
     updateConsent({ analytics, ads }),
   },
+=======
+import { useState } from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { Switch } from '@/components/ui/switch';
+import { Button } from '@/components/ui/button';
+import { useConsent } from '@/context/ConsentContext';
+
+export default function PrivacySettings() {
+  const { consent, updateConsent } = useConsent();
+  const [analytics, setAnalytics] = useState(consent.analytics);
+  const [ads, setAds] = useState(consent.ads);
+
+  const handleSave = () => {
+    updateConsent({ analytics, ads });
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
@@ -35,5 +54,9 @@ export default function PrivacySettings() {
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

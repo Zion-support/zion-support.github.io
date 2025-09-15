@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import React{ createContextuseContextuseStateuseEffectReactNode } from 'react';
 import { useWhitelabelTenant } from '@/hooks/useWhitelabelTenant';
+=======
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export interface WhitelabelContextType {
   isWhitelabel: boolean;
@@ -18,15 +23,26 @@ export interface WhitelabelContextType {
 
 const defaultContext: WhitelabelContextType = {
   isWhitelabel: false,
+<<<<<<< HEAD
   primaryColor: '#9b87f5'// Default Zion purple
+=======
+  primaryColor: '#9b87f5', // Default Zion purple
+>>>>>>> origin/auto/autonomy-17186719616
   logoUrl: null,
   brandName: 'Zion AI Marketplace',
   themePreset: 'light',
   landingPageCopy: {
     headline: 'AI Talent Marketplace',
     subtitle: 'Find the best AI talent for your projects',
+<<<<<<< HEAD
     cta: 'Get Started'},
   tenant: null};
+=======
+    cta: 'Get Started',
+  },
+  tenant: null,
+};
+>>>>>>> origin/auto/autonomy-17186719616
 
 // The context may be undefined if the provider is not mounted.  By declaring
 // the generic as `WhitelabelContextType | null` we get proper type checking
@@ -48,8 +64,13 @@ interface WhitelabelProviderProps {
 }
 
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
+<<<<<<< HEAD
   const [contextValuesetContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenantisLoading } = useWhitelabelTenant();
+=======
+  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
+  const { tenant, isLoading } = useWhitelabelTenant();
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     if (!isLoading && tenant) {
@@ -60,11 +81,20 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
         brandName: tenant.brand_name,
         themePreset: tenant.theme_preset,
         landingPageCopy: tenant.landing_page_copy,
+<<<<<<< HEAD
         tenant: tenant});
     } else if (!isLoading) {
       setContextValue(defaultContext);
     }
   }[tenantisLoading]);
+=======
+        tenant: tenant,
+      });
+    } else if (!isLoading) {
+      setContextValue(defaultContext);
+    }
+  }, [tenant, isLoading]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <WhitelabelContext.Provider value={contextValue}>

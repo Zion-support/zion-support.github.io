@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -74,6 +75,17 @@ import {;
 
   GraduationCap, Scale, Building, Factory, Camera;
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets;
+=======
+import React from 'react';
+import Link from 'next/link';
+import { 
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
+  Shield, Users, Briefcase, BookOpen, MessageCircle, 
+  Star, TrendingUp, Target, Layers, Cpu, Database, 
+  Cloud, Lock, ShieldCheck, Heart, Leaf, Car, 
+  GraduationCap, Scale, Building, Factory, Camera,
+  Video, Music, Gamepad2, Sun, Moon, Wind, Droplets,
+>>>>>>> origin/auto/autonomy-17186719616
   Code
 } from 'lucide-react';
 
@@ -86,22 +98,33 @@ const contactInfo = {
 
 const serviceCategories = [
   {
+<<<<<<< HEAD
     title: ' 2028 Futuristic Innovations',
+=======
+    title: '🚀 2028 Futuristic Innovations',
+>>>>>>> origin/auto/autonomy-17186719616
     services: [
       { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform' },
       { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall' },
       { name: 'Autonomous Drone Delivery Network', href: '/autonomous-drone-delivery-network' },
       { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform' }
     ]
+<<<<<<< HEAD
   };
   {
     title: ' Smart City & Infrastructure',
+=======
+  },
+  {
+    title: '🏙️ Smart City & Infrastructure',
+>>>>>>> origin/auto/autonomy-17186719616
     services: [
       { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management' },
       { name: 'IoT Energy Management System', href: '/iot-energy-management-system' },
       { name: 'Digital Twin Manufacturing Platform', href: '/digital-twin-manufacturing-platform' },
       { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai' }
     ]
+<<<<<<< HEAD
   };
 
 import Link from 'next / link';
@@ -325,11 +348,48 @@ const resource_links = [;
   { name: 'Documentation', href: '/docs', icon: BookOpen },
   { name: 'API Reference', href: '/api', icon: Cpu },
   { name: 'Developer Tools', href: '/dev - tools', icon: Database },
+=======
+  },
+  {
+    title: '⚛️ Quantum & Advanced Tech',
+    services: [
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' },
+      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform' },
+      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway' },
+      { name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol' }
+    ]
+  },
+  {
+    title: '🤖 AI & Machine Learning',
+    services: [
+      { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation' },
+      { name: 'AI Education Platform', href: '/ai-education-platform' },
+      { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite' },
+      { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform' }
+    ]
+  }
+];
+
+const companyLinks = [
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
+  { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
+  { name: 'Careers', href: '/careers', icon: TrendingUp },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
+  { name: 'Support', href: '/support', icon: ShieldCheck }
+];
+
+const resourceLinks = [
+  { name: 'Documentation', href: '/docs', icon: BookOpen },
+  { name: 'API Reference', href: '/api', icon: Cpu },
+  { name: 'Developer Tools', href: '/dev-tools', icon: Database },
+>>>>>>> origin/auto/autonomy-17186719616
   { name: 'Mobile Apps', href: '/mobile', icon: Globe },
   { name: 'Cloud Services', href: '/cloud', icon: Cloud },
   { name: 'Security Center', href: '/security', icon: Shield }
 ];
 
+<<<<<<< HEAD
 
 
 
@@ -384,6 +444,19 @@ export default function UltraFuturisticFooter2028() {
                   href={contactInfo.website}
                   className='text-sm hover:text-white transition-colors'
                 >                  {contactInfo.website}      {/* Main Footer Content */}
+=======
+const socialLinks = [
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Users },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: MessageCircle },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video },
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code }
+];
+
+export default function UltraFuturisticFooter2028() {
+  return (
+    <footer className="bg-black/95 backdrop-blur-xl border-t border-purple-500/30">
+      {/* Main Footer Content */}
+>>>>>>> origin/auto/autonomy-17186719616
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -402,10 +475,19 @@ export default function UltraFuturisticFooter2028() {
                 <p className="text-sm text-purple-300">2028 Future Technology</p>
               </div>
             </div>
+<<<<<<< HEAD
             <p className="text-purple-200 mb-6 leading-relaxed">
               Leading the future with cutting-edge AI, quantum computing, and innovative technology solutions.
               Transforming businesses through intelligent automation and next-generation infrastructure.
             </p>
+=======
+            
+            <p className="text-purple-200 mb-6 leading-relaxed">
+              Leading the future with cutting-edge AI, quantum computing, and innovative technology solutions. 
+              Transforming businesses through intelligent automation and next-generation infrastructure.
+            </p>
+
+>>>>>>> origin/auto/autonomy-17186719616
             {/* Contact Information */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-purple-200">
@@ -424,6 +506,7 @@ export default function UltraFuturisticFooter2028() {
                 <Globe className="w-4 h-4 text-purple-400" />
                 <a href={contactInfo.website} className="text-sm hover:text-white transition-colors">
                   {contactInfo.website}
+<<<<<<< HEAD
 
 
 
@@ -580,15 +663,29 @@ target="_blank"
 
 
                   <social.icon className='w-5 h-5' />                </a>                <a
+=======
+                </a>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex space-x-4 mt-6">
+              {socialLinks.map((social) => (
+                <a
+>>>>>>> origin/auto/autonomy-17186719616
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                   className="w-10 h-10 bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg flex items-center justify-center text-purple-300 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
+<<<<<<< HEAD
 
               ))}
 
@@ -603,11 +700,14 @@ target="_blank"
 
                 </a>
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               ))}
             </div>
           </div>
 
           {/* Service Categories */}
+<<<<<<< HEAD
           <div className='lg:col-span-2'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
 
@@ -649,6 +749,8 @@ target="_blank"
 
 
           {/* Service Categories */}
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           <div className="lg:col-span-2">
             <h3 className="text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
               🚀 Our Services
@@ -661,6 +763,7 @@ target="_blank"
                     {category.services.map((service) => (
                       <li key={service.name}>
                         <Link
+<<<<<<< HEAD
             <p className='text - purple - 200 mb - 6 leading - relaxed'>;
               Leading the future with cutting - edge AI, quantum computing, and;
               innovative technology solutions. Transforming businesses through;
@@ -780,6 +883,11 @@ target="_blank"
                           href={service.href}
                           className="text - sm text - purple - 200 hover:text - white transition - colors hover:underline";
                         >;
+=======
+                          href={service.href}
+                          className="text-sm text-purple-200 hover:text-white transition-colors hover:underline"
+                        >
+>>>>>>> origin/auto/autonomy-17186719616
                           {service.name}
                         </Link>
                       </li>
@@ -789,6 +897,7 @@ target="_blank"
               ))}
             </div>
           </div>
+<<<<<<< HEAD
           {/* Quick Links */}
           <div className='lg:col-span-1'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
@@ -836,10 +945,15 @@ target="_blank"
                   </li>;
 
 
+=======
+
+          {/* Quick Links */}
+>>>>>>> origin/auto/autonomy-17186719616
           <div className="lg:col-span-1">
             <h3 className="text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2">
               Quick Links
             </h3>
+<<<<<<< HEAD
                         </Link>;
                       </li>))}
                   </ul>;
@@ -879,6 +993,14 @@ target="_blank"
                     <Link;
                       href={link.href}
 
+=======
+            
+            {/* Company Links */}
+            <div className="mb-6">
+              <h4 className="font-medium text-purple-300 mb-3">Company</h4>
+              <ul className="space-y-2">
+                {companyLinks.map((link) => (
+>>>>>>> origin/auto/autonomy-17186719616
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -888,12 +1010,16 @@ target="_blank"
                       <span>{link.name}</span>
                     </Link>
                   </li>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                 ))}
               </ul>
             </div>
 
+<<<<<<< HEAD
 
 
 
@@ -911,6 +1037,16 @@ target="_blank"
                       <link.icon className='w-4 h-4' />                      <span>{link.name}</span>                  <li key={link.name}>
                     <Link
                       href={link.href}
+=======
+            {/* Resource Links */}
+            <div className="mb-6">
+              <h4 className="font-medium text-purple-300 mb-3">Resources</h4>
+              <ul className="space-y-2">
+                {resourceLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+>>>>>>> origin/auto/autonomy-17186719616
                       className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2"
                     >
                       <link.icon className="w-4 h-4" />
@@ -921,6 +1057,7 @@ target="_blank"
               </ul>
             </div>
 
+<<<<<<< HEAD
 
 
 
@@ -1000,6 +1137,8 @@ target="_blank"
                   className='flex-1 px-3 py-2 bg-purple-900/30 border border-purple-500/30 rounded text-white placeholder-purple-300 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
             {/* Newsletter Signup */}
             <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-4">
               <h4 className="font-medium text-white mb-3">Stay Updated</h4>
@@ -1007,12 +1146,16 @@ target="_blank"
                 Get the latest insights on future technology and AI innovations.
               </p>
               <div className="flex space-x-2">
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                 <input
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-3 py-2 bg-purple-900/30 border border-purple-500/30 rounded text-white placeholder-purple-300 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+<<<<<<< HEAD
 
 
 
@@ -1033,6 +1176,8 @@ target="_blank"
             {/* Legal Links */}
             <div className='flex items-center space-x-6 text-sm'>;
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                 />
                 <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded text-sm hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
                   Subscribe
@@ -1042,6 +1187,7 @@ target="_blank"
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       {/* Bottom Bar */}
       <div className='border-t border-purple-500/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
@@ -1080,6 +1226,18 @@ target="_blank"
             <div className="text-sm text-purple-300">
                2028 Zion Tech Group. All rights reserved. Leading the future of technology.
             </div>
+=======
+
+      {/* Bottom Bar */}
+      <div className="border-t border-purple-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            {/* Copyright */}
+            <div className="text-sm text-purple-300">
+              © 2028 Zion Tech Group. All rights reserved. Leading the future of technology.
+            </div>
+
+>>>>>>> origin/auto/autonomy-17186719616
             {/* Legal Links */}
             <div className="flex items-center space-x-6 text-sm">
               <Link href="/privacy" className="text-purple-300 hover:text-white transition-colors">
@@ -1100,6 +1258,7 @@ target="_blank"
       </div>
 
       {/* Floating Action Button */}
+<<<<<<< HEAD
       <div className='fixed bottom-6 right-6 z-50'>
 
         <Link
@@ -1109,6 +1268,10 @@ target="_blank"
           <MessageCircle className='w-8 h-8 group-hover:rotate-12 transition-transform duration-300' />        </Link>
       </div>
       {/* Background Effects */}        <Link
+=======
+      <div className="fixed bottom-6 right-6 z-50">
+        <Link
+>>>>>>> origin/auto/autonomy-17186719616
           href="/contact"
           className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-400/40 group"
         >
@@ -1117,6 +1280,7 @@ target="_blank"
       </div>
 
       {/* Background Effects */}
+<<<<<<< HEAD
       <div className='absolute inset-0 pointer-events-none'>
         <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
         <div className='absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
@@ -1124,11 +1288,15 @@ target="_blank"
       </div>
     </footer>
   );      <div className="absolute inset-0 pointer-events-none">
+=======
+      <div className="absolute inset-0 pointer-events-none">
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl"></div>
       </div>
     </footer>
+<<<<<<< HEAD
 );
 }
           className='w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-400/40 group'>;
@@ -1155,3 +1323,7 @@ target="_blank"
 
 
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

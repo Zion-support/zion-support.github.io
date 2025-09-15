@@ -2,12 +2,20 @@
 import React from "react";
 import { BadgeDollarSign } from "lucide-react";
 import { useWallet } from "@/hooks/useWallet";
+<<<<<<< HEAD
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export function TokenDisplay() {
+<<<<<<< HEAD
   const { walletloading } = useWallet();
+=======
+  const { wallet, loading } = useWallet();
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Card>
@@ -28,7 +36,11 @@ export function TokenDisplay() {
               <span className="ml-1 text-muted-foreground">ZION$</span>
             </div>
             <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
               Use your tokens to boost visibilityaccess premium featuresor convert to credits.
+=======
+              Use your tokens to boost visibility, access premium features, or convert to credits.
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
             <div className="mt-2">
               <Button variant="outline" size="sm">

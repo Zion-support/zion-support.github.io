@@ -1,13 +1,22 @@
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
+=======
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
+<<<<<<< HEAD
   SelectValue} from "@/components/ui/select",
 import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
@@ -50,6 +59,37 @@ export function MobileResumeBuilder() {
           variant = {currentStep === "basics" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {(,) => setCurrentStep("basics"),}
+=======
+  SelectValue,
+} from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
+
+type ResumeStep = "basics" | "experience" | "education" | "skills";
+
+export function MobileResumeBuilder() {
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
+  
+  const renderStepContent = () => {
+    switch (currentStep) {
+      case "basics":
+        return <BasicsStep />;
+      case "experience":
+        return <ExperienceStep />;
+      case "education":
+        return <EducationStep />;
+      case "skills":
+        return <SkillsStep />;
+      default:
+        return <BasicsStep />;
+    }
+  };
+  
+  return (
+    <div className="space-y-6 px-4 pb-24">
+      <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
+        <Button
+>>>>>>> origin/auto/autonomy-17186719616
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
@@ -89,7 +129,11 @@ export function MobileResumeBuilder() {
         Save & Preview
       </Button>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 function BasicsStep() {
@@ -126,6 +170,7 @@ function BasicsStep() {
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   ),
 }
 
@@ -140,6 +185,22 @@ function ExperienceStep() {
   const removeExperience = (id: string) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
   },
+=======
+  );
+}
+
+function ExperienceStep() {
+  const [experiences, setExperiences] = useState([{ id: '1' }]);
+  
+  const addExperience = () => {
+    const newId = (experiences.length + 1).toString();
+    setExperiences([...experiences, { id: newId }]);
+  };
+  
+  const removeExperience = (id: string) => {
+    setExperiences(experiences.filter(exp => exp.id !== id));
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="space-y-4">
@@ -198,6 +259,7 @@ function ExperienceStep() {
         <Plus className="h-4 w-4" /> Add Another Experience
       </Button>
     </div>
+<<<<<<< HEAD
   ),
 }
 
@@ -212,6 +274,22 @@ function EducationStep() {
   const removeEducation = (id: string) => {
     setEducations(educations.filter(edu => edu.id !== id))
   },
+=======
+  );
+}
+
+function EducationStep() {
+  const [educations, setEducations] = useState([{ id: '1' }]);
+  
+  const addEducation = () => {
+    const newId = (educations.length + 1).toString();
+    setEducations([...educations, { id: newId }]);
+  };
+  
+  const removeEducation = (id: string) => {
+    setEducations(educations.filter(edu => edu.id !== id));
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="space-y-4">
@@ -266,12 +344,17 @@ function EducationStep() {
         <Plus className="h-4 w-4" /> Add Another Education
       </Button>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 function SkillsStep() {
   const [skills, setSkills] = useState([
     { id: '1', name: "", proficiency: "beginner" }
+<<<<<<< HEAD
   ]),
   
   const addSkill = () => {
@@ -282,12 +365,29 @@ function SkillsStep() {
   const removeSkill = (id: string) => {
     setSkills(skills.filter(skill => skill.id !== id))
   },
+=======
+  ]);
+  
+  const addSkill = () => {
+    const newId = (skills.length + 1).toString();
+    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }]);
+  };
+  
+  const removeSkill = (id: string) => {
+    setSkills(skills.filter(skill => skill.id !== id));
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   const updateSkill = (id: string, field: string, value: string) => {
     setSkills(skills.map(skill => 
       skill.id === id ? { ...skill, [field]: value } : skill
+<<<<<<< HEAD
     )),
   },
+=======
+    ));
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="space-y-4">
@@ -356,5 +456,9 @@ function SkillsStep() {
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

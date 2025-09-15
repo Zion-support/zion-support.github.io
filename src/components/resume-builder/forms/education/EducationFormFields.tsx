@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useForm } from 'react-hook-form',
 import { zodResolver } from '@hookform/resolvers/zod',
 import { z } from 'zod',
@@ -9,16 +10,36 @@ import { Textarea } from '@/components/ui/textarea',
 import { Input } from '@/components/ui/input',
 import { Checkbox } from '@/components/ui/checkbox',
 import { Alert, AlertDescription } from '@/components/ui/alert',
+=======
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { format } from 'date-fns';
+import { Loader2 } from 'lucide-react'
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage} from '@/components/ui/form',
 import { useState } from 'react',
 import { EducationFormFieldsProps } from './types',
 import { Education } from '@/types/resume',
+=======
+  FormMessage,
+} from '@/components/ui/form';
+import { useState } from 'react';
+import { EducationFormFieldsProps } from './types';
+import { Education } from '@/types/resume';
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Define schema for form validation
 const educationSchema = z.object({
@@ -29,17 +50,29 @@ const educationSchema = z.object({
   end_date: z.string().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
+<<<<<<< HEAD
   location: z.string().optional()}),
 
 type EducationFormValues = z.infer<typeof educationSchema>,
+=======
+  location: z.string().optional(),
+});
+
+type EducationFormValues = z.infer<typeof educationSchema>;
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function EducationFormFields({ 
   isEditing, 
   onSubmit, 
   onCancel 
 }: EducationFormFieldsProps) {
+<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
+=======
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const form = useForm<EducationFormValues>({
     resolver: zodResolver(educationSchema),
@@ -50,6 +83,7 @@ export function EducationFormFields({
       start_date: format(new Date(), 'yyyy-MM-dd'),
       is_current: false,
       description: '',
+<<<<<<< HEAD
       location: ''}}),
 
   const handleSubmit = async (data: EducationFormValues) => {
@@ -63,6 +97,23 @@ export function EducationFormFields({
       setIsLoading(false),
     }
   },
+=======
+      location: '',
+    },
+  });
+
+  const handleSubmit = async (data: EducationFormValues) => {
+    setIsLoading(true);
+    setError(null);
+    try {
+      await onSubmit(data);
+    } catch (err: any) {
+      setError(err.message || 'An error occurred');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Form {...form}>
@@ -70,7 +121,10 @@ export function EducationFormFields({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
             name="institution"
             render={({ field }: { field: any }) => (
               <FormItem>
@@ -112,6 +166,11 @@ export function EducationFormFields({
           )}
         />
 
+<<<<<<< HEAD
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+>>>>>>> origin/auto/autonomy-17186719616
             control={form.control}
             name="start_date"
             render={({ field }: { field: any }) => (
@@ -129,6 +188,11 @@ export function EducationFormFields({
             )}
           />
 
+<<<<<<< HEAD
+=======
+          <div className="space-y-4">
+            <FormField
+>>>>>>> origin/auto/autonomy-17186719616
               control={form.control}
               name="is_current"
               render={({ field }: { field: any }) => (
@@ -218,5 +282,9 @@ export function EducationFormFields({
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

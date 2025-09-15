@@ -1,11 +1,19 @@
 
+<<<<<<< HEAD
 import { FacebookTwitter } from "lucide-react";
+=======
+import { Facebook, Twitter } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { Web3Login } from "./Web3Login";
 
 export function SocialLogin() {
+<<<<<<< HEAD
   const { loginWithGoogleloginWithFacebookloginWithTwitterisLoading } = useAuth();
+=======
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth();
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="mt-6">

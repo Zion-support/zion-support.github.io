@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -30,18 +31,63 @@ export function MyApplications() {
     }
 
 import {ApplicationStatus} from "@/types/jobs";
+=======
+import { useState } from "react";
+import { useJobApplications } from "@/hooks/useJobApplications";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
+import { formatDistanceToNow } from "date-fns";
+import Link from "next/link";
+import { ApplicationStatus } from "@/types/jobs";
+
+export function MyApplications() {
+  const { applications, isLoading, error } = useJobApplications();
+  
+  const getStatusBadge = (status: ApplicationStatus) => {
+    switch (status) {
+      case "new":
+        return <Badge variant="secondary">New</Badge>;
+      case "viewed":
+        return <Badge variant="outline">Viewed</Badge>;
+      case "shortlisted":
+        return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>;
+      case "interview":
+        return <Badge className="bg-purple-100 text-purple-800">Interview</Badge>;
+      case "hired":
+        return <Badge className="bg-green-100 text-green-800">Hired</Badge>;
+      case "rejected":
+        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
+      default:
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  };
+  
+  if (isLoading) {
+>>>>>>> origin/auto/autonomy-17186719616
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
+<<<<<<< HEAD
     ),
   }
+=======
+    );
+  }
+  
+>>>>>>> origin/auto/autonomy-17186719616
   if (error) {
     return (
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">
         <p>{error}</p>
       </div>
+<<<<<<< HEAD
     ),
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
   
   if (applications.length === 0) {
@@ -56,18 +102,28 @@ import {ApplicationStatus} from "@/types/jobs";
           </Button>
         </CardContent>
       </Card>
+<<<<<<< HEAD
     ),
+=======
+    );
+>>>>>>> origin/auto/autonomy-17186719616
   }
   
   return (
     <div className="grid gap-4 md:grid-cols-2">
+<<<<<<< HEAD
       {applications.map((application,) => (
+=======
+>>>>>>> origin/auto/autonomy-17186719616
       {applications.map((application) => (
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
               <CardTitle className="text-lg">
+<<<<<<< HEAD
                 {application.job?.title |"Unknown Job"}
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                 {application.job?.title || "Unknown Job"}
               </CardTitle>
               {getStatusBadge(application.status)}
@@ -112,5 +168,9 @@ import {ApplicationStatus} from "@/types/jobs";
         </Card>
       ))}
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

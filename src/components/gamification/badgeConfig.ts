@@ -7,6 +7,7 @@ export type BadgeKey =
   | "profile_complete"
   | "featured_creator"
   | "first_action"
+<<<<<<< HEAD
   | "monetized",
 
 export interface BadgeMeta {
@@ -16,6 +17,17 @@ export interface BadgeMeta {
   icon: LucideIcon,
   color: string,
   bg: string
+=======
+  | "monetized";
+
+export interface BadgeMeta {
+  key: BadgeKey;
+  name: string;
+  description: string;
+  icon: LucideIcon;
+  color: string;
+  bg: string;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export const badgeList: BadgeMeta[] = [
@@ -66,8 +78,16 @@ export const badgeList: BadgeMeta[] = [
     icon: BadgeDollarSign,
     color: "#22C55E", // Soft Green
     bg: "#F2FCE2",    // Soft Green
+<<<<<<< HEAD
   }],
 
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key),
+=======
+  },
+];
+
+export const getBadgeMeta = (key: BadgeKey) =>
+  badgeList.find((b) => b.key === key);
+>>>>>>> origin/auto/autonomy-17186719616
 

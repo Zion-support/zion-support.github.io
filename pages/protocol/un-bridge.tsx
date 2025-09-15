@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
+=======
+import React, { useState } from 'react';
+>>>>>>> origin/auto/autonomy-17186719616
 
 export default function UNBridge() {
   const [form, setForm] = useState({
@@ -9,6 +13,7 @@ export default function UNBridge() {
     budgetOrResolution: 'USD 3M over 24 months',
     supportingMultiverses: 'Digital Labor, AI Ethics',
     promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+<<<<<<< HEAD
     language: 'en'}),
   const [loading, setLoading] = useState(false),
   const [result, setResult] = useState<any>(null),
@@ -21,12 +26,28 @@ export default function UNBridge() {
 
   async function generate() {
     setLoading(true),
+=======
+    language: 'en',
+  });
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any>(null);
+  const [translated, setTranslated] = useState<string>('');
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setForm((f) => ({ ...f, [name]: value }));
+  };
+
+  async function generate() {
+    setLoading(true);
+>>>>>>> origin/auto/autonomy-17186719616
     try {
       const res = await fetch('/api/proposals/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...form,
+<<<<<<< HEAD
           supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
       const data = await res.json(),
       setResult(data),
@@ -36,10 +57,24 @@ export default function UNBridge() {
   async function translate(targetLanguage: string) {
     if (!result?.markdown) return,
     setLoading(true),
+=======
+          supportingMultiverses: form.supportingMultiverses.split(',').map((s) => s.trim()).filter(Boolean),
+        }),
+      });
+      const data = await res.json();
+      setResult(data);
+    } finally { setLoading(false); }
+  }
+
+  async function translate(targetLanguage: string) {
+    if (!result?.markdown) return;
+    setLoading(true);
+>>>>>>> origin/auto/autonomy-17186719616
     try {
       const res = await fetch('/api/proposals/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+<<<<<<< HEAD
         body: JSON.stringify({ markdown: result.markdown, targetLanguage })}),
       const data = await res.json(),
       setTranslated(data.translated),
@@ -49,10 +84,23 @@ export default function UNBridge() {
   async function exportArtifacts() {
     if (!result?.meta?.id) return,
     setLoading(true),
+=======
+        body: JSON.stringify({ markdown: result.markdown, targetLanguage }),
+      });
+      const data = await res.json();
+      setTranslated(data.translated);
+    } finally { setLoading(false); }
+  }
+
+  async function exportArtifacts() {
+    if (!result?.meta?.id) return;
+    setLoading(true);
+>>>>>>> origin/auto/autonomy-17186719616
     try {
       await fetch('/api/proposals/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+<<<<<<< HEAD
         body: JSON.stringify({ id: result.meta.id })}),
       // Refresh meta
       const list = await fetch('/api/proposals/list'),
@@ -65,14 +113,37 @@ export default function UNBridge() {
   async function submit(channels: string[]) {
     if (!result?.meta?.id) return,
     setLoading(true),
+=======
+        body: JSON.stringify({ id: result.meta.id }),
+      });
+      // Refresh meta
+      const list = await fetch('/api/proposals/list');
+      const { proposals } = await list.json();
+      const updated = proposals.find((p: any) => p.id === result.meta.id);
+      setResult((r: any) => ({ ...r, meta: updated }));
+    } finally { setLoading(false); }
+  }
+
+  async function submit(channels: string[]) {
+    if (!result?.meta?.id) return;
+    setLoading(true);
+>>>>>>> origin/auto/autonomy-17186719616
     try {
       const res = await fetch('/api/proposals/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+<<<<<<< HEAD
         body: JSON.stringify({ id: result.meta.id, channels })}),
       const data = await res.json(),
       setResult((r: any) => ({ ...r, meta: data.meta })),
     } finally { setLoading(false), }
+=======
+        body: JSON.stringify({ id: result.meta.id, channels }),
+      });
+      const data = await res.json();
+      setResult((r: any) => ({ ...r, meta: data.meta }));
+    } finally { setLoading(false); }
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -156,5 +227,9 @@ export default function UNBridge() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

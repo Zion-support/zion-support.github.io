@@ -35,7 +35,12 @@ i18n
       lookupCookie: 'zion_language',
       lookupLocalStorage: 'zion_language',
       caches: ['cookie']
+<<<<<<< HEAD
     }})
+=======
+    },
+  })
+>>>>>>> origin/auto/autonomy-17186719616
   .catch(error => {
     logErrorToProduction('Error initializing i18next or its detector:', { data: error });
     // This helps prevent an unhandled promise rejection if init fails.

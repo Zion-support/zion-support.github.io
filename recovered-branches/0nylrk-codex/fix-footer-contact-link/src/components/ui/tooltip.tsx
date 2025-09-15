@@ -12,7 +12,11 @@ const TooltipTrigger = TooltipPrimitive.Trigger
 const TooltipContent = React.forwardRef<
   React.ElementRef<typeof TooltipPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
+<<<<<<< HEAD
 >(({ classNamesideOffset = 4...props }ref) => (
+=======
+>(({ className, sideOffset = 4, ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <TooltipPrimitive.Content
     ref={ref}
     sideOffset={sideOffset}
@@ -25,4 +29,8 @@ const TooltipContent = React.forwardRef<
 ))
 TooltipContent.displayName = TooltipPrimitive.Content.displayName
 
+<<<<<<< HEAD
 export { TooltipTriggerTooltipContentTooltipProvider }
+=======
+export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
+>>>>>>> origin/auto/autonomy-17186719616

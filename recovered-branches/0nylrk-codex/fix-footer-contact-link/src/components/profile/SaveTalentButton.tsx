@@ -9,7 +9,11 @@ interface SaveTalentButtonProps {
   isSaved: boolean;
 }
 
+<<<<<<< HEAD
 export function SaveTalentButton({ talentIdonSaveisSaved }: SaveTalentButtonProps) {
+=======
+export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButtonProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <Button
       onClick={() => onSave(talentId)}

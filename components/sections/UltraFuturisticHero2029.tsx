@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -99,10 +100,21 @@ function UltraFuturisticHero2029() {
       text: 'Autonomous IT Operations',
       color: 'from-cyan-500 to-teal-600',;
     },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-violet-500 to-purple-600' },
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom, Rocket, Target, Shield, Cpu, Globe, Sparkles } from 'lucide-react';
+import Link from 'next/link';
+
+export default function UltraFuturisticHero2029() {
+  const features = [
+    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-violet-500 to-purple-600' },
+>>>>>>> origin/auto/autonomy-17186719616
     { icon: Atom, text: 'Quantum Computing Solutions', color: 'from-blue-500 to-cyan-600' },
     { icon: Rocket, text: 'Space Technology Innovation', color: 'from-emerald-500 to-teal-600' },
     { icon: Target, text: 'Micro SAAS Excellence', color: 'from-orange-500 to-red-600' },
     { icon: Shield, text: 'Enterprise Security', color: 'from-indigo-500 to-blue-600' },
+<<<<<<< HEAD
 
 
     { icon: Cpu, text: 'Autonomous IT Operations', color: 'from-cyan-500 to-teal-600' }
@@ -361,6 +373,18 @@ export default function UltraFuturisticHero2029() {;
                 left: Math.random() * 100 + '%'
                 top: Math.random() * 100 + '%'
               }}            />  ];
+=======
+    { icon: Cpu, text: 'Autonomous IT Operations', color: 'from-cyan-500 to-teal-600' }
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Innovative Services', icon: Sparkles },
+    { number: '$2.5B+', label: 'Market Opportunity', icon: TrendingUp },
+    { number: '99.9%', label: 'Success Rate', icon: Star },
+    { number: '24/7', label: 'AI Operations', icon: Zap }
+  ];
+
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
@@ -372,6 +396,7 @@ export default function UltraFuturisticHero2029() {;
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-20"
               animate={{
+<<<<<<< HEAD
                 x: [0, Math.random() * 1000];
                 y: [0, Math.random() * 1000];
                 opacity: [0.2, 0.8, 0.2]}}
@@ -683,6 +708,21 @@ export default function UltraFuturisticHero2029() {;
         >;
           {features.map ((feature, index) => (
             <motion.div;
+=======
+                x: [0, Math.random() * 1000],
+                y: [0, Math.random() * 1000],
+                opacity: [0.2, 0.8, 0.2],
+              }}
+              transition={{
+                duration: Math.random() * 10 + 10,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+              style={{
+                left: Math.random() * 100 + '%',
+                top: Math.random() * 100 + '%',
+              }}
+>>>>>>> origin/auto/autonomy-17186719616
             />
           ))}
         </div>
@@ -701,6 +741,7 @@ export default function UltraFuturisticHero2029() {;
       </div>
 
       {/* Content */}
+<<<<<<< HEAD
       <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
 
       {/* Content */}
@@ -711,10 +752,15 @@ export default function UltraFuturisticHero2029() {;
 
 
 
+=======
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Main Heading */}
+>>>>>>> origin/auto/autonomy-17186719616
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+<<<<<<< HEAD
           className='mb-8'
 
         >
@@ -747,16 +793,44 @@ export default function UltraFuturisticHero2029() {;
 
 
 
+=======
+          className="mb-8"
+        >
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              2029
+            </span>
+            <br />
+            <span className="text-white">
+              Future Technology
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
+              Revolution
+            </span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Experience the future of technology with Zion Tech Group's revolutionary 2029 services. 
+            From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.
+          </p>
+        </motion.div>
+
+>>>>>>> origin/auto/autonomy-17186719616
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
 
 
 
 
           className=&quot;flex flex-col sm:flex-row gap-4 justify-center mb-16&quot;
+=======
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+>>>>>>> origin/auto/autonomy-17186719616
         >
           <Link
             href="/services"
@@ -775,6 +849,7 @@ export default function UltraFuturisticHero2029() {;
           </Link>
         </motion.div>
 
+<<<<<<< HEAD
         {_/* Features Grid */}
 
 
@@ -818,11 +893,14 @@ export default function UltraFuturisticHero2029() {;
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
+<<<<<<< HEAD
 
 
 
@@ -835,10 +913,17 @@ export default function UltraFuturisticHero2029() {;
           {features.map((feature, index) => (
             <motion.div
 
+=======
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
+        >
+          {features.map((feature, index) => (
+            <motion.div
+>>>>>>> origin/auto/autonomy-17186719616
               key={feature.text}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+<<<<<<< HEAD
 
 
 
@@ -862,11 +947,16 @@ export default function UltraFuturisticHero2029() {;
               </div>
 
               <p className='text-xs text-gray-300 group-hover:text-white transition-colors text-center leading-tight'>                {feature.text}            >
+=======
+              className="group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/50"
+            >
+>>>>>>> origin/auto/autonomy-17186719616
               <div className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform`}>
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
               <p className="text-xs text-gray-300 group-hover:text-white transition-colors text-center leading-tight">
                 {feature.text}
+<<<<<<< HEAD
               <p className='text-xs text-gray-300 group-hover:text-white transition-colors text-center leading-tight'>                {feature.text}
 
                 {feature.text}
@@ -877,11 +967,14 @@ export default function UltraFuturisticHero2029() {;
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               </p>
             </motion.div>
           ))}
         </motion.div>
 
+<<<<<<< HEAD
 
 
 
@@ -979,10 +1072,22 @@ export default function UltraFuturisticHero2029() {;
                 {stat && stat.label}
               </div>;
             </motion && motion.div>;
+=======
+        {/* Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8"
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+>>>>>>> origin/auto/autonomy-17186719616
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+<<<<<<< HEAD
 
 
 
@@ -1026,6 +1131,10 @@ export default function UltraFuturisticHero2029() {;
               </div>
 
               <div className='text-sm text-gray-400 group-hover:text-gray-300 transition-colors'>                {stat.label}            >
+=======
+              className="text-center group"
+            >
+>>>>>>> origin/auto/autonomy-17186719616
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform">
                 <stat.icon className="w-8 h-8 text-cyan-400" />
               </div>
@@ -1034,6 +1143,7 @@ export default function UltraFuturisticHero2029() {;
               </div>
               <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
                 {stat.label}
+<<<<<<< HEAD
               <div className='text-sm text-gray-400 group-hover:text-gray-300 transition-colors'>                {stat.label}
 
                 {stat.label}
@@ -1044,11 +1154,14 @@ export default function UltraFuturisticHero2029() {;
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               </div>
             </motion.div>
           ))}
         </motion.div>
 
+<<<<<<< HEAD
 
 
 
@@ -1104,6 +1217,14 @@ export default function UltraFuturisticHero2029() {;
 
 
 
+=======
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.2 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+>>>>>>> origin/auto/autonomy-17186719616
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -1119,6 +1240,7 @@ export default function UltraFuturisticHero2029() {;
         </motion.div>
       </div>
 
+<<<<<<< HEAD
 
 
             />;
@@ -1216,10 +1338,21 @@ export default function UltraFuturisticHero2029() {;
   );      />
       <motion.div
         animate={{ rotate: -360 }}
+=======
+      {/* Floating Elements */}
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        className="absolute top-20 right-20 w-32 h-32 border border-cyan-500/20 rounded-full"
+      />
+      <motion.div
+        animate={{ rotate: -360 }}
+>>>>>>> origin/auto/autonomy-17186719616
         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
         className="absolute bottom-20 left-20 w-24 h-24 border border-purple-500/20 rounded-full"
       />
     </section>
+<<<<<<< HEAD
   )
 }
 
@@ -1255,3 +1388,7 @@ export default function UltraFuturisticHero2029() {;
 
 
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

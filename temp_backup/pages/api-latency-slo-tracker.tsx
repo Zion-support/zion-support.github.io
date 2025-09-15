@@ -1,10 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
 export default function ApiLatencySloTrackerPage() {
   return (
     <UltraAdvancedFuturisticBackground>
+=======
+import Layout from '../components/layout/Layout';
+
+export default function ApiLatencySloTrackerPage() {
+  return (
+    <Layout>
+>>>>>>> origin/auto/autonomy-17186719616
       <Head>
         <title>API Latency SLO Tracker | Zion Tech Group</title>
         <meta name="description" content="Define, monitor, and alert on p95/p99 API SLOs with synthetic and real-user monitoring and optional status pages." />
@@ -25,7 +33,11 @@ export default function ApiLatencySloTrackerPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>
+=======
+    </Layout>
+>>>>>>> origin/auto/autonomy-17186719616
   );
 }
 

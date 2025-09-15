@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { Header } from '@/components/Header',
@@ -8,6 +9,18 @@ import { SEO } from '@/components/SEO',
 
 export default function SellerDashboard() {
   const [tab, setTab] = useState('products'),
+=======
+import { useState } from 'react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { DropzoneBulkUpload } from '@/components/DropzoneBulkUpload';
+import { ProductSubmissionForm } from '@/components/ProductSubmissionForm';
+import { SEO } from '@/components/SEO';
+
+export default function SellerDashboard() {
+  const [tab, setTab] = useState('products');
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
@@ -30,5 +43,9 @@ export default function SellerDashboard() {
       </main>
       <Footer />
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

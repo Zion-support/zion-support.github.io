@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -73,6 +74,32 @@ interface IntegrationCardProps {
   onConnect}: IntegrationCardProps) {
   return (
 
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Check, ExternalLink } from "lucide-react";
+
+interface IntegrationCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  status?: "connected" | "disconnected" | "pending";
+  href?: string;
+  onConnect?: () => void;
+}
+
+export function IntegrationCard({
+  title,
+  description,
+  icon,
+  status = "disconnected",
+  href,
+  onConnect,
+}: IntegrationCardProps) {
+  return (
+>>>>>>> origin/auto/autonomy-17186719616
     <Card className="overflow-hidden">
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
@@ -105,13 +132,18 @@ interface IntegrationCardProps {
             <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
               <span>Manage</span>
               <ExternalLink className="h-3.5 w-3.5" />
+<<<<<<< HEAD
             </Link>
+=======
+            </a>
+>>>>>>> origin/auto/autonomy-17186719616
           </Button>
         ) : (
           <Button variant="default" className="w-full" onClick={onConnect}>
             <span>Connect</span>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
+<<<<<<< HEAD
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -200,11 +232,17 @@ export function IntegrationCard({;
         )}
       </CardFooter>;
     </Card>;
+=======
+        )}
+      </CardFooter>
+    </Card>
+>>>>>>> origin/auto/autonomy-17186719616
   );
 }
 
 export function IntegrationCards() {
   return (
+<<<<<<< HEAD
     <div className="grid md:grid-cols-3 gap-6">;
       {/* Integration cards would go here */}
 
@@ -223,3 +261,10 @@ export function IntegrationCards() {
 
 
 
+=======
+    <div className="grid md:grid-cols-3 gap-6">
+      {/* Integration cards would go here */}
+    </div>
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

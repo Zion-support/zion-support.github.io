@@ -1,10 +1,15 @@
 
+<<<<<<< HEAD
 import Link from "next/link",
+=======
+import Link from "next/link";
+>>>>>>> origin/auto/autonomy-17186719616
 import { 
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
+<<<<<<< HEAD
 } from "@/components/ui/dropdown-menu",
 import { Button } from "@/components/ui/button",
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
@@ -21,6 +26,24 @@ export function ApplicationActions({
   application;
   processingId;
   onViewApplication;
+=======
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { Eye, ChevronDown, Loader2 } from 'lucide-react'
+import { JobApplication, ApplicationStatus } from "@/types/jobs";
+
+interface ApplicationActionsProps {
+  application: JobApplication;
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+}
+
+export function ApplicationActions({
+  application,
+  processingId,
+  onViewApplication,
+>>>>>>> origin/auto/autonomy-17186719616
   onStatusChange
 }: ApplicationActionsProps) {
   return (
@@ -61,11 +84,18 @@ export function ApplicationActions({
           </DropdownMenuItem>
           <DropdownMenuItem 
             onClick={() => onStatusChange(application.id, "hired")}
+<<<<<<< HEAD
 
           >
             Hire
           </DropdownMenuItem>
           <DropdownMenuItem
+=======
+          >
+            Hire
+          </DropdownMenuItem>
+          <DropdownMenuItem 
+>>>>>>> origin/auto/autonomy-17186719616
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
           >
@@ -84,5 +114,9 @@ export function ApplicationActions({
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

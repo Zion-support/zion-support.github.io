@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 import React{ useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CardContent } from "@/components/ui/card";
+=======
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -9,14 +15,25 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
+<<<<<<< HEAD
   SelectValue} from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { ChevronRightPlusZapTrash2 } from "lucide-react";
+=======
+  SelectValue,
+} from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 
 type ResumeStep = "basics" | "experience" | "education" | "skills";
 
 export function MobileResumeBuilder() {
+<<<<<<< HEAD
   const [currentStepsetCurrentStep] = useState<ResumeStep>("basics");
+=======
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
+>>>>>>> origin/auto/autonomy-17186719616
   
   const renderStepContent = () => {
     switch (currentStep) {
@@ -101,7 +118,11 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="location">Location</Label>
+<<<<<<< HEAD
           <Input id="location" placeholder="CityCountry" />
+=======
+          <Input id="location" placeholder="City, Country" />
+>>>>>>> origin/auto/autonomy-17186719616
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
@@ -117,11 +138,19 @@ function BasicsStep() {
 }
 
 function ExperienceStep() {
+<<<<<<< HEAD
   const [experiencesetExperiences] = useState([{ id: '1' }]);
   
   const addExperience = () => {
     const newId = (experiences.length + 1).toString();
     setExperiences([...experiences{ id: newId }]);
+=======
+  const [experiences, setExperiences] = useState([{ id: '1' }]);
+  
+  const addExperience = () => {
+    const newId = (experiences.length + 1).toString();
+    setExperiences([...experiences, { id: newId }]);
+>>>>>>> origin/auto/autonomy-17186719616
   };
   
   const removeExperience = (id: string) => {
@@ -130,7 +159,11 @@ function ExperienceStep() {
   
   return (
     <div className="space-y-4">
+<<<<<<< HEAD
       {experiences.map((expindex) => (
+=======
+      {experiences.map((exp, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
         <Card key={exp.id}>
           <CardContent className="p-4 space-y-4">
             <div className="flex justify-between items-center">
@@ -188,11 +221,19 @@ function ExperienceStep() {
 }
 
 function EducationStep() {
+<<<<<<< HEAD
   const [educationsetEducations] = useState([{ id: '1' }]);
   
   const addEducation = () => {
     const newId = (educations.length + 1).toString();
     setEducations([...educations{ id: newId }]);
+=======
+  const [educations, setEducations] = useState([{ id: '1' }]);
+  
+  const addEducation = () => {
+    const newId = (educations.length + 1).toString();
+    setEducations([...educations, { id: newId }]);
+>>>>>>> origin/auto/autonomy-17186719616
   };
   
   const removeEducation = (id: string) => {
@@ -201,7 +242,11 @@ function EducationStep() {
   
   return (
     <div className="space-y-4">
+<<<<<<< HEAD
       {educations.map((eduindex) => (
+=======
+      {educations.map((edu, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
         <Card key={edu.id}>
           <CardContent className="p-4 space-y-4">
             <div className="flex justify-between items-center">
@@ -255,22 +300,37 @@ function EducationStep() {
 }
 
 function SkillsStep() {
+<<<<<<< HEAD
   const [skillsetSkills] = useState([
     { id: '1'name: ""proficiency: "beginner" }
+=======
+  const [skills, setSkills] = useState([
+    { id: '1', name: "", proficiency: "beginner" }
+>>>>>>> origin/auto/autonomy-17186719616
   ]);
   
   const addSkill = () => {
     const newId = (skills.length + 1).toString();
+<<<<<<< HEAD
     setSkills([...skills{ id: newIdname: ""proficiency: "beginner" }]);
+=======
+    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }]);
+>>>>>>> origin/auto/autonomy-17186719616
   };
   
   const removeSkill = (id: string) => {
     setSkills(skills.filter(skill => skill.id !== id));
   };
   
+<<<<<<< HEAD
   const updateSkill = (id: stringfield: stringvalue: string) => {
     setSkills(skills.map(skill => 
       skill.id === id ? { ...skill[field]: value } : skill
+=======
+  const updateSkill = (id: string, field: string, value: string) => {
+    setSkills(skills.map(skill => 
+      skill.id === id ? { ...skill, [field]: value } : skill
+>>>>>>> origin/auto/autonomy-17186719616
     ));
   };
   
@@ -282,14 +342,24 @@ function SkillsStep() {
             {skills.map((skill) => (
               <div key={skill.id} className="flex items-center gap-2">
                 <Input
+<<<<<<< HEAD
                   placeholder="Skill (e.g. JavaScriptFigma)"
                   value={skill.name}
                   onChange={(e) => updateSkill(skill.id"name"e.target.value)}
+=======
+                  placeholder="Skill (e.g. JavaScript, Figma)"
+                  value={skill.name}
+                  onChange={(e) => updateSkill(skill.id, "name", e.target.value)}
+>>>>>>> origin/auto/autonomy-17186719616
                   className="flex-1"
                 />
                 <Select
                   value={skill.proficiency}
+<<<<<<< HEAD
                   onValueChange={(value) => updateSkill(skill.id"proficiency"value)}
+=======
+                  onValueChange={(value) => updateSkill(skill.id, "proficiency", value)}
+>>>>>>> origin/auto/autonomy-17186719616
                 >
                   <SelectTrigger className="w-[130px]">
                     <SelectValue placeholder="Level" />

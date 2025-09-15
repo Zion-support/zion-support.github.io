@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -75,6 +76,39 @@ interface InterviewRequestFormProps {
 const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
+=======
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
+import { TalentProfile } from "@/types/talent";
+import type { UserProfile } from "@/types/auth";
+import { cn } from "@/lib/utils";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { z } from "zod";
+import { format, addDays } from "date-fns";
+import { CalendarIcon } from 'lucide-react'
+import { toast } from "@/components/ui/use-toast";
+import { useInterviews } from "@/hooks/useInterviews";
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+
+interface InterviewRequestFormProps {
+  talent: TalentProfile;
+  onClose: () => void;
+  userDetails?: UserProfile;
+}
+
+const formSchema = z.object({
+  date: z.date({
+    required_error: "Please select a date for the interview.",
+  }).refine(date => date > new Date(), {
+>>>>>>> origin/auto/autonomy-17186719616
     message: "Interview date must be in the future"
   }),
   time: z.string().min(1, "Please select a time for the interview."),
@@ -82,6 +116,7 @@ const formSchema = z.object({
   platform: z.string().min(1, "Please select a meeting platform."),
   meetingLink: z.string().optional(),
   title: z.string().min(3, "Please provide a brief title for the interview."),
+<<<<<<< HEAD
   notes: z.string().optional()}),
 
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
@@ -123,12 +158,32 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       platform: "zoom",
       notes: "",
       meetingLink: ""}}),
+=======
+  notes: z.string().optional(),
+});
+
+export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
+  const { requestInterview } = useInterviews();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      title: `Interview with ${talent.full_name}`,
+      duration: "30",
+      platform: "zoom",
+      notes: "",
+      meetingLink: "",
+    },
+  });
+>>>>>>> origin/auto/autonomy-17186719616
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {
       toast({
         title: "Authentication required",
         description: "Please log in to schedule an interview",
+<<<<<<< HEAD
         variant: "destructive"}),
       return,
     }
@@ -142,6 +197,22 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration),
+=======
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Combine date and time
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
+      const scheduledDate = new Date(dateTimeString);
+      
+      // Calculate end time based on duration
+      const durationMinutes = parseInt(values.duration);
+>>>>>>> origin/auto/autonomy-17186719616
 
       await requestInterview({
         talent_id: talent.id,
@@ -153,6 +224,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         meeting_link: values.meetingLink,
         interview_type: "video",
         title: values.title
+<<<<<<< HEAD
       }),
 
       toast({
@@ -240,6 +312,33 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ],
+=======
+      });
+
+      toast({
+        title: "Interview requested",
+        description: `Your interview request with ${talent.full_name} has been sent.`,
+      });
+      onClose();
+    } catch (error) {
+      logErrorToProduction('Failed to schedule interview:', { data: error });
+      toast({
+        title: "Failed to schedule interview",
+        description: "An error occurred while scheduling the interview. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  const timeSlots = [
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
+    "18:00", "18:30", "19:00", "19:30", "20:00"
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Form {...form}>
@@ -247,6 +346,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         <div className="flex items-center mb-6">
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
             <img
+<<<<<<< HEAD
 
 
 
@@ -255,20 +355,26 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               alt={talent.full_name}
               className='h-full w-full object-cover'
               loading='lazy'            />
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               src={talent.profile_picture_url || "/placeholder.svg"}
               alt={talent.full_name}
               className="h-full w-full object-cover"
               loading="lazy"
             />
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           </div>
           <div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
           </div>
         </div>
+<<<<<<< HEAD
               src={talent && talent.profile_picture_url || '/placeholder && placeholder.svg'}
               alt={talent && talent.full_name}
               className='h-full w-full object-cover'
@@ -307,12 +413,24 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
                 <Input placeholder='Brief title for the interview' {...field} />
+=======
+
+        <FormField
+          control={form.control}
+          name="title"
+          render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> }) => (
+            <FormItem>
+              <FormLabel>Interview Title</FormLabel>
+              <FormControl>
+                <Input placeholder="Brief title for the interview" {...field} />
+>>>>>>> origin/auto/autonomy-17186719616
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
 
+<<<<<<< HEAD
 
 
 
@@ -335,19 +453,32 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             control={form.control}
 
 
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="date"
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (
+              <FormItem className="flex flex-col">
+                <FormLabel>Date</FormLabel>
+>>>>>>> origin/auto/autonomy-17186719616
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
                       <Button
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                         variant="outline"
                         className={cn(
                           "w-full pl-3 text-left font-normal",
                           !field.value && "text-muted-foreground"
                         )}
                       >
+<<<<<<< HEAD
 
 
 
@@ -372,6 +503,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                           format(field && field.value, 'PPP');
                         ) : (;
                           <span>Pick a date</span>;
+=======
+                        {field.value ? (
+                          format(field.value, "PPP")
+                        ) : (
+                          <span>Pick a date</span>
+>>>>>>> origin/auto/autonomy-17186719616
                         )}
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                       </Button>
@@ -379,6 +516,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0" align="start">
                     <Calendar
+<<<<<<< HEAD
                       mode='single'
                       selected={field.value}
                       onSelect={field.onChange}
@@ -386,20 +524,26 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                         date < new Date() |date > addDays(new Date(), 90)
                       }                      initialFocus
                       className='p-3 pointer-events-auto'
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                       mode="single"
                       selected={field.value}
                       onSelect={field.onChange}
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus
                       className="p-3 pointer-events-auto"
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                     />
                   </PopoverContent>
                 </Popover>
                 <FormMessage />
               </FormItem>
+<<<<<<< HEAD
 
 
                       selected={field && field.value}
@@ -620,6 +764,16 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
 
+=======
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="time"
+            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => (
+              <FormItem>
+>>>>>>> origin/auto/autonomy-17186719616
                 <FormLabel>Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -627,6 +781,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       <SelectValue placeholder="Select time" />
                     </SelectTrigger>
                   </FormControl>
+<<<<<<< HEAD
                   <SelectContent className='max-h-[300px]'>
                     {timeSlots.map(time => (                      <SelectItem key={time} value={time}>
                   <SelectContent className="max-h-[300px]">
@@ -677,6 +832,21 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 'duration'
               >
             }) => (              <FormItem>
+=======
+                  <SelectContent className="max-h-[300px]">
+                    {timeSlots.map((time) => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+>>>>>>> origin/auto/autonomy-17186719616
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
@@ -685,6 +855,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
                 <FormLabel>Duration</FormLabel>
+<<<<<<< HEAD
                 z && z.infer<typeof formSchema>,;
                 'duration';
               >;
@@ -738,10 +909,32 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             }) => (              <FormItem>
           />;
           <FormField;
+=======
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select duration" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="15">15 minutes</SelectItem>
+                    <SelectItem value="30">30 minutes</SelectItem>
+                    <SelectItem value="45">45 minutes</SelectItem>
+                    <SelectItem value="60">60 minutes</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+>>>>>>> origin/auto/autonomy-17186719616
             control={form.control}
             name="platform"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
               <FormItem>
+<<<<<<< HEAD
 
 
 
@@ -828,16 +1021,43 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         </div>;
         {form.watch('platform') !== 'in-app' && (;
           <FormField;
+=======
+                <FormLabel>Platform</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select platform" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="zoom">Zoom</SelectItem>
+                    <SelectItem value="google-meet">Google Meet</SelectItem>
+                    <SelectItem value="teams">Microsoft Teams</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+
+        {form.watch('platform') !== 'in-app' && (
+          <FormField
+>>>>>>> origin/auto/autonomy-17186719616
             control={form.control}
             name="meetingLink"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => (
               <FormItem>
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
                   <Input
@@ -848,6 +1068,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
           />;
         )}
 
@@ -877,6 +1098,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 ;
         <FormField;
+=======
+          />
+        )}
+
+        <FormField
+>>>>>>> origin/auto/autonomy-17186719616
           control={form.control}
           name="notes"
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "notes"> }) => (
@@ -886,6 +1113,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Textarea 
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
+<<<<<<< HEAD
 
 
 
@@ -910,12 +1138,33 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           </Button>
           <Button type='submit' disabled={isSubmitting}>
             {isSubmitting ? 'Scheduling...' : 'Schedule Interview'}
+=======
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <div className="flex justify-end gap-4 pt-4">
+          <Button variant="outline" onClick={onClose} type="button">
+            Cancel
+          </Button>
+          <Button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Scheduling..." : "Schedule Interview"}
+>>>>>>> origin/auto/autonomy-17186719616
           </Button>
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
   ),
 }
 
 ;
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

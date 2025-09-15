@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
@@ -52,6 +53,19 @@ function ApiWebhooks() {
     "created_at": "2023 - 06 - 10T15:42:31Z";
   }
 }`;
+=======
+import React from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+export function ApiWebhooks() {
+  // Sample webhook event payload
+  const newApplicationPayload = `{
+  "event_type": "new_application",
+  "created_at": "2023-06-10T15:42:31Z",
+  "data": {
+>>>>>>> origin/auto/autonomy-17186719616
     "application_id": "app-123456",
     "job_id": "job-789",
     "talent_id": "talent-456",
@@ -60,13 +74,18 @@ function ApiWebhooks() {
     "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf",
     "created_at": "2023-06-10T15:42:31Z"
   }
+<<<<<<< HEAD
 }`,
 
+=======
+}`;
+>>>>>>> origin/auto/autonomy-17186719616
 
   const newHirePayload = `{
   "event_type": "talent_hired",
   "created_at": "2023-06-12T09:15:22Z",
   "data": {
+<<<<<<< HEAD
 
     "project_id": "project-123";
     "job_id": "job-456";
@@ -77,6 +96,8 @@ function ApiWebhooks() {
     "created_at": "2023-06-12T09:15:22Z"
   }
 }`;
+=======
+>>>>>>> origin/auto/autonomy-17186719616
     "project_id": "project-123",
     "job_id": "job-456",
     "client_id": "client-789",
@@ -85,13 +106,18 @@ function ApiWebhooks() {
     "status": "offer_accepted",
     "created_at": "2023-06-12T09:15:22Z"
   }
+<<<<<<< HEAD
 }`,
 
+=======
+}`;
+>>>>>>> origin/auto/autonomy-17186719616
 
   const quoteReceivedPayload = `{
   "event_type": "quote_received",
   "created_at": "2023-06-15T11:30:00Z",
   "data": {
+<<<<<<< HEAD
 
     "quote_id": "quote-123";
     "client_id": "client-456";
@@ -144,6 +170,8 @@ function verifyWebhookSignature(req, res, next) {
 // Webhook endpoint with signature verification
 app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
   const { event_type, data } = req.body;
+=======
+>>>>>>> origin/auto/autonomy-17186719616
     "quote_id": "quote-123",
     "client_id": "client-456",
     "talent_id": "talent-789",
@@ -153,6 +181,7 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
     "status": "new",
     "created_at": "2023-06-15T11:30:00Z"
   }
+<<<<<<< HEAD
 }`,
 
   const messageReceivedPayload = `{
@@ -165,14 +194,40 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
     "sender_id": "user-789";
     "recipient_id": "user-012",
     "content": "Hi, I'd like to discuss the project details.";
+=======
+}`;
+
+  const messageReceivedPayload = `{
+  "event_type": "message_received",
+  "created_at": "2023-06-18T14:22:15Z",
+  "data": {
+    "message_id": "msg-123",
+    "conversation_id": "conv-456",
+    "sender_id": "user-789",
+    "recipient_id": "user-012",
+    "content": "Hi, I'd like to discuss the project details.",
+>>>>>>> origin/auto/autonomy-17186719616
     "created_at": "2023-06-18T14:22:15Z"
   }
 }`;
 
+<<<<<<< HEAD
 
 
 
 
+=======
+  const webhookHandlerJs = `// Express.js webhook handler example
+const express = require('express');
+const app = express();
+const crypto = require('crypto');
+
+// Middleware to parse JSON bodies
+app.use(express.json());
+
+// Your webhook secret from the Zion dashboard
+const webhookSecret = 'YOUR_WEBHOOK_SECRET';
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Middleware to verify webhook signatures
 function verifyWebhookSignature(req, res, next) {
@@ -180,7 +235,11 @@ function verifyWebhookSignature(req, res, next) {
   const timestamp = req.headers['x-zion-timestamp'];
   
   if (!signature || !timestamp) {
+<<<<<<< HEAD
     return res.status(401).send('Missing signature or timestamp')
+=======
+    return res.status(401).send('Missing signature or timestamp');
+>>>>>>> origin/auto/autonomy-17186719616
   }
   
   // Verify the signature
@@ -191,6 +250,7 @@ function verifyWebhookSignature(req, res, next) {
     .digest('hex');
   
   if (signature !== expectedSignature) {
+<<<<<<< HEAD
     return res.status(401).send('Invalid signature')
   }
   
@@ -290,10 +350,17 @@ function verifyWebhookSignature(req, res, next) {;
 ;
   next();
 
+=======
+    return res.status(401).send('Invalid signature');
+  }
+  
+  next();
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 // Webhook endpoint with signature verification
 app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
+<<<<<<< HEAD
   const { event_type, data } = req.body,
 
 
@@ -308,23 +375,40 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
 
       break;
       break,
+=======
+  const { event_type, data } = req.body;
+  
+  // Handle different event types
+  switch (event_type) {
+    case 'new_application':
+      console.log('New application received:', data.application_id);
+      // Process the new application...
+      break;
+>>>>>>> origin/auto/autonomy-17186719616
     
     case 'talent_hired':
       console.log('Talent hired:', data.talent_id);
       // Update your system...
       break;
+<<<<<<< HEAD
       break,
+=======
+>>>>>>> origin/auto/autonomy-17186719616
     
     case 'quote_received':
       console.log('New quote received:', data.quote_id);
       // Process the quote...
       break;
+<<<<<<< HEAD
       break,
+=======
+>>>>>>> origin/auto/autonomy-17186719616
     
     case 'message_received':
       console.log('New message received:', data.message_id);
       // Process the message...
       break;
+<<<<<<< HEAD
       break,
     
 
@@ -344,17 +428,42 @@ app.listen(3000, () => {
   // // // console.log('Webhook server listening on port 3000')
 }),`,
 
+=======
+    
+    default:
+      console.log('Unknown event type:', event_type);
+  }
+  
+  // Always return a 200 response quickly
+  res.status(200).send('Webhook received');
+});
+
+app.listen(3000, () => {
+  console.log('Webhook server listening on port 3000');
+});`;
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
         <h1>Webhooks</h1>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <p>
           Webhooks allow your application to receive real-time notifications when events occur in the Zion AI Marketplace.
           Instead of constantly polling our API for updates, webhooks push data to your server whenever relevant events happen.
         </p>
+<<<<<<< HEAD
         <h2>Supported Events</h2>
         <p>You can subscribe to the following webhook events:</p>
+=======
+
+        <h2>Supported Events</h2>
+        <p>You can subscribe to the following webhook events:</p>
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <div className="overflow-x-auto mb-6">
           <table className="w-full border-collapse">
             <thead>
@@ -383,21 +492,40 @@ app.listen(3000, () => {
             </tbody>
           </table>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
         <h2>Setting Up Webhooks</h2>
         <p>
           You can configure webhooks in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a> under the Webhooks tab.
           For each webhook, you'll need to provide:
         </p>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <ul>
           <li>A name for the webhook (for your reference)</li>
           <li>The URL where you want to receive webhook events</li>
           <li>The event types you want to subscribe to</li>
         </ul>
+<<<<<<< HEAD
         <p>
           After creating a webhook, you'll be given a webhook secret that you should use to verify that incoming requests are genuinely from Zion.
         </p>
         <h2>Webhook Payload Format</h2>
         <p>All webhook payloads follow a common format:</p>
+=======
+        
+        <p>
+          After creating a webhook, you'll be given a webhook secret that you should use to verify that incoming requests are genuinely from Zion.
+        </p>
+
+        <h2>Webhook Payload Format</h2>
+        <p>All webhook payloads follow a common format:</p>
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <Tabs defaultValue="new_application">
           <TabsList>
             <TabsTrigger value="new_application">New Application</TabsTrigger>
@@ -418,15 +546,24 @@ app.listen(3000, () => {
             <CodeBlock code={messageReceivedPayload} language="json" showLineNumbers={true} />
           </TabsContent>
         </Tabs>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
         <h2>Verifying Webhook Signatures</h2>
         <p>
           To ensure webhook requests are genuinely from Zion, you should verify the signature included in each request.
           We include two HTTP headers with each webhook request:
         </p>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <ul>
           <li><code>X-Zion-Signature</code>: HMAC-SHA256 signature</li>
           <li><code>X-Zion-Timestamp</code>: Unix timestamp when the webhook was sent</li>
         </ul>
+<<<<<<< HEAD
         <p>Here's an example of verifying a webhook in Node.js:</p>
         <CodeBlock code={webhookHandlerJs} language="javascript" showLineNumbers={true} />
         <h2>Testing Webhooks</h2>
@@ -434,6 +571,19 @@ app.listen(3000, () => {
           You can test your webhook implementation using the Developer Portal. From the Webhooks tab;
           select "Test Webhook" next to any configured webhook to send a test payload to your endpoint.
         </p>
+=======
+        
+        <p>Here's an example of verifying a webhook in Node.js:</p>
+        
+        <CodeBlock code={webhookHandlerJs} language="javascript" showLineNumbers={true} />
+
+        <h2>Testing Webhooks</h2>
+        <p>
+          You can test your webhook implementation using the Developer Portal. From the Webhooks tab,
+          select "Test Webhook" next to any configured webhook to send a test payload to your endpoint.
+        </p>
+        
+>>>>>>> origin/auto/autonomy-17186719616
         <h2>Best Practices</h2>
         <ul>
           <li><strong>Respond quickly</strong>: Return a 200 response as soon as you receive the webhook, then process it asynchronously</li>
@@ -443,6 +593,7 @@ app.listen(3000, () => {
         </ul>
       </div>
     </ApiDocsLayout>
+<<<<<<< HEAD
   )
 
 }
@@ -607,3 +758,9 @@ app.listen(3000, () => {;
 
 export default ApiWebhooks;
 
+=======
+  );
+}
+
+export default ApiWebhooks;
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -20,3 +21,6 @@ export default function Index.pagePage() {
     </>
   );
 }
+=======
+export { default } from './index';
+>>>>>>> origin/auto/autonomy-17186719616

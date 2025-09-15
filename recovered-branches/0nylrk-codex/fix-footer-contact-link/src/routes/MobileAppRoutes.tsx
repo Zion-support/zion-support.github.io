@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Routes } from "react-router-dom";
+=======
+import { Route, Routes } from "react-router-dom";
+>>>>>>> origin/auto/autonomy-17186719616
 import MobileAppPage from "../pages/MobileAppPage";
 import MobileLaunchPage from "../pages/MobileLaunchPage";
 import OpenAppRedirect from "../pages/OpenAppRedirect";

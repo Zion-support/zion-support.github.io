@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import Head from 'next/head',
+=======
+import Head from 'next/head';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const TechnologyImplementationStrategies = () => {
   return (
@@ -14,7 +18,14 @@ const TechnologyImplementationStrategies = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
   ),
 },
 
 export default TechnologyImplementationStrategies,
+=======
+  );
+};
+
+export default TechnologyImplementationStrategies;
+>>>>>>> origin/auto/autonomy-17186719616

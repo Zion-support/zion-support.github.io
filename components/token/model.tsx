@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -20,3 +21,6 @@ export default function ModelPage() {
     </>
   );
 }
+=======
+export { default } from '../economy/simulator';
+>>>>>>> origin/auto/autonomy-17186719616

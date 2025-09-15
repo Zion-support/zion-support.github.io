@@ -35,6 +35,7 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 				</section>
 
+<<<<<<< HEAD
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Resume & Cover Letter Builder</h2>
 					<p className="text-slate-300">ATS-optimized resumes and tailored cover letters with role-aware keywording and metric suggestions.</p>
@@ -44,6 +45,96 @@ export default function ServicesAdvertisingPage() {
 						<li>Try: <a href="/services/ai-resume-cover-letter-builder" className="text-cyan-400 underline">ziontechgroup.com/services/ai-resume-cover-letter-builder</a></li>
 					</ul>
 				</section>
+=======
+  const pricingRefs = [
+    {
+      title: 'AI Platforms',
+      links: [
+        { name: 'OpenAI', href: 'https://openai.com/api/pricing' },
+        { name: 'Anthropic', href: 'https://www.anthropic.com/pricing' },
+        { name: 'Google Vertex AI', href: 'https://cloud.google.com/vertex-ai/pricing' },
+        { name: 'Azure OpenAI', href: 'https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/' },
+        { name: 'Langfuse', href: 'https://langfuse.com/pricing' },
+        { name: 'Groq', href: 'https://wow.groq.com/pricing' },
+        { name: 'OpenRouter', href: 'https://openrouter.ai/models' },
+        { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' },
+        { name: 'Humanloop', href: 'https://humanloop.com/pricing' }
+      ],
+      note: 'SMB budgets: $100–$2,000/mo. Enterprise: $5k–$100k+/mo depending on volume and models.'
+    },
+    {
+      title: 'Security & Compliance',
+      links: [
+        { name: 'Wiz', href: 'https://www.wiz.io/pricing' },
+        { name: 'Prisma Cloud', href: 'https://www.paloaltonetworks.com/prisma/cloud/pricing' },
+        { name: 'HashiCorp Vault', href: 'https://www.hashicorp.com/products/vault/pricing' },
+        { name: 'Cloudflare Zero Trust', href: 'https://www.cloudflare.com/products/zero-trust/pricing/' },
+        { name: 'Snyk', href: 'https://snyk.io/plans/' },
+        { name: 'Okta', href: 'https://www.okta.com/pricing/' }
+      ],
+      note: 'SMB budgets: $200–$5,000/mo. Enterprise: $10k–$250k/yr+ for broader suites.'
+    },
+    {
+      title: 'Vector & Search',
+      links: [
+        { name: 'Pinecone', href: 'https://www.pinecone.io/pricing/' },
+        { name: 'Weaviate', href: 'https://weaviate.io/pricing' },
+        { name: 'Qdrant', href: 'https://qdrant.tech/pricing/' },
+        { name: 'Elasticsearch Serverless', href: 'https://www.elastic.co/pricing/' },
+        { name: 'Milvus', href: 'https://zilliz.com/pricing' }
+      ],
+      note: 'SMB budgets: $50–$1,000/mo. Enterprise: $2k–$50k+/mo depending on throughput/latency.'
+    },
+    {
+      title: 'Cloud & Edge',
+      links: [
+        { name: 'AWS Calculator', href: 'https://calculator.aws' },
+        { name: 'Azure', href: 'https://azure.microsoft.com/pricing' },
+        { name: 'Google Cloud', href: 'https://cloud.google.com/pricing' },
+        { name: 'Cloudflare', href: 'https://www.cloudflare.com/plans/' },
+        { name: 'Netlify', href: 'https://www.netlify.com/pricing/' },
+        { name: 'Vercel', href: 'https://vercel.com/pricing' }
+      ],
+      note: 'SMB budgets: $200–$10,000/mo.'
+    },
+    {
+      title: 'Product Analytics',
+      links: [
+        { name: 'Mixpanel', href: 'https://mixpanel.com/pricing/' },
+        { name: 'Amplitude', href: 'https://amplitude.com/pricing' },
+        { name: 'PostHog', href: 'https://posthog.com/pricing' }
+      ],
+      note: 'SMB budgets: $0–$1,500/mo.'
+    },
+    {
+      title: 'Incident & On‑Call',
+      links: [
+        { name: 'PagerDuty', href: 'https://www.pagerduty.com/pricing/' },
+        { name: 'Opsgenie', href: 'https://www.atlassian.com/software/opsgenie/pricing' },
+        { name: 'Better Stack', href: 'https://betterstack.com/status/pricing' }
+      ],
+      note: 'SMB budgets: $10–$1,000/mo.'
+    },
+    {
+      title: 'Email & Deliverability',
+      links: [
+        { name: 'SendGrid', href: 'https://sendgrid.com/pricing/' },
+        { name: 'Mailgun', href: 'https://www.mailgun.com/pricing/' },
+        { name: 'Postmark', href: 'https://postmarkapp.com/pricing' }
+      ],
+      note: 'SMB budgets: $15–$500/mo.'
+    },
+    {
+      title: 'Observability & APM',
+      links: [
+        { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },
+        { name: 'New Relic', href: 'https://newrelic.com/pricing' },
+        { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
+      ],
+      note: 'SMB budgets: $50–$2,000/mo.'
+    }
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
@@ -108,6 +199,7 @@ export default function ServicesAdvertisingPage() {
             </div>
           </section>
 
+<<<<<<< HEAD
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Featured Offerings</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -130,6 +222,17 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
           </section>
+=======
+				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">Browser Automation Cloud</h2>
+					<p className="text-slate-300">Scale Playwright/Puppeteer jobs with proxy pools, recorder-to-code and webhooks.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical budget: $40–$200/mo</li>
+						<li>References: {ext('https://apify.com/pricing')}, {ext('https://www.browserless.io/pricing')}</li>
+						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</a></li>
+					</ul>
+				</section>
+>>>>>>> origin/auto/autonomy-17186719616
 
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">API Performance Testing</h2>
@@ -141,6 +244,7 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 				</section>
 
+<<<<<<< HEAD
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Average Market Prices</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -184,6 +288,17 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
           </section>
+=======
+				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">Email Deliverability Monitor</h2>
+					<p className="text-slate-300">DMARC/SPF/DKIM health, blocklists, and inbox placement with alerts.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical budget: $15–$60/mo</li>
+						<li>References: {ext('https://dmarc.org/overview/')}, {ext('https://postmarkapp.com/support/category/dmarc')}</li>
+						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</a></li>
+					</ul>
+				</section>
+>>>>>>> origin/auto/autonomy-17186719616
 
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Podcast Transcription & Insights</h2>
@@ -240,6 +355,7 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 				</section>
 
+<<<<<<< HEAD
 				{/* New sections with average market prices and references */}
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Customer Support & Helpdesk</h2>
@@ -1533,4 +1649,155 @@ export default function ServicesAdvertisingPage() {
 			</div>
 		</div>
 	);
+=======
+				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">API Observability Starter</h2>
+					<p className="text-slate-300">Distributed tracing, golden signals dashboards, opinionated SLOs and alerting. Go live in under 60 minutes.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical SMB budget: $99–$350/mo</li>
+						<li>References: {ext('https://www.honeycomb.io/pricing/')}, {ext('https://www.datadoghq.com/pricing/')}, {ext('https://newrelic.com/pricing')}</li>
+					</ul>
+				</section>
+
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Micro SaaS & IT Solutions</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { name: 'Affiliate Marketing Tracker Pro', price: '$99/mo', href: '/affiliate-marketing-tracker-pro', refs: [{ n: 'Refersion', u: 'https://www.refersion.com/pricing' }] },
+                { name: 'SMB Privacy Web Analytics', price: '$12/mo', href: '/smb-privacy-web-analytics', refs: [{ n: 'Plausible', u: 'https://plausible.io/#pricing' }] },
+                { name: 'MSP Helpdesk & ITSM', price: '$149/mo', href: '/msp-helpdesk-itsm', refs: [{ n: 'Freshdesk', u: 'https://freshdesk.com/pricing' }] },
+                { name: 'AI Content Creation Studio', price: '$39/mo', href: '/ai-content-creation-studio', refs: [{ n: 'Jasper', u: 'https://www.jasper.ai/pricing' }] },
+                { name: 'E-commerce Returns Manager', price: '$59/mo', href: '/ecommerce-returns-manager', refs: [{ n: 'Loop Returns', u: 'https://www.loopreturns.com/pricing' }] },
+                { name: 'Automated Email Follow-ups', price: '$29/mo', href: '/automated-email-followups', refs: [{ n: 'Reply.io', u: 'https://reply.io/pricing' }] },
+                { name: 'Podcast Transcription Pro', price: '$15/mo', href: '/podcast-transcription-pro', refs: [{ n: 'Rev', u: 'https://www.rev.com/pricing' }] },
+                { name: 'Freelancer Portfolio Builder', price: '$9/mo', href: '/freelancer-portfolio-builder', refs: [{ n: 'Webflow', u: 'https://webflow.com/pricing' }] },
+                { name: 'Micro CRM for Local Business', price: '$19/mo', href: '/micro-crm-local-business', refs: [{ n: 'Zoho Bigin', u: 'https://www.zoho.com/bigin/pricing/' }] },
+                { name: 'AI SEO Content Optimizer', price: '$59/mo', href: '/ai-seo-content-optimizer', refs: [{ n: 'Surfer SEO', u: 'https://surferseo.com/pricing/' }] }
+              ].map((o) => (
+                <div key={o.name} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                  <a href={o.href} className="block group">
+                    <div className="text-sm text-gray-400 mb-1">From</div>
+                    <div className="flex items-center justify-between">
+                      <div className="text-white font-semibold text-lg group-hover:text-cyan-300">{o.name}</div>
+                      <div className="text-cyan-300 font-medium">{o.price}</div>
+                    </div>
+                  </a>
+                  <div className="mt-3 text-sm text-gray-400 flex flex-wrap gap-3">
+                    {o.refs.map((r) => (
+                      <a key={r.n} href={r.u} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-gray-300 hover:text-white">
+                        <ExternalLink className="w-4 h-4" /> {r.n}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Average Market Price Ranges</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[ 
+                { title: 'AI Evaluations & Prompting', range: '$50–$800/mo', links: [
+                  { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' },
+                  { name: 'Humanloop', href: 'https://humanloop.com/pricing' },
+                  { name: 'Promptfoo', href: 'https://www.promptfoo.dev/pricing' }
+                ]},
+                { title: 'LLM Platforms', range: '$100–$2,000/mo', links: [
+                  { name: 'OpenAI', href: 'https://openai.com/api/pricing' },
+                  { name: 'Anthropic', href: 'https://www.anthropic.com/pricing' },
+                  { name: 'OpenRouter', href: 'https://openrouter.ai/models' }
+                ]},
+                { title: 'Observability/APM', range: '$50–$2,000/mo', links: [
+                  { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },
+                  { name: 'New Relic', href: 'https://newrelic.com/pricing' },
+                  { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
+                ]},
+                { title: 'Security & Compliance', range: '$200–$5,000/mo', links: [
+                  { name: 'Wiz', href: 'https://www.wiz.io/pricing' },
+                  { name: 'Prisma Cloud', href: 'https://www.paloaltonetworks.com/prisma/cloud/pricing' },
+                  { name: 'Vault', href: 'https://www.hashicorp.com/products/vault/pricing' }
+                ]},
+                { title: 'Vector DB & Retrieval', range: '$20–$1,000/mo', links: [
+                  { name: 'Pinecone', href: 'https://www.pinecone.io/pricing/' },
+                  { name: 'Weaviate', href: 'https://weaviate.io/pricing' },
+                  { name: 'Qdrant', href: 'https://qdrant.tech/pricing/' }
+                ]},
+                { title: 'Email Deliverability', range: '$50–$300/mo', links: [
+                  { name: 'Mailgun', href: 'https://www.mailgun.com/pricing/' },
+                  { name: 'SendGrid', href: 'https://sendgrid.com/pricing/' },
+                  { name: 'Postmark', href: 'https://postmarkapp.com/pricing' }
+                ]}
+              ].map((group) => (
+                <div key={group.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-white">{group.title}</h3>
+                    <span className="text-sm text-gray-300">{group.range}</span>
+                  </div>
+                  <ul className="text-slate-300 space-y-1">
+                    {group.links.map((l) => (
+                      <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{l.name}</a></li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-6">
+              <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Explore by Category</h2>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {anchors.map((a) => (
+                <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
+                  {a.title}
+                </a>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Contact Us</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <a href={`tel:${contact.mobile.replace(/[^+\d]/g, '')}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 flex items-center gap-3">
+                <Phone className="w-5 h-5 text-cyan-400" />
+                <span className="text-gray-200">{contact.mobile}</span>
+              </a>
+              <a href={`mailto:${contact.email}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 flex items-center gap-3">
+                <Mail className="w-5 h-5 text-purple-400" />
+                <span className="text-gray-200">{contact.email}</span>
+              </a>
+              <a href={`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-emerald-500/40 flex items-center gap-3">
+                <MapPin className="w-5 h-5 text-emerald-400" />
+                <span className="text-gray-200 text-sm">{contact.address}</span>
+              </a>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">More Featured Solutions</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { name: 'Email Deliverability Monitor', price: '$149/mo', href: '/email-deliverability-monitor' },
+                { name: 'API Security Scanner', price: '$799/mo', href: '/api-security-scanner' },
+                { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' },
+                { name: 'Uptime & SLO Monitor', price: '$99/mo', href: '/uptime-slo-monitor' },
+                { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' },
+                { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor' }
+              ].map((o) => (
+                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
+                  <div className="text-sm text-gray-400 mb-1">From</div>
+                  <div className="text-2xl font-bold text-white">{o.price}</div>
+                  <div className="text-gray-200 mt-2">{o.name}</div>
+                </a>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

@@ -14,6 +14,10 @@ export interface Revolutionary2026Innovation {
     address: string;
   };
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/auto/autonomy-17186719616
 export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [
   {
     id: "2026-revolutionary-innovation",

@@ -1,7 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
 
 import Head from 'next/head';
 CheckShieldAlertLockPhoneMailMapPinExternalLink
+=======
+import Head from 'next/head';
+import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+>>>>>>> origin/auto/autonomy-17186719616
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -18,16 +23,26 @@ export default function AIGuardrailsPage() {
 		'Prompt/output policy engine with allow/deny lists',
 		'Jailbreak and prompt injection detection',
 		'PII/PHI detection and redaction',
+<<<<<<< HEAD
 		'Toxicitybias and safety classifiers',
 		'Human handoff flows and escalation policies',
 		'Audit logsalerting and exportable evidence'
+=======
+		'Toxicity, bias and safety classifiers',
+		'Human handoff flows and escalation policies',
+		'Audit logs, alerting and exportable evidence'
+>>>>>>> origin/auto/autonomy-17186719616
 	];
 
 	return (
 		<UltraAdvancedFuturisticBackground>
 			<Head>
 				<title>AI Guardrails Suite | Zion Tech Group</title>
+<<<<<<< HEAD
 				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcementjailbreak detectionPII/PHI controls and audit logs with SDKs and proxies." />
+=======
+				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies." />
+>>>>>>> origin/auto/autonomy-17186719616
 				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />
 			</Head>
 
@@ -67,18 +82,30 @@ export default function AIGuardrailsPage() {
 						</Card>
 						<Card className="p-6 bg-black/30 border border-emerald-500/30">
 							<h3 className="text-lg font-semibold mb-2">Compliance</h3>
+<<<<<<< HEAD
 							<p className="text-gray-300 text-sm">SOC 2-friendly audit logspolicy-as-codeand retention controls for evidence collection.</p>
 						</Card>
 						<Card className="p-6 bg-black/30 border border-cyan-500/30">
 							<h3 className="text-lg font-semibold mb-2">Integrations</h3>
 							<p className="text-gray-300 text-sm">SlackPagerDutyDatadog and SIEM integrations for alerting and incident response.</p>
+=======
+							<p className="text-gray-300 text-sm">SOC 2-friendly audit logs, policy-as-code, and retention controls for evidence collection.</p>
+						</Card>
+						<Card className="p-6 bg-black/30 border border-cyan-500/30">
+							<h3 className="text-lg font-semibold mb-2">Integrations</h3>
+							<p className="text-gray-300 text-sm">Slack, PagerDuty, Datadog and SIEM integrations for alerting and incident response.</p>
+>>>>>>> origin/auto/autonomy-17186719616
 						</Card>
 					</div>
 
 					<div className="bg-black/20 border border-rose-500/30 rounded-2xl p-6">
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+<<<<<<< HEAD
 							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g', ')}`}>{contactInfo.mobile}</a></div>
+=======
+							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`}>{contactInfo.mobile}</a></div>
+>>>>>>> origin/auto/autonomy-17186719616
 							<div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /> <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></div>
 							<div className="flex items-center justify-center gap-2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs">{contactInfo.address}</a></div>
 						</div>

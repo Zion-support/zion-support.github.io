@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',
 import { Search } from 'lucide-react'
 import { Input } from '@/components/ui/input',
 import { Button } from '@/components/ui/button',
+=======
+import { useState, useEffect } from 'react';
+import { Search } from 'lucide-react'
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+>>>>>>> origin/auto/autonomy-17186719616
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationButton,
   PaginationNext,
+<<<<<<< HEAD
   PaginationPrevious} from '@/components/ui/pagination',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { CountryServiceCard } from '@/components/services/CountryServiceCard',
@@ -20,6 +28,21 @@ interface CountryTabsProps {
   onQuote?: (country: CountryPricing) => void,
   searchQuery: string,
   setSearchQuery: (query: string) => void
+=======
+  PaginationPrevious,
+} from '@/components/ui/pagination';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { CountryServiceCard } from '@/components/services/CountryServiceCard';
+import { CountryPricing } from '@/data/onsiteServicePricing';
+
+interface CountryTabsProps {
+  popularCountries: string[];
+  filteredCountries: CountryPricing[];
+  handleCountrySelect: (country: CountryPricing) => void;
+  onQuote?: (country: CountryPricing) => void;
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function CountryTabs({
@@ -28,6 +51,7 @@ export function CountryTabs({
   handleCountrySelect,
   onQuote,
   searchQuery,
+<<<<<<< HEAD
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -41,6 +65,22 @@ export function CountryTabs({
     (currentPage - 1) * countriesPerPage,
     currentPage * countriesPerPage
   ),
+=======
+  setSearchQuery,
+}: CountryTabsProps) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const countriesPerPage = 50;
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery]);
+
+  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage);
+  const paginatedCountries = filteredCountries.slice(
+    (currentPage - 1) * countriesPerPage,
+    currentPage * countriesPerPage
+  );
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <Tabs defaultValue="featured" className="w-full">
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
@@ -102,6 +142,7 @@ export function CountryTabs({
               onSelect={handleCountrySelect}
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
+<<<<<<< HEAD
             />;
 
 
@@ -133,6 +174,10 @@ export function CountryTabs({
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
+=======
+            />
+          ))}
+>>>>>>> origin/auto/autonomy-17186719616
         </div>
 
         {totalPages > 1 && (
@@ -143,8 +188,13 @@ export function CountryTabs({
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
                     onClick={(e) => {
+<<<<<<< HEAD
                       e.preventDefault(),
                       setCurrentPage(Math.max(1, currentPage - 1)),
+=======
+                      e.preventDefault();
+                      setCurrentPage(Math.max(1, currentPage - 1));
+>>>>>>> origin/auto/autonomy-17186719616
                     }}
                   />
                 </PaginationItem>
@@ -155,8 +205,13 @@ export function CountryTabs({
                         page={page}
                         isActive={page === currentPage}
                         onClick={(e) => {
+<<<<<<< HEAD
                           e.preventDefault(),
                           setCurrentPage(page),
+=======
+                          e.preventDefault();
+                          setCurrentPage(page);
+>>>>>>> origin/auto/autonomy-17186719616
                         }}
                       />
                     </PaginationItem>
@@ -166,8 +221,13 @@ export function CountryTabs({
                   <PaginationNext
                     href={`?page=${currentPage + 1}`}
                     onClick={(e) => {
+<<<<<<< HEAD
                       e.preventDefault(),
                       setCurrentPage(Math.min(totalPages, currentPage + 1)),
+=======
+                      e.preventDefault();
+                      setCurrentPage(Math.min(totalPages, currentPage + 1));
+>>>>>>> origin/auto/autonomy-17186719616
                     }}
                   />
                 </PaginationItem>
@@ -177,6 +237,7 @@ export function CountryTabs({
         )}
       </TabsContent>
     </Tabs>
+<<<<<<< HEAD
   ),
 }
   );
@@ -359,3 +420,7 @@ function CountryTabs() {
                       e.preventDefault(),;
                       setCurrentPage(Math.max(1, currentPage - 1));
 
+=======
+  );
+}
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link',
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary',
@@ -8,12 +9,25 @@ import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productio
 
 interface PageErrorFallbackProps extends FallbackProps {
   pageName?: string,
+=======
+import React from 'react';
+import Link from 'next/link';
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
+import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger';
+
+
+interface PageErrorFallbackProps extends FallbackProps {
+  pageName?: string;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFallbackProps) {
   const isAuthConfigError = error?.message?.includes('Auth0') || 
                            error?.message?.includes('AUTH0') ||
                            error?.message?.includes('authentication') ||
+<<<<<<< HEAD
                            error?.message?.includes('environment'),
 
   const handleRefresh = () => {
@@ -23,6 +37,17 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
       window.location.reload(),
     }
   },
+=======
+                           error?.message?.includes('environment');
+
+  const handleRefresh = () => {
+    if (resetErrorBoundary) {
+      resetErrorBoundary();
+    } else {
+      window.location.reload();
+    }
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
@@ -64,6 +89,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
               <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details
               </summary>
+<<<<<<< HEAD
               <pre className='mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto'>
                 {error.message}
               </pre>
@@ -80,6 +106,8 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
             <Link
               href='/'
               className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
+=======
+>>>>>>> origin/auto/autonomy-17186719616
               <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
                 {error.message}
               </pre>
@@ -100,7 +128,11 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
               href="/"
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
             >
+<<<<<<< HEAD
               <Home className='w-4 h-4 mr-2' />
+=======
+              <Home className="w-4 h-4 mr-2" />
+>>>>>>> origin/auto/autonomy-17186719616
               Go Home
             </Link>
           </div>
@@ -128,7 +160,11 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
         {/* Support Information */}
         <div className="bg-gray-800 text-white rounded-lg p-6 text-center">
           <p className="mb-3">Need help? Contact our support team</p>
+<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-3 justify-center">
+=======
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+>>>>>>> origin/auto/autonomy-17186719616
             <a 
               href="mailto:support@zion.tech" 
               className="text-blue-400 hover:underline"
@@ -142,6 +178,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 
@@ -149,6 +186,15 @@ interface PageErrorBoundaryProps {
   children: React.ReactNode,
   pageName?: string,
   fallback?: React.ComponentType<FallbackProps>
+=======
+  );
+}
+
+interface PageErrorBoundaryProps {
+  children: React.ReactNode;
+  pageName?: string;
+  fallback?: React.ComponentType<FallbackProps>;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export default function PageErrorBoundary({ 
@@ -157,19 +203,32 @@ export default function PageErrorBoundary({
   fallback 
 }: PageErrorBoundaryProps) {
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
+<<<<<<< HEAD
     prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`, error),
+=======
+    prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`, error);
+>>>>>>> origin/auto/autonomy-17186719616
     
     logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, {
       page: pageName || 'unknown',
       componentStack: errorInfo.componentStack || undefined,
       errorBoundary: 'PageErrorBoundary',
       timestamp: new Date().toISOString()
+<<<<<<< HEAD
     }),
   },
 
   const FallbackComponent = fallback || ((props: FallbackProps) => (
     <PageErrorFallback {...props} pageName={pageName} />
   )),
+=======
+    });
+  };
+
+  const FallbackComponent = fallback || ((props: FallbackProps) => (
+    <PageErrorFallback {...props} pageName={pageName} />
+  ));
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <ErrorBoundary
@@ -177,10 +236,19 @@ export default function PageErrorBoundary({
       onError={handleError}
       onReset={() => {
         // Reset any application state if needed
+<<<<<<< HEAD
         logInfo(`Resetting error boundary for ${pageName || 'page'}`),
+=======
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`);
+>>>>>>> origin/auto/autonomy-17186719616
       }}
     >
       {children}
     </ErrorBoundary>
+<<<<<<< HEAD
   ),
 } 
+=======
+  );
+} 
+>>>>>>> origin/auto/autonomy-17186719616

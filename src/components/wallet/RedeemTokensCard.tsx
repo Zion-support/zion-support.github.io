@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
+=======
+import React, { useState } from "react";
+import { useWallet } from "@/hooks/useWallet";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
 import {
   Dialog,
@@ -10,6 +17,7 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
   DialogTrigger} from "@/components/ui/dialog",
 
 type RewardOption = {
@@ -19,6 +27,18 @@ type RewardOption = {
   cost: number,
   type: 'credit' | 'feature' | 'course'
 },
+=======
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+type RewardOption = {
+  id: string;
+  title: string;
+  description: string;
+  cost: number;
+  type: 'credit' | 'feature' | 'course';
+};
+>>>>>>> origin/auto/autonomy-17186719616
 
 const REWARD_OPTIONS: RewardOption[] = [
   {
@@ -42,6 +62,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     cost: 100,
     type: 'credit'
   }
+<<<<<<< HEAD
 ],
 
 
@@ -51,6 +72,20 @@ const REWARD_OPTIONS: RewardOption[] = [
     await spendTokens(option.cost, `Redeemed: ${option.title}`),
     setOpen(false),
   },
+=======
+];
+
+export function RedeemTokensCard() {
+  const { wallet, spendTokens } = useWallet();
+  const [open, setOpen] = useState(false);
+
+  const handleRedeem = async (option: RewardOption) => {
+    if (!wallet || wallet.balance < option.cost) return;
+    
+    await spendTokens(option.cost, `Redeemed: ${option.title}`);
+    setOpen(false);
+  };
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Card>
@@ -103,5 +138,9 @@ const REWARD_OPTIONS: RewardOption[] = [
         </Dialog>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

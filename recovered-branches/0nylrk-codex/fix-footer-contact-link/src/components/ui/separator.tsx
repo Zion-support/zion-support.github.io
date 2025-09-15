@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import * as React from 'react.ts'
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 import { cn  } from '../../utils/cn'
+=======
+import * as React from "react"
+import * as SeparatorPrimitive from "@radix-ui/react-separator"
+
+import { cn } from "@/lib/utils"
+>>>>>>> origin/auto/autonomy-17186719616
 
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>,
@@ -25,4 +32,8 @@ const Separator = React.forwardRef<
 )
 Separator.displayName = SeparatorPrimitive.Root.displayName
 
+<<<<<<< HEAD
 export { Separator }
+=======
+export { Separator }
+>>>>>>> origin/auto/autonomy-17186719616

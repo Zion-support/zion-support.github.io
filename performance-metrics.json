@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 <<<<<<< HEAD
   "timestamp": "2025-09-03T16:54:18.031Z",
@@ -49,3 +50,34 @@
   },
   "recommendations": []
 }
+=======
+[
+  {
+    "buildTime": "101.66ms",
+    "bundleSize": null,
+    "chunkCount": null,
+    "timestamp": "2025-06-29T04:25:36.759Z",
+    "warnings": [],
+    "errors": [],
+    "devServerHealth": "offline"
+  },
+  {
+    "buildTime": "67.93ms",
+    "bundleSize": null,
+    "chunkCount": null,
+    "timestamp": "2025-06-29T04:26:43.238Z",
+    "warnings": [],
+    "errors": [],
+    "devServerHealth": "offline"
+  },
+  {
+    "buildTime": "1296.60ms",
+    "bundleSize": "43.64 MB",
+    "chunkCount": 171,
+    "timestamp": "2025-06-29T04:45:16.879Z",
+    "warnings": [],
+    "errors": [],
+    "devServerHealth": "healthy"
+  }
+]
+>>>>>>> origin/auto/autonomy-17186719616

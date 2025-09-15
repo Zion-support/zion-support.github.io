@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import { CardContent } from "@/components/ui/card";
+=======
+import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Loader2 } from "lucide-react";
 
 export function LoadingState() {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import { AlertTriangle, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button',
@@ -30,6 +31,40 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {
 
   render() {;
     if (this && this.state.hasError) {;
+=======
+import React from 'react';
+import { AlertTriangle, RefreshCw } from 'lucide-react'
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+
+interface Props {
+  children: React.ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+export class EquipmentErrorBoundary extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack });
+  }
+
+  render() {
+    if (this.state.hasError) {
+>>>>>>> origin/auto/autonomy-17186719616
       return (
         <div className="container py-8">
           <Card className="border-red-200 bg-red-50">
@@ -54,9 +89,18 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {
             </CardContent>
           </Card>
         </div>
+<<<<<<< HEAD
       ),
     }
 
     return this.props.children,
   }
 } 
+=======
+      );
+    }
+
+    return this.props.children;
+  }
+} 
+>>>>>>> origin/auto/autonomy-17186719616

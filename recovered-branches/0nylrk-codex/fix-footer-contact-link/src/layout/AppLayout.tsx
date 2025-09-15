@@ -8,9 +8,14 @@ interface AppLayoutProps {
   hideFooter?: boolean;
 }
 
+<<<<<<< HEAD
 export function AppLayout({ childrenhideFooter = false }: AppLayoutProps) {
   return (
 
+=======
+export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
+  return (
+>>>>>>> origin/auto/autonomy-17186719616
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-grow">

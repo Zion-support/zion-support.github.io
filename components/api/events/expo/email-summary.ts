@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -71,13 +72,28 @@ export default async function handler(
 
 
 
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  try {
+    const provider = process.env.MAIL_PROVIDER || 'none';
+    if (provider === 'none') {
+      console.log('[EmailSummary] Stub: no provider configured');
+      return res.status(200).json({ status: 'queued', provider: 'stub' });
+>>>>>>> origin/auto/autonomy-17186719616
     }
     // TODO: Integrate with actual provider
     return res.status(200).json({ status: 'queued', provider });
   } catch (e: any) {
+<<<<<<< HEAD
 return res
       .status(500)
 
 
 
 
+=======
+    return res.status(500).json({ error: e.message || 'Failed to queue emails' });
+  }
+}
+>>>>>>> origin/auto/autonomy-17186719616

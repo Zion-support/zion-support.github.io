@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import { FileText } from 'lucide-react'
 import { ResumeOption } from '../resume-selector/types',
@@ -20,6 +21,27 @@ export function SelectResumeSection({
   handleDownloadResume;
 
 
+=======
+import React from 'react';
+import { FileText } from 'lucide-react'
+import { ResumeOption } from '../resume-selector/types';
+import { ResumePreviewCard } from './ResumePreviewCard';
+import { Resume } from '@/types/resume';
+
+interface SelectResumeSectionProps {
+  resumeOptions: ResumeOption[];
+  selectedResume: ResumeOption | null;
+  handleResumeSelect: (resumeId: string) => void;
+  handleDownloadResume: () => void;
+  isLoading: boolean;
+}
+
+export function SelectResumeSection({
+  resumeOptions,
+  selectedResume,
+  handleResumeSelect,
+  handleDownloadResume,
+>>>>>>> origin/auto/autonomy-17186719616
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -28,6 +50,7 @@ export function SelectResumeSection({
         <p className="text-sm text-zion-slate">No saved resumes found.</p>
       ) : (
         <>
+<<<<<<< HEAD
           {resumeOptions.map(option => (            <button
               key = {option.id,}
               className={`w-full text-left p-3 rounded-md transition ${
@@ -36,6 +59,8 @@ export function SelectResumeSection({
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
               onClick = {(,) => handleResumeSelect(option.id),}
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           {resumeOptions.map((option) => (
             <button
               key={option.id}
@@ -63,5 +88,9 @@ export function SelectResumeSection({
         </>
       )}
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }

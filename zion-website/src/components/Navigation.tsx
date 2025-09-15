@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -156,6 +157,26 @@ export default function Navigation() {
             <div className=&quot;text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200&quot;>
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
+=======
+'use client'
+
+import { useState } from 'react'
+import { Dialog } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Research', href: '/research' },
+  { name: 'Contact', href: '/contact' },
+]
+
+export default function Navigation() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -225,9 +246,15 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                     href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800 transition-colors duration-200"
                     onClick={() => setMobileMenuOpen(false)}
+<<<<<<< HEAD
                   >;
                     {item.name}
 </Link>
+=======
+                  >
+                    {item.name}
+                  </a>
+>>>>>>> origin/auto/autonomy-17186719616
                 ))}
               </div>
               <div className="py-6">
@@ -245,4 +272,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
       </Dialog>
     </header>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/auto/autonomy-17186719616

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useMemo, useState } from 'react',
@@ -10,6 +11,20 @@ interface Talent {
   title: string,
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>,
   testimonial?: { quote: string, author: string },
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { useMemo, useState } from 'react';
+import Pagination from '../../components/ui/Pagination';
+import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
+
+interface Talent {
+  id: string;
+  name: string;
+  title: string;
+  badges: Array<'Verified' | 'Pro' | 'Top Rated'>;
+  testimonial?: { quote: string; author: string };
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
@@ -17,6 +32,7 @@ const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
   name: `Talent ${i + 1}`,
   title: 'Full-Stack Developer',
   badges: (i % 3 === 0 ? ['Verified'] : i % 3 === 1 ? ['Pro'] : ['Top Rated']) as Talent['badges'],
+<<<<<<< HEAD
   testimonial: i % 5 === 0 ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' } : undefined})),
 
 const TalentDirectory: NextPage = () => {
@@ -28,6 +44,20 @@ const TalentDirectory: NextPage = () => {
     const start = (page - 1) * pageSize,
     return mockTalent.slice(start, start + pageSize),
   }, [page]),
+=======
+  testimonial: i % 5 === 0 ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' } : undefined,
+}));
+
+const TalentDirectory: NextPage = () => {
+  const [page, setPage] = useState(1);
+  const pageSize = 10;
+  const total = mockTalent.length;
+
+  const pageItems = useMemo(() => {
+    const start = (page - 1) * pageSize;
+    return mockTalent.slice(start, start + pageSize);
+  }, [page]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6 pb-16">
@@ -58,7 +88,14 @@ const TalentDirectory: NextPage = () => {
 
       <Pagination page={page} pageSize={pageSize} total={total} onChange={setPage} />
     </div>
+<<<<<<< HEAD
   ),
 },
 
 export default TalentDirectory,
+=======
+  );
+};
+
+export default TalentDirectory;
+>>>>>>> origin/auto/autonomy-17186719616

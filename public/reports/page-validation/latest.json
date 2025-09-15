@@ -1,5 +1,6 @@
 {
   "summary": {
+<<<<<<< HEAD
     "totalFiles": 36,
     "filesWithIssues": 36,
     "totalIssues": 31,
@@ -62,51 +63,88 @@
     },
     {
       "file": "pages/ai-healthcare-analytics.tsx",
+=======
+    "totalFiles": 4,
+    "filesWithIssues": 4,
+    "totalIssues": 0,
+    "totalWarnings": 4,
+    "buildBreakingFiles": 0,
+    "canBuild": true
+  },
+  "results": [
+    {
+      "file": "pages/api/email-validator.ts",
+>>>>>>> origin/auto/autonomy-17186719616
       "issues": [],
       "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
+<<<<<<< HEAD
           "line": 6,
+=======
+          "line": 81,
+>>>>>>> origin/auto/autonomy-17186719616
           "severity": "warning"
         }
       ]
     },
     {
+<<<<<<< HEAD
       "file": "pages/ai-hr-management-platform.tsx",
+=======
+      "file": "pages/api/password-strength.ts",
+>>>>>>> origin/auto/autonomy-17186719616
       "issues": [],
       "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
+<<<<<<< HEAD
           "line": 6,
+=======
+          "line": 68,
+>>>>>>> origin/auto/autonomy-17186719616
           "severity": "warning"
         }
       ]
     },
     {
+<<<<<<< HEAD
       "file": "pages/ai-legal-document-analysis.tsx",
+=======
+      "file": "pages/api/text-analyzer.ts",
+>>>>>>> origin/auto/autonomy-17186719616
       "issues": [],
       "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
+<<<<<<< HEAD
           "line": 6,
+=======
+          "line": 71,
+>>>>>>> origin/auto/autonomy-17186719616
           "severity": "warning"
         }
       ]
     },
     {
+<<<<<<< HEAD
       "file": "pages/ai-manufacturing-optimization.tsx",
+=======
+      "file": "pages/api/url-shortener.ts",
+>>>>>>> origin/auto/autonomy-17186719616
       "issues": [],
       "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
+<<<<<<< HEAD
           "line": 6,
           "severity": "warning"
         }
@@ -700,11 +738,15 @@
           "code": "PAGE_TOO_SHORT",
           "message": "Page content seems too short, may be incomplete",
           "line": 0,
+=======
+          "line": 31,
+>>>>>>> origin/auto/autonomy-17186719616
           "severity": "warning"
         }
       ]
     }
   ],
+<<<<<<< HEAD
   "buildBreakingFiles": [
     "pages/features/ai-content-generation.tsx",
     "pages/franchise-portal/index.tsx",
@@ -719,4 +761,11 @@
     "pages/zion/ipfs.tsx"
   ],
   "generatedAt": "2025-08-24T03:18:48.442Z"
+=======
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-20T19:03:33.426Z"
+=======
+  "generatedAt": "2025-08-20T19:21:03.555Z"
+>>>>>>> origin/auto/autonomy-17186719616
 }

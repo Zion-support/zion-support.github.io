@@ -1,11 +1,20 @@
 
 import { MapPin } from 'lucide-react'
+<<<<<<< HEAD
 import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { toast } from "@/hooks/use-toast",
 
 interface PaymentSectionProps {
   selectedCountry: CountryPricing
+=======
+import { PaymentButton } from "@/components/transactions/PaymentButton";
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { toast } from "@/hooks/use-toast";
+
+interface PaymentSectionProps {
+  selectedCountry: CountryPricing;
+>>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
@@ -13,8 +22,14 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   const handlePaymentInitiated = () => {
     toast({
       title: "Processing your request",
+<<<<<<< HEAD
       description: "You'll be redirected to our secure payment portal momentarily."}),
   },
+=======
+      description: "You'll be redirected to our secure payment portal momentarily.",
+    });
+  };
+>>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="text-center">
@@ -39,5 +54,9 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         Price includes transportation and first hour onsite. Additional hours billed separately.
       </p>
     </div>
+<<<<<<< HEAD
   ),
+=======
+  );
+>>>>>>> origin/auto/autonomy-17186719616
 }
