@@ -7,6 +7,15 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (new featured content)
+  {
+    title: 'Launch: Knowledge Graph Copilot v1.0',
+    summary:
+      'Automatically builds and maintains enterprise knowledge graphs with policy-aware ingestion and live evals.',
+    href: '/updates/knowledge-graph-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
   // Added 2025-09-15 (late night batch)
   {
     title: 'Launch: Autonomous Knowledge Ops Suite v1.0',
