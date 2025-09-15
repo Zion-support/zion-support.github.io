@@ -8,41 +8,6 @@ const EnhancedContentShowcase: React.FC = () => {
   const showcaseItems = [
     {
       id: 1,
-<<<<<<< HEAD
-      title: "Synthetic Intelligence 2026",
-      description: "Experience the future with AI agents that possess synthetic consciousness and autonomous capabilities",
-      icon: "🤖",
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/SyntheticIntelligence2026",
-      features: ["Autonomous AI agents", "Synthetic consciousness", "Collective intelligence", "Creative synthesis"]
-    },
-    {
-      id: 2,
-      title: "Advanced Quantum Computing 2026",
-      description: "Breakthrough quantum processors with 1000+ logical qubits and quantum supremacy capabilities",
-      icon: "⚡",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/AdvancedQuantumComputing2026",
-      features: ["1000+ logical qubits", "Quantum supremacy", "Molecular simulation", "Quantum AI integration"]
-    },
-    {
-      id: 3,
-      title: "Neural Interface Revolution 2026",
-      description: "Direct brain-computer communication with non-invasive neural interfaces and thought control",
-      icon: "🧬",
-      gradient: "from-emerald-600 to-teal-600",
-      link: "/pages/NeuralInterfaceRevolution2026",
-      features: ["Non-invasive BCI", "Thought control", "Neural feedback", "Medical applications"]
-    },
-    {
-      id: 4,
-      title: "Quantum-Neural Fusion 2026",
-      description: "Revolutionary fusion of quantum computing and neural interfaces for unprecedented capabilities",
-      icon: "⚛️",
-      gradient: "from-violet-600 to-purple-600",
-      link: "/pages/QuantumNeuralFusion2026",
-      features: ["Quantum-neural networks", "Enhanced cognition", "Parallel processing", "Synaptic acceleration"]
-=======
       title: "Advanced AI Transformation 2026",
       description: "Experience the next evolution of artificial intelligence with autonomous reasoning, quantum-enhanced processing, and self-evolving neural architectures.",
       image: "🧠",
@@ -106,7 +71,6 @@ const EnhancedContentShowcase: React.FC = () => {
       features: ["Non-invasive BCI", "Thought Control", "Neural Feedback", "Medical Applications"],
       category: "Neural Interfaces",
       year: "2026"
->>>>>>> cursor/create-and-deploy-new-content-3afb
     }
   ];
 
@@ -114,11 +78,7 @@ const EnhancedContentShowcase: React.FC = () => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
-<<<<<<< HEAD
-      }, 5000);
-=======
       }, 6000);
->>>>>>> cursor/create-and-deploy-new-content-3afb
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, showcaseItems.length]);
@@ -129,10 +89,14 @@ const EnhancedContentShowcase: React.FC = () => {
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
-<<<<<<< HEAD
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
   };
 
   return (
+<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -168,13 +132,6 @@ const EnhancedContentShowcase: React.FC = () => {
           {/* Main Showcase Display */}
           <div className="relative h-96 rounded-2xl overflow-hidden mb-8">
 =======
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  return (
     <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -193,7 +150,7 @@ const EnhancedContentShowcase: React.FC = () => {
         {/* Main Showcase Carousel */}
         <div className="relative max-w-7xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl">
->>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -205,7 +162,15 @@ const EnhancedContentShowcase: React.FC = () => {
                 className={`absolute inset-0 bg-gradient-to-br ${showcaseItems[currentSlide].gradient} p-12 flex items-center justify-between`}
               >
                 <div className="flex-1 text-white">
-                  <div className="text-8xl mb-6">{showcaseItems[currentSlide].icon}</div>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">
+                      {showcaseItems[currentSlide].category}
+                    </span>
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">
+                      {showcaseItems[currentSlide].year}
+                    </span>
+                  </div>
+                  <div className="text-8xl mb-6">{showcaseItems[currentSlide].image}</div>
                   <h3 className="text-5xl font-bold mb-4">{showcaseItems[currentSlide].title}</h3>
                   <p className="text-xl opacity-90 mb-6 max-w-2xl">
                     {showcaseItems[currentSlide].description}
@@ -227,7 +192,7 @@ const EnhancedContentShowcase: React.FC = () => {
                 </div>
                 <div className="flex-1 flex justify-center">
                   <div className="w-80 h-80 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <div className="text-9xl">{showcaseItems[currentSlide].icon}</div>
+                    <div className="text-9xl">{showcaseItems[currentSlide].image}</div>
 =======
                 className="relative"
               >
@@ -290,7 +255,7 @@ const EnhancedContentShowcase: React.FC = () => {
                         </ul>
                       </div>
                     </div>
->>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
                   </div>
                 </div>
               </motion.div>
@@ -298,7 +263,6 @@ const EnhancedContentShowcase: React.FC = () => {
           </div>
 
           {/* Navigation Controls */}
-<<<<<<< HEAD
           <div className="flex justify-center items-center space-x-4 mb-8">
             <button
               onClick={prevSlide}
@@ -332,53 +296,7 @@ const EnhancedContentShowcase: React.FC = () => {
             >
               {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
             </button>
-=======
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          {/* Play/Pause Button */}
-          <button
-            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            {isAutoPlaying ? (
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-              </svg>
-            ) : (
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            )}
-          </button>
-        </div>
-
-        {/* Slide Indicators */}
-        <div className="flex justify-center space-x-3 mt-8">
-          {showcaseItems.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
-              }`}
-            />
-          ))}
+          </div>
         </div>
 
         {/* Content Categories */}
@@ -401,7 +319,7 @@ const EnhancedContentShowcase: React.FC = () => {
                 </div>
               </motion.div>
             ))}
->>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
           </div>
 
           {/* Quick Access Grid */}
@@ -415,7 +333,7 @@ const EnhancedContentShowcase: React.FC = () => {
                 className={`bg-gradient-to-br ${item.gradient} backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
                 onClick={() => setCurrentSlide(index)}
               >
-                <div className="text-4xl mb-3 text-center">{item.icon}</div>
+                <div className="text-4xl mb-3 text-center">{item.image}</div>
                 <h3 className="text-lg font-bold mb-2 text-center text-white">{item.title}</h3>
                 <p className="text-white/80 mb-4 text-sm text-center">
                   {item.description.substring(0, 80)}...
@@ -431,56 +349,57 @@ const EnhancedContentShowcase: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-      {/* Features Section */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">✨ Enhanced Features</h2>
-          <p className="text-xl text-purple-200">Experience interactive technology exploration</p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <div className="text-5xl mb-4 text-center">🎮</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Interactive Experience</h3>
-            <p className="text-purple-200 text-center">
-              Navigate through revolutionary technologies with intuitive controls and smooth animations
-            </p>
+        {/* Features Section */}
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">✨ Enhanced Features</h2>
+            <p className="text-xl text-purple-200">Experience interactive technology exploration</p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <div className="text-5xl mb-4 text-center">🚀</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Real-time Updates</h3>
-            <p className="text-purple-200 text-center">
-              Stay current with the latest breakthroughs and technology advancements as they happen
-            </p>
-          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <div className="text-5xl mb-4 text-center">🎮</div>
+              <h3 className="text-2xl font-bold mb-4 text-center text-white">Interactive Experience</h3>
+              <p className="text-purple-200 text-center">
+                Navigate through revolutionary technologies with intuitive controls and smooth animations
+              </p>
+            </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <div className="text-5xl mb-4 text-center">🌟</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Immersive Design</h3>
-            <p className="text-purple-200 text-center">
-              Experience stunning visual design with gradient backgrounds and smooth transitions
-            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <div className="text-5xl mb-4 text-center">🚀</div>
+              <h3 className="text-2xl font-bold mb-4 text-center text-white">Real-time Updates</h3>
+              <p className="text-purple-200 text-center">
+                Stay current with the latest breakthroughs and technology advancements as they happen
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <div className="text-5xl mb-4 text-center">🌟</div>
+              <h3 className="text-2xl font-bold mb-4 text-center text-white">Immersive Design</h3>
+              <p className="text-purple-200 text-center">
+                Experience stunning visual design with gradient backgrounds and smooth transitions
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-20 text-center">
-        <h2 className="text-4xl font-bold text-white mb-4">Ready to Explore the Future?</h2>
-        <p className="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
-          Dive deeper into our revolutionary technologies and discover how they can transform your business
-        </p>
-        <div className="flex justify-center space-x-4">
-          <a href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-            Start Your Journey →
-          </a>
-          <a href="/pages/InnovationLanding2025" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors">
-            View All Innovations
-          </a>
-        </div>
+        {/* CTA Section */}
+        <div className="container mx-auto px-4 py-20 text-center">
+          <h2 className="text-4xl font-bold text-white mb-4">Ready to Explore the Future?</h2>
+          <p className="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
+            Dive deeper into our revolutionary technologies and discover how they can transform your business
+          </p>
+          <div className="flex justify-center space-x-4">
+            <a href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              Start Your Journey →
+            </a>
+            <a href="/pages/NextGenTechShowcase2026" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors">
+              View All Innovations
+            </a>
 =======
+          </div>
+        </div>
+
         {/* Quick Access Grid */}
         <div className="mt-16">
           <h3 className="text-3xl font-bold text-center mb-8">Quick Access to All Content</h3>
@@ -513,9 +432,9 @@ const EnhancedContentShowcase: React.FC = () => {
                 </a>
               </motion.div>
             ))}
+>>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
           </div>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-3afb
       </div>
     </div>
   );
