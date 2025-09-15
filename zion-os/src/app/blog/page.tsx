@@ -1,6 +1,4 @@
-// @ts-nocheck
 import Link from 'next/link';
-import React from 'react';
 
 export const metadata = {
   title: 'Blog & News - Zion Tech Group',
@@ -10,36 +8,14 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
-      id: 'agentic-safety-patterns-2025',
-      title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
-      excerpt: 'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
-      category: 'AI Safety',
+      id: 'ai-governance-blueprint-2025',
+      title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
+      excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
+      category: 'AI Governance',
       author: 'Dr. Emily Watson',
       date: '2025-09-15',
-      readTime: '9 min read',
-      image: '/blog/agentic-safety-patterns.jpg',
-      featured: true
-    },
-    {
-      id: 'multi-agent-supply-chains',
-      title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
-      excerpt: 'How agent-based orchestration reduces latency and increases resilience across complex, multi-party supply chains.',
-      category: 'AI Solutions',
-      author: 'Dr. Sarah Chen',
-      date: '2025-09-12',
       readTime: '8 min read',
-      image: '/blog/multi-agent-supply-chains.jpg',
-      featured: true
-    },
-    {
-      id: 'ai-foundation-models-2025',
-      title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
-      excerpt: 'Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.',
-      category: 'AI Solutions',
-      author: 'Dr. David Kim',
-      date: '2025-09-15',
-      readTime: '9 min read',
-      image: '/blog/foundation-models-2025.jpg',
+      image: '/blog/ai-governance.jpg',
       featured: true
     },
     {
@@ -96,45 +72,50 @@ export default function BlogPage() {
       readTime: '10 min read',
       image: '/blog/autonomous-ai.jpg',
       featured: true
+    },
+    {
+      id: 'ai-ops-cost-optimization-2025',
+      title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
+      excerpt: 'Deploy AI-driven observability and predictive autoscaling to cut spend while improving reliability.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/ai-ops-cost.jpg',
+      featured: true
     }
   ];
 
-  // Inject new featured posts
-  featuredPosts.unshift(
-    {
-      id: 'ai-governance-framework-2025',
-      title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
-      excerpt: 'A comprehensive framework for implementing AI governance, risk management, and compliance in enterprise environments.',
-      category: 'AI Governance',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-16',
-      readTime: '12 min read',
-      image: '/blog/ai-governance-framework.jpg',
-      featured: true
-    },
-    {
-      id: 'agent-safety-red-teaming-2025',
-      title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
-      excerpt: 'Scenarios and mitigations to probe and harden multi‑agent systems in production.',
-      category: 'AI Safety',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-15',
-      readTime: '11 min read',
-      image: '/blog/agent-safety-red-teaming.jpg',
-      featured: true
-    }
-  );
-
   const recentPosts = [
     {
-      id: 'enterprise-agent-guardrails',
-      title: 'Enterprise Agent Guardrails: Safety, Identity, and Policy Enforcement',
-      excerpt: 'A practical framework for shipping helpful, harmless, and honest AI agents with enterprise-grade controls.',
-      category: 'Cybersecurity',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-14',
+      id: 'ai-ops-cost-optimization-2025',
+      title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
+      excerpt: 'A 6-week rollout to reduce cloud and ops costs by 30–50% using AI-driven rightsizing and autoscaling.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/ai-ops-cost.jpg'
+    },
+    {
+      id: 'agentic-sales-playbooks',
+      title: 'Agentic Sales Playbooks: Autonomous Pipelines from Lead to Close',
+      excerpt: 'Build autonomous sales loops with RAG, orchestration, and CRM integration with human-in-the-loop.',
+      category: 'AI Solutions',
+      author: 'Dr. David Kim',
+      date: '2025-09-12',
       readTime: '8 min read',
-      image: '/blog/enterprise-agent-guardrails.jpg'
+      image: '/blog/agentic-sales.jpg'
+    },
+    {
+      id: 'edge-ai-marketplaces',
+      title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
+      excerpt: 'Architectures for edge-native agent marketplaces with local policy and cloud sync.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-14',
+      readTime: '7 min read',
+      image: '/blog/edge-ai-marketplaces.jpg'
     },
     {
       id: 'autonomous-it-operations',
@@ -175,46 +156,6 @@ export default function BlogPage() {
       date: '2024-01-12',
       readTime: '6 min read',
       image: '/blog/ai-cybersecurity.jpg'
-    },
-    {
-      id: 'edge-ai-on-device-inference',
-      title: 'Edge AI: On-Device Inference for Privacy and Speed',
-      excerpt: 'How to deploy efficient on-device models to reduce latency and protect user data.',
-      category: 'AI Solutions',
-      author: 'Priya Natarajan',
-      date: '2024-01-18',
-      readTime: '7 min read',
-      image: '/blog/edge-ai.jpg'
-    },
-    {
-      id: 'autonomous-agents-in-enterprise',
-      title: 'Autonomous Agents in the Enterprise: Patterns and Pitfalls',
-      excerpt: 'Design patterns for safe, measurable, and ROI-positive agent deployments across workflows.',
-      category: 'AI Solutions',
-      author: 'Dr. Kleber Santos',
-      date: '2024-01-16',
-      readTime: '9 min read',
-      image: '/blog/enterprise-agents.jpg'
-    },
-    {
-      id: 'post-quantum-cryptography-roadmap',
-      title: 'Post-Quantum Cryptography: A Practical Migration Roadmap',
-      excerpt: 'Assessing risk, selecting algorithms, and planning phased rollouts to PQC.',
-      category: 'Quantum Computing',
-      author: 'Dr. Sarah Chen',
-      date: '2024-01-14',
-      readTime: '8 min read',
-      image: '/blog/pqc-roadmap.jpg'
-    },
-    {
-      id: 'llm-evals-in-production',
-      title: 'LLM Evals in Production: From Offline Benchmarks to Live Metrics',
-      excerpt: 'Move beyond static benchmarks with continuous evals, guardrails, and feedback loops.',
-      category: 'Data Science',
-      author: 'Michael Rodriguez',
-      date: '2024-01-11',
-      readTime: '7 min read',
-      image: '/blog/llm-evals.jpg'
     },
     {
       id: 'data-science-business-intelligence',
@@ -268,37 +209,13 @@ export default function BlogPage() {
     }
   ];
 
-  // Add new recent posts
-  recentPosts.unshift(
-    {
-      id: 'agent-safety-red-teaming-2025',
-      title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
-      excerpt: 'Playbooks to systematically evaluate and improve multi‑agent safety.',
-      category: 'AI Safety',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-15',
-      readTime: '11 min read',
-      image: '/blog/agent-safety-red-teaming.jpg'
-    },
-    {
-      id: 'ai-automation-case-studies-2025',
-      title: 'AI Automation Case Studies 2025: From MTTR to Margin Uplift',
-      excerpt: 'Five deployments with measurable KPIs and lessons learned.',
-      category: 'Case Studies',
-      author: 'Michael Rodriguez',
-      date: '2025-09-12',
-      readTime: '9 min read',
-      image: '/blog/ai-automation-case-studies.jpg'
-    }
-  );
-
   const categories = [
-    { name: 'All Posts', count: 16, active: true },
+    { name: 'All Posts', count: 12, active: true },
     { name: 'Research & Development', count: 3, active: false },
     { name: 'AI Solutions', count: 4, active: false },
-    { name: 'Quantum Computing', count: 3, active: false },
+    { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
-    { name: 'Data Science', count: 2, active: false },
+    { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
     { name: 'Content Marketing', count: 1, active: false }
@@ -327,13 +244,13 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/ai-foundation-models-2025"
+            href="/blog/ai-ops-cost-optimization-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Foundation Models in 2025: Practical Enterprise Patterns That Work"
+            aria-label="Read: AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                FM
+                AO
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -341,10 +258,10 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  Foundation Models in 2025: Practical Enterprise Patterns That Work
+                  AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.
+                  Cut cloud and ops costs with AI-driven rightsizing and predictive autoscaling without sacrificing reliability.
                 </p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
