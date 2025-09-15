@@ -19,6 +19,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'ai-governance-playbook-2025',
+      title: 'AI Governance Playbook 2025: Practical Guardrails for Autonomous Systems',
+      excerpt: 'A pragmatic framework for policy, approvals, auditability, and human-in-the-loop safety.',
+      category: 'AI Ethics',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-14',
+      readTime: '8 min read',
+      image: '/blog/ai-governance.jpg',
+      featured: true
+    },
+    {
       id: 'quantum-risk-modeling-2025',
       title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
       excerpt: 'Near-term quantum and hybrid methods that boost risk analytics and portfolio construction.',
@@ -74,6 +85,16 @@ export default function BlogPage() {
       date: '2025-09-05',
       readTime: '7 min read',
       image: '/blog/autonomous-it.jpg'
+    },
+    {
+      id: 'edge-ai-orchestration',
+      title: 'Edge AI Orchestration: Real‑Time Intelligence Across Devices and Sites',
+      excerpt: 'Design patterns for resilient, low-latency inference and control at the edge.',
+      category: 'Infrastructure',
+      author: 'Michael Rodriguez',
+      date: '2025-09-13',
+      readTime: '7 min read',
+      image: '/blog/edge-ai.jpg'
     },
     {
       id: 'sovereign-ai-commerce-2025',
@@ -158,14 +179,14 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 2, active: false },
+    { name: 'AI Solutions', count: 3, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
-    { name: 'AI Ethics', count: 1, active: false },
-    { name: 'Infrastructure', count: 1, active: false },
+    { name: 'AI Ethics', count: 2, active: false },
+    { name: 'Infrastructure', count: 2, active: false },
     { name: 'Content Marketing', count: 1, active: false }
   ];
 

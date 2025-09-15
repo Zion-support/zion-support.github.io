@@ -11,6 +11,36 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-governance-playbook-2025': {
+    id: 'ai-governance-playbook-2025',
+    title: 'AI Governance Playbook 2025: Practical Guardrails for Autonomous Systems',
+    excerpt:
+      'A pragmatic framework for policy design, approvals, auditability, and human-in-the-loop safety for enterprise AI.',
+    category: 'AI Ethics',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-14',
+    readTime: '8 min read',
+    content: [
+      'Enterprises deploying autonomous AI require clear governance: decision boundaries, change controls, and transparent audit trails. This playbook offers practical guidance you can implement today.',
+      'Start with a risk taxonomy and align policies to action classes. Use step-up authentication and approvals for higher-risk changes. Instrument your agents to produce signed event logs for post‑hoc review and forensics.',
+      'Adopt a safety contract that describes allowed tools, rate limits, escalation paths, and rollback procedures. Regularly test failure modes via chaos exercises to validate safeguards and response readiness.'
+    ]
+  },
+  'edge-ai-orchestration': {
+    id: 'edge-ai-orchestration',
+    title: 'Edge AI Orchestration: Real‑Time Intelligence Across Devices and Sites',
+    excerpt:
+      'Design patterns for resilient, low-latency inference and control spanning edge devices, gateways, and cloud.',
+    category: 'Infrastructure',
+    author: 'Michael Rodriguez',
+    date: '2025-09-13',
+    readTime: '7 min read',
+    content: [
+      'Edge AI enables responsive experiences where latency and bandwidth matter. The challenge is orchestrating models, data, and updates across heterogeneous fleets.',
+      'We cover topology choices (star, mesh, hybrid), model packaging and A/B rollout, and offline-forward designs that buffer telemetry and decisions until connectivity returns.',
+      'Security considerations include secure boot, TPM-backed attestation, signed artifacts, and zero-trust comms between edge and control-plane.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
