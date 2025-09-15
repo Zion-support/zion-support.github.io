@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App';
 =======
@@ -11,14 +12,34 @@ import { createRoot } from 'react-dom/client';
 import App from '../App.tsx';
 >>>>>>> cursor/create-and-deploy-new-content-764d
 >>>>>>> cursor/create-and-deploy-new-content-6f13
+=======
+import { createRoot } from 'react-dom/client';
+import App from '../App.tsx';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
+>>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 import './index.css';
 
 const rootElement = document.getElementById('root');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-6f13
+=======
+});
+if (rootElement) {
+  const root = createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 function renderApp() {
     const app = (
         <React.StrictMode>
@@ -54,6 +75,7 @@ window.addEventListener('error', (e) => {
     console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
 });
@@ -68,3 +90,7 @@ if (rootElement) {
 }
 >>>>>>> cursor/create-and-deploy-new-content-764d
 >>>>>>> cursor/create-and-deploy-new-content-6f13
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
+>>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c

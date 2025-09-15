@@ -32,7 +32,6 @@ export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 
       await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt - 1)));
     }
   }
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 };
 
 export default fetchWithRetry;
