@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function UltimateContentShowcaseBanner() {
   return (
@@ -33,18 +33,18 @@ export default function UltimateContentShowcaseBanner() {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
+          <a 
             href="/ultimate-content-showcase-2026"
             className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
           >
             Explore All Content
-          </Link>
-          <Link 
+          </a>
+          <a 
             href="/blog/ai-2025-ultimate-automation-revolution"
             className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-colors"
           >
             Latest Breakthrough
-          </Link>
+          </a>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025ContentShowcaseBanner() {
   return (
@@ -27,18 +27,18 @@ export default function AI2025ContentShowcaseBanner() {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link 
+          <a 
             href="/ai-2025-ultimate-content-showcase"
             className="px-6 py-2 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg text-center"
           >
             Explore Now
-          </Link>
-          <Link 
+          </a>
+          <a 
             href="/ai-2025-roi-calculator"
             className="px-6 py-2 bg-transparent text-white font-semibold rounded-lg border-2 border-white hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 text-center"
           >
             Calculate ROI
-          </Link>
+          </a>
         </div>
       </div>
       

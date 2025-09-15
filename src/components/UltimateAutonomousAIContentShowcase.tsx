@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateAutonomousAIContentShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -207,12 +207,12 @@ const UltimateAutonomousAIContentShowcase = () => {
                 {/* Footer */}
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{item.readingTime}</span>
-                  <Link
+                  <a
                     href={item.url}
                     className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                   >
                     Read More
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -229,18 +229,18 @@ const UltimateAutonomousAIContentShowcase = () => {
               Get personalized implementation support and guidance based on proven strategies from Fortune 500 companies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
                 Get Free Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
                 Explore Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

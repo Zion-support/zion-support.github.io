@@ -1,7 +1,7 @@
 "use client";
 'use client';
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentItem {
   id: string;
@@ -295,11 +295,11 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
                   ))}
                 </div>
                 
-                <Link href={`/content/${item.id}`}>
+                <a href={`/content/${item.id}`}>
                   <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 px-4 rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-colors duration-200 font-medium">
                     Read Now →
                   </button>
-                </Link>
+                </a>
               </div>
             ))}
           </div>

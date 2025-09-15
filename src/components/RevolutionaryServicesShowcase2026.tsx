@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface Service {
   id: string;
@@ -170,12 +170,12 @@ export default function RevolutionaryServicesShowcase2026() {
               </div>
               
               {/* CTA */}
-              <Link
+              <a
                 href={service.href}
                 className={`block w-full bg-gradient-to-r ${service.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:scale-105`}
               >
                 Get Started Now
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -213,18 +213,18 @@ export default function RevolutionaryServicesShowcase2026() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
+            <a
               href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Get Started Today
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies"
               className="border-2 border-white/30 hover:border-white/60 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:bg-white/10"
             >
               View Success Stories
-            </Link>
+            </a>
           </div>
         </div>
       </div>

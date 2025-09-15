@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function QuantumComputingBreakthroughPromotionBanner() {
   return (
@@ -92,18 +92,18 @@ export default function QuantumComputingBreakthroughPromotionBanner() {
           
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-            <Link 
+            <a 
               href="/quantum-computing-breakthrough-2025-2030"
               className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-10 py-5 rounded-lg font-bold text-xl hover:from-blue-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Explore Quantum Timeline
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-5 rounded-lg font-bold text-xl hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Get Quantum Strategy
-            </Link>
+            </a>
           </div>
           
           {/* Trust indicators */}

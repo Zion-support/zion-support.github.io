@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025UltimateInnovationShowcaseBanner = () => {
   return (
@@ -29,18 +29,18 @@ const AI2025UltimateInnovationShowcaseBanner = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/blog/ai-2025-ultimate-innovation-showcase-latest-trends"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Read Full Article
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies/ai-2025-global-enterprise-transformation-3000-roi-ultimate-success"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
               View Success Story
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -100,18 +100,18 @@ const AI2025UltimateInnovationShowcaseBanner = () => {
             Ready to transform your business with cutting-edge AI solutions?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Get Free Consultation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
               Explore Services
-            </Link>
+            </a>
           </div>
         </div>
       </div>

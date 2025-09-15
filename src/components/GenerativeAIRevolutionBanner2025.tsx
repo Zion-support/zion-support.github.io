@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const GenerativeAIRevolutionBanner2025 = () => {
   const [currentSlidesetCurrentSlide] = useState(0);
@@ -148,24 +148,24 @@ const GenerativeAIRevolutionBanner2025 = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href={currentContent.url}
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
               >
                 Read {currentContent.type === 'blog' ? 'Article' : currentContent.type === 'case-study' ? 'Case Study' : 'Guide'} →
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 Get AI Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="text-white/80 hover:text-white transition-colors duration-300 flex items-center"
               >
                 View All Resources →
-              </Link>
+              </a>
             </div>
           </div>
 

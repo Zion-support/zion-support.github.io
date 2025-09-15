@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightSearchFilterTrendingUpStar
 
 const SEOOptimizedContentHub = () => {
@@ -110,7 +110,7 @@ const SEOOptimizedContentHub = () => {
         {/* Content Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {contentCategories.map((categoryindex) => (
-            <Link
+            <a
               key={index}
               href={category.link}
               className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
@@ -128,7 +128,7 @@ const SEOOptimizedContentHub = () => {
                 <span className="text-sm font-medium">Explore</span>
                 <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -139,18 +139,18 @@ const SEOOptimizedContentHub = () => {
               <Star className="w-6 h-6 text-yellow-500 mr-2" />
               Featured Content
             </h3>
-            <Link
+            <a
               href="/featured-content"
               className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
             >
               View All
               <ArrowRight className="w-4 h-4 ml-1" />
-            </Link>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredContent.map((contentindex) => (
-              <Link
+              <a
                 key={index}
                 href={content.link}
                 className={`group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ${
@@ -179,7 +179,7 @@ const SEOOptimizedContentHub = () => {
                   <span className="text-sm font-medium">Read More</span>
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -215,19 +215,19 @@ const SEOOptimizedContentHub = () => {
             Join thousands of companies already using our AI solutions to achieve unprecedented growth and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors"
             >
               Get Started Today
               <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/demo"
               className="inline-flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors"
             >
               Schedule Demo
-            </Link>
+            </a>
           </div>
         </div>
       </div>

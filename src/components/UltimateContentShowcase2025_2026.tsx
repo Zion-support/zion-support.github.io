@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContentShowcase2025_2026: React.FC = () => {
   const contentItems = [
@@ -110,7 +110,7 @@ const UltimateContentShowcase2025_2026: React.FC = () => {
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {item.description}
                   </p>
-                  <Link
+                  <a
                     href={item.href}
                     className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-300"
                   >
@@ -118,7 +118,7 @@ const UltimateContentShowcase2025_2026: React.FC = () => {
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
@@ -162,7 +162,7 @@ const UltimateContentShowcase2025_2026: React.FC = () => {
                   <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                     {item.description}
                   </p>
-                  <Link
+                  <a
                     href={item.href}
                     className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                   >
@@ -170,7 +170,7 @@ const UltimateContentShowcase2025_2026: React.FC = () => {
                     <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
@@ -187,18 +187,18 @@ const UltimateContentShowcase2025_2026: React.FC = () => {
               Join the AI revolution and achieve extraordinary results like our Fortune 500 clients
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/consultation"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300"
               >
                 Get Free Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transform hover:scale-105 transition-all duration-300"
               >
                 Explore Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

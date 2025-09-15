@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const HighROICaseStudiesShowcase = () => {
   return (
@@ -44,12 +44,12 @@ const HighROICaseStudiesShowcase = () => {
                 Time: 6 months
               </div>
             </div>
-            <Link 
+            <a 
               href="/case-studies/fortune-500-manufacturing-15000-roi"
               className="inline-block bg-white text-green-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
             >
               Read Full Case Study →
-            </Link>
+            </a>
           </div>
 
           {/* Case Study 2 */}
@@ -70,12 +70,12 @@ const HighROICaseStudiesShowcase = () => {
                 Time: 4 months
               </div>
             </div>
-            <Link 
+            <a 
               href="/case-studies/global-financial-services-25000-roi"
               className="inline-block bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
             >
               Read Full Case Study →
-            </Link>
+            </a>
           </div>
 
           {/* Case Study 3 */}
@@ -96,12 +96,12 @@ const HighROICaseStudiesShowcase = () => {
                 Time: 8 months
               </div>
             </div>
-            <Link 
+            <a 
               href="/case-studies/healthcare-network-30000-roi"
               className="inline-block bg-white text-purple-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
             >
               Read Full Case Study →
-            </Link>
+            </a>
           </div>
 
           {/* Case Study 4 */}
@@ -122,12 +122,12 @@ const HighROICaseStudiesShowcase = () => {
                 Time: 12 months
               </div>
             </div>
-            <Link 
+            <a 
               href="/case-studies/automotive-industry-20000-roi"
               className="inline-block bg-white text-orange-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
             >
               Read Full Case Study →
-            </Link>
+            </a>
           </div>
 
           {/* Case Study 5 */}
@@ -148,12 +148,12 @@ const HighROICaseStudiesShowcase = () => {
                 Time: 6 months
               </div>
             </div>
-            <Link 
+            <a 
               href="/case-studies/ecommerce-giant-18000-roi"
               className="inline-block bg-white text-indigo-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
             >
               Read Full Case Study →
-            </Link>
+            </a>
           </div>
 
           {/* Case Study 6 */}
@@ -174,12 +174,12 @@ const HighROICaseStudiesShowcase = () => {
                 Time: 9 months
               </div>
             </div>
-            <Link 
+            <a 
               href="/case-studies/energy-sector-22000-roi"
               className="inline-block bg-white text-teal-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
             >
               Read Full Case Study →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -215,18 +215,18 @@ const HighROICaseStudiesShowcase = () => {
             Join hundreds of companies already achieving breakthrough ROI with our AI solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
+            <a 
               href="/contact"
               className="bg-black text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-colors"
             >
               Get Your ROI Assessment
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies"
               className="bg-white text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
             >
               View All Case Studies
-            </Link>
+            </a>
           </div>
         </div>
       </div>

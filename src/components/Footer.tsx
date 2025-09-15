@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   Mail, 
   Phone, 
@@ -135,12 +135,12 @@ const Footer: React.FC = () => {
                   <ul className="space-y-1">
                     {links.slice(0, 3).map((link) => (
                       <li key={link.name}>
-                        <Link 
+                        <a 
                           href={link.href}
                           className="text-sm text-gray-300 hover:text-white transition-colors"
                         >
                           {link.name}
-                        </Link>
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -155,12 +155,12 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {company.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <a 
                     href={link.href}
                     className="text-sm text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -172,12 +172,12 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {resources.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <a 
                     href={link.href}
                     className="text-sm text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -208,15 +208,15 @@ const Footer: React.FC = () => {
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+              <a href="/privacy" className="text-gray-400 hover:text-white transition-colors">
                 Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+              </a>
+              <a href="/terms" className="text-gray-400 hover:text-white transition-colors">
                 Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">
+              </a>
+              <a href="/cookies" className="text-gray-400 hover:text-white transition-colors">
                 Cookie Policy
-              </Link>
+              </a>
             </div>
           </div>
         </div>

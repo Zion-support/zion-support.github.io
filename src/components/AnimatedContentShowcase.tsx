@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ShowcaseItem {
   id: string;
@@ -197,20 +197,20 @@ export default function AnimatedContentShowcase() {
 
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Link
+                    <a
                       href={currentItem.href}
                       className={`inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r ${currentItem.gradient} text-white font-bold text-lg rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
                     >
                       <span className="mr-2">🚀</span>
                       Explore Now
-                    </Link>
-                    <Link
+                    </a>
+                    <a
                       href="/content-showcase"
                       className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-gray-300 text-gray-700 font-bold text-lg rounded-xl hover:bg-gray-50 transition-all duration-300"
                     >
                       <span className="mr-2">📚</span>
                       View All Content
-                    </Link>
+                    </a>
                   </div>
                 </div>
 
@@ -262,7 +262,7 @@ export default function AnimatedContentShowcase() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {showcaseItems.slice(3).map((item) => (
-              <Link
+              <a
                 key={item.id}
                 href={item.href}
                 className="group block bg-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
@@ -291,7 +291,7 @@ export default function AnimatedContentShowcase() {
                     Explore →
                   </div>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

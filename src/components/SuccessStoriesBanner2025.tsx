@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { CheckCircleIcon, ArrowRightIcon, ChartBarIcon, CurrencyDollarIcon, ClockIcon } from '@heroicons/react/24/outline';
 
 interface SuccessStory {
@@ -193,13 +193,13 @@ const SuccessStoriesBanner2025: React.FC = () => {
                           </ul>
                         </div>
 
-                        <Link
+                        <a
                           href={story.url}
                           className="inline-flex items-center bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105 w-fit"
                         >
                           Read Full Case Study
                           <ArrowRightIcon className="w-5 h-5 ml-2" />
-                        </Link>
+                        </a>
                       </div>
 
                       {/* Visual Element */}
@@ -317,19 +317,19 @@ const SuccessStoriesBanner2025: React.FC = () => {
               designed for your specific business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 transform hover:scale-105"
               >
                 Start Your AI Journey
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-200"
               >
                 View All Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

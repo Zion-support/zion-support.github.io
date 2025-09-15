@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { CalendarIconClockIconArrowRightIconStarIcon } from '@heroicons/react/24/outline';
 
 export default function NewContentShowcase2025_2026() {
@@ -105,13 +105,13 @@ export default function NewContentShowcase2025_2026() {
                 </div>
 
                 {/* CTA Button */}
-                <Link
+                <a
                   href={content.href}
                   className="inline-flex items-center w-full justify-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg"
                 >
                   Read More
                   <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -127,19 +127,19 @@ export default function NewContentShowcase2025_2026() {
               Join thousands of companies achieving 500%+ ROI through strategic AI implementation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/services"
                 className="inline-flex items-center bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Explore Our Services
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Get Free Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>

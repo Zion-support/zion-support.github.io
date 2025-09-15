@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function CaseStudy25000ROIBanner() {
   return (
@@ -48,18 +48,18 @@ export default function CaseStudy25000ROIBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link 
+            <a 
               href="/case-studies/ai-2025-global-transformation-25000-roi" 
               className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-green-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Read the Full Story
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact" 
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Start Your Transformation
-            </Link>
+            </a>
           </div>
           
           {/* Additional Info */}

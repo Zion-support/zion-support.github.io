@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightSparklesZapStarUsersGlobeBrainRocket
 
 const NewContent2025RevolutionaryShowcaseBanner = () => {
@@ -89,14 +89,14 @@ const NewContent2025RevolutionaryShowcaseBanner = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Link 
+          <a 
             href="/revolutionary-showcase-2025" 
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
             <Star className="w-5 h-5 mr-2" />
             Join the Revolution
             <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

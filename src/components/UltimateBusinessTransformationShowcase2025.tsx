@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateBusinessTransformationShowcase2025 = () => {
   const [activeTabsetActiveTab] = useState('all');
@@ -199,18 +199,18 @@ const UltimateBusinessTransformationShowcase2025 = () => {
 
                 {/* Actions */}
                 <div className="flex gap-3">
-                  <Link
+                  <a
                     href={content.url}
                     className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center"
                   >
                     Read {content.type}
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/contact"
                     className="px-4 py-3 border-2 border-purple-600 text-purple-600 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300"
                   >
                     Consult
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -242,18 +242,18 @@ const UltimateBusinessTransformationShowcase2025 = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
             >
               Get Your Free Analysis
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/ai-transformation"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
             >
               Explore Services
-            </Link>
+            </a>
           </div>
         </div>
       </div>

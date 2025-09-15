@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight
@@ -169,21 +169,21 @@ const AI2025RevolutionaryContentBanner = () => {
 
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <Link
+                    <a
                       href="/ai-solutions"
                       className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl group"
                     >
                       Explore AI Solutions
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    </a>
                     
-                    <Link
+                    <a
                       href="/contact"
                       className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 group"
                     >
                       <Users className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                       Get Consultation
-                    </Link>
+                    </a>
                   </div>
                 </motion.div>
               </div>

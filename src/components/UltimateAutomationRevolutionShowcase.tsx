@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentCard {
   id: string;
@@ -197,19 +197,19 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
 
                 {/* Action Buttons */}
                 <div className="flex flex-wrap gap-3">
-                  <Link
+                  <a
                     href={card.url}
                     className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-blue-700 transition-colors"
                   >
                     Read {card.type === 'blog' ? 'Guide' : card.type === 'case-study' ? 'Case Study' : 'Resource'}
-                  </Link>
+                  </a>
                   
-                  <Link
+                  <a
                     href="/contact"
                     className="px-4 py-2 border-2 border-purple-600 text-purple-600 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
                   >
                     Get Consultation
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -226,7 +226,7 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
               Join the Fortune 500 companies already transforming their businesses with revolutionary AI automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
@@ -234,13 +234,13 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Explore Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

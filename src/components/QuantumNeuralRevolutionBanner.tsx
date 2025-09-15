@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility // Replaced with regular anchor tags for React compatibility
 
 const QuantumNeuralRevolutionBanner = () => {
   return (
@@ -82,18 +82,18 @@ const QuantumNeuralRevolutionBanner = () => {
             </div>
             
             <div className="mt-8 space-y-3">
-              <Link 
+              <a 
                 href="/content/quantum-ai-revolution-2026"
                 className="block bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-center hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Quantum AI →
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/blog/quantum-ai-business-implementation"
                 className="block border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-xl font-semibold text-center hover:bg-cyan-600 hover:text-white transition-all duration-300"
               >
                 Implementation Guide
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -128,18 +128,18 @@ const QuantumNeuralRevolutionBanner = () => {
             </div>
             
             <div className="mt-8 space-y-3">
-              <Link 
+              <a 
                 href="/content/neural-interface-revolution-2026"
                 className="block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold text-center hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Neural Interfaces →
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/blog/neural-interface-safety-ethics"
                 className="block border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-xl font-semibold text-center hover:bg-purple-600 hover:text-white transition-all duration-300"
               >
                 Safety & Ethics Guide
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -173,18 +173,18 @@ const QuantumNeuralRevolutionBanner = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/content/quantum-neural-convergence-2026"
               className="bg-white text-purple-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Explore the Convergence
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
             >
               Start Your Journey
-            </Link>
+            </a>
           </div>
         </div>
       </div>

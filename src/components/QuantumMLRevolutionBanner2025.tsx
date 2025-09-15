@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumMLRevolutionBanner2025 = () => {
   return (
@@ -65,18 +65,18 @@ const QuantumMLRevolutionBanner2025 = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/blog/ai-2025-2026-quantum-machine-learning-breakthrough"
               className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Quantum ML Guide
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies/ai-2025-2026-quantum-ml-fortune-500-5000-roi-success"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
             >
               View Success Stories
-            </Link>
+            </a>
           </div>
 
           {/* Trust Indicators */}

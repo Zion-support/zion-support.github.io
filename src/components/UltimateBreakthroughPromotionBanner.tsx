@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function UltimateBreakthroughPromotionBanner() {
   const [isVisiblesetIsVisible] = useState(false);
@@ -65,7 +65,7 @@ export default function UltimateBreakthroughPromotionBanner() {
             </div>
             
             <div className="flex-1 text-center">
-              <Link 
+              <a 
                 href={currentPromo.link}
                 className="group block transition-all duration-300 hover:scale-105"
               >
@@ -81,16 +81,16 @@ export default function UltimateBreakthroughPromotionBanner() {
                   </div>
                   <div className="text-2xl animate-bounce" style={{ animationDelay: '0.5s' }}>⚡</div>
                 </div>
-              </Link>
+              </a>
             </div>
 
             <div className="flex items-center space-x-2">
-              <Link 
+              <a 
                 href={currentPromo.link}
                 className={`bg-gradient-to-r ${currentPromo.color} text-white px-4 py-2 rounded-full text-sm font-bold hover:scale-105 transition-transform duration-300`}
               >
                 Discover Now
-              </Link>
+              </a>
               <button 
                 onClick={() => setIsVisible(false)}
                 className="text-gray-500 hover:text-gray-700 transition-colors"

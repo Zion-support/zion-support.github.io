@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2035SingularityPromotionBanner: React.FC = () => {
   return (
@@ -64,18 +64,18 @@ const AI2035SingularityPromotionBanner: React.FC = () => {
           </div>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
+            <a 
               href="/ai-2035-singularity-breakthrough" 
               className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
             >
               🌌 Experience Singularity
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/resources/ai-2035-singularity-guide" 
               className="border-2 border-indigo-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all"
             >
               📚 Singularity Guide
-            </Link>
+            </a>
           </div>
         </div>
       </div>

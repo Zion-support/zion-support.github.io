@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 
 const FeaturedContent2025Showcase: React.FC = () => {
@@ -118,7 +118,7 @@ const FeaturedContent2025Showcase: React.FC = () => {
                     </div>
                   </div>
                   
-                  <Link
+                  <a
                     href={content.href}
                     className={`inline-flex items-center font-semibold transition-colors ${
                       content.featured 
@@ -128,7 +128,7 @@ const FeaturedContent2025Showcase: React.FC = () => {
                   >
                     {content.featured ? 'Read Full Guide' : 'Read More'}
                     <span className="ml-2">→</span>
-                  </Link>
+                  </a>
                 </div>
                 
                 {/* Hover Effect */}

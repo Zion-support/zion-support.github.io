@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NewBlogPosts2025Banner() {
   return (
@@ -49,12 +49,12 @@ export default function NewBlogPosts2025Banner() {
                 <div className="text-sm opacity-80">Operational Uptime</div>
               </div>
             </div>
-            <Link 
+            <a 
               href="/blog/ai-2025-next-generation-autonomous-systems"
               className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
             >
               Read Full Article →
-            </Link>
+            </a>
           </div>
 
           {/* Featured Blog Post 2 */}
@@ -87,12 +87,12 @@ export default function NewBlogPosts2025Banner() {
                 <div className="text-sm opacity-80">Operational Accuracy</div>
               </div>
             </div>
-            <Link 
+            <a 
               href="/blog/quantum-ai-2025-business-breakthrough"
               className="inline-flex items-center bg-gradient-to-r from-purple-400 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-300 hover:to-pink-400 transition-all duration-300 transform hover:scale-105"
             >
               Read Full Article →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -134,18 +134,18 @@ export default function NewBlogPosts2025Banner() {
             Get expert consultation and implementation support to transform your business with the latest AI technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-semibold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 text-lg"
             >
               Start Your Transformation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/blog"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 text-lg"
             >
               Explore More Articles
-            </Link>
+            </a>
           </div>
         </div>
       </div>

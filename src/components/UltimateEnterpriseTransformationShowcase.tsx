@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateEnterpriseTransformationShowcase = () => {
   const [activeCategorysetActiveCategory] = useState('all');
@@ -191,12 +191,12 @@ const UltimateEnterpriseTransformationShowcase = () => {
                 </div>
 
                 {/* CTA button */}
-                <Link
+                <a
                   href={item.url}
                   className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-center block"
                 >
                   Read {item.type === 'blog' ? 'Article' : item.type === 'case-study' ? 'Case Study' : 'Guide'}
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -234,18 +234,18 @@ const UltimateEnterpriseTransformationShowcase = () => {
         {/* Call to action */}
         <div className="text-center mt-12">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
+            <a
               href="/contact"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
             >
               Get Your Free Transformation Assessment
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources"
               className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-600 hover:text-white transition-all duration-300"
             >
               Explore All Resources
-            </Link>
+            </a>
           </div>
           <p className="text-gray-600 mt-4">
             Ready to transform your enterprise? Start your AI 2025 journey today.

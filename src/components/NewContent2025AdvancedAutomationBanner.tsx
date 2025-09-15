@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NewContent2025AdvancedAutomationBanner() {
   return (
@@ -17,18 +17,18 @@ export default function NewContent2025AdvancedAutomationBanner() {
             Advanced neural networks, autonomous systems, and intelligent business processes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/ai-2025-advanced-automation"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
             >
               Explore Advanced Automation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all"
             >
               Get Started Today
-            </Link>
+            </a>
           </div>
         </div>
       </div>

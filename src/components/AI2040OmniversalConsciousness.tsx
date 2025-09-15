@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2040OmniversalConsciousness() {
   const [currentDimensionsetCurrentDimension] = useState(0);
@@ -220,18 +220,18 @@ export default function AI2040OmniversalConsciousness() {
             The ultimate evolution of consciousness awaits. Be part of the transformation that transcends all limitations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-2040-omniversal-consciousness-showcase" 
               className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Omniversal AI
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/ai-2035-singularity-breakthrough" 
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               View Singularity
-            </Link>
+            </a>
           </div>
         </div>
       </div>

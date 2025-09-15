@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContentNavigationBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -75,12 +75,12 @@ const NewContentNavigationBanner: React.FC = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-2">{content.title}</h3>
                       <p className="text-sm opacity-90 mb-4">{content.description}</p>
-                      <Link
+                      <a
                         href={content.link}
                         className="inline-flex items-center text-white font-semibold hover:underline"
                       >
                         Explore Now →
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 ))}
@@ -94,7 +94,7 @@ const NewContentNavigationBanner: React.FC = () => {
               <h3 className="text-white font-bold mb-4">Latest Content</h3>
               <div className="space-y-2">
                 {featuredContent.map((content, index) => (
-                  <Link
+                  <a
                     key={index}
                     href={content.link}
                     className={`block px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
@@ -104,7 +104,7 @@ const NewContentNavigationBanner: React.FC = () => {
                     }`}
                   >
                     {content.title}
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025UltimateContentRevolutionPromotionBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -161,28 +161,28 @@ const AI2025UltimateContentRevolutionPromotionBanner = () => {
                 </div>
               </div>
 
-              <Link
+              <a
                 href={currentContent.url}
                 className="inline-flex items-center bg-yellow-400 text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition-colors"
               >
                 Read More →
-              </Link>
+              </a>
             </div>
 
             {/* Call to action */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
               >
                 Get Started Today
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors text-center"
               >
                 View All Resources
-              </Link>
+              </a>
             </div>
           </div>
 

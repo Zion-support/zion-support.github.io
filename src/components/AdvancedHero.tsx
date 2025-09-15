@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 
 interface AdvancedHeroProps {
@@ -49,18 +49,18 @@ export default function AdvancedHero({
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href={ctaLink}
               className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
             >
               {ctaText}
-            </Link>
-            <Link
+            </a>
+            <a
               href="/about"
               className="inline-block px-8 py-4 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200"
             >
               Learn More
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightCalendarBrainZapGlobeTrendingUpTarget
 
 export default function AIFuturePredictionsUltimate2025_2035Banner() {
@@ -51,23 +51,23 @@ export default function AIFuturePredictionsUltimate2025_2035Banner() {
 
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-future-predictions-ultimate-2025-2035"
               className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
             >
               <Calendar className="h-5 w-5 mr-2 group-hover:animate-pulse" />
               Explore Predictions
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
             
-            <Link 
+            <a 
               href="/blog"
               className="group border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center"
             >
               <Target className="h-5 w-5 mr-2 group-hover:animate-pulse" />
               Read Analysis
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           </div>
 
           {/* Additional info */}

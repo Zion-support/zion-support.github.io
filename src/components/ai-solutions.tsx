@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AISolutionsPage() {
   const aiSolutions = [
@@ -130,12 +130,12 @@ export default function AISolutionsPage() {
                         </li>
                       ))}
                     </ul>
-                    <Link 
+                    <a 
                       href={`/services#${solution.id}`}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       Learn More <span className="ml-1">→</span>
-                    </Link>
+                    </a>
                   </div>
                 ))}
               </div>
@@ -187,24 +187,24 @@ export default function AISolutionsPage() {
                   <p className="text-white/70 mb-4">
                     Implemented computer vision and ML solutions that improved quality control by 85% and reduced defects by 60%.
                   </p>
-                  <Link 
+                  <a 
                     href="/case-studies#ai-automation-manufacturing"
                     className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
                   >
                     Read Case Study →
-                  </Link>
+                  </a>
                 </div>
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-3 text-fuchsia-400">Content Generation Scale</h3>
                   <p className="text-white/70 mb-4">
                     Built autonomous content generation systems that increased output by 10x while maintaining quality standards.
                   </p>
-                  <Link 
+                  <a 
                     href="/case-studies#content-generation-scale"
                     className="text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     Read Case Study →
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -216,18 +216,18 @@ export default function AISolutionsPage() {
                 Let our AI experts help you implement intelligent solutions that drive real business value
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link 
+                <a 
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Start Your AI Journey
-                </Link>
-                <Link 
+                </a>
+                <a 
                   href="/automation-insights"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
                 >
                   Explore Insights
-                </Link>
+                </a>
               </div>
             </div>
           </section>

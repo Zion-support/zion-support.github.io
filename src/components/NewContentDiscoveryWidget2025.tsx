@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContentDiscoveryWidget2025 = () => {
   const [activeTab, setActiveTab] = useState('featured');
@@ -232,7 +232,7 @@ const NewContentDiscoveryWidget2025 = () => {
                   {item.description}
                 </p>
 
-                <Link
+                <a
                   href={item.url}
                   className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors group"
                 >
@@ -240,7 +240,7 @@ const NewContentDiscoveryWidget2025 = () => {
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -248,7 +248,7 @@ const NewContentDiscoveryWidget2025 = () => {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <Link
+          <a
             href="/content"
             className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:from-purple-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-2xl"
           >
@@ -256,7 +256,7 @@ const NewContentDiscoveryWidget2025 = () => {
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </Link>
+          </a>
         </div>
 
         {/* Stats */}

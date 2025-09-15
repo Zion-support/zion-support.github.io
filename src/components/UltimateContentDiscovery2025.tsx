@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 SearchFilterArrowRightClockTrendingUpStarEyeBookOpenVideoFileTextUsersZap
 
 const UltimateContentDiscovery2025 = () => {
@@ -222,13 +222,13 @@ const UltimateContentDiscovery2025 = () => {
                   </div>
                 </div>
 
-                <Link
+                <a
                   href={`/content/${item.id}`}
                   className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors group"
                 >
                   Read More
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
               </div>
             </div>
           ))}

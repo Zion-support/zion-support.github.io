@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2026UltimatePromotionBanner: React.FC = () => {
   return (
@@ -40,12 +40,12 @@ const NewContent2026UltimatePromotionBanner: React.FC = () => {
               <span className="bg-green-500/20 text-green-200 px-3 py-1 rounded-full text-xs">Autonomous Systems</span>
               <span className="bg-yellow-500/20 text-yellow-200 px-3 py-1 rounded-full text-xs">15,000% ROI</span>
             </div>
-            <Link
+            <a
               href="/ai-2026-ultimate-business-transformation"
               className="bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 inline-block"
             >
               Explore Content →
-            </Link>
+            </a>
           </div>
 
           {/* Quantum AI Revolution 2026 */}
@@ -67,12 +67,12 @@ const NewContent2026UltimatePromotionBanner: React.FC = () => {
               <span className="bg-yellow-500/20 text-yellow-200 px-3 py-1 rounded-full text-xs">Synthetic Intelligence</span>
               <span className="bg-green-500/20 text-green-200 px-3 py-1 rounded-full text-xs">25,000% ROI</span>
             </div>
-            <Link
+            <a
               href="/quantum-ai-revolution-2026"
               className="bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all transform hover:scale-105 inline-block"
             >
               Discover Revolution →
-            </Link>
+            </a>
           </div>
 
           {/* Autonomous Systems 2026 */}
@@ -94,12 +94,12 @@ const NewContent2026UltimatePromotionBanner: React.FC = () => {
               <span className="bg-purple-500/20 text-purple-200 px-3 py-1 rounded-full text-xs">24/7 Operation</span>
               <span className="bg-orange-500/20 text-orange-200 px-3 py-1 rounded-full text-xs">80% Cost Reduction</span>
             </div>
-            <Link
+            <a
               href="/autonomous-systems-2026"
               className="bg-gradient-to-r from-green-500 to-blue-500 px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all transform hover:scale-105 inline-block"
             >
               Explore Autonomy →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -136,18 +136,18 @@ const NewContent2026UltimatePromotionBanner: React.FC = () => {
               The future of business is here, and it starts with your decision to lead.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105"
               >
                 Start Your Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
               >
                 Explore Our Services
-              </Link>
+              </a>
             </div>
           </div>
           

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2026UltimateContentRevolutionBanner: React.FC = () => {
   return (
@@ -45,7 +45,7 @@ const AI2026UltimateContentRevolutionBanner: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6">
-            <Link 
+            <a 
               href="/ai-2026-ultimate-content-revolution" 
               className="group inline-flex items-center px-8 py-4 bg-white text-purple-600 font-bold text-lg rounded-full hover:bg-cyan-50 transition-all duration-300 hover:scale-105 shadow-xl"
             >
@@ -53,14 +53,14 @@ const AI2026UltimateContentRevolutionBanner: React.FC = () => {
               <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </Link>
+            </a>
             
-            <Link 
+            <a 
               href="/contact" 
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-105 shadow-xl"
             >
               Get Started Today
-            </Link>
+            </a>
           </div>
 
           <div className="mt-8 text-sm text-cyan-200">

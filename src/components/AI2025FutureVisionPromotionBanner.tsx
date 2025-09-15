@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025FutureVisionPromotionBanner = () => {
   return (
@@ -179,18 +179,18 @@ const AI2025FutureVisionPromotionBanner = () => {
             'Don', 't just witness the future – help create it. Join the AI revolution and transform your business with cutting-edge technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
+            <a
               href="/ai-2025-future-vision"
               className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-10 py-4 rounded-lg font-bold text-xl hover:from-yellow-500 hover:to-orange-500 transition-all duration-300 transform hover:scale-105"
             >
               Explore Future Vision
-            </Link>
-            <Link
+            </a>
+            <a
               href="/future-predictions-2025"
               className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-black transition-all duration-300"
             >
               View Predictions
-            </Link>
+            </a>
           </div>
         </div>
       </div>

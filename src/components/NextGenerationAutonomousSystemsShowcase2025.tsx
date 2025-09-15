@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NextGenerationAutonomousSystemsShowcase2025 = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -247,18 +247,18 @@ const NextGenerationAutonomousSystemsShowcase2025 = () => {
 
                 {/* Actions */}
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
+                  <a
                     href={item.url}
                     className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-4 py-3 rounded-lg font-semibold text-center transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     Read {item.type === 'blog' ? 'Article' : item.type === 'case-study' ? 'Case Study' : 'Guide'}
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/contact"
                     className="flex-1 border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-4 py-3 rounded-lg font-semibold text-center transition-all duration-300"
                   >
                     Get Consultation
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -275,18 +275,18 @@ const NextGenerationAutonomousSystemsShowcase2025 = () => {
               Join Fortune 500 companies achieving revolutionary results with next-generation autonomous systems
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Start Your Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Explore Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

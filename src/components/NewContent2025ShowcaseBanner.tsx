@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NewContent2025ShowcaseBanner() {
   return (
@@ -41,12 +41,12 @@ export default function NewContent2025ShowcaseBanner() {
                 <span>24/7 Autonomous Operation</span>
               </div>
             </div>
-            <Link
+            <a
               href="/ai-2025-advanced-automation"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all transform hover:scale-105 inline-block"
             >
               Explore Now
-            </Link>
+            </a>
           </div>
 
           {/* Quantum AI 2026 Revolution */}
@@ -71,12 +71,12 @@ export default function NewContent2025ShowcaseBanner() {
                 <span>$10T Economic Impact</span>
               </div>
             </div>
-            <Link
+            <a
               href="/quantum-ai-2026-revolution"
               className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all transform hover:scale-105 inline-block"
             >
               Explore Now
-            </Link>
+            </a>
           </div>
 
           {/* Neural Interface 2025 Breakthrough */}
@@ -101,22 +101,22 @@ export default function NewContent2025ShowcaseBanner() {
                 <span>24h Battery Life</span>
               </div>
             </div>
-            <Link
+            <a
               href="/neural-interface-2025-breakthrough"
               className="bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-violet-700 hover:to-fuchsia-700 transition-all transform hover:scale-105 inline-block"
             >
               Explore Now
-            </Link>
+            </a>
           </div>
         </div>
 
         <div className="text-center mt-12">
-          <Link
+          <a
             href="/contact"
             className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-blue-700 transition-all transform hover:scale-105"
           >
             Get Started with AI Transformation
-          </Link>
+          </a>
         </div>
       </div>
     </section>

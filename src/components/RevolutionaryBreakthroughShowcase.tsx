@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function RevolutionaryBreakthroughShowcase() {
   return (
@@ -38,12 +38,12 @@ export default function RevolutionaryBreakthroughShowcase() {
                 <span className="text-green-400 font-bold">10,000x</span>
               </div>
             </div>
-            <Link 
+            <a 
               href="/ai-2025-ultimate-breakthrough-revolution"
               className="block w-full bg-gradient-to-r from-red-500 to-pink-500 text-white text-center py-3 rounded-lg font-semibold hover:from-red-600 hover:to-pink-600 transition-all duration-300"
             >
               Explore Breakthrough →
-            </Link>
+            </a>
           </div>
 
           {/* AI 2026 Quantum-Neural Fusion */}
@@ -68,12 +68,12 @@ export default function RevolutionaryBreakthroughShowcase() {
                 <span className="text-green-400 font-bold">0ms</span>
               </div>
             </div>
-            <Link 
+            <a 
               href="/ai-2026-quantum-neural-fusion-breakthrough"
               className="block w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-center py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
             >
               Experience Fusion →
-            </Link>
+            </a>
           </div>
 
           {/* AI 2030 Transcendent Intelligence */}
@@ -98,12 +98,12 @@ export default function RevolutionaryBreakthroughShowcase() {
                 <span className="text-green-400 font-bold">0</span>
               </div>
             </div>
-            <Link 
+            <a 
               href="/ai-2030-transcendent-intelligence"
               className="block w-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all duration-300"
             >
               Transcend Reality →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -113,18 +113,18 @@ export default function RevolutionaryBreakthroughShowcase() {
             Ready to experience the future of AI? Choose your breakthrough journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/contact"
               className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
             >
               🚀 Start Your Journey
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/webinars/revolutionary-breakthroughs"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
             >
               📺 Watch Live Demo
-            </Link>
+            </a>
           </div>
         </div>
       </div>

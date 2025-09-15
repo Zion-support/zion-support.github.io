@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapClockTrendingUpCheckCircle
 
 export default function AITrends2025UltimatePredictionsBanner() {
@@ -62,19 +62,19 @@ export default function AITrends2025UltimatePredictionsBanner() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
+                <a 
                   href="/ai-trends-2025-ultimate-predictions" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   View All Predictions
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link 
+                </a>
+                <a 
                   href="/ai-trends-2025-ultimate-predictions#predictions" 
                   className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
                 >
                   Explore Timeline
-                </Link>
+                </a>
               </div>
             </div>
             

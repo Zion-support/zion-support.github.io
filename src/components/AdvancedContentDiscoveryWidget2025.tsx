@@ -26,7 +26,7 @@ import {
   Shield,
   Target
 } from 'lucide-react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AdvancedContentDiscoveryWidget2025() {
   const [searchQuerysetSearchQuery] = useState('');
@@ -247,7 +247,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sortedContent.map((item) => (
               <div key={item.id} className="group">
-                <Link href={item.link}>
+                <a href={item.link}>
                   <div className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden hover:transform hover:scale-105">
                     {/* Image */}
                     <div className="relative h-48 bg-gradient-to-br from-purple-600 to-blue-600 overflow-hidden">
@@ -298,7 +298,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </a>
               </div>
             ))}
           </div>
@@ -306,7 +306,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
           <div className="space-y-4">
             {sortedContent.map((item) => (
               <div key={item.id} className="group">
-                <Link href={item.link}>
+                <a href={item.link}>
                   <div className="bg-white/5 backdrop-blur-lg rounded-lg border border-white/10 hover:border-white/20 transition-all duration-300 p-6 hover:bg-white/10">
                     <div className="flex items-center gap-6">
                       {/* Image */}
@@ -353,7 +353,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
                       <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all" />
                     </div>
                   </div>
-                </Link>
+                </a>
               </div>
             ))}
           </div>

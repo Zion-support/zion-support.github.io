@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function GlobalEnterpriseSuccessBanner() {
   return (
@@ -56,18 +56,18 @@ export default function GlobalEnterpriseSuccessBanner() {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough"
               className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               View Full Case Study
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/ai-2025-ultimate-breakthrough-revolution"
               className="bg-transparent border-2 border-white hover:bg-white hover:text-green-900 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300"
             >
               Start Your Transformation
-            </Link>
+            </a>
           </div>
 
           {/* Testimonial */}

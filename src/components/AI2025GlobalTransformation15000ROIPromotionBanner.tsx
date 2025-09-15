@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025GlobalTransformation15000ROIPromotionBanner() {
   return (
@@ -56,24 +56,24 @@ export default function AI2025GlobalTransformation15000ROIPromotionBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/case-studies/ai-2025-global-transformation-breakthrough"
               className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               🏆 Read Full Success Story
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact"
               className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               💬 Start Your Transformation
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/resources/ai-2025-ultimate-implementation-toolkit"
               className="bg-yellow-500 text-gray-900 hover:bg-yellow-400 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               📚 Get Implementation Guide
-            </Link>
+            </a>
           </div>
 
           {/* Trust Indicators */}

@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
@@ -310,21 +310,21 @@ const RevolutionaryAIInnovations2025 = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              <Link
+              <a
                 href={`/ai-innovations/${currentInnovation.id}`}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-bold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 group"
               >
                 <Play className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
                 Explore Innovation
                 <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-purple-900 transition-all duration-300 group"
               >
                 <BookOpen className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
                 Get Started
-              </Link>
+              </a>
             </div>
           </motion.div>
 
@@ -435,20 +435,20 @@ const RevolutionaryAIInnovations2025 = () => {
               Be among the first to experience the future of technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
+              <a
                 href="/ai-innovations"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
               >
                 <Sparkles className="w-6 h-6 mr-3" />
                 Explore All Innovations
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-purple-600 text-purple-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-purple-600 hover:text-white transition-all duration-300 inline-flex items-center justify-center"
               >
                 <MessageSquare className="w-6 h-6 mr-3" />
                 Schedule Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>

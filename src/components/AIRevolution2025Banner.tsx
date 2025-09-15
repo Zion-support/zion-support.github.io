@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AIRevolution2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -113,18 +113,18 @@ const AIRevolution2025Banner = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href={currentContent.url}
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Read Full {currentContent.type === 'blog' ? 'Article' : currentContent.type === 'case-study' ? 'Case Study' : 'Guide'} →
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources/ai-revolution-implementation-ultimate-guide-2025-2026"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 Get Implementation Guide
-              </Link>
+              </a>
             </div>
           </div>
 

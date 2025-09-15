@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightSparklesZapBrainTrendingUpTargetUsersAwardStarGlobe
 
 export default function AI2025RevolutionaryContentPromotionBanner() {
@@ -86,7 +86,7 @@ export default function AI2025RevolutionaryContentPromotionBanner() {
         {/* Content Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {/* Learning Hub */}
-          <Link 
+          <a 
             href="/ai-interactive-learning-hub-2025"
             className="group bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 hover:from-blue-600/30 hover:to-purple-600/30 transition-all duration-300 transform hover:-translate-y-2 border border-blue-500/20"
           >
@@ -103,10 +103,10 @@ export default function AI2025RevolutionaryContentPromotionBanner() {
               Start Learning
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </div>
-          </Link>
+          </a>
 
           {/* Technologies */}
-          <Link 
+          <a 
             href="/cutting-edge-ai-technologies-2025"
             className="group bg-gradient-to-br from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-8 hover:from-purple-600/30 hover:to-indigo-600/30 transition-all duration-300 transform hover:-translate-y-2 border border-purple-500/20"
           >
@@ -123,10 +123,10 @@ export default function AI2025RevolutionaryContentPromotionBanner() {
               Explore Tech
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </div>
-          </Link>
+          </a>
 
           {/* Business Solutions */}
-          <Link 
+          <a 
             href="/ai-powered-business-solutions-2025"
             className="group bg-gradient-to-br from-indigo-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 hover:from-indigo-600/30 hover:to-blue-600/30 transition-all duration-300 transform hover:-translate-y-2 border border-indigo-500/20"
           >
@@ -143,7 +143,7 @@ export default function AI2025RevolutionaryContentPromotionBanner() {
               Transform Business
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </div>
-          </Link>
+          </a>
         </div>
 
         {/* CTA Section */}
@@ -156,19 +156,19 @@ export default function AI2025RevolutionaryContentPromotionBanner() {
               Be among the first to experience the future of AI. Start your transformation journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <a 
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/ai-interactive-learning-hub-2025"
                 className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 Explore All Content
-              </Link>
+              </a>
             </div>
           </div>
         </div>

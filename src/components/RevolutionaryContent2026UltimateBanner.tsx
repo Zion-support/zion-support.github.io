@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryContent2026UltimateBanner = () => {
   return (
@@ -24,12 +24,12 @@ const RevolutionaryContent2026UltimateBanner = () => {
             <p className="text-lg opacity-90 mb-6">
               Revolutionary AI technologies that will transform business operations in 2026.
             </p>
-            <Link 
+            <a 
               href="/blog/ai-2026-revolutionary-breakthroughs"
               className="inline-flex items-center bg-white text-teal-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Learn More →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-30 text-center">
@@ -38,12 +38,12 @@ const RevolutionaryContent2026UltimateBanner = () => {
             <p className="text-lg opacity-90 mb-6">
               How quantum computing is revolutionizing business optimization and problem-solving.
             </p>
-            <Link 
+            <a 
               href="/blog/quantum-computing-business-applications-2026"
               className="inline-flex items-center bg-white text-teal-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Learn More →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-30 text-center">
@@ -52,12 +52,12 @@ const RevolutionaryContent2026UltimateBanner = () => {
             <p className="text-lg opacity-90 mb-6">
               Self-managing enterprise systems that adapt and optimize without human intervention.
             </p>
-            <Link 
+            <a 
               href="/blog/autonomous-enterprise-systems-2026"
               className="inline-flex items-center bg-white text-teal-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Learn More →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-30 text-center">
@@ -66,12 +66,12 @@ const RevolutionaryContent2026UltimateBanner = () => {
             <p className="text-lg opacity-90 mb-6">
               Real-world case studies of companies achieving extraordinary results with AI.
             </p>
-            <Link 
+            <a 
               href="/case-studies"
               className="inline-flex items-center bg-white text-teal-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Learn More →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -106,12 +106,12 @@ const RevolutionaryContent2026UltimateBanner = () => {
                   <span className="text-green-300 font-bold">340%</span>
                 </div>
               </div>
-              <Link 
+              <a 
                 href="/case-studies/fortune-500-ai-transformation"
                 className="inline-flex items-center bg-white text-teal-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Read Full Case Study →
-              </Link>
+              </a>
             </div>
 
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-30">
@@ -136,12 +136,12 @@ const RevolutionaryContent2026UltimateBanner = () => {
                   <span className="text-green-300 font-bold">450%</span>
                 </div>
               </div>
-              <Link 
+              <a 
                 href="/case-studies/quantum-computing-logistics-optimization"
                 className="inline-flex items-center bg-white text-teal-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Read Full Case Study →
-              </Link>
+              </a>
             </div>
           </div>
         </div>

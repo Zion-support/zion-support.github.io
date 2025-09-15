@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapTargetCodeDatabaseTrendingUp
 
 export default function AIToolsUltimateShowcase2025Banner() {
@@ -51,23 +51,23 @@ export default function AIToolsUltimateShowcase2025Banner() {
 
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-tools-ultimate-showcase-2025"
               className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
             >
               <Brain className="h-5 w-5 mr-2 group-hover:animate-pulse" />
               Explore AI Tools
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
             
-            <Link 
+            <a 
               href="/case-studies"
               className="group border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center"
             >
               <Target className="h-5 w-5 mr-2 group-hover:animate-pulse" />
               View Implementations
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           </div>
 
           {/* Additional info */}

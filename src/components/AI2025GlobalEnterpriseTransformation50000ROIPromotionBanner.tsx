@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightTrendingUpDollarSignStarCheckCircleTarget
 
 export default function AI2025GlobalEnterpriseTransformation50000ROIPromotionBanner() {
@@ -57,19 +57,19 @@ export default function AI2025GlobalEnterpriseTransformation50000ROIPromotionBan
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
+              <a 
                 href="/case-studies/ai-2025-global-enterprise-transformation-50000-roi"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Read Full Case Study
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/case-studies"
                 className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 View All Case Studies
-              </Link>
+              </a>
             </div>
           </div>
 

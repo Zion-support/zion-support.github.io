@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContentDiscovery2025Banner = () => {
   return (
@@ -26,12 +26,12 @@ const NewContentDiscovery2025Banner = () => {
             <p className="text-gray-300 mb-6">
               Intelligent automation solutions that revolutionize business operations and drive unprecedented efficiency.
             </p>
-            <Link 
+            <a 
               href="/ai-automation-2025"
               className="bg-gradient-to-r from-emerald-400 to-teal-400 text-black px-6 py-3 rounded-lg font-bold hover:from-emerald-500 hover:to-teal-500 transition-all duration-300 inline-block"
             >
               Explore AI Automation
-            </Link>
+            </a>
           </div>
 
           <div className="bg-gradient-to-br from-teal-800 to-cyan-800 rounded-2xl p-8 border border-teal-400 border-opacity-30">
@@ -40,12 +40,12 @@ const NewContentDiscovery2025Banner = () => {
             <p className="text-gray-300 mb-6">
               Advanced neural network architectures that enable breakthrough AI capabilities and cognitive computing.
             </p>
-            <Link 
+            <a 
               href="/neural-networks-2025"
               className="bg-gradient-to-r from-teal-400 to-cyan-400 text-black px-6 py-3 rounded-lg font-bold hover:from-teal-500 hover:to-cyan-500 transition-all duration-300 inline-block"
             >
               Discover Neural AI
-            </Link>
+            </a>
           </div>
 
           <div className="bg-gradient-to-br from-cyan-800 to-blue-800 rounded-2xl p-8 border border-cyan-400 border-opacity-30">
@@ -54,12 +54,12 @@ const NewContentDiscovery2025Banner = () => {
             <p className="text-gray-300 mb-6">
               Revolutionary quantum computing solutions that unlock new possibilities in AI and computational power.
             </p>
-            <Link 
+            <a 
               href="/quantum-computing-2025"
               className="bg-gradient-to-r from-cyan-400 to-blue-400 text-black px-6 py-3 rounded-lg font-bold hover:from-cyan-500 hover:to-blue-500 transition-all duration-300 inline-block"
             >
               Learn Quantum AI
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -73,18 +73,18 @@ const NewContentDiscovery2025Banner = () => {
             Join thousands of companies already using our revolutionary AI solutions to achieve unprecedented growth and success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/content-discovery-2025"
               className="bg-gradient-to-r from-emerald-400 to-cyan-400 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-emerald-500 hover:to-cyan-500 transition-all duration-300 transform hover:scale-105"
             >
               Start Discovery
-            </Link>
-            <Link
+            </a>
+            <a
               href="/content-showcase-2025"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-300"
             >
               View Showcase
-            </Link>
+            </a>
           </div>
         </div>
       </div>

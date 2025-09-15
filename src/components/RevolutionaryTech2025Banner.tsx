@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryTech2025Banner = () => {
   return (
@@ -52,12 +52,12 @@ const RevolutionaryTech2025Banner = () => {
                   <div className="text-sm opacity-80">Projects</div>
                 </div>
               </div>
-              <Link 
+              <a 
                 href="/blog/ai-2025-enterprise-automation-revolution-complete-implementation-guide"
                 className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
               >
                 Read Complete Guide →
-              </Link>
+              </a>
             </div>
 
             <div className="bg-gradient-to-r from-red-600 to-pink-600 rounded-2xl p-8 border border-white border-opacity-20">
@@ -90,12 +90,12 @@ const RevolutionaryTech2025Banner = () => {
                   <div className="text-sm opacity-80">Cost Reduction</div>
                 </div>
               </div>
-              <Link 
+              <a 
                 href="/blog/ai-2025-cybersecurity-revolution-next-generation-threat-protection"
                 className="inline-flex items-center bg-white text-red-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
               >
                 Learn Security Solutions →
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -131,12 +131,12 @@ const RevolutionaryTech2025Banner = () => {
                   <div className="text-sm opacity-80">Investment Growth</div>
                 </div>
               </div>
-              <Link 
+              <a 
                 href="/blog/quantum-computing-business-applications-2025-ultimate-guide"
                 className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
               >
                 Explore Quantum Guide →
-              </Link>
+              </a>
             </div>
 
             {/* Additional Content Preview */}
@@ -166,12 +166,12 @@ const RevolutionaryTech2025Banner = () => {
                   <span>Autonomous Business Systems</span>
                 </div>
               </div>
-              <Link 
+              <a 
                 href="/blog"
                 className="inline-flex items-center bg-white text-green-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
               >
                 Explore All Content →
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -185,18 +185,18 @@ const RevolutionaryTech2025Banner = () => {
               quantum computingand cybersecurity solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-black text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-800 transition-colors"
               >
                 Get Expert Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-black text-black px-10 py-4 rounded-xl font-bold text-lg hover:bg-black hover:text-white transition-colors"
               >
                 Explore Our Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

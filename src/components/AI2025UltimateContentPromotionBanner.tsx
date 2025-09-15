@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 XChevronLeftChevronRightStarTrendingUpUsersClock
 
 const AI2025UltimateContentPromotionBanner = () => {
@@ -164,19 +164,19 @@ const AI2025UltimateContentPromotionBanner = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href={currentContent.url}
                 className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
               >
                 Read Full {currentContent.type}
                 <ChevronRight className="ml-2 h-4 w-4" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Get Free Consultation
-              </Link>
+              </a>
             </div>
           </div>
 

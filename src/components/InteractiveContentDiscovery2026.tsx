@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const InteractiveContentDiscovery2026 = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -201,12 +201,12 @@ const InteractiveContentDiscovery2026 = () => {
                   </span>
                 </div>
                 
-                <Link
+                <a
                   href={`/content/${item.id}`}
                   className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center block"
                 >
                   Read More
-                </Link>
+                </a>
               </div>
             </div>
           ))}
