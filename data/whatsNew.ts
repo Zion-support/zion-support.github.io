@@ -11,6 +11,38 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "trust-grid-for-agents-2026",
+    title: "AI 2026: Trust Grid for Autonomous Agents",
+    description:
+      "Unified trust model across safety, security, reliability, and compliance with enforceable gates.",
+    ctaLabel: "Read Framework",
+    href: "/content/ai-2026-trust-grid-for-agents",
+    emoji: "🔒",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "evidence-driven-governance-2026",
+    title: "AI 2026: Evidence-Driven AI Governance",
+    description:
+      "Governance powered by verifiable evidence: evals, approvals, and runtime telemetry.",
+    ctaLabel: "Explore Governance",
+    href: "/content/ai-2026-evidence-driven-ai-governance",
+    emoji: "📜",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-release-checklists-2026",
+    title: "AI 2026: Agent Release Checklists",
+    description:
+      "Evidence-driven checklists for safe, secure, and reliable agent releases.",
+    ctaLabel: "Use Checklists",
+    href: "/content/ai-2026-agent-release-checklists",
+    emoji: "✅",
+    date: "2025-09-15",
+  },
+  {
     id: "llm-evals-maturity-model-2026-content",
     title: "AI 2026: LLM Evals Maturity Model",
     description:
