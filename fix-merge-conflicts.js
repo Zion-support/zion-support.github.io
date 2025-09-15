@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  };
-  traverse(dir),
-  return files};
-// Find and fix files with merge conflicts,
-const conflictedFiles = findFilesWithConflicts('.'),
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`),
-for (const file of conflictedFiles) {,
-  fixMergeConflicts(file)};
-console.log('Merge conflict resolution complete!'),
-#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'), content = content.replace(/[\s\S]*?[\s\S]*?};
-};
-        };
-      };
-};
-
-console.log('\nMerge conflict fixing complete!'),
-console.log('\nMerge conflict fixing complete!'),
-,
-console.log(`Fixed merge conflicts in ${fixedCount} files`),
-,),
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -49,8 +25,6 @@ function fixMergeConflicts(filePath) {
 
 // Fix the specific file
 fixMergeConflicts('src/components/EnhancedSearch.tsx');
->>>>>>> origin/enhance-app-with-new-services-and-advertising
-=======
 const fs = require('fs');
 const path = require('path');
 
@@ -93,4 +67,3 @@ function fixMergeConflicts(directory) {
 console.log('🔧 Fixing merge conflicts throughout the project...');
 fixMergeConflicts('.');
 console.log('✅ Merge conflict fixing completed!'); 
->>>>>>> origin/auto/autonomy-17186719616

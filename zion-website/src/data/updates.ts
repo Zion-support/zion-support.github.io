@@ -9,6 +9,15 @@ export interface UpdateItem {
 
 export const updates: UpdateItem[] = [
   {
+    id: 'autonomous-research-assistant-v2',
+    title: 'Launch: Autonomous Research Assistant v2',
+    summary:
+      'Major upgrade with multi-agent collaboration, document-grounded reasoning, and faster retrieval.',
+    href: '/updates/ai-research-assistant-2-0',
+    date: '2025-09-15',
+    tag: 'Release',
+  },
+  {
     id: 'advanced-blockchain-dev-course',
     title: 'New Course: Advanced Blockchain Development',
     summary:
@@ -16,6 +25,40 @@ export const updates: UpdateItem[] = [
     href: '/updates/advanced-blockchain-development',
     date: '2025-09-10',
     tag: 'Course',
+  },
+  {
+    id: 'genai-systems-design-bootcamp',
+    title: 'Bootcamp: Generative AI Systems Design',
+    summary:
+      'Hands-on bootcamp covering RAG, agents, evaluation, and production GenAI systems.',
+    href: '/updates/genai-systems-design-bootcamp',
+    date: '2025-09-14',
+    tag: 'Course',
+  },
+  {
+    id: 'enterprise-ai-governance-framework',
+    title: 'Announcement: Enterprise AI Governance Framework',
+    summary:
+      'Introducing our comprehensive framework for responsible AI with policy tooling.',
+    href: '/updates/enterprise-ai-governance-framework',
+    date: '2025-09-13',
+    tag: 'Announcement',
+  },
+  {
+    id: 'mlops-observability-challenge',
+    title: 'Community Challenge: MLOps Observability Dashboards',
+    summary: 'Build dashboards for tracing, drift detection, and model health insights.',
+    href: '/updates/mlops-observability-challenge',
+    date: '2025-09-12',
+    tag: 'Challenge',
+  },
+  {
+    id: 'agentic-automation-research',
+    title: 'Research Release: Agentic Automation Patterns',
+    summary: 'Field-tested design patterns for robust autonomous workflows in enterprises.',
+    href: '/updates/agentic-automation-patterns',
+    date: '2025-09-11',
+    tag: 'Research',
   },
   {
     id: 'web3-fundamentals-path',

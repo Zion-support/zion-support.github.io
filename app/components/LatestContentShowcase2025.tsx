@@ -16,44 +16,57 @@ export default function LatestContentShowcase2025() {
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">🧠</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">AI Agent Breakthroughs</h3>
+            <div className="text-4xl mb-4">✅</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Trustworthy Autonomous Agents 2026</h3>
             <p className="text-gray-600 mb-4">
-              Discover how enterprise AI agents are revolutionizing business operations with unprecedented levels of autonomy and intelligence.
+              Governance-by-design with evals-as-code, policy-as-code, and safety telemetry.
             </p>
             <Link 
-              href="/blog/ai-2025-enterprise-ai-agents-breakthrough"
+              href="/content/trustworthy-autonomous-agents-2026"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              Read Full Article →
+              Read Blueprint →
+            </Link>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="text-4xl mb-4">🛡️</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Agent Risk Management 2026</h3>
+            <p className="text-gray-600 mb-4">
+              Threat models, layered controls, and runtime guardrails for enterprise agents.
+            </p>
+            <Link 
+              href="/content/ai-2026-agent-risk-management"
+              className="text-purple-600 font-semibold hover:text-purple-800"
+            >
+              Read Framework →
             </Link>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Hyperautomation Guide</h3>
+            <div className="text-4xl mb-4">⚙️</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Autonomous Incident Response 2026</h3>
             <p className="text-gray-600 mb-4">
-              Complete playbook for implementing AI-driven hyperautomation across your organization with proven strategies and real-world examples.
+              Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability.
             </p>
             <Link 
-              href="/blog/ai-2026-hyperautomation-business-playbook"
+              href="/blog/ai-2026-ai-ops-autonomous-incident-response"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              Get Implementation Guide →
+              Read Article →
             </Link>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">🚀</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">AI Services</h3>
+            <div className="text-4xl mb-4">🔐</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Secure Agent Architecture 2026</h3>
             <p className="text-gray-600 mb-4">
-              Explore our comprehensive suite of AI automation services designed to accelerate your digital transformation journey.
+              Design zero-trust autonomous agents with isolation domains and runtime guards.
             </p>
             <Link 
-              href="/services/ai-automation"
+              href="/blog/ai-2026-secure-agent-architecture"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              View Services →
+              Explore Architecture →
             </Link>
           </div>
         </div>
@@ -64,12 +77,7 @@ export default function LatestContentShowcase2025() {
             Join thousands of companies already using our AI solutions to drive innovation and growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Explore All Services
-            </Link>
+            <Link href="/content/ai-governance-blueprint-2026" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Read AI Governance Blueprint</Link>
             <Link
               href="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"

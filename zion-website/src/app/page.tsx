@@ -1,5 +1,5 @@
 import React from 'react'
-import { getLatestUpdates } from '@/data/updates'
+import { getLatestUpdates } from '../data/updates'
 import {
   LightBulbIcon,
   CpuChipIcon,
@@ -120,13 +120,9 @@ export default function HomePage() {
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-            {getLatestUpdates(6).map((item) => (
-              <article key={item.id} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center gap-2 text-xs text-blue-300">
-                  <span className="inline-flex items-center rounded-full bg-blue-500/10 px-2 py-0.5 ring-1 ring-inset ring-blue-500/20">{item.tag}</span>
-                  <time dateTime={item.date} className="text-gray-400">{new Date(item.date).toLocaleDateString()}</time>
-                </div>
-                <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+            {getLatestUpdates(3).map((item) => (
+              <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                <h3 className="text-lg font-semibold leading-6 text-white">
                   <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
                     <span className="absolute inset-0" />
                     {item.title}
@@ -139,10 +135,50 @@ export default function HomePage() {
               </article>
             ))}
           </div>
-          <div className="mt-8 flex justify-center">
-            <a href="/updates" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View all updates <span aria-hidden="true">→</span>
-            </a>
+        </div>
+      </div>
+
+      {/* Latest on the blog */}
+      <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Latest on the blog</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Just published</p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            New articles on enterprise AI, security, and autonomous systems.
+          </p>
+        </div>
+        <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+            {[
+              {
+                title: 'AI 2026: Multimodal Agents Enterprise Blueprint',
+                summary: 'Design, deploy, and scale multimodal agents with measurable ROI.',
+                href: '/blog/ai-2026-multimodal-agents-enterprise-blueprint'
+              },
+              {
+                title: 'AI 2026: LLM Evals Maturity Model',
+                summary: 'Evaluation-first framework with quality gates and policy-as-code.',
+                href: '/blog/ai-2026-llm-evals-maturity-model'
+              },
+              {
+                title: 'Enterprise AI Security Blueprint (2025)',
+                summary: 'Layered controls across model, data, runtime, and supply chain.',
+                href: '/blog/ai-2025-enterprise-ai-security-blueprint'
+              }
+            ].map((item) => (
+              <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                <h3 className="text-lg font-semibold leading-6 text-white">
+                  <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
+                    <span className="absolute inset-0" />
+                    {item.title}
+                  </a>
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-gray-300">{item.summary}</p>
+                <a href={item.href} className="mt-6 text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
+                  Read more <span aria-hidden="true">→</span>
+                </a>
+              </article>
+            ))}
           </div>
         </div>
       </div>

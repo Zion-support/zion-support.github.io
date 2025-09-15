@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-
-export default function ToolResourcePage() {
-  const router = useRouter(),
-  const { id } = router.query,
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -16,7 +6,6 @@ import { useRouter } from 'next/router';
 export default function ToolResourcePage() {
   const router = useRouter();
   const { id } = router.query;
->>>>>>> origin/auto/autonomy-17186719616
 
   // Tools data - this should match the data in resources.tsx
   const tools = [
@@ -70,15 +59,10 @@ export default function ToolResourcePage() {
         </ul>
       `,
       features: [
-<<<<<<< HEAD
-        'Comprehensive evaluation frameworkIndustry benchmarking',
-        'Actionable recommendationsProgress tracking',
-=======
         'Comprehensive evaluation framework',
         'Industry benchmarking',
         'Actionable recommendations',
         'Progress tracking',
->>>>>>> origin/auto/autonomy-17186719616
         'Resource library access'
       ]
     },
@@ -135,15 +119,10 @@ export default function ToolResourcePage() {
         </ul>
       `,
       features: [
-<<<<<<< HEAD
-        '5-level maturity frameworkMulti-dimensional assessment',
-        'Gap analysis toolsTransformation roadmap',
-=======
         '5-level maturity framework',
         'Multi-dimensional assessment',
         'Gap analysis tools',
         'Transformation roadmap',
->>>>>>> origin/auto/autonomy-17186719616
         'Progress tracking'
       ]
     },
@@ -209,16 +188,6 @@ export default function ToolResourcePage() {
         </ul>
       `,
       features: [
-<<<<<<< HEAD
-        'Industry benchmark databasePerformance gap analysis',
-        'Trend analysis toolsAction planning framework',
-        'Progress tracking'
-      ]
-    }
-  ],
-
-  const tool = tools.find(t => t.id === id),
-=======
         'Industry benchmark database',
         'Performance gap analysis',
         'Trend analysis tools',
@@ -229,7 +198,6 @@ export default function ToolResourcePage() {
   ];
 
   const tool = tools.find(t => t.id === id);
->>>>>>> origin/auto/autonomy-17186719616
 
   if (!tool) {
     return (
@@ -246,11 +214,7 @@ export default function ToolResourcePage() {
               </p>
               <Link 
                 href="/resources"
-<<<<<<< HEAD
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
->>>>>>> origin/auto/autonomy-17186719616
               >
                 ← Back to Resources
               </Link>
@@ -258,11 +222,7 @@ export default function ToolResourcePage() {
           </main>
         </div>
       </>
-<<<<<<< HEAD
-    )
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -338,11 +298,7 @@ export default function ToolResourcePage() {
             <div className="text-center">
               <Link 
                 href="/contact"
-<<<<<<< HEAD
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
->>>>>>> origin/auto/autonomy-17186719616
               >
                 Get Started with Your Project
               </Link>
@@ -351,9 +307,5 @@ export default function ToolResourcePage() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

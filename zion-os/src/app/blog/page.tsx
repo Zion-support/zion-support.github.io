@@ -21,17 +21,6 @@ export default function BlogPage() {
       featured: true
     },
     {
-      id: 'sovereign-ai-commerce-2025',
-      title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
-      excerpt: 'We unveil our blueprint for self-orchestrating, sovereign AI marketplaces with built‑in governance, identity, and commerce rails.',
-      category: 'AI Solutions',
-      author: 'Dr. Kleber Santos',
-      date: '2025-09-15',
-      readTime: '9 min read',
-      image: '/blog/sovereign-ai-commerce.jpg',
-      featured: true
-    },
-    {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -84,17 +73,6 @@ export default function BlogPage() {
       date: '2024-01-05',
       readTime: '10 min read',
       image: '/blog/autonomous-ai.jpg',
-      featured: true
-    },
-    {
-      id: 'agentic-supply-chains-2025',
-      title: 'Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents',
-      excerpt: 'Autonomous agents coordinating demand sensing, supplier negotiation, and dynamic routing with safety rails.',
-      category: 'AI Solutions',
-      author: 'Michael Rodriguez',
-      date: '2025-09-15',
-      readTime: '9 min read',
-      image: '/blog/agentic-supply-chains.jpg',
       featured: true
     }
   ];
@@ -203,16 +181,11 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 14, active: true },
+    { name: 'All Posts', count: 12, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 3, active: false },
-<<<<<<< HEAD
-    { name: 'AI Safety', count: 1, active: false },
-=======
->>>>>>> cursor/create-and-deploy-new-content-4789
+    { name: 'AI Solutions', count: 2, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
-    { name: 'IoT & Edge', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
@@ -222,7 +195,7 @@ export default function BlogPage() {
   const tags = [
     'AI Consciousness', 'Quantum Computing', 'Machine Learning', 'Cybersecurity',
     'Data Science', 'Autonomous Systems', 'Business Intelligence', 'Cloud Computing',
-    'AI Ethics', 'AI Safety', 'Supply Chain', 'Innovation', 'Technology Trends'
+    'AI Ethics', 'Research', 'Innovation', 'Technology Trends'
   ];
 
   return (

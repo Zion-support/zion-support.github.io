@@ -16,9 +16,10 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Web Development</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Mobile Apps</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Cloud Solutions</Link></li>
+              <li><Link to="/pages/InnovativeServicesShowcase2025" className="text-gray-400 hover:text-white transition-colors">AI Solutions</Link></li>
+              <li><Link to="/pages/InnovationLanding2025" className="text-gray-400 hover:text-white transition-colors">Blockchain</Link></li>
+              <li><Link to="/pages/InnovativeServicesShowcase2025" className="text-gray-400 hover:text-white transition-colors">Cloud Solutions</Link></li>
+              <li><Link to="/pages/InnovationLanding2025" className="text-gray-400 hover:text-white transition-colors">Quantum Computing</Link></li>
             </ul>
           </div>
           
@@ -26,6 +27,8 @@ export const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/pages/BlogPost2025" className="text-gray-400 hover:text-white transition-colors">Latest Blog</Link></li>
+              <li><Link to="/pages/InnovationLanding2025" className="text-gray-400 hover:text-white transition-colors">Innovation 2025</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-
-=======
 // Basic Jest setup
 import @testing-library/jest-dom';
 
@@ -49,4 +37,3 @@ jest.mock('next/image', () => ({
     return <img {...props} />;
   }
 }));
->>>>>>> origin/auto/autonomy-17186719616

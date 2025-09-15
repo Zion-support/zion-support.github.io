@@ -11,6 +11,91 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "trustworthy-autonomous-agents-2026",
+    title: "AI 2026: Trustworthy Autonomous Agents",
+    description:
+      "Blueprint for measurable, reliable, auditable agents with policy-as-code and evals-as-code.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/trustworthy-autonomous-agents-2026",
+    emoji: "✅",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agentic-risk-and-safety-playbook-2026",
+    title: "AI 2026: Agentic Risk and Safety Playbook",
+    description:
+      "Safeguards, monitoring, and governance patterns for production agent systems.",
+    ctaLabel: "Read Playbook",
+    href: "/blog/ai-2026-agentic-risk-and-safety-playbook",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-posture-management-2026",
+    title: "AI 2026: Agent Posture Management",
+    description:
+      "Continuously assess, harden, and govern autonomous agents with baselines and controls.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-agent-posture-management",
+    emoji: "🧭",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agentic-evaluation-checklists-2026",
+    title: "AI 2026: Agentic Evaluation Checklists",
+    description:
+      "Practical red-team, reliability, and safety checklists for agent releases.",
+    ctaLabel: "Use Checklists",
+    href: "/content/ai-2026-agentic-evaluation-checklists",
+    emoji: "✅",
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-ops-playbook-blog-2026",
+    title: "AI 2026: Autonomous Ops Playbook",
+    description:
+      "SLOs, incident response, eval-driven releases, and policy-as-code for AI operations.",
+    ctaLabel: "Explore Playbook",
+    href: "/blog/ai-2026-autonomous-ops-playbook",
+    emoji: "🛠️",
+    date: "2025-09-15",
+  },
+  {
+    id: "real-time-rag-2026",
+    title: "AI 2026: Real-Time Retrieval Architectures",
+    description:
+      "Sub-100ms RAG with hybrid search, semantic caching, and streaming for production.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-real-time-retrieval-architectures",
+    emoji: "⚡",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-ops-playbook-2026",
+    title: "AI 2026: Autonomous Ops Playbook",
+    description:
+      "A practical playbook to deploy autonomous, outcome-driven operations with guardrails.",
+    ctaLabel: "Explore Playbook",
+    href: "/content/ai-2026-autonomous-ops-playbook",
+    emoji: "🛠️",
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-observability-guide-2026",
+    title: "AI 2026: Enterprise Agent Observability Guide",
+    description:
+      "Traces, evals, and safety telemetry to operate autonomous agents in production.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-enterprise-agent-observability-guide",
+    emoji: "👀",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "ai-content-studio",
     title: "AI Content Studio v2",
     description:
@@ -40,6 +125,90 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     href: "/cloud/optimizer",
     emoji: "☁️",
     date: "2025-09-01",
+  },
+  {
+    id: "secure-agent-architecture-2026",
+    title: "AI 2026: Secure Agent Architecture",
+    description:
+      "Blueprint for zero-trust agents with policy-as-code, isolation domains, and runtime guards.",
+    ctaLabel: "Read Architecture",
+    href: "/blog/ai-2026-secure-agent-architecture",
+    emoji: "🔐",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "llm-evals-maturity-model-2026",
+    title: "AI 2026: LLM Evals Maturity Model",
+    description:
+      "Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.",
+    ctaLabel: "Read Framework",
+    href: "/blog/ai-2026-llm-evals-maturity-model",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-compliance-2026",
+    title: "AI 2026: Autonomous Compliance Operating Model",
+    description:
+      "Automate controls, evidence, and tests for audit-ready AI operations with policy-as-code.",
+    ctaLabel: "Explore Model",
+    href: "/content/ai-2026-autonomous-compliance",
+    emoji: "✅",
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-finance-os",
+    title: "AI 2026: Autonomous Finance OS",
+    description:
+      "Real-time treasury, autonomous close, and compliance automation for CFO organizations.",
+    ctaLabel: "Explore Finance OS",
+    href: "/blog/ai-2026-autonomous-finance-operating-system",
+    emoji: "💹",
+    date: "2025-09-14",
+  },
+  {
+    id: "real-time-rag-2026",
+    title: "AI 2026: Real-Time Retrieval Architectures",
+    description:
+      "Design sub-200ms RAG with hybrid search, streaming generation, and eval-gated upgrades.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-real-time-retrieval-architectures",
+    emoji: "⚡",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-ops-playbook-2026",
+    title: "AI 2026: Autonomous Ops Playbook",
+    description:
+      "SLOs, incident response, eval-driven releases, and policy-as-code for AI operations.",
+    ctaLabel: "Explore Playbook",
+    href: "/content/ai-2026-autonomous-ops-playbook",
+    emoji: "🛠️",
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-safety-certification-2026",
+    title: "AI 2026: Agent Safety Certification",
+    description:
+      "Structured certification to validate agent safety with scenario test suites and governance.",
+    ctaLabel: "Read Framework",
+    href: "/blog/ai-2026-agent-safety-certification",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "edge-agents-on-device-2026",
+    title: "AI 2026: Edge Agents On-Device",
+    description:
+      "Private, low-latency agents with hybrid offload, secure updates, and telemetry.",
+    ctaLabel: "Explore",
+    href: "/blog/ai-2026-edge-agents-on-device",
+    emoji: "📱",
+    date: "2025-09-15",
   },
 ];
 
