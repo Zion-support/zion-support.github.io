@@ -26,7 +26,12 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   openGraph: {
     title: 'Zion Tech Group - Leading AI and Technology Solutions',
+<<<<<<< HEAD
+    description:
+      'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+=======
     description: "Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.",
+>>>>>>> origin/cursor/create-and-deploy-new-content-ceec
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
