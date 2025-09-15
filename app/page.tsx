@@ -37,12 +37,11 @@ import RevolutionaryContent2026Banner from './components/RevolutionaryContent202
 import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 
 // Import new promotional components
+import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
 import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
+import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
-import SuccessMetricsShowcase2026 from './components/SuccessMetricsShowcase2026';
-import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
-import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
 
 // Import additional promotional components
 import AI2025BreakthroughBanner from './components/AI2025BreakthroughBanner';
@@ -324,7 +323,6 @@ export default function HomePage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Featured Content Grid */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,10 +343,25 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-=======
+
         {/* Latest Content Showcase 2025 - NEW FEATURED */}
         <LatestContentShowcase2025 />
->>>>>>> cursor/create-and-deploy-new-content-47bb
+
+        {/* Promo: New Blueprint - Enterprise AI Ops 2026 */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">New Blueprint</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise AI Ops Blueprint (2026)</h3>
+                <p className="text-gray-600 max-w-2xl">A practical operating model for reliable, governed, and cost-efficient AI at scale.</p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/content/enterprise-ai-ops-2026" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Blueprint</Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
