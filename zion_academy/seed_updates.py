@@ -177,6 +177,52 @@ We apologize for the inconvenience and appreciate your prompt action to secure y
                 'priority': 'urgent',
                 'created_at': datetime.utcnow() - timedelta(days=4)
             }
+            ,
+            {
+                'title': 'New Course: GenAI Prompt Engineering Mastery',
+                'content': '''Master the art and science of prompt engineering for LLMs.
+
+What you'll learn:
+• Prompt design patterns and frameworks
+• Retrieval-augmented generation (RAG) prompting
+• Tool-use prompting and function calling
+• Evaluation and guardrails for safe prompts
+
+Includes hands-on labs with real-world scenarios and a capstone project.''',
+                'summary': 'Hands-on course on effective prompting, RAG, tool-use, and guardrails.',
+                'update_type': 'course',
+                'priority': 'high',
+                'created_at': datetime.utcnow() - timedelta(hours=1)
+            },
+            {
+                'title': 'Report: 2025 State of AI Adoption',
+                'content': '''We have published our annual report on AI adoption across industries.
+
+Highlights:
+• 78% of enterprises report measurable ROI from AI initiatives
+• Top use cases: customer support, analytics, and automation
+• Key challenges: data quality, governance, and change management
+
+Download the full report from your dashboard.''',
+                'summary': 'New research report on AI adoption trends, ROI, and challenges in 2025.',
+                'update_type': 'announcement',
+                'priority': 'normal',
+                'created_at': datetime.utcnow() - timedelta(days=1, hours=3)
+            },
+            {
+                'title': 'Scholarship Program: 1,000 Seats for Underrepresented Learners',
+                'content': '''We are awarding 1,000 full scholarships for our AI and Blockchain tracks.
+
+Eligibility:
+• Underrepresented groups in tech
+• Demonstrated passion for learning and impact
+
+Applications open today and close in 3 weeks. Apply via the Scholarships page.''',
+                'summary': 'Apply now for 1,000 full-ride scholarships in AI and Blockchain tracks.',
+                'update_type': 'announcement',
+                'priority': 'high',
+                'created_at': datetime.utcnow() - timedelta(days=2, hours=6)
+            }
         ]
         
 <<<<<<< HEAD

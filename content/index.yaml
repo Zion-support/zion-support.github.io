@@ -1,6 +1,6 @@
 content_index:
-  last_updated: "2025-01-17"
-  total_content_pieces: 20
+  last_updated: "2025-09-15"
+  total_content_pieces: 39
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -99,7 +99,22 @@ content_index:
         satisfaction: "98%"
         efficiency: "67%"
         
-<<<<<<< HEAD
+    - id: "data-governance-trust-security-2025"
+      type: "blog"
+      title: "AI 2025: Data Governance, Trust, and Security — Enterprise Guide"
+      file_path: "/content/blog/ai-2025-data-governance-trust-security.md"
+      url: "/blog/ai-2025-data-governance-trust-security"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["AI", "Data Governance", "Security", "Compliance", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        risk_reduction: "65%"
+        approval_speed: "2x"
+        audit_coverage: "100%"
+        incidents_reduction: "40%"
+
     - id: "healthcare-transformation"
       type: "case-study"
       title: "AI Healthcare Transformation 2025: 450% ROI Success Story"
@@ -133,8 +148,6 @@ content_index:
         projects: "500+ Success Stories"
 
   new_2025_content_latest:
-<<<<<<< HEAD
-=======
     - id: "ai-2025-advanced-analytics-revolution-ultimate-guide"
       type: "blog"
       title: "AI 2025: Advanced Analytics Revolution - Ultimate Enterprise Guide"
@@ -185,8 +198,6 @@ content_index:
         projects: "500+"
         timeline: "6-8 months"
       reading_time: "28 min read"
-      
->>>>>>> origin/new-content-and-promotional-components
     - id: "ai-2025-advanced-automation-revolution-ultimate-guide"
       type: "blog"
       title: "AI 2025: Advanced Automation Revolution - Ultimate Enterprise Guide"
@@ -263,54 +274,10 @@ content_index:
       status: "published"
       created: "2025-01-17"
       tags: ["Case Study", "Fortune 500", "AI Transformation", "ROI", "Manufacturing", "Success Story", "Cost Savings"]
-=======
-    - id: "ai-enterprise-automation-revolution"
-      type: "blog"
-      title: "AI 2025: The Enterprise Automation Revolution - 500% ROI"
-      file_path: "/content/blog/ai-2025-enterprise-automation-revolution.md"
-      url: "/blog/ai-2025-enterprise-automation-revolution"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "2025"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "500%"
-        savings: "$200M"
-        satisfaction: "99.8%"
-        time: "12 months"
-
-  new_case_studies:
-    - id: "global-manufacturing-ai-transformation"
-      type: "case-study"
-      title: "Global Manufacturing Giant Achieves 500% ROI with AI Transformation"
-      file_path: "/content/case-studies/global-manufacturing-ai-transformation.md"
-      url: "/case-studies/global-manufacturing-ai-transformation"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Case Study", "Manufacturing", "AI Automation", "ROI", "Transformation"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "500%"
-        savings: "$50M"
-        efficiency: "95%"
-        satisfaction: "98%"
-        
-    - id: "financial-services-ai-revolution"
-      type: "case-study"
-      title: "Financial Services Leader Achieves 600% ROI with AI-Powered Digital Transformation"
-      file_path: "/content/case-studies/financial-services-ai-revolution.md"
-      url: "/case-studies/financial-services-ai-revolution"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Case Study", "Financial Services", "AI Automation", "ROI", "Digital Transformation"]
->>>>>>> c8b857ad6d423d3347e8320a93310c8577edc4aa
       featured: true
       is_new: true
       metrics:
         roi: "600%"
-<<<<<<< HEAD
         savings: "$2.8B"
         efficiency: "156%"
         uptime: "99.2%"
@@ -430,44 +397,67 @@ content_index:
         timeframe: "6 months"
         phases: "3 phases"
         payback: "3.8 months"
-=======
-        savings: "$75M"
-        satisfaction: "98%"
-        efficiency: "80%"
-        
-    - id: "quantum-ai-transformation-2026"
-      type: "case-study"
-      title: "Quantum AI Transformation 2026: Ultimate Success Story"
-      file_path: "/content/case-studies/quantum-ai-transformation-2026-ultimate-success.md"
-      url: "/case-studies/quantum-ai-transformation-2026-ultimate-success"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Quantum AI", "Case Study", "ROI", "Transformation", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "800%"
-        savings: "$100M"
-        efficiency: "99%"
-        satisfaction: "99%"
 
-  new_resources:
-    - id: "ai-transformation-checklist-2025"
-      type: "resource"
-      title: "AI Transformation Checklist 2025 - Complete Implementation Guide"
-      file_path: "/content/resources/ai-transformation-checklist-2025.md"
-      url: "/resources/ai-transformation-checklist-2025"
+  newly_added_september_2025:
+    - id: "ai-2026-evidence-driven-release-checklists"
+      type: "blog"
+      title: "AI 2026: Evidence‑Driven Release Checklists — Gates, Rollbacks, and Audit"
+      file_path: "/content/blog/ai-2026-evidence-driven-release-checklists.md"
+      url: "/blog/ai-2026-evidence-driven-release-checklists"
       status: "published"
-      created: "2025-01-17"
-      tags: ["Resource", "AI Transformation", "Checklist", "Implementation", "Guide"]
+      created: "2025-09-15"
+      tags: ["Evaluations", "Reliability", "Governance", "Progressive Delivery", "2026"]
       featured: true
       is_new: true
       metrics:
-        downloads: "1000+"
-        success_rate: "95%"
-        implementation_time: "6-12 months"
-        roi: "300-500%"
->>>>>>> c8b857ad6d423d3347e8320a93310c8577edc4aa
+        reliability: "99.9%"
+        rollback_time: "< 5 min"
+        audit_ready: true
+
+    - id: "ai-2026-agent-platform-health-dashboard-starter"
+      type: "resource"
+      title: "AI 2026: Agent Platform Health Dashboard — Starter Kit"
+      file_path: "/content/resources/ai-2026-agent-platform-health-dashboard-starter.md"
+      url: "/resources/ai-2026-agent-platform-health-dashboard-starter"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Observability", "SLOs", "Reliability", "Operations", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        availability: "99.9%"
+        eval_pass_rate: "> 95%"
+        cost_per_task: "tracked"
+    
+    - id: "ai-2026-zero-trust-agent-architecture"
+      type: "blog"
+      title: "AI 2026: Zero-Trust Agent Architecture"
+      file_path: "/content/blog/ai-2026-zero-trust-agent-architecture.md"
+      url: "/blog/ai-2026-zero-trust-agent-architecture"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Security", "Architecture", "Zero-Trust", "Policy-as-Code", "Isolation", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        rollback_time: "< 5 min"
+        audit_ready: true
+
+    - id: "ai-2026-privacy-preserving-agents"
+      type: "blog"
+      title: "AI 2026: Privacy-Preserving Agents"
+      file_path: "/content/blog/ai-2026-privacy-preserving-agents.md"
+      url: "/blog/ai-2026-privacy-preserving-agents"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Privacy", "Security", "Confidential Computing", "Redaction", "Scoped Memory", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        approval_speed: "2x"
+        breaches: "reduced"
+        audit_ready: true
 
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
@@ -534,23 +524,20 @@ content_index:
     component: "HomePage"
     file_path: "/app/page.tsx"
     changes:
-      - "Added NewContent2025UltimateBanner at top of homepage"
-      - "Added NewContentShowcase2025 in content promotion section"
-      - "Integrated new promotional components with existing banners"
-      - "Updated layout to prominently feature new content"
-      - "Added comprehensive content showcase with metrics"
-      - "Implemented interactive content discovery and filtering"
+      - "Added compact promos for Incident Response, Eval Pipelines, and Secure Tooling"
+      - "Integrated links to new blog and blueprint pages"
+      - "Updated last_updated and counts to reflect new content"
 
   metrics:
-    expected_roi_mentions: 45
+    expected_roi_mentions: 50
     success_stories: 8
     implementation_guides: 6
-    blog_posts: 10
-    total_word_count: "~85,000 words"
-    estimated_reading_time: "~340 minutes"
+    blog_posts: 19
+    total_word_count: "~90,000 words"
+    estimated_reading_time: "~382 minutes"
     new_content_roi_highlights: "600% ROI featured prominently across all content"
     promotional_components: 10
-    homepage_integration: "Complete with comprehensive showcase and advanced automation focus"
+    homepage_integration: "Complete with three new compact promos"
     new_2025_content_pieces: 3
     advanced_automation_focus: "Primary content theme with 600% ROI emphasis"
   new_september_2025:

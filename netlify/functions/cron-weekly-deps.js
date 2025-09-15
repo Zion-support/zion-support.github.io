@@ -20,7 +20,9 @@ exports.handler = async function() {
     const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) };
 
     const entries = [];
-    for (const [name, current] of Object.entries(deps)) {
+    for (const [
+  {
+    name, current] of Object.entries(deps)) {
       const latest = await getLatest(name);
       if (!latest) continue;
       entries.push({ name, current, latest, outOfDate: current.replace(/^[^0-9]*/, '') !== latest });

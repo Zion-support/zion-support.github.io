@@ -37,30 +37,42 @@ const FeaturedContentSection: React.FC = () => {
       readTime: '12 min read',
       featured: true
     }
+    ,
+    {
+      id: 4,
+      type: 'Blueprint',
+      title: 'Autonomous Ops Blueprint 2026',
+      description: 'A pragmatic framework for reliable, observable, and governed agent operations at scale.',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop',
+      category: 'AI Operations',
+      readTime: '10 min read',
+      featured: true,
+      stats: { efficiency: '99.9%', costSavings: '$1.2M', satisfaction: '97%' }
+    }
   ];
 
   const latestBlogs = [
     {
-      id: 4,
-      title: '5 AI Trends That Will Define 2025',
-      excerpt: 'From autonomous systems to ethical AI, discover the trends shaping the future.',
-      author: 'Sarah Johnson',
-      date: '2025-01-15',
-      readTime: '5 min read',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop',
-      slug: 'ai-trends-2025',
-      category: 'AI'
+      id: 37,
+      title: 'GenAI for Regulated Industries: Practical Compliance Patterns (2025)',
+      excerpt: 'Deploy GenAI in finance and healthcare with auditability and control.',
+      author: 'Amelia Brooks',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: 'https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=400&h=250&fit=crop',
+      slug: 'genai-2025-practical-compliance-patterns',
+      category: 'Compliance'
     },
     {
-      id: 5,
-      title: 'Cybersecurity Best Practices for Modern Enterprises',
-      excerpt: 'Protect your business with these essential cybersecurity strategies and tools.',
-      author: 'Michael Chen',
-      date: '2025-01-12',
+      id: 38,
+      title: 'Agentic CRM: Autonomous Revenue Workflows (2025)',
+      excerpt: 'Lead-to-cash with agents: enrichment, outreach, pipeline hygiene, renewals.',
+      author: 'Sofia Ramirez',
+      date: '2025-09-15',
       readTime: '7 min read',
-      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop',
-      slug: 'cybersecurity-best-practices',
-      category: 'Security'
+      image: 'https://images.unsplash.com/photo-1538688423619-a81d3f23454b?w=400&h=250&fit=crop',
+      slug: 'agentic-crm-autonomous-revenue-workflows-2025',
+      category: 'Go-To-Market'
     },
     {
       id: 6,
@@ -72,6 +84,29 @@ const FeaturedContentSection: React.FC = () => {
       image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop',
       slug: 'cloud-migration-guide',
       category: 'Cloud'
+    }
+    ,
+    {
+      id: 39,
+      title: 'Operationalizing Live Evals in Production — Deep Dive (2026)',
+      excerpt: 'Move quality gates to runtime with eval-driven progressive delivery and auto rollback.',
+      author: 'Noah Patel',
+      date: '2025-09-15',
+      readTime: '16 min read',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop',
+      slug: 'ai-2026-operationalizing-live-evals-in-production-deep-dive',
+      category: 'Reliability'
+    },
+    {
+      id: 40,
+      title: 'Agent Reliability Field Guide (2026)',
+      excerpt: 'SLOs, guardrails, and telemetry to reach 99.9% reliability for autonomous agents.',
+      author: 'Maya Chen',
+      date: '2025-09-15',
+      readTime: '12 min read',
+      image: 'https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?w=400&h=250&fit=crop',
+      slug: 'ai-2026-agent-reliability-field-guide',
+      category: 'Operations'
     }
   ];
 

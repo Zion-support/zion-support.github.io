@@ -17,13 +17,15 @@ export default function ResearchPage() {
 				</div>
 				<div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-none">
 					<dl className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-						{areas.map((a) => (
-							<div key={a.name} className="rounded-2xl bg-white/5 p-6">
+						{areas.map((area) => (
+							<div key={area.name} className="flex flex-col">
 								<dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-									<a.icon className="h-5 w-5 text-blue-400" />
-									{a.name}
+									<area.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+									{area.name}
 								</dt>
-								<dd className="mt-3 text-sm text-gray-300">{a.description}</dd>
+								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+									<p className="flex-auto">{area.description}</p>
+								</dd>
 							</div>
 						))}
 					</dl>

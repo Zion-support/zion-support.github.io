@@ -94,10 +94,10 @@ export function NewContentPromoBanner({
               <span className="text-cyan-400 text-sm font-medium">Limited Time Offer</span>
             </div>
             <h3 className="text-white font-bold text-lg">
-              🚀 Discover Our Latest AI Solutions
+              🚀 Fresh: Trusted GenAI Patterns for Regulated Enterprises
             </h3>
             <p className="text-gray-300 text-sm">
-              Explore 50+ new AI-powered services including Legal AI, Healthcare Diagnostics, and Quantum Cybersecurity
+              New enterprise blueprint for compliant GenAI with evals, policy-as-code, and cost routing
             </p>
           </div>
         </div>
@@ -105,12 +105,26 @@ export function NewContentPromoBanner({
         {/* CTA Button */}
         <div className="flex items-center space-x-3">
           <Link
-            to="/new-content-showcase"
+            to="/blog/ai-2026-trusted-genai-patterns-regulated-enterprises"
             className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
           >
             <Rocket className="w-4 h-4 mr-2" />
-            Explore Now
+            Trusted GenAI
             <ArrowRight className="w-4 h-4 ml-2" />
+          </Link>
+          <Link
+            to="/blog/agentic-crm-autonomous-revenue-workflows-2026"
+            className="inline-flex items-center px-6 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold rounded-lg transition-all duration-300"
+          >
+            <Sparkles className="w-4 h-4 mr-2" />
+            Agentic CRM
+          </Link>
+          <Link
+            to="/blog/real-time-agent-observability-2026"
+            className="inline-flex items-center px-6 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold rounded-lg transition-all duration-300"
+          >
+            <Zap className="w-4 h-4 mr-2" />
+            Observability
           </Link>
           
           {showCloseButton && (

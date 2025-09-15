@@ -40,7 +40,7 @@ const WhatsNew: React.FC<WhatsNewProps> = ({
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{title}</h2>
             <p className="text-gray-600 mt-1">{subtitle}</p>
           </div>
-          <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">View all</Link>
+          <Link href="/content" className="text-purple-600 font-semibold hover:text-purple-800">View all</Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

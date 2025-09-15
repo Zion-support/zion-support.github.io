@@ -1,4 +1,8 @@
-import React from 'react';
+import Link from 'next/link';
+};
+
+export default function HyperautomationBlueprint2026() {
+  return (
 export const metadata = {
   title: 'Hyperautomation Blueprint 2026',
   description: 'A practical blueprint to design, deploy, and scale AI-driven hyperautomation.'
