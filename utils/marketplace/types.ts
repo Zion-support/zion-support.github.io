@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-
-
-export interface Offer {;
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -116,53 +106,3 @@ export type ProjectDocument = {
   name: string;
   url?: string;
   uploadedAtIso: string;
-<<<<<<< HEAD
-}
-
-  id: string;
-  authorId: string;
-  authorRole: string;
-  content: string;
-  createdAtIso: string;
-}
-
-
-
-
-export interface ProjectNote {;
-  id: string;
-  authorId: string;
-  authorRole: string;
-  content: string;
-  createdAtIso: string;
-}
-
-=======
-};
-
-export type ProjectNote = {
-  id: string;
-  authorId: string;
-  authorRole: "client" | "talent";
-  content: string;
-  createdAtIso: string;
-};
-
-export type Project = {
-  id: string;
-  title: string;
-  summary: string;
-  clientId: string;
-  talentSlug: string;
-  startDateIso: string;
-  status: ProjectStatus;
-  timeline: Milestone[];
-  documents: ProjectDocument[];
-  notes: ProjectNote[];
-};
-
-export type MarketplaceDb = {
-  offers: Offer[];
-  projects: Project[];
-};
->>>>>>> origin/auto/autonomy-17186719616

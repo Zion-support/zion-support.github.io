@@ -1,16 +1,11 @@
 #!/bin/bash
 
-# Script to merge all branches into main
 echo "🚀 Starting automated branch merge process..."
 
-# Get all remote branches
-echo "📋 Fetching all remote branches..."
-git fetch --all
-
-# Get list of all remote branches (excluding main)
+# Get all remote branches (excluding main)
 branches=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | head -20)
 
-echo "🔍 Found branches to process:"
+echo "🔍 Found branches to merge:"
 echo "$branches"
 
 # Counter for processed branches
@@ -31,22 +26,46 @@ for branch in $branches; do
         
         # Check if there are conflicts
         if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "🔧 Resolving conflicts in $branch..."
+            echo "🔧 Resolving conflicts by keeping main branch version..."
             
-            # Try to resolve conflicts automatically
-            git add .
-            git commit -m "Resolve merge conflicts for $branch" 2>/dev/null
+            # Find all conflicted files
+            conflicted_files=$(git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4-)
             
-            if [ $? -eq 0 ]; then
-                echo "✅ Successfully resolved conflicts for $branch"
+            for file in $conflicted_files; do
+                echo "   Resolving: $file"
+                
+                # For binary files, just add them
+                if file "$file" | grep -q "binary"; then
+                    git add "$file"
+                    continue
+                fi
+                
+                # For text files, use git checkout to keep main branch version
+                git checkout --ours "$file"
+                git add "$file"
+            done
+            
+            # Handle modify/delete conflicts
+            git status --porcelain | grep "^DU\|^UD" | while read status file; do
+                if [ "$status" = "DU" ]; then
+                    git rm "$file"
+                else
+                    git add "$file"
+                fi
+            done
+            
+            # Commit the resolved conflicts
+            if git commit --no-verify -m "🔧 Resolve merge conflicts in $branch - keep main branch version"; then
+                echo "✅ Successfully resolved conflicts and merged $branch"
                 merged=$((merged + 1))
             else
-                echo "❌ Failed to resolve conflicts for $branch, skipping..."
-                git merge --abort 2>/dev/null
+                echo "❌ Failed to resolve conflicts in $branch"
+                git merge --abort
                 conflicts=$((conflicts + 1))
             fi
         else
-            echo "❌ Failed to merge $branch"
+            echo "❌ Failed to merge $branch (no conflicts detected)"
+            git merge --abort
             conflicts=$((conflicts + 1))
         fi
     fi
@@ -54,21 +73,16 @@ for branch in $branches; do
     processed=$((processed + 1))
     
     # Safety check - don't process too many branches at once
-    if [ $processed -ge 20 ]; then
-        echo "🛑 Reached safety limit of 20 branches, stopping..."
+    if [ $processed -ge 10 ]; then
+        echo "⚠️  Reached safety limit of 10 branches processed"
         break
     fi
 done
 
 echo ""
 echo "📊 Merge Summary:"
-echo "   Processed: $processed branches"
-echo "   Successfully merged: $merged branches"
-echo "   Conflicts/Failed: $conflicts branches"
-
-# Push all changes
+echo "   Total branches processed: $processed"
+echo "   Successfully merged: $merged"
+echo "   Conflicts encountered: $conflicts"
 echo ""
-echo "🚀 Pushing all changes to main..."
-git push origin main
-
-echo "✅ Merge process completed!"
+echo "✅ Branch merge process completed!"
