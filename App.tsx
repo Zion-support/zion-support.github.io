@@ -91,6 +91,10 @@ import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevoluti
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
+import RevolutionaryAIConsciousness2027 from './src/pages/RevolutionaryAIConsciousness2027';
+import QuantumConsciousnessRevolution2027 from './src/pages/QuantumConsciousnessRevolution2027';
+import UltimateTechRevolution2027 from './src/pages/UltimateTechRevolution2027';
+import RevolutionaryContentShowcase2027 from './src/components/RevolutionaryContentShowcase2027';
 <<<<<<< HEAD
 import AdvancedTechInsights2026 from './src/pages/AdvancedTechInsights2026';
 import FutureTechTrends2026 from './src/pages/FutureTechTrends2026';
@@ -2021,6 +2025,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/NextGenInnovationHub2026" element={<NextGenInnovationHub2026 />} />
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
 >>>>>>> origin/cursor/create-and-deploy-new-content-e901
+          <Route path="/revolutionary-ai-consciousness-2027" element={<RevolutionaryAIConsciousness2027 />} />
+          <Route path="/quantum-consciousness-revolution-2027" element={<QuantumConsciousnessRevolution2027 />} />
+          <Route path="/ultimate-tech-revolution-2027" element={<UltimateTechRevolution2027 />} />
+          <Route path="/revolutionary-content-showcase-2027" element={<RevolutionaryContentShowcase2027 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/contact" element={
