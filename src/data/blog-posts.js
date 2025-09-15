@@ -200,6 +200,7 @@ export const blogPosts = [
   ,
   {
     id: 12,
+<<<<<<< HEAD
     title: "AI 2026: Agentic Risk and Safety Playbook",
     excerpt: "Practical safeguards, monitoring, and governance patterns for production agent systems.",
     content: "This playbook distills proven patterns for safely operating agentic systems at scale: policy-as-code guardrails, evaluation harnesses, runtime tripwires, behavior analytics, and rollback strategies. It includes rollout checklists and reference architectures for high-assurance deployments.",
@@ -227,6 +228,35 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/enterprise-agent-observability-2026.jpg",
     slug: "ai-2026-enterprise-agent-observability-guide"
+=======
+    title: "AI 2026: Real-Time Retrieval Architectures",
+    excerpt: "Low-latency retrieval patterns for RAG systems at enterprise scale.",
+    content: "Enterprises need sub-200ms retrieval for interactive agent systems. This guide covers vector DB sharding, hybrid search, ANN index tuning, caching layers, and streaming generation patterns to achieve real-time performance.",
+    author: "Nora Patel",
+    authorRole: "Principal Architect",
+    publishDate: "2025-09-15",
+    readTime: "7 min read",
+    category: "Architecture",
+    tags: ["RAG", "Search", "Vector DB", "Latency"],
+    featured: true,
+    imageUrl: "/images/blog/real-time-rag-architectures-2026.jpg",
+    slug: "ai-2026-real-time-retrieval-architectures"
+  },
+  {
+    id: 13,
+    title: "AI 2026: Autonomous Ops Playbook",
+    excerpt: "Runbooks, guardrails, and evals for safe autonomous operations.",
+    content: "A practical playbook for autonomous operations: event-driven observability, action gating, safety envelopes, human-in-the-loop escalation, and policy-as-code. Includes reference architectures and rollout checklist.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Operations",
+    tags: ["Autonomous Ops", "Evals", "Policy-as-Code", "Safety"],
+    featured: true,
+    imageUrl: "/images/blog/autonomous-ops-playbook-2026.jpg",
+    slug: "ai-2026-autonomous-ops-playbook"
+>>>>>>> feature/new-sept-2025-content
   }
 ];
 
