@@ -6,9 +6,13 @@
 <<<<<<< HEAD
 =======
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 import { LightBulbIcon, CogIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const services = [
@@ -172,9 +176,13 @@ const services = [
 >>>>>>> origin/backup-main-20250915-074228
 =======
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 ]
 
 export default function ServicesPage() {
@@ -318,11 +326,15 @@ export default function ServicesPage() {
                   <service.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {service.name}
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
+<<<<<<< HEAD
 =======
                   <service.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {service.name}
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{service.description}</p>
@@ -394,9 +406,13 @@ export default function ServicesPage() {
   )
 }
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/services/page.tsx
+<<<<<<< HEAD
 =======
     </div>
   )
 }
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
