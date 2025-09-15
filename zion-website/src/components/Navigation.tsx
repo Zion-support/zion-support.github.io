@@ -1,3 +1,21 @@
+"use client"
+import React, { useState } from 'react'
+import { Dialog } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Updates', href: '/updates' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/contact' },
+]
+
+export default function Navigation() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -67,6 +85,9 @@
                     href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800 transition-colors duration-200"
                     onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
                 ))}
               </div>
               <div className="py-6">
@@ -84,3 +105,4 @@
       </Dialog>
     </header>
   )
+}

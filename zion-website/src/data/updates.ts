@@ -286,11 +286,6 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Product'
   },
-  
-  
-  
-  
-  ,
   {
     title: 'Case Study: RAG Agents Reduce MTTR by 42%',
     summary:
