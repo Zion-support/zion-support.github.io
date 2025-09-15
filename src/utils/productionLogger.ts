@@ -1,53 +1,133 @@
-// Production logger utility
-interface LogLevel {
-  ERROR: 'error';
-  WARN: 'warn';
-  INFO: 'info';
-  DEBUG: 'debug';
-}
+/**
+ * Production-safe logging utilities
+ */
 
-const LOG_LEVELS: LogLevel = {
-  ERROR: 'error',
-  WARN: 'warn',
-  INFO: 'info',
-  DEBUG: 'debug',
-};
+export type LogLevel = 'debug' | 'info' | 'warn' | 'error';
+
+export interface LogEntry {
+  level: LogLevel;
+  message: string;
+  timestamp: number;
+  context?: Record<string, any>;
+  error?: Error;
+}
 
 class ProductionLogger {
   private isDevelopment = process.env.NODE_ENV === 'development';
-  private logLevel = this.isDevelopment ? 'debug' : 'info';
+  private logHistory: LogEntry[] = [];
+  private maxHistorySize = 100;
 
-  private shouldLog(level: string): boolean {
-    const levels = ['error', 'warn', 'info', 'debug'];
-    const currentLevelIndex = levels.indexOf(this.logLevel);
-    const messageLevelIndex = levels.indexOf(level);
-    return messageLevelIndex <= currentLevelIndex;
+  private createLogEntry(level: LogLevel, message: string, context?: Record<string, any>, error?: Error): LogEntry {
+    return {
+      level,
+      message,
+      timestamp: Date.now(),
+      context,
+      error,
+    };
   }
 
-  error(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.ERROR)) {
-      console.error(`[ERROR] ${message}`, ...args);
+  private addToHistory(entry: LogEntry): void {
+    this.logHistory.push(entry);
+    
+    // Keep only the most recent entries
+    if (this.logHistory.length > this.maxHistorySize) {
+      this.logHistory = this.logHistory.slice(-this.maxHistorySize);
     }
   }
 
-  warn(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.WARN)) {
-      console.warn(`[WARN] ${message}`, ...args);
+  private shouldLog(level: LogLevel): boolean {
+    if (this.isDevelopment) {
+      return true;
     }
+
+    // In production, only log warnings and errors
+    return level === 'warn' || level === 'error';
   }
 
-  info(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.INFO)) {
-      console.info(`[INFO] ${message}`, ...args);
+  debug(message: string, context?: Record<string, any>): void {
+    const entry = this.createLogEntry('debug', message, context);
+    
+    if (this.shouldLog('debug')) {
+      console.debug(`[DEBUG] ${message}`, context || '');
     }
+    
+    this.addToHistory(entry);
   }
 
-  debug(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.DEBUG)) {
-      console.debug(`[DEBUG] ${message}`, ...args);
+  info(message: string, context?: Record<string, any>): void {
+    const entry = this.createLogEntry('info', message, context);
+    
+    if (this.shouldLog('info')) {
+      console.info(`[INFO] ${message}`, context || '');
     }
+    
+    this.addToHistory(entry);
+  }
+
+  warn(message: string, context?: Record<string, any>): void {
+    const entry = this.createLogEntry('warn', message, context);
+    
+    if (this.shouldLog('warn')) {
+      console.warn(`[WARN] ${message}`, context || '');
+    }
+    
+    this.addToHistory(entry);
+  }
+
+  error(message: string, error?: Error, context?: Record<string, any>): void {
+    const entry = this.createLogEntry('error', message, context, error);
+    
+    if (this.shouldLog('error')) {
+      console.error(`[ERROR] ${message}`, error || '', context || '');
+    }
+    
+    this.addToHistory(entry);
+  }
+
+  getLogHistory(): LogEntry[] {
+    return [...this.logHistory];
+  }
+
+  clearHistory(): void {
+    this.logHistory = [];
+  }
+
+  exportLogs(): string {
+    return JSON.stringify(this.logHistory, null, 2);
   }
 }
 
-export const productionLogger = new ProductionLogger();
-export default productionLogger;
+// Create singleton instance
+export const logger = new ProductionLogger();
+
+// Convenience functions
+export const logDebug = (message: string, context?: Record<string, any>): void => {
+  logger.debug(message, context);
+};
+
+export const logInfo = (message: string, context?: Record<string, any>): void => {
+  logger.info(message, context);
+};
+
+export const logWarn = (message: string, context?: Record<string, any>): void => {
+  logger.warn(message, context);
+};
+
+export const logError = (message: string, error?: Error, context?: Record<string, any>): void => {
+  logger.error(message, error, context);
+};
+
+export const getLogHistory = (): LogEntry[] => {
+  return logger.getLogHistory();
+};
+
+export const clearLogHistory = (): void => {
+  logger.clearHistory();
+};
+
+export const exportLogs = (): string => {
+  return logger.exportLogs();
+};
+
+export default logger;
