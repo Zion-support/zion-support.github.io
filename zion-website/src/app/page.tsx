@@ -1,10 +1,9 @@
-import React from 'react'
 import {
-  LightBulbIcon,
+  ChartBarIcon,
   CpuChipIcon,
   GlobeAltIcon,
+  LightBulbIcon,
   ShieldCheckIcon,
-  ChartBarIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
 
@@ -132,8 +131,8 @@ export default function HomePage() {
                 href: '/updates'
               },
               {
-                title: 'New Learning Path: Web3 Fundamentals',
-                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
+                title: 'Release: AI Research Assistant v2.0',
+                summary: 'Major upgrade with multi-agent collaboration and faster literature synthesis.',
                 href: '/updates'
               }
             ].map((item) => (
