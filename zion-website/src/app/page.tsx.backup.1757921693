@@ -1,4 +1,13 @@
 import React from 'react'
+<<<<<<< HEAD
+import { 
+	LightBulbIcon, 
+	CpuChipIcon, 
+	GlobeAltIcon, 
+	ShieldCheckIcon,
+	ChartBarIcon,
+	UserGroupIcon
+=======
 import { siteUpdates } from '../data/updates'
 import {
   LightBulbIcon,
@@ -7,6 +16,7 @@ import {
   ShieldCheckIcon,
   ChartBarIcon,
   UserGroupIcon
+>>>>>>> origin/cursor/create-and-deploy-new-content-5766
 } from '@heroicons/react/24/outline'
 
 const features = [
@@ -115,7 +125,30 @@ export default function HomePage() {
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+<<<<<<< HEAD
+            {[
+              {
+                title: 'Launch: AI Security Fundamentals Course',
+                summary:
+                  'Hands-on course on secure AI development, model hardening, and red-teaming best practices.',
+                href: '/updates'
+              },
+              {
+                title: 'Whitepaper: Autonomous IT Operations 2.0',
+                summary:
+                  'A practical roadmap to fully autonomous incident response and cost-aware remediation.',
+                href: '/updates'
+              },
+              {
+                title: 'Event Recap: Web3 Builders Challenge',
+                summary:
+                  'Highlighting the top teams who built production-ready DApps in under two weeks.',
+                href: '/updates'
+              }
+            ].map((item) => (
+=======
             {siteUpdates.slice(0, 3).map((item) => (
+>>>>>>> origin/cursor/create-and-deploy-new-content-5766
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 {item.tag || item.date ? (
                   <div className="mb-2 flex items-center gap-2 text-xs text-blue-300">

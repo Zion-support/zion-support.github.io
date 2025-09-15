@@ -1,4 +1,17 @@
+<<<<<<< HEAD
+import { 
+  LightBulbIcon, 
+  CpuChipIcon, 
+  RocketLaunchIcon, 
+  ShieldCheckIcon,
+  ChartBarIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  CogIcon
+} from '@heroicons/react/24/outline'
+=======
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon, ChartBarIcon, GlobeAltIcon, UserGroupIcon, CogIcon } from '@heroicons/react/24/outline'
+>>>>>>> origin/cursor/create-and-deploy-new-content-5766
 
 const flagshipSolutions = [
   { name: 'AI Research Assistant', description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.', icon: LightBulbIcon, features: ['Natural Language Processing','Multi-modal Learning','Real-time Collaboration','Advanced Analytics'], href: '/solutions/ai-autonomous-research' },
@@ -133,3 +146,7 @@ export default function SolutionsPage() {
     </div>
   )
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-5766
