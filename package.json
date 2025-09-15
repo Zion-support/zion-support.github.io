@@ -45,6 +45,10 @@
     "prefer-offline": true
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "@esbuild/linux-x64": "^0.25.9",
+>>>>>>> 92e78fe0fa97c23b26e9c757f0eb6a5609cf6432
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",

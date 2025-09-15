@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Production logger utility for handling logging in production environments
 
 interface LogLevel {
@@ -140,3 +141,46 @@ export default productionLogger;
 
 // Export the class for testing purposes
 export { ProductionLogger };
+=======
+// Production logger utility
+export const productionLogger = {
+  log: (message: string, ...args: any[]): void => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log(message, ...args);
+    }
+  },
+
+  error: (message: string, ...args: any[]): void => {
+    if (process.env.NODE_ENV === 'development') {
+      console.error(message, ...args);
+    }
+  },
+
+  warn: (message: string, ...args: any[]): void => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(message, ...args);
+    }
+  },
+
+  info: (message: string, ...args: any[]): void => {
+    if (process.env.NODE_ENV === 'development') {
+      console.info(message, ...args);
+    }
+  }
+};
+
+// Export the specific function that's being imported
+export const logErrorToProduction = (error: Error | string, context?: string): void => {
+  const errorMessage = error instanceof Error ? error.message : error;
+  const fullMessage = context ? `${context}: ${errorMessage}` : errorMessage;
+  
+  if (process.env.NODE_ENV === 'development') {
+    console.error('[PRODUCTION LOGGER]', fullMessage);
+  }
+  
+  // In production, you might want to send this to an error tracking service
+  // like Sentry, LogRocket, etc.
+};
+
+export default productionLogger;
+>>>>>>> 92e78fe0fa97c23b26e9c757f0eb6a5609cf6432
