@@ -3,8 +3,23 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8472
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 const navigation = {
   main: [
     { name: 'About', href: '/about' },
@@ -37,14 +52,30 @@ const navigation = {
   ],
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 
 <<<<<<< HEAD
 =======
 >>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> cursor/create-and-deploy-new-content-8472
+<<<<<<< HEAD
 =======
 >>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-white/10">
