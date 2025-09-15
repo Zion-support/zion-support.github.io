@@ -103,40 +103,30 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </a>
-              <a href="/blog/sovereign-ai-commerce-2025" className="btn-secondary hover-lift">
-                📰 New: Sovereign AI Commerce 2025
+              <a href="/blog/ai-governance-framework-2025" className="btn-secondary hover-lift">
+                📰 New: AI Governance Framework 2025
               </a>
-              <a href="/blog/agent-safety-evaluation-2025" className="btn-secondary hover-lift">
-                ✅ New: Agent Safety Evaluation 2025
+              <a href="/blog/agent-safety-red-teaming-2025" className="btn-secondary hover-lift">
+                ✅ New: Agent Safety Red Teaming 2025
+              </a>
+              <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
+                🔬 New: Foundation Models 2025
               </a>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Promo Banner - New Articles */}
-      <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
-        <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
-          <a
-            href="/blog/agent-safety-red-teaming-2025"
-            className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
-          >
-=======
-=======
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="glass-effect rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
               <p className="text-sm uppercase tracking-wider text-blue-300 mb-2">What's New</p>
-              <h3 className="text-2xl md:text-3xl font-bold mb-2">ZionGPT 2.0, Multi-region Blue/Green, Continuous ASM</h3>
-              <p className="text-white/70">Catch up on our latest AI, DevOps, and Security updates rolling out this quarter.</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-2">AI Governance Framework 2025 & Agent Safety Red Teaming</h3>
+              <p className="text-white/70">Latest AI governance frameworks and safety playbooks now available for enterprise deployment.</p>
             </div>
-            <a href="/news" className="btn-primary whitespace-nowrap">Read the updates →</a>
+            <a href="/blog" className="btn-primary whitespace-nowrap">Read the updates →</a>
           </div>
         </div>
       </section>
