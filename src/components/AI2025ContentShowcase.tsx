@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025ContentShowcase() {
   const contentItems = [
@@ -101,12 +101,12 @@ export default function AI2025ContentShowcase() {
                   <div className="text-2xl font-bold text-gray-900">
                     {item.stats}
                   </div>
-                  <Link
+                  <a
                     href={item.link}
                     className={`bg-gradient-to-r ${item.color} text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
                   >
                     Explore →
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function AI2025ContentShowcase() {
         </div>
 
         <div className="text-center mt-12">
-          <Link
+          <a
             href="/content-showcase"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
@@ -122,7 +122,7 @@ export default function AI2025ContentShowcase() {
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

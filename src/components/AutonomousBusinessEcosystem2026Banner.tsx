@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AutonomousBusinessEcosystem2026Banner = () => {
   return (
@@ -53,18 +53,18 @@ const AutonomousBusinessEcosystem2026Banner = () => {
           
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/autonomous-business-ecosystem-2026"
               className="bg-gradient-to-r from-blue-400 to-green-400 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-500 hover:to-green-500 transition-all duration-300 transform hover:scale-105"
             >
               Build Your Ecosystem →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/autonomous-business-ecosystem-2026/case-studies"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
               View Case Studies
-            </Link>
+            </a>
           </div>
           
           {/* Ecosystem stats */}

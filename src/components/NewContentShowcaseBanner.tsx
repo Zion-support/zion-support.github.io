@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function NewContentShowcaseBanner() {
   return (
@@ -28,7 +28,7 @@ export default function NewContentShowcaseBanner() {
             <div className="text-3xl mb-3">🚀</div>
             <h3 className="text-xl font-bold mb-2">AI 2025 Ultimate Revolution</h3>
             <p className="text-sm opacity-90 mb-4">Breakthrough technologies delivering 2,500-10,000% ROI</p>
-            <Link 
+            <a 
               href="/ai-2025-ultimate-breakthrough-revolution"
               className="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold text-sm transition-colors"
             >
@@ -36,14 +36,14 @@ export default function NewContentShowcaseBanner() {
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
             <div className="text-3xl mb-3">🌌</div>
             <h3 className="text-xl font-bold mb-2">Quantum-Neural Fusion</h3>
             <p className="text-sm opacity-90 mb-4">Revolutionary convergence delivering 15,000% ROI</p>
-            <Link 
+            <a 
               href="/ai-2026-quantum-neural-fusion-breakthrough"
               className="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold text-sm transition-colors"
             >
@@ -51,14 +51,14 @@ export default function NewContentShowcaseBanner() {
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
             <div className="text-3xl mb-3">🧠</div>
             <h3 className="text-xl font-bold mb-2">Transcendent Intelligence</h3>
             <p className="text-sm opacity-90 mb-4">Consciousness-level AI with infinite scalability</p>
-            <Link 
+            <a 
               href="/ai-2030-transcendent-intelligence"
               className="inline-flex items-center text-yellow-300 hover:text-yellow-200 font-semibold text-sm transition-colors"
             >
@@ -66,23 +66,23 @@ export default function NewContentShowcaseBanner() {
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link 
+          <a 
             href="/content-showcase" 
             className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             View All Content
-          </Link>
-          <Link 
+          </a>
+          <a 
             href="/contact" 
             className="px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-white hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105"
           >
             Get Started Today
-          </Link>
+          </a>
         </div>
       </div>
 

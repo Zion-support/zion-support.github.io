@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const DataRevolutionContentShowcase2025 = () => {
   const [activeCategorysetActiveCategory] = useState('all');
@@ -217,12 +217,12 @@ const DataRevolutionContentShowcase2025 = () => {
                 </div>
 
                 {/* Action Button */}
-                <Link
+                <a
                   href={item.url}
                   className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Read {item.type === 'case-study' ? 'Case Study' : item.type === 'resource' ? 'Guide' : 'Article'}
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -238,18 +238,18 @@ const DataRevolutionContentShowcase2025 = () => {
               Join 500+ companies already achieving unprecedented ROI with our proven AI data transformation solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Free Assessment
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Explore Our Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

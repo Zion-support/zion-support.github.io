@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
   const [currentContent, setCurrentContent] = useState(0);
@@ -125,18 +125,18 @@ const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-              <Link
+              <a
                 href={current.url}
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Explore {current.category}
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies"
                 className="bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition-all duration-300 border border-white/30"
               >
                 View All Success Stories
-              </Link>
+              </a>
             </div>
 
             {/* Category Indicator */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026UltimateBreakthroughPredictionsBanner() {
   return (
@@ -73,7 +73,7 @@ export default function AI2026UltimateBreakthroughPredictionsBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/ai-2026-ultimate-breakthrough-predictions"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold text-lg rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
@@ -81,19 +81,19 @@ export default function AI2026UltimateBreakthroughPredictionsBanner() {
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-2026-quantum-neural-fusion-breakthrough"
               className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold text-lg rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               Quantum-Neural Fusion
-            </Link>
-            <Link
+            </a>
+            <a
               href="/webinars/ai-2026-predictions-demo"
               className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold text-lg rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               Watch Demo
-            </Link>
+            </a>
           </div>
 
           {/* Timeline preview */}

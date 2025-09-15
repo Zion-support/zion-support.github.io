@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function RevolutionaryContentPromotionBanner() {
   const [isVisiblesetIsVisible] = useState(true);
@@ -69,12 +69,12 @@ export default function RevolutionaryContentPromotionBanner() {
           </div>
           
           <div className="flex items-center space-x-4">
-            <Link
+            <a
               href={current.link}
               className={`bg-gradient-to-r ${current.color} text-white px-6 py-2 rounded-full text-sm font-bold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg`}
             >
               Discover Now
-            </Link>
+            </a>
             <button
               onClick={() => setIsVisible(false)}
               className="text-gray-400 hover:text-white transition-colors p-1"

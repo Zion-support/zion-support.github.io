@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   SparklesIcon, 
@@ -219,22 +219,22 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {
             <motion.div className="text-center" variants={itemVariants}>
               <div className="space-y-6">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
+                  <a
                     href="/ai-2025-ultimate-content-showcase-revolutionary-breakthrough"
                     className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25"
                   >
                     <RocketLaunchIcon className="w-6 h-6 mr-2" />
                     Explore Revolutionary Content
                     <ArrowRightIcon className="w-5 h-5 ml-2" />
-                  </Link>
+                  </a>
                   
-                  <Link
+                  <a
                     href="/ai-2025-ultimate-content-showcase-implementation-guide"
                     className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-black transition-all duration-300"
                   >
                     <CheckCircleIcon className="w-6 h-6 mr-2" />
                     Implementation Guide
-                  </Link>
+                  </a>
                 </div>
                 
                 <div className="text-center">

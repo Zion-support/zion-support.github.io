@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContentPromotionBanner2026 = () => {
   return (
@@ -54,18 +54,18 @@ const NewContentPromotionBanner2026 = () => {
           
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/ai-2026-revolution"
               className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-500 transition-all duration-300 transform hover:scale-105"
             >
               Explore AI 2026 →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/ai-2026-revolution/demo"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-all duration-300"
             >
               Try Interactive Demo
-            </Link>
+            </a>
           </div>
           
           {/* Stats */}

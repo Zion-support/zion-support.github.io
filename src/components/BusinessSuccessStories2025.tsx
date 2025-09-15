@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 import { 
   ArrowRight
@@ -223,13 +223,13 @@ const BusinessSuccessStories2025 = () => {
               </div>
 
               {/* CTA */}
-              <Link
+              <a
                 href={`/case-study/${story.id}`}
                 className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
               >
                 Read Full Case Study
                 <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
+              </a>
             </motion.div>
           ))}
         </div>
@@ -278,20 +278,20 @@ const BusinessSuccessStories2025 = () => {
             Join hundreds of companies that have transformed their business with our solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg"
             >
               Start Your Journey
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies"
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-green-600 transition-all duration-300"
             >
               <BookOpen className="w-5 h-5 mr-2" />
               View All Stories
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

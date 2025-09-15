@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2026RevolutionaryBanner = () => {
   return (
@@ -24,12 +24,12 @@ const NewContent2026RevolutionaryBanner = () => {
             <p className="text-lg opacity-90 mb-6">
               Explore revolutionary AI technologies including quantum-enhanced machine learningautonomous business systemsand multimodal AI integration.
             </p>
-            <Link 
+            <a 
               href="/blog/ai-2026-revolutionary-breakthroughs"
               className="inline-flex items-center bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Read More →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20">
@@ -38,12 +38,12 @@ const NewContent2026RevolutionaryBanner = () => {
             <p className="text-lg opacity-90 mb-6">
               Learn how quantum computing is revolutionizing business operations with exponential speed improvements and advanced optimization capabilities.
             </p>
-            <Link 
+            <a 
               href="/blog/quantum-computing-business-applications-2026"
               className="inline-flex items-center bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Read More →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20">
@@ -52,12 +52,12 @@ const NewContent2026RevolutionaryBanner = () => {
             <p className="text-lg opacity-90 mb-6">
               Discover how autonomous enterprise systems are creating self-managing organizations that adapt and optimize without human intervention.
             </p>
-            <Link 
+            <a 
               href="/blog/autonomous-enterprise-systems-2026"
               className="inline-flex items-center bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Read More →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -68,18 +68,18 @@ const NewContent2026RevolutionaryBanner = () => {
               See how Fortune 500 companies are achieving extraordinary results with our AI and quantum computing solutions.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Link 
+              <a 
                 href="/case-studies/fortune-500-ai-transformation"
                 className="inline-flex items-center bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Fortune 500: $2.3B Revenue Increase →
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/case-studies/quantum-computing-logistics-optimization"
                 className="inline-flex items-center bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Quantum Logistics: 40% Cost Reduction →
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025FutureTrendsShowcase = () => {
   const trendItems = [
@@ -70,7 +70,7 @@ const NewContent2025FutureTrendsShowcase = () => {
                 <div className="text-sm text-gray-500">
                   Timeline: <span className="font-semibold text-gray-700">{item.timeline}</span>
                 </div>
-                <Link 
+                <a 
                   href="/ai-2025-2026-ultimate-breakthrough"
                   className="inline-flex items-center text-emerald-600 hover:text-emerald-800 font-medium transition-colors duration-200"
                 >
@@ -78,19 +78,19 @@ const NewContent2025FutureTrendsShowcase = () => {
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
         </div>
         
         <div className="text-center mt-12">
-          <Link 
+          <a 
             href="/ai-2025-2026-ultimate-breakthrough"
             className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-emerald-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
           >
             Explore All Future Trends
-          </Link>
+          </a>
         </div>
       </div>
     </div>

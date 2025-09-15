@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContent2025RevolutionaryBanner = () => {
   return (
@@ -64,24 +64,24 @@ const UltimateContent2025RevolutionaryBanner = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/blog/ai-2025-2026-ultimate-trends-revolutionary-breakthrough"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Read Ultimate Trends Guide
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies/fortune-500-ai-transformation-ultimate-success-2025-2026"
               className="bg-white text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               View Success Story
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources/ai-2025-2026-implementation-ultimate-master-guide"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Get Implementation Guide
-            </Link>
+            </a>
           </div>
 
           {/* Stats */}

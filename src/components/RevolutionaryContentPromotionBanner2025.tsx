@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarBookOpenPlayZapBrainTrendingUpUsersTargetCheckCircleAwardDollarSign
 
 interface RevolutionaryContentPromotionBanner2025Props {
@@ -74,7 +74,7 @@ export default function RevolutionaryContentPromotionBanner2025({
 
             {/* Featured Content Grid */}
             <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <Link 
+              <a 
                 href="/blog/ai-2025-enterprise-automation-revolution"
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
@@ -88,9 +88,9 @@ export default function RevolutionaryContentPromotionBanner2025({
                 <div className="flex items-center text-cyan-400 text-sm font-medium">
                   Read Article <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </Link>
+              </a>
 
-              <Link 
+              <a 
                 href="/case-studies/ai-2025-global-enterprise-transformation-ultimate-success"
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
@@ -104,9 +104,9 @@ export default function RevolutionaryContentPromotionBanner2025({
                 <div className="flex items-center text-purple-400 text-sm font-medium">
                   View Case Study <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </Link>
+              </a>
 
-              <Link 
+              <a 
                 href="/resources/ai-2025-implementation-quick-start-guide"
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
@@ -120,7 +120,7 @@ export default function RevolutionaryContentPromotionBanner2025({
                 <div className="flex items-center text-pink-400 text-sm font-medium">
                   Get Started <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </Link>
+              </a>
             </div>
 
             {/* Stats */}
@@ -145,20 +145,20 @@ export default function RevolutionaryContentPromotionBanner2025({
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link 
+              <a 
                 href={currentContent.buttonHref}
                 className="px-8 py-4 bg-white text-gray-900 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 flex items-center"
               >
                 {currentContent.buttonText}
                 <ArrowRight className="h-5 w-5 ml-2" />
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href={currentContent.secondaryButtonHref}
                 className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 hover:scale-105 flex items-center"
               >
                 {currentContent.secondaryButtonText}
                 <Play className="h-5 w-5 ml-2" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -175,13 +175,13 @@ export default function RevolutionaryContentPromotionBanner2025({
               <h3 className="text-xl font-bold text-white mb-2">{currentContent.title}</h3>
               <p className="text-white/90 text-sm">{currentContent.description}</p>
             </div>
-            <Link 
+            <a 
               href={currentContent.buttonHref}
               className="ml-6 px-6 py-2 bg-white/20 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/30 transition-colors flex items-center"
             >
               {currentContent.buttonText}
               <ArrowRight className="h-4 w-4 ml-1" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -215,13 +215,13 @@ export default function RevolutionaryContentPromotionBanner2025({
             ))}
           </div>
 
-          <Link 
+          <a 
             href={currentContent.buttonHref}
             className="inline-flex items-center px-8 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
           >
             {currentContent.buttonText}
             <ArrowRight className="h-5 w-5 ml-2" />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

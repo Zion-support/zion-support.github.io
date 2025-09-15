@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { getFeaturedBlogPosts, getRecentBlogPosts } from '@/data/blog-posts';
 
 const ContentPromotionBanner: React.FC = () => {
@@ -23,11 +23,11 @@ const ContentPromotionBanner: React.FC = () => {
       </p>
       <div className="flex flex-wrap justify-center gap-3">
         {picks.map((item) => (
-          <Link key={item.href} href={item.href} className="inline-block bg-white text-green-600 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
+          <a key={item.href} href={item.href} className="inline-block bg-white text-green-600 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
             <span className="mr-1">{item.emoji}</span>
             {item.label}
             <span className="ml-1">→</span>
-          </Link>
+          </a>
         ))}
       </div>
     </div>

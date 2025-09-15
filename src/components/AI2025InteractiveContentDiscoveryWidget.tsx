@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025InteractiveContentDiscoveryWidget() {
   const [selectedCategorysetSelectedCategory] = useState('all');
@@ -200,12 +200,12 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
                 </div>
 
                 {/* CTA Button */}
-                <Link 
+                <a 
                   href={item.url}
                   className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
                   {item.type === 'blog' ? 'Read Article' : item.type === 'case-study' ? 'View Case Study' : 'Access Guide'}
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -234,18 +234,18 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
               Our AI experts can help you find the perfect content for your specific needs and goals.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link 
+              <a 
                 href="/contact"
                 className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
                 Get Personalized Recommendations
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/blog"
                 className="bg-white border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
               >
                 Browse All Content
-              </Link>
+              </a>
             </div>
           </div>
         </div>

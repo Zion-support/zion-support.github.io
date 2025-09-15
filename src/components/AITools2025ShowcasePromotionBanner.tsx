@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AITools2025ShowcasePromotionBanner() {
   return (
@@ -25,18 +25,18 @@ export default function AITools2025ShowcasePromotionBanner() {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link 
+          <a 
             href="/ai-tools-2025-ultimate-showcase"
             className="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg text-center"
           >
             Explore Tools
-          </Link>
-          <Link 
+          </a>
+          <a 
             href="/tools/ai-2025-roi-calculator"
             className="bg-transparent border-2 border-white text-white px-6 py-2 rounded-lg font-semibold text-sm hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 text-center"
           >
             Try ROI Calculator
-          </Link>
+          </a>
         </div>
       </div>
       

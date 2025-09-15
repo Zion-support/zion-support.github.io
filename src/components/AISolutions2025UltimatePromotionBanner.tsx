@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AISolutions2025UltimatePromotionBanner = () => {
   return (
@@ -71,7 +71,7 @@ const AISolutions2025UltimatePromotionBanner = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/ai-solutions-2025-ultimate"
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-bold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-lg shadow-2xl transform hover:scale-105 inline-flex items-center justify-center"
             >
@@ -79,8 +79,8 @@ const AISolutions2025UltimatePromotionBanner = () => {
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-xl font-bold hover:bg-cyan-400 hover:text-black transition-all duration-300 text-lg inline-flex items-center justify-center"
             >
@@ -88,7 +88,7 @@ const AISolutions2025UltimatePromotionBanner = () => {
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
-            </Link>
+            </a>
           </div>
 
           {/* Limited Time Offer */}

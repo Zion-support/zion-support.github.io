@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentItem {
   id: string;
@@ -172,25 +172,25 @@ const AutonomousEnterprise2025PromotionBanner: React.FC = () => {
 
             {/* Action buttons */}
             <div className="flex items-center space-x-4">
-              <Link
+              <a
                 href={currentItem.url}
                 className="bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center space-x-2"
               >
                 <span>Read Now</span>
                 <span>→</span>
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources/autonomous-enterprise-implementation-guide-2025-40000-roi"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
               >
                 Implementation Guide
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies"
                 className="border-2 border-white border-opacity-50 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition-colors"
               >
                 View All Case Studies
-              </Link>
+              </a>
             </div>
           </div>
 

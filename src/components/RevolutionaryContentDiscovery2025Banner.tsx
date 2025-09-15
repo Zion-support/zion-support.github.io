@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapShieldGlobeTrendingUpStarUsers
 
 export default function RevolutionaryContentDiscovery2025Banner() {
@@ -112,7 +112,7 @@ export default function RevolutionaryContentDiscovery2025Banner() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
+              <a
                 href="/blog/ai-2025-latest-innovations-showcase"
                 className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
               >
@@ -121,8 +121,8 @@ export default function RevolutionaryContentDiscovery2025Banner() {
                   Explore Latest Innovations
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </span>
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/case-studies/ai-2025-mega-enterprise-transformation-success"
                 className="group border-2 border-white/30 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
               >
@@ -131,23 +131,23 @@ export default function RevolutionaryContentDiscovery2025Banner() {
                   View Success Stories
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </span>
-              </Link>
+              </a>
             </div>
 
             {/* Additional Links */}
             <div className="flex flex-wrap justify-center gap-8 text-white/60">
-              <Link href="/ai-tools" className="hover:text-white transition-colors flex items-center">
+              <a href="/ai-tools" className="hover:text-white transition-colors flex items-center">
                 <Zap className="w-4 h-4 mr-2" />
                 AI Tools
-              </Link>
-              <Link href="/guides" className="hover:text-white transition-colors flex items-center">
+              </a>
+              <a href="/guides" className="hover:text-white transition-colors flex items-center">
                 <Brain className="w-4 h-4 mr-2" />
                 Implementation Guides
-              </Link>
-              <Link href="/contact" className="hover:text-white transition-colors flex items-center">
+              </a>
+              <a href="/contact" className="hover:text-white transition-colors flex items-center">
                 <Users className="w-4 h-4 mr-2" />
                 Get Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>

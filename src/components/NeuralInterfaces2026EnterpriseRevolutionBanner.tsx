@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NeuralInterfaces2026EnterpriseRevolutionBanner: React.FC = () => {
   return (
@@ -103,18 +103,18 @@ const NeuralInterfaces2026EnterpriseRevolutionBanner: React.FC = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/blog/neural-interfaces-2026-enterprise-revolution-complete-guide"
               className="bg-gradient-to-r from-emerald-400 to-cyan-500 text-black px-8 py-4 rounded-lg font-semibold hover:from-emerald-500 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             >
               Read Complete Guide →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/neural-interfaces"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-900 transition-colors"
             >
               Start Neural Transformation
-            </Link>
+            </a>
           </div>
 
           {/* Trust indicators */}

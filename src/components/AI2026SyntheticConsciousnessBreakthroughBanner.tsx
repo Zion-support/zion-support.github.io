@@ -1,6 +1,6 @@
 "use client";
 import React{ useStateuseEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2026SyntheticConsciousnessBreakthroughBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(true);
@@ -127,18 +127,18 @@ const AI2026SyntheticConsciousnessBreakthroughBanner: React.FC = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <Link
+                <a
                   href={currentContent.url}
                   className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Explore Consciousness Guide →
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/contact"
                   className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-xl font-semibold transition-all duration-300"
                 >
                   Schedule AGI Consultation
-                </Link>
+                </a>
               </div>
             </div>
           </div>

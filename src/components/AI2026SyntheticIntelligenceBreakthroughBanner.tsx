@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRightIcon, SparklesIcon, LightBulbIcon, HeartIcon, BrainIcon } from '@heroicons/react/24/outline';
 
 const AI2026SyntheticIntelligenceBreakthroughBanner = () => {
@@ -53,19 +53,19 @@ const AI2026SyntheticIntelligenceBreakthroughBanner = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/blog/ai-2026-synthetic-intelligence-breakthrough"
               className="inline-flex items-center bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Discover Synthetic Intelligence
               <ArrowRightIcon className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/synthetic-intelligence-solutions"
               className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-violet-900 px-8 py-4 rounded-xl font-semibold transition-all duration-300"
             >
               Explore AI Solutions
-            </Link>
+            </a>
           </div>
         </div>
         

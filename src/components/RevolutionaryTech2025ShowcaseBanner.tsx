@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryTech2025ShowcaseBanner = () => {
   return (
@@ -45,12 +45,12 @@ const RevolutionaryTech2025ShowcaseBanner = () => {
                 <span>Computer Vision & Image Recognition</span>
               </li>
             </ul>
-            <Link 
+            <a 
               href="/services/ai-automation"
               className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore AI Solutions →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20">
@@ -79,12 +79,12 @@ const RevolutionaryTech2025ShowcaseBanner = () => {
                 <span>Financial Modeling & Risk Analysis</span>
               </li>
             </ul>
-            <Link 
+            <a 
               href="/services/quantum-computing"
               className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Discover Quantum Power →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -115,12 +115,12 @@ const RevolutionaryTech2025ShowcaseBanner = () => {
                 <span>Accessibility Solutions</span>
               </li>
             </ul>
-            <Link 
+            <a 
               href="/services/neural-interfaces"
               className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Experience Neural Tech →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20">
@@ -149,12 +149,12 @@ const RevolutionaryTech2025ShowcaseBanner = () => {
                 <span>Advanced Security & Compliance</span>
               </li>
             </ul>
-            <Link 
+            <a 
               href="/services/cloud-infrastructure"
               className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Build Cloud Future →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -165,18 +165,18 @@ const RevolutionaryTech2025ShowcaseBanner = () => {
             Get started with a free consultation and discover your transformation potential.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
             >
               Schedule Free Consultation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
             >
               Download Resources
-            </Link>
+            </a>
           </div>
         </div>
       </div>

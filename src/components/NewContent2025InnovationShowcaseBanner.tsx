@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarBrainZapAtomBot
 
 export default function NewContent2025InnovationShowcaseBanner() {
@@ -35,13 +35,13 @@ export default function NewContent2025InnovationShowcaseBanner() {
             <p className="text-gray-300 text-sm mb-4">
               Revolutionary AI technologies including quantum AI fusioneural interfacesand autonomous business systems.
             </p>
-            <Link 
+            <a 
               href="/ai-innovation-showcase-2025-2026"
               className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold text-sm"
             >
               Explore Now
               <ArrowRight className="ml-1 w-4 h-4" />
-            </Link>
+            </a>
           </div>
 
           {/* Quantum Computing Breakthrough */}
@@ -53,13 +53,13 @@ export default function NewContent2025InnovationShowcaseBanner() {
             <p className="text-gray-300 text-sm mb-4">
               Next-generation quantum processorsquantum AI fusionand unbreakable quantum cryptography systems.
             </p>
-            <Link 
+            <a 
               href="/quantum-computing-breakthrough-2025-2026"
               className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-sm"
             >
               Discover More
               <ArrowRight className="ml-1 w-4 h-4" />
-            </Link>
+            </a>
           </div>
 
           {/* Advanced Automation */}
@@ -71,31 +71,31 @@ export default function NewContent2025InnovationShowcaseBanner() {
             <p className="text-gray-300 text-sm mb-4">
               Intelligent automation solutions that work 24/7learn continuouslyand deliver unprecedented efficiency.
             </p>
-            <Link 
+            <a 
               href="/advanced-automation-solutions-2025-2026"
               className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-semibold text-sm"
             >
               Learn More
               <ArrowRight className="ml-1 w-4 h-4" />
-            </Link>
+            </a>
           </div>
         </div>
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/ai-innovation-showcase-2025-2026"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
             >
               Explore All Innovations
               <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
             >
               Get Started Today
-            </Link>
+            </a>
           </div>
         </div>
       </div>

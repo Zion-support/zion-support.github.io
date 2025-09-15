@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025UltimateBanner: React.FC = () => {
   return (
@@ -39,12 +39,12 @@ const NewContent2025UltimateBanner: React.FC = () => {
               <span className="bg-blue-600 px-3 py-1 rounded-full text-xs">500+ Projects</span>
               <span className="bg-green-600 px-3 py-1 rounded-full text-xs">98% Success</span>
             </div>
-            <Link 
+            <a 
               href="/blog/ai-2025-advanced-automation-mastery-ultimate-guide"
               className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
             >
               Read Guide →
-            </Link>
+            </a>
           </div>
 
           {/* Quantum AI Content */}
@@ -61,12 +61,12 @@ const NewContent2025UltimateBanner: React.FC = () => {
               <span className="bg-purple-600 px-3 py-1 rounded-full text-xs">99.9% Accuracy</span>
               <span className="bg-blue-600 px-3 py-1 rounded-full text-xs">Revolutionary</span>
             </div>
-            <Link 
+            <a 
               href="/blog/quantum-ai-2026-revolutionary-breakthrough-complete-guide"
               className="inline-flex items-center bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300"
             >
               Explore Breakthrough →
-            </Link>
+            </a>
           </div>
 
           {/* Case Study */}
@@ -83,12 +83,12 @@ const NewContent2025UltimateBanner: React.FC = () => {
               <span className="bg-yellow-600 px-3 py-1 rounded-full text-xs">$2.3B Growth</span>
               <span className="bg-red-600 px-3 py-1 rounded-full text-xs">Industry Leader</span>
             </div>
-            <Link 
+            <a 
               href="/case-studies/quantum-ai-fortune-500-transformation-2026-ultimate-success"
               className="inline-flex items-center bg-gradient-to-r from-green-600 to-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-yellow-700 transition-all duration-300"
             >
               Read Case Study →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -102,18 +102,18 @@ const NewContent2025UltimateBanner: React.FC = () => {
               Join the AI revolution and achieve breakthrough results like our Fortune 500 clients.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-300"
               >
                 Explore Our Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

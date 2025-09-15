@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   Play
   BookOpen
@@ -170,13 +170,13 @@ const InteractiveContentHub2025 = () => {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4">
-                    <Link 
+                    <a 
                       href="/content"
                       className="inline-flex items-center px-4 py-2 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
                     >
                       <Play className="w-4 h-4 mr-2" />
                       Watch Now
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -207,20 +207,20 @@ const InteractiveContentHub2025 = () => {
             Join our community of 25,000+ learners and unlock your potential
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/academy"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
             >
               <BookOpen className="w-5 h-5 mr-2" />
               Browse All Content
               <ChevronRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/free-trial"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300"
             >
               Start Free Trial
-            </Link>
+            </a>
           </div>
         </div>
       </div>

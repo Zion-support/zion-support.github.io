@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 SearchFilterGridListStarClockTrendingUpArrowRightEyeBookOpenPlayDownload
 
 const InteractiveContentDiscovery2026PromotionBanner = () => {
@@ -181,13 +181,13 @@ const InteractiveContentDiscovery2026PromotionBanner = () => {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <Link
+            <a
               href="/interactive-content-discovery-2026"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-xl hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
             >
               Explore Content Library
               <ArrowRight className="w-5 h-5" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

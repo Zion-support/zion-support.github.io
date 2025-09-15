@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryAIServices2026: React.FC = () => {
   const services = [
@@ -83,18 +83,18 @@ const RevolutionaryAIServices2026: React.FC = () => {
               </div>
 
               <div className="flex space-x-4">
-                <Link
+                <a
                   href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className={`flex-1 bg-gradient-to-r ${service.gradient} text-white px-6 py-3 rounded-lg font-semibold text-center hover:opacity-90 transition-all duration-300`}
                 >
                   Learn More
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/contact"
                   className="flex-1 border-2 border-white border-opacity-30 text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white hover:bg-opacity-10 transition-all duration-300"
                 >
                   Get Quote
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -110,18 +110,18 @@ const RevolutionaryAIServices2026: React.FC = () => {
               Join the AI revolution and secure your competitive advantage for the next decade.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
                 Schedule Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/demo"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:bg-opacity-10 transition-all duration-300"
               >
                 Request Demo
-              </Link>
+              </a>
             </div>
           </div>
           

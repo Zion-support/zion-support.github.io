@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateAI2025ContentShowcase = () => {
   const [activeCategorysetActiveCategory] = useState('all');
@@ -170,12 +170,12 @@ const UltimateAI2025ContentShowcase = () => {
                     ))}
                   </div>
                   
-                  <Link
+                  <a
                     href={item.url}
                     className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                   >
                     Read More
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
@@ -239,12 +239,12 @@ const UltimateAI2025ContentShowcase = () => {
                   ))}
                 </div>
                 
-                <Link
+                <a
                   href={item.url}
                   className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                 >
                   {item.type === 'blog' ? 'Read Article' : item.type === 'case-study' ? 'Read Case Study' : 'Download Guide'}
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -258,18 +258,18 @@ const UltimateAI2025ContentShowcase = () => {
               Join thousands of companies already achieving extraordinary results with our proven AI framework.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors duration-300"
               >
                 Schedule Free Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
                 Browse All Resources
-              </Link>
+              </a>
             </div>
           </div>
         </div>

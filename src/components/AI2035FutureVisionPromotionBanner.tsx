@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   Brain
   Zap
@@ -71,14 +71,14 @@ export default function AI2035FutureVisionPromotionBanner() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <Link 
+          <a 
             href="/ai-2035-future-vision"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
           >
             <Rocket className="w-5 h-5" />
             Explore AI 2035 Future Vision
             <ArrowRight className="w-5 h-5" />
-          </Link>
+          </a>
           
           <p className="text-gray-400 text-sm mt-4">
             Join thousands exploring the future of artificial intelligence

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightSparklesTrendingUpUsersClock
 
 export default function NewContent2025PromotionBanner() {
@@ -51,21 +51,21 @@ export default function NewContent2025PromotionBanner() {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
+                <a
                   href="/blog/ai-2025-latest-innovations"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
                 >
                   <TrendingUp className="w-5 h-5 mr-2" />
                   Read Latest Innovations
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/case-studies/ai-2025-global-tech-transformation-mega-success"
                   className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
                 >
                   <Users className="w-5 h-5 mr-2" />
                   View Success Stories
-                </Link>
+                </a>
               </div>
             </div>
             
@@ -90,12 +90,12 @@ export default function NewContent2025PromotionBanner() {
                     <Clock className="w-4 h-4 mr-1" />
                     5 min read
                   </div>
-                  <Link
+                  <a
                     href="/blog/ai-2025-latest-innovations"
                     className="text-yellow-400 hover:text-yellow-300 text-sm font-medium"
                   >
                     Read More →
-                  </Link>
+                  </a>
                 </div>
               </div>
               
@@ -118,12 +118,12 @@ export default function NewContent2025PromotionBanner() {
                     <Users className="w-4 h-4 mr-1" />
                     500K+ employees
                   </div>
-                  <Link
+                  <a
                     href="/case-studies/ai-2025-global-tech-transformation-mega-success"
                     className="text-yellow-400 hover:text-yellow-300 text-sm font-medium"
                   >
                     View Details →
-                  </Link>
+                  </a>
                 </div>
               </div>
               

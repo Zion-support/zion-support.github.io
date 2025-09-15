@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AdvancedAutomationMastery2025Banner = () => {
   const [currentContentsetCurrentContent] = useState(0);
@@ -115,18 +115,18 @@ const AdvancedAutomationMastery2025Banner = () => {
             </div>
 
             <div className="flex items-center space-x-4">
-              <Link
+              <a
                 href={currentItem.url}
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg"
               >
                 {currentItem.type === 'blog' ? 'Read Article' : currentItem.type === 'service' ? 'Explore Service' : 'Read Guide'}
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-emerald-900 px-6 py-3 rounded-lg font-semibold transition-all duration-200"
               >
                 Get Started
-              </Link>
+              </a>
             </div>
           </div>
 

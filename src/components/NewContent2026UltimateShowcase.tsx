@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 
 const NewContent2026UltimateShowcase: React.FC = () => {
@@ -114,12 +114,12 @@ const NewContent2026UltimateShowcase: React.FC = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Link
+                <a
                   href={item.href}
                   className={`block w-full bg-gradient-to-r ${item.gradient} text-white text-center py-4 rounded-lg font-bold text-lg hover:opacity-90 transform hover:scale-105 transition-all duration-300 shadow-lg`}
                 >
                   📖 Read Complete Guide
-                </Link>
+                </a>
               </div>
             </motion.div>
           ))}
@@ -140,18 +140,18 @@ const NewContent2026UltimateShowcase: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/services/ai-consulting"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-500 hover:to-blue-500 transform hover:scale-105 transition-all duration-300 shadow-lg"
             >
               🚀 Get Implementation Support
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-600 hover:text-white transform hover:scale-105 transition-all duration-300"
             >
               📞 Schedule Consultation
-            </Link>
+            </a>
           </div>
         </motion.div>
 

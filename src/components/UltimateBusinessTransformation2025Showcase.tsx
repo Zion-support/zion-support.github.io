@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateBusinessTransformation2025Showcase = () => {
   return (
@@ -184,18 +184,18 @@ const UltimateBusinessTransformation2025Showcase = () => {
             Join thousands of forward-thinking companies that have already transformed their operations with our Ultimate Business Transformation 2025 solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
+            <a
               href="/ultimate-business-transformation-2025"
               className="bg-gradient-to-r from-cyan-400 to-blue-400 text-black px-10 py-4 rounded-lg font-bold text-xl hover:from-cyan-500 hover:to-blue-500 transition-all duration-300 transform hover:scale-105"
             >
               Start Transformation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/transformation-case-studies"
               className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-black transition-all duration-300"
             >
               View Case Studies
-            </Link>
+            </a>
           </div>
           
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryAI2025ContentBanner = () => {
   return (
@@ -47,12 +47,12 @@ const RevolutionaryAI2025ContentBanner = () => {
               ultra-low latency processingand real-world implementation strategies that are transforming industries.
             </p>
             <div className="flex items-center justify-between">
-              <Link 
+              <a 
                 href="/blog/ai-2025-edge-computing-revolution-ultimate-guide"
                 className="inline-flex items-center text-yellow-400 hover:text-yellow-300 font-semibold text-lg"
               >
                 Read Complete Guide →
-              </Link>
+              </a>
               <div className="text-sm opacity-80">
                 <span className="font-semibold">15 min read</span>
               </div>
@@ -80,12 +80,12 @@ const RevolutionaryAI2025ContentBanner = () => {
               and intent. Learn how to implement chatbots and voice assistants that deliver truly human-like experiences.
             </p>
             <div className="flex items-center justify-between">
-              <Link 
+              <a 
                 href="/blog/ai-2025-conversational-ai-revolution-enterprise-transformation"
                 className="inline-flex items-center text-yellow-400 hover:text-yellow-300 font-semibold text-lg"
               >
                 Explore Now →
-              </Link>
+              </a>
               <div className="text-sm opacity-80">
                 <span className="font-semibold">12 min read</span>
               </div>
@@ -130,12 +130,12 @@ const RevolutionaryAI2025ContentBanner = () => {
           </div>
 
           <div className="text-center">
-            <Link
+            <a
               href="/resources/ai-2025-implementation-complete-roadmap"
               className="inline-flex items-center bg-black text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-800 transition-colors"
             >
               Download Complete Roadmap →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -181,18 +181,18 @@ const RevolutionaryAI2025ContentBanner = () => {
             revolutionary AI technologies and transforming their industries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-10 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300"
             >
               Get Expert Consultation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services"
               className="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-black transition-all duration-300"
             >
               Explore All Services
-            </Link>
+            </a>
           </div>
         </div>
       </div>

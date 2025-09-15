@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const InnovationShowcase2025 = () => {
   const [activeTabsetActiveTab] = useState('ai');
@@ -159,7 +159,7 @@ const InnovationShowcase2025 = () => {
               </div>
 
               <div className="mt-6">
-                <Link
+                <a
                   href={`/services/${activeTab}/${index + 1}`}
                   className="w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
                 >
@@ -167,7 +167,7 @@ const InnovationShowcase2025 = () => {
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -183,18 +183,18 @@ const InnovationShowcase2025 = () => {
             revolutionary technology solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
             >
               Get Started Today
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors border-2 border-blue-600"
             >
               View Case Studies
-            </Link>
+            </a>
           </div>
         </div>
       </div>
