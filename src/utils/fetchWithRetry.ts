@@ -1,48 +1,60 @@
-// Fetch with retry utility for better error handling
+// Fetch utility with retry logic and error handling
+
 interface FetchWithRetryOptions {
   retries?: number;
-  delay?: number;
+  retryDelay?: number;
   timeout?: number;
+  headers?: Record<string, string>;
 }
 
 export const fetchWithRetry = async (
   url: string,
   options: RequestInit & FetchWithRetryOptions = {}
 ): Promise<Response> => {
-  const { retries = 3, delay = 1000, timeout = 10000, ...fetchOptions } = options;
-  
-  let lastError: Error;
-  
-  for (let attempt = 0; attempt <= retries; attempt++) {
+  const {
+    retries = 3,
+    retryDelay = 1000,
+    timeout = 10000,
+    headers = {},
+    ...fetchOptions
+  } = options;
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+  const attemptFetch = async (attempt: number): Promise<Response> => {
     try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), timeout);
-      
       const response = await fetch(url, {
         ...fetchOptions,
+        headers: {
+          'Content-Type': 'application/json',
+          ...headers,
+          ...fetchOptions.headers,
+        },
         signal: controller.signal,
       });
-      
+
       clearTimeout(timeoutId);
-      
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      
+
       return response;
     } catch (error) {
-      lastError = error as Error;
-      
-      if (attempt === retries) {
-        throw lastError;
+      clearTimeout(timeoutId);
+
+      if (attempt < retries) {
+        console.warn(`Fetch attempt ${attempt + 1} failed, retrying in ${retryDelay}ms:`, error);
+        await new Promise(resolve => setTimeout(resolve, retryDelay * attempt));
+        return attemptFetch(attempt + 1);
       }
-      
-      // Wait before retrying
-      await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
+
+      throw error;
     }
-  }
-  
-  throw lastError!;
+  };
+
+  return attemptFetch(0);
 };
 
 export default fetchWithRetry;
