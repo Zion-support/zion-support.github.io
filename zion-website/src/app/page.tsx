@@ -1,4 +1,5 @@
 import React from 'react'
+import { siteUpdates } from '../data/updates'
 import {
   LightBulbIcon,
   CpuChipIcon,
@@ -119,25 +120,14 @@ export default function HomePage() {
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-            {[
-              {
-                title: 'New Course: Advanced Blockchain Development',
-                summary:
-                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
-                href: '/updates'
-              },
-              {
-                title: 'Community Challenge: Build a DApp',
-                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-                href: '/updates'
-              },
-              {
-                title: 'New Learning Path: Web3 Fundamentals',
-                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
-                href: '/updates'
-              }
-            ].map((item) => (
+            {siteUpdates.slice(0, 3).map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                {item.tag || item.date ? (
+                  <div className="mb-2 flex items-center gap-2 text-xs text-blue-300">
+                    {item.tag ? <span className="rounded-full bg-blue-500/10 px-2 py-0.5 text-blue-300">{item.tag}</span> : null}
+                    {item.date ? <time className="text-gray-400">{item.date}</time> : null}
+                  </div>
+                ) : null}
                 <h3 className="text-lg font-semibold leading-6 text-white">
                   <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
                     <span className="absolute inset-0" />
