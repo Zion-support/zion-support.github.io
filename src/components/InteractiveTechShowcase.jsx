@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -85,6 +86,8 @@ const InteractiveTechShowcase = () => {
           </motion.div>
         ))}
       </motion.div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4d2c
     </div>
   );
 };
