@@ -15,13 +15,10 @@ from app import app
 from models import db, Update, User, Category, Course
 
 def seed_updates():
-    """Seed the database with sample updates."""
+    """Seed the database with sample updates. Idempotent by title."""
     with app.app_context():
-        # Check if updates already exist
-        if Update.query.first():
-            print("Updates already exist in the database. Skipping seed.")
-            return
-        
+        existing_titles = {u.title for u in Update.query.all()}
+
         # Create sample updates
         sample_updates = [
             {
@@ -182,18 +179,51 @@ We apologize for the inconvenience and appreciate your prompt action to secure y
             }
         ]
         
-        # Create and add updates
-        for update_data in sample_updates:
+        # Additional fresh content to advertise
+        fresh_updates = [
+            {
+                'title': 'Launch: AI-Powered Career Coach',
+                'content': 'Meet your new AI Career Coach. Personalized roadmaps, interview prep, and skill gaps analysis built into Zion Academy.',
+                'summary': 'Personalized AI Career Coach now available across tracks.',
+                'update_type': 'feature',
+                'priority': 'high',
+                'created_at': datetime.utcnow()
+            },
+            {
+                'title': 'Course Refresh: Web3 Fundamentals 2025 Edition',
+                'content': 'We refreshed Web3 Fundamentals with updated modules on account abstraction, L2 ecosystems, and real-world case studies.',
+                'summary': 'Updated Web3 course with 2025 content and exercises.',
+                'update_type': 'course',
+                'priority': 'normal',
+                'created_at': datetime.utcnow()
+            },
+            {
+                'title': 'Event: Live AMA with Industry Experts',
+                'content': 'Join our live AMA featuring leaders from AI infra, blockchain security, and product design. Bring your questions.',
+                'summary': 'Live AMA event announced for next week.',
+                'update_type': 'event',
+                'priority': 'normal',
+                'created_at': datetime.utcnow()
+            }
+        ]
+
+        to_create = 0
+        for update_data in sample_updates + fresh_updates:
+            if update_data['title'] in existing_titles:
+                continue
             update = Update(**update_data)
             db.session.add(update)
-        
-        # Commit all updates
-        db.session.commit()
-        print(f"Successfully seeded {len(sample_updates)} sample updates!")
+            to_create += 1
+
+        if to_create:
+            db.session.commit()
+            print(f"Successfully seeded {to_create} updates!")
+        else:
+            print("No new updates to seed. Database is up to date.")
         
         # Print summary
-        print("\nSample updates created:")
-        for update in Update.query.all():
+        print("\nCurrent updates in database:")
+        for update in Update.query.order_by(Update.created_at.desc()).limit(10).all():
             print(f"• {update.title} ({update.priority} priority, {update.update_type})")
 
 if __name__ == '__main__':
