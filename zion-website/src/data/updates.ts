@@ -39,6 +39,9 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
   {
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
