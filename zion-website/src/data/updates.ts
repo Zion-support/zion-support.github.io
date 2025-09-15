@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Incident Response (v1.0)',
+    summary:
+      'End-to-end incident triage with real-time RAG, policy-as-code runbooks, and auditable actions.',
+    href: '/updates/autonomous-incident-response-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Secure Prompt Engineering (2025 Edition)',
+    summary:
+      'Practical strategies for prompt hardening, jailbreak resistance, and least-privilege tool-use.',
+    href: '/updates/secure-prompt-engineering-2025',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Autonomous Customer Support Copilot (v1.0)',
     summary:
       'Omnichannel support copilot with retrieval grounding, escalations, and real-time quality evals.',
