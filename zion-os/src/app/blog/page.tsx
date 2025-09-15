@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'agent-safety-evaluation-2025',
+      title: 'Agent Safety Evaluation 2025: Practical Checklists for Production AI',
+      excerpt: 'Operational guardrails, red-teaming flows, and rollback planning for agentic systems.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '7 min read',
+      image: '/blog/agent-safety-eval.jpg',
+      featured: true
+    },
+    {
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
       excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
@@ -76,6 +87,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'agent-safety-evaluation-2025',
+      title: 'Agent Safety Evaluation 2025: Practical Checklists for Production AI',
+      excerpt: 'A pragmatic safety evaluation playbook with templates and measurable safeguards.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '7 min read',
+      image: '/blog/agent-safety-eval.jpg'
+    },
     {
       id: 'edge-ai-marketplaces',
       title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',

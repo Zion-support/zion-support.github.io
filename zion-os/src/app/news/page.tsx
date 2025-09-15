@@ -9,6 +9,13 @@ export const metadata = {
 const latest2025 = [
   {
     date: "September 15, 2025",
+    category: "RESEARCH",
+    title: "Agent Safety Evaluation Playbook released for enterprise teams",
+    slug: "/blog/agent-safety-evaluation-2025",
+    color: "cyan",
+  },
+  {
+    date: "September 15, 2025",
     category: "AI",
     title: "ZionGPT 2.0 launches with adaptive reasoning and on-device inference",
     slug: "/news/ziongpt-2-adaptive-reasoning",

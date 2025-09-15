@@ -1,58 +1,82 @@
 {
   "pages": {
     "/_not-found/page": [
-      "static/chunks/webpack-879f858537244e02.js",
-      "static/chunks/fd9d1056-be48aeae6e94b8d1.js",
-      "static/chunks/23-17d109591ec31f31.js",
-      "static/chunks/main-app-924c9045949c844c.js",
-      "static/chunks/app/_not-found/page-846bc14f8cdb3714.js"
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/vendors-3122bd7717b9aa25.js",
+      "static/chunks/main-app-f3fb56a20223b43b.js",
+      "static/chunks/app/_not-found/page-c0bdf0bd2fb6cfba.js"
     ],
     "/layout": [
-      "static/chunks/webpack-879f858537244e02.js",
-      "static/chunks/fd9d1056-be48aeae6e94b8d1.js",
-      "static/chunks/23-17d109591ec31f31.js",
-      "static/chunks/main-app-924c9045949c844c.js",
-      "static/css/6b0427a93b429524.css",
-      "static/chunks/app/layout-17fd8ed90260e2ae.js"
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/vendors-3122bd7717b9aa25.js",
+      "static/chunks/main-app-f3fb56a20223b43b.js",
+      "static/chunks/app/layout-3fbe2b587b520fbe.js"
     ],
-    "/multiverse/launch/page": [
-      "static/chunks/webpack-879f858537244e02.js",
-      "static/chunks/fd9d1056-be48aeae6e94b8d1.js",
-      "static/chunks/23-17d109591ec31f31.js",
-      "static/chunks/main-app-924c9045949c844c.js",
-      "static/chunks/772-7cf5cbb99bb72e66.js",
-      "static/chunks/617-5d014d7b173061b6.js",
-      "static/chunks/app/multiverse/launch/page-47cfe89f0677f293.js"
+    "/ai-autonomous-systems/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/vendors-3122bd7717b9aa25.js",
+      "static/chunks/main-app-f3fb56a20223b43b.js",
+      "static/chunks/app/ai-autonomous-systems/page-5eca0668fe9c1f19.js"
+    ],
+    "/ai-solutions/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/vendors-3122bd7717b9aa25.js",
+      "static/chunks/main-app-f3fb56a20223b43b.js",
+      "static/chunks/app/ai-solutions/page-de66ba255c8407c9.js"
     ],
     "/page": [
-      "static/chunks/webpack-879f858537244e02.js",
-      "static/chunks/fd9d1056-be48aeae6e94b8d1.js",
-      "static/chunks/23-17d109591ec31f31.js",
-      "static/chunks/main-app-924c9045949c844c.js",
-      "static/chunks/app/page-76f085bbf1ae175a.js"
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/vendors-3122bd7717b9aa25.js",
+      "static/chunks/main-app-f3fb56a20223b43b.js",
+      "static/chunks/app/page-c7bb1a2a16864ad0.js"
     ],
-    "/admin/os-deploy/page": [
-      "static/chunks/webpack-879f858537244e02.js",
-      "static/chunks/fd9d1056-be48aeae6e94b8d1.js",
-      "static/chunks/23-17d109591ec31f31.js",
-      "static/chunks/main-app-924c9045949c844c.js",
-      "static/chunks/772-7cf5cbb99bb72e66.js",
-      "static/chunks/617-5d014d7b173061b6.js",
-      "static/chunks/app/admin/os-deploy/page-a6fedc5f4f31ba63.js"
+    "/research-development/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/vendors-3122bd7717b9aa25.js",
+      "static/chunks/main-app-f3fb56a20223b43b.js",
+      "static/chunks/app/research-development/page-ba49b777bd62c6f0.js"
     ],
-    "/admin/layout": [
-      "static/chunks/webpack-879f858537244e02.js",
-      "static/chunks/fd9d1056-be48aeae6e94b8d1.js",
-      "static/chunks/23-17d109591ec31f31.js",
-      "static/chunks/main-app-924c9045949c844c.js",
-      "static/chunks/app/admin/layout-6991a364e694f370.js"
+    "/blog/[id]/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/vendors-3122bd7717b9aa25.js",
+      "static/chunks/main-app-f3fb56a20223b43b.js",
+      "static/chunks/app/blog/[id]/page-ff0647c7b2e24030.js"
     ],
-    "/admin/instances/page": [
-      "static/chunks/webpack-879f858537244e02.js",
-      "static/chunks/fd9d1056-be48aeae6e94b8d1.js",
-      "static/chunks/23-17d109591ec31f31.js",
-      "static/chunks/main-app-924c9045949c844c.js",
-      "static/chunks/app/admin/instances/page-4612614990b7e86b.js"
+    "/quantum-computing/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/vendors-3122bd7717b9aa25.js",
+      "static/chunks/main-app-f3fb56a20223b43b.js",
+      "static/chunks/app/quantum-computing/page-f8b05a4c8fde5bcb.js"
+    ],
+    "/sitemap/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/vendors-3122bd7717b9aa25.js",
+      "static/chunks/main-app-f3fb56a20223b43b.js",
+      "static/chunks/app/sitemap/page-f9e0410c305882aa.js"
+    ],
+    "/team/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/vendors-3122bd7717b9aa25.js",
+      "static/chunks/main-app-f3fb56a20223b43b.js",
+      "static/chunks/app/team/page-3996c5232ea47062.js"
+    ],
+    "/news/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/vendors-3122bd7717b9aa25.js",
+      "static/chunks/main-app-f3fb56a20223b43b.js",
+      "static/chunks/app/news/page-b83d274342531dea.js"
+    ],
+    "/resources/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/vendors-3122bd7717b9aa25.js",
+      "static/chunks/main-app-f3fb56a20223b43b.js",
+      "static/chunks/app/resources/page-0e804a25932ca08f.js"
+    ],
+    "/blog/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/vendors-3122bd7717b9aa25.js",
+      "static/chunks/main-app-f3fb56a20223b43b.js",
+      "static/chunks/app/blog/page-5df58b133f8012f5.js"
     ]
   }
 }

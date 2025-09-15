@@ -11,6 +11,20 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'agent-safety-evaluation-2025': {
+    id: 'agent-safety-evaluation-2025',
+    title: 'Agent Safety Evaluation 2025: Practical Checklists for Production AI',
+    excerpt:
+      'A field-tested evaluation playbook covering red-teaming, policy probes, capability safeguards, and rollback plans for agentic systems.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '7 min read',
+    content: [
+      'Production AI agents demand continuous safety evaluation, not one-off certifications. This checklist-based guide helps teams operationalize safeguards before and after deployment.',
+      'We cover scenario design, adversarial prompts, tool-use containment, graded autonomy, and incident response. Templates and metrics make adoption fast within existing SDLCs.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
