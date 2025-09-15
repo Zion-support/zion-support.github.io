@@ -45,6 +45,7 @@ import {
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import PromotionalBanner from "@/components/PromotionalBanner";
 
 // Lazy load heavy components
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
@@ -69,6 +70,7 @@ const SecurityComplianceSection = React.lazy(() => import("@/components/Security
 const AIServicesShowcase = React.lazy(() => import("@/components/AIServicesShowcase"));
 const InteractiveTestimonials = React.lazy(() => import("@/components/InteractiveTestimonials"));
 const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase"));
+const FeaturedServicesSection = React.lazy(() => import("@/components/FeaturedServicesSection"));
 
 interface StatItem {
   value: string;
@@ -324,6 +326,9 @@ export default function Home() {
       />
       
       <div className="min-h-screen bg-futuristic">
+        {/* Promotional Banner */}
+        <PromotionalBanner />
+        
         {/* Hero Section */}
         <HeroSection />
 
@@ -551,6 +556,11 @@ export default function Home() {
             </div>
           </div>
         </motion.section>
+
+        {/* Featured Services Section */}
+        <Suspense fallback={<div className="py-20 text-center"><LoadingSpinner /></div>}>
+          <FeaturedServicesSection />
+        </Suspense>
 
         {/* Lazy Loaded Components */}
         <Suspense fallback={<div className="py-20 text-center"><LoadingSpinner /></div>}>
