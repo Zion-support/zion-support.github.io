@@ -111,6 +111,24 @@ export default function HomePage() {
         {/* Revolutionary AI Content 2026 Banner - NEW FEATURED */}
         <RevolutionaryAIContent2026Banner />
 
+        {/* Featured: New AI Strategy Article 2025 */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">Fresh content</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI Strategy 2025: 7 Practical Plays for Immediate Impact</h3>
+                <p className="text-gray-600 max-w-2xl">A concise, actionable strategy any enterprise can start this quarter to capture AI value fast with governance.</p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/blog/new-insightful-ai-strategy-2025" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+                  Read Article
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Promo: New Article - Enterprise AI Agents 2025 */}
         <section className="py-12 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
