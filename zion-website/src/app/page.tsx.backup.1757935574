@@ -148,6 +148,9 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
+<<<<<<< HEAD
+                href="/updates/ai-fundamentals-v2-1"
+=======
                 href="/updates/agent-safety-toolkit-v1"
                 className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
               >
@@ -156,6 +159,7 @@ export default function HomePage() {
               </a>
               <a
                 href="/updates/autonomous-ops-playbook-2026"
+>>>>>>> origin/cursor/create-and-deploy-new-content-1bab
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
                 Course: AI Fundamentals v2.1

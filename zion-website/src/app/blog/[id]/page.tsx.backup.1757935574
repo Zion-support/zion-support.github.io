@@ -90,9 +90,14 @@ const blogPosts: Record<string, any> = {
   }
 }
 
+<<<<<<< HEAD
+export default function BlogPostPage({ params }: any) {
+  const post = blogPosts[params.id]
+=======
 export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const post = blogPosts[id]
+>>>>>>> origin/cursor/create-and-deploy-new-content-1bab
   
   if (!post) {
     return (

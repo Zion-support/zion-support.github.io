@@ -8,28 +8,83 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
-    title: 'Guide: Real-Time Evals Starter Kit',
+<<<<<<< HEAD
+    title: 'Launch: Autonomous Ops Control Center (v2.0)',
     summary:
-      'A practical starter kit with metrics, harnesses, and examples to begin live evaluation in production.',
-    href: '/updates/real-time-evals-starter-kit',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  {
-    title: 'Launch: Agent Safety Toolkit (v1)',
-    summary:
-      'End-to-end safety reviews, red-teaming templates, and policy-as-code checks for agentic systems.',
-    href: '/updates/agent-safety-toolkit-v1',
+      'Unified observability, policy enforcement, and automated incident workflows with live evals.',
+    href: '/updates/autonomous-ops-control-center-2-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
+    title: 'Blueprint: Enterprise Agent Safety (2026)',
+    summary:
+      'Risk tiers, permissioned tools, sandboxes, approvals, and runtime safety telemetry.',
+    href: '/updates/enterprise-agent-safety-blueprint-2026',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: Compliance Auditor (v1.0)',
+    summary:
+      'Automated GenAI compliance auditing with policy-as-code, lineage, PII detection, and exportable audit reports.',
+    href: '/updates/compliance-auditor-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Agent Platform Operations (2026)',
+    summary:
+      'Reference operating model: SLOs, incident response, and eval-gated change management.',
+    href: '/updates/agent-platform-operations-2026',
+=======
+    title: 'Guide: Real-Time Evals Starter Kit',
+    summary:
+      'A practical starter kit with metrics, harnesses, and examples to begin live evaluation in production.',
+    href: '/updates/real-time-evals-starter-kit',
+>>>>>>> origin/cursor/create-and-deploy-new-content-1bab
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+<<<<<<< HEAD
+    title: 'Course: GenAI for Executives',
+    summary:
+      'Executive program on GenAI strategy, governance, risk, operating models, and ROI with practical playbooks.',
+    href: '/updates/genai-executive-course',
+    date: '2025-09-15',
+    tag: 'Course'
+  },
+  {
+    title: 'Launch: Autonomous Sales Copilot (v1.0)',
+    summary:
+      'Pipeline-aware copilot with CRM grounding, retrieval observability, and live performance evals.',
+    href: '/updates/autonomous-sales-copilot-1-0',
+=======
+    title: 'Launch: Agent Safety Toolkit (v1)',
+    summary:
+      'End-to-end safety reviews, red-teaming templates, and policy-as-code checks for agentic systems.',
+    href: '/updates/agent-safety-toolkit-v1',
+>>>>>>> origin/cursor/create-and-deploy-new-content-1bab
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+<<<<<<< HEAD
+    title: 'Guide: Evaluating Real-World RAG Latency',
+    summary:
+      'A practical guide to measure tail latency, hit rate, and answer quality in production RAG.',
+    href: '/updates/evaluating-real-world-rag-latency',
+    date: '2025-09-15',
+    tag: 'Guide'
+=======
     title: 'Report: AI Governance Maturity Model (2026 Preview)',
     summary:
       'A staged model to assess and level-up AI governance across policy, controls, and telemetry.',
     href: '/updates/ai-governance-maturity-model-2026',
     date: '2025-09-15',
     tag: 'Report'
+>>>>>>> origin/cursor/create-and-deploy-new-content-1bab
   },
   {
     title: 'Launch: Autonomous Research Copilot (v1.1)',
