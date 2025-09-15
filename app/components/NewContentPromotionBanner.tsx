@@ -7,10 +7,10 @@ const NewContentPromotionBanner: React.FC = () => {
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <div className="text-sm font-semibold text-purple-700 mb-2">Just published</div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">AI 2026: Enterprise AI Governance Blueprint</h2>
-            <p className="text-lg text-gray-600 max-w-2xl">A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly.</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">AI 2026: Agent Safety Evaluations</h2>
+            <p className="text-lg text-gray-600 max-w-2xl">Design safety scenarios, define metrics, and integrate continuous evaluation gates to ship safer autonomous agents.</p>
           </div>
-          <a href="/blog/ai-2026-enterprise-ai-governance-blueprint" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article →</a>
+          <a href="/content/ai-2026-agent-safety-evals" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Guide →</a>
         </div>
       </div>
     </div>

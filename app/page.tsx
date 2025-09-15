@@ -230,22 +230,22 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
                 <div>
-                  <div className="text-sm font-semibold text-purple-700 mb-2">Security</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise AI Security Blueprint (2025)</h3>
-                  <p className="text-gray-600">Layered controls for model, data, runtime, and supply chain risk.</p>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Governance</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise AI Governance Blueprint (2026)</h3>
+                  <p className="text-gray-600">Policy-as-code, risk tiers, and continuous evaluations for safe scale.</p>
                 </div>
                 <div className="mt-4">
-                  <Link href="/blog/ai-2025-enterprise-ai-security-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                  <Link href="/blog/ai-2026-enterprise-ai-governance-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
                 <div>
-                  <div className="text-sm font-semibold text-purple-700 mb-2">Enterprise AI</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Multimodal Agents in the Enterprise (2025)</h3>
-                  <p className="text-gray-600">Deploy agents that see, hear, and act for real outcomes.</p>
+                  <div className="text-sm font-semibold text-purple-700 mb-2">Safety</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Safety Evaluations (2026)</h3>
+                  <p className="text-gray-600">Scenarios, metrics, and gates for safer autonomous agents.</p>
                 </div>
                 <div className="mt-4">
-                  <Link href="/blog/ai-2025-multimodal-agents-in-the-enterprise" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+                  <Link href="/content/ai-2026-agent-safety-evals" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
                 </div>
               </div>
               <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
