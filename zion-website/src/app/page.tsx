@@ -121,19 +121,19 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-                title: 'New Course: Advanced Blockchain Development',
+                title: 'New Course: GenAI Prompt Engineering Mastery',
                 summary:
-                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
+                  'Hands-on course on effective prompting, RAG, tool-use, and guardrails.',
                 href: '/updates'
               },
               {
-                title: 'Community Challenge: Build a DApp',
-                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
+                title: 'Report Released: 2025 State of AI Adoption',
+                summary: 'New research report on enterprise AI ROI, top use cases, and challenges.',
                 href: '/updates'
               },
               {
-                title: 'New Learning Path: Web3 Fundamentals',
-                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
+                title: 'Scholarships: 1,000 Seats for Underrepresented Learners',
+                summary: 'Apply now for full scholarships in AI and Blockchain tracks (3 weeks left).',
                 href: '/updates'
               }
             ].map((item) => (
