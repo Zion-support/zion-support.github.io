@@ -11,6 +11,21 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-safety-governance-2025': {
+    id: 'ai-safety-governance-2025',
+    title: 'AI Safety and Governance 2025: Practical Guardrails for Autonomous Systems',
+    excerpt:
+      'A field guide to implementing measurable, enforceable safety guardrails across autonomous AI systems at scale.',
+    category: 'AI Ethics',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'As autonomy increases, organizations need concrete safety and governance measures that go beyond policy documents. This guide introduces a practical framework for guardrails that can be implemented, monitored, and audited.',
+      'We cover policy-as-code, graded permissions, human-in-the-loop break‑glass controls, red-teaming pipelines, and incident postmortems tailored for AI behavior. Each control is mapped to measurable indicators and automated checks.',
+      'We conclude with a rollout plan that progressively increases autonomy only when safety signals remain within thresholds, ensuring reliability while preserving innovation velocity.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
