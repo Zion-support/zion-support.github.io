@@ -24,6 +24,30 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Blueprint'
   },
   {
+    title: 'Guide: Agents-On-Call Playbooks (2026)',
+    summary:
+      'Design eval-gated incident playbooks for autonomous triage, mitigation, and escalation.',
+    href: '/updates/agents-oncall-playbooks',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Blueprint: Agent Observability (v1)',
+    summary:
+      'Tracing, metrics, and evaluations to monitor autonomous systems end-to-end.',
+    href: '/updates/agent-observability-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: Autonomous Finance OS (Preview)',
+    summary:
+      'Real-time close, policy-as-code controls, and automated reconciliations for finance.',
+    href: '/updates/autonomous-finance-os-preview',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Launch: AI Governance Toolkit (v2)',
     summary:
       'Policy-as-code templates, audit trails, and automated guardrails for enterprise AI programs.',
