@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Marketing Copilot v1.0',
+    summary:
+      'Plan campaigns, generate assets, and auto‑schedule posts with policy guardrails and live evals.',
+    href: '/updates/autonomous-marketing-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Enterprise Agent Risk Playbook (2026 Preview)',
+    summary:
+      'Unified taxonomy, scorecards, and mitigation patterns to operationalize agent risk management.',
+    href: '/updates/enterprise-agent-risk-playbook-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: AI Incident Simulator v1.1',
     summary:
       'New scenarios, live eval gates, and evidence exports to harden agent systems.',
