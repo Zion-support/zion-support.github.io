@@ -668,6 +668,21 @@ content_index:
         rollback_time: "< 5 min"
         conversion_lift: "+8%"
 
+    - id: "ai-2026-secure-agent-routing-strategies"
+      type: "blog"
+      title: "AI 2026: Secure Agent Routing Strategies"
+      file_path: "/content/blog/ai-2026-secure-agent-routing-strategies.md"
+      url: "/blog/ai-2026-secure-agent-routing-strategies"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Agents", "Security", "Routing", "Evals", "Policy-as-Code", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "35%"
+        mttr: "< 15 min"
+        permission_scope: "least-privilege"
+
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
       file_path: "/app/components/NewContent2025AdvancedAutomationBanner.tsx"
