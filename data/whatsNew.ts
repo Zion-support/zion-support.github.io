@@ -11,6 +11,17 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "agent-risk-maturity-matrix-2026",
+    title: "AI 2026: Agent Risk Maturity Matrix",
+    description:
+      "Benchmark policy, evals, telemetry, and ops to safely scale agent impact.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-agent-risk-maturity-matrix",
+    emoji: "📊",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "incident-simulation-toolkit-1-0",
     title: "Incident Simulation Toolkit v1.0",
     description:

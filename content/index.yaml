@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-09-15"
-  total_content_pieces: 29
+  total_content_pieces: 30
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -624,6 +624,21 @@ content_index:
         adoption_time: "< 1 day"
         templates: 4
         audit_schema: true
+
+    - id: "ai-2026-agent-risk-maturity-matrix"
+      type: "blog"
+      title: "AI 2026: Agent Risk Maturity Matrix — Governance to ROI"
+      file_path: "/app/blog/ai-2026-agent-risk-maturity-matrix/page.tsx"
+      url: "/blog/ai-2026-agent-risk-maturity-matrix"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Agents", "Risk", "Governance", "Evals", "Telemetry", "Operations", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        rollback_time: "< 5 min"
+        conversion_lift: "+8%"
 
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
