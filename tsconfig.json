@@ -38,7 +38,12 @@
     "src/**/*",
     "src/types/offline-shims.d.ts",
 =======
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+<<<<<<< HEAD
+    "src/**/*",
+    "src/types/offline-shims.d.ts",
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
     "**/*.ts",
     "**/*.tsx",
     "tailwind.config.js",
@@ -49,13 +54,19 @@
     "dist",
     "build",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
     "coverage",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx"
+<<<<<<< HEAD
+=======
 =======
     "coverage"
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
   ]
 }

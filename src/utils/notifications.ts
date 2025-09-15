@@ -1,62 +1,45 @@
-/**
- * Notification utility for handling browser notifications
- * with fallbacks and error handling
- */
-
-export interface NotificationOptions {
+// Notification utilities
+interface NotificationOptions {
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
+  data?: any;
   requireInteraction?: boolean;
   silent?: boolean;
-  vibrate?: number[];
+  timestamp?: number;
+  actions?: NotificationAction[];
 }
 
-export const notifications = {
-  /**
-   * Check if notifications are supported
-   */
-  isSupported: (): boolean => {
-    return typeof window !== 'undefined' && 'Notification' in window;
-  },
+interface NotificationAction {
+  action: string;
+  title: string;
+  icon?: string;
+}
 
-  /**
-   * Check if notifications are permitted
-   */
-  getPermission: (): NotificationPermission => {
-    if (!notifications.isSupported()) return 'denied';
-    return Notification.permission;
-  },
+class NotificationManager {
+  private permission: NotificationPermission = 'default';
 
-  /**
-   * Request notification permission
-   */
-  requestPermission: async (): Promise<NotificationPermission> => {
-    if (!notifications.isSupported()) return 'denied';
-    
-    try {
-      const permission = await Notification.requestPermission();
-      return permission;
-    } catch (error) {
-      console.warn('Failed to request notification permission:', error);
-      return 'denied';
+  async requestPermission(): Promise<NotificationPermission> {
+    if ('Notification' in window) {
+      this.permission = await Notification.requestPermission();
     }
-  },
+    return this.permission;
+  }
 
-  /**
-   * Show a notification
-   */
-  show: (options: NotificationOptions): Notification | null => {
-    if (!notifications.isSupported()) {
-      console.warn('Notifications not supported');
+  async showNotification(options: NotificationOptions): Promise<Notification | null> {
+    if (!('Notification' in window)) {
+      console.warn('This browser does not support notifications');
       return null;
     }
 
-    if (Notification.permission !== 'granted') {
-      console.warn('Notification permission not granted');
-      return null;
+    if (this.permission !== 'granted') {
+      this.permission = await this.requestPermission();
+      if (this.permission !== 'granted') {
+        console.warn('Notification permission denied');
+        return null;
+      }
     }
 
     try {
@@ -65,9 +48,11 @@ export const notifications = {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
+        data: options.data,
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
-        vibrate: options.vibrate
+        timestamp: options.timestamp || Date.now(),
+        actions: options.actions || [],
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -79,59 +64,48 @@ export const notifications = {
 
       return notification;
     } catch (error) {
-      console.warn('Failed to show notification:', error);
+      console.error('Error showing notification:', error);
       return null;
     }
-  },
+  }
 
-  /**
-   * Show a success notification
-   */
-  success: (title: string, body?: string): Notification | null => {
-    return notifications.show({
+  showSuccess(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
       title,
       body,
       icon: '/icons/success.png',
-      tag: 'success'
+      tag: 'success',
     });
-  },
+  }
 
-  /**
-   * Show an error notification
-   */
-  error: (title: string, body?: string): Notification | null => {
-    return notifications.show({
+  showError(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
-      requireInteraction: true
+      requireInteraction: true,
     });
-  },
+  }
 
-  /**
-   * Show an info notification
-   */
-  info: (title: string, body?: string): Notification | null => {
-    return notifications.show({
+  showInfo(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
       title,
       body,
       icon: '/icons/info.png',
-      tag: 'info'
+      tag: 'info',
     });
-  },
+  }
 
-  /**
-   * Show a warning notification
-   */
-  warning: (title: string, body?: string): Notification | null => {
-    return notifications.show({
+  showWarning(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
       title,
       body,
       icon: '/icons/warning.png',
-      tag: 'warning'
+      tag: 'warning',
     });
   }
-};
+}
 
-export default notifications;
+export const notificationManager = new NotificationManager();
+export default notificationManager;
