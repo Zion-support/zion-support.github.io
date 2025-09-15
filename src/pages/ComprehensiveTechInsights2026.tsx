@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const ComprehensiveTechInsights2026: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Comprehensive Tech Insights 2026 | Zion Tech Group</title>
         <meta name="description" content="Comprehensive technology insights covering AI, quantum computing, neural interfaces, and emerging technologies for 2026. Expert analysis and future predictions." />
@@ -247,6 +247,7 @@ const ComprehensiveTechInsights2026: React.FC = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
