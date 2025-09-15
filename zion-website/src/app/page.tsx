@@ -121,20 +121,21 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-                title: 'Launch: AI Research Assistant 2.0',
+                title: 'Launch: Autonomous Research Assistant v2',
                 summary:
-                  'Multi-agent orchestration, faster retrieval, and better research planning.',
-                href: '/updates/ai-research-assistant-2-0'
+                  'Multi-agent collaboration, grounded reasoning, and faster retrieval now live.',
+                href: '/updates'
               },
               {
-                title: 'Guide: Production-Ready RAG Patterns',
-                summary: 'How to ship reliable RAG with evaluation and observability.',
-                href: '/updates/rag-production-patterns'
+                title: 'New Course: Advanced Blockchain Development',
+                summary:
+                  'Smart contracts, DeFi, L2 scaling, and security audit practices.',
+                href: '/updates'
               },
               {
-                title: 'Course: Web3 Fundamentals Track',
-                summary: 'Beginner-friendly curriculum on wallets, NFTs, and L2 ecosystems.',
-                href: '/updates/web3-fundamentals-track'
+                title: 'Community Challenge: Build a DApp',
+                summary: 'Compete to win $1000 in ZION tokens and mentorship.',
+                href: '/updates'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
