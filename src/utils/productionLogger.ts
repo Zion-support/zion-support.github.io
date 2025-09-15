@@ -1,350 +1,163 @@
-<<<<<<< HEAD
-// Production-safe logging utility
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Production logger utility for handling logging in production environment
-
-=======
-// Production logger utility
->>>>>>> main
-interface LogLevel {
-  ERROR: 'error';
-  WARN: 'warn';
-  INFO: 'info';
-  DEBUG: 'debug';
-}
-
-const LOG_LEVELS: LogLevel = {
-  ERROR: 'error',
-  WARN: 'warn',
-  INFO: 'info',
-<<<<<<< HEAD
-  DEBUG: 'debug'
-};
-
-interface LoggerOptions {
-  enableConsole?: boolean;
-  enableRemote?: boolean;
-  remoteEndpoint?: string;
-  logLevel?: keyof LogLevel;
-}
-
-class ProductionLogger {
-  private options: Required<LoggerOptions>;
-  private isDevelopment: boolean;
-
-  constructor(options: LoggerOptions = {}) {
-    this.isDevelopment = process.env.NODE_ENV === 'development';
-    this.options = {
-      enableConsole: options.enableConsole ?? true,
-      enableRemote: options.enableRemote ?? false,
-      remoteEndpoint: options.remoteEndpoint ?? '/api/logs',
-      logLevel: options.logLevel ?? 'INFO'
-    };
-  }
-
-  private shouldLog(level: keyof LogLevel): boolean {
-    const levelPriority = {
-      ERROR: 0,
-      WARN: 1,
-      INFO: 2,
-      DEBUG: 3
-    };
-
-    return levelPriority[level] <= levelPriority[this.options.logLevel];
-  }
-
-  private formatMessage(level: string, message: string, data?: any): string {
-    const timestamp = new Date().toISOString();
-    const formattedData = data ? ` | Data: ${JSON.stringify(data)}` : '';
-    return `[${timestamp}] [${level}] ${message}${formattedData}`;
-  }
-
-  private async sendToRemote(level: string, message: string, data?: any): Promise<void> {
-    if (!this.options.enableRemote) return;
-
-    try {
-      await fetch(this.options.remoteEndpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          level,
-          message,
-          data,
-          timestamp: new Date().toISOString(),
-          userAgent: navigator.userAgent,
-          url: window.location.href
-        })
-      });
-    } catch (error) {
-      // Silently fail for remote logging
-      console.warn('Failed to send log to remote endpoint:', error);
-    }
-  }
-
-  error(message: string, data?: any): void {
-    if (!this.shouldLog('ERROR')) return;
-
-    const formattedMessage = this.formatMessage('ERROR', message, data);
-    
-    if (this.options.enableConsole) {
-      console.error(formattedMessage);
-    }
-
-    if (!this.isDevelopment) {
-      this.sendToRemote('ERROR', message, data);
-    }
-  }
-
-  warn(message: string, data?: any): void {
-    if (!this.shouldLog('WARN')) return;
-
-    const formattedMessage = this.formatMessage('WARN', message, data);
-    
-    if (this.options.enableConsole) {
-      console.warn(formattedMessage);
-    }
-
-    if (!this.isDevelopment) {
-      this.sendToRemote('WARN', message, data);
-    }
-  }
-
-  info(message: string, data?: any): void {
-    if (!this.shouldLog('INFO')) return;
-
-    const formattedMessage = this.formatMessage('INFO', message, data);
-    
-    if (this.options.enableConsole) {
-      console.info(formattedMessage);
-    }
-
-    if (!this.isDevelopment) {
-      this.sendToRemote('INFO', message, data);
-    }
-  }
-
-  debug(message: string, data?: any): void {
-    if (!this.shouldLog('DEBUG')) return;
-
-    const formattedMessage = this.formatMessage('DEBUG', message, data);
-    
-    if (this.options.enableConsole) {
-      console.debug(formattedMessage);
-    }
-
-    if (!this.isDevelopment) {
-      this.sendToRemote('DEBUG', message, data);
-=======
-  DEBUG: 'debug',
-};
-=======
 /**
- * Production-safe logging utilities
+ * Production-safe logging utility
+ * Provides different logging levels and formats for production environments
  */
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 
-type LogLevel = 'debug' | 'info' | 'warn' | 'error';
+export enum LogLevel {
+  ERROR = 0,
+  WARN = 1,
+  INFO = 2,
+  DEBUG = 3,
+  TRACE = 4
+}
 
-interface LogEntry {
+export interface LogEntry {
+  timestamp: string;
   level: LogLevel;
   message: string;
   data?: any;
-  timestamp: string;
-  url?: string;
-  userAgent?: string;
+  context?: string;
 }
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 
 class ProductionLogger {
-  private isDevelopment: boolean;
   private logLevel: LogLevel;
+  private isProduction: boolean;
+  private context?: string;
 
-  constructor() {
-    this.isDevelopment = process.env.NODE_ENV === 'development';
-    this.logLevel = this.isDevelopment ? 'debug' : 'warn';
+  constructor(logLevel: LogLevel = LogLevel.INFO, context?: string) {
+    this.logLevel = logLevel;
+    this.isProduction = process.env.NODE_ENV === 'production';
+    this.context = context;
   }
 
   private shouldLog(level: LogLevel): boolean {
-    const levels: Record<LogLevel, number> = {
-      debug: 0,
-      info: 1,
-      warn: 2,
-      error: 3,
-    };
-    return levels[level] >= levels[this.logLevel];
+    return level <= this.logLevel;
   }
 
-  private createLogEntry(level: LogLevel, message: string, data?: any): LogEntry {
+  private formatMessage(level: LogLevel, message: string, data?: any): LogEntry {
     return {
+      timestamp: new Date().toISOString(),
       level,
       message,
       data,
-      timestamp: new Date().toISOString(),
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-      userAgent: typeof window !== 'undefined' ? navigator.userAgent : undefined,
+      context: this.context
     };
   }
 
   private log(level: LogLevel, message: string, data?: any): void {
     if (!this.shouldLog(level)) return;
 
-    const logEntry = this.createLogEntry(level, message, data);
-
-    if (this.isDevelopment) {
-      // In development, use console methods with colors
-      const colors: Record<LogLevel, string> = {
-        debug: '#6B7280',
-        info: '#3B82F6',
-        warn: '#F59E0B',
-        error: '#EF4444',
-      };
-
-      const style = `color: ${colors[level]}; font-weight: bold;`;
-      console[level](`%c[${level.toUpperCase()}] ${message}`, style, data || '');
+    const logEntry = this.formatMessage(level, message, data);
+    
+    if (this.isProduction) {
+      // In production, only log to console for errors and warnings
+      if (level <= LogLevel.WARN) {
+        console.error(JSON.stringify(logEntry));
+      }
+      // Send to external logging service if available
+      this.sendToExternalLogger(logEntry);
     } else {
-      // In production, send to logging service or store locally
-      this.sendToLoggingService(logEntry);
+      // In development, use console methods with colors
+      this.logToConsole(level, message, data);
     }
   }
 
-  private sendToLoggingService(logEntry: LogEntry): void {
-    // In production, you would typically send logs to a service like:
-    // - Sentry
-    // - LogRocket
-    // - DataDog
-    // - Custom logging endpoint
+  private logToConsole(level: LogLevel, message: string, data?: any): void {
+    const timestamp = new Date().toLocaleTimeString();
+    const contextStr = this.context ? `[${this.context}]` : '';
+    
+    switch (level) {
+      case LogLevel.ERROR:
+        console.error(`🔴 ${timestamp} ${contextStr}`, message, data || '');
+        break;
+      case LogLevel.WARN:
+        console.warn(`🟡 ${timestamp} ${contextStr}`, message, data || '');
+        break;
+      case LogLevel.INFO:
+        console.info(`🔵 ${timestamp} ${contextStr}`, message, data || '');
+        break;
+      case LogLevel.DEBUG:
+        console.debug(`🟢 ${timestamp} ${contextStr}`, message, data || '');
+        break;
+      case LogLevel.TRACE:
+        console.trace(`⚪ ${timestamp} ${contextStr}`, message, data || '');
+        break;
+    }
+  }
 
-    // For now, we'll store in localStorage as a fallback
+  private sendToExternalLogger(logEntry: LogEntry): void {
+    // In a real application, you would send this to your logging service
+    // For now, we'll just store it in memory or localStorage for debugging
     try {
       const logs = JSON.parse(localStorage.getItem('app_logs') || '[]');
       logs.push(logEntry);
       
-      // Keep only last 100 logs
+      // Keep only the last 100 logs
       if (logs.length > 100) {
         logs.splice(0, logs.length - 100);
       }
       
       localStorage.setItem('app_logs', JSON.stringify(logs));
     } catch (error) {
-      // Silently fail if localStorage is not available
+      // If localStorage fails, just ignore
     }
-  }
-
-<<<<<<< HEAD
-  debug(message: string, data?: any): void {
-    this.log('debug', message, data);
-  }
-
-  info(message: string, data?: any): void {
-    this.log('info', message, data);
-  }
-
-  warn(message: string, data?: any): void {
-    this.log('warn', message, data);
   }
 
   error(message: string, data?: any): void {
-    this.log('error', message, data);
+    this.log(LogLevel.ERROR, message, data);
   }
 
-  // Get stored logs (useful for debugging in production)
-  getStoredLogs(): LogEntry[] {
-    try {
-      return JSON.parse(localStorage.getItem('app_logs') || '[]');
-    } catch {
-      return [];
-=======
-<<<<<<< HEAD
-  debug(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.DEBUG)) {
-      console.debug(`[DEBUG] ${message}`, ...args);
->>>>>>> main
-=======
-  info(message: string, context?: Record<string, any>): void {
-    const entry = this.createLogEntry('info', message, context);
-    
-    if (this.shouldLog('info')) {
-      console.info(`[INFO] ${message}`, context || '');
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-    }
+  warn(message: string, data?: any): void {
+    this.log(LogLevel.WARN, message, data);
   }
 
-  // Clear stored logs
-  clearStoredLogs(): void {
-    try {
-      localStorage.removeItem('app_logs');
-    } catch {
-      // Silently fail
-    }
+  info(message: string, data?: any): void {
+    this.log(LogLevel.INFO, message, data);
   }
 
-  // Set log level dynamically
+  debug(message: string, data?: any): void {
+    this.log(LogLevel.DEBUG, message, data);
+  }
+
+  trace(message: string, data?: any): void {
+    this.log(LogLevel.TRACE, message, data);
+  }
+
+  setContext(context: string): void {
+    this.context = context;
+  }
+
   setLogLevel(level: LogLevel): void {
     this.logLevel = level;
   }
+
+  getLogs(): LogEntry[] {
+    try {
+      return JSON.parse(localStorage.getItem('app_logs') || '[]');
+    } catch (error) {
+      return [];
+    }
+  }
+
+  clearLogs(): void {
+    localStorage.removeItem('app_logs');
+  }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Create default logger instance
-const productionLogger = new ProductionLogger();
+const logger = new ProductionLogger();
 
-// Convenience exports
-export const logInfo = (message: string, data?: any) => productionLogger.info(message, data);
-export const logWarn = (message: string, data?: any) => productionLogger.warn(message, data);
-export const logError = (message: string, data?: any) => productionLogger.error(message, data);
-export const logDebug = (message: string, data?: any) => productionLogger.debug(message, data);
-export const logErrorToProduction = (message: string, data?: any) => productionLogger.error(message, data);
-
-export default productionLogger;
-export { ProductionLogger, LOG_LEVELS };
-export type { LoggerOptions };
-=======
-export const productionLogger = new ProductionLogger();
-export default productionLogger;
->>>>>>> main
-=======
-// Create singleton instance
-const productionLogger = new ProductionLogger();
-
-<<<<<<< HEAD
-export default productionLogger;
-export { ProductionLogger, type LogLevel, type LogEntry };
-=======
-// Convenience functions
-export const logDebug = (message: string, context?: Record<string, any>): void => {
-  logger.debug(message, context);
+// Export convenience functions
+export const log = {
+  error: (message: string, data?: any) => logger.error(message, data),
+  warn: (message: string, data?: any) => logger.warn(message, data),
+  info: (message: string, data?: any) => logger.info(message, data),
+  debug: (message: string, data?: any) => logger.debug(message, data),
+  trace: (message: string, data?: any) => logger.trace(message, data),
+  setContext: (context: string) => logger.setContext(context),
+  setLogLevel: (level: LogLevel) => logger.setLogLevel(level),
+  getLogs: () => logger.getLogs(),
+  clearLogs: () => logger.clearLogs()
 };
 
-export const logInfo = (message: string, context?: Record<string, any>): void => {
-  logger.info(message, context);
-};
-
-export const logWarn = (message: string, context?: Record<string, any>): void => {
-  logger.warn(message, context);
-};
-
-export const logError = (message: string, error?: Error, context?: Record<string, any>): void => {
-  logger.error(message, error, context);
-};
-
-export const getLogHistory = (): LogEntry[] => {
-  return logger.getLogHistory();
-};
-
-export const clearLogHistory = (): void => {
-  logger.clearHistory();
-};
-
-export const exportLogs = (): string => {
-  return logger.exportLogs();
-};
-
-export default logger;
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
+export default ProductionLogger;

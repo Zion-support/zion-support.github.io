@@ -118,7 +118,6 @@ export default function HomePage() {
       </section>
 
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -138,11 +137,8 @@ export default function HomePage() {
 =======
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
-<<<<<<< HEAD
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
 =======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> cursor/create-and-deploy-new-content-81d0
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
