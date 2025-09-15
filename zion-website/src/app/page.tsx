@@ -89,6 +89,8 @@ export default function HomePage() {
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-security-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">security launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
+              <a href="/updates/autonomous-knowledge-ops-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">knowledge ops suite</a>
+              <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/production-guardrails-tool-use-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">guardrails guide</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
