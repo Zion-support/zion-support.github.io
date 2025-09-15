@@ -19,6 +19,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'sovereign-ai-commerce-2025',
+      title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
+      excerpt: 'We unveil our blueprint for self-orchestrating, sovereign AI marketplaces with built‑in governance, identity, and commerce rails.',
+      category: 'AI Solutions',
+      author: 'Dr. Kleber Santos',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/sovereign-ai-commerce.jpg',
+      featured: true
+    },
+    {
       id: 'quantum-computing-finance',
       title: 'Quantum Computing Revolutionizing Financial Trading: A Deep Dive',
       excerpt: 'Discover how our quantum algorithms are transforming financial markets and creating new opportunities for investors and institutions.',
@@ -43,6 +54,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'sovereign-ai-commerce-2025',
+      title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
+      excerpt: 'A practical guide to deploying autonomous, self-regulating AI marketplaces powered by Zion OS.',
+      category: 'AI Solutions',
+      author: 'Dr. Kleber Santos',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/sovereign-ai-commerce.jpg'
+    },
     {
       id: 'cybersecurity-ai-trends',
       title: 'AI-Powered Cybersecurity: Trends and Best Practices for 2024',
@@ -133,6 +154,36 @@ export default function BlogPage() {
             Stay updated with the latest insights, breakthroughs, and thought leadership 
             from our team of AI and technology experts.
           </p>
+        </div>
+      </section>
+
+      {/* Promo Banner - New Article */}
+      <section className="py-6 bg-blue-50 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <a
+            href="/blog/sovereign-ai-commerce-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025"
+          >
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+                SA
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Solutions</span>
+                  <span className="text-xs text-gray-500">New</span>
+                </div>
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900">
+                  Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  A practical blueprint for deploying autonomous, self-regulating AI marketplaces powered by Zion OS.
+                </p>
+              </div>
+              <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
+            </div>
+          </a>
         </div>
       </section>
 
