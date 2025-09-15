@@ -109,3 +109,6 @@
 2025-09-15 15:33:31 - Merge conflicts detected in dependabot/npm_and_yarn/testing-library/react-16.3.0
 2025-09-15 15:33:31 - Resolving conflicts in package-lock.json for branch dependabot/npm_and_yarn/testing-library/react-16.3.0
 2025-09-15 15:33:31 - Resolving conflicts in package.json for branch dependabot/npm_and_yarn/testing-library/react-16.3.0
+2025-09-15 15:33:35 - Merge conflicts detected in dependabot/npm_and_yarn/types/react-datepicker-7.0.0
+2025-09-15 15:33:35 - Resolving conflicts in package-lock.json for branch dependabot/npm_and_yarn/types/react-datepicker-7.0.0
+2025-09-15 15:33:35 - Resolving conflicts in package.json for branch dependabot/npm_and_yarn/types/react-datepicker-7.0.0
