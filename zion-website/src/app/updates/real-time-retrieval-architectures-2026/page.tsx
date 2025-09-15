@@ -37,4 +37,3 @@ export default function RealTimeRetrievalArchitectures2026() {
     </div>
   )
 }
-
