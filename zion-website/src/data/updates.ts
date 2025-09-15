@@ -7,14 +7,22 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
-  // Added 2025-09-15 (new content)
+  // Added 2025-09-15 (new content for homepage promotion)
   {
-    title: 'Blueprint: Agent Budgeting & Cost Controls (2026)',
+    title: 'Launch: Autonomous Incident Simulation Toolkit v1.1',
     summary:
-      'Set budgets, enforce spend guardrails, and route by cost-quality tradeoffs with audit evidence.',
-    href: '/updates/agent-budgeting-blueprint-2026',
+      'New real-time scenarios, eval-gated rollbacks, and signed evidence exports to drill agent safety.',
+    href: '/updates/incident-simulation-toolkit-1-1',
     date: '2025-09-15',
-    tag: 'Blueprint'
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Evaluating Real-Time Retrieval in Production (2026)',
+    summary:
+      'Streaming metrics, budgeted latency, and rollout playbooks to harden real-time retrieval.',
+    href: '/updates/evaluating-real-time-retrieval-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
   },
   // Added 2025-09-15 (brand new content)
   {
