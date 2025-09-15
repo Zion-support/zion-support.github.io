@@ -3,134 +3,109 @@
  * with error handling and fallbacks
  */
 
-export interface StorageOptions {
-  useSessionStorage?: boolean;
-  defaultValue?: any;
+interface StorageInterface {
+  getItem(key: string): string | null;
+  setItem(key: string, value: string): void;
+  removeItem(key: string): void;
+  clear(): void;
 }
 
-class SafeStorage {
+class SafeStorage implements StorageInterface {
   private storage: Storage;
 
-  constructor(useSessionStorage = false) {
-    this.storage = useSessionStorage ? sessionStorage : localStorage;
+  constructor(storage: Storage) {
+    this.storage = storage;
   }
 
-  /**
-   * Safely get an item from storage
-   */
-  getItem(key: string, defaultValue: any = null): any {
+  getItem(key: string): string | null {
     try {
-      const item = this.storage.getItem(key);
-      if (item === null) {
-        return defaultValue;
-      }
-      return JSON.parse(item);
+      return this.storage.getItem(key);
     } catch (error) {
-      console.warn(`Failed to get item ${key} from storage:`, error);
-      return defaultValue;
+      console.warn(`Failed to get item from storage: ${error}`);
+      return null;
     }
   }
 
-  /**
-   * Safely set an item in storage
-   */
-  setItem(key: string, value: any): boolean {
+  setItem(key: string, value: string): void {
     try {
-      this.storage.setItem(key, JSON.stringify(value));
-      return true;
+      this.storage.setItem(key, value);
     } catch (error) {
-      console.warn(`Failed to set item ${key} in storage:`, error);
-      return false;
+      console.warn(`Failed to set item in storage: ${error}`);
     }
   }
 
-  /**
-   * Safely remove an item from storage
-   */
-  removeItem(key: string): boolean {
+  removeItem(key: string): void {
     try {
       this.storage.removeItem(key);
-      return true;
     } catch (error) {
-      console.warn(`Failed to remove item ${key} from storage:`, error);
-      return false;
+      console.warn(`Failed to remove item from storage: ${error}`);
     }
   }
 
-  /**
-   * Safely clear all items from storage
-   */
-  clear(): boolean {
+  clear(): void {
     try {
       this.storage.clear();
-      return true;
     } catch (error) {
-      console.warn('Failed to clear storage:', error);
-      return false;
-    }
-  }
-
-  /**
-   * Check if storage is available
-   */
-  isAvailable(): boolean {
-    try {
-      const testKey = '__storage_test__';
-      this.storage.setItem(testKey, 'test');
-      this.storage.removeItem(testKey);
-      return true;
-    } catch (error) {
-      return false;
-    }
-  }
-
-  /**
-   * Get storage size in bytes (approximate)
-   */
-  getSize(): number {
-    try {
-      let size = 0;
-      for (let key in this.storage) {
-        if (this.storage.hasOwnProperty(key)) {
-          size += this.storage[key].length + key.length;
-        }
-      }
-      return size;
-    } catch (error) {
-      console.warn('Failed to calculate storage size:', error);
-      return 0;
+      console.warn(`Failed to clear storage: ${error}`);
     }
   }
 }
 
-// Create default instances
-export const localStorage = new SafeStorage(false);
-export const sessionStorage = new SafeStorage(true);
+// Create safe storage instances
+export const safeLocalStorage = new SafeStorage(localStorage);
+export const safeSessionStorage = new SafeStorage(sessionStorage);
 
-// Convenience functions
-export const safeGetItem = (key: string, defaultValue: any = null, useSessionStorage = false): any => {
-  const storage = useSessionStorage ? sessionStorage : localStorage;
-  return storage.getItem(key, defaultValue);
+// Utility functions
+export const setSafeItem = (key: string, value: string, useSession = false): void => {
+  const storage = useSession ? safeSessionStorage : safeLocalStorage;
+  storage.setItem(key, value);
 };
 
-export const safeSetItem = (key: string, value: any, useSessionStorage = false): boolean => {
-  const storage = useSessionStorage ? sessionStorage : localStorage;
-  return storage.setItem(key, value);
+export const getSafeItem = (key: string, useSession = false): string | null => {
+  const storage = useSession ? safeSessionStorage : safeLocalStorage;
+  return storage.getItem(key);
 };
 
-export const safeRemoveItem = (key: string, useSessionStorage = false): boolean => {
-  const storage = useSessionStorage ? sessionStorage : localStorage;
-  return storage.removeItem(key);
+export const removeSafeItem = (key: string, useSession = false): void => {
+  const storage = useSession ? safeSessionStorage : safeLocalStorage;
+  storage.removeItem(key);
 };
 
-export const safeClear = (useSessionStorage = false): boolean => {
-  const storage = useSessionStorage ? sessionStorage : localStorage;
-  return storage.clear();
+export const clearSafeStorage = (useSession = false): void => {
+  const storage = useSession ? safeSessionStorage : safeLocalStorage;
+  storage.clear();
 };
 
-export const isStorageAvailable = (useSessionStorage = false): boolean => {
-  const storage = useSessionStorage ? sessionStorage : localStorage;
-  return storage.isAvailable();
+// JSON utilities
+export const setSafeJSONItem = <T>(key: string, value: T, useSession = false): void => {
+  try {
+    const jsonString = JSON.stringify(value);
+    setSafeItem(key, jsonString, useSession);
+  } catch (error) {
+    console.warn(`Failed to stringify value for storage: ${error}`);
+  }
 };
 
-export default SafeStorage;
+export const getSafeJSONItem = <T>(key: string, defaultValue: T, useSession = false): T => {
+  try {
+    const item = getSafeItem(key, useSession);
+    if (item === null) {
+      return defaultValue;
+    }
+    return JSON.parse(item) as T;
+  } catch (error) {
+    console.warn(`Failed to parse JSON from storage: ${error}`);
+    return defaultValue;
+  }
+};
+
+export default {
+  safeLocalStorage,
+  safeSessionStorage,
+  setSafeItem,
+  getSafeItem,
+  removeSafeItem,
+  clearSafeStorage,
+  setSafeJSONItem,
+  getSafeJSONItem,
+};

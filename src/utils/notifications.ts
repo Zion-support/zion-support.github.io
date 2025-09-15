@@ -1,263 +1,125 @@
 /**
- * Notification utility for handling browser notifications and in-app notifications
+ * Notification utilities for managing user notifications
  */
 
 export interface NotificationOptions {
   title: string;
-  body?: string;
-  icon?: string;
-  badge?: string;
-  tag?: string;
-  requireInteraction?: boolean;
-  silent?: boolean;
-  timestamp?: number;
-  actions?: NotificationAction[];
-  data?: any;
-}
-
-export interface NotificationAction {
-  action: string;
-  title: string;
-  icon?: string;
-}
-
-export interface InAppNotification {
-  id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-  title: string;
   message: string;
+  type?: 'success' | 'error' | 'warning' | 'info';
   duration?: number;
-  action?: {
-    label: string;
-    onClick: () => void;
-  };
+  persistent?: boolean;
+}
+
+export interface Notification extends NotificationOptions {
+  id: string;
+  timestamp: number;
+  dismissed?: boolean;
 }
 
 class NotificationManager {
-  private permission: NotificationPermission = 'default';
-  private inAppNotifications: InAppNotification[] = [];
-  private listeners: ((notifications: InAppNotification[]) => void)[] = [];
+  private notifications: Notification[] = [];
+  private listeners: ((notifications: Notification[]) => void)[] = [];
 
-  constructor() {
-    this.permission = Notification.permission;
-  }
-
-  /**
-   * Request notification permission
-   */
-  async requestPermission(): Promise<NotificationPermission> {
-    if ('Notification' in window) {
-      this.permission = await Notification.requestPermission();
-    }
-    return this.permission;
-  }
-
-  /**
-   * Check if notifications are supported and permitted
-   */
-  isSupported(): boolean {
-    return 'Notification' in window;
-  }
-
-  /**
-   * Check if notifications are permitted
-   */
-  isPermitted(): boolean {
-    return this.permission === 'granted';
-  }
-
-  /**
-   * Show a browser notification
-   */
-  async showBrowserNotification(options: NotificationOptions): Promise<Notification | null> {
-    if (!this.isSupported() || !this.isPermitted()) {
-      console.warn('Notifications not supported or not permitted');
-      return null;
-    }
-
-    try {
-      const notification = new Notification(options.title, {
-        body: options.body,
-        icon: options.icon || '/favicon.ico',
-        badge: options.badge,
-        tag: options.tag,
-        requireInteraction: options.requireInteraction || false,
-        silent: options.silent || false,
-        timestamp: options.timestamp || Date.now(),
-        actions: options.actions,
-        data: options.data
-      });
-
-      // Auto-close after 5 seconds unless requireInteraction is true
-      if (!options.requireInteraction) {
-        setTimeout(() => {
-          notification.close();
-        }, 5000);
-      }
-
-      return notification;
-    } catch (error) {
-      console.error('Failed to show browser notification:', error);
-      return null;
-    }
-  }
-
-  /**
-   * Add an in-app notification
-   */
-  addInAppNotification(notification: Omit<InAppNotification, 'id'>): string {
-    const id = `notification_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    const newNotification: InAppNotification = {
-      id,
-      duration: 5000, // Default 5 seconds
-      ...notification
+  addNotification(options: NotificationOptions): string {
+    const notification: Notification = {
+      id: this.generateId(),
+      timestamp: Date.now(),
+      ...options,
     };
 
-    this.inAppNotifications.push(newNotification);
+    this.notifications.unshift(notification);
     this.notifyListeners();
 
-    // Auto-remove after duration
-    if (newNotification.duration && newNotification.duration > 0) {
+    // Auto-dismiss after duration if not persistent
+    if (!notification.persistent && notification.duration) {
       setTimeout(() => {
-        this.removeInAppNotification(id);
-      }, newNotification.duration);
+        this.dismissNotification(notification.id);
+      }, notification.duration);
     }
 
-    return id;
+    return notification.id;
   }
 
-  /**
-   * Remove an in-app notification
-   */
-  removeInAppNotification(id: string): void {
-    this.inAppNotifications = this.inAppNotifications.filter(n => n.id !== id);
+  dismissNotification(id: string): void {
+    const index = this.notifications.findIndex(n => n.id === id);
+    if (index !== -1) {
+      this.notifications[index].dismissed = true;
+      this.notifyListeners();
+    }
+  }
+
+  removeNotification(id: string): void {
+    this.notifications = this.notifications.filter(n => n.id !== id);
     this.notifyListeners();
   }
 
-  /**
-   * Clear all in-app notifications
-   */
-  clearInAppNotifications(): void {
-    this.inAppNotifications = [];
+  clearAll(): void {
+    this.notifications = [];
     this.notifyListeners();
   }
 
-  /**
-   * Get all in-app notifications
-   */
-  getInAppNotifications(): InAppNotification[] {
-    return [...this.inAppNotifications];
+  getNotifications(): Notification[] {
+    return this.notifications.filter(n => !n.dismissed);
   }
 
-  /**
-   * Subscribe to in-app notification changes
-   */
-  subscribe(listener: (notifications: InAppNotification[]) => void): () => void {
+  subscribe(listener: (notifications: Notification[]) => void): () => void {
     this.listeners.push(listener);
-    
-    // Return unsubscribe function
     return () => {
       this.listeners = this.listeners.filter(l => l !== listener);
     };
   }
 
   private notifyListeners(): void {
-    this.listeners.forEach(listener => {
-      try {
-        listener([...this.inAppNotifications]);
-      } catch (error) {
-        console.error('Error in notification listener:', error);
-      }
-    });
+    this.listeners.forEach(listener => listener(this.getNotifications()));
   }
 
-  /**
-   * Convenience methods for different notification types
-   */
-  success(title: string, message: string, options?: Partial<NotificationOptions>): string {
-    return this.addInAppNotification({
-      type: 'success',
-      title,
-      message
-    });
-  }
-
-  error(title: string, message: string, options?: Partial<NotificationOptions>): string {
-    return this.addInAppNotification({
-      type: 'error',
-      title,
-      message,
-      duration: 8000 // Errors stay longer
-    });
-  }
-
-  warning(title: string, message: string, options?: Partial<NotificationOptions>): string {
-    return this.addInAppNotification({
-      type: 'warning',
-      title,
-      message
-    });
-  }
-
-  info(title: string, message: string, options?: Partial<NotificationOptions>): string {
-    return this.addInAppNotification({
-      type: 'info',
-      title,
-      message
-    });
-  }
-
-  /**
-   * Show a toast notification (browser + in-app)
-   */
-  async toast(title: string, message: string, type: InAppNotification['type'] = 'info', showBrowser = false): Promise<string> {
-    const id = this.addInAppNotification({
-      type,
-      title,
-      message
-    });
-
-    if (showBrowser && this.isPermitted()) {
-      await this.showBrowserNotification({
-        title,
-        body: message,
-        icon: this.getIconForType(type)
-      });
-    }
-
-    return id;
-  }
-
-  private getIconForType(type: InAppNotification['type']): string {
-    const icons = {
-      success: '/icons/success.png',
-      error: '/icons/error.png',
-      warning: '/icons/warning.png',
-      info: '/icons/info.png'
-    };
-    return icons[type] || '/favicon.ico';
+  private generateId(): string {
+    return Math.random().toString(36).substr(2, 9);
   }
 }
 
-// Create default instance
-const notificationManager = new NotificationManager();
+// Create singleton instance
+export const notificationManager = new NotificationManager();
 
-// Export convenience functions
-export const notifications = {
-  requestPermission: () => notificationManager.requestPermission(),
-  isSupported: () => notificationManager.isSupported(),
-  isPermitted: () => notificationManager.isPermitted(),
-  showBrowser: (options: NotificationOptions) => notificationManager.showBrowserNotification(options),
-  success: (title: string, message: string) => notificationManager.success(title, message),
-  error: (title: string, message: string) => notificationManager.error(title, message),
-  warning: (title: string, message: string) => notificationManager.warning(title, message),
-  info: (title: string, message: string) => notificationManager.info(title, message),
-  toast: (title: string, message: string, type?: InAppNotification['type'], showBrowser?: boolean) => 
-    notificationManager.toast(title, message, type, showBrowser),
-  subscribe: (listener: (notifications: InAppNotification[]) => void) => notificationManager.subscribe(listener),
-  getNotifications: () => notificationManager.getInAppNotifications(),
-  remove: (id: string) => notificationManager.removeInAppNotification(id),
-  clear: () => notificationManager.clearInAppNotifications()
+// Convenience functions
+export const showNotification = (options: NotificationOptions): string => {
+  return notificationManager.addNotification(options);
+};
+
+export const showSuccess = (title: string, message: string, duration = 3000): string => {
+  return showNotification({ title, message, type: 'success', duration });
+};
+
+export const showError = (title: string, message: string, persistent = false): string => {
+  return showNotification({ title, message, type: 'error', persistent });
+};
+
+export const showWarning = (title: string, message: string, duration = 5000): string => {
+  return showNotification({ title, message, type: 'warning', duration });
+};
+
+export const showInfo = (title: string, message: string, duration = 4000): string => {
+  return showNotification({ title, message, type: 'info', duration });
+};
+
+export const dismissNotification = (id: string): void => {
+  notificationManager.dismissNotification(id);
+};
+
+export const removeNotification = (id: string): void => {
+  notificationManager.removeNotification(id);
+};
+
+export const clearAllNotifications = (): void => {
+  notificationManager.clearAll();
+};
+
+export const getNotifications = (): Notification[] => {
+  return notificationManager.getNotifications();
+};
+
+export const subscribeToNotifications = (listener: (notifications: Notification[]) => void): () => void => {
+  return notificationManager.subscribe(listener);
 };
 
 export default notificationManager;
