@@ -1,18 +1,5 @@
 
 import { useState } from 'react';
-<<<<<<< HEAD
-import { CardContentCardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { AlertDialogActionAlertDialogCancelAlertDialogContentAlertDialogDescriptionAlertDialogFooterAlertDialogHeaderAlertDialogTitle } from '@/components/ui/alert-dialog';
-EditTrash2GithubLinkFileText
-=======
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import { PortfolioProject } from '@/types/resume';
 
 interface ProjectCardProps {
@@ -21,13 +8,6 @@ interface ProjectCardProps {
   onDelete: (projectId: string) => void;
 }
 
-<<<<<<< HEAD
-export function ProjectCard({ projectonEditonDelete }: ProjectCardProps) {
-  const [deleteDialogOpensetDeleteDialogOpen] = useState(false);
-=======
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
   
   const handleDelete = () => {
     if (project.id) {
@@ -62,16 +42,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
-<<<<<<< HEAD
-              {project.technologies.map((techindex) => (
-                <Badge key={index} variant="secondary" className="text-xs">
-                  {tech}
-
-=======
-              {project.technologies.map((tech, index) => (
-                <Badge key={index} variant="secondary" className="text-xs">
-                  {tech}
->>>>>>> origin/auto/autonomy-17186719616
                 </Badge>
               ))}
             </div>
