@@ -19,6 +19,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'quantum-risk-modeling-2025',
+      title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
+      excerpt: 'Near-term quantum and hybrid methods that boost risk analytics and portfolio construction.',
+      category: 'Quantum Computing',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-10',
+      readTime: '10 min read',
+      image: '/blog/quantum-risk.jpg',
+      featured: true
+    },
+    {
       id: 'sovereign-ai-commerce-2025',
       title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
       excerpt: 'We unveil our blueprint for self-orchestrating, sovereign AI marketplaces with built‑in governance, identity, and commerce rails.',
@@ -55,6 +66,16 @@ export default function BlogPage() {
 
   const recentPosts = [
     {
+      id: 'autonomous-it-operations',
+      title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
+      excerpt: 'Deploy AI-driven observability, incident response, and remediation to cut MTTR.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-05',
+      readTime: '7 min read',
+      image: '/blog/autonomous-it.jpg'
+    },
+    {
       id: 'sovereign-ai-commerce-2025',
       title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
       excerpt: 'A practical guide to deploying autonomous, self-regulating AI marketplaces powered by Zion OS.',
@@ -63,6 +84,16 @@ export default function BlogPage() {
       date: '2025-09-15',
       readTime: '9 min read',
       image: '/blog/sovereign-ai-commerce.jpg'
+    },
+    {
+      id: 'secure-agent-marketplaces',
+      title: 'Building Secure Agent Marketplaces: Identity, Reputation, and Policy',
+      excerpt: 'Trust frameworks for multi-agent ecosystems with identity, reputation, and safety.',
+      category: 'Cybersecurity',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-02',
+      readTime: '8 min read',
+      image: '/blog/secure-agent-marketplaces.jpg'
     },
     {
       id: 'cybersecurity-ai-trends',
