@@ -1,183 +1,416 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 
 const AdvancedIoTPlatform2026: React.FC = () => {
+  const [activeDevice, setActiveDevice] = useState('smart');
+  const [dataFlow, setDataFlow] = useState(0);
+  const [isConnected, setIsConnected] = useState(true);
+
+  const deviceTypes = {
+    smart: {
+      title: "Smart Cities",
+      icon: "🏙️",
+      description: "Intelligent urban infrastructure with connected sensors and automated systems",
+      features: [
+        "Traffic optimization",
+        "Energy management",
+        "Waste collection",
+        "Public safety monitoring"
+      ],
+      devices: "1M+",
+      efficiency: "40%"
+    },
+    industrial: {
+      title: "Industrial IoT",
+      icon: "🏭",
+      description: "Connected manufacturing and industrial automation systems",
+      features: [
+        "Predictive maintenance",
+        "Quality control",
+        "Supply chain optimization",
+        "Worker safety monitoring"
+      ],
+      devices: "500K+",
+      efficiency: "60%"
+    },
+    healthcare: {
+      title: "Healthcare IoT",
+      icon: "🏥",
+      description: "Connected medical devices and health monitoring systems",
+      features: [
+        "Remote patient monitoring",
+        "Medical device integration",
+        "Health data analytics",
+        "Emergency response"
+      ],
+      devices: "200K+",
+      efficiency: "35%"
+    },
+    agriculture: {
+      title: "Smart Agriculture",
+      icon: "🌾",
+      description: "Precision farming with connected sensors and automated systems",
+      features: [
+        "Crop monitoring",
+        "Soil analysis",
+        "Irrigation control",
+        "Livestock tracking"
+      ],
+      devices: "300K+",
+      efficiency: "50%"
+    }
+  };
+
+  const platformFeatures = [
+    {
+      category: "Device Management",
+      icon: "📱",
+      features: [
+        "Remote device provisioning",
+        "Firmware updates",
+        "Device health monitoring",
+        "Bulk device operations"
+      ],
+      capability: "Unlimited"
+    },
+    {
+      category: "Data Analytics",
+      icon: "📊",
+      features: [
+        "Real-time data processing",
+        "Machine learning insights",
+        "Predictive analytics",
+        "Custom dashboards"
+      ],
+      capability: "10TB/day"
+    },
+    {
+      category: "Security",
+      icon: "🔒",
+      features: [
+        "End-to-end encryption",
+        "Device authentication",
+        "Secure communication",
+        "Threat detection"
+      ],
+      capability: "Military-grade"
+    },
+    {
+      category: "Integration",
+      icon: "🔗",
+      features: [
+        "API connectivity",
+        "Cloud integration",
+        "Third-party services",
+        "Custom protocols"
+      ],
+      capability: "Universal"
+    }
+  ];
+
+  const industryMetrics = [
+    { metric: "Connected Devices", value: "2M+", trend: "+25%" },
+    { metric: "Data Processed", value: "50TB/day", trend: "+40%" },
+    { metric: "Uptime", value: "99.99%", trend: "+0.1%" },
+    { metric: "Energy Saved", value: "30%", trend: "+5%" },
+    { metric: "Cost Reduction", value: "45%", trend: "+10%" },
+    { metric: "Response Time", value: "<100ms", trend: "-20%" }
+  ];
+
+  // Simulate real-time data flow
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDataFlow(prev => (prev + 1) % 100);
+    }, 50);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-100">
-      <div className="container mx-auto px-4 py-16">
+    <>
+      <Helmet>
+        <title>Advanced IoT Platform 2026 | Zion Tech Group</title>
+        <meta name="description" content="Connect and manage millions of devices with our advanced IoT platform. Real-time analytics, AI-powered insights, and seamless integration for smart cities and industries." />
+        <meta name="keywords" content="IoT Platform, Internet of Things, Smart Cities, Industrial IoT, Device Management, IoT Analytics" />
+        <meta property="og:title" content="Advanced IoT Platform 2026 | Zion Tech Group" />
+        <meta property="og:description" content="Revolutionary IoT platform for the connected world" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://ziontechgroup.com/pages/AdvancedIoTPlatform2026" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-full text-lg font-semibold mb-6">
-            🌐 Advanced IoT Platform 2026
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+          <div className="container mx-auto relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-teal-500 rounded-full text-white text-sm font-bold mb-6">
+                🌐 IOT REVOLUTION • 2026
+              </div>
+              <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-teal-400 to-blue-400 bg-clip-text text-transparent">
+                Advanced IoT Platform 2026
+              </h1>
+              <p className="text-2xl text-green-100 max-w-4xl mx-auto mb-8">
+                Connect, manage, and optimize millions of devices with our revolutionary IoT platform. 
+                Transform your business with real-time insights and intelligent automation.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <button className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Connect Your Devices →
+                </button>
+                <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400 hover:text-white transition-colors font-semibold">
+                  View Platform Demo
+                </button>
+              </div>
+            </motion.div>
           </div>
-          <h1 className="text-6xl font-bold text-gray-900 mb-6">
-            Intelligent Internet of Things
-          </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Connect, monitor, and control millions of devices with our next-generation IoT platform 
-            featuring edge computing, AI analytics, and real-time insights.
-          </p>
-        </div>
+        </section>
 
-        {/* Key Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
-            <div className="text-5xl mb-6">🧠</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Edge AI Processing</h3>
-            <p className="text-gray-600 mb-6">
-              Process data at the edge with advanced AI algorithms, reducing latency and 
-              enabling real-time decision making.
-            </p>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• TensorFlow Lite integration</li>
-              <li>• Real-time inference</li>
-              <li>• Low-power optimization</li>
-            </ul>
-          </div>
+        {/* Real-time Metrics */}
+        <section className="py-20 px-4 bg-gradient-to-br from-teal-900/50 to-blue-900/50">
+          <div className="container mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6 text-green-300">📊 Real-time Platform Metrics</h2>
+              <p className="text-xl text-green-100 max-w-3xl mx-auto">
+                Live data from our global IoT network
+              </p>
+            </motion.div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
-            <div className="text-5xl mb-6">📊</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Predictive Analytics</h3>
-            <p className="text-gray-600 mb-6">
-              Advanced machine learning models predict equipment failures, optimize performance, 
-              and prevent costly downtime.
-            </p>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• Anomaly detection</li>
-              <li>• Predictive maintenance</li>
-              <li>• Performance optimization</li>
-            </ul>
-          </div>
-
-          <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
-            <div className="text-5xl mb-6">🔒</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Security</h3>
-            <p className="text-gray-600 mb-6">
-              End-to-end encryption, device authentication, and secure communication protocols 
-              protect your IoT infrastructure.
-            </p>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• TLS 1.3 encryption</li>
-              <li>• Device certificates</li>
-              <li>• Zero-trust architecture</li>
-            </ul>
-          </div>
-
-          <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
-            <div className="text-5xl mb-6">⚡</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Real-time Monitoring</h3>
-            <p className="text-gray-600 mb-6">
-              Monitor device status, performance metrics, and environmental conditions 
-              with real-time dashboards and alerts.
-            </p>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• Live data streaming</li>
-              <li>• Custom dashboards</li>
-              <li>• Automated alerts</li>
-            </ul>
-          </div>
-
-          <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
-            <div className="text-5xl mb-6">🌍</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Global Connectivity</h3>
-            <p className="text-gray-600 mb-6">
-              Connect devices worldwide with support for multiple communication protocols 
-              and global network coverage.
-            </p>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• 5G/LTE support</li>
-              <li>• LoRaWAN integration</li>
-              <li>• Satellite connectivity</li>
-            </ul>
-          </div>
-
-          <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
-            <div className="text-5xl mb-6">🔧</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Device Management</h3>
-            <p className="text-gray-600 mb-6">
-              Comprehensive device lifecycle management including provisioning, updates, 
-              and remote diagnostics.
-            </p>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• OTA updates</li>
-              <li>• Remote diagnostics</li>
-              <li>• Fleet management</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Industry Applications */}
-        <div className="bg-white rounded-2xl p-12 shadow-xl mb-16">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-            Industry Applications
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl mb-4">🏭</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Manufacturing</h3>
-              <p className="text-gray-600">Smart factory automation and quality control</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🏥</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Healthcare</h3>
-              <p className="text-gray-600">Patient monitoring and medical device management</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🏠</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Cities</h3>
-              <p className="text-gray-600">Traffic management and environmental monitoring</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🚛</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Logistics</h3>
-              <p className="text-gray-600">Fleet tracking and supply chain optimization</p>
+            <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
+              {industryMetrics.map((metric, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-green-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-6 border border-green-400/30 text-center"
+                >
+                  <div className="text-3xl font-bold text-green-400 mb-2">{metric.value}</div>
+                  <div className="text-sm text-green-200 mb-2">{metric.metric}</div>
+                  <div className="text-xs text-green-300">{metric.trend}</div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Technology Stack */}
-        <div className="bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl p-12 text-white mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Our Technology Stack</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl mb-4">☁️</div>
-              <h3 className="text-xl font-semibold mb-2">AWS IoT Core</h3>
-              <p className="opacity-90">Cloud infrastructure</p>
+        {/* Device Types */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6 text-green-300">🔌 Device Types</h2>
+              <p className="text-xl text-green-100 max-w-3xl mx-auto">
+                Support for all types of connected devices and applications
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              {Object.entries(deviceTypes).map(([key, device], index) => (
+                <motion.div
+                  key={key}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className={`bg-gradient-to-br from-green-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 cursor-pointer transition-all duration-300 hover:scale-105 ${
+                    activeDevice === key ? 'ring-2 ring-green-400' : ''
+                  }`}
+                  onClick={() => setActiveDevice(key)}
+                >
+                  <div className="text-5xl mb-6 text-center">{device.icon}</div>
+                  <h3 className="text-2xl font-bold mb-4 text-center text-green-300">{device.title}</h3>
+                  <p className="text-green-100 mb-6 text-center text-sm">{device.description}</p>
+                  <div className="text-center">
+                    <div className="text-sm text-green-200 mb-2">Connected Devices:</div>
+                    <div className="text-lg font-bold text-green-400">{device.devices}</div>
+                    <div className="text-sm text-green-300 mt-2">Efficiency: +{device.efficiency}</div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🐍</div>
-              <h3 className="text-xl font-semibold mb-2">Python</h3>
-              <p className="opacity-90">Data processing</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">📡</div>
-              <h3 className="text-xl font-semibold mb-2">MQTT</h3>
-              <p className="opacity-90">Device communication</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🔧</div>
-              <h3 className="text-xl font-semibold mb-2">Docker</h3>
-              <p className="opacity-90">Containerization</p>
+
+            {/* Active Device Details */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeDevice}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className="bg-gradient-to-r from-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="text-4xl mr-4">{deviceTypes[activeDevice as keyof typeof deviceTypes].icon}</div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-green-300 mb-2">
+                      {deviceTypes[activeDevice as keyof typeof deviceTypes].title}
+                    </h3>
+                    <p className="text-green-100">
+                      {deviceTypes[activeDevice as keyof typeof deviceTypes].description}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-xl font-bold text-green-300 mb-4">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {deviceTypes[activeDevice as keyof typeof deviceTypes].features.map((feature, index) => (
+                        <li key={index} className="flex items-center text-green-100">
+                          <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-gradient-to-r from-green-600 to-teal-600 rounded-xl p-6">
+                      <div className="text-green-200 text-sm mb-2">Connected Devices</div>
+                      <div className="text-3xl font-bold text-white">
+                        {deviceTypes[activeDevice as keyof typeof deviceTypes].devices}
+                      </div>
+                      <div className="text-green-200 text-sm mt-2">
+                        Efficiency: +{deviceTypes[activeDevice as keyof typeof deviceTypes].efficiency}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </section>
+
+        {/* Platform Features */}
+        <section className="py-20 px-4 bg-gradient-to-br from-teal-900/50 to-blue-900/50">
+          <div className="container mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6 text-teal-300">⚡ Platform Features</h2>
+              <p className="text-xl text-teal-100 max-w-3xl mx-auto">
+                Comprehensive IoT platform capabilities for any use case
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {platformFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-teal-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30"
+                >
+                  <div className="text-5xl mb-6 text-center">{feature.icon}</div>
+                  <h3 className="text-2xl font-bold mb-4 text-center text-teal-300">{feature.category}</h3>
+                  <ul className="space-y-2 mb-6">
+                    {feature.features.map((feat, featIndex) => (
+                      <li key={featIndex} className="text-teal-100 text-sm">
+                        • {feat}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="text-center">
+                    <div className="text-sm text-teal-200 mb-2">Capability:</div>
+                    <div className="text-sm font-bold text-teal-300">{feature.capability}</div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Data Flow Visualization */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-6 text-green-300">📈 Real-time Data Flow</h2>
+              <p className="text-xl text-green-100 max-w-3xl mx-auto">
+                Visualize data flowing through our IoT network in real-time
+              </p>
+            </motion.div>
+
+            <div className="bg-gradient-to-r from-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30">
+              <div className="grid md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl mb-4">📱</div>
+                  <h3 className="text-xl font-bold text-green-300 mb-2">Devices</h3>
+                  <div className="text-2xl font-bold text-green-400">2M+</div>
+                  <div className="text-sm text-green-200">Connected</div>
+                </div>
+                
+                <div className="text-center">
+                  <div className="text-4xl mb-4">☁️</div>
+                  <h3 className="text-xl font-bold text-green-300 mb-2">Cloud</h3>
+                  <div className="text-2xl font-bold text-green-400">50TB</div>
+                  <div className="text-sm text-green-200">Data/day</div>
+                </div>
+                
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🧠</div>
+                  <h3 className="text-xl font-bold text-green-300 mb-2">AI Processing</h3>
+                  <div className="text-2xl font-bold text-green-400">99.9%</div>
+                  <div className="text-sm text-green-200">Accuracy</div>
+                </div>
+                
+                <div className="text-center">
+                  <div className="text-4xl mb-4">📊</div>
+                  <h3 className="text-xl font-bold text-green-300 mb-2">Analytics</h3>
+                  <div className="text-2xl font-bold text-green-400">Real-time</div>
+                  <div className="text-sm text-green-200">Insights</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
-        <div className="text-center bg-white rounded-2xl p-12 shadow-xl">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Start Your IoT Journey Today</h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Join industry leaders who trust our IoT platform to power their connected future.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all">
-              Get Started
-            </button>
-            <button className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors">
-              Schedule Demo
-            </button>
+        <section className="py-20 px-4 bg-gradient-to-r from-green-600 via-teal-600 to-blue-600">
+          <div className="container mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold mb-6">Connect Your World Today</h2>
+              <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+                Join thousands of organizations using our IoT platform to transform their operations
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <button className="bg-white text-green-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                  Start Your IoT Journey →
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-green-600 transition-colors font-semibold">
+                  Schedule Demo
+                </button>
+              </div>
+            </motion.div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </>
   );
 };
 
