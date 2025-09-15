@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "secure-agent-routing-strategies-2026",
+    title: "AI 2026: Secure Agent Routing Strategies",
+    description:
+      "Least‑privilege, tiered trust, and eval‑gated routing for safe autonomy.",
+    ctaLabel: "Read Guide",
+    href: "/content/ai-2026-secure-agent-routing-strategies",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-failure-modes-mitigations-2026",
+    title: "AI 2026: Agent Failure Modes + Mitigations",
+    description:
+      "Catalog failures and ship a repeatable eval SOP to prevent regressions.",
+    ctaLabel: "Read Playbook",
+    href: "/content/ai-2026-agent-failure-modes-and-mitigations",
+    emoji: "🧯",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agent-risk-maturity-matrix-2026",
     title: "AI 2026: Agent Risk Maturity Matrix",
     description:
