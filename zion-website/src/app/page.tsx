@@ -114,10 +114,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/ai-governance-toolkit"
+                href="/updates/ai-trends-radar-2025"
                 className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
               >
-                New: AI Governance Toolkit v2
+                New: 2025 AI Trends Radar
                 <span aria-hidden>→</span>
               </a>
               <a
