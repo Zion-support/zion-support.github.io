@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 
 interface BlogPostMeta {
   id: string;
@@ -11,6 +12,36 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'agent-safety-guardrails-2025': {
+    id: 'agent-safety-guardrails-2025',
+    title: 'Agent Safety Guardrails: Designing Trustworthy Autonomous Systems in 2025',
+    excerpt:
+      'Practical blueprints for policy engines, intervention strategies, and auditable controls that keep autonomous agents safe and aligned.',
+    category: 'AI Solutions',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'As autonomous agents take on higher-stakes actions, safety guardrails must be first-class citizens in system design. Organizations need layered defenses that combine policy engines, runtime monitors, and human-in-the-loop approvals for sensitive operations.',
+      'We present a reference architecture: (1) capability declarations and allowlists, (2) contextual policy checks with verifiable logs, (3) graded interventions from soft prompts to hard blocks, and (4) incident review loops to improve future behavior.',
+      'This article includes example policies, red-team scenarios, and rollout guidance to incrementally raise autonomy while preserving control and accountability.'
+    ]
+  },
+  'edge-ai-agents-2025': {
+    id: 'edge-ai-agents-2025',
+    title: 'Edge AI Agents: Real-Time Intelligence Across Devices and Locations',
+    excerpt:
+      'Deploy low-latency, bandwidth-efficient agents at the edge for on-site decisioning, resilience, and cost control.',
+    category: 'IoT & Edge',
+    author: 'Michael Rodriguez',
+    date: '2025-09-12',
+    readTime: '7 min read',
+    content: [
+      'Edge AI agents unlock sub-second inference and decision-making where data is produced. This reduces bandwidth costs, preserves privacy, and increases resilience when connectivity is limited.',
+      'We outline deployment patterns using containerized runtimes, model compression, and event-driven synchronization with the cloud. Observability and policy propagation are covered to ensure safe, consistent behavior across fleets.',
+      'Use cases include smart facilities, industrial inspection, retail analytics, and on-site incident response with autonomous remediation.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',

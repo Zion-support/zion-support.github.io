@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 
 export const metadata = {
   title: 'Blog & News - Zion Tech Group',
@@ -7,6 +8,17 @@ export const metadata = {
 
 export default function BlogPage() {
   const featuredPosts = [
+    {
+      id: 'agent-safety-guardrails-2025',
+      title: 'Agent Safety Guardrails: Designing Trustworthy Autonomous Systems in 2025',
+      excerpt: 'Blueprints for policy engines, interventions, and auditable controls that keep AI agents safe and aligned.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/agent-safety-guardrails.jpg',
+      featured: true
+    },
     {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
@@ -65,6 +77,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'edge-ai-agents-2025',
+      title: 'Edge AI Agents: Real-Time Intelligence Across Devices and Locations',
+      excerpt: 'Deploy low-latency, bandwidth‑efficient agents at the edge for on‑site decisioning and resilience.',
+      category: 'IoT & Edge',
+      author: 'Michael Rodriguez',
+      date: '2025-09-12',
+      readTime: '7 min read',
+      image: '/blog/edge-ai-agents.jpg'
+    },
     {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
@@ -158,11 +180,12 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 2, active: false },
+    { name: 'AI Solutions', count: 3, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
+    { name: 'IoT & Edge', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
