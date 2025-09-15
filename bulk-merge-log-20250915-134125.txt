@@ -1,0 +1,27 @@
+[2025-09-15 13:41:28] 🔄 Starting bulk processing...
+[2025-09-15 13:41:28] 📊 Batch size: 50
+[2025-09-15 13:41:28] 📊 Max conflicts per batch: 10
+[2025-09-15 13:41:28] ---
+[2025-09-15 13:41:30] 📊 Total branches to process: 199
+[2025-09-15 13:41:30] ---
+[2025-09-15 13:41:30] 🚀 Processing batch 1 (branches 1 to 50)
+[2025-09-15 13:41:30] ---
+[2025-09-15 13:41:30] 📋 Processing branch 1: aggressive-merge-backup-20250915-112751
+[2025-09-15 13:41:31] 🔄 Attempting to merge aggressive-merge-backup-20250915-112751...
+[2025-09-15 13:41:32] ✅ Successfully merged aggressive-merge-backup-20250915-112751
+[2025-09-15 13:41:33] ✅ Branch aggressive-merge-backup-20250915-112751 processed successfully
+[2025-09-15 13:41:33] 📊 Batch progress: 1 successful, 0 failed
+[2025-09-15 13:41:33] 📊 Overall progress: 1 successful, 0 failed, 0 conflicts resolved
+[2025-09-15 13:41:33] 📋 Processing branch 2: aggressive-merge-backup-20250915-115452
+[2025-09-15 13:41:33] 🔄 Attempting to merge aggressive-merge-backup-20250915-115452...
+[2025-09-15 13:41:35] ✅ Successfully merged aggressive-merge-backup-20250915-115452
+[2025-09-15 13:41:35] ✅ Branch aggressive-merge-backup-20250915-115452 processed successfully
+[2025-09-15 13:41:35] 📊 Batch progress: 2 successful, 0 failed
+[2025-09-15 13:41:35] 📊 Overall progress: 2 successful, 0 failed, 0 conflicts resolved
+[2025-09-15 13:41:35] 📋 Processing branch 3: aggressive-merge-backup-20250915-122844
+[2025-09-15 13:41:36] 🔄 Attempting to merge aggressive-merge-backup-20250915-122844...
+[2025-09-15 13:41:38] ⚠️  Merge conflicts detected in aggressive-merge-backup-20250915-122844, resolving...
+[2025-09-15 13:41:38] 📋 Conflicted files: App.tsx
+[2025-09-15 13:41:38] 🔧 Resolving conflicts in App.tsx for branch aggressive-merge-backup-20250915-122844...
+[2025-09-15 13:41:38] 🧩 Generic file: prefer main version
+[2025-09-15 13:41:38] ✅ Resolved conflicts in App.tsx
