@@ -49,7 +49,11 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
+<<<<<<< HEAD
     "**/*.spec.tsx",
     "coverage"
+=======
+    "**/*.spec.tsx"
+>>>>>>> cursor/create-and-deploy-new-content-f977
   ]
 }

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,11 +39,14 @@ interface NotificationOptions {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,26 +61,19 @@ interface NotificationOptions {
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
   requireInteraction?: boolean;
   silent?: boolean;
   timestamp?: number;
   actions?: NotificationAction[];
 }
 
-interface NotificationAction {
-  action: string;
-  title: string;
-  icon?: string;
 }
 
 class NotificationManager {
   private permission: NotificationPermission = 'default';
 
-  async requestPermission(): Promise<NotificationPermission> {
-    if ('Notification' in window) {
-      this.permission = await Notification.requestPermission();
-    }
-    return this.permission;
   }
 
   async showNotification(options: NotificationOptions): Promise<Notification | null> {
@@ -86,6 +83,7 @@ class NotificationManager {
     }
 
     if (this.permission !== 'granted') {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       this.permission = await this.requestPermission();
@@ -263,6 +261,8 @@ class NotificationManager {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
     }
 
     try {
@@ -271,6 +271,7 @@ class NotificationManager {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -315,6 +316,8 @@ class NotificationManager {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -329,6 +332,7 @@ class NotificationManager {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -339,11 +343,14 @@ class NotificationManager {
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
       console.error('Error showing notification:', error);
       return null;
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   showSuccess(title: string, body?: string): Promise<Notification | null> {
@@ -547,10 +554,13 @@ export type { NotificationOptions, ToastOptions };
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -658,3 +668,5 @@ export default notificationManager;
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977

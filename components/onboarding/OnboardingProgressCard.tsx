@@ -1,10 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-CheckCircle2CirclePartyPopper
-=======
-import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 export type OnboardingStep = {
   id: string;
@@ -26,20 +21,11 @@ function computePercentage(steps: OnboardingStep[]): number {
   return Math.round((completedCount / steps.length) * 100);
 }
 
-<<<<<<< HEAD
-export default function OnboardingProgressCard({ titlestepshighlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {
-=======
-export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {
->>>>>>> origin/auto/autonomy-17186719616
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
 
   const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
       <div className="flex items-center justify-between">

@@ -4,25 +4,11 @@ import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
 import { Certification } from '@/types/resume';
-<<<<<<< HEAD
-Loader2
-import { useResume } from '@/hooks/useResume';
-import { AlertDescription } from '@/components/ui/alert';
-=======
-import { Loader2 } from 'lucide-react';
-import { useResume } from '@/hooks/useResume';
-import { Alert, AlertDescription } from '@/components/ui/alert';
->>>>>>> origin/auto/autonomy-17186719616
 import { zodResolver } from '@hookform/resolvers/zod';
 import { format } from 'date-fns';
 
 import { CertificationsList } from './CertificationsList';
 import { CertificationFormFields } from './CertificationFormFields';
-<<<<<<< HEAD
-import { CertificationFormValuescertificationSchema } from './types';
-=======
-import { CertificationFormValues, certificationSchema } from './types';
->>>>>>> origin/auto/autonomy-17186719616
 
 interface CertificationsFormProps {
   resumeId: string;
@@ -31,27 +17,11 @@ interface CertificationsFormProps {
   onBack: () => void;
 }
 
-<<<<<<< HEAD
-export function CertificationsForm({ resumeIdcertificationsonCompleteonBack }: CertificationsFormProps) {
-  const { addCertificationupdateCertificationdeleteCertificationisLoading } = useResume();
-  const [editingIdsetEditingId] = useState<string | null>(null);
-  const [errorsetError] = useState<string | null>(null);
-=======
-export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
-  const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
-  const [editingId, setEditingId] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
->>>>>>> origin/auto/autonomy-17186719616
 
   // Helper function to format dates as strings for form inputs
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue;
-<<<<<<< HEAD
-    return format(dateValue'yyyy-MM-dd');
-=======
-    return format(dateValue, 'yyyy-MM-dd');
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   const form = useForm<CertificationFormValues>({
@@ -62,13 +32,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       issue_date: '',
       expiration_date: '',
       credential_id: '',
-<<<<<<< HEAD
-      credential_url: ''}});
-=======
-      credential_url: '',
-    },
-  });
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleAddOrUpdate = async (data: CertificationFormValues) => {
     try {
@@ -81,22 +44,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         issue_date: data.issue_date || undefined,
         expiration_date: data.expiration_date || undefined,
         credential_id: data.credential_id,
-<<<<<<< HEAD
-        credential_url: data.credential_url};
-
-      if (editingId) {
-        success = await updateCertification(editingIdcertData);
-      } else {
-        success = await addCertification(resumeIdcertData);
-=======
-        credential_url: data.credential_url,
-      };
-
-      if (editingId) {
-        success = await updateCertification(editingId, certData);
-      } else {
-        success = await addCertification(resumeId, certData);
->>>>>>> origin/auto/autonomy-17186719616
       }
 
       if (success) {
@@ -106,12 +53,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           issue_date: '',
           expiration_date: '',
           credential_id: '',
-<<<<<<< HEAD
-          credential_url: ''});
-=======
-          credential_url: '',
-        });
->>>>>>> origin/auto/autonomy-17186719616
         setEditingId(null);
       }
     } catch (err: any) {
@@ -124,12 +65,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     form.reset({
       ...cert,
       issue_date: formatDateValue(cert.issue_date),
-<<<<<<< HEAD
-      expiration_date: formatDateValue(cert.expiration_date)});
-=======
-      expiration_date: formatDateValue(cert.expiration_date),
-    });
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   const handleDelete = async (id: string) => {
@@ -143,11 +78,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       <div>
         <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>
         <p className="text-muted-foreground">
-<<<<<<< HEAD
-          Add any professional certificationslicensesor credentials you have earned.
-=======
-          Add any professional certifications, licenses, or credentials you have earned.
->>>>>>> origin/auto/autonomy-17186719616
         </p>
       </div>
 
@@ -183,12 +113,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
-<<<<<<< HEAD
-                      credential_url: ''});
-=======
-                      credential_url: '',
-                    });
->>>>>>> origin/auto/autonomy-17186719616
                   } else {
                     onBack();
                   }

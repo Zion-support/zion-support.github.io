@@ -1,22 +1,21 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 =======
 >>>>>>> a138f30b15304af49b19e9920ab7ee61e74c407f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
 import Header from '../Header';
 import Footer from '../Footer';
 
 const NextGenSpaceTech2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
->>>>>>> a138f30b15304af49b19e9920ab7ee61e74c407f
       <Header />
       
       <main className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
 =======
 
 const NextGenSpaceTech2026: React.FC = () => {
@@ -371,10 +370,14 @@ const NextGenSpaceTech2026: React.FC = () => {
                 <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
                 Ecosystem Creation
               </div>
+=======
+        {/* Hero Section */}
+>>>>>>> cursor/create-and-deploy-new-content-f977
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Space Missions and Applications */}
         <div className="mb-16">
@@ -637,10 +640,13 @@ const NextGenSpaceTech2026: React.FC = () => {
               </div>
             </div>
 >>>>>>> a138f30b15304af49b19e9920ab7ee61e74c407f
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
           </div>
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -688,6 +694,11 @@ const NextGenSpaceTech2026: React.FC = () => {
 =======
       </div>
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+      </main>
+      
+      <Footer />
+>>>>>>> cursor/create-and-deploy-new-content-f977
     </div>
   );
 };
