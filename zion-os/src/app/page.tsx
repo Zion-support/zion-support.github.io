@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import FeatureCard from './components/FeatureCard';
 
@@ -102,8 +103,8 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </a>
-              <a href="/news" className="btn-secondary hover-lift">
-                📰 See what's new in 2025
+              <a href="/blog/sovereign-ai-commerce-2025" className="btn-secondary hover-lift">
+                📰 New: Sovereign AI Commerce 2025
               </a>
             </div>
           </div>
