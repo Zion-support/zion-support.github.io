@@ -442,6 +442,51 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/agent-finops-2026.jpg",
     slug: "ai-2026-agent-finops-cost-optimization"
+  },
+  {
+    id: 28,
+    title: "Enterprise GenAI Compliance Patterns (2026)",
+    excerpt: "Practical guardrails, audits, and policy-as-code for regulated GenAI.",
+    content: "This guide distills proven GenAI compliance patterns for regulated industries. Learn how to map risk tiers to controls, enforce policy-as-code in CI/CD, add runtime tripwires, and automate evidence collection for audits.",
+    author: "Elena Rossi",
+    authorRole: "Chief Compliance Architect",
+    publishDate: "2025-09-15",
+    readTime: "9 min read",
+    category: "Compliance",
+    tags: ["GenAI", "Compliance", "Policy-as-Code"],
+    featured: true,
+    imageUrl: "/images/blog/enterprise-genai-compliance-2026.jpg",
+    slug: "enterprise-genai-compliance-patterns-2026"
+  },
+  {
+    id: 29,
+    title: "Agentic CRM: Autonomous Revenue Workflows (2026)",
+    excerpt: "Blueprint for lead routing, outreach, and pipeline hygiene with agents.",
+    content: "Design agentic CRM workflows that qualify leads, personalize outreach, and maintain pipeline hygiene. Covers value-based model routing, safety gates, and evaluation harnesses tied to revenue KPIs.",
+    author: "Marcus Lee",
+    authorRole: "VP, Revenue Operations",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Revenue",
+    tags: ["Agents", "CRM", "Automation"],
+    featured: true,
+    imageUrl: "/images/blog/agentic-crm-revenue-workflows-2026.jpg",
+    slug: "agentic-crm-autonomous-revenue-workflows-2026"
+  },
+  {
+    id: 30,
+    title: "Real-Time Agent Observability (2026)",
+    excerpt: "Traces, metrics, and evals for production agent workflows.",
+    content: "Implement observability for agent systems: structured tool traces, scenario-linked evals, failure taxonomies, and rollback signals. Integrate with your existing telemetry stack for end-to-end visibility.",
+    author: "Hannah Park",
+    authorRole: "Director of Observability",
+    publishDate: "2025-09-15",
+    readTime: "7 min read",
+    category: "Observability",
+    tags: ["Agents", "Tracing", "Evals"],
+    featured: true,
+    imageUrl: "/images/blog/real-time-agent-observability-2026.jpg",
+    slug: "real-time-agent-observability-2026"
   }
 ];
 
