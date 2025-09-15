@@ -1,5 +1,4 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
 
 const AppLayout = ({ children }) => {
   return (
@@ -9,4 +8,5 @@ const AppLayout = ({ children }) => {
   );
 };
 
+export { AppLayout };
 export default AppLayout;
