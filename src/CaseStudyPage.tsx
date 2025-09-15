@@ -5,26 +5,16 @@ const CaseStudyPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Case Study: {slug}</h1>
-          <p className="text-xl text-gray-600">Detailed case study coming soon</p>
-        </div>
-        
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
-          <div className="text-center">
-            <div className="text-6xl mb-6">📊</div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Case Study Details</h2>
-            <p className="text-gray-600 mb-6">
-              This case study page is under development. We're working on bringing you detailed insights and success stories.
+    <div className="min-h-screen bg-gray-50 py-16">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Case Study: {slug}
+          </h1>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <p className="text-gray-600 text-lg">
+              This case study showcases how we've helped businesses transform with our technology solutions.
             </p>
-            <a 
-              href="/" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
-              Back to Home
-            </a>
           </div>
         </div>
       </div>
