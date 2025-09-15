@@ -335,6 +335,23 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   }
+  ,
+  {
+    title: 'Guide: Generative AI Risk Register (2026)',
+    summary:
+      'Template and practices to track risks, owners, mitigations, and audit evidence for AI programs.',
+    href: '/blog/ai-2026-generative-ai-risk-register',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Guide: Agent Cost Optimization (2026)',
+    summary:
+      'Cut spend via routing, caching, batching, and benchmark-driven model selection with guardrails.',
+    href: '/blog/ai-2026-agent-cost-optimization',
+    date: '2025-09-15',
+    tag: 'Guide'
+  }
 ]
 
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
