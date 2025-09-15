@@ -7,13 +7,10 @@ const NewContentPromotionBanner: React.FC = () => {
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <div className="text-sm font-semibold text-purple-700 mb-2">Just published</div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">AI 2026: Edge Governance + Agent Security</h2>
-            <p className="text-lg text-gray-600 max-w-2xl">Govern edge AI and harden agents with policy-as-code, telemetry, and layered defenses for safe autonomy.</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">AI 2026: Risk-Aware Agents Blueprint</h2>
+            <p className="text-lg text-gray-600 max-w-2xl">Design policy-constrained, risk-scored agent workflows with continuous evaluations and guardrails.</p>
           </div>
-          <div className="flex flex-col md:flex-row gap-3">
-            <a href="/content/ai-2026-edge-governance-framework" className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Edge Governance →</a>
-            <a href="/content/ai-2026-agent-security-hardening" className="inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Agent Security →</a>
-          </div>
+          <a href="/content/ai-2026-risk-aware-agents-blueprint" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Blueprint →</a>
         </div>
       </div>
     </div>

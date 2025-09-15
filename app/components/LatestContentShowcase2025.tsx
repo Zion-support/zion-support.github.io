@@ -17,26 +17,26 @@ export default function LatestContentShowcase2025() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">🛡️</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Agent Risk Management 2026</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Risk-Aware Agents Blueprint</h3>
             <p className="text-gray-600 mb-4">
-              Threat models, layered controls, and runtime guardrails for enterprise agents.
+              Policy-constrained, risk-scored agent workflows with evals and guardrails.
             </p>
             <Link 
-              href="/content/ai-2026-agent-risk-management"
+              href="/content/ai-2026-risk-aware-agents-blueprint"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              Read Framework →
+              Read Full Guide →
             </Link>
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">⚙️</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Autonomous Incident Response 2026</h3>
+            <div className="text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Evaluations in Production</h3>
             <p className="text-gray-600 mb-4">
-              Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability.
+              Operationalize LLM and agent evals with live metrics and rollbacks.
             </p>
             <Link 
-              href="/blog/ai-2026-ai-ops-autonomous-incident-response"
+              href="/blog/ai-2026-evaluations-in-production"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
               Read Article →
@@ -44,16 +44,16 @@ export default function LatestContentShowcase2025() {
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">🔐</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Secure Agent Architecture 2026</h3>
+            <div className="text-4xl mb-4">📏</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">AI Agents ROI Playbook</h3>
             <p className="text-gray-600 mb-4">
-              Design zero-trust autonomous agents with isolation domains and runtime guards.
+              A practical playbook to model, track, and realize ROI from enterprise AI agents.
             </p>
             <Link 
-              href="/blog/ai-2026-secure-agent-architecture"
+              href="/content/ai-agents-roi-playbook-2026"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              Explore Architecture →
+              Read Playbook →
             </Link>
           </div>
         </div>
