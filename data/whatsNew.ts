@@ -11,24 +11,24 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
-    id: "exec-guide-agent-adoption-2026",
-    title: "AI 2026: Executive Guide to Agent Adoption",
+    id: "agentic-risk-and-safety-playbook-2026",
+    title: "AI 2026: Agentic Risk and Safety Playbook",
     description:
-      "Leadership playbook for adopting autonomous agents with governance, controls, and ROI.",
-    ctaLabel: "Read Guide",
-    href: "/content/ai-2026-executive-guide-to-agent-adoption",
-    emoji: "🏛️",
+      "Safeguards, monitoring, and governance patterns for production agent systems.",
+    ctaLabel: "Read Playbook",
+    href: "/blog/ai-2026-agentic-risk-and-safety-playbook",
+    emoji: "🛡️",
     highlight: true,
     date: "2025-09-15",
   },
   {
-    id: "production-guardrails-2026",
-    title: "AI 2026: Production Guardrails for Autonomous Agents",
+    id: "autonomous-ops-playbook-blog-2026",
+    title: "AI 2026: Autonomous Ops Playbook",
     description:
-      "Isolation domains, policy-as-code, eval gates, and telemetry to ship safely.",
-    ctaLabel: "Read Article",
-    href: "/blog/ai-2026-production-guardrails-for-autonomous-agents",
-    emoji: "🛡️",
+      "SLOs, incident response, eval-driven releases, and policy-as-code for AI operations.",
+    ctaLabel: "Explore Playbook",
+    href: "/blog/ai-2026-autonomous-ops-playbook",
+    emoji: "🛠️",
     date: "2025-09-15",
   },
   {
