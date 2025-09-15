@@ -1,197 +1,237 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const NewContentShowcase2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState('space');
 
-  const contentTabs = [
-    {
-      id: 'ai-transformation',
-      title: 'AI Transformation 2026',
-      icon: '🧠',
-      description: 'Advanced AI systems with synthetic consciousness and quantum enhancement',
-      link: '/pages/AdvancedAITransformation2026',
-      color: 'from-purple-600 to-pink-600',
-      features: ['Synthetic Consciousness', 'Quantum-Enhanced AI', 'Autonomous Agents']
+  const contentData = {
+    space: {
+      title: "Advanced Space Technology 2026",
+      description: "Pioneering the next frontier with revolutionary space technologies, quantum propulsion systems, and interplanetary communication networks.",
+      icon: "🚀",
+      color: "from-slate-900 via-purple-900 to-slate-900",
+      features: [
+        "Quantum Propulsion Systems",
+        "Autonomous Space Mining",
+        "Interplanetary Internet",
+        "Self-Sustaining Space Habitats",
+        "Luxury Space Tourism",
+        "Space Defense Networks"
+      ],
+      link: "/pages/AdvancedSpaceTech2026",
+      metrics: {
+        investment: "$7.5B Raised",
+        timeline: "2026-2030",
+        status: "Operational"
+      }
     },
-    {
-      id: 'quantum-revolution',
-      title: 'Quantum Revolution 2025',
-      icon: '⚡',
-      description: 'Revolutionary quantum computing that solves impossible problems',
-      link: '/pages/QuantumComputingRevolution2025',
-      color: 'from-cyan-600 to-blue-600',
-      features: ['Quantum Supremacy', 'Quantum Cryptography', 'Molecular Simulation']
+    quantum: {
+      title: "Quantum Computing Breakthrough 2026",
+      description: "Witness the dawn of practical quantum computing with revolutionary 1000-qubit processors and real-world applications.",
+      icon: "⚛️",
+      color: "from-indigo-900 via-purple-900 to-pink-900",
+      features: [
+        "1000-Qubit Processor",
+        "Quantum Error Correction",
+        "Quantum Machine Learning",
+        "Quantum Cryptography",
+        "Quantum Simulation",
+        "Quantum Internet"
+      ],
+      link: "/pages/QuantumComputingBreakthrough2026",
+      metrics: {
+        investment: "$36.2B Raised",
+        timeline: "Available Now",
+        status: "Breakthrough"
+      }
     },
-    {
-      id: 'neural-interface',
-      title: 'Neural Interface 2025',
-      icon: '🧬',
-      description: 'Direct brain-computer communication and thought-controlled devices',
-      link: '/pages/NeuralInterfaceRevolution2025',
-      color: 'from-emerald-600 to-teal-600',
-      features: ['Non-Invasive BCI', 'Neural Implants', 'Optical Interfaces']
+    robotics: {
+      title: "Advanced Robotics 2026",
+      description: "Experience the next generation of intelligent robots with human-like dexterity and autonomous decision-making capabilities.",
+      icon: "🤖",
+      color: "from-gray-900 via-blue-900 to-indigo-900",
+      features: [
+        "Humanoid Robots",
+        "Industrial Automation",
+        "Medical Robots",
+        "Service Robots",
+        "Space Robots",
+        "Agricultural Robots"
+      ],
+      link: "/pages/AdvancedRobotics2026",
+      metrics: {
+        investment: "$56.9B Raised",
+        timeline: "Production Ready",
+        status: "Deployed"
+      }
     }
+  };
+
+  const tabs = [
+    { id: 'space', label: 'Space Tech', icon: '🚀' },
+    { id: 'quantum', label: 'Quantum Computing', icon: '⚛️' },
+    { id: 'robotics', label: 'Advanced Robotics', icon: '🤖' }
   ];
 
-  const additionalContent = [
-    {
-      title: 'Synthetic Intelligence 2026',
-      icon: '🤖',
-      description: 'AI agents with synthetic consciousness and autonomous capabilities',
-      link: '/pages/SyntheticIntelligence2026',
-      color: 'from-violet-600 to-purple-600'
-    },
-    {
-      title: 'Advanced Quantum Computing 2026',
-      icon: '⚛️',
-      description: 'Next-generation quantum processors with 1000+ logical qubits',
-      link: '/pages/AdvancedQuantumComputing2026',
-      color: 'from-indigo-600 to-cyan-600'
-    },
-    {
-      title: 'Neural Interface Revolution 2026',
-      icon: '🧠',
-      description: 'Revolutionary brain-computer interfaces with thought control',
-      link: '/pages/NeuralInterfaceRevolution2026',
-      color: 'from-teal-600 to-emerald-600'
-    },
-    {
-      title: 'Revolutionary Tech Blog 2026',
-      icon: '📚',
-      description: 'Comprehensive insights into cutting-edge technology trends',
-      link: '/pages/RevolutionaryTechBlog2026',
-      color: 'from-orange-600 to-red-600'
-    }
-  ];
+  const currentContent = contentData[activeTab as keyof typeof contentData];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl p-8 mb-12">
-      <div className="text-center mb-12">
-        <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
-          🚀 BREAKTHROUGH 2026 • REVOLUTIONARY NEW CONTENT
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 REVOLUTIONARY NEW CONTENT • 2026
+          </div>
+          <h2 className="text-4xl font-bold mb-4">🚀 Next-Generation Technology Showcase</h2>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Explore our latest breakthrough content featuring cutting-edge space technology, 
+            quantum computing, and advanced robotics that will reshape the future.
+          </p>
         </div>
-        <h2 className="text-5xl font-bold text-white mb-6">🌟 Revolutionary Technology Showcase 2026</h2>
-        <p className="text-2xl text-purple-200 max-w-4xl mx-auto">
-          Experience the future with our groundbreaking new content covering the most advanced technologies 
-          that are reshaping industries and creating new possibilities.
-        </p>
-      </div>
 
-      {/* Interactive Tab Navigation */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
-        {contentTabs.map((tab, index) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(index)}
-            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-              activeTab === index
-                ? `bg-gradient-to-r ${tab.color} text-white shadow-lg scale-105`
-                : 'bg-white/20 text-white hover:bg-white/30'
-            }`}
-          >
-            <span className="text-2xl mr-2">{tab.icon}</span>
-            {tab.title}
-          </button>
-        ))}
-      </div>
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === tab.id
+                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-105'
+                  : 'bg-white/20 backdrop-blur-sm text-gray-300 hover:bg-white/30 hover:text-white'
+              }`}
+            >
+              <span className="text-xl">{tab.icon}</span>
+              <span>{tab.label}</span>
+            </button>
+          ))}
+        </div>
 
-      {/* Tab Content */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-          className="mb-12"
-        >
-          <div className="bg-gradient-to-r from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <div className="text-6xl mb-6">{contentTabs[activeTab].icon}</div>
-                <h3 className="text-4xl font-bold text-white mb-4">{contentTabs[activeTab].title}</h3>
-                <p className="text-xl text-purple-200 mb-6">{contentTabs[activeTab].description}</p>
-                <div className="space-y-2 mb-8">
-                  {contentTabs[activeTab].features.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                      <span className="text-purple-200">{feature}</span>
-                    </div>
-                  ))}
+        {/* Content Display */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Left Side - Content Info */}
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="flex items-center space-x-3 mb-4">
+                <span className="text-4xl">{currentContent.icon}</span>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">{currentContent.title}</h3>
+                  <div className="flex items-center space-x-2 mt-2">
+                    <span className="px-3 py-1 bg-green-600/30 rounded-full text-sm font-semibold">
+                      {currentContent.metrics.status}
+                    </span>
+                    <span className="px-3 py-1 bg-blue-600/30 rounded-full text-sm font-semibold">
+                      {currentContent.metrics.timeline}
+                    </span>
+                  </div>
                 </div>
-                <a
-                  href={contentTabs[activeTab].link}
-                  className={`inline-block bg-gradient-to-r ${contentTabs[activeTab].color} text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all duration-300`}
-                >
-                  Explore {contentTabs[activeTab].title} →
-                </a>
               </div>
-              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-                <h4 className="text-2xl font-bold text-white mb-4">Key Highlights</h4>
-                <ul className="space-y-3 text-purple-200">
-                  <li className="flex items-start space-x-3">
-                    <span className="text-purple-400 mt-1">✨</span>
-                    <span>Cutting-edge technology implementation</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-purple-400 mt-1">🚀</span>
-                    <span>Revolutionary breakthrough capabilities</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-purple-400 mt-1">🔬</span>
-                    <span>Advanced research and development</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-purple-400 mt-1">💡</span>
-                    <span>Innovative problem-solving approaches</span>
-                  </li>
-                </ul>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                {currentContent.description}
+              </p>
+            </div>
+
+            {/* Features Grid */}
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h4 className="text-xl font-bold text-white mb-4">🌟 Key Features</h4>
+              <div className="grid grid-cols-2 gap-3">
+                {currentContent.features.map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-2 text-gray-300">
+                    <span className="text-green-400">✓</span>
+                    <span className="text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Investment Info */}
+            <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">
+              <h4 className="text-xl font-bold text-white mb-4">💰 Investment Status</h4>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <div className="text-2xl font-bold text-green-400">{currentContent.metrics.investment}</div>
+                  <div className="text-gray-300 text-sm">Total Funding</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-blue-400">{currentContent.metrics.timeline}</div>
+                  <div className="text-gray-300 text-sm">Timeline</div>
+                </div>
               </div>
             </div>
           </div>
-        </motion.div>
-      </AnimatePresence>
 
-      {/* Additional Content Grid */}
-      <div className="mb-12">
-        <h3 className="text-3xl font-bold text-white text-center mb-8">🌟 More Revolutionary Content</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {additionalContent.map((content, index) => (
-            <motion.div
-              key={content.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-            >
-              <div className="text-4xl mb-4 text-center">{content.icon}</div>
-              <h4 className="text-xl font-bold text-white mb-3 text-center">{content.title}</h4>
-              <p className="text-purple-200 text-sm mb-4 text-center">{content.description}</p>
+          {/* Right Side - Interactive Preview */}
+          <div className="space-y-6">
+            {/* Visual Preview */}
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 h-64 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-8xl mb-4 animate-bounce">{currentContent.icon}</div>
+                <div className="text-2xl font-bold text-white mb-2">{currentContent.title}</div>
+                <div className="text-gray-300">Interactive Preview</div>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="space-y-4">
               <a
-                href={content.link}
-                className={`block w-full bg-gradient-to-r ${content.color} text-white py-2 rounded-lg font-semibold text-center hover:shadow-lg transition-all duration-300`}
+                href={currentContent.link}
+                className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-6 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-lg"
               >
-                Explore →
+                🚀 Explore {currentContent.title} →
               </a>
-            </motion.div>
-          ))}
-        </div>
-      </div>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 px-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                  💰 Invest Now
+                </button>
+                <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 px-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                  📧 Learn More
+                </button>
+              </div>
+            </div>
 
-      {/* Call to Action */}
-      <div className="text-center">
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white">
-          <h3 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h3>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Dive into our revolutionary technology content and discover the innovations that are shaping tomorrow.
+            {/* Quick Stats */}
+            <div className="bg-gradient-to-r from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6">
+              <h4 className="text-lg font-bold text-white mb-4">📊 Quick Stats</h4>
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-400">1000+</div>
+                  <div className="text-gray-300">Qubits/Features</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400">99.9%</div>
+                  <div className="text-gray-300">Accuracy</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-emerald-400">24/7</div>
+                  <div className="text-gray-300">Operation</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-pink-400">10x</div>
+                  <div className="text-gray-300">Efficiency</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-8 pt-8 border-t border-white/20">
+          <h3 className="text-2xl font-bold text-white mb-4">Ready to Experience the Future?</h3>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Join thousands of innovators, investors, and technology leaders who are already 
+            transforming their industries with our revolutionary technologies.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-50 transition-colors">
-              Explore All Content →
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              🌟 Explore All Technologies
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors">
-              Get Started Today
+            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              💼 Schedule Demo
+            </button>
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              📞 Contact Us
             </button>
           </div>
         </div>
