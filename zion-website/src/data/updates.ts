@@ -7,6 +7,23 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (new content batch)
+  {
+    title: 'Launch: Autonomous Incident Analysis Copilot v1.0',
+    summary:
+      'Automated incident timelines, causal graphs, and remediation suggestions with audit-ready evidence.',
+    href: '/updates/autonomous-incident-analysis-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: State of Agent Reliability 2026',
+    summary:
+      'Uptime, SLO adherence, and failure taxonomy across production agent systems with benchmarks.',
+    href: '/updates/state-of-agent-reliability-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
   // Added 2025-09-15 (brand new content)
   {
 <<<<<<< HEAD
@@ -33,6 +50,23 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  // Newly added 2025-09-15 (to advertise on homepage)
+  {
+    title: 'Report: Enterprise Retrieval Observability (2026)',
+    summary:
+      'Metrics, traces, and dashboards to monitor retrieval quality, drift, and SLIs at scale.',
+    href: '/updates/enterprise-retrieval-observability-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Launch: AI Lab Open Benchmarks Portal',
+    summary:
+      'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
+    href: '/updates/ai-lab-open-benchmarks-portal',
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -255,6 +289,22 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/state-of-agent-tooling-2026',
     date: '2025-09-15',
     tag: 'Report'
+  },
+  {
+    title: 'Launch: Real-Time Agent Observability Console v1.0',
+    summary:
+      'Unified traces, eval signals, and guardrail events with drilldowns and exportable evidence bundles.',
+    href: '/updates/real-time-agent-observability-console-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Agent Change Management Runbook (2026)',
+    summary:
+      'Standardize eval-gated approvals, progressive rollouts, and incident playbooks for safer autonomy.',
+    href: '/updates/agent-change-management-runbook-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
   },
   {
     title: 'Launch: Agent Evals & Observability Suite v1.0',

@@ -18,6 +18,7 @@ import {
   Cloud
 } from 'lucide-react';
 import { latestContent } from '../../utils/data/latestContent';
+import { NewContentPromoSection } from '../components/NewContentPromoBanner';
 
 export default function Home() {
   const stats = [
@@ -131,6 +132,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate">
+      <NewContentPromoSection />
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         {/* Background Effects */}

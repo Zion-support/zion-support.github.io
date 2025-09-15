@@ -1,12 +1,9 @@
-import { LightBulbIcon, CogIcon, UserGroupIcon } from '@heroicons/react/24/outline'
-
-const services = [
-  { name: 'AI Consulting', description: 'Strategy, readiness, and roadmap for AI adoption.', icon: LightBulbIcon },
-  { name: 'Managed AI Operations', description: 'Operate and optimize AI systems with SLAs.', icon: CogIcon },
-  { name: 'Enterprise Enablement', description: 'Training, governance, and change management.', icon: UserGroupIcon }
-]
-
 export default function ServicesPage() {
+  const services = [
+    { name: 'AI Consulting', description: 'Strategy, readiness, and roadmap for AI adoption.' },
+    { name: 'Managed AI Operations', description: 'Operate and optimize AI systems with SLAs.' },
+    { name: 'Enterprise Enablement', description: 'Training, governance, and change management.' },
+  ]
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-7xl px-6 pt-24">
@@ -18,10 +15,7 @@ export default function ServicesPage() {
           <dl className="grid grid-cols-1 gap-8 sm:grid-cols-3">
             {services.map((s) => (
               <div key={s.name} className="rounded-2xl bg-white/5 p-6">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <s.icon className="h-5 w-5 text-blue-400" />
-                  {s.name}
-                </dt>
+                <dt className="text-base font-semibold leading-7 text-white">{s.name}</dt>
                 <dd className="mt-3 text-sm text-gray-300">{s.description}</dd>
               </div>
             ))}

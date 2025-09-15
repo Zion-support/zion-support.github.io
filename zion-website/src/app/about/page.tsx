@@ -14,16 +14,15 @@ export default function AboutPage() {
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">About Zion Tech Group</h1>
           <p className="mt-4 text-lg leading-8 text-gray-300">We help organizations accelerate with AI, automation, and secure infrastructure.</p>
         </div>
-
         <div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-none">
           <dl className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-            {values.map((v) => (
-              <div key={v.name} className="rounded-2xl bg-white/5 p-6">
+            {values.map((value) => (
+              <div key={value.name} className="rounded-2xl bg-white/5 p-6">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <v.icon className="h-5 w-5 text-blue-400" />
-                  {v.name}
+                  <value.icon className="h-5 w-5 text-blue-400" />
+                  {value.name}
                 </dt>
-                <dd className="mt-3 text-sm text-gray-300">{v.description}</dd>
+                <dd className="mt-3 text-sm text-gray-300">{value.description}</dd>
               </div>
             ))}
           </dl>

@@ -1,83 +1,9 @@
-import {
-  ChartBarIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  LightBulbIcon,
-  ShieldCheckIcon,
-  UserGroupIcon
-} from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '../data/updates'
 
-const features = [
-  {
-    name: 'AI-Powered Research',
-    description:
-      'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
-    icon: LightBulbIcon
-  },
-  {
-    name: 'Quantum Computing',
-    description:
-      'Next-generation quantum neural networks for solving complex computational problems.',
-    icon: CpuChipIcon
-  },
-  {
-    name: 'Global Solutions',
-    description:
-      'Worldwide deployment of autonomous business operations and digital transformation.',
-    icon: GlobeAltIcon
-  },
-  {
-    name: 'Enterprise Security',
-    description:
-      'Military-grade security protocols protecting your most valuable digital assets.',
-    icon: ShieldCheckIcon
-  },
-  {
-    name: 'Data Analytics',
-    description: 'Advanced analytics and insights driving informed decision-making.',
-    icon: ChartBarIcon
-  },
-  {
-    name: 'Expert Team',
-    description:
-      'World-class researchers and engineers pushing the boundaries of technology.',
-    icon: UserGroupIcon
-  }
-]
-
-const stats = [
-  { name: 'Research Papers Published', value: '150+' },
-  { name: 'AI Models Deployed', value: '500+' },
-  { name: 'Global Clients', value: '1000+' },
-  { name: 'Patents Filed', value: '25+' }
-]
-
-const solutions = [
-  {
-    name: 'AI Research Assistant',
-    description: 'Autonomous research platform that accelerates scientific discovery.',
-    href: '/solutions/ai-autonomous-research'
-  },
-  {
-    name: 'Quantum Neural Networks',
-    description: 'Next-generation computing for complex problem solving.',
-    href: '/solutions/quantum-neural-networks'
-  },
-  {
-    name: 'Autonomous Business Operations',
-    description: 'AI-powered automation for enterprise efficiency.',
-    href: '/solutions/autonomous-business'
-  },
-  {
-    name: 'IT Asset Management',
-    description: 'Intelligent management of digital infrastructure.',
-    href: '/solutions/it-asset-management'
-  }
-]
-
 export default function HomePage() {
+  const latest = getLatestUpdates(6)
   return (
+<<<<<<< HEAD
     <div className="bg-black">
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
@@ -590,23 +516,25 @@ export default function HomePage() {
 
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+=======
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-7xl px-6 pt-24">
+>>>>>>> chore/new-updates-2025-09-15
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Ready to transform your business?
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-            Join the AI revolution and discover how our cutting-edge technology can accelerate your growth and innovation.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="/contact"
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105"
-            >
-              Get Started
-            </a>
-            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View Solutions <span aria-hidden="true">→</span>
-            </a>
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Zion Tech Group</h1>
+          <p className="mt-4 text-lg leading-8 text-gray-300">AI, automation, and secure infrastructure.</p>
+          <div className="mt-8">
+            <a href="/updates" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">See all updates →</a>
+          </div>
+        </div>
+        <div className="mx-auto mt-12 max-w-4xl">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {latest.map((item) => (
+              <article key={item.href} className="rounded-2xl bg-white/5 p-6">
+                <h3 className="text-white font-semibold"><a href={item.href}>{item.title}</a></h3>
+                <p className="mt-2 text-sm text-gray-300">{item.summary}</p>
+              </article>
+            ))}
           </div>
         </div>
       </div>

@@ -26,7 +26,10 @@ import {
   Network,
   Lock,
   Gauge,
-  BarChart3
+  BarChart3,
+  Mail,
+  Play,
+  Lightbulb
 } from 'lucide-react';
 import type { ComponentType, SyntheticEvent } from 'react';
 import React, { useEffect, useState } from 'react';
