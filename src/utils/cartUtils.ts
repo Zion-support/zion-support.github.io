@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Cart utility functions for managing shopping cart state
 =======
 <<<<<<< HEAD
@@ -15,6 +16,8 @@
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
 export interface CartItem {
   id: string;
   name: string;
@@ -39,6 +42,7 @@ export const cartUtils = {
 <<<<<<< HEAD
 export const cartUtils = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Create empty cart
   createEmptyCart: (): Cart => ({
     items: [],
@@ -61,6 +65,8 @@ export const cartUtils = {
   // Add item to cart
   addItem(cart: Cart, item: Omit<CartItem, 'quantity'>): Cart {
 >>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-afc8
     const existingItem = cart.items.find(cartItem => cartItem.id === item.id);
     
     if (existingItem) {
@@ -71,6 +77,7 @@ export const cartUtils = {
       const newItem: CartItem = { ...item, quantity: 1 };
       const newItems = [...cart.items, newItem];
       return cartUtils.calculateTotals({ ...cart, items: newItems });
+<<<<<<< HEAD
 =======
 export interface Discount {
   code: string;
@@ -145,11 +152,18 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
 =======
   removeItem(cart: Cart, itemId: string): Cart {
 >>>>>>> main
+=======
+    }
+  },
+
+  // Remove item from cart
+>>>>>>> cursor/create-and-deploy-new-content-afc8
     const newItems = cart.items.filter(item => item.id !== itemId);
     return cartUtils.calculateTotals({ ...cart, items: newItems });
   },
 
   // Update item quantity
+<<<<<<< HEAD
 <<<<<<< HEAD
   updateItemQuantity: (cart: Cart, itemId: string, quantity: number): Cart => {
 =======
@@ -188,12 +202,27 @@ export function calculateCartTotals(cart: Cart): Cart {
 =======
   calculateTotals(cart: Cart): Cart {
 >>>>>>> main
+=======
+    if (quantity <= 0) {
+      return cartUtils.removeItem(cart, itemId);
+    }
+
+    const newItems = cart.items.map(item =>
+      item.id === itemId ? { ...item, quantity } : item
+    );
+    
+    return cartUtils.calculateTotals({ ...cart, items: newItems });
+  },
+
+  // Calculate totals
+>>>>>>> cursor/create-and-deploy-new-content-afc8
     const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
     
     return {
       ...cart,
       total: Math.round(total * 100) / 100, // Round to 2 decimal places
+<<<<<<< HEAD
 <<<<<<< HEAD
       itemCount
 =======
@@ -248,10 +277,17 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
   // Check if item is in cart
   hasItem(cart: Cart, itemId: string): boolean {
 >>>>>>> main
+=======
+    };
+  },
+
+  // Clear cart
+>>>>>>> cursor/create-and-deploy-new-content-afc8
     return cart.items.some(item => item.id === itemId);
   },
 
   // Get cart summary
+<<<<<<< HEAD
 <<<<<<< HEAD
   getSummary: (cart: Cart) => ({
     itemCount: cart.itemCount,
@@ -597,3 +633,6 @@ export default {
 };
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+export default cartUtils;
+>>>>>>> cursor/create-and-deploy-new-content-afc8
