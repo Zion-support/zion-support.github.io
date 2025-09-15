@@ -54,6 +54,8 @@ import NewShowcase2025 from './pages/NewShowcase2025';
 import BusinessAutomationGuide2025 from './pages/BusinessAutomationGuide2025';
 import UltimateTechRevolution2027 from './pages/UltimateTechRevolution2027';
 import ConsciousAIRevolution2027 from './pages/ConsciousAIRevolution2027';
+import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
+import QuantumConsciousnessRevolution2027 from './pages/QuantumConsciousnessRevolution2027';
 
 export default function App(): JSX.Element {
   return (
@@ -131,14 +133,17 @@ export default function App(): JSX.Element {
                       Experience the future of consciousness with our revolutionary new content on 
                       Ultimate Tech Revolution, Conscious AI, and Next-Generation Technologies
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                       <a href="/pages/UltimateTechRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-lg">
                         🚀 Ultimate Tech 2027 →
                       </a>
                       <a href="/pages/ConsciousAIRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-lg">
                         🧠 Conscious AI 2027 →
                       </a>
-                      <a href="/pages/UltimateTechRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl hover:bg-white hover:text-pink-600 transition-all duration-300 font-semibold border border-white/30 text-lg">
+                      <a href="/pages/SyntheticBiologyRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold border border-white/30 text-lg">
+                        🧬 Synthetic Biology →
+                      </a>
+                      <a href="/pages/QuantumConsciousnessRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl hover:bg-white hover:text-pink-600 transition-all duration-300 font-semibold border border-white/30 text-lg">
                         ⚛️ Quantum Consciousness →
                       </a>
                     </div>
@@ -460,6 +465,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
           <Route path="/pages/UltimateTechRevolution2027" element={<UltimateTechRevolution2027 />} />
           <Route path="/pages/ConsciousAIRevolution2027" element={<ConsciousAIRevolution2027 />} />
+          <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} />
+          <Route path="/pages/QuantumConsciousnessRevolution2027" element={<QuantumConsciousnessRevolution2027 />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">
