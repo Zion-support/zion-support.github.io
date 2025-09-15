@@ -127,13 +127,13 @@ export default function HomePage() {
                 href: '/updates'
               },
               {
-                title: 'Community Challenge: Build a DApp',
-                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
+                title: 'New Service: Edge AI Inference (Beta)',
+                summary: 'Low-latency on-device inference with secure OTA model updates and fleet telemetry.',
                 href: '/updates'
               },
               {
-                title: 'New Learning Path: Web3 Fundamentals',
-                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
+                title: 'New Service: Generative Content Studio',
+                summary: 'End-to-end content generation workflows with brand voice and multi-channel publishing.',
                 href: '/updates'
               }
             ].map((item) => (

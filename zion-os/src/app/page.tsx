@@ -1,4 +1,5 @@
 import FeatureCard from './components/FeatureCard';
+import { services } from '../data/services';
 
 export default function HomePage() {
   const features = [
@@ -128,6 +129,45 @@ export default function HomePage() {
                 gradient={feature.gradient}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* New Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">New Services</h2>
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              Explore our latest offerings designed to accelerate your deployments and content operations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services
+              .filter((s) => s.id === 'edge-ai-inference' || s.id === 'generative-content-studio')
+              .map((s) => (
+                <div key={s.id} className="feature-card group">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-white text-xl">✨</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{s.name}</h3>
+                  <p className="text-white/70 mb-4">{s.description}</p>
+                  <ul className="text-sm text-white/60 space-y-1 mb-6">
+                    {s.features.slice(0, 4).map((f, idx) => (
+                      <li key={idx}>• {f}</li>
+                    ))}
+                  </ul>
+                  <div className="flex gap-3">
+                    {s.demoUrl && (
+                      <a href={s.demoUrl} className="btn-primary hover-lift">Demo</a>
+                    )}
+                    {s.documentationUrl && (
+                      <a href={s.documentationUrl} className="btn-secondary hover-lift">Docs</a>
+                    )}
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </section>
