@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "ai-2026-eval-cookbook",
+    title: "AI 2026: Evaluations Cookbook",
+    description:
+      "Practical, ready-to-run eval recipes for reliability, safety, and regression testing.",
+    ctaLabel: "Use Recipes",
+    href: "/content/ai-2026-eval-cookbook",
+    emoji: "📚",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "ai-2026-reliability-checklists",
+    title: "AI 2026: Reliability Release Checklists",
+    description:
+      "Ship confidently with preflight, rollout, and incident playbooks for autonomous agents.",
+    ctaLabel: "Get Checklists",
+    href: "/content/ai-2026-reliability-checklists",
+    emoji: "✅",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "llm-evals-maturity-model-2026-content",
     title: "AI 2026: LLM Evals Maturity Model",
     description:

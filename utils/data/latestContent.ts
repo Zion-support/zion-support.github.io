@@ -9,6 +9,22 @@ export type ContentItem = {
 
 export const latestContent: ContentItem[] = [
   {
+    id: "ai-2026-eval-cookbook",
+    title: "AI 2026: Evaluations Cookbook",
+    summary: "Hands-on recipes and templates to operationalize evals in CI/CD.",
+    href: "/content/ai-2026-eval-cookbook",
+    tag: "Guide",
+    date: "2025-09-15",
+  },
+  {
+    id: "ai-2026-reliability-checklists",
+    title: "AI 2026: Reliability Release Checklists",
+    summary: "Preflight, rollout, and incident guides to ship dependable autonomous agents.",
+    href: "/content/ai-2026-reliability-checklists",
+    tag: "Checklist",
+    date: "2025-09-15",
+  },
+  {
     id: "ai-governance-2025",
     title: "AI Governance Playbook 2025",
     summary: "A practical guide to building safe, compliant AI systems at scale.",

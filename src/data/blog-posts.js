@@ -365,6 +365,37 @@ export const blogPosts = [
     imageUrl: "/images/blog/production-guardrails-playbook-2026.jpg",
     slug: "ai-2026-production-guardrails-playbook"
   }
+  ,
+  {
+    id: 23,
+    title: "AI 2026: Evaluations Cookbook",
+    excerpt: "Practical, ready-to-run eval recipes for reliability, safety, and regression testing.",
+    content: "This cookbook provides runnable examples for capability evals, safety evals, regression gates, and drift detection. It includes dataset tips, metric choices, CI integration patterns, and rollout strategies.",
+    author: "Ava Morgan",
+    authorRole: "Director of AI Quality",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Evaluation",
+    tags: ["Evals", "Reliability", "CI/CD"],
+    featured: true,
+    imageUrl: "/images/blog/evaluations-cookbook-2026.jpg",
+    slug: "ai-2026-eval-cookbook"
+  },
+  {
+    id: 24,
+    title: "AI 2026: Reliability Release Checklists",
+    excerpt: "Preflight, rollout, and incident playbooks to ship dependable autonomous agents.",
+    content: "Use these checklists before each release: preflight validations, canary plan, rollback criteria, safety gates, and incident response runbooks. Includes templates and links to monitoring dashboards.",
+    author: "Ethan Cole",
+    authorRole: "Head of Platform Reliability",
+    publishDate: "2025-09-15",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["Reliability", "Playbooks", "Checklists"],
+    featured: true,
+    imageUrl: "/images/blog/reliability-release-checklists-2026.jpg",
+    slug: "ai-2026-reliability-checklists"
+  }
 ];
 
 export const getBlogPostBySlug = (slug) => {
