@@ -180,6 +180,38 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* New Content Promo: Generative Agents Infrastructure Blueprint (2025) */}
+        <section className="py-6 bg-gradient-to-r from-indigo-50 to-purple-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-purple-700">New Architecture Guide</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">Generative Agents Infrastructure Blueprint (2025)</h2>
+                <p className="text-gray-600 mt-2">Design, deploy, and operate enterprise-grade generative agent infrastructure with governance and ROI.</p>
+              </div>
+              <Link href="/blog/ai-2025-generative-agents-infrastructure-blueprint" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+                Read the Blueprint →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* New Content Promo: Autonomous Finance Control Plane (2026) */}
+        <section className="py-6 bg-gradient-to-r from-purple-50 to-pink-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-purple-700">New Finance AI</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">Autonomous Finance Control Plane (2026)</h2>
+                <p className="text-gray-600 mt-2">Real-time policy enforcement, anomaly detection, and auditability for modern finance operations.</p>
+              </div>
+              <Link href="/blog/ai-2026-autonomous-finance-control-plane" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+                Explore the Guide →
+              </Link>
+            </div>
+          </div>
+        </section>
         
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">

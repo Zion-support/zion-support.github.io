@@ -30,6 +30,22 @@ const UltimateContentShowcase2025 = () => {
       isNew: true
     },
     {
+      id: 'generative-agents-infrastructure-blueprint',
+      title: 'Generative Agents Infrastructure Blueprint (2025): Governance, Observability, ROI',
+      type: 'blog',
+      url: '/blog/ai-2025-generative-agents-infrastructure-blueprint',
+      description: 'A practical blueprint to design, deploy, and operate enterprise-grade generative agent infrastructure with policy-aware execution and continuous evaluation.',
+      metrics: {
+        roi: '340%',
+        savings: '$120M',
+        accuracy: '99.7%',
+        satisfaction: '98%'
+      },
+      tags: ['Generative Agents', 'Architecture', 'Governance', 'Observability'],
+      readingTime: '16 min read',
+      isNew: true
+    },
+    {
       id: 'customer-experience-revolution',
       title: 'AI 2025: The Customer Experience Revolution - Ultimate Guide to 750% ROI',
       type: 'blog',
