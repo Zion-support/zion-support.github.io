@@ -3,11 +3,16 @@ import { useLazyLoad } from '../useLazyLoad';
 
 // Mock IntersectionObserver
 const mockIntersectionObserver = jest.fn();
+const mockObserve = jest.fn();
+const mockUnobserve = jest.fn();
+const mockDisconnect = jest.fn();
+
 mockIntersectionObserver.mockReturnValue({
-  observe: () => null,
-  unobserve: () => null,
-  disconnect: () => null,
+  observe: mockObserve,
+  unobserve: mockUnobserve,
+  disconnect: mockDisconnect,
 });
+
 window.IntersectionObserver = mockIntersectionObserver;
 
 describe('useLazyLoad', () => {
