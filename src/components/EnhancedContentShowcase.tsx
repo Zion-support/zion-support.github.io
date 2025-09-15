@@ -10,7 +10,7 @@ const EnhancedContentShowcase: React.FC = () => {
       id: 1,
       title: "Advanced AI Transformation 2026",
       description: "Experience the next evolution of artificial intelligence with autonomous reasoning, quantum-enhanced processing, and self-evolving neural architectures.",
-      icon: "🧠",
+      image: "🧠",
       gradient: "from-purple-600 to-pink-600",
       link: "/pages/AdvancedAITransformation2026",
       features: ["Autonomous Reasoning", "Quantum Processing", "Self-Evolving Networks", "Industry Transformation"],
@@ -21,7 +21,7 @@ const EnhancedContentShowcase: React.FC = () => {
       id: 2,
       title: "Quantum-Neural Fusion 2026",
       description: "Revolutionary fusion of quantum computing and neural networks, creating unprecedented processing power for complex problem solving.",
-      icon: "⚛️",
+      image: "⚛️",
       gradient: "from-cyan-600 to-blue-600",
       link: "/pages/QuantumNeuralFusion2026",
       features: ["Quantum Processing", "Neural Networks", "Fusion Technology", "Exponential Power"],
@@ -32,7 +32,7 @@ const EnhancedContentShowcase: React.FC = () => {
       id: 3,
       title: "Next-Gen Tech Showcase 2026",
       description: "Discover the most advanced technologies of 2026, featuring revolutionary innovations in AI, quantum computing, and neural interfaces.",
-      icon: "🌟",
+      image: "🌟",
       gradient: "from-violet-600 to-fuchsia-600",
       link: "/pages/NextGenTechShowcase2026",
       features: ["Synthetic Intelligence", "Advanced Quantum", "Neural Interfaces", "Global AI Network"],
@@ -43,7 +43,7 @@ const EnhancedContentShowcase: React.FC = () => {
       id: 4,
       title: "Synthetic Intelligence 2026",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that think, create, and evolve independently.",
-      icon: "🤖",
+      image: "🤖",
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/SyntheticIntelligence2026",
       features: ["Synthetic Consciousness", "Autonomous Agents", "Creative AI", "Collective Intelligence"],
@@ -52,9 +52,20 @@ const EnhancedContentShowcase: React.FC = () => {
     },
     {
       id: 5,
+      title: "Advanced Quantum Computing 2026",
+      description: "Experience exponential processing power with 1000+ qubit quantum processors and quantum supremacy capabilities.",
+      image: "⚡",
+      gradient: "from-indigo-600 to-purple-600",
+      link: "/pages/AdvancedQuantumComputing2026",
+      features: ["1000+ Qubits", "Quantum Supremacy", "Molecular Simulation", "Quantum AI"],
+      category: "Quantum Computing",
+      year: "2026"
+    },
+    {
+      id: 6,
       title: "Neural Interface Revolution 2026",
       description: "Bridge mind and machine with direct brain-computer communication and thought control technology.",
-      icon: "🧬",
+      image: "🧬",
       gradient: "from-rose-600 to-pink-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       features: ["Non-invasive BCI", "Thought Control", "Neural Feedback", "Medical Applications"],
@@ -129,7 +140,15 @@ const EnhancedContentShowcase: React.FC = () => {
                 className={`absolute inset-0 bg-gradient-to-br ${showcaseItems[currentSlide].gradient} p-12 flex items-center justify-between`}
               >
                 <div className="flex-1 text-white">
-                  <div className="text-8xl mb-6">{showcaseItems[currentSlide].icon}</div>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">
+                      {showcaseItems[currentSlide].category}
+                    </span>
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">
+                      {showcaseItems[currentSlide].year}
+                    </span>
+                  </div>
+                  <div className="text-8xl mb-6">{showcaseItems[currentSlide].image}</div>
                   <h3 className="text-5xl font-bold mb-4">{showcaseItems[currentSlide].title}</h3>
                   <p className="text-xl opacity-90 mb-6 max-w-2xl">
                     {showcaseItems[currentSlide].description}
@@ -151,7 +170,7 @@ const EnhancedContentShowcase: React.FC = () => {
                 </div>
                 <div className="flex-1 flex justify-center">
                   <div className="w-80 h-80 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <div className="text-9xl">{showcaseItems[currentSlide].icon}</div>
+                    <div className="text-9xl">{showcaseItems[currentSlide].image}</div>
                   </div>
                 </div>
               </motion.div>
@@ -171,7 +190,7 @@ const EnhancedContentShowcase: React.FC = () => {
               {showcaseItems.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentSlide(index)}
+                  onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
                     index === currentSlide ? 'bg-white' : 'bg-white/30'
                   }`}
@@ -195,30 +214,62 @@ const EnhancedContentShowcase: React.FC = () => {
           </div>
         </div>
 
-        {/* Quick Access Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {showcaseItems.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`bg-gradient-to-br ${item.gradient} backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
-              onClick={() => setCurrentSlide(index)}
-            >
-              <div className="text-4xl mb-3 text-center">{item.icon}</div>
-              <h3 className="text-lg font-bold mb-2 text-center text-white">{item.title}</h3>
-              <p className="text-white/80 mb-4 text-sm text-center">
-                {item.description.substring(0, 80)}...
-              </p>
-              <a 
-                href={item.link}
-                className="block w-full bg-white text-gray-900 py-2 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-center text-sm"
+        {/* Content Categories */}
+        <div className="mt-16">
+          <h3 className="text-3xl font-bold text-center mb-8 text-white">Content Categories</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {['AI & Machine Learning', 'Quantum Computing', 'Neural Interfaces', 'Synthetic Intelligence', 'Technology Showcase', 'Revolutionary Tech'].map((category, index) => (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer"
               >
-                Explore →
-              </a>
-            </motion.div>
-          ))}
+                <div className="text-4xl mb-4 text-center">🚀</div>
+                <h4 className="text-xl font-bold mb-3 text-center text-white">{category}</h4>
+                <p className="text-sm opacity-90 text-center mb-4 text-white">Explore cutting-edge content in this category</p>
+                <div className="text-center">
+                  <span className="text-purple-300 font-semibold">Explore Category →</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Quick Access Grid */}
+        <div className="mt-16">
+          <h3 className="text-3xl font-bold text-center mb-8 text-white">Quick Access to All Content</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {showcaseItems.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`bg-gradient-to-br ${item.gradient} p-6 rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer`}
+                onClick={() => goToSlide(index)}
+              >
+                <div className="flex items-center space-x-3 mb-4">
+                  <span className="px-2 py-1 bg-white/20 rounded-full text-xs font-semibold">
+                    {item.category}
+                  </span>
+                  <span className="px-2 py-1 bg-white/20 rounded-full text-xs font-semibold">
+                    {item.year}
+                  </span>
+                </div>
+                <div className="text-4xl mb-4 text-center">{item.image}</div>
+                <h4 className="text-xl font-bold mb-3 text-center text-white">{item.title}</h4>
+                <p className="text-sm opacity-90 text-center mb-4 text-white">{item.description}</p>
+                <a
+                  href={item.link}
+                  className="block w-full bg-white/20 text-white text-center py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold"
+                >
+                  Explore →
+                </a>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -266,7 +317,7 @@ const EnhancedContentShowcase: React.FC = () => {
           <a href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
             Start Your Journey →
           </a>
-          <a href="/pages/InnovationLanding2025" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors">
+          <a href="/pages/NextGenTechShowcase2026" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors">
             View All Innovations
           </a>
         </div>
