@@ -1,3 +1,36 @@
+"use client"
+import React from 'react'
+
+export default function StateOfRealTimeRag2026() {
+  return (
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 lg:px-8">
+        <a href="/updates" className="text-sm text-blue-400 hover:text-blue-300">← All updates</a>
+        <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Report: State of Real-Time RAG 2026 (Preview)
+        </h1>
+        <p className="mt-3 text-gray-300">2025-09-15 · Report</p>
+        <div className="mt-8 prose prose-invert prose-a:text-blue-400">
+          <p>
+            This preview covers the latest architectures and practices for delivering low-latency retrieval-augmented
+            generation in production, including streaming pipelines, hybrid indexes, and eval frameworks.
+          </p>
+          <h3>Key Takeaways</h3>
+          <ul>
+            <li>Latency budgets across model, retrieval, and network layers</li>
+            <li>Observability signals that matter for real-time RAG</li>
+            <li>Evaluation harnesses for quality, grounding, and safety</li>
+            <li>Reference architectures and cost considerations</li>
+          </ul>
+          <p>
+            The full report will be available soon. Subscribe on the Updates page to be notified.
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 
 export default function Page() {
   return (
