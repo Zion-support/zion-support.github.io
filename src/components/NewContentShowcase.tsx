@@ -3,6 +3,18 @@ import React from 'react';
 const NewContentShowcase: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/feature/revolutionary-2027-content
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
   const newContent = [
     {
       title: "Trustworthy Model Routing",
@@ -98,9 +110,15 @@ const NewContentShowcase: React.FC = () => {
         >
           View All Content
         </a>
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> origin/feature/revolutionary-2027-content
   return (
     <div className="w-full">
       {/* New Content Banner */}
@@ -219,7 +237,17 @@ const NewContentShowcase: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
       </div>
     </div>
   );
@@ -227,9 +255,29 @@ const NewContentShowcase: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/feature/revolutionary-2027-content
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 export { NewContentShowcase };
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+export { NewContentShowcase };
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+export { NewContentShowcase };
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
 export default NewContentShowcase;

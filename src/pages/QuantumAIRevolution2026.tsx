@@ -236,7 +236,15 @@ const QuantumAIRevolution2026: React.FC = () => {
                 <div className="text-sm text-green-400 font-semibold">+{stat.improvement}</div>
               </motion.div>
             ))}
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
           </div>
         </div>
       </div>

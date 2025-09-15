@@ -1,6 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> origin/feature/revolutionary-2027-content
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Notifications utility for handling browser notifications and toast messages
@@ -33,7 +41,18 @@ interface NotificationOptions {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
   title: string;
   body?: string;
   icon?: string;
@@ -42,6 +61,14 @@ interface NotificationOptions {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> origin/feature/revolutionary-2027-content
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -49,7 +76,17 @@ interface NotificationOptions {
 <<<<<<< HEAD
   data?: any;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
   requireInteraction?: boolean;
   silent?: boolean;
   timestamp?: number;
@@ -80,6 +117,13 @@ class NotificationManager {
 
     if (this.permission !== 'granted') {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
       this.permission = await this.requestPermission();
       if (this.permission !== 'granted') {
         console.warn('Notification permission denied');
@@ -251,7 +295,18 @@ class NotificationManager {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
     }
 
     try {
@@ -262,7 +317,15 @@ class NotificationManager {
         tag: options.tag,
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/feature/revolutionary-2027-content
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -299,7 +362,18 @@ class NotificationManager {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -314,19 +388,44 @@ class NotificationManager {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> origin/feature/revolutionary-2027-content
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
       console.error('Error showing notification:', error);
       return null;
     }
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
   showSuccess(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
@@ -525,13 +624,31 @@ export type { NotificationOptions, ToastOptions };
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/feature/revolutionary-2027-content
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
@@ -632,4 +749,15 @@ export default notificationManager;
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content

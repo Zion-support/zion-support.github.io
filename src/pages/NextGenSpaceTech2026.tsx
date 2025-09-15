@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 =======
 >>>>>>> a138f30b15304af49b19e9920ab7ee61e74c407f
@@ -16,6 +17,13 @@ const NextGenSpaceTech2026: React.FC = () => {
       <Header />
       
       <main className="container mx-auto px-4 py-16">
+=======
+
+const NextGenSpaceTech2026: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-blue-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+>>>>>>> cursor/create-and-deploy-new-content-8735
         {/* Hero Section */}
 <<<<<<< HEAD
         <motion.div
@@ -214,16 +222,17 @@ const NextGenSpaceTech2026: React.FC = () => {
               <p className="text-orange-200">Planned human Mars mission</p>
 =======
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 NEXT-GEN SPACE TECH • 2026
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-black rounded-full text-lg font-bold mb-6">
+            🚀 NEXT-GEN SPACE TECH 2026
           </div>
-          <h1 className="text-7xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Next-Gen Space Technology 2026
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
+            Beyond Earth's Boundaries
           </h1>
-          <p className="text-2xl text-gray-300 max-w-5xl mx-auto mb-8 leading-relaxed">
-            Pioneering the future of space exploration with revolutionary technologies including autonomous spacecraft, 
-            advanced propulsion systems, and AI-powered space missions that will enable humanity's expansion into the cosmos
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Experience the future of space exploration with revolutionary technologies that enable 
+            interplanetary travel, space colonization, and cosmic resource utilization. The stars are no longer the limit.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-10 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform">
               🚀 Explore Space Tech →
@@ -242,6 +251,33 @@ const NextGenSpaceTech2026: React.FC = () => {
             <p className="text-blue-200 text-center">
               Revolutionary propulsion systems enabling faster-than-ever space travel
             </p>
+=======
+        </div>
+
+        {/* Space Technology Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-blue-800 to-cyan-800 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300">
+            <div className="text-5xl mb-4">🛸</div>
+            <h3 className="text-2xl font-bold mb-4">Advanced Propulsion</h3>
+            <p className="text-gray-300 mb-6">
+              Revolutionary propulsion systems including fusion drives, antimatter engines, 
+              and warp field generators for faster-than-light travel.
+            </p>
+            <div className="space-y-2 text-sm text-gray-300">
+              <div className="flex items-center">
+                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                Fusion Drive Technology
+              </div>
+              <div className="flex items-center">
+                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                Antimatter Propulsion
+              </div>
+              <div className="flex items-center">
+                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                Warp Field Generation
+              </div>
+            </div>
+>>>>>>> origin/feature/revolutionary-2027-content
           </div>
           
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
@@ -259,16 +295,27 @@ const NextGenSpaceTech2026: React.FC = () => {
               Advanced manufacturing and construction technologies for space habitats
             </p>
           </div>
+<<<<<<< HEAD
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌍</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Terraforming Tech</h3>
             <p className="text-cyan-200 text-center">
               Technologies for making other planets habitable for human colonization
+=======
+
+          <div className="bg-gradient-to-br from-red-800 to-orange-800 p-8 rounded-2xl hover:shadow-2xl transition-all duration-300">
+            <div className="text-5xl mb-4">⚡</div>
+            <h3 className="text-2xl font-bold mb-4">Space Energy</h3>
+            <p className="text-gray-300 mb-6">
+              Revolutionary energy systems including solar power satellites, 
+              fusion reactors, and cosmic energy harvesting technologies.
+>>>>>>> origin/feature/revolutionary-2027-content
             </p>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Revolutionary Space Technologies */}
         <div className="bg-gradient-to-r from-slate-800/50 to-blue-800/50 rounded-3xl p-12 mb-16 backdrop-blur-sm border border-slate-400/30">
           <div className="text-center mb-12">
@@ -331,6 +378,9 @@ const NextGenSpaceTech2026: React.FC = () => {
           </div>
         </div>
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/feature/revolutionary-2027-content
         {/* Space Missions and Applications */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -519,6 +569,7 @@ const NextGenSpaceTech2026: React.FC = () => {
           </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
             <div className="text-center">
               <div className="text-6xl mb-4">🌍</div>
               <h3 className="text-2xl font-bold text-white mb-4">Multi-Planetary Species</h3>
@@ -544,6 +595,79 @@ const NextGenSpaceTech2026: React.FC = () => {
                 Thriving space-based economy with industries, trade, and 
                 commerce spanning multiple worlds
               </p>
+=======
+=======
+        {/* Mission Timeline */}
+        <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12">Space Mission Timeline 2026</h2>
+          <div className="grid md:grid-cols-4 gap-8">
+>>>>>>> cursor/create-and-deploy-new-content-8735
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">Q1 2026</div>
+              <div className="text-gray-300">Lunar Base Alpha</div>
+              <div className="text-sm text-gray-400 mt-2">First permanent lunar settlement</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">Q2 2026</div>
+              <div className="text-gray-300">Mars Mission Launch</div>
+              <div className="text-sm text-gray-400 mt-2">First manned mission to Mars</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">Q3 2026</div>
+              <div className="text-gray-300">Asteroid Mining</div>
+              <div className="text-sm text-gray-400 mt-2">First commercial asteroid mining</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-400 mb-2">Q4 2026</div>
+              <div className="text-gray-300">Space Tourism</div>
+              <div className="text-sm text-gray-400 mt-2">Commercial space tourism begins</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Technology Showcase */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-blue-900 to-purple-900 p-8 rounded-2xl">
+            <h3 className="text-3xl font-bold mb-6 text-cyan-400">Quantum Space Navigation</h3>
+            <p className="text-gray-300 mb-6">
+              Revolutionary quantum navigation systems that use quantum entanglement 
+              for precise positioning and navigation across vast distances in space.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-gray-300">Navigation Accuracy</span>
+                <span className="text-cyan-400 font-bold">99.999%</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-gray-300">Range</span>
+                <span className="text-cyan-400 font-bold">Unlimited</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-gray-300">Real-time Updates</span>
+                <span className="text-cyan-400 font-bold">Instantaneous</span>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-green-900 to-blue-900 p-8 rounded-2xl">
+            <h3 className="text-3xl font-bold mb-6 text-emerald-400">Space Habitat Technology</h3>
+            <p className="text-gray-300 mb-6">
+              Advanced habitat systems that create comfortable living environments 
+              in space, complete with artificial gravity and life support systems.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-gray-300">Artificial Gravity</span>
+                <span className="text-emerald-400 font-bold">Earth-like</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-gray-300">Life Support</span>
+                <span className="text-emerald-400 font-bold">Self-sustaining</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-gray-300">Capacity</span>
+                <span className="text-emerald-400 font-bold">10,000+ people</span>
+              </div>
+>>>>>>> origin/feature/revolutionary-2027-content
             </div>
 >>>>>>> a138f30b15304af49b19e9920ab7ee61e74c407f
           </div>
@@ -575,6 +699,7 @@ const NextGenSpaceTech2026: React.FC = () => {
         </motion.div>
 =======
         <div className="text-center">
+<<<<<<< HEAD
           <div className="bg-gradient-to-r from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-3xl p-16 border border-blue-400/30">
             <h2 className="text-5xl font-bold text-white mb-6">Ready to Reach for the Stars?</h2>
             <p className="text-2xl text-blue-200 mb-10 max-w-4xl mx-auto leading-relaxed">
@@ -592,12 +717,30 @@ const NextGenSpaceTech2026: React.FC = () => {
                 🔬 Research Opportunities
               </button>
             </div>
+=======
+          <h2 className="text-4xl font-bold mb-6">Ready to Explore the Cosmos?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join us in the greatest adventure in human history. The universe is waiting, 
+            and the future of space exploration starts with you.
+          </p>
+          <div className="flex justify-center space-x-6">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Join Mission
+            </button>
+            <button className="bg-gradient-to-r from-purple-500 to-pink-600 px-10 py-4 rounded-lg text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Learn More
+            </button>
+>>>>>>> origin/feature/revolutionary-2027-content
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> a138f30b15304af49b19e9920ab7ee61e74c407f
       </main>
       
       <Footer />
+=======
+      </div>
+>>>>>>> cursor/create-and-deploy-new-content-8735
     </div>
   );
 };

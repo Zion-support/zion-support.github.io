@@ -1,6 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> origin/feature/revolutionary-2027-content
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Safe storage utility for handling localStorage and sessionStorage
@@ -311,7 +319,18 @@ export const safeStorage = {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
     }
   }
 };

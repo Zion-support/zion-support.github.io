@@ -1,5 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/feature/revolutionary-2027-content
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 // Fetch utility with retry logic and error handling
 =======
 <<<<<<< HEAD
@@ -30,13 +38,31 @@ interface FetchWithRetryOptions {
 
 >>>>>>> main
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
 export const fetchWithRetry = async (
   url: string,
   options: RequestInit & FetchWithRetryOptions = {}
 ): Promise<Response> => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/feature/revolutionary-2027-content
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
   const { retries, delay, backoff, timeout, ...fetchOptions } = {
     ...defaultOptions,
     ...options
@@ -146,13 +172,31 @@ export async function fetchWithRetry(
       
 >>>>>>> main
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
       return response;
     } catch (error) {
       lastError = error as Error;
       
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/feature/revolutionary-2027-content
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
       // Don't retry on the last attempt
       if (attempt === retries) {
         break;
@@ -308,7 +352,17 @@ export const del = (url: string, options: Omit<FetchOptions, 'method'> = {}): Pr
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
+>>>>>>> origin/feature/revolutionary-2027-content
 };
 
 export default fetchWithRetry;

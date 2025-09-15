@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -179,6 +180,8 @@ const NewContentShowcase2026: React.FC = () => {
               </a>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
