@@ -70,7 +70,7 @@ const AdvancedRobotics2026: React.FC = () => {
                 <div className="space-y-2">
                   <div className="text-blue-400 font-mono text-sm">AI Processing: 1000 TOPS</div>
                   <div className="text-blue-400 font-mono text-sm">Learning Rate: 10x faster</div>
-                  <div className="text-blue-400 font-mono text-sm">Decision Time: <1ms</div>
+                  <div className="text-blue-400 font-mono text-sm">Decision Time: &lt;1ms</div>
                 </div>
               </div>
               
