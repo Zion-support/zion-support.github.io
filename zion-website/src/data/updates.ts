@@ -16,6 +16,30 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Launch: Mentor Office Hours',
+    summary:
+      'Weekly live sessions with expert mentors for Q&A, portfolio reviews, and roadmap guidance.',
+    href: '/updates/mentor-office-hours',
+    date: '2025-09-15',
+    tag: 'Community'
+  },
+  {
+    title: 'Feature: Progress Streaks and Badges',
+    summary:
+      'Stay motivated with learning streaks and new achievement badges across courses and labs.',
+    href: '/updates/progress-streaks-badges',
+    date: '2025-09-15',
+    tag: 'Feature'
+  },
+  {
+    title: 'Course Update: AI Fundamentals v2.1',
+    summary:
+      'Refreshed modules on contrastive learning, retrieval patterns, and production evals with labs.',
+    href: '/updates/ai-fundamentals-v2-1',
+    date: '2025-09-14',
+    tag: 'Course'
+  },
+  {
     title: 'Course: Web3 Fundamentals Track',
     summary:
       'Hands-on introduction to wallets, smart contracts, tokens, and decentralized applications.',

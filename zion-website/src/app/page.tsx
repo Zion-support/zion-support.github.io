@@ -107,24 +107,24 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
-                href="/updates/ai-research-assistant-2-0"
+                href="/updates/mentor-office-hours"
                 className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
               >
-                New: AI Research Assistant 2.0
+                New: Mentor Office Hours
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/ai-governance-toolkit"
+                href="/updates/progress-streaks-badges"
                 className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
               >
-                New: AI Governance Toolkit v2
+                Feature: Streaks & Badges
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/autonomous-ops-playbook-2026"
+                href="/updates/ai-fundamentals-v2-1"
                 className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
               >
-                Launch: Autonomous Ops Playbook
+                Course: AI Fundamentals v2.1
                 <span aria-hidden>→</span>
               </a>
               <a
