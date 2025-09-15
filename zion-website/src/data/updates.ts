@@ -306,6 +306,30 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Report'
   },
   {
+    title: 'Report: State of Real-Time RAG (2026)',
+    summary:
+      'Benchmarks, latency profiles, and production design patterns for sub-second RAG at scale.',
+    href: '/updates/state-of-real-time-rag-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Secure Prompt Engineering (2025)',
+    summary:
+      'Permissioning, input validation, and defense-in-depth patterns to harden LLM prompts.',
+    href: '/updates/secure-prompt-engineering-2025',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Guide: Real-Time RAG Evals (2026)',
+    summary:
+      'Live canaries, streaming metrics, and rollout gates to continuously evaluate real-time RAG.',
+    href: '/updates/real-time-rag-evals-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Guide: Real-Time Evals Starter Kit',
     summary:
       'A practical starter kit with metrics, harnesses, and examples to begin live evaluation in production.',
