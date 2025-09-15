@@ -178,77 +178,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
         </div>
 
         {/* Quantum Technology Stack */}
-<<<<<<< HEAD
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">Quantum Technology Stack</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-              <h3 className="text-2xl font-bold text-white mb-6">Hardware Infrastructure</h3>
-              <ul className="text-gray-300 space-y-3">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                  Superconducting quantum processors
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                  Ion trap quantum computers
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                  Photonic quantum systems
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                  Topological quantum computers
-                </li>
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
-              <h3 className="text-2xl font-bold text-white mb-6">Software & Algorithms</h3>
-              <ul className="text-gray-300 space-y-3">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  Quantum programming languages
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  Quantum machine learning
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  Quantum optimization algorithms
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  Quantum error correction
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready for Quantum Computing?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join the quantum revolution and unlock unprecedented computational power 
-            for your organization's most challenging problems.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              Get Quantum Access
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-cyan-900 transition-colors">
-              Schedule Consultation
-            </button>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
@@ -354,12 +283,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175

@@ -621,10 +621,6 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase />
                 </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
                   <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 text-white relative overflow-hidden">

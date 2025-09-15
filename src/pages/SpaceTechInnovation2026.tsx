@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 const SpaceTechInnovation2026: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -13,223 +12,122 @@ const SpaceTechInnovation2026: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-center mb-16"
           >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-sm font-bold mb-6 text-white">
               🚀 SPACE TECH INNOVATION • 2026
             </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-800 to-purple-800 bg-clip-text text-transparent">
               Space Technology Innovation 2026
             </h1>
-            <p className="text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
-              Revolutionary space technologies that are enabling interplanetary exploration, space colonization, and advanced satellite systems for the next generation of space missions
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
+              Revolutionary space technologies and exploration solutions for the next generation of space missions
             </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Explore Technologies →
+              </button>
+              <button className="border-2 border-indigo-300 text-indigo-700 px-8 py-4 rounded-lg hover:bg-indigo-100 transition-all duration-300 font-semibold text-lg">
+                Schedule Demo
+              </button>
+            </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Key Features */}
+      {/* Technologies Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">🌌 Breakthrough Space Technologies</h2>
-          <p className="text-xl text-gray-600">Pioneering the future of space exploration and colonization</p>
+          <h2 className="text-4xl font-bold mb-6 text-gray-800">Advanced Space Technologies</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover our comprehensive suite of space technologies designed to revolutionize space exploration and colonization
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-indigo-200"
-          >
-            <div className="text-5xl mb-4">🚀</div>
-            <h3 className="text-2xl font-bold mb-4 text-indigo-600">Advanced Propulsion Systems</h3>
-            <p className="text-gray-600 mb-6">
-              Next-generation propulsion technologies including ion drives, nuclear thermal propulsion, and antimatter engines for deep space missions.
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-indigo-200">
+            <div className="text-5xl mb-4 text-center">🚀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">Launch Systems</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Advanced launch vehicles and propulsion systems for efficient space access
             </p>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• Ion propulsion systems</li>
-              <li>• Nuclear thermal engines</li>
-              <li>• Antimatter propulsion</li>
-              <li>• Solar sail technology</li>
+            <ul className="text-gray-500 space-y-2 text-sm">
+              <li>• Reusable rockets</li>
+              <li>• Advanced propulsion</li>
+              <li>• Cost optimization</li>
+              <li>• Safety protocols</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-purple-200"
-          >
-            <div className="text-5xl mb-4">🏠</div>
-            <h3 className="text-2xl font-bold mb-4 text-purple-600">Space Habitats</h3>
-            <p className="text-gray-600 mb-6">
-              Self-sustaining space habitats with advanced life support systems, artificial gravity, and closed-loop ecosystems for long-term space colonization.
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-purple-200">
+            <div className="text-5xl mb-4 text-center">🛰️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">Satellite Technology</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Next-generation satellites with advanced capabilities and extended lifespans
             </p>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• Closed-loop life support</li>
-              <li>• Artificial gravity systems</li>
-              <li>• Radiation shielding</li>
-              <li>• Sustainable agriculture</li>
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-pink-200"
-          >
-            <div className="text-5xl mb-4">🛰️</div>
-            <h3 className="text-2xl font-bold mb-4 text-pink-600">Advanced Satellites</h3>
-            <p className="text-gray-600 mb-6">
-              Next-generation satellite constellations with AI-powered capabilities, quantum communication, and advanced Earth observation systems.
-            </p>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• AI-powered operations</li>
-              <li>• Quantum communication</li>
+            <ul className="text-gray-500 space-y-2 text-sm">
               <li>• High-resolution imaging</li>
-              <li>• Autonomous maintenance</li>
+              <li>• Communication networks</li>
+              <li>• Earth observation</li>
+              <li>• Navigation systems</li>
             </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-blue-200"
-          >
-            <div className="text-5xl mb-4">🌙</div>
-            <h3 className="text-2xl font-bold mb-4 text-blue-600">Lunar & Mars Missions</h3>
-            <p className="text-gray-600 mb-6">
-              Advanced mission systems for lunar bases, Mars colonization, and interplanetary exploration with autonomous rovers and human habitats.
-=======
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-400 text-indigo-900 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 SPACE TECH REVOLUTION 2026
           </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Space Technology Innovation 2026
-          </h1>
-          <p className="text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
-            Pioneering the next frontier with revolutionary space technologies that are reshaping our understanding of the universe
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a href="#technologies" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore Technologies →
-            </a>
-            <a href="#contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-indigo-900 transition-colors font-semibold text-lg">
-              Join Mission
-            </a>
-          </div>
-        </motion.div>
 
-        {/* Revolutionary Space Tech Banner */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-gradient-to-r from-cyan-600/20 via-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 mb-16 border border-cyan-400/30 relative overflow-hidden"
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-sm"></div>
-          <div className="relative z-10">
-            <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                🌌 Revolutionary Space Technologies
-              </h2>
-              <p className="text-xl text-blue-100 max-w-4xl mx-auto">
-                Experience the future of space exploration with our cutting-edge technologies that are making the impossible possible
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold mb-3 text-cyan-300">Advanced Propulsion</h3>
-                <p className="text-blue-100 text-sm">Next-generation ion drives and nuclear propulsion systems</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
-                <div className="text-4xl mb-4">🛰️</div>
-                <h3 className="text-xl font-bold mb-3 text-blue-300">AI Satellites</h3>
-                <p className="text-blue-100 text-sm">Autonomous satellites with machine learning capabilities</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
-                <div className="text-4xl mb-4">🌍</div>
-                <h3 className="text-xl font-bold mb-3 text-purple-300">Space Habitats</h3>
-                <p className="text-blue-100 text-sm">Self-sustaining space colonies and orbital stations</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Technologies Grid */}
-        <motion.section
-          id="technologies"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-16"
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              🚀 Advanced Space Technologies
-            </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Discover our comprehensive suite of space technologies designed to revolutionize space exploration and colonization
->>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-pink-200">
+            <div className="text-5xl mb-4 text-center">🌙</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">Lunar Exploration</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Comprehensive lunar exploration and colonization technologies
             </p>
-            <ul className="space-y-2 text-sm text-gray-600">
+            <ul className="text-gray-500 space-y-2 text-sm">
               <li>• Lunar base construction</li>
-              <li>• Mars colonization</li>
-              <li>• Autonomous rovers</li>
               <li>• Resource extraction</li>
+              <li>• Life support systems</li>
+              <li>• Transportation networks</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-cyan-200"
-          >
-            <div className="text-5xl mb-4">🔬</div>
-            <h3 className="text-2xl font-bold mb-4 text-cyan-600">Space Manufacturing</h3>
-            <p className="text-gray-600 mb-6">
-              Zero-gravity manufacturing facilities for producing advanced materials, pharmaceuticals, and technologies that are impossible to create on Earth.
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-cyan-200">
+            <div className="text-5xl mb-4 text-center">🔴</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">Mars Mission</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Advanced technologies for Mars exploration and eventual colonization
             </p>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• Zero-gravity production</li>
-              <li>• Advanced materials</li>
-              <li>• Pharmaceutical manufacturing</li>
-              <li>• Crystal growth</li>
+            <ul className="text-gray-500 space-y-2 text-sm">
+              <li>• Mars rovers</li>
+              <li>• Habitat systems</li>
+              <li>• Terraforming research</li>
+              <li>• Mission planning</li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-teal-200"
-          >
-            <div className="text-5xl mb-4">🌍</div>
-            <h3 className="text-2xl font-bold mb-4 text-teal-600">Earth Observation</h3>
-            <p className="text-gray-600 mb-6">
-              Advanced Earth observation systems for climate monitoring, disaster response, and environmental protection with real-time data analysis.
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-emerald-200">
+            <div className="text-5xl mb-4 text-center">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">Power Systems</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Advanced power generation and storage systems for space applications
             </p>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>• Climate monitoring</li>
-              <li>• Disaster response</li>
-              <li>• Environmental protection</li>
-              <li>• Real-time analysis</li>
+            <ul className="text-gray-500 space-y-2 text-sm">
+              <li>• Solar arrays</li>
+              <li>• Nuclear power</li>
+              <li>• Energy storage</li>
+              <li>• Power distribution</li>
             </ul>
-          </motion.div>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-orange-200">
+            <div className="text-5xl mb-4 text-center">🔬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">Research & Development</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Cutting-edge research and development in space technology and science
+            </p>
+            <ul className="text-gray-500 space-y-2 text-sm">
+              <li>• Materials science</li>
+              <li>• Life sciences</li>
+              <li>• Physics research</li>
+              <li>• Technology testing</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -240,325 +138,7 @@ const SpaceTechInnovation2026: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">🌌 Mission Categories</h2>
             <p className="text-xl text-indigo-100">Comprehensive space exploration and development programs</p>
           </div>
-<<<<<<< HEAD
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center text-white">
-              <div className="text-6xl mb-4">🌙</div>
-              <h3 className="text-xl font-bold mb-2">Lunar Missions</h3>
-              <p className="text-indigo-100">Moon base construction and resource extraction</p>
-            </div>
-            <div className="text-center text-white">
-              <div className="text-6xl mb-4">🔴</div>
-              <h3 className="text-xl font-bold mb-2">Mars Exploration</h3>
-              <p className="text-indigo-100">Colonization and terraforming initiatives</p>
-            </div>
-            <div className="text-center text-white">
-              <div className="text-6xl mb-4">🛰️</div>
-              <h3 className="text-xl font-bold mb-2">Satellite Networks</h3>
-              <p className="text-indigo-100">Global communication and observation systems</p>
-            </div>
-            <div className="text-center text-white">
-              <div className="text-6xl mb-4">🌌</div>
-              <h3 className="text-xl font-bold mb-2">Deep Space</h3>
-              <p className="text-indigo-100">Interplanetary and interstellar exploration</p>
-            </div>
-          </div>
         </div>
-      </div>
-
-      {/* Technology Stack */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">⚙️ Advanced Technology Stack</h2>
-          <p className="text-xl text-gray-600">Cutting-edge technologies enabling space exploration</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-xl border border-indigo-200">
-            <div className="text-3xl mb-3">🚀</div>
-            <h3 className="text-lg font-bold text-indigo-600 mb-2">Propulsion</h3>
-            <p className="text-sm text-gray-600">Advanced propulsion systems and engines</p>
-          </div>
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
-            <div className="text-3xl mb-3">🧠</div>
-            <h3 className="text-lg font-bold text-purple-600 mb-2">AI Systems</h3>
-            <p className="text-sm text-gray-600">Autonomous mission control and navigation</p>
-          </div>
-          <div className="bg-gradient-to-br from-pink-50 to-rose-50 p-6 rounded-xl border border-pink-200">
-            <div className="text-3xl mb-3">🔬</div>
-            <h3 className="text-lg font-bold text-pink-600 mb-2">Materials</h3>
-            <p className="text-sm text-gray-600">Advanced space-grade materials</p>
-          </div>
-          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl border border-cyan-200">
-            <div className="text-3xl mb-3">🌐</div>
-            <h3 className="text-lg font-bold text-cyan-600 mb-2">Communication</h3>
-            <p className="text-sm text-gray-600">Quantum and laser communication</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Future Vision */}
-      <div className="bg-gradient-to-r from-gray-900 to-indigo-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">🌟 The Future of Space</h2>
-            <p className="text-xl text-gray-300">Envisioning humanity's expansion into the cosmos</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center text-white">
-              <div className="text-6xl mb-4">🏙️</div>
-              <h3 className="text-2xl font-bold mb-4">Space Cities</h3>
-              <p className="text-gray-300">Self-sustaining space habitats with thousands of residents</p>
-            </div>
-            <div className="text-center text-white">
-              <div className="text-6xl mb-4">🌍</div>
-              <h3 className="text-2xl font-bold mb-4">Terraforming</h3>
-              <p className="text-gray-300">Transforming planets to support human life</p>
-            </div>
-            <div className="text-center text-white">
-              <div className="text-6xl mb-4">🚀</div>
-              <h3 className="text-2xl font-bold mb-4">Interstellar Travel</h3>
-              <p className="text-gray-300">Journeying to distant star systems</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-20 text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Ready to Reach for the Stars?</h2>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Join us in pioneering the next frontier of space exploration and be part of humanity's greatest adventure
-        </p>
-        <div className="flex justify-center space-x-4">
-          <a href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-            Start Your Mission →
-          </a>
-          <a href="/pages/AdvancedTechSolutions2026" className="border border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors">
-            View All Solutions
-          </a>
-        </div>
-=======
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">🚀</div>
-              <h3 className="text-2xl font-bold text-cyan-300 mb-4">Advanced Propulsion Systems</h3>
-              <p className="text-blue-100 mb-6">
-                Next-generation propulsion technologies including ion drives, nuclear thermal rockets, and antimatter engines.
-              </p>
-              <ul className="space-y-2 mb-6 text-sm text-blue-200">
-                <li>• 10x faster than chemical rockets</li>
-                <li>• 99% fuel efficiency</li>
-                <li>• Interplanetary travel in weeks</li>
-                <li>• Reusable engine technology</li>
-              </ul>
-              <a href="#contact" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Learn More →
-              </a>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">🛰️</div>
-              <h3 className="text-2xl font-bold text-blue-300 mb-4">AI-Powered Satellites</h3>
-              <p className="text-blue-100 mb-6">
-                Autonomous satellites with advanced AI capabilities for real-time decision making and self-maintenance.
-              </p>
-              <ul className="space-y-2 mb-6 text-sm text-blue-200">
-                <li>• Autonomous operation</li>
-                <li>• Self-repair capabilities</li>
-                <li>• Real-time data processing</li>
-                <li>• Swarm intelligence</li>
-              </ul>
-              <a href="#contact" className="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Tech →
-              </a>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">🌍</div>
-              <h3 className="text-2xl font-bold text-purple-300 mb-4">Space Habitats</h3>
-              <p className="text-blue-100 mb-6">
-                Self-sustaining space colonies and orbital stations with advanced life support systems.
-              </p>
-              <ul className="space-y-2 mb-6 text-sm text-blue-200">
-                <li>• Closed-loop life support</li>
-                <li>• Artificial gravity systems</li>
-                <li>• Radiation shielding</li>
-                <li>• Modular construction</li>
-              </ul>
-              <a href="#contact" className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                View Designs →
-              </a>
-            </div>
-
-            <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">🌱</div>
-              <h3 className="text-2xl font-bold text-green-300 mb-4">Space Agriculture</h3>
-              <p className="text-blue-100 mb-6">
-                Advanced hydroponic and aeroponic systems for growing food in space environments.
-              </p>
-              <ul className="space-y-2 mb-6 text-sm text-blue-200">
-                <li>• Zero-gravity farming</li>
-                <li>• LED growth optimization</li>
-                <li>• Nutrient recycling</li>
-                <li>• High-yield crops</li>
-              </ul>
-              <a href="#contact" className="inline-block bg-gradient-to-r from-green-500 to-teal-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Discover More →
-              </a>
-            </div>
-
-            <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">⚡</div>
-              <h3 className="text-2xl font-bold text-orange-300 mb-4">Space Energy Systems</h3>
-              <p className="text-blue-100 mb-6">
-                Advanced solar arrays, nuclear reactors, and fusion power systems for space missions.
-              </p>
-              <ul className="space-y-2 mb-6 text-sm text-blue-200">
-                <li>• Solar sail technology</li>
-                <li>• Compact fusion reactors</li>
-                <li>• Wireless power transmission</li>
-                <li>• Energy storage systems</li>
-              </ul>
-              <a href="#contact" className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Learn More →
-              </a>
-            </div>
-
-            <div className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-6">🔬</div>
-              <h3 className="text-2xl font-bold text-pink-300 mb-4">Space Research Labs</h3>
-              <p className="text-blue-100 mb-6">
-                Advanced research facilities for conducting experiments in microgravity and space environments.
-              </p>
-              <ul className="space-y-2 mb-6 text-sm text-blue-200">
-                <li>• Microgravity experiments</li>
-                <li>• Materials science research</li>
-                <li>• Biological studies</li>
-                <li>• Physics experiments</li>
-              </ul>
-              <a href="#contact" className="inline-block bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Labs →
-              </a>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Mission Achievements */}
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="bg-gradient-to-br from-cyan-600/20 via-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-cyan-400/30"
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              🏆 Mission Achievements
-            </h2>
-            <p className="text-xl text-blue-100">Pioneering achievements in space technology</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-              <div className="flex items-center space-x-2 mb-4">
-                <span className="px-3 py-1 bg-cyan-100 text-cyan-700 text-sm rounded-full font-semibold">100+</span>
-                <span className="text-sm text-blue-200">Successful Launches</span>
-              </div>
-              <h3 className="text-xl font-bold text-cyan-300 mb-3">Rocket Launches</h3>
-              <p className="text-blue-100 mb-4">
-                Successfully launched over 100 missions with 99.8% success rate using our advanced propulsion systems.
-              </p>
-              <div className="text-sm text-cyan-400 font-semibold">View Mission Log →</div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
-              <div className="flex items-center space-x-2 mb-4">
-                <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-semibold">50+</span>
-                <span className="text-sm text-blue-200">Active Satellites</span>
-              </div>
-              <h3 className="text-xl font-bold text-blue-300 mb-3">Satellite Constellation</h3>
-              <p className="text-blue-100 mb-4">
-                Deployed 50+ AI-powered satellites providing global coverage for communications and Earth observation.
-              </p>
-              <div className="text-sm text-blue-400 font-semibold">Track Satellites →</div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-              <div className="flex items-center space-x-2 mb-4">
-                <span className="px-3 py-1 bg-purple-100 text-purple-700 text-sm rounded-full font-semibold">Mars</span>
-                <span className="text-sm text-blue-200">Mission Ready</span>
-              </div>
-              <h3 className="text-xl font-bold text-purple-300 mb-3">Mars Colonization</h3>
-              <p className="text-blue-100 mb-4">
-                Completed feasibility studies and prototype testing for Mars colonization mission scheduled for 2027.
-              </p>
-              <div className="text-sm text-purple-400 font-semibold">Mission Details →</div>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Future Vision */}
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            🌌 The Future of Space Exploration
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            Our vision extends beyond Earth's orbit. We're building the technologies that will enable humanity to become a multi-planetary species.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
-              <div className="text-3xl mb-3">🌍</div>
-              <h3 className="text-lg font-bold text-cyan-300 mb-2">Earth Orbit</h3>
-              <p className="text-blue-100 text-sm">Space stations and satellite networks</p>
-            </div>
-            <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
-              <div className="text-3xl mb-3">🌙</div>
-              <h3 className="text-lg font-bold text-blue-300 mb-2">Lunar Base</h3>
-              <p className="text-blue-100 text-sm">Permanent human settlement on the Moon</p>
-            </div>
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
-              <div className="text-3xl mb-3">🔴</div>
-              <h3 className="text-lg font-bold text-purple-300 mb-2">Mars Colony</h3>
-              <p className="text-blue-100 text-sm">Self-sustaining cities on Mars</p>
-            </div>
-            <div className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
-              <div className="text-3xl mb-3">🌌</div>
-              <h3 className="text-lg font-bold text-pink-300 mb-2">Deep Space</h3>
-              <p className="text-blue-100 text-sm">Interstellar exploration missions</p>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Call to Action */}
-        <motion.section
-          id="contact"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className="text-center bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 rounded-2xl p-12"
-        >
-          <h2 className="text-4xl font-bold mb-6">Ready to Reach for the Stars?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join us in pioneering the next frontier of space exploration. Together, we'll make humanity a multi-planetary species.
-          </p>
-          <div className="flex justify-center space-x-6">
-            <a href="/contact" className="bg-white text-cyan-600 px-8 py-4 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-lg">
-              Join Our Mission
-            </a>
-            <a href="/pages/ComprehensiveTechInsights2026" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors font-semibold text-lg">
-              Learn More
-            </a>
-          </div>
-        </motion.section>
->>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
       </div>
     </div>
   );
