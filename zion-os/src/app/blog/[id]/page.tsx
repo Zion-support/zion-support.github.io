@@ -40,6 +40,20 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'We provide templates for governance charters, review cadences, and cross-functional roles that keep AI value creation safe and accountable.',
     ],
   },
+  'edge-ai-marketplaces': {
+    id: 'edge-ai-marketplaces',
+    title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
+    excerpt:
+      'Designing and operating marketplaces where agents negotiate and transact at the edge for speed, privacy, and resilience.',
+    category: 'AI Solutions',
+    author: 'Michael Rodriguez',
+    date: '2025-09-14',
+    readTime: '7 min read',
+    content: [
+      'Edge-native marketplaces reduce round trips and keep sensitive data local while enabling autonomous negotiation and fulfillment.',
+      'We cover reference topologies, event buses, local policy enforcement, and synchronization with cloud systems for compliance and analytics.',
+    ],
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
