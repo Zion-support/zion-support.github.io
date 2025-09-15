@@ -80,3 +80,6 @@
 2025-09-15 15:33:01 - Merge conflicts detected in dependabot/npm_and_yarn/modelcontextprotocol/sdk-1.17.4
 2025-09-15 15:33:01 - Resolving conflicts in package-lock.json for branch dependabot/npm_and_yarn/modelcontextprotocol/sdk-1.17.4
 2025-09-15 15:33:01 - Resolving conflicts in package.json for branch dependabot/npm_and_yarn/modelcontextprotocol/sdk-1.17.4
+2025-09-15 15:33:05 - Merge conflicts detected in dependabot/npm_and_yarn/next-15.4.6
+2025-09-15 15:33:05 - Resolving conflicts in package-lock.json for branch dependabot/npm_and_yarn/next-15.4.6
+2025-09-15 15:33:05 - Resolving conflicts in package.json for branch dependabot/npm_and_yarn/next-15.4.6
