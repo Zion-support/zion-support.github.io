@@ -1,14 +1,15 @@
-"use client"
+'use client'
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Solutions', href: '/solutions' },
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
-  { name: 'New', href: '/updates/realtime-agent-observatory-1-0' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Research', href: '/research', tag: 'New' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export default function Navigation() {
@@ -41,7 +42,12 @@ export default function Navigation() {
               href={item.href}
               className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5"
             >
-              {item.name}
+              <span className="inline-flex items-center gap-2">
+                {item.name}
+                {item.tag ? (
+                  <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-600/20 text-blue-300">{item.tag}</span>
+                ) : null}
+              </span>
             </a>
           ))}
         </div>
@@ -83,7 +89,12 @@ export default function Navigation() {
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800 transition-colors duration-200"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {item.name}
+                    <span className="inline-flex items-center gap-2">
+                      {item.name}
+                      {item.tag ? (
+                        <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-600/20 text-blue-300">{item.tag}</span>
+                      ) : null}
+                    </span>
                   </a>
                 ))}
               </div>

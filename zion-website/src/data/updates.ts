@@ -7,6 +7,58 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (new content for homepage promotion)
+  {
+    title: 'Launch: Autonomous Incident Simulation Toolkit v1.1',
+    summary:
+      'New real-time scenarios, eval-gated rollbacks, and signed evidence exports to drill agent safety.',
+    href: '/updates/incident-simulation-toolkit-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Evaluating Real-Time Retrieval in Production (2026)',
+    summary:
+      'Streaming metrics, budgeted latency, and rollout playbooks to harden real-time retrieval.',
+    href: '/updates/evaluating-real-time-retrieval-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  // Added 2025-09-15 (brand new content)
+  {
+    title: 'Launch: Autonomous Data Quality Copilot 1.0',
+    summary:
+      'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
+    href: '/updates/autonomous-data-quality-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  // Newly added 2025-09-15 (to advertise on homepage)
+  {
+    title: 'Report: Enterprise Retrieval Observability (2026)',
+    summary:
+      'Metrics, traces, and dashboards to monitor retrieval quality, drift, and SLIs at scale.',
+    href: '/updates/enterprise-retrieval-observability-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Launch: AI Lab Open Benchmarks Portal',
+    summary:
+      'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
+    href: '/updates/ai-lab-open-benchmarks-portal',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  // Added 2025-09-15 (featured)
+  {
+    title: 'Launch: Autonomous Strategy Copilot v1.0',
+    summary:
+      'Exec-ready strategy copilot that drafts roadmaps, OKRs, and investment memos grounded in telemetry and benchmarks.',
+    href: '/updates/autonomous-strategy-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
   // Added 2025-09-15 (even later night batch - fresh content)
   {
     title: 'Launch: Realtime Agent Observatory 1.0',
@@ -217,6 +269,22 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/state-of-agent-tooling-2026',
     date: '2025-09-15',
     tag: 'Report'
+  },
+  {
+    title: 'Launch: Real-Time Agent Observability Console v1.0',
+    summary:
+      'Unified traces, eval signals, and guardrail events with drilldowns and exportable evidence bundles.',
+    href: '/updates/real-time-agent-observability-console-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Agent Change Management Runbook (2026)',
+    summary:
+      'Standardize eval-gated approvals, progressive rollouts, and incident playbooks for safer autonomy.',
+    href: '/updates/agent-change-management-runbook-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
   },
   {
     title: 'Launch: Agent Evals & Observability Suite v1.0',
@@ -581,6 +649,30 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Guide'
   },
   {
+    title: 'Launch: Autonomous Ops Control Center 2.0',
+    summary:
+      'Unified command center with live evals, guardrails, and automated incident workflows for agent ops.',
+    href: '/updates/autonomous-ops-control-center-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Compliance Auditor v1.0',
+    summary:
+      'Automated compliance checks for AI systems with policy-as-code and evidence collection.',
+    href: '/updates/compliance-auditor-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Autonomous Support Copilot v1.1',
+    summary:
+      'Upgraded support copilot with retrieval observability, safe tool use, and faster resolutions.',
+    href: '/updates/autonomous-support-copilot-1-1',
+    date: '2025-09-15',
+    tag: 'Product'
+  },
+  {
     title: 'Guide: Real-Time Evals Starter Kit',
     summary:
       'A practical starter kit with metrics, harnesses, and examples to begin live evaluation in production.',
@@ -691,6 +783,22 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-fundamentals-v2-1',
     date: '2025-09-14',
     tag: 'Course'
+  },
+  {
+    title: 'Report: State of AI Automation (2026 Preview)',
+    summary:
+      'Trends, metrics, and enterprise adoption patterns shaping the next wave of AI-led automation.',
+    href: '/insights/state-of-ai-automation-2025',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Case Study: Autonomous Retail Fulfillment at Scale',
+    summary:
+      'How autonomous agents improved OTIF by 11% and reduced costs across a global retailer.',
+    href: '/updates/autonomous-retail-fulfillment',
+    date: '2025-09-15',
+    tag: 'Case Study'
   },
   {
     title: 'Launch: Autonomous Ops Playbook (2026 Preview)',

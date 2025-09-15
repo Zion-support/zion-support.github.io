@@ -99,6 +99,12 @@ const posts = [
       'End-to-end framework to evaluate autonomous agents with task suites, rubrics, and guardrails.'
   },
   {
+    slug: 'ai-2026-cost-transparency-for-agents',
+    title: 'AI 2026: Cost Transparency for Agentic Systems',
+    summary:
+      'Establishing SLOs, SLIs, and cost attribution for complex multi-agent workflows in production.'
+  },
+  {
     slug: 'ai-2026-multimodal-agents-enterprise-blueprint',
     title: 'AI 2026: Multimodal Agents Enterprise Blueprint',
     summary:
@@ -155,6 +161,12 @@ const posts = [
     slug: 'ai-2026-agent-orchestration-patterns',
     title: 'AI 2026: Agent Orchestration Patterns',
     summary: 'Plan-exec cycles, tool adapters, and policy-as-code guardrails that scale.'
+  }
+  ,
+  {
+    slug: 'ai-2026-cost-aware-agent-routing',
+    title: 'AI 2026: Cost‑Aware Agent Routing — Practical Guide',
+    summary: 'Balance quality, latency, and spend using eval signals and budget guardrails.'
   }
   ,
   {
