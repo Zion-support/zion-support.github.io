@@ -83,22 +83,22 @@ const solutions = [
 
 const whatsNew = [
   {
+    title: 'Agent Safety Red Teaming 2025',
+    desc: 'Practical playbooks to probe, stress, and harden multi‑agent systems.',
+    href: '/blog/agent-safety-red-teaming-2025',
+    tag: 'New',
+  },
+  {
+    title: 'AI Automation Case Studies 2025',
+    desc: 'Five deployments with measurable KPIs from MTTR to margin uplift.',
+    href: '/blog/ai-automation-case-studies-2025',
+    tag: 'New',
+  },
+  {
     title: 'Edge AI Inference v1.2',
     desc: 'Run models 3x faster on edge devices with quantization-aware serving.',
     href: '/solutions/edge-ai-inference',
     tag: 'New',
-  },
-  {
-    title: 'GenAI Content Studio',
-    desc: 'Launch multi-channel AI content with approvals, analytics, and guardrails.',
-    href: '/solutions/genai-content-studio',
-    tag: 'New',
-  },
-  {
-    title: 'Security Copilot',
-    desc: 'AI-driven incident response and continuous posture hardening for enterprises.',
-    href: '/solutions/security-copilot',
-    tag: 'Beta',
   },
 ]
 
