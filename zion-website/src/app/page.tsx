@@ -1,16 +1,9 @@
-<<<<<<< HEAD
+import React from 'react'
 import {
   ChartBarIcon,
   CpuChipIcon,
   GlobeAltIcon,
   LightBulbIcon,
-=======
-import React from 'react'
-import { 
-  LightBulbIcon, 
-  CpuChipIcon, 
-  GlobeAltIcon, 
->>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
   ShieldCheckIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
@@ -482,7 +475,6 @@ export default function HomePage() {
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* What's New section */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -566,8 +558,6 @@ export default function HomePage() {
         </div>
       </div>
 
-=======
->>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
       {/* Features section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">

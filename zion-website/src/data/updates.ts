@@ -42,6 +42,22 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Guide'
   },
   {
+    title: 'Launch: AI Platform 2.0',
+    summary:
+      'Realtime reasoning, tool-use, retrieval observability, and eval-backed releases baked in.',
+    href: '/updates/ai-platform-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Customer Win: Finance - MTTR -42%',
+    summary:
+      'How a Fortune 100 finance org cut MTTR and boosted FCR with real-time RAG + guardrails.',
+    href: '/updates/customer-win-finance',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
     title: 'Launch: Agentic Ops Control Center (v1.0)',
     summary:
       'Unified runbooks, eval gates, and incident workflows for reliable agent operations.',
