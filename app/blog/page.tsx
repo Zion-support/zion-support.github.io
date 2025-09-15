@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import SEO from '../../components/SEO';
 
 export const metadata = {
@@ -13,6 +13,24 @@ export const metadata = {
 
 const BlogPage = () => {
   const featuredPosts = [
+    {
+      title: "AI 2026: Agent Observability Blueprint",
+      description: "Instrument agent systems with metrics, traces, evaluations, and safety guardrails to ship reliable products.",
+      slug: "ai-2026-agent-observability-blueprint",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/agent-observability-2026.jpg"
+    },
+    {
+      title: "AI 2026: Trustworthy RAG Blueprint",
+      description: "Design RAG systems with grounding, citations, verification, and continuous evals for enterprise reliability.",
+      slug: "ai-2026-trustworthy-rag-blueprint",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/trustworthy-rag-2026.jpg"
+    },
     {
       title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
       description: "Discover how generative AI is transforming enterprise operations in 2025, delivering unprecedented automation, creativity, and efficiency gains across all business functions.",
