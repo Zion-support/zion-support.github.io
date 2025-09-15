@@ -99,6 +99,22 @@ content_index:
         satisfaction: "98%"
         efficiency: "67%"
         
+    - id: "data-governance-trust-security-2025"
+      type: "blog"
+      title: "AI 2025: Data Governance, Trust, and Security — Enterprise Guide"
+      file_path: "/content/blog/ai-2025-data-governance-trust-security.md"
+      url: "/blog/ai-2025-data-governance-trust-security"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["AI", "Data Governance", "Security", "Compliance", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        risk_reduction: "65%"
+        approval_speed: "2x"
+        audit_coverage: "100%"
+        incidents_reduction: "40%"
+
 <<<<<<< HEAD
     - id: "healthcare-transformation"
       type: "case-study"
