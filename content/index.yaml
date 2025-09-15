@@ -1,6 +1,6 @@
 content_index:
   last_updated: "2025-09-15"
-  total_content_pieces: 24
+  total_content_pieces: 27
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -497,6 +497,48 @@ content_index:
         release_speed: "2x"
         rollback: "automatic"
         risk_reduction: "60%"
+    - id: "ai-2026-enterprise-agent-observability-guide"
+      type: "blog"
+      title: "AI 2026: Enterprise Agent Observability Guide"
+      file_path: "/content/blog/ai-2026-enterprise-agent-observability-guide.md"
+      url: "/blog/ai-2026-enterprise-agent-observability-guide"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Agents", "Observability", "Tracing", "Evals", "Safety"]
+      featured: true
+      is_new: true
+      metrics:
+        mttr: "-42%"
+        quality_improvement: "+18%"
+        cost_reduction: "-22%"
+    - id: "ai-2026-safe-tool-use-blueprint"
+      type: "blog"
+      title: "AI 2026: Safe Tool Use Blueprint"
+      file_path: "/content/blog/ai-2026-safe-tool-use-blueprint.md"
+      url: "/blog/ai-2026-safe-tool-use-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Safety", "Tools", "Policy", "Sandboxing"]
+      featured: true
+      is_new: true
+      metrics:
+        incidents_reduction: "40%"
+        approvals: "time-boxed"
+        audits: "continuous"
+    - id: "ai-2025-enterprise-ai-security-blueprint"
+      type: "blog"
+      title: "Enterprise AI Security Blueprint (2025)"
+      file_path: "/content/blog/ai-2025-enterprise-ai-security-blueprint.md"
+      url: "/blog/ai-2025-enterprise-ai-security-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Security", "Governance", "Supply Chain", "Safety"]
+      featured: true
+      is_new: true
+      metrics:
+        coverage: "99% controls mapped"
+        sbom: true
+        provenance: true
     - id: "ai-2026-eval-ready-ai-pipelines-in-production"
       type: "blog"
       title: "AI 2026: Eval-Ready AI Pipelines in Production"
