@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ChevronRight, Star, TrendingUp, Zap, Shield, Brain, Target } from 'lucide-react';
+import { X, ChevronRight, Star, TrendingUp, Zap, Shield, Brain } from 'lucide-react';
 
 const UltimateAutonomousEnterpriseBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -165,7 +165,7 @@ const UltimateAutonomousEnterpriseBanner = () => {
               </div>
               
               <div className="absolute top-1/2 right-0 w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center animate-bounce delay-3000">
-                <Target className="w-4 h-4 text-white" />
+                <Award className="w-4 h-4 text-white" />
               </div>
             </div>
           </div>

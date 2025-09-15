@@ -7,7 +7,7 @@ import {
   Clock, 
   TrendingUp, 
   DollarSign, 
-  Target, 
+  
   Zap,
   FileText,
   BarChart3,
@@ -127,7 +127,7 @@ const UltimateDigitalTransformationShowcase2025: React.FC = () => {
             
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <div className="flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mx-auto mb-4">
-                <Target className="h-6 w-6 text-purple-600" />
+                <Award className="h-6 w-6 text-purple-600" />
               </div>
               <div className="text-2xl font-bold text-gray-900 mb-1">99.99%</div>
               <div className="text-sm text-gray-600">Efficiency</div>

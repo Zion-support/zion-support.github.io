@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+// import ErrorBoundary from '../../components/ErrorBoundary';
 import NewContent2025UltimateContentRevolutionBanner from '../../components/NewContent2025UltimateContentRevolutionBanner';
 import UltimateContentRevolutionShowcase2025 from '../../components/UltimateContentRevolutionShowcase2025';
 
@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function ContentRevolutionPage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="AI Content Revolution 2025 - 25,000% ROI Content Strategy"
         description="Discover the revolutionary AI content strategies delivering 25,000% ROI. Transform your business with cutting-edge content automation and optimization."
@@ -195,6 +195,6 @@ export default function ContentRevolutionPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }

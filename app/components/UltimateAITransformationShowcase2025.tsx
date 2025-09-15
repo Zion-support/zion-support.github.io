@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, DollarSign, Target, Clock, Users, Award, Zap } from 'lucide-react';
+import { ArrowRight, TrendingUp, DollarSign, Clock, Users, Award, Zap } from 'lucide-react';
 
 const UltimateAITransformationShowcase2025 = () => {
   const content = [
@@ -200,7 +200,7 @@ const UltimateAITransformationShowcase2025 = () => {
               </Link>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-              <Target className="w-8 h-8 text-green-600 mx-auto mb-4" />
+              <Award className="w-8 h-8 text-green-600 mx-auto mb-4" />
               <h5 className="font-semibold text-gray-900 mb-2">ROI Calculator</h5>
               <p className="text-gray-600 text-sm mb-4">Calculate your potential ROI from AI transformation</p>
               <Link href="/tools/roi-calculator" className="text-green-600 font-semibold hover:text-green-800">

@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
-import ErrorBoundary from './ErrorBoundary';
+// import ErrorBoundary from './ErrorBoundary';
 import SEO from './SEO';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -60,7 +60,7 @@ export const metadata = {
 
 const HomePageOptimized = () => {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="Zion Tech Group - AI & Technology Solutions | 400% ROI Guaranteed"
         description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services with proven 400% ROI results."
@@ -257,7 +257,7 @@ const HomePageOptimized = () => {
           />
         </Suspense>
       </div>
-    </ErrorBoundary>
+    </>
   );
 };
 

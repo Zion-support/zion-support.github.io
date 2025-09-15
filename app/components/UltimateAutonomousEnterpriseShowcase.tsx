@@ -7,7 +7,7 @@ import {
   TrendingUp, 
   Zap, 
   Shield, 
-  Target, 
+  
   Clock, 
   Users, 
   BarChart3,

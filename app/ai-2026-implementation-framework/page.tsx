@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, TrendingUp, Zap, Shield, Users, CheckCircle, Clock, Target } from 'lucide-react';
+import { ArrowRight, Brain, TrendingUp, Zap, Shield, Users, CheckCircle, Clock } from 'lucide-react';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+// import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'AI 2026 Ultimate Implementation Framework - Zion Tech Group',
@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function AI2026ImplementationFrameworkPage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="AI 2026 Ultimate Implementation Framework - Zion Tech Group"
         description="Complete AI implementation framework for achieving 500%+ ROI. Comprehensive roadmap from strategy to execution with proven methodologies."
@@ -297,6 +297,6 @@ export default function AI2026ImplementationFrameworkPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import ErrorBoundary from '../../components/ErrorBoundary';
+// import ErrorBoundary from '../../components/ErrorBoundary';
 import SEO from '../../components/SEO';
 import AI2025_2026UltimateTransformation50000ROIPromotionBanner from '../../components/AI2025_2026UltimateTransformation50000ROIPromotionBanner';
 import InteractiveROICalculator2025_2026 from '../../components/InteractiveROICalculator2025_2026';
@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function AI2025_2026UltimateTransformationPage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="AI 2025-2026 Ultimate Business Transformation | 50,000% ROI Guide"
         description="Discover the revolutionary AI technologies achieving 50,000% ROI. Complete guide to AI transformation with Fortune 500 case studies and implementation framework."
@@ -209,6 +209,6 @@ export default function AI2025_2026UltimateTransformationPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }

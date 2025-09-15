@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ChevronRight, TrendingUp, DollarSign, Zap, Target } from 'lucide-react';
+import { X, ChevronRight, TrendingUp, DollarSign, Zap } from 'lucide-react';
 
 const UltimateAutonomousEnterpriseRevolutionBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -158,7 +158,7 @@ const UltimateAutonomousEnterpriseRevolutionBanner = () => {
                   
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
                     <div className="flex items-center space-x-2">
-                      <Target className="h-4 w-4 text-blue-400" />
+                      <Award className="h-4 w-4 text-blue-400" />
                       <span className="text-sm text-gray-300">Accuracy</span>
                     </div>
                     <div className="text-xl font-bold text-white">{currentContent.metrics.accuracy}</div>

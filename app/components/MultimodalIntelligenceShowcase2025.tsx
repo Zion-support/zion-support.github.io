@@ -101,7 +101,7 @@ const MultimodalIntelligenceShowcase2025: React.FC = () => {
       case 'case-study':
         return <TrendingUp className="w-5 h-5" />;
       case 'resource':
-        return <Target className="w-5 h-5" />;
+        return <Award className="w-5 h-5" />;
       default:
         return <FileText className="w-5 h-5" />;
     }

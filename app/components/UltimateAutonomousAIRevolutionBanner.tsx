@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ChevronRight, TrendingUp, DollarSign, Zap, Target } from 'lucide-react';
+import { X, ChevronRight, TrendingUp, DollarSign, Zap } from 'lucide-react';
 
 const UltimateAutonomousAIRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -159,7 +159,7 @@ const UltimateAutonomousAIRevolutionBanner = () => {
           <div className="hidden lg:block ml-8">
             <div className="w-64 h-64 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full flex items-center justify-center">
               <div className="text-center">
-                <Target className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
+                <Award className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
                 <div className="text-4xl font-bold text-yellow-400">15,000%</div>
                 <div className="text-lg text-gray-300">ROI</div>
               </div>

@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
+// import ErrorBoundary from '../components/ErrorBoundary';
 import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import MobileResponsiveLayout from '../components/MobileResponsiveLayout';
@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <ErrorBoundary>
+    <>
       <SEOOptimizer seoData={seoData}>
         <PerformanceOptimizer
           enableMetrics={true}
@@ -330,7 +330,7 @@ const HomePage: React.FC = () => {
           </MobileResponsiveLayout>
         </PerformanceOptimizer>
       </SEOOptimizer>
-    </ErrorBoundary>
+    </>
   );
 };
 

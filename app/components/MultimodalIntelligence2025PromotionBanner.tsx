@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronRight, Star, TrendingUp, Zap, Target } from 'lucide-react';
+import { X, ChevronRight, Star, TrendingUp, Zap } from 'lucide-react';
 
 const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -55,7 +55,7 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
       subtitle: "Step-by-Step Roadmap",
       description: "Everything you need to deploy multimodal AI systems with guaranteed ROI success",
       metrics: "94% success rate",
-      icon: <Target className="w-6 h-6" />,
+      icon: <Award className="w-6 h-6" />,
       gradient: "from-orange-600 to-red-600"
     }
   ];
@@ -77,7 +77,7 @@ const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
       >
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 opacity-30"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

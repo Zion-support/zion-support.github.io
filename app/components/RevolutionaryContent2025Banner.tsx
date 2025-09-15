@@ -47,7 +47,7 @@ const RevolutionaryContent2025Banner: React.FC = () => {
       stats: "10^12 Speedup • $50M+ Savings • Revolutionary Security",
       cta: "Explore Quantum AI",
       href: "/blog/ai-2025-quantum-computing-business-transformation",
-      icon: <Target className="w-8 h-8" />,
+      icon: <Award className="w-8 h-8" />,
       color: "from-blue-600 to-cyan-600"
     },
     {

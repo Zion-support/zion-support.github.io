@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, TrendingUp, DollarSign, Target, Zap } from 'lucide-react';
+import { X, ArrowRight, TrendingUp, DollarSign, Zap } from 'lucide-react';
 
 const AI2025UltimateEnterpriseTransformationBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -165,7 +165,7 @@ const AI2025UltimateEnterpriseTransformationBanner = () => {
                 
                 {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center animate-bounce">
-                  <Target className="w-6 h-6 text-green-400" />
+                  <Award className="w-6 h-6 text-green-400" />
                 </div>
                 <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center animate-bounce delay-1000">
                   <TrendingUp className="w-8 h-8 text-blue-400" />

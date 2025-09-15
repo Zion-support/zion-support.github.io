@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+// import ErrorBoundary from '../../components/ErrorBoundary';
 import SuccessStoriesShowcase2026 from '../../components/SuccessStoriesShowcase2026';
 
 export const metadata = {
@@ -51,7 +51,7 @@ export default function CaseStudiesPage() {
   ];
 
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="AI Success Stories & Case Studies - Proven ROI Results"
         description="Discover real success stories from companies that have transformed their operations with our AI solutions, achieving 500%+ ROI and unprecedented efficiency gains."
@@ -209,6 +209,6 @@ export default function CaseStudiesPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }

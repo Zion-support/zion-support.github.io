@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, XCircle, AlertCircle, TrendingUp, Zap, ArrowRight, Target } from 'lucide-react';
+import { CheckCircle, XCircle, AlertCircle, TrendingUp, Zap, ArrowRight } from 'lucide-react';
 
 interface AssessmentQuestion {
   id: string;

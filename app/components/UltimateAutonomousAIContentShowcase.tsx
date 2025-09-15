@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, DollarSign, Clock, Users, Target, Zap, BookOpen, FileText, BarChart3 } from 'lucide-react';
+import { ArrowRight, TrendingUp, DollarSign, Clock, Users, Zap, BookOpen, FileText, BarChart3 } from 'lucide-react';
 
 const UltimateAutonomousAIContentShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all');

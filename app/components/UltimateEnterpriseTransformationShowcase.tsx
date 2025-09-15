@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, DollarSign, Target, Clock, Users, Award, BookOpen, FileText, BarChart3 } from 'lucide-react';
+import { ArrowRight, TrendingUp, DollarSign, Clock, Users, Award, BookOpen, FileText, BarChart3 } from 'lucide-react';
 
 const UltimateEnterpriseTransformationShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -253,7 +253,7 @@ const UltimateEnterpriseTransformationShowcase = () => {
                 href="/services"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
-                <Target className="mr-2 w-5 h-5" />
+                <Award className="mr-2 w-5 h-5" />
                 Explore Services
               </Link>
             </div>

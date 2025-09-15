@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+// import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'AI Content Revolution Implementation Guide 2025: Complete Roadmap to 25,000% ROI',
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function AIContentRevolutionImplementationGuidePage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="AI Content Revolution Implementation Guide 2025: Complete Roadmap to 25,000% ROI"
         description="The definitive guide to transforming your content strategy with revolutionary AI technologies. Complete roadmap to achieving 25,000% ROI within 18 months."
@@ -384,6 +384,6 @@ export default function AIContentRevolutionImplementationGuidePage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }

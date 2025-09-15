@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, TrendingUp, Calculator, FileText, Users, DollarSign, Clock, Star, Target } from 'lucide-react';
+import { ArrowRight, Zap, TrendingUp, Calculator, FileText, Users, DollarSign, Clock, Star } from 'lucide-react';
 
 const EnhancedContentPromotionBanner2026 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -53,7 +53,7 @@ const EnhancedContentPromotionBanner2026 = () => {
   const quickStats = [
     { label: 'New Articles', value: '6+', icon: FileText, color: 'text-blue-600' },
     { label: 'Case Studies', value: '2', icon: Users, color: 'text-green-600' },
-    { label: 'Implementation Guides', value: '2', icon: Target, color: 'text-purple-600' },
+    { label: 'Implementation Guides', value: '2', icon: color: 'text-purple-600' },
     { label: 'Total ROI Mentioned', value: '8+', icon: TrendingUp, color: 'text-orange-600' }
   ];
 

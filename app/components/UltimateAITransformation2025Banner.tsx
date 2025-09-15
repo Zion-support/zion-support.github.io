@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowRight, TrendingUp, DollarSign, Zap, Target } from 'lucide-react';
+import { X, ArrowRight, TrendingUp, DollarSign, Zap } from 'lucide-react';
 
 const UltimateAITransformation2025Banner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -110,7 +110,7 @@ const UltimateAITransformation2025Banner = () => {
                   <span className="font-semibold">{currentContent.metrics}</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <Target className="w-5 h-5 text-blue-400" />
+                  <Award className="w-5 h-5 text-blue-400" />
                   <span className="font-semibold">{currentContent.readingTime}</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-yellow-500/20 backdrop-blur-sm rounded-lg px-4 py-2">

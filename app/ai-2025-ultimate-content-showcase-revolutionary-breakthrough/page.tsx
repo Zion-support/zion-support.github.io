@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+// import ErrorBoundary from '../../components/ErrorBoundary';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function AI2025UltimateContentShowcaseRevolutionaryBreakthroughPage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="AI 2025 Ultimate Content Showcase: Revolutionary Breakthrough"
         description="Discover the revolutionary AI content showcase transforming enterprise operations with 50000% ROI, neural architectures, and quantum-enhanced processing."
@@ -191,6 +191,6 @@ export default function AI2025UltimateContentShowcaseRevolutionaryBreakthroughPa
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }

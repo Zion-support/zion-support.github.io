@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+// import ErrorBoundary from '../../components/ErrorBoundary';
 import UltimateContentShowcase2026 from '../../components/UltimateContentShowcase2026';
 import InteractiveContentDiscovery2026 from '../../components/InteractiveContentDiscovery2026';
 import SuccessStoriesShowcase2026 from '../../components/SuccessStoriesShowcase2026';
@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function ContentPage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="AI Content Library 2026 - Revolutionary Technologies & Solutions"
         description="Explore our comprehensive library of AI technologies, quantum computing breakthroughs, neural interfaces, and autonomous business systems with proven ROI results."
@@ -124,6 +124,6 @@ export default function ContentPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, DollarSign, Zap, Target, Clock, Users, Award, CheckCircle, Star } from 'lucide-react';
+import { ArrowRight, TrendingUp, DollarSign, Zap, Clock, Users, Award, CheckCircle, Star } from 'lucide-react';
 
 const UltimateBusinessAutomationShowcase2025 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -141,7 +141,7 @@ const UltimateBusinessAutomationShowcase2025 = () => {
           <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
             <div className="flex items-center space-x-3 mb-3">
               <div className="p-2 bg-blue-100 rounded-lg">
-                <Target className="w-6 h-6 text-blue-600" />
+                <Award className="w-6 h-6 text-blue-600" />
               </div>
               <div>
                 <div className="text-2xl font-bold text-blue-600">99.97%</div>

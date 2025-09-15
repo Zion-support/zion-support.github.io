@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+// import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Fortune 500 AI Content Revolution Success: $500B Annual Savings - 25,000% ROI',
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function Fortune500AIContentRevolutionCaseStudyPage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="Fortune 500 AI Content Revolution Success: $500B Annual Savings - 25,000% ROI"
         description="How TechGlobal Industries achieved extraordinary results with AI content revolution. Learn how they achieved 25,000% ROI and $500B in annual savings."
@@ -375,6 +375,6 @@ export default function Fortune500AIContentRevolutionCaseStudyPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }

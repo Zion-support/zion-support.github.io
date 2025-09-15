@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, DollarSign, Users, Award, Target, Building, Clock, CheckCircle } from 'lucide-react';
+import { ArrowRight, TrendingUp, DollarSign, Users, Award, Building, Clock, CheckCircle } from 'lucide-react';
 import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+// import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Fortune 500 AI Transformation: 600% ROI Case Study - Zion Tech Group',
@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function Fortune500AITransformationPage() {
   return (
-    <ErrorBoundary>
+    <>
       <SEO
         title="Fortune 500 AI Transformation: 600% ROI Case Study - Zion Tech Group"
         description="Discover how a Fortune 500 manufacturing company achieved $130M+ annual benefits through comprehensive AI transformation across all business units."
@@ -96,7 +96,7 @@ export default function Fortune500AITransformationPage() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <Target className="w-8 h-8 text-orange-600 mt-1" />
+                    <Award className="w-8 h-8 text-orange-600 mt-1" />
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">Locations</h3>
                       <p className="text-gray-600">25+ facilities across North America, Europe, and Asia</p>
@@ -275,7 +275,7 @@ export default function Fortune500AITransformationPage() {
               </div>
 
               <div className="bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-xl border border-purple-200">
-                <Target className="w-12 h-12 text-purple-600 mb-4" />
+                <Award className="w-12 h-12 text-purple-600 mb-4" />
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">95%</h3>
                 <p className="text-gray-600">Quality Improvement</p>
                 <div className="text-sm text-gray-500 mt-2">
@@ -408,6 +408,6 @@ export default function Fortune500AITransformationPage() {
           </div>
         </section>
       </div>
-    </ErrorBoundary>
+    </>
   );
 }
