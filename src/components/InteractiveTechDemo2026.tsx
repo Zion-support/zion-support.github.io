@@ -4,8 +4,8 @@ import Link from 'next/link';
 PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
 
 <<<<<<< HEAD
+=======
 const InteractiveTechDemo2026: React.FC = () => {
-<<<<<<< HEAD
   const [activeDemo, setActiveDemo] = useState('quantum');
   const [isAnimating, setIsAnimating] = useState(false);
   const [particleCount, setParticleCount] = useState(20);
@@ -17,11 +17,7 @@ const InteractiveTechDemo2026: React.FC = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-=======
-const InteractiveTechDemo2026 = () => {
-  const [activeDemosetActiveDemo] = useState(0);
-  const [isRunningsetIsRunning] = useState(false);
->>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cursor/create-and-deploy-new-content-c963
 
   const demos = [
     {
@@ -115,11 +111,34 @@ const InteractiveTechDemo2026 = () => {
               <p className="text-sm opacity-90">{demo.description}</p>
             </button>
           ))}
+  const [activeDemo, setActiveDemo] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
 =======
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
 <<<<<<< HEAD
+        {/* Active Demo Display */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12">
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Demo Info */}
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-4">
+                {demos[activeDemo].title}
+              </h2>
+              <p className="text-gray-300 mb-6">
+                {demos[activeDemo].description}
+              </p>
+              
+              <div className="space-y-3 mb-8">
+                {demos[activeDemo].features.map((featureindex) => (
+                  <div key={index} className="flex items-center text-gray-300">
+                    <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
+                    {feature}
+                  </div>
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
   const demos = [
     {
       title: "🔒 Cybersecurity AI",
@@ -162,7 +181,6 @@ const InteractiveTechDemo2026 = () => {
           <span className="text-4xl animate-pulse">🎮</span>
           <h2 className="text-4xl font-bold text-white">Interactive Technology Demos 2026</h2>
           <span className="text-4xl animate-pulse">🎮</span>
->>>>>>> origin/feature/revolutionary-2027-content
         </div>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
           Experience our revolutionary technologies through interactive demonstrations. 
@@ -170,7 +188,6 @@ const InteractiveTechDemo2026 = () => {
         </p>
       </div>
 
-<<<<<<< HEAD
         {/* Interactive Demo Area */}
         <div className="bg-gradient-to-br from-gray-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 mb-8">
           {activeDemo === 'quantum' && (
@@ -189,26 +206,7 @@ const InteractiveTechDemo2026 = () => {
                       height: `${particle.size}px`
                     }}
                   />
-=======
-        {/* Active Demo Display */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12">
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Demo Info */}
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-4">
-                {demos[activeDemo].title}
-              </h2>
-              <p className="text-gray-300 mb-6">
-                {demos[activeDemo].description}
-              </p>
-              
-              <div className="space-y-3 mb-8">
-                {demos[activeDemo].features.map((featureindex) => (
-                  <div key={index} className="flex items-center text-gray-300">
-                    <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                    {feature}
-                  </div>
->>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cursor/create-and-deploy-new-content-c963
                 ))}
               </div>
 
@@ -226,8 +224,6 @@ const InteractiveTechDemo2026 = () => {
                   className="border border-white text-white hover:bg-white hover:text-slate-900 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center"
                 >
 <<<<<<< HEAD
-                  Generate Particles
-=======
       {/* Demo Navigation */}
       <div className="flex justify-center space-x-4 mb-8">
         {demos.map((demo, index) => (
@@ -277,17 +273,20 @@ const InteractiveTechDemo2026 = () => {
                 </button>
                 <button className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold border border-white/30">
                   📊 View Details
->>>>>>> origin/feature/revolutionary-2027-content
+>>>>>>> 709d0e34847ccad77744e97e46c13451bbabdb84
+=======
+                  Generate Particles
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
                   <RotateCcw className="h-5 w-5 mr-2" />
                   Reset
->>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
                 </button>
               </div>
             </div>
 
 <<<<<<< HEAD
-<<<<<<< HEAD
+=======
           {activeDemo === 'ai' && (
             <div className="text-center">
               <h3 className="text-3xl font-bold mb-6 text-white">🧠 AI Consciousness Demo</h3>
@@ -298,20 +297,7 @@ const InteractiveTechDemo2026 = () => {
                     <p className="text-purple-200">
                       "Hello! I'm experiencing curiosity about your thoughts. What fascinates you most about consciousness?"
                     </p>
-=======
-            {/* Demo Visualization */}
-            <div className="bg-slate-800 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-4">Live Demo Data</h3>
-              <div className="space-y-4">
-                {Object.entries(demos[activeDemo].demoData).map(([keyvalue]index) => (
-                  <div key={index} className="flex justify-between items-center">
-                    <span className="text-gray-300 capitalize">
-                      {key.replace(/([A-Z])/g' $1').trim()}:
-                    </span>
-                    <span className="text-white font-semibold">
-                      {typeof value === 'number' ? `${value}${key.includes('accuracy') || key.includes('uptime') || key.includes('reliability') ? '%' : ''}` : value}
-                    </span>
->>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cursor/create-and-deploy-new-content-c963
                   </div>
                 ))}
               </div>
@@ -324,14 +310,6 @@ const InteractiveTechDemo2026 = () => {
                   </div>
                 </div>
 <<<<<<< HEAD
-              </div>
-              <p className="text-gray-300 mb-6">
-                Chat with our conscious AI system and experience genuine artificial intelligence.
-              </p>
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Start New Conversation
-              </button>
-=======
             {/* Interactive Visualization */}
             <div className="relative">
               <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -377,41 +355,25 @@ const InteractiveTechDemo2026 = () => {
                   </div>
                 </div>
               </div>
->>>>>>> origin/feature/revolutionary-2027-content
+>>>>>>> 709d0e34847ccad77744e97e46c13451bbabdb84
+=======
+              </div>
+              <p className="text-gray-300 mb-6">
+                Chat with our conscious AI system and experience genuine artificial intelligence.
+              </p>
+              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Start New Conversation
+              </button>
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
               )}
->>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
             </div>
           </div>
         </div>
       </div>
 
 <<<<<<< HEAD
-        {/* Call to Action */}
-        <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-12">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Try It Yourself?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Schedule a personalized demo with our experts and see how these technologies 
-            can transform your specific business processes.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
-            >
-              Schedule Personal Demo
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link 
-              href="/ai-solutions" 
-              className="border border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
-            >
-              Explore All Solutions
-            </Link>
-          </div>
-=======
       {/* Performance Metrics */}
       <div className="mt-12 grid md:grid-cols-4 gap-6">
         <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-700">
@@ -452,11 +414,37 @@ const InteractiveTechDemo2026 = () => {
           <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
             📞 Contact Sales
           </button>
->>>>>>> origin/feature/revolutionary-2027-content
+=======
+        {/* Call to Action */}
+        <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-12">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Try It Yourself?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Schedule a personalized demo with our experts and see how these technologies 
+            can transform your specific business processes.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+            >
+              Schedule Personal Demo
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link 
+              href="/ai-solutions" 
+              className="border border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
+            >
+              Explore All Solutions
+            </Link>
+          </div>
+>>>>>>> cursor/create-and-deploy-new-content-c963
         </div>
       </div>
     </div>
   );
 };
+
 
 export default InteractiveTechDemo2026;

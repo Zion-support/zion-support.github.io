@@ -26,91 +26,174 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
           </div>
         </div>
 
-        {/* Synthetic Biology Breakthroughs */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-24">
-          <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-3xl p-10 border border-green-400/40 hover:scale-105 transition-all duration-500">
-            <div className="text-9xl mb-8 text-center animate-pulse">🧬</div>
-            <h3 className="text-3xl font-bold mb-6 text-center text-white">Programmable Cells</h3>
-            <p className="text-green-200 mb-8 text-center text-xl">
-              Engineered living cells that can be programmed like computers to perform specific biological functions
+        {/* Core Technologies */}
+        <div className="grid lg:grid-cols-3 gap-12 mb-20">
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-10 border border-green-400/30 hover:border-green-400/60 transition-all duration-300">
+            <div className="text-6xl mb-6">🧬</div>
+            <h2 className="text-3xl font-bold text-white mb-6">Programmable Life</h2>
+            <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+              Engineered biological systems that can be programmed like computers, 
+              creating living machines with unprecedented capabilities.
             </p>
-            <ul className="text-green-300 space-y-4 mb-10 text-lg">
-              <li className="flex items-center"><span className="mr-3">💻</span>DNA programming</li>
-              <li className="flex items-center"><span className="mr-3">🔄</span>Self-replication</li>
-              <li className="flex items-center"><span className="mr-3">🎯</span>Targeted functions</li>
-              <li className="flex items-center"><span className="mr-3">🛡️</span>Biological security</li>
-            </ul>
-            <button className="w-full bg-white text-green-600 py-5 rounded-xl hover:bg-green-50 transition-colors font-bold text-xl">
-              Program Cells →
-            </button>
+            <div className="space-y-4">
+              <div className="bg-green-500/20 p-4 rounded-xl">
+                <div className="text-green-300 font-semibold">Bio-Programming Language</div>
+                <div className="text-sm text-gray-400">DNA-based programming for living systems</div>
+              </div>
+              <div className="bg-green-500/20 p-4 rounded-xl">
+                <div className="text-green-300 font-semibold">Living Computers</div>
+                <div className="text-sm text-gray-400">Biological processors with organic memory</div>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-3xl p-10 border border-teal-400/40 hover:scale-105 transition-all duration-500">
-            <div className="text-9xl mb-8 text-center animate-bounce">🧠</div>
-            <h3 className="text-3xl font-bold mb-6 text-center text-white">Bio-Computers</h3>
-            <p className="text-teal-200 mb-8 text-center text-xl">
-              Living computers made from biological materials that process information using DNA and proteins
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-10 border border-emerald-400/30 hover:border-emerald-400/60 transition-all duration-300">
+            <div className="text-6xl mb-6">🔬</div>
+            <h2 className="text-3xl font-bold text-white mb-6">Synthetic Organisms</h2>
+            <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+              Artificially created life forms designed for specific purposes, 
+              from environmental cleanup to medical treatment.
             </p>
-            <ul className="text-teal-300 space-y-4 mb-10 text-lg">
-              <li className="flex items-center"><span className="mr-3">🧮</span>DNA computation</li>
-              <li className="flex items-center"><span className="mr-3">⚡</span>Protein processors</li>
-              <li className="flex items-center"><span className="mr-3">💾</span>Biological memory</li>
-              <li className="flex items-center"><span className="mr-3">🔗</span>Neural networks</li>
-            </ul>
-            <button className="w-full bg-white text-teal-600 py-5 rounded-xl hover:bg-teal-50 transition-colors font-bold text-xl">
-              Build Bio-Computer →
-            </button>
+            <div className="space-y-4">
+              <div className="bg-emerald-500/20 p-4 rounded-xl">
+                <div className="text-emerald-300 font-semibold">Designer Organisms</div>
+                <div className="text-sm text-gray-400">Custom-built life forms for specific tasks</div>
+              </div>
+              <div className="bg-emerald-500/20 p-4 rounded-xl">
+                <div className="text-emerald-300 font-semibold">Bio-Factories</div>
+                <div className="text-sm text-gray-400">Living systems that produce valuable compounds</div>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-gradient-to-br from-emerald-600/30 to-green-600/30 backdrop-blur-sm rounded-3xl p-10 border border-emerald-400/40 hover:scale-105 transition-all duration-500">
-            <div className="text-9xl mb-8 text-center animate-spin">🌱</div>
-            <h3 className="text-3xl font-bold mb-6 text-center text-white">Engineered Organisms</h3>
-            <p className="text-emerald-200 mb-8 text-center text-xl">
-              Custom-designed living organisms with enhanced capabilities for medicine, agriculture, and industry
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-10 border border-teal-400/30 hover:border-teal-400/60 transition-all duration-300">
+            <div className="text-6xl mb-6">🧠</div>
+            <h2 className="text-3xl font-bold text-white mb-6">Bio-Intelligence</h2>
+            <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+              Biological AI systems that combine organic intelligence with 
+              artificial processing for unprecedented cognitive abilities.
             </p>
-            <ul className="text-emerald-300 space-y-4 mb-10 text-lg">
-              <li className="flex items-center"><span className="mr-3">💊</span>Medical synthesis</li>
-              <li className="flex items-center"><span className="mr-3">🌾</span>Crop enhancement</li>
-              <li className="flex items-center"><span className="mr-3">🏭</span>Industrial production</li>
-              <li className="flex items-center"><span className="mr-3">🌍</span>Environmental cleanup</li>
-            </ul>
-            <button className="w-full bg-white text-emerald-600 py-5 rounded-xl hover:bg-emerald-50 transition-colors font-bold text-xl">
-              Design Organisms →
-            </button>
+            <div className="space-y-4">
+              <div className="bg-teal-500/20 p-4 rounded-xl">
+                <div className="text-teal-300 font-semibold">Neural Bio-Circuits</div>
+                <div className="text-sm text-gray-400">Organic neural networks in living systems</div>
+              </div>
+              <div className="bg-teal-500/20 p-4 rounded-xl">
+                <div className="text-teal-300 font-semibold">Bio-Memory</div>
+                <div className="text-sm text-gray-400">DNA-based data storage and retrieval</div>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div className="bg-gradient-to-br from-lime-600/30 to-green-600/30 backdrop-blur-sm rounded-3xl p-10 border border-lime-400/40 hover:scale-105 transition-all duration-500">
-            <div className="text-9xl mb-8 text-center animate-pulse">🔬</div>
-            <h3 className="text-3xl font-bold mb-6 text-center text-white">Bio-Manufacturing</h3>
-            <p className="text-lime-200 mb-8 text-center text-xl">
-              Revolutionary manufacturing using living systems to produce complex materials and chemicals
-            </p>
-            <ul className="text-lime-300 space-y-4 mb-10 text-lg">
-              <li className="flex items-center"><span className="mr-3">🏗️</span>Living factories</li>
-              <li className="flex items-center"><span className="mr-3">🧪</span>Bio-synthesis</li>
-              <li className="flex items-center"><span className="mr-3">♻️</span>Sustainable production</li>
-              <li className="flex items-center"><span className="mr-3">🎯</span>Precision engineering</li>
-            </ul>
-            <button className="w-full bg-white text-lime-600 py-5 rounded-xl hover:bg-lime-50 transition-colors font-bold text-xl">
-              Start Bio-Manufacturing →
-            </button>
+        {/* Revolutionary Applications */}
+        <div className="mb-20">
+          <h2 className="text-5xl font-bold text-white text-center mb-16">🌟 Revolutionary Applications</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-3xl p-10 border border-green-500/30">
+              <h3 className="text-3xl font-bold text-white mb-6">🏥 Medical Miracles</h3>
+              <p className="text-gray-300 mb-8 text-lg">
+                Synthetic biology is revolutionizing medicine with programmable cells, 
+                personalized treatments, and regenerative therapies.
+              </p>
+              <ul className="text-gray-300 space-y-4 text-lg">
+                <li>• Programmable immune cells that target specific diseases</li>
+                <li>• Synthetic organs grown from patient's own cells</li>
+                <li>• Bio-computers that diagnose and treat conditions</li>
+                <li>• Regenerative medicine that reverses aging</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 rounded-3xl p-10 border border-emerald-500/30">
+              <h3 className="text-3xl font-bold text-white mb-6">🌱 Agricultural Revolution</h3>
+              <p className="text-gray-300 mb-8 text-lg">
+                Transforming agriculture with engineered crops, bio-fertilizers, 
+                and sustainable food production systems.
+              </p>
+              <ul className="text-gray-300 space-y-4 text-lg">
+                <li>• Crops that grow in any environment</li>
+                <li>• Bio-fertilizers that enhance soil health</li>
+                <li>• Synthetic meat production without animals</li>
+                <li>• Carbon-negative farming systems</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 rounded-3xl p-10 border border-teal-500/30">
+              <h3 className="text-3xl font-bold text-white mb-6">🌍 Environmental Solutions</h3>
+              <p className="text-gray-300 mb-8 text-lg">
+                Using synthetic biology to clean up pollution, restore ecosystems, 
+                and create sustainable environmental solutions.
+              </p>
+              <ul className="text-gray-300 space-y-4 text-lg">
+                <li>• Bacteria that eat plastic waste</li>
+                <li>• Algae that capture CO2 from atmosphere</li>
+                <li>• Synthetic organisms that clean oil spills</li>
+                <li>• Bio-materials that replace petroleum products</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 rounded-3xl p-10 border border-cyan-500/30">
+              <h3 className="text-3xl font-bold text-white mb-6">🏭 Industrial Biotechnology</h3>
+              <p className="text-gray-300 mb-8 text-lg">
+                Revolutionizing manufacturing with biological processes, 
+                bio-materials, and sustainable production methods.
+              </p>
+              <ul className="text-gray-300 space-y-4 text-lg">
+                <li>• Bio-manufacturing of chemicals and materials</li>
+                <li>• Living factories that produce products</li>
+                <li>• Bio-sensors for quality control</li>
+                <li>• Sustainable industrial processes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Future Vision */}
+        <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-3xl p-12 border border-green-500/30 mb-20">
+          <h2 className="text-4xl font-bold text-white text-center mb-12">🔮 Future Vision 2030</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6">🌍 Planetary Transformation</h3>
+              <p className="text-gray-300 mb-6 text-lg">
+                By 2030, synthetic biology will have transformed our planet, 
+                creating a sustainable, healthy, and thriving ecosystem.
+              </p>
+              <ul className="text-gray-300 space-y-3 text-lg">
+                <li>• Complete environmental restoration</li>
+                <li>• Sustainable food production for all</li>
+                <li>• Disease-free world through bio-medicine</li>
+                <li>• Carbon-negative global economy</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6">🚀 Space Colonization</h3>
+              <p className="text-gray-300 mb-6 text-lg">
+                Synthetic biology will enable human colonization of other planets 
+                through terraforming and bio-engineering.
+              </p>
+              <ul className="text-gray-300 space-y-3 text-lg">
+                <li>• Terraforming Mars with engineered organisms</li>
+                <li>• Bio-domes for space habitats</li>
+                <li>• Synthetic food production in space</li>
+                <li>• Bio-engineered space suits and equipment</li>
+              </ul>
+            </div>
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
-          <h2 className="text-6xl font-bold text-white mb-8">
-            Ready for the Bio Revolution?
-          </h2>
-          <p className="text-3xl text-gray-300 mb-16 max-w-6xl mx-auto">
-            Join the transformation that's redefining life itself through synthetic biology
+        <div className="text-center">
+          <h2 className="text-4xl font-bold text-white mb-8">Join the Bio Revolution</h2>
+          <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            Be part of the most significant transformation in human history as we 
+            merge biology with technology to create a better future
           </p>
-          <div className="flex justify-center space-x-8">
-            <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-20 py-8 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-3xl transform hover:scale-105">
-              🧬 Begin Bio Journey
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-12 py-6 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-xl transform hover:scale-105">
+              🧬 Start Your Bio Journey →
             </button>
-            <button className="border-2 border-green-400 text-green-400 px-20 py-8 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-3xl">
-              📞 Bio Consultation
+            <button className="border-2 border-green-400 text-green-400 px-12 py-6 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-xl">
+              🔬 Explore Bio Lab
             </button>
           </div>
         </div>

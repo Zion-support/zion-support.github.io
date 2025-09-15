@@ -24,22 +24,25 @@ const Header = () => {
             <Link to="/pages/InnovationLanding2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Innovation
             </Link>
+            <Link to="/pages/AdvancedTechSolutions2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Solutions
+            </Link>
             <Link to="/pages/ComprehensiveServices2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Services
             </Link>
-            <Link to="/pages/BlogPost2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Blog
+            <Link to="/pages/FutureTechTrends2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Trends
             </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Contact
+            <Link to="/pages/TechnologyInsights2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Insights
             </Link>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              to="/pages/InnovationLanding2025" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
             >
               Get Started
             </Link>
@@ -56,7 +59,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
@@ -66,18 +69,21 @@ const Header = () => {
               <Link to="/pages/InnovationLanding2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Innovation
               </Link>
+              <Link to="/pages/AdvancedTechSolutions2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                Solutions
+              </Link>
               <Link to="/pages/ComprehensiveServices2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Services
               </Link>
-              <Link to="/pages/BlogPost2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                Blog
+              <Link to="/pages/FutureTechTrends2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                Trends
               </Link>
-              <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                Contact
+              <Link to="/pages/TechnologyInsights2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                Insights
               </Link>
               <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center"
+                to="/pages/InnovationLanding2025" 
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 text-center"
               >
                 Get Started
               </Link>

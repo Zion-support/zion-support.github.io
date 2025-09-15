@@ -5,6 +5,7 @@ const AITransformationGuide2025 = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
       <div className="container mx-auto px-4">
 <<<<<<< HEAD
+=======
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">AI Transformation Guide 2025</h1>
           <p className="text-xl text-gray-700">
@@ -36,18 +37,12 @@ const AITransformationGuide2025 = () => {
               Continuous optimization and improvement strategies.
             </p>
           </div>
-=======
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">A I Transformation Guide2025</h1>
-          <p className="text-xl text-gray-600 mb-8">Coming soon - Revolutionary technology showcase</p>
-          <a href="/" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Back to Home
-          </a>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cursor/create-and-deploy-new-content-c963
         </div>
       </div>
     </div>
   );
 };
+
 
 export default AITransformationGuide2025;

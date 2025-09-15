@@ -24,15 +24,15 @@ const SyntheticIntelligence2026 = () => {
             <div className="text-4xl mb-4">🧠</div>
             <h2 className="text-2xl font-bold mb-4">Synthetic Consciousness</h2>
             <p className="text-gray-600">
-              AI systems with synthetic consciousness and self-awareness.
+              AI systems with artificial consciousness and self-awareness.
             </p>
           </div>
           
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <div className="text-4xl mb-4">🎨</div>
-            <h2 className="text-2xl font-bold mb-4">Creative AI</h2>
+            <div className="text-4xl mb-4">⚡</div>
+            <h2 className="text-2xl font-bold mb-4">Quantum Processing</h2>
             <p className="text-gray-600">
-              AI systems capable of creative thinking and artistic expression.
+              Quantum-enhanced AI processing for unprecedented capabilities.
             </p>
           </div>
         </div>

@@ -31,10 +31,9 @@ export const NotificationProvider = ({ children }) => {
     notifications,
     addNotification,
 <<<<<<< HEAD
-    removeNotification,
 =======
-    removeNotification
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+    removeNotification,
+>>>>>>> cursor/create-and-deploy-new-content-c963
   };
 
   return (
@@ -42,4 +41,3 @@ export const NotificationProvider = ({ children }) => {
       {children}
     </NotificationContext.Provider>
   );
-};

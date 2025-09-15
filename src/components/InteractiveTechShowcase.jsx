@@ -29,62 +29,82 @@ const InteractiveTechShowcase = () => {
       title: "Neural Interfaces",
       icon: "🧬",
       technologies: [
-        { name: "Brain-Computer Interface", description: "Direct communication between brain and computer" },
-        { name: "Neural Prosthetics", description: "AI-powered prosthetic devices controlled by thought" },
+        { name: "Brain-Computer Interfaces", description: "Direct communication between brain and computers" },
+        { name: "Neural Implants", description: "Advanced neural prosthetics and implants" },
         { name: "Cognitive Enhancement", description: "Augmenting human cognitive abilities" },
-        { name: "Medical Applications", description: "Neural interfaces for medical diagnosis and treatment" }
+        { name: "Neural Networks", description: "Biological-inspired computing architectures" }
+      ]
+    },
+    {
+      title: "Space Technology",
+      icon: "🚀",
+      technologies: [
+        { name: "Space Exploration", description: "Advanced spacecraft and exploration missions" },
+        { name: "Space Colonization", description: "Technologies for human settlement in space" },
+        { name: "Space Manufacturing", description: "Production in zero-gravity environments" },
+        { name: "Interplanetary Travel", description: "Fast and efficient space transportation" }
       ]
     }
   ];
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-8">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Interactive Technology Showcase</h2>
-        <p className="text-lg text-gray-600">Explore our cutting-edge technologies</p>
-      </div>
+    <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Interactive Technology Showcase</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore the cutting-edge technologies that are shaping our future
+          </p>
+        </div>
 
-      {/* Tab Navigation */}
-      <div className="flex justify-center mb-8">
-        <div className="bg-gray-100 rounded-lg p-1">
-          {techCategories.map((category, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveTab(index)}
-              className={`px-6 py-3 rounded-md transition-all duration-300 ${
-                activeTab === index
-                  ? 'bg-white shadow-md text-blue-600'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              <span className="text-2xl mr-2">{category.icon}</span>
-              {category.title}
-            </button>
-          ))}
+        <div className="max-w-6xl mx-auto">
+          {/* Tab Navigation */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            {techCategories.map((category, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveTab(index)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeTab === index
+                    ? 'bg-blue-600 text-white shadow-lg'
+                    : 'bg-white text-gray-700 hover:bg-blue-50'
+                }`}
+              >
+                <span className="text-2xl mr-2">{category.icon}</span>
+                {category.title}
+              </button>
+            ))}
+          </div>
+
+          {/* Tab Content */}
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white rounded-2xl shadow-xl p-8"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              {techCategories[activeTab].title}
+            </h3>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {techCategories[activeTab].technologies.map((tech, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200 hover:shadow-lg transition-shadow duration-300"
+                >
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">{tech.name}</h4>
+                  <p className="text-gray-600">{tech.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
-
-      {/* Tab Content */}
-      <motion.div
-        key={activeTab}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-        className="grid md:grid-cols-2 gap-6"
-      >
-        {techCategories[activeTab].technologies.map((tech, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 hover:shadow-md transition-shadow"
-          >
-            <h3 className="text-xl font-bold text-gray-900 mb-2">{tech.name}</h3>
-            <p className="text-gray-600">{tech.description}</p>
-          </motion.div>
-        ))}
-      </motion.div>
     </div>
   );
 };

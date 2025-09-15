@@ -58,7 +58,7 @@ export default function AI2026QuantumBreakthroughPromotionBanner() {
               className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-bold rounded-full hover:bg-indigo-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Quantum Breakthroughs
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="ml-2 w-5 h-5" fill%3D%22none%22 stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </Link>

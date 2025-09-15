@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
 import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
+import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner';
+import NeuralRealityBanner from '../components/NeuralRealityBanner';
 
 const Home: React.FC = () => {
   return (
@@ -78,6 +80,16 @@ const Home: React.FC = () => {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* NEW: Ultimate Breakthrough Banner */}
+        <div className="container mx-auto px-4">
+          <UltimateBreakthroughBanner />
+        </div>
+
+        {/* NEW: Neural Reality Interface Banner */}
+        <div className="container mx-auto px-4">
+          <NeuralRealityBanner />
         </div>
 
         {/* Services Grid */}
@@ -228,7 +240,34 @@ const Home: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.section>
+
+        {/* Lazy Loaded Components */}
+        <React.Suspense fallback={<div className="py-20 text-center"><LoadingSpinner /></div>}>
+          <CategoriesSection />
+          <BenefitsSection />
+          <HowItWorksSection />
+          <NewsletterSection />
+          <FeaturedListingsSection />
+          <QuickAccess />
+          <FeatureCTAs />
+          <FeatureHighlights />
+          <ITServiceRequestHero />
+          <FloatingCTA />
+          <PricingSection />
+          <TechSolutionsSection />
+          <CaseStudiesSection />
+          <TeamExpertiseSection />
+          <GlobalPresenceSection />
+          <InnovationResearchSection />
+          <ClientSuccessStoriesSection />
+          <TechnologyStackSection />
+          <SecurityComplianceSection />
+          <AIServicesShowcase />
+          <InteractiveTestimonials />
+          <ServicesShowcase />
+          <RevolutionaryContentShowcase2027 />
+        </React.Suspense>
       </div>
     </>
   );

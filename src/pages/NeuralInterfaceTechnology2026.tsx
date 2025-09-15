@@ -115,125 +115,9 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
         'Reduced cognitive load'
       ],
 <<<<<<< HEAD
-      description: "Enhanced productivity and efficiency in professional environments"
 =======
-      image: '🛡️',
-      testimonial: 'This technology gives us a significant tactical advantage in the field.'
-    }
-  ];
-
-  const technicalSpecs = [
-    {
-      category: 'Signal Processing',
-      specs: [
-        'Neural signal sampling: 10,000 Hz',
-        'Signal-to-noise ratio: 40 dB',
-        'Latency: < 10ms',
-        'Bandwidth: 1 Gbps'
-      ]
-    },
-    {
-      category: 'Safety & Security',
-      specs: [
-        'Biocompatible materials',
-        'Encrypted neural data',
-        'Fail-safe mechanisms',
-        'Medical grade certification'
-      ]
-    },
-    {
-      category: 'Connectivity',
-      specs: [
-        'Wireless range: 100 meters',
-        'Battery life: 24 hours',
-        'Bluetooth 6.0 compatibility',
-        'Cloud synchronization'
-      ]
-    },
-    {
-      category: 'Performance',
-      specs: [
-        'Accuracy: 95-99.9%',
-        'Response time: < 50ms',
-        'Concurrent channels: 256',
-        'Data processing: Real-time'
-      ]
-    }
-  ];
-
-  const demos = [
-    {
-      id: 'mind-control',
-      title: 'Mind-Controlled Devices',
-      description: 'Control computers, phones, and smart devices with your thoughts',
-      features: ['Cursor movement', 'Text input', 'App navigation', 'Voice commands']
-    },
-    {
-      id: 'neural-gaming',
-      title: 'Neural Gaming Experience',
-      description: 'Play games using only your mind - no controllers needed',
-      features: ['Character movement', 'Action commands', 'Strategy decisions', 'Real-time feedback']
-    },
-    {
-      id: 'memory-enhancement',
-      title: 'Memory Enhancement',
-      description: 'Boost your memory and learning capabilities',
-      features: ['Information storage', 'Quick recall', 'Learning acceleration', 'Memory organization']
-    },
-    {
-      id: 'communication',
-      title: 'Silent Communication',
-      description: 'Communicate with others through neural interfaces',
-      features: ['Thought messaging', 'Emotion sharing', 'Group communication', 'Language translation']
-    }
-  ];
-
-  const pricing = [
-    {
-      name: 'Neural Starter',
-      price: '$2,500',
-      period: 'one-time',
-      description: 'Basic neural interface for personal use',
-      features: [
-        'Non-invasive BCI device',
-        'Basic thought control',
-        'Mobile app integration',
-        '1-year warranty',
-        'Email support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Neural Professional',
-      price: '$8,500',
-      period: 'one-time',
-      description: 'Advanced neural interface for professionals',
-      features: [
-        'High-precision BCI',
-        'Advanced signal processing',
-        'Multiple device control',
-        '3-year warranty',
-        'Priority support',
-        'Custom training'
-      ],
-      popular: true
-    },
-    {
-      name: 'Neural Enterprise',
-      price: 'Custom',
-      period: 'pricing',
-      description: 'Enterprise-grade neural solutions',
-      features: [
-        'Custom neural implants',
-        'Maximum precision',
-        'Bulk deployment',
-        'Lifetime warranty',
-        'Dedicated support',
-        'On-site installation',
-        'Custom development'
-      ],
-      popular: false
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+      description: "Enhanced productivity and efficiency in professional environments"
+>>>>>>> cursor/create-and-deploy-new-content-c963
     }
   ];
 
@@ -589,5 +473,6 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
     </div>
   );
 };
+
 
 export default NeuralInterfaceTechnology2026;
