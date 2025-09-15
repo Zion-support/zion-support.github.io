@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
+    summary:
+      'Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.',
+    href: '/updates/autonomous-it-ops-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Evaluating Agent Runbooks with Live E2E Evals',
+    summary:
+      'How to score and harden operational runbooks using real traffic, guardrails, and rollout gates.',
+    href: '/updates/agent-runbooks-live-evals',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Agentic Ops Control Center (v1.0)',
     summary:
       'Unified console for monitoring, guardrails, and live evals across agentic systems.',
