@@ -177,55 +177,8 @@ We apologize for the inconvenience and appreciate your prompt action to secure y
                 'priority': 'urgent',
                 'created_at': datetime.utcnow() - timedelta(days=4)
             }
-            ,
-            {
-                'title': 'New Course: GenAI Prompt Engineering Mastery',
-                'content': '''Master the art and science of prompt engineering for LLMs.
-
-What you'll learn:
-• Prompt design patterns and frameworks
-• Retrieval-augmented generation (RAG) prompting
-• Tool-use prompting and function calling
-• Evaluation and guardrails for safe prompts
-
-Includes hands-on labs with real-world scenarios and a capstone project.''',
-                'summary': 'Hands-on course on effective prompting, RAG, tool-use, and guardrails.',
-                'update_type': 'course',
-                'priority': 'high',
-                'created_at': datetime.utcnow() - timedelta(hours=1)
-            },
-            {
-                'title': 'Report: 2025 State of AI Adoption',
-                'content': '''We have published our annual report on AI adoption across industries.
-
-Highlights:
-• 78% of enterprises report measurable ROI from AI initiatives
-• Top use cases: customer support, analytics, and automation
-• Key challenges: data quality, governance, and change management
-
-Download the full report from your dashboard.''',
-                'summary': 'New research report on AI adoption trends, ROI, and challenges in 2025.',
-                'update_type': 'announcement',
-                'priority': 'normal',
-                'created_at': datetime.utcnow() - timedelta(days=1, hours=3)
-            },
-            {
-                'title': 'Scholarship Program: 1,000 Seats for Underrepresented Learners',
-                'content': '''We are awarding 1,000 full scholarships for our AI and Blockchain tracks.
-
-Eligibility:
-• Underrepresented groups in tech
-• Demonstrated passion for learning and impact
-
-Applications open today and close in 3 weeks. Apply via the Scholarships page.''',
-                'summary': 'Apply now for 1,000 full-ride scholarships in AI and Blockchain tracks.',
-                'update_type': 'announcement',
-                'priority': 'high',
-                'created_at': datetime.utcnow() - timedelta(days=2, hours=6)
-            }
         ]
         
-<<<<<<< HEAD
         # Additional fresh content to advertise
         fresh_updates = [
             {
@@ -271,81 +224,6 @@ Applications open today and close in 3 weeks. Apply via the Scholarships page.''
         # Print summary
         print("\nCurrent updates in database:")
         for update in Update.query.order_by(Update.created_at.desc()).limit(10).all():
-=======
-        # Additional new updates to enrich content
-        more_updates = [
-            {
-                'title': 'Introducing Mentor Office Hours',
-                'content': '''We are launching weekly mentor office hours for enrolled students.
-
-Schedule:
-• Wednesdays: 5:00 PM – 7:00 PM UTC
-• Saturdays: 3:00 PM – 5:00 PM UTC
-
-Drop in to get help on projects, discuss career paths, and review code with experienced mentors.''',
-                'summary': 'Weekly mentor office hours now available to support your learning.',
-                'update_type': 'announcement',
-                'priority': 'normal',
-                'created_at': datetime.utcnow() - timedelta(hours=12)
-            },
-            {
-                'title': 'Course Update: AI Fundamentals v2.1',
-                'content': '''We refreshed AI Fundamentals with new lessons on:
-• Contrastive learning basics
-• Modern evaluation techniques
-• Efficient fine-tuning with LoRA
-
-All enrolled learners automatically receive the updated materials.''',
-                'summary': 'AI Fundamentals updated with contrastive learning, evals, and LoRA.',
-                'update_type': 'course',
-                'priority': 'high',
-                'created_at': datetime.utcnow() - timedelta(days=1, hours=3)
-            },
-            {
-                'title': 'New Feature: Progress Streaks',
-                'content': '''Stay motivated with learning streaks! Earn badges for 3, 7, 14, and 30-day streaks.
-
-Keep your streak alive by completing any lesson or quiz each day.''',
-                'summary': 'Earn badges by maintaining daily learning streaks.',
-                'update_type': 'feature',
-                'priority': 'normal',
-                'created_at': datetime.utcnow() - timedelta(days=6)
-            },
-            {
-                'title': 'Security Notice: OAuth Provider Rotation',
-                'content': '''We are rotating OAuth credentials for third-party providers next week.
-
-Expected impact: brief sign-in interruptions under 5 minutes during the window. No action is required from users.''',
-                'summary': 'Upcoming OAuth credential rotation; brief sign-in interruptions possible.',
-                'update_type': 'security',
-                'priority': 'high',
-                'created_at': datetime.utcnow() - timedelta(days=7)
-            },
-            {
-                'title': 'Community Spotlight: Capstone Showcase',
-                'content': '''Join our live Capstone Showcase to see standout learner projects across AI and Web3.
-
-Submit your project for consideration by Friday and get feedback from mentors and peers.''',
-                'summary': 'Live Capstone Showcase featuring standout projects. Submissions open now.',
-                'update_type': 'event',
-                'priority': 'normal',
-                'created_at': datetime.utcnow() - timedelta(days=9)
-            }
-        ]
-        
-        # Create and add additional updates
-        for update_data in more_updates:
-            update = Update(**update_data)
-            db.session.add(update)
-        
-        # Commit all updates
-        db.session.commit()
-        print(f"Successfully seeded {len(sample_updates) + len(more_updates)} total sample updates!")
-        
-        # Print summary
-        print("\nAll updates now in database:")
-        for update in Update.query.order_by(Update.created_at.desc()).all():
->>>>>>> ae78a241413f04b853a8cb652af3c863231dcf08
             print(f"• {update.title} ({update.priority} priority, {update.update_type})")
 
 if __name__ == '__main__':

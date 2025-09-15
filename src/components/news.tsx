@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-"use client";
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import React from 'react';
   const featuredNews = [
     {
@@ -12,11 +8,7 @@ import React from 'react';
       author: 'Dr. Kleber',
       featured: true,
       image: '/api/placeholder/600/400',
-<<<<<<< HEAD
-      tags: ['AI 'Consciousness', 'Breakthrough'Innovation'],
-=======
       tags: ['AI Consciousness', 'Breakthrough', 'Innovation'],
->>>>>>> origin/auto/autonomy-17186719616
       readTime: '5 min read'
     },
     {
@@ -27,11 +19,7 @@ import React from 'react';
       category: 'Research',
       readTime: '6 min read',
       image: '/news/quantum-breakthrough.jpg',
-<<<<<<< HEAD
-      tags: ['Quantum 'Computing', 'Research'Breakthrough'],
-=======
       tags: ['Quantum Computing', 'Research', 'Breakthrough'],
->>>>>>> origin/auto/autonomy-17186719616
       icon: <Atom className="w-6 h-6" />,
       featured: true
     },
@@ -40,32 +28,6 @@ import React from 'react';
       excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.',
       author: 'Partnerships Team',
       date: '2025-01-10',
-<<<<<<< HEAD
-  const [searchQuerysetSearchQuery] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [selectedYearsetSelectedYear] = useState('all');
-
-  const categories = [
-    { id: ''all', 'name: 'All 'News', 'icon: Newspapercount: 45 },
-    { id: ''ai', 'name: 'AI & 'Technology', 'icon: Braincount: 18 },
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: Atomcount: 12 },
-    { id: ''space', 'name: 'Space 'Technology', 'icon: Rocketcount: 8 },
-    { id: ''security', 'name: ''Cybersecurity', 'icon: Shieldcount: 7 }
-  ];
-
-  const years = [
-    { id: ''all', 'name: 'All Years' },
-    { id: '2025'name: '2025' },
-    { id: '2024'name: '2024' },
-    { id: '2023'name: '2023' }
-  ];
-
-  NewspaperCalendarUserTagArrowRightExternalLink,
-  TrendingUpLightbulbRocketGlobeShieldZap,
-  ClockBookOpenVideoPodcastFileTextSearch
-} from 'lucide-react';
-import Link from 'next/link';
-=======
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedYear, setSelectedYear] = useState('all');
@@ -90,18 +52,12 @@ import Link from 'next/link';
   Clock, BookOpen, Video, Podcast, FileText, Search
 } from 'lucide-react';
 import Link from 'next/link';
-=======
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <UltraFuturisticBackground>
       <div className="min-h-screen">
         <Head>
           <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>
-<<<<<<< HEAD
-          <meta name="description" content="Stay updated with Zion Tech 'Group', 's latest newsproduct launchespartnershipsand industry insights. Read about our breakthroughs in AIquantum computingand emerging technologies." />
-=======
           <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />
->>>>>>> origin/auto/autonomy-17186719616
         </Head>
 
       id: 1,
@@ -112,87 +68,51 @@ import Link from 'next/link';
       date: "2025-01-15",
       readTime: "5 min read",
       image: "/images/news/quantum-ai-launch.jpg",
-<<<<<<< HEAD
-      tags: ["Quantum Computing"AI"Product Launch"]
-=======
       tags: ["Quantum Computing", "AI", "Product Launch"]
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 2,
       title: "New Partnership with Global Healthcare Consortium",
-<<<<<<< HEAD
-      excerpt: "'We', 're excited to announce our strategic partnership with the Global Healthcare Consortium to revolutionize medical diagnostics using our AI-powered healthcare solutions.",
-=======
       excerpt: "We're excited to announce our strategic partnership with the Global Healthcare Consortium to revolutionize medical diagnostics using our AI-powered healthcare solutions.",
->>>>>>> origin/auto/autonomy-17186719616
       category: "Partnership",
       author: "Business Development",
       date: "2025-01-12",
       readTime: "4 min read",
       image: "/images/news/healthcare-partnership.jpg",
-<<<<<<< HEAD
-      tags: ["Healthcare"Partnership"AI"]
-=======
       tags: ["Healthcare", "Partnership", "AI"]
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 3,
       title: "Breakthrough in Autonomous Cybersecurity Systems",
-<<<<<<< HEAD
-      excerpt: "Our research team has achieved a major breakthrough in autonomous cybersecuritydeveloping systems that can detect and respond to threats in real-time without human intervention.",
-=======
       excerpt: "Our research team has achieved a major breakthrough in autonomous cybersecurity, developing systems that can detect and respond to threats in real-time without human intervention.",
->>>>>>> origin/auto/autonomy-17186719616
       category: "Research",
       author: "Research Team",
       date: "2025-01-10",
       readTime: "6 min read",
       image: "/images/news/cybersecurity-breakthrough.jpg",
-<<<<<<< HEAD
-      tags: ["Cybersecurity"Research"Autonomous Systems"]
-=======
       tags: ["Cybersecurity", "Research", "Autonomous Systems"]
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 4,
       title: "Space Technology Division Expands Operations",
-<<<<<<< HEAD
-      excerpt: "Our space technology division is expanding operations to support growing demand for satellite operationspace resource miningand orbital analytics services.",
-=======
       excerpt: "Our space technology division is expanding operations to support growing demand for satellite operations, space resource mining, and orbital analytics services.",
->>>>>>> origin/auto/autonomy-17186719616
       category: "Company News",
       author: "Space Technology Team",
       date: "2025-01-08",
       readTime: "3 min read",
       image: "/images/news/space-expansion.jpg",
-<<<<<<< HEAD
-      tags: ["Space Technology"Expansion"Satellites"]
-=======
       tags: ["Space Technology", "Expansion", "Satellites"]
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 5,
       title: "AI Ethics and Governance Framework Released",
-<<<<<<< HEAD
-      excerpt: "'We', 've published our comprehensive AI ethics and governance frameworksetting new standards for responsible AI development and deployment in enterprise environments.",
-=======
       excerpt: "We've published our comprehensive AI ethics and governance framework, setting new standards for responsible AI development and deployment in enterprise environments.",
->>>>>>> origin/auto/autonomy-17186719616
       category: "Policy",
       author: "AI Ethics Team",
       date: "2025-01-05",
       readTime: "7 min read",
       image: "/images/news/ai-ethics-framework.jpg",
-<<<<<<< HEAD
-      tags: ["AI Ethics"Governance"Policy"]
-=======
       tags: ["AI Ethics", "Governance", "Policy"]
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 6,
@@ -203,33 +123,19 @@ import Link from 'next/link';
       date: "2025-01-03",
       readTime: "3 min read",
       image: "/images/news/financial-award.jpg",
-<<<<<<< HEAD
-      tags: ["Awards"Financial Services"Quantum Computing"]
-=======
       tags: ["Awards", "Financial Services", "Quantum Computing"]
-=======
->>>>>>> origin/auto/autonomy-17186719616
 export default function News() {
   const featuredNews = [
     {
       id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform',
-<<<<<<< HEAD
-      excerpt: 'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptographyoptimizationand scientific research.',
-=======
       excerpt: 'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptography, optimization, and scientific research.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'Company News',
       author: 'Dr. Sarah Chen',
       date: '2024-01-15',
       readTime: '5 min read',
       image: '/api/placeholder/600/400',
-<<<<<<< HEAD
-      tags: [', 'AI', 'Quantum 'Computing', 'Innovation'],
-=======
       tags: ['AI', 'Quantum Computing', 'Innovation'],
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import Head from 'next/head';
 
 export default function NewsPage() {
@@ -237,11 +143,7 @@ export default function NewsPage() {
     {
       id: 1,
       title: "Zion Tech Group Launches New AI-Powered Automation Platform",
-<<<<<<< HEAD
-      excerpt: "Our latest innovation brings autonomous decision-making capabilities to enterprise environmentsrevolutionizing how businesses operate.",
-=======
       excerpt: "Our latest innovation brings autonomous decision-making capabilities to enterprise environments, revolutionizing how businesses operate.",
->>>>>>> origin/auto/autonomy-17186719616
       date: "2025-01-19",
       category: "Company News",
       author: "Zion Tech Group",
@@ -255,11 +157,6 @@ export default function NewsPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/auto/autonomy-17186719616
         {/* Featured Article */}
         {featuredArticle && (
           <section className="py-20">
@@ -279,11 +176,7 @@ export default function NewsPage() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: 0.2 }}
-=======
                 transition={{ duration: 0.8, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-3xl border border-purple-500/20 overflow-hidden"
               >
@@ -339,10 +232,6 @@ export default function NewsPage() {
           </section>
         )}
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/auto/autonomy-17186719616
         {/* Category Filter */}
         <section className="py-12 bg-black/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -377,11 +266,7 @@ export default function NewsPage() {
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-              {newsArticles.filter(article => !article.featured).map((articleindex) => (
-=======
               {newsArticles.filter(article => !article.featured).map((article, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.article
                   key={article.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -393,11 +278,7 @@ export default function NewsPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 overflow-hidden"
                 >
@@ -427,11 +308,7 @@ export default function NewsPage() {
                       </div>
                     </div>
                     <div className="flex flex-wrap gap-2 mb-4">
-<<<<<<< HEAD
-                      {article.tags.slice(02).map((tag) => (
-=======
                       {article.tags.slice(0, 2).map((tag) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <span
                           key={tag}
                           className="bg-gray-800/30 text-gray-400 text-xs px-2 py-1 rounded-full border border-gray-700/30"
@@ -448,28 +325,16 @@ export default function NewsPage() {
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                   </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/auto/autonomy-17186719616
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.6delay: 0.2 }}
-=======
               transition={{ duration: 0.6, delay: 0.2 }}
->>>>>>> origin/auto/autonomy-17186719616
               className="text-center mb-16"
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
                 <Newspaper className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/auto/autonomy-17186719616
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-6xl">
             <motion.div
@@ -485,11 +350,7 @@ export default function NewsPage() {
                 News & Press
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-                Stay updated with the latest developmentsbreakthroughsand innovations 
-=======
                 Stay updated with the latest developments, breakthroughs, and innovations 
->>>>>>> origin/auto/autonomy-17186719616
                 from Zion Tech Group and the technology industry.
               </p>
             </motion.div>
@@ -500,55 +361,26 @@ export default function NewsPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8delay: 0.2 }}
-              className="flex flex-wrap justify-center gap-4"
-            >
-              {categories.map((categoryindex) => (
-=======
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-wrap justify-center gap-4"
             >
               {categories.map((category, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <button
                   key={category}
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
-<<<<<<< HEAD
-import React{ useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  SearchCalendarClockUserTag
-  ArrowRightExternalLinkTrendingUp
-  BookOpenGlobeVideo
-=======
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Search, Calendar, Clock, User, Tag, 
   ArrowRight, ExternalLink, TrendingUp, 
   BookOpen, Globe, Video
->>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import Link from 'next/link';
 
 export default function News() {
-<<<<<<< HEAD
-  const [searchTermsetSearchTerm] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-
-  const categories = [
-    { id: ''all', 'name: 'All 'News', 'count: 24 },
-    { id: ''ai', 'name: 'AI & 'Consciousness', 'count: 8 },
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'count: 6 },
-    { id: ''enterprise', 'name: 'Enterprise 'IT', 'count: 5 },
-    { id: ''research', 'name: 'Research & 'Development', 'count: 3 },
-    { id: ''industry', 'name: 'Industry 'Insights', 'count: 2 }
-=======
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -559,49 +391,32 @@ export default function News() {
     { id: 'enterprise', name: 'Enterprise IT', count: 5 },
     { id: 'research', name: 'Research & Development', count: 3 },
     { id: 'industry', name: 'Industry Insights', count: 2 }
->>>>>>> origin/auto/autonomy-17186719616
   ];
 
   const featuredNews = [
     {
       id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
-<<<<<<< HEAD
-      excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systemsenabling unprecedented levels of understanding and collaboration.',
-=======
       excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'ai',
       author: 'Dr. Sarah Chen',
       date: '2024-01-15',
       readTime: '5 min read',
       image: '/images/news/ai-consciousness-launch.jpg',
       featured: true,
-<<<<<<< HEAD
-      tags: ['AI 'Consciousness', 'Platform 'Launch', 'Innovation']
-=======
       tags: ['AI Consciousness', 'Platform Launch', 'Innovation']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 2,
       title: 'Quantum Computing Breakthrough: Achieving 1000+ Qubit Stability',
-<<<<<<< HEAD
-      excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stabilityopening new possibilities for complex computational problems.',
-=======
       excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'quantum',
       author: 'Prof. Michael Rodriguez',
       date: '2024-01-12',
       readTime: '7 min read',
       image: '/images/news/quantum-breakthrough.jpg',
       featured: true,
-<<<<<<< HEAD
-      tags: ['Quantum 'Computing', 'Research'Breakthrough']
-=======
       tags: ['Quantum Computing', 'Research', 'Breakthrough']
->>>>>>> origin/auto/autonomy-17186719616
     }
   ];
 
@@ -615,11 +430,7 @@ export default function News() {
       date: '2024-01-10',
       readTime: '4 min read',
       image: '/images/news/enterprise-ai-trends.jpg',
-<<<<<<< HEAD
-      tags: ['Enterprise 'AI', 'Best Practices'2024 Trends']
-=======
       tags: ['Enterprise AI', 'Best Practices', '2024 Trends']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 4,
@@ -630,11 +441,7 @@ export default function News() {
       date: '2024-01-08',
       readTime: '6 min read',
       image: '/images/news/autonomous-systems.jpg',
-<<<<<<< HEAD
-      tags: ['Autonomous 'Systems', 'Future of 'Work', 'Innovation']
-=======
       tags: ['Autonomous Systems', 'Future of Work', 'Innovation']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 5,
@@ -645,30 +452,18 @@ export default function News() {
       date: '2024-01-05',
       readTime: '5 min read',
       image: '/images/news/ai-cybersecurity.jpg',
-<<<<<<< HEAD
-      tags: [', 'Cybersecurity', 'AI 'Security', 'Digital Protection']
-=======
       tags: ['Cybersecurity', 'AI Security', 'Digital Protection']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 6,
       title: 'Quantum Machine Learning: Bridging Two Revolutionary Technologies',
-<<<<<<< HEAD
-      excerpt: 'Our research team explores the intersection of quantum computing and machine learningrevealing exciting possibilities for the future.',
-=======
       excerpt: 'Our research team explores the intersection of quantum computing and machine learning, revealing exciting possibilities for the future.',
->>>>>>> origin/auto/autonomy-17186719616
       category: 'quantum',
       author: 'Dr. Elena Petrova',
       date: '2024-01-03',
       readTime: '8 min read',
       image: '/images/news/quantum-ml.jpg',
-<<<<<<< HEAD
-      tags: ['Quantum 'ML', 'Research'Technology Convergence']
-=======
       tags: ['Quantum ML', 'Research', 'Technology Convergence']
->>>>>>> origin/auto/autonomy-17186719616
     }
   ];
 
@@ -681,11 +476,7 @@ export default function News() {
       author: 'Dr. Robert Chang',
       date: '2024-01-01',
       readTime: '6 min read',
-<<<<<<< HEAD
-      tags: ['AI 'Ethics', 'Business 'Impact', 'Consciousness']
-=======
       tags: ['AI Ethics', 'Business Impact', 'Consciousness']
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
       id: 8,
@@ -695,11 +486,7 @@ export default function News() {
       author: 'Lisa Wang',
       date: '2023-12-28',
       readTime: '4 min read',
-<<<<<<< HEAD
-      tags: ['Micro-'SaaS', 'Startups'Software Industry']
-=======
       tags: ['Micro-SaaS', 'Startups', 'Software Industry']
->>>>>>> origin/auto/autonomy-17186719616
     }
   ];
 
@@ -710,11 +497,7 @@ export default function News() {
       type: 'Conference',
       date: '2024-02-15',
       time: '9:00 AM - 6:00 PM',
-<<<<<<< HEAD
-      location: 'San FranciscoCA',
-=======
       location: 'San Francisco, CA',
->>>>>>> origin/auto/autonomy-17186719616
       description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',
       registration: 'https://ziontechgroup.com/events/ai-consciousness-summit-2024'
     },
@@ -730,11 +513,7 @@ export default function News() {
     }
   ];
 
-<<<<<<< HEAD
-  const filteredNews = [...featuredNews...latestNews...industryInsights].filter(article => {
-=======
   const filteredNews = [...featuredNews, ...latestNews, ...industryInsights].filter(article => {
->>>>>>> origin/auto/autonomy-17186719616
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -743,11 +522,7 @@ export default function News() {
   });
 
   const formatDate = (dateString: string) => {
-<<<<<<< HEAD
-    return new Date(dateString).toLocaleDateString('en-US'{
-=======
     return new Date(dateString).toLocaleDateString('en-US', {
->>>>>>> origin/auto/autonomy-17186719616
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -781,17 +556,10 @@ export default function News() {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
-          >
-            Stay updated with the latest developments in AI consciousnessquantum computing
-=======
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
           >
             Stay updated with the latest developments in AI consciousness, quantum computing, 
->>>>>>> origin/auto/autonomy-17186719616
             and emerging technologies from Zion Tech Group.
           </motion.p>
           
@@ -799,11 +567,7 @@ export default function News() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.4 }}
-=======
             transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
             className="max-w-4xl mx-auto"
           >
             <div className="relative mb-8">
@@ -840,10 +604,6 @@ export default function News() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/auto/autonomy-17186719616
     'All News',
     'Company News',
     'Partnerships',
@@ -858,11 +618,7 @@ export default function News() {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-<<<<<<< HEAD
-    return date.toLocaleDateString('en-US'{
-=======
     return date.toLocaleDateString('en-US', {
->>>>>>> origin/auto/autonomy-17186719616
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -886,26 +642,15 @@ export default function News() {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.2 }}
-            className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"
-          >
-            Stay updated with the latest developments in AIquantum computingspace technologyand more from Zion Tech Group.
-=======
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"
           >
             Stay updated with the latest developments in AI, quantum computing, space technology, and more from Zion Tech Group.
->>>>>>> origin/auto/autonomy-17186719616
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8delay: 0.4 }}
-=======
             transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/auto/autonomy-17186719616
             className="flex flex-wrap justify-center gap-4"
           >
             <a href="#featured" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
@@ -923,11 +668,7 @@ export default function News() {
       <section className="py-8 border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2 justify-center">
-<<<<<<< HEAD
-            {categories.map((categoryindex) => (
-=======
             {categories.map((category, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <button
                 key={index}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -962,20 +703,12 @@ export default function News() {
           </motion.div>
           
           <div className="grid lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {featuredNews.map((articleindex) => (
-=======
             {featuredNews.map((article, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <motion.article 
                 key={article.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: index * 0.1 }}
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-all duration-300 overflow-hidden"
               >
@@ -1006,11 +739,7 @@ export default function News() {
                     </span>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
-<<<<<<< HEAD
-                    {article.tags.map((tagidx) => (
-=======
                     {article.tags.map((tag, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                       <span key={idx} className="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded">
                         {tag}
                       </span>
@@ -1046,20 +775,12 @@ export default function News() {
           </motion.div>
           
           <div className="grid lg:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {recentNews.map((articleindex) => (
-=======
             {recentNews.map((article, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <motion.article 
                 key={article.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: index * 0.1 }}
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
               >
@@ -1086,11 +807,7 @@ export default function News() {
                   </span>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
-<<<<<<< HEAD
-                  {article.tags.map((tagidx) => (
-=======
                   {article.tags.map((tag, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <span key={idx} className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">
                       {tag}
                     </span>
@@ -1125,20 +842,12 @@ export default function News() {
           </motion.div>
           
           <div className="grid lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {industryInsights.map((insightindex) => (
-=======
             {industryInsights.map((insight, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: index * 0.1 }}
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all duration-300"
               >
@@ -1155,11 +864,7 @@ export default function News() {
                   {insight.excerpt}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-<<<<<<< HEAD
-                  {insight.tags.map((tagidx) => (
-=======
                   {insight.tags.map((tag, idx) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <span key={idx} className="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded">
                       {tag}
                     </span>
@@ -1188,11 +893,7 @@ export default function News() {
               Stay Updated
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
-              Subscribe to our newsletter for the latest newsinsightsand updates from Zion Tech Group.
-=======
               Subscribe to our newsletter for the latest news, insights, and updates from Zion Tech Group.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
@@ -1209,10 +910,6 @@ export default function News() {
       </section>
 
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/auto/autonomy-17186719616
                     <div className="flex items-center gap-3 mb-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(article.category)} text-white`}>
                         {categories.find(c => c.id === article.category)?.name}
@@ -1267,20 +964,12 @@ export default function News() {
           </motion.h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {filteredNews.slice(28).map((articleindex) => (
-=======
             {filteredNews.slice(2, 8).map((article, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <motion.article
                 key={article.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: index * 0.1 }}
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
@@ -1336,20 +1025,12 @@ export default function News() {
           </motion.h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {upcomingEvents.map((eventindex) => (
-=======
             {upcomingEvents.map((event, index) => (
->>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={event.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8delay: index * 0.1 }}
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
               >
@@ -1415,11 +1096,7 @@ export default function News() {
               Stay Updated
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-              Get the latest newsinsightsand updates delivered directly to your inbox.
-=======
               Get the latest news, insights, and updates delivered directly to your inbox.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -1434,11 +1111,7 @@ export default function News() {
             </div>
             
             <p className="text-sm text-gray-400 mt-4">
-<<<<<<< HEAD
-              No spamunsubscribe at any time. We respect your privacy.
-=======
               No spam, unsubscribe at any time. We respect your privacy.
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </motion.div>
         </div>
@@ -1448,11 +1121,7 @@ export default function News() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.6delay: 0.6 }}
-=======
               transition={{ duration: 0.6, delay: 0.6 }}
->>>>>>> origin/auto/autonomy-17186719616
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">Latest News</h2>
@@ -1462,20 +1131,12 @@ export default function News() {
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-              {newsArticles.filter(article => !article.featured).map((articleindex) => (
-=======
               {newsArticles.filter(article => !article.featured).map((article, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.article
                   key={article.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: 0.1 * index }}
-=======
                   transition={{ duration: 0.6, delay: 0.1 * index }}
->>>>>>> origin/auto/autonomy-17186719616
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="flex items-center gap-4 mb-4">
@@ -1510,30 +1171,17 @@ export default function News() {
                 Stay Updated
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-<<<<<<< HEAD
-                Subscribe to our newsletter for the latest newsinsightsand breakthroughs in AI consciousness and quantum computing.
-=======
                 Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing.
-=======
->>>>>>> origin/auto/autonomy-17186719616
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.6delay: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
-              <p className="text-xl text-gray-400 mb-8">
-                Subscribe to our newsletter for the latest newsinsightsand technology updates
-=======
               transition={{ duration: 0.6, delay: 0.8 }}
             >
               <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
               <p className="text-xl text-gray-400 mb-8">
                 Subscribe to our newsletter for the latest news, insights, and technology updates
->>>>>>> origin/auto/autonomy-17186719616
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
@@ -1548,20 +1196,12 @@ export default function News() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
-              {pressReleases.map((releaseindex) => (
-=======
               {pressReleases.map((release, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.article
                   key={release.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
@@ -1606,20 +1246,12 @@ export default function News() {
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-<<<<<<< HEAD
-              {newsCategories.map((categoryindex) => (
-=======
               {newsCategories.map((category, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.div
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="text-center group cursor-pointer"
                 >
@@ -1657,20 +1289,12 @@ export default function News() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-              {recentNews.map((newsindex) => (
-=======
               {recentNews.map((news, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                 <motion.article
                   key={news.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
@@ -1715,14 +1339,8 @@ export default function News() {
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-                For press inquiriesmedia interviewsor additional information
-                please contact our communications team.
-=======
                 For press inquiries, media interviews, or additional information, 
                 please contact our communications team.
-=======
->>>>>>> origin/auto/autonomy-17186719616
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -1737,10 +1355,6 @@ export default function News() {
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
                 >
                   Press Kit
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/auto/autonomy-17186719616
                 </a>
               </div>
             </motion.div>
@@ -1748,10 +1362,6 @@ export default function News() {
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/auto/autonomy-17186719616
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -1765,11 +1375,7 @@ export default function News() {
               Ready to Stay Informed?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-              Explore our latest researchindustry insightsand technology breakthroughs 
-=======
               Explore our latest research, industry insights, and technology breakthroughs 
->>>>>>> origin/auto/autonomy-17186719616
               that are shaping the future of AI and quantum computing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1793,10 +1399,6 @@ export default function News() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/auto/autonomy-17186719616
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1827,10 +1429,6 @@ export default function News() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/auto/autonomy-17186719616
       title: "Partnership with TechCorp Announced for Cloud Infrastructure",
       excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.",
       date: "2025-01-18",
@@ -1842,11 +1440,7 @@ export default function News() {
     {
       id: 3,
       title: "AI Ethics Guidelines Released for Responsible Development",
-<<<<<<< HEAD
-      excerpt: "Comprehensive framework ensuring our AI solutions are developed with transparencyfairnessand societal benefit in mind.",
-=======
       excerpt: "Comprehensive framework ensuring our AI solutions are developed with transparency, fairness, and societal benefit in mind.",
->>>>>>> origin/auto/autonomy-17186719616
       date: "2025-01-17",
       category: "Innovation",
       author: "Dr. Emily Watson",
@@ -1896,11 +1490,7 @@ export default function News() {
     {
       id: 8,
       title: "New Research Paper on Autonomous Systems",
-<<<<<<< HEAD
-      excerpt: "Published in leading AI journalour research explores the future of self-managing technology infrastructure.",
-=======
       excerpt: "Published in leading AI journal, our research explores the future of self-managing technology infrastructure.",
->>>>>>> origin/auto/autonomy-17186719616
       date: "2025-01-12",
       category: "Research",
       author: "Prof. Maria Garcia",
@@ -1909,25 +1499,15 @@ export default function News() {
     }
   ];
 
-<<<<<<< HEAD
-  const categories = ["All"Company News"Partnerships"Innovation"Technology"Sustainability"Case Studies"Research"];
-=======
   const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <>
       <Head>
         <title>News | Zion Tech Group - Latest Updates & Insights</title>
-<<<<<<< HEAD
-        <meta name="description" content="Stay informed with the latest newscompany updatesand industry insights from Zion Tech Group." />
-        <meta property="og:title" content="News - Zion Tech Group" />
-        <meta property="og:description" content="Latest company newspartnershipsand technology insights." />
-=======
         <meta name="description" content="Stay informed with the latest news, company updates, and industry insights from Zion Tech Group." />
         <meta property="og:title" content="News - Zion Tech Group" />
         <meta property="og:description" content="Latest company news, partnerships, and technology insights." />
->>>>>>> origin/auto/autonomy-17186719616
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
@@ -1938,11 +1518,7 @@ export default function News() {
               Latest News
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              Stay updated with company newspartnershipsinnovationsand industry insights
-=======
               Stay updated with company news, partnerships, innovations, and industry insights
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </section>
 

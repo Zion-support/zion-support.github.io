@@ -1,19 +1,25 @@
 #!/bin/bash
 
-echo "Fixing merge conflicts in all files..."
+# List of files with merge conflicts
+files=(
+  "/workspace/src/components/NewContentShowcase2026.tsx"
+  "/workspace/src/components/InteractiveTechShowcase2026.tsx"
+  "/workspace/src/pages/AdvancedCybersecuritySuite2026.tsx"
+  "/workspace/src/pages/SpaceTechInnovation2026.tsx"
+  "/workspace/src/pages/AdvancedBiotechAI2026.tsx"
+  "/workspace/src/pages/AdvancedQuantumComputing2026.tsx"
+  "/workspace/src/pages/AdvancedRobotics2026.tsx"
+)
 
-# Find all files with merge conflict markers and fix them
-find src -name "*.jsx" -o -name "*.tsx" -o -name "*.js" -o -name "*.ts" | while read -r file; do
-  if grep -q "<<<<<<< HEAD" "$file"; then
-    echo "Fixing merge conflicts in: $file"
-    
-    # Remove merge conflict markers and keep content between HEAD and ======
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> main/d' "$file"
-    
-    # Clean up any remaining empty lines
-    sed -i '/^[[:space:]]*$/d' "$file"
-  fi
+for file in "${files[@]}"; do
+  echo "Fixing merge conflicts in $file"
+  
+  # Remove merge conflict markers and keep the first version (HEAD)
+  sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+  sed -i '/^>>>>>>> /d' "$file"
+  
+  # Remove any remaining ======= lines
+  sed -i '/^=======$/d' "$file"
 done
 
 echo "Merge conflicts fixed!"
