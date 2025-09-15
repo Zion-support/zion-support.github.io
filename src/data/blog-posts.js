@@ -200,7 +200,6 @@ export const blogPosts = [
   ,
   {
     id: 12,
-<<<<<<< HEAD
     title: "AI 2026: Agentic Risk and Safety Playbook",
     excerpt: "Practical safeguards, monitoring, and governance patterns for production agent systems.",
     content: "This playbook distills proven patterns for safely operating agentic systems at scale: policy-as-code guardrails, evaluation harnesses, runtime tripwires, behavior analytics, and rollback strategies. It includes rollout checklists and reference architectures for high-assurance deployments.",
@@ -228,7 +227,9 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/enterprise-agent-observability-2026.jpg",
     slug: "ai-2026-enterprise-agent-observability-guide"
-=======
+  },
+  {
+    id: 14,
     title: "AI 2026: Real-Time Retrieval Architectures",
     excerpt: "Low-latency retrieval patterns for RAG systems at enterprise scale.",
     content: "Enterprises need sub-200ms retrieval for interactive agent systems. This guide covers vector DB sharding, hybrid search, ANN index tuning, caching layers, and streaming generation patterns to achieve real-time performance.",
@@ -243,7 +244,7 @@ export const blogPosts = [
     slug: "ai-2026-real-time-retrieval-architectures"
   },
   {
-    id: 13,
+    id: 15,
     title: "AI 2026: Autonomous Ops Playbook",
     excerpt: "Runbooks, guardrails, and evals for safe autonomous operations.",
     content: "A practical playbook for autonomous operations: event-driven observability, action gating, safety envelopes, human-in-the-loop escalation, and policy-as-code. Includes reference architectures and rollout checklist.",
@@ -256,7 +257,36 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/autonomous-ops-playbook-2026.jpg",
     slug: "ai-2026-autonomous-ops-playbook"
->>>>>>> feature/new-sept-2025-content
+  },
+  {
+    id: 16,
+    title: "AI 2026: Agent Safety Certification",
+    excerpt: "Certification model for validating agent safety across scenarios and domains.",
+    content: "This guide introduces a structured certification program for agent systems, covering scenario test suites, red teaming, governance workflows, and production drift monitoring to ensure sustained safety.",
+    author: "Avery Singh",
+    authorRole: "Head of Responsible AI",
+    publishDate: "2025-09-15",
+    readTime: "9 min read",
+    category: "Safety",
+    tags: ["Certification", "Safety", "Governance", "Evals"],
+    featured: true,
+    imageUrl: "/images/blog/agent-safety-certification-2026.jpg",
+    slug: "ai-2026-agent-safety-certification"
+  },
+  {
+    id: 17,
+    title: "AI 2026: Edge Agents On-Device Inference",
+    excerpt: "Design patterns for reliable, private, and low-latency edge agents.",
+    content: "We cover on-device LLMs, hybrid offload, energy-aware scheduling, secure model updates, and telemetry for agents running on phones, cars, and IoT devices.",
+    author: "Kenji Watanabe",
+    authorRole: "Edge AI Architect",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Edge AI",
+    tags: ["Edge", "On-Device", "Latency", "Privacy"],
+    featured: true,
+    imageUrl: "/images/blog/edge-agents-on-device-2026.jpg",
+    slug: "ai-2026-edge-agents-on-device"
   }
 ];
 

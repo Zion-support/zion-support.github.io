@@ -95,6 +95,24 @@ const BlogPage = () => {
       image: "/images/ai-finops-2026.jpg"
     },
     {
+      title: "AI 2026: Agent Safety Certification",
+      description: "Certification framework to validate agent safety with scenario suites and governance.",
+      slug: "ai-2026-agent-safety-certification",
+      category: "Safety",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/agent-safety-certification-2026.jpg"
+    },
+    {
+      title: "AI 2026: Edge Agents On-Device Inference",
+      description: "Design patterns for private, low-latency edge agents with hybrid offload.",
+      slug: "ai-2026-edge-agents-on-device",
+      category: "Edge AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/edge-agents-on-device-2026.jpg"
+    },
+    {
       title: "AI 2026: Autonomous Compliance Operating Model",
       description: "Automate controls, evidence, and tests for audit-ready AI operations with policy-as-code.",
       slug: "ai-2026-autonomous-compliance",
