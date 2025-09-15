@@ -416,6 +416,34 @@ content_index:
         roi: "300-500%"
 
   newly_added_september_2025:
+    - id: "ai-2026-eval-driven-release-engineering"
+      type: "blog"
+      title: "AI 2026: Eval-Driven Release Engineering"
+      file_path: "/app/blog/ai-2026-eval-driven-release-engineering/page.tsx"
+      url: "/blog/ai-2026-eval-driven-release-engineering"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Reliability", "Evals", "Policy-as-Code", "Progressive Delivery", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        gated_releases: true
+        rollback_time: "< 5 min"
+    - id: "ai-2026-fail-safe-architectures"
+      type: "architecture"
+      title: "AI 2026: Fail-Safe Architectures for Autonomous Agents"
+      file_path: "/app/content/ai-2026-fail-safe-architectures/page.tsx"
+      url: "/content/ai-2026-fail-safe-architectures"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Architecture", "Safety", "Zero-Trust", "Isolation", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_prevention: "99.9%"
+        risk_reduction: "65%"
+        mttr: "< 10 min"
     - id: "ai-2026-autonomous-enterprise-blueprint"
       type: "blueprint"
       title: "AI 2026: Autonomous Enterprise Blueprint"
