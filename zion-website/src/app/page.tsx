@@ -84,19 +84,14 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-<<<<<<< HEAD
-              New: Analytics & Security Copilots v1.0 —
-              <a href="/updates/autonomous-analytics-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">analytics launch</a>
+              New: AI Autonomous Workflow Engine v1.0 —
+              <a href="/updates/ai-autonomous-workflow-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">workflow engine</a>
+              <span className="mx-2 text-blue-300/60">|</span>
+              <a href="/updates/autonomous-analytics-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">analytics launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-security-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">security launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates/autonomous-knowledge-ops-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">knowledge ops suite</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates/production-guardrails-tool-use-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">guardrails guide</a>
-              <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-decision-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">decision engine</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates/realtime-agent-observatory-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">observatory</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
