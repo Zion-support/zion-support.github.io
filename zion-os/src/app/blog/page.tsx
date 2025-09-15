@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 
 export const metadata = {
   title: 'Blog & News - Zion Tech Group',
@@ -7,6 +8,17 @@ export const metadata = {
 
 export default function BlogPage() {
   const featuredPosts = [
+    {
+      id: 'agentic-ops-blueprint',
+      title: 'Blueprint for Agentic Operations: From Pilots to Production',
+      excerpt: 'An operating model to scale autonomous workflows safely across the enterprise.',
+      category: 'Research & Development',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-12',
+      readTime: '9 min read',
+      image: '/blog/agentic-ops.jpg',
+      featured: true
+    },
     {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
@@ -65,6 +77,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'ai-governance-2025',
+      title: 'AI Governance in 2025: Practical Guardrails for Autonomous Systems',
+      excerpt: 'Implement policy, oversight, and measurable controls for agentic systems.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-14',
+      readTime: '8 min read',
+      image: '/blog/ai-governance.jpg'
+    },
     {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
@@ -158,9 +180,9 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
-    { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 2, active: false },
+    { name: 'All Posts', count: 14, active: true },
+    { name: 'Research & Development', count: 4, active: false },
+    { name: 'AI Solutions', count: 3, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
@@ -188,33 +210,51 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Promo Banner - New Article */}
+      {/* Promo Banner - New Articles */}
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <a
-            href="/blog/sovereign-ai-commerce-2025"
-            className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025"
-          >
-            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                SA
-              </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Solutions</span>
-                  <span className="text-xs text-gray-500">New</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a
+              href="/blog/ai-governance-2025"
+              className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
+              aria-label="Read: AI Governance in 2025: Practical Guardrails for Autonomous Systems"
+            >
+              <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+                  AG
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A practical blueprint for deploying autonomous, self-regulating AI marketplaces powered by Zion OS.
-                </p>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Solutions</span>
+                    <span className="text-xs text-gray-500">New</span>
+                  </div>
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900">AI Governance in 2025: Practical Guardrails for Autonomous Systems</h3>
+                  <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">A field guide to implementing policy, oversight, and measurable controls.</p>
+                </div>
+                <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
               </div>
-              <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
-            </div>
-          </a>
+            </a>
+            <a
+              href="/blog/agentic-ops-blueprint"
+              className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
+              aria-label="Read: Blueprint for Agentic Operations: From Pilots to Production"
+            >
+              <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 text-white flex items-center justify-center text-xl font-bold">
+                  AO
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs px-2 py-1 rounded-full bg-purple-100 text-purple-800">Research & Development</span>
+                    <span className="text-xs text-gray-500">New</span>
+                  </div>
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900">Blueprint for Agentic Operations: From Pilots to Production</h3>
+                  <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">Scale autonomous workflows with standardized capabilities and controls.</p>
+                </div>
+                <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 

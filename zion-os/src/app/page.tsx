@@ -1,3 +1,4 @@
+import React from 'react';
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -118,16 +119,16 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <FeatureCard
-                key={index}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-                features={feature.features}
-                gradient={feature.gradient}
-              />
-            ))}
+            {features.map((feature, index) => {
+              const cardProps = {
+                icon: feature.icon,
+                title: feature.title,
+                description: feature.description,
+                features: feature.features,
+                gradient: feature.gradient,
+              } as const;
+              return <FeatureCard key={`feature-${index}`} {...cardProps} />;
+            })}
           </div>
         </div>
       </section>
@@ -147,8 +148,11 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-              <a href="/blog/quantum-risk-modeling-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: Quantum Risk Modeling 2025
+              <a href="/blog/ai-governance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Governance 2025
+              </a>
+              <a href="/blog/agentic-ops-blueprint" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Agentic Ops Blueprint
               </a>
             </div>
           </div>

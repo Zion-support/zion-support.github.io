@@ -11,6 +11,36 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-governance-2025': {
+    id: 'ai-governance-2025',
+    title: 'AI Governance in 2025: Practical Guardrails for Autonomous Systems',
+    excerpt:
+      'A field guide to implementing policy, oversight, and measurable controls for agentic systems across the enterprise.',
+    category: 'AI Solutions',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-14',
+    readTime: '8 min read',
+    content: [
+      'As organizations deploy autonomous systems, governance must shift from static review to continuous oversight. This article presents a pragmatic framework to align safety with velocity.',
+      'We cover policy-as-code, graded permissions, incident playbooks, and human-in-the-loop checkpoints for sensitive actions. We also include reference metrics for safety, reliability, and responsiveness.',
+      'Implementations should start with an inventory of agent capabilities, attach controls to high-risk actions, and iterate using post-incident learnings.'
+    ]
+  },
+  'agentic-ops-blueprint': {
+    id: 'agentic-ops-blueprint',
+    title: 'Blueprint for Agentic Operations: From Pilots to Production',
+    excerpt:
+      'A step-by-step operating model to scale autonomous workflows safely: discovery, pilots, platform, and productization.',
+    category: 'Research & Development',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-12',
+    readTime: '9 min read',
+    content: [
+      'Agentic operations move beyond isolated copilots to event-driven platforms with standardized capabilities and controls.',
+      'This blueprint helps teams avoid one-off automations by establishing shared services: identity, orchestration, policy, audit, and observability.',
+      'Outcomes include reduced duplication, faster iteration, and measurable reliability improvements across business units.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
