@@ -64,3 +64,4 @@ export default function App(): JSX.Element {
       <Footer />
     </div>
   );
+}
