@@ -29,25 +29,17 @@ import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
+import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import './src/index.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
-import AdvancedAITransformation2025 from './src/pages/AdvancedAITransformation2025';
+import BusinessAutomationGuide2025 from './src/pages/BusinessAutomationGuide2025';
+import AdvancedTechSolutions2026 from './src/pages/AdvancedTechSolutions2026';
+import InnovationShowcase2026 from './src/pages/InnovationShowcase2026';
+import NextGenAISolutions2025 from './src/pages/NextGenAISolutions2025';
 import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
-import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
-import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
-import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
-import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
-import ConsciousnessComputing2026 from './src/pages/ConsciousnessComputing2026';
-import TransdimensionalAI2026 from './src/pages/TransdimensionalAI2026';
-import OmniversalAI2026 from './src/pages/OmniversalAI2026';
-import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
-import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
-import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
-import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
-import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
-import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
-import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
+import BlockchainInnovation2025 from './src/pages/BlockchainInnovation2025';
+import EnterpriseSolutions2025 from './src/pages/EnterpriseSolutions2025';
 
 export default function App(): JSX.Element {
   return (
@@ -212,6 +204,36 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
+                {/* NEW: Latest Content Showcase */}
+                <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-center space-x-3 mb-4">
+                      <span className="text-3xl animate-pulse">✨</span>
+                      <h3 className="text-2xl font-bold">BRAND NEW CONTENT • JANUARY 2025</h3>
+                      <span className="text-3xl animate-pulse">✨</span>
+                    </div>
+                    <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
+                      Discover our latest breakthrough content covering Next-Gen AI Solutions, Quantum Computing Revolution, 
+                      Blockchain Innovation, and Enterprise Solutions
+                    </p>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                      <a href="/pages/NextGenAISolutions2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🤖 Next-Gen AI →
+                      </a>
+                      <a href="/pages/QuantumComputingRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        ⚡ Quantum Revolution →
+                      </a>
+                      <a href="/pages/BlockchainInnovation2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🔗 Blockchain Innovation →
+                      </a>
+                      <a href="/pages/EnterpriseSolutions2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
+                        🏢 Enterprise Solutions →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
                   <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
@@ -304,73 +326,24 @@ export default function App(): JSX.Element {
                     <a href="/pages/InnovationShowcase2025" className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🚀 Innovation Showcase →
                     </a>
+                    <a href="/pages/NextGenAISolutions2025" className="bg-gradient-to-r from-slate-600 to-gray-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🤖 Next-Gen AI Solutions
+                    </a>
+                    <a href="/pages/QuantumComputingRevolution2025" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      ⚡ Quantum Revolution
+                    </a>
+                    <a href="/pages/BlockchainInnovation2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🔗 Blockchain Innovation
+                    </a>
+                    <a href="/pages/EnterpriseSolutions2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🏢 Enterprise Solutions
+                    </a>
                   </div>
                 </div>
 
-                {/* NEW: Revolutionary Technology Showcase 2025 */}
-                <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-                  <div className="relative z-10">
-                    <div className="text-center mb-12">
-                      <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-                        🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2025
-                      </div>
-                      <h2 className="text-5xl font-bold mb-6">🚀 Revolutionary Technology Showcase</h2>
-                      <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-                        Experience the future with our groundbreaking content on AI Transformation, Quantum Computing, and Neural Interfaces
-                      </p>
-                    </div>
-                    
-                    <div className="grid md:grid-cols-3 gap-8">
-                      <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-                        <div className="text-6xl mb-4 text-center">🤖</div>
-                        <h3 className="text-2xl font-bold mb-4 text-center">Advanced AI Transformation</h3>
-                        <p className="text-purple-100 mb-6 text-center">
-                          Transform your business with cutting-edge AI solutions that deliver measurable results
-                        </p>
-                        <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-                          <li>• Intelligent Automation</li>
-                          <li>• Predictive Analytics</li>
-                          <li>• Enterprise Security</li>
-                        </ul>
-                        <a href="/pages/AdvancedAITransformation2025" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-                          Explore AI Transformation →
-                        </a>
-                      </div>
-                      
-                      <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-                        <div className="text-6xl mb-4 text-center">⚡</div>
-                        <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing Revolution</h3>
-                        <p className="text-cyan-100 mb-6 text-center">
-                          Experience the future of computing with quantum technology solving impossible problems
-                        </p>
-                        <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-                          <li>• Molecular Simulation</li>
-                          <li>• Quantum Cryptography</li>
-                          <li>• Optimization Problems</li>
-                        </ul>
-                        <a href="/pages/QuantumComputingRevolution2025" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-                          Go Quantum →
-                        </a>
-                      </div>
-                      
-                      <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-                        <div className="text-6xl mb-4 text-center">🧬</div>
-                        <h3 className="text-2xl font-bold mb-4 text-center">Neural Interface Revolution</h3>
-                        <p className="text-emerald-100 mb-6 text-center">
-                          Bridge the gap between mind and machine with direct neural interfaces
-                        </p>
-                        <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-                          <li>• Non-Invasive BCI</li>
-                          <li>• Thought Control</li>
-                          <li>• Memory Enhancement</li>
-                        </ul>
-                        <a href="/pages/NeuralInterfaceRevolution2025" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-                          Connect Mind & Machine →
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                {/* Enhanced Content Showcase */}
+                <div className="mb-12">
+                  <EnhancedContentShowcase />
                 </div>
 
                 {/* Interactive Dynamic Content Carousel */}
@@ -784,22 +757,13 @@ export default function App(): JSX.Element {
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
           <Route path="/pages/NewShowcase2025" element={<NewShowcase2025 />} />
-          <Route path="/pages/AdvancedAITransformation2025" element={<AdvancedAITransformation2025 />} />
+          <Route path="/pages/BusinessAutomationGuide2025" element={<BusinessAutomationGuide2025 />} />
+          <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
+          <Route path="/pages/InnovationShowcase2026" element={<InnovationShowcase2026 />} />
+          <Route path="/pages/NextGenAISolutions2025" element={<NextGenAISolutions2025 />} />
           <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
-          <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
-          <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
-          <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
-          <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
-          <Route path="/pages/ConsciousnessComputing2026" element={<ConsciousnessComputing2026 />} />
-          <Route path="/pages/TransdimensionalAI2026" element={<TransdimensionalAI2026 />} />
-          <Route path="/pages/OmniversalAI2026" element={<OmniversalAI2026 />} />
-          <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
-          <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
-          <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
-          <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
-          <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
-          <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
-          <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
+          <Route path="/pages/BlockchainInnovation2025" element={<BlockchainInnovation2025 />} />
+          <Route path="/pages/EnterpriseSolutions2025" element={<EnterpriseSolutions2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
