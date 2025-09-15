@@ -58,6 +58,11 @@ const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financia
 // Enhanced services pages with better error handling
 const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovative-Services-Showcase-2025.tsx'));
 
+// New content showcase components
+const UltimateServicesShowcase2025 = React.lazy(() => import('./components/UltimateServicesShowcase2025'));
+const ContentShowcase = React.lazy(() => import('./components/ContentShowcase'));
+const InteractiveDemoShowcase = React.lazy(() => import('./components/InteractiveDemoShowcase'));
+
 // Service pages with enhanced error boundaries
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -172,6 +177,11 @@ function App() {
                 <Route path="/training" element={<Training />} />
                 <Route path="/support" element={<Support />} />
                 <Route path="/demo" element={<Demo />} />
+                
+                {/* New Content Showcase Routes */}
+                <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
+                <Route path="/content-showcase" element={<ContentShowcase />} />
+                <Route path="/interactive-demos" element={<InteractiveDemoShowcase />} />
 
                 <Route path="/investors" element={<Investors />} />
                 <Route path="/legal" element={<Legal />} />
