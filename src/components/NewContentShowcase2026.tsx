@@ -1,249 +1,198 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const NewContentShowcase2026: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [activeTab, setActiveTab] = useState(0);
 
-  const showcaseItems = [
+  const contentTabs = [
     {
-      id: 1,
-      title: "Revolutionary Tech Breakthrough 2026",
-      description: "Experience cutting-edge technologies that are reshaping our world",
-      image: "🚀",
-      color: "from-blue-500 to-indigo-600",
-      link: "/pages/RevolutionaryTechBreakthrough2026",
-      features: ["Synthetic Intelligence", "Quantum Computing", "Bio-Quantum Interfaces"]
+      id: 'next-gen-tech',
+      title: 'Next-Gen Tech Revolution',
+      icon: '🚀',
+      description: 'Revolutionary technologies including Synthetic Intelligence, Quantum-Neural Fusion, and Advanced AI Systems',
+      link: '/pages/NextGenTechRevolution2026',
+      color: 'from-purple-600 to-pink-600',
+      features: ['Synthetic Intelligence', 'Quantum-Neural Fusion', 'Advanced AI Systems']
     },
     {
-      id: 2,
-      title: "Ultimate Tech Showcase 2027",
-      description: "Inter-dimensional computing and advanced AI systems",
-      image: "🌌",
-      color: "from-purple-500 to-pink-600",
-      link: "/pages/UltimateTechShowcase2027",
-      features: ["Dimensional Computing", "Temporal AI", "Neural Interfaces"]
+      id: 'tech-insights',
+      title: 'Revolutionary Tech Insights',
+      icon: '📊',
+      description: 'Deep insights into the most revolutionary technologies of 2026 with expert analysis and market trends',
+      link: '/pages/RevolutionaryTechInsights2026',
+      color: 'from-cyan-600 to-blue-600',
+      features: ['Expert Analysis', 'Market Trends', 'Future Predictions']
     },
     {
-      id: 3,
-      title: "Revolutionary Innovation Hub 2027",
-      description: "Advanced innovation labs and breakthrough technologies",
-      image: "🔬",
-      color: "from-emerald-500 to-teal-600",
-      link: "/pages/RevolutionaryInnovationHub2027",
-      features: ["Innovation Labs", "Research Centers", "Tech Incubators"]
-    },
-    {
-      id: 4,
-      title: "Advanced AI Systems 2026",
-      description: "Synthetic consciousness and autonomous AI capabilities",
-      image: "🧠",
-      color: "from-orange-500 to-red-600",
-      link: "/pages/AdvancedAISystems2026",
-      features: ["Synthetic Consciousness", "Autonomous AI", "Neural Networks"]
-    },
-    {
-      id: 5,
-      title: "Quantum Computing Revolution 2026",
-      description: "Exponential processing power and quantum applications",
-      image: "⚛️",
-      color: "from-cyan-500 to-blue-600",
-      link: "/pages/QuantumComputingRevolution2026",
-      features: ["Quantum Supremacy", "Quantum Algorithms", "Quantum Cryptography"]
-    },
-    {
-      id: 6,
-      title: "Revolutionary Tech Blog 2026",
-      description: "Insights and analysis of breakthrough technologies",
-      image: "📝",
-      color: "from-violet-500 to-purple-600",
-      link: "/pages/RevolutionaryTechBlog2026",
-      features: ["Tech Insights", "Industry Analysis", "Future Predictions"]
+      id: 'future-showcase',
+      title: 'Future Tech Showcase',
+      icon: '🌟',
+      description: 'Interactive demonstrations of the most advanced technologies with cutting-edge innovations',
+      link: '/pages/FutureTechShowcase2026',
+      color: 'from-emerald-600 to-teal-600',
+      features: ['Interactive Demos', 'Live Statistics', 'Hands-on Experience']
     }
   ];
 
-  useEffect(() => {
-    if (isAutoPlaying) {
-      const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isAutoPlaying, showcaseItems.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
   return (
-    <div className="relative bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 py-16 px-4">
-      <div className="container mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-white text-sm font-bold mb-6">
-            🎯 NEW CONTENT SHOWCASE • 2026
-          </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Revolutionary New Content 2026
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our latest breakthrough technologies and innovative solutions that are transforming the future
-          </p>
-        </motion.div>
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-12 text-white relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white rounded-full opacity-30 animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+            }}
+          />
+        ))}
+      </div>
 
-        {/* Main Carousel */}
-        <div className="relative max-w-6xl mx-auto">
-          <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, x: 300 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -300 }}
-                transition={{ duration: 0.5 }}
-                className="relative"
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full border border-cyan-400/30 mb-6">
+            <span className="text-cyan-400">✨</span>
+            <span className="text-cyan-300 font-semibold ml-2">NEW CONTENT SHOWCASE 2026</span>
+            <span className="text-cyan-400 ml-2">✨</span>
+          </div>
+          
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            🌟 Revolutionary New Content 2026
+          </h2>
+          
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Experience the future with our groundbreaking new content featuring Next-Gen Tech Revolution, 
+            Revolutionary Tech Insights, and Future Tech Showcase - the most advanced technology content of 2026
+          </p>
+        </div>
+
+        {/* Content Tabs */}
+        <div className="mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            {contentTabs.map((tab, index) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(index)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeTab === index
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
               >
-                <div className={`bg-gradient-to-br ${showcaseItems[currentSlide].color} text-white p-12 md:p-16`}>
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
-                    <div>
-                      <div className="text-6xl mb-6">{showcaseItems[currentSlide].image}</div>
-                      <h3 className="text-4xl font-bold mb-6">
-                        {showcaseItems[currentSlide].title}
-                      </h3>
-                      <p className="text-xl opacity-90 mb-8">
-                        {showcaseItems[currentSlide].description}
-                      </p>
-                      <div className="flex flex-wrap gap-2 mb-8">
-                        {showcaseItems[currentSlide].features.map((feature, index) => (
-                          <span
-                            key={index}
-                            className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold"
-                          >
-                            {feature}
-                          </span>
-                        ))}
+                <span className="mr-2">{tab.icon}</span>
+                {tab.title}
+              </button>
+            ))}
+          </div>
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30"
+            >
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="text-6xl mb-4">{contentTabs[activeTab].icon}</div>
+                  <h3 className="text-3xl font-bold mb-4 text-white">{contentTabs[activeTab].title}</h3>
+                  <p className="text-gray-300 mb-6 text-lg">{contentTabs[activeTab].description}</p>
+                  
+                  <div className="space-y-3 mb-8">
+                    {contentTabs[activeTab].features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
+                        <span className="text-gray-300">{feature}</span>
                       </div>
-                      <a
-                        href={showcaseItems[currentSlide].link}
-                        className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
-                      >
-                        Explore Now →
-                      </a>
-                    </div>
-                    <div className="hidden md:block">
-                      <div className="w-full h-80 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                        <div className="text-8xl opacity-50">
-                          {showcaseItems[currentSlide].image}
-                        </div>
+                    ))}
+                  </div>
+
+                  <a
+                    href={contentTabs[activeTab].link}
+                    className={`inline-block bg-gradient-to-r ${contentTabs[activeTab].color} text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform`}
+                  >
+                    🚀 Explore {contentTabs[activeTab].title} →
+                  </a>
+                </div>
+
+                <div className="text-center">
+                  <div className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 rounded-xl p-8 border border-gray-600/30">
+                    <div className="text-4xl mb-4">📊</div>
+                    <h4 className="text-xl font-bold mb-4 text-white">Live Statistics</h4>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-cyan-400">2.3M+</div>
+                        <div className="text-gray-400 text-sm">Interactions</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-purple-400">847K+</div>
+                        <div className="text-gray-400 text-sm">Users</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-pink-400">156K+</div>
+                        <div className="text-gray-400 text-sm">Downloads</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-emerald-400">99.9%</div>
+                        <div className="text-gray-400 text-sm">Uptime</div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Navigation Arrows */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            {/* Play/Pause Button */}
-            <button
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-colors"
-            >
-              {isAutoPlaying ? (
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
-                </svg>
-              ) : (
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              )}
-            </button>
-          </div>
-
-          {/* Dots Navigation */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {showcaseItems.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
-                }`}
-              />
-            ))}
-          </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
 
-        {/* Grid of All Items */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
-            All New Content
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {showcaseItems.map((item, index) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`bg-gradient-to-br ${item.color} text-white rounded-xl p-6 hover:scale-105 transition-transform cursor-pointer`}
-                onClick={() => goToSlide(index)}
+        {/* Quick Access Links */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {contentTabs.map((tab, index) => (
+            <motion.a
+              key={tab.id}
+              href={tab.link}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className={`bg-gradient-to-br ${tab.color}/20 backdrop-blur-sm rounded-xl p-6 border border-${tab.color.split('-')[1]}-400/30 hover:scale-105 transition-all duration-300 text-center`}
+            >
+              <div className="text-4xl mb-3">{tab.icon}</div>
+              <h4 className="text-lg font-bold mb-2 text-white">{tab.title}</h4>
+              <p className="text-gray-300 text-sm mb-4">{tab.description}</p>
+              <div className="text-cyan-400 font-semibold text-sm">Explore Now →</div>
+            </motion.a>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-12">
+          <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Experience the Future?
+            </h3>
+            <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
+              Join thousands of technology enthusiasts who are already exploring our revolutionary new content
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/pages/NextGenTechRevolution2026" 
+                className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg hover:scale-105 transform"
               >
-                <div className="text-4xl mb-4">{item.image}</div>
-                <h4 className="text-xl font-bold mb-3">{item.title}</h4>
-                <p className="text-white/90 mb-4 text-sm">{item.description}</p>
-                <div className="flex flex-wrap gap-1 mb-4">
-                  {item.features.slice(0, 2).map((feature, featureIndex) => (
-                    <span
-                      key={featureIndex}
-                      className="px-2 py-1 bg-white/20 rounded text-xs"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                  {item.features.length > 2 && (
-                    <span className="px-2 py-1 bg-white/20 rounded text-xs">
-                      +{item.features.length - 2}
-                    </span>
-                  )}
-                </div>
-                <a
-                  href={item.link}
-                  className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors text-sm font-semibold"
-                >
-                  Explore →
-                </a>
-              </motion.div>
-            ))}
+                🚀 Start Exploring
+              </a>
+              <a 
+                href="/pages/RevolutionaryTechInsights2026" 
+                className="inline-block border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
+              >
+                📊 View Insights
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -2,17 +2,6 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { 
-<<<<<<< HEAD
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-=======
-  Select, 
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
->>>>>>> origin/auto/autonomy-17186719616
   SelectValue 
 } from "@/components/ui/select";
 import type { QuoteStatus } from "@/types/quotes";

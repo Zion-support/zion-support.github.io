@@ -1,477 +1,363 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const FutureTechTrends2026: React.FC = () => {
-  const [activeTrend, setActiveTrend] = useState('ai');
-
-  const techTrends = {
-    ai: {
-      title: "Artificial Intelligence Revolution",
-      icon: "🧠",
-      description: "AI systems achieving human-level intelligence and beyond",
-      keyPoints: [
-        "Synthetic consciousness achieved",
-        "Autonomous AI agents deployed",
-        "AI-human collaboration standard",
-        "Creative AI surpassing human capabilities"
-      ],
-      impact: "Transform every industry",
-      timeline: "2026-2027"
-    },
-    quantum: {
-      title: "Quantum Computing Breakthrough",
-      icon: "⚛️",
-      description: "Quantum computers solving impossible problems",
-      keyPoints: [
-        "1000+ qubit processors available",
-        "Quantum supremacy achieved",
-        "Real-world quantum applications",
-        "Quantum internet launched"
-      ],
-      impact: "Exponential computational power",
-      timeline: "2026-2028"
-    },
-    neural: {
-      title: "Neural Interface Technology",
-      icon: "🧬",
-      description: "Direct brain-computer communication",
-      keyPoints: [
-        "Non-invasive BCI technology",
-        "Thought-controlled devices",
-        "Neural prosthetics advanced",
-        "Memory enhancement possible"
-      ],
-      impact: "Merge mind and machine",
-      timeline: "2026-2029"
-    },
-    space: {
-      title: "Space Colonization",
-      icon: "🚀",
-      description: "Human settlements beyond Earth",
-      keyPoints: [
-        "Mars colony established",
-        "Lunar base operational",
-        "Asteroid mining begins",
-        "Space tourism commercialized"
-      ],
-      impact: "Multi-planetary species",
-      timeline: "2026-2030"
-    },
-    biotech: {
-      title: "Biotechnology Revolution",
-      icon: "🧬",
-      description: "Genetic engineering and life extension",
-      keyPoints: [
-        "Gene editing perfected",
-        "Aging reversed",
-        "Custom organs grown",
-        "Life expectancy doubled"
-      ],
-      impact: "Redefine human potential",
-      timeline: "2026-2032"
-    },
-    energy: {
-      title: "Clean Energy Revolution",
-      icon: "⚡",
-      description: "100% renewable energy achieved",
-      keyPoints: [
-        "Fusion power commercialized",
-        "Solar efficiency 50%+",
-        "Energy storage breakthrough",
-        "Carbon negative technology"
-      ],
-      impact: "Solve climate change",
-      timeline: "2026-2028"
-    }
-  };
-
-  const industryTransformations = [
-    {
-      industry: "Healthcare",
-      icon: "🏥",
-      transformation: "AI doctors, personalized medicine, gene therapy",
-      impact: "95% disease prevention",
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      industry: "Transportation",
-      icon: "🚗",
-      transformation: "Autonomous vehicles, flying cars, hyperloop",
-      impact: "Zero traffic accidents",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      industry: "Education",
-      icon: "🎓",
-      transformation: "AI tutors, virtual reality learning, neural implants",
-      impact: "10x faster learning",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      industry: "Manufacturing",
-      icon: "🏭",
-      transformation: "3D printing, nanomanufacturing, space factories",
-      impact: "Custom everything",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      industry: "Finance",
-      icon: "💰",
-      transformation: "Quantum cryptography, AI trading, digital currencies",
-      impact: "Instant global transactions",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      industry: "Entertainment",
-      icon: "🎮",
-      transformation: "Virtual reality, neural interfaces, AI content",
-      impact: "Immersive experiences",
-      color: "from-indigo-500 to-purple-500"
-    }
-  ];
-
-  const futurePredictions = [
-    {
-      year: "2026",
-      prediction: "AI achieves human-level consciousness",
-      probability: "85%",
-      impact: "Revolutionary"
-    },
-    {
-      year: "2027",
-      prediction: "Quantum computers solve climate modeling",
-      probability: "70%",
-      impact: "Transformative"
-    },
-    {
-      year: "2028",
-      prediction: "First Mars colony established",
-      probability: "60%",
-      impact: "Historic"
-    },
-    {
-      year: "2030",
-      prediction: "Neural interfaces become mainstream",
-      probability: "45%",
-      impact: "Paradigm shift"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
-        <div className="container mx-auto relative z-10">
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🔮 FUTURE TECH TRENDS • JANUARY 2026
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Future Tech Trends 2026
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Discover the emerging technologies and trends that will shape the next decade, 
+              from quantum computing to neural interfaces and beyond.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-violet-500 to-fuchsia-500 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Explore Trends
+              </button>
+              <button className="border-2 border-violet-400 text-violet-400 px-8 py-4 rounded-lg hover:bg-violet-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+                Get Trend Report
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Top Trends */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-8">🌟 Top Tech Trends 2026</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            The most significant technology trends that will transform industries and societies
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
           >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white text-sm font-bold mb-6">
-              🔮 FUTURE TECH TRENDS • 2026
-            </div>
-            <h1 className="text-6xl font-bold text-gray-900 mb-6">
-              Future Technology Trends 2026
-            </h1>
-            <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Explore the revolutionary technologies that will reshape our world and define the next decade of human progress
+            <div className="text-5xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Synthetic Intelligence</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              AI systems that exhibit consciousness-like behaviors and creative problem-solving
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Trends →
-              </button>
-              <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
-                Download Report
-              </button>
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between text-cyan-200">
+                <span>Market Growth</span>
+                <span className="font-bold">+450%</span>
+              </div>
+              <div className="flex justify-between text-cyan-200">
+                <span>Adoption Rate</span>
+                <span className="font-bold">85%</span>
+              </div>
+              <div className="flex justify-between text-cyan-200">
+                <span>Investment</span>
+                <span className="font-bold">$2.3T</span>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-5xl mb-4 text-center">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Quantum computers solving problems impossible for classical computers
+            </p>
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between text-purple-200">
+                <span>Qubit Count</span>
+                <span className="font-bold">1000+</span>
+              </div>
+              <div className="flex justify-between text-purple-200">
+                <span>Error Rate</span>
+                <span className="font-bold">0.01%</span>
+              </div>
+              <div className="flex justify-between text-purple-200">
+                <span>Speed Gain</span>
+                <span className="font-bold">10^15x</span>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-5xl mb-4 text-center">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Direct brain-computer interfaces enabling thought-controlled devices
+            </p>
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between text-emerald-200">
+                <span>Signal Quality</span>
+                <span className="font-bold">99.9%</span>
+              </div>
+              <div className="flex justify-between text-emerald-200">
+                <span>Response Time</span>
+                <span className="font-bold">5ms</span>
+              </div>
+              <div className="flex justify-between text-emerald-200">
+                <span>Accuracy</span>
+                <span className="font-bold">98%</span>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-5xl mb-4 text-center">🌐</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Metaverse 2.0</h3>
+            <p className="text-orange-100 mb-6 text-center">
+              Immersive virtual worlds with photorealistic graphics and haptic feedback
+            </p>
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between text-orange-200">
+                <span>Users</span>
+                <span className="font-bold">2.5B</span>
+              </div>
+              <div className="flex justify-between text-orange-200">
+                <span>Resolution</span>
+                <span className="font-bold">8K+</span>
+              </div>
+              <div className="flex justify-between text-orange-200">
+                <span>Latency</span>
+                <span className="font-bold">1ms</span>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="bg-gradient-to-br from-yellow-600/30 to-orange-600/30 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-5xl mb-4 text-center">🌱</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Green Tech</h3>
+            <p className="text-yellow-100 mb-6 text-center">
+              Sustainable technologies for carbon neutrality and environmental protection
+            </p>
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between text-yellow-200">
+                <span>CO2 Reduction</span>
+                <span className="font-bold">-90%</span>
+              </div>
+              <div className="flex justify-between text-yellow-200">
+                <span>Efficiency</span>
+                <span className="font-bold">+300%</span>
+              </div>
+              <div className="flex justify-between text-yellow-200">
+                <span>Investment</span>
+                <span className="font-bold">$1.8T</span>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-5xl mb-4 text-center">🚀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Space Tech</h3>
+            <p className="text-pink-100 mb-6 text-center">
+              Advanced space technologies enabling interplanetary travel and colonization
+            </p>
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between text-pink-200">
+                <span>Mars Missions</span>
+                <span className="font-bold">12</span>
+              </div>
+              <div className="flex justify-between text-pink-200">
+                <span>Launch Cost</span>
+                <span className="font-bold">-95%</span>
+              </div>
+              <div className="flex justify-between text-pink-200">
+                <span>Success Rate</span>
+                <span className="font-bold">99%</span>
+              </div>
             </div>
           </motion.div>
         </div>
-      </section>
 
-      {/* Tech Trends Showcase */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">🚀 Revolutionary Tech Trends</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover the breakthrough technologies that will transform our world in 2026 and beyond
-            </p>
-          </motion.div>
-
-          {/* Trend Tabs */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {Object.entries(techTrends).map(([key, trend]) => (
-              <button
-                key={key}
-                onClick={() => setActiveTrend(key)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  activeTrend === key
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
-                }`}
-              >
-                <span className="mr-2">{trend.icon}</span>
-                {trend.title}
-              </button>
-            ))}
+        {/* Trend Analysis */}
+        <div className="bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">📊 Trend Analysis</h2>
+            <p className="text-xl text-gray-300">Comprehensive analysis of emerging technology trends</p>
           </div>
 
-          {/* Trend Content */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTrend}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-2xl p-8 shadow-lg mb-12"
-            >
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <div className="text-6xl mb-4">{techTrends[activeTrend as keyof typeof techTrends].icon}</div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                    {techTrends[activeTrend as keyof typeof techTrends].title}
-                  </h3>
-                  <p className="text-lg text-gray-600 mb-6">
-                    {techTrends[activeTrend as keyof typeof techTrends].description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {techTrends[activeTrend as keyof typeof techTrends].keyPoints.map((point, index) => (
-                      <li key={index} className="flex items-center text-gray-600">
-                        <span className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-3"></span>
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-blue-100 rounded-lg p-3">
-                      <p className="text-sm text-blue-600">Impact:</p>
-                      <p className="font-semibold text-blue-800">{techTrends[activeTrend as keyof typeof techTrends].impact}</p>
-                    </div>
-                    <div className="bg-purple-100 rounded-lg p-3">
-                      <p className="text-sm text-purple-600">Timeline:</p>
-                      <p className="font-semibold text-purple-800">{techTrends[activeTrend as keyof typeof techTrends].timeline}</p>
-                    </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-bold mb-3 text-violet-400">📈 Market Growth</h3>
+                <p className="text-gray-300 mb-4">
+                  Technology markets are experiencing unprecedented growth with AI and quantum computing leading the charge.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-violet-300">AI Market</span>
+                    <span className="text-white font-bold">$2.3T by 2026</span>
                   </div>
-                </div>
-                <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl p-8 text-center">
-                  <div className="text-8xl mb-4">{techTrends[activeTrend as keyof typeof techTrends].icon}</div>
-                  <p className="text-gray-600 font-semibold mb-4">Interactive Analysis Available</p>
-                  <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                    Deep Dive →
-                  </button>
+                  <div className="flex justify-between items-center">
+                    <span className="text-violet-300">Quantum Computing</span>
+                    <span className="text-white font-bold">$65B by 2026</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-violet-300">Neural Interfaces</span>
+                    <span className="text-white font-bold">$12B by 2026</span>
+                  </div>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      </section>
 
-      {/* Industry Transformations */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-        <div className="container mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">🏭 Industry Transformations</h2>
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-              See how emerging technologies are revolutionizing every major industry
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industryTransformations.map((industry, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-800/50 to-blue-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:scale-105 transition-all duration-300"
-              >
-                <div className="text-4xl mb-4">{industry.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-white">{industry.industry}</h3>
-                <p className="text-blue-200 mb-4 text-sm">{industry.transformation}</p>
-                <div className={`inline-block px-3 py-1 bg-gradient-to-r ${industry.color} text-white text-xs font-semibold rounded-full`}>
-                  {industry.impact}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Future Predictions */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">🔮 Future Predictions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Expert predictions for major technological breakthroughs in the coming years
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {futurePredictions.map((prediction, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="text-center mb-4">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">{prediction.year}</div>
-                  <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center text-white font-bold ${
-                    parseFloat(prediction.probability) >= 70 ? 'bg-green-500' :
-                    parseFloat(prediction.probability) >= 50 ? 'bg-yellow-500' :
-                    'bg-red-500'
-                  }`}>
-                    {prediction.probability}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-bold mb-3 text-fuchsia-400">🎯 Adoption Rates</h3>
+                <p className="text-gray-300 mb-4">
+                  Enterprise adoption of new technologies is accelerating across all industries.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-fuchsia-300">AI Integration</span>
+                    <span className="text-white font-bold">85%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-fuchsia-300">Cloud Migration</span>
+                    <span className="text-white font-bold">92%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-fuchsia-300">IoT Deployment</span>
+                    <span className="text-white font-bold">78%</span>
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{prediction.prediction}</h3>
-                <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
-                  prediction.impact === 'Revolutionary' ? 'bg-red-100 text-red-800' :
-                  prediction.impact === 'Transformative' ? 'bg-orange-100 text-orange-800' :
-                  prediction.impact === 'Historic' ? 'bg-blue-100 text-blue-800' :
-                  'bg-purple-100 text-purple-800'
-                }`}>
-                  {prediction.impact}
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-bold mb-3 text-cyan-400">🔮 Future Predictions</h3>
+                <p className="text-gray-300 mb-4">
+                  Our predictions for the next 5 years based on current trend analysis.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-cyan-300">Quantum Supremacy</span>
+                    <span className="text-white font-bold">2027</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-cyan-300">AGI Achievement</span>
+                    <span className="text-white font-bold">2028</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-cyan-300">Mars Colony</span>
+                    <span className="text-white font-bold">2030</span>
+                  </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
 
-      {/* Technology Impact Matrix */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white">
-        <div className="container mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">📊 Technology Impact Matrix</h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Compare the potential impact and timeline of different emerging technologies
-            </p>
-          </motion.div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-white/20">
-                    <th className="px-6 py-4 text-left font-semibold">Technology</th>
-                    <th className="px-6 py-4 text-left font-semibold">Impact Level</th>
-                    <th className="px-6 py-4 text-left font-semibold">Timeline</th>
-                    <th className="px-6 py-4 text-left font-semibold">Market Size</th>
-                    <th className="px-6 py-4 text-left font-semibold">Readiness</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    {
-                      name: "AI Revolution",
-                      icon: "🧠",
-                      impact: "Revolutionary",
-                      timeline: "2026-2027",
-                      market: "$10T+",
-                      readiness: "Ready"
-                    },
-                    {
-                      name: "Quantum Computing",
-                      icon: "⚛️",
-                      impact: "Transformative",
-                      timeline: "2026-2028",
-                      market: "$1T+",
-                      readiness: "Emerging"
-                    },
-                    {
-                      name: "Neural Interfaces",
-                      icon: "🧬",
-                      impact: "Paradigm Shift",
-                      timeline: "2026-2029",
-                      market: "$500B+",
-                      readiness: "Research"
-                    },
-                    {
-                      name: "Space Colonization",
-                      icon: "🚀",
-                      impact: "Historic",
-                      timeline: "2026-2030",
-                      market: "$2T+",
-                      readiness: "Pilot"
-                    }
-                  ].map((tech, index) => (
-                    <tr key={index} className="border-b border-white/10">
-                      <td className="px-6 py-4 font-semibold">
-                        <span className="mr-2">{tech.icon}</span>
-                        {tech.name}
-                      </td>
-                      <td className="px-6 py-4">{tech.impact}</td>
-                      <td className="px-6 py-4">{tech.timeline}</td>
-                      <td className="px-6 py-4 font-bold text-green-300">{tech.market}</td>
-                      <td className="px-6 py-4">
-                        <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                          tech.readiness === 'Ready' ? 'bg-green-100 text-green-800' :
-                          tech.readiness === 'Emerging' ? 'bg-yellow-100 text-yellow-800' :
-                          tech.readiness === 'Research' ? 'bg-blue-100 text-blue-800' :
-                          'bg-purple-100 text-purple-800'
-                        }`}>
-                          {tech.readiness}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-bold mb-3 text-emerald-400">💡 Innovation Hotspots</h3>
+                <p className="text-gray-300 mb-4">
+                  Geographic regions leading in technology innovation and development.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-emerald-300">Silicon Valley</span>
+                    <span className="text-white font-bold">35%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-emerald-300">Shenzhen</span>
+                    <span className="text-white font-bold">28%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-emerald-300">Tel Aviv</span>
+                    <span className="text-white font-bold">18%</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white"
-          >
-            <h2 className="text-4xl font-bold mb-6">Ready to Shape the Future?</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Join us in developing and implementing the technologies that will define the next decade
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-                Start Future Project →
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold">
-                Download Trends Report
-              </button>
+        {/* Industry Impact */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12">🏭 Industry Impact</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto">🏥</div>
+              <h3 className="text-xl font-bold mb-2">Healthcare</h3>
+              <p className="text-gray-300 text-sm">AI diagnostics, personalized medicine, and neural prosthetics</p>
             </div>
-          </motion.div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto">🏭</div>
+              <h3 className="text-xl font-bold mb-2">Manufacturing</h3>
+              <p className="text-gray-300 text-sm">Smart factories, quantum optimization, and autonomous systems</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto">🏦</div>
+              <h3 className="text-xl font-bold mb-2">Finance</h3>
+              <p className="text-gray-300 text-sm">Quantum cryptography, AI trading, and blockchain systems</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto">🚗</div>
+              <h3 className="text-xl font-bold mb-2">Transportation</h3>
+              <p className="text-gray-300 text-sm">Autonomous vehicles, smart cities, and space travel</p>
+            </div>
+          </div>
         </div>
-      </section>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-2xl p-12">
+            <h2 className="text-4xl font-bold mb-6">Stay Ahead of the Trends</h2>
+            <p className="text-xl mb-8 text-violet-100">
+              Get exclusive access to our comprehensive trend reports and technology insights.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/pages/RevolutionaryTechShowcase2026" 
+                className="bg-white text-violet-600 px-8 py-4 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-lg"
+              >
+                Download Trend Report →
+              </a>
+              <a 
+                href="/pages/NextGenInnovationHub2026" 
+                className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-violet-600 transition-colors font-semibold text-lg"
+              >
+                Explore Innovation Hub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

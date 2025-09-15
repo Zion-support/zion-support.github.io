@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-"use client";
-import React{ useEffectuseRef } from 'react';
-=======
-import React, { useEffect, useRef } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import { motion } from 'framer-motion';
 
 const UltraFuturisticBackground2034: React.FC = () => {
@@ -22,11 +16,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
       canvas.height = window.innerHeight;
     };
     resizeCanvas();
-<<<<<<< HEAD
-    window.addEventListener(', 'resize', 'resizeCanvas);
-=======
-    window.addEventListener('resize', resizeCanvas);
->>>>>>> origin/auto/autonomy-17186719616
 
     // Particle system
     class Particle {
@@ -46,11 +35,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
         this.vx = (Math.random() - 0.5) * 0.5;
         this.vy = (Math.random() - 0.5) * 0.5;
         this.size = Math.random() * 2 + 1;
-<<<<<<< HEAD
-        this.color = `hsl(${Math.random() * 60 + 180}70%60%)`;
-=======
-        this.color = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`;
->>>>>>> origin/auto/autonomy-17186719616
         this.alpha = Math.random() * 0.5 + 0.3;
         this.life = Math.random() * 100 + 50;
         this.maxLife = this.life;
@@ -77,11 +61,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
         ctx.globalAlpha = this.alpha * (this.life / this.maxLife);
         ctx.fillStyle = this.color;
         ctx.beginPath();
-<<<<<<< HEAD
-        ctx.arc(this.xthis.ythis.size0Math.PI * 2);
-=======
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
->>>>>>> origin/auto/autonomy-17186719616
         ctx.fill();
         ctx.restore();
       }
@@ -98,19 +77,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
       if (!ctx) return;
       
       // Clear canvas with gradient
-<<<<<<< HEAD
-      const gradient = ctx.createLinearGradient(00canvas.height);
-      gradient.addColorStop(0'rgba(00.1)');
-      gradient.addColorStop(1'rgba(00.05)');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0canvas.widthcanvas.height);
-=======
-      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.1)');
-      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.05)');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
->>>>>>> origin/auto/autonomy-17186719616
 
       // Update and draw particles
       particles.forEach(particle => {
@@ -119,11 +85,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
       });
 
       // Draw connecting lines
-<<<<<<< HEAD
-      ctx.strokeStyle = 'rgba(02550.1)';
-=======
-      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
->>>>>>> origin/auto/autonomy-17186719616
       ctx.lineWidth = 0.5;
       
       for (let i = 0; i < particles.length; i++) {
@@ -134,13 +95,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           
           if (distance < 150) {
             ctx.beginPath();
-<<<<<<< HEAD
-            ctx.moveTo(particles[i].xparticles[i].y);
-            ctx.lineTo(particles[j].xparticles[j].y);
-=======
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
->>>>>>> origin/auto/autonomy-17186719616
             ctx.stroke();
           }
         }
@@ -152,15 +106,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
     animate();
 
     return () => {
-<<<<<<< HEAD
-      window.removeEventListener(', 'resize', 'resizeCanvas);
-    };
-  }[]);
-=======
-      window.removeEventListener('resize', resizeCanvas);
-    };
-  }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -168,24 +113,12 @@ const UltraFuturisticBackground2034: React.FC = () => {
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
-<<<<<<< HEAD
-        style={{ background: 'radial-gradient(ellipse at centergba(00) 0%rgba(00.8) 100%)' }}
-=======
-        style={{ background: 'radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)' }}
->>>>>>> origin/auto/autonomy-17186719616
       />
 
       {/* Animated Grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
           backgroundImage: `
-<<<<<<< HEAD
-            linear-gradient(rgba(02550.1) 1pxtransparent 1px),
-            linear-gradient(90degrgba(02550.1) 1pxtransparent 1px)
-=======
-            linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
->>>>>>> origin/auto/autonomy-17186719616
           `,
           backgroundSize: '50px 50px'
         }} />
@@ -196,18 +129,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
         className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-full"
         animate={{
           rotate: 360,
-<<<<<<< HEAD
-          scale: [1.21],
-          opacity: [0.30.60.3]
-        }}
-        transition={{
-
-=======
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.6, 0.3]
-        }}
-        transition={{
->>>>>>> origin/auto/autonomy-17186719616
           duration: 20,
           repeat: Infinity,
           ease: "linear"
@@ -218,38 +139,15 @@ const UltraFuturisticBackground2034: React.FC = () => {
         className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 transform rotate-45"
         animate={{
           rotate: -360,
-<<<<<<< HEAD
-          scale: [1.31],
-          opacity: [0.20.50.2]
-=======
-          scale: [1, 1.3, 1],
-          opacity: [0.2, 0.5, 0.2]
->>>>>>> origin/auto/autonomy-17186719616
         }}
         transition={{
           duration: 25,
           repeat: Infinity,
           ease: "linear"
-<<<<<<< HEAD
-
-        }}
-      />
-=======
-        }}
-      />
-
->>>>>>> origin/auto/autonomy-17186719616
       <motion.div
         className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg"
         animate={{
           rotate: 360,
-<<<<<<< HEAD
-          scale: [1.41],
-          opacity: [0.40.70.4]
-=======
-          scale: [1, 1.4, 1],
-          opacity: [0.4, 0.7, 0.4]
->>>>>>> origin/auto/autonomy-17186719616
         }}
         transition={{
           duration: 18,
@@ -262,15 +160,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
       <motion.div
         className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm"
         animate={{
-<<<<<<< HEAD
-          y: [0-20],
-          scale: [1.21],
-          opacity: [0.30.80.3]
-=======
-          y: [0, -20, 0],
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.8, 0.3]
->>>>>>> origin/auto/autonomy-17186719616
         }}
         transition={{
           duration: 4,
@@ -282,15 +171,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
       <motion.div
         className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-sm"
         animate={{
-<<<<<<< HEAD
-          y: [0150],
-          scale: [1.31],
-          opacity: [0.40.90.4]
-=======
-          y: [0, 15, 0],
-          scale: [1, 1.3, 1],
-          opacity: [0.4, 0.9, 0.4]
->>>>>>> origin/auto/autonomy-17186719616
         }}
         transition={{
           duration: 5,
@@ -302,11 +182,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
 
       {/* Quantum Field Lines */}
       <div className="absolute inset-0">
-<<<<<<< HEAD
-        {[...Array(8)].map((_i) => (
-=======
-        {[...Array(8)].map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
           <motion.div
             key={i}
             className="absolute w-px h-32 bg-gradient-to-b from-transparent via-cyan-400/50 to-transparent"
@@ -315,13 +190,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
               top: '20%'
             }}
             animate={{
-<<<<<<< HEAD
-              height: [326432],
-              opacity: [0.20.60.2]
-=======
-              height: [32, 64, 32],
-              opacity: [0.2, 0.6, 0.2]
->>>>>>> origin/auto/autonomy-17186719616
             }}
             transition={{
               duration: 3 + i * 0.5,
@@ -338,13 +206,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full"
         animate={{
           rotate: 360,
-<<<<<<< HEAD
-          scale: [1.1],
-          opacity: [0.10.30.1]
-=======
-          scale: [1, 1.1, 1],
-          opacity: [0.1, 0.3, 0.1]
->>>>>>> origin/auto/autonomy-17186719616
         }}
         transition={{
           duration: 30,
@@ -357,13 +218,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-400/20 rounded-full"
         animate={{
           rotate: -360,
-<<<<<<< HEAD
-          scale: [1.21],
-          opacity: [0.150.350.15]
-=======
-          scale: [1, 1.2, 1],
-          opacity: [0.15, 0.35, 0.15]
->>>>>>> origin/auto/autonomy-17186719616
         }}
         transition={{
           duration: 25,
@@ -374,11 +228,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
 
       {/* Neural Network Nodes */}
       <div className="absolute inset-0">
-<<<<<<< HEAD
-        {[...Array(12)].map((_i) => (
-=======
-        {[...Array(12)].map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
           <motion.div
             key={i}
             className="absolute w-3 h-3 bg-green-400 rounded-full"
@@ -387,13 +236,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
               top: `${Math.random() * 100}%`
             }}
             animate={{
-<<<<<<< HEAD
-              scale: [1.51],
-              opacity: [0.30.80.3]
-=======
-              scale: [1, 1.5, 1],
-              opacity: [0.3, 0.8, 0.3]
->>>>>>> origin/auto/autonomy-17186719616
             }}
             transition={{
               duration: 2 + Math.random() * 2,
@@ -407,11 +249,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
 
       {/* Data Streams */}
       <div className="absolute inset-0 overflow-hidden">
-<<<<<<< HEAD
-        {[...Array(6)].map((_i) => (
-=======
-        {[...Array(6)].map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
           <motion.div
             key={i}
             className="absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent"
@@ -420,13 +257,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
               top: '-20px'
             }}
             animate={{
-<<<<<<< HEAD
-              y: [0window.innerHeight + 20],
-              opacity: [010]
-=======
-              y: [0, window.innerHeight + 20],
-              opacity: [0, 1, 0]
->>>>>>> origin/auto/autonomy-17186719616
             }}
             transition={{
               duration: 8 + i * 0.5,
@@ -443,15 +273,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
         className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full"
         animate={{
           boxShadow: [
-<<<<<<< HEAD
-            '0 0 10px rgba(02550.5)',
-            '0 0 30px rgba(02550.8)',
-            '0 0 10px rgba(02550.5)'
-=======
-            '0 0 10px rgba(0, 255, 255, 0.5)',
-            '0 0 30px rgba(0, 255, 255, 0.8)',
-            '0 0 10px rgba(0, 255, 255, 0.5)'
->>>>>>> origin/auto/autonomy-17186719616
           ]
         }}
         transition={{
@@ -465,22 +286,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
         className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full"
         animate={{
           boxShadow: [
-<<<<<<< HEAD
-            '0 0 10px rgba(02550.5)',
-            '0 0 30px rgba(02550.8)',
-            '0 0 10px rgba(02550.5)'
-          ]
-        }}
-        transition={{
-
-=======
-            '0 0 10px rgba(0, 255, 255, 0.5)',
-            '0 0 30px rgba(0, 255, 255, 0.8)',
-            '0 0 10px rgba(0, 255, 255, 0.5)'
-          ]
-        }}
-        transition={{
->>>>>>> origin/auto/autonomy-17186719616
           duration: 2,
           repeat: Infinity,
           ease: "easeInOut",
@@ -493,13 +298,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full"
         animate={{
           rotate: 360,
-<<<<<<< HEAD
-          scale: [1.051],
-          opacity: [0.050.150.05]
-=======
-          scale: [1, 1.05, 1],
-          opacity: [0.05, 0.15, 0.05]
->>>>>>> origin/auto/autonomy-17186719616
         }}
         transition={{
           duration: 40,
@@ -510,11 +308,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
 
       {/* AI Consciousness Waves */}
       <div className="absolute inset-0">
-<<<<<<< HEAD
-        {[...Array(5)].map((_i) => (
-=======
-        {[...Array(5)].map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
           <motion.div
             key={i}
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-pink-400/20 rounded-full"
@@ -523,13 +316,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
               height: `${200 + i * 100}px`
             }}
             animate={{
-<<<<<<< HEAD
-              scale: [0.81.20.8],
-              opacity: [0.10.30.1]
-=======
-              scale: [0.8, 1.2, 0.8],
-              opacity: [0.1, 0.3, 0.1]
->>>>>>> origin/auto/autonomy-17186719616
             }}
             transition={{
               duration: 6 + i * 0.5,

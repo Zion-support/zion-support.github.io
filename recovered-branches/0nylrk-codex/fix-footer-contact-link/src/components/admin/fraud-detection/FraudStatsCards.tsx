@@ -1,19 +1,4 @@
 
-<<<<<<< HEAD
-
-
-
-
-
-
-import {;
-  Card,;
-  CardHeader,;
-  CardTitle,;
-  CardDescription,;
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 } from "@/components/ui/card";
@@ -58,16 +43,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-
-      
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -87,16 +62,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-
-      
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -122,16 +87,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-
-      
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -157,16 +112,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-
-      
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
