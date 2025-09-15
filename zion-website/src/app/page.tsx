@@ -1,7 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c439
 import React from 'react'
 import {
   ChartBarIcon,
@@ -11,8 +16,14 @@ import {
   ShieldCheckIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> cursor/create-and-deploy-new-content-c439
 import { getLatestUpdates } from '../data/updates'
 
+<<<<<<< HEAD
 const features = [
   {
     name: 'AI-Powered Research',
@@ -134,6 +145,16 @@ import { getLatestUpdates } from '../data/updates'
 export default function HomePage() {
   return (
     <div className="bg-black">
+=======
+export default function HomePage() {
+  return (
+<<<<<<< HEAD
+    <div className="bg-black min-h-screen">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-f175
+>>>>>>> cursor/create-and-deploy-new-content-c439
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
@@ -141,12 +162,22 @@ export default function HomePage() {
             <p className="text-sm sm:text-base font-semibold text-blue-200">
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c439
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-6f13
+>>>>>>> cursor/create-and-deploy-new-content-c439
               New: Real-Time AI Analytics Dashboard v3.0 —
               <a href="/updates/real-time-ai-analytics-dashboard-v3-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">analytics dashboard</a>
               <span className="mx-2 text-blue-300/60">|</span>
@@ -154,6 +185,7 @@ export default function HomePage() {
               <a href="/updates/ai-agent-orchestration-platform-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">orchestration platform</a>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
@@ -163,6 +195,15 @@ export default function HomePage() {
               New: Real-Time Agent Cost Controller v1.0 —
               <a href="/updates/real-time-agent-cost-controller-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost controller</a>
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
+              New: AI Autonomous Workflow Engine v1.0 —
+              <a href="/updates/ai-autonomous-workflow-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">workflow engine</a>
+>>>>>>> cursor/create-and-deploy-new-content-c439
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-analytics-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">analytics launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
@@ -170,7 +211,20 @@ export default function HomePage() {
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-decision-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">decision engine</a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8472
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8472
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-6f13
+              <span className="mx-2 text-blue-300/60">|</span>
+              <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
+            </p>
+>>>>>>> cursor/create-and-deploy-new-content-c439
 <<<<<<< HEAD
 =======
 =======
@@ -662,6 +716,7 @@ export default function HomePage() {
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to transform your business?
           </h2>
@@ -678,6 +733,39 @@ export default function HomePage() {
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </a>
+=======
+<<<<<<< HEAD
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Zion Tech Group</h1>
+          <p className="mt-4 text-lg leading-8 text-gray-300">AI, automation, and secure infrastructure.</p>
+          <div className="mt-8">
+            <a href="/updates" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">See all updates →</a>
+          </div>
+        </div>
+        <div className="mx-auto mt-12 max-w-4xl">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<<<<<<< HEAD
+=======
+=======
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</h2>
+            <p className="mt-4 text-lg text-gray-300">Stay informed with our latest content and announcements</p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
+            {latest.map((item) => (
+              <article key={item.href} className="rounded-2xl bg-white/5 p-6">
+                <h3 className="text-white font-semibold"><a href={item.href}>{item.title}</a></h3>
+                <p className="mt-2 text-sm text-gray-300">{item.summary}</p>
+              </article>
+            ))}
+=======
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to transform your business?</h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Join the AI revolution and discover how our cutting-edge technology can accelerate your growth and innovation.</p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105">Get Started</a>
+            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Solutions <span aria-hidden="true">→</span></a>
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> cursor/create-and-deploy-new-content-c439
           </div>
         </div>
       </div>

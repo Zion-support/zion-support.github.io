@@ -15,6 +15,14 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f175
+>>>>>>> cursor/create-and-deploy-new-content-c439
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
@@ -75,7 +83,9 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
@@ -95,6 +105,12 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
+>>>>>>> cursor/create-and-deploy-new-content-c439
     ]
   },
 >>>>>>> 989864ad5ef118804be96b17356deb0745379eba
