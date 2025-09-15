@@ -1,26 +1,29 @@
 export default function Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
-        <p className="text-sm font-semibold text-emerald-300">Launch</p>
+      <div className="mx-auto max-w-3xl px-6 pt-28 pb-16 lg:px-8">
+        <p className="text-sm text-blue-300">Launch • 2025-09-15</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
           Autonomous Marketing Copilot v1.0
         </h1>
-        <p className="mt-4 text-lg leading-8 text-gray-300">
-          Plan, draft, and schedule multi-channel campaigns with brand-safe guardrails and live evaluation gates.
+        <p className="mt-4 text-gray-300">
+          Plan campaigns, generate assets, and auto‑schedule multi‑channel posts with policy guardrails, approval flows,
+          and live evaluation signals. Integrates with brand kits, content calendars, and analytics for closed‑loop
+          optimization.
         </p>
-        <div className="mt-10 prose prose-invert prose-a:text-blue-400">
-          <h2>What’s new</h2>
-          <ul>
-            <li>Campaign planner with briefs, assets, and timelines</li>
-            <li>Brand kits with tone and terminology guardrails</li>
-            <li>Live evals for safety, quality, and factuality</li>
-            <li>Calendar scheduling with approvals and audit trails</li>
+        <div className="mt-8 space-y-4 text-gray-300">
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Campaign planner with objectives, audiences, and budget guardrails</li>
+            <li>Asset generation for blog, video scripts, email, and social variants</li>
+            <li>Policy‑as‑code checks for claims, compliance, and brand tone</li>
+            <li>Auto‑scheduling with best‑time predictions and content calendar sync</li>
+            <li>Live evals for engagement, quality, and safety with rollback rules</li>
           </ul>
-          <h2>Why it matters</h2>
-          <p>
-            Teams ship consistent campaigns faster while maintaining governance with policy-as-code and audit-ready evidence.
-          </p>
+        </div>
+        <div className="mt-10">
+          <a href="/contact" className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-500">
+            Request a demo
+          </a>
         </div>
       </div>
     </div>
