@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
 import SEO from '../../../components/SEO';
 
 export const metadata = {
@@ -44,7 +44,7 @@ export default function AutonomousOpsPlaybook2026() {
 
           <div className="mt-8 p-6 bg-purple-50 border border-purple-200 rounded-xl">
             <p className="mb-2 font-semibold text-purple-800">Need expert help?</p>
-            <Link href="/contact" className="text-purple-700 font-semibold hover:text-purple-900">Talk to our architects →</Link>
+            <Link href="/blog/ai-2026-real-time-retrieval-architectures" className="text-purple-700 font-semibold hover:text-purple-900">Read Real-Time RAG →</Link>
           </div>
         </div>
       </section>

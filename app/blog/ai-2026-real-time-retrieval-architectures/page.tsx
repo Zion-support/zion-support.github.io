@@ -72,7 +72,7 @@ const RealTimeRetrievalArchitectures2026: React.FC = () => {
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">← Back to Blog</Link>
+              <Link href="/content/ai-2026-autonomous-ops-playbook" className="text-purple-600 font-semibold">Go to Autonomous Ops Playbook →</Link>
               <Link href="/contact" className="text-white bg-purple-600 px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Discuss RAG Architecture</Link>
             </div>
           </div>
