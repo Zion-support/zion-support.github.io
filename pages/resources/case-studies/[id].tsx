@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-
-export default function CaseStudyResourcePage() {
-  const router = useRouter(),
-  const { id } = router.query,
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -16,7 +6,6 @@ import { useRouter } from 'next/router';
 export default function CaseStudyResourcePage() {
   const router = useRouter();
   const { id } = router.query;
->>>>>>> origin/auto/autonomy-17186719616
 
   // Case studies data - this should match the data in resources.tsx
   const caseStudies = [
@@ -212,15 +201,9 @@ export default function CaseStudyResourcePage() {
         optimal performance and cost efficiency.</p>
       `
     }
-<<<<<<< HEAD
-  ],
-
-  const caseStudy = caseStudies.find(study => study.id === id),
-=======
   ];
 
   const caseStudy = caseStudies.find(study => study.id === id);
->>>>>>> origin/auto/autonomy-17186719616
 
   if (!caseStudy) {
     return (
@@ -237,11 +220,7 @@ export default function CaseStudyResourcePage() {
               </p>
               <Link 
                 href="/resources"
-<<<<<<< HEAD
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
->>>>>>> origin/auto/autonomy-17186719616
               >
                 ← Back to Resources
               </Link>
@@ -249,11 +228,7 @@ export default function CaseStudyResourcePage() {
           </main>
         </div>
       </>
-<<<<<<< HEAD
-    )
-=======
     );
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   return (
@@ -300,11 +275,7 @@ export default function CaseStudyResourcePage() {
             <div className="text-center">
               <Link 
                 href="/contact"
-<<<<<<< HEAD
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
->>>>>>> origin/auto/autonomy-17186719616
               >
                 Get Started with Your Project
               </Link>
@@ -313,9 +284,5 @@ export default function CaseStudyResourcePage() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
