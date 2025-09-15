@@ -12,7 +12,6 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
-<<<<<<< HEAD
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -47,39 +46,12 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     excerpt:
       'A pragmatic framework for dual-layer governance blending automated policy engines with human oversight for AI systems at scale.',
     category: 'AI Governance',
-=======
-  'agent-safety-guardrails-2025': {
-    id: 'agent-safety-guardrails-2025',
-    title: 'Agent Safety Guardrails: Designing Trustworthy Autonomous Systems in 2025',
-    excerpt:
-      'Practical blueprints for policy engines, intervention strategies, and auditable controls that keep autonomous agents safe and aligned.',
-    category: 'AI Solutions',
->>>>>>> cursor/create-and-deploy-new-content-4789
     author: 'Dr. Emily Watson',
     date: '2025-09-15',
-    readTime: '8 min read',
+    readTime: '9 min read',
     content: [
-<<<<<<< HEAD
       'Enterprises adopting autonomous AI need governance beyond static checklists. Dual-layer policy couples machine-enforceable rules with human exception paths.',
       'This blueprint outlines roles, policy grammars, escalation thresholds, and audit trails. It includes a rollout sequence and measurable safety KPIs.'
-    ]
-  },
-  'edge-ai-marketplaces': {
-    id: 'edge-ai-marketplaces',
-    title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
-    excerpt:
-      'Designing and operating marketplaces where agents negotiate and transact at the edge for speed, privacy, and resilience.',
-    category: 'AI Solutions',
-    author: 'Michael Rodriguez',
-    date: '2025-09-14',
-    readTime: '7 min read',
-    content: [
-      'Edge-native marketplaces reduce round trips and keep sensitive data local while enabling autonomous negotiation and fulfillment.',
-      'We cover reference topologies, event buses, local policy enforcement, and synchronization with cloud systems for compliance and analytics.'
-=======
-      'As autonomous agents take on higher-stakes actions, safety guardrails must be first-class citizens in system design. Organizations need layered defenses that combine policy engines, runtime monitors, and human-in-the-loop approvals for sensitive operations.',
-      'We present a reference architecture: (1) capability declarations and allowlists, (2) contextual policy checks with verifiable logs, (3) graded interventions from soft prompts to hard blocks, and (4) incident review loops to improve future behavior.',
-      'This article includes example policies, red-team scenarios, and rollout guidance to incrementally raise autonomy while preserving control and accountability.'
     ]
   },
   'edge-ai-agents-2025': {
@@ -95,7 +67,6 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Edge AI agents unlock sub-second inference and decision-making where data is produced. This reduces bandwidth costs, preserves privacy, and increases resilience when connectivity is limited.',
       'We outline deployment patterns using containerized runtimes, model compression, and event-driven synchronization with the cloud. Observability and policy propagation are covered to ensure safe, consistent behavior across fleets.',
       'Use cases include smart facilities, industrial inspection, retail analytics, and on-site incident response with autonomous remediation.'
->>>>>>> cursor/create-and-deploy-new-content-4789
     ]
   },
   'sovereign-ai-commerce-2025': {
@@ -112,7 +83,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'In this guide, we outline a phased approach: start with identity and governance, introduce autonomous listing and matching, then activate treasury and incentive policies. Each phase is measurable and reversible, ensuring safe rollout.',
       'Key building blocks include: DID-backed identity, reputation scoring, policy engines, event-driven orchestration, and human-in-the-loop controls for sensitive actions.',
       'Outcomes: reduced operational cost, higher market liquidity, and more resilient ecosystems that adapt in real time to participant behavior and external signals.'
-    ],
+    ]
   },
   'quantum-risk-modeling-2025': {
     id: 'quantum-risk-modeling-2025',
@@ -188,7 +159,7 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'We propose task archetypes, gold standards, evaluation rubrics, and cost models to compare tools apples-to-apples.',
       'The framework enables portfolio-level governance and investment decisions grounded in observable outcomes.'
     ]
-  },
+  }
 };
 
 export function generateStaticParams() {
