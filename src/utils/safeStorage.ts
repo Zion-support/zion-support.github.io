@@ -1,4 +1,4 @@
-=======
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 export const safeStorage = {
   // Safe localStorage operations
   localStorage: {
@@ -99,9 +99,6 @@ export const safeStorage = {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     }
   }
 };

@@ -96,11 +96,32 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
               <p className="text-sm opacity-90">{demo.description}</p>
             </button>
           ))}
-=======
->>>>>>> 709d0e34847ccad77744e97e46c13451bbabdb84
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
+=======
+  const [activeDemo, setActiveDemo] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+        {/* Active Demo Display */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12">
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Demo Info */}
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-4">
+                {demos[activeDemo].title}
+              </h2>
+              <p className="text-gray-300 mb-6">
+                {demos[activeDemo].description}
+              </p>
+              
+              <div className="space-y-3 mb-8">
+                {demos[activeDemo].features.map((featureindex) => (
+                  <div key={index} className="flex items-center text-gray-300">
+                    <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
+                    {feature}
+                  </div>
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
                 ))}
               </div>
 
@@ -166,11 +187,11 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
                 </button>
                 <button className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white/20 transition-all duration-300 font-semibold border border-white/30">
                   📊 View Details
+>>>>>>> 709d0e34847ccad77744e97e46c13451bbabdb84
 =======
                   <RotateCcw className="h-5 w-5 mr-2" />
                   Reset
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 709d0e34847ccad77744e97e46c13451bbabdb84
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
                 </button>
               </div>
             </div>
@@ -231,10 +252,10 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
                   </div>
                 </div>
               </div>
+>>>>>>> 709d0e34847ccad77744e97e46c13451bbabdb84
 =======
               )}
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 709d0e34847ccad77744e97e46c13451bbabdb84
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
             </div>
           </div>
         </div>

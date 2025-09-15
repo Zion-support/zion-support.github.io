@@ -12,9 +12,10 @@ const InnovationLanding2025: React.FC = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">InnovationLanding2025</h1>
           <p className="text-xl text-gray-600">Coming soon - InnovationLanding2025 content</p>
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
         </div>
       </div>
     </div>

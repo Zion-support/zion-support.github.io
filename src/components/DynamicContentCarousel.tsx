@@ -1,7 +1,55 @@
 import React, { useState, useEffect } from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+=======
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      id: 1,
+      title: "Consciousness AI Revolution",
+      description: "Experience AI systems that possess genuine consciousness, self-awareness, and emotional intelligence",
+      image: "🧠",
+      link: "/pages/ConsciousnessAI2026",
+      gradient: "from-indigo-600 to-purple-600",
+      bgGradient: "from-indigo-600/30 to-purple-600/30"
+    },
+    {
+      id: 2,
+      title: "Quantum Internet",
+      description: "Instantaneous, secure global communication through quantum entanglement networks",
+      image: "🌐",
+      link: "/pages/QuantumInternet2026",
+      gradient: "from-cyan-600 to-blue-600",
+      bgGradient: "from-cyan-600/30 to-blue-600/30"
+    },
+    {
+      id: 3,
+      title: "Meta Intelligence",
+      description: "AI systems that think about thinking and continuously improve themselves",
+      image: "🔄",
+      link: "/pages/MetaIntelligence2026",
+      gradient: "from-purple-600 to-pink-600",
+      bgGradient: "from-purple-600/30 to-pink-600/30"
+    },
+    {
+      id: 4,
+      title: "Synthetic Intelligence",
+      description: "Self-evolving AI systems that transcend traditional limitations and create new forms of intelligence",
+      image: "🤖",
+      link: "/pages/SyntheticIntelligence2026",
+      gradient: "from-emerald-600 to-teal-600",
+      bgGradient: "from-emerald-600/30 to-teal-600/30"
+    },
+    {
+      id: 5,
+      title: "Quantum-Neural Fusion",
+      description: "The revolutionary convergence of quantum computing and neural networks",
+      image: "⚛️",
+      link: "/pages/QuantumNeuralFusion2026",
+      gradient: "from-blue-600 to-indigo-600",
+      bgGradient: "from-blue-600/30 to-indigo-600/30"
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
     }
   ];
 
@@ -83,63 +131,6 @@ const DynamicContentCarousel: React.FC = () => {
                 index === currentSlide ? 'bg-white' : 'bg-white/30'
               }`}
             />
-=======
-    if (!isAutoPlaying) return;
-    
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, contentItems.length]);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + contentItems.length) % contentItems.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  const currentItem = contentItems[currentIndex];
-
-  return (
-    <div className="relative bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 overflow-hidden">
-      {/* Carousel Container */}
-      <div className="relative h-96 overflow-hidden rounded-xl">
-        {/* Main Content */}
-        <div 
-          className="flex transition-transform duration-500 ease-in-out h-full"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {contentItems.map((item, index) => (
-            <div
-              key={item.id}
-              className="w-full flex-shrink-0 h-full relative"
-            >
-              <div className={`bg-gradient-to-br ${item.gradient} h-full rounded-xl flex items-center justify-center text-white relative overflow-hidden`}>
-                {/* Background Pattern */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-                
-                <div className="relative z-10 text-center max-w-4xl mx-auto px-8">
-                  <div className="text-8xl mb-6 animate-bounce">{item.icon}</div>
-                  <h3 className="text-4xl font-bold mb-6">{item.title}</h3>
-                  <p className="text-xl opacity-90 mb-8">{item.description}</p>
-                  <a
-                    href={item.link}
-                    className="inline-block bg-white text-gray-800 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg"
-                  >
-                    Explore {item.title.split(' ')[0]} →
-                  </a>
-                </div>
-              </div>
-            </div>
->>>>>>> cursor/create-and-deploy-new-content-f977
           ))}
         </div>
 

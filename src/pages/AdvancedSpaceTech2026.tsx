@@ -1,22 +1,8 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AdvancedSpaceTech2026: React.FC = () => {
   return (
-            </ul>
-          </div>
-        </div>
-
-                </div>
-              </div>
-            </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
           </div>
         </div>
       </div>

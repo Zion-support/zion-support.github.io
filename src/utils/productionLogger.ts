@@ -1,10 +1,8 @@
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -16,8 +14,7 @@ const LOG_LEVELS: LogLevel = {
   ERROR: 'error',
   WARN: 'warn',
   INFO: 'info',
-    }
-  }
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
@@ -145,8 +142,3 @@ const productionLogger = new ProductionLogger();
 }
 
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
-}
-
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c

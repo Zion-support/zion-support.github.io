@@ -1,4 +1,96 @@
 <<<<<<< HEAD
+import React from 'react';
+
+const AdvancedSEOOptimizer = () => {
+  const seoData = {
+    title: "Zion Tech Group - AI & Technology Solutions | Enterprise AI Automation",
+    description: "Transform your business with cutting-edge AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting with 340% average ROI increase. Get started today!",
+    keywords: [
+      "AI automation",
+      "artificial intelligence consulting",
+      "enterprise AI solutions",
+      "cloud infrastructure",
+      "micro SaaS development",
+      "business transformation",
+      "AI implementation",
+      "machine learning consulting",
+      "digital transformation",
+      "AI ROI calculator",
+      "neural networks",
+      "quantum computing",
+      "AI case studies",
+      "business intelligence",
+      "AI tools",
+      "automation solutions",
+      "AI consulting services",
+      "technology consulting",
+      "AI strategy",
+      "enterprise solutions"
+    ],
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "description": "Leading AI and technology consulting firm specializing in enterprise automation, cloud infrastructure, and micro SaaS solutions",
+      "url": "https://zion.app",
+      "logo": "https://zion.app/images/zion-tech-group-logo.png",
+      "foundingDate": "2016",
+      "numberOfEmployees": "50-100",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-ZION-TECH",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://twitter.com/ZionTechGroup",
+        "https://linkedin.com/company/zion-tech-group",
+        "https://github.com/zion-tech-group"
+      ],
+      "service": [
+        {
+          "@type": "Service",
+          "name": "AI Automation Consulting",
+          "description": "Comprehensive AI automation solutions for enterprise operations"
+        },
+        {
+          "@type": "Service",
+          "name": "Cloud Infrastructure",
+          "description": "Scalable cloud solutions for business growth and digital transformation"
+        },
+        {
+          "@type": "Service",
+          "name": "Micro SaaS Development",
+          "description": "Custom micro SaaS applications for specific business challenges"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    openGraph: {
+      title: "Zion Tech Group - AI & Technology Solutions | Enterprise AI Automation",
+      description: "Transform your business with cutting-edge AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting with 340% average ROI increase.",
+      type: "website",
+      url: "https://zion.app",
+      image: "https://zion.app/images/og-image.jpg",
+      siteName: "Zion Tech Group"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Zion Tech Group - AI & Technology Solutions",
+      description: "Transform your business with cutting-edge AI automation and technology solutions. 340% average ROI increase.",
+      image: "https://zion.app/images/twitter-card.jpg"
+    }
+=======
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -216,217 +308,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     twitterDescription: twitterDescription || description,
     twitterImage: twitterImage || ogImage,
     canonical: canonical || currentUrl,
-=======
-import React from 'react';
-
-const AdvancedSEOOptimizer = () => {
-  const seoData = {
-    title: "Zion Tech Group - AI & Technology Solutions | Enterprise AI Automation",
-    description: "Transform your business with cutting-edge AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting with 340% average ROI increase. Get started today!",
-    keywords: [
-      "AI automation",
-      "artificial intelligence consulting",
-      "enterprise AI solutions",
-      "cloud infrastructure",
-      "micro SaaS development",
-      "business transformation",
-      "AI implementation",
-      "machine learning consulting",
-      "digital transformation",
-      "AI ROI calculator",
-      "neural networks",
-      "quantum computing",
-      "AI case studies",
-      "business intelligence",
-      "AI tools",
-      "automation solutions",
-      "AI consulting services",
-      "technology consulting",
-      "AI strategy",
-      "enterprise solutions"
-    ],
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": "Leading AI and technology consulting firm specializing in enterprise automation, cloud infrastructure, and micro SaaS solutions",
-      "url": "https://zion.app",
-      "logo": "https://zion.app/images/zion-tech-group-logo.png",
-      "foundingDate": "2016",
-      "numberOfEmployees": "50-100",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "US"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-555-ZION-TECH",
-        "contactType": "customer service",
-        "availableLanguage": "English"
-      },
-      "sameAs": [
-        "https://twitter.com/ZionTechGroup",
-        "https://linkedin.com/company/zion-tech-group",
-        "https://github.com/zion-tech-group"
-      ],
-      "service": [
-        {
-          "@type": "Service",
-          "name": "AI Automation Consulting",
-          "description": "Comprehensive AI automation solutions for enterprise operations"
-        },
-        {
-          "@type": "Service",
-          "name": "Cloud Infrastructure",
-          "description": "Scalable cloud solutions for business growth and digital transformation"
-        },
-        {
-          "@type": "Service",
-          "name": "Micro SaaS Development",
-          "description": "Custom micro SaaS applications for specific business challenges"
-        }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "150",
-        "bestRating": "5",
-        "worstRating": "1"
-      }
-    },
-    openGraph: {
-      title: "Zion Tech Group - AI & Technology Solutions | Enterprise AI Automation",
-      description: "Transform your business with cutting-edge AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting with 340% average ROI increase.",
-      type: "website",
-      url: "https://zion.app",
-      image: "https://zion.app/images/og-image.jpg",
-      siteName: "Zion Tech Group"
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "Zion Tech Group - AI & Technology Solutions",
-      description: "Transform your business with cutting-edge AI automation and technology solutions. 340% average ROI increase.",
-      image: "https://zion.app/images/twitter-card.jpg"
-    }
->>>>>>> cursor/create-and-deploy-new-content-abae
+>>>>>>> cursor/create-and-deploy-new-content-7857
   };
 
   return (
     <>
 <<<<<<< HEAD
-      <Helmet>
-        {/* Basic Meta Tags */}
-        <title>{finalSEO.title}</title>
-        <meta name="description" content={finalSEO.description} />
-        <meta name="keywords" content={finalSEO.keywords?.join(', ')} />
-        <meta name="author" content={author} />
-        <meta name="robots" content={robots} />
-        <meta name="viewport" content={viewport} />
-        <meta name="theme-color" content={themeColor} />
-        
-        {/* Canonical URL */}
-        {finalSEO.canonical && <link rel="canonical" href={finalSEO.canonical} />}
-        
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={finalSEO.ogTitle} />
-        <meta property="og:description" content={finalSEO.ogDescription} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content={ogType} />
-        <meta property="og:url" content={finalSEO.ogUrl} />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        <meta property="og:locale" content="en_US" />
-        
-        {/* Article specific Open Graph tags */}
-        {pageType === 'article' && publishedTime && (
-          <meta property="article:published_time" content={publishedTime} />
-        )}
-        {pageType === 'article' && modifiedTime && (
-          <meta property="article:modified_time" content={modifiedTime} />
-        )}
-        {pageType === 'article' && category && (
-          <meta property="article:section" content={category} />
-        )}
-        {pageType === 'article' && tags.map((tag, index) => (
-          <meta key={index} property="article:tag" content={tag} />
-        ))}
-        
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={finalSEO.twitterTitle} />
-        <meta name="twitter:description" content={finalSEO.twitterDescription} />
-        <meta name="twitter:image" content={finalSEO.twitterImage} />
-        <meta name="twitter:site" content={twitterSite} />
-        <meta name="twitter:creator" content={twitterCreator} />
-        
-        {/* Icons */}
-        <link rel="icon" href={favicon} />
-        <link rel="apple-touch-icon" href={appleTouchIcon} />
-        
-        {/* Alternate Languages */}
-        {alternateLanguages.map((lang, index) => (
-          <link key={index} rel="alternate" hrefLang={lang.hreflang} href={lang.href} />
-        ))}
-        
-        {/* Additional Meta Tags for Better SEO */}
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Zion Tech" />
-        
-        {/* Preconnect to external domains for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="//www.google-analytics.com" />
-        
-        {/* Structured Data */}
-        {generateStructuredData().map((data, index) => (
-          <script key={index} type="application/ld+json">
-            {JSON.stringify(data)}
-          </script>
-        ))}
-        
-        {/* Additional Performance and Security Headers */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-        
-        {/* Content Security Policy */}
-        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;" />
-        
-        {/* Geo Location */}
-        <meta name="geo.region" content="US-CA" />
-        <meta name="geo.placename" content="Silicon Valley" />
-        
-        {/* Business/Industry specific meta tags */}
-        <meta name="industry" content="Technology" />
-        <meta name="coverage" content="Worldwide" />
-        <meta name="distribution" content="Global" />
-        <meta name="rating" content="General" />
-        
-        {/* Rich Snippets Support */}
-        <meta name="application-name" content="Zion Tech Group" />
-        <meta name="msapplication-TileColor" content={themeColor} />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
-        
-        {/* Manifest for PWA */}
-        <link rel="manifest" href="/manifest.json" />
-      </Helmet>
-      
-      {children}
-      
-      {/* SEO Debug Info (only in development) */}
-      {process.env.NODE_ENV === 'development' && (
-        <div style={{ display: 'none' }}>
-          <div data-seo-title={finalSEO.title} />
-          <div data-seo-description={finalSEO.description} />
-          <div data-seo-keywords={finalSEO.keywords?.join(', ')} />
-          <div data-seo-canonical={finalSEO.canonical} />
-          <div data-seo-og-image={ogImage} />
-        </div>
-      )}
-=======
       {/* Enhanced Meta Tags */}
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
@@ -576,7 +463,120 @@ const AdvancedSEOOptimizer = () => {
           })
         }}
       />
->>>>>>> cursor/create-and-deploy-new-content-abae
+=======
+      <Helmet>
+        {/* Basic Meta Tags */}
+        <title>{finalSEO.title}</title>
+        <meta name="description" content={finalSEO.description} />
+        <meta name="keywords" content={finalSEO.keywords?.join(', ')} />
+        <meta name="author" content={author} />
+        <meta name="robots" content={robots} />
+        <meta name="viewport" content={viewport} />
+        <meta name="theme-color" content={themeColor} />
+        
+        {/* Canonical URL */}
+        {finalSEO.canonical && <link rel="canonical" href={finalSEO.canonical} />}
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content={finalSEO.ogTitle} />
+        <meta property="og:description" content={finalSEO.ogDescription} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:type" content={ogType} />
+        <meta property="og:url" content={finalSEO.ogUrl} />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Article specific Open Graph tags */}
+        {pageType === 'article' && publishedTime && (
+          <meta property="article:published_time" content={publishedTime} />
+        )}
+        {pageType === 'article' && modifiedTime && (
+          <meta property="article:modified_time" content={modifiedTime} />
+        )}
+        {pageType === 'article' && category && (
+          <meta property="article:section" content={category} />
+        )}
+        {pageType === 'article' && tags.map((tag, index) => (
+          <meta key={index} property="article:tag" content={tag} />
+        ))}
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content={twitterCard} />
+        <meta name="twitter:title" content={finalSEO.twitterTitle} />
+        <meta name="twitter:description" content={finalSEO.twitterDescription} />
+        <meta name="twitter:image" content={finalSEO.twitterImage} />
+        <meta name="twitter:site" content={twitterSite} />
+        <meta name="twitter:creator" content={twitterCreator} />
+        
+        {/* Icons */}
+        <link rel="icon" href={favicon} />
+        <link rel="apple-touch-icon" href={appleTouchIcon} />
+        
+        {/* Alternate Languages */}
+        {alternateLanguages.map((lang, index) => (
+          <link key={index} rel="alternate" hrefLang={lang.hreflang} href={lang.href} />
+        ))}
+        
+        {/* Additional Meta Tags for Better SEO */}
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Zion Tech" />
+        
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        
+        {/* Structured Data */}
+        {generateStructuredData().map((data, index) => (
+          <script key={index} type="application/ld+json">
+            {JSON.stringify(data)}
+          </script>
+        ))}
+        
+        {/* Additional Performance and Security Headers */}
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="X-Frame-Options" content="DENY" />
+        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+        <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+        
+        {/* Content Security Policy */}
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;" />
+        
+        {/* Geo Location */}
+        <meta name="geo.region" content="US-CA" />
+        <meta name="geo.placename" content="Silicon Valley" />
+        
+        {/* Business/Industry specific meta tags */}
+        <meta name="industry" content="Technology" />
+        <meta name="coverage" content="Worldwide" />
+        <meta name="distribution" content="Global" />
+        <meta name="rating" content="General" />
+        
+        {/* Rich Snippets Support */}
+        <meta name="application-name" content="Zion Tech Group" />
+        <meta name="msapplication-TileColor" content={themeColor} />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        
+        {/* Manifest for PWA */}
+        <link rel="manifest" href="/manifest.json" />
+      </Helmet>
+      
+      {children}
+      
+      {/* SEO Debug Info (only in development) */}
+      {process.env.NODE_ENV === 'development' && (
+        <div style={{ display: 'none' }}>
+          <div data-seo-title={finalSEO.title} />
+          <div data-seo-description={finalSEO.description} />
+          <div data-seo-keywords={finalSEO.keywords?.join(', ')} />
+          <div data-seo-canonical={finalSEO.canonical} />
+          <div data-seo-og-image={ogImage} />
+        </div>
+      )}
+>>>>>>> cursor/create-and-deploy-new-content-7857
     </>
   );
 };

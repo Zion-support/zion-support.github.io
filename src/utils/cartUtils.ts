@@ -1,3 +1,4 @@
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 /**
  * Cart utility functions for managing shopping cart operations
@@ -9,9 +10,6 @@
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 export interface CartItem {
   id: string;
   name: string;
@@ -28,14 +26,11 @@ export interface Cart {
   itemCount: number;
 }
 
-export const cartUtils = {
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     const existingItem = cart.items.find(cartItem => cartItem.id === item.id);
     
     if (existingItem) {
@@ -46,6 +41,7 @@ export const cartUtils = {
       const newItem: CartItem = { ...item, quantity: 1 };
       const newItems = [...cart.items, newItem];
       return cartUtils.calculateTotals({ ...cart, items: newItems });
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
     items: [],
     total: 0,
     itemCount: 0,
@@ -58,23 +54,19 @@ export const cartUtils = {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     }
   },
 
   // Remove item from cart
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     const newItems = cart.items.filter(item => item.id !== itemId);
     return cartUtils.calculateTotals({ ...cart, items: newItems });
   },
 
   // Update item quantity
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
     }
@@ -104,9 +96,6 @@ export function calculateCartTotals(cart: Cart): Cart {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
     }
@@ -119,17 +108,16 @@ export function calculateCartTotals(cart: Cart): Cart {
   },
 
   // Calculate totals
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
     
     return {
       ...cart,
       total: Math.round(total * 100) / 100, // Round to 2 decimal places
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
   return {
     ...cart,
@@ -155,26 +143,22 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
   }
 
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     };
   },
 
   // Clear cart
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
 =======
     };
   },
 
   // Clear cart
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     return cart.items.some(item => item.id === itemId);
   },
 
   // Get cart summary
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
     return {
       cart,
       isValid: false,
@@ -379,7 +363,3 @@ export default cartUtils;
 =======
 export default cartUtils;
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
-export default cartUtils;
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c

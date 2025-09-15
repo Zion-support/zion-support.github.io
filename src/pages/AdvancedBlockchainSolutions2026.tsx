@@ -91,15 +91,10 @@ const AdvancedBlockchainSolutions2026: React.FC = () => {
                   Learn More
                 </button>
               </div>
-=======
               <div className="text-5xl font-bold text-orange-400 mb-2">$0</div>
               <div className="text-white font-semibold mb-1">Transaction Fees</div>
               <div className="text-gray-400 text-sm">Zero-cost transactions</div>
->>>>>>> cursor/create-and-deploy-new-content-c336
-=======
->>>>>>> 3d1201ff466e0a9c82bed2da7dd3df054f828ce6
             </div>
-=======
 
 const AdvancedBlockchainSolutions2026: React.FC = () => {
   return (
@@ -203,7 +198,6 @@ const AdvancedBlockchainSolutions2026: React.FC = () => {
               <li>• Voting mechanisms</li>
               <li>• Proposal systems</li>
             </ul>
->>>>>>> cursor/create-and-deploy-new-content-f977
           </div>
         </div>
 
@@ -309,7 +303,6 @@ const AdvancedBlockchainSolutions2026: React.FC = () => {
         </div>
       </div>
     </>
-=======
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl mb-4">⚡</div>
@@ -351,8 +344,6 @@ const AdvancedBlockchainSolutions2026: React.FC = () => {
         </div>
       </div>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
   );
 };
 

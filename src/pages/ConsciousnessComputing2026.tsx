@@ -150,7 +150,6 @@ const ConsciousnessComputing2026: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-=======
           <div className="bg-gradient-to-r from-pink-600/20 to-violet-600/20 backdrop-blur-sm rounded-2xl p-12 border border-pink-400/30">
             <h2 className="text-4xl font-bold mb-6">Experience True AI Consciousness</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -165,7 +164,6 @@ const ConsciousnessComputing2026: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-f977
         </div>
       </div>
     </div>

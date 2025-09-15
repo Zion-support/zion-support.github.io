@@ -1,19 +1,3 @@
-
-const NewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubscribed(true);
-    setIsLoading(false);
-    setEmail('');
 "use client";
 import React{ useState } from 'react';
 
@@ -38,9 +22,9 @@ export default function NewsletterSignup({ variant = ', 'default', 'className = 
     setIsSubmitting(false);
     setEmail(', ');
 =======
->>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
-=======
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+=======
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
   };
 
   if (isSubscribed) {
@@ -114,21 +98,6 @@ export default function NewsletterSignup({ variant = ', 'default', 'className = 
             </button>
           </form>
         </div>
-=======
-      <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-center">
-        <div className="text-4xl mb-4">🎉</div>
-        <h3 className="text-2xl font-bold text-white mb-3">Welcome to the Future!</h3>
-        <p className="text-green-100 mb-4">
-          You're now subscribed to our revolutionary content updates. 
-          Get ready for exclusive access to breakthrough technologies.
-        </p>
-        <button
-          onClick={() => setIsSubscribed(false)}
-          className="text-green-200 hover:text-white underline"
-        >
-          Subscribe another email
-        </button>
->>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
       </div>
     );
   }
@@ -140,27 +109,24 @@ export default function NewsletterSignup({ variant = ', 'default', 'className = 
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
 =======
-            className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+=======
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
           />
-          <button
-            type="submit"
-            disabled={isLoading}
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {isLoading ? 'Subscribing...' : 'Subscribe Now'}
-          </button>
         </div>
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50"
+        >
+          {isSubmitting ? 'Subscribing...' : 'Subscribe Free'}
+        </button>
+        <p className="text-xs text-gray-500 mt-3 text-center">
+          No spam. Unsubscribe anytime. We respect your privacy.
+        </p>
       </form>
-      
-      <p className="text-purple-200 text-sm mt-4">
-        Join 10,000+ innovators already subscribed • No spam, ever • Unsubscribe anytime
-      </p>
     </div>
   );
-};
-
-export default NewsletterSignup;
->>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+}
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915

@@ -164,7 +164,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
               >
             </div>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           </div>
         </div>
 

@@ -1,4 +1,22 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+<<<<<<< HEAD
+// Notification utilities
+interface NotificationOptions {
+=======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 /**
  * Notification utility for handling browser notifications
  * with fallbacks and error handling
@@ -9,17 +27,78 @@ export interface NotificationOptions {
 interface NotificationOptions {
 // Notification utilities
 interface NotificationOptions {
+<<<<<<< HEAD
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
->>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+<<<<<<< HEAD
+  data?: any;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   requireInteraction?: boolean;
   silent?: boolean;
+  timestamp?: number;
+  actions?: NotificationAction[];
+}
+
+}
+
+class NotificationManager {
+  private permission: NotificationPermission = 'default';
+
+  }
+
+  async showNotification(options: NotificationOptions): Promise<Notification | null> {
+    if (!('Notification' in window)) {
+      console.warn('This browser does not support notifications');
+      return null;
+    }
+
+    if (this.permission !== 'granted') {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      this.permission = await this.requestPermission();
+      if (this.permission !== 'granted') {
+        console.warn('Notification permission denied');
+        return null;
+      }
+=======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
+  requireInteraction?: boolean;
+  silent?: boolean;
   vibrate?: number[];
 }
 
@@ -70,32 +149,24 @@ export const notifications = {
   data?: any;
   requireInteraction?: boolean;
   silent?: boolean;
-=======
->>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
   timestamp?: number;
   actions?: NotificationAction[];
 }
 
-<<<<<<< HEAD
 interface NotificationAction {
   action: string;
   title: string;
   icon?: string;
-=======
->>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
 }
 
 class NotificationManager {
   private permission: NotificationPermission = 'default';
 
-<<<<<<< HEAD
   async requestPermission(): Promise<NotificationPermission> {
     if ('Notification' in window) {
       this.permission = await Notification.requestPermission();
     }
     return this.permission;
-=======
->>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
   }
 
   async showNotification(options: NotificationOptions): Promise<Notification | null> {
@@ -105,15 +176,28 @@ class NotificationManager {
     }
 
     if (this.permission !== 'granted') {
-<<<<<<< HEAD
       this.permission = await this.requestPermission();
       if (this.permission !== 'granted') {
         console.warn('Notification permission denied');
         return null;
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> main
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
->>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
     }
 
     try {
@@ -123,6 +207,29 @@ class NotificationManager {
         badge: options.badge,
         tag: options.tag,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        requireInteraction: options.requireInteraction || false,
+        silent: options.silent || false,
+        timestamp: options.timestamp || Date.now(),
+        actions: options.actions
+=======
+<<<<<<< HEAD
+        requireInteraction: options.requireInteraction || false,
+        silent: options.silent || false,
+        vibrate: options.vibrate
+=======
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
         data: options.data,
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
@@ -131,9 +238,25 @@ class NotificationManager {
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         vibrate: options.vibrate
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> main
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
->>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -146,6 +269,47 @@ class NotificationManager {
       return notification;
     } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
+      console.error('Error showing notification:', error);
+      return null;
+    }
+  }
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  showSuccess(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/success.png',
+      tag: 'success',
+    });
+  }
+
+  showError(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+=======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       console.warn('Failed to show notification:', error);
       return null;
     }
@@ -168,14 +332,11 @@ class NotificationManager {
    */
   error: (title: string, body?: string): Notification | null => {
     return notifications.show({
-=======
->>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
       console.error('Error showing notification:', error);
       return null;
     }
   }
 
-<<<<<<< HEAD
   showSuccess(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
@@ -187,13 +348,61 @@ class NotificationManager {
 
   showError(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
+<<<<<<< HEAD
 =======
->>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
+<<<<<<< HEAD
+      requireInteraction: true,
+    });
+  }
+
+  showInfo(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/info.png',
+      tag: 'info',
+    });
+  }
+
+  showWarning(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/warning.png',
+      tag: 'warning',
+    });
+  }
+}
+
+export const notificationManager = new NotificationManager();
+export default notificationManager;
+=======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       requireInteraction: true
     });
   },
@@ -249,6 +458,20 @@ export default notifications;
 
 export const notificationManager = new NotificationManager();
 export default notificationManager;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> main
+=======
+export default notificationManager;
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
->>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
