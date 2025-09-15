@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: AI Content Studio 2.1',
+    summary:
+      'Refinements to workflows, new templates, and 20% faster asset generation for teams.',
+    href: '/updates/ai-content-studio-2-1',
+    date: '2025-09-15',
+    tag: 'Product'
+  },
+  {
+    title: 'Guide: Production RAG Evals Starter Pack',
+    summary:
+      'Ready-to-run eval suites, rubrics, and canary tests to ship reliable RAG systems.',
+    href: '/updates/production-rag-evals-starter-pack',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: State of AI Governance 2026 (Preview)',
+    summary:
+      'Key findings on policy-as-code adoption, auditability, and enterprise readiness.',
+    href: '/updates/state-of-ai-governance-2026-preview',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
     title: 'Guide: Real-Time Evals Starter Kit',
     summary:
       'A practical starter kit with metrics, harnesses, and examples to begin live evaluation in production.',

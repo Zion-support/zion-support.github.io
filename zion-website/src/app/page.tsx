@@ -106,6 +106,27 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
+                href="/updates/ai-content-studio-2-1"
+                className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
+              >
+                Launch: AI Content Studio 2.1
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/production-rag-evals-starter-pack"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                Guide: Production RAG Evals Pack
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/state-of-ai-governance-2026-preview"
+                className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
+              >
+                Report: AI Governance 2026 Preview
+                <span aria-hidden>→</span>
+              </a>
+              <a
                 href="/updates/autonomous-ops-control-center-2-0"
                 className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
               >
