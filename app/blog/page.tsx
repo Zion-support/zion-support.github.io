@@ -14,6 +14,15 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2025: Autonomous Analytics Blueprint",
+      description: "Architect self-directed analytics that monitor signals, generate hypotheses, and trigger actions—beyond manual dashboards.",
+      slug: "ai-2025-autonomous-analytics-blueprint",
+      category: "Analytics",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/autonomous-analytics-2025.jpg"
+    },
+    {
       title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
       description: "Discover how generative AI is transforming enterprise operations in 2025, delivering unprecedented automation, creativity, and efficiency gains across all business functions.",
       slug: "ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough",
