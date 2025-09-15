@@ -1,30 +1,12 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-=======
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
->>>>>>> origin/auto/autonomy-17186719616
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-<<<<<<< HEAD
-  TooltipTrigger} from "@/components/ui/tooltip",
-import { useToast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-
-export function OnChainExport() {
-  const [isConnected, setIsConnected] = useState(false),
-  const [isExporting, setIsExporting] = useState(false),
-  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
-  const { toast } = useToast(),
-  const { user } = useAuth(),
-=======
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useToast } from "@/hooks/use-toast";
@@ -36,42 +18,16 @@ export function OnChainExport() {
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
   const { toast } = useToast();
   const { user } = useAuth();
->>>>>>> origin/auto/autonomy-17186719616
   
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
-<<<<<<< HEAD
-      const ethereum = (window as any).ethereum,
-=======
       const ethereum = (window as any).ethereum;
->>>>>>> origin/auto/autonomy-17186719616
       if (!ethereum) {
         toast({
           title: "Wallet not detected",
           description: "Please install MetaMask or another Ethereum wallet to use this feature",
           variant: "destructive"
-<<<<<<< HEAD
-        }),
-        return,
-      }
-      
-      // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
-      const address = accounts[0],
-      
-      // Sign message to verify ownership
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
-      await ethereum.request({
-        method: 'personal_sign',
-        params: [address, message]
-      }),
-      
-      setIsConnected(true),
-      toast({
-        title: "Wallet connected",
-        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`}),
-=======
         });
         return;
       }
@@ -92,32 +48,11 @@ export function OnChainExport() {
         title: "Wallet connected",
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
       });
->>>>>>> origin/auto/autonomy-17186719616
     } catch (error: any) {
       toast({
         title: "Connection failed",
         description: error.message || "Could not connect to wallet",
         variant: "destructive"
-<<<<<<< HEAD
-      }),
-    }
-  },
-  
-  const handleExportTokens = async () => {
-    setIsExporting(true),
-    setExportStatus('processing'),
-    
-    try {
-      // Simulate token export
-      await new Promise(resolve => setTimeout(resolve, 2000)),
-      
-      setExportStatus('success'),
-      toast({
-        title: "Tokens exported",
-        description: "Your ZION$ tokens have been exported to your wallet"}),
-    } catch (error: any) {
-      setExportStatus('error'),
-=======
       });
     }
   };
@@ -137,24 +72,15 @@ export function OnChainExport() {
       });
     } catch (error: any) {
       setExportStatus('error');
->>>>>>> origin/auto/autonomy-17186719616
       toast({
         title: "Export failed",
         description: error.message || "Could not export tokens",
         variant: "destructive"
-<<<<<<< HEAD
-      }),
-    } finally {
-      setIsExporting(false),
-    }
-  },
-=======
       });
     } finally {
       setIsExporting(false);
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <Card>
@@ -214,9 +140,5 @@ export function OnChainExport() {
         )}
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

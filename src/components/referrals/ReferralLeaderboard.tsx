@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-
-
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award } from 'lucide-react'
 
@@ -22,7 +18,6 @@ export function ReferralLeaderboard() {
     { rank: 4, name: "Casey Brown", referrals: 12 },
     { rank: 5, name: "Jordan Lee", referrals: 10 },
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Card>
@@ -49,10 +44,6 @@ export function ReferralLeaderboard() {
                       ? "bg-slate-200 text-slate-800"
                       : entry.rank === 3
                       ? "bg-amber-200 text-amber-800"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                       : "bg-muted text-muted-foreground"
                   }`}
                 >
@@ -68,9 +59,5 @@ export function ReferralLeaderboard() {
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

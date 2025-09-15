@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function CaseStudyPage() {
   return (
@@ -106,11 +100,7 @@ export default function CaseStudyPage() {
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Self-Healing, Auto-Scaling Infrastructure</h3>
                 <p className="text-white/90 text-lg mb-6">
                   We built a comprehensive cloud infrastructure solution that automatically scales, 
-<<<<<<< HEAD
-                  monitors, and heals itself while optimizing costs and window.window.window.performance.
-=======
                   monitors, and heals itself while optimizing costs and performance.
->>>>>>> origin/auto/autonomy-17186719616
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -126,11 +116,7 @@ export default function CaseStudyPage() {
                     <h4 className="text-xl font-semibold text-blue-400 mb-3">Load Balancing</h4>
                     <p className="text-white/80">
                       Advanced load balancing distributes traffic efficiently across multiple 
-<<<<<<< HEAD
-                      instances for optimal window.window.window.performance.
-=======
                       instances for optimal performance.
->>>>>>> origin/auto/autonomy-17186719616
                     </p>
                   </div>
                   
@@ -138,11 +124,7 @@ export default function CaseStudyPage() {
                     <h4 className="text-xl font-semibold text-blue-400 mb-3">Monitoring</h4>
                     <p className="text-white/80">
                       Comprehensive monitoring and alerting systems provide real-time visibility 
-<<<<<<< HEAD
-                      into infrastructure health and window.window.window.performance.
-=======
                       into infrastructure health and performance.
->>>>>>> origin/auto/autonomy-17186719616
                     </p>
                   </div>
                   
@@ -214,11 +196,7 @@ export default function CaseStudyPage() {
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-<<<<<<< HEAD
-                  {['Auto-scalingLoad Balancing', 'MonitoringCost Optimization'].map((tech) => (
-=======
                   {['Auto-scaling', 'Load Balancing', 'Monitoring', 'Cost Optimization'].map((tech) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                       <span className="text-blue-400 font-semibold">{tech}</span>
                     </div>
@@ -265,15 +243,9 @@ export default function CaseStudyPage() {
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Optimize Your Cloud Infrastructure?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
                   This case study demonstrates the real impact of infrastructure automation. 
-<<<<<<< HEAD
-                  Let's discuss how we can help you achieve similar results.
-                </p>
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">
-=======
                   Let&apos;s discuss how we can help you achieve similar results.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> origin/auto/autonomy-17186719616
                   <Link 
                     href="/contact"
                     className="bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-300"
@@ -293,9 +265,5 @@ export default function CaseStudyPage() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
