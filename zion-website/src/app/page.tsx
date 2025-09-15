@@ -1,10 +1,9 @@
-import React from 'react'
 import {
-  LightBulbIcon,
+  ChartBarIcon,
   CpuChipIcon,
   GlobeAltIcon,
+  LightBulbIcon,
   ShieldCheckIcon,
-  ChartBarIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
 
@@ -79,6 +78,14 @@ const solutions = [
 export default function HomePage() {
   return (
     <div className="bg-black">
+      {/* Announcement banner */}
+      <div className="w-full bg-blue-600/10 border-b border-blue-600/30">
+        <div className="mx-auto max-w-7xl px-6 py-2 text-center text-sm">
+          <a href="/updates" className="text-blue-300 hover:text-blue-200 font-medium">
+            New: Fall 2025 course releases and community initiatives — see Updates →
+          </a>
+        </div>
+      </div>
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -113,17 +120,14 @@ export default function HomePage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Fresh content, announcements, and courses from Zion Academy.
-          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">Fresh content, announcements, and courses from Zion Academy.</p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
                 title: 'New Course: Advanced Blockchain Development',
-                summary:
-                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
+                summary: 'Comprehensive blockchain course: smart contracts, DeFi, L2 scaling, security.',
                 href: '/updates'
               },
               {
@@ -133,7 +137,7 @@ export default function HomePage() {
               },
               {
                 title: 'New Learning Path: Web3 Fundamentals',
-                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
+                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and security.',
                 href: '/updates'
               }
             ].map((item) => (
