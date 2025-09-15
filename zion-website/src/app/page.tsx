@@ -84,8 +84,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-              New: Agentic Ops Control Center v2.3 —
-              <a href="/updates/agentic-ops-control-center-2-3" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read launch</a>
+              New: Autonomous Data Lineage Monitor v1.0 —
+              <a href="/updates/autonomous-data-lineage-monitor-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>

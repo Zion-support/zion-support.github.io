@@ -895,6 +895,22 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/real-time-agent-shadow-testing',
     date: '2025-09-15',
     tag: 'Feature'
+  },
+  {
+    title: 'Launch: Autonomous Data Lineage Monitor v1.0',
+    summary:
+      'Continuous provenance tracking and signed evidence bundles across ingestion, retrieval, and generation.',
+    href: '/updates/autonomous-data-lineage-monitor-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Eval‑Ready Agent Release Automation',
+    summary:
+      'Wire eval gates, shadow tests, and rollback policies into CI/CD with audit‑ready evidence.',
+    href: '/updates/eval-ready-agent-release-automation',
+    date: '2025-09-15',
+    tag: 'Guide'
   }
 ]
 
