@@ -7,6 +7,15 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (latest)
+  {
+    title: 'Launch: Autonomous Data Quality Copilot v1.0',
+    summary:
+      'Continuously profiles, tests, and remediates data issues with policy‑aware fixes and audit‑ready evidence.',
+    href: '/updates/autonomous-data-quality-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
   // Added 2025-09-15 (new featured content)
   {
     title: 'Launch: Knowledge Graph Copilot v1.0',
