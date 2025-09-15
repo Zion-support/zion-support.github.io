@@ -15,6 +15,31 @@ export default function ContentIndexPage() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Guide</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-change-management" className="hover:underline">
+              AI 2026: Agent Change Management
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Eval-gated approvals, progressive rollouts, and safe-mode fallbacks for safer changes.
+          </p>
+          <Link href="/content/ai-2026-agent-change-management" className="text-purple-700 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Kit</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-runbook-starter-kit" className="hover:underline">
+              AI 2026: Agent Runbook Starter Kit
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Standardized triage, mitigation, and escalation templates linked to evaluations.
+          </p>
+          <Link href="/content/ai-2026-agent-runbook-starter-kit" className="text-indigo-700 font-semibold">Use Kit →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
           <div className="text-sm font-semibold text-indigo-700 mb-2">Hub</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/ai-2026-evaluation-hub" className="hover:underline">

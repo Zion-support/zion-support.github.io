@@ -211,6 +211,22 @@ export default function HomePage() {
       </section>
       {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={8} />
+      {/* New Promo: Change Management + Runbook Kit (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-purple-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-blue-100">
+            <div>
+              <p className="text-sm font-semibold text-purple-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Change Management + Runbook Starter Kit</h2>
+              <p className="text-gray-600 mt-2">Eval-gated approvals, progressive rollouts, and standardized incident runbooks.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/content/ai-2026-agent-change-management" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Change Management</Link>
+              <Link href="/content/ai-2026-agent-runbook-starter-kit" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Runbook Kit</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Content Promo: Production Safety + Cost Optimization (Sept 2025) */}
       <section className="py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
