@@ -45,7 +45,10 @@
     "prefer-offline": true
   },
   "dependencies": {
+<<<<<<< HEAD
     "@esbuild/linux-x64": "^0.25.9",
+=======
+>>>>>>> 83a51f4ac071 (feat: add latest content data and advertise on Home; fix configs for build)
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",
