@@ -124,17 +124,17 @@ export default function HomePage() {
                 title: 'New Course: Advanced Blockchain Development',
                 summary:
                   'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
-                href: '/updates'
+                href: '/updates#advanced-blockchain-development-course'
               },
               {
                 title: 'Community Challenge: Build a DApp',
-                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-                href: '/updates'
+                summary: 'Join our DApp challenge and compete for 5,000 ZION in prizes.',
+                href: '/updates#community-dapp-challenge'
               },
               {
                 title: 'New Learning Path: Web3 Fundamentals',
                 summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
-                href: '/updates'
+                href: '/updates#web3-fundamentals-path'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
