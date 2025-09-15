@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Report: State of AI Automation (2026 Preview)',
+    summary:
+      'Trends, metrics, and enterprise adoption patterns shaping the next wave of AI-led automation.',
+    href: '/insights/state-of-ai-automation-2025',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Case Study: Autonomous Retail Fulfillment at Scale',
+    summary:
+      'How autonomous agents improved OTIF by 11% and reduced costs across a global retailer.',
+    href: '/updates/autonomous-retail-fulfillment',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
     title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
     summary:
       'Step-by-step playbook to stand up autonomous operations with policy-as-code and measurable SLAs.',
