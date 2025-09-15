@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "safe-tool-use-blueprint-2026",
+    title: "AI 2026: Safe Tool Use Blueprint",
+    description:
+      "Permissioned tool use with risk tiers, policy-as-code, sandboxes, and runtime checks.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-safe-tool-use-blueprint",
+    emoji: "🧰",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agents-oncall-automation-2026-new",
+    title: "AI 2026: Agents‑On‑Call Automation",
+    description:
+      "Autonomous incident triage, mitigation, and escalation with eval‑gated playbooks.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agents-oncall-automation",
+    emoji: "📟",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agent-fleet-management-handbook-2026",
     title: "AI 2026: Agent Fleet Management Handbook",
     description:

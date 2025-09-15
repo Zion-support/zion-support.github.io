@@ -565,6 +565,37 @@ export const blogPosts = [
     imageUrl: "/images/blog/ai-finops.jpg",
     slug: "cost-optimization-for-ai-workloads-practical-finops"
   }
+  ,
+  {
+    id: 32,
+    title: "AI 2026: Safe Tool Use Blueprint",
+    excerpt: "Permissioned tool use with risk tiers, sandboxes, and runtime checks.",
+    content: "Enterprises need rigorous controls for agent tool use. This blueprint covers permissioned tool registries, least-privilege schemas, sandboxed execution, risk-tiered approvals, output validation, and audit trails—plus how to evaluate tool behaviors safely in CI/CD and production.",
+    author: "Amelia Grant",
+    authorRole: "Head of Platform Safety",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Safety",
+    tags: ["Tool Use", "Safety", "Policy-as-Code"],
+    featured: true,
+    imageUrl: "/images/blog/safe-tool-use-blueprint-2026.jpg",
+    slug: "ai-2026-safe-tool-use-blueprint"
+  },
+  {
+    id: 33,
+    title: "AI 2026: Agents‑On‑Call Automation",
+    excerpt: "Autonomous incident triage, mitigation, and escalation with eval‑gated playbooks.",
+    content: "Design agents-on-call that watch telemetry, detect anomalies, and execute guardrailed playbooks. Learn handoff criteria, rollback paths, and risk-tiered gates to cut MTTR while preserving safety. Includes reference runbooks and SLO-driven release management.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-15",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["AIOps", "Incident Response", "Agents"],
+    featured: true,
+    imageUrl: "/images/blog/agents-on-call-automation-2026.jpg",
+    slug: "ai-2026-agents-oncall-automation"
+  }
 ];
 
 export const getBlogPostBySlug = (slug) => {
