@@ -55,6 +55,8 @@ import EnhancedContentAdvertising from './src/components/EnhancedContentAdvertis
 import RevolutionaryAdvertisingBanner2026 from './src/components/RevolutionaryAdvertisingBanner2026';
 import UltimateTechRevolution2026 from './src/pages/UltimateTechRevolution2026';
 import BreakthroughInnovations2026 from './src/pages/BreakthroughInnovations2026';
+import AdvancedQuantumComputing2026 from './src/pages/AdvancedQuantumComputing2026';
+import AdvancedNeuralInterface2026 from './src/pages/AdvancedNeuralInterface2026';
 
 export default function App(): JSX.Element {
   return (
@@ -715,6 +717,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/FutureTechTrends2026" element={<FutureTechTrends2026 />} />
           <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />
           <Route path="/pages/BreakthroughInnovations2026" element={<BreakthroughInnovations2026 />} />
+          <Route path="/pages/AdvancedQuantumComputing2026" element={<AdvancedQuantumComputing2026 />} />
+          <Route path="/pages/AdvancedNeuralInterface2026" element={<AdvancedNeuralInterface2026 />} />
+          <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
