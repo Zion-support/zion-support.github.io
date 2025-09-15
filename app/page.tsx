@@ -324,7 +324,6 @@ export default function HomePage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Featured Content Grid */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,10 +344,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-=======
+
         {/* Latest Content Showcase 2025 - NEW FEATURED */}
         <LatestContentShowcase2025 />
->>>>>>> cursor/create-and-deploy-new-content-47bb
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
