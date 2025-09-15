@@ -133,6 +133,51 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
     ]
   },
+  'ai-safety-governance-2025': {
+    id: 'ai-safety-governance-2025',
+    title: 'AI Safety & Governance 2025: Practical Controls for Enterprise Adoption',
+    excerpt:
+      'A pragmatic framework for model risk management, evaluation, and policy controls to deploy AI safely at scale.',
+    category: 'AI Ethics',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-12',
+    readTime: '8 min read',
+    content: [
+      'Enterprises are moving from pilots to production AI. This shift requires concrete controls: evaluation pipelines, red-teaming, approval workflows, and incident response playbooks.',
+      'We propose an operating model: define risk tiers, attach policy guardrails, automate evaluation (safety, bias, robustness), and route high‑risk actions through human approval.',
+      'With these controls, organizations accelerate value while reducing exposure, aligning AI initiatives with regulatory and ethical expectations.'
+    ]
+  },
+  'agentic-rpa-automation': {
+    id: 'agentic-rpa-automation',
+    title: 'From RPA to Agentic Automation: Building Reliable Autonomous Workflows',
+    excerpt:
+      'Design patterns to evolve brittle RPA into resilient, agentic automations with feedback, memory, and verification.',
+    category: 'AI Solutions',
+    author: 'Michael Rodriguez',
+    date: '2025-09-08',
+    readTime: '7 min read',
+    content: [
+      'Traditional RPA breaks under change. Agentic automation uses goals, tools, and verification loops to adapt safely.',
+      'Start by wrapping existing scripts with tool interfaces, add observation and retry policies, and centralize run telemetry.',
+      'The result is higher reliability, easier maintenance, and broader coverage of real‑world business processes.'
+    ]
+  },
+  'edge-ai-iot-2025': {
+    id: 'edge-ai-iot-2025',
+    title: 'Edge AI for IoT in 2025: Real‑Time Intelligence Under Constraints',
+    excerpt:
+      'Architectures and deployment tactics for running compact, robust models at the edge with low latency.',
+    category: 'Research & Development',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-03',
+    readTime: '9 min read',
+    content: [
+      'Edge deployments face power, memory, and connectivity limits. Success demands compact models, streaming inference, and resilient update channels.',
+      'We compare quantization and distillation strategies, outline OTA update safety, and show reference topologies for factory, retail, and mobility use cases.',
+      'These patterns unlock real‑time decisions while preserving privacy and reducing cloud costs.'
+    ]
+  },
 };
 
 export function generateStaticParams() {
