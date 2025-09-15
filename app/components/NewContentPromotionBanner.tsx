@@ -12,7 +12,7 @@ const NewContentPromotionBanner: React.FC = () => {
           </div>
           <div className="flex gap-3">
             <a href="/content/ai-2026-operational-excellence-blueprint" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read →</a>
-            <a href="/blog/ai-2026-agent-posture-management" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Posture Guide</a>
+            <a href="/content/ai-2026-risk-aware-agents-blueprint" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Risk-Aware Agents</a>
           </div>
         </div>
         <div className="mt-6 bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">

@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
 import SEO from '../../components/SEO';
 
 export const metadata = {
@@ -14,85 +14,13 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
-      title: "AI 2026: Agents-On-Call Automation",
-      description: "Autonomous triage, mitigation, and escalation via eval-gated playbooks and deep observability.",
-      slug: "ai-2026-agents-oncall-automation",
-      category: "Operations",
+      title: "AI 2026: Enterprise AI Governance Blueprint",
+      description: "A practical blueprint to ship reliable AI with policy-as-code, risk tiers, and runtime monitoring.",
+      slug: "ai-2026-enterprise-ai-governance-blueprint",
+      category: "Enterprise AI",
       date: "2025-09-15",
       featured: true,
-      image: "/images/agents-oncall-automation-2026.jpg"
-    },
-    {
-      title: "AI 2026: Real-Time Retrieval Architectures",
-      description: "Low-latency retrieval patterns for RAG systems at enterprise scale.",
-      slug: "ai-2026-real-time-retrieval-architectures",
-      category: "Architecture",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/real-time-rag-architectures-2026.jpg"
-    },
-    {
-      title: "AI 2026: Autonomous Ops Playbook",
-      description: "Runbooks, guardrails, and evals for safe autonomous operations.",
-      slug: "ai-2026-autonomous-ops-playbook",
-      category: "Operations",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/autonomous-ops-playbook-2026.jpg"
-    },
-    {
-      title: "AI 2026: LLM Evals Maturity Model",
-      description: "Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI systems.",
-      slug: "ai-2026-llm-evals-maturity-model",
-      category: "Quality",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/llm-evals-maturity-model-2026.jpg"
-    },
-    {
-      title: "AI 2026: Autonomous Customer Support Agents",
-      description: "Blueprint to deploy autonomous support agents with routing, guardrails, and eval gates.",
-      slug: "ai-2026-autonomous-customer-support-agents",
-      category: "Operations",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/autonomous-support-agents-2026.jpg"
-    },
-    {
-      title: "AI 2026: Multimodal Agents Enterprise Blueprint",
-      description: "Design patterns, reference architectures, and an adoption roadmap for enterprise multimodal agents.",
-      slug: "ai-2026-multimodal-agents-enterprise-blueprint",
-      category: "Architecture",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/multimodal-agents-enterprise-blueprint-2026.jpg"
-    },
-    {
-      title: "AI 2026: Agent Observability Blueprint",
-      description: "Deep visibility into autonomous agents: traces, evaluations, and safety telemetry.",
-      slug: "ai-2026-agent-observability-blueprint",
-      category: "Operations",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/agent-observability-blueprint-2026.jpg"
-    },
-    {
-      title: "AI 2026: Autonomous Incident Response",
-      description: "Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability.",
-      slug: "ai-2026-ai-ops-autonomous-incident-response",
-      category: "Operations",
-      date: "2025-09-14",
-      featured: true,
-      image: "/images/ai-ops-autonomous-incident-response-2026.jpg"
-    },
-    {
-      title: "AI 2025: LLM Evaluation Best Practices - Reliable, Fair, and Robust",
-      description: "A practical guide to evaluating large language models in 2025: metrics, human evaluation, bias audits, reliability, and production monitoring.",
-      slug: "ai-2025-llm-evaluation-best-practices",
-      category: "Best Practices",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/llm-evaluation-best-practices-2025.jpg"
+      image: "/images/ai-governance-2026.jpg"
     },
     {
       title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
@@ -104,13 +32,13 @@ const BlogPage = () => {
       image: "/images/generative-ai-enterprise-2025.jpg"
     },
     {
-      title: "Enterprise AI Governance Blueprint (2026)",
-      description: "Policy-as-code, risk tiers, and continuous evaluations for safe AI scale.",
-      slug: "ai-2026-enterprise-ai-governance-blueprint",
-      category: "Governance",
+      title: "Enterprise Foundation Models: A Practical Guide (2025)",
+      description: "Vendor-neutral steps to evaluate, deploy, and govern foundation models that drive measurable outcomes.",
+      slug: "ai-2025-enterprise-foundation-models-practical-guide",
+      category: "Enterprise AI",
       date: "2025-09-15",
       featured: true,
-      image: "/images/ai-governance-blueprint-2026.jpg"
+      image: "/images/enterprise-foundation-models-2025.jpg"
     },
     {
       title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
@@ -122,60 +50,6 @@ const BlogPage = () => {
       image: "/images/enterprise-ai-agents-2025.jpg"
     },
     {
-      title: "AI 2026: Enterprise AI FinOps Cost Optimization",
-      description: "Control AI infrastructure costs with FinOps: visibility, right-sizing, caching, eval-gated upgrades, and policy guardrails.",
-      slug: "ai-2026-enterprise-ai-finops-cost-optimization",
-      category: "FinOps",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/ai-finops-2026.jpg"
-    },
-    {
-      title: "AI 2026: Agent Safety Certification",
-      description: "Certification framework to validate agent safety with scenario suites and governance.",
-      slug: "ai-2026-agent-safety-certification",
-      category: "Safety",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/agent-safety-certification-2026.jpg"
-    },
-    {
-      title: "AI 2026: Secure Agent Architecture",
-      description: "Zero-trust agents with isolation domains, policy-as-code, and runtime guards.",
-      slug: "ai-2026-secure-agent-architecture",
-      category: "Security",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/secure-agent-architecture-2026.jpg"
-    },
-    {
-      title: "AI 2026: Edge Agents On-Device Inference",
-      description: "Design patterns for private, low-latency edge agents with hybrid offload.",
-      slug: "ai-2026-edge-agents-on-device",
-      category: "Edge AI",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/edge-agents-on-device-2026.jpg"
-    },
-    {
-      title: "AI 2026: Autonomous Compliance Operating Model",
-      description: "Automate controls, evidence, and tests for audit-ready AI operations with policy-as-code.",
-      slug: "ai-2026-autonomous-compliance",
-      category: "Governance",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/autonomous-compliance-2026.jpg"
-    },
-    {
-      title: "AI 2026: Autonomous Agents Red-Team Scenarios",
-      description: "Adversarial scenarios, pass criteria, and CI/CD integration to harden agents.",
-      slug: "ai-2026-autonomous-agents-red-team-scenarios",
-      category: "Safety",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/autonomous-agents-red-team-2026.jpg"
-    },
-    {
       title: "Quantum Computing Breakthrough 2025: Enterprise Applications",
       description: "Explore how quantum computing is revolutionizing enterprise operations in 2025 with unprecedented processing power and breakthrough applications.",
       slug: "ai-2025-quantum-computing-breakthrough",
@@ -183,15 +57,6 @@ const BlogPage = () => {
       date: "2025-01-15",
       featured: true,
       image: "/images/quantum-computing-2025.jpg"
-    },
-    {
-      title: "AI 2026: Autonomous Finance Operating System",
-      description: "Design a real-time, autonomous finance OS with policy-as-code, continuous close, and AI-driven cash optimization.",
-      slug: "ai-2026-autonomous-finance-operating-system",
-      category: "Finance",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/autonomous-finance-os-2026.jpg"
     }
   ];
 

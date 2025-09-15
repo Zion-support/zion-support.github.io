@@ -108,6 +108,27 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-10",
   },
   {
+    id: "risk-aware-agents-2026",
+    title: "Risk-Aware Agents Blueprint",
+    description:
+      "Policy-constrained, risk-scored agent workflows with evals and guardrails.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/ai-2026-risk-aware-agents-blueprint",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "evals-in-prod-2026",
+    title: "Evaluations in Production",
+    description:
+      "Operationalize LLM and agent evals with live metrics, drift detection, rollbacks.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-evaluations-in-production",
+    emoji: "📈",
+    date: "2025-09-15",
+  },
+  {
     id: "blockchain-audit",
     title: "Blockchain Audit Toolkit",
     description:
