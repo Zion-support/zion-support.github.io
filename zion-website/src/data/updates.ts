@@ -8,6 +8,14 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Whitepaper: AI Agent Safety Framework (2025)',
+    summary:
+      'Operational guardrails, evals, and policy-as-code for autonomous agents in production.',
+    href: '/updates/agent-safety-whitepaper',
+    date: '2025-09-15',
+    tag: 'Whitepaper'
+  },
+  {
     title: 'Report: 2025 AI Trends Radar',
     summary:
       'Key enterprise AI trends for 2025: agent safety, real-time RAG, governance automation, and cost-aware routing.',
