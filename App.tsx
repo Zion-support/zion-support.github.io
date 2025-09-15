@@ -28,6 +28,10 @@ import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import './src/index.css';
+import AdvancedBiotechSolutions2026 from './src/pages/AdvancedBiotechSolutions2026';
+import SpaceTechInnovation2026 from './src/pages/SpaceTechInnovation2026';
+import CyberPhysicalSystems2026 from './src/pages/CyberPhysicalSystems2026';
+import NewContentShowcase2026 from './src/components/NewContentShowcase2026';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
 import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
@@ -143,6 +147,11 @@ export default function App(): JSX.Element {
                 {/* Revolutionary Content Showcase */}
                 <div className="mb-12">
                   <RevolutionaryContentShowcase />
+                </div>
+
+                {/* NEW: Brand New Content Showcase 2026 */}
+                <div className="mb-12">
+                  <NewContentShowcase2026 />
                 </div>
 
                 {/* Featured New Services */}
@@ -439,6 +448,8 @@ export default function App(): JSX.Element {
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
+          <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
+          <Route path="/pages/CyberPhysicalSystems2026" element={<CyberPhysicalSystems2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
