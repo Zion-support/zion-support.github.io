@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const EnhancedContentShowcase: React.FC = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
@@ -17,6 +19,8 @@ const EnhancedContentShowcase: React.FC = () => {
         </div>
         
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -244,15 +248,19 @@ const EnhancedContentShowcase: React.FC = () => {
           <p className="text-xl text-purple-200">Experience interactive technology exploration</p>
         </div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🤖</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Advanced AI</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Cutting-edge artificial intelligence solutions
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="text-5xl mb-4 text-center">🎮</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Interactive Experience</h3>
+            <p className="text-purple-200 text-center">
+              Navigate through revolutionary technologies with intuitive controls and smooth animations
             </p>
           </div>
+<<<<<<< HEAD
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
@@ -270,6 +278,41 @@ const EnhancedContentShowcase: React.FC = () => {
             </p>
           </div>
         </div>
+=======
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="text-5xl mb-4 text-center">🚀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Real-time Updates</h3>
+            <p className="text-purple-200 text-center">
+              Stay current with the latest breakthroughs and technology advancements as they happen
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="text-5xl mb-4 text-center">🌟</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Immersive Design</h3>
+            <p className="text-purple-200 text-center">
+              Experience stunning visual design with gradient backgrounds and smooth transitions
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="container mx-auto px-4 py-20 text-center">
+        <h2 className="text-4xl font-bold text-white mb-4">Ready to Explore the Future?</h2>
+        <p className="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
+          Dive deeper into our revolutionary technologies and discover how they can transform your business
+        </p>
+        <div className="flex justify-center space-x-4">
+          <a href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            Start Your Journey →
+          </a>
+          <a href="/pages/InnovationLanding2025" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors">
+            View All Innovations
+          </a>
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
       </div>
 <<<<<<< HEAD
 =======

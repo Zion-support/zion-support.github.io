@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const ComprehensiveTechInsights2026: React.FC = () => {
 <<<<<<< HEAD
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ComprehensiveTechInsights2026: React.FC = () => {
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
 <<<<<<< HEAD
 =======
   const insights = [
@@ -642,10 +649,15 @@ const ComprehensiveTechInsights2026: React.FC = () => {
         </motion.div>
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
     </div>
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
   );
 };
 

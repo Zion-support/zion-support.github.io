@@ -3,6 +3,7 @@ import React from 'react';
 const NewContentShowcase: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
   const newContent = [
@@ -102,6 +103,8 @@ const NewContentShowcase: React.FC = () => {
         </a>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
   return (
     <div className="w-full">
       {/* New Content Banner */}
@@ -217,9 +220,12 @@ const NewContentShowcase: React.FC = () => {
             <div className="text-emerald-100 text-sm">Autonomous Operation</div>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
       </div>
     </div>
   );
@@ -227,10 +233,13 @@ const NewContentShowcase: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { NewContentShowcase };
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
 export { NewContentShowcase };
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
 export default NewContentShowcase;

@@ -10,8 +10,11 @@ import AIEnterpriseCopilot2025 from './pages/AIEnterpriseCopilot2025';
 import NeuralInterfaceFuture from './pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './components/DynamicContentCarousel';
 import InteractiveTechShowcase from './components/InteractiveTechShowcase';
+<<<<<<< HEAD
 import InteractiveTechDemo2026 from './components/InteractiveTechDemo2026';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
 import './index.css';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import InnovationShowcase2026 from './pages/InnovationShowcase2026';
@@ -32,10 +35,13 @@ import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard20
 import BiotechRevolution2026 from './pages/BiotechRevolution2026';
 import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
 import NewContentShowcase2026 from './components/NewContentShowcase2026';
+<<<<<<< HEAD
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
 import AIInnovationHub2026 from './pages/AIInnovationHub2026';
 import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution2026';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
 
 export default function App(): JSX.Element {
   return (
@@ -95,8 +101,13 @@ export default function App(): JSX.Element {
                       <a href="/pages/QuantumNeuralFusion2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         ⚡ Quantum-Neural →
                       </a>
+<<<<<<< HEAD
                       <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🌟 Ultimate Showcase →
+=======
+                      <a href="/pages/EnhancedContentShowcase" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🌟 Enhanced Showcase →
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
                       </a>
                     </div>
                   </div>
@@ -178,6 +189,7 @@ export default function App(): JSX.Element {
                     <a href="/pages/SpaceTechInnovation2026" className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🚀 Space Tech Innovation 2026
                     </a>
+<<<<<<< HEAD
                     <a href="/pages/AIInnovationHub2026" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🧠 AI Innovation Hub 2026
                     </a>
@@ -187,6 +199,8 @@ export default function App(): JSX.Element {
                     <a href="/pages/UltimateTechShowcase2026" className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🌟 Ultimate Tech Showcase
                     </a>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
                   </div>
                 </div>
 
@@ -359,11 +373,14 @@ export default function App(): JSX.Element {
                     <p className="text-xl text-gray-600">Explore our cutting-edge technology solutions with interactive features</p>
                   </div>
                   <InteractiveTechShowcase />
+<<<<<<< HEAD
                 </div>
 
                 {/* NEW: Interactive Tech Demos 2026 */}
                 <div className="mb-12">
                   <InteractiveTechDemo2026 />
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
                 </div>
 
                 <div className="text-center">
@@ -429,9 +446,12 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAnalyticsDashboard2026" element={<AdvancedAnalyticsDashboard2026 />} />
           <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
+<<<<<<< HEAD
           <Route path="/pages/AIInnovationHub2026" element={<AIInnovationHub2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
           <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">

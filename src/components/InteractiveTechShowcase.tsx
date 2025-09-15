@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -18,6 +21,7 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
       link: "/pages/AdvancedAITransformation2026"
+<<<<<<< HEAD
     },
     {
       id: 1,
@@ -275,6 +279,8 @@ const InteractiveTechShowcase: React.FC = () => {
       ],
       color: "from-emerald-600 to-teal-600",
       stats: { performance: "Direct", accuracy: "99.8%", speed: "Instant" }
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
     },
     {
       id: 4,
@@ -467,6 +473,7 @@ const InteractiveTechShowcase: React.FC = () => {
                 {/* Features Grid */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {technologies[activeTech].features.map((feature, index) => (
+<<<<<<< HEAD
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
@@ -586,6 +593,8 @@ const InteractiveTechShowcase: React.FC = () => {
                 
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {technologies[activeTech].features.map((feature, index) => (
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
                     <div key={index} className="flex items-center space-x-3">
                       <span className="w-2 h-2 bg-white rounded-full"></span>
                       <span className="text-sm">{feature}</span>

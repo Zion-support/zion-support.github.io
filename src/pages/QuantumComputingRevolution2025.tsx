@@ -24,6 +24,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
           </h1>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
             Experience exponential computing power with our quantum solutions that solve impossible problems and unlock new possibilities across industries.
           </p>
@@ -159,6 +160,8 @@ const QuantumComputingRevolution2025: React.FC = () => {
             Experience the future of computing with quantum technology that solves impossible problems, 
             breaks encryption, and revolutionizes industries across the globe.
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
             Experience the next generation of quantum computing with unprecedented processing power, 
             quantum supremacy, and revolutionary applications that will transform industries.
@@ -615,11 +618,15 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold mb-2 text-white">Space Exploration</h3>
               <p className="text-gray-300 text-sm">Quantum navigation and space mission optimization</p>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Call to Action */}
         <div id="contact" className="text-center bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12 text-white">
@@ -644,6 +651,8 @@ const QuantumComputingRevolution2025: React.FC = () => {
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f4f2
         {/* CTA Section */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Quantum Revolution?</h2>
