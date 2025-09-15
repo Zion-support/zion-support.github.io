@@ -2,19 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const LanguageDetectionPopup = () => {
-  const { language, changeLanguage, isLanguageDetected } = useLanguage();
+  const { language, changeLanguage, isLanguageDetected, setIsLanguageDetected } = useLanguage();
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    // Show language detection popup if user hasn't set a preference
-    const hasLanguagePreference = localStorage.getItem('preferred-language');
-    if (!hasLanguagePreference && isLanguageDetected) {
+    // Check if language has been detected before
+    const hasDetectedLanguage = localStorage.getItem('languageDetected');
+    if (!hasDetectedLanguage) {
       setShowPopup(true);
     }
-  }, [isLanguageDetected]);
+  }, []);
 
   const handleLanguageSelect = (selectedLanguage) => {
     changeLanguage(selectedLanguage);
+    setIsLanguageDetected(true);
+    localStorage.setItem('languageDetected', 'true');
     setShowPopup(false);
   };
 
@@ -23,32 +25,32 @@ const LanguageDetectionPopup = () => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg p-6 max-w-md mx-4">
-        <h2 className="text-xl font-bold mb-4">Select Your Language</h2>
-        <p className="text-gray-600 mb-4">
-          We detected your language preference. Would you like to use this language?
-        </p>
-        
-        <div className="flex space-x-3 mb-4">
+        <h3 className="text-lg font-semibold mb-4">Select Your Language</h3>
+        <p className="text-gray-600 mb-4">Choose your preferred language for the best experience.</p>
+        <div className="space-y-2">
           <button
-            onClick={() => handleLanguageSelect(language)}
-            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+            onClick={() => handleLanguageSelect('en')}
+            className="w-full text-left px-4 py-2 hover:bg-gray-100 rounded"
           >
-            Yes, use {language === 'en' ? 'English' : language === 'es' ? 'Spanish' : language}
+            English
           </button>
           <button
-            onClick={() => setShowPopup(false)}
-            className="flex-1 bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition-colors"
+            onClick={() => handleLanguageSelect('es')}
+            className="w-full text-left px-4 py-2 hover:bg-gray-100 rounded"
           >
-            Not now
+            Español
           </button>
-        </div>
-
-        <div className="text-sm text-gray-500">
-          You can change this later in settings.
+          <button
+            onClick={() => handleLanguageSelect('fr')}
+            className="w-full text-left px-4 py-2 hover:bg-gray-100 rounded"
+          >
+            Français
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
+export { LanguageDetectionPopup };
 export default LanguageDetectionPopup;
