@@ -21,6 +21,9 @@ import NextGenSpaceTech2026 from './src/pages/NextGenSpaceTech2026';
 import AIInnovation2027 from './src/pages/AIInnovation2027';
 import QuantumConsciousness2028 from './src/pages/QuantumConsciousness2028';
 import NeuralReality2027 from './src/pages/NeuralReality2027';
+import AdvancedTechRevolution2025 from './src/pages/AdvancedTechRevolution2025';
+import QuantumBreakthrough2025 from './src/pages/QuantumBreakthrough2025';
+import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
@@ -28,6 +31,7 @@ import UltimateContentShowcase2026 from './src/components/UltimateContentShowcas
 import UltimateContentShowcase2027 from './src/components/UltimateContentShowcase2027';
 import RevolutionaryContentShowcase2027 from './src/components/RevolutionaryContentShowcase2027';
 import TrendingContentSection from './src/components/TrendingContentSection';
+import NewContentShowcase2025 from './src/components/NewContentShowcase2025';
 
 export default function App(): JSX.Element {
   return (
@@ -45,20 +49,32 @@ export default function App(): JSX.Element {
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
                   <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
                   <div className="relative z-10">
-                    </p>
+                    <div className="text-center mb-8">
+                      <div className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm rounded-full text-lg font-bold mb-6 animate-pulse">
+                        🚀 BREAKTHROUGH CONTENT • JANUARY 2025
+                      </div>
+                      <h2 className="text-5xl font-bold mb-4">🌟 Revolutionary New Content</h2>
+                      <p className="text-2xl opacity-95 max-w-5xl mx-auto">
+                        Experience the most advanced technology content ever created: Advanced Tech Revolution, Quantum Breakthrough, and Neural Interface Revolution
+                      </p>
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                      <a href="/pages/AIInnovation2027" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
-                        🧠 NEW: AI Innovation 2027 →
+                      <a href="/pages/AdvancedTechRevolution2025" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
+                        🚀 NEW: Advanced Tech Revolution 2025 →
                       </a>
-                      <a href="/pages/QuantumConsciousness2028" className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
-                        🌌 NEW: Quantum Consciousness 2028 →
+                      <a href="/pages/QuantumBreakthrough2025" className="inline-block bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
+                        ⚛️ NEW: Quantum Breakthrough 2025 →
                       </a>
-                      <a href="/pages/NeuralReality2027" className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
-                        🧬 NEW: Neural Reality 2027 →
-                      </a>
+                      <a href="/pages/NeuralInterfaceRevolution2025" className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30 hover:scale-105 text-center">
+                        🧬 NEW: Neural Interface Revolution 2025 →
                       </a>
                     </div>
                   </div>
+                </div>
+
+                {/* NEW: Interactive Content Showcase */}
+                <div className="mb-12">
+                  <NewContentShowcase2025 />
                 </div>
 
                 <div className="mb-12">
@@ -509,6 +525,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/AIInnovation2027" element={<AIInnovation2027 />} />
           <Route path="/pages/QuantumConsciousness2028" element={<QuantumConsciousness2028 />} />
           <Route path="/pages/NeuralReality2027" element={<NeuralReality2027 />} />
+          <Route path="/pages/AdvancedTechRevolution2025" element={<AdvancedTechRevolution2025 />} />
+          <Route path="/pages/QuantumBreakthrough2025" element={<QuantumBreakthrough2025 />} />
+          <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
