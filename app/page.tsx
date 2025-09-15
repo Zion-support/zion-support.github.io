@@ -145,6 +145,22 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Agent Red Teaming Blueprint (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-red-50 to-purple-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-red-100">
+            <div>
+              <p className="text-sm font-semibold text-red-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Agent Red Teaming Blueprint</h2>
+              <p className="text-gray-600 mt-2">Adversarial scenarios, runtime controls, and continuous hardening for agents.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/content/ai-2026-agent-red-teaming-blueprint" className="inline-block bg-red-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-red-700">Read Blueprint</Link>
+              <Link href="/blog/ai-2026-secure-agent-architecture" className="inline-block border border-red-600 text-red-700 px-5 py-3 rounded-lg font-semibold hover:bg-red-50">Secure Architecture</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Safe Tool Use Blueprint */}
       <section className="py-8 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
