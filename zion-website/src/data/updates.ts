@@ -9,13 +9,18 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (brand new content)
   {
-<<<<<<< HEAD
-    title: 'Launch: Autonomous Data Quality Copilot 1.0',
-=======
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
       'Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.',
     href: '/updates/autonomous-it-ops-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Autonomous Innovation Hub v1.0',
+    summary:
+      'Unified workspace with blueprints, live eval gates, and policy‑as‑code to accelerate safe AI launches.',
+    href: '/updates/autonomous-innovation-hub-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -28,8 +33,7 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Guide'
   },
   {
-    title: 'Launch: Agentic Ops Control Center (v1.0)',
->>>>>>> cursor/create-and-deploy-new-content-8191
+    title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary:
       'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
