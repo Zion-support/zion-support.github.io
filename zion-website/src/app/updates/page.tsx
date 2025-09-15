@@ -5,70 +5,60 @@ type UpdateItem = {
   date: string
   summary: string
   href: string
-  tag?: string
 }
 
 const updates: UpdateItem[] = [
   {
-    title: 'Launch: Advanced Blockchain Development Course',
+    title: 'Launch: AI Research Assistant 2.0',
+    date: '2025-09-15',
+    summary:
+      'Major upgrade with multi-agent orchestration, faster retrieval, and improved research planning.',
+    href: '/updates/ai-research-assistant-2-0'
+  },
+  {
+    title: 'Guide: Production-Ready RAG Patterns',
     date: '2025-09-10',
     summary:
-      'A deep-dive curriculum on smart contracts, DeFi, L2 scaling, and security best practices.',
-    href: '/contact',
-    tag: 'Course'
+      'A concise guide to building reliable retrieval-augmented generation systems with observability.',
+    href: '/updates/rag-production-patterns'
   },
   {
-    title: 'Community Challenge: Build a Production-Ready DApp',
-    date: '2025-09-12',
+    title: 'Course: Web3 Fundamentals Track',
+    date: '2025-09-01',
     summary:
-      'Join our 3-week challenge. Top projects can win up to $1,000 in ZION tokens.',
-    href: '/contact',
-    tag: 'Challenge'
-  },
-  {
-    title: 'Learning Path: Web3 Fundamentals',
-    date: '2025-09-14',
-    summary:
-      'Start with the basics of blockchain, wallets, NFTs, and Web3 security to build confidence fast.',
-    href: '/contact',
-    tag: 'Learning Path'
+      'A new beginner-friendly, hands-on curriculum that covers wallet safety, NFTs, and L2s.',
+    href: '/updates/web3-fundamentals-track'
   }
 ]
 
-export default function UpdatesPage() {
+export default function UpdatesIndexPage() {
   return (
     <div className="bg-black min-h-screen">
       <div className="relative isolate px-6 pt-24 lg:px-8">
-        <div className="mx-auto max-w-2xl py-10 lg:py-16 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Latest Updates</h1>
-          <p className="mt-4 text-lg leading-7 text-gray-300">
-            New courses, challenges, and announcements from Zion Academy.
-          </p>
+        <div className="mx-auto max-w-2xl py-12 lg:py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Latest Updates</h1>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Product launches, guides, and learning resources from Zion Academy and the team.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {updates.map((item) => (
-            <article key={item.title} className="flex flex-col justify-between bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <div>
-                <div className="flex items-center gap-2 text-xs text-blue-300">
-                  {item.tag ? <span className="rounded-full bg-blue-600/20 px-2 py-0.5 text-blue-300">{item.tag}</span> : null}
-                  <span className="text-gray-400">{new Date(item.date).toLocaleDateString()}</span>
-                </div>
-                <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                  <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
-                    <span className="absolute inset-0" />
-                    {item.title}
-                  </a>
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-gray-300">{item.summary}</p>
-              </div>
-              <div className="mt-6">
-                <a href={item.href} className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
-                  Learn more <span aria-hidden="true">→</span>
+            <article key={item.href} className="flex flex-col bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+              <div className="text-sm text-blue-400 font-medium">{item.date}</div>
+              <h2 className="mt-2 text-xl font-semibold text-white">
+                <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
+                  {item.title}
                 </a>
-              </div>
+              </h2>
+              <p className="mt-3 text-sm leading-6 text-gray-300">{item.summary}</p>
+              <a href={item.href} className="mt-6 text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
+                Read more <span aria-hidden="true">→</span>
+              </a>
             </article>
           ))}
         </div>
