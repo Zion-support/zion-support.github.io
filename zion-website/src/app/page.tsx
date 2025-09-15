@@ -123,17 +123,17 @@ export default function HomePage() {
               {
                 title: 'New Course: Advanced Blockchain Development',
                 summary:
-                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
+                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security best practices.',
                 href: '/updates'
               },
               {
                 title: 'Community Challenge: Build a DApp',
-                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
+                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens. Submissions close next month.',
                 href: '/updates'
               },
               {
-                title: 'New Learning Path: Web3 Fundamentals',
-                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
+                title: 'Learning Path: Web3 Fundamentals',
+                summary: 'Beginner-friendly path covering blockchain basics, NFTs, wallets, and Web3 security essentials.',
                 href: '/updates'
               }
             ].map((item) => (
