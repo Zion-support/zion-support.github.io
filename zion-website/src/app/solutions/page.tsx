@@ -1,11 +1,20 @@
 import React from 'react'
-import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon, ChartBarIcon, GlobeAltIcon, UserGroupIcon, CogIcon } from '@heroicons/react/24/outline'
+import { 
+  LightBulbIcon, 
+  CpuChipIcon, 
+  RocketLaunchIcon, 
+  ShieldCheckIcon,
+  ChartBarIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  CogIcon
+} from '@heroicons/react/24/outline'
 
 const flagshipSolutions = [
-  { name: 'AI Research Assistant', description: 'Revolutionary autonomous research platform accelerating scientific discovery.', icon: LightBulbIcon, features: ['Natural Language Processing', 'Multi-modal Learning', 'Real-time Collaboration', 'Advanced Analytics'], href: '/solutions/ai-autonomous-research' },
-  { name: 'Quantum Neural Networks', description: 'Breakthrough quantum computing technology for next-generation AI.', icon: CpuChipIcon, features: ['Quantum Supremacy', 'Neural Architecture Search', 'Hybrid Classical-Quantum', 'Scalable Architecture'], href: '/solutions/quantum-neural-networks' },
+  { name: 'AI Research Assistant', description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.', icon: LightBulbIcon, features: ['Natural Language Processing', 'Multi-modal Learning', 'Real-time Collaboration', 'Advanced Analytics'], href: '/solutions/ai-autonomous-research' },
+  { name: 'Quantum Neural Networks', description: 'Breakthrough quantum computing technology for next-generation AI applications.', icon: CpuChipIcon, features: ['Quantum Supremacy', 'Neural Architecture Search', 'Hybrid Classical-Quantum', 'Scalable Architecture'], href: '/solutions/quantum-neural-networks' },
   { name: 'Autonomous Business Operations', description: 'Self-optimizing business processes that adapt and improve automatically.', icon: RocketLaunchIcon, features: ['Process Automation', 'Predictive Analytics', 'Continuous Optimization', 'Real-time Monitoring'], href: '/solutions/autonomous-business' },
-  { name: 'IT Asset Management', description: 'Intelligent asset tracking and optimization for enterprise infrastructure.', icon: ShieldCheckIcon, features: ['Asset Discovery', 'Lifecycle Management', 'Security Compliance', 'Cost Optimization'], href: '/solutions/it-asset-management' },
+  { name: 'IT Asset Management', description: 'Intelligent asset tracking and optimization for modern enterprise infrastructure.', icon: ShieldCheckIcon, features: ['Asset Discovery', 'Lifecycle Management', 'Security Compliance', 'Cost Optimization'], href: '/solutions/it-asset-management' },
 ]
 
 const industryApplications = [
@@ -17,21 +26,19 @@ const industryApplications = [
 
 const implementationSteps = [
   { step: '01', title: 'Discovery & Assessment', description: 'We analyze your current systems, identify opportunities, and develop a comprehensive AI strategy.', icon: LightBulbIcon },
-  { step: '02', title: 'Solution Design', description: 'We design custom AI solutions tailored to your specific business needs and objectives.', icon: CpuChipIcon },
-  { step: '03', title: 'Development & Testing', description: 'We develop and rigorously test your AI solution to ensure optimal performance.', icon: CogIcon },
-  { step: '04', title: 'Deployment & Training', description: 'Seamless deployment with comprehensive training for your team to maximize adoption.', icon: RocketLaunchIcon },
-  { step: '05', title: 'Ongoing Support', description: 'Continuous monitoring and optimization to ensure lasting value.', icon: ShieldCheckIcon },
+  { step: '02', title: 'Solution Design', description: 'Our experts design custom AI solutions tailored to your specific business needs and objectives.', icon: CpuChipIcon },
+  { step: '03', title: 'Development & Testing', description: 'We develop and rigorously test your AI solution to ensure optimal performance and reliability.', icon: CogIcon },
+  { step: '04', title: 'Deployment & Training', description: 'Seamless deployment with comprehensive training for your team to maximize solution adoption.', icon: RocketLaunchIcon },
+  { step: '05', title: 'Ongoing Support', description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.', icon: ShieldCheckIcon },
 ]
 
 export default function SolutionsPage() {
   return (
     <div className="bg-black">
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      <div className="relative isolate px-6 pt-24 lg:px-8">
+        <div className="mx-auto max-w-2xl py-10 lg:py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              AI Solutions for <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Every Industry</span>
-            </h1>
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">AI Solutions for <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Every Industry</span></h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">Discover our cutting-edge AI and technology solutions designed to transform your business operations and drive unprecedented growth and innovation.</p>
           </div>
         </div>
