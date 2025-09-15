@@ -44,6 +44,37 @@ Enrollment opens next week with early bird pricing available for the first 50 st
                 'created_at': datetime.utcnow() - timedelta(hours=2)
             },
             {
+                'title': 'Feature Launch: Interactive AI Labs',
+                'content': '''We are launching Interactive AI Labs across select courses!
+
+Highlights:
+• GPU-backed sandboxed environments
+• Preloaded datasets and notebooks
+• One-click lab resets and hints
+• Auto-grading for select exercises
+
+Rollout starts next week for AI Fundamentals and Computer Vision tracks, with more labs coming soon.''',
+                'summary': 'New GPU-powered Interactive AI Labs with auto-grading and one-click resets.',
+                'update_type': 'feature',
+                'priority': 'high',
+                'created_at': datetime.utcnow() - timedelta(hours=8)
+            },
+            {
+                'title': 'Webinar Series: Production-Ready LLM Systems',
+                'content': '''Join our free webinar series on designing, deploying, and monitoring production LLM systems.
+
+Schedule:
+• Part 1: Retrieval and Caching Strategies
+• Part 2: Evaluation and Guardrails
+• Part 3: Cost Optimization and Observability
+
+Register today to reserve your seat and receive recordings and materials after each session.''',
+                'summary': 'Free 3-part webinar on production LLM systems: retrieval, guardrails, and cost.',
+                'update_type': 'event',
+                'priority': 'normal',
+                'created_at': datetime.utcnow() - timedelta(days=5)
+            },
+            {
                 'title': 'System Maintenance Scheduled',
                 'content': '''Scheduled maintenance will occur this weekend to improve platform performance and add new features.
 
