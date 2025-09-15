@@ -14,6 +14,15 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: RAG at Scale - Engineering Playbook",
+      description: "A practical, engineering-first playbook to design, operate, and scale RAG systems with reliability, observability, and ROI.",
+      slug: "ai-2026-rag-at-scale-engineering-playbook",
+      category: "Engineering",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/rag-at-scale-2026.jpg"
+    },
+    {
       title: "AI 2026: Secure Agent Architecture - Zero-Trust, Guardrails, and Compliance",
       description: "Designing secure AI agent systems in 2026 using zero-trust principles, capability-scoped tools, runtime guardrails, and compliance-by-design.",
       slug: "ai-2026-secure-agent-architecture",

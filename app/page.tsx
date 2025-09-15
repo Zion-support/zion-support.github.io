@@ -366,7 +366,9 @@ export default function HomePage() {
           </div>
         </section>
 
-<<<<<<< HEAD
+        {/* Latest Content Showcase 2025 - NEW FEATURED */}
+        <LatestContentShowcase2025 />
+
         {/* Featured Content Grid */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -399,10 +401,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-=======
-        {/* Latest Content Showcase 2025 - NEW FEATURED */}
-        <LatestContentShowcase2025 />
->>>>>>> cursor/create-and-deploy-new-content-47bb
 
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
@@ -482,6 +480,22 @@ export default function HomePage() {
         <NewServicesShowcase2025 />
         <NewContent2026Showcase />
         <InteractiveContentDiscoveryWidget />
+
+        {/* Promo: New Article - RAG at Scale Engineering Playbook */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">New on the blog</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: RAG at Scale - Engineering Playbook</h3>
+                <p className="text-gray-600 max-w-2xl">Architect reliable RAG systems with hybrid retrieval, eval harnesses, and strong governance.</p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/blog/ai-2026-rag-at-scale-engineering-playbook" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Advanced AI Components */}
         <AdvancedContentRecommendationEngine />
