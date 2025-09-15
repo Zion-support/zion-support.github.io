@@ -31,7 +31,6 @@ export interface Service {
     address: string;
   };
 }
-
 export const services: Service[] = [
   // AI Services
   {

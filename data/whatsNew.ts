@@ -11,50 +11,6 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
-    id: "agent-incident-response-playbook-2026-sept15",
-    title: "AI 2026: Agent Incident Response Playbook",
-    description:
-      "Eval‑gated triage, mitigation, and escalation playbooks for autonomous agents in production.",
-    ctaLabel: "Read Playbook",
-    href: "/content/ai-2026-agent-incident-response-playbook",
-    emoji: "🚨",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
-    id: "agents-oncall-automation-2026-sept15",
-    title: "AI 2026: Agents‑On‑Call Automation",
-    description:
-      "Autonomous incident triage, mitigation, and escalation with eval‑gated playbooks and observability.",
-    ctaLabel: "Read Article",
-    href: "/blog/ai-2026-agents-oncall-automation",
-    emoji: "📟",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
-    id: "zero-trust-agent-architecture-2026",
-    title: "AI 2026: Zero-Trust Agent Architecture",
-    description:
-      "Blueprint for zero-trust agents with isolation domains, policy-as-code, and runtime guards.",
-    ctaLabel: "Read Architecture",
-    href: "/content/ai-2026-zero-trust-agent-architecture",
-    emoji: "🛡️",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
-    id: "privacy-preserving-agents-2026",
-    title: "AI 2026: Privacy-Preserving Agents",
-    description:
-      "Private-by-default agents with scoped memory, redaction, and confidential computing.",
-    ctaLabel: "Read Article",
-    href: "/blog/ai-2026-privacy-preserving-agents",
-    emoji: "🔒",
-    highlight: true,
-    date: "2025-09-15",
-  },
-  {
     id: "agent-incident-response-playbook-2026-v1",
     title: "AI 2026: Agent Incident Response Playbook",
     description:

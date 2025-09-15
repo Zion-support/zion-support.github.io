@@ -98,50 +98,18 @@ export const siteUpdates: SiteUpdate[] = [
   {
     title: 'Launch: AI Research Assistant 2.0',
     summary:
-      'Autonomous research platform with improved retrieval, citation quality, and benchmarked task suites.',
+      'Major upgrade with better sources, multimodal inputs, and faster research pipelines.',
     href: '/updates/ai-research-assistant-2-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
-    title: 'Whitepaper: AI Agent Safety Framework (2025)',
+    title: 'Course: Web3 Fundamentals Track',
     summary:
-      'Operational guardrails, evals, and policy-as-code for autonomous agents in production.',
-    href: '/updates/agent-safety-whitepaper',
+      'Hands-on introduction to wallets, smart contracts, tokens, and decentralized applications.',
+    href: '/updates/web3-fundamentals-track',
     date: '2025-09-15',
-    tag: 'Whitepaper'
-  },
-  {
-    title: 'Report: 2025 AI Trends Radar',
-    summary:
-      'Key enterprise AI trends for 2025: agent safety, real-time RAG, governance automation, and cost-aware routing.',
-    href: '/updates/ai-trends-radar-2025',
-    date: '2025-09-15',
-    tag: 'Report'
-  },
-  {
-    title: 'Launch: AI Lab Research Portal',
-    summary:
-      'Unified portal for research briefs, datasets, and evaluations with live benchmarks and citations.',
-    href: '/updates/ai-lab-research-portal',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Guide: Real-Time Retrieval Evals',
-    summary:
-      'Practical guide to measuring latency, hit-rate, and answer quality in streaming RAG systems.',
-    href: '/updates/real-time-retrieval-evals',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  {
-    title: 'Launch: AI Agent Safety Certification (Beta)',
-    summary:
-      'New certification program validating safety practices for autonomous agents across design, evals, and operations.',
-    href: '/updates/ai-agent-safety-certification-beta',
-    date: '2025-09-15',
-    tag: 'Launch'
+    tag: 'Course'
   },
   {
     title: 'Launch: Autonomous Ops Playbook (2026 Preview)',

@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Play, Star, Users, Award, TrendingUp } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { ContentShowcase } from '../components/ContentShowcase';
+import { NewContentShowcase } from '../components/NewContentShowcase';
+import { InteractiveTechDemo } from '../components/InteractiveTechDemo';
 import { ServicesHighlight } from '../components/ServicesHighlight';
 
 const EnhancedHome: React.FC = () => {
@@ -240,6 +242,12 @@ const EnhancedHome: React.FC = () => {
 
       {/* Services Highlight */}
       <ServicesHighlight />
+
+      {/* New Content Showcase */}
+      <NewContentShowcase />
+
+      {/* Interactive Demo */}
+      <InteractiveTechDemo />
 
       {/* Content Showcase */}
       <ContentShowcase />

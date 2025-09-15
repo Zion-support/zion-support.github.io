@@ -113,50 +113,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* New Promo: Governance Control Library + Safety Runbooks */}
-      <section className="py-8 bg-gradient-to-r from-purple-50 to-pink-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-pink-100">
-            <div>
-              <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agent Governance Control Library + Safety Runbooks</h2>
-              <p className="text-gray-600 mt-2">Policy‑as‑code controls and standardized, eval‑gated safety runbooks.</p>
-            </div>
-            <div className="flex gap-3">
-              <Link href="/content/ai-2026-agent-governance-control-library" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Control Library</Link>
-              <Link href="/blog/ai-2026-agent-safety-runbooks" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Safety Runbooks</Link>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* New Promo: September 2025 fresh content */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
             <div>
               <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Eval Pipelines + Guardrails in Prod</h2>
-              <p className="text-gray-600 mt-2">End‑to‑end evaluation pipelines and operational guardrails for safer autonomy.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Real‑Time RAG + Agents‑On‑Call</h2>
+              <p className="text-gray-600 mt-2">Low‑latency retrieval architectures and autonomous incident handling with eval‑gated playbooks.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-end-to-end-eval-pipelines" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Eval Pipelines</Link>
-              <Link href="/blog/ai-2026-guardrails-in-production" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Guardrails in Prod</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* New Promo: Agent Red Teaming Blueprint (Sept 2025) */}
-      <section className="py-8 bg-gradient-to-r from-red-50 to-purple-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-red-100">
-            <div>
-              <p className="text-sm font-semibold text-red-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Agent Red Teaming Blueprint</h2>
-              <p className="text-gray-600 mt-2">Adversarial scenarios, runtime controls, and continuous hardening for agents.</p>
-            </div>
-            <div className="flex gap-3">
-              <Link href="/content/ai-2026-agent-red-teaming-blueprint" className="inline-block bg-red-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-red-700">Read Blueprint</Link>
-              <Link href="/blog/ai-2026-secure-agent-architecture" className="inline-block border border-red-600 text-red-700 px-5 py-3 rounded-lg font-semibold hover:bg-red-50">Secure Architecture</Link>
+              <Link href="/blog/ai-2026-real-time-retrieval-architectures" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Real‑Time RAG</Link>
+              <Link href="/blog/ai-2026-agents-oncall-automation" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agents‑On‑Call</Link>
             </div>
           </div>
         </div>
@@ -173,22 +141,6 @@ export default function HomePage() {
             <div className="flex gap-3">
               <Link href="/blog/ai-2026-safe-tool-use-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
               <Link href="/content/ai-2026-secure-tooling-permissions-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Permissions Blueprint</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* New Promo: Eval-Driven Release Engineering + Fail-Safe Architectures (Sept 2025) */}
-      <section className="py-8 bg-gradient-to-r from-purple-50 to-pink-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-pink-100">
-            <div>
-              <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Eval‑Driven Release Engineering + Fail‑Safe Architectures</h2>
-              <p className="text-gray-600 mt-2">Gate releases with evals and design isolation to reduce blast radius.</p>
-            </div>
-            <div className="flex gap-3">
-              <Link href="/blog/ai-2026-eval-driven-release-engineering" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Release Engineering</Link>
-              <Link href="/content/ai-2026-fail-safe-architectures" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Fail‑Safe Architectures</Link>
             </div>
           </div>
         </div>

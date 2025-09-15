@@ -62,6 +62,8 @@ const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financia
 const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovative-Services-Showcase-2025.tsx'));
 
 // New content showcase components
+const UltimateServicesShowcase2025 = React.lazy(() => import('./components/UltimateServicesShowcase2025'));
+const ContentShowcase = React.lazy(() => import('./components/ContentShowcase'));
 const InteractiveDemoShowcase = React.lazy(() => import('./components/InteractiveDemoShowcase'));
 
 // Service pages with enhanced error boundaries
