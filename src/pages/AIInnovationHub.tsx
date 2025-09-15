@@ -25,7 +25,10 @@ import {
   BarChart3,
   MessageSquare,
   Calendar,
-  BookOpen
+  BookOpen,
+  Eye,
+  Atom,
+  Sparkles
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -227,48 +230,6 @@ export default function AIInnovationHub() {
                 </Link>
               </div>
             </motion.div>
-          </div>
-        </section>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative"
-              >
-                <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="p-3 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl">
-                        <Brain className="w-8 h-8 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white">AI Capabilities</h3>
-                        <p className="text-gray-400">6 Core Technologies</p>
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-slate-700/50 rounded-lg p-4">
-                        <div className="text-2xl font-bold text-zion-cyan">500+</div>
-                        <div className="text-sm text-gray-400">Models Deployed</div>
-                      </div>
-                      <div className="bg-slate-700/50 rounded-lg p-4">
-                        <div className="text-2xl font-bold text-zion-cyan">99.9%</div>
-                        <div className="text-sm text-gray-400">Accuracy Rate</div>
-                      </div>
-                      <div className="bg-slate-700/50 rounded-lg p-4">
-                        <div className="text-2xl font-bold text-zion-cyan">24/7</div>
-                        <div className="text-sm text-gray-400">AI Support</div>
-                      </div>
-                      <div className="bg-slate-700/50 rounded-lg p-4">
-                        <div className="text-2xl font-bold text-zion-cyan">50+</div>
-                        <div className="text-sm text-gray-400">Industries</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
           </div>
         </section>
 
