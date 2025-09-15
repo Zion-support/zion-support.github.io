@@ -37,8 +37,6 @@
 <<<<<<< HEAD
     "src/**/*",
     "src/types/offline-shims.d.ts",
-=======
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
     "**/*.ts",
     "**/*.tsx",
     "tailwind.config.js",
@@ -48,14 +46,10 @@
     "node_modules",
     "dist",
     "build",
-<<<<<<< HEAD
     "coverage",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx"
-=======
-    "coverage"
->>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
   ]
 }
