@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Customer Support Copilot (v1.0)',
+    summary:
+      'Omnichannel support copilot with retrieval grounding, escalations, and real-time quality evals.',
+    href: '/updates/autonomous-support-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production Agent Red Teaming (2025)',
+    summary:
+      'End-to-end adversarial evaluation playbook with jailbreak taxonomies and measurable mitigations.',
+    href: '/updates/production-agent-red-teaming-2025',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Autonomous Finance OS (v1.0)',
     summary:
       'Real-time cash visibility, autonomous close, and policy-as-code controls for finance.',
