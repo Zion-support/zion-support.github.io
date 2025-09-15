@@ -14,6 +14,15 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: LLM Evals Maturity Model",
+      description: "An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI systems in 2026.",
+      slug: "ai-2026-llm-evals-maturity-model",
+      category: "Best Practices",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/llm-evals-maturity-model-2026.jpg"
+    },
+    {
       title: "AI 2026: Secure Agent Architecture - Zero-Trust, Guardrails, and Compliance",
       description: "Designing secure AI agent systems in 2026 using zero-trust principles, capability-scoped tools, runtime guardrails, and compliance-by-design.",
       slug: "ai-2026-secure-agent-architecture",
