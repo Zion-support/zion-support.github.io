@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
+    summary:
+      'Step-by-step playbook to stand up autonomous operations with policy-as-code and measurable SLAs.',
+    href: '/updates/autonomous-ops-playbook-2026',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Blueprint: Real-Time Retrieval Architectures (2026)',
+    summary:
+      'Design patterns for low-latency hybrid retrieval powering agentic systems and copilots.',
+    href: '/updates/real-time-retrieval-architectures-2026',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
     title: 'Launch: AI Governance Toolkit (v2)',
     summary:
       'Policy-as-code templates, audit trails, and automated guardrails for enterprise AI programs.',
