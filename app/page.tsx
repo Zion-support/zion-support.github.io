@@ -91,17 +91,18 @@ export default function HomePage() {
         {/* New Multimodal Agents 2025 Banner - NEW */}
         <NewMultimodalAgents2025Banner />
         {/* Promo: Fresh Content */}
-        <section className="py-10 bg-gradient-to-r from-purple-50 to-blue-50">
+        <section className="py-10 bg-gradient-to-r from-emerald-50 to-teal-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
               <div>
-                <p className="text-sm font-semibold text-purple-700">Just published</p>
+                <p className="text-sm font-semibold text-emerald-700">Just published</p>
                 <h2 className="text-2xl font-bold text-gray-900 mt-1">Explore our newest guides</h2>
-                <p className="text-gray-600 mt-2">Hyperautomation Blueprint 2026 and Edge AI Agents are now live.</p>
+                <p className="text-gray-600 mt-2">Autonomous Finance Operations 2026, Hyperautomation 2026, and Edge AI Agents.</p>
               </div>
               <div className="flex gap-3">
-                <Link href="/content/hyperautomation-blueprint-2026" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Blueprint</Link>
-                <Link href="/content/edge-ai-agents-2026" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Edge AI Agents</Link>
+                <Link href="/content/autonomous-finance-ops-2026" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Autonomous Finance</Link>
+                <Link href="/content/hyperautomation-blueprint-2026" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Hyperautomation</Link>
+                <Link href="/content/edge-ai-agents-2026" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Edge AI Agents</Link>
               </div>
             </div>
           </div>
