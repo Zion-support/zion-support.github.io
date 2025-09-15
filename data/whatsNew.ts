@@ -22,6 +22,17 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+    id: "autonomous-customer-support-agents-2026",
+    title: "AI 2026: Autonomous Customer Support Agents",
+    description:
+      "Blueprint to deploy autonomous support agents with routing, guardrails, and eval gates.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-autonomous-customer-support-agents",
+    emoji: "🤝",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agent-posture-management-2026",
     title: "AI 2026: Agent Posture Management",
     description:
@@ -61,6 +72,16 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     href: "/blog/ai-2026-real-time-retrieval-architectures",
     emoji: "⚡",
     highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "evaluation-harness-blueprint-2026",
+    title: "AI 2026: Evaluation Harness Blueprint",
+    description:
+      "Build scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
+    ctaLabel: "Read Blueprint",
+    href: "/content/ai-2026-evaluation-harness-blueprint",
+    emoji: "📊",
     date: "2025-09-15",
   },
   {
