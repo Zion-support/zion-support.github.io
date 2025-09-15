@@ -97,6 +97,22 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+      {/* New Promo: Agentic Sandbox Patterns (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-purple-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
+            <div>
+              <p className="text-sm font-semibold text-purple-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Agentic Sandbox Patterns</h2>
+              <p className="text-gray-600 mt-2">Isolation domains, least privilege, and runtime guards for safe tool use.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/content/ai-2026-agentic-sandbox-patterns" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Guide</Link>
+              <Link href="/blog/ai-2026-agentic-sandbox-patterns" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Blog Overview</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: GTM Agents Blueprint (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-purple-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
