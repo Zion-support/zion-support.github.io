@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import SEO from '../../components/SEO';
 
 export const metadata = {
@@ -59,6 +59,15 @@ const BlogPage = () => {
       image: "/images/enterprise-ai-agents-2025.jpg"
     },
     {
+      title: "AI 2026: Enterprise AI FinOps Cost Optimization",
+      description: "Control AI infrastructure costs with FinOps: visibility, right-sizing, caching, eval-gated upgrades, and policy guardrails.",
+      slug: "ai-2026-enterprise-ai-finops-cost-optimization",
+      category: "FinOps",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/ai-finops-2026.jpg"
+    },
+    {
       title: "Quantum Computing Breakthrough 2025: Enterprise Applications",
       description: "Explore how quantum computing is revolutionizing enterprise operations in 2025 with unprecedented processing power and breakthrough applications.",
       slug: "ai-2025-quantum-computing-breakthrough",
@@ -66,6 +75,15 @@ const BlogPage = () => {
       date: "2025-01-15",
       featured: true,
       image: "/images/quantum-computing-2025.jpg"
+    },
+    {
+      title: "AI 2026: Autonomous Finance Operating System",
+      description: "Design a real-time, autonomous finance OS with policy-as-code, continuous close, and AI-driven cash optimization.",
+      slug: "ai-2026-autonomous-finance-operating-system",
+      category: "Finance",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/autonomous-finance-os-2026.jpg"
     }
   ];
 
