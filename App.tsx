@@ -19,6 +19,10 @@ import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 import AI2026RevolutionaryBreakthrough from './src/pages/AI2026RevolutionaryBreakthrough';
 import QuantumComputingBreakthrough2026 from './src/pages/QuantumComputingBreakthrough2026';
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
+import RevolutionaryAIConsciousness2027 from './src/pages/RevolutionaryAIConsciousness2027';
+import QuantumConsciousnessRevolution2027 from './src/pages/QuantumConsciousnessRevolution2027';
+import UltimateTechRevolution2027 from './src/pages/UltimateTechRevolution2027';
+import RevolutionaryContentShowcase2027 from './src/components/RevolutionaryContentShowcase2027';
 import InteractiveTechnologyShowcase from './src/components/InteractiveTechnologyShowcase';
 import AIFutureTrends2027 from './src/pages/AIFutureTrends2027';
 import BlockchainRevolution2027 from './src/pages/BlockchainRevolution2027';
@@ -692,6 +696,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/CybersecurityFortress2026" element={<CybersecurityFortress2026 />} />
           <Route path="/pages/FutureTechInsights2027" element={<FutureTechInsights2027 />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
+          <Route path="/revolutionary-ai-consciousness-2027" element={<RevolutionaryAIConsciousness2027 />} />
+          <Route path="/quantum-consciousness-revolution-2027" element={<QuantumConsciousnessRevolution2027 />} />
+          <Route path="/ultimate-tech-revolution-2027" element={<UltimateTechRevolution2027 />} />
+          <Route path="/revolutionary-content-showcase-2027" element={<RevolutionaryContentShowcase2027 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/contact" element={
