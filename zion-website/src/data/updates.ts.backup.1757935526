@@ -8,20 +8,36 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+<<<<<<< HEAD
+    title: 'Launch: Autonomous Support Copilot (v1.1)',
+    summary:
+      'Reliability and cost upgrades with retrieval observability, improved grounding, and safety guardrails.',
+    href: '/updates/autonomous-support-copilot-1-1',
+=======
     title: 'Launch: Autonomous Ops Control Center (v2.0)',
     summary:
       'Unified observability, policy enforcement, and automated incident workflows with live evals.',
     href: '/updates/autonomous-ops-control-center-2-0',
+>>>>>>> origin/cursor/create-and-deploy-new-content-4e22
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
+<<<<<<< HEAD
+    title: 'Guide: Real-Time RAG Evals (2026)',
+    summary:
+      'Instrument retrieval pipelines and run continuous live evals with actionable dashboards.',
+    href: '/updates/real-time-rag-evals-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+=======
     title: 'Blueprint: Enterprise Agent Safety (2026)',
     summary:
       'Risk tiers, permissioned tools, sandboxes, approvals, and runtime safety telemetry.',
     href: '/updates/enterprise-agent-safety-blueprint-2026',
     date: '2025-09-15',
     tag: 'Blueprint'
+>>>>>>> origin/cursor/create-and-deploy-new-content-4e22
   },
   {
     title: 'Launch: Compliance Auditor (v1.0)',

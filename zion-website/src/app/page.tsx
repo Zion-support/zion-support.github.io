@@ -1,13 +1,12 @@
-import React from 'react'
-import { getLatestUpdates } from '../data/updates'
 import {
-  LightBulbIcon,
+  ChartBarIcon,
   CpuChipIcon,
   GlobeAltIcon,
+  LightBulbIcon,
   ShieldCheckIcon,
-  ChartBarIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline'
+import { getLatestUpdates } from '../data/updates'
 
 const features = [
   {
@@ -106,6 +105,13 @@ export default function HomePage() {
               </a>
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
+              <a
+                href="/updates/autonomous-ops-control-center-2-0"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Launch: Ops Control Center 2.0
+                <span aria-hidden>→</span>
+              </a>
               <a
                 href="/updates/mentor-office-hours"
                 className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
