@@ -1,24 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-import { createRoot, hydrateRoot } from 'react-dom/client';
-import App from './App';
-=======
-<<<<<<< HEAD
-import { createRoot, hydrateRoot } from 'react-dom/client';
-import App from './App';
-=======
-import { createRoot } from 'react-dom/client';
-import App from '../App.tsx';
->>>>>>> cursor/create-and-deploy-new-content-764d
 >>>>>>> cursor/create-and-deploy-new-content-6f13
 import './index.css';
 
 const rootElement = document.getElementById('root');
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-6f13
 function renderApp() {
     const app = (
         <React.StrictMode>
@@ -53,18 +38,4 @@ try {
 window.addEventListener('error', (e) => {
     console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
-<<<<<<< HEAD
-});
-=======
-});
-=======
-if (rootElement) {
-  const root = createRoot(rootElement);
-  root.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  );
-}
->>>>>>> cursor/create-and-deploy-new-content-764d
 >>>>>>> cursor/create-and-deploy-new-content-6f13

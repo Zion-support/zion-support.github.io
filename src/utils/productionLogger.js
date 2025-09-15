@@ -1,69 +1,35 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-// Production logger utility
-export const productionLogger = {
-  log: (message, ...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(message, ...args);
-    }
-  },
-  
-  error: (message, ...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.error(message, ...args);
-    }
-  },
-  
-  warn: (message, ...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.warn(message, ...args);
-    }
-  },
-  
-  info: (message, ...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.info(message, ...args);
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 // Production logger utility for safe logging in production environments
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 export const productionLogger = {
-  log: (...args) => {
+  log: (message, ...args) => {
     if (isDevelopment) {
-      console.log(...args);
+      console.log(message, ...args);
     }
   },
   
-  warn: (...args) => {
+  warn: (message, ...args) => {
     if (isDevelopment) {
-      console.warn(...args);
+      console.warn(message, ...args);
     }
   },
   
-  error: (...args) => {
+  error: (message, ...args) => {
     if (isDevelopment) {
-      console.error(...args);
+      console.error(message, ...args);
     }
   },
   
-  info: (...args) => {
+  info: (message, ...args) => {
     if (isDevelopment) {
-      console.info(...args);
+      console.info(message, ...args);
     }
   },
   
-  debug: (...args) => {
+  debug: (message, ...args) => {
     if (isDevelopment) {
-      console.debug(...args);
+      console.debug(message, ...args);
     }
   },
   
@@ -75,14 +41,7 @@ export const productionLogger = {
       }
     } catch (error) {
       // Silently fail in production
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d952
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-d952
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
     }
   }
 };

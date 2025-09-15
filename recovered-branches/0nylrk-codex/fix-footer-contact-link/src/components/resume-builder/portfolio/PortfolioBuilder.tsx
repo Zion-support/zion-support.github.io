@@ -1,38 +1,10 @@
 
-<<<<<<< HEAD
-import { useStateuseEffect } from 'react';
-import { CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-FilePlusLoader2
-=======
-import { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { FilePlus, Loader2 } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 import { ProjectCard } from './ProjectCard';
 import { ProjectForm } from './ProjectForm';
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 
 export function PortfolioBuilder() {
-<<<<<<< HEAD
-  const { projectsfetchProjectsdeleteProjectisLoading } = usePortfolio();
-  const [showAddProjectsetShowAddProject] = useState(false);
-  const [editingProjectsetEditingProject] = useState<PortfolioProject | null>(null);
-  
-  useEffect(() => {
-    fetchProjects();
-  }[fetchProjects]);
-=======
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
-  const [showAddProject, setShowAddProject] = useState(false);
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null);
-  
-  useEffect(() => {
-    fetchProjects();
-  }, [fetchProjects]);
->>>>>>> origin/auto/autonomy-17186719616
   
   const handleAddSuccess = () => {
     setShowAddProject(false);

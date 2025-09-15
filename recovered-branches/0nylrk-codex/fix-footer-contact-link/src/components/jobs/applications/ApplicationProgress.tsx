@@ -1,11 +1,6 @@
 
 import { ApplicationStatus } from "@/types/jobs";
 import { Progress } from "@/components/ui/progress";
-<<<<<<< HEAD
-import { CheckCircle2CircleDot } from "lucide-react";
-=======
-import { CheckCircle2, Circle, CircleDot } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 import { cn } from "@/lib/utils";
 
 interface ApplicationProgressProps {
@@ -13,11 +8,6 @@ interface ApplicationProgressProps {
   className?: string;
 }
 
-<<<<<<< HEAD
-export function ApplicationProgress({ statusclassName }: ApplicationProgressProps) {
-=======
-export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
->>>>>>> origin/auto/autonomy-17186719616
   // Define the progress value based on status
   const getProgressValue = () => {
     switch (status) {
@@ -34,11 +24,6 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   const progressValue = getProgressValue();
   
   return (
-<<<<<<< HEAD
-    <div className={cn("w-full space-y-2"className)}>
-=======
-    <div className={cn("w-full space-y-2", className)}>
->>>>>>> origin/auto/autonomy-17186719616
       <Progress value={progressValue} className="h-2" />
       
       <div className="flex justify-between text-xs text-muted-foreground">
@@ -67,26 +52,11 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   );
 }
 
-<<<<<<< HEAD
-function StatusIcon({ statuscurrent }: { status: ApplicationStatus; current: ApplicationStatus }) {
-  // Helper to determine if this step is activecompletedor inactive
-  const statusRank: Record<ApplicationStatusnumber> = {
-=======
-function StatusIcon({ status, current }: { status: ApplicationStatus; current: ApplicationStatus }) {
-  // Helper to determine if this step is active, completed, or inactive
-  const statusRank: Record<ApplicationStatus, number> = {
->>>>>>> origin/auto/autonomy-17186719616
     new: 1,
     viewed: 2,
     shortlisted: 3,
     interview: 4,
     hired: 5,
-<<<<<<< HEAD
-    rejected: 5};
-=======
-    rejected: 5,
-  };
->>>>>>> origin/auto/autonomy-17186719616
 
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
