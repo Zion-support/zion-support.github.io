@@ -49,14 +49,10 @@
       "@constants/*": ["src/constants/*"],
       "@/components/*": ["src/components/*"]
     },
-<<<<<<< HEAD
     "types": ["vite/client", "node"],
     "plugins": [
       { "name": "typescript-plugin-css-modules" }
     ]
-=======
-    "types": ["vite/client", "node"]
->>>>>>> 83a51f4ac071 (feat: add latest content data and advertise on Home; fix configs for build)
   },
   "include": [
     "src/**/*",
