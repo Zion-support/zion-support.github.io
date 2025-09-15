@@ -32,5 +32,21 @@ export const latestContent: ContentItem[] = [
     tag: "Blueprint",
     date: "2025-09-14",
   },
+  {
+    id: "agentic-risk-safety-2026",
+    title: "AI 2026: Agentic Risk and Safety Playbook",
+    summary: "Safeguards, monitoring, and governance patterns for production agent systems.",
+    href: "/blog/ai-2026-agentic-risk-and-safety-playbook",
+    tag: "Playbook",
+    date: "2025-09-15",
+  },
+  {
+    id: "production-guardrails-2026",
+    title: "AI 2026: Production Guardrails for Autonomous Agents",
+    summary: "Isolation domains, policy-as-code, eval gates, and telemetry to ship safely.",
+    href: "/blog/ai-2026-production-guardrails-for-autonomous-agents",
+    tag: "Guide",
+    date: "2025-09-15",
+  },
 ];
 
