@@ -413,6 +413,35 @@ content_index:
         settlement_speed: "3x"
         incidents_reduction: "40%"
         audit_ready: true
+    - id: "ai-2026-autonomous-customer-support-agents"
+      type: "blog"
+      title: "AI 2026: Autonomous Customer Support Agents"
+      file_path: "/app/blog/ai-2026-autonomous-customer-support-agents/page.tsx"
+      url: "/blog/ai-2026-autonomous-customer-support-agents"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Customer Support", "Autonomous Agents", "Guardrails", "Evaluations", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        csat_improvement: "+12%"
+        aht_reduction: "-25%"
+        deflection: "+30%"
+        audit_ready: true
+    - id: "ai-2026-secure-agent-architecture"
+      type: "blog"
+      title: "AI 2026: Secure Agent Architecture"
+      file_path: "/app/blog/ai-2026-secure-agent-architecture/page.tsx"
+      url: "/blog/ai-2026-secure-agent-architecture"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Architecture", "Zero-Trust", "Security", "Policy-as-Code", "Isolation", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "-40%"
+        isolation_domains: true
+        runtime_guards: true
     - id: "ai-2026-realtime-evals-at-scale"
       type: "blog"
       title: "AI 2026: Real-Time Evals at Scale — From Offline Suites to Live Gates"
