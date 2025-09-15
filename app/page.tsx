@@ -111,6 +111,22 @@ export default function HomePage() {
         {/* Revolutionary AI Content 2026 Banner - NEW FEATURED */}
         <RevolutionaryAIContent2026Banner />
 
+        {/* New Content Promo: Enterprise Knowledge Graphs (2025) - NEW */}
+        <section className="py-10 bg-gradient-to-r from-purple-50 to-blue-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">New on the blog</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise Knowledge Graphs in 2025: From Data to Decisions</h3>
+                <p className="text-gray-600 max-w-2xl">Blueprint to unify data, enable secure RAG, and operationalize trustworthy AI across the enterprise.</p>
+              </div>
+              <Link href="/blog/ai-2025-enterprise-knowledge-graphs" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+                Read Article →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Promo: New Article - Enterprise AI Agents 2025 */}
         <section className="py-12 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
