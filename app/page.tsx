@@ -178,6 +178,23 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* New Promo: Agent Risk Metrics + Governed Tool Use + Starter Kit (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agent Risk Metrics + Governed Tool Use</h2>
+              <p className="text-gray-600 mt-2">Measure safety and reliability with evaluation gates and policy‑guarded tools.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-enterprise-agent-risk-metrics" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Risk Metrics</Link>
+              <Link href="/blog/ai-2026-governed-tool-use-case-studies" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Tool Use Case Studies</Link>
+              <Link href="/resources/ai-2026-agent-risk-metrics-starter-kit" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Starter Kit</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={8} />
       {/* New Promo: GTM Agents Blueprint */}
