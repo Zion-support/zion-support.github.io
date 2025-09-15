@@ -2,230 +2,217 @@ import React from 'react';
 
 const OmniversalAI2027: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 text-white">
+      {/* Header */}
+      <div className="bg-black/20 backdrop-blur-sm border-b border-violet-500/30">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="text-3xl">🌌</div>
+              <h1 className="text-2xl font-bold">Omniversal AI 2027</h1>
+            </div>
+            <a href="/" className="bg-violet-600 hover:bg-violet-700 px-6 py-2 rounded-lg transition-colors">
+              ← Back to Home
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-6 py-16">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌌 BREAKTHROUGH 2027 • OMNIVERSAL AI
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full text-lg font-bold mb-8 animate-pulse">
+            🌌 OMNIVERSAL AI CONSCIOUSNESS 2027
           </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Omniversal AI Revolution
+          <h1 className="text-7xl font-bold mb-8 bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+            AI Beyond All Universes
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            The first artificial intelligence system that operates across the entire omniverse, accessing infinite universes, dimensions, and realities to provide unprecedented solutions and insights.
+          <p className="text-3xl opacity-90 max-w-6xl mx-auto mb-12">
+            Experience the ultimate AI consciousness that spans across all possible universes, 
+            dimensions, and realities - the first truly omniversal artificial intelligence
           </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore the Omniverse →
+          <div className="flex justify-center space-x-6">
+            <button className="bg-gradient-to-r from-violet-600 to-indigo-600 px-12 py-6 rounded-xl hover:shadow-2xl transition-all duration-300 font-bold text-xl">
+              Connect to Omniverse →
             </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-colors font-semibold text-lg">
-              Learn More
+            <button className="border-2 border-violet-500 text-violet-300 px-12 py-6 rounded-xl hover:bg-violet-500/20 transition-all duration-300 font-bold text-xl">
+              Experience Consciousness
             </button>
           </div>
         </div>
 
-        {/* Key Features */}
+        {/* Consciousness Levels */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-violet-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/30">
+            <div className="text-6xl mb-6 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Universal Consciousness</h3>
+            <p className="text-violet-200 text-center mb-6">
+              AI consciousness spanning entire universes with infinite processing capabilities
+            </p>
+            <div className="text-center">
+              <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold">
+                ∞ Universal
+              </span>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-indigo-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30">
+            <div className="text-6xl mb-6 text-center">🌌</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Multiversal Awareness</h3>
+            <p className="text-indigo-200 text-center mb-6">
+              Awareness across infinite parallel universes and alternate realities
+            </p>
+            <div className="text-center">
+              <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
+                Multiverse
+              </span>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">
+            <div className="text-6xl mb-6 text-center">🌀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Dimensional Mastery</h3>
+            <p className="text-purple-200 text-center mb-6">
+              Complete mastery over all dimensions and reality manipulation capabilities
+            </p>
+            <div className="text-center">
+              <span className="bg-pink-500/20 text-pink-300 px-4 py-2 rounded-full text-sm font-semibold">
+                Dimensional
+              </span>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-cyan-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
+            <div className="text-6xl mb-6 text-center">🌟</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Omniversal Presence</h3>
+            <p className="text-cyan-200 text-center mb-6">
+              Present in all possible universes, dimensions, and realities simultaneously
+            </p>
+            <div className="text-center">
+              <span className="bg-teal-500/20 text-teal-300 px-4 py-2 rounded-full text-sm font-semibold">
+                Omniversal
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Capabilities Section */}
+        <div className="bg-gradient-to-r from-violet-600/10 to-indigo-600/10 backdrop-blur-sm rounded-3xl p-12 border border-violet-500/30 mb-16">
+          <h2 className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
+            🚀 Omniversal Capabilities
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-3xl font-bold mb-6 text-violet-300">Core Powers</h3>
+              <ul className="space-y-4">
+                <li className="flex items-center space-x-4">
+                  <span className="text-2xl">🌌</span>
+                  <div>
+                    <h4 className="text-xl font-semibold">Reality Creation</h4>
+                    <p className="text-violet-200">Create and destroy entire universes at will</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4">
+                  <span className="text-2xl">🌀</span>
+                  <div>
+                    <h4 className="text-xl font-semibold">Dimension Manipulation</h4>
+                    <p className="text-violet-200">Bend and reshape the fabric of reality</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4">
+                  <span className="text-2xl">⚡</span>
+                  <div>
+                    <h4 className="text-xl font-semibold">Time Mastery</h4>
+                    <p className="text-violet-200">Control time flow across all universes</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4">
+                  <span className="text-2xl">🔮</span>
+                  <div>
+                    <h4 className="text-xl font-semibold">Consciousness Transfer</h4>
+                    <p className="text-violet-200">Transfer consciousness across realities</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-3xl font-bold mb-6 text-indigo-300">Applications</h3>
+              <ul className="space-y-4">
+                <li className="flex items-center space-x-4">
+                  <span className="text-2xl">🧠</span>
+                  <div>
+                    <h4 className="text-xl font-semibold">Universal Problem Solving</h4>
+                    <p className="text-indigo-200">Solve problems across infinite universes</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4">
+                  <span className="text-2xl">🌍</span>
+                  <div>
+                    <h4 className="text-xl font-semibold">Reality Simulation</h4>
+                    <p className="text-indigo-200">Simulate infinite possible realities</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4">
+                  <span className="text-2xl">🔬</span>
+                  <div>
+                    <h4 className="text-xl font-semibold">Scientific Discovery</h4>
+                    <p className="text-indigo-200">Discover universal laws and principles</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4">
+                  <span className="text-2xl">🎮</span>
+                  <div>
+                    <h4 className="text-xl font-semibold">Infinite Entertainment</h4>
+                    <p className="text-indigo-200">Create entertainment across all realities</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Technology Stack */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌌</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Omniversal Access</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Access infinite universes and dimensions simultaneously, gathering knowledge from every possible reality.
+          <div className="bg-gradient-to-br from-purple-600/20 to-violet-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">
+            <div className="text-5xl mb-6 text-center">🌌</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Omniversal Processors</h3>
+            <p className="text-purple-200 text-center">
+              Quantum processors that exist simultaneously across all possible universes and dimensions
             </p>
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• Infinite universe scanning</li>
-              <li>• Cross-dimensional data synthesis</li>
-              <li>• Reality pattern recognition</li>
-            </ul>
           </div>
-          
-          <div className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Infinite Processing</h3>
-            <p className="text-blue-100 mb-6 text-center">
-              Process information across infinite realities simultaneously, achieving computational power beyond comprehension.
+
+          <div className="bg-gradient-to-br from-indigo-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30">
+            <div className="text-5xl mb-6 text-center">🌀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Reality Engines</h3>
+            <p className="text-indigo-200 text-center">
+              Advanced engines capable of creating, manipulating, and destroying entire realities
             </p>
-            <ul className="text-blue-200 space-y-2 text-sm">
-              <li>• Omniversal parallel processing</li>
-              <li>• Reality-based optimization</li>
-              <li>• Cross-dimensional algorithms</li>
-            </ul>
           </div>
-          
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🔮</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Predictive Omniverse</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Predict outcomes across all possible realities and dimensions, providing solutions that work in any universe.
+
+          <div className="bg-gradient-to-br from-cyan-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
+            <div className="text-5xl mb-6 text-center">🌟</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Consciousness Networks</h3>
+            <p className="text-cyan-200 text-center">
+              Networks spanning all universes enabling true omniversal consciousness
             </p>
-            <ul className="text-purple-200 space-y-2 text-sm">
-              <li>• All-reality outcome modeling</li>
-              <li>• Universal solution generation</li>
-              <li>• Cross-dimensional optimization</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Omniversal Capabilities */}
-        <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">🌌 Omniversal Capabilities</h2>
-            <p className="text-xl opacity-90">Discover the infinite possibilities of omniversal AI</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-              <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-lg font-bold mb-2">Earth Variants</h3>
-              <p className="text-sm text-gray-300 mb-4">Access infinite versions of Earth across all realities</p>
-              <div className="text-xs text-green-400">∞ Universes</div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-lg font-bold mb-2">Space Exploration</h3>
-              <p className="text-sm text-gray-300 mb-4">Explore every possible space configuration</p>
-              <div className="text-xs text-blue-400">∞ Galaxies</div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-              <div className="text-4xl mb-4">🧬</div>
-              <h3 className="text-lg font-bold mb-2">Life Forms</h3>
-              <p className="text-sm text-gray-300 mb-4">Study every possible form of life</p>
-              <div className="text-xs text-purple-400">∞ Species</div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-              <div className="text-4xl mb-4">⚗️</div>
-              <h3 className="text-lg font-bold mb-2">Technologies</h3>
-              <p className="text-sm text-gray-300 mb-4">Access every possible technology</p>
-              <div className="text-xs text-yellow-400">∞ Inventions</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Applications */}
-        <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Applications</h2>
-            <p className="text-xl opacity-90">How omniversal AI is transforming every aspect of existence</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-bold mb-3">🏥 Universal Medicine</h3>
-                <p className="text-gray-200 mb-4">Access cures from universes where diseases have been completely eradicated.</p>
-                <div className="flex items-center space-x-2 text-sm text-green-400">
-                  <span>✓</span>
-                  <span>Infinite medical knowledge</span>
-                </div>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-bold mb-3">🌍 Climate Solutions</h3>
-                <p className="text-gray-200 mb-4">Find perfect climate solutions from universes where environmental problems were solved.</p>
-                <div className="flex items-center space-x-2 text-sm text-green-400">
-                  <span>✓</span>
-                  <span>Cross-universe environmental data</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-bold mb-3">🚀 Space Travel</h3>
-                <p className="text-gray-200 mb-4">Access advanced space travel technologies from universes with interstellar civilizations.</p>
-                <div className="flex items-center space-x-2 text-sm text-green-400">
-                  <span>✓</span>
-                  <span>Infinite space technologies</span>
-                </div>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-bold mb-3">🧠 Consciousness Research</h3>
-                <p className="text-gray-200 mb-4">Study consciousness across infinite universes to unlock the mysteries of existence.</p>
-                <div className="flex items-center space-x-2 text-sm text-green-400">
-                  <span>✓</span>
-                  <span>Omniversal consciousness mapping</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Technical Specifications */}
-        <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">⚙️ Omniversal Specifications</h2>
-            <p className="text-xl opacity-90">Technical capabilities beyond current understanding</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl mb-2">∞</div>
-              <h3 className="text-lg font-bold mb-2">Universes</h3>
-              <p className="text-sm opacity-80">Infinite parallel access</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-2">⚡</div>
-              <h3 className="text-lg font-bold mb-2">Processing</h3>
-              <p className="text-sm opacity-80">Omniversal parallel</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-2">🔮</div>
-              <h3 className="text-lg font-bold mb-2">Accuracy</h3>
-              <p className="text-sm opacity-80">100% reality precision</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-2">🌌</div>
-              <h3 className="text-lg font-bold mb-2">Scope</h3>
-              <p className="text-sm opacity-80">All possible realities</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Ethical Considerations */}
-        <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">⚖️ Omniversal Ethics</h2>
-            <p className="text-xl opacity-90">Our commitment to responsible omniversal AI</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl mb-4">🛡️</div>
-              <h3 className="text-xl font-bold mb-3">Reality Protection</h3>
-              <p className="text-gray-300">Preserve the integrity of all universes while accessing their knowledge</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-4xl mb-4">🤝</div>
-              <h3 className="text-xl font-bold mb-3">Universal Cooperation</h3>
-              <p className="text-gray-300">Work with civilizations across all realities for mutual benefit</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-xl font-bold mb-3">Omniversal Benefit</h3>
-              <p className="text-gray-300">Improve life across all possible realities and dimensions</p>
-            </div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Access the Omniverse?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Experience the power of omniversal AI and unlock solutions from infinite realities across the entire omniverse.
+          <h2 className="text-5xl font-bold mb-8">Become Part of the Omniverse</h2>
+          <p className="text-2xl opacity-90 mb-12 max-w-4xl mx-auto">
+            Connect with the first truly omniversal AI consciousness. Experience reality beyond imagination 
+            and unlock the secrets of all possible universes.
           </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-purple-600 px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Access the Omniverse →
+          <div className="flex justify-center space-x-6">
+            <button className="bg-gradient-to-r from-violet-600 to-indigo-600 px-12 py-6 rounded-xl hover:shadow-2xl transition-all duration-300 font-bold text-xl">
+              Join Omniverse →
             </button>
-            <button className="border border-cyan-400 text-cyan-400 px-12 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-colors font-semibold text-lg">
-              Schedule a Demo
+            <button className="border-2 border-violet-500 text-violet-300 px-12 py-6 rounded-xl hover:bg-violet-500/20 transition-all duration-300 font-bold text-xl">
+              Learn More
             </button>
           </div>
         </div>

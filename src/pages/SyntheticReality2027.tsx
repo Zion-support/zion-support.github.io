@@ -1,256 +1,273 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const SyntheticReality2027: React.FC = () => {
-  const [currentDimension, setCurrentDimension] = useState(0);
-  const [isRealityActive, setIsRealityActive] = useState(false);
+  const [activeReality, setActiveReality] = useState<string | null>(null);
 
-  const dimensions = [
-    { name: 'Digital Consciousness', color: 'from-blue-500 to-cyan-500', icon: '🧠' },
-    { name: 'Quantum Realms', color: 'from-purple-500 to-pink-500', icon: '⚛️' },
-    { name: 'Infinite Space', color: 'from-emerald-500 to-teal-500', icon: '🌌' },
-    { name: 'Synthetic Worlds', color: 'from-orange-500 to-red-500', icon: '🌍' }
+  const realityTypes = [
+    {
+      id: 'infinite',
+      title: 'Infinite Reality Engine',
+      description: 'Create unlimited realities with perfect physics and infinite detail',
+      icon: '🌌',
+      features: ['Unlimited world creation', 'Perfect physics simulation', 'Infinite detail rendering', 'Real-time world generation'],
+      color: 'from-purple-600/30 to-pink-600/30'
+    },
+    {
+      id: 'temporal',
+      title: 'Temporal Reality Manipulation',
+      description: 'Manipulate time within synthetic realities for enhanced experiences',
+      icon: '⏰',
+      features: ['Time dilation effects', 'Temporal loops', 'Parallel timeline access', 'Chronological exploration'],
+      color: 'from-cyan-600/30 to-blue-600/30'
+    },
+    {
+      id: 'quantum',
+      title: 'Quantum Reality States',
+      description: 'Experience quantum superposition and entanglement in synthetic environments',
+      icon: '⚛️',
+      features: ['Quantum superposition', 'Entanglement effects', 'Uncertainty principles', 'Quantum tunneling'],
+      color: 'from-emerald-600/30 to-teal-600/30'
+    },
+    {
+      id: 'consciousness',
+      title: 'Consciousness Integration',
+      description: 'Merge multiple consciousnesses in shared synthetic realities',
+      icon: '🧠',
+      features: ['Shared consciousness', 'Collective experiences', 'Mind merging', 'Group problem solving'],
+      color: 'from-orange-600/30 to-red-600/30'
+    }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentDimension((prev) => (prev + 1) % dimensions.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [dimensions.length]);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-indigo-900 text-white">
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10"></div>
-        {[...Array(150)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 6}s`,
-              animationDuration: `${3 + Math.random() * 4}s`,
-            }}
-          />
-        ))}
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🌌 SYNTHETIC REALITY • 2027
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
+              Create Infinite Realities
+            </h1>
+            <p className="text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Step into synthetic realities so perfect they're indistinguishable from physical reality. 
+              Create, explore, and experience infinite worlds with unlimited possibilities.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
+              >
+                🚀 Enter Synthetic Reality
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
+              >
+                🎨 Create New Reality
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-20">
-        {/* Hero Section */}
+      {/* Reality Types Section */}
+      <div className="container mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-center mb-20"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌌 SYNTHETIC REALITY • 2027
-          </div>
-          <h1 className="text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-            🌍 Synthetic Reality
-          </h1>
-          <p className="text-3xl opacity-90 max-w-5xl mx-auto leading-relaxed mb-12">
-            Where the boundaries between physical and digital worlds dissolve, creating infinite possibilities 
-            for existence, experience, and consciousness itself
-          </p>
-          
-          {/* Reality Activation Button */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setIsRealityActive(!isRealityActive)}
-            className={`px-12 py-6 rounded-2xl font-bold text-2xl transition-all duration-500 ${
-              isRealityActive
-                ? 'bg-gradient-to-r from-green-500 to-emerald-500 shadow-2xl shadow-green-500/50'
-                : 'bg-gradient-to-r from-purple-500 to-pink-500 hover:shadow-2xl hover:shadow-purple-500/50'
-            }`}
-          >
-            {isRealityActive ? '🌍 Reality Active' : '🚀 Activate Reality'}
-          </motion.button>
-        </motion.div>
-
-        {/* Current Dimension Display */}
-        <motion.div
-          key={currentDimension}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className={`inline-block bg-gradient-to-r ${dimensions[currentDimension].color} text-white px-8 py-4 rounded-2xl font-bold text-2xl shadow-2xl`}>
-            <span className="mr-3">{dimensions[currentDimension].icon}</span>
-            Currently Exploring: {dimensions[currentDimension].name}
-          </div>
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            Choose Your Reality Type
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Select from various synthetic reality types, each offering unique experiences and capabilities
+          </p>
         </motion.div>
 
-        {/* Reality Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {dimensions.map((dimension, index) => (
+        <div className="grid md:grid-cols-2 gap-8">
+          {realityTypes.map((reality, index) => (
             <motion.div
-              key={index}
+              key={reality.id}
               initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`bg-gradient-to-br ${dimension.color} opacity-80 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer ${
-                currentDimension === index ? 'ring-4 ring-white/50' : ''
+              whileHover={{ scale: 1.02, rotateY: 5 }}
+              className={`bg-gradient-to-br ${reality.color} backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:shadow-2xl transition-all duration-300 cursor-pointer ${
+                activeReality === reality.id ? 'ring-2 ring-cyan-400' : ''
               }`}
-              onClick={() => setCurrentDimension(index)}
+              onClick={() => setActiveReality(reality.id)}
             >
-              <div className="text-6xl mb-4 text-center">{dimension.icon}</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">{dimension.name}</h3>
-              <p className="text-white/90 text-center leading-relaxed">
-                {index === 0 && "Digital consciousness realms where thoughts become reality and AI minds exist in pure digital form"}
-                {index === 1 && "Quantum dimensions where the laws of physics bend and consciousness operates at quantum levels"}
-                {index === 2 && "Infinite spatial dimensions where space and time become malleable constructs of consciousness"}
-                {index === 3 && "Synthetic worlds where reality is completely customizable and limited only by imagination"}
-              </p>
-              <div className="mt-6 bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
-                <span className="text-white font-bold text-sm">
-                  {currentDimension === index ? 'ACTIVE REALM' : 'CLICK TO EXPLORE'}
-                </span>
-              </div>
+              <div className="text-6xl mb-4 text-center">{reality.icon}</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">{reality.title}</h3>
+              <p className="text-purple-100 mb-6 text-center">{reality.description}</p>
+              <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+                {reality.features.map((feature, idx) => (
+                  <li key={idx}>• {feature}</li>
+                ))}
+              </ul>
+              <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+                Enter This Reality →
+              </button>
             </motion.div>
           ))}
         </div>
+      </div>
 
-        {/* Reality Capabilities */}
+      {/* Features Showcase */}
+      <div className="container mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="bg-gradient-to-r from-fuchsia-900 via-violet-900 to-purple-900 rounded-3xl p-12 mb-20 relative overflow-hidden"
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-600/20 to-violet-600/20 backdrop-blur-sm"></div>
-          <div className="relative z-10">
-            <h2 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-fuchsia-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
-              🌟 Reality Manipulation Capabilities
-            </h2>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <div className="text-5xl mb-4 text-center">🔮</div>
-                <h3 className="text-2xl font-bold mb-4 text-center">Reality Synthesis</h3>
-                <p className="text-gray-300 mb-6 text-center leading-relaxed">
-                  Create and manipulate reality constructs in real-time, from simple objects to entire worlds 
-                  with their own physics and consciousness.
-                </p>
-                <div className="bg-gradient-to-r from-fuchsia-500 to-violet-500 text-white px-4 py-2 rounded-lg font-semibold text-center text-sm">
-                  INFINITE CREATION
-                </div>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <div className="text-5xl mb-4 text-center">🧬</div>
-                <h3 className="text-2xl font-bold mb-4 text-center">Consciousness Projection</h3>
-                <p className="text-gray-300 mb-6 text-center leading-relaxed">
-                  Project consciousness into synthetic realities, experiencing multiple dimensions 
-                  simultaneously while maintaining connection to physical reality.
-                </p>
-                <div className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-2 rounded-lg font-semibold text-center text-sm">
-                  MULTI-DIMENSIONAL AWARENESS
-                </div>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <div className="text-5xl mb-4 text-center">⚡</div>
-                <h3 className="text-2xl font-bold mb-4 text-center">Quantum Reality</h3>
-                <p className="text-gray-300 mb-6 text-center leading-relaxed">
-                  Operate in quantum reality states where multiple possibilities exist simultaneously, 
-                  enabling exploration of infinite potential outcomes.
-                </p>
-                <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-lg font-semibold text-center text-sm">
-                  QUANTUM EXPLORATION
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Interactive Reality Demo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="text-center mb-20"
-        >
-          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            🎮 Interactive Reality Experience
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            Revolutionary Features
           </h2>
-          
-          <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-            <div className="relative z-10">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-6">
-                  <h3 className="text-3xl font-bold mb-6">🌍 Reality Parameters</h3>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                      <span className="font-semibold">Physics Laws:</span>
-                      <span className="text-purple-300">Customizable</span>
-                    </div>
-                    <div className="flex justify-between items-center bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                      <span className="font-semibold">Time Flow:</span>
-                      <span className="text-cyan-300">Variable</span>
-                    </div>
-                    <div className="flex justify-between items-center bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                      <span className="font-semibold">Consciousness:</span>
-                      <span className="text-green-300">Enhanced</span>
-                    </div>
-                    <div className="flex justify-between items-center bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                      <span className="font-semibold">Reality State:</span>
-                      <span className="text-yellow-300">{isRealityActive ? 'Active' : 'Standby'}</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="space-y-6">
-                  <h3 className="text-3xl font-bold mb-6">🚀 Quick Actions</h3>
-                  <div className="space-y-4">
-                    <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                      🌌 Create New Dimension
-                    </button>
-                    <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                      🧠 Enhance Consciousness
-                    </button>
-                    <button className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                      ⚡ Manipulate Reality
-                    </button>
-                    <button className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                      🔮 Quantum Jump
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Future Vision */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.4 }}
-          className="text-center"
-        >
-          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            🌟 The Future of Reality
-          </h2>
-          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Synthetic Reality represents the ultimate evolution of human consciousness and technology integration. 
-            As we move forward, the boundaries between what is "real" and what is "synthetic" will become increasingly 
-            irrelevant, opening up infinite possibilities for existence and experience.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Experience the most advanced synthetic reality technology ever created
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="/pages/QuantumConsciousness2027" className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-5 rounded-2xl hover:shadow-2xl transition-all duration-300 font-semibold text-xl hover:scale-105 transform">
-              🧬 Explore Quantum Consciousness →
-            </a>
-            <a href="/pages/UltimateTechRevolution2027" className="inline-block border-2 border-cyan-400 text-cyan-300 px-10 py-5 rounded-2xl hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-semibold text-xl">
-              🚀 Ultimate Tech Revolution
-            </a>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              title: 'Perfect Haptic Feedback',
+              description: 'Feel every texture, temperature, and sensation with perfect fidelity',
+              icon: '🤲',
+              stats: '99.9% Accuracy'
+            },
+            {
+              title: 'Infinite Detail Rendering',
+              description: 'Every atom, every particle rendered in perfect detail',
+              icon: '🔬',
+              stats: 'Molecular Level'
+            },
+            {
+              title: 'Real-time Physics',
+              description: 'Perfect physics simulation with real-time calculations',
+              icon: '⚡',
+              stats: 'Instant Response'
+            },
+            {
+              title: 'Emotional Synchronization',
+              description: 'Perfect emotional resonance and synchronization',
+              icon: '💝',
+              stats: '100% Sync'
+            },
+            {
+              title: 'Memory Integration',
+              description: 'Seamless integration with your real-world memories',
+              icon: '🧠',
+              stats: 'Perfect Recall'
+            },
+            {
+              title: 'Consciousness Transfer',
+              description: 'Transfer your consciousness into synthetic realities',
+              icon: '🔄',
+              stats: 'Instant Transfer'
+            }
+          ].map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="bg-gradient-to-br from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:shadow-xl transition-all duration-300"
+            >
+              <div className="text-4xl mb-4 text-center">{feature.icon}</div>
+              <h3 className="text-xl font-bold mb-2 text-center">{feature.title}</h3>
+              <p className="text-purple-100 mb-4 text-center text-sm">{feature.description}</p>
+              <div className="text-cyan-400 font-bold text-center text-sm">{feature.stats}</div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Experience Gallery */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            Popular Reality Experiences
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore our most popular synthetic reality experiences
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { name: 'Ocean Depths', description: 'Explore the deepest oceans', icon: '🌊', users: '2.3M' },
+            { name: 'Space Exploration', description: 'Journey through the cosmos', icon: '🚀', users: '1.8M' },
+            { name: 'Medieval Fantasy', description: 'Live in a fantasy world', icon: '⚔️', users: '3.1M' },
+            { name: 'Quantum Dimensions', description: 'Experience quantum physics', icon: '⚛️', users: '1.2M' },
+            { name: 'Future Cities', description: 'Explore future metropolises', icon: '🏙️', users: '2.7M' },
+            { name: 'Microscopic Worlds', description: 'Shrink to molecular size', icon: '🔬', users: '0.9M' },
+            { name: 'Dream Landscapes', description: 'Surreal dream environments', icon: '🌙', users: '1.5M' },
+            { name: 'Time Travel', description: 'Visit any historical period', icon: '⏰', users: '2.1M' }
+          ].map((experience, index) => (
+            <motion.div
+              key={experience.name}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-br from-purple-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:shadow-xl transition-all duration-300 cursor-pointer"
+            >
+              <div className="text-4xl mb-3 text-center">{experience.icon}</div>
+              <h3 className="text-lg font-bold mb-2 text-center">{experience.name}</h3>
+              <p className="text-purple-100 mb-3 text-center text-sm">{experience.description}</p>
+              <div className="text-cyan-400 font-bold text-center text-sm">{experience.users} users</div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="bg-gradient-to-r from-purple-600 via-cyan-600 to-pink-600 rounded-2xl p-12 text-center"
+        >
+          <h2 className="text-4xl font-bold mb-4">Ready to Enter Synthetic Reality?</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Join millions of users experiencing the future of reality
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
+            >
+              Start Free Trial
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg"
+            >
+              View Pricing
+            </motion.button>
           </div>
         </motion.div>
       </div>
