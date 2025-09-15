@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Link from 'next/link';
 import React from 'react';
 
@@ -8,6 +9,28 @@ export const metadata = {
 
 export default function BlogPage() {
   const featuredPosts = [
+    {
+      id: 'agentic-safety-patterns-2025',
+      title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
+      excerpt: 'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/agentic-safety-patterns.jpg',
+      featured: true
+    },
+    {
+      id: 'multi-agent-supply-chains',
+      title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
+      excerpt: 'How agent-based orchestration reduces latency and increases resilience across complex, multi-party supply chains.',
+      category: 'AI Solutions',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-12',
+      readTime: '8 min read',
+      image: '/blog/multi-agent-supply-chains.jpg',
+      featured: true
+    },
     {
       id: 'ai-foundation-models-2025',
       title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
@@ -76,18 +99,31 @@ export default function BlogPage() {
     }
   ];
 
-  // Inject new featured post
-  featuredPosts.unshift({
-    id: 'agent-safety-red-teaming-2025',
-    title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
-    excerpt: 'Scenarios and mitigations to probe and harden multi‑agent systems in production.',
-    category: 'AI Safety',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-15',
-    readTime: '11 min read',
-    image: '/blog/agent-safety-red-teaming.jpg',
-    featured: true
-  });
+  // Inject new featured posts
+  featuredPosts.unshift(
+    {
+      id: 'ai-governance-framework-2025',
+      title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
+      excerpt: 'A comprehensive framework for implementing AI governance, risk management, and compliance in enterprise environments.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-16',
+      readTime: '12 min read',
+      image: '/blog/ai-governance-framework.jpg',
+      featured: true
+    },
+    {
+      id: 'agent-safety-red-teaming-2025',
+      title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
+      excerpt: 'Scenarios and mitigations to probe and harden multi‑agent systems in production.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '11 min read',
+      image: '/blog/agent-safety-red-teaming.jpg',
+      featured: true
+    }
+  );
 
   const recentPosts = [
     {

@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
-  color?: string;
+  text?: string;
   className?: string;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
-  color = 'text-blue-500',
+  text = 'Loading...', 
   className = '' 
 }) => {
   const sizeClasses = {
@@ -19,29 +19,27 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-    <motion.div
-      className={`${sizeClasses[size]} ${color} ${className}`}
-      animate={{ rotate: 360 }}
-      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-    >
-      <svg
-        className="w-full h-full"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeDasharray="60 40"
-          strokeDashoffset="0"
-        />
-      </svg>
-    </motion.div>
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <motion.div
+        className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-600 rounded-full`}
+        animate={{ rotate: 360 }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+      />
+      {text && (
+        <motion.p
+          className="mt-4 text-gray-600 text-sm"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          {text}
+        </motion.p>
+      )}
+    </div>
   );
 };
 

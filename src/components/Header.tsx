@@ -41,7 +41,7 @@ import {
   Lock
 } from 'lucide-react';
 
-export function Header() {
+function Header() {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
 	const [searchQuery, setSearchQuery] = useState('');
 	const location = useLocation();
@@ -218,4 +218,7 @@ export function Header() {
 		</header>
 	);
 }
+
+export { Header };
+export default Header;
 

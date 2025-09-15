@@ -444,6 +444,36 @@ content_index:
         rollback_time: "< 5 min"
         audit_ready: true
 
+    - id: "ai-2026-trustworthy-model-routing-2026-preview"
+      type: "blog"
+      title: "AI 2026: Trustworthy Model Routing — 2026 Preview"
+      file_path: "/content/blog/ai-2026-trustworthy-model-routing-2026-preview.md"
+      url: "/blog/ai-2026-trustworthy-model-routing-2026-preview"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Routing", "Policy-as-Code", "Evaluations", "Reliability", "Cost Optimization", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "20-40%"
+        latency_p95: "stable"
+        override_rate: "improved"
+
+    - id: "ai-2026-trustworthy-agent-operations-blueprint"
+      type: "blueprint"
+      title: "AI 2026: Trustworthy Agent Operations — Blueprint"
+      file_path: "/content/pages/ai-2026-trustworthy-agent-operations-blueprint.md"
+      url: "/content/ai-2026-trustworthy-agent-operations-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Operations", "SLOs", "Evaluations", "Policy-as-Code", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        mttr: "< 10 min"
+        cost_optimization: "20-40%"
+
     - id: "ai-2026-privacy-preserving-agents"
       type: "blog"
       title: "AI 2026: Privacy-Preserving Agents"
@@ -458,6 +488,51 @@ content_index:
         approval_speed: "2x"
         breaches: "reduced"
         audit_ready: true
+
+    - id: "ai-2026-cost-aware-model-routing"
+      type: "blog"
+      title: "AI 2026: Cost‑Aware Model Routing — Blueprint"
+      file_path: "/content/blog/ai-2026-cost-aware-model-routing-blueprint.md"
+      url: "/blog/ai-2026-cost-aware-model-routing-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Routing", "Cost Optimization", "Evaluations", "SLOs", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "35%"
+        latency: "< 600ms"
+        quality: "> 95% target"
+
+    - id: "ai-2026-secure-prompt-engineering"
+      type: "resource"
+      title: "AI 2026: Secure Prompt Engineering — Enterprise Guide"
+      file_path: "/content/resources/ai-2026-secure-prompt-engineering.md"
+      url: "/resources/ai-2026-secure-prompt-engineering"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Security", "Prompt Engineering", "Governance", "Policy‑as‑Code", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        review_time: "-50%"
+        coverage: "100% gated"
+
+    - id: "ai-2026-agent-evidence-hub-starter"
+      type: "resource"
+      title: "AI 2026: Agent Evidence Hub — Starter Kit"
+      file_path: "/content/resources/ai-2026-agent-evidence-hub-starter.md"
+      url: "/resources/ai-2026-agent-evidence-hub-starter"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evaluations", "Evidence", "Compliance", "Audit", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        audit_ready: true
+        integration_time: "< 1 day"
+        data_sources: "Evals, Incidents, Approvals"
 
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
@@ -540,3 +615,71 @@ content_index:
     homepage_integration: "Complete with three new compact promos"
     new_2025_content_pieces: 3
     advanced_automation_focus: "Primary content theme with 600% ROI emphasis"
+  new_september_2025:
+    - id: "ai-2026-responsible-ai-operations-blueprint"
+      type: "blog"
+      title: "AI 2026: Responsible AI Operations Blueprint"
+      file_path: "/app/blog/ai-2026-responsible-ai-operations-blueprint/page.tsx"
+      url: "/blog/ai-2026-responsible-ai-operations-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Responsible AI", "Governance", "LLM Evals", "Policy-as-Code", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        reliability: "99.9%"
+        release_speed: "67% faster"
+        incidents: "-72%"
+      reading_time: "16 min read"
+
+    - id: "ai-2026-foundational-models-cost-optimization-playbook"
+      type: "blog"
+      title: "AI 2026: Foundational Models Cost Optimization Playbook"
+      file_path: "/app/blog/ai-2026-foundational-models-cost-optimization-playbook/page.tsx"
+      url: "/blog/ai-2026-foundational-models-cost-optimization-playbook"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Cost Optimization", "Routing", "Caching", "Distillation", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "30-70%"
+        latency: "2.4x faster"
+        quality: "stable via evals"
+      reading_time: "14 min read"
+
+    - id: "ai-2026-autonomous-operations-framework"
+      type: "blog"
+      title: "AI 2026: Autonomous Operations Framework"
+      file_path: "/app/blog/ai-2026-autonomous-operations-framework/page.tsx"
+      url: "/blog/ai-2026-autonomous-operations-framework"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Autonomous Operations", "Self-Healing", "Automation", "Framework", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        manual_intervention: "90% reduction"
+        uptime: "99.9%"
+        incident_resolution: "75% faster"
+      reading_time: "16 min read"
+
+    - id: "ai-2026-predictive-maintenance-revolution"
+      type: "blog"
+      title: "AI 2026: Predictive Maintenance Revolution"
+      file_path: "/app/blog/ai-2026-predictive-maintenance-revolution/page.tsx"
+      url: "/blog/ai-2026-predictive-maintenance-revolution"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Predictive Maintenance", "AI Analytics", "IoT", "Machine Learning", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        downtime_reduction: "85%"
+        cost_savings: "60%"
+        prediction_accuracy: "95%"
+<<<<<<< HEAD
+      reading_time: "18 min read"
+=======
+      reading_time: "18 min read"
+>>>>>>> cursor/create-and-deploy-new-content-81d0
