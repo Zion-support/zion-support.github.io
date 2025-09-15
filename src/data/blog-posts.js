@@ -287,6 +287,51 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/edge-agents-on-device-2026.jpg",
     slug: "ai-2026-edge-agents-on-device"
+  },
+  {
+    id: 18,
+    title: "AI 2026: Agentic Evaluation Checklists",
+    excerpt: "Gate releases with scenario-driven evals and measurable pass criteria.",
+    content: "Ship safer agents with structured evaluation checklists spanning capability, safety, and reliability. Define scenario suites, pass thresholds, regression gates, and drift monitors to continuously validate behavior in CI/CD and production.",
+    author: "Maya Gupta",
+    authorRole: "Head of AI Quality",
+    publishDate: "2025-09-15",
+    readTime: "7 min read",
+    category: "Evaluation",
+    tags: ["Evals", "Checklists", "CI/CD", "Reliability"],
+    featured: true,
+    imageUrl: "/images/blog/agentic-evaluation-checklists-2026.jpg",
+    slug: "ai-2026-agentic-evaluation-checklists"
+  },
+  {
+    id: 19,
+    title: "AI 2026: Policy-as-Code for Agent Governance",
+    excerpt: "Codify guardrails and approvals to scale autonomous operations.",
+    content: "Adopt policy-as-code to define constraints, approvals, and evidence across the agent lifecycle. Integrate with pipelines, runtime enforcement, and audit logs to ensure consistent, reviewable decisions at scale.",
+    author: "Olivia Park",
+    authorRole: "Chief Governance Architect",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Governance",
+    tags: ["Policy-as-Code", "Governance", "Compliance"],
+    featured: true,
+    imageUrl: "/images/blog/policy-as-code-agent-governance-2026.jpg",
+    slug: "ai-2026-agent-governance-policy-as-code"
+  },
+  {
+    id: 20,
+    title: "AI 2026: Evals Maturity Model",
+    excerpt: "A roadmap for evolving from ad-hoc tests to evaluation-first ops.",
+    content: "This maturity model outlines levels from basic correctness checks to continuous, dataset-backed evaluation ecosystems with risk-tiered gates, red teaming, and business KPI alignment.",
+    author: "Noah Bennett",
+    authorRole: "Director of AI Reliability",
+    publishDate: "2025-09-15",
+    readTime: "9 min read",
+    category: "Evaluation",
+    tags: ["Evals", "Maturity Model", "Governance"],
+    featured: true,
+    imageUrl: "/images/blog/evals-maturity-model-2026.jpg",
+    slug: "ai-2026-evals-maturity-model"
   }
 ];
 
