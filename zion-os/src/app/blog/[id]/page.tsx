@@ -11,6 +11,36 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-governance-framework-2025': {
+    id: 'ai-governance-framework-2025',
+    title: 'AI Governance Framework 2025: Practical Controls for Safe Autonomy',
+    excerpt:
+      'A pragmatic governance model with policy engines, graded trust, and auditability for autonomous AI environments.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'As autonomy increases, organizations need provable safety controls that scale. We propose a layered governance model that combines declarative policy, verifiable identity, and graded trust to balance innovation with risk reduction.',
+      'Core pillars include: capability scoping, intent verification, runtime policy enforcement, and post-action auditing. We share reference implementations using attestations and signed decision logs.',
+      'Adopting this framework enables faster approvals, clearer accountability, and safer collaboration across human and AI teams.'
+    ]
+  },
+  'edge-ai-inference-optimizations': {
+    id: 'edge-ai-inference-optimizations',
+    title: 'Edge AI Inference: Optimizing Cost and Latency with Hybrid Serving',
+    excerpt:
+      'Design patterns for low-latency, cost-efficient inference with on-device acceleration and cloud fallbacks.',
+    category: 'AI Infrastructure',
+    author: 'Michael Rodriguez',
+    date: '2025-09-14',
+    readTime: '7 min read',
+    content: [
+      'Hybrid edge-cloud serving reduces latency and spend by routing requests based on context, model size, and on-device capabilities. We outline patterns for batching, quantization, and dynamic routing.',
+      'We compare WebGPU, CUDA, and NPU acceleration paths, and show how to toggle precision based on user tier or SLA. Observability hooks track accuracy and drift to protect product quality.',
+      'Teams report 30–60% cost reductions and significant responsiveness improvements with these techniques.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',

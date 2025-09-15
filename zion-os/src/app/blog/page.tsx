@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'ai-governance-framework-2025',
+      title: 'AI Governance Framework 2025: Practical Controls for Safe Autonomy',
+      excerpt: 'A pragmatic governance model with policy engines, graded trust, and auditability for autonomous AI environments.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-governance.jpg',
+      featured: true
+    },
+    {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -65,6 +76,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'edge-ai-inference-optimizations',
+      title: 'Edge AI Inference: Optimizing Cost and Latency with Hybrid Serving',
+      excerpt: 'Patterns for low-latency, cost-efficient inference with on-device acceleration and cloud fallbacks.',
+      category: 'AI Infrastructure',
+      author: 'Michael Rodriguez',
+      date: '2025-09-14',
+      readTime: '7 min read',
+      image: '/blog/edge-ai.jpg'
+    },
     {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
@@ -192,25 +213,21 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/sovereign-ai-commerce-2025"
+            href="/blog/ai-governance-framework-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025"
+            aria-label="Read: AI Governance Framework 2025: Practical Controls for Safe Autonomy"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                SA
+                AG
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Solutions</span>
+                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Governance</span>
                   <span className="text-xs text-gray-500">New</span>
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A practical blueprint for deploying autonomous, self-regulating AI marketplaces powered by Zion OS.
-                </p>
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900">AI Governance Framework 2025: Practical Controls for Safe Autonomy</h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">A pragmatic governance model with policy engines, graded trust, and auditability for autonomous AI environments.</p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
             </div>
