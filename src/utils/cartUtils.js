@@ -5,7 +5,10 @@ export const cartUtils = {
   addItem: (cart, item) => {
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
     
+<<<<<<< HEAD
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+=======
+>>>>>>> cursor/create-and-deploy-new-content-abae
     if (existingItem) {
       return cart.map(cartItem =>
         cartItem.id === item.id
@@ -18,34 +21,66 @@ export const cartUtils = {
   },
   
   // Remove item from cart
+<<<<<<< HEAD
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+=======
+>>>>>>> cursor/create-and-deploy-new-content-abae
   removeItem: (cart, itemId) => {
     return cart.filter(item => item.id !== itemId);
   },
   
+<<<<<<< HEAD
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+=======
+  // Update item quantity
+>>>>>>> cursor/create-and-deploy-new-content-abae
   updateQuantity: (cart, itemId, quantity) => {
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
     }
+<<<<<<< HEAD
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+=======
+    
+>>>>>>> cursor/create-and-deploy-new-content-abae
     return cart.map(item =>
       item.id === itemId ? { ...item, quantity } : item
     );
   },
   
+<<<<<<< HEAD
+  // Clear cart
+  clearCart: () => {
+    return [];
+=======
+  // Get total price
+  getTotalPrice: (cart) => {
+    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+>>>>>>> cursor/create-and-deploy-new-content-abae
+  },
+  
+  // Get total items count
+  getTotalItems: (cart) => {
+    return cart.reduce((total, item) => total + item.quantity, 0);
+  },
+  
+<<<<<<< HEAD
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+=======
   // Clear cart
   clearCart: () => {
     return [];
   },
   
-  // Get total items count
->>>>>>> cursor/create-and-deploy-new-content-d952
-  getTotalItems: (cart) => {
-    return cart.reduce((total, item) => total + item.quantity, 0);
+  // Check if item is in cart
+  isInCart: (cart, itemId) => {
+    return cart.some(item => item.id === itemId);
   },
   
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+  // Get item from cart
+  getItem: (cart, itemId) => {
+    return cart.find(item => item.id === itemId);
+>>>>>>> cursor/create-and-deploy-new-content-abae
   }
 };
 

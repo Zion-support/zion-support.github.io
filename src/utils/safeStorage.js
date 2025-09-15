@@ -107,8 +107,29 @@ export const safeStorage = {
         console.warn('JSON stringify failed:', error);
         return false;
       }
+<<<<<<< HEAD
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
     }
+=======
+    }
+  },
+  
+  // Convenience methods for direct access
+  getItem: (key) => {
+    return safeStorage.localStorage.getItem(key);
+  },
+  
+  setItem: (key, value) => {
+    return safeStorage.localStorage.setItem(key, value);
+  },
+  
+  removeItem: (key) => {
+    return safeStorage.localStorage.removeItem(key);
+  },
+  
+  clear: () => {
+    return safeStorage.localStorage.clear();
+>>>>>>> cursor/create-and-deploy-new-content-abae
   }
 };
 

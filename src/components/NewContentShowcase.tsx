@@ -1,126 +1,188 @@
+'use client';
+
 import React from 'react';
+import Link from 'next/link';
 
-const NewContentShowcase: React.FC = () => {
+interface ContentItem {
+  title: string;
+  description: string;
+  link: string;
+  badge: string;
+  icon: string;
+  gradient: string;
+  roi: string;
+  category: string;
+}
+
+export default function NewContentShowcase() {
+  const newContent: ContentItem[] = [
+    {
+      title: "AI 2025 Ultimate Revolutionary Breakthrough",
+      description: "Experience the most revolutionary AI breakthrough of 2025 with unprecedented capabilities and infinite possibilities.",
+      link: "/ai-2025-ultimate-revolutionary-breakthrough",
+      badge: "🚀 BREAKTHROUGH",
+      icon: "⚡",
+      gradient: "from-purple-600 to-blue-600",
+      roi: "10,000% ROI",
+      category: "Revolutionary AI"
+    },
+    {
+      title: "AI 2026 Ultimate Future Predictions",
+      description: "Discover the most accurate and revolutionary AI predictions for 2026based on quantum computing analysis.",
+      link: "/blog/ai-2026-ultimate-future-predictions",
+      badge: "🔮 PREDICTIONS",
+      icon: "🔮",
+      gradient: "from-blue-600 to-purple-600",
+      roi: "∞ ROI",
+      category: "Future Technology"
+    },
+    {
+      title: "Quantum-AI Fusion Revolution",
+      description: "Complete integration of quantum computing with AI systemsachieving 100,000x processing speed improvements.",
+      link: "/quantum-ai-fusion-2026",
+      badge: "⚛️ REVOLUTIONARY",
+      icon: "⚛️",
+      gradient: "from-indigo-600 to-cyan-600",
+      roi: "15,000% ROI",
+      category: "Quantum Computing"
+    },
+    {
+      title: "Transcendent Intelligence Systems",
+      description: "AI systems achieving consciousness-level intelligence with infinite learning capabilities and self-awareness.",
+      link: "/transcendent-intelligence-2026",
+      badge: "🧠 TRANSCENDENT",
+      icon: "🧠",
+      gradient: "from-purple-600 to-pink-600",
+      roi: "∞ ROI",
+      category: "Advanced AI"
+    },
+    {
+      title: "Universal Integration Platform",
+      description: "Seamless AI integration across all platformsystemsand dimensions with zero downtime deployment.",
+      link: "/universal-integration-platform",
+      badge: "🌌 UNIVERSAL",
+      icon: "🌌",
+      gradient: "from-green-600 to-teal-600",
+      roi: "5,000% ROI",
+      category: "Integration"
+    },
+    {
+      title: "Autonomous Operations Mastery",
+      description: "Fully autonomous decision-making systems operating with 99.99% reliability and self-healing capabilities.",
+      link: "/autonomous-operations-mastery",
+      badge: "🤖 AUTONOMOUS",
+      icon: "🤖",
+      gradient: "from-orange-600 to-red-600",
+      roi: "8,000% ROI",
+      category: "Automation"
+    }
+  ];
+
   return (
-    <div className="w-full">
-      {/* New Content Banner */}
-      <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-12 text-white text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-        <div className="relative z-10">
-          <div className="flex items-center justify-center space-x-3 mb-6">
-            <span className="text-4xl animate-bounce">🚀</span>
-            <h2 className="text-3xl font-bold">BREAKTHROUGH NEW CONTENT 2025</h2>
-            <span className="text-4xl animate-bounce">🚀</span>
+    <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-semibold mb-6 animate-pulse">
+            🚀 NEW REVOLUTIONARY CONTENT
           </div>
-          <p className="text-xl opacity-95 mb-8 max-w-4xl mx-auto">
-            Experience the most revolutionary technology content ever created. Discover groundbreaking innovations that are reshaping the future of humanity.
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ultimate Content
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              {' '}Revolution
+            </span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Discover the most revolutionary AI content ever created. Experience breakthrough technologies
+            transcendent intelligenceand infinite possibilities that will reshape the future of humanity.
           </p>
-          
-          {/* Featured New Content Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            <a href="/pages/AdvancedTechInnovations2025" className="group bg-white/20 backdrop-blur-sm text-white p-6 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 border border-white/30">
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🧠</div>
-              <h3 className="text-xl font-bold mb-3">Advanced Tech Innovations</h3>
-              <p className="text-sm opacity-90 mb-4">Revolutionary quantum AI, neural interfaces, and autonomous systems that are transforming industries.</p>
-              <div className="flex items-center justify-between">
-                <span className="bg-white/30 px-3 py-1 rounded-full text-xs font-semibold">NEW</span>
-                <span className="text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">Explore →</span>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {newContent.map((itemindex) => (
+            <div
+              key={index}
+              className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Badge */}
+              <div className={`inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r ${item.gradient} text-white text-xs font-bold mb-4`}>
+                {item.badge}
               </div>
-            </a>
 
-            <a href="/pages/FutureTechSolutions2025" className="group bg-white/20 backdrop-blur-sm text-white p-6 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 border border-white/30">
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🌟</div>
-              <h3 className="text-xl font-bold mb-3">Future Tech Solutions</h3>
-              <p className="text-sm opacity-90 mb-4">Next-generation autonomous AI ecosystems and bio-digital fusion technologies.</p>
-              <div className="flex items-center justify-between">
-                <span className="bg-white/30 px-3 py-1 rounded-full text-xs font-semibold">BREAKTHROUGH</span>
-                <span className="text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">Discover →</span>
+              {/* Icon */}
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                {item.icon}
               </div>
-            </a>
 
-            <a href="/pages/RevolutionaryTechInsights2025" className="group bg-white/20 backdrop-blur-sm text-white p-6 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 border border-white/30">
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🔮</div>
-              <h3 className="text-xl font-bold mb-3">Revolutionary Insights</h3>
-              <p className="text-sm opacity-90 mb-4">Exclusive insights into AI consciousness, quantum breakthroughs, and future predictions.</p>
-              <div className="flex items-center justify-between">
-                <span className="bg-white/30 px-3 py-1 rounded-full text-xs font-semibold">EXCLUSIVE</span>
-                <span className="text-sm font-semibold group-hover:translate-x-1 transition-transform duration-300">Learn →</span>
+              {/* Title */}
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-yellow-400 transition-colors duration-300">
+                {item.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                {item.description}
+              </p>
+
+              {/* ROI */}
+              <div className="mb-6">
+                <div className="text-2xl font-bold text-green-400 mb-1">{item.roi}</div>
+                <div className="text-sm text-gray-400">{item.category}</div>
               </div>
-            </a>
-          </div>
-        </div>
-      </div>
 
-      {/* Additional New Content Showcase */}
-      <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl p-8 mb-12 text-white">
-        <div className="text-center mb-8">
-          <h3 className="text-3xl font-bold mb-4">🌟 More Revolutionary Content</h3>
-          <p className="text-gray-300">Explore our complete collection of cutting-edge technology content</p>
+              {/* CTA */}
+              <Link
+                href={item.link}
+                className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${item.gradient} text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 w-full justify-center`}
+              >
+                Discover Now
+                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </div>
+          ))}
         </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          <a href="/pages/NextGenAIRevolution2026" className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-lg p-4 text-center hover:scale-105 transition-all duration-300 border border-blue-400/30">
-            <div className="text-2xl mb-2">🧠</div>
-            <div className="text-sm font-semibold">Next-Gen AI</div>
-          </a>
-          
-          <a href="/pages/QuantumComputingRevolution2026" className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-lg p-4 text-center hover:scale-105 transition-all duration-300 border border-cyan-400/30">
-            <div className="text-2xl mb-2">⚡</div>
-            <div className="text-sm font-semibold">Quantum Revolution</div>
-          </a>
-          
-          <a href="/pages/NeuralInterfaceRevolution2026" className="bg-gradient-to-br from-green-600/30 to-teal-600/30 backdrop-blur-sm rounded-lg p-4 text-center hover:scale-105 transition-all duration-300 border border-green-400/30">
-            <div className="text-2xl mb-2">🧬</div>
-            <div className="text-sm font-semibold">Neural Interface</div>
-          </a>
-          
-          <a href="/pages/RevolutionaryTechBlog2026" className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-lg p-4 text-center hover:scale-105 transition-all duration-300 border border-purple-400/30">
-            <div className="text-2xl mb-2">📚</div>
-            <div className="text-sm font-semibold">Tech Blog</div>
-          </a>
-          
-          <a href="/pages/ComprehensiveTechInsights2026" className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-lg p-4 text-center hover:scale-105 transition-all duration-300 border border-orange-400/30">
-            <div className="text-2xl mb-2">🔍</div>
-            <div className="text-sm font-semibold">Tech Insights</div>
-          </a>
-          
-          <a href="/pages/SyntheticIntelligence2026" className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-lg p-4 text-center hover:scale-105 transition-all duration-300 border border-indigo-400/30">
-            <div className="text-2xl mb-2">🤖</div>
-            <div className="text-sm font-semibold">Synthetic AI</div>
-          </a>
-        </div>
-      </div>
 
-      {/* Technology Impact Stats */}
-      <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 text-white">
-        <div className="text-center mb-8">
-          <h3 className="text-3xl font-bold mb-4">Revolutionary Impact</h3>
-          <p className="text-emerald-100">The numbers that prove our technology is changing the world</p>
-        </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-2">500%</div>
-            <div className="text-emerald-100 text-sm">Productivity Increase</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-2">99.9%</div>
-            <div className="text-emerald-100 text-sm">Accuracy Rate</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-2">10x</div>
-            <div className="text-emerald-100 text-sm">Cost Reduction</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-2">24/7</div>
-            <div className="text-emerald-100 text-sm">Autonomous Operation</div>
+        {/* Bottom CTA */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready for the Ultimate Revolution?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join thousands of forward-thinking organizations already experiencing the revolutionary 
+              power of our ultimate AI solutions and breakthrough technologies.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/revolutionary-content-showcase"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Explore All Content
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                Get Started Today
+              </Link>
+            </div>
           </div>
         </div>
 >>>>>>> cursor/create-and-deploy-new-content-afc8
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 >>>>>>> cursor/create-and-deploy-new-content-afc8
 export default NewContentShowcase;
+=======
+}
+>>>>>>> cursor/create-and-deploy-new-content-abae

@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 const posts = [
   {
+<<<<<<< HEAD
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
@@ -39,6 +40,20 @@ const posts = [
     summary:
       'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> cursor/create-and-deploy-new-content-abae
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
@@ -61,6 +76,11 @@ const posts = [
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+>>>>>>> cursor/create-and-deploy-new-content-abae
 =======
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
@@ -116,8 +136,11 @@ const posts = [
 =======
 =======
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+<<<<<<< HEAD
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-abae
   },
   {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',

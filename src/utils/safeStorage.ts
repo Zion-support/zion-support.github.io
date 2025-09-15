@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -269,6 +270,8 @@ export const safeStorage = {
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 =======
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-abae
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key: string): string | null => {
@@ -304,6 +307,7 @@ export const safeStorage = {
     } catch (error) {
       console.warn('localStorage not available:', error);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> main
 =======
@@ -312,6 +316,8 @@ export const safeStorage = {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-abae
     }
   }
 };

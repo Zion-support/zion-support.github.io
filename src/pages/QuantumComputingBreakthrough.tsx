@@ -5,8 +5,13 @@ const QuantumComputingBreakthrough: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
+<<<<<<< HEAD
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Quantum Computing Breakthrough</h1>
           <p className="text-xl text-gray-600">Coming soon - QuantumComputingBreakthrough content</p>
+=======
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">QuantumComputingBreakthrough</h1>
+          <p className="text-xl text-gray-600">Content coming soon</p>
+>>>>>>> cursor/create-and-deploy-new-content-abae
         </div>
       </div>
     </div>

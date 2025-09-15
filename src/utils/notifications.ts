@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,11 +35,16 @@ interface NotificationOptions {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+// Notification utilities
+interface NotificationOptions {
+>>>>>>> cursor/create-and-deploy-new-content-abae
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -138,6 +144,8 @@ export const notifications = {
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 =======
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-abae
   data?: any;
 >>>>>>> main
 =======
@@ -244,6 +252,7 @@ class NotificationManager {
         return null;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> main
 =======
@@ -252,6 +261,8 @@ class NotificationManager {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-abae
     }
 
     try {
@@ -260,6 +271,7 @@ class NotificationManager {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -279,11 +291,14 @@ class NotificationManager {
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-abae
         data: options.data,
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions || [],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         requireInteraction: options.requireInteraction || false,
@@ -300,6 +315,8 @@ class NotificationManager {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-abae
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -311,6 +328,7 @@ class NotificationManager {
 
       return notification;
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -368,6 +386,8 @@ class NotificationManager {
 >>>>>>> main
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+=======
+>>>>>>> cursor/create-and-deploy-new-content-abae
       console.error('Error showing notification:', error);
       return null;
     }
@@ -520,16 +540,20 @@ export type { NotificationOptions, ToastOptions };
   showError(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+>>>>>>> cursor/create-and-deploy-new-content-abae
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -598,6 +622,8 @@ export default notifications;
 =======
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+=======
+>>>>>>> cursor/create-and-deploy-new-content-abae
       requireInteraction: true,
     });
   }
@@ -623,6 +649,7 @@ export default notifications;
 
 export const notificationManager = new NotificationManager();
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default notificationManager;
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> main
@@ -633,3 +660,6 @@ export default notificationManager;
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-afc8
+=======
+export default notificationManager;
+>>>>>>> cursor/create-and-deploy-new-content-abae

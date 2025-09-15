@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 >>>>>>> df1ae652825cf0aad03f4f2c81f7b3bd32b53561
 import React, { useState, useEffect } from 'react';
 
@@ -9,6 +10,20 @@ const InteractiveTechShowcase: React.FC = () => {
     {
       id: 1,
       name: "AI Consciousness",
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
+const InteractiveTechShowcase: React.FC = () => {
+  const [activeTech, setActiveTech] = useState(0);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
+  const technologies = [
+    {
+      id: 0,
+      name: "AI Innovation Hub 2026",
+      description: "Revolutionary AI technologies with consciousness and emotional intelligence",
+>>>>>>> cursor/create-and-deploy-new-content-abae
       icon: "🧠",
       description: "Self-aware AI systems with emotional intelligence and conscious decision-making",
       features: ["Self-awareness", "Emotional intelligence", "Ethical reasoning", "Autonomous learning"],
@@ -191,6 +206,61 @@ const InteractiveTechShowcase: React.FC = () => {
                 </div>
               </div>
             </motion.div>
+<<<<<<< HEAD
+=======
+          ))}
+        </div>
+      </div>
+
+      {/* Technology Comparison */}
+      <div className="mt-16">
+        <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">Technology Comparison</h3>
+        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Technology</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Performance</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Innovation Level</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Market Ready</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {technologies.map((tech, index) => (
+                  <tr key={tech.id} className={activeTech === index ? 'bg-blue-50' : 'hover:bg-gray-50'}>
+                    <td className="px-6 py-4">
+                      <div className="flex items-center">
+                        <span className="text-2xl mr-3">{tech.icon}</span>
+                        <span className="font-medium text-gray-800">{tech.name}</span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="flex items-center">
+                        <div className="w-20 bg-gray-200 rounded-full h-2 mr-2">
+                          <div 
+                            className={`bg-gradient-to-r ${tech.color} h-2 rounded-full`}
+                            style={{ width: `${80 + index * 5}%` }}
+                          ></div>
+                        </div>
+                        <span className="text-sm text-gray-600">{80 + index * 5}%</span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full font-semibold">
+                        Revolutionary
+                      </span>
+                    </td>
+                    <td className="px-6 py-4">
+                      <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-semibold">
+                        Available Now
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+>>>>>>> cursor/create-and-deploy-new-content-abae
           </div>
         </div>
 
