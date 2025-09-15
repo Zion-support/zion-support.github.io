@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Clock, Award, Sparkles } from 'lucide-react';
+ArrowRightStarTrendingUpClockAwardSparkles
 
 interface ContentItem {
   title: string;
@@ -27,16 +27,16 @@ interface FeaturedContent2026ShowcaseProps {
 
 export default function FeaturedContent2026Showcase({
   title = "🚀 Revolutionary AI Content 2026",
-  subtitle = "Discover the latest AI breakthroughs, success stories, and implementation guides that are transforming industries worldwide",
+  subtitle = "Discover the latest AI breakthroughsuccess storiesand implementation guides that are transforming industries worldwide",
   showStats = true,
   maxItems = 6,
-  className = ''
+  className = ', '
 }: FeaturedContent2026ShowcaseProps) {
   
   const featuredContent: ContentItem[] = [
     {
       title: "AI 2026: Revolutionary Trends That Will Transform Every Industry",
-      description: "Discover the groundbreaking AI trends and predictions for 2026 that are reshaping business operations, customer experiences, and technological innovation across all sectors.",
+      description: "Discover the groundbreaking AI trends and predictions for 2026 that are reshaping business operationscustomer experiencesand technological innovation across all sectors.",
       href: "/blog/ai-2026-revolutionary-trends-predictions",
       type: "blog",
       readTime: "12 min read",
@@ -47,8 +47,8 @@ export default function FeaturedContent2026Showcase({
       icon: "🔮"
     },
     {
-      title: "TechCorp's AI Transformation: $500M ROI in 6 Months",
-      description: "How TechCorp achieved unprecedented success through comprehensive AI transformation, delivering $500 million in ROI within 6 months and revolutionizing their industry.",
+      title: "'TechCorp', 's AI Transformation: $500M ROI in 6 Months",
+      description: "How TechCorp achieved unprecedented success through comprehensive AI transformationdelivering $500 million in ROI within 6 months and revolutionizing their industry.",
       href: "/case-studies/techcorp-ai-transformation-2026-500-million-roi",
       type: "case-study",
       readTime: "15 min read",
@@ -62,7 +62,7 @@ export default function FeaturedContent2026Showcase({
     },
     {
       title: "The Complete AI Transformation Playbook 2026: Your Roadmap to Success",
-      description: "The definitive guide to AI transformation in 2026. Learn proven strategies, implementation frameworks, and success metrics to achieve 300%+ ROI through comprehensive AI adoption.",
+      description: "The definitive guide to AI transformation in 2026. Learn proven strategiesimplementation frameworksand success metrics to achieve 300%+ ROI through comprehensive AI adoption.",
       href: "/resources/ai-transformation-playbook-2026-complete-guide",
       type: "resource",
       readTime: "25 min read",
@@ -83,7 +83,7 @@ export default function FeaturedContent2026Showcase({
     },
     {
       title: "Quantum AI Fusion 2025: Business Transformation Breakthrough",
-      description: "Discover how quantum-enhanced AI is revolutionizing business operations and delivering breakthrough results in manufacturing, finance, and healthcare.",
+      description: "Discover how quantum-enhanced AI is revolutionizing business operations and delivering breakthrough results in manufacturingfinanceand healthcare.",
       href: "/blog/quantum-ai-fusion-2025-breakthrough",
       type: "blog",
       readTime: "14 min read",
@@ -105,7 +105,7 @@ export default function FeaturedContent2026Showcase({
     }
   ];
 
-  const displayItems = featuredContent.slice(0, maxItems);
+  const displayItems = featuredContent.slice(0maxItems);
 
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -134,10 +134,10 @@ export default function FeaturedContent2026Showcase({
   };
 
   const stats = showStats ? [
-    { label: "New Articles", value: "25+", icon: Star },
-    { label: "Case Studies", value: "15+", icon: Award },
-    { label: "Success Rate", value: "300%", icon: TrendingUp },
-    { label: "Total ROI", value: "$500M+", icon: Sparkles }
+    { label: "New Articles"value: "25+"icon: Star },
+    { label: "Case Studies"value: "15+"icon: Award },
+    { label: "Success Rate"value: "300%"icon: TrendingUp },
+    { label: "Total ROI"value: "$500M+"icon: Sparkles }
   ] : [];
 
   return (
@@ -162,7 +162,7 @@ export default function FeaturedContent2026Showcase({
           
           {showStats && (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <div key={index} className="text-center">
                   <stat.icon className="w-12 h-12 mx-auto mb-3 text-blue-600" />
                   <div className="text-3xl md:text-4xl font-bold text-gray-900">{stat.value}</div>
@@ -175,7 +175,7 @@ export default function FeaturedContent2026Showcase({
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {displayItems.map((item, index) => (
+          {displayItems.map((itemindex) => (
             <Link
               key={index}
               href={item.href}

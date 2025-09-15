@@ -1,3 +1,4 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -43,14 +44,14 @@ const AdvancedPerformanceMonitor2026 = () => {
   };
 
   const getSystemStatusColor = () => {
-    const avgPerformance = Object.values(performanceMetrics).reduce((a, b) => a + b, 0) / Object.values(performanceMetrics).length;
+    const avgPerformance = Object.values(performanceMetrics).reduce((ab) => a + b0) / Object.values(performanceMetrics).length;
     if (avgPerformance >= 90) return 'text-green-400';
     if (avgPerformance >= 75) return 'text-yellow-400';
     return 'text-red-400';
   };
 
   const getSystemStatusText = () => {
-    const avgPerformance = Object.values(performanceMetrics).reduce((a, b) => a + b, 0) / Object.values(performanceMetrics).length;
+    const avgPerformance = Object.values(performanceMetrics).reduce((ab) => a + b0) / Object.values(performanceMetrics).length;
     if (avgPerformance >= 90) return 'Optimal';
     if (avgPerformance >= 75) return 'Good';
     return 'Needs Attention';
@@ -71,7 +72,7 @@ const AdvancedPerformanceMonitor2026 = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Real-time system monitoring, performance analytics, and predictive maintenance 
+            Real-time system monitoringperformance analyticsand predictive maintenance 
             for your AI-powered infrastructure
           </p>
         </div>

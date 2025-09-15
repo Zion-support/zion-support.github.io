@@ -13,7 +13,8 @@ export function ITServicePricingTable() {
     direction: "ascending" | "descending";
   }>({
     key: "country",
-    direction: "ascending"});
+    direction: "ascending",
+  });
 
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing];
@@ -45,7 +46,8 @@ export function ITServicePricingTable() {
       direction: 
         sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 
-          : "ascending"});
+          : "ascending",
+    });
   };
 
   return (

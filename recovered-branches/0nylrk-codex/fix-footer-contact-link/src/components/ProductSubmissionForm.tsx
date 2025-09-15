@@ -14,24 +14,45 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage} from "@/components/ui/form";
+=======
+  FormMessage,
+} from "@/components/ui/form";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+<<<<<<< HEAD
+import { TabsListTabsTriggerTabsContent } from "@/components/ui/tabs";
+=======
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+>>>>>>> origin/auto/autonomy-17186719616
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from "lucide-react";
 
 // Define the form schema with zod
 const productSchema = z.object({
+<<<<<<< HEAD
+  title: z.string().min(3"Title must be at least 3 characters"),
+  description: z.string().min(10"Description must be at least 10 characters"),
+  price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0{
+    message: "Price must be a valid number"}),
+  category: z.string().min(1"Please select a category"),
+  image: z.instanceof(File).optional(),
+  tags: z.string().optional()});
+=======
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-    message: "Price must be a valid number"}),
+    message: "Price must be a valid number",
+  }),
   category: z.string().min(1, "Please select a category"),
   image: z.instanceof(File).optional(),
-  tags: z.string().optional()});
+  tags: z.string().optional(),
+});
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>;
@@ -40,9 +61,15 @@ export function ProductSubmissionForm() {
   const { user } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
+<<<<<<< HEAD
+  const [isSubmittingsetIsSubmitting] = React.useState(false);
+  const [imagePreviewsetImagePreview] = React.useState(null as string | null);
+  const [activeTabsetActiveTab] = React.useState("manual");
+=======
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [imagePreview, setImagePreview] = React.useState(null as string | null);
   const [activeTab, setActiveTab] = React.useState("manual");
+>>>>>>> origin/auto/autonomy-17186719616
   
   // Initialize the form
   const form = useForm<ProductFormValues>({
@@ -52,13 +79,23 @@ export function ProductSubmissionForm() {
       description: "",
       price: "",
       category: "",
+<<<<<<< HEAD
       tags: ""}});
+=======
+      tags: "",
+    },
+  });
+>>>>>>> origin/auto/autonomy-17186719616
   
   // Handle image upload preview
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
+<<<<<<< HEAD
+      form.setValue("image"file);
+=======
       form.setValue("image", file);
+>>>>>>> origin/auto/autonomy-17186719616
       const reader = new FileReader();
       reader.onloadend = () => {
         setImagePreview(reader.result as string);
@@ -69,12 +106,21 @@ export function ProductSubmissionForm() {
 
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
+<<<<<<< HEAD
+    form.setValue("description"content.description);
+    form.setValue("tags"content.tags.join("));
+    
+    // Set a default price as the middle of the suggested range
+    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
+    form.setValue("price"averagePrice);
+=======
     form.setValue("description", content.description);
     form.setValue("tags", content.tags.join(", "));
     
     // Set a default price as the middle of the suggested range
     const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
     form.setValue("price", averagePrice);
+>>>>>>> origin/auto/autonomy-17186719616
     
     // Switch to the manual tab to show applied content
     setActiveTab("manual");
@@ -86,7 +132,12 @@ export function ProductSubmissionForm() {
       toast({
         title: "Authentication Required",
         description: "You must be logged in to publish products",
+<<<<<<< HEAD
         variant: "destructive"});
+=======
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       return;
     }
 
@@ -99,14 +150,27 @@ export function ProductSubmissionForm() {
         description: values.description,
         price: parseFloat(values.price),
         category: values.category,
-        currency: "USD", // Default currency
+<<<<<<< HEAD
+        currency: "USD"// Default currency
         tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],
         author: {
           name: user.displayName || "Anonymous Creator",
           id: user.id},
         createdAt: new Date().toISOString()};
       
+      const { data: productRecorderror: productError } = await supabase
+=======
+        currency: "USD", // Default currency
+        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],
+        author: {
+          name: user.displayName || "Anonymous Creator",
+          id: user.id,
+        },
+        createdAt: new Date().toISOString(),
+      };
+      
       const { data: productRecord, error: productError } = await supabase
+>>>>>>> origin/auto/autonomy-17186719616
         .from('product_listings')
         .insert([productData])
         .select('id')
@@ -116,12 +180,20 @@ export function ProductSubmissionForm() {
         throw new Error(productError.message);
       }
 
+<<<<<<< HEAD
+      // If we have an imageupload it
+=======
       // If we have an image, upload it
+>>>>>>> origin/auto/autonomy-17186719616
       if (values.image) {
         const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
         const { error: uploadError } = await supabase.storage
           .from('products')
+<<<<<<< HEAD
+          .upload(imagePathvalues.image);
+=======
           .upload(imagePath, values.image);
+>>>>>>> origin/auto/autonomy-17186719616
           
         if (uploadError) {
           throw new Error(uploadError.message);
@@ -138,7 +210,11 @@ export function ProductSubmissionForm() {
           .update({ 
             images: [publicUrlData.publicUrl]
           })
+<<<<<<< HEAD
+          .eq('id'productRecord.id);
+=======
           .eq('id', productRecord.id);
+>>>>>>> origin/auto/autonomy-17186719616
           
         if (updateError) {
           throw new Error(updateError.message);
@@ -148,7 +224,12 @@ export function ProductSubmissionForm() {
       // Show success message
       toast({
         title: "Product Published!",
+<<<<<<< HEAD
         description: "Your product has been successfully published on Zion."});
+=======
+        description: "Your product has been successfully published on Zion.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       
       // Redirect to product page
       navigate(`/marketplace/listing/${productRecord.id}`);
@@ -156,7 +237,12 @@ export function ProductSubmissionForm() {
       toast({
         title: "Publication Failed",
         description: error instanceof Error ? error.message : "An unknown error occurred",
+<<<<<<< HEAD
         variant: "destructive"});
+=======
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsSubmitting(false);
     }
@@ -269,7 +355,11 @@ export function ProductSubmissionForm() {
                     <Input placeholder="Enter tags separated by commas" {...field} />
                   </FormControl>
                   <FormDescription>
+<<<<<<< HEAD
+                    Add relevant tags to help users find your product (e.g.aiproductivitydesign)
+=======
                     Add relevant tags to help users find your product (e.g., ai, productivity, design)
+>>>>>>> origin/auto/autonomy-17186719616
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -329,6 +419,10 @@ export function ProductSubmissionForm() {
           initialValues={{
             title: form.getValues("title"),
             category: form.getValues("category")
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
           }}
         />
       </TabsContent>

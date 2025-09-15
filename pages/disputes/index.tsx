@@ -1,12 +1,12 @@
-import useSWR from 'swr';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import Link from 'next/link';
+import useSWR from 'swr',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import Link from 'next/link',
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export default function DisputesIndexPage() {
-  const { data } = useSWR('/api/disputes', fetcher);
-  const disputes = data?.disputes || [];
+  const { data } = useSWR('/api/disputes', fetcher),
+  const disputes = data?.disputes || [],
   return (
     <EnhancedLayout>
       <div className="max-w-4xl mx-auto">
@@ -43,5 +43,5 @@ export default function DisputesIndexPage() {
         </div>
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

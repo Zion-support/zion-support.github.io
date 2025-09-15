@@ -33,9 +33,13 @@ const toastVariants = cva(
           "destructive border-destructive bg-destructive text-destructive-foreground",
         success: "border-green-500 bg-green-50 text-green-900 dark:bg-green-900/20 dark:text-green-100",
         warning: "border-yellow-500 bg-yellow-50 text-yellow-900 dark:bg-yellow-900/20 dark:text-yellow-100",
-        info: "border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100"}},
+        info: "border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100",
+      },
+    },
     defaultVariants: {
-      variant: "default"}}
+      variant: "default",
+    },
+  }
 )
 
 const Toast = React.forwardRef<
@@ -123,7 +127,8 @@ export {
   ToastTitle,
   ToastDescription,
   ToastClose,
-  ToastAction}
+  ToastAction,
+}
 
 // Add useToast hook export
 // export function useToast() {

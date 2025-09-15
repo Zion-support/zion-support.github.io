@@ -54,7 +54,13 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
           `${functionName}${params}`,
           {
             headers: {
+<<<<<<< HEAD
               'Content-Type': 'application/json'}}
+=======
+              'Content-Type': 'application/json',
+            },
+          }
+>>>>>>> origin/auto/autonomy-17186719616
         );
 
         if (functionError) {

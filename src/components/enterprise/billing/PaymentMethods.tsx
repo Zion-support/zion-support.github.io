@@ -14,7 +14,8 @@ export function PaymentMethods() {
       last4: "4242",
       expMonth: 12,
       expYear: 2025,
-      isDefault: true},
+      isDefault: true,
+    },
     {
       id: "pm-2",
       type: "credit_card",
@@ -22,7 +23,8 @@ export function PaymentMethods() {
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
-      isDefault: false}
+      isDefault: false,
+    }
   ];
 
   return (

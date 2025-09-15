@@ -1,22 +1,22 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Brain, DollarSign, TrendingUp, Shield, Zap, 
   CheckCircle, ArrowRight, Star, Users, Award,
   Clock, Globe, BarChart3, Target, Microscope,
   Phone, Mail, MapPin, ArrowUpRight, Play,
   BarChart, PieChart, LineChart, Activity
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const features = [
   {
@@ -55,7 +55,7 @@ const features = [
     icon: Globe,
     color: 'from-cyan-500 to-blue-600'
   }
-];
+],
 
 const pricingPlans = [
   {
@@ -64,12 +64,9 @@ const pricingPlans = [
     period: 'month',
     description: 'Perfect for individual traders and small investment firms',
     features: [
-      'Basic market analysis and insights',
-      'Portfolio tracking and monitoring',
-      'Risk assessment and management',
-      'Email support',
-      'Up to 5 trading strategies',
-      'Basic reporting and analytics'
+      'Basic market analysis and insightsPortfolio tracking and monitoring',
+      'Risk assessment and managementEmail support',
+      'Up to 5 trading strategiesBasic reporting and analytics'
     ],
     popular: false,
     color: 'from-gray-500 to-gray-600'
@@ -80,14 +77,10 @@ const pricingPlans = [
     period: 'month',
     description: 'Ideal for professional traders and growing investment firms',
     features: [
-      'Advanced AI models and algorithms',
-      'Automated trading with backtesting',
-      'Custom strategy development',
-      'Priority support and API access',
-      'Advanced risk management tools',
-      'Multi-portfolio management',
-      'Real-time market alerts',
-      'Custom reporting and dashboards'
+      'Advanced AI models and algorithmsAutomated trading with backtesting',
+      'Custom strategy developmentPriority support and API access',
+      'Advanced risk management toolsMulti-portfolio management',
+      'Real-time market alertsCustom reporting and dashboards'
     ],
     popular: true,
     color: 'from-cyan-500 to-purple-600'
@@ -98,46 +91,42 @@ const pricingPlans = [
     period: 'month',
     description: 'For large investment firms and institutional investors',
     features: [
-      'Custom AI model training and development',
-      'White-label solution with branding',
-      'Dedicated account manager and support',
-      'Advanced compliance automation',
-      '24/7 monitoring and support',
-      'Custom integrations and APIs',
-      'Advanced security and audit trails',
-      'Multi-user access and permissions'
+      'Custom AI model training and developmentWhite-label solution with branding',
+      'Dedicated account manager and supportAdvanced compliance automation',
+      '24/7 monitoring and supportCustom integrations and APIs',
+      'Advanced security and audit trailsMulti-user access and permissions'
     ],
     popular: false,
     color: 'from-purple-500 to-pink-600'
   }
-];
+],
 
 const useCases = [
   {
     title: 'Algorithmic Trading Strategy Development',
     description: 'Develop, backtest, and deploy sophisticated trading algorithms using our AI-powered platform.',
     icon: BarChart,
-    benefits: ['Increased trading efficiency', 'Reduced emotional bias', '24/7 market monitoring']
+    benefits: ['Increased trading efficiencyReduced emotional bias', '24/7 market monitoring']
   },
   {
     title: 'Portfolio Risk Management & Optimization',
     description: 'Advanced risk modeling and portfolio optimization using neural networks and machine learning.',
     icon: PieChart,
-    benefits: ['Risk-adjusted returns', 'Portfolio diversification', 'Real-time risk monitoring']
+    benefits: ['Risk-adjusted returnsPortfolio diversification', 'Real-time risk monitoring']
   },
   {
     title: 'Market Trend Prediction & Analysis',
     description: 'Predict market movements and identify trading opportunities with AI-powered analytics.',
     icon: LineChart,
-    benefits: ['Early trend detection', 'Improved timing', 'Higher success rates']
+    benefits: ['Early trend detectionImproved timing', 'Higher success rates']
   },
   {
     title: 'Automated Financial Reporting',
     description: 'Generate comprehensive financial reports and compliance documentation automatically.',
     icon: Activity,
-    benefits: ['Time savings', 'Regulatory compliance', 'Accurate reporting']
+    benefits: ['Time savingsRegulatory compliance', 'Accurate reporting']
   }
-];
+],
 
 const integrations = [
   { name: 'Bloomberg Terminal', logo: '🔵', category: 'Market Data' },
@@ -146,7 +135,7 @@ const integrations = [
   { name: 'MetaTrader', logo: '📈', category: 'Trading Platform' },
   { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' },
   { name: 'TD Ameritrade', logo: '💼', category: 'Broker' }
-];
+],
 
 const NeuralFinanceAI: React.FC = () => {
   return (
@@ -477,7 +466,7 @@ const NeuralFinanceAI: React.FC = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -511,7 +500,7 @@ const NeuralFinanceAI: React.FC = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )
+},
 
-export default NeuralFinanceAI;
+export default NeuralFinanceAI,

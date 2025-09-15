@@ -9,7 +9,8 @@ export const NavigationButtons = ({
   isNextDisabled = false,
   backLabel = "Back",
   nextLabel = "Next",
-  isLoading = false}: NavigationButtonsProps) => {
+  isLoading = false,
+}: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
       {onBack && (

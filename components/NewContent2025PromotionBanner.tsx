@@ -1,130 +1,148 @@
 import React from 'react';
 import Link from 'next/link';
+ArrowRightSparklesTrendingUpUsersClock
 
 export default function NewContent2025PromotionBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-700">
-      <div className="absolute inset-0 bg-black opacity-20"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white bg-opacity-20 text-white text-sm font-semibold mb-6">
-            <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-            </svg>
-            NEW CONTENT AVAILABLE
-          </div>
-          
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Discover Our Latest AI Innovations
-          </h2>
-          
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            Explore cutting-edge AI tools, breakthrough technologies, and revolutionary solutions that are transforming industries in 2025.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
-            {/* AI Innovation Hub Card */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 rounded-2xl">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
+      <div className="relative z-10 p-8 md:p-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Left Content */}
+            <div>
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mr-4">
+                  <Sparkles className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white">AI Innovation Hub 2025</h3>
-              </div>
-              <p className="text-blue-100 mb-4">
-                Explore breakthrough AI technologies, neural interfaces, and quantum computing solutions that are reshaping our future.
-              </p>
-              <Link 
-                href="/ai-innovation-hub-2025"
-                className="inline-flex items-center text-white font-semibold hover:text-blue-200 transition-colors"
-              >
-                Explore Innovations
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            {/* AI Tools & Utilities Card */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
+                <div className="bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                  <span className="text-white font-medium text-sm">NEW CONTENT ALERT</span>
                 </div>
-                <h3 className="text-xl font-bold text-white">AI Tools & Utilities 2025</h3>
               </div>
-              <p className="text-blue-100 mb-4">
-                Discover powerful AI tools and utilities that streamline workflows, automate tasks, and boost productivity for modern businesses.
+              
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Discover the Latest
+                <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                  AI Innovations
+                </span>
+              </h2>
+              
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Explore cutting-edge AI technologiesbreakthrough case studiesand revolutionary insights that are reshaping industries in 2025.
               </p>
-              <Link 
-                href="/ai-tools-utilities-2025"
-                className="inline-flex items-center text-white font-semibold hover:text-blue-200 transition-colors"
-              >
-                Browse Tools
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/ai-innovation-hub-2025"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-              Explore AI Innovations
-            </Link>
-            <Link 
-              href="/ai-tools-utilities-2025"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-              Browse AI Tools
-            </Link>
-          </div>
-
-          {/* Additional Features */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-white">50+</div>
+                  <div className="text-gray-400 text-sm">New Articles</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-white">25+</div>
+                  <div className="text-gray-400 text-sm">Case Studies</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-white">100K+</div>
+                  <div className="text-gray-400 text-sm">Readers</div>
+                </div>
               </div>
-              <h4 className="text-lg font-semibold text-white mb-2">Lightning Fast</h4>
-              <p className="text-blue-100 text-sm">Experience blazing-fast AI processing and real-time results</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
+              
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/blog/ai-2025-latest-innovations"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold rounded-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  <TrendingUp className="w-5 h-5 mr-2" />
+                  Read Latest Innovations
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link
+                  href="/case-studies/ai-2025-global-tech-transformation-mega-success"
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
+                >
+                  <Users className="w-5 h-5 mr-2" />
+                  View Success Stories
+                </Link>
               </div>
-              <h4 className="text-lg font-semibold text-white mb-2">Enterprise Ready</h4>
-              <p className="text-blue-100 text-sm">Built for scale with enterprise-grade security and reliability</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
+            
+            {/* Right Content - Featured Content Cards */}
+            <div className="space-y-6">
+              {/* Featured Blog Post */}
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mr-3">
+                    <span className="text-white text-sm font-bold">AI</span>
+                  </div>
+                  <div className="text-white font-semibold">Latest Blog Post</div>
+                </div>
+                <h3 className="text-white font-bold text-lg mb-2">
+                  AI 2025: Latest Innovations and Breakthrough Technologies
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  Discover quantum AI fusioneural interfacesand autonomous systems revolutionizing industries.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-gray-400 text-sm">
+                    <Clock className="w-4 h-4 mr-1" />
+                    5 min read
+                  </div>
+                  <Link
+                    href="/blog/ai-2025-latest-innovations"
+                    className="text-yellow-400 hover:text-yellow-300 text-sm font-medium"
+                  >
+                    Read More →
+                  </Link>
+                </div>
               </div>
-              <h4 className="text-lg font-semibold text-white mb-2">User Friendly</h4>
-              <p className="text-blue-100 text-sm">Intuitive interfaces designed for users of all skill levels</p>
+              
+              {/* Featured Case Study */}
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mr-3">
+                    <span className="text-white text-sm font-bold">CS</span>
+                  </div>
+                  <div className="text-white font-semibold">Featured Case Study</div>
+                </div>
+                <h3 className="text-white font-bold text-lg mb-2">
+                  Global Tech Giant: 50,000% ROI Success
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  How a Fortune 500 company achieved unprecedented ROI through AI transformation.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-gray-400 text-sm">
+                    <Users className="w-4 h-4 mr-1" />
+                    500K+ employees
+                  </div>
+                  <Link
+                    href="/case-studies/ai-2025-global-tech-transformation-mega-success"
+                    className="text-yellow-400 hover:text-yellow-300 text-sm font-medium"
+                  >
+                    View Details →
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Quick Stats */}
+              <div className="bg-gradient-to-r from-yellow-400/20 to-orange-500/20 backdrop-blur-lg rounded-xl p-6 border border-yellow-400/30">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-2">50,000%</div>
+                  <div className="text-yellow-400 font-semibold mb-1">ROI Achieved</div>
+                  <div className="text-gray-300 text-sm">by our latest client</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      
+      {/* Floating Elements */}
+      <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 rounded-full blur-xl"></div>
+      <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-full blur-xl"></div>
     </div>
   );
 }

@@ -1,31 +1,34 @@
-import type { NextPage } from 'next';
-import Link from 'next/link';
-import Seo from '../../components/seo/Seo';
-import { FAQPageJsonLd } from 'next-seo';
 
-const AiSeoAuditor: NextPage = () => {
+<<<<<<< HEAD
+import Head from 'next/head',
+import Link from 'next/link',
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/auto/autonomy-17186719616
+
+const ApiDevelopmentChat = () => {
   return (
     <div>
-      <Seo title="AI SEO Auditor" description="Automated SEO audits and recommendations powered by AI." openGraph={{ title: 'AI SEO Auditor', description: 'Automated SEO audits and recommendations powered by AI.' }} />
-      <FAQPageJsonLd
-        mainEntity={[
-          {
-            questionName: 'What does the AI SEO Auditor analyze?',
-            acceptedAnswerText: 'It scans metadata, headings, performance, accessibility, and content structure to highlight SEO opportunities.'
-          },
-          {
-            questionName: 'How fast are the recommendations generated?',
-            acceptedAnswerText: 'Typically within seconds for single pages and a few minutes for larger sites.'
-          }
-        ]}
-      />
+      <Head>
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>
+        <meta name="description" content="ApiDevelopmentChat service" />
+      </Head>
+      
       <main>
-        <h1>AI SEO Auditor</h1>
+        <h1>ApiDevelopmentChat</h1>
         <p>Service details coming soon...</p>
-        <Link href="/services">Back to Services</Link>
+        <Link href="/services"><a>Back to Services</a></Link>
       </main>
     </div>
+<<<<<<< HEAD
+  ),
+},
+
+export default ApiDevelopmentChat,
+=======
   );
 };
 
-export default AiSeoAuditor;
+export default ApiDevelopmentChat;
+>>>>>>> origin/auto/autonomy-17186719616

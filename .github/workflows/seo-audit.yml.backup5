@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+---
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 name: SEO Audit
 
 on:
@@ -20,27 +24,42 @@ jobs:
         uses: actions/checkout@v4
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Setup Node.js
         uses: actions/setup-node@v4"
           node-version: '20'
           cache: 'npm'
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Install dependencies
         run: |
           npm ci --no-audit --no-fund
           echo "Dependencies installed successfully"
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Create reports directory
         run: |
           mkdir -p public/reports/seo
           echo "Reports directory created"
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Set file permissions
         run: |
           chmod +x scripts/seo-audit.js
           echo "File permissions set"
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Generate SEO report
         id: seo_report
           echo "Starting SEO audit..."
@@ -48,7 +67,11 @@ jobs:
           echo "NPM version: $(npm --version)"
           echo "Current directory: $(pwd)"
           echo "Script path: $(realpath scripts/seo-audit.js)"
+<<<<<<< HEAD
+
+=======
           
+>>>>>>> origin/auto/autonomy-17186719616
           if node scripts/seo-audit.js; then
             echo "SEO audit completed successfully"
             echo "::set-output name=status::success"
@@ -56,7 +79,10 @@ jobs:
             echo "SEO audit failed, but continuing..."
             echo "::set-output name=status::failed"
           fi
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
       - name: List generated files
         run: |
           echo "Generated files:
@@ -64,7 +90,10 @@ jobs:
           echo "Current working directory: $(pwd)"
           echo "Directory contents:
           ls -la public/ || echo "No public directory found"
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Check for changes
         id: check_changes
           echo "Checking for git changes..."
@@ -77,13 +106,19 @@ jobs:
             echo "has_changes=false" >> $GITHUB_OUTPUT
             echo "No changes detected"
           fi
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Configure git
   if: steps.check_changes.outputs.has_changes == 'true'
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           echo "Git configured successfully"
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Add and commit changes
   if: steps.check_changes.outputs.has_changes == 'true'
           echo "Adding files to git..."
@@ -94,7 +129,10 @@ jobs:
           else
             echo "Commit failed, but continuing..."
           fi
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
       - name: Push changes
   if: steps.check_changes.outputs.has_changes == 'true'
           echo "Pushing changes..."
@@ -103,7 +141,10 @@ jobs:
           else
             echo "Push failed, but this is not critical"
           fi
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
       - name: No changes notification
   if: steps.check_changes.outputs.has_changes == 'false'
 

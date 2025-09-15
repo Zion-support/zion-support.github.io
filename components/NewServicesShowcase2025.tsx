@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, DollarSign, Users, Zap, Target, CheckCircle } from 'lucide-react';
+ArrowRightTrendingUpDollarSignUsersZapTargetCheckCircle
 
 export default function NewServicesShowcase2025() {
   const newServices = [
@@ -45,14 +45,14 @@ export default function NewServicesShowcase2025() {
             Revolutionary AI Services for 2025
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our latest AI-powered services designed to transform your business operations, 
-            reduce costs, and drive unprecedented growth. Proven results with measurable ROI.
+            Discover our latest AI-powered services designed to transform your business operations
+            reduce costsand drive unprecedented growth. Proven results with measurable ROI.
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {newServices.map((service, index) => {
+          {newServices.map((serviceindex) => {
             const IconComponent = service.icon;
             return (
               <div
@@ -81,7 +81,7 @@ export default function NewServicesShowcase2025() {
                 <div className="p-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Features:</h4>
                   <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map((featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>

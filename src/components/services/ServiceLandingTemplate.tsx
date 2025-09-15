@@ -36,7 +36,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
   benefits,
   testimonials,
   ctaText,
-  ctaLink}) => {
+  ctaLink,
+}) => {
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">

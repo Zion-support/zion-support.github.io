@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Rocket, Brain, Shield, Zap, Target, Atom, Cpu, 
   Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
@@ -11,7 +11,7 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
-} from 'lucide-react';
+} from 'lucide-react',
 
 const SpaceTechnologyPage: React.FC = () => {
   const spaceServices = [
@@ -19,7 +19,7 @@ const SpaceTechnologyPage: React.FC = () => {
       id: 'space-resource-mining',
       name: 'Space Resource Mining',
       description: 'Advanced mining operations for extraterrestrial resources',
-      features: ['Asteroid Mining', 'Resource Extraction', 'Processing Automation', 'Transport Logistics'],
+      features: ['Asteroid MiningResource Extraction', 'Processing AutomationTransport Logistics'],
       price: '$4,999',
       period: 'month',
       popular: true,
@@ -29,7 +29,7 @@ const SpaceTechnologyPage: React.FC = () => {
       id: 'ai-powered-space-tech',
       name: 'AI-Powered Space Technology',
       description: 'Intelligent space systems with autonomous capabilities',
-      features: ['Autonomous Navigation', 'AI Mission Control', 'Predictive Analytics', 'Real-time Optimization'],
+      features: ['Autonomous NavigationAI Mission Control', 'Predictive AnalyticsReal-time Optimization'],
       price: '$3,999',
       period: 'month',
       popular: false,
@@ -39,7 +39,7 @@ const SpaceTechnologyPage: React.FC = () => {
       id: 'brain-computer-interface',
       name: 'Brain-Computer Interface',
       description: 'Neural interface technology for space applications',
-      features: ['Neural Control', 'Cognitive Enhancement', 'Remote Operation', 'Safety Protocols'],
+      features: ['Neural ControlCognitive Enhancement', 'Remote OperationSafety Protocols'],
       price: '$3,499',
       period: 'month',
       popular: false,
@@ -49,7 +49,7 @@ const SpaceTechnologyPage: React.FC = () => {
       id: 'autonomous-vehicle-ai',
       name: 'Autonomous Vehicle AI',
       description: 'AI-powered autonomous systems for space vehicles',
-      features: ['Path Planning', 'Obstacle Avoidance', 'Mission Execution', 'Adaptive Learning'],
+      features: ['Path PlanningObstacle Avoidance', 'Mission ExecutionAdaptive Learning'],
       price: '$2,999',
       period: 'month',
       popular: false,
@@ -59,7 +59,7 @@ const SpaceTechnologyPage: React.FC = () => {
       id: 'quantum-space-communications',
       name: 'Quantum Space Communications',
       description: 'Secure quantum communication for space missions',
-      features: ['Quantum Encryption', 'Interplanetary Links', 'Secure Data Transfer', 'Quantum Networks'],
+      features: ['Quantum EncryptionInterplanetary Links', 'Secure Data TransferQuantum Networks'],
       price: '$3,799',
       period: 'month',
       popular: false,
@@ -69,13 +69,13 @@ const SpaceTechnologyPage: React.FC = () => {
       id: 'space-infrastructure',
       name: 'Space Infrastructure',
       description: 'Comprehensive space infrastructure solutions',
-      features: ['Orbital Stations', 'Lunar Bases', 'Mars Colonies', 'Sustainable Systems'],
+      features: ['Orbital StationsLunar Bases', 'Mars ColoniesSustainable Systems'],
       price: '$5,999',
       period: 'month',
       popular: false,
       icon: <Building className="w-8 h-8" />
     }
-  ];
+  ],
 
   const spaceCapabilities = [
     {
@@ -108,7 +108,7 @@ const SpaceTechnologyPage: React.FC = () => {
       description: 'Eco-friendly space infrastructure',
       icon: <Heart className="w-6 h-6" />
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -275,7 +275,7 @@ const SpaceTechnologyPage: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Ready to Explore Space?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -300,8 +300,8 @@ const SpaceTechnologyPage: React.FC = () => {
         </section>
       </main>
     </Layout>
-  );
-};
+  )
+},
 
-export default SpaceTechnologyPage;
+export default SpaceTechnologyPage,
 

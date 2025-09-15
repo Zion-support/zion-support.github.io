@@ -197,7 +197,8 @@ export default function JobDetails() {
             description: job.description,
             company_name: job.company_name ?? "Company",
             budget: formatBudget(job.budget),
-            client_id: job.client_id}}
+            client_id: job.client_id,
+          }}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
         />

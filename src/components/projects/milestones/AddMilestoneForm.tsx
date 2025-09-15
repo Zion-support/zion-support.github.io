@@ -14,13 +14,15 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from '@/components/ui/form';
+  FormMessage,
+} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
   Popover,
   PopoverContent,
-  PopoverTrigger} from '@/components/ui/popover';
+  PopoverTrigger,
+} from '@/components/ui/popover';
 import { AIMilestoneGenerator } from './AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
 
@@ -28,7 +30,8 @@ const formSchema = z.object({
   title: z.string().min(1, 'Title is required'),
   description: z.string().optional(),
   due_date: z.date().optional(),
-  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
+  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0'),
+});
 
 type MilestoneFormValues = z.infer<typeof formSchema>;
 
@@ -56,7 +59,9 @@ export function AddMilestoneForm({
     defaultValues: {
       title: '',
       description: '',
-      amount: 0}});
+      amount: 0,
+    },
+  });
 
   const handleSubmit = (values: MilestoneFormValues) => {
     onSubmit(values);

@@ -15,7 +15,8 @@ export default function ClientDashboard() {
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ status: 'Closed' })});
+      body: JSON.stringify({ status: 'Closed' }),
+    });
     mutate();
   }
 

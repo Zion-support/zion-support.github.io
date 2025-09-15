@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Zap, TrendingUp, Star } from 'lucide-react';
+ArrowRightSparklesZapTrendingUpStar
 
 export default function RevolutionaryAIContentPromotionBanner() {
   return (
@@ -24,7 +24,7 @@ export default function RevolutionaryAIContentPromotionBanner() {
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            transition={{ delay: 0.2type: "spring"stiffness: 200 }}
             className="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-500 rounded-full px-6 py-2 mb-6 shadow-lg"
           >
             <Sparkles className="w-4 h-4 mr-2" />
@@ -52,7 +52,7 @@ export default function RevolutionaryAIContentPromotionBanner() {
             transition={{ delay: 0.6 }}
             className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
-            Discover cutting-edge AI insights, implementation guides, and breakthrough technologies 
+            Discover cutting-edge AI insightsimplementation guidesand breakthrough technologies 
             that are reshaping industries worldwide. Join 10,000+ businesses already transforming with our content.
           </motion.p>
 

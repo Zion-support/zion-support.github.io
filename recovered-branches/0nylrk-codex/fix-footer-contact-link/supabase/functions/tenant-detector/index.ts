@@ -15,7 +15,12 @@ const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-client-info',
+<<<<<<< HEAD
   'Access-Control-Max-Age': '86400'};
+=======
+  'Access-Control-Max-Age': '86400',
+};
+>>>>>>> origin/auto/autonomy-17186719616
 
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get('SUPABASE_URL');
@@ -32,7 +37,12 @@ serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, {
       status: 204,
+<<<<<<< HEAD
       headers: corsHeaders});
+=======
+      headers: corsHeaders,
+    });
+>>>>>>> origin/auto/autonomy-17186719616
   }
 
   try {
@@ -105,7 +115,13 @@ serve(async (req) => {
       {
         headers: {
           'Content-Type': 'application/json',
+<<<<<<< HEAD
           ...corsHeaders}},
+=======
+          ...corsHeaders,
+        },
+      },
+>>>>>>> origin/auto/autonomy-17186719616
     );
   } catch (error) {
     console.error('Tenant detector error:', error);
@@ -118,7 +134,13 @@ serve(async (req) => {
         status: 500,
         headers: {
           'Content-Type': 'application/json',
+<<<<<<< HEAD
           ...corsHeaders}},
+=======
+          ...corsHeaders,
+        },
+      },
+>>>>>>> origin/auto/autonomy-17186719616
     );
   }
 });

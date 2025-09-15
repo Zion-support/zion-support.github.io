@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  Rocket, 
-  Brain, 
-  Zap, 
-  ArrowRight, 
+  Rocket
+  Brain
+  Zap
+  ArrowRight
   Star,
   TrendingUp,
   Users,
@@ -88,7 +88,7 @@ const AI2026BreakthroughAnnouncementBanner = () => {
 
         {/* Breakthrough Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {breakthroughs.map((breakthrough, index) => (
+          {breakthroughs.map((breakthroughindex) => (
             <div 
               key={index}
               className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
@@ -167,7 +167,7 @@ const AI2026BreakthroughAnnouncementBanner = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join thousands of forward-thinking organizations already transforming their operations with our breakthrough AI technologies. 
-              The future is here, and it's waiting for you.
+              The future is hereand 'it', 's waiting for you.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

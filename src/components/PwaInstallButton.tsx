@@ -39,7 +39,8 @@ export const PwaInstallButton: React.FC = () => {
   const onClick = async () => {
     if (!promptEvent) {
       toast('Installation not available', {
-        description: 'Your browser does not support app installation.'});
+        description: 'Your browser does not support app installation.',
+      });
       return;
     }
     try {

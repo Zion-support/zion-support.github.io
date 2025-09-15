@@ -1,230 +1,278 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
-  Sparkles, 
-  ArrowRight, 
-  X, 
-  Play, 
-  Star,
-  Zap,
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  Zap
+  Shield
   Brain,
-  ArrowUp,
-  TrendingUp,
-  Award
+  Globe,
+  Target,
+  Award,
+  CheckCircle,
+  PlayCircle,
+  BookOpen,
+  Lightbulb,
+  Sparkles,
+  Rocket
 } from 'lucide-react';
 
 const NewContentShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
-    return () => clearTimeout(timer);
-  }, []);
+    setIsVisible(true);
+    
+    // Rotate features every 3 seconds
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % 3);
+    }3000);
 
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
+    return () => clearInterval(interval);
+  }[]);
 
-  if (isDismissed) return null;
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI Solutions',
+      description: 'Revolutionary AI technology',
+      color: 'from-purple-500 to-blue-500'
+    },
+    {
+      icon: Zap,
+      title: 'Automation',
+      description: 'Intelligent workflow automation',
+      color: 'from-green-500 to-teal-500'
+    },
+    {
+      icon: Shield,
+      title: 'Security',
+      description: 'Advanced cybersecurity protection',
+      color: 'from-red-500 to-orange-500'
+    }
+  ];
+
+  const stats = [
+    { label: 'New 'Features', 'value: '50+'icon: Sparkles },
+    { label: 'Success 'Rate', 'value: '99.8%'icon: Award },
+    { label: 'Client 'Satisfaction', 'value: '5.0★'icon: Star },
+    { label: 'ROI 'Increase', 'value: '300%'icon: TrendingUp }
+  ];
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden"
-        >
-          {/* Background Pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-          
-          {/* Animated Background Elements */}
-          <div className="absolute top-0 left-0 w-full h-full">
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-blue-600/20 to-purple-600/20" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0x: -50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="text-white"
+          >
+            {/* Badge */}
             <motion.div
-              animate={{ 
-                x: [0, 100, 0],
-                y: [0, -50, 0],
-                rotate: [0, 180, 360]
-              }}
-              transition={{ 
-                duration: 20, 
-                repeat: Infinity, 
-                ease: "linear" 
-              }}
-              className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"
-            />
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.2 }}
+              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-sm font-medium mb-6"
+            >
+              <Sparkles className="w-4 h-4 mr-2" />
+              NEW CONTENT AVAILABLE
+            </motion.div>
+
+            {/* Main Heading */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.3 }}
+              className="text-4xl md:text-5xl font-bold mb-6"
+            >
+              Discover Our Latest{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+                Innovations
+              </span>
+            </motion.h2>
+
+            {/* Subheading */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.4 }}
+              className="text-xl text-gray-300 mb-8"
+            >
+              Explore cutting-edge AI solutionsintelligent automationand advanced cybersecurity 
+              designed to revolutionize your business operations and drive unprecedented growth.
+            </motion.p>
+
+            {/* Rotating Feature */}
             <motion.div
-              animate={{ 
-                x: [0, -80, 0],
-                y: [0, 60, 0],
-                rotate: [0, -180, -360]
-              }}
-              transition={{ 
-                duration: 25, 
-                repeat: Infinity, 
-                ease: "linear" 
-              }}
-              className="absolute top-20 right-20 w-16 h-16 bg-pink-500/20 rounded-full blur-lg"
-            />
+              key={currentFeature}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-8"
+            >
+              <div className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                <div className={`p-3 bg-gradient-to-r ${features[currentFeature].color} rounded-lg`}>
+                  <features[currentFeature].icon className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-white">
+                    {features[currentFeature].title}
+                  </h4>
+                  <p className="text-gray-300">
+                    {features[currentFeature].description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Stats */}
             <motion.div
-              animate={{ 
-                x: [0, 60, 0],
-                y: [0, -40, 0],
-                rotate: [0, 90, 180]
-              }}
-              transition={{ 
-                duration: 15, 
-                repeat: Infinity, 
-                ease: "linear" 
-              }}
-              className="absolute bottom-10 left-1/3 w-12 h-12 bg-cyan-500/20 rounded-full blur-md"
-            />
-          </div>
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.5 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
+            >
+              {stats.map((statindex) => (
+                <div key={index} className="text-center">
+                  <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-sm text-gray-300">{stat.label}</div>
+                </div>
+              ))}
+            </motion.div>
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-              {/* Left Content */}
-              <div className="flex-1 text-center lg:text-left">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="flex items-center justify-center lg:justify-start gap-2 mb-4"
-                >
-                  <Sparkles className="w-6 h-6 text-yellow-300 animate-pulse" />
-                  <span className="text-sm font-semibold uppercase tracking-wider text-yellow-300">
-                    NEW CONTENT 2025
-                  </span>
-                  <div className="flex items-center gap-1 ml-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />
-                    ))}
-                  </div>
-                </motion.div>
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <Link
+                href="/new-content-showcase-2025"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                <Rocket className="w-5 h-5 mr-2" />
+                Explore New Content
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                href="/demo"
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300"
+              >
+                <PlayCircle className="w-5 h-5 mr-2" />
+                Watch Demo
+              </Link>
+            </motion.div>
+          </motion.div>
 
-                <motion.h2
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
-                >
-                  Revolutionary Technology
-                  <span className="block bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
-                    Showcase 2025
-                  </span>
-                </motion.h2>
-
-                <motion.p
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="text-lg md:text-xl text-blue-100 mb-6 max-w-2xl"
-                >
-                  Discover breakthrough AI innovations, cutting-edge automation solutions, and future technologies that are reshaping industries worldwide.
-                </motion.p>
-
-                {/* Feature Icons */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mb-6"
-                >
-                  <div className="flex items-center gap-2">
-                    <Brain className="w-5 h-5 text-cyan-300" />
-                    <span className="text-sm font-medium">AI Consciousness</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-yellow-300" />
-                    <span className="text-sm font-medium">Smart Automation</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Rocket className="w-5 h-5 text-pink-300" />
-                    <span className="text-sm font-medium">Future Tech</span>
-                  </div>
-                </motion.div>
-
-                {/* CTA Buttons */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-                >
-                  <button className="group bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                    <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                    Explore Now
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                  <button className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center backdrop-blur-sm">
-                    <Award className="w-5 h-5 mr-2" />
-                    View Case Studies
-                  </button>
-                </motion.div>
+          {/* Right Content - Visual */}
+          <motion.div
+            initial={{ opacity: 0x: 50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8delay: 0.2 }}
+            className="relative"
+          >
+            {/* Main Visual Card */}
+            <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-white">New Content Hub</h3>
+                <div className="flex space-x-2">
+                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                </div>
               </div>
 
-              {/* Right Content - Stats */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex-shrink-0"
-              >
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                  <h3 className="text-xl font-bold mb-6 text-center">Impact Metrics</h3>
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-yellow-300 mb-1">10K+</div>
-                      <div className="text-sm text-blue-100">AI Models</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-cyan-300 mb-1">5K+</div>
-                      <div className="text-sm text-blue-100">Businesses</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-pink-300 mb-1">95%</div>
-                      <div className="text-sm text-blue-100">Efficiency</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-green-300 mb-1">99.8%</div>
-                      <div className="text-sm text-blue-100">Satisfaction</div>
-                    </div>
-                  </div>
-                  
+              {/* Feature Cards */}
+              <div className="space-y-4">
+                {features.map((featureindex) => (
                   <motion.div
-                    animate={{ scale: [1, 1.05, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="mt-6 text-center"
+                    key={index}
+                    initial={{ opacity: 0x: 20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.5delay: 0.8 + index * 0.1 }}
+                    className={`p-4 rounded-xl border transition-all duration-300 ${
+                      index === currentFeature
+                        ? 'bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-400/50'
+                        : 'bg-white/5 border-white/20'
+                    }`}
                   >
-                    <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-400 to-blue-400 text-white px-4 py-2 rounded-full text-sm font-bold">
-                      <TrendingUp className="w-4 h-4" />
-                      Trending Now
+                    <div className="flex items-center space-x-3">
+                      <div className={`p-2 bg-gradient-to-r ${feature.color} rounded-lg`}>
+                        <feature.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold">{feature.title}</h4>
+                        <p className="text-gray-300 text-sm">{feature.description}</p>
+                      </div>
+                      {index === currentFeature && (
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          className="ml-auto"
+                        >
+                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        </motion.div>
+                      )}
                     </div>
                   </motion.div>
+                ))}
+              </div>
+
+              {/* Progress Bar */}
+              <div className="mt-6">
+                <div className="flex justify-between text-sm text-gray-300 mb-2">
+                  <span>Content Loading</span>
+                  <span>100%</span>
                 </div>
-              </motion.div>
+                <div className="w-full bg-white/20 rounded-full h-2">
+                  <motion.div
+                    className="bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full"
+                    initial={{ width: 0 }}
+                    animate={{ width: '100%' }}
+                    transition={{ duration: 2delay: 1 }}
+                  />
+                </div>
+              </div>
             </div>
-          </div>
 
-          {/* Dismiss Button */}
-          <button
-            onClick={handleDismiss}
-            className="absolute top-4 right-4 p-2 rounded-full hover:bg-white/20 transition-colors"
-            aria-label="Dismiss banner"
-          >
-            <X className="w-5 h-5" />
-          </button>
-
-          {/* Bottom Gradient */}
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400"></div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+            {/* Floating Elements */}
+            <motion.div
+              animate={{ y: [0-10] }}
+              transition={{ duration: 2repeat: Infinity }}
+              className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
+            >
+              <Star className="w-4 h-4 text-white" />
+            </motion.div>
+            <motion.div
+              animate={{ y: [010] }}
+              transition={{ duration: 2repeat: Infinitydelay: 1 }}
+              className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center"
+            >
+              <CheckCircle className="w-3 h-3 text-white" />
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
   );
 };
 

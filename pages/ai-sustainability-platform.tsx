@@ -1,5 +1,5 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from 'react',
+import SEO from '../components/SEO',
 
 export default function AISustainabilityPlatformPage() {
   return (
@@ -10,5 +10,5 @@ export default function AISustainabilityPlatformPage() {
         <p className="text-gray-300">Measure and optimize sustainability metrics with AI. Details coming soon.</p>
       </div>
     </div>
-  );
+  ),
 }

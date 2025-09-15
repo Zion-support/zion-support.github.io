@@ -232,7 +232,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const containerStyle: React.CSSProperties = {
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
     width: width ? `${width}px` : undefined,
-    height: height ? `${height}px` : undefined};
+    height: height ? `${height}px` : undefined,
+  };
 
   return (
     <div 

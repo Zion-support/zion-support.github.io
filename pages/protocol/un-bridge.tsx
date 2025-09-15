@@ -9,7 +9,8 @@ export default function UNBridge() {
     budgetOrResolution: 'USD 3M over 24 months',
     supportingMultiverses: 'Digital Labor, AI Ethics',
     promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
-    language: 'en'});
+    language: 'en',
+  });
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
@@ -27,7 +28,9 @@ export default function UNBridge() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...form,
-          supportingMultiverses: form.supportingMultiverses.split(',').map((s) => s.trim()).filter(Boolean)})});
+          supportingMultiverses: form.supportingMultiverses.split(',').map((s) => s.trim()).filter(Boolean),
+        }),
+      });
       const data = await res.json();
       setResult(data);
     } finally { setLoading(false); }
@@ -40,7 +43,8 @@ export default function UNBridge() {
       const res = await fetch('/api/proposals/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: result.markdown, targetLanguage })});
+        body: JSON.stringify({ markdown: result.markdown, targetLanguage }),
+      });
       const data = await res.json();
       setTranslated(data.translated);
     } finally { setLoading(false); }
@@ -53,7 +57,8 @@ export default function UNBridge() {
       await fetch('/api/proposals/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: result.meta.id })});
+        body: JSON.stringify({ id: result.meta.id }),
+      });
       // Refresh meta
       const list = await fetch('/api/proposals/list');
       const { proposals } = await list.json();
@@ -69,7 +74,8 @@ export default function UNBridge() {
       const res = await fetch('/api/proposals/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: result.meta.id, channels })});
+        body: JSON.stringify({ id: result.meta.id, channels }),
+      });
       const data = await res.json();
       setResult((r: any) => ({ ...r, meta: data.meta }));
     } finally { setLoading(false); }

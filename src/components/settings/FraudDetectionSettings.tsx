@@ -9,7 +9,8 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger} from "@/components/ui/accordion";
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
@@ -32,13 +33,15 @@ export function FraudDetectionSettings() {
       
       toast({
         title: "Settings saved",
-        description: "Your fraud detection preferences have been updated."});
+        description: "Your fraud detection preferences have been updated.",
+      });
     } catch (error) {
       logErrorToProduction('Error saving preferences:', { data: error });
       toast({
         title: "Error",
         description: "Failed to save your preferences. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     } finally {
       setIsSaving(false);
     }

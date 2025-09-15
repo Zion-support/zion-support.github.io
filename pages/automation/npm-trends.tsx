@@ -1,9 +1,9 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore
-import data from '../../data/npm-trends.json';
+import data from '../../data/npm-trends.json',
 
 export default function NpmTrendsPage() {
-  const items: any[] = (data?.items || []).slice(0, 50);
+  const items: any[] = (data?.items || []).slice(0, 50),
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -22,5 +22,5 @@ export default function NpmTrendsPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

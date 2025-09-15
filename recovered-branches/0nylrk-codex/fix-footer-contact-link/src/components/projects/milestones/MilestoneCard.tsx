@@ -1,10 +1,18 @@
 
 import React from 'react';
+<<<<<<< HEAD
+import { CardContentCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { format } from 'date-fns';
+import { CheckArrowDownX } from "lucide-react";
+=======
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { format } from 'date-fns';
 import { Check, ArrowDown, X } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
@@ -22,17 +30,30 @@ interface MilestoneCardProps {
 }
 
 export function MilestoneCard({ 
+<<<<<<< HEAD
+  id
+  projectId,
+  title
+  description
+  amount
+  status
+=======
   id, 
   projectId,
   title, 
   description, 
   amount, 
   status, 
+>>>>>>> origin/auto/autonomy-17186719616
   dueDate,
   onApprove,
   onReject
 }: MilestoneCardProps) {
+<<<<<<< HEAD
+  const { isUnderDisputedisputeStatus } = useDisputeCheck(projectIdid);
+=======
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
+>>>>>>> origin/auto/autonomy-17186719616
   
   function getStatusBadgeColor() {
     switch (status) {
@@ -57,13 +78,21 @@ export function MilestoneCard({
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
               <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
+                Due: {format(new Date(dueDate)'MMM dyyyy')}
+=======
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
+>>>>>>> origin/auto/autonomy-17186719616
               </p>
             )}
           </div>
           <div className="flex gap-2">
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
+<<<<<<< HEAD
+              {status.replace('_' ')}
+=======
               {status.replace('_', ' ')}
+>>>>>>> origin/auto/autonomy-17186719616
             </Badge>
             
             {isUnderDispute && disputeStatus && (

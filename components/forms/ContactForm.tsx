@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+"use client";
+'use client';
+
+import React{ useState } from 'react';
+import { motion } from 'framer-motion';
+MailPhoneMapPinSendCheckCircleAlertCircle
+
+const ContactForm: React.FC = () => {
+  const [formDatasetFormData] = useState({
+=======
 'use client';
 
 import React, { useState } from 'react';
@@ -6,6 +17,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-reac
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
+>>>>>>> origin/auto/autonomy-17186719616
     name: '',
     email: '',
     company: '',
@@ -13,9 +25,22 @@ const ContactForm: React.FC = () => {
     service: '',
     message: ''
   });
+<<<<<<< HEAD
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<;
+    'idle' | 'success' | 'error';
+  >('idle');
+
+
+
+
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [submitStatusetSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+=======
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -30,7 +55,11 @@ const ContactForm: React.FC = () => {
     
     // Simulate API call
     try {
+<<<<<<< HEAD
+      await new Promise(resolve => setTimeout(resolve2000));
+=======
       await new Promise(resolve => setTimeout(resolve, 2000));
+>>>>>>> origin/auto/autonomy-17186719616
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -73,7 +102,11 @@ const ContactForm: React.FC = () => {
     {
       icon: MapPin,
       title: 'Visit Us',
+<<<<<<< HEAD
+      content: '123 Tech StreetInnovation CityIC 12345',
+=======
       content: '123 Tech Street, Innovation City, IC 12345',
+>>>>>>> origin/auto/autonomy-17186719616
       href: '#'
     }
   ];
@@ -111,9 +144,15 @@ const ContactForm: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
           {/* Contact Information */}
           <motion.div
+<<<<<<< HEAD
+            initial={{ opacity: 0x: -30 }}
+            whileInView={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
+=======
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+>>>>>>> origin/auto/autonomy-17186719616
             viewport={{ once: true }}
             className="space-y-8"
           >
@@ -127,6 +166,15 @@ const ContactForm: React.FC = () => {
 
             {/* Contact Details */}
             <div className="space-y-6">
+<<<<<<< HEAD
+              {contactInfo.map((infoindex) => (
+                <motion.a
+                  key={info.title}
+                  href={info.href}
+                  initial={{ opacity: 0x: -20 }}
+                  whileInView={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
+=======
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={info.title}
@@ -134,6 +182,7 @@ const ContactForm: React.FC = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                   viewport={{ once: true }}
                   className="flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group"
                 >
@@ -154,7 +203,11 @@ const ContactForm: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.6delay: 0.6 }}
+=======
               transition={{ duration: 0.6, delay: 0.6 }}
+>>>>>>> origin/auto/autonomy-17186719616
               viewport={{ once: true }}
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6"
             >
@@ -182,16 +235,27 @@ const ContactForm: React.FC = () => {
 
           {/* Contact Form */}
           <motion.div
+<<<<<<< HEAD
+            initial={{ opacity: 0x: 30 }}
+            whileInView={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.8delay: 0.4 }}
+=======
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+>>>>>>> origin/auto/autonomy-17186719616
             viewport={{ once: true }}
             className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
           >
             {submitStatus === 'success' ? (
               <motion.div
+<<<<<<< HEAD
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={{ opacity: 1scale: 1 }}
+=======
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 className="text-center py-12"
               >
                 <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />

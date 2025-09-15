@@ -31,7 +31,12 @@ export function useAISearch() {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
+<<<<<<< HEAD
           body: JSON.stringify({ query })}
+=======
+          body: JSON.stringify({ query }),
+        }
+>>>>>>> origin/auto/autonomy-17186719616
       );
       const data = await response.json();
       const filters: SearchFilters = data.filters || {};

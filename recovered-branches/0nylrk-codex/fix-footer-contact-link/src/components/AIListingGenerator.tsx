@@ -1,11 +1,21 @@
+<<<<<<< HEAD
+import React{ useState } from "react";
+=======
 import React, { useState } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+<<<<<<< HEAD
+import { CardContentCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
+import { SparklesArrowRight } from "@/components/icons";
+=======
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Sparkles, ArrowRight } from "@/components/icons";
+>>>>>>> origin/auto/autonomy-17186719616
 import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 
@@ -29,6 +39,18 @@ interface AIListingGeneratorProps {
   };
 }
 
+<<<<<<< HEAD
+export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AIListingGeneratorProps) {
+  const { toast } = useToast();
+  const [titlesetTitle] = useState(initialValues.title || "");
+  const [categorysetCategory] = useState(initialValues.category || "");
+  const [keyFeaturesetKeyFeatures] = useState(initialValues.keyFeatures || "");
+  const [targetAudiencesetTargetAudience] = useState(initialValues.targetAudience || "");
+  const [isLoadingsetIsLoading] = useState(false);
+  const [generatedContentsetGeneratedContent] = useState(null as GeneratedContent | null);
+
+  const handleInputChange = (e: { target: { value: string } }field: string) => {
+=======
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title || "");
@@ -39,6 +61,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
 
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
+>>>>>>> origin/auto/autonomy-17186719616
     switch(field) {
       case 'title':
         setTitle(e.target.value);
@@ -68,8 +91,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     setIsLoading(true);
     
     try {
+<<<<<<< HEAD
+      const { dataerror } = await supabase.functions.invoke('ai-listing-generator'{
+        body: { titlecategorykeyFeaturestargetAudience }
+=======
       const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
         body: { title, category, keyFeatures, targetAudience }
+>>>>>>> origin/auto/autonomy-17186719616
       });
 
       if (error) {
@@ -86,7 +114,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "AI has created optimized listing content for you."
       });
     } catch (error) {
+<<<<<<< HEAD
+      console.error("Error generating content:"error);
+=======
       console.error("Error generating content:", error);
+>>>>>>> origin/auto/autonomy-17186719616
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
@@ -116,7 +148,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             AI Listing Optimizer
           </CardTitle>
           <p className="text-sm text-zion-slate-light">
+<<<<<<< HEAD
+            Provide basic information and let AI generate optimizedSEO-friendly content for your listing
+=======
             Provide basic information and let AI generate optimized, SEO-friendly content for your listing
+>>>>>>> origin/auto/autonomy-17186719616
           </p>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -125,7 +161,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             <Input
               id="title"
               value={title}
+<<<<<<< HEAD
+              onChange={(e) => handleInputChange(e'title')}
+=======
               onChange={(e) => handleInputChange(e, 'title')}
+>>>>>>> origin/auto/autonomy-17186719616
               placeholder="Enter your product or service title"
               className="bg-zion-blue border border-zion-blue-light text-white"
               disabled={isLoading}
@@ -136,8 +176,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             <Input
               id="category"
               value={category}
+<<<<<<< HEAD
+              onChange={(e) => handleInputChange(e'category')}
+              placeholder="e.g. AI ToolDigital ProductService"
+=======
               onChange={(e) => handleInputChange(e, 'category')}
               placeholder="e.g. AI Tool, Digital Product, Service"
+>>>>>>> origin/auto/autonomy-17186719616
               className="bg-zion-blue border border-zion-blue-light text-white"
               disabled={isLoading}
             />
@@ -147,7 +192,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             <Textarea
               id="keyFeatures"
               value={keyFeatures}
+<<<<<<< HEAD
+              onChange={(e) => handleInputChange(e'keyFeatures')}
+=======
               onChange={(e) => handleInputChange(e, 'keyFeatures')}
+>>>>>>> origin/auto/autonomy-17186719616
               placeholder="Briefly describe the main features or benefits"
               className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
               disabled={isLoading}
@@ -158,8 +207,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             <Input
               id="targetAudience"
               value={targetAudience}
+<<<<<<< HEAD
+              onChange={(e) => handleInputChange(e'targetAudience')}
+              placeholder="e.g. DevelopersMarketersStartups"
+=======
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups"
+>>>>>>> origin/auto/autonomy-17186719616
               className="bg-zion-blue border border-zion-blue-light text-white"
               disabled={isLoading}
             />
@@ -189,13 +243,21 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           <CardContent className="space-y-4">
             <Skeleton className="h-32 w-full bg-zion-blue-light/20" />
             <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
+              {[...Array(5)].map((_i) => (
+=======
               {[...Array(5)].map((_, i) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
               ))}
             </div>
             <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />
             <div className="space-y-2">
+<<<<<<< HEAD
+              {[...Array(3)].map((_i) => (
+=======
               {[...Array(3)].map((_, i) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />
               ))}
             </div>
@@ -217,7 +279,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
               <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
+                {generatedContent.tags.map((tagindex) => (
+=======
                 {generatedContent.tags.map((tag, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                   <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">{tag}</Badge>
                 ))}
               </div>
@@ -231,7 +297,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
               <ul className="list-disc pl-5 text-white space-y-1">
+<<<<<<< HEAD
+                {generatedContent.keyPoints.map((pointindex) => (
+=======
                 {generatedContent.keyPoints.map((point, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                   <li key={index}>{point}</li>
                 ))}
               </ul>

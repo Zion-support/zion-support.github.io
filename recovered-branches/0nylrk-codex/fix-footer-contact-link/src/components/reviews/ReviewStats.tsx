@@ -5,10 +5,17 @@ import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
   averageRating: number;
   totalReviews: number;
+<<<<<<< HEAD
+  ratingDistribution?: Record<number>;
+}
+
+export function ReviewStats({ averageRatingtotalReviewsratingDistribution }: ReviewStatsProps) {
+=======
   ratingDistribution?: Record<number, number>;
 }
 
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   // Format the average rating to one decimal place
   const formattedRating = averageRating.toFixed(1);
   
@@ -25,7 +32,11 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
           <h3 className="text-xl font-bold">{formattedRating}</h3>
           <div className="flex items-center">
             <div className="flex mr-2">
+<<<<<<< HEAD
+              {[12345].map((i) => (
+=======
               {[1, 2, 3, 4, 5].map((i) => (
+>>>>>>> origin/auto/autonomy-17186719616
                 <Star
                   key={i}
                   className={`h-4 w-4 ${
@@ -43,7 +54,11 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
       
       {ratingDistribution && (
         <div className="space-y-2">
+<<<<<<< HEAD
+          {[54321].map((rating) => (
+=======
           {[5, 4, 3, 2, 1].map((rating) => (
+>>>>>>> origin/auto/autonomy-17186719616
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />

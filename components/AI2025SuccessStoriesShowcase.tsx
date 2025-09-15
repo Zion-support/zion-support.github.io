@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
-  CheckCircle, 
+  TrendingUp
+  Users
+  DollarSign
+  Clock
+  CheckCircle
   ArrowRight,
   Star,
   Award,
@@ -20,16 +21,16 @@ import {
 } from 'lucide-react';
 
 const AI2025SuccessStoriesShowcase = () => {
-  const [activeStory, setActiveStory] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeStorysetActiveStory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setActiveStory((prev) => (prev + 1) % successStories.length);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const successStories = [
     {
@@ -78,7 +79,7 @@ const AI2025SuccessStoriesShowcase = () => {
       },
       icon: Lightbulb,
       color: "from-purple-500 to-pink-500",
-      testimonial: "AI helps us diagnose patients faster and more accurately. It's revolutionizing healthcare delivery."
+      testimonial: "AI helps us diagnose patients faster and more accurately. 'It', 's revolutionizing healthcare delivery."
     },
     {
       id: 4,
@@ -99,19 +100,19 @@ const AI2025SuccessStoriesShowcase = () => {
   ];
 
   const metrics = [
-    { icon: TrendingUp, label: "Average ROI", value: "340%" },
-    { icon: Clock, label: "Time Saved", value: "75%" },
-    { icon: DollarSign, label: "Cost Reduction", value: "55%" },
-    { icon: CheckCircle, label: "Success Rate", value: "98%" }
+    { icon: TrendingUplabel: "Average ROI"value: "340%" },
+    { icon: Clocklabel: "Time Saved"value: "75%" },
+    { icon: DollarSignlabel: "Cost Reduction"value: "55%" },
+    { icon: CheckCirclelabel: "Success Rate"value: "98%" }
   ];
 
   const industries = [
-    { name: "Manufacturing", count: "150+", icon: Target },
-    { name: "Healthcare", count: "120+", icon: Lightbulb },
-    { name: "Finance", count: "200+", icon: Shield },
-    { name: "Retail", count: "180+", icon: Users },
-    { name: "Education", count: "90+", icon: Award },
-    { name: "Logistics", count: "110+", icon: Globe }
+    { name: "Manufacturing"count: "150+"icon: Target },
+    { name: "Healthcare"count: "120+"icon: Lightbulb },
+    { name: "Finance"count: "200+"icon: Shield },
+    { name: "Retail"count: "180+"icon: Users },
+    { name: "Education"count: "90+"icon: Award },
+    { name: "Logistics"count: "110+"icon: Globe }
   ];
 
   return (
@@ -149,7 +150,7 @@ const AI2025SuccessStoriesShowcase = () => {
             {/* Story Navigation */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white mb-6">Featured Success Stories</h3>
-              {successStories.map((story, index) => (
+              {successStories.map((storyindex) => (
                 <motion.div
                   key={story.id}
                   className={`p-4 rounded-xl cursor-pointer transition-all duration-300 ${
@@ -180,9 +181,9 @@ const AI2025SuccessStoriesShowcase = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeStory}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -50 }}
+                  initial={{ opacity: 0x: 50 }}
+                  animate={{ opacity: 1x: 0 }}
+                  exit={{ opacity: 0x: -50 }}
                   transition={{ duration: 0.5 }}
                   className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20"
                 >
@@ -217,7 +218,7 @@ const AI2025SuccessStoriesShowcase = () => {
 
                   {/* Results Grid */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                    {Object.entries(successStories[activeStory].results).map(([key, value], index) => (
+                    {Object.entries(successStories[activeStory].results).map(([keyvalue]index) => (
                       <div key={key} className="text-center p-4 bg-white/5 rounded-lg">
                         <div className="text-2xl font-bold text-white mb-1">{value}</div>
                         <div className="text-sm text-gray-300 capitalize">{key}</div>
@@ -249,12 +250,12 @@ const AI2025SuccessStoriesShowcase = () => {
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Proven Impact Across All Projects</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {metrics.map((metric, index) => (
+            {metrics.map((metricindex) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center p-6 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4">
@@ -271,12 +272,12 @@ const AI2025SuccessStoriesShowcase = () => {
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Trusted Across Industries</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {industries.map((industry, index) => (
+            {industries.map((industryindex) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isVisible ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center p-4 bg-white/5 rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300 group"
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 mb-3 group-hover:from-purple-500 group-hover:to-pink-500 transition-all duration-300">
@@ -293,7 +294,7 @@ const AI2025SuccessStoriesShowcase = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-purple-500/20">

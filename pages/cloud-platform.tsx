@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react',
 
 
 export default function CloudPlatformPage() {
@@ -25,16 +25,13 @@ export default function CloudPlatformPage() {
       title: 'Enterprise Security',
       description: 'SOC 2 compliant with advanced threat protection'
     }
-  ];
+  ],
 
   const benefits = [
-    '99.99% uptime guarantee',
-    'Global edge locations',
-    'Real-time monitoring',
-    'Automated scaling',
-    'Pay-as-you-go pricing',
-    '24/7 expert support'
-  ];
+    '99.99% uptime guaranteeGlobal edge locations',
+    'Real-time monitoringAutomated scaling',
+    'Pay-as-you-go pricing24/7 expert support'
+  ],
 
   return (
     <>
@@ -154,7 +151,7 @@ export default function CloudPlatformPage() {
 
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Scale Your Infrastructure?
             </h2>
@@ -175,5 +172,5 @@ export default function CloudPlatformPage() {
         </section>
       </div>
     </>
-  );
+  )
 }

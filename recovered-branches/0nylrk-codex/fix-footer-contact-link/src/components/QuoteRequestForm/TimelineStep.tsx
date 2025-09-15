@@ -5,7 +5,11 @@ import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { CalendarIcon } from "@/components/icons";
+<<<<<<< HEAD
+import { PopoverContentPopoverTrigger } from "@/components/ui/popover";
+=======
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+>>>>>>> origin/auto/autonomy-17186719616
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
 
@@ -14,7 +18,11 @@ interface TimelineStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 
+<<<<<<< HEAD
+export function TimelineStep({ formDataupdateFormData }: TimelineStepProps) {
+=======
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="space-y-6">
       <div>
@@ -61,7 +69,11 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
+<<<<<<< HEAD
+                      {formData.startDate ? format(formData.startDate"PPP") : <span>Pick a date</span>}
+=======
                       {formData.startDate ? format(formData.startDate, "PPP") : <span>Pick a date</span>}
+>>>>>>> origin/auto/autonomy-17186719616
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">
@@ -88,14 +100,24 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
+<<<<<<< HEAD
+                      {formData.endDate ? format(formData.endDate"PPP") : <span>Pick a date</span>}
+=======
                       {formData.endDate ? format(formData.endDate, "PPP") : <span>Pick a date</span>}
+>>>>>>> origin/auto/autonomy-17186719616
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">
                     <Calendar
                       mode="single"
+<<<<<<< HEAD
+                      selected={formData && formData.endDate}
+                      onSelect={(date) => updateFormData({ endDate: date })}
+
+=======
                       selected={formData.endDate}
                       onSelect={(date) => updateFormData({ endDate: date })}
+>>>>>>> origin/auto/autonomy-17186719616
                       initialFocus
                       className="p-3 pointer-events-auto"
                       disabled={(date) => date < (formData.startDate || new Date())}

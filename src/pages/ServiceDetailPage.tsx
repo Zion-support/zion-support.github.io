@@ -1,365 +1,355 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { COMPREHENSIVE_SERVICES, PRICING_TIERS, CONTACT_INFO } from '@/data/comprehensiveServices';
+import { Phone, Mail, CheckCircle, ArrowRight } from 'lucide-react';
+import { COMPREHENSIVE_SERVICES, SERVICE_PRICING_TIERS, CONTACT_INFO, SERVICE_GUARANTEES } from '../data/comprehensiveServices';
 
-// Create service guarantees
-const SERVICE_GUARANTEES = [
-  "100% Satisfaction Guarantee",
-  "30-Day Money Back Guarantee",
-  "Free Revisions for 30 Days",
-  "24/7 Customer Support",
-  "Quality Assurance Guarantee"
-];
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { SEO } from '@/components/SEO';
-import { 
-  ArrowLeft, 
-  Star, 
-  CheckCircle, 
-  Clock, 
-  Shield, 
-  Users, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Award,
-  TrendingUp,
-  Zap,
-  Cloud,
-  Database,
-  Smartphone,
-  Code
-} from 'lucide-react';
+interface ServiceDetailPageProps {}
 
-export default function ServiceDetailPage() {
-  const { id } = useParams<{ id: string }>();
+const ServiceDetailPage: React.FC<ServiceDetailPageProps> = () => {
+  const params = useParams();
+  const id = params.id;
   const [service, setService] = useState<any>(null);
   const [selectedTier, setSelectedTier] = useState<string>('basic');
-  const [showQuoteForm, setShowQuoteForm] = useState(false);
-  const [quoteData, setQuoteData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    message: '',
-    selectedTier: 'basic'
-  });
 
   useEffect(() => {
     if (id) {
       const foundService = COMPREHENSIVE_SERVICES.find(s => s.id === id);
       setService(foundService);
     }
-  }, [id]);
+=======
+import React, { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { COMPREHENSIVE_SERVICES, SERVICE_PRICING_TIERS, CONTACT_INFO, SERVICE_GUARANTEES } from '@/data/comprehensiveServices';
+import { 
+  Star, 
+  Clock, 
+  MapPin, 
+  Phone, 
+  Mail, 
+  Globe, 
+  CheckCircle, 
+  Users, 
+  Award,
+  ArrowLeft,
+  Calendar,
+  Shield,
+  Zap,
+  TrendingUp
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { SEO } from '@/components/SEO';
 
-  const handleQuoteSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle quote submission
-    console.log('Quote submitted:', quoteData);
-    setShowQuoteForm(false);
-  };
+export default function ServiceDetailPage() {
+  const { id } = useParams();
+  const [service, setService] = useState<any>(null);
+  const [selectedPricingTier, setSelectedPricingTier] = useState<string>('smb');
+
+  useEffect(() => {
+    const foundService = COMPREHENSIVE_SERVICES.find(s => s.id === id);
+    setService(foundService);
+  }, [id]);
 
   if (!service) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">Service Not Found</h1>
-          <Link to="/comprehensive-services">
-            <Button>Browse All Services</Button>
-          </Link>
-        </div>
+import React from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { Check, Star, TrendingUp, Clock, Shield, Zap, Cloud, BarChart3, Smartphone, Link as LinkIcon, Phone, Mail, MapPin, ArrowLeft } from 'lucide-react';
+import { EXPANDED_SERVICES } from '@/data/expandedServices';
+import { SEO } from '@/components/SEO';
+import { TrustedBySection } from '@/components/TrustedBySection';
+
+const categoryIcons: Record<string, React.ReactNode> = {
+  "AI & Automation": <Zap className="w-6 h-6" />,
+  "Cybersecurity": <Shield className="w-6 h-6" />,
+  "Cloud & DevOps": <Cloud className="w-6 h-6" />,
+  "Data & Analytics": <BarChart3 className="w-6 h-6" />,
+  "Digital Transformation": <TrendingUp className="w-6 h-6" />,
+  "IoT & Edge Computing": <Smartphone className="w-6 h-6" />,
+  "Blockchain & Web3": <LinkIcon className="w-6 h-6" />,
+};
+
+const pricingModelColors: Record<string, string> = {
+  "subscription": "bg-blue-100 text-blue-800",
+  "project-based": "bg-purple-100 text-purple-800",
+  "one-time": "bg-green-100 text-green-800",
+  "usage-based": "bg-orange-100 text-orange-800",
+};
+
+export default function ServiceDetailPage() {
+  const { serviceId } = useParams();
+  const service = EXPANDED_SERVICES.find(s => s.id === serviceId);
+
+  if (!service) {
+    return (
+      <div className="container mx-auto px-4 py-16 text-center">
+        <h1 className="text-2xl font-bold text-gray-900 mb-4">Service Not Found</h1>
+        <p className="text-gray-600 mb-6">The service you're looking for doesn't exist.</p>
+        <Link to="/services">
+          <Button>Back to Services</Button>
+        </Link>
       </div>
     );
   }
 
-  const serviceIcon = {
-    'ai-ml': <Zap className="h-8 w-8" />,
-    'cloud': <Cloud className="h-8 w-8" />,
-    'cybersecurity': <Shield className="h-8 w-8" />,
-    'data': <Database className="h-8 w-8" />,
-    'mobile': <Smartphone className="h-8 w-8" />,
-    'development': <Code className="h-8 w-8" />,
-    'analytics': <TrendingUp className="h-8 w-8" />,
-    'infrastructure': <Cloud className="h-8 w-8" />,
-    'integration': <Code className="h-8 w-8" />,
-    'consulting': <TrendingUp className="h-8 w-8" />
-  }[service.category] || <Code className="h-8 w-8" />;
+  const pricingTier = SERVICE_PRICING_TIERS.find(tier => tier.name === selectedTier);
+  const servicePricing = service.pricing[selectedTier as keyof typeof service.pricing];
 
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-blue/80 z-10"></div>
+        <div className="relative z-20 container mx-auto px-4 py-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-zion-gold/20 text-zion-gold px-4 py-2 rounded-full mb-6">
+              <span className="text-sm font-medium">{service.category}</span>
+              <span className="text-zion-gold">•</span>
+              <span className="text-sm">{service.subcategory}</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              {service.name}
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              {service.description}
+            </p>
+            
+            {/* Service Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-zion-gold mb-2">{service.rating}</div>
+                <div className="flex justify-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-zion-gold fill-current' : 'text-zion-slate-light'}`} />
+                  ))}
+                </div>
+                <div className="text-sm text-zion-slate-light">Rating</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-zion-gold mb-2">{service.aiScore}</div>
+                <div className="text-sm text-zion-slate-light">AI Score</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-zion-gold mb-2">{service.availability}</div>
+                <div className="text-sm text-zion-slate-light">Availability</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-zion-gold mb-2">{service.location}</div>
+                <div className="text-sm text-zion-slate-light">Location</div>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 bg-zion-gold text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-gold-light transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+                Get Started
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center gap-2 border-2 border-zion-gold text-zion-gold px-8 py-4 rounded-lg font-semibold hover:bg-zion-gold hover:text-zion-blue-dark transition-colors"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Service Details */}
+      <div className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-3 gap-12">
+              {/* Main Content */}
+              <div className="lg:col-span-2 space-y-12">
+                {/* Features */}
+                <section>
+                  <h2 className="text-3xl font-bold text-white mb-8">Key Features</h2>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {service.features.map((feature: string, index: number) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <CheckCircle className="w-6 h-6 text-zion-gold flex-shrink-0 mt-1" />
+                        <span className="text-zion-slate-light">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Detailed Description */}
+                <section>
+                  <h2 className="text-3xl font-bold text-white mb-8">About This Service</h2>
+                  <div className="prose prose-invert max-w-none">
+                    <p className="text-zion-slate-light leading-relaxed mb-6">
+                      {service.detailedDescription}
+                    </p>
+                  </div>
+                </section>
+
+                {/* Service Guarantees */}
+                <section>
+                  <h2 className="text-3xl font-bold text-white mb-8">Our Guarantees</h2>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {SERVICE_GUARANTEES.map((guarantee, index) => (
+                      <div key={index} className="bg-zion-blue/20 rounded-lg p-6 border border-zion-blue/30">
+                        <div className="flex items-center gap-3 mb-3">
+                          <Shield className="w-6 h-6 text-zion-gold" />
+                          <h3 className="text-xl font-semibold text-white">{guarantee.title}</h3>
+                        </div>
+                        <p className="text-zion-slate-light">{guarantee.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              </div>
+
+              {/* Sidebar */}
+              <div className="space-y-8">
+                {/* Pricing Card */}
+                <div className="bg-zion-blue/20 rounded-lg p-6 border border-zion-blue/30">
+                  <h3 className="text-xl font-bold text-white mb-4">Pricing</h3>
+                  
+                  {/* Tier Selector */}
+                  <div className="mb-6">
+                    <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                      Select Tier
+                    </label>
+                    <select
+                      value={selectedTier}
+                      onChange={(e) => setSelectedTier(e.target.value)}
+                      className="w-full bg-zion-blue/30 border border-zion-blue/50 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-gold"
+                    >
+                      {Object.keys(service.pricing).map((tier) => (
+                        <option key={tier} value={tier} className="bg-zion-blue-dark text-white">
+                          {tier.charAt(0).toUpperCase() + tier.slice(1)}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Price Display */}
+                  <div className="text-center mb-6">
+                    <div className="text-3xl font-bold text-zion-gold mb-2">
+                      ${servicePricing.price}
+                    </div>
+                    <div className="text-zion-slate-light">
+                      per {pricingTier?.billingCycle || 'month'}
+                    </div>
+                  </div>
+
+                  {/* Tier Features */}
+                  <div className="space-y-3 mb-6">
+                    {pricingTier?.features.map((feature: string, index: number) => (
+                      <div key={index} className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-zion-gold" />
+                        <span className="text-sm text-zion-slate-light">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link
+                    to="/contact"
+                    className="w-full bg-zion-gold text-zion-blue-dark py-3 rounded-lg font-semibold text-center block hover:bg-zion-gold-light transition-colors"
+                  >
+                    Get Started
+                  </Link>
+                </div>
+
+                {/* Contact Info */}
+                <div className="bg-zion-blue/20 rounded-lg p-6 border border-zion-blue/30">
+                  <h3 className="text-xl font-bold text-white mb-4">Contact Us</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <Phone className="w-5 h-5 text-zion-gold" />
+                      <a href={`tel:${CONTACT_INFO.mobile}`} className="text-zion-slate-light hover:text-zion-gold">
+                        {CONTACT_INFO.mobile}
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Mail className="w-5 h-5 text-zion-gold" />
+                      <a href={`mailto:${CONTACT_INFO.email}`} className="text-zion-slate-light hover:text-zion-gold">
+                        {CONTACT_INFO.email}
+                      </a>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <MapPin className="w-5 h-5 text-zion-gold flex-shrink-0 mt-1" />
+                      <span className="text-zion-slate-light text-sm">
+                        {CONTACT_INFO.address}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Service Tags */}
+                <div className="bg-zion-blue/20 rounded-lg p-6 border border-zion-blue/30">
+                  <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {service.tags.map((tag: string, index: number) => (
+                      <span
+                        key={index}
+                        className="bg-zion-gold/20 text-zion-gold px-3 py-1 rounded-full text-sm"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+=======
+  const getDiscountedPrice = (price: number, tier: string) => {
+    const pricingTier = SERVICE_PRICING_TIERS[tier as keyof typeof SERVICE_PRICING_TIERS];
+    if (pricingTier) {
+      return price * (1 - pricingTier.discount);
+    }
+    return price;
+  };
+
+  const formatPrice = (price: number) => {
+    if (price >= 1000) {
+      return `$${(price / 1000).toFixed(1)}k`;
+    }
+    return `$${price}`;
+  };
+
+  const getOriginalPrice = (price: number, tier: string) => {
+    const pricingTier = SERVICE_PRICING_TIERS[tier as keyof typeof SERVICE_PRICING_TIERS];
+    if (pricingTier && pricingTier.discount > 0) {
+      return price;
+    }
+    return null;
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      <SEO 
+        title={`${service.title} - Zion Tech Group`}
+=======
   return (
     <>
       <SEO 
-        title={`${service.name} - Zion Technology Solutions`}
+        title={`${service.title} | Zion Tech Group`}
         description={service.description}
-        keywords={service.keywords?.join(', ') || ''}
+        keywords={service.tags.join(', ')}
+        canonical={`https://ziontechgroup.com/services/${service.id}`}
       />
-      
-      <div className="min-h-screen bg-gray-50">
-        {/* Header Section */}
-        <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white py-16">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center mb-6">
-              <Link to="/comprehensive-services">
-                <Button variant="ghost" className="text-white hover:bg-white/20">
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  Back to Services
-                </Button>
-              </Link>
-            </div>
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="p-3 bg-white/20 rounded-lg">
-                {serviceIcon}
-              </div>
-              <div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-2">{service.name}</h1>
-                <p className="text-xl text-zion-cyan">{service.description}</p>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-4">
-              <Badge variant="secondary" className="bg-zion-cyan text-white text-lg px-4 py-2">
-                {service.category}
-              </Badge>
-              <div className="flex items-center space-x-1">
-                <Star className="h-5 w-5 text-yellow-400 fill-current" />
-                <span className="text-lg">{service.rating}</span>
-              </div>
-              <div className="flex items-center space-x-1">
-                <Clock className="h-5 w-5" />
-                <span className="text-lg">{service.duration}</span>
-              </div>
-            </div>
-          </div>
+
+      {/* Breadcrumb */}
+      <section className="py-4 bg-gray-50 border-b">
+        <div className="container mx-auto px-4">
+          <nav className="flex items-center space-x-2 text-sm">
+            <Link to="/" className="text-gray-500 hover:text-gray-700">Home</Link>
+            <span className="text-gray-400">/</span>
+            <Link to="/services" className="text-gray-500 hover:text-gray-700">Services</Link>
+            <span className="text-gray-400">/</span>
+            <span className="text-gray-900">{service.title}</span>
+          </nav>
         </div>
+      </section>
 
-        {/* Main Content */}
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Service Details */}
-            <div className="lg:col-span-2 space-y-8">
-              {/* Overview */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl">Service Overview</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700 leading-relaxed mb-6">{service.overview}</p>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold text-lg mb-3">Key Features</h4>
-                      <ul className="space-y-2">
-                        {service.features?.map((feature: string, index: number) => (
-                          <li key={index} className="flex items-center space-x-2">
-                            <CheckCircle className="h-5 w-5 text-green-500" />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-lg mb-3">Benefits</h4>
-                      <ul className="space-y-2">
-                        {service.benefits?.map((benefit: string, index: number) => (
-                          <li key={index} className="flex items-center space-x-2">
-                            <CheckCircle className="h-5 w-5 text-green-500" />
-                            <span>{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Process */}
-              {service.process && (
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Our Process</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      {service.process.map((step: any, index: number) => (
-                        <div key={index} className="flex items-start space-x-4">
-                          <div className="flex-shrink-0 w-8 h-8 bg-zion-purple text-white rounded-full flex items-center justify-center font-bold">
-                            {index + 1}
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-lg">{step.title}</h4>
-                            <p className="text-gray-700">{step.description}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
-
-              {/* Case Studies */}
-              {service.caseStudies && (
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Case Studies</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-6">
-                      {service.caseStudies.map((caseStudy: any, index: number) => (
-                        <div key={index} className="border-l-4 border-zion-cyan pl-4">
-                          <h4 className="font-semibold text-lg mb-2">{caseStudy.title}</h4>
-                          <p className="text-gray-700 mb-2">{caseStudy.description}</p>
-                          <div className="flex flex-wrap gap-2">
-                            {caseStudy.results?.map((result: string, resultIndex: number) => (
-                              <Badge key={resultIndex} variant="outline" className="text-zion-cyan border-zion-cyan">
-                                {result}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
-            </div>
-
-            {/* Sidebar */}
-            <div className="space-y-6">
-              {/* Pricing Tiers */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl">Pricing Tiers</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {PRICING_TIERS.map((tier) => (
-                      <div 
-                        key={tier.id}
-                        className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
-                          selectedTier === tier.id 
-                            ? 'border-zion-purple bg-zion-purple/5' 
-                            : 'border-gray-200 hover:border-zion-cyan'
-                        }`}
-                        onClick={() => setSelectedTier(tier.id)}
-                      >
-                        <div className="flex justify-between items-center mb-2">
-                          <h4 className="font-semibold">{tier.name}</h4>
-                          <span className="text-lg font-bold text-zion-purple">
-                            ${tier.price.toLocaleString()}
-                          </span>
-                        </div>
-                        <p className="text-sm text-gray-600">{tier.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Contact Info */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl">Get Started</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <Phone className="h-5 w-5 text-zion-cyan" />
-                      <span>{CONTACT_INFO.phone}</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Mail className="h-5 w-5 text-zion-cyan" />
-                      <span>{CONTACT_INFO.email}</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <MapPin className="h-5 w-5 text-zion-cyan" />
-                      <span>{CONTACT_INFO.address}</span>
-                    </div>
-                    <Button 
-                      className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white"
-                      onClick={() => setShowQuoteForm(true)}
-                    >
-                      Request Quote
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Guarantees */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl">Our Guarantees</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    {SERVICE_GUARANTEES.map((guarantee, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <Shield className="h-5 w-5 text-green-500" />
-                        <span className="text-sm">{guarantee}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-
-        {/* Quote Form Modal */}
-        {showQuoteForm && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-white rounded-lg p-6 w-full max-w-md mx-4">
-              <h3 className="text-xl font-semibold mb-4">Request Quote for {service.name}</h3>
-              <form onSubmit={handleQuoteSubmit} className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  value={quoteData.name}
-                  onChange={(e) => setQuoteData({...quoteData, name: e.target.value})}
-                  className="w-full p-3 border border-gray-300 rounded-md"
-                  required
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  value={quoteData.email}
-                  onChange={(e) => setQuoteData({...quoteData, email: e.target.value})}
-                  className="w-full p-3 border border-gray-300 rounded-md"
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Company"
-                  value={quoteData.company}
-                  onChange={(e) => setQuoteData({...quoteData, company: e.target.value})}
-                  className="w-full p-3 border border-gray-300 rounded-md"
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone"
-                  value={quoteData.phone}
-                  onChange={(e) => setQuoteData({...quoteData, phone: e.target.value})}
-                  className="w-full p-3 border border-gray-300 rounded-md"
-                />
-                <textarea
-                  placeholder="Message"
-                  value={quoteData.message}
-                  onChange={(e) => setQuoteData({...quoteData, message: e.target.value})}
-                  className="w-full p-3 border border-gray-300 rounded-md"
-                  rows={3}
-                />
-                <div className="flex space-x-2">
-                  <Button type="submit" className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white">
-                    Submit Quote
-                  </Button>
-                  <Button type="button" variant="outline" onClick={() => setShowQuoteForm(false)}>
-                    Cancel
-                  </Button>
-                </div>
-              </form>
-            </div>
-          </div>
-        )}
-      </div>
-    </>
-  );
-}

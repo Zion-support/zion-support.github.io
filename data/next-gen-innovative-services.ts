@@ -38,7 +38,10 @@ export interface NextGenInnovativeService {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing
   {
@@ -92,7 +95,10 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.9,
     reviews: 8
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Space Technology Platform
   {
     id: 'space-technology-platform',
@@ -145,7 +151,10 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.8,
     reviews: 12
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Biotech AI Platform
   {
     id: 'biotech-ai-platform',
@@ -198,7 +207,10 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.7,
     reviews: 18
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Quantum Financial Trading Platform
   {
     id: 'quantum-financial-trading',
@@ -251,7 +263,10 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.9,
     reviews: 15
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -304,7 +319,10 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.8,
     reviews: 22
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Quantum Cybersecurity Platform
   {
     id: 'quantum-cybersecurity-platform',
@@ -357,7 +375,10 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.9,
     reviews: 28
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Metaverse AI Development Platform
   {
     id: 'metaverse-ai-development-platform',
@@ -410,7 +431,10 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.7,
     reviews: 32
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-platform',
@@ -463,7 +487,10 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.8,
     reviews: 19
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Legal Contract Analyzer
   {
     id: 'ai-legal-contract-analyzer',
@@ -516,7 +543,10 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.6,
     reviews: 45
   },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
   // Quantum IoT Platform
   {
     id: 'quantum-iot-platform',

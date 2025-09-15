@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Link from 'next/link';
 import { 
-  Play, 
-  BookOpen, 
-  Code, 
-  BarChart3, 
-  Users, 
-  Lightbulb, 
+  Play
+  BookOpen
+  Code
+  BarChart3
+  Users
+  Lightbulb
   ChevronRight,
   Clock,
   Star,
@@ -16,7 +17,7 @@ import {
 } from 'lucide-react';
 
 const InteractiveContentHub2025 = () => {
-  const [activeTab, setActiveTab] = useState('tutorials');
+  const [activeTabsetActiveTab] = useState('tutorials');
 
   const contentCategories = [
     {
@@ -89,10 +90,10 @@ const InteractiveContentHub2025 = () => {
   ];
 
   const stats = [
-    { label: "Total Content", value: "500+", icon: BookOpen },
-    { label: "Active Learners", value: "25K+", icon: Users },
-    { label: "Completion Rate", value: "94%", icon: TrendingUp },
-    { label: "Average Rating", value: "4.8/5", icon: Star }
+    { label: "Total Content"value: "500+"icon: BookOpen },
+    { label: "Active Learners"value: "25K+"icon: Users },
+    { label: "Completion Rate"value: "94%"icon: TrendingUp },
+    { label: "Average Rating"value: "4.8/5"icon: Star }
   ];
 
   return (
@@ -111,13 +112,13 @@ const InteractiveContentHub2025 = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Access our comprehensive library of tutorials, live demos, and hands-on projects designed to accelerate your learning journey.
+            Access our comprehensive library of tutorialslive demosand hands-on projects designed to accelerate your learning journey.
           </p>
         </div>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white mb-4">
                 <stat.icon className="w-8 h-8" />
@@ -153,7 +154,7 @@ const InteractiveContentHub2025 = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {featuredContent
             .filter(item => activeTab === 'all' || item.type === activeTab)
-            .map((item, index) => (
+            .map((itemindex) => (
             <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="relative">
                 <img 

@@ -27,7 +27,8 @@ function ReviewsModerationContent() {
       toast({
         title: "Error",
         description: "Failed to load reviews. Please try again later.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       setIsLoading(false);
     }
   };

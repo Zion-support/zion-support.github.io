@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { 
-  Search, 
-  Filter, 
-  Grid, 
-  List, 
-  Star, 
-  Clock, 
-  TrendingUp, 
+  Search
+  Filter
+  Grid
+  List
+  Star
+  Clock
+  TrendingUp
   ArrowRight,
   Brain,
   Zap,
@@ -28,25 +29,25 @@ import {
 import Link from 'next/link';
 
 export default function AdvancedContentDiscoveryWidget2025() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState('grid');
-  const [sortBy, setSortBy] = useState('trending');
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [searchQuerysetSearchQuery] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [viewModesetViewMode] = useState('grid');
+  const [sortBysetSortBy] = useState('trending');
+  const [isExpandedsetIsExpanded] = useState(false);
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: Globe, count: 150 },
-    { id: 'ai-innovation', name: 'AI Innovation', icon: Brain, count: 45 },
-    { id: 'ai-tools', name: 'AI Tools', icon: Zap, count: 38 },
-    { id: 'predictions', name: 'Future Predictions', icon: Rocket, count: 25 },
-    { id: 'code', name: 'Code & Development', icon: Code, count: 20 },
-    { id: 'visual', name: 'Visual Content', icon: Image, count: 15 },
-    { id: 'video', name: 'Video & Media', icon: Video, count: 12 },
-    { id: 'audio', name: 'Audio & Music', icon: Music, count: 8 },
-    { id: 'writing', name: 'Content Writing', icon: FileText, count: 18 },
-    { id: 'analytics', name: 'Data & Analytics', icon: BarChart3, count: 14 },
-    { id: 'communication', name: 'Communication', icon: MessageSquare, count: 10 },
-    { id: 'security', name: 'Security & Ethics', icon: Shield, count: 6 }
+    { id: ''all', 'name: 'All 'Content', 'icon: Globecount: 150 },
+    { id: 'ai-'innovation', 'name: 'AI 'Innovation', 'icon: Braincount: 45 },
+    { id: 'ai-'tools', 'name: 'AI 'Tools', 'icon: Zapcount: 38 },
+    { id: ''predictions', 'name: 'Future 'Predictions', 'icon: Rocketcount: 25 },
+    { id: ''code', 'name: 'Code & 'Development', 'icon: Codecount: 20 },
+    { id: ''visual', 'name: 'Visual 'Content', 'icon: Imagecount: 15 },
+    { id: ''video', 'name: 'Video & 'Media', 'icon: Videocount: 12 },
+    { id: ''audio', 'name: 'Audio & 'Music', 'icon: Musicount: 8 },
+    { id: ''writing', 'name: 'Content 'Writing', 'icon: FileTextcount: 18 },
+    { id: ''analytics', 'name: 'Data & 'Analytics', 'icon: BarChart3count: 14 },
+    { id: ''communication', 'name: ''Communication', 'icon: MessageSquarecount: 10 },
+    { id: ''security', 'name: 'Security & 'Ethics', 'icon: Shieldcount: 6 }
   ];
 
   const contentItems = [
@@ -59,7 +60,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
       rating: 4.9,
       views: '125K',
       date: '2025-01-15',
-      tags: ['AI', 'Innovation', 'Breakthrough', 'Interactive'],
+      tags: [', 'AI', 'Innovation', 'Breakthrough', 'Interactive'],
       image: '/api/placeholder/400/250',
       link: '/ai-innovation-showcase-2025',
       featured: true
@@ -73,7 +74,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
       rating: 4.8,
       views: '98K',
       date: '2025-01-14',
-      tags: ['Tools', 'Productivity', 'Automation', 'AI'],
+      tags: [', 'Tools', 'Productivity', 'Automation', 'AI'],
       image: '/api/placeholder/400/250',
       link: '/ai-tools-ultimate-showcase-2025',
       featured: true
@@ -87,7 +88,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
       rating: 4.7,
       views: '87K',
       date: '2025-01-13',
-      tags: ['Future', 'Predictions', 'Technology', 'Research'],
+      tags: [', 'Future', 'Predictions', 'Technology', 'Research'],
       image: '/api/placeholder/400/250',
       link: '/ai-2030-future-predictions-ultimate',
       featured: true
@@ -101,7 +102,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
       rating: 4.9,
       views: '76K',
       date: '2025-01-12',
-      tags: ['Code', 'AI', 'Development', 'Automation'],
+      tags: [', 'Code', 'AI', 'Development', 'Automation'],
       image: '/api/placeholder/400/250',
       link: '/tools/neural-code-generator',
       featured: false
@@ -115,7 +116,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
       rating: 4.8,
       views: '65K',
       date: '2025-01-11',
-      tags: ['Image', 'AI', 'Art', 'Quantum'],
+      tags: [', 'Image', 'AI', 'Art', 'Quantum'],
       image: '/api/placeholder/400/250',
       link: '/tools/quantum-image-creator',
       featured: false
@@ -129,7 +130,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
       rating: 4.7,
       views: '54K',
       date: '2025-01-10',
-      tags: ['Voice', 'AI', 'Audio', 'Synthesis'],
+      tags: [', 'Voice', 'AI', 'Audio', 'Synthesis'],
       image: '/api/placeholder/400/250',
       link: '/tools/voice-synthesis-studio',
       featured: false
@@ -144,10 +145,10 @@ export default function AdvancedContentDiscoveryWidget2025() {
     return matchesSearch && matchesCategory;
   });
 
-  const sortedContent = [...filteredContent].sort((a, b) => {
+  const sortedContent = [...filteredContent].sort((ab) => {
     switch (sortBy) {
       case 'trending':
-        return parseInt(b.views.replace('K', '')) - parseInt(a.views.replace('K', ''));
+        return parseInt(b.views.replace('K', ')) - parseInt(a.views.replace('K', '));
       case 'rating':
         return b.rating - a.rating;
       case 'newest':
@@ -183,7 +184,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input
               type="text"
-              placeholder="Search content, tools, and resources..."
+              placeholder="Search contentoolsand resources..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"

@@ -1,4 +1,3 @@
-
 module.exports = {
   extends: ['next/core-web-vitals'],
   rules: {
@@ -23,8 +22,6 @@ module.exports = {
     'scripts/',
     'automation/',
     'netlify/',
-    'src/',
     'apps/'
   ]
 };
-,

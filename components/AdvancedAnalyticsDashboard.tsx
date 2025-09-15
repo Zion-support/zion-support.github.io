@@ -1,229 +1,489 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface AnalyticsData {
-  totalVisitors: number;
-  pageViews: number;
-  uniqueVisitors: number;
-  conversionRate: number;
-  revenue: number;
-  topPages: Array<{ page: string; views: number; conversion: number }>;
-  trafficSources: Array<{ source: string; visitors: number; percentage: number }>;
-  deviceBreakdown: Array<{ device: string; percentage: number; visitors: number }>;
-  geographicData: Array<{ country: string; visitors: number; percentage: number }>;
-  timeOnSite: number;
-  bounceRate: number;
-  newVsReturning: { new: number; returning: number };
+  visitors: {
+    total: number;
+    unique: number;
+    returning: number;
+    new: number;
+    growth: number;
+  };
+  traffic: {
+    organic: number;
+    direct: number;
+    social: number;
+    referral: number;
+    paid: number;
+  };
+  engagement: {
+    bounceRate: number;
+    avgSessionDuration: number;
+    pagesPerSession: number;
+    conversionRate: number;
+  };
+  performance: {
+    pageLoadTime: number;
+    serverResponseTime: number;
+    errorRate: number;
+    uptime: number;
+  };
+  revenue: {
+    total: number;
+    growth: number;
+    avgOrderValue: number;
+    transactions: number;
+  };
 }
 
-export default function AdvancedAnalyticsDashboard() {
-  const [data, setData] = useState<AnalyticsData>({
-    totalVisitors: 0,
-    pageViews: 0,
-    uniqueVisitors: 0,
-    conversionRate: 0,
-    revenue: 0,
-    topPages: [],
-    trafficSources: [],
-    deviceBreakdown: [],
-    geographicData: [],
-    timeOnSite: 0,
-    bounceRate: 0,
-    newVsReturning: { new: 0, returning: 0 },
+interface TimeRange {
+  label: string;
+  value: string;
+  days: number;
+}
+
+const timeRanges: TimeRange[] = [
+  { label: 'Last 7 days', value: '7d', days: 7 },
+  { label: 'Last 30 days', value: '30d', days: 30 },
+  { label: 'Last 90 days', value: '90d', days: 90 },
+  { label: 'Last year', value: '1y', days: 365 }
+];
+
+const AdvancedAnalyticsDashboard: React.FC = () => {
+  const [selectedTimeRange, setSelectedTimeRange] = useState<TimeRange>(timeRanges[1]);
+  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
+    visitors: {
+      total: 0,
+      unique: 0,
+      returning: 0,
+      new: 0,
+      growth: 0
+    },
+    traffic: {
+      organic: 0,
+      direct: 0,
+      social: 0,
+      referral: 0,
+      paid: 0
+    },
+    engagement: {
+      bounceRate: 0,
+      avgSessionDuration: 0,
+      pagesPerSession: 0,
+      conversionRate: 0
+    },
+    performance: {
+      pageLoadTime: 0,
+      serverResponseTime: 0,
+      errorRate: 0,
+      uptime: 0
+    },
+    revenue: {
+      total: 0,
+      growth: 0,
+      avgOrderValue: 0,
+      transactions: 0
+    }
   });
 
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedTimeframe, setSelectedTimeframe] = useState('7d');
+  const [isLoading, setIsLoading] = useState(true);
+  const [selectedMetric, setSelectedMetric] = useState<string>('visitors');
 
-  useEffect(() => {
-    // Simulate real-time analytics data
-    const generateData = () => {
-      const baseVisitors = 125000 + Math.random() * 50000;
-      const baseRevenue = 2500000 + Math.random() * 1000000;
-      
-      setData({
-        totalVisitors: Math.floor(baseVisitors),
-        pageViews: Math.floor(baseVisitors * (2.5 + Math.random() * 1.5)),
-        uniqueVisitors: Math.floor(baseVisitors * 0.85),
-        conversionRate: 8.5 + Math.random() * 3,
-        revenue: Math.floor(baseRevenue),
-        topPages: [
-          { page: '/ai-2025-ultimate-breakthrough-revolution', views: 15420, conversion: 12.5 },
-          { page: '/case-studies/ai-2025-global-transformation-breakthrough', views: 12850, conversion: 15.2 },
-          { page: '/blog/ai-2025-revolutionary-trends-predictions', views: 11200, conversion: 9.8 },
-          { page: '/quantum-computing-breakthrough-2026', views: 9850, conversion: 11.3 },
-          { page: '/ultimate-content-showcase-2026', views: 8750, conversion: 8.7 },
-        ],
-        trafficSources: [
-          { source: 'Organic Search', visitors: 45000, percentage: 36 },
-          { source: 'Direct', visitors: 32000, percentage: 25.6 },
-          { source: 'Social Media', visitors: 28000, percentage: 22.4 },
-          { source: 'Email', visitors: 15000, percentage: 12 },
-          { source: 'Referral', visitors: 5000, percentage: 4 },
-        ],
-        deviceBreakdown: [
-          { device: 'Desktop', percentage: 45, visitors: 56250 },
-          { device: 'Mobile', percentage: 40, visitors: 50000 },
-          { device: 'Tablet', percentage: 15, visitors: 18750 },
-        ],
-        geographicData: [
-          { country: 'United States', visitors: 35000, percentage: 28 },
-          { country: 'United Kingdom', visitors: 18000, percentage: 14.4 },
-          { country: 'Germany', visitors: 15000, percentage: 12 },
-          { country: 'Canada', visitors: 12000, percentage: 9.6 },
-          { country: 'Australia', visitors: 10000, percentage: 8 },
-          { country: 'Other', visitors: 35000, percentage: 28 },
-        ],
-        timeOnSite: 180 + Math.random() * 120,
-        bounceRate: 25 + Math.random() * 10,
-        newVsReturning: { 
-          new: Math.floor(baseVisitors * 0.6), 
-          returning: Math.floor(baseVisitors * 0.4) 
-        },
-      });
+  // Simulate data fetching
+  const fetchAnalyticsData = useCallback(async () => {
+    setIsLoading(true);
+    
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    // Generate mock data based on time range
+    const multiplier = selectedTimeRange.days / 30; // Scale data based on time range
+
+    const mockData: AnalyticsData = {
+      visitors: {
+        total: Math.round((Math.random() * 50000 + 10000) * multiplier),
+        unique: Math.round((Math.random() * 30000 + 8000) * multiplier),
+        returning: Math.round((Math.random() * 20000 + 5000) * multiplier),
+        new: Math.round((Math.random() * 25000 + 3000) * multiplier),
+        growth: Math.random() * 40 - 10 // -10% to +30%
+      },
+      traffic: {
+        organic: Math.round((Math.random() * 40 + 30) * multiplier),
+        direct: Math.round((Math.random() * 30 + 20) * multiplier),
+        social: Math.round((Math.random() * 20 + 10) * multiplier),
+        referral: Math.round((Math.random() * 15 + 5) * multiplier),
+        paid: Math.round((Math.random() * 25 + 10) * multiplier)
+      },
+      engagement: {
+        bounceRate: Math.random() * 30 + 40,
+        avgSessionDuration: Math.random() * 200 + 100,
+        pagesPerSession: Math.random() * 3 + 2,
+        conversionRate: Math.random() * 5 + 1
+      },
+      performance: {
+        pageLoadTime: Math.random() * 2000 + 500,
+        serverResponseTime: Math.random() * 500 + 100,
+        errorRate: Math.random() * 2,
+        uptime: Math.random() * 5 + 95
+      },
+      revenue: {
+        total: Math.round((Math.random() * 100000 + 50000) * multiplier),
+        growth: Math.random() * 50 - 10,
+        avgOrderValue: Math.random() * 200 + 50,
+        transactions: Math.round((Math.random() * 1000 + 200) * multiplier)
+      }
     };
 
-    generateData();
-    const interval = setInterval(generateData, 5000);
-    return () => clearInterval(interval);
-  }, [selectedTimeframe]);
+    setAnalyticsData(mockData);
+    setIsLoading(false);
+  }, [selectedTimeRange]);
 
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
-    if (num >= 1000) return `${(num / 1000).toFixed(1)}K`;
-    return num.toString();
+  useEffect(() => {
+    fetchAnalyticsData();
+  }, [fetchAnalyticsData]);
+
+  const formatNumber = (num: number, type: 'currency' | 'percentage' | 'number' = 'number') => {
+    if (type === 'currency') {
+      return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(num);
+    }
+    if (type === 'percentage') {
+      return `${num.toFixed(1)}%`;
+    }
+    if (num >= 1000000) {
+      return `${(num / 1000000).toFixed(1)}M`;
+    }
+    if (num >= 1000) {
+      return `${(num / 1000).toFixed(1)}K`;
+    }
+    return num.toFixed(0);
   };
 
-  const formatCurrency = (num: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(num);
+  const getGrowthColor = (growth: number) => {
+    if (growth > 0) return 'text-green-600 dark:text-green-400';
+    if (growth < 0) return 'text-red-600 dark:text-red-400';
+    return 'text-gray-600 dark:text-gray-400';
   };
+
+  const getGrowthIcon = (growth: number) => {
+    if (growth > 0) return '📈';
+    if (growth < 0) return '📉';
+    return '➡️';
+  };
+
+  const MetricCard = ({ title, value, growth, type = 'number', icon }: {
+    title: string;
+    value: number;
+    growth?: number;
+    type?: 'currency' | 'percentage' | 'number';
+    icon: string;
+  }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600"
+    >
+      <div className="flex items-center justify-between mb-4">
+        <div className="text-2xl">{icon}</div>
+        {growth !== undefined && (
+          <div className={`flex items-center space-x-1 text-sm ${getGrowthColor(growth)}`}>
+            <span>{getGrowthIcon(growth)}</span>
+            <span>{formatNumber(growth, 'percentage')}</span>
+          </div>
+        )}
+      </div>
+      <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+        {formatNumber(value, type)}
+      </div>
+      <div className="text-sm text-gray-600 dark:text-gray-400">
+        {title}
+      </div>
+    </motion.div>
+  );
+
+  const ProgressBar = ({ value, max, label, color = 'blue' }: {
+    value: number;
+    max: number;
+    label: string;
+    color?: string;
+  }) => {
+    const percentage = (value / max) * 100;
+    const colorClasses = {
+      blue: 'bg-blue-500',
+      green: 'bg-green-500',
+      yellow: 'bg-yellow-500',
+      red: 'bg-red-500',
+      purple: 'bg-purple-500'
+    };
+
+    return (
+      <div className="mb-4">
+        <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-1">
+          <span>{label}</span>
+          <span>{formatNumber(value)}</span>
+        </div>
+        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+          <motion.div
+            className={`h-2 rounded-full ${colorClasses[color as keyof typeof colorClasses]}`}
+            initial={{ width: 0 }}
+            animate={{ width: `${percentage}%` }}
+            transition={{ duration: 1, delay: 0.2 }}
+          />
+        </div>
+      </div>
+    );
+  };
+
+  if (isLoading) {
+    return (
+      <div className="max-w-7xl mx-auto p-6">
+        <div className="animate-pulse">
+          <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-1/4 mb-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {[...Array(8)].map((_, i) => (
+              <div key={i} className="h-32 bg-gray-200 dark:bg-gray-700 rounded-lg"></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="fixed bottom-4 left-4 z-50">
-      <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg shadow-lg transition-colors duration-200"
-      >
-        {isVisible ? 'Hide' : 'Show'} Analytics
-      </button>
-
-      {isVisible && (
-        <div className="absolute bottom-16 left-0 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-96 border border-gray-200 dark:border-gray-700 max-h-96 overflow-y-auto">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-              Advanced Analytics
-            </h3>
-            <select
-              value={selectedTimeframe}
-              onChange={(e) => setSelectedTimeframe(e.target.value)}
-              className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded"
+    <div className="max-w-7xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+      {/* Header */}
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+            Analytics Dashboard
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400">
+            Comprehensive insights into your application performance
+          </p>
+        </div>
+        
+        <div className="flex space-x-2 mt-4 md:mt-0">
+          {timeRanges.map((range) => (
+            <button
+              key={range.value}
+              onClick={() => setSelectedTimeRange(range)}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                selectedTimeRange.value === range.value
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+              }`}
             >
-              <option value="1d">Last 24h</option>
-              <option value="7d">Last 7 days</option>
-              <option value="30d">Last 30 days</option>
-              <option value="90d">Last 90 days</option>
-            </select>
-          </div>
+              {range.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Key Metrics */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <MetricCard
+          title="Total Visitors"
+          value={analyticsData.visitors.total}
+          growth={analyticsData.visitors.growth}
+          icon="👥"
+        />
+        <MetricCard
+          title="Unique Visitors"
+          value={analyticsData.visitors.unique}
+          icon="🎯"
+        />
+        <MetricCard
+          title="Conversion Rate"
+          value={analyticsData.engagement.conversionRate}
+          type="percentage"
+          icon="💰"
+        />
+        <MetricCard
+          title="Total Revenue"
+          value={analyticsData.revenue.total}
+          growth={analyticsData.revenue.growth}
+          type="currency"
+          icon="💵"
+        />
+      </div>
+
+      {/* Detailed Analytics */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        {/* Traffic Sources */}
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+            Traffic Sources
+          </h3>
           
-          {/* Key Metrics */}
-          <div className="grid grid-cols-2 gap-3 mb-4">
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
-              <div className="text-xs text-blue-600 dark:text-blue-400 font-medium">Total Visitors</div>
-              <div className="text-lg font-bold text-blue-800 dark:text-blue-200">
-                {formatNumber(data.totalVisitors)}
-              </div>
-            </div>
-            <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
-              <div className="text-xs text-green-600 dark:text-green-400 font-medium">Revenue</div>
-              <div className="text-lg font-bold text-green-800 dark:text-green-200">
-                {formatCurrency(data.revenue)}
-              </div>
-            </div>
-            <div className="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg">
-              <div className="text-xs text-purple-600 dark:text-purple-400 font-medium">Conversion Rate</div>
-              <div className="text-lg font-bold text-purple-800 dark:text-purple-200">
-                {data.conversionRate.toFixed(1)}%
-              </div>
-            </div>
-            <div className="bg-orange-50 dark:bg-orange-900/20 p-3 rounded-lg">
-              <div className="text-xs text-orange-600 dark:text-orange-400 font-medium">Time on Site</div>
-              <div className="text-lg font-bold text-orange-800 dark:text-orange-200">
-                {Math.floor(data.timeOnSite / 60)}m {Math.floor(data.timeOnSite % 60)}s
-              </div>
-            </div>
+          <div className="space-y-4">
+            <ProgressBar
+              value={analyticsData.traffic.organic}
+              max={analyticsData.visitors.total}
+              label="Organic Search"
+              color="green"
+            />
+            <ProgressBar
+              value={analyticsData.traffic.direct}
+              max={analyticsData.visitors.total}
+              label="Direct Traffic"
+              color="blue"
+            />
+            <ProgressBar
+              value={analyticsData.traffic.social}
+              max={analyticsData.visitors.total}
+              label="Social Media"
+              color="purple"
+            />
+            <ProgressBar
+              value={analyticsData.traffic.referral}
+              max={analyticsData.visitors.total}
+              label="Referral"
+              color="yellow"
+            />
+            <ProgressBar
+              value={analyticsData.traffic.paid}
+              max={analyticsData.visitors.total}
+              label="Paid Advertising"
+              color="red"
+            />
           </div>
+        </div>
 
-          {/* Top Pages */}
-          <div className="mb-4">
-            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Top Pages</h4>
-            <div className="space-y-2">
-              {data.topPages.slice(0, 3).map((page, index) => (
-                <div key={index} className="flex justify-between items-center text-xs">
-                  <span className="text-gray-600 dark:text-gray-300 truncate flex-1 mr-2">
-                    {page.page.split('/').pop()?.replace(/-/g, ' ')}
-                  </span>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-gray-500 dark:text-gray-400">{formatNumber(page.views)}</span>
-                    <span className="text-green-600 dark:text-green-400 font-medium">
-                      {page.conversion.toFixed(1)}%
-                    </span>
-                  </div>
-                </div>
-              ))}
+        {/* Engagement Metrics */}
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+            Engagement Metrics
+          </h3>
+          
+          <div className="space-y-6">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Bounce Rate</span>
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                {formatNumber(analyticsData.engagement.bounceRate, 'percentage')}
+              </span>
             </div>
-          </div>
-
-          {/* Traffic Sources */}
-          <div className="mb-4">
-            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Traffic Sources</h4>
-            <div className="space-y-1">
-              {data.trafficSources.map((source, index) => (
-                <div key={index} className="flex justify-between items-center text-xs">
-                  <span className="text-gray-600 dark:text-gray-300">{source.source}</span>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-16 bg-gray-200 dark:bg-gray-700 rounded-full h-1">
-                      <div 
-                        className="bg-blue-500 h-1 rounded-full" 
-                        style={{ width: `${source.percentage}%` }}
-                      ></div>
-                    </div>
-                    <span className="text-gray-500 dark:text-gray-400 w-8 text-right">
-                      {source.percentage}%
-                    </span>
-                  </div>
-                </div>
-              ))}
+            
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Avg Session Duration</span>
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                {Math.round(analyticsData.engagement.avgSessionDuration / 60)}m {Math.round(analyticsData.engagement.avgSessionDuration % 60)}s
+              </span>
             </div>
-          </div>
-
-          {/* Device Breakdown */}
-          <div className="mb-4">
-            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Device Breakdown</h4>
-            <div className="space-y-1">
-              {data.deviceBreakdown.map((device, index) => (
-                <div key={index} className="flex justify-between items-center text-xs">
-                  <span className="text-gray-600 dark:text-gray-300">{device.device}</span>
-                  <span className="text-gray-500 dark:text-gray-400">{device.percentage}%</span>
-                </div>
-              ))}
+            
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Pages per Session</span>
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                {formatNumber(analyticsData.engagement.pagesPerSession)}
+              </span>
             </div>
-          </div>
-
-          <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
-            <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
-              <span>Last updated: {new Date().toLocaleTimeString()}</span>
-              <span className="flex items-center">
-                <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                Live
+            
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Conversion Rate</span>
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                {formatNumber(analyticsData.engagement.conversionRate, 'percentage')}
               </span>
             </div>
           </div>
         </div>
-      )}
+      </div>
+
+      {/* Performance & Revenue */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Performance Metrics */}
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+            Performance Metrics
+          </h3>
+          
+          <div className="space-y-6">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Page Load Time</span>
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                {formatNumber(analyticsData.performance.pageLoadTime)}ms
+              </span>
+            </div>
+            
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Server Response</span>
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                {formatNumber(analyticsData.performance.serverResponseTime)}ms
+              </span>
+            </div>
+            
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Error Rate</span>
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                {formatNumber(analyticsData.performance.errorRate, 'percentage')}
+              </span>
+            </div>
+            
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Uptime</span>
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                {formatNumber(analyticsData.performance.uptime, 'percentage')}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Revenue Metrics */}
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+            Revenue Metrics
+          </h3>
+          
+          <div className="space-y-6">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Total Revenue</span>
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                {formatNumber(analyticsData.revenue.total, 'currency')}
+              </span>
+            </div>
+            
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Growth</span>
+              <span className={`text-2xl font-bold ${getGrowthColor(analyticsData.revenue.growth)}`}>
+                {formatNumber(analyticsData.revenue.growth, 'percentage')}
+              </span>
+            </div>
+            
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Avg Order Value</span>
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                {formatNumber(analyticsData.revenue.avgOrderValue, 'currency')}
+              </span>
+            </div>
+            
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 dark:text-gray-400">Transactions</span>
+              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                {formatNumber(analyticsData.revenue.transactions)}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Action Buttons */}
+      <div className="mt-8 flex flex-wrap gap-4 justify-center">
+        <button
+          onClick={fetchAnalyticsData}
+          className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+        >
+          Refresh Data
+        </button>
+        <button
+          className="px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors"
+        >
+          Export Report
+        </button>
+        <button
+          className="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-colors"
+        >
+          Schedule Report
+        </button>
+      </div>
     </div>
   );
-}
+};
+
+export default AdvancedAnalyticsDashboard;

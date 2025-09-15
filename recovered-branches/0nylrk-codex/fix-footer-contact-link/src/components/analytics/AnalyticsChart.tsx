@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+import { LineChartLineXAxisYAxisCartesianGridTooltipResponsiveContainerBarChartBarLegend } from 'recharts';
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+>>>>>>> origin/auto/autonomy-17186719616
 import { useState } from "react";
 
 interface AnalyticsChartProps {
@@ -15,6 +21,21 @@ interface AnalyticsChartProps {
 }
 
 export function AnalyticsChart({ 
+<<<<<<< HEAD
+  title
+  description
+  data
+  type = 'line',
+  dataKeys
+  timeRange = '7d',
+  onTimeRangeChange
+}: AnalyticsChartProps) {
+  const [chartTypesetChartType] = useState<'line' | 'bar'>(type);
+  
+  const colors = [
+    '#8884d8'#82ca9d'#ffc658'#ff8042'#0088fe'
+    '#00C49F'#FFBB28'#FF8042'#a4de6c'#d0ed57'
+=======
   title, 
   description, 
   data, 
@@ -28,6 +49,7 @@ export function AnalyticsChart({
   const colors = [
     '#8884d8', '#82ca9d', '#ffc658', '#ff8042', '#0088fe', 
     '#00C49F', '#FFBB28', '#FF8042', '#a4de6c', '#d0ed57'
+>>>>>>> origin/auto/autonomy-17186719616
   ];
   
   return (
@@ -69,25 +91,44 @@ export function AnalyticsChart({
         <div className="h-72 w-full p-4">
           <ResponsiveContainer width="100%" height="100%">
             {chartType === 'line' ? (
+<<<<<<< HEAD
+              <LineChart data={data} margin={{ top: 5right: 30left: 20bottom: 25 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
+                <XAxis 
+                  dataKey="date" 
+                  tick={{ fill: '#b1b9c6'fontSize: 12 }}
+=======
               <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
                 <XAxis 
                   dataKey="date" 
                   tick={{ fill: '#b1b9c6', fontSize: 12 }}
+>>>>>>> origin/auto/autonomy-17186719616
                   angle={-30}
                   textAnchor="end"
                   height={50}
                 />
+<<<<<<< HEAD
+                <YAxis tick={{ fill: '#b1b9c6'fontSize: 12 }} />
+                <Tooltip 
+                  contentStyle={{ 
+                    backgroundColor: '#1a2332'
+=======
                 <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
                 <Tooltip 
                   contentStyle={{ 
                     backgroundColor: '#1a2332', 
+>>>>>>> origin/auto/autonomy-17186719616
                     borderColor: '#293445',
                     color: '#fff'
                   }} 
                 />
                 <Legend />
+<<<<<<< HEAD
+                {dataKeys.map((keyindex) => (
+=======
                 {dataKeys.map((key, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                   <Line
                     key={key}
                     type="monotone"
@@ -99,30 +140,53 @@ export function AnalyticsChart({
                 ))}
               </LineChart>
             ) : (
+<<<<<<< HEAD
+              <BarChart data={data} margin={{ top: 5right: 30left: 20bottom: 25 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
+                <XAxis 
+                  dataKey="date" 
+                  tick={{ fill: '#b1b9c6'fontSize: 12 }} 
+=======
               <BarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
                 <XAxis 
                   dataKey="date" 
                   tick={{ fill: '#b1b9c6', fontSize: 12 }} 
+>>>>>>> origin/auto/autonomy-17186719616
                   angle={-30}
                   textAnchor="end"
                   height={50}
                 />
+<<<<<<< HEAD
+                <YAxis tick={{ fill: '#b1b9c6'fontSize: 12 }} />
+                <Tooltip 
+                  contentStyle={{ 
+                    backgroundColor: '#1a2332'
+=======
                 <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
                 <Tooltip 
                   contentStyle={{ 
                     backgroundColor: '#1a2332', 
+>>>>>>> origin/auto/autonomy-17186719616
                     borderColor: '#293445',
                     color: '#fff'
                   }} 
                 />
                 <Legend />
+<<<<<<< HEAD
+                {dataKeys.map((keyindex) => (
+=======
                 {dataKeys.map((key, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                   <Bar 
                     key={key}
                     dataKey={key} 
                     fill={colors[index % colors.length]} 
+<<<<<<< HEAD
+                    radius={[40]}
+=======
                     radius={[4, 4, 0, 0]}
+>>>>>>> origin/auto/autonomy-17186719616
                   />
                 ))}
               </BarChart>

@@ -1,353 +1,242 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Sparkles, 
-  Zap, 
-  Brain, 
-  Rocket, 
-  Star, 
-  TrendingUp, 
-  Users, 
-  Award,
-  ChevronRight,
-  Play,
-  BookOpen,
-  Lightbulb,
-  Target,
-  Globe,
-  Quote,
-  ArrowRight,
-  CheckCircle,
-  BarChart3,
-  DollarSign,
-  Clock,
-  User
-} from 'lucide-react';
+import Link from 'next/link';
 
 const SuccessStoriesShowcase2026 = () => {
   const [activeStory, setActiveStory] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   const successStories = [
     {
       id: 1,
-      company: "TechCorp Solutions",
-      industry: "Technology",
-      logo: "/api/placeholder/80/80",
-      challenge: "Manual data processing was taking 40+ hours per week, limiting growth potential",
-      solution: "Implemented AI-powered data analysis and automation tools",
+      company: 'TechCorp Global',
+      industry: 'Technology',
+      logo: '🏢',
+      challenge: 'Needed to automate complex data processing workflows that were taking 40+ hours per week',
+      solution: 'Implemented AI-powered automation system with neural network optimization',
       results: {
-        timeSaved: "85%",
-        costReduction: "$2.3M",
-        efficiency: "300%",
-        roi: "450%"
+        timeSaved: '95%',
+        costReduction: '80%',
+        productivityIncrease: '300%',
+        roi: '500%'
       },
-      testimonial: {
-        text: "The AI tools transformed our entire operation. What used to take days now happens in minutes, and the accuracy is incredible.",
-        author: "Sarah Johnson",
-        role: "CTO",
-        avatar: "/api/placeholder/60/60"
-      },
-      metrics: [
-        { label: "Time Saved", value: "85%", icon: Clock },
-        { label: "Cost Reduction", value: "$2.3M", icon: DollarSign },
-        { label: "Efficiency Gain", value: "300%", icon: TrendingUp },
-        { label: "ROI", value: "450%", icon: BarChart3 }
-      ],
-      color: "from-blue-600 to-cyan-600"
+      testimonial: 'The AI automation system transformed our operations completely. What used to take 40 hours now takes 2 hours, and the accuracy is incredible.',
+      author: 'Sarah Johnson',
+      position: 'CTO, TechCorp Global',
+      image: '👩‍💼'
     },
     {
       id: 2,
-      company: "Global Finance Inc",
-      industry: "Financial Services",
-      logo: "/api/placeholder/80/80",
-      challenge: "Risk assessment processes were manual and prone to human error",
-      solution: "Deployed AI-powered risk analysis and predictive modeling",
+      company: 'Quantum Dynamics',
+      industry: 'Quantum Computing',
+      logo: '⚛️',
+      challenge: 'Required quantum-level security for sensitive financial data processing',
+      solution: 'Deployed quantum encryption protocols with neural interface integration',
       results: {
-        timeSaved: "70%",
-        costReduction: "$5.1M",
-        efficiency: "250%",
-        roi: "380%"
+        timeSaved: '90%',
+        costReduction: '75%',
+        productivityIncrease: '400%',
+        roi: '600%'
       },
-      testimonial: {
-        text: "Our risk assessment accuracy improved dramatically while reducing processing time by 70%. The AI insights are invaluable.",
-        author: "Michael Chen",
-        role: "Risk Director",
-        avatar: "/api/placeholder/60/60"
-      },
-      metrics: [
-        { label: "Time Saved", value: "70%", icon: Clock },
-        { label: "Cost Reduction", value: "$5.1M", icon: DollarSign },
-        { label: "Efficiency Gain", value: "250%", icon: TrendingUp },
-        { label: "ROI", value: "380%", icon: BarChart3 }
-      ],
-      color: "from-green-600 to-emerald-600"
+      testimonial: 'Our quantum security implementation exceeded all expectations. The neural interface makes complex operations feel effortless.',
+      author: 'Dr. Michael Chen',
+      position: 'Chief Quantum Officer, Quantum Dynamics',
+      image: '👨‍🔬'
     },
     {
       id: 3,
-      company: "RetailMax",
-      industry: "E-commerce",
-      logo: "/api/placeholder/80/80",
-      challenge: "Customer service was overwhelmed with repetitive inquiries",
-      solution: "Implemented AI chatbot and automated customer support systems",
+      company: 'NeuralTech Solutions',
+      industry: 'AI Research',
+      logo: '🧠',
+      challenge: 'Needed to scale AI model training from days to hours for real-time applications',
+      solution: 'Implemented quantum-neural fusion architecture with advanced optimization',
       results: {
-        timeSaved: "90%",
-        costReduction: "$1.8M",
-        efficiency: "400%",
-        roi: "520%"
+        timeSaved: '98%',
+        costReduction: '85%',
+        productivityIncrease: '500%',
+        roi: '800%'
       },
-      testimonial: {
-        text: "Customer satisfaction increased by 40% while reducing support costs by 90%. The AI handles complex queries beautifully.",
-        author: "Emily Rodriguez",
-        role: "Customer Success Manager",
-        avatar: "/api/placeholder/60/60"
-      },
-      metrics: [
-        { label: "Time Saved", value: "90%", icon: Clock },
-        { label: "Cost Reduction", value: "$1.8M", icon: DollarSign },
-        { label: "Efficiency Gain", value: "400%", icon: TrendingUp },
-        { label: "ROI", value: "520%", icon: BarChart3 }
-      ],
-      color: "from-purple-600 to-pink-600"
+      testimonial: 'The quantum-neural fusion technology is revolutionary. We can now train complex models in hours instead of days.',
+      author: 'Dr. Elena Rodriguez',
+      position: 'Head of AI Research, NeuralTech Solutions',
+      image: '👩‍🔬'
     },
     {
       id: 4,
-      company: "ManufacturingPro",
-      industry: "Manufacturing",
-      logo: "/api/placeholder/80/80",
-      challenge: "Production line optimization was inefficient and costly",
-      solution: "Deployed AI-powered predictive maintenance and optimization",
+      company: 'Autonomous Enterprises',
+      industry: 'Manufacturing',
+      logo: '🏭',
+      challenge: 'Required fully autonomous production lines with predictive maintenance',
+      solution: 'Deployed autonomous business systems with AI-powered predictive analytics',
       results: {
-        timeSaved: "75%",
-        costReduction: "$3.7M",
-        efficiency: "280%",
-        roi: "420%"
+        timeSaved: '92%',
+        costReduction: '70%',
+        productivityIncrease: '350%',
+        roi: '450%'
       },
-      testimonial: {
-        text: "Our production efficiency increased by 280% while reducing downtime by 75%. The predictive maintenance is a game-changer.",
-        author: "David Thompson",
-        role: "Operations Director",
-        avatar: "/api/placeholder/60/60"
-      },
-      metrics: [
-        { label: "Time Saved", value: "75%", icon: Clock },
-        { label: "Cost Reduction", value: "$3.7M", icon: DollarSign },
-        { label: "Efficiency Gain", value: "280%", icon: TrendingUp },
-        { label: "ROI", value: "420%", icon: BarChart3 }
-      ],
-      color: "from-orange-600 to-red-600"
+      testimonial: 'Our production lines now run autonomously with 99.9% uptime. The predictive maintenance prevents issues before they occur.',
+      author: 'James Wilson',
+      position: 'Operations Director, Autonomous Enterprises',
+      image: '👨‍💼'
     }
   ];
 
   useEffect(() => {
-    if (!isAutoPlaying) return;
-    
+    const timer = setTimeout(() => setIsVisible(true), 400);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setActiveStory((prev) => (prev + 1) % successStories.length);
-    }, 6000);
+    }, 5000);
     return () => clearInterval(interval);
-  }, [isAutoPlaying, successStories.length]);
+  }, [successStories.length]);
 
   const currentStory = successStories[activeStory];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/50 to-blue-900/50"></div>
-        <div className="absolute inset-0">
-          {[...Array(12)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-green-400/20 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -30, 0],
-                opacity: [0.2, 0.8, 0.2],
-                scale: [0.5, 1, 0.5],
-              }}
-              transition={{
-                duration: 3 + Math.random() * 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 py-16">
+    <div className={`py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-6">
-            <Award className="w-4 h-4" />
-            Success Stories 2026
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🏆 SUCCESS STORIES</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Real Results from
-            <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"> Real Companies</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            See how leading businesses are transforming their operations and achieving remarkable results with our AI solutions.
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Real Results, Real Success
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Discover how leading companies are transforming their operations with our AI solutions, 
+            achieving remarkable ROI and unprecedented efficiency gains.
           </p>
-        </motion.div>
+        </div>
 
         {/* Story Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
-        >
+        <div className="flex flex-wrap justify-center mb-12">
           {successStories.map((story, index) => (
             <button
               key={story.id}
-              onClick={() => {
-                setActiveStory(index);
-                setIsAutoPlaying(false);
-              }}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium transition-all duration-300 ${
+              onClick={() => setActiveStory(index)}
+              className={`px-6 py-3 mx-2 mb-4 rounded-lg font-semibold transition-all duration-300 ${
                 activeStory === index
-                  ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white shadow-lg shadow-green-500/25'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                  ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg transform scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md hover:shadow-lg'
               }`}
             >
-              <img src={story.logo} alt={story.company} className="w-6 h-6 rounded-full" />
-              {story.company}
+              {story.logo} {story.company}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Main Story Display */}
-        <motion.div
-          key={activeStory}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="grid lg:grid-cols-2 gap-12 items-center"
-        >
-          {/* Left Content */}
-          <div className="space-y-8">
-            {/* Company Info */}
-            <div className="flex items-center gap-4">
-              <img src={currentStory.logo} alt={currentStory.company} className="w-16 h-16 rounded-xl" />
-              <div>
-                <h3 className="text-3xl font-bold text-white">{currentStory.company}</h3>
-                <p className="text-gray-300">{currentStory.industry}</p>
-              </div>
-            </div>
-
-            {/* Challenge & Solution */}
-            <div className="space-y-6">
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                <p className="text-gray-300 leading-relaxed">{currentStory.challenge}</p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                <p className="text-gray-300 leading-relaxed">{currentStory.solution}</p>
-              </div>
-            </div>
-
-            {/* Metrics Grid */}
-            <div className="grid grid-cols-2 gap-4">
-              {currentStory.metrics.map((metric, index) => {
-                const Icon = metric.icon;
-                return (
-                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className={`w-8 h-8 bg-gradient-to-r ${currentStory.color} rounded-lg flex items-center justify-center`}>
-                        <Icon className="w-4 h-4 text-white" />
-                      </div>
-                      <span className="text-sm text-gray-300">{metric.label}</span>
-                    </div>
-                    <div className="text-2xl font-bold text-white">{metric.value}</div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Right Content - Testimonial */}
-          <div className="relative">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <Quote className="w-8 h-8 text-green-400 mb-4" />
-              <blockquote className="text-lg text-gray-300 leading-relaxed mb-6">
-                "{currentStory.testimonial.text}"
-              </blockquote>
-              <div className="flex items-center gap-4">
-                <img 
-                  src={currentStory.testimonial.avatar} 
-                  alt={currentStory.testimonial.author}
-                  className="w-12 h-12 rounded-full"
-                />
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Left Side - Story Details */}
+            <div className="p-8">
+              <div className="flex items-center mb-6">
+                <div className="text-4xl mr-4">{currentStory.logo}</div>
                 <div>
-                  <div className="font-semibold text-white">{currentStory.testimonial.author}</div>
-                  <div className="text-sm text-gray-400">{currentStory.testimonial.role}</div>
+                  <h3 className="text-2xl font-bold text-gray-900">{currentStory.company}</h3>
+                  <p className="text-gray-600">{currentStory.industry}</p>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Challenge</h4>
+                  <p className="text-gray-600">{currentStory.challenge}</p>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Solution</h4>
+                  <p className="text-gray-600">{currentStory.solution}</p>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Results</h4>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-green-50 p-4 rounded-lg">
+                      <div className="text-2xl font-bold text-green-600">{currentStory.results.timeSaved}</div>
+                      <div className="text-sm text-gray-600">Time Saved</div>
+                    </div>
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <div className="text-2xl font-bold text-blue-600">{currentStory.results.costReduction}</div>
+                      <div className="text-sm text-gray-600">Cost Reduction</div>
+                    </div>
+                    <div className="bg-purple-50 p-4 rounded-lg">
+                      <div className="text-2xl font-bold text-purple-600">{currentStory.results.productivityIncrease}</div>
+                      <div className="text-sm text-gray-600">Productivity Increase</div>
+                    </div>
+                    <div className="bg-orange-50 p-4 rounded-lg">
+                      <div className="text-2xl font-bold text-orange-600">{currentStory.results.roi}</div>
+                      <div className="text-sm text-gray-600">ROI</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
-              <Star className="w-4 h-4 text-white fill-current" />
+            {/* Right Side - Testimonial */}
+            <div className="bg-gradient-to-br from-gray-50 to-blue-50 p-8 flex flex-col justify-center">
+              <div className="text-6xl mb-6 text-center">{currentStory.image}</div>
+              <blockquote className="text-xl text-gray-700 mb-6 italic leading-relaxed">
+                "{currentStory.testimonial}"
+              </blockquote>
+              <div className="text-center">
+                <div className="font-semibold text-gray-900">{currentStory.author}</div>
+                <div className="text-gray-600">{currentStory.position}</div>
+              </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Story Indicators */}
-        <div className="flex justify-center gap-2 mt-12">
-          {successStories.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                setActiveStory(index);
-                setIsAutoPlaying(false);
-              }}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === activeStory
-                  ? 'bg-gradient-to-r from-green-500 to-emerald-500 w-8'
-                  : 'bg-white/30 hover:bg-white/50'
+        {/* All Stories Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {successStories.map((story) => (
+            <div
+              key={story.id}
+              className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer ${
+                activeStory === story.id - 1 ? 'ring-2 ring-green-500' : ''
               }`}
-            />
+              onClick={() => setActiveStory(story.id - 1)}
+            >
+              <div className="text-center">
+                <div className="text-3xl mb-4">{story.logo}</div>
+                <h4 className="font-bold text-gray-900 mb-2">{story.company}</h4>
+                <p className="text-sm text-gray-600 mb-4">{story.industry}</p>
+                <div className="text-2xl font-bold text-green-600 mb-2">{story.results.roi}</div>
+                <div className="text-xs text-gray-500">ROI</div>
+              </div>
+            </div>
           ))}
         </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Write Your Success Story?
-            </h3>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join these industry leaders and transform your business with our proven AI solutions. Start your journey to success today.
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Ready to Join These Success Stories?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              Start your transformation journey today and achieve similar results
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 hover:scale-105">
-                Start Your Success Story
-              </button>
-              <button className="border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all duration-300">
-                View Case Studies
-              </button>
+              <Link
+                href="/contact"
+                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Started
+              </Link>
+              <Link
+                href="/case-studies"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+              >
+                View All Case Studies
+              </Link>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -1,11 +1,19 @@
 
 import { formatDistanceToNow } from "date-fns";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+import { CalendarUserFileTextBarChart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Avatar } from "@/components/ui/avatar";
+import { TableRowTableCell } from "@/components/ui/table";
+import { JobApplicationStatus } from "@/types/jobs";
+=======
 import { Calendar, User, FileText, BarChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar } from "@/components/ui/avatar";
 import { TableRow, TableCell } from "@/components/ui/table";
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
+>>>>>>> origin/auto/autonomy-17186719616
 import { StatusBadge } from "./StatusBadge";
 import { ScoreBadge } from "./ScoreBadge";
 import { ApplicationActions } from "./ApplicationActions";
@@ -14,7 +22,11 @@ interface ApplicationRowProps {
   application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
+<<<<<<< HEAD
+  onStatusChange: (applicationId: stringnewStatus: ApplicationStatus) => Promise<void>;
+=======
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+>>>>>>> origin/auto/autonomy-17186719616
   onViewScore: (application: JobApplication) => void;
 }
 
@@ -52,7 +64,11 @@ export function ApplicationRow({
       <TableCell>
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
+<<<<<<< HEAD
+          <span>{formatDistanceToNow(new Date(application.created_at){ addSuffix: true })}</span>
+=======
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
+>>>>>>> origin/auto/autonomy-17186719616
         </div>
       </TableCell>
       <TableCell>

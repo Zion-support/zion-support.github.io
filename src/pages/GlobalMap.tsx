@@ -26,7 +26,8 @@ const INSTANCES: Instance[] = [
     governance: 'hybrid',
     votesPassed: 5,
     votesPending: 1,
-    region: 'Latin America'},
+    region: 'Latin America',
+  },
   {
     id: 2,
     name: 'Zion Health',
@@ -36,7 +37,8 @@ const INSTANCES: Instance[] = [
     governance: 'admin',
     votesPassed: 8,
     votesPending: 2,
-    region: 'North America'},
+    region: 'North America',
+  },
   {
     id: 3,
     name: 'Zion Law',
@@ -46,7 +48,9 @@ const INSTANCES: Instance[] = [
     governance: 'vote',
     votesPassed: 12,
     votesPending: 3,
-    region: 'Europe'}];
+    region: 'Europe',
+  },
+];
 
 interface FeedItem {
   id: number;
@@ -61,7 +65,8 @@ export default function GlobalMapPage() {
       const messages = [
         'ZionGPT upgraded to v1.7 in Egypt',
         'Proposal #121 passed in Zion DevOps',
-        'New franchise deployed: Zion Indonesia'];
+        'New franchise deployed: Zion Indonesia',
+      ];
       const id = Date.now();
       const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress';
       setFeed((f) => [{ id, text }, ...f].slice(0, 5));

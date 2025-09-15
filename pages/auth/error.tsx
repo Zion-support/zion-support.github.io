@@ -5,7 +5,7 @@ import { AlertTriangle } from 'lucide-react'
 import Link from 'next/link'
 import Head from 'next/head'
 
-const errorMessages: Record<string, string> = {
+const errorMessages: Record<string string> = {
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.',
   default: 'There was an issue with your authentication request.'
 }

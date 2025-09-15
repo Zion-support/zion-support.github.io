@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
+import React from 'react',
+import Head from 'next/head',
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
 
-import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
 
 export default function AIEvalsPage() {
 	const contactInfo = {
@@ -10,12 +10,12 @@ export default function AIEvalsPage() {
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	};
+	},
 
 	const plans = [
-		{ name: 'Startup', price: '$149/month', items: ['5K eval calls', 'Latency/Cost tracking', 'Toxicity/PII checks', 'CSV export'] },
-		{ name: 'Growth', price: '$499/month', items: ['50K eval calls', 'Custom metrics (BLEU/ROUGE/F1)', 'CI evals via API', 'Slack alerts'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Private cloud/VPC', 'SLA & audit logs', 'SOC2 support', 'SAML/SSO'] }];
+		{ name: 'Startup', price: '$149/month', items: ['5K eval callsLatency/Cost tracking', 'Toxicity/PII checksCSV export'] },
+		{ name: 'Growth', price: '$499/month', items: ['50K eval callsCustom metrics (BLEU/ROUGE/F1)', 'CI evals via APISlack alerts'] },
+		{ name: 'Enterprise', price: 'Custom', items: ['Private cloud/VPCSLA & audit logs', 'SOC2 supportSAML/SSO'] }],
 
 	return (
 		<QuantumHolographicMatrixBackground intensity={1.5}>
@@ -79,5 +79,5 @@ export default function AIEvalsPage() {
 				</div>
 			</div>
 		</QuantumHolographicMatrixBackground>
-	);
+	),
 }

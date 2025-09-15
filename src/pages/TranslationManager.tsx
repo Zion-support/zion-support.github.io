@@ -131,7 +131,8 @@ export default function TranslationManager() {
       
       toast({
         title: t("translation.saved"),
-        description: t("translation.changes_saved")});
+        description: t("translation.changes_saved"),
+      });
     }, 1000);
   };
   
@@ -152,7 +153,8 @@ export default function TranslationManager() {
       toast({
         title: t('translation.no_content'),
         description: t('translation.add_content_first'),
-        variant: "destructive"});
+        variant: "destructive",
+      });
       return;
     }
     
@@ -167,7 +169,8 @@ export default function TranslationManager() {
         toast({
           title: t('translation.translation_failed'),
           description: error,
-          variant: "destructive"});
+          variant: "destructive",
+        });
         return;
       }
       
@@ -179,13 +182,15 @@ export default function TranslationManager() {
       
       toast({
         title: t('translation.translation_success'),
-        description: t('translation.content_translated')});
+        description: t('translation.content_translated'),
+      });
     } catch (error) {
       logErrorToProduction('Error translating key ${key}:', { data: error });
       toast({
         title: t('translation.translation_failed'),
         description: error instanceof Error ? error.message : t('translation.unknown_error'),
-        variant: "destructive"});
+        variant: "destructive",
+      });
     }
   };
   

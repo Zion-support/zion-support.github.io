@@ -24,7 +24,8 @@ export function DeveloperPortal() {
     { id: "documentation", label: "Documentation", icon: BookOpen },
     { id: "api-keys", label: "API Keys", icon: Key },
     { id: "webhooks", label: "Webhooks", icon: Webhook },
-    { id: "logs", label: "Logs", icon: List }];
+    { id: "logs", label: "Logs", icon: List },
+  ];
 
   return (
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">

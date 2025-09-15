@@ -1,72 +1,7 @@
-    return { hasError: true, error };
-
-export { ErrorBoundary };
-  };
-,
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    console.error('ErrorBoundary caught an error:', error, errorInfo),
-    this.setState({,
-      error,
-      errorInfo
-    })
-  };
-,
-  render() {,
-    if (this.state.hasError) {,
-      return (,
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">,
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">,
-            <div className="flex items-center mb-4">,
-              <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">,
-                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />,
-                </svg>,
-              </div>,
-              <h2 className="text-xl font-semibold text-gray-900">Something went wrong</h2>,
-            </div>,
-            <p className="text-gray-600 mb-4">,
-              We're sorry, but something unexpected happened. Please try refreshing the page.,
-            </p>,
-            <div className="space-y-3">,
-              <button,
-                onClick={() => window.location.reload()};
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors",
-              >,
-                Refresh Page,
-              </button>,
-              <button,
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })};
-                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover: bg-gray-200 transition-colors",
-              >,
-                Try Again,
-              </button>,
-            </div>,
-            {process.env.NODE_ENV === 'development' && this.state.error && (,
-              <details className="mt-4 p-4 bg-gray-100 rounded-lg">,
-                <summary className="cursor-pointer text-sm font-medium text-gray-700">,
-                  Error Details (Development),
-                </summary>,
-                <pre className="mt-2 text-xs text-gray-600 overflow-auto">,
-                  {this.state.error.toString()};
-                  {this.state.errorInfo?.componentStack};
-                </pre>,
-              </details>,
-            )};
-          </div>,
-        </div>,
-      )
-    };
-,
-    return this.props.children
-  };
-};
-,
-export { ErrorBoundary };
-import React, { Component, ReactNode } from 'react';
-import { Button } from './ui/button';
-import { AlertTriangle } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
-
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { motion } from 'framer-motion';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
@@ -76,9 +11,10 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
+  errorInfo?: ErrorInfo;
 }
 
-export class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -88,8 +24,12 @@ export class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: any) {
-    logErrorToProduction('ErrorBoundary caught an error:', error, errorInfo);
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    this.setState({
+      error,
+      errorInfo
+    });
   }
 
   render() {
@@ -99,12 +39,54 @@ export class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div style={{ border: '5px solid red', padding: '20px', textAlign: 'center', backgroundColor: 'lightyellow' }}>
-          <h1>CUSTOM ERROR BOUNDARY (ErrorBoundary.tsx) TRIGGERED!</h1>
-          <p>If you see this, the page component crashed.</p>
-          {this.state.error && <pre>{this.state.error.message}</pre>}
-          <button onClick={() => window.location.reload()}>Refresh Page</button>
-          <button onClick={() => window.location.href = '/'}>Go Home</button>
+        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-md w-full bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8 text-center"
+          >
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
+            </div>
+            
+            <h1 className="text-2xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-gray-300 mb-6">
+              We encountered an unexpected error. Please try refreshing the page or contact support if the problem persists.
+            </p>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="text-left mb-6 p-4 bg-black/20 rounded-lg border border-red-500/20">
+                <summary className="text-red-400 cursor-pointer font-medium mb-2">
+                  Error Details (Development)
+                </summary>
+                <pre className="text-xs text-red-300 overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button
+                onClick={() => window.location.reload()}
+                className="inline-flex items-center px-4 py-2 bg-zion-cyan text-white font-medium rounded-lg hover:bg-zion-cyan-dark transition-colors"
+              >
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Refresh Page
+              </button>
+              
+              <Link
+                to="/"
+                className="inline-flex items-center px-4 py-2 border border-zion-cyan/30 text-zion-cyan font-medium rounded-lg hover:bg-zion-cyan/10 transition-colors"
+              >
+                <Home className="w-4 h-4 mr-2" />
+                Go Home
+              </Link>
+            </div>
+          </motion.div>
         </div>
       );
     }
@@ -112,3 +94,5 @@ export class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
+export default ErrorBoundary;

@@ -15,22 +15,27 @@ import Link from 'next/link';
 // Lazy load heavy components to prevent router abort
 const CommunityDiscussion = dynamic(() => import("@/components/CommunityDiscussion").then(mod => ({ default: mod.CommunityDiscussion })), {
   loading: () => <div className="h-32 bg-zion-blue-light rounded animate-pulse" />,
-  ssr: false});
+  ssr: false,
+});
 
 const PointsBadge = dynamic(() => import('@/components/loyalty/PointsBadge').then(mod => ({ default: mod.PointsBadge })), {
   loading: () => <span className="text-zion-cyan font-medium">Loading...</span>,
-  ssr: false});
+  ssr: false,
+});
 
 const ApiKeysManager = dynamic(() => import('@/components/developers/ApiKeysManager').then(mod => ({ default: mod.ApiKeysManager })), {
   loading: () => <div className="h-24 bg-zion-blue-light rounded animate-pulse" />,
-  ssr: false});
+  ssr: false,
+});
 
 const NotificationBell = dynamic(() => import("@/components/NotificationBell").then(mod => ({ default: mod.NotificationBell })), {
   loading: () => <Bell size={16} className="text-zion-cyan" />,
-  ssr: false});
+  ssr: false,
+});
 
 const GuidedTour = dynamic(() => import("@/components/onboarding/GuidedTour").then(mod => ({ default: mod.GuidedTour })), {
-  ssr: false});
+  ssr: false,
+});
 
 // Lazy load notification functions
 const loadNotificationFunctions = () => import("@/utils/notifications");
@@ -80,18 +85,21 @@ export default function Dashboard() {
       if (result.success) {
         toast({
           title: "Test notification created",
-          description: "Check your notification center"});
+          description: "Check your notification center",
+        });
       } else {
         toast({
           title: "Error creating test notification",
           description: "Something went wrong",
-          variant: "destructive"});
+          variant: "destructive",
+        });
       }
     } catch (error) {
       toast({
         title: "Error loading notification system",
         description: "Please try again",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     }
   };
 
@@ -186,7 +194,8 @@ export default function Dashboard() {
                           toast({
                             title: "Error sending notification",
                             description: "Please try again",
-                            variant: "destructive"});
+                            variant: "destructive",
+                          });
                         }
                       }}
                     >
@@ -215,7 +224,8 @@ export default function Dashboard() {
                           toast({
                             title: "Error sending notification",
                             description: "Please try again",
-                            variant: "destructive"});
+                            variant: "destructive",
+                          });
                         }
                       }}
                     >
@@ -367,23 +377,6 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            <Badge variant="outline" className="border-green-500 text-green-500">
-              Completed
-            </Badge>
-          </div>
-        </div>
-
-        {/* Recent Orders */}
-        <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
-          <h2 className="text-xl font-semibold text-white mb-4">Recent Orders</h2>
-          <div className="flex items-center justify-between p-4 bg-slate-700/50 rounded-lg">
-            <div>
-              <h3 className="text-white font-medium">Cloud Migration</h3>
-              <p className="text-gray-400 text-sm">Order #12346</p>
-            </div>
-            <Badge variant="outline" className="border-yellow-500 text-yellow-500">
-              In Progress
-            </Badge>
           </div>
         </div>
       </div>

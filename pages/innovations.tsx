@@ -1,23 +1,23 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Brain, Rocket, Target, Cpu, Globe, Eye, 
   ChevronRight, Star, TrendingUp, Zap, Shield,
   ArrowRight, Search, Filter, Grid, List,
   Phone, Mail, MapPin, ExternalLink, Sparkles
-} from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
-import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
-import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
+} from 'lucide-react',
+import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029',
+import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2',
+import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2',
+import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export default function InnovationsPage() {
   return (
@@ -140,28 +140,28 @@ export default function InnovationsPage() {
                   title: 'AI Consciousness',
                   description: 'Revolutionary AI consciousness development and emotional intelligence platforms',
                   color: 'from-violet-600 via-purple-600 to-indigo-600',
-                  features: ['Consciousness Evolution', 'Emotional Intelligence', 'Creative Orchestration', 'Autonomous Business Management']
+                  features: ['Consciousness EvolutionEmotional Intelligence', 'Creative OrchestrationAutonomous Business Management']
                 },
                 {
                   icon: Globe,
                   title: 'Quantum Technology',
                   description: 'Quantum-AI fusion and breakthrough quantum computing solutions',
                   color: 'from-indigo-600 via-blue-600 to-cyan-600',
-                  features: ['Quantum-AI Fusion', 'Quantum Internet Security', 'DNA Computing', 'Quantum Financial Trading']
+                  features: ['Quantum-AI FusionQuantum Internet Security', 'DNA ComputingQuantum Financial Trading']
                 },
                 {
                   icon: Rocket,
                   title: 'Space Technology',
                   description: 'Next-generation space exploration and metaverse digital reality',
                   color: 'from-teal-600 via-emerald-600 to-green-600',
-                  features: ['Space Mining Automation', 'Metaverse Digital Reality', 'AI Health Analytics', 'Holographic Events']
+                  features: ['Space Mining AutomationMetaverse Digital Reality', 'AI Health AnalyticsHolographic Events']
                 },
                 {
                   icon: Cpu,
                   title: 'Enterprise IT',
                   description: 'AI-powered enterprise solutions and intelligent business optimization',
                   color: 'from-blue-600 via-cyan-600 to-teal-600',
-                  features: ['Business Intelligence', 'Supply Chain Optimization', 'HR Analytics', 'Cybersecurity']
+                  features: ['Business IntelligenceSupply Chain Optimization', 'HR AnalyticsCybersecurity']
                 }
               ].map((category, index) => (
                 <motion.div
@@ -319,5 +319,5 @@ export default function InnovationsPage() {
         <UltraFuturisticFooter2029V2 />
       </div>
     </UltraFuturisticBackground2029>
-  );
+  ),
 }

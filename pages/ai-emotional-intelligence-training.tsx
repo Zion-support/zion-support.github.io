@@ -1,5 +1,5 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import React from 'react',
+import ServiceLanding from '../components/sections/ServiceLanding',
 
 export default function AIEmotionalIntelligenceTraining() {
 	return (
@@ -20,7 +20,7 @@ export default function AIEmotionalIntelligenceTraining() {
 				"Privacy-first voice and text processing"
 			]}
 			industries={["Customer Support", "Sales", "HR & L&D", "Leadership"]}
-			canonical="https://ziontechgroup.com/ai-emotional-intelligence-training"
+			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training"
 		/>
-	);
+	)
 }

@@ -127,7 +127,7 @@ const NewContentPromotionBanner = () => {
 
           {/* Progress Indicators */}
           <div className="flex justify-center space-x-2 pb-4">
-            {promotions.map((_, index) => (
+            {promotions.map((_index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}

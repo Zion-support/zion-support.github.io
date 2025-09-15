@@ -1,310 +1,176 @@
 import React from 'react';
 import Link from 'next/link';
-import { Calendar, User, Tag, ArrowRight, TrendingUp, Clock, Eye } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 export const metadata = {
-  title: 'Blog - Zion Tech Group | Latest AI & Technology Insights',
-  description: 'Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from our expert team at Zion Tech Group.',
-  keywords: 'AI blog, technology insights, quantum computing, cybersecurity, innovation, business transformation',
+  title: 'AI & Technology Blog - Latest Insights & Breakthroughs | Zion Tech Group',
+  description: 'Discover the latest insights in AI, quantum computing, neural interfaces, and enterprise transformation. Expert analysis, case studies, and breakthrough technologies.',
+  keywords: [
+    'AI blog', 'technology insights', 'quantum computing', 'neural interfaces', 
+    'enterprise AI', 'business transformation', 'AI trends', 'technology news'
+  ],
 };
 
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  author: string;
-  date: string;
-  readTime: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
-  url: string;
-  image: string;
-  views?: number;
-}
+const BlogPage = () => {
+  const featuredPosts = [
+    {
+      title: "AI 2026: Enterprise AI Governance Blueprint",
+      description: "A practical blueprint to ship reliable AI with policy-as-code, risk tiers, and runtime monitoring.",
+      slug: "ai-2026-enterprise-ai-governance-blueprint",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/ai-governance-2026.jpg"
+    },
+    {
+      title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
+      description: "Discover how generative AI is transforming enterprise operations in 2025, delivering unprecedented automation, creativity, and efficiency gains across all business functions.",
+      slug: "ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough",
+      category: "AI Revolution",
+      date: "2025-01-15",
+      featured: true,
+      image: "/images/generative-ai-enterprise-2025.jpg"
+    },
+    {
+      title: "Enterprise Foundation Models: A Practical Guide (2025)",
+      description: "Vendor-neutral steps to evaluate, deploy, and govern foundation models that drive measurable outcomes.",
+      slug: "ai-2025-enterprise-foundation-models-practical-guide",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/enterprise-foundation-models-2025.jpg"
+    },
+    {
+      title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
+      description: "How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.",
+      slug: "ai-2025-enterprise-ai-agents-breakthrough",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/enterprise-ai-agents-2025.jpg"
+    },
+    {
+      title: "Quantum Computing Breakthrough 2025: Enterprise Applications",
+      description: "Explore how quantum computing is revolutionizing enterprise operations in 2025 with unprecedented processing power and breakthrough applications.",
+      slug: "ai-2025-quantum-computing-breakthrough",
+      category: "Quantum Computing",
+      date: "2025-01-15",
+      featured: true,
+      image: "/images/quantum-computing-2025.jpg"
+    }
+  ];
 
-const blogPosts: BlogPost[] = [
-  {
-    id: 'ai-2025-enterprise-automation-revolutionary-breakthrough',
-    title: 'AI 2025 Enterprise Automation: The Revolutionary Breakthrough',
-    excerpt: 'Discover the revolutionary AI 2025 Enterprise Automation breakthrough delivering 4,200% ROI, 99.9% accuracy, and unprecedented operational efficiency.',
-    author: 'Zion Tech Group AI Research Team',
-    date: '2025-01-16',
-    readTime: '15 min read',
-    category: 'AI & Machine Learning',
-    tags: ['AI 2025', 'Enterprise Automation', 'ROI', 'Breakthrough'],
-    featured: true,
-    url: '/blog/ai-2025-enterprise-automation-revolutionary-breakthrough',
-    image: '🚀',
-    views: 0
-  },
-  {
-    id: 'ai-2025-enterprise-genai-blueprint',
-    title: 'Enterprise GenAI Blueprint 2025: From Pilot to Production',
-    excerpt: 'A practical, guardrailed path for enterprises to ship GenAI to production safely and profitably — with a 90-day playbook and ROI model.',
-    author: 'Zion Tech Group',
-    date: '2025-09-12',
-    readTime: '12 min read',
-    category: 'AI & Machine Learning',
-    tags: ['GenAI', 'Enterprise', 'Governance', 'MLOps'],
-    featured: true,
-    url: '/blog/ai-2025-enterprise-genai-blueprint',
-    image: '🏢',
-    views: 0
-  },
-  {
-    id: 'ai-revolution-2025',
-    title: 'The AI Revolution of 2025: Transformative Technologies Reshaping Business',
-    excerpt: 'Discover how cutting-edge AI technologies are revolutionizing industries and creating unprecedented opportunities for business growth and innovation.',
-    author: 'Zion Tech Group',
-    date: '2025-01-17',
-    readTime: '8 min read',
-    category: 'AI & Machine Learning',
-    tags: ['AI', 'Technology', 'Innovation', 'Business Transformation'],
-    featured: true,
-    url: '/blog/ai-revolution-2025',
-    image: '🤖',
-    views: 2847
-  },
-  {
-    id: 'quantum-computing-breakthrough',
-    title: 'Quantum Computing Breakthrough: Unlocking the Future of Problem-Solving',
-    excerpt: 'Explore how quantum computing is revolutionizing cryptography, optimization, and scientific research, opening new possibilities for businesses worldwide.',
-    author: 'Zion Tech Group',
-    date: '2025-01-16',
-    readTime: '10 min read',
-    category: 'Quantum Computing',
-    tags: ['Quantum Computing', 'Technology', 'Innovation', 'Cryptography'],
-    featured: true,
-    url: '/blog/quantum-computing-breakthrough',
-    image: '⚛️',
-    views: 1923
-  },
-  {
-    id: 'multimodal-ai-applications',
-    title: 'Multimodal AI: The Future of Human-Computer Interaction',
-    excerpt: 'Learn how multimodal AI systems are transforming the way we interact with technology, from voice assistants to autonomous vehicles.',
-    author: 'Zion Tech Group',
-    date: '2025-01-15',
-    readTime: '6 min read',
-    category: 'AI & Machine Learning',
-    tags: ['AI', 'Multimodal', 'Technology', 'User Experience'],
-    featured: false,
-    url: '/blog/multimodal-ai-applications',
-    image: '🧠',
-    views: 1456
-  },
-  {
-    id: 'sustainable-tech-solutions',
-    title: 'Building a Sustainable Future with Green Technology',
-    excerpt: 'Discover how innovative technologies are helping businesses reduce their carbon footprint while improving efficiency and profitability.',
-    author: 'Zion Tech Group',
-    date: '2025-01-14',
-    readTime: '7 min read',
-    category: 'Sustainability',
-    tags: ['Sustainability', 'Green Tech', 'Innovation', 'Environment'],
-    featured: false,
-    url: '/blog/sustainable-tech-solutions',
-    image: '🌱',
-    views: 1234
-  },
-  {
-    id: 'cybersecurity-trends-2025',
-    title: 'Cybersecurity Trends 2025: Protecting Your Digital Assets',
-    excerpt: 'Stay ahead of emerging cybersecurity threats with our comprehensive guide to the latest security trends and best practices.',
-    author: 'Zion Tech Group',
-    date: '2025-01-13',
-    readTime: '9 min read',
-    category: 'Cybersecurity',
-    tags: ['Cybersecurity', 'Security', 'Technology', 'Best Practices'],
-    featured: false,
-    url: '/blog/cybersecurity-trends-2025',
-    image: '🔒',
-    views: 1876
-  },
-  {
-    id: 'edge-computing-future',
-    title: 'Edge Computing: Bringing Intelligence to the Edge',
-    excerpt: 'Explore how edge computing is revolutionizing data processing and enabling real-time applications across industries.',
-    author: 'Zion Tech Group',
-    date: '2025-01-12',
-    readTime: '5 min read',
-    category: 'Edge Computing',
-    tags: ['Edge Computing', 'Technology', 'Data Processing', 'Real-time'],
-    featured: false,
-    url: '/blog/edge-computing-future',
-    image: '⚡',
-    views: 987
-  }
-];
-
-export default function BlogPage() {
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const regularPosts = blogPosts.filter(post => !post.featured);
+  const categories = [
+    { name: "AI Revolution", count: 25, color: "bg-blue-500" },
+    { name: "Quantum Computing", count: 15, color: "bg-purple-500" },
+    { name: "Neural Interfaces", count: 12, color: "bg-green-500" },
+    { name: "Enterprise AI", count: 18, color: "bg-orange-500" },
+    { name: "Future Tech", count: 20, color: "bg-pink-500" }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Latest Insights & Innovation
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, 
-            and the cutting-edge technologies shaping our future.
-          </p>
-        </div>
-
-        {/* Featured Posts */}
-        {featuredPosts.length > 0 && (
-          <section className="mb-16">
-            <div className="flex items-center gap-3 mb-8">
-              <TrendingUp className="w-6 h-6 text-purple-400" />
-              <h2 className="text-3xl font-bold text-white">Featured Articles</h2>
+    <div>
+      <SEO
+        title="AI & Technology Blog - Latest Insights & Breakthroughs"
+        description="Discover the latest insights in AI, quantum computing, neural interfaces, and enterprise transformation. Expert analysis, case studies, and breakthrough technologies."
+        keywords="AI blog, technology insights, quantum computing, neural interfaces, enterprise AI, business transformation, AI trends, technology news"
+        url="/blog"
+      />
+      
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                AI & Technology Blog
+              </h1>
+              <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto">
+                Stay ahead with the latest insights, breakthroughs, and expert analysis in AI, quantum computing, and enterprise transformation.
+              </p>
             </div>
-            
-            <div className="grid lg:grid-cols-2 gap-8">
-              {featuredPosts.map((post, index) => (
-                <Link key={post.id} href={post.url} className="group">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all transform hover:scale-105 border border-white/20">
-                    <div className="flex items-start gap-6">
-                      <div className="text-6xl group-hover:scale-110 transition-transform">
-                        {post.image}
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-3">
-                          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium">
-                            {post.category}
-                          </span>
-                          <span className="px-3 py-1 bg-yellow-500/20 text-yellow-300 rounded-full text-sm font-medium">
-                            Featured
-                          </span>
-                        </div>
-                        
-                        <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors leading-tight">
-                          {post.title}
-                        </h3>
-                        
-                        <p className="text-gray-300 mb-6 leading-relaxed">
-                          {post.excerpt}
-                        </p>
-                        
-                        <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                          <div className="flex items-center gap-4">
-                            <div className="flex items-center">
-                              <User className="w-4 h-4 mr-1" />
-                              {post.author}
-                            </div>
-                            <div className="flex items-center">
-                              <Calendar className="w-4 h-4 mr-1" />
-                              {new Date(post.date).toLocaleDateString()}
-                            </div>
-                            <div className="flex items-center">
-                              <Clock className="w-4 h-4 mr-1" />
-                              {post.readTime}
-                            </div>
-                          </div>
-                          <div className="flex items-center">
-                            <Eye className="w-4 h-4 mr-1" />
-                            {post.views?.toLocaleString()}
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center text-purple-400 group-hover:text-purple-300">
-                          <span className="font-medium">Read Article</span>
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* All Posts */}
-        <section>
-          <h2 className="text-3xl font-bold text-white mb-8">All Articles</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularPosts.map((post, index) => (
-              <Link key={post.id} href={post.url} className="group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all transform hover:scale-105 border border-white/20 h-full">
-                  <div className="text-center mb-4">
-                    <div className="text-4xl group-hover:scale-110 transition-transform mb-4">
-                      {post.image}
-                    </div>
-                    <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium">
-                      {post.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors leading-tight">
-                    {post.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 mb-4 leading-relaxed text-sm">
-                    {post.excerpt}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {post.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded text-xs">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
-                    <div className="flex items-center">
-                      <Calendar className="w-3 h-3 mr-1" />
-                      {new Date(post.date).toLocaleDateString()}
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="w-3 h-3 mr-1" />
-                      {post.readTime}
-                    </div>
-                    <div className="flex items-center">
-                      <Eye className="w-3 h-3 mr-1" />
-                      {post.views?.toLocaleString()}
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center text-purple-400 group-hover:text-purple-300 text-sm font-medium">
-                    <span>Read More</span>
-                    <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </Link>
-            ))}
           </div>
         </section>
 
-        {/* Newsletter Signup */}
-        <section className="mt-16">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Stay Updated with Our Latest Insights
-            </h2>
-            <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
-              Get the latest articles, case studies, and technology insights delivered directly to your inbox. 
-              Join thousands of professionals staying ahead of the curve.
+        {/* Categories */}
+        <section className="py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Explore by Category</h2>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {categories.map((category, index) => (
+                <div key={index} className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                  <div className={`w-12 h-12 ${category.color} rounded-full mx-auto mb-4 flex items-center justify-center`}>
+                    <span className="text-white font-bold text-lg">{category.count}</span>
+                  </div>
+                  <h3 className="font-semibold text-gray-900">{category.name}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Posts */}
+        <section className="py-16">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Featured Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {featuredPosts.map((post, index) => (
+                <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                  <div className="h-48 bg-gradient-to-r from-purple-400 to-blue-500 flex items-center justify-center">
+                    <span className="text-6xl">🚀</span>
+                  </div>
+                  <div className="p-8">
+                    <div className="flex items-center mb-4">
+                      <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {post.category}
+                      </span>
+                      <span className="text-gray-500 text-sm ml-4">{post.date}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 line-clamp-3">
+                      {post.description}
+                    </p>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
+                    >
+                      Read Full Article →
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-6">Stay Updated with Latest Insights</h2>
+            <p className="text-xl opacity-90 mb-8">
+              Get the latest AI and technology insights delivered directly to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
-              />
-              <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Subscribe
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Subscribe to Newsletter
+              </Link>
+              <Link
+                href="/resources"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                Download Resources
+              </Link>
             </div>
           </div>
         </section>
       </div>
     </div>
   );
-}
+};
+
+export default BlogPage;

@@ -1,121 +1,112 @@
-export default function NewsPage() {
-  const articles = [
-    {
-    },
-    {
-      emoji: "🚀",
-      title: "Zion OS 1.0 Launches: One-Click Digital Economies",
-      excerpt:
-        "We are excited to announce the public launch of Zion OS 1.0, enabling one-click deployment of AI-powered digital economies.",
-      date: "Sep 12, 2025",
-      href: "/news/zion-os-1-0-launch",
-      gradient: "from-blue-600 to-purple-600",
-    },
-    {
-      emoji: "📈",
-      title: "Case Study: 38% Faster Hiring with Resume AI",
-      excerpt: "A regional marketplace cut time‑to‑hire by 38% using Zion Resume AI and proposal scoring.",
-      date: "Sep 08, 2025",
-      href: "/news/case-study-resume-ai-38-percent-faster",
-      gradient: "from-emerald-600 to-teal-600",
-    },
-    {
-      emoji: "📰",
-      title: "Zion OS v1.2 Launches Autonomous Deployments",
-      excerpt: "One-click orchestration now provisions full AI marketplaces, governance, and analytics out of the box.",
-      date: "Sep 12, 2025",
-      href: "/news/autonomous-deployments",
-      gradient: "from-indigo-600 to-blue-600",
-    },
-    {
-      emoji: "🤝",
-      title: "Partnership: Zion Tech Group x Enterprise Cloud",
-      excerpt: "New hybrid-cloud reference architecture reduces infra costs by 32% while boosting reliability.",
-      date: "Sep 05, 2025",
-      href: "/news/enterprise-cloud-partnership",
-      gradient: "from-green-600 to-emerald-600",
-    },
-    {
-      emoji: "🎓",
-      title: "Zion Academy Opens: Learn, Build, Launch",
-      excerpt:
-        "Introducing Zion Academy with hands-on courses covering AI, Web3, marketplaces, and governance—designed to help you launch faster.",
-      date: "Sep 10, 2025",
-      href: "/news/academy-opens",
-      gradient: "from-teal-600 to-cyan-600",
-    },
-    {
-      emoji: "🎓",
-      title: "Zion Academy Adds AI Careers Track",
-      excerpt: "Hands-on labs for RAG, agents, and ML ops, plus certifications recognized by hiring partners.",
-      date: "Aug 28, 2025",
-      href: "/news/academy-ai-track",
-      gradient: "from-purple-600 to-pink-600",
-    },
-    {
-      emoji: "🤝",
-      title: "Enterprise Partner Program: Scale With Confidence",
-      excerpt:
-        "Our new partner program brings white‑label solutions, SLAs, and integration support for enterprise deployments.",
-      date: "Sep 05, 2025",
-      href: "/news/enterprise-partners",
-      gradient: "from-orange-600 to-red-600",
-    },
-    {
-      emoji: "🏪",
-      title: "Marketplace Suite: Jobs, Proposals, and Escrow Go GA",
-      excerpt:
-        "The complete marketplace stack moves to General Availability with SLAs, audit logs, and fraud protections.",
-      date: "Sep 11, 2025",
-      href: "/news/marketplace-suite-ga",
-      gradient: "from-emerald-600 to-teal-600",
-    },
-    {
-      emoji: "🛡️",
-      title: "Compliance Pack: SOC 2 Playbooks and KYC/AML APIs",
-      excerpt:
-        "Launch faster with prebuilt SOC 2 controls, audit-ready checklists, and turnkey KYC/AML integrations.",
-      date: "Sep 09, 2025",
-      href: "/news/compliance-pack-release",
-      gradient: "from-rose-600 to-red-600",
-    },
-  ];
+import Link from "next/link";
 
-
-
-import Link from "next/link",;
-export const metadata = {;
-export default function NewsPage() {;
-
-import Link from './next / link';,
 export const metadata = {
-export default /**
-import Link from "next/link",;
-export const metadata = {;
-export default function NewsPage() {;
-                <Link href="/news / ai - business - intelligence - platform - launch" className="btn - primary">;
-                </Link>;
-            <Link href="/news / category / ai" className="card text - center group hover:bg - blue - 500 / 10 transition - colors">;
-            </Link>;
-            <Link href="/news / category / quantum" className="card text - center group hover:bg - purple - 500 / 10 transition - colors">;
-            </Link>;
-            <Link href="/news / category / cybersecurity" className="card text - center group hover:bg - green - 500 / 10 transition - colors">;
-            </Link>;
-            <Link href="/news / category / company" className="card text - center group hover:bg - red - 500 / 10 transition - colors">;
-            </Link>;
-              <Link href="/news / quantum - error - correction - breakthrough" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-              </Link>;
-              <Link href="/news / ai - cybersecurity - framework" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-              </Link>;
-              <Link href="/news / european - market - expansion" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-              </Link>;
-              <Link href="/news / satellite - communication - advances" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-              </Link>;
-              <Link href="/news / ai - content - generation - ethics" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-              </Link>;
-              <Link href="/news / university - research - partnerships" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-              </Link>;
-              <Link href="/contact" className="btn - primary text - lg px - 8 py - 4">;
-              </Link>;
-              <Link href="/about" className="btn - secondary text - lg px - 8 py - 4">;
-              </Link>;
+  title: "News & Insights - Zion Tech Group | Latest Technology Updates",
+  description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.",
+  keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group",
+};
+
+const latest2025 = [
+  {
+    date: "September 15, 2025",
+    category: "AI",
+    title: "ZionGPT 2.0 launches with adaptive reasoning and on-device inference",
+    slug: "/news/ziongpt-2-adaptive-reasoning",
+    color: "indigo",
+  },
+  {
+    date: "September 02, 2025",
+    category: "QUANTUM",
+    title: "Hybrid quantum-classical pipeline boosts optimization accuracy by 38%",
+    slug: "/news/hybrid-quantum-classical-pipeline",
+    color: "purple",
+  },
+  {
+    date: "August 21, 2025",
+    category: "COMPANY",
+    title: "Zion Tech Group acquires VectorEdge to expand edge-AI capabilities",
+    slug: "/news/acquisition-vectoredge",
+    color: "blue",
+  },
+  {
+    date: "September 13, 2025",
+    category: "SAFETY",
+    title: "Agent Safety Scorecards now available across Zion OS deployments",
+    slug: "/news/agent-safety-scorecards",
+    color: "emerald",
+  },
+  {
+    date: "September 11, 2025",
+    category: "OPERATIONS",
+    title: "Governed Autonomy Runbooks shipped for change management & approvals",
+    slug: "/news/governed-autonomy-runbooks",
+    color: "orange",
+  },
+];
+
+export default function NewsPage() {
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <span className="gradient-text">News & Insights</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Stay ahead with the latest technology trends, company updates, and industry insights from Zion Tech Group
+          </p>
+        </div>
+      </section>
+
+      {/* Featured 2025 Highlights */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Latest in 2025</h2>
+            <p className="text-xl text-gray-400">Fresh product launches, research, and company news</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {latest2025.map((item) => (
+              <article key={item.slug} className="card group">
+                <div className={`w-full h-48 bg-gradient-to-br from-${item.color}-500/20 to-blue-500/20 rounded-xl mb-6 flex items-center justify-center`}>
+                  <svg className={`w-16 h-16 text-${item.color}-400`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div className="flex items-center mb-3">
+                  <span className={`px-2 py-1 rounded-full mr-3 text-xs font-bold bg-${item.color}-500/20 text-${item.color}-400`}>{item.category}</span>
+                  <span className="text-gray-400 text-sm">{item.date}</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">{item.title}</h3>
+                <Link href={item.slug} className="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                  Read More →
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Stay Updated</h2>
+            <p className="text-xl text-gray-300 mb-8">Subscribe to our newsletter for the latest updates</p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+              />
+              <button className="btn-primary px-8 py-3">Subscribe</button>
+            </div>
+            <p className="text-gray-400 text-sm mt-4">We respect your privacy. Unsubscribe at any time.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+

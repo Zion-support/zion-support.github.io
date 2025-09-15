@@ -1,10 +1,20 @@
+<<<<<<< HEAD
+"use client";
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+  ArrowRightBrainShieldRocketCpuDatabaseAtomTargetStar
+  SparklesZapUsersAwardClockCheckCircleGlobeCodeServer,
+  ChevronRightExternalLinkTrendingUpBarChart3CloudNetwork
+=======
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
+>>>>>>> origin/auto/autonomy-17186719616
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
@@ -13,8 +23,13 @@ import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
 
 export default function HomePage() {
+<<<<<<< HEAD
+  const [currentFeaturesetCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+=======
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     setIsVisible(true);
@@ -22,10 +37,17 @@ export default function HomePage() {
     // Auto-rotate features
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % 6);
+<<<<<<< HEAD
+    }5000);
+    
+    return () => clearInterval(interval);
+  }[]);
+=======
     }, 5000);
     
     return () => clearInterval(interval);
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const features = [
     {
@@ -69,31 +91,51 @@ export default function HomePage() {
   const services = [
     {
       title: "AI & Machine Learning",
+<<<<<<< HEAD
+      description: "Custom AI solutionsneural networksand autonomous systems",
+=======
       description: "Custom AI solutions, neural networks, and autonomous systems",
+>>>>>>> origin/auto/autonomy-17186719616
       icon: Brain,
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Quantum Computing",
+<<<<<<< HEAD
+      description: "Quantum algorithmscryptographyand quantum AI integration",
+=======
       description: "Quantum algorithms, cryptography, and quantum AI integration",
+>>>>>>> origin/auto/autonomy-17186719616
       icon: Atom,
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Cybersecurity",
+<<<<<<< HEAD
+      description: "Advanced threat detectionquantum-resistant encryption",
+=======
       description: "Advanced threat detection, quantum-resistant encryption",
+>>>>>>> origin/auto/autonomy-17186719616
       icon: Shield,
       color: "from-red-500 to-orange-500"
     },
     {
       title: "Cloud Infrastructure",
+<<<<<<< HEAD
+      description: "Scalable cloud solutionsedge computingand DevOps",
+=======
       description: "Scalable cloud solutions, edge computing, and DevOps",
+>>>>>>> origin/auto/autonomy-17186719616
       icon: Cloud,
       color: "from-emerald-500 to-teal-500"
     },
     {
       title: "Data Analytics",
+<<<<<<< HEAD
+      description: "Big data processingpredictive analyticsand insights",
+=======
       description: "Big data processing, predictive analytics, and insights",
+>>>>>>> origin/auto/autonomy-17186719616
       icon: BarChart3,
       color: "from-indigo-500 to-purple-500"
     },
@@ -106,16 +148,33 @@ export default function HomePage() {
   ];
 
   const stats = [
+<<<<<<< HEAD
+    { number: "500+"label: "Projects Delivered"icon: CheckCircle },
+    { number: "50+"label: "Enterprise Clients"icon: Users },
+    { number: "99.9%"label: "Uptime Guarantee"icon: Shield },
+    { number: "24/7"label: "Support Available"icon: Clock }
+=======
     { number: "500+", label: "Projects Delivered", icon: CheckCircle },
     { number: "50+", label: "Enterprise Clients", icon: Users },
     { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
     { number: "24/7", label: "Support Available", icon: Clock }
+>>>>>>> origin/auto/autonomy-17186719616
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
         <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
+<<<<<<< HEAD
+        <meta name="description" content="Zion Tech Group delivers cutting-edge AIquantum computingcybersecurityand digital transformation solutions. Leading the future of autonomous innovation." />
+        <meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />
+        <meta property="og:description" content="Cutting-edge AIquantum computingcybersecurityand digital transformation solutions. Leading the future of autonomous innovation." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="keywords" content="AIquantum computingcybersecuritydigital transformationautonomous systemstechnology solutions" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+      
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform","url":"https://ziontechgroup.com/","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
+=======
         <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
         <meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />
         <meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
@@ -123,6 +182,7 @@ export default function HomePage() {
         <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
+>>>>>>> origin/auto/autonomy-17186719616
 
       <EnhancedNavigation />
 
@@ -137,7 +197,11 @@ export default function HomePage() {
         <div className="relative z-10 text-center max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
+            animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+=======
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+>>>>>>> origin/auto/autonomy-17186719616
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -151,12 +215,21 @@ export default function HomePage() {
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
+            animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+            transition={{ duration: 0.8delay: 0.2 }}
+            className="mb-12"
+          >
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              Empowering businesses with cutting-edge AIquantum computingcybersecurity
+=======
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Empowering businesses with cutting-edge AI, quantum computing, cybersecurity, 
+>>>>>>> origin/auto/autonomy-17186719616
               and digital transformation solutions that drive innovation and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -180,6 +253,20 @@ export default function HomePage() {
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
           <motion.div
+<<<<<<< HEAD
+            animate={{ y: [0-20] }}
+            transition={{ duration: 6repeat: Infinityease: "easeInOut" }}
+            className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60"
+          />
+          <motion.div
+            animate={{ y: [020] }}
+            transition={{ duration: 8repeat: Infinityease: "easeInOut" }}
+            className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full opacity-60"
+          />
+          <motion.div
+            animate={{ y: [0-150] }}
+            transition={{ duration: 7repeat: Infinityease: "easeInOut" }}
+=======
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60"
@@ -192,6 +279,7 @@ export default function HomePage() {
           <motion.div
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+>>>>>>> origin/auto/autonomy-17186719616
             className="absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60"
           />
         </div>
@@ -216,12 +304,20 @@ export default function HomePage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {services.map((serviceindex) => (
+=======
             {services.map((service, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.6delay: index * 0.1 }}
+=======
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
@@ -247,12 +343,21 @@ export default function HomePage() {
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+<<<<<<< HEAD
+            {stats.map((statindex) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0scale: 0.8 }}
+                whileInView={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
+=======
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -336,7 +441,11 @@ export default function HomePage() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
+<<<<<<< HEAD
+              'Let', 's discuss your project and explore how our cutting-edge technology solutions can transform your business
+=======
               Let's discuss your project and explore how our cutting-edge technology solutions can transform your business
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
           </motion.div>
 

@@ -1,307 +1,201 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Settings, 
-  BarChart3, 
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Database
-} from 'lucide-react';
+"use client";
+import React{ useState } from 'react';
+import Link from 'next/link';
+PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
 
 const InteractiveTechDemo2026 = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentDemo, setCurrentDemo] = useState(0);
-  const [metrics, setMetrics] = useState({
-    efficiency: 0,
-    speed: 0,
-    accuracy: 0,
-    cost: 0
-  });
+  const [activeDemosetActiveDemo] = useState(0);
+  const [isRunningsetIsRunning] = useState(false);
 
   const demos = [
     {
-      id: 'neural-interface',
-      title: 'Neural Interface Demo',
-      description: 'Experience thought-controlled computing',
+      id: 0,
+      title: "AI-Powered Data Analysis",
+      description: "Watch our AI analyze complex datasets in real-time and provide actionable insights",
       icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      metrics: { efficiency: 95, speed: 98, accuracy: 99, cost: 85 }
+      features: ["Real-time processing"Pattern recognition"Predictive analytics"],
+      demoData: {
+        datasets: 15,
+        accuracy: 99.2,
+        timeSaved: "85%"
+      }
     },
     {
-      id: 'quantum-ai',
-      title: 'Quantum AI Processing',
-      description: 'Witness quantum-enhanced AI computations',
+      id: 1,
+      title: "Automated Workflow Engine",
+      description: "Experience how our automation engine streamlines business processes",
       icon: Zap,
-      color: 'from-blue-500 to-cyan-500',
-      metrics: { efficiency: 99, speed: 100, accuracy: 100, cost: 90 }
+      features: ["Process automation"Smart routing"Error handling"],
+      demoData: {
+        processes: 8,
+        efficiency: 95,
+        timeSaved: "70%"
+      }
     },
     {
-      id: 'autonomous-security',
-      title: 'Autonomous Security',
-      description: 'Self-healing cybersecurity in action',
-      icon: Shield,
-      color: 'from-green-500 to-emerald-500',
-      metrics: { efficiency: 97, speed: 96, accuracy: 98, cost: 88 }
+      id: 2,
+      title: "Predictive Maintenance System",
+      description: "See how AI predicts equipment failures before they happen",
+      icon: Target,
+      features: ["Failure prediction"Maintenance scheduling"Cost optimization"],
+      demoData: {
+        assets: 12,
+        uptime: 99.8,
+        costSaved: "40%"
+      }
     },
     {
-      id: 'edge-computing',
-      title: 'Edge Intelligence',
-      description: 'Real-time processing at the edge',
-      icon: Cloud,
-      color: 'from-orange-500 to-red-500',
-      metrics: { efficiency: 92, speed: 99, accuracy: 97, cost: 82 }
-    },
-    {
-      id: 'synthetic-data',
-      title: 'Synthetic Data Generation',
-      description: 'Privacy-preserving AI training data',
-      icon: Database,
-      color: 'from-indigo-500 to-purple-500',
-      metrics: { efficiency: 94, speed: 93, accuracy: 96, cost: 91 }
+      id: 3,
+      title: "Global AI Network",
+      description: "Explore how distributed AI systems collaborate across the globe",
+      icon: Globe,
+      features: ["Distributed learning"Global collaboration"Real-time sync"],
+      demoData: {
+        nodes: 25,
+        latency: "2ms",
+        reliability: 99.9
+      }
     }
   ];
 
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isPlaying) {
-      interval = setInterval(() => {
-        setCurrentDemo((prev) => (prev + 1) % demos.length);
-      }, 3000);
-    }
-    return () => clearInterval(interval);
-  }, [isPlaying, demos.length]);
+  const handleStartDemo = () => {
+    setIsRunning(true);
+    // Simulate demo running
+    setTimeout(() => setIsRunning(false)3000);
+  };
 
-  useEffect(() => {
-    if (isPlaying) {
-      const targetMetrics = demos[currentDemo].metrics;
-      const duration = 1000;
-      const steps = 20;
-      const stepDuration = duration / steps;
-      
-      let step = 0;
-      const timer = setInterval(() => {
-        step++;
-        const progress = step / steps;
-        setMetrics({
-          efficiency: Math.round(targetMetrics.efficiency * progress),
-          speed: Math.round(targetMetrics.speed * progress),
-          accuracy: Math.round(targetMetrics.accuracy * progress),
-          cost: Math.round(targetMetrics.cost * progress)
-        });
-        
-        if (step >= steps) {
-          clearInterval(timer);
-        }
-      }, stepDuration);
-      
-      return () => clearInterval(timer);
-    }
-  }, [currentDemo, isPlaying]);
-
-  const currentDemoData = demos[currentDemo];
+  const handleResetDemo = () => {
+    setIsRunning(false);
+  };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Interactive Tech Demo
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              2026 Experience
-            </span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience the future of technology through our interactive demonstrations. 
-            See how these revolutionary systems work in real-time.
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Interactive Tech Demo 2026
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Experience the future of technology through hands-on interactive demos. 
+            Test our AI solutions and see the impact on your business.
           </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Demo Controls */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
-          >
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-6">Demo Controls</h3>
-              
-              <div className="flex items-center space-x-4 mb-8">
-                <button
-                  onClick={() => setIsPlaying(!isPlaying)}
-                  className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-xl font-bold hover:from-blue-600 hover:to-purple-600 transition-all"
-                >
-                  {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
-                  <span>{isPlaying ? 'Pause' : 'Play'} Demo</span>
-                </button>
-                
-                <button
-                  onClick={() => {
-                    setIsPlaying(false);
-                    setCurrentDemo(0);
-                    setMetrics({ efficiency: 0, speed: 0, accuracy: 0, cost: 0 });
-                  }}
-                  className="flex items-center space-x-2 border-2 border-white/30 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition-all"
-                >
-                  <RotateCcw className="w-5 h-5" />
-                  <span>Reset</span>
-                </button>
-              </div>
-
-              <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white mb-4">Select Demo:</h4>
-                <div className="grid grid-cols-1 gap-3">
-                  {demos.map((demo, index) => (
-                    <button
-                      key={demo.id}
-                      onClick={() => {
-                        setCurrentDemo(index);
-                        setIsPlaying(false);
-                      }}
-                      className={`p-4 rounded-xl text-left transition-all ${
-                        currentDemo === index
-                          ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white'
-                          : 'bg-white/5 text-gray-300 hover:bg-white/10'
-                      }`}
-                    >
-                      <div className="flex items-center space-x-3">
-                        <demo.icon className="w-5 h-5" />
-                        <span className="font-medium">{demo.title}</span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Demo Visualization */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentDemo}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-center"
-                >
-                  <div className={`inline-flex p-6 rounded-2xl bg-gradient-to-r ${currentDemoData.color} mb-6`}>
-                    <currentDemoData.icon className="w-12 h-12 text-white" />
-                  </div>
-                  
-                  <h3 className="text-3xl font-bold text-white mb-4">
-                    {currentDemoData.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 mb-8 text-lg">
-                    {currentDemoData.description}
-                  </p>
-
-                  {/* Real-time Metrics */}
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="bg-white/5 rounded-xl p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-gray-300">Efficiency</span>
-                        <span className="text-white font-bold">{metrics.efficiency}%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div 
-                          className="bg-gradient-to-r from-green-400 to-blue-400 h-2 rounded-full transition-all duration-300"
-                          style={{ width: `${metrics.efficiency}%` }}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="bg-white/5 rounded-xl p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-gray-300">Speed</span>
-                        <span className="text-white font-bold">{metrics.speed}%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div 
-                          className="bg-gradient-to-r from-blue-400 to-purple-400 h-2 rounded-full transition-all duration-300"
-                          style={{ width: `${metrics.speed}%` }}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="bg-white/5 rounded-xl p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-gray-300">Accuracy</span>
-                        <span className="text-white font-bold">{metrics.accuracy}%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div 
-                          className="bg-gradient-to-r from-purple-400 to-pink-400 h-2 rounded-full transition-all duration-300"
-                          style={{ width: `${metrics.accuracy}%` }}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="bg-white/5 rounded-xl p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-gray-300">Cost Savings</span>
-                        <span className="text-white font-bold">{metrics.cost}%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div 
-                          className="bg-gradient-to-r from-pink-400 to-red-400 h-2 rounded-full transition-all duration-300"
-                          style={{ width: `${metrics.cost}%` }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-          </motion.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4">
-              Experience the Future Today
-            </h3>
-            <p className="text-xl mb-8 text-blue-100">
-              Schedule a personalized demo to see how these technologies can transform your business
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-colors">
-                Schedule Demo
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors">
-                Download Whitepaper
-              </button>
+        {/* Demo Selector */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {demos.map((demo) => (
+            <button
+              key={demo.id}
+              onClick={() => setActiveDemo(demo.id)}
+              className={`p-6 rounded-xl transition-all duration-300 ${
+                activeDemo === demo.id
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              }`}
+            >
+              <demo.icon className="h-8 w-8 mb-4 mx-auto" />
+              <h3 className="font-semibold text-lg mb-2">{demo.title}</h3>
+              <p className="text-sm opacity-90">{demo.description}</p>
+            </button>
+          ))}
+        </div>
+
+        {/* Active Demo Display */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12">
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Demo Info */}
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-4">
+                {demos[activeDemo].title}
+              </h2>
+              <p className="text-gray-300 mb-6">
+                {demos[activeDemo].description}
+              </p>
+              
+              <div className="space-y-3 mb-8">
+                {demos[activeDemo].features.map((featureindex) => (
+                  <div key={index} className="flex items-center text-gray-300">
+                    <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
+                    {feature}
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex space-x-4">
+                <button
+                  onClick={handleStartDemo}
+                  disabled={isRunning}
+                  className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center"
+                >
+                  {isRunning ? <Pause className="h-5 w-5 mr-2" /> : <Play className="h-5 w-5 mr-2" />}
+                  {isRunning ? 'Running...' : 'Start Demo'}
+                </button>
+                <button
+                  onClick={handleResetDemo}
+                  className="border border-white text-white hover:bg-white hover:text-slate-900 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center"
+                >
+                  <RotateCcw className="h-5 w-5 mr-2" />
+                  Reset
+                </button>
+              </div>
+            </div>
+
+            {/* Demo Visualization */}
+            <div className="bg-slate-800 rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Live Demo Data</h3>
+              <div className="space-y-4">
+                {Object.entries(demos[activeDemo].demoData).map(([keyvalue]index) => (
+                  <div key={index} className="flex justify-between items-center">
+                    <span className="text-gray-300 capitalize">
+                      {key.replace(/([A-Z])/g' $1').trim()}:
+                    </span>
+                    <span className="text-white font-semibold">
+                      {typeof value === 'number' ? `${value}${key.includes('accuracy') || key.includes('uptime') || key.includes('reliability') ? '%' : ''}` : value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              
+              {isRunning && (
+                <div className="mt-6 p-4 bg-green-600/20 border border-green-500/30 rounded-lg">
+                  <div className="flex items-center text-green-400">
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-green-400 mr-3"></div>
+                    Demo is running...
+                  </div>
+                </div>
+              )}
             </div>
           </div>
-        </motion.div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-12">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Try It Yourself?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Schedule a personalized demo with our experts and see how these technologies 
+            can transform your specific business processes.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
+            >
+              Schedule Personal Demo
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link 
+              href="/ai-solutions" 
+              className="border border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
+            >
+              Explore All Solutions
+            </Link>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

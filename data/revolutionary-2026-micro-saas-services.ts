@@ -14,7 +14,10 @@ export interface Revolutionary2026MicroSaasService {
     address: string;
   };
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
 export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] = [
   {
     id: "2026-revolutionary-micro-saas",
@@ -38,4 +41,8 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/auto/autonomy-17186719616

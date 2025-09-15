@@ -17,7 +17,8 @@ export async function getStaticProps() {
   const sections = fs.existsSync(base)
     ? list(base, base).map((entry) => ({
         title: entry.name,
-        items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
+        items: entry.isDir ? list(path.join(base, entry.name), base) : [],
+      }))
     : [];
   return { props: { sections }, revalidate: 600 };
 }

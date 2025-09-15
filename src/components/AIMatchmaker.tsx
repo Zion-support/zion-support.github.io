@@ -26,7 +26,8 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       return;
     }
 
@@ -48,13 +49,15 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       
       toast({
         title: "Matches Found",
-        description: `Found ${results.length} matches based on your description.`});
+        description: `Found ${results.length} matches based on your description.`,
+      });
     } catch (error) {
       logErrorToProduction('Error during AI matching:', { data: error });
       toast({
         title: "Matching Error",
         description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       // Set empty matches to show no results found UI
       setMatches([]);
     } finally {

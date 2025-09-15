@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Zap, Brain, Rocket, Star, TrendingUp, Users, Globe, Shield, Award, Lightbulb } from 'lucide-react';
+ArrowRightSparklesZapBrainRocketStarTrendingUpUsersGlobeShieldAwardLightbulb
 
 const RevolutionaryInnovationBanner2026 = () => {
   const innovations = [
@@ -22,7 +22,7 @@ const RevolutionaryInnovationBanner2026 = () => {
     },
     {
       title: "Universal Translation AI",
-      description: "Real-time translation of any language, including non-human communication patterns",
+      description: "Real-time translation of any languageincluding non-human communication patterns",
       icon: <Globe className="w-8 h-8 text-green-400" />,
       impact: "Transformative",
       timeline: "2026 Q4"
@@ -37,10 +37,10 @@ const RevolutionaryInnovationBanner2026 = () => {
   ];
 
   const stats = [
-    { number: "10,000x", label: "Faster Processing", description: "Compared to current AI systems" },
-    { number: "99.9%", label: "Accuracy Rate", description: "Across all prediction models" },
-    { number: "150+", label: "Countries", description: "Global deployment coverage" },
-    { number: "24/7", label: "Availability", description: "Continuous operation guarantee" }
+    { number: "10,000x"label: "Faster Processing"description: "Compared to current AI systems" },
+    { number: "99.9%"label: "Accuracy Rate"description: "Across all prediction models" },
+    { number: "150+"label: "Countries"description: "Global deployment coverage" },
+    { number: "24/7"label: "Availability"description: "Continuous operation guarantee" }
   ];
 
   return (
@@ -83,15 +83,15 @@ const RevolutionaryInnovationBanner2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
         >
-          {innovations.map((innovation, index) => (
+          {innovations.map((innovationindex) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
             >
               <div className="flex items-center justify-between mb-6">
@@ -127,7 +127,7 @@ const RevolutionaryInnovationBanner2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center text-white mb-12">
@@ -135,12 +135,12 @@ const RevolutionaryInnovationBanner2026 = () => {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
+            {stats.map((statindex) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"
               >
                 <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
@@ -155,7 +155,7 @@ const RevolutionaryInnovationBanner2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30 rounded-3xl p-12">

@@ -156,7 +156,8 @@ export default function PartnerManager() {
       toast({
         title: "Error",
         description: "Failed to load partner data",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     } finally {
       setIsLoading(false);
     }
@@ -221,7 +222,8 @@ export default function PartnerManager() {
       toast({
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected",
         description: `The partner has been ${status}.`,
-        variant: status === 'approved' ? "default" : "destructive"});
+        variant: status === 'approved' ? "default" : "destructive",
+      });
       
       // Close the dialog if open
       if (isDetailsOpen && selectedPartner?.id === partnerId) {
@@ -232,7 +234,8 @@ export default function PartnerManager() {
       toast({
         title: "Error",
         description: "Failed to update partner status",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     }
   };
 
@@ -254,7 +257,8 @@ export default function PartnerManager() {
       toast({
         title: "Settings Updated",
         description: "Partner settings have been updated successfully.",
-        variant: "default"});
+        variant: "default",
+      });
       
       setIsSettingsOpen(false);
     } catch (error) {
@@ -262,7 +266,8 @@ export default function PartnerManager() {
       toast({
         title: "Error",
         description: "Failed to update partner settings",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     }
   };
 

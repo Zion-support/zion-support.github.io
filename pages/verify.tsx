@@ -1,84 +1,84 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import Head from 'next/head';
-import { getBadgeLabels } from '../utils/kyc';
-import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc';
-import { VerifiedBadge } from '../components/ui/VerifiedBadge';
+import React, { useEffect, useMemo, useState } from 'react',
+import Head from 'next/head',
+import { getBadgeLabels } from '../utils/kyc',
+import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc',
+import { VerifiedBadge } from '../components/ui/VerifiedBadge',
 
 export default function VerifyPage() {
-  const [userId, setUserId] = useState<string>('demo-user');
-  const [role, setRole] = useState<KycRole>('client');
-  const [profile, setProfile] = useState<KycProfile | null>(null);
-  const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]);
-  const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]);
-  const [fullLegalName, setFullLegalName] = useState('');
-  const [businessName, setBusinessName] = useState('');
-  const [businessReg, setBusinessReg] = useState('');
-  const [busy, setBusy] = useState(false);
-  const [message, setMessage] = useState<string>('');
+  const [userId, setUserId] = useState<string>('demo-user'),
+  const [role, setRole] = useState<KycRole>('client'),
+  const [profile, setProfile] = useState<KycProfile | null>(null),
+  const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]),
+  const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]),
+  const [fullLegalName, setFullLegalName] = useState(''),
+  const [businessName, setBusinessName] = useState(''),
+  const [businessReg, setBusinessReg] = useState(''),
+  const [busy, setBusy] = useState(false),
+  const [message, setMessage] = useState<string>(''),
 
   const progress = useMemo(() => {
-    if (!profile) return 0;
-    const uploaded = new Set((profile.documents || []).map((d) => d.kind));
-    const required = requiredDocs.length;
-    const have = Array.from(uploaded).filter((k) => requiredDocs.includes(k as any)).length;
-    const base = required > 0 ? Math.round((have / required) * 80) : 0; // up to 80%
-    const submitted = profile.status === 'submitted' ? 90 : 0;
-    const approved = profile.status === 'approved' ? 100 : 0;
-    return Math.max(base, submitted, approved);
-  }, [profile, requiredDocs]);
+    if (!profile) return 0,
+    const uploaded = new Set((profile.documents || []).map((d) => d.kind)),
+    const required = requiredDocs.length,
+    const have = Array.from(uploaded).filter((k) => requiredDocs.includes(k as any)).length,
+    const base = required > 0 ? Math.round((have / required) * 80) : 0, // up to 80%
+    const submitted = profile.status === 'submitted' ? 90 : 0,
+    const approved = profile.status === 'approved' ? 100 : 0,
+    return Math.max(base, submitted, approved),
+  }, [profile, requiredDocs]),
 
   async function start() {
-    setBusy(true);
-    setMessage('');
+    setBusy(true),
+    setMessage(''),
     const res = await fetch('/api/kyc/start', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, role, fullLegalName, businessName, businessRegistrationNumber: businessReg })});
-    const data = await res.json();
+      body: JSON.stringify({ userId, role, fullLegalName, businessName, businessRegistrationNumber: businessReg })}),
+    const data = await res.json(),
     if (data.ok) {
-      setProfile(data.profile);
-      setRequiredDocs(data.requiredDocuments);
-      setOptionalDocs(data.optionalDocuments);
+      setProfile(data.profile),
+      setRequiredDocs(data.requiredDocuments),
+      setOptionalDocs(data.optionalDocuments),
     } else {
-      setMessage(data.error || 'Failed to start');
+      setMessage(data.error || 'Failed to start'),
     }
-    setBusy(false);
+    setBusy(false),
   }
 
   async function upload(kind: KycDocumentMeta['kind']) {
-    const filename = prompt(`Enter filename for ${kind}`) || '';
-    if (!filename) return;
-    setBusy(true);
+    const filename = prompt(`Enter filename for ${kind}`) || '',
+    if (!filename) return,
+    setBusy(true),
     const res = await fetch('/api/kyc/upload', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, kind, filename })});
-    const data = await res.json();
+      body: JSON.stringify({ userId, kind, filename })}),
+    const data = await res.json(),
     if (data.ok) {
-      setProfile(data.profile);
+      setProfile(data.profile),
     } else {
-      setMessage(data.error || 'Upload failed');
+      setMessage(data.error || 'Upload failed'),
     }
-    setBusy(false);
+    setBusy(false),
   }
 
   async function submit() {
-    setBusy(true);
+    setBusy(true),
     const res = await fetch('/api/kyc/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId })});
-    const data = await res.json();
+      body: JSON.stringify({ userId })}),
+    const data = await res.json(),
     if (data.ok) {
-      setProfile(data.profile);
-      setMessage('Submitted. AML check performed.');
+      setProfile(data.profile),
+      setMessage('Submitted. AML check performed.'),
     } else {
-      setMessage(data.error || 'Submit failed');
+      setMessage(data.error || 'Submit failed'),
     }
-    setBusy(false);
+    setBusy(false),
   }
 
-  const labels = getBadgeLabels(profile || undefined);
+  const labels = getBadgeLabels(profile || undefined),
 
   return (
     <>
@@ -146,9 +146,9 @@ export default function VerifyPage() {
 
             <section>
               <h2 className="font-semibold mb-2">Required documents</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                 {requiredDocs.map((k) => {
-                  const hasIt = (profile.documents || []).some((d) => d.kind === k);
+                  const hasIt = (profile.documents || []).some((d) => d.kind === k),
                   return (
                     <div key={k} className="flex items-center justify-between border rounded p-3">
                       <div>
@@ -157,7 +157,7 @@ export default function VerifyPage() {
                       </div>
                       <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                     </div>
-                  );
+                  ),
                 })}
               </div>
             </section>
@@ -165,9 +165,9 @@ export default function VerifyPage() {
             {optionalDocs.length > 0 && (
               <section>
                 <h2 className="font-semibold mb-2">Optional documents</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                   {optionalDocs.map((k) => {
-                    const hasIt = (profile.documents || []).some((d) => d.kind === k);
+                    const hasIt = (profile.documents || []).some((d) => d.kind === k),
                     return (
                       <div key={k} className="flex items-center justify-between border rounded p-3">
                         <div>
@@ -176,7 +176,7 @@ export default function VerifyPage() {
                         </div>
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
-                    );
+                    ),
                   })}
                 </div>
               </section>
@@ -191,5 +191,5 @@ export default function VerifyPage() {
         )}
       </main>
     </>
-  );
+  ),
 }

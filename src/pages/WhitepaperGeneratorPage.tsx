@@ -54,7 +54,8 @@ const WhitepaperGeneratorPage: React.FC = () => {
     { id: crypto.randomUUID(), name: 'Private Sale Investors', percentage: '20' },
     { id: crypto.randomUUID(), name: 'Ecosystem Development Fund', percentage: '35' },
     { id: crypto.randomUUID(), name: 'Community Rewards & Airdrops', percentage: '20' },
-    { id: crypto.randomUUID(), name: 'Public Sale Allocation', percentage: '10' }]);
+    { id: crypto.randomUUID(), name: 'Public Sale Allocation', percentage: '10' },
+  ]);
 
   const [isLoading, setIsLoading] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
@@ -110,7 +111,8 @@ const WhitepaperGeneratorPage: React.FC = () => {
     return distributionData
       .map(item => ({
         name: item.name || 'Unnamed',
-        value: parseFloat(item.percentage) || 0}))
+        value: parseFloat(item.percentage) || 0,
+      }))
       .filter(item => item.value > 0);
   }, [distributionData]);
 
@@ -142,14 +144,16 @@ const WhitepaperGeneratorPage: React.FC = () => {
         rewardsLogic,
         governanceLogic,
         legalDisclaimers,
-        distributionBreakdown};
+        distributionBreakdown,
+      };
 
       if (processedDistData.length > 0) {
         apiPayload.distributionData = processedDistData;
       }
 
       const { data, error: funcError } = await supabase.functions.invoke('generate-whitepaper', {
-        body: apiPayload});
+        body: apiPayload,
+      });
 
       if (funcError) {
         throw new Error(`Supabase function error: ${funcError.message}`);
@@ -298,9 +302,11 @@ const WhitepaperGeneratorPage: React.FC = () => {
         tokenSupply,
         sections,
         distributionChartData,
-        distributionBreakdown};
+        distributionBreakdown,
+      };
       const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {
-        body: whitepaperPayload});
+        body: whitepaperPayload,
+      });
 
       if (funcError) throw new Error(`Supabase function error: ${funcError.message}`);
       if (!response) throw new Error('No response received from create-shared-whitepaper function');
@@ -334,7 +340,8 @@ const WhitepaperGeneratorPage: React.FC = () => {
 
     try {
         const { data: response, error: funcError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
-            body: { whitepaperId: currentSharedWhitepaperId, isPublic: newPublicStatus }});
+            body: { whitepaperId: currentSharedWhitepaperId, isPublic: newPublicStatus },
+        });
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`);
         if (!response) throw new Error('No response received from set-shared-whitepaper-public-status function');
         if ((response as any).error) throw new Error(`Error from set-shared-whitepaper-public-status: ${(response as any).error}`);
@@ -366,7 +373,8 @@ const WhitepaperGeneratorPage: React.FC = () => {
             toast.info("Generating a shareable link first to submit to counsel...");
             const whitepaperPayload = { tokenName, tokenSupply, sections, distributionChartData, distributionBreakdown };
             const { data: linkResponse, error: linkFuncError } = await supabase.functions.invoke('create-shared-whitepaper', {
-                body: whitepaperPayload});
+                body: whitepaperPayload,
+            });
             if (linkFuncError) throw new Error(`Failed to create link for counsel: ${linkFuncError.message}`);
             if (!linkResponse) throw new Error('No response received from create-shared-whitepaper function for counsel');
             if ((linkResponse as any).error) throw new Error(`Error from create-shared-whitepaper function: ${(linkResponse as any).error}`);
@@ -383,7 +391,8 @@ const WhitepaperGeneratorPage: React.FC = () => {
         if (currentSharedWhitepaperIsPublic === false) {
             toast.info("Making whitepaper public before submitting to counsel...");
             const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
-                body: { whitepaperId: whitepaperIdToSubmit, isPublic: true }});
+                body: { whitepaperId: whitepaperIdToSubmit, isPublic: true },
+            });
             if (statusError) throw new Error(`Failed to make whitepaper public: ${statusError.message}`);
             if (!statusResponse) throw new Error('No response received from set-shared-whitepaper-public-status function');
             if ((statusResponse as any).error) throw new Error((statusResponse as any).error);
@@ -395,7 +404,8 @@ const WhitepaperGeneratorPage: React.FC = () => {
             body: {
                 whitepaperId: whitepaperIdToSubmit,
                 sharableLink: linkToSubmit, // Corrected variable name
-                tokenName: tokenName}
+                tokenName: tokenName,
+            }
         });
         if (notifyError) throw new Error(`Failed to notify counsel: ${notifyError.message}`);
         if (!notifyResponse) throw new Error('No response received from notify-legal-team function');

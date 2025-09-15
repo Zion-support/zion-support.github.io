@@ -8,7 +8,8 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table";
+  TableRow,
+} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 
 export function EnterprisePricingTable() {
@@ -29,7 +30,9 @@ export function EnterprisePricingTable() {
         { name: "Team collaboration", included: true },
         { name: "API access", included: false },
         { name: "Custom integrations", included: false },
-        { name: "Dedicated success manager", included: false }]},
+        { name: "Dedicated success manager", included: false },
+      ],
+    },
     {
       name: "Business",
       price: "$1,999",
@@ -46,7 +49,9 @@ export function EnterprisePricingTable() {
         { name: "Team collaboration", included: true },
         { name: "API access", included: true },
         { name: "Custom integrations", included: false },
-        { name: "Dedicated success manager", included: false }]},
+        { name: "Dedicated success manager", included: false },
+      ],
+    },
     {
       name: "Enterprise",
       price: "Custom",
@@ -63,7 +68,10 @@ export function EnterprisePricingTable() {
         { name: "Team collaboration", included: true },
         { name: "API access", included: true },
         { name: "Custom integrations", included: true },
-        { name: "Dedicated success manager", included: true }]}];
+        { name: "Dedicated success manager", included: true },
+      ],
+    },
+  ];
 
   return (
     <section id="pricing" className="py-20 px-4 md:px-6">

@@ -54,7 +54,8 @@ export function AIEnhancementButton({
       setGeneratedContent(null);
       toast({
         title: "Content applied",
-        description: "AI-enhanced content has been applied."});
+        description: "AI-enhanced content has been applied.",
+      });
     }
   };
   

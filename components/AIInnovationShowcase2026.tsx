@@ -1,460 +1,479 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Shield, 
+  Brain
+  Cpu
+  Zap
+  Eye
+  MessageSquare
+  BarChart3
+  Shield
   Globe,
-  Brain,
-  Database,
-  Cloud,
-  Lock,
-  Award,
   ChevronRight,
   Play,
-  Download,
-  ExternalLink,
-  BarChart3,
-  Settings,
-  Code,
-  Layers,
-  Network,
-  Bot,
-  Eye,
-  MessageSquare,
-  FileText,
-  Image,
-  Video,
-  Mic,
-  Search,
-  Filter,
-  Calendar,
-  Clock,
-  MapPin,
-  Phone,
-  Mail,
-  Share2,
-  Heart,
-  Bookmark,
-  Flag,
-  AlertCircle,
-  Info,
-  HelpCircle,
-  X,
-  Plus,
-  Edit,
-  Trash2,
-  Copy,
-  Save,
-  Upload,
-  RefreshCw,
-  RotateCcw,
-  ChevronLeft,
-  ChevronDown,
-  ChevronUp,
-  Menu,
-  XCircle,
-  CheckCircle2,
-  AlertTriangle
+  Star,
+  CheckCircle,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Award,
+  Lightbulb,
+  Target,
+  Rocket
 } from 'lucide-react';
 
 const AIInnovationShowcase2026 = () => {
-  const [activeCategory, setActiveCategory] = useState('ai-tools');
-  const [hoveredItem, setHoveredItem] = useState<number | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeInnovationsetActiveInnovation] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
-
-  const categories = {
-    'ai-tools': {
-      title: 'AI Tools & Utilities',
-      description: 'Cutting-edge AI-powered tools for productivity and creativity',
-      icon: Bot,
-      color: 'from-blue-600 to-purple-600'
-    },
-    'machine-learning': {
-      title: 'Machine Learning',
-      description: 'Advanced ML models and frameworks for data science',
-      icon: Brain,
-      color: 'from-green-600 to-teal-600'
-    },
-    'computer-vision': {
-      title: 'Computer Vision',
-      description: 'AI systems that can see and understand visual content',
-      icon: Eye,
-      color: 'from-orange-600 to-red-600'
-    },
-    'natural-language': {
-      title: 'Natural Language Processing',
-      description: 'AI that understands and generates human language',
-      icon: MessageSquare,
-      color: 'from-purple-600 to-pink-600'
-    },
-    'automation': {
-      title: 'Intelligent Automation',
-      description: 'Smart automation solutions for business processes',
-      icon: Settings,
-      color: 'from-cyan-600 to-blue-600'
-    },
-    'analytics': {
-      title: 'AI Analytics',
-      description: 'Data analysis and insights powered by artificial intelligence',
-      icon: BarChart3,
-      color: 'from-indigo-600 to-purple-600'
-    }
-  };
+  }[]);
 
   const innovations = [
     {
-      id: 1,
-      title: 'AI Content Generator Pro',
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
-      category: 'ai-tools',
-      image: '/api/placeholder/400/300',
-      rating: 4.9,
-      users: 25000,
-      price: 'Free',
-      features: ['Multi-language Support', 'SEO Optimization', 'Content Templates', 'Brand Voice Matching'],
-      tags: ['Content Creation', 'AI Writing', 'Marketing', 'SEO'],
-      status: 'Popular',
-      trending: true,
-      demo: true,
-      api: true
+      id: 'neural-interfaces',
+      title: 'Neural Interface Technology',
+      icon: Brain,
+      color: 'from-purple-600 to-indigo-600',
+      description: 'Direct brain-computer interfaces that enable seamless human-AI collaboration',
+      features: [
+        'Real-time thought-to-action translation',
+        'Enhanced cognitive processing',
+        'Intuitive AI interaction',
+        'Memory augmentation systems',
+        'Emotional intelligence integration',
+        'Predictive decision support'
+      ],
+      impact: {
+        efficiency: '300%',
+        accuracy: '99.7%',
+        speed: '10x faster'
+      },
+      applications: [', 'Healthcare', 'Education', 'Gaming', 'Professional Training']
     },
     {
-      id: 2,
-      title: 'Neural Image Enhancer',
-      description: 'Transform low-quality images into high-resolution masterpieces using deep learning algorithms.',
-      category: 'computer-vision',
-      image: '/api/placeholder/400/300',
-      rating: 4.8,
-      users: 18000,
-      price: '$29/month',
-      features: ['Upscaling', 'Noise Reduction', 'Color Enhancement', 'Batch Processing'],
-      tags: ['Image Processing', 'AI Enhancement', 'Photography', 'Graphics'],
-      status: 'New',
-      trending: true,
-      demo: true,
-      api: true
+      id: 'quantum-ai',
+      title: 'Quantum-Enhanced AI',
+      icon: Cpu,
+      color: 'from-blue-600 to-cyan-600',
+      description: 'Quantum computing power combined with artificial intelligence for unprecedented processing capabilities',
+      features: [
+        'Quantum machine learning algorithms',
+        'Exponential data processing',
+        'Complex optimization solutions',
+        'Cryptographic security',
+        'Parallel universe simulations',
+        'Advanced pattern recognition'
+      ],
+      impact: {
+        processing: '1000x faster',
+        complexity: 'Unlimited',
+        security: 'Unbreakable'
+      },
+      applications: ['Drug 'Discovery', 'Climate 'Modeling', 'Financial 'Analysis', 'Space Exploration']
     },
     {
-      id: 3,
-      title: 'Smart Code Assistant',
-      description: 'AI-powered coding companion that helps developers write better code faster.',
-      category: 'ai-tools',
-      image: '/api/placeholder/400/300',
-      rating: 4.7,
-      users: 35000,
-      price: '$19/month',
-      features: ['Code Completion', 'Bug Detection', 'Refactoring', 'Documentation'],
-      tags: ['Development', 'Code Review', 'Productivity', 'AI Assistant'],
-      status: 'Stable',
-      trending: false,
-      demo: true,
-      api: true
+      id: 'emotional-ai',
+      title: 'Emotional Intelligence AI',
+      icon: MessageSquare,
+      color: 'from-pink-600 to-rose-600',
+      description: 'AI systems that understandprocessand respond to human emotions with unprecedented accuracy',
+      features: [
+        'Real-time emotion detection',
+        'Contextual response generation',
+        'Empathy modeling',
+        'Mood-based recommendations',
+        'Therapeutic conversation support',
+        'Cultural sensitivity adaptation'
+      ],
+      impact: {
+        satisfaction: '95%',
+        engagement: '400%',
+        retention: '80%'
+      },
+      applications: ['Customer 'Service', 'Mental 'Health', 'Education'Entertainment']
     },
     {
-      id: 4,
-      title: 'Predictive Analytics Engine',
-      description: 'Advanced machine learning models for business forecasting and trend analysis.',
-      category: 'analytics',
-      image: '/api/placeholder/400/300',
-      rating: 4.6,
-      users: 12000,
-      price: '$99/month',
-      features: ['Time Series Analysis', 'Anomaly Detection', 'Custom Models', 'Real-time Insights'],
-      tags: ['Analytics', 'Predictions', 'Business Intelligence', 'Data Science'],
-      status: 'Enterprise',
-      trending: false,
-      demo: true,
-      api: true
-    },
-    {
-      id: 5,
-      title: 'Voice Synthesis Studio',
-      description: 'Create natural-sounding voiceovers and audio content with AI voice synthesis.',
-      category: 'natural-language',
-      image: '/api/placeholder/400/300',
-      rating: 4.8,
-      users: 15000,
-      price: '$39/month',
-      features: ['Multiple Voices', 'Emotion Control', 'Language Support', 'Audio Export'],
-      tags: ['Voice Synthesis', 'Audio', 'NLP', 'Content Creation'],
-      status: 'Popular',
-      trending: true,
-      demo: true,
-      api: true
-    },
-    {
-      id: 6,
-      title: 'Automated Workflow Designer',
-      description: 'Visual workflow automation tool that learns from your processes and suggests optimizations.',
-      category: 'automation',
-      image: '/api/placeholder/400/300',
-      rating: 4.5,
-      users: 22000,
-      price: '$49/month',
-      features: ['Visual Designer', 'Process Learning', 'Integration Hub', 'Performance Analytics'],
-      tags: ['Workflow', 'Automation', 'Productivity', 'Business Process'],
-      status: 'Stable',
-      trending: false,
-      demo: true,
-      api: true
+      id: 'predictive-analytics',
+      title: 'Predictive Analytics 2.0',
+      icon: BarChart3,
+      color: 'from-green-600 to-emerald-600',
+      description: 'Next-generation predictive systems that forecast trends with near-perfect accuracy',
+      features: [
+        'Multi-dimensional trend analysis',
+        'Real-time market predictions',
+        'Risk assessment algorithms',
+        'Behavioral pattern recognition',
+        'Scenario modeling',
+        'Automated decision recommendations'
+      ],
+      impact: {
+        accuracy: '98.5%',
+        roi: '500%',
+        risk: '90% reduction'
+      },
+      applications: [', 'Finance', 'Marketing'Supply 'Chain', 'Healthcare']
     }
   ];
 
-  const filteredInnovations = innovations.filter(item => item.category === activeCategory);
+  const currentInnovation = innovations[activeInnovation];
+
+  const successStories = [
+    {
+      company: 'MedTech Solutions',
+      industry: 'Healthcare',
+      challenge: 'Diagnostic accuracy and speed',
+      solution: 'Neural Interface Technology',
+      results: '300% faster diagnosis99.7% accuracy',
+      logo: '🏥'
+    },
+    {
+      company: 'Quantum Finance',
+      industry: 'Financial Services',
+      challenge: 'Complex risk modeling',
+      solution: 'Quantum-Enhanced AI',
+      results: '1000x faster calculations90% risk reduction',
+      logo: '💰'
+    },
+    {
+      company: 'EduTech Global',
+      industry: 'Education',
+      challenge: 'Personalized learning',
+      solution: 'Emotional Intelligence AI',
+      results: '95% student satisfaction400% engagement',
+      logo: '🎓'
+    }
+  ];
 
   return (
-    <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%236366F1" fill-opacity="0.1"%3E%3Ccircle cx="20" cy="20" r="1.5"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <motion.div
+          className="absolute top-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1.31],
+            opacity: [0.20.50.2],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute bottom-20 left-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1.21.2],
+            opacity: [0.30.60.3],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-6">
-            <Star className="w-4 h-4 mr-2" />
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
+            <Brain className="w-4 h-4" />
             AI Innovation Showcase 2026
           </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Revolutionary AI
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Innovations
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              {' '}Innovations
             </span>
-          </h2>
-          
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest AI tools, machine learning models, and intelligent automation solutions that are reshaping industries and empowering businesses worldwide.
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover the cutting-edge AI technologies that are reshaping industries and 
+            creating unprecedented opportunities for innovation and growth.
           </p>
         </motion.div>
 
-        {/* Category Navigation */}
+        {/* Innovation Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
-          {Object.entries(categories).map(([key, category]) => {
-            const Icon = category.icon;
+          {innovations.map((innovationindex) => {
+            const Icon = innovation.icon;
             return (
-              <button
-                key={key}
-                onClick={() => setActiveCategory(key)}
-                className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  activeCategory === key
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
-                    : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md hover:shadow-lg'
+              <motion.button
+                key={innovation.id}
+                onClick={() => setActiveInnovation(index)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`p-6 rounded-2xl transition-all duration-300 ${
+                  activeInnovation === index
+                    ? `bg-gradient-to-br ${innovation.color} text-white shadow-xl`
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
               >
-                <Icon className="w-5 h-5 mr-2" />
-                {category.title}
-              </button>
+                <Icon className="w-12 h-12 mx-auto mb-4" />
+                <h3 className="font-bold text-lg mb-2">{innovation.title}</h3>
+                <p className="text-sm opacity-90">{innovation.description}</p>
+              </motion.button>
             );
           })}
         </motion.div>
 
-        {/* Innovation Grid */}
+        {/* Detailed Innovation Display */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={activeCategory}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            key={activeInnovation}
+            initial={{ opacity: 0x: 50 }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: -50 }}
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid lg:grid-cols-2 gap-12 items-center mb-20"
           >
-            {filteredInnovations.map((item, index) => (
+            {/* Innovation Details */}
+            <div>
               <motion.div
-                key={item.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                onHoverStart={() => setHoveredItem(item.id)}
-                onHoverEnd={() => setHoveredItem(null)}
-                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+                transition={{ duration: 0.6delay: 0.1 }}
+                className="mb-8"
               >
-                {/* Status Badge */}
-                <div className="absolute top-4 left-4 z-10">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    item.status === 'New' ? 'bg-green-100 text-green-800' :
-                    item.status === 'Popular' ? 'bg-blue-100 text-blue-800' :
-                    item.status === 'Enterprise' ? 'bg-purple-100 text-purple-800' :
-                    'bg-gray-100 text-gray-800'
-                  }`}>
-                    {item.status}
-                  </span>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${currentInnovation.color} rounded-2xl flex items-center justify-center`}>
+                    <currentInnovation.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h2 className="text-3xl font-bold text-white">
+                      {currentInnovation.title}
+                    </h2>
+                    <p className="text-gray-400">
+                      Revolutionary AI Technology
+                    </p>
+                  </div>
                 </div>
+                <p className="text-xl text-gray-300 mb-8">
+                  {currentInnovation.description}
+                </p>
+              </motion.div>
 
-                {/* Trending Badge */}
-                {item.trending && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 flex items-center">
-                      <TrendingUp className="w-3 h-3 mr-1" />
-                      Trending
+              {/* Features */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6delay: 0.2 }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
+              >
+                {currentInnovation.features.map((featureindex) => (
+                  <div key={index} className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span className="text-lg">{feature}</span>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* Impact Metrics */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6delay: 0.3 }}
+                className="grid grid-cols-3 gap-6 mb-8"
+              >
+                {Object.entries(currentInnovation.impact).map(([keyvalue]index) => (
+                  <div key={key} className="text-center">
+                    <div className="text-3xl font-bold text-white mb-1">
+                      {value}
+                    </div>
+                    <div className="text-sm text-gray-400 capitalize">
+                      {key.replace(/([A-Z])/g' $1').trim()}
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* Applications */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6delay: 0.4 }}
+                className="mb-8"
+              >
+                <h4 className="text-lg font-semibold text-white mb-4">Key Applications:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {currentInnovation.applications.map((appindex) => (
+                    <span
+                      key={index}
+                      className="px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300"
+                    >
+                      {app}
                     </span>
-                  </div>
-                )}
-
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                  
-                  {/* Demo Badge */}
-                  {item.demo && (
-                    <div className="absolute bottom-4 left-4">
-                      <span className="px-2 py-1 bg-white/90 text-gray-800 text-xs rounded-full flex items-center">
-                        <Play className="w-3 h-3 mr-1" />
-                        Demo Available
-                      </span>
-                    </div>
-                  )}
+                  ))}
                 </div>
+              </motion.div>
 
-                {/* Content */}
-                <div className="p-6">
-                  {/* Title and Rating */}
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                      {item.title}
-                    </h3>
-                    <div className="flex items-center text-yellow-500">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm font-medium text-gray-600">{item.rating}</span>
-                    </div>
-                  </div>
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6delay: 0.5 }}
+                className="flex flex-wrap gap-4"
+              >
+                <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
+                  <Play className="w-5 h-5" />
+                  See in Action
+                </button>
+                <button className="flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300">
+                  Get Started
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </motion.div>
+            </div>
 
-                  {/* Description */}
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                    {item.description}
+            {/* Visual Representation */}
+            <motion.div
+              initial={{ opacity: 0scale: 0.8 }}
+              animate={{ opacity: 1scale: 1 }}
+              transition={{ duration: 0.8delay: 0.3 }}
+              className="relative"
+            >
+              <div className={`bg-gradient-to-br ${currentInnovation.color} p-8 rounded-3xl shadow-2xl`}>
+                <div className="text-center text-white">
+                  <currentInnovation.icon className="w-32 h-32 mx-auto mb-6" />
+                  <h3 className="text-2xl font-bold mb-4">
+                    {currentInnovation.title}
+                  </h3>
+                  <p className="text-lg opacity-90 mb-6">
+                    {currentInnovation.description}
                   </p>
-
-                  {/* Features */}
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-2">
-                      {item.features.slice(0, 2).map((feature, idx) => (
-                        <span
-                          key={idx}
-                          className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded-md"
-                        >
-                          {feature}
-                        </span>
-                      ))}
-                      {item.features.length > 2 && (
-                        <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-md">
-                          +{item.features.length - 2} more
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Stats */}
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <div className="flex items-center">
-                      <Users className="w-4 h-4 mr-1" />
-                      {item.users.toLocaleString()} users
-                    </div>
-                    <div className="font-medium text-gray-900">
-                      {item.price}
-                    </div>
-                  </div>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {item.tags.slice(0, 3).map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
-                      >
-                        {tag}
-                      </span>
+                  
+                  {/* Interactive Elements */}
+                  <div className="grid grid-cols-2 gap-4">
+                    {Object.entries(currentInnovation.impact).map(([keyvalue]index) => (
+                      <div key={key} className="bg-white/20 rounded-xl p-4">
+                        <div className="text-2xl font-bold mb-1">{value}</div>
+                        <div className="text-sm opacity-80 capitalize">
+                          {key.replace(/([A-Z])/g' $1').trim()}
+                        </div>
+                      </div>
                     ))}
                   </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex gap-2">
-                    <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
-                      <Play className="w-4 h-4 mr-2" />
-                      Try Demo
-                    </button>
-                    <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-                      <Bookmark className="w-4 h-4" />
-                    </button>
-                  </div>
-
-                  {/* API Badge */}
-                  {item.api && (
-                    <div className="mt-3 flex items-center justify-center">
-                      <span className="px-3 py-1 bg-green-100 text-green-800 text-xs rounded-full flex items-center">
-                        <Code className="w-3 h-3 mr-1" />
-                        API Available
-                      </span>
-                    </div>
-                  )}
                 </div>
-
-                {/* Hover Overlay */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ 
-                    opacity: hoveredItem === item.id ? 1 : 0 
-                  }}
-                  className="absolute inset-0 bg-gradient-to-t from-blue-600/90 to-purple-600/90 flex items-center justify-center"
-                >
-                  <div className="text-center text-white p-6">
-                    <h4 className="text-xl font-bold mb-2">Explore Innovation</h4>
-                    <p className="text-sm mb-4">Discover how this AI solution can transform your workflow</p>
-                    <div className="flex gap-2">
-                      <button className="bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                        View Details
-                      </button>
-                      <button className="border border-white text-white px-4 py-2 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors">
-                        <ExternalLink className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                </motion.div>
+              </div>
+              
+              {/* Floating Elements */}
+              <motion.div
+                className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
+                animate={{
+                  y: [0-10],
+                  rotate: [0180360],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <Star className="w-4 h-4 text-yellow-800" />
               </motion.div>
-            ))}
+              
+              <motion.div
+                className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full"
+                animate={{
+                  scale: [1.21],
+                  opacity: [0.710.7],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+            </motion.div>
           </motion.div>
         </AnimatePresence>
 
-        {/* Call to Action */}
+        {/* Success Stories */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mt-16"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
+          className="mb-20"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4">Ready to Innovate with AI?</h3>
-            <p className="text-xl mb-6 opacity-90">
-              Join thousands of developers and businesses already using our AI innovations
+          <h3 className="text-3xl font-bold text-white text-center mb-12">
+            Real-World Success Stories
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {successStories.map((storyindex) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6delay: 0.7 + index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+              >
+                <div className="text-4xl mb-4">{story.logo}</div>
+                <h4 className="text-xl font-bold text-white mb-2">
+                  {story.company}
+                </h4>
+                <p className="text-gray-400 text-sm mb-4">
+                  {story.industry}
+                </p>
+                <div className="mb-4">
+                  <p className="text-sm text-gray-300 mb-2">
+                    <strong>Challenge:</strong> {story.challenge}
+                  </p>
+                  <p className="text-sm text-gray-300 mb-2">
+                    <strong>Solution:</strong> {story.solution}
+                  </p>
+                  <p className="text-sm text-green-400 font-semibold">
+                    <strong>Results:</strong> {story.results}
+                  </p>
+                </div>
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Final CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.8 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
+            <h3 className="text-4xl font-bold text-white mb-6">
+              Ready to Implement AI Innovation?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join the AI revolution and transform your business with cutting-edge 
+              artificial intelligence solutions tailored to your needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors flex items-center justify-center">
-                <Star className="w-5 h-5 mr-2" />
-                Start Building
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                Start Your AI Journey
+                <Rocket className="w-5 h-5" />
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors">
-                View Documentation
+              <button className="flex items-center gap-2 bg-white/10 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-300">
+                Schedule Demo
+                <Users className="w-5 h-5" />
               </button>
             </div>
           </div>

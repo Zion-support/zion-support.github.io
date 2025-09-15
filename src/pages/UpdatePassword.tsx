@@ -15,7 +15,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage,
+} from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
 import { cleanupAuthState } from "@/utils/authUtils";
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -27,10 +28,12 @@ const updatePasswordSchema = z
       .string()
       .min(8, "Password must be at least 8 characters")
       .max(64, "Password must be less than 64 characters"),
-    confirmPassword: z.string()})
+    confirmPassword: z.string(),
+  })
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
-    path: ["confirmPassword"]});
+    path: ["confirmPassword"],
+  });
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
 
@@ -46,7 +49,9 @@ export default function UpdatePassword() {
     resolver: zodResolver(updatePasswordSchema),
     defaultValues: {
       password: "",
-      confirmPassword: ""}});
+      confirmPassword: "",
+    },
+  });
 
   useEffect(() => {
     // Extract access token from URL hash on the client
@@ -76,17 +81,20 @@ export default function UpdatePassword() {
       // Set the session with the access token
       await supabase.auth.setSession({
         access_token: accessToken,
-        refresh_token: ''});
+        refresh_token: '',
+      });
 
       // Update the password
       const { error } = await supabase.auth.updateUser({
-        password: data.password});
+        password: data.password,
+      });
 
       if (error) {
         toast({
           title: "Password update failed",
           description: error.message,
-          variant: "destructive"});
+          variant: "destructive",
+        });
         setError(error.message);
         return;
       }
@@ -95,7 +103,8 @@ export default function UpdatePassword() {
       setSuccess(true);
       toast({
         title: "Password updated successfully",
-        description: "You can now log in with your new password."});
+        description: "You can now log in with your new password.",
+      });
 
       // Clean auth state and redirect after a delay
       cleanupAuthState();
@@ -107,7 +116,8 @@ export default function UpdatePassword() {
       toast({
         title: "Password update failed",
         description: error.message || "An unexpected error occurred",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       setError(error.message || "An unexpected error occurred");
     } finally {
       setIsLoading(false);

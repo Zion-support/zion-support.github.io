@@ -21,7 +21,8 @@ export function IntegrationCard({
   icon,
   status = "disconnected",
   href,
-  onConnect}: IntegrationCardProps) {
+  onConnect,
+}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
       <CardHeader className="pb-2">

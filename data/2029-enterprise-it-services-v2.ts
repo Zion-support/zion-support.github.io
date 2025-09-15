@@ -39,7 +39,10 @@ export interface EnterpriseITService2029V2 {
     address: string;
   };
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
 export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
   {
     id: 'autonomous-devops-platform',

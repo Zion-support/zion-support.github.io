@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Settings, 
-  BarChart3, 
-  Users, 
-  TrendingUp, 
-  Eye, 
-  Heart, 
+  Settings
+  BarChart3
+  Users
+  TrendingUp
+  Eye
+  Heart
   Share2,
   Download,
   Edit,
@@ -36,9 +37,9 @@ import {
 } from 'lucide-react';
 
 const AdvancedContentManagementSystem = () => {
-  const [activeTab, setActiveTab] = useState('dashboard');
-  const [isVisible, setIsVisible] = useState(false);
-  const [contentStats, setContentStats] = useState({
+  const [activeTabsetActiveTab] = useState('dashboard');
+  const [isVisiblesetIsVisible] = useState(false);
+  const [contentStatsetContentStats] = useState({
     totalContent: 1247,
     publishedContent: 1156,
     draftContent: 91,
@@ -51,17 +52,17 @@ const AdvancedContentManagementSystem = () => {
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const contentTypes = [
-    { id: 'all', name: 'All Content', count: 1247, icon: Database, color: 'blue' },
-    { id: 'blog', name: 'Blog Posts', count: 342, icon: Globe, color: 'green' },
-    { id: 'case-studies', name: 'Case Studies', count: 156, icon: Target, color: 'purple' },
-    { id: 'tutorials', name: 'Tutorials', count: 289, icon: Brain, color: 'orange' },
-    { id: 'research', name: 'Research', count: 123, icon: Cpu, color: 'cyan' },
-    { id: 'videos', name: 'Videos', count: 89, icon: Activity, color: 'red' },
-    { id: 'whitepapers', name: 'Whitepapers', count: 78, icon: Shield, color: 'indigo' },
-    { id: 'tools', name: 'Tools', count: 170, icon: Zap, color: 'yellow' }
+    { id: ''all', 'name: 'All 'Content', 'count: 1247icon: Databasecolor: 'blue' },
+    { id: ''blog', 'name: 'Blog 'Posts', 'count: 342icon: Globecolor: 'green' },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'count: 156icon: Targetcolor: 'purple' },
+    { id: ''tutorials', 'name: ''Tutorials', 'count: 289icon: Braincolor: 'orange' },
+    { id: ''research', 'name: ''Research', 'count: 123icon: Cpucolor: 'cyan' },
+    { id: ''videos', 'name: ''Videos', 'count: 89icon: Activitycolor: 'red' },
+    { id: ''whitepapers', 'name: ''Whitepapers', 'count: 78icon: Shieldcolor: 'indigo' },
+    { id: ''tools', 'name: ''Tools', 'count: 170icon: Zapcolor: 'yellow' }
   ];
 
   const recentContent = [
@@ -86,7 +87,7 @@ const AdvancedContentManagementSystem = () => {
       engagement: 456,
       publishedAt: '2025-01-14',
       author: 'Prof. Michael Rodriguez',
-      tags: ['quantum', 'computing', 'applications'],
+      tags: [', 'quantum', 'computing'applications'],
       featured: true
     },
     {
@@ -98,7 +99,7 @@ const AdvancedContentManagementSystem = () => {
       engagement: 0,
       publishedAt: null,
       author: 'Emily Watson',
-      tags: ['neural-interface', 'guide', 'tutorial'],
+      tags: ['neural-'interface', 'guide'tutorial'],
       featured: false
     },
     {
@@ -110,33 +111,33 @@ const AdvancedContentManagementSystem = () => {
       engagement: 234,
       publishedAt: '2025-01-13',
       author: 'Alex Thompson',
-      tags: ['edge-ai', 'performance', 'optimization'],
+      tags: ['edge-'ai', 'performance'optimization'],
       featured: false
     }
   ];
 
   const analytics = {
     viewsOverTime: [
-      { date: '2025-01-01', views: 12000 },
-      { date: '2025-01-02', views: 15000 },
-      { date: '2025-01-03', views: 18000 },
-      { date: '2025-01-04', views: 22000 },
-      { date: '2025-01-05', views: 25000 },
-      { date: '2025-01-06', views: 28000 },
-      { date: '2025-01-07', views: 32000 }
+      { date: '2025-01-01'views: 12000 },
+      { date: '2025-01-02'views: 15000 },
+      { date: '2025-01-03'views: 18000 },
+      { date: '2025-01-04'views: 22000 },
+      { date: '2025-01-05'views: 25000 },
+      { date: '2025-01-06'views: 28000 },
+      { date: '2025-01-07'views: 32000 }
     ],
     topContent: [
-      { title: 'AI 2026: The Future of Autonomous Business Operations', views: 15420, engagement: 892 },
-      { title: 'Quantum Computing Breakthrough: Real-World Applications', views: 8930, engagement: 456 },
-      { title: 'Edge AI Computing: Performance Optimization', views: 6780, engagement: 234 },
-      { title: 'Neural Interface Revolution: A Complete Guide', views: 5420, engagement: 189 }
+      { title: 'AI 2026: The Future of Autonomous Business 'Operations', 'views: 15420engagement: 892 },
+      { title: 'Quantum Computing Breakthrough: Real-World 'Applications', 'views: 8930engagement: 456 },
+      { title: 'Edge AI Computing: Performance 'Optimization', 'views: 6780engagement: 234 },
+      { title: 'Neural Interface Revolution: A Complete 'Guide', 'views: 5420engagement: 189 }
     ],
     engagementByType: [
-      { type: 'Blog Posts', engagement: 45.2 },
-      { type: 'Case Studies', engagement: 32.1 },
-      { type: 'Tutorials', engagement: 28.7 },
-      { type: 'Research', engagement: 24.3 },
-      { type: 'Videos', engagement: 38.9 }
+      { type: 'Blog 'Posts', 'engagement: 45.2 },
+      { type: 'Case 'Studies', 'engagement: 32.1 },
+      { type: ''Tutorials', 'engagement: 28.7 },
+      { type: ''Research', 'engagement: 24.3 },
+      { type: ''Videos', 'engagement: 38.9 }
     ]
   };
 
@@ -160,7 +161,7 @@ const AdvancedContentManagementSystem = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
@@ -170,7 +171,7 @@ const AdvancedContentManagementSystem = () => {
                 Advanced Content Management System
               </h1>
               <p className="text-gray-600">
-                Manage, analyze, and optimize your content ecosystem
+                Manageanalyzeand optimize your content ecosystem
               </p>
             </div>
             <div className="flex items-center space-x-4">
@@ -189,16 +190,16 @@ const AdvancedContentManagementSystem = () => {
         {/* Stats Overview */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
         >
           {[
-            { label: 'Total Content', value: contentStats.totalContent, icon: Database, color: 'blue' },
-            { label: 'Total Views', value: contentStats.totalViews.toLocaleString(), icon: Eye, color: 'green' },
-            { label: 'Engagement', value: contentStats.totalEngagement.toLocaleString(), icon: Heart, color: 'purple' },
-            { label: 'Avg. Engagement Rate', value: `${contentStats.avgEngagementRate}%`, icon: TrendingUp, color: 'orange' }
-          ].map((stat, index) => (
+            { label: 'Total 'Content', 'value: contentStats.totalContenticon: Databasecolor: 'blue' },
+            { label: 'Total 'Views', 'value: contentStats.totalViews.toLocaleString()icon: Eyecolor: 'green' },
+            { label: ''Engagement', 'value: contentStats.totalEngagement.toLocaleString()icon: Heartcolor: 'purple' },
+            { label: 'Avg. Engagement 'Rate', 'value: `${contentStats.avgEngagementRate}%`icon: TrendingUpcolor: 'orange' }
+          ].map((statindex) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
               <div className="flex items-center justify-between">
                 <div>
@@ -216,17 +217,17 @@ const AdvancedContentManagementSystem = () => {
         {/* Navigation Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-8"
         >
           <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
             {[
-              { id: 'dashboard', name: 'Dashboard', icon: BarChart3 },
-              { id: 'content', name: 'Content', icon: Database },
-              { id: 'analytics', name: 'Analytics', icon: TrendingUp },
-              { id: 'users', name: 'Users', icon: Users },
-              { id: 'settings', name: 'Settings', icon: Settings }
+              { id: ''dashboard', 'name: ''Dashboard', 'icon: BarChart3 },
+              { id: ''content', 'name: ''Content', 'icon: Database },
+              { id: ''analytics', 'name: ''Analytics', 'icon: TrendingUp },
+              { id: ''users', 'name: ''Users', 'icon: Users },
+              { id: ''settings', 'name: ''Settings', 'icon: Settings }
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -247,8 +248,8 @@ const AdvancedContentManagementSystem = () => {
         {/* Content Types Overview */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="mb-8"
         >
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Content Types</h2>
@@ -270,8 +271,8 @@ const AdvancedContentManagementSystem = () => {
         {/* Recent Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="bg-white rounded-xl shadow-lg p-6"
         >
           <div className="flex items-center justify-between mb-6">
@@ -366,8 +367,8 @@ const AdvancedContentManagementSystem = () => {
         {/* Analytics Charts Placeholder */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 1.0 }}
           className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6"
         >
           <div className="bg-white rounded-xl shadow-lg p-6">

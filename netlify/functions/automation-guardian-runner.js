@@ -8,7 +8,8 @@ function runNode(relPath, args = []) {
 }
 
 exports.config = {
-  schedule: '*/10 * * * *'};
+  schedule: '*/10 * * * *',
+};
 
 exports.handler = async () => {
   const logs = [];
@@ -33,7 +34,8 @@ exports.handler = async () => {
 
   // Commit and push
   logStep('git:sync', () => runNode('automation/git-sync.cjs'));
-=  // Run the automation guardian
+========
+  // Run the automation guardian
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'));
 
   // Attempt to push any changes

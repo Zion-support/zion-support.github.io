@@ -549,6 +549,4 @@ export default function ComprehensiveServicesShowcase2025() {
         </section>
     </>
   );
-};
-
-export default ComprehensiveServicesShowcase2025;
+  };

@@ -86,14 +86,24 @@ export function useContractTemplates() {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template saved",
+<<<<<<< HEAD
         description: "Contract template has been successfully saved."});
+=======
+        description: "Contract template has been successfully saved.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     },
     onError: (error: Error) => {
       console.error("Error saving template:", error);
       toast({
         title: "Failed to save template",
         description: "There was an error saving your contract template.",
+<<<<<<< HEAD
         variant: "destructive"});
+=======
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     }
   });
 
@@ -149,14 +159,24 @@ export function useContractTemplates() {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template updated",
+<<<<<<< HEAD
         description: "Contract template has been successfully updated."});
+=======
+        description: "Contract template has been successfully updated.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     },
     onError: (error: Error) => {
       console.error("Error updating template:", error);
       toast({
         title: "Failed to update template",
         description: "There was an error updating your contract template.",
+<<<<<<< HEAD
         variant: "destructive"});
+=======
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     }
   });
 
@@ -183,14 +203,24 @@ export function useContractTemplates() {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template deleted",
+<<<<<<< HEAD
         description: "Contract template has been successfully deleted."});
+=======
+        description: "Contract template has been successfully deleted.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     },
     onError: (error: Error) => {
       console.error("Error deleting template:", error);
       toast({
         title: "Failed to delete template",
         description: "There was an error deleting your contract template.",
+<<<<<<< HEAD
         variant: "destructive"});
+=======
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     }
   });
 
@@ -225,14 +255,24 @@ export function useContractTemplates() {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Default template set",
+<<<<<<< HEAD
         description: "Default contract template has been updated."});
+=======
+        description: "Default contract template has been updated.",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     },
     onError: (error: Error) => {
       console.error("Error setting default template:", error);
       toast({
         title: "Failed to set default template",
         description: "There was an error setting your default contract template.",
+<<<<<<< HEAD
         variant: "destructive"});
+=======
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
     }
   });
 

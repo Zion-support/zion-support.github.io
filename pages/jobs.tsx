@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import Seo from '../components/seo/Seo';
-import { JobPostingJsonLd } from 'next-seo';
+import type { NextPage } from 'next',
+import Seo from '../components/seo/Seo',
+import { JobPostingJsonLd } from 'next-seo',
 
 const Jobs: NextPage = () => {
   const job = {
@@ -17,7 +17,7 @@ const Jobs: NextPage = () => {
       name: 'Zion Tech Solutions',
       sameAs: 'https://ziontechgroup.netlify.app',
       logo: 'https://ziontechgroup.netlify.app/logo.png'},
-    jobLocationType: 'TELECOMMUTE'} as const;
+    jobLocationType: 'TELECOMMUTE'} as const,
 
   return (
     <div>
@@ -38,7 +38,7 @@ const Jobs: NextPage = () => {
         <p>{job.description}</p>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default Jobs;
+export default Jobs,

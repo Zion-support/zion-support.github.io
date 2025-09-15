@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Filter, Grid, List, ArrowRight, ChevronRight,
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon
-} from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
+} from 'lucide-react',
+import SmartHeader from '../components/SmartHeader',
+import SmartFooter from '../components/SmartFooter',
 
 export default function ExplorePage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('popularity'),
 
   const categories = [
     {
@@ -106,7 +106,7 @@ export default function ExplorePage() {
       serviceCount: 17,
       featured: false
     }
-  ];
+  ],
 
   const featuredServices = [
     {
@@ -149,29 +149,28 @@ export default function ExplorePage() {
       icon: Rocket,
       color: 'from-indigo-500 to-purple-500'
     }
-  ];
+  ],
 
   // Filter categories based on search
   const filteredCategories = categories.filter(category => {
     const matchesSearch = category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         category.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory;
-    return matchesSearch && matchesFilter;
-  });
+                         category.description.toLowerCase().includes(searchTerm.toLowerCase()),
+    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory,
+    return matchesSearch && matchesFilter,
+  }),
 
   // Sort categories
   const sortedCategories = [...filteredCategories].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
-        return b.serviceCount - a.serviceCount;
+        return b.serviceCount - a.serviceCount,
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name),
       case 'featured':
-        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-      default:
-        return 0;
+        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0),
+      default: return 0
     }
-  });
+  }),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -524,7 +523,7 @@ export default function ExplorePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Explore?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
@@ -551,5 +550,5 @@ export default function ExplorePage() {
 
       <SmartFooter />
     </div>
-  );
+  )
 }
