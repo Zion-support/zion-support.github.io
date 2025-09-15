@@ -1,14 +1,5 @@
 import React from 'react';
 <<<<<<< HEAD
-            </p>
-            <ul className="text-emerald-600 space-y-2 mb-6 text-sm">
-              <li>• Precision gene targeting</li>
-              <li>• Minimal off-target effects</li>
-              <li>• Therapeutic applications</li>
-            </ul>
-            <a href="#gene-editing" className="block w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
-              Learn More →
-            </a>
 =======
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -105,7 +96,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
                 </button>
               </div>
             </div>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           </div>
         </div>
 
@@ -215,11 +205,10 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
           </div>
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
         </div>
       </div>
     </>
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 
 const AdvancedBiotechSolutions2026: React.FC = () => {
@@ -530,7 +519,6 @@ const AdvancedBiotechSolutions2026: React.FC = () => {
         </div>
       </div>
     </div>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
   );
 };
 

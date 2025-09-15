@@ -246,3 +246,4 @@ export default notifications;
 
 export const notificationManager = new NotificationManager();
 export default notificationManager;
+export default notificationManager;

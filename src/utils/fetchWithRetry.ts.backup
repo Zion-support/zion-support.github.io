@@ -25,6 +25,7 @@ const defaultOptions: Required<FetchWithRetryOptions> = {
 };
 
 =======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 // Fetch with retry utility for better error handling
 interface FetchWithRetryOptions {
   retries?: number;
@@ -32,6 +33,8 @@ interface FetchWithRetryOptions {
   timeout?: number;
 }
 
+<<<<<<< HEAD
+=======
 >>>>>>> main
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
@@ -39,7 +42,7 @@ interface FetchWithRetryOptions {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 export const fetchWithRetry = async (
   url: string,
   options: RequestInit & FetchWithRetryOptions = {}
@@ -76,13 +79,12 @@ export const fetchWithRetry = async (
       }
 
 =======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   const { retries = 3, delay = 1000, timeout = 10000, ...fetchOptions } = options;
   
-=======
 /**
  * Fetch utility with retry logic and error handling
  */
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 
 interface FetchWithRetryOptions {
   retries?: number;
@@ -106,9 +108,6 @@ export const fetchWithRetry = async (
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), timeout);
 
-<<<<<<< HEAD
-  const attemptFetch = async (attempt: number): Promise<Response> => {
-=======
   try {
     const response = await fetch(url, {
       ...options,
@@ -129,12 +128,10 @@ export async function fetchWithRetry(
   const { retry = {}, timeout = 30000, ...fetchOptions } = options;
   const retryOptions = { ...DEFAULT_RETRY_OPTIONS, ...retry };
 
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
   let lastError: Error;
   let attempt = 0;
 
   while (attempt <= retryOptions.maxRetries) {
->>>>>>> cursor/create-and-deploy-new-content-cc9d
     try {
       const response = await fetch(url, {
         ...fetchOptions,
@@ -152,6 +149,8 @@ export async function fetchWithRetry(
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
       return response;
 =======
@@ -164,7 +163,7 @@ export async function fetchWithRetry(
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       return response;
     } catch (error) {
       lastError = error as Error;
@@ -176,55 +175,24 @@ export async function fetchWithRetry(
 <<<<<<< HEAD
 <<<<<<< HEAD
       // Don't retry on the last attempt
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       if (attempt === retries) {
-        break;
-      }
-
-      // Calculate delay based on backoff strategy
-      const currentDelay = backoff === 'exponential' 
-        ? delay * Math.pow(2, attempt)
-        : delay * (attempt + 1);
-
-      // Wait before retrying
-      await new Promise(resolve => setTimeout(resolve, currentDelay));
-    }
-  }
-
-  throw lastError || new Error('Fetch failed after all retries');
-=======
-      if (attempt === retries) {
-=======
->>>>>>> cursor/create-and-deploy-new-content-cc9d
     } catch (error) {
       clearTimeout(timeoutId);
 
-<<<<<<< HEAD
-      if (attempt < retries) {
-        console.warn(`Fetch attempt ${attempt + 1} failed, retrying in ${retryDelay}ms:`, error);
-        await new Promise(resolve => setTimeout(resolve, retryDelay * attempt));
-        return attemptFetch(attempt + 1);
-=======
       // Check if we should retry this error
       if (attempt === retryOptions.maxRetries || !retryOptions.retryCondition(lastError, attempt)) {
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
         throw lastError;
->>>>>>> cursor/create-and-deploy-new-content-cc9d
       }
 
       throw error;
     }
   };
 
-<<<<<<< HEAD
-  return attemptFetch(0);
-=======
     attempt++;
   }
 
   throw lastError!;
-<<<<<<< HEAD
->>>>>>> main
-=======
 }
 
 export async function fetchJSON<T>(
@@ -327,6 +295,8 @@ export const put = (url: string, body?: any, options: Omit<FetchOptions, 'method
 
 export const del = (url: string, options: Omit<FetchOptions, 'method'> = {}): Promise<Response> => {
   return fetchWithRetry(url, { ...options, method: 'DELETE' });
+<<<<<<< HEAD
+=======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
@@ -335,7 +305,7 @@ export const del = (url: string, options: Omit<FetchOptions, 'method'> = {}): Pr
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 };
 
 export default fetchWithRetry;

@@ -217,6 +217,4 @@ const NewContentShowcase: React.FC = () => {
 };
 
 export { NewContentShowcase };
-export { NewContentShowcase };
-export { NewContentShowcase };
 export default NewContentShowcase;

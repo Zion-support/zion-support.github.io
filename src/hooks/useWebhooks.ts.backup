@@ -11,18 +11,17 @@ import { useState, useEffect, useCallback } from 'react';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 =======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 import { useState, useEffect, useCallback } from 'react';
->>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
+import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+<<<<<<< HEAD
 =======
-import { useState, useEffect, useCallback } from 'react';
->>>>>>> cursor/create-and-deploy-new-content-d3a3
-=======
-import { useState, useEffect, useCallback } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 import { useState, useEffect, useCallback } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 
 export interface Webhook {
   id: string;
@@ -45,26 +44,25 @@ export interface Webhook {
   lastTriggered?: Date;
   successCount: number;
 =======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   isActive: boolean;
   createdAt: string;
   lastTriggered?: string;
->>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
+  isActive: boolean;
+  createdAt: string;
+  lastTriggered?: string;
+  isActive: boolean;
+  createdAt: string;
+  lastTriggered?: string;
+<<<<<<< HEAD
 =======
-  isActive: boolean;
-  createdAt: string;
-  lastTriggered?: string;
->>>>>>> cursor/create-and-deploy-new-content-d3a3
-=======
-  isActive: boolean;
-  createdAt: string;
-  lastTriggered?: string;
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
   isActive: boolean;
   createdAt: string;
   lastTriggered?: string;
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   failureCount: number;
 }
 
@@ -120,7 +118,7 @@ export const useWebhooks = (options: WebhookOptions = {}): UseWebhooksReturn => 
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   createdAt: string;
   lastAttempt?: string;
   error?: string;
@@ -146,7 +144,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [events, setEvents] = useState<WebhookEvent[]>([]);
   const [loading, setLoading] = useState(false);
@@ -170,22 +168,21 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 
   // Fetch webhooks from API
 =======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 
   // Fetch webhooks
->>>>>>> 093b5ff1e91d61aea3b0c167e337f742d290f1c7
+
+  // Fetch webhooks
+
+  // Fetch webhooks
+<<<<<<< HEAD
 =======
-
-  // Fetch webhooks
->>>>>>> cursor/create-and-deploy-new-content-d3a3
-=======
-
-  // Fetch webhooks
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 
   // Fetch webhooks
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   const fetchWebhooks = useCallback(async () => {
     try {
       setLoading(true);
@@ -207,7 +204,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       }
       
       const data = await response.json();
@@ -238,7 +235,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   // Fetch webhook events
   const fetchEvents = useCallback(async (webhookId?: string) => {
     try {
@@ -261,7 +258,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       }
       
       const data = await response.json();
@@ -287,7 +284,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       setError(err instanceof Error ? err.message : 'Failed to fetch webhook events');
     } finally {
       setLoading(false);
@@ -310,7 +307,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       setError(null);
       
       const response = await fetch('/api/webhooks', {
@@ -335,7 +332,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       }
       
       const newWebhook = await response.json();
@@ -364,7 +361,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       setError(err instanceof Error ? err.message : 'Failed to create webhook');
       throw err;
     } finally {
@@ -388,7 +385,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       setError(null);
       
       const response = await fetch(`/api/webhooks/${id}`, {
@@ -429,7 +426,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
         throw new Error('Failed to update webhook');
       }
       
@@ -462,7 +459,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       setError(null);
       
       const response = await fetch(`/api/webhooks/${id}`, {
@@ -538,7 +535,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
         throw new Error('Failed to delete webhook');
       }
       
@@ -570,7 +567,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
         method: 'POST',
       });
       
@@ -638,7 +635,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
         throw new Error('Failed to test webhook');
       }
       
@@ -701,7 +698,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   useEffect(() => {
     fetchWebhooks();
     fetchEvents();
@@ -736,7 +733,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   return {
     webhooks,
     events,
@@ -765,7 +762,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
     fetchWebhooks,
     fetchEvents,
     createWebhook,
@@ -785,7 +782,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   };
 };
 

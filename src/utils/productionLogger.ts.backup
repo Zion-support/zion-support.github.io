@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+// Production logger utility
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,7 +20,7 @@
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -34,8 +35,6 @@ const LOG_LEVELS: LogLevel = {
     }
   }
 <<<<<<< HEAD
-}
-
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,13 +94,12 @@ const LOG_LEVELS: LogLevel = {
     if (!this.isDevelopment) {
       this.sendToRemote('DEBUG', message, data);
 =======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   DEBUG: 'debug',
 };
-=======
 /**
  * Production-safe logging utilities
  */
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
@@ -113,7 +111,6 @@ interface LogEntry {
   url?: string;
   userAgent?: string;
 }
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 
 class ProductionLogger {
   private isDevelopment: boolean;
@@ -190,43 +187,11 @@ class ProductionLogger {
     }
   }
 
-<<<<<<< HEAD
-  debug(message: string, data?: any): void {
-    this.log('debug', message, data);
-  }
-
-  info(message: string, data?: any): void {
-    this.log('info', message, data);
-  }
-
-  warn(message: string, data?: any): void {
-    this.log('warn', message, data);
-  }
-
-  error(message: string, data?: any): void {
-    this.log('error', message, data);
-  }
-
-  // Get stored logs (useful for debugging in production)
-  getStoredLogs(): LogEntry[] {
-    try {
-      return JSON.parse(localStorage.getItem('app_logs') || '[]');
-    } catch {
-      return [];
-=======
-<<<<<<< HEAD
-  debug(message: string, ...args: any[]): void {
-    if (this.shouldLog(LOG_LEVELS.DEBUG)) {
-      console.debug(`[DEBUG] ${message}`, ...args);
->>>>>>> main
-=======
   info(message: string, context?: Record<string, any>): void {
     const entry = this.createLogEntry('info', message, context);
     
     if (this.shouldLog('info')) {
       console.info(`[INFO] ${message}`, context || '');
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
     }
   }
 
@@ -245,33 +210,11 @@ class ProductionLogger {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Create default logger instance
-const productionLogger = new ProductionLogger();
-
-// Convenience exports
-export const logInfo = (message: string, data?: any) => productionLogger.info(message, data);
-export const logWarn = (message: string, data?: any) => productionLogger.warn(message, data);
-export const logError = (message: string, data?: any) => productionLogger.error(message, data);
-export const logDebug = (message: string, data?: any) => productionLogger.debug(message, data);
-export const logErrorToProduction = (message: string, data?: any) => productionLogger.error(message, data);
-
-export default productionLogger;
-export { ProductionLogger, LOG_LEVELS };
-export type { LoggerOptions };
-=======
 export const productionLogger = new ProductionLogger();
 export default productionLogger;
->>>>>>> main
-=======
 // Create singleton instance
 const productionLogger = new ProductionLogger();
 
-<<<<<<< HEAD
-export default productionLogger;
-export { ProductionLogger, type LogLevel, type LogEntry };
-=======
 // Convenience functions
 export const logDebug = (message: string, context?: Record<string, any>): void => {
   logger.debug(message, context);
@@ -302,18 +245,13 @@ export const exportLogs = (): string => {
 };
 
 export default logger;
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-=======
 }
 
->>>>>>> cursor/create-and-deploy-new-content-d3a3
-=======
 }
 
->>>>>>> cursor/create-and-deploy-new-content-8735
-=======
 }
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e

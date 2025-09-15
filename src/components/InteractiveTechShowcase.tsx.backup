@@ -9,7 +9,7 @@
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -36,11 +36,11 @@ const InteractiveTechShowcase: React.FC = () => {
       id: 1,
 <<<<<<< HEAD
 =======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       link: "/pages/AIInnovationHub2026"
     },
     {
       id: 1,
->>>>>>> cursor/create-and-deploy-new-content-f977
       name: "Quantum Computing 2026",
       description: "Exponential computational power with quantum algorithms and quantum supremacy",
       icon: "⚡",
@@ -257,10 +257,6 @@ const InteractiveTechShowcase: React.FC = () => {
       description: "Revolutionary AI technologies with consciousness and emotional intelligence",
       icon: "🧠",
       color: "from-purple-600 to-pink-600",
-<<<<<<< HEAD
-      stats: { performance: "1000x", accuracy: "99.9%", speed: "Real-time" }
-=======
->>>>>>> cursor/create-and-deploy-new-content-8735
     },
     {
       id: 2,
@@ -343,11 +339,8 @@ const InteractiveTechShowcase: React.FC = () => {
           {/* Technology Selector */}
           <div className="space-y-4">
             <h3 className="text-3xl font-bold mb-8">Choose Your Technology</h3>
-=======
-=======
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       link: "/pages/AdvancedAITransformation2026"
     },
     {
@@ -355,7 +348,7 @@ const InteractiveTechShowcase: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       name: "Quantum Computing Revolution",
       description: "Breakthrough quantum processors with 1000+ qubits and quantum supremacy",
       icon: "⚛️",
@@ -452,7 +445,7 @@ const InteractiveTechShowcase: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -473,7 +466,7 @@ const InteractiveTechShowcase: React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
                     <p className="text-sm opacity-90">{tech.description}</p>
                   </div>
                   {activeTech === tech.id && (
@@ -485,6 +478,7 @@ const InteractiveTechShowcase: React.FC = () => {
                   )}
                 </div>
 <<<<<<< HEAD
+          </div>
 =======
 <<<<<<< HEAD
               </motion.button>
@@ -592,7 +586,7 @@ const InteractiveTechShowcase: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
                 
                 {hoveredCard === tech.id && (
                   <motion.div
@@ -661,7 +655,6 @@ const InteractiveTechShowcase: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
         {/* Technology Stats */}
         <div className="mt-20 grid md:grid-cols-4 gap-8">
           <motion.div
@@ -701,12 +694,11 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-gray-300">Future Technology</div>
           </motion.div>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
         {/* Interactive Demo Section */}
         <div className="mt-20 text-center">
           <h3 className="text-3xl font-bold mb-8">Try Interactive Demo</h3>
@@ -747,8 +739,10 @@ const InteractiveTechShowcase: React.FC = () => {
               </button>
             </motion.div>
           </div>
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
         </div>
       </div>
     </div>

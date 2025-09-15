@@ -271,7 +271,7 @@ const QuantumAIRevolution2026: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -339,7 +339,7 @@ const QuantumAIRevolution2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-8735
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
           </div>
         </div>
       </div>
