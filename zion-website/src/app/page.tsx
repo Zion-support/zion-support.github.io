@@ -1,117 +1,4 @@
-
-
-import React from 'react';
-import { 
-  LightBulbIcon,
-  CpuChipIcon
-  GlobeAltIcon
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon;
-} from '@heroicons/react/24/outline';
-import React from 'react';
-
-
-
-const features = [
-  {
-    name: 'AI-Powered Research'
-    description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.'
-    icon: LightBulbIcon
-  }
-  {
-    name: 'Quantum Computing'
-    description: 'Next-generation quantum neural networks for solving complex computational problems.'
-    icon: CpuChipIcon
-  }
-  {
-    name: 'Global Solutions'
-    description: 'Worldwide deployment of autonomous business operations and digital transformation.'
-    icon: GlobeAltIcon
-  }
-  {
-    name: 'Enterprise Security'
-    description: 'Military-grade security protocols protecting your most valuable digital assets.'
-    icon: ShieldCheckIcon
-  }
-  {
-    name: 'Data Analytics'
-    description: 'Advanced analytics and insights driving informed decision-making.'
-    icon: ChartBarIcon
-  }
-  {
-    name: 'Expert Team'
-    description: 'World-class researchers and engineers pushing the boundaries of technology.'
-    icon: UserGroupIcon
-  }
-];
-const stats = [
-  { name: 'Research Papers Published'value: '150+' }
-  { name: 'AI Models Deployed'value: '500+' }
-  { name: 'Global Clients'value: '1000+' }
-  { name: 'Patents Filed'value: '25+' }
-];
-const solutions = [
-  {
-    name: 'AI Research Assistant'
-    description: 'Autonomous research platform that accelerates scientific discovery.'
-    href: '/solutions/ai-autonomous-research'
-  }
-  {
-    name: 'Quantum Neural Networks'
-    description: 'Next-generation computing for complex problem solving.'
-    href: '/solutions/quantum-neural-networks'
-  }
-  {
-    name: 'Autonomous Business Operations'
-    description: 'AI-powered automation for enterprise efficiency.'
-    href: '/solutions/autonomous-business'
-  }
-  {
-    name: 'IT Asset Management'
-    description: 'Intelligent management of digital infrastructure.'
-    href: '/solutions/it-asset-management'
-  }
-];
-export default function HomePage() {
-  LightBulbIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon;
-} from '@heroicons / react / 24 / outline';
-;
-const features = [;
-  LightBulbIcon
-  CpuChipIcon
-  GlobeAltIcon
-  ShieldCheckIcon
-  ChartBarIcon
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
-import React from 'react';
-import { 
-  LightBulbIcon,
-  CpuChipIcon
-  GlobeAltIcon
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon;
-} from '@heroicons/react/24/outline';
-import React from 'react';
-
-const features = [
-  {
-    name: 'AI - Powered Research',
-    description: 'Cutting - edge artificial intelligence that accelerates research and discovery across all domains.',
-    icon: LightBulbIcon;
-  },
-  {
-    name: 'Quantum Computing',
-    description: 'Next - generation quantum neural networks for solving complex computational problems.',
-    icon: CpuChipIcon;
-=======
+import React from 'react'
 import { 
   LightBulbIcon, 
   CpuChipIcon, 
@@ -330,14 +217,11 @@ export default function HomePage() {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Insights and updates from Zion Tech Group
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Explore our recent announcements, research highlights, and product updates.
-          </p>
-          <div className="mt-8">
-            <a href="/news" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-500 transition-all duration-200 hover:scale-105">
-              Visit Newsroom <span className="ml-2" aria-hidden="true">→</span>
-            </a>
-          </div>
+        </div>
+        <div className="mt-8 text-center">
+          <a href="/news" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-500 transition-all duration-200 hover:scale-105">
+            Visit Newsroom <span className="ml-2" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
 
