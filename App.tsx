@@ -76,30 +76,6 @@ export default function App(): JSX.Element {
                       <span className="text-3xl animate-bounce">🚀</span>
                     </div>
                     <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-<<<<<<< HEAD
-                      Experience the future of technology with our groundbreaking new content on Synthetic Intelligence, 
-                      Quantum-Neural Fusion, AI Revolution, Neural Interface Technology, and Autonomous AI Systems
-                    </p>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-8xl mx-auto">
-                      <a href="/pages/AIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center">
-                        🧠 AI Revolution 2025 →
-                      </a>
-                      <a href="/pages/QuantumComputingBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center">
-                        ⚡ Quantum Breakthrough →
-                      </a>
-                      <a href="/pages/NeuralInterfaceFuture" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center">
-                        🧬 Neural Interface →
-                      </a>
-                      <a href="/pages/AIEnterpriseCopilot2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center">
-                        🧭 AI Enterprise Copilot →
-                      </a>
-                      <a href="/pages/AIFutureTrends2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center">
-                        🔮 AI Future Trends →
-                      </a>
-                      <a href="/pages/AdvancedAnalyticsInsights2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-center">
-                        📊 Advanced Analytics →
-                      </a>
-=======
                       Experience the future of technology with our groundbreaking new content on Next-Gen AI Revolution, 
                       Quantum Computing Breakthrough, Neural Interface Technology, and Revolutionary Tech Blog
                     </p>
@@ -119,7 +95,6 @@ export default function App(): JSX.Element {
                       <a href="/pages/ComprehensiveTechInsights2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🔍 Comprehensive Tech Insights →
                       </a>
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
                     </div>
                   </div>
                 </div>
