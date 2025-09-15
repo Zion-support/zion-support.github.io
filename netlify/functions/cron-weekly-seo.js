@@ -1,0 +1,7 @@
+const { upsertFile } = require('./_lib/github');
+
+async function scorePage(url) {
+  const t0 = Date.now();
+  try {
+    const resp = await fetch(url);
+    const html = await resp.text();

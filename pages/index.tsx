@@ -1,6 +1,8 @@
-import type { NextPage } from 'next';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { NextPage } from 'next';
+import Homepage2025 from '../components/Homepage2025';
 
 const Home: NextPage = () => {
   return (

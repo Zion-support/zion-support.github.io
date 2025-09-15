@@ -1,28 +1,20 @@
-import { ReactNode } from "react";
+import React from 'react';
+import clsx from 'clsx';
 
-interface EnhancedButtonProps {
-  children: ReactNode;
-  onClick?: () => void;
-  className?: string;
-  disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset';
-}
+export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  variant?: 'primary' | 'secondary' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  fullWidth?: boolean;
+};
 
-export default function EnhancedButton({ 
-  children, 
-  onClick, 
-  className = '', 
-  disabled = false,
-  type = 'button'
+const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]';
+
+export default function EnhancedButton({
+  className,
+  variant = 'primary',
+  size = 'md',
+  fullWidth,
+  ...props
 }: EnhancedButtonProps) {
   return (
     <button
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
-      className={`px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors ${className}`}
-    >
-      {children}
-    </button>
-  );
-}

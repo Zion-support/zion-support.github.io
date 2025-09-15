@@ -1,0 +1,13 @@
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    changefreq: 'monthly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {

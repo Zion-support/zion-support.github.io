@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "title": "Reference Architecture — Autonomous Content Mesh",
+      "href": "/reports/blueprints/blueprint-2025-08-15-000055",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T00:00:55.974Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Playbook — Autonomous Delivery",
+      "href": "/reports/playbooks/playbook-2025-08-15-000055",
+      "desc": "New autonomous content",
+      "createdAt": "2025-08-15T00:00:55.909Z",
+      "source": "cloud-playbook-factory"
+    },
+    {
+      "title": "Case Study — Trigger Homepage",
+      "href": "/reports/cases/case-2025-08-15-000055",
+      "desc": "New autonomous content",
+      "source": "cloud-deep-research-factory"
+    }
+  ]
+}
+>>>>>>> origin/auto/autonomy-17186719616
