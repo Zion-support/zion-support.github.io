@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export const metaverseDigitalRealityServices2026 = [] as any[];
-=======
->>>>>>> origin/auto/autonomy-17186719616
 export interface MetaverseDigitalRealityService2026 {
   id: string;
   name: string;
@@ -18,10 +14,6 @@ export interface MetaverseDigitalRealityService2026 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] = [
   {
     id: "2026-metaverse-digital-reality",
@@ -45,8 +37,3 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-<<<<<<< HEAD
-];
-=======
-];
->>>>>>> origin/auto/autonomy-17186719616

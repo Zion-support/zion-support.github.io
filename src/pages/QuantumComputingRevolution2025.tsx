@@ -1,9 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100">
+=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-cyan-900">
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <motion.div
