@@ -469,6 +469,32 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Guide'
   }
+  ,
+  // Added 2025-09-15
+  {
+    title: 'Launch: Real-Time Agent Debugger v1.0',
+    summary:
+      'Live traces, prompt diffs, and tool-call timelines to debug production agents safely.',
+    href: '/updates/real-time-agent-debugger-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: Agent Risk Metrics 2026 (Preview)',
+    summary:
+      'Unified risk taxonomy, baseline metrics, and evaluation harnesses for autonomous agents.',
+    href: '/updates/agent-risk-metrics-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Guide: Production Rollouts with Canary AI Evals',
+    summary:
+      'Blueprint for shipping AI safely: canaries, live evals, abort switches, and evidence trails.',
+    href: '/updates/canary-ai-evals-rollouts',
+    date: '2025-09-15',
+    tag: 'Guide'
+  }
 ]
 
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
