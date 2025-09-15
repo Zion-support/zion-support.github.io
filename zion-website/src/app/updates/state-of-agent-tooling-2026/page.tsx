@@ -1,4 +1,3 @@
-
 export default function StateOfAgentTooling2026() {
   return (
     <div className="bg-black min-h-screen">
