@@ -402,6 +402,31 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Guide'
   }
   ,
+  {
+    title: 'Launch: Autonomous Compliance Auditor v1.1',
+    summary:
+      'Continuous policy checks, evidence bundles, and SOC2-ready exports integrated into CI/CD.',
+    href: '/updates/autonomous-compliance-auditor-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Blueprint: Production Agent Telemetry 2026',
+    summary:
+      'Unified tracing, eval signals, and guardrail events for operating agent fleets reliably.',
+    href: '/updates/production-agent-telemetry-2026',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Report: Enterprise AI Readiness Index (2026 Preview)',
+    summary:
+      'A composite index to score data, governance, and platform maturity across enterprises.',
+    href: '/updates/enterprise-ai-readiness-index-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  }
+  ,
   // New updates added by automation on 2025-09-15
   {
     title: 'Launch: Agent Policy-as-Code Starter Kit',
