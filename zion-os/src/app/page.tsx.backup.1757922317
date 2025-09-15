@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+// @ts-nocheck
+=======
 import React from 'react';
+>>>>>>> origin/chore/add-blog-content-and-promote
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -79,6 +83,20 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      {/* Promo Ribbon */}
+      <section className="py-3 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto">
+          <a href="/blog/autonomous-it-ops-2025" className="flex items-center justify-between gap-3 text-blue-900">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center justify-center w-8 h-8 rounded-md bg-blue-600 text-white text-sm font-bold">AO</span>
+              <p className="text-sm md:text-base">
+                New: Autonomous IT Operations in 2025 — self-healing, policy-driven, AI-orchestrated ops. <span className="underline">Read more</span>
+              </p>
+            </div>
+            <span className="hidden md:block text-blue-700">→</span>
+          </a>
+        </div>
+      </section>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -108,6 +126,26 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* What's New Section */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-2">What's New</h2>
+            <p className="text-white/70">Just shipped: Operational Excellence Blueprint and Agent Risk Management Framework.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="/blog/ai-2026-operational-excellence-blueprint" className="card hover:bg-white/10 transition p-6">
+              <div className="text-2xl mb-2">📈 Operational Excellence 2026</div>
+              <p className="text-white/70">SLOs, policy-as-code, and autonomous remediation for elite reliability.</p>
+            </a>
+            <a href="/blog/ai-2026-agent-risk-management-framework" className="card hover:bg-white/10 transition p-6">
+              <div className="text-2xl mb-2">🛡️ Agent Risk Management 2026</div>
+              <p className="text-white/70">Threat models, safeguards, and governance for autonomous agents.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -120,6 +158,18 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+<<<<<<< HEAD
+              <FeatureCard
+                key={String(index)}
+                icon={<span>{feature.icon}</span>}
+                title={feature.title}
+                description={feature.description}
+                color={feature.gradient}
+                href="#"
+                isActive={false}
+                onClick={() => {}}
+              />
+=======
               <div key={index}>
                 <FeatureCard
                   icon={feature.icon}
@@ -129,6 +179,7 @@ export default function HomePage() {
                   gradient={feature.gradient}
                 />
               </div>
+>>>>>>> origin/chore/add-blog-content-and-promote
             ))}
           </div>
         </div>
@@ -149,8 +200,13 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
+<<<<<<< HEAD
+              <a href="/blog/agentic-supply-chains-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Agentic Supply Chains 2025
+=======
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Foundation Models 2025
+>>>>>>> origin/chore/add-blog-content-and-promote
               </a>
             </div>
           </div>
