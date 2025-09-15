@@ -21,3 +21,9 @@
 2025-09-15 15:32:03 - Resolving conflicts in zion-os/.next/server/server-reference-manifest.json for branch backup-main-20250915-070330
 2025-09-15 15:32:03 - Resolving conflicts in zion-os/.next/trace for branch backup-main-20250915-070330
 2025-09-15 15:32:03 - Resolving conflicts in zion-os/src/components/Navigation.tsx for branch backup-main-20250915-070330
+2025-09-15 15:32:07 - Merge conflicts detected in chore/add-ai-governance-post
+2025-09-15 15:32:08 - Resolving conflicts in zion-os/src/app/about/page.tsx for branch chore/add-ai-governance-post
+2025-09-15 15:32:08 - Resolving conflicts in zion-os/src/app/accessibility/page.tsx for branch chore/add-ai-governance-post
+2025-09-15 15:32:08 - Resolving conflicts in zion-os/src/app/admin/layout.tsx for branch chore/add-ai-governance-post
+2025-09-15 15:32:08 - Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch chore/add-ai-governance-post
+2025-09-15 15:32:08 - Resolving conflicts in zion-os/src/app/blog/page.tsx for branch chore/add-ai-governance-post
