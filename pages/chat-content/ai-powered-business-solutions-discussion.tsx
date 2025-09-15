@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+import type { NextPage } from 'next',
+import Head from 'next/head',
+=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
+>>>>>>> origin/auto/autonomy-17186719616
 
 const AiPoweredBusinessSolutionsDiscussion: NextPage = () => {
   return (
@@ -14,7 +19,14 @@ const AiPoweredBusinessSolutionsDiscussion: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
+  )
+},
+
+export default AiPoweredBusinessSolutionsDiscussion,
+=======
   );
 };
 
 export default AiPoweredBusinessSolutionsDiscussion;
+>>>>>>> origin/auto/autonomy-17186719616
