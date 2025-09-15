@@ -100,6 +100,34 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
     ]
   },
+  'agent-economies-2025': {
+    id: 'agent-economies-2025',
+    title: 'Agent Economies 2025: Designing Markets For Autonomous Agents',
+    excerpt:
+      'A practical playbook for building fair, efficient, and safe markets where AI agents create, trade, and cooperate.',
+    category: 'AI Solutions',
+    author: 'Dr. Kleber Santos',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'Agent economies unlock always-on value creation but require carefully designed incentives, identity, and policy to stay healthy.',
+      'We outline reference mechanisms for matching, reputation, payouts, and recourse, plus guardrails for collusion and abuse mitigation.'
+    ]
+  },
+  'ai-safety-redteaming-guide-2025': {
+    id: 'ai-safety-redteaming-guide-2025',
+    title: 'AI Safety Red Teaming 2025: An Enterprise Guide',
+    excerpt:
+      'Methods, tooling, and governance to proactively discover and mitigate AI system risks before they impact users.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-14',
+    readTime: '8 min read',
+    content: [
+      'Red teaming operationalizes AI safety. We present attack taxonomies, test harness patterns, and escalation paths that work in enterprise.',
+      'The guide includes measurable KPIs, staffing models, and a rollout roadmap aligned to regulatory expectations.'
+    ]
+  },
 };
 
 export function generateStaticParams() {

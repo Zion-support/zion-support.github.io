@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'agent-economies-2025',
+      title: 'Agent Economies 2025: Designing Markets For Autonomous Agents',
+      excerpt: 'A practical playbook for building fair, efficient, and safe markets where AI agents create, trade, and cooperate.',
+      category: 'AI Solutions',
+      author: 'Dr. Kleber Santos',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/agent-economies.jpg',
+      featured: true
+    },
+    {
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
       excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
@@ -76,6 +87,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'ai-safety-redteaming-guide-2025',
+      title: 'AI Safety Red Teaming 2025: An Enterprise Guide',
+      excerpt: 'Methods, tooling, and governance to proactively discover and mitigate AI system risks before they impact users.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-14',
+      readTime: '8 min read',
+      image: '/blog/ai-safety-redteam.jpg'
+    },
     {
       id: 'edge-ai-marketplaces',
       title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
