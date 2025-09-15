@@ -402,7 +402,11 @@ const InteractiveTechShowcase: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Technology Cards */}
           <div className="space-y-6">
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
             {technologies.map((tech, index) => (
               <motion.button
                 key={tech.id}
@@ -437,7 +441,11 @@ const InteractiveTechShowcase: React.FC = () => {
                   <div className="text-4xl">{tech.icon}</div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">{tech.name}</h3>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
                     <p className="text-sm opacity-90">{tech.description}</p>
                   </div>
                   {activeTech === tech.id && (
@@ -654,9 +662,13 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-gray-300">Future Technology</div>
           </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
         </div>
       </div>
     </div>

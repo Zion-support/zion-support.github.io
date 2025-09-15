@@ -212,7 +212,11 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
             Experience the future of human-computer interaction with direct brain-computer 
             interfaces that enable seamless thought-to-action control and enhanced cognition.
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -570,7 +574,11 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               <div className="text-4xl mb-4">🔬</div>
               <h3 className="text-xl font-bold mb-2 text-white">Research & Development</h3>
               <p className="text-gray-300 text-sm">Advance neuroscience research and brain-computer interface development</p>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
             </div>
           </div>
         </div>
@@ -646,7 +654,11 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
       </div>
     </div>
   );

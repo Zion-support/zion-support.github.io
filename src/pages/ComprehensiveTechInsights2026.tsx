@@ -1,7 +1,9 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const ComprehensiveTechInsights2026: React.FC = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -87,6 +89,18 @@ const ComprehensiveTechInsights2026: React.FC = () => {
   ];
 
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ComprehensiveTechInsights2026: React.FC = () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-be96
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
   return (
     <>
       <Helmet>
@@ -642,10 +656,17 @@ const ComprehensiveTechInsights2026: React.FC = () => {
         </motion.div>
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
+<<<<<<< HEAD
     </div>
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-60ab
+>>>>>>> cursor/create-and-deploy-new-content-be96
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
   );
 };
 

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 // Cart utility functions for managing shopping cart state
 =======
 <<<<<<< HEAD
@@ -18,9 +21,13 @@
 
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 export interface CartItem {
   id: string;
   name: string;
@@ -70,9 +77,13 @@ export const cartUtils = {
   addItem(cart: Cart, item: Omit<CartItem, 'quantity'>): Cart {
 >>>>>>> main
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
     const existingItem = cart.items.find(cartItem => cartItem.id === item.id);
     
     if (existingItem) {
@@ -85,6 +96,9 @@ export const cartUtils = {
       return cartUtils.calculateTotals({ ...cart, items: newItems });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 =======
 export interface Discount {
   code: string;
@@ -160,16 +174,23 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
   removeItem(cart: Cart, itemId: string): Cart {
 >>>>>>> main
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
     }
   },
 
   // Remove item from cart
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
     const newItems = cart.items.filter(item => item.id !== itemId);
     return cartUtils.calculateTotals({ ...cart, items: newItems });
   },
@@ -178,6 +199,9 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
   updateItemQuantity: (cart: Cart, itemId: string, quantity: number): Cart => {
 =======
   updateItemQuantity(cart: Cart, itemId: string, quantity: number): Cart {
@@ -216,8 +240,11 @@ export function calculateCartTotals(cart: Cart): Cart {
   calculateTotals(cart: Cart): Cart {
 >>>>>>> main
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
     }
@@ -231,9 +258,13 @@ export function calculateCartTotals(cart: Cart): Cart {
 
   // Calculate totals
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
     const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
     
@@ -243,6 +274,9 @@ export function calculateCartTotals(cart: Cart): Cart {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
       itemCount
 =======
       itemCount,
@@ -301,6 +335,7 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
   },
 
   // Clear cart
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
     };
@@ -308,6 +343,9 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
 
   // Clear cart
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
     return cart.items.some(item => item.id === itemId);
   },
 
@@ -315,6 +353,9 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
   getSummary: (cart: Cart) => ({
     itemCount: cart.itemCount,
     total: cart.total,
@@ -661,7 +702,11 @@ export default {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 export default cartUtils;
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 export default cartUtils;
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 // Fetch utility with retry logic and error handling
 =======
 <<<<<<< HEAD
@@ -31,9 +34,13 @@ interface FetchWithRetryOptions {
 
 >>>>>>> main
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 export const fetchWithRetry = async (
   url: string,
   options: RequestInit & FetchWithRetryOptions = {}
@@ -41,6 +48,9 @@ export const fetchWithRetry = async (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
   const { retries, delay, backoff, timeout, ...fetchOptions } = {
     ...defaultOptions,
     ...options
@@ -150,9 +160,13 @@ export async function fetchWithRetry(
       
 >>>>>>> main
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
       return response;
     } catch (error) {
       lastError = error as Error;
@@ -160,6 +174,9 @@ export async function fetchWithRetry(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
       // Don't retry on the last attempt
       if (attempt === retries) {
         break;
@@ -315,9 +332,13 @@ export const del = (url: string, options: Omit<FetchOptions, 'method'> = {}): Pr
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 };
 
 export default fetchWithRetry;

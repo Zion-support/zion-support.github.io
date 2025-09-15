@@ -16,6 +16,15 @@ const EnhancedContentShowcase: React.FC = () => {
           </p>
         </div>
         
+<<<<<<< HEAD
+=======
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🤖</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Advanced AI</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Cutting-edge artificial intelligence solutions
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 =======
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -244,6 +253,7 @@ const EnhancedContentShowcase: React.FC = () => {
           <p className="text-xl text-purple-200">Experience interactive technology exploration</p>
         </div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -251,6 +261,23 @@ const EnhancedContentShowcase: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4 text-center">Advanced AI</h3>
             <p className="text-purple-100 mb-6 text-center">
               Cutting-edge artificial intelligence solutions
+=======
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="text-5xl mb-4 text-center">🎮</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Interactive Experience</h3>
+            <p className="text-purple-200 text-center">
+              Navigate through revolutionary technologies with intuitive controls and smooth animations
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="text-5xl mb-4 text-center">🚀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Real-time Updates</h3>
+            <p className="text-purple-200 text-center">
+              Stay current with the latest breakthroughs and technology advancements as they happen
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
             </p>
           </div>
           
@@ -261,6 +288,7 @@ const EnhancedContentShowcase: React.FC = () => {
               Revolutionary quantum computing technology
             </p>
           </div>
+<<<<<<< HEAD
           
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
@@ -269,10 +297,14 @@ const EnhancedContentShowcase: React.FC = () => {
               Direct brain-computer interfaces
             </p>
           </div>
+=======
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20 text-center">
@@ -287,9 +319,13 @@ const EnhancedContentShowcase: React.FC = () => {
           <a href="/pages/InnovationLanding2025" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors">
             View All Innovations
           </a>
+>>>>>>> cursor/create-and-deploy-new-content-fb46
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
     </div>
   );
 };

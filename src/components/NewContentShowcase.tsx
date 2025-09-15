@@ -4,10 +4,13 @@ const NewContentShowcase: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
   const newContent = [
     {
       title: "Trustworthy Model Routing",
@@ -106,6 +109,8 @@ const NewContentShowcase: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
   return (
     <div className="w-full">
       {/* New Content Banner */}
@@ -221,11 +226,16 @@ const NewContentShowcase: React.FC = () => {
             <div className="text-emerald-100 text-sm">Autonomous Operation</div>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
       </div>
     </div>
   );
@@ -234,13 +244,20 @@ const NewContentShowcase: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 export { NewContentShowcase };
 =======
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 =======
+<<<<<<< HEAD
 export { NewContentShowcase };
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 export { NewContentShowcase };
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 export default NewContentShowcase;

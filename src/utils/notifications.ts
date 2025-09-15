@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,10 +37,14 @@ interface NotificationOptions {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
   title: string;
   body?: string;
   icon?: string;
@@ -46,6 +53,9 @@ interface NotificationOptions {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,9 +64,13 @@ interface NotificationOptions {
 <<<<<<< HEAD
   data?: any;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
   requireInteraction?: boolean;
   silent?: boolean;
   timestamp?: number;
@@ -88,6 +102,9 @@ class NotificationManager {
     if (this.permission !== 'granted') {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
       this.permission = await this.requestPermission();
       if (this.permission !== 'granted') {
         console.warn('Notification permission denied');
@@ -259,10 +276,14 @@ class NotificationManager {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
     }
 
     try {
@@ -275,6 +296,9 @@ class NotificationManager {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -311,10 +335,14 @@ class NotificationManager {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -329,6 +357,9 @@ class NotificationManager {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -336,9 +367,13 @@ class NotificationManager {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
       console.error('Error showing notification:', error);
       return null;
     }
@@ -346,6 +381,9 @@ class NotificationManager {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
   showSuccess(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
       title,
@@ -544,9 +582,13 @@ export type { NotificationOptions, ToastOptions };
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
       title,
       body,
       icon: '/icons/error.png',
@@ -554,6 +596,9 @@ export type { NotificationOptions, ToastOptions };
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b15f
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
@@ -654,7 +699,11 @@ export default notificationManager;
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-fb46
+>>>>>>> cursor/create-and-deploy-new-content-b15f
