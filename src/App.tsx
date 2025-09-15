@@ -41,6 +41,7 @@ import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevoluti
 import InterdimensionalTechShowcase2027 from './components/InterdimensionalTechShowcase2027';
 import TranscendentTechnologyShowcase2028 from './components/TranscendentTechnologyShowcase2028';
 import OmniversalTechShowcase2029 from './components/OmniversalTechShowcase2029';
+import InfiniteTechShowcase2030 from './components/InfiniteTechShowcase2030';
 import NewsletterSignup from './components/NewsletterSignup';
 import PromotionalBanner from './components/PromotionalBanner';
 import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026';
@@ -209,6 +210,11 @@ export default function App(): JSX.Element {
                 {/* Omniversal Technology Showcase 2029 */}
                 <div className="mb-12">
                   <OmniversalTechShowcase2029 />
+                </div>
+
+                {/* Infinite Technology Showcase 2030 */}
+                <div className="mb-12">
+                  <InfiniteTechShowcase2030 />
                 </div>
 
                 {/* Hero Section with New Content Promotions */}
