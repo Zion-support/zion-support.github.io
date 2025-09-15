@@ -11,6 +11,36 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-governance-playbook-2025': {
+    id: 'ai-governance-playbook-2025',
+    title: 'AI Governance Playbook 2025: Practical Policies That Scale',
+    excerpt:
+      'Templates, controls, and rollout patterns that help product teams ship responsibly at speed.',
+    category: 'AI Solutions',
+    author: 'Dr. Kleber Santos',
+    date: '2025-09-15',
+    readTime: '7 min read',
+    content: [
+      'Responsible AI needs to be operational, not theoretical. This playbook provides lightweight controls that slot into product development without slowing teams down.',
+      'We focus on four tracks: data governance, model governance, policy enforcement, and post‑deployment monitoring. Each track includes checklists, owner roles, and acceptance criteria.',
+      'Adopt incrementally: start with pre‑release reviews and incident playbooks, then automate guardrails in CI/CD and runtime to scale coverage across teams.'
+    ]
+  },
+  'edge-ai-manufacturing-2025': {
+    id: 'edge-ai-manufacturing-2025',
+    title: 'Edge AI for Manufacturing 2025: From Pilots to Production',
+    excerpt:
+      'A pragmatic approach for deploying real‑time inspection, predictive maintenance, and closed‑loop control on the factory floor.',
+    category: 'IoT & Edge',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-14',
+    readTime: '8 min read',
+    content: [
+      'Manufacturers are moving beyond PoCs to productionized edge AI. Success requires hardened data pipelines, versioned models, and robust MLOps at constrained edge sites.',
+      'We outline reference topologies for camera‑based inspection and vibro‑acoustic sensing, including hardware options, streaming protocols, and deployment patterns.',
+      'Key metrics: detection latency, false‑positive rates, time‑to‑retrain, and mean time between interventions. Align incentives across ops, quality, and IT.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',

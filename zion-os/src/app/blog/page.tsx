@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'ai-governance-playbook-2025',
+      title: 'AI Governance Playbook 2025: Practical Policies That Scale',
+      excerpt: 'Templates and patterns to operationalize responsible AI across fast‑moving product teams.',
+      category: 'AI Solutions',
+      author: 'Dr. Kleber Santos',
+      date: '2025-09-15',
+      readTime: '7 min read',
+      image: '/blog/ai-governance-playbook.jpg',
+      featured: true
+    },
+    {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -65,6 +76,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'edge-ai-manufacturing-2025',
+      title: 'Edge AI for Manufacturing 2025: From Pilots to Production',
+      excerpt: 'A field guide to deploying real-time quality inspection, predictive maintenance, and closed-loop control at the edge.',
+      category: 'IoT & Edge',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-14',
+      readTime: '8 min read',
+      image: '/blog/edge-ai-manufacturing.jpg'
+    },
     {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
@@ -158,12 +179,13 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 2, active: false },
+    { name: 'AI Solutions', count: 3, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
+    { name: 'IoT & Edge', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
     { name: 'Content Marketing', count: 1, active: false }
