@@ -33,11 +33,7 @@ const RevolutionaryPromoBanner: React.FC = () => {
       gradient: "from-emerald-600 via-teal-600 to-blue-600",
       icon: "🤖"
 =======
->>>>>>> cursor/create-and-deploy-new-content-fb46
->>>>>>> origin/feature/revolutionary-2027-content
-=======
->>>>>>> cursor/create-and-deploy-new-content-f4f2
->>>>>>> origin/revolutionary-content-2026
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     }
   ];
 
@@ -93,11 +89,7 @@ const RevolutionaryPromoBanner: React.FC = () => {
               </div>
             </div>
 =======
->>>>>>> cursor/create-and-deploy-new-content-fb46
->>>>>>> origin/feature/revolutionary-2027-content
-=======
->>>>>>> cursor/create-and-deploy-new-content-f4f2
->>>>>>> origin/revolutionary-content-2026
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           </div>
         </motion.div>
       </AnimatePresence>
@@ -114,11 +106,7 @@ const RevolutionaryPromoBanner: React.FC = () => {
                 ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' 
                 : 'bg-gray-300 hover:bg-gray-400'
 =======
->>>>>>> cursor/create-and-deploy-new-content-fb46
->>>>>>> origin/feature/revolutionary-2027-content
-=======
->>>>>>> cursor/create-and-deploy-new-content-f4f2
->>>>>>> origin/revolutionary-content-2026
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
             }`}
           />
         ))}

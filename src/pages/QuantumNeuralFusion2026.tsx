@@ -84,7 +84,9 @@ const QuantumNeuralFusion2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -112,7 +114,9 @@ const QuantumNeuralFusion2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
->>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -132,7 +136,9 @@ const QuantumNeuralFusion2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
             <ul className="text-cyan-200 space-y-2 text-sm">
               <li>• Quantum superposition</li>
               <li>• Quantum entanglement</li>
@@ -253,7 +259,7 @@ const QuantumNeuralFusion2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
->>>>>>> main
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           </motion.div>
         </div>
       </div>
@@ -269,7 +275,7 @@ const QuantumNeuralFusion2026: React.FC = () => {
       {/* Quantum Stats */}
       <div className="py-16 bg-white/5 backdrop-blur-sm">
 >>>>>>> cursor/create-and-deploy-new-content-8735
->>>>>>> main
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Revolutionary Applications</h2>
@@ -279,7 +285,6 @@ const QuantumNeuralFusion2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> main
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -895,7 +900,9 @@ const QuantumNeuralFusion2026: React.FC = () => {
         </div>
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
->>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       </div>
     </div>
   );

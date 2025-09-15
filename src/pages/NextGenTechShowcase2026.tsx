@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
 
 const NextGenTechShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
@@ -32,6 +35,7 @@ const NextGenTechShowcase2026: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Next-Gen Tech Showcase 2026 | Zion Tech Group</title>
@@ -71,6 +75,8 @@ const NextGenTechShowcase2026: React.FC = () => {
               </div>
             </div>
           </div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
         </div>
 
         {/* Technology Tabs */}
@@ -110,6 +116,7 @@ const NextGenTechShowcase2026: React.FC = () => {
                   {techCategories[activeTab as keyof typeof techCategories].description}
                 </p>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -199,6 +206,29 @@ const NextGenTechShowcase2026: React.FC = () => {
         </div>
       </div>
     </>
+=======
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </section>
+
+      {/* Innovation Timeline */}
+      <section className="py-20 px-4 bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 text-white">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">📅 Innovation Timeline 2026</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Major breakthroughs and milestones in next-generation technology
+            </p>
+          </motion.div>
+
+    </div>
+>>>>>>> cursor/create-and-deploy-new-content-f977
   );
 };
 

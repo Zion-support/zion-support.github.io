@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+>>>>>>> main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -33,12 +38,22 @@ interface NotificationOptions {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -49,7 +64,12 @@ interface NotificationOptions {
 <<<<<<< HEAD
   data?: any;
 =======
->>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
   requireInteraction?: boolean;
   silent?: boolean;
   timestamp?: number;
@@ -70,6 +90,11 @@ class NotificationManager {
     }
 
     if (this.permission !== 'granted') {
+<<<<<<< HEAD
+>>>>>>> main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
       this.permission = await this.requestPermission();
       if (this.permission !== 'granted') {
@@ -242,7 +267,13 @@ class NotificationManager {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     }
 
     try {
@@ -253,6 +284,12 @@ class NotificationManager {
         tag: options.tag,
 <<<<<<< HEAD
 >>>>>>> main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -289,7 +326,13 @@ class NotificationManager {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -302,6 +345,10 @@ class NotificationManager {
       return notification;
     } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -310,12 +357,21 @@ class NotificationManager {
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       console.error('Error showing notification:', error);
       return null;
     }
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
   showSuccess(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
@@ -515,11 +571,21 @@ export type { NotificationOptions, ToastOptions };
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
->>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
+<<<<<<< HEAD
+>>>>>>> main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -622,4 +688,10 @@ export default notificationManager;
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 >>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c

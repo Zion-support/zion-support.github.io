@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Production-safe logging utility
 =======
@@ -10,7 +14,12 @@
 // Production logger utility
 >>>>>>> main
 =======
->>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -24,6 +33,12 @@ const LOG_LEVELS: LogLevel = {
   INFO: 'info',
     }
   }
+<<<<<<< HEAD
+}
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   error(message: string, data?: any): void {
@@ -292,4 +307,13 @@ export default logger;
 =======
 }
 
->>>>>>> cursor/create-and-deploy-new-content-afc8
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+}
+
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+}
+
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c

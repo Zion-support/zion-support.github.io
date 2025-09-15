@@ -5,9 +5,7 @@
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 <<<<<<< HEAD
 =======
->>>>>>> main
-=======
-<<<<<<< HEAD
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 =======
 <<<<<<< HEAD
 =======
@@ -31,7 +29,7 @@
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 =======
->>>>>>> main
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51,15 +49,12 @@
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
-<<<<<<< HEAD
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 >>>>>>> cursor/create-and-deploy-new-content-f977
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
-=======
->>>>>>> main
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
@@ -79,7 +74,16 @@
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 =======
->>>>>>> main
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-d223
+=======
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+>>>>>>> cursor/create-and-deploy-new-content-abae
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
 
 const solutions = [
@@ -94,9 +98,7 @@ const solutions = [
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 <<<<<<< HEAD
 =======
->>>>>>> main
-=======
-<<<<<<< HEAD
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 =======
 <<<<<<< HEAD
 =======
@@ -120,7 +122,7 @@ const solutions = [
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 =======
->>>>>>> main
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 =======
 import { 
@@ -269,15 +271,12 @@ const solutions = [
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
-<<<<<<< HEAD
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 >>>>>>> cursor/create-and-deploy-new-content-f977
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
-=======
->>>>>>> main
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
@@ -297,7 +296,16 @@ const solutions = [
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 =======
->>>>>>> main
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-d223
+=======
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+>>>>>>> cursor/create-and-deploy-new-content-abae
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 ]
 
 export default function SolutionsPage() {
@@ -311,9 +319,7 @@ export default function SolutionsPage() {
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 <<<<<<< HEAD
 =======
->>>>>>> main
-=======
-<<<<<<< HEAD
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 =======
 <<<<<<< HEAD
 =======
@@ -337,7 +343,7 @@ export default function SolutionsPage() {
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 =======
->>>>>>> main
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 =======
     <div className="bg-black">
@@ -378,15 +384,12 @@ export default function SolutionsPage() {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
-<<<<<<< HEAD
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 >>>>>>> cursor/create-and-deploy-new-content-f977
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
-=======
->>>>>>> main
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
@@ -406,7 +409,16 @@ export default function SolutionsPage() {
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 =======
->>>>>>> main
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-d223
+=======
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+>>>>>>> cursor/create-and-deploy-new-content-abae
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
         <div className="mx-auto max-w-2xl lg:text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Solutions</h1>
           <p className="mt-4 text-lg leading-8 text-gray-300">Cutting-edge AI solutions for enterprise challenges.</p>
@@ -436,7 +448,7 @@ export default function SolutionsPage() {
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 =======
->>>>>>> main
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 =======
 <<<<<<< HEAD
 }
@@ -464,7 +476,7 @@ export default function SolutionsPage() {
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 =======
->>>>>>> main
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 }
 =======
@@ -495,7 +507,6 @@ export default function SolutionsPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -515,8 +526,6 @@ export default function SolutionsPage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
-=======
->>>>>>> main
 =======
 }
 >>>>>>> cursor/create-and-deploy-new-content-81d0
@@ -541,4 +550,13 @@ export default function SolutionsPage() {
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-d223
 =======
->>>>>>> main
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-d223
+=======
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+>>>>>>> cursor/create-and-deploy-new-content-abae
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
