@@ -1,11 +1,26 @@
+<<<<<<< HEAD
 // Notification utilities for handling browser notifications and toast messages
 
 export interface NotificationOptions {
+=======
+<<<<<<< HEAD
+/**
+ * Notification utility for handling browser notifications
+ * with fallbacks and error handling
+ */
+
+export interface NotificationOptions {
+=======
+// Notification utilities
+interface NotificationOptions {
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-2def
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
+<<<<<<< HEAD
   requireInteraction?: boolean;
   silent?: boolean;
   timestamp?: number;
@@ -16,6 +31,12 @@ export interface NotificationAction {
   action: string;
   title: string;
   icon?: string;
+=======
+<<<<<<< HEAD
+  requireInteraction?: boolean;
+  silent?: boolean;
+  vibrate?: number[];
+>>>>>>> cursor/create-and-deploy-new-content-2def
 }
 
 export const notifications = {
@@ -52,6 +73,46 @@ export const notifications = {
     if (!notifications.isSupported() || Notification.permission !== 'granted') {
       console.warn('Notifications not supported or permission not granted');
       return null;
+<<<<<<< HEAD
+=======
+=======
+  data?: any;
+  requireInteraction?: boolean;
+  silent?: boolean;
+  timestamp?: number;
+  actions?: NotificationAction[];
+}
+
+interface NotificationAction {
+  action: string;
+  title: string;
+  icon?: string;
+}
+
+class NotificationManager {
+  private permission: NotificationPermission = 'default';
+
+  async requestPermission(): Promise<NotificationPermission> {
+    if ('Notification' in window) {
+      this.permission = await Notification.requestPermission();
+    }
+    return this.permission;
+  }
+
+  async showNotification(options: NotificationOptions): Promise<Notification | null> {
+    if (!('Notification' in window)) {
+      console.warn('This browser does not support notifications');
+      return null;
+    }
+
+    if (this.permission !== 'granted') {
+      this.permission = await this.requestPermission();
+      if (this.permission !== 'granted') {
+        console.warn('Notification permission denied');
+        return null;
+      }
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-2def
     }
 
     try {
@@ -60,10 +121,23 @@ export const notifications = {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        requireInteraction: options.requireInteraction || false,
+        silent: options.silent || false,
+        vibrate: options.vibrate
+=======
+        data: options.data,
+>>>>>>> cursor/create-and-deploy-new-content-2def
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions || [],
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-2def
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -75,6 +149,10 @@ export const notifications = {
 
       return notification;
     } catch (error) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-2def
       console.warn('Failed to show notification:', error);
       return null;
     }
@@ -93,11 +171,37 @@ export const notifications = {
   // Show an error notification
   error: (title: string, body?: string): Notification | null => {
     return notifications.show({
+<<<<<<< HEAD
+=======
+=======
+      console.error('Error showing notification:', error);
+      return null;
+    }
+  }
+
+  showSuccess(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/success.png',
+      tag: 'success',
+    });
+  }
+
+  showError(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-2def
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
+<<<<<<< HEAD
       requireInteraction: true,
+=======
+<<<<<<< HEAD
+      requireInteraction: true
+>>>>>>> cursor/create-and-deploy-new-content-2def
     });
   },
 
@@ -146,4 +250,35 @@ export const notifications = {
   }
 };
 
+<<<<<<< HEAD
 export default notifications;
+=======
+export default notifications;
+=======
+      requireInteraction: true,
+    });
+  }
+
+  showInfo(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/info.png',
+      tag: 'info',
+    });
+  }
+
+  showWarning(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/warning.png',
+      tag: 'warning',
+    });
+  }
+}
+
+export const notificationManager = new NotificationManager();
+export default notificationManager;
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-2def
