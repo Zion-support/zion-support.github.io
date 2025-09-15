@@ -14,10 +14,6 @@ export interface EmergingTech2026ServiceV3 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [
   {
     id: "2026-emerging-tech-v3",

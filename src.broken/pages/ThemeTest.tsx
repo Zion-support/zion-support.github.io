@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from "react",
-import ThemeToggle from "@/components/ThemeToggle",
-import { ThemeProvider } from "@/context/ThemeContext",
-=======
-import React from "react";
-import ThemeToggle from "@/components/ThemeToggle";
-import { ThemeProvider } from "@/context/ThemeContext";
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function ThemeTest() {
   return (
@@ -15,9 +6,4 @@ export default function ThemeTest() {
         <ThemeToggle />
       </div>
     </ThemeProvider>
-<<<<<<< HEAD
-  ),
-=======
-  );
->>>>>>> origin/auto/autonomy-17186719616
 }
