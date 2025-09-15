@@ -216,14 +216,14 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-                title: 'AI 2026: Autonomous Procurement Blueprint',
-                summary: 'From sourcing to contract ops with policy-as-code and measurable savings.',
-                href: '/blog/ai-2026-autonomous-procurement-blueprint'
+                title: 'AI 2026: Safe Tool Use Blueprint',
+                summary: 'Permissioned tool use with risk tiers, sandboxes, policy-as-code, and runtime checks.',
+                href: '/blog/ai-2026-safe-tool-use-blueprint'
               },
               {
-                title: 'AI 2026: Guardrails for Multimodal Agents',
-                summary: 'Design patterns for safe image/audio/text agents with continuous evals.',
-                href: '/blog/ai-2026-guardrails-for-multimodal-agents'
+                title: 'AI 2026: Enterprise Agent Observability Guide',
+                summary: 'Traces, evals, and safety telemetry to operate autonomous agents in production.',
+                href: '/blog/ai-2026-enterprise-agent-observability-guide'
               },
               {
                 title: 'Enterprise AI Security Blueprint (2025)',

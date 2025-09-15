@@ -32,6 +32,14 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Guide: Agent Platform Operations (2026)',
+    summary:
+      'Reference operating model: SLOs, incident response, and eval-gated change management.',
+    href: '/updates/agent-platform-operations-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Course: GenAI for Executives',
     summary:
       'Executive program on GenAI strategy, governance, risk, operating models, and ROI with practical playbooks.',

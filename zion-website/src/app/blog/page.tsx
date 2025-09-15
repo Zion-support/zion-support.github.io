@@ -8,6 +8,18 @@ const posts = [
       'From sourcing to contract ops with policy-as-code and measurable savings.'
   },
   {
+    slug: 'ai-2026-safe-tool-use-blueprint',
+    title: 'AI 2026: Safe Tool Use Blueprint',
+    summary:
+      'Permissioned tool use with risk tiers, sandboxes, policy-as-code, and runtime checks.'
+  },
+  {
+    slug: 'ai-2026-enterprise-agent-observability-guide',
+    title: 'AI 2026: Enterprise Agent Observability Guide',
+    summary:
+      'Traces, evals, and safety telemetry to operate autonomous agents in production.'
+  },
+  {
     slug: 'ai-2026-guardrails-for-multimodal-agents',
     title: 'AI 2026: Guardrails for Multimodal Agents',
     summary:
