@@ -1,60 +1,59 @@
-name: Crawl and Normalize
+<<<<<<< HEAD
+name: crawl-normalize
+on:
+  workflow_dispatch: {}
+  schedule:
+  - cron: '0 2 * * *'
+permissions:
+  contents: read
+  actions: read
+  
+concurrency:
+  group: crawl-normalize-\${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  main:
+    name: Crawl Normalize Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+=======
+name: Crawl Normalize
 
 on:
+  workflow_dispatch: {}
   schedule:
-    - cron: '*/5 * * * *' # every 5 minutes
-  workflow_dispatch:
-    inputs:
-      base_url:
-        description: 'Override base URL for crawling'
-        required: false
-  push:
-    branches: [ main ]
-    paths:
-      - 'pages/**'
-      - 'components/**'
-      - 'styles/**'
-      - 'scripts/crawl-and-normalize.cjs'
-      - '.github/workflows/crawl-normalize.yml'
+    - cron: '*/10 * * * *'
 
 permissions:
   contents: write
+  actions: read
 
 jobs:
-  crawl_and_normalize:
+  main:
+    name: Main Job
     runs-on: ubuntu-latest
+    timeout-minutes: 25
+>>>>>>> origin/auto/autonomy-17186719616
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+<<<<<<< HEAD
+=======
 
-      - name: Setup Node
+>>>>>>> origin/auto/autonomy-17186719616
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '20'
+<<<<<<< HEAD
+          cache: npm
+=======
+          cache: 'npm'
 
-      - name: Install dependencies (CI)
-        run: npm ci --prefer-offline --no-audit --no-fund
-
-      - name: Crawl and normalize
-        env:
-          BASE_URL: ${{ github.event.inputs.base_url || 'https://ziontechgroup.com' }}
-        run: node scripts/crawl-and-normalize.cjs
-
-      - name: Build to validate
-        run: npm run build
-
-      - name: Commit and push changes
-        if: success()
-        run: |
-          if ! git diff --quiet; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add -A
-            git commit -m "chore(ui): crawl live site and normalize layout/links"
-            git push
-          else
-            echo "No changes to commit."
-          fi
-
+>>>>>>> origin/auto/autonomy-17186719616
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"

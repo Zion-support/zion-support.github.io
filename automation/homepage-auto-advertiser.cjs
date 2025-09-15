@@ -29,17 +29,17 @@ function displayName(fn) {
 
 function buildToolsSection(functionNames) {
   const knownDescriptions = {
-    'homepage-enhancer': 'Enhance homepage sections continuously.',
-    'link-crawler': 'Crawl and fix links; push changes automatically.',
-    'site-crawler': 'Generate sitemap and search artifacts.',
-    'automation-matrix': 'Curated set of automations on a 30m cadence.',
     'front-enhancer': 'Run front improvements continuously.',
     'frontpage-enhancer': 'Refresh frontpage content on schedule.',
     'homepage_advertiser': 'Auto‑advertise homepage features and links.',
     'cloud_orchestrator': 'Coordinate broader agents and git sync.',
     'sitemap_runner': 'Keep sitemap fresh for SEO.',
     'marketing-and-features-promo': 'Regenerate promos and deep links.',
-    'fast-front-promoter': 'Fast iteration of front/home updates.'
+    'fast-front-promoter': 'Fast iteration of front/home updates.',
+    'ai-trends-radar': 'AI ecosystem radar — fetches and publishes trends.',
+    'seo-audit': 'SEO audit and report generation.',
+    'newsroom-scheduler': 'Publishes the autonomous newsroom updates.',
+    'schedule-knowledge-graph': 'Weekly repo knowledge graph and metrics.',
   };
 
   const cards = functionNames
@@ -92,10 +92,11 @@ function ensureMarkers(content) {
   let content = fs.readFileSync(INDEX_PAGE, 'utf8');
   content = ensureMarkers(content);
 
-  const functionNames = listFunctions();
-  const section = buildToolsSection(functionNames);
+  const fns = listFunctions();
+  const section = buildToolsSection(fns);
 
-  if (!content.includes(START) || !content.includes(END)) {
+  const hasMarkers = content.includes(START) && content.includes(END);
+  if (!hasMarkers) {
     console.error('Failed to ensure markers');
     process.exit(1);
   }

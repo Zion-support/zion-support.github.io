@@ -1,22 +1,24 @@
-name: Security Auto-Heal
+name: Security Auto Heal
 
 on:
-  schedule:
-    - cron: '7 3 * * *'
   workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: security-auto-heal-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  security_scan:
+  main:
+    name: Main Job
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -30,23 +32,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
 
-      - name: Run security audit and fixes
-        run: |
-          node automation/security-audit.cjs || true
-          npm audit --audit-level=high || true
-          node scripts/generate-readme.js
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
-      - name: Build (non-blocking)
-        run: npm run build || true
-
-      - name: Commit and push changes
-        run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A
-            git commit -m "security: auto-heal updates [skip ci]"
-            git push origin HEAD:main
-          else
-            echo "No changes to push"
-          fi

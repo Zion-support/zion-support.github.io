@@ -1,74 +1,259 @@
 #!/usr/bin/env node
-'use strict';
+
+/**
+ * Content Quality Analyzer
+ * Analyzes content quality and provides recommendations
+ */
 
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = path.resolve(__dirname, '..');
-const UPDATES_DIR = path.join(ROOT, 'pages', 'reports', 'updates');
-const REPORTS_DIR = path.join(ROOT, 'public', 'reports', 'content-quality');
-
-function ensureDir(dir) { try { fs.mkdirSync(dir, { recursive: true }); } catch {} }
-
-function listUpdateFiles(limit = 50) {
-  if (!fs.existsSync(UPDATES_DIR)) return [];
-  return fs.readdirSync(UPDATES_DIR)
-    .filter((f) => f.endsWith('.tsx'))
-    .map((f) => ({ name: f, full: path.join(UPDATES_DIR, f), mtime: fs.statSync(path.join(UPDATES_DIR, f)).mtimeMs }))
-    .sort((a, b) => b.mtime - a.mtime)
-    .slice(0, limit);
-}
-
-function readFileSafe(fp) { try { return fs.readFileSync(fp, 'utf8'); } catch { return ''; } }
-
-function analyzeDiversity(contents) {
-  const templatePhrases = [
-    'Autonomously generated update',
-    'autonomous publishing',
-    'Learn more at',
-    'Latest Autonomous Content',
-    'Today\'s Highlight',
-  ];
-  let duplicateCount = 0;
-  const lengths = [];
-  const seoOk = [];
-  for (const content of contents) {
-    lengths.push(content.length);
-    const found = templatePhrases.filter((p) => content.includes(p));
-    if (found.length >= 3) duplicateCount += 1;
-    const hasDesc = content.includes('meta name="description"') || content.includes("meta name=\"description\"");
-    const hasKeywords = content.includes('meta name="keywords"') || content.includes("meta name=\"keywords\"");
-    const hasLink = content.includes('href="https://ziontechgroup.com"') || content.includes('href="https://www.ziontechgroup.com"') || content.includes('ziontechgroup.com');
-    seoOk.push(hasDesc && hasKeywords && hasLink);
+class ContentQualityAnalyzer {
+  constructor() {
+    this.analysis = {
+      totalFiles: 0,
+      issues: [],
+      recommendations: [],
+      scores: {}
+    };
   }
-  const avgLen = lengths.length ? Math.round(lengths.reduce((a, b) => a + b, 0) / lengths.length) : 0;
-  const diversityScore = Math.max(0, 100 - Math.round((duplicateCount / Math.max(1, contents.length)) * 100));
-  const seoScore = Math.round((seoOk.filter(Boolean).length / Math.max(1, seoOk.length)) * 100);
-  return { diversityScore, avgLen, duplicateCount, seoScore };
+
+  async analyzeContent() {
+    console.log('🔍 Starting content quality analysis...');
+    
+    try {
+      // Analyze different content types
+      await this.analyzeMarkdownFiles();
+      await this.analyzeHTMLFiles();
+      await this.analyzeTextFiles();
+      
+      // Generate overall score
+      this.calculateOverallScore();
+      
+      // Generate recommendations
+      this.generateRecommendations();
+      
+      console.log('✅ Content quality analysis completed.');
+      this.printReport();
+      
+      return this.analysis;
+    } catch (error) {
+      console.error('❌ Error during content quality analysis:', error.message);
+      return { error: error.message };
+    }
+  }
+
+  async analyzeMarkdownFiles() {
+    const markdownFiles = this.findFiles('.md');
+    
+    for (const file of markdownFiles) {
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        const fileAnalysis = this.analyzeMarkdownContent(content, file);
+        
+        this.analysis.scores[file] = fileAnalysis.score;
+        this.analysis.issues.push(...fileAnalysis.issues);
+        
+        this.analysis.totalFiles++;
+      } catch (error) {
+        this.analysis.issues.push(`Error analyzing ${file}: ${error.message}`);
+      }
+    }
+  }
+
+  async analyzeHTMLFiles() {
+    const htmlFiles = this.findFiles('.html');
+    
+    for (const file of htmlFiles) {
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        const fileAnalysis = this.analyzeHTMLContent(content, file);
+        
+        this.analysis.scores[file] = fileAnalysis.score;
+        this.analysis.issues.push(...fileAnalysis.issues);
+        
+        this.analysis.totalFiles++;
+      } catch (error) {
+        this.analysis.issues.push(`Error analyzing ${file}: ${error.message}`);
+      }
+    }
+  }
+
+  async analyzeTextFiles() {
+    const textFiles = this.findFiles('.txt');
+    
+    for (const file of textFiles) {
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        const fileAnalysis = this.analyzeTextContent(content, file);
+        
+        this.analysis.scores[file] = fileAnalysis.score;
+        this.analysis.issues.push(...fileAnalysis.issues);
+        
+        this.analysis.totalFiles++;
+      } catch (error) {
+        this.analysis.issues.push(`Error analyzing ${file}: ${error.message}`);
+      }
+    }
+  }
+
+  analyzeMarkdownContent(content, filename) {
+    const issues = [];
+    let score = 100;
+    
+    // Check for common markdown issues
+    if (content.includes('  ')) {
+      issues.push(`${filename}: Multiple consecutive spaces detected`);
+      score -= 5;
+    }
+    
+    if (content.match(/\n{3,}/)) {
+      issues.push(`${filename}: Excessive line breaks detected`);
+      score -= 3;
+    }
+    
+    if (!content.includes('# ')) {
+      issues.push(`${filename}: No main heading found`);
+      score -= 10;
+    }
+    
+    if (content.length < 100) {
+      issues.push(`${filename}: Content seems too short`);
+      score -= 15;
+    }
+    
+    return { score: Math.max(0, score), issues };
+  }
+
+  analyzeHTMLContent(content, filename) {
+    const issues = [];
+    let score = 100;
+    
+    // Check for common HTML issues
+    if (content.includes('<br>') && !content.includes('<br />')) {
+      issues.push(`${filename}: Self-closing tags not properly formatted`);
+      score -= 5;
+    }
+    
+    if (content.includes('  ')) {
+      issues.push(`${filename}: Multiple consecutive spaces detected`);
+      score -= 3;
+    }
+    
+    if (!content.includes('<title>')) {
+      issues.push(`${filename}: No title tag found`);
+      score -= 10;
+    }
+    
+    return { score: Math.max(0, score), issues };
+  }
+
+  analyzeTextContent(content, filename) {
+    const issues = [];
+    let score = 100;
+    
+    // Check for common text issues
+    if (content.includes('  ')) {
+      issues.push(`${filename}: Multiple consecutive spaces detected`);
+      score -= 5;
+    }
+    
+    if (content.match(/\n{3,}/)) {
+      issues.push(`${filename}: Excessive line breaks detected`);
+      score -= 3;
+    }
+    
+    if (content.length < 50) {
+      issues.push(`${filename}: Content seems too short`);
+      score -= 10;
+    }
+    
+    return { score: Math.max(0, score), issues };
+  }
+
+  calculateOverallScore() {
+    const scores = Object.values(this.analysis.scores);
+    if (scores.length > 0) {
+      this.analysis.overallScore = scores.reduce((a, b) => a + b, 0) / scores.length;
+    } else {
+      this.analysis.overallScore = 0;
+    }
+  }
+
+  generateRecommendations() {
+    const recommendations = [];
+    
+    if (this.analysis.overallScore < 80) {
+      recommendations.push('Consider running content quality fixes to improve scores');
+    }
+    
+    if (this.analysis.issues.length > 10) {
+      recommendations.push('High number of issues detected - prioritize content cleanup');
+    }
+    
+    if (this.analysis.totalFiles < 5) {
+      recommendations.push('Consider adding more content to improve site coverage');
+    }
+    
+    this.analysis.recommendations = recommendations;
+  }
+
+  printReport() {
+    console.log('\n📊 Content Quality Analysis Report');
+    console.log('=====================================');
+    console.log(`Total files analyzed: ${this.analysis.totalFiles}`);
+    console.log(`Overall quality score: ${this.analysis.overallScore.toFixed(1)}/100`);
+    console.log(`Total issues found: ${this.analysis.issues.length}`);
+    
+    if (this.analysis.recommendations.length > 0) {
+      console.log('\n💡 Recommendations:');
+      this.analysis.recommendations.forEach(rec => console.log(`  - ${rec}`));
+    }
+    
+    if (this.analysis.issues.length > 0) {
+      console.log('\n⚠️  Issues found:');
+      this.analysis.issues.slice(0, 10).forEach(issue => console.log(`  - ${issue}`));
+      if (this.analysis.issues.length > 10) {
+        console.log(`  ... and ${this.analysis.issues.length - 10} more issues`);
+      }
+    }
+  }
+
+  findFiles(extension) {
+    const files = [];
+    const searchDir = (dir) => {
+      try {
+        const items = fs.readdirSync(dir);
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+            searchDir(fullPath);
+          } else if (stat.isFile() && item.endsWith(extension)) {
+            files.push(fullPath);
+          }
+        }
+      } catch (error) {
+        // Skip directories we can't access
+      }
+    };
+    
+    searchDir('.');
+    return files;
+  }
 }
 
-function main() {
-  ensureDir(REPORTS_DIR);
-  const files = listUpdateFiles(100);
-  const contents = files.map((f) => readFileSafe(f.full));
-  const summary = analyzeDiversity(contents);
-  const report = {
-    generatedAt: new Date().toISOString(),
-    files: files.map((f) => f.name),
-    metrics: summary,
-    guidance: [
-      'Aim for varied intros, highlights, and CTAs across updates.',
-      'Keep meta description and keywords present for each page.',
-      'Include at least one external source highlight when available.',
-      'Target 300–1000 characters per update for skim-ability.',
-    ],
-  };
-  const out = path.join(REPORTS_DIR, `report-${Date.now()}.json`);
-  fs.writeFileSync(out, JSON.stringify(report, null, 2));
-  fs.writeFileSync(path.join(REPORTS_DIR, 'latest.json'), JSON.stringify(report, null, 2));
-  process.stdout.write(`[content-quality] Wrote report: ${path.relative(ROOT, out)}\n`);
+// Run if called directly
+if (require.main === module) {
+  const analyzer = new ContentQualityAnalyzer();
+  analyzer.analyzeContent().then(result => {
+    if (result.error) {
+      process.exit(1);
+    } else {
+      process.exit(0);
+    }
+  });
 }
 
-main();
-
-
+module.exports = ContentQualityAnalyzer;
