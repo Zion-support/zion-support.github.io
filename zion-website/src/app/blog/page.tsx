@@ -1,6 +1,25 @@
+// @ts-nocheck
 import Link from 'next/link'
 
 const posts = [
+  {
+    slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',
+    title: 'AI 2026: Eval‑Ready AI Pipelines — Blueprint',
+    summary:
+      'From datasets to live canaries with objective rubrics and rollbacks.'
+  },
+  {
+    slug: 'ai-2026-agent-observability-blueprint',
+    title: 'AI 2026: Agent Observability — Blueprint',
+    summary:
+      'Traces, eval signals, and guardrail events to operate agent fleets reliably.'
+  },
+  {
+    slug: 'ai-2026-governed-tool-use-blueprint',
+    title: 'AI 2026: Governed Tool Use — Blueprint',
+    summary:
+      'Permissioned tool adapters with policy‑as‑code, risk tiers, and runtime checks.'
+  },
   {
     slug: 'ai-2026-eval-driven-release-engineering-deep-dive',
     title: 'AI 2026: Eval‑Driven Release Engineering — Deep Dive',

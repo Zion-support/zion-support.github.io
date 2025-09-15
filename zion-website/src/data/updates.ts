@@ -16,6 +16,30 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Blueprint: Eval‑Ready AI Pipelines (2026)',
+    summary:
+      'From datasets to live canaries with rubrics, harnesses, and rollback rules.',
+    href: '/blog/ai-2026-eval-ready-ai-pipelines-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Blueprint: Agent Observability (2026)',
+    summary:
+      'Traces, eval signals, and guardrail events to operate agent fleets reliably.',
+    href: '/blog/ai-2026-agent-observability-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Blueprint: Governed Tool Use (2026)',
+    summary:
+      'Permissioned adapters with policy‑as‑code, risk tiers, and runtime checks.',
+    href: '/blog/ai-2026-governed-tool-use-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
     title: 'Guide: Real-Time Model Routing Playbook (2026)',
     summary:
       'Implement latency- and quality-aware routing with budgets, canaries, and audits.',
