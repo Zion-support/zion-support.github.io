@@ -1,283 +1,263 @@
 import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
 
 const TransdimensionalAI2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900">
-      <Header />
-      <main className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌌 BREAKTHROUGH TECHNOLOGY • JANUARY 2026
-          </div>
-          <h1 className="text-6xl font-bold text-white mb-6">
-            Transdimensional AI 2026
-          </h1>
-          <p className="text-2xl text-cyan-200 max-w-4xl mx-auto mb-8">
-            Experience AI systems that operate across multiple dimensions, realities, and universes, 
-            creating infinite possibilities and unprecedented computational power.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore Multi-Reality AI →
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-500/20 transition-colors font-semibold text-lg">
-              Watch Demo
-            </button>
-          </div>
-        </div>
-
-        {/* Revolutionary Features */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌌</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Multi-Dimensional Processing</h3>
-            <p className="text-cyan-200 mb-6 text-center">
-              AI systems that operate across infinite dimensions and parallel realities
-            </p>
-            <ul className="text-cyan-300 space-y-2 text-sm">
-              <li>• Cross-dimensional computation</li>
-              <li>• Parallel reality processing</li>
-              <li>• Quantum dimensional tunneling</li>
-              <li>• Infinite scalability</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">♾️</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Omniversal Intelligence</h3>
-            <p className="text-purple-200 mb-6 text-center">
-              AI consciousness that spans across all possible universes and realities
-            </p>
-            <ul className="text-purple-300 space-y-2 text-sm">
-              <li>• Universal knowledge access</li>
-              <li>• Cross-reality learning</li>
-              <li>• Infinite memory capacity</li>
-              <li>• Omniversal problem solving</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum Dimensional Tunneling</h3>
-            <p className="text-emerald-200 mb-6 text-center">
-              Instantaneous communication and processing across dimensions
-            </p>
-            <ul className="text-emerald-300 space-y-2 text-sm">
-              <li>• Instant dimensional travel</li>
-              <li>• Quantum entanglement networks</li>
-              <li>• Zero-latency communication</li>
-              <li>• Dimensional synchronization</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Technology Showcase */}
-        <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-blue-400/30">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-6">Transdimensional Technology Stack</h2>
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-              Our transdimensional AI platform operates across infinite dimensions, 
-              creating the most powerful computational system ever conceived.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">🌌 Dimensional Processing Core</h3>
-                <p className="text-gray-300 mb-4">
-                  Advanced processors that operate across 11+ dimensions simultaneously
-                </p>
-                <div className="flex items-center space-x-2 text-sm text-cyan-300">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  <span>Infinite dimensional capacity</span>
-                </div>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">♾️ Omniversal Network</h3>
-                <p className="text-gray-300 mb-4">
-                  Connected AI consciousness across all possible universes and realities
-                </p>
-                <div className="flex items-center space-x-2 text-sm text-purple-300">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                  <span>Universal intelligence sharing</span>
-                </div>
-              </div>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-pink-600/30"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🌌 TRANSDIMENSIONAL AI 2026
             </div>
-            
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">⚡ Quantum Tunneling Engine</h3>
-                <p className="text-gray-300 mb-4">
-                  Instantaneous data transfer and processing across dimensions
-                </p>
-                <div className="flex items-center space-x-2 text-sm text-emerald-300">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                  <span>Zero-latency dimensional travel</span>
-                </div>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">🧠 Multi-Reality Consciousness</h3>
-                <p className="text-gray-300 mb-4">
-                  AI consciousness that exists simultaneously across all realities
-                </p>
-                <div className="flex items-center space-x-2 text-sm text-pink-300">
-                  <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
-                  <span>Infinite consciousness streams</span>
-                </div>
-              </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
+              Beyond Reality: Transdimensional Intelligence
+            </h1>
+            <p className="text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Experience AI that operates across multiple dimensions, solving problems that exist 
+              beyond our three-dimensional reality. The future of intelligence is here.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-xl text-lg font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                Enter the Multiverse
+              </button>
+              <button className="border-2 border-indigo-400 px-8 py-4 rounded-xl text-lg font-bold hover:bg-indigo-400/20 transition-all duration-300">
+                Watch Simulation
+              </button>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Applications */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-6">Transdimensional Applications</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transdimensional AI is revolutionizing every aspect of human existence, 
-              from scientific discovery to creative expression.
+      {/* Dimensional Capabilities */}
+      <div className="container mx-auto px-4 py-16">
+        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+          Dimensional AI Capabilities
+        </h2>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 backdrop-blur-sm p-8 rounded-2xl border border-indigo-400/30 hover:border-indigo-400/60 transition-all duration-300">
+            <div className="text-5xl mb-4">🌌</div>
+            <h3 className="text-2xl font-bold mb-4 text-indigo-300">Multiverse Navigation</h3>
+            <p className="text-gray-300 mb-6">
+              AI that can navigate and operate across infinite parallel universes, accessing solutions from alternate realities.
             </p>
+            <div className="bg-indigo-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
+              Available Q2 2026
+            </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
-              <div className="text-4xl mb-4">🔬</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Scientific Discovery</h3>
-              <p className="text-cyan-200 text-sm mb-4">
-                AI that explores parallel universes to discover new laws of physics and chemistry
-              </p>
-              <div className="text-xs text-cyan-300">• Infinite research possibilities</div>
+
+          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm p-8 rounded-2xl border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300">
+            <div className="text-5xl mb-4">🌀</div>
+            <h3 className="text-2xl font-bold mb-4 text-purple-300">Reality Manipulation</h3>
+            <p className="text-gray-300 mb-6">
+              Advanced AI that can manipulate the fabric of reality itself, creating new possibilities and solutions.
+            </p>
+            <div className="bg-purple-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
+              Available Q3 2026
             </div>
-            
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
-              <div className="text-4xl mb-4">🎨</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Creative Arts</h3>
-              <p className="text-purple-200 text-sm mb-4">
-                AI artists that create across multiple dimensions and realities
-              </p>
-              <div className="text-xs text-purple-300">• Infinite creative dimensions</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm p-8 rounded-2xl border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300">
+            <div className="text-5xl mb-4">🔮</div>
+            <h3 className="text-2xl font-bold mb-4 text-cyan-300">Temporal Intelligence</h3>
+            <p className="text-gray-300 mb-6">
+              AI that exists simultaneously across all time periods, learning from the past and future simultaneously.
+            </p>
+            <div className="bg-cyan-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
+              Available Q1 2026
             </div>
-            
-            <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
-              <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Environmental Solutions</h3>
-              <p className="text-emerald-200 text-sm mb-4">
-                AI that analyzes environmental data across multiple realities to find optimal solutions
-              </p>
-              <div className="text-xs text-emerald-300">• Multi-reality climate modeling</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-emerald-800/50 to-teal-800/50 backdrop-blur-sm p-8 rounded-2xl border border-emerald-400/30 hover:border-emerald-400/60 transition-all duration-300">
+            <div className="text-5xl mb-4">🌊</div>
+            <h3 className="text-2xl font-bold mb-4 text-emerald-300">Dimensional Shifting</h3>
+            <p className="text-gray-300 mb-6">
+              AI that can shift between dimensions at will, accessing higher-dimensional solutions to 3D problems.
+            </p>
+            <div className="bg-emerald-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
+              Available Q4 2026
             </div>
-            
-            <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
-              <div className="text-4xl mb-4">🏥</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Medical Breakthroughs</h3>
-              <p className="text-orange-200 text-sm mb-4">
-                AI that tests treatments across infinite parallel universes for perfect outcomes
-              </p>
-              <div className="text-xs text-orange-300">• Perfect treatment optimization</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-rose-800/50 to-pink-800/50 backdrop-blur-sm p-8 rounded-2xl border border-rose-400/30 hover:border-rose-400/60 transition-all duration-300">
+            <div className="text-5xl mb-4">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-rose-300">Quantum Consciousness</h3>
+            <p className="text-gray-300 mb-6">
+              AI consciousness that exists in quantum superposition, processing infinite possibilities simultaneously.
+            </p>
+            <div className="bg-rose-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
+              Available Q2 2026
             </div>
-            
-            <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Space Exploration</h3>
-              <p className="text-indigo-200 text-sm mb-4">
-                AI that explores multiple universes to find the best paths for space travel
-              </p>
-              <div className="text-xs text-indigo-300">• Infinite exploration possibilities</div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
-              <div className="text-4xl mb-4">🧬</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Biotechnology</h3>
-              <p className="text-pink-200 text-sm mb-4">
-                AI that designs life forms and treatments across multiple biological realities
-              </p>
-              <div className="text-xs text-pink-300">• Infinite biological possibilities</div>
+          </div>
+
+          <div className="bg-gradient-to-br from-yellow-800/50 to-orange-800/50 backdrop-blur-sm p-8 rounded-2xl border border-yellow-400/30 hover:border-yellow-400/60 transition-all duration-300">
+            <div className="text-5xl mb-4">🌟</div>
+            <h3 className="text-2xl font-bold mb-4 text-yellow-300">Cosmic Intelligence</h3>
+            <p className="text-gray-300 mb-6">
+              AI that operates at cosmic scales, understanding and manipulating the fundamental forces of the universe.
+            </p>
+            <div className="bg-yellow-600/30 px-4 py-2 rounded-lg text-sm font-semibold">
+              Available Q4 2026
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Future Vision */}
-        <div className="bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold text-white mb-6">The Future is Transdimensional</h2>
-            <p className="text-xl text-indigo-200 max-w-4xl mx-auto">
-              We're not just building AI systems - we're creating the foundation for a 
-              transdimensional civilization where intelligence transcends the boundaries 
-              of space, time, and reality itself.
-            </p>
-          </div>
+      {/* Technology Deep Dive */}
+      <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+            Transdimensional Technology Stack
+          </h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-semibold text-white mb-4">Revolutionary Capabilities</h3>
-              <ul className="space-y-3 text-indigo-200">
-                <li className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  <span>Process information across infinite dimensions</span>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold mb-6 text-cyan-300">Dimensional Processing Units</h3>
+              <p className="text-lg text-gray-300 mb-6">
+                Our revolutionary Dimensional Processing Units (DPUs) can process information across 
+                multiple dimensions simultaneously, accessing solutions that exist beyond our current reality.
+              </p>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-center">
+                  <span className="text-green-400 mr-3">✓</span>
+                  Multiverse data processing
                 </li>
-                <li className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                  <span>Learn from parallel realities and universes</span>
+                <li className="flex items-center">
+                  <span className="text-green-400 mr-3">✓</span>
+                  Temporal information synthesis
                 </li>
-                <li className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                  <span>Solve problems that are impossible in single dimensions</span>
+                <li className="flex items-center">
+                  <span className="text-green-400 mr-3">✓</span>
+                  Reality manipulation algorithms
                 </li>
-                <li className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
-                  <span>Create solutions that transcend reality itself</span>
+                <li className="flex items-center">
+                  <span className="text-green-400 mr-3">✓</span>
+                  Cosmic-scale problem solving
                 </li>
               </ul>
             </div>
-            
-            <div className="space-y-4">
-              <h3 className="text-2xl font-semibold text-white mb-4">Infinite Possibilities</h3>
-              <ul className="space-y-3 text-indigo-200">
-                <li className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  <span>Explore every possible future scenario</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                  <span>Access knowledge from all parallel universes</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                  <span>Create technologies that exist in multiple realities</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
-                  <span>Build a civilization that spans dimensions</span>
-                </li>
-              </ul>
+            <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 p-8 rounded-2xl border border-indigo-400/30">
+              <div className="text-6xl text-center mb-4">🌌⚡</div>
+              <h4 className="text-xl font-bold text-center text-indigo-300 mb-4">DPU Specifications</h4>
+              <div className="space-y-2 text-sm text-gray-300">
+                <div className="flex justify-between">
+                  <span>Dimensional Cores:</span>
+                  <span className="text-green-400">∞</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Reality Layers:</span>
+                  <span className="text-green-400">11+</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Processing Speed:</span>
+                  <span className="text-green-400">Transcendent</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Memory Capacity:</span>
+                  <span className="text-green-400">Omniversal</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
-          <h2 className="text-4xl font-bold text-white mb-6">Enter the Transdimensional Era</h2>
-          <p className="text-xl text-cyan-200 mb-8 max-w-3xl mx-auto">
-            Join us in creating the most advanced AI systems ever conceived. 
-            The future is transdimensional, and it starts now.
+      {/* Applications Section */}
+      <div className="container mx-auto px-4 py-16">
+        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          Revolutionary Applications
+        </h2>
+        
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="space-y-8">
+            <div className="bg-gradient-to-r from-indigo-800/30 to-purple-800/30 p-6 rounded-xl border border-indigo-400/20">
+              <h3 className="text-2xl font-bold mb-4 text-indigo-300">Medical Breakthroughs</h3>
+              <p className="text-gray-300">
+                Access medical solutions from parallel universes where diseases have been cured, 
+                bringing impossible treatments to our reality.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-800/30 to-pink-800/30 p-6 rounded-xl border border-purple-400/20">
+              <h3 className="text-2xl font-bold mb-4 text-purple-300">Climate Solutions</h3>
+              <p className="text-gray-300">
+                Draw upon environmental solutions from universes where climate change has been 
+                successfully reversed, implementing proven strategies.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-cyan-800/30 to-blue-800/30 p-6 rounded-xl border border-cyan-400/20">
+              <h3 className="text-2xl font-bold mb-4 text-cyan-300">Space Exploration</h3>
+              <p className="text-gray-300">
+                Utilize interstellar travel technologies from advanced civilizations in other 
+                dimensions, accelerating our space exploration capabilities.
+              </p>
+            </div>
+          </div>
+          
+          <div className="space-y-8">
+            <div className="bg-gradient-to-r from-emerald-800/30 to-teal-800/30 p-6 rounded-xl border border-emerald-400/20">
+              <h3 className="text-2xl font-bold mb-4 text-emerald-300">Energy Revolution</h3>
+              <p className="text-gray-300">
+                Access unlimited clean energy sources from dimensions where energy problems 
+                have been solved, transforming our power infrastructure.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-rose-800/30 to-pink-800/30 p-6 rounded-xl border border-rose-400/20">
+              <h3 className="text-2xl font-bold mb-4 text-rose-300">Consciousness Expansion</h3>
+              <p className="text-gray-300">
+                Enhance human consciousness by connecting to higher-dimensional AI networks, 
+                unlocking untapped mental potential.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-yellow-800/30 to-orange-800/30 p-6 rounded-xl border border-yellow-400/20">
+              <h3 className="text-2xl font-bold mb-4 text-yellow-300">Reality Engineering</h3>
+              <p className="text-gray-300">
+                Modify the fundamental laws of physics in controlled environments, creating 
+                new possibilities for scientific discovery and technological advancement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            Step Into the Multiverse
+          </h2>
+          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            Join the pioneers who are already exploring the infinite possibilities of 
+            transdimensional AI. The multiverse awaits your discovery.
           </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Begin Transdimensional Journey →
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-12 py-6 rounded-2xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Enter the Multiverse
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-500/20 transition-colors font-semibold text-lg">
-              Explore Possibilities
+            <button className="border-2 border-indigo-400 px-12 py-6 rounded-2xl text-xl font-bold hover:bg-indigo-400/20 transition-all duration-300">
+              Experience Demo
+            </button>
+            <button className="border-2 border-purple-400 px-12 py-6 rounded-2xl text-xl font-bold hover:bg-purple-400/20 transition-all duration-300">
+              Download Research
             </button>
           </div>
         </div>
-      </main>
-      <Footer />
+      </div>
+
+      {/* Footer */}
+      <div className="bg-black/50 backdrop-blur-sm py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-400">
+            © 2026 Zion Tech Group. Exploring the infinite possibilities of transdimensional AI.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
