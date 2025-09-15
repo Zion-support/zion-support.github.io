@@ -34,6 +34,14 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Launch: Autonomous Innovation Hub v1.0',
+    summary:
+      'Unified workspace with blueprints, live eval gates, and policy‑as‑code to accelerate safe AI launches.',
+    href: '/updates/autonomous-innovation-hub-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Guide: Evaluating Agent Runbooks with Live E2E Evals',
     summary:
       'How to score and harden operational runbooks using real traffic, guardrails, and rollout gates.',

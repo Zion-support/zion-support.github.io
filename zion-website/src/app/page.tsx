@@ -150,9 +150,23 @@ export default function HomePage() {
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
                 href="/updates/autonomous-analytics-copilot-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
+              >
+                New Launch: Analytics Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-it-ops-copilot-1-0"
                 className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-200 hover:bg-indigo-500/20 transition-colors duration-200"
               >
                 New Launch: Analytics Copilot v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/autonomous-innovation-hub-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-200 hover:bg-purple-500/20 transition-colors duration-200"
+              >
+                Launch: Innovation Hub v1.0
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -202,13 +216,6 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
               >
                 New: Agent Safety Certification (Beta)
-                <span aria-hidden>→</span>
-              </a>
-              <a
-                href="/updates/ai-trends-radar-2025"
-                className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/20 transition-colors duration-200"
-              >
-                Report: AI Trends Radar 2025
                 <span aria-hidden>→</span>
               </a>
               <a
