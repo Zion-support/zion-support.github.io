@@ -27,6 +27,51 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Outcomes: reduced operational cost, higher market liquidity, and more resilient ecosystems that adapt in real time to participant behavior and external signals.'
     ],
   },
+  'quantum-risk-modeling-2025': {
+    id: 'quantum-risk-modeling-2025',
+    title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
+    excerpt:
+      'How near-term quantum techniques are improving portfolio optimization, risk calculations, and stress testing today.',
+    category: 'Quantum Computing',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-10',
+    readTime: '10 min read',
+    content: [
+      'Quantum-inspired and hybrid quantum-classical methods are already delivering measurable improvements in risk simulations and portfolio construction. While fully fault-tolerant systems are years away, financial institutions can adopt pragmatic techniques now.',
+      'In this article, we cover how to prioritize use cases, evaluate vendors, and set up pilot programs with clear KPIs. We also discuss governance, model validation, and compliance considerations for regulated environments.',
+      'Key takeaways include: selecting high-leverage problems (e.g., optimization under constraints), building hybrid pipelines, and establishing an experimentation framework that preserves auditability.'
+    ]
+  },
+  'autonomous-it-operations': {
+    id: 'autonomous-it-operations',
+    title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
+    excerpt:
+      'A blueprint for deploying AI-driven observability, incident response, and remediation to cut MTTR and improve reliability.',
+    category: 'AI Solutions',
+    author: 'Michael Rodriguez',
+    date: '2025-09-05',
+    readTime: '7 min read',
+    content: [
+      'Autonomous IT Operations combines event-driven automation, policy engines, and AI-assisted diagnostics to identify and remediate incidents before customers are impacted.',
+      'We outline a maturity path: instrument, detect, diagnose, act. Each phase increases automation confidence while keeping humans in control for high-risk actions.',
+      'Early adopters report reductions in MTTR of 40–60% and fewer out-of-hours escalations, freeing engineers to focus on proactive improvements.'
+    ]
+  },
+  'secure-agent-marketplaces': {
+    id: 'secure-agent-marketplaces',
+    title: 'Building Secure Agent Marketplaces: Identity, Reputation, and Policy',
+    excerpt:
+      'Design principles for trustworthy multi-agent ecosystems, covering identity verification, reputation scoring, and safety policies.',
+    category: 'Cybersecurity',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-02',
+    readTime: '8 min read',
+    content: [
+      'As AI agents transact and collaborate, marketplaces must enforce identity, reputation, and policy to mitigate fraud and abuse.',
+      'This guide covers DID-backed identity, attestations, dispute resolution, and graded trust. We include reference architectures and rollout strategies for enterprise environments.',
+      'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
+    ]
+  },
 };
 
 export function generateStaticParams() {
