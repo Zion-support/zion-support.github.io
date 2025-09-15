@@ -63,6 +63,9 @@ import TrendingContentSection2028 from './src/components/TrendingContentSection2
 import RevolutionaryContentBanner2028 from './src/components/RevolutionaryContentBanner2028';
 import RevolutionaryContentBanner2030 from './src/components/RevolutionaryContentBanner2030';
 import InteractiveTechShowcase2030 from './src/components/InteractiveTechShowcase2030';
+import QuantumConsciousnessRevolution2029 from './src/pages/QuantumConsciousnessRevolution2029';
+import TranscendentAI2030 from './src/pages/TranscendentAI2030';
+import UniversalTechRevolution2030 from './src/pages/UniversalTechRevolution2030';
 >>>>>>> cursor/create-and-deploy-new-content-a3b8
 
 export default function App(): JSX.Element {
@@ -99,7 +102,7 @@ export default function App(): JSX.Element {
                       Experience the future with our revolutionary new content: AI Consciousness 2.0, Quantum-Neural Fusion, Neural Enhancement, and Interactive Tech Showcases
 >>>>>>> cursor/create-and-deploy-new-content-a3b8
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-8xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-8xl mx-auto">
                       <a href="/pages/QuantumConsciousnessRevolution2029" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30 text-center animate-pulse">
                         🧠 NEW: Quantum Consciousness →
                       </a>
@@ -253,6 +256,11 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Revolutionary Content Banner 2030 */}
                 <RevolutionaryContentBanner2030 />
+                
+                {/* NEW: Interactive Tech Showcase 2030 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2030 />
+                </div>
                 {/* REVOLUTIONARY CONTENT SHOWCASE 2027 */}
                 <div className="mb-12">
                   <RevolutionaryContentShowcase2027 />
