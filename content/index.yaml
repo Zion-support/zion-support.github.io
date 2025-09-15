@@ -444,6 +444,36 @@ content_index:
         rollback_time: "< 5 min"
         audit_ready: true
 
+    - id: "ai-2026-trustworthy-model-routing-2026-preview"
+      type: "blog"
+      title: "AI 2026: Trustworthy Model Routing — 2026 Preview"
+      file_path: "/content/blog/ai-2026-trustworthy-model-routing-2026-preview.md"
+      url: "/blog/ai-2026-trustworthy-model-routing-2026-preview"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Routing", "Policy-as-Code", "Evaluations", "Reliability", "Cost Optimization", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "20-40%"
+        latency_p95: "stable"
+        override_rate: "improved"
+
+    - id: "ai-2026-trustworthy-agent-operations-blueprint"
+      type: "blueprint"
+      title: "AI 2026: Trustworthy Agent Operations — Blueprint"
+      file_path: "/content/pages/ai-2026-trustworthy-agent-operations-blueprint.md"
+      url: "/content/ai-2026-trustworthy-agent-operations-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Operations", "SLOs", "Evaluations", "Policy-as-Code", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        mttr: "< 10 min"
+        cost_optimization: "20-40%"
+
     - id: "ai-2026-privacy-preserving-agents"
       type: "blog"
       title: "AI 2026: Privacy-Preserving Agents"
@@ -617,3 +647,35 @@ content_index:
         latency: "2.4x faster"
         quality: "stable via evals"
       reading_time: "14 min read"
+
+    - id: "ai-2026-autonomous-operations-framework"
+      type: "blog"
+      title: "AI 2026: Autonomous Operations Framework"
+      file_path: "/app/blog/ai-2026-autonomous-operations-framework/page.tsx"
+      url: "/blog/ai-2026-autonomous-operations-framework"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Autonomous Operations", "Self-Healing", "Automation", "Framework", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        manual_intervention: "90% reduction"
+        uptime: "99.9%"
+        incident_resolution: "75% faster"
+      reading_time: "16 min read"
+
+    - id: "ai-2026-predictive-maintenance-revolution"
+      type: "blog"
+      title: "AI 2026: Predictive Maintenance Revolution"
+      file_path: "/app/blog/ai-2026-predictive-maintenance-revolution/page.tsx"
+      url: "/blog/ai-2026-predictive-maintenance-revolution"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Predictive Maintenance", "AI Analytics", "IoT", "Machine Learning", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        downtime_reduction: "85%"
+        cost_savings: "60%"
+        prediction_accuracy: "95%"
+      reading_time: "18 min read"
