@@ -433,22 +433,28 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
+                title: 'AI 2026: Trustworthy Model Routing',
+                summary:
+                  'Policy‑aware, evaluation‑driven routing balancing quality, latency, and cost with audit evidence.',
+                href: '/blog/ai-2026-trustworthy-model-routing'
+              },
+              {
                 title: 'AI 2026: Policy‑as‑Code in Production — Blueprint',
                 summary:
                   'Operationalize governance with executable policies, CI/CD gates, and audit‑ready evidence.',
                 href: '/blog/ai-2026-policy-as-code-production-blueprint'
               },
               {
-                title: 'AI 2026: Real‑Time Retrieval Architectures',
-                summary:
-                  'Low‑latency hybrid retrieval patterns with grounding, evals, and rollout controls.',
-                href: '/blog/ai-2026-real-time-retrieval-architectures'
-              },
-              {
                 title: 'AI 2026: Generative AI Risk Register',
                 summary:
                   'Templates, owners, mitigations, and audit evidence to operationalize AI risk.',
                 href: '/blog/ai-2026-generative-ai-risk-register'
+              },
+              {
+                title: 'AI 2026: Real‑Time Retrieval Architectures',
+                summary:
+                  'Low‑latency hybrid retrieval patterns with grounding, evals, and rollout controls.',
+                href: '/blog/ai-2026-real-time-retrieval-architectures'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
