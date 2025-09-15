@@ -1,35 +1,33 @@
-import React from 'react'
-
-export default function AIGovernanceDashboardV3Page() {
+export default function Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-24 pb-24">
-        <p className="text-sm text-blue-300">Launch • 2025-09-15</p>
+      <div className="mx-auto max-w-3xl px-6 pt-28 pb-24 lg:px-8">
+        <p className="text-sm font-semibold leading-6 text-blue-400">Launch</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          AI Governance Dashboard v3
+          Launch: AI Governance Dashboard v3
         </h1>
-        <p className="mt-4 text-lg leading-8 text-gray-300">
-          Unified governance KPIs with policy-as-code status, eval gates, and exception workflows for audited AI delivery.
-        </p>
-        <div className="mt-8 prose prose-invert prose-lg max-w-none">
+        <p className="mt-2 text-gray-400">2025-09-15</p>
+        <div className="prose prose-invert mt-8">
+          <p>
+            v3 unifies governance KPIs across policy-as-code status, evaluation gates, and exception workflows. It
+            brings deeper auditability, real-time compliance views, and integration hooks for CI/CD and ticketing.
+          </p>
           <h2>What’s new</h2>
           <ul>
-            <li>Program-level KPIs for policy coverage, exception rates, and approval latency</li>
-            <li>Signed eval artifacts with lineage and environment provenance</li>
-            <li>Gate status across services with drill-down to failing rubrics</li>
-            <li>Access controls and immutable audit logs</li>
+            <li>Policy pack status with drift detection and evidence bundle exports</li>
+            <li>Live eval gate monitoring with pass/fail trends and impact analysis</li>
+            <li>Exception workflows with approvals, expiry, and auto-review reminders</li>
+            <li>API and webhooks for CI/CD checks and SOC2-ready exports</li>
           </ul>
           <h2>Why it matters</h2>
           <p>
-            Teams gain real-time visibility into compliance posture and release readiness, reducing audit effort while
-            improving reliability.
+            Teams get a single pane of glass to measure governance readiness, reduce audit toil, and ship safer
+            agent changes with confidence.
           </p>
-          <h2>Get started</h2>
-          <p>
-            Enable the dashboard in your organization and connect to your CI/CD and model gateways.
-          </p>
-          <p>
-            <a href="/contact" className="text-blue-400">Talk to our team →</a>
+          <p className="mt-8">
+            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+              Talk to us
+            </a>
           </p>
         </div>
       </div>
