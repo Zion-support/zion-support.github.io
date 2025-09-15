@@ -84,10 +84,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-              New: Autonomous Data Quality Copilot 1.0 —
-              <a href="/updates/autonomous-data-quality-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read launch</a>
+              New: Autonomous Analytics Copilot v1.0 —
+              <a href="/updates/autonomous-analytics-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates/enterprise-retrieval-latency-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see latency benchmarks 2026</a>
+              <a href="/updates/ai-2026-platform-readiness-checklist" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">read checklist</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>

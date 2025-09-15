@@ -8,7 +8,7 @@ const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
-  { name: 'New', href: '/updates/autonomous-strategy-copilot-1-0' },
+  { name: 'New', href: '/updates/autonomous-analytics-copilot-1-0' },
 ]
 
 export default function Navigation() {

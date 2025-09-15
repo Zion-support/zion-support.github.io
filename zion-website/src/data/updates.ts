@@ -25,6 +25,14 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Report: AI 2026 Platform Readiness Checklist',
+    summary:
+      'Engineer-ready checklist across data, governance, evals, and observability to ship enterprise AI safely.',
+    href: '/updates/ai-2026-platform-readiness-checklist',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
     title: 'Guide: Evaluating Agent Runbooks with Live E2E Evals',
     summary:
       'How to score and harden operational runbooks using real traffic, guardrails, and rollout gates.',
