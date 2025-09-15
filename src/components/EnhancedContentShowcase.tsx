@@ -2,113 +2,267 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const EnhancedContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [activeTab, setActiveTab] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const contentSlides = [
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const contentTabs = [
     {
-      id: 1,
-      title: "Next-Gen AI Solutions",
-      description: "Revolutionary AI technologies transforming industries with autonomous agents and predictive analytics",
-      image: "🤖",
-      gradient: "from-slate-600 to-gray-600",
-      link: "/pages/NextGenAISolutions2025",
-      features: ["Autonomous AI Agents", "Real-time Processing", "Predictive Analytics"]
+      id: 'synthetic-intelligence',
+      title: 'Synthetic Intelligence',
+      icon: '🧠',
+      color: 'from-purple-600 to-pink-600',
+      content: {
+        title: 'Revolutionary AI Platform',
+        description: 'Experience the next evolution of artificial intelligence with our breakthrough synthetic intelligence platform.',
+        features: [
+          'Quantum Neural Networks with exponential processing power',
+          'Autonomous decision-making systems that adapt in real-time',
+          'Multi-domain intelligence across scientific research and creative arts',
+          'Advanced predictive analytics with unprecedented accuracy',
+          'Seamless human-AI collaboration interfaces',
+          'Built-in ethical AI framework for responsible deployment'
+        ],
+        metrics: [
+          { label: 'Processing Speed', value: '10^15x faster' },
+          { label: 'Learning Accuracy', value: '99.97%' },
+          { label: 'Energy Efficiency', value: '90% less consumption' }
+        ]
+      }
     },
     {
-      id: 2,
-      title: "Quantum Computing Revolution",
-      description: "Experience exponential computing power with quantum technology solving impossible problems",
-      image: "⚡",
-      gradient: "from-blue-600 to-indigo-600",
-      link: "/pages/QuantumComputingRevolution2025",
-      features: ["Exponential Speed", "Quantum Cryptography", "Molecular Simulation"]
+      id: 'quantum-neural-fusion',
+      title: 'Quantum-Neural Fusion',
+      icon: '⚛️',
+      color: 'from-cyan-600 to-blue-600',
+      content: {
+        title: 'Quantum Computing Breakthrough',
+        description: 'The world\'s first quantum-neural hybrid system combining quantum computing with advanced neural networks.',
+        features: [
+          'Quantum superposition processing for multiple neural states',
+          'Entangled neural networks with instant information transfer',
+          'Quantum tunneling learning for impossible solution spaces',
+          'Coherent state optimization for efficient learning',
+          '1,000,000+ logical qubits with error correction',
+          '99.99% quantum gate operation accuracy'
+        ],
+        metrics: [
+          { label: 'Qubit Count', value: '1M+' },
+          { label: 'Coherence Time', value: '100+ seconds' },
+          { label: 'Gate Fidelity', value: '99.99%' }
+        ]
+      }
     },
     {
-      id: 3,
-      title: "Blockchain Innovation",
-      description: "Decentralized solutions enabling trust, transparency, and new economic opportunities",
-      image: "🔗",
-      gradient: "from-emerald-600 to-teal-600",
-      link: "/pages/BlockchainInnovation2025",
-      features: ["Layer 2 Solutions", "Zero-Knowledge Proofs", "Cross-Chain Interoperability"]
+      id: 'ai-revolution',
+      title: 'AI Revolution 2025',
+      icon: '🤖',
+      color: 'from-green-600 to-emerald-600',
+      content: {
+        title: 'Autonomous AI Systems',
+        description: 'Discover how artificial intelligence is reshaping industries and creating new opportunities in 2025.',
+        features: [
+          'Autonomous AI agents for business process automation',
+          'Edge AI computing for real-time decision making',
+          'Generative AI 2.0 for creative content production',
+          'Advanced computer vision and natural language processing',
+          'Self-evolving algorithms that improve without human intervention',
+          'Cross-industry AI solutions for healthcare, finance, and manufacturing'
+        ],
+        metrics: [
+          { label: 'Efficiency Gain', value: '300%' },
+          { label: 'Cost Reduction', value: '40%' },
+          { label: 'Accuracy', value: '99.9%' }
+        ]
+      }
     },
     {
-      id: 4,
-      title: "Enterprise Solutions",
-      description: "Comprehensive enterprise-grade solutions driving digital transformation and business growth",
-      image: "🏢",
-      gradient: "from-indigo-600 to-purple-600",
-      link: "/pages/EnterpriseSolutions2025",
-      features: ["AI-Powered Automation", "Cloud Infrastructure", "Cybersecurity Suite"]
+      id: 'neural-interfaces',
+      title: 'Neural Interfaces',
+      icon: '🧬',
+      color: 'from-orange-600 to-red-600',
+      content: {
+        title: 'Mind-Machine Connection',
+        description: 'Bridge the gap between mind and machine with direct neural interfaces and brain-computer communication.',
+        features: [
+          'Non-invasive brain-computer interfaces (BCI)',
+          'Thought-controlled device operation',
+          'Neural feedback systems for enhanced learning',
+          'Direct neural data processing and analysis',
+          'Mind-to-mind communication protocols',
+          'Neural pattern recognition and interpretation'
+        ],
+        metrics: [
+          { label: 'Response Time', value: '< 100ms' },
+          { label: 'Accuracy', value: '95%' },
+          { label: 'Safety', value: '100%' }
+        ]
+      }
     }
   ];
 
-  useEffect(() => {
-    if (isAutoPlaying) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
-      }, 5000);
-      return () => clearInterval(interval);
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
     }
-  }, [isAutoPlaying, contentItems.length]);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % contentItems.length);
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + contentItems.length) % contentItems.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6
+      }
+    }
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-8 text-white overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-      </div>
-
-      <div className="relative z-10">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-4 animate-pulse">
-            ✨ FEATURED CONTENT • 2025
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center py-20"
+      >
+        <div className="container mx-auto px-4">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 INTERACTIVE SHOWCASE • 2026
           </div>
-          <h2 className="text-4xl font-bold mb-4">Revolutionary Technology Showcase</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our latest breakthrough content covering cutting-edge technologies that are reshaping the future
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Enhanced Technology Showcase
+          </h1>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Explore our revolutionary technologies through an interactive, immersive experience
           </p>
         </div>
+      </motion.div>
 
-        {/* Main Content Carousel */}
-        <div className="relative">
+      {/* Interactive Tabs */}
+      <div className="container mx-auto px-4 pb-20">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="max-w-6xl mx-auto"
+        >
+          {/* Tab Navigation */}
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-wrap justify-center gap-4 mb-12"
+          >
+            {contentTabs.map((tab, index) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(index)}
+                className={`flex items-center space-x-3 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                  activeTab === index
+                    ? `bg-gradient-to-r ${tab.color} text-white shadow-lg scale-105`
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                <span className="text-2xl">{tab.icon}</span>
+                <span>{tab.title}</span>
+              </button>
+            ))}
+          </motion.div>
+
+          {/* Tab Content */}
           <AnimatePresence mode="wait">
             <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, x: 100 }}
+              key={activeTab}
+              initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
+              exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}
-              className="grid md:grid-cols-2 gap-8 items-center"
+              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
             >
-              {/* Content */}
-              <div>
-                <div className="text-6xl mb-4">{contentItems[currentIndex].image}</div>
-                <h3 className="text-3xl font-bold mb-4">{contentItems[currentIndex].title}</h3>
-                <p className="text-lg text-gray-300 mb-6">{contentItems[currentIndex].description}</p>
-                
-                <div className="space-y-2 mb-8">
-                  {contentItems[currentIndex].features.map((feature, index) => (
-                    <div key={index} className="flex items-center text-blue-300">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      {feature}
+              <div className="grid lg:grid-cols-2 gap-12">
+                {/* Content Description */}
+                <div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="mb-8"
+                  >
+                    <h2 className="text-4xl font-bold mb-4">{contentTabs[activeTab].content.title}</h2>
+                    <p className="text-xl text-gray-300 mb-6">{contentTabs[activeTab].content.description}</p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className="space-y-4"
+                  >
+                    <h3 className="text-2xl font-bold mb-4">Key Features</h3>
+                    {contentTabs[activeTab].content.features.map((feature, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.6 + index * 0.1 }}
+                        className="flex items-start space-x-3"
+                      >
+                        <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <p className="text-gray-300">{feature}</p>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                </div>
+
+                {/* Metrics and Visual */}
+                <div className="space-y-8">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6 }}
+                    className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20"
+                  >
+                    <h3 className="text-2xl font-bold mb-6 text-center">Performance Metrics</h3>
+                    <div className="space-y-4">
+                      {contentTabs[activeTab].content.metrics.map((metric, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: 0.8 + index * 0.1 }}
+                          className="flex justify-between items-center py-3 border-b border-white/10 last:border-b-0"
+                        >
+                          <span className="text-gray-300">{metric.label}</span>
+                          <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                            {metric.value}
+                          </span>
+                        </motion.div>
+                      ))}
                     </div>
-                  ))}
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 1.0 }}
+                    className={`bg-gradient-to-br ${contentTabs[activeTab].color} rounded-xl p-8 text-center`}
+                  >
+                    <div className="text-6xl mb-4">{contentTabs[activeTab].icon}</div>
+                    <h3 className="text-2xl font-bold mb-2">Interactive Demo</h3>
+                    <p className="text-lg opacity-90 mb-6">
+                      Experience this technology in action
+                    </p>
+                    <button className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold">
+                      Launch Demo →
+                    </button>
+                  </motion.div>
                 </div>
 
                 <a
@@ -134,55 +288,85 @@ const EnhancedContentShowcase: React.FC = () => {
               </div>
             </motion.div>
           </AnimatePresence>
+        </motion.div>
+      </div>
 
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
-            onMouseEnter={() => setIsAutoPlaying(false)}
-            onMouseLeave={() => setIsAutoPlaying(true)}
+      {/* Additional Interactive Features */}
+      <div className="py-20 bg-gradient-to-r from-purple-900/50 to-pink-900/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
-            onMouseEnter={() => setIsAutoPlaying(false)}
-            onMouseLeave={() => setIsAutoPlaying(true)}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+            <h2 className="text-4xl font-bold mb-6">Interactive Features</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Explore additional interactive elements and demonstrations
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Virtual Reality Demo',
+                description: 'Experience our technologies in immersive VR environments',
+                icon: '🥽',
+                action: 'Enter VR'
+              },
+              {
+                title: 'Live Data Visualization',
+                description: 'Watch real-time data processing and analysis',
+                icon: '📊',
+                action: 'View Live Data'
+              },
+              {
+                title: 'AI Chat Assistant',
+                description: 'Interact with our AI systems through natural conversation',
+                icon: '💬',
+                action: 'Start Chat'
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 text-center"
+              >
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  {feature.action}
+                </button>
+              </motion.div>
+            ))}
+          </div>
         </div>
+      </div>
 
-        {/* Dots Indicator */}
-        <div className="flex justify-center space-x-2 mt-8">
-          {contentItems.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentIndex ? 'bg-white' : 'bg-white/30'
-              }`}
-              onMouseEnter={() => setIsAutoPlaying(false)}
-              onMouseLeave={() => setIsAutoPlaying(true)}
-            />
-          ))}
-        </div>
-
-        {/* Auto-play Toggle */}
-        <div className="flex justify-center mt-4">
-          <button
-            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-white transition-colors"
+      {/* CTA Section */}
+      <div className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            <div className={`w-3 h-3 rounded-full ${isAutoPlaying ? 'bg-green-400' : 'bg-gray-400'}`}></div>
-            <span>{isAutoPlaying ? 'Auto-playing' : 'Paused'}</span>
-          </button>
+            <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Join thousands of organizations already transforming their operations with our revolutionary technologies
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Get Started Today
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
+                Schedule Consultation
+              </button>
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>
