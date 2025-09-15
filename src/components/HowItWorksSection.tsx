@@ -14,19 +14,24 @@ const getSteps = (t: any) => [
   {
     title: t('how_it_works.post'),
     description: t('how_it_works.post_desc'),
-    icon: Send},
+    icon: Send,
+  },
   {
     title: t('how_it_works.match'),
     description: t('how_it_works.match_desc'),
-    icon: Search},
+    icon: Search,
+  },
   {
     title: t('how_it_works.hire_buy'),
     description: t('how_it_works.hire_buy_desc'),
-    icon: Handshake},
+    icon: Handshake,
+  },
   {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
-    icon: Check}];
+    icon: Check,
+  },
+];
 
 export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
   const { t } = useTranslation();

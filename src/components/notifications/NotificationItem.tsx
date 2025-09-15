@@ -9,7 +9,8 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip';
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import { useRouter } from 'next/router';
 import { Notification, NotificationType } from '@/context/notifications';
 
@@ -47,7 +48,8 @@ interface NotificationItemProps {
 export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification,
   onMarkAsRead,
-  onDismiss}) => {
+  onDismiss,
+}) => {
   const router = useRouter(); // Changed from useNavigate to useRouter
 
   const handleClick = () => {
@@ -85,7 +87,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
             <p className="text-xs text-zion-slate">
               {notification.created_at
                 ? formatDistanceToNow(new Date(notification.created_at), {
-                    addSuffix: true})
+                    addSuffix: true,
+                  })
                 : 'Just now'}
             </p>
 

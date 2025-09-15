@@ -104,7 +104,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       
       toast({
         title: "Application sent",
-        description: `Your application for "${job.title}" has been sent.`});
+        description: `Your application for "${job.title}" has been sent.`,
+      });
       
       onClose();
     } catch (error) {

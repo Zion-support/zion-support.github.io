@@ -1,333 +1,306 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  BarChart3
+  TrendingUp
+  Users
+  DollarSign
+  Eye
+  MousePointer
+  Clock,
+  Target,
+  Zap,
+  Brain,
+  Rocket,
+  Globe,
+  Shield,
+  Star,
+  ArrowUpRight,
+  ArrowDownRight,
+  Activity
+} from 'lucide-react';
 
-interface Metric {
+interface AnalyticsData {
   id: string;
   title: string;
-  value: number;
+  value: string | number;
   change: number;
   trend: 'up' | 'down' | 'stable';
-  format: 'number' | 'percentage' | 'currency';
-  icon: string;
+  icon: React.ComponentType<any>;
   color: string;
+  description: string;
 }
 
-interface ChartData {
-  labels: string[];
-  datasets: {
-    label: string;
-    data: number[];
-    borderColor: string;
-    backgroundColor: string;
-  }[];
-}
+const AdvancedAnalyticsDashboard2026 = () => {
+  const [analyticsDatasetAnalyticsData] = useState<AnalyticsData[]>([]);
+  const [selectedTimeframesetSelectedTimeframe] = useState('7d');
+  const [isLoadingsetIsLoading] = useState(true);
 
-const AdvancedAnalyticsDashboard2026: React.FC = () => {
-  const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
-  const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    // Simulate data loading
+    const loadData = async () => {
+      setIsLoading(true);
+      await new Promise(resolve => setTimeout(resolve1000));
+      
+      const data: AnalyticsData[] = [
+        {
+          id: 'revenue',
+          title: 'Total Revenue',
+          value: '$2.4M',
+          change: 23.5,
+          trend: 'up',
+          icon: DollarSign,
+          color: 'from-green-500 to-emerald-500',
+          description: 'Monthly recurring revenue'
+        },
+        {
+          id: 'users',
+          title: 'Active Users',
+          value: '45.2K',
+          change: 12.3,
+          trend: 'up',
+          icon: Users,
+          color: 'from-blue-500 to-cyan-500',
+          description: 'Daily active users'
+        },
+        {
+          id: 'conversion',
+          title: 'Conversion Rate',
+          value: '8.7%',
+          change: -2.1,
+          trend: 'down',
+          icon: Target,
+          color: 'from-purple-500 to-pink-500',
+          description: 'Visitor to customer conversion'
+        },
+        {
+          id: 'pageviews',
+          title: 'Page Views',
+          value: '1.2M',
+          change: 34.7,
+          trend: 'up',
+          icon: Eye,
+          color: 'from-orange-500 to-red-500',
+          description: 'Total page views this month'
+        },
+        {
+          id: 'sessions',
+          title: 'Sessions',
+          value: '89.4K',
+          change: 18.9,
+          trend: 'up',
+          icon: Activity,
+          color: 'from-teal-500 to-cyan-500',
+          description: 'User sessions this month'
+        },
+        {
+          id: 'bounce',
+          title: 'Bounce Rate',
+          value: '32.1%',
+          change: -5.2,
+          trend: 'down',
+          icon: MousePointer,
+          color: 'from-indigo-500 to-purple-500',
+          description: 'Single-page sessions'
+        },
+        {
+          id: 'avg-session',
+          title: 'Avg. Session',
+          value: '4m 32s',
+          change: 8.3,
+          trend: 'up',
+          icon: Clock,
+          color: 'from-yellow-500 to-orange-500',
+          description: 'Average session duration'
+        },
+        {
+          id: 'ai-usage',
+          title: 'AI Features Used',
+          value: '156K',
+          change: 67.2,
+          trend: 'up',
+          icon: Brain,
+          color: 'from-pink-500 to-rose-500',
+          description: 'AI-powered interactions'
+        }
+      ];
+      
+      setAnalyticsData(data);
+      setIsLoading(false);
+    };
 
-  const metrics: Metric[] = [
-    {
-      id: '1',
-      title: 'Total Users',
-      value: 125430,
-      change: 12.5,
-      trend: 'up',
-      format: 'number',
-      icon: '👥',
-      color: 'blue'
-    },
-    {
-      id: '2',
-      title: 'Page Views',
-      value: 2847392,
-      change: 8.3,
-      trend: 'up',
-      format: 'number',
-      icon: '👁️',
-      color: 'green'
-    },
-    {
-      id: '3',
-      title: 'Conversion Rate',
-      value: 3.47,
-      change: -2.1,
-      trend: 'down',
-      format: 'percentage',
-      icon: '📈',
-      color: 'red'
-    },
-    {
-      id: '4',
-      title: 'Revenue',
-      value: 125430,
-      change: 15.8,
-      trend: 'up',
-      format: 'currency',
-      icon: '💰',
-      color: 'purple'
-    },
-    {
-      id: '5',
-      title: 'Bounce Rate',
-      value: 34.2,
-      change: -5.2,
-      trend: 'up',
-      format: 'percentage',
-      icon: '📉',
-      color: 'green'
-    },
-    {
-      id: '6',
-      title: 'Avg. Session',
-      value: 4.2,
-      change: 7.1,
-      trend: 'up',
-      format: 'number',
-      icon: '⏱️',
-      color: 'blue'
-    }
-  ];
-
-  const timeRanges = [
-    { value: '24h', label: 'Last 24 Hours' },
-    { value: '7d', label: 'Last 7 Days' },
-    { value: '30d', label: 'Last 30 Days' },
-    { value: '90d', label: 'Last 90 Days' }
-  ];
-
-  const formatValue = (value: number, format: string) => {
-    switch (format) {
-      case 'currency':
-        return new Intl.NumberFormat('en-US', {
-          style: 'currency',
-          currency: 'USD',
-          minimumFractionDigits: 0
-        }).format(value);
-      case 'percentage':
-        return `${value.toFixed(1)}%`;
-      case 'number':
-        return new Intl.NumberFormat('en-US').format(value);
-      default:
-        return value.toString();
-    }
-  };
+    loadData();
+  }[selectedTimeframe]);
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'up':
-        return '↗️';
-      case 'down':
-        return '↘️';
-      default:
-        return '→';
+      case 'up': return <ArrowUpRight className="w-4 h-4 text-green-400" />;
+      case 'down': return <ArrowDownRight className="w-4 h-4 text-red-400" />;
+      case 'stable': return <TrendingUp className="w-4 h-4 text-gray-400" />;
+      default: return <TrendingUp className="w-4 h-4 text-gray-400" />;
     }
   };
 
-  const getTrendColor = (trend: string, change: number) => {
-    if (trend === 'up') {
-      return change > 0 ? 'text-green-600' : 'text-red-600';
-    } else if (trend === 'down') {
-      return change > 0 ? 'text-green-600' : 'text-red-600';
-    }
-    return 'text-gray-600';
+  const getChangeColor = (change: number) => {
+    return change >= 0 ? 'text-green-400' : 'text-red-400';
   };
 
-  const getMetricColor = (color: string) => {
-    switch (color) {
-      case 'blue':
-        return 'bg-blue-50 border-blue-200';
-      case 'green':
-        return 'bg-green-50 border-green-200';
-      case 'red':
-        return 'bg-red-50 border-red-200';
-      case 'purple':
-        return 'bg-purple-50 border-purple-200';
-      default:
-        return 'bg-gray-50 border-gray-200';
-    }
-  };
+  const timeframes = [
+    { value: '24'h', 'label: '24 Hours' },
+    { value: '7'd', 'label: '7 Days' },
+    { value: '30'd', 'label: '30 Days' },
+    { value: '90'd', 'label: '90 Days' }
+  ];
 
-  useEffect(() => {
-    setIsLoading(true);
-    // Simulate data loading
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  }, [selectedTimeRange]);
+  if (isLoading) {
+    return (
+      <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white p-6 rounded-2xl border border-white/10">
+        <div className="flex items-center justify-center h-64">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500"></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-12">
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
-                📊 ADVANCED ANALYTICS 2026
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Real-time Analytics Dashboard
-              </h2>
-              <p className="text-xl text-gray-600">
-                Comprehensive insights into your AI platform performance and user engagement
-              </p>
-            </div>
-            
-            {/* Time Range Selector */}
-            <div className="flex space-x-2">
-              {timeRanges.map((range) => (
-                <button
-                  key={range.value}
-                  onClick={() => setSelectedTimeRange(range.value)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    selectedTimeRange === range.value
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
-                  }`}
-                >
-                  {range.label}
-                </button>
-              ))}
-            </div>
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white p-6 rounded-2xl border border-white/10">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center gap-3">
+          <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl">
+            <BarChart3 className="w-6 h-6 text-white" />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-white">Advanced Analytics 2026</h3>
+            <p className="text-gray-400">Comprehensive business intelligence and insights</p>
           </div>
         </div>
-
-        {/* Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {metrics.map((metric) => (
-            <div
-              key={metric.id}
-              className={`p-6 rounded-xl border-2 ${getMetricColor(metric.color)} ${
-                isLoading ? 'animate-pulse' : ''
+        
+        <div className="flex items-center gap-2">
+          {timeframes.map((timeframe) => (
+            <button
+              key={timeframe.value}
+              onClick={() => setSelectedTimeframe(timeframe.value)}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                selectedTimeframe === timeframe.value
+                  ? 'bg-purple-500 text-white'
+                  : 'bg-white/10 text-gray-400 hover:bg-white/20 hover:text-white'
               }`}
             >
-              <div className="flex items-center justify-between mb-4">
-                <div className="text-3xl">{metric.icon}</div>
-                <div className={`text-sm font-medium ${getTrendColor(metric.trend, metric.change)}`}>
-                  {getTrendIcon(metric.trend)} {Math.abs(metric.change)}%
-                </div>
-              </div>
-              
-              <h3 className="text-sm font-medium text-gray-600 mb-2">{metric.title}</h3>
-              <div className="text-3xl font-bold text-gray-900 mb-2">
-                {isLoading ? '...' : formatValue(metric.value, metric.format)}
-              </div>
-              
-              <div className="flex items-center text-sm">
-                <span className={`font-medium ${getTrendColor(metric.trend, metric.change)}`}>
-                  {metric.change > 0 ? '+' : ''}{metric.change}%
-                </span>
-                <span className="text-gray-500 ml-2">vs previous period</span>
-              </div>
-            </div>
+              {timeframe.label}
+            </button>
           ))}
         </div>
+      </div>
 
-        {/* Charts Section */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          {/* User Growth Chart */}
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6">User Growth</h3>
-            <div className="h-64 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-4xl mb-2">📈</div>
-                <p className="text-gray-600">Interactive chart would be here</p>
-                <p className="text-sm text-gray-500">+12.5% growth this period</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Traffic Sources */}
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6">Traffic Sources</h3>
-            <div className="space-y-4">
-              {[
-                { source: 'Direct', percentage: 45, color: 'bg-blue-500' },
-                { source: 'Search', percentage: 30, color: 'bg-green-500' },
-                { source: 'Social', percentage: 15, color: 'bg-purple-500' },
-                { source: 'Referral', percentage: 10, color: 'bg-orange-500' }
-              ].map((item, index) => (
-                <div key={index} className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700">{item.source}</span>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-32 bg-gray-200 rounded-full h-2">
-                      <div
-                        className={`h-2 rounded-full ${item.color}`}
-                        style={{ width: `${item.percentage}%` }}
-                      ></div>
-                    </div>
-                    <span className="text-sm font-medium text-gray-900 w-12 text-right">
-                      {item.percentage}%
-                    </span>
-                  </div>
+      {/* Analytics Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <AnimatePresence>
+          {analyticsData.map((itemindex) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5delay: index * 0.1 }}
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className={`p-2 rounded-lg bg-gradient-to-r ${item.color}`}>
+                  <item.icon className="w-5 h-5 text-white" />
                 </div>
-              ))}
+                <div className="flex items-center gap-1">
+                  {getTrendIcon(item.trend)}
+                  <span className={`text-sm font-medium ${getChangeColor(item.change)}`}>
+                    {item.change > 0 ? '+' : ''}{item.change.toFixed(1)}%
+                  </span>
+                </div>
+              </div>
+              
+              <div className="mb-2">
+                <div className="text-2xl font-bold text-white mb-1">
+                  {item.value}
+                </div>
+                <div className="text-sm text-gray-400">
+                  {item.title}
+                </div>
+              </div>
+              
+              <div className="text-xs text-gray-500">
+                {item.description}
+              </div>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </div>
+
+      {/* Performance Insights */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+          <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+            <Zap className="w-5 h-5 text-yellow-400" />
+            Performance Insights
+          </h4>
+          <div className="space-y-4">
+            <div className="flex items-center justify-between p-3 bg-green-500/10 rounded-lg border border-green-500/20">
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                <span className="text-sm text-white">AI Features Usage</span>
+              </div>
+              <span className="text-sm font-medium text-green-400">+67.2%</span>
+            </div>
+            <div className="flex items-center justify-between p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <span className="text-sm text-white">User Engagement</span>
+              </div>
+              <span className="text-sm font-medium text-blue-400">+18.9%</span>
+            </div>
+            <div className="flex items-center justify-between p-3 bg-purple-500/10 rounded-lg border border-purple-500/20">
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <span className="text-sm text-white">Revenue Growth</span>
+              </div>
+              <span className="text-sm font-medium text-purple-400">+23.5%</span>
             </div>
           </div>
         </div>
 
-        {/* Performance Insights */}
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 mb-12">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-6">Performance Insights</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl mb-2">⚡</div>
-              <h4 className="font-semibold text-gray-900 mb-1">Page Speed</h4>
-              <p className="text-2xl font-bold text-green-600">2.1s</p>
-              <p className="text-sm text-gray-500">Average load time</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl mb-2">📱</div>
-              <h4 className="font-semibold text-gray-900 mb-1">Mobile Users</h4>
-              <p className="text-2xl font-bold text-blue-600">68%</p>
-              <p className="text-sm text-gray-500">Of total traffic</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl mb-2">🌍</div>
-              <h4 className="font-semibold text-gray-900 mb-1">Global Reach</h4>
-              <p className="text-2xl font-bold text-purple-600">127</p>
-              <p className="text-sm text-gray-500">Countries</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl mb-2">🎯</div>
-              <h4 className="font-semibold text-gray-900 mb-1">Engagement</h4>
-              <p className="text-2xl font-bold text-orange-600">4.2m</p>
-              <p className="text-sm text-gray-500">Avg. session time</p>
-            </div>
-          </div>
-        </div>
-
-        {/* AI Recommendations */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
-          <div className="flex items-start space-x-4">
-            <div className="text-4xl">🤖</div>
-            <div>
-              <h3 className="text-2xl font-bold mb-4">AI-Powered Recommendations</h3>
-              <div className="space-y-3">
-                <div className="bg-white/10 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Optimize Mobile Experience</h4>
-                  <p className="text-sm opacity-90">
-                    Your mobile bounce rate is 15% higher than desktop. Consider optimizing 
-                    mobile page speed and user experience.
-                  </p>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Content Strategy</h4>
-                  <p className="text-sm opacity-90">
-                    AI-related content shows 40% higher engagement. Focus on creating 
-                    more AI-focused content to increase user retention.
-                  </p>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
-                  <h4 className="font-semibold mb-2">Peak Traffic Times</h4>
-                  <p className="text-sm opacity-90">
-                    Schedule important content releases between 2-4 PM EST for maximum 
-                    visibility and engagement.
-                  </p>
-                </div>
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+          <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+            <Rocket className="w-5 h-5 text-orange-400" />
+            Growth Opportunities
+          </h4>
+          <div className="space-y-4">
+            <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">
+              <div className="flex items-center gap-2 mb-2">
+                <Brain className="w-4 h-4 text-purple-400" />
+                <span className="text-sm font-medium text-white">AI Optimization</span>
               </div>
+              <p className="text-xs text-gray-400">
+                Implement advanced AI features to increase user engagement by 25%
+              </p>
+            </div>
+            <div className="p-3 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-lg border border-blue-500/20">
+              <div className="flex items-center gap-2 mb-2">
+                <Globe className="w-4 h-4 text-blue-400" />
+                <span className="text-sm font-medium text-white">Global Expansion</span>
+              </div>
+              <p className="text-xs text-gray-400">
+                Expand to new markets to capture additional 40% revenue growth
+              </p>
+            </div>
+            <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-lg border border-green-500/20">
+              <div className="flex items-center gap-2 mb-2">
+                <Shield className="w-4 h-4 text-green-400" />
+                <span className="text-sm font-medium text-white">Security Enhancement</span>
+              </div>
+              <p className="text-xs text-gray-400">
+                Upgrade security measures to build trust and reduce bounce rate
+              </p>
             </div>
           </div>
         </div>

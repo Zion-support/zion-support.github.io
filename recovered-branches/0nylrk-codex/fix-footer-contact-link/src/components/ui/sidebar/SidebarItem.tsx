@@ -8,7 +8,11 @@ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
   active?: boolean;
 }
 
+<<<<<<< HEAD
+export function SidebarItem({ classNamechildrenactive...props }: SidebarItemProps) {
+=======
 export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div
       className={cn(
@@ -22,3 +26,7 @@ export function SidebarItem({ className, children, active, ...props }: SidebarIt
     </div>
   );
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616

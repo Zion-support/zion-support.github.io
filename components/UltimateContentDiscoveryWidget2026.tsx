@@ -1,17 +1,17 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, Star, Clock, TrendingUp, BookOpen, Video, FileText, Users, Zap } from 'lucide-react';
-=======
+SearchFilterStarClockTrendingUpBookOpenVideoFileTextUsersZap
 import { 
-  Search, 
-  Filter, 
-  Grid, 
-  List, 
-  Star, 
-  Clock, 
-  Users, 
+  Search
+  Filter
+  Grid
+  List
+  Star
+  Clock
+  Users
   TrendingUp,
   ArrowRight,
   Play,
@@ -21,48 +21,53 @@ import {
   Rocket,
   Globe,
   ChevronDown,
-  X
+  ChevronUp,
+  X,
+  Video,
+  FileText,
+  Download,
+  Share2,
+  Heart,
+  Bookmark
 } from 'lucide-react';
 import Link from 'next/link';
 
 const UltimateContentDiscoveryWidget2026 = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [isSearching, setIsSearching] = useState(false);
+  const [searchQuerysetSearchQuery] = useState('');
+  const [selectedCategorysetSelectedCategory] = useState('all');
+  const [isSearchingsetIsSearching] = useState(false);
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: <BookOpen className="w-4 h-4" /> },
-    { id: 'ai', name: 'AI Solutions', icon: <Zap className="w-4 h-4" /> },
-    { id: 'quantum', name: 'Quantum Computing', icon: <TrendingUp className="w-4 h-4" /> },
-    { id: 'automation', name: 'Automation', icon: <Users className="w-4 h-4" /> },
-    { id: 'tutorials', name: 'Tutorials', icon: <Video className="w-4 h-4" /> },
-    { id: 'case-studies', name: 'Case Studies', icon: <FileText className="w-4 h-4" /> }
-=======
-  const [viewMode, setViewMode] = useState('grid');
-  const [sortBy, setSortBy] = useState('trending');
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+    { id: ''all', 'name: 'All 'Content', 'icon: <BookOpen className="w-4 h-4" /> },
+    { id: ''ai', 'name: 'AI 'Solutions', 'icon: <Zap className="w-4 h-4" /> },
+    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: <TrendingUp className="w-4 h-4" /> },
+    { id: ''automation', 'name: ''Automation', 'icon: <Users className="w-4 h-4" /> },
+    { id: ''tutorials', 'name: ''Tutorials', 'icon: <Video className="w-4 h-4" /> },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: <FileText className="w-4 h-4" /> }
+  const [viewModesetViewMode] = useState('grid');
+  const [sortBysetSortBy] = useState('trending');
+  const [isFilterOpensetIsFilterOpen] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const categories = [
-    { id: 'all', name: 'All Content', icon: Grid, color: 'from-purple-500 to-pink-500' },
-    { id: 'ai-innovations', name: 'AI Innovations', icon: Brain, color: 'from-blue-500 to-cyan-500' },
-    { id: 'automation', name: 'Automation', icon: Zap, color: 'from-green-500 to-emerald-500' },
-    { id: 'future-tech', name: 'Future Tech', icon: Rocket, color: 'from-orange-500 to-red-500' },
-    { id: 'tutorials', name: 'Tutorials', icon: BookOpen, color: 'from-indigo-500 to-purple-500' },
-    { id: 'case-studies', name: 'Case Studies', icon: TrendingUp, color: 'from-pink-500 to-rose-500' }
+    { id: ''all', 'name: 'All 'Content', 'icon: Gridcolor: 'from-purple-500 to-pink-500' },
+    { id: 'ai-'innovations', 'name: 'AI 'Innovations', 'icon: Braincolor: 'from-blue-500 to-cyan-500' },
+    { id: ''automation', 'name: ''Automation', 'icon: Zapcolor: 'from-green-500 to-emerald-500' },
+    { id: 'future-'tech', 'name: 'Future 'Tech', 'icon: Rocketcolor: 'from-orange-500 to-red-500' },
+    { id: ''tutorials', 'name: ''Tutorials', 'icon: BookOpencolor: 'from-indigo-500 to-purple-500' },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: TrendingUpcolor: 'from-pink-500 to-rose-500' }
   ];
 
-  const featuredContent = [
+  const contentItems = [
     {
       id: 1,
       title: "AI-Powered Business Transformation Guide 2026",
       category: 'ai',
       type: 'guide',
-=======
       title: 'Neural Interface Revolution 2026',
       description: 'Breakthrough brain-computer interfaces enabling direct neural communication with AI systems',
       category: 'ai-innovations',
@@ -72,7 +77,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.9,
       trending: true,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['AI', 'Neural Networks', 'Brain-Computer Interface', 'Revolutionary']
+      tags: [', 'AI', 'Neural 'Networks', 'Brain-Computer 'Interface', 'Revolutionary']
     },
     {
       id: 2,
@@ -85,7 +90,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.8,
       trending: true,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Quantum Computing', 'AI', 'Fusion', 'Advanced']
+      tags: ['Quantum 'Computing', 'AI', 'Fusion', 'Advanced']
     },
     {
       id: 3,
@@ -98,7 +103,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.7,
       trending: false,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Automation', 'Business', 'AI', 'Operations']
+      tags: [', 'Automation', 'Business', 'AI', 'Operations']
     },
     {
       id: 4,
@@ -111,7 +116,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.9,
       trending: true,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Consciousness', 'AI', 'Self-Awareness', 'Emotional Intelligence']
+      tags: [', 'Consciousness', 'AI'Self-'Awareness', 'Emotional Intelligence']
     },
     {
       id: 5,
@@ -124,7 +129,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.8,
       trending: false,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Manufacturing', 'AI', 'Predictive Maintenance', 'Industry 4.0']
+      tags: [', 'Manufacturing', 'AI'Predictive 'Maintenance', 'Industry 4.0']
     },
     {
       id: 6,
@@ -137,7 +142,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
       rating: 4.8,
       trending: true,
       thumbnail: '/api/placeholder/400/225',
-      tags: ['Space', 'AI', 'Exploration', 'Communication']
+      tags: [', 'Space', 'AI', 'Exploration', 'Communication']
     }
   ];
 
@@ -145,7 +150,9 @@ const UltimateContentDiscoveryWidget2026 = () => {
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    
     return matchesSearch && matchesCategory;
   });
 
@@ -153,9 +160,8 @@ const UltimateContentDiscoveryWidget2026 = () => {
     setSearchQuery(query);
     setIsSearching(true);
     // Simulate search delay
-    setTimeout(() => setIsSearching(false), 1000);
+    setTimeout(() => setIsSearching(false)1000);
   };
-=======
 
   const toggleFavorite = (id) => {
     setFavorites(prev => {
@@ -167,27 +173,29 @@ const UltimateContentDiscoveryWidget2026 = () => {
       }
       return newFavorites;
     });
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
   };
 
-  const toggleBookmark = (id) => {
-    setBookmarks(prev => {
-      const newBookmarks = new Set(prev);
-      if (newBookmarks.has(id)) {
-        newBookmarks.delete(id);
-      } else {
-        newBookmarks.add(id);
-      }
-      return newBookmarks;
-    });
-  };
-
-  const getTypeIcon = (type) => {
-    switch (type) {
-      case 'video': return Video;
-      case 'tutorial': return Play;
-      case 'case-study': return FileText;
-      default: return BookOpen;
+  const toggleFavorite = (id: number) => {
+    const newFavorites = new Set(favorites);
+    if (newFavorites.has(id)) {
+      newFavorites.delete(id);
+    } else {
+      newFavorites.add(id);
     }
+    setFavorites(newFavorites);
+  };
+
+  const toggleBookmark = (id: number) => {
+    const newBookmarks = new Set(bookmarks);
+    if (newBookmarks.has(id)) {
+      newBookmarks.delete(id);
+    } else {
+      newBookmarks.add(id);
+    }
+    setBookmarks(newBookmarks);
   };
 
   return (
@@ -201,10 +209,10 @@ const UltimateContentDiscoveryWidget2026 = () => {
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Ultimate Content Discovery
+            Ultimate Content Discovery 2026
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover, explore, and engage with the most comprehensive collection of AI and technology content
+            Discover revolutionary AI contentbreakthrough technologiesand transformative insights that will shape the future.
           </p>
         </motion.div>
 
@@ -212,11 +220,10 @@ const UltimateContentDiscoveryWidget2026 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          transition={{ delay: 0.2duration: 0.6 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8"
         >
           <div className="flex flex-col lg:flex-row gap-4">
-=======
     <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -229,8 +236,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
             Ultimate Content Discovery
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Powered by AI 2026
-=======
-  const sortedContent = [...filteredContent].sort((a, b) => {
+  const sortedContent = [...filteredContent].sort((ab) => {
     switch (sortBy) {
       case 'trending':
         return b.trending - a.trending || b.views.localeCompare(a.views);
@@ -248,7 +254,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
       transition={{ duration: 0.8 }}
       className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
     >
@@ -266,7 +272,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore the most advanced AI innovations, automation solutions, and future technologies
+            Explore the most advanced AI innovationsautomation solutionsand future technologies
             with our intelligent content discovery system.
           </p>
         </div>
@@ -275,16 +281,17 @@ const UltimateContentDiscoveryWidget2026 = () => {
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">
           <div className="flex flex-col lg:flex-row gap-4">
             {/* Search Bar */}
-            <div className="flex-1 relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className="relative flex-1">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <Search className="h-5 w-5 text-gray-400" />
+              </div>
               <input
                 type="text"
-                placeholder="Search for content, tutorials, guides..."
+                placeholder="Search for contentutorialsguides..."
                 value={searchQuery}
                 onChange={(e) => handleSearch(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-=======
-                placeholder="Search for content, topics, or technologies..."
+                placeholder="Search for contentopicsor technologies..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -312,7 +319,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
               Filters
             </button>
           </div>
-=======
 
             {/* Sort Options */}
             <div className="relative">
@@ -333,7 +339,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
             <div className="flex bg-white/10 rounded-xl p-1">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`p-2 rounded-lg transition-all duration-300 ${
+                className={`p-2 rounded-lg transition-colors ${
                   viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'
                 }`}
               >
@@ -341,7 +347,7 @@ const UltimateContentDiscoveryWidget2026 = () => {
               </button>
               <button
                 onClick={() => setViewMode('list')}
-                className={`p-2 rounded-lg transition-all duration-300 ${
+                className={`p-2 rounded-lg transition-colors ${
                   viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'
                 }`}
               >
@@ -349,142 +355,129 @@ const UltimateContentDiscoveryWidget2026 = () => {
               </button>
             </div>
           </div>
-
-          {/* Category Pills */}
-          <div className="flex flex-wrap gap-2 mt-4">
-            {categories.map(category => {
-              const Icon = category.icon;
-              return (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                  }`}
-                >
-                  <Icon className="w-4 h-4" />
-                  {category.name}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-=======
-  );
-};
-
-        {/* Results Count */}
-        <div className="flex items-center justify-between mb-6">
-          <p className="text-gray-300">
-            Showing {sortedContent.length} of {contentItems.length} results
-          </p>
-          <div className="flex items-center gap-2 text-sm text-gray-400">
-            <TrendingUp className="w-4 h-4" />
-            <span>Real-time updates</span>
-          </div>
         </div>
 
         {/* Content Grid */}
-        <div className={`grid gap-6 ${
-          viewMode === 'grid' 
-            ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
-            : 'grid-cols-1'
-        }`}>
-          {sortedContent.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-            >
-              {/* Thumbnail */}
-              <div className="relative h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Play className="w-12 h-12 text-white/60" />
-                </div>
-                <div className="absolute top-4 left-4">
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-medium">
-                    {item.type}
-                  </span>
-                </div>
-                <div className="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded text-xs">
-                  {item.duration}
-                </div>
-                {item.trending && (
-                  <div className="absolute bottom-4 left-4 bg-red-500 text-white px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
-                    <TrendingUp className="w-3 h-3" />
-                    Trending
-                  </div>
-                )}
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-1 text-yellow-400">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="text-sm font-medium">{item.rating}</span>
-                  </div>
-                  <div className="flex items-center gap-4 text-sm text-gray-400">
-                    <div className="flex items-center gap-1">
-                      <Users className="w-4 h-4" />
-                      <span>{item.views}</span>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8delay: 0.2 }}
+          className={`grid gap-6 ${
+            viewMode === 'grid' 
+              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
+              : 'grid-cols-1'
+          }`}
+        >
+          <AnimatePresence>
+            {sortedContent.map((itemindex) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
+                className={`bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 ${
+                  viewMode === 'list' ? 'flex' : ''
+                }`}
+              >
+                <div className={`${viewMode === 'list' ? 'w-1/3' : 'w-full'} aspect-video bg-gradient-to-br from-purple-500 to-blue-500 relative`}>
+                  <img
+                    src={item.thumbnail}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                  {item.featured && (
+                    <div className="absolute top-3 left-3 bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-bold">
+                      FEATURED
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{item.duration}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-gray-300 text-sm mb-4 line-clamp-2">
-                  {item.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="bg-white/10 text-gray-300 px-2 py-1 rounded text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                  {item.tags.length > 3 && (
-                    <span className="bg-white/10 text-gray-300 px-2 py-1 rounded text-xs">
-                      +{item.tags.length - 3} more
-                    </span>
                   )}
+                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <Play className="w-12 h-12 text-white" />
+                  </div>
                 </div>
+                
+                <div className={`p-6 ${viewMode === 'list' ? 'w-2/3' : 'w-full'}`}>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${categories.find(c => c.id === item.category)?.color} text-white`}>
+                      {categories.find(c => c.id === item.category)?.name}
+                    </span>
+                    {item.trending && (
+                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-red-500 text-white">
+                        TRENDING
+                      </span>
+                    )}
+                  </div>
+                  
+                  <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
+                  <p className="text-gray-300 mb-4 line-clamp-2">{item.description}</p>
+                  
+                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      {item.duration}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      {item.views.toLocaleString()}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Star className="w-4 h-4" />
+                      {item.rating}
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => toggleFavorite(item.id)}
+                        className={`p-2 rounded-lg transition-colors ${
+                          favorites.has(item.id) ? 'text-red-500 bg-red-500/20' : 'text-gray-400 hover:text-red-500'
+                        }`}
+                      >
+                        <Heart className="w-5 h-5" />
+                      </button>
+                      <button
+                        onClick={() => toggleBookmark(item.id)}
+                        className={`p-2 rounded-lg transition-colors ${
+                          bookmarks.has(item.id) ? 'text-blue-500 bg-blue-500/20' : 'text-gray-400 hover:text-blue-500'
+                        }`}
+                      >
+                        <Bookmark className="w-5 h-5" />
+                      </button>
+                      <button className="p-2 rounded-lg text-gray-400 hover:text-white transition-colors">
+                        <Share2 className="w-5 h-5" />
+                      </button>
+                    </div>
+                    
+                    <Link
+                      href={`/content/${item.id}`}
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+                    >
+                      Explore
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
 
-                {/* Action Button */}
-                <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2 group">
-                  Explore Content
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Load More */}
-        {sortedContent.length > 0 && (
-          <div className="text-center mt-12">
-            <button className="bg-white/10 text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition-all duration-300 flex items-center gap-2 mx-auto">
-              Load More Content
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
+        {/* No Results */}
+        {sortedContent.length === 0 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-12"
+          >
+            <div className="w-24 h-24 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center">
+              <Search className="w-12 h-12 text-gray-400" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>
+            <p className="text-gray-400">Try adjusting your search or filter criteria</p>
+          </motion.div>
         )}
       </div>
-    </motion.div>
   );
 };
 

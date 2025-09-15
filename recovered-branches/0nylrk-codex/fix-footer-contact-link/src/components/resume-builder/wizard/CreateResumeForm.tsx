@@ -1,6 +1,10 @@
 
 import { useState } from "react";
+<<<<<<< HEAD
+import { CardContent } from "@/components/ui/card";
+=======
 import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 import { CreateResumeFormProps } from "./types";
@@ -10,7 +14,11 @@ export const CreateResumeForm = ({
   onCancel,
   isLoading 
 }: CreateResumeFormProps) => {
+<<<<<<< HEAD
+  const [newResumeTitlesetNewResumeTitle] = useState('');
+=======
   const [newResumeTitle, setNewResumeTitle] = useState('');
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return;

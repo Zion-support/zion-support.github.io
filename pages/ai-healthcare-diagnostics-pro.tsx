@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Stethoscope, Brain, Eye, Heart, 
   Microscope, Shield, BarChart3, 
@@ -9,8 +9,8 @@ import {
   ArrowRight, Cpu, Network, Database, 
   Lock, Clock, DollarSign, PieChart,
   Activity, Zap, Pill, Syringe, Hospital, Ambulance
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 const AIHealthcareDiagnosticsPro: React.FC = () => {
   const features = [
@@ -50,7 +50,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       description: "Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const useCases = [
     {
@@ -77,7 +77,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       description: "Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.",
       benefits: ["Precision medicine", "Faster results", "Standardized analysis"]
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -133,7 +133,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       color: "from-green-500 to-emerald-500",
       popular: false
     }
-  ];
+  ],
 
   const integrations = [
     {
@@ -172,7 +172,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       description: "AWS, Azure, Google Cloud, IBM Cloud",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const specialties = [
     {
@@ -211,7 +211,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       description: "Kidney disease detection, renal function analysis, transplant assessment",
       accuracy: "98.8%"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -571,7 +571,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -594,7 +594,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIHealthcareDiagnosticsPro;
+export default AIHealthcareDiagnosticsPro,

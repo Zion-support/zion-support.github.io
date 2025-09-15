@@ -20,7 +20,7 @@ export default function AI2026UltimateInnovationShowcasePromotionBanner() {
               AI 2026 Ultimate Innovation Showcase
             </h2>
             <p className="text-lg md:text-xl text-cyan-100 mb-6 max-w-2xl">
-              Discover the most advanced AI innovations, breakthrough technologies, and revolutionary solutions that will define the future of business in 2026
+              Discover the most advanced AI innovationsbreakthrough technologiesand revolutionary solutions that will define the future of business in 2026
             </p>
             <div className="flex flex-wrap gap-4 mb-6">
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">

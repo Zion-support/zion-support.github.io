@@ -4,6 +4,10 @@ export type SkeletonProps = {
   className?: string
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
 export default function Skeleton({ className = '' }: SkeletonProps) {
   return (
     <div className={`relative overflow-hidden rounded-md bg-gray-200/60 dark:bg-white/10 ${className}`}>

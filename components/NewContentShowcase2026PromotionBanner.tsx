@@ -1,184 +1,161 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
-  Sparkles, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Brain, 
+  Sparkles
+  ArrowRight
+  Star
+  Zap,
+  Brain,
   Rocket,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
+  Target,
   CheckCircle,
-  X
+  Play,
+  ExternalLink
 } from 'lucide-react';
 
 const NewContentShowcase2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
-    return () => clearTimeout(timer);
-  }, []);
+    setIsVisible(true);
+  }[]);
 
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
+  const features = [
+    'Revolutionary AI Innovations',
+    'Advanced Automation Solutions'
+    'Future Technology Predictions',
+    'Interactive Demonstrations'
+  ];
 
   return (
-    <AnimatePresence>
-      {isVisible && (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8 }}
+      className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600"
+    >
+      {/* Animated background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white overflow-hidden"
-        >
-          {/* Background Pattern */}
-          <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -z-10" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-400/20 rounded-full blur-2xl -z-10" />
+          className="absolute top-0 left-0 w-full h-full"
+          animate={{
+            background: [
+              'radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)',
+              'radial-gradient(circle at 80% 20%rgba(2552550.1) 0%transparent 50%)',
+              'radial-gradient(circle at 40% 80%rgba(2552550.1) 0%transparent 50%)',
+              'radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)'
+            ]
+          }}
+          transition={{ duration: 8repeat: Infinity }}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          {/* Content */}
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <Sparkles className="w-6 h-6 text-yellow-300" />
+              <span className="text-sm font-medium text-yellow-200 bg-yellow-400/20 px-3 py-1 rounded-full">
+                NEW CONTENT 2026
+              </span>
+            </div>
+            
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+              Revolutionary Content
+              <span className="block text-yellow-300">Showcase 2026</span>
+            </h2>
+            
+            <p className="text-lg text-purple-100 mb-6">
+              Discover the latest breakthroughs in AIautomationand future technology predictions. 
+              Explore cutting-edge innovations that will transform your business and shape the future.
+            </p>
+            
+            <div className="grid grid-cols-2 gap-3 mb-6">
+              {features.map((featureindex) => (
+                <div key={index} className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-300 flex-shrink-0" />
+                  <span className="text-sm text-white">{feature}</span>
+                </div>
+              ))}
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="flex items-center gap-2 px-6 py-3 bg-white text-purple-600 rounded-full font-medium hover:bg-gray-100 transition-all duration-300 shadow-lg">
+                <Play className="w-5 h-5" />
+                Explore Content
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <button className="flex items-center gap-2 px-6 py-3 bg-white/20 text-white rounded-full font-medium hover:bg-white/30 transition-all duration-300">
+                <ExternalLink className="w-5 h-5" />
+                Learn More
+              </button>
+            </div>
+          </div>
           
-          {/* Floating Elements */}
-          <div className="absolute top-4 left-4 w-3 h-3 bg-yellow-400 rounded-full animate-pulse" />
-          <div className="absolute top-8 right-8 w-2 h-2 bg-pink-400 rounded-full animate-bounce" />
-          <div className="absolute bottom-4 right-4 w-4 h-4 bg-green-400 rounded-full animate-ping" />
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-              {/* Content */}
-              <div className="flex-1 text-center lg:text-left">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-4"
-                >
-                  <Sparkles className="w-4 h-4" />
-                  <span>New Content 2026</span>
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                </motion.div>
-
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-3xl md:text-4xl font-bold mb-4"
-                >
-                  Revolutionary Technology Showcase
-                </motion.h2>
-
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="text-lg md:text-xl opacity-90 mb-6 max-w-2xl"
-                >
-                  Discover cutting-edge AI breakthroughs, quantum computing innovations, and next-generation technologies that are reshaping industries.
-                </motion.p>
-
-                {/* Features Grid */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6"
-                >
-                  {[
-                    { icon: Brain, label: 'AI Breakthroughs', color: 'text-blue-300' },
-                    { icon: Zap, label: 'Quantum Computing', color: 'text-purple-300' },
-                    { icon: Rocket, label: 'Smart Automation', color: 'text-pink-300' },
-                    { icon: TrendingUp, label: 'Future Tech', color: 'text-green-300' }
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <feature.icon className={`w-5 h-5 ${feature.color}`} />
-                      <span className="text-sm font-medium">{feature.label}</span>
-                    </div>
-                  ))}
-                </motion.div>
-
-                {/* Stats */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm"
-                >
-                  <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4" />
-                    <span>10,000+ Companies</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Award className="w-4 h-4" />
-                    <span>99.8% Success Rate</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span>24/7 Support</span>
-                  </div>
-                </motion.div>
-              </div>
-
-              {/* CTA Section */}
+          {/* Visual */}
+          <div className="relative">
+            <div className="grid grid-cols-2 gap-4">
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-                className="flex flex-col sm:flex-row gap-4 items-center"
+                animate={{ y: [-10-10] }}
+                transition={{ duration: 3repeat: Infinity }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
               >
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105">
-                  Explore Now
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
-                  Learn More
-                </button>
+                <Brain className="w-8 h-8 text-purple-300 mb-2" />
+                <h4 className="text-white font-semibold mb-1">AI Innovations</h4>
+                <p className="text-sm text-purple-200">Neural interfaces & quantum AI</p>
+              </motion.div>
+              
+              <motion.div
+                animate={{ y: [10-10] }}
+                transition={{ duration: 4repeat: Infinity }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
+              >
+                <Zap className="w-8 h-8 text-pink-300 mb-2" />
+                <h4 className="text-white font-semibold mb-1">Automation</h4>
+                <p className="text-sm text-pink-200">Smart workflows & processes</p>
+              </motion.div>
+              
+              <motion.div
+                animate={{ y: [-515-5] }}
+                transition={{ duration: 5repeat: Infinity }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
+              >
+                <Rocket className="w-8 h-8 text-yellow-300 mb-2" />
+                <h4 className="text-white font-semibold mb-1">Future Tech</h4>
+                <p className="text-sm text-yellow-200">2030+ predictions</p>
+              </motion.div>
+              
+              <motion.div
+                animate={{ y: [15-515] }}
+                transition={{ duration: 6repeat: Infinity }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
+              >
+                <Target className="w-8 h-8 text-green-300 mb-2" />
+                <h4 className="text-white font-semibold mb-1">Interactive</h4>
+                <p className="text-sm text-green-200">Live demonstrations</p>
               </motion.div>
             </div>
-
-            {/* Bottom Features */}
+            
+            {/* Floating elements */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-8 pt-6 border-t border-white/20"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div className="flex items-center justify-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-sm">Free Consultation</span>
-                </div>
-                <div className="flex items-center justify-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-sm">No Setup Fees</span>
-                </div>
-                <div className="flex items-center justify-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-sm">30-Day Money Back</span>
-                </div>
-              </div>
-            </motion.div>
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20repeat: Infinityease: "linear" }}
+              className="absolute -top-4 -right-4 w-16 h-16 border-2 border-white/30 rounded-full"
+            />
+            <motion.div
+              animate={{ rotate: -360 }}
+              transition={{ duration: 15repeat: Infinityease: "linear" }}
+              className="absolute -bottom-4 -left-4 w-12 h-12 border-2 border-white/20 rounded-full"
+            />
           </div>
-
-          {/* Dismiss Button */}
-          <button
-            onClick={handleDismiss}
-            className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition-colors duration-200"
-            aria-label="Dismiss banner"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </motion.div>
-      )}
-    </AnimatePresence>
+        </div>
+      </div>
+    </motion.div>
   );
 };
 

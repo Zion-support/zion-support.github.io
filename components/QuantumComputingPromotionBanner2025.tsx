@@ -1,11 +1,12 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Atom, Zap, Cpu, ArrowRight, X, Star } from 'lucide-react';
+AtomZapCpuArrowRightXStar
 import Link from 'next/link';
 
 const QuantumComputingPromotionBanner2025: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentFeaturesetCurrentFeature] = useState(0);
 
   const features = [
     {
@@ -31,10 +32,10 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 4000);
+    }4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (!isVisible) return null;
 
@@ -52,9 +53,9 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
             <div className="flex items-center gap-4">
               <motion.div
                 key={currentFeature}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0x: -20 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: 20 }}
                 className={`px-4 py-2 rounded-full bg-gradient-to-r ${features[currentFeature].color} text-white font-bold text-sm animate-pulse`}
               >
                 QUANTUM REVOLUTION
@@ -63,9 +64,9 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
               {/* Rotating Icon */}
               <motion.div
                 key={`icon-${currentFeature}`}
-                initial={{ scale: 0, rotate: -180 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ type: "spring", stiffness: 200 }}
+                initial={{ scale: 0rotate: -180 }}
+                animate={{ scale: 1rotate: 0 }}
+                transition={{ type: "spring"stiffness: 200 }}
                 className={`p-2 rounded-full bg-gradient-to-r ${features[currentFeature].color}`}
               >
                 <features[currentFeature].icon className="w-6 h-6 text-white" />
@@ -119,7 +120,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
         
         {/* Quantum Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(25)].map((_, i) => (
+          {[...Array(25)].map((_i) => (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full"
@@ -128,9 +129,9 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
                 top: `${Math.random() * 100}%`,
               }}
               animate={{
-                y: [0, -20, 0],
-                opacity: [0, 1, 0],
-                scale: [0.5, 1.5, 0.5],
+                y: [0-20],
+                opacity: [010],
+                scale: [0.51.50.5],
               }}
               transition={{
                 duration: 3,

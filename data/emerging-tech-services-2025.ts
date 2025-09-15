@@ -14,7 +14,10 @@ export interface EmergingTechService2025 {
     address: string;
   };
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
 export const emergingTechServices2025: EmergingTechService2025[] = [
   {
     id: "metaverse-platform",

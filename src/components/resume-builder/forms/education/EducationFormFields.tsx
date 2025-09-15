@@ -15,7 +15,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from '@/components/ui/form';
+  FormMessage,
+} from '@/components/ui/form';
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
@@ -29,7 +30,8 @@ const educationSchema = z.object({
   end_date: z.string().optional(),
   is_current: z.boolean().default(false),
   description: z.string().optional(),
-  location: z.string().optional()});
+  location: z.string().optional(),
+});
 
 type EducationFormValues = z.infer<typeof educationSchema>;
 
@@ -50,7 +52,9 @@ export function EducationFormFields({
       start_date: format(new Date(), 'yyyy-MM-dd'),
       is_current: false,
       description: '',
-      location: ''}});
+      location: '',
+    },
+  });
 
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true);

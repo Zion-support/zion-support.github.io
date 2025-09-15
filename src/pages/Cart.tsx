@@ -7,7 +7,8 @@ import { useAuth } from '@/hooks/useAuth';
 import type { RootState, AppDispatch } from '@/store';
 import {
   removeItem as removeItemAction,
-  updateQuantity as updateQuantityAction} from '@/store/cartSlice';
+  updateQuantity as updateQuantityAction,
+} from '@/store/cartSlice';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
 import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
@@ -44,7 +45,8 @@ export default function CartPage() {
     if (item) {
       toast({
         title: "Item removed",
-        description: `${item.name} has been removed from your cart`});
+        description: `${item.name} has been removed from your cart`,
+      });
     }
   };
 
@@ -55,7 +57,8 @@ export default function CartPage() {
       title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist',
       description: wasWishlisted
         ? `${name} has been removed from your wishlist`
-        : `${name} has been added to your wishlist`});
+        : `${name} has been added to your wishlist`,
+    });
   };
 
   const handleCheckout = async (details?: { email?: string; address?: string }) => {
@@ -67,7 +70,8 @@ export default function CartPage() {
       const { data } = await axios.post('/api/checkout-session', {
         cartItems: items,
         customer_email: details?.email || user?.email,
-        shipping_address: details?.address});
+        shipping_address: details?.address,
+      });
 
       const sessionId = data.sessionId as string | undefined;
       if (!sessionId) throw new Error('Session ID missing in response');

@@ -10,7 +10,8 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog";
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 type RewardOption = {
   id: string;

@@ -1,6 +1,10 @@
 
 import React from "react";
+<<<<<<< HEAD
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Badge } from "@/components/ui/badge";
 
 export function RecentActivity() {

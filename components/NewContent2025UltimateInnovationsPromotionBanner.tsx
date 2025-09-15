@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Brain, TrendingUp, Zap, ArrowRight, Star, Sparkles } from 'lucide-react';
+BrainTrendingUpZapArrowRightStarSparkles
 
 export default function NewContent2025UltimateInnovationsPromotionBanner() {
   return (

@@ -26,14 +26,16 @@ export default function ReferralsPage() {
     stats,
     getReferralLink,
     copyReferralLink,
-    shareOnSocialMedia} = useReferrals();
+    shareOnSocialMedia,
+  } = useReferrals();
 
   useEffect(() => {
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
         description: "Please login to access the referral program",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       router.push("/login"); // Changed to router.push
     }
   }, [isAuthenticated, router]); // Changed navigate to router in dependencies

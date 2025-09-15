@@ -33,7 +33,8 @@ const categories = [
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/innovation",
     color: undefined, // Let CategoryCard use default color
-  }];
+  },
+];
 
 export default function AllCategoriesPage() {
   return (

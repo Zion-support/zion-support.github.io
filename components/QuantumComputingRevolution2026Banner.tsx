@@ -90,7 +90,7 @@ export default function QuantumComputingRevolution2026Banner() {
           {/* Additional info */}
           <div className="mt-8 text-sm text-gray-400">
             <p>Revolutionary quantum computing technology solving previously impossible problems</p>
-            <p className="mt-1">Exclusive quantum solutions from Zion Tech Group's research division</p>
+            <p className="mt-1">Exclusive quantum solutions from Zion Tech 'Group', 's research division</p>
           </div>
         </div>
       </div>

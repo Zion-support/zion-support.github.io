@@ -6,10 +6,17 @@ import { cn } from "@/lib/utils"
 const ScrollArea = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
+<<<<<<< HEAD
+>(({ classNamechildren...props }ref) => (
+  <ScrollAreaPrimitive.Root
+    ref={ref}
+    className={cn("relative overflow-hidden"className)}
+=======
 >(({ className, children, ...props }, ref) => (
   <ScrollAreaPrimitive.Root
     ref={ref}
     className={cn("relative overflow-hidden", className)}
+>>>>>>> origin/auto/autonomy-17186719616
     {...props}
   >
     <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
@@ -24,7 +31,11 @@ ScrollArea.displayName = ScrollAreaPrimitive.Root.displayName
 const ScrollBar = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>,
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>
+<<<<<<< HEAD
+>(({ classNameorientation = "vertical"...props }ref) => (
+=======
 >(({ className, orientation = "vertical", ...props }, ref) => (
+>>>>>>> origin/auto/autonomy-17186719616
   <ScrollAreaPrimitive.ScrollAreaScrollbar
     ref={ref}
     orientation={orientation}
@@ -43,4 +54,8 @@ const ScrollBar = React.forwardRef<
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
 
+<<<<<<< HEAD
+export { ScrollAreaScrollBar }
+=======
 export { ScrollArea, ScrollBar }
+>>>>>>> origin/auto/autonomy-17186719616

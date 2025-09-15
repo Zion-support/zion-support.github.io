@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+AtomBrainZapShieldUsersTargetArrowRightCheckStarGlobeCpuNetwork
+=======
 import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
+>>>>>>> origin/auto/autonomy-17186719616
 import SEO from '../components/SEO';
 
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
@@ -36,7 +40,11 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
       <SEO 
         title="Quantum AI Neural Network Platform 2045 | Zion Tech Group"
         description="Revolutionary quantum-powered AI neural network platform with exponential computational power and quantum advantage."
+<<<<<<< HEAD
+        keywords={["quantum AI"neural networks"quantum computing"AI platform"quantum advantage"]}
+=======
         keywords={["quantum AI", "neural networks", "quantum computing", "AI platform", "quantum advantage"]}
+>>>>>>> origin/auto/autonomy-17186719616
       />
       
       {/* Hero Section */}
@@ -62,8 +70,13 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+<<<<<<< HEAD
+              Experience the future of AI with quantum-powered neural networks that deliver exponential computational power
+              quantum advantageand unprecedented learning capabilities.
+=======
               Experience the future of AI with quantum-powered neural networks that deliver exponential computational power, 
               quantum advantage, and unprecedented learning capabilities.
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -105,13 +118,21 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {features.map((featureindex) => (
+=======
             {features.map((feature, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
+                transition={{ duration: 0.5delay: index * 0.1 }}
+=======
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 className="bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
@@ -140,13 +161,21 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {benefits.map((benefitindex) => (
+=======
             {benefits.map((benefit, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
+                transition={{ duration: 0.5delay: index * 0.1 }}
+=======
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -178,13 +207,21 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            {Object.entries(pricing).map(([planprice]index) => (
+=======
             {Object.entries(pricing).map(([plan, price], index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <motion.div
                 key={plan}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
+                transition={{ duration: 0.5delay: index * 0.1 }}
+=======
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+>>>>>>> origin/auto/autonomy-17186719616
                 className={`bg-gray-800/50 border rounded-xl p-8 ${
                   plan === 'professional' 
                     ? 'border-blue-500/50 bg-blue-900/20' 

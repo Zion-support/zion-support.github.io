@@ -25,7 +25,8 @@ const signupSchema = z.object({
   confirmPassword: z.string()
 }).refine((data) => data.password === data.confirmPassword, {
   message: "Passwords don't match",
-  path: ["confirmPassword"]});
+  path: ["confirmPassword"],
+});
 
 type SignupFormData = z.infer<typeof signupSchema>;
 
@@ -57,7 +58,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     setError,
     reset,
     watch,
-    trigger} = useForm<SignupFormData>({
+    trigger,
+  } = useForm<SignupFormData>({
     resolver: zodResolver(signupSchema),
     mode: 'onChange', // Enable real-time validation
   });
@@ -152,7 +154,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       /[A-Z]/.test(password),
       /[a-z]/.test(password),
       /[0-9]/.test(password),
-      /[^A-Za-z0-9]/.test(password)];
+      /[^A-Za-z0-9]/.test(password),
+    ];
     
     strength = checks.filter(Boolean).length;
     
@@ -212,13 +215,15 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
         title: "Account Created Successfully!",
         description: result.emailVerificationRequired 
           ? "Please check your email to verify your account before logging in."
-          : "You can now log in to your account."});
+          : "You can now log in to your account.",
+      });
 
       reset();
       fireEvent('signup_success');
       onSuccess?.({
         email: data.email,
-        emailVerificationRequired: result.emailVerificationRequired ?? false});
+        emailVerificationRequired: result.emailVerificationRequired ?? false,
+      });
 
     } catch (error: any) {
       logErrorToProduction('Unexpected signup error:', { data: error });
@@ -231,7 +236,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       toast({
         title: "Signup Failed",
         description: errorMessage,
-        variant: "destructive"});
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }

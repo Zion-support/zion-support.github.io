@@ -1,129 +1,122 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, Brain, TrendingUp, Users, Award, Sparkles } from 'lucide-react';
 
-export default function NewContentShowcase2025Banner() {
-  const newContentItems = [
-    {
-      title: 'AI Interactive Learning Hub',
-      description: 'Master AI through hands-on, interactive experiences',
-      icon: Brain,
-      link: '/ai-interactive-learning-hub-2025',
-      badge: 'New'
-    },
-    {
-      title: 'Cutting-Edge AI Technologies',
-      description: 'Explore revolutionary AI innovations shaping 2025',
-      icon: Zap,
-      link: '/cutting-edge-ai-technologies-2025',
-      badge: 'Breakthrough'
-    },
-    {
-      title: 'AI Business Solutions',
-      description: 'Transform your enterprise with AI-powered automation',
-      icon: TrendingUp,
-      link: '/ai-powered-business-solutions-2025',
-      badge: 'Hot'
-    }
-  ];
-
-  const stats = [
-    { icon: Users, value: '50K+', label: 'Active Learners' },
-    { icon: Award, value: '2,500%', label: 'Average ROI' },
-    { icon: Star, value: '99.9%', label: 'Success Rate' },
-    { icon: Sparkles, value: '100+', label: 'New Features' }
-  ];
-
+const NewContentShowcase2025Banner = () => {
   return (
-    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 overflow-hidden">
+    <section className="py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-4">
-            <Sparkles className="h-4 w-4 mr-2" />
-            Brand New Content Available
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🎉 NEW CONTENT LAUNCH</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Revolutionary Content Hub 2025
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            Revolutionary New Content
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
+              & Interactive Tools
+            </span>
           </h2>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-            Discover cutting-edge AI technologies, interactive learning experiences, and business solutions that are reshaping the future
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover our comprehensive collection of case studies, interactive assessments, 
+            expert insights, and cutting-edge AI tools designed to transform your business.
           </p>
         </div>
 
-        {/* Stats Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl mx-auto mb-3">
-                <stat.icon className="h-6 w-6 text-white" />
-              </div>
-              <div className="text-2xl md:text-3xl font-bold text-white">{stat.value}</div>
-              <div className="text-blue-100 text-sm">{stat.label}</div>
+        {/* Content Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-opacity-20 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="text-4xl mb-4">📊</div>
+            <h3 className="text-xl font-bold mb-3">Case Studies</h3>
+            <p className="text-sm opacity-90 mb-4">
+              Real success stories from Fortune 500 companies achieving 1000%+ ROI
+            </p>
+            <div className="text-2xl font-bold text-yellow-300">6+ Studies</div>
+          </div>
+
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-opacity-20 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className="text-xl font-bold mb-3">AI Assessment</h3>
+            <p className="text-sm opacity-90 mb-4">
+              Interactive tool to discover your AI potential and get personalized recommendations
+            </p>
+            <div className="text-2xl font-bold text-green-300">Free Tool</div>
+          </div>
+
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-opacity-20 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="text-4xl mb-4">📚</div>
+            <h3 className="text-xl font-bold mb-3">Expert Insights</h3>
+            <p className="text-sm opacity-90 mb-4">
+              Comprehensive blog with AI trends, strategies, and industry expertise
+            </p>
+            <div className="text-2xl font-bold text-blue-300">50+ Articles</div>
+          </div>
+
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-opacity-20 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-bold mb-3">Interactive Demos</h3>
+            <p className="text-sm opacity-90 mb-4">
+              Hands-on demonstrations of AI technologies and business applications
+            </p>
+            <div className="text-2xl font-bold text-purple-300">Live Demos</div>
+          </div>
+        </div>
+
+        {/* Key Highlights */}
+        <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-12">
+          <h3 className="text-2xl font-bold mb-6 text-center">'What', 's New & Exciting</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-yellow-300 mb-2">1000%+</div>
+              <div className="text-sm opacity-90">Average ROI Achieved</div>
             </div>
-          ))}
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-300 mb-2">50+</div>
+              <div className="text-sm opacity-90">Expert Articles Published</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-300 mb-2">10K+</div>
+              <div className="text-sm opacity-90">Professionals Engaged</div>
+            </div>
+          </div>
         </div>
 
-        {/* New Content Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {newContentItems.map((item, index) => (
-            <Link 
-              key={index}
-              href={item.link}
-              className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-white/20 rounded-xl">
-                  <item.icon className="h-6 w-6 text-white" />
-                </div>
-                <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                  item.badge === 'New' ? 'bg-green-500/20 text-green-300' :
-                  item.badge === 'Breakthrough' ? 'bg-purple-500/20 text-purple-300' :
-                  'bg-red-500/20 text-red-300'
-                }`}>
-                  {item.badge}
-                </span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-100 transition-colors">
-                {item.title}
-              </h3>
-              <p className="text-blue-100 mb-4">
-                {item.description}
-              </p>
-              <div className="flex items-center text-white font-medium group-hover:text-blue-100 transition-colors">
-                Explore Now
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        {/* CTA Buttons */}
+        {/* Call to Action */}
         <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/ai-interactive-learning-hub-2025"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Link
+              href="/case-studies"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
             >
-              Start Learning AI
-              <ArrowRight className="ml-2 h-5 w-5" />
+              Explore Case Studies
             </Link>
-            <Link 
-              href="/ai-powered-business-solutions-2025"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+            <Link
+              href="/ai-assessment"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
             >
-              Transform Your Business
+              Take AI Assessment
+            </Link>
+            <Link
+              href="/blog"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+            >
+              Read Expert Insights
             </Link>
           </div>
+          
+          <p className="text-lg opacity-90 max-w-2xl mx-auto">
+            Join thousands of professionals who are already transforming their businesses 
+            with our proven AI solutions and expert guidance.
+          </p>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default NewContentShowcase2025Banner;

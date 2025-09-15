@@ -1,9 +1,9 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore
-import data from '../../data/arxiv-research.json';
+import data from '../../data/arxiv-research.json',
 
 export default function ArxivResearchPage() {
-  const items: any[] = (data?.items || []).slice(0, 40);
+  const items: any[] = (data?.items || []).slice(0, 40),
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -22,5 +22,5 @@ export default function ArxivResearchPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

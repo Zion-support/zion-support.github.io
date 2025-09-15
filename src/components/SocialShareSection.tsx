@@ -31,7 +31,8 @@ export function SocialShareSection() {
       .then(() => {
         toast({
           title: "Link Copied!",
-          description: "The link has been copied to your clipboard"});
+          description: "The link has been copied to your clipboard",
+        });
       })
       .catch(() => {
         toast({
@@ -66,7 +67,8 @@ export function SocialShareSection() {
       icon: <Link className="h-5 w-5" aria-hidden="true" />,
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
       onClick: copyLinkToClipboard
-    }];
+    },
+  ];
 
   return (
     <section className="py-12 bg-zion-blue">

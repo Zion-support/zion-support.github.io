@@ -11,7 +11,11 @@ interface TalentResultsProps {
   viewProfile: (id: string) => void;
   handleRequestHire: (talent: TalentProfile) => void;
   savedTalents: string[];
+<<<<<<< HEAD
+  handleToggleSave: (id: stringisSaved: boolean) => void;
+=======
   handleToggleSave: (id: string, isSaved: boolean) => void;
+>>>>>>> origin/auto/autonomy-17186719616
   isAuthenticated: boolean;
   activeFiltersProps: {
     selectedSkills: string[];
@@ -20,10 +24,17 @@ interface TalentResultsProps {
     toggleAvailability: (availability: string) => void;
     selectedRegions: string[];
     toggleRegion: (region: string) => void;
+<<<<<<< HEAD
+    priceRange: [number];
+    setPriceRange: (range: [number]) => void;
+    experienceRange: [number];
+    setExperienceRange: (range: [number]) => void;
+=======
     priceRange: [number, number];
     setPriceRange: (range: [number, number]) => void;
     experienceRange: [number, number];
     setExperienceRange: (range: [number, number]) => void;
+>>>>>>> origin/auto/autonomy-17186719616
     clearFilters: () => void;
   }
 }

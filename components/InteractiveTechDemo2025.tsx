@@ -1,308 +1,467 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Settings, 
-  Code, 
-  Cpu,
+  Play
+  Pause
+  RotateCcw
+  Settings
+  Zap
+  Brain
+  Cpu
   Database,
+  Cloud,
+  Smartphone,
+  Laptop,
+  Server,
   Network,
   Shield,
-  Zap,
-  Brain,
+  Target,
+  TrendingUp,
+  Users,
+  Globe,
+  Code,
+  Atom,
   Rocket,
+  Star,
   CheckCircle,
   AlertCircle,
-  Info
+  Info,
+  ArrowRight,
+  Download,
+  Share2,
+  Heart,
+  MessageCircle,
+  BookOpen,
+  Lightbulb
 } from 'lucide-react';
 
 const InteractiveTechDemo2025 = () => {
-  const [isRunning, setIsRunning] = useState(false);
-  const [currentStep, setCurrentStep] = useState(0);
-  const [selectedDemo, setSelectedDemo] = useState('ai-processing');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeDemosetActiveDemo] = useState('ai-consciousness');
+  const [isPlayingsetIsPlaying] = useState(false);
+  const [progressetProgress] = useState(0);
+  const [selectedFeaturesetSelectedFeature] = useState(null);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
+
+  useEffect(() => {
+    let interval;
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setProgress(prev => {
+          if (prev >= 100) {
+            setIsPlaying(false);
+            return 100;
+          }
+          return prev + 2;
+        });
+      }100);
+    }
+    return () => clearInterval(interval);
+  }[isPlaying]);
 
   const demos = {
-    'ai-processing': {
-      title: 'AI Processing Pipeline',
-      description: 'Real-time AI model inference and processing',
-      steps: [
-        { id: 1, name: 'Data Input', status: 'completed', icon: Database },
-        { id: 2, name: 'Preprocessing', status: 'completed', icon: Settings },
-        { id: 3, name: 'AI Inference', status: 'running', icon: Brain },
-        { id: 4, name: 'Post-processing', status: 'pending', icon: Code },
-        { id: 5, name: 'Output', status: 'pending', icon: CheckCircle }
+    'ai-consciousness': {
+      title: 'AI Consciousness Evolution',
+      description: 'Experience the breakthrough in synthetic consciousness with real-time neural pattern analysis',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      features: [
+        { name: 'Neural Pattern 'Recognition', 'value: 99.7unit: '%' },
+        { name: 'Consciousness 'Index', 'value: 8.9unit: '/10' },
+        { name: 'Learning 'Rate', 'value: 0.95unit: 'α' },
+        { name: 'Memory 'Retention', 'value: 99.9unit: '%' }
       ],
-      metrics: [
-        { label: 'Processing Time', value: '2.3ms', trend: '+15%' },
-        { label: 'Accuracy', value: '99.2%', trend: '+2.1%' },
-        { label: 'Throughput', value: '1.2K req/s', trend: '+8.3%' }
-      ]
+      visualization: 'neural-network'
     },
     'quantum-computing': {
-      title: 'Quantum Computing Simulation',
-      description: 'Quantum algorithm execution and optimization',
-      steps: [
-        { id: 1, name: 'Qubit Initialization', status: 'completed', icon: Cpu },
-        { id: 2, name: 'Quantum Gates', status: 'running', icon: Network },
-        { id: 3, name: 'Entanglement', status: 'pending', icon: Zap },
-        { id: 4, name: 'Measurement', status: 'pending', icon: CheckCircle }
+      title: 'Quantum Neural Fusion',
+      description: 'Witness the integration of quantum computing with neural networks for unprecedented processing power',
+      icon: Atom,
+      color: 'from-indigo-500 to-purple-500',
+      features: [
+        { name: 'Qubit 'Coherence', 'value: 99.8unit: '%' },
+        { name: 'Processing 'Speed', 'value: 1000unit: 'x' },
+        { name: 'Error 'Rate', 'value: 0.001unit: '%' },
+        { name: 'Quantum 'Volume', 'value: 64unit: 'QV' }
       ],
-      metrics: [
-        { label: 'Qubits', value: '128', trend: '+50%' },
-        { label: 'Coherence Time', value: '100μs', trend: '+25%' },
-        { label: 'Gate Fidelity', value: '99.9%', trend: '+0.1%' }
-      ]
+      visualization: 'quantum-circuit'
     },
-    'neural-networks': {
-      title: 'Neural Network Training',
-      description: 'Deep learning model training and optimization',
-      steps: [
-        { id: 1, name: 'Data Loading', status: 'completed', icon: Database },
-        { id: 2, name: 'Forward Pass', status: 'running', icon: Brain },
-        { id: 3, name: 'Loss Calculation', status: 'pending', icon: AlertCircle },
-        { id: 4, name: 'Backpropagation', status: 'pending', icon: RotateCcw },
-        { id: 5, name: 'Weight Update', status: 'pending', icon: Settings }
+    'neural-interface': {
+      title: 'Brain-Computer Interface',
+      description: 'Direct neural communication enabling thought-controlled computing with 99.9% accuracy',
+      icon: Cpu,
+      color: 'from-green-500 to-teal-500',
+      features: [
+        { name: 'Signal 'Accuracy', 'value: 99.9unit: '%' },
+        { name: 'Response 'Time', 'value: 12unit: 'ms' },
+        { name: ''Bandwidth', 'value: 1.2unit: 'Gbps' },
+        { name: 'Neural 'Channels', 'value: 1024unit: 'ch' }
       ],
-      metrics: [
-        { label: 'Epoch', value: '45/100', trend: '+5' },
-        { label: 'Loss', value: '0.023', trend: '-12%' },
-        { label: 'Accuracy', value: '94.7%', trend: '+3.2%' }
-      ]
+      visualization: 'neural-signals'
+    },
+    'edge-ai': {
+      title: 'Edge AI Processing',
+      description: 'Distributed AI processing at the edge for real-time decision making and ultra-low latency',
+      icon: Network,
+      color: 'from-blue-500 to-cyan-500',
+      features: [
+        { name: 'Latency 'Reduction', 'value: 95unit: '%' },
+        { name: 'Processing 'Nodes', 'value: 10000unit: '+' },
+        { name: 'Data 'Throughput', 'value: 50unit: 'TB/s' },
+        { name: 'Energy 'Efficiency', 'value: 85unit: '%' }
+      ],
+      visualization: 'edge-network'
     }
   };
 
-  const currentDemo = demos[selectedDemo as keyof typeof demos];
+  const currentDemo = demos[activeDemo];
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+    if (progress >= 100) {
+      setProgress(0);
+    }
+  };
+
+  const handleReset = () => {
+    setIsPlaying(false);
+    setProgress(0);
+  };
 
   const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      y: 0,
       transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
+        staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
-  const handlePlayPause = () => {
-    setIsRunning(!isRunning);
-  };
-
-  const handleReset = () => {
-    setIsRunning(false);
-    setCurrentStep(0);
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'completed': return 'text-green-500 bg-green-100';
-      case 'running': return 'text-blue-500 bg-blue-100';
-      case 'pending': return 'text-gray-400 bg-gray-100';
-      default: return 'text-gray-400 bg-gray-100';
-    }
-  };
-
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'completed': return CheckCircle;
-      case 'running': return Play;
-      case 'pending': return AlertCircle;
-      default: return AlertCircle;
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
     }
   };
 
   return (
-    <motion.section
-      className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-    >
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div className="text-center mb-16" variants={itemVariants}>
-          <motion.div
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 text-sm font-medium mb-4 border border-blue-500/30"
-            whileHover={{ scale: 1.05 }}
-          >
-            <Rocket className="w-4 h-4 mr-2" />
-            Interactive Tech Demo 2025
-          </motion.div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Experience Technology in Action
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Interact with cutting-edge technologies through live demonstrations and real-time simulations.
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
+            <Play className="w-5 h-5 text-blue-400 mr-2" />
+            <span className="text-sm font-medium text-white">Interactive Technology Demo 2025</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
+              Experience
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              The Future
+            </span>
+          </h1>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Interact with cutting-edge AI technologiesquantum computing systemsand neural interfaces 
+            in real-time. See the future of technology in action.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Demo Selection */}
-          <motion.div className="lg:col-span-1" variants={itemVariants}>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <h3 className="text-xl font-bold mb-6">Select Demo</h3>
-              <div className="space-y-3">
-                {Object.entries(demos).map(([key, demo]) => (
-                  <button
-                    key={key}
-                    onClick={() => setSelectedDemo(key)}
-                    className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
-                      selectedDemo === key
-                        ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
-                        : 'bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white'
-                    }`}
+        {/* Demo Selector */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
+        >
+          {Object.entries(demos).map(([keydemo]) => {
+            const Icon = demo.icon;
+            return (
+              <button
+                key={key}
+                onClick={() => setActiveDemo(key)}
+                className={`flex items-center px-6 py-3 rounded-full transition-all duration-300 ${
+                  activeDemo === key
+                    ? `bg-gradient-to-r ${demo.color} text-white shadow-lg scale-105`
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                <Icon className="w-5 h-5 mr-2" />
+                <span className="font-medium">{demo.title}</span>
+              </button>
+            );
+          })}
+        </motion.div>
+
+        {/* Main Demo Area */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+        >
+          {/* Demo Visualization */}
+          <motion.div variants={itemVariants} className="space-y-6">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${currentDemo.color} flex items-center justify-center mr-4`}>
+                    {React.createElement(currentDemo.icon{ className: "w-6 h-6 text-white" })}
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">{currentDemo.title}</h3>
+                    <p className="text-gray-300">{currentDemo.description}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Demo Visualization */}
+              <div className="relative h-64 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl overflow-hidden border border-white/10">
+                {/* Animated Background */}
+                <div className="absolute inset-0 opacity-20">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.3),transparent_50%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(168,85,247,0.3),transparent_50%)]" />
+                </div>
+
+                {/* Demo Content Based on Type */}
+                {currentDemo.visualization === 'neural-network' && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="grid grid-cols-4 gap-4">
+                      {[...Array(16)].map((_i) => (
+                        <motion.div
+                          key={i}
+                          animate={{
+                            scale: isPlaying ? [1.21] : 1,
+                            opacity: isPlaying ? [0.510.5] : 0.7
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: isPlaying ? Infinity : 0,
+                            delay: i * 0.1
+                          }}
+                          className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {currentDemo.visualization === 'quantum-circuit' && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="relative">
+                      {[...Array(8)].map((_i) => (
+                        <motion.div
+                          key={i}
+                          animate={{
+                            rotate: isPlaying ? 360 : 0,
+                            scale: isPlaying ? [1.1] : 1
+                          }}
+                          transition={{
+                            duration: 3,
+                            repeat: isPlaying ? Infinity : 0,
+                            delay: i * 0.2
+                          }}
+                          className="absolute w-16 h-16 border-2 border-indigo-400 rounded-full"
+                          style={{
+                            left: `${Math.cos(i * Math.PI / 4) * 60}px`,
+                            top: `${Math.sin(i * Math.PI / 4) * 60}px`
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {currentDemo.visualization === 'neural-signals' && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-full h-32 relative">
+                      {[...Array(5)].map((_i) => (
+                        <motion.div
+                          key={i}
+                          animate={{
+                            scaleY: isPlaying ? [121] : 1,
+                            opacity: isPlaying ? [0.510.5] : 0.7
+                          }}
+                          transition={{
+                            duration: 1.5,
+                            repeat: isPlaying ? Infinity : 0,
+                            delay: i * 0.2
+                          }}
+                          className="absolute w-1 bg-gradient-to-t from-green-500 to-teal-500 rounded-full"
+                          style={{
+                            left: `${20 + i * 20}%`,
+                            height: '100%'
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {currentDemo.visualization === 'edge-network' && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="grid grid-cols-3 gap-4">
+                      {[...Array(9)].map((_i) => (
+                        <motion.div
+                          key={i}
+                          animate={{
+                            scale: isPlaying ? [1.31] : 1,
+                            opacity: isPlaying ? [0.610.6] : 0.8
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: isPlaying ? Infinity : 0,
+                            delay: i * 0.1
+                          }}
+                          className="w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Progress Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10">
+                  <motion.div
+                    className={`h-full bg-gradient-to-r ${currentDemo.color}`}
+                    style={{ width: `${progress}%` }}
+                    transition={{ duration: 0.1 }}
+                  />
+                </div>
+              </div>
+
+              {/* Controls */}
+              <div className="flex items-center justify-center space-x-4 mt-6">
+                <button
+                  onClick={handlePlayPause}
+                  className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
+                >
+                  {isPlaying ? <Pause className="w-6 h-6 text-white" /> : <Play className="w-6 h-6 text-white ml-1" />}
+                </button>
+                <button
+                  onClick={handleReset}
+                  className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                >
+                  <RotateCcw className="w-6 h-6 text-white" />
+                </button>
+                <button className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <Settings className="w-6 h-6 text-white" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Features and Metrics */}
+          <motion.div variants={itemVariants} className="space-y-6">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Real-Time Metrics</h3>
+              
+              <div className="space-y-4">
+                {currentDemo.features.map((featureindex) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0x: 20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.5delay: index * 0.1 }}
+                    className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
+                    onClick={() => setSelectedFeature(feature)}
                   >
-                    <div className="flex items-center space-x-3">
-                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                        selectedDemo === key ? 'bg-white/20' : 'bg-white/10'
-                      }`}>
-                        <Brain className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <div className="font-semibold">{demo.title}</div>
-                        <div className="text-sm opacity-80">{demo.description}</div>
+                    <div>
+                      <p className="text-white font-medium">{feature.name}</p>
+                      <div className="w-32 h-2 bg-white/10 rounded-full mt-2">
+                        <motion.div
+                          className="h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
+                          initial={{ width: 0 }}
+                          animate={{ width: `${(feature.value / 100) * 100}%` }}
+                          transition={{ duration: 1delay: index * 0.2 }}
+                        />
                       </div>
                     </div>
-                  </button>
+                    <div className="text-right">
+                      <p className="text-2xl font-bold text-white">
+                        {feature.value}
+                        <span className="text-sm text-gray-400 ml-1">{feature.unit}</span>
+                      </p>
+                    </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
-          </motion.div>
 
-          {/* Main Demo Area */}
-          <motion.div className="lg:col-span-2" variants={itemVariants}>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              {/* Demo Header */}
-              <div className="flex items-center justify-between mb-8">
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">{currentDemo.title}</h3>
-                  <p className="text-gray-300">{currentDemo.description}</p>
+            {/* Additional Info */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
+              <h3 className="text-xl font-bold text-white mb-4">Technology Highlights</h3>
+              <div className="space-y-3">
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Industry-leading performance metrics</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <button
-                    onClick={handlePlayPause}
-                    className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                  >
-                    {isRunning ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
-                  </button>
-                  <button
-                    onClick={handleReset}
-                    className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
-                  >
-                    <RotateCcw className="w-6 h-6" />
-                  </button>
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Real-time processing capabilities</span>
                 </div>
-              </div>
-
-              {/* Process Steps */}
-              <div className="mb-8">
-                <h4 className="text-lg font-semibold mb-4">Process Flow</h4>
-                <div className="space-y-3">
-                  {currentDemo.steps.map((step, index) => {
-                    const StatusIcon = getStatusIcon(step.status);
-                    return (
-                      <motion.div
-                        key={step.id}
-                        className={`flex items-center p-4 rounded-xl border ${
-                          step.status === 'running' 
-                            ? 'border-blue-500/50 bg-blue-500/10' 
-                            : 'border-white/20 bg-white/5'
-                        }`}
-                        animate={step.status === 'running' ? {
-                          boxShadow: ['0 0 0 0 rgba(59, 130, 246, 0.5)', '0 0 0 10px rgba(59, 130, 246, 0)', '0 0 0 0 rgba(59, 130, 246, 0)'],
-                        } : {}}
-                        transition={{
-                          duration: 2,
-                          repeat: step.status === 'running' ? Infinity : 0,
-                          ease: "easeInOut"
-                        }}
-                      >
-                        <div className={`w-10 h-10 rounded-lg flex items-center justify-center mr-4 ${getStatusColor(step.status)}`}>
-                          <StatusIcon className="w-5 h-5" />
-                        </div>
-                        <div className="flex-1">
-                          <div className="font-medium">{step.name}</div>
-                          <div className="text-sm text-gray-400 capitalize">{step.status}</div>
-                        </div>
-                        {step.status === 'running' && (
-                          <motion.div
-                            className="w-2 h-2 bg-blue-500 rounded-full"
-                            animate={{ scale: [1, 1.5, 1] }}
-                            transition={{ duration: 1, repeat: Infinity }}
-                          />
-                        )}
-                      </motion.div>
-                    );
-                  })}
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Advanced error correction</span>
                 </div>
-              </div>
-
-              {/* Metrics */}
-              <div>
-                <h4 className="text-lg font-semibold mb-4">Live Metrics</h4>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {currentDemo.metrics.map((metric, index) => (
-                    <motion.div
-                      key={index}
-                      className="bg-white/5 rounded-xl p-4 border border-white/20"
-                      whileHover={{ scale: 1.05 }}
-                    >
-                      <div className="text-2xl font-bold text-blue-400 mb-1">{metric.value}</div>
-                      <div className="text-sm text-gray-300 mb-1">{metric.label}</div>
-                      <div className="text-xs text-green-400 flex items-center">
-                        <TrendingUp className="w-3 h-3 mr-1" />
-                        {metric.trend}
-                      </div>
-                    </motion.div>
-                  ))}
+                <div className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Scalable architecture</span>
                 </div>
               </div>
             </div>
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <motion.div className="text-center mt-16" variants={itemVariants}>
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Build the Future?
-            </h3>
-            <p className="text-lg mb-6 opacity-90">
-              Start implementing these technologies in your projects today.
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Experience the Future?
+            </h2>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Get hands-on experience with our cutting-edge technologies and see how they can 
+              transform your business operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-                <Code className="w-5 h-5 mr-2" />
-                Get Started
+              <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Rocket className="w-5 h-5 mr-2" />
+                Start Your Demo
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center">
-                <Shield className="w-5 h-5 mr-2" />
-                Learn More
+              <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
+                <Download className="w-5 h-5 mr-2" />
+                Download SDK
               </button>
             </div>
           </div>
         </motion.div>
       </div>
-    </motion.section>
+    </div>
   );
 };
 

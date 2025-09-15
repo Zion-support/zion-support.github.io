@@ -69,7 +69,8 @@ function CategoryContent({
   categoryId,
   category,
   IconComponent,
-  user}: {
+  user,
+}: {
   categoryId: string;
   category: ForumCategoryInfo;
   IconComponent: React.ComponentType<any>;

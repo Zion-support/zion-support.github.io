@@ -26,7 +26,7 @@ export default function AI2026QuantumNeuralFusionBreakthroughBanner() {
           
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            The world's first successful integration of quantum computing with advanced neural networks. Experience unprecedented computational power and 15,000% ROI through revolutionary quantum-neural fusion technology.
+            The 'world', 's first successful integration of quantum computing with advanced neural networks. Experience unprecedented computational power and 15,000% ROI through revolutionary quantum-neural fusion technology.
           </p>
           
           {/* Key metrics */}

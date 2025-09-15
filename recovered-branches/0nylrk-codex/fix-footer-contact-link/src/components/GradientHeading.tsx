@@ -8,7 +8,11 @@ interface GradientHeadingProps {
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 
+<<<<<<< HEAD
+export function GradientHeading({ childrenclassNamelevel = "h2" }: GradientHeadingProps) {
+=======
 export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   const Tag = level;
   
   return (

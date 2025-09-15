@@ -44,7 +44,9 @@ export default function ComposePage() {
         linkUrl: linkUrl || undefined,
         attachmentBase64,
         attachmentName: file?.name,
-        context})});
+        context,
+      }),
+    });
     const data = await res.json();
     setSending(false);
     if (data?.conversation?.id) router.replace(`/messages/${data.conversation.id}`);

@@ -14,7 +14,7 @@ export default function NewContent2025RevolutionaryBanner() {
             Revolutionary Content Just Dropped
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover our latest breakthrough content including AI trends, enterprise automation guides, 
+            Discover our latest breakthrough content including AI trendsenterprise automation guides
             and real-world success stories delivering 500-2000% ROI.
           </p>
           

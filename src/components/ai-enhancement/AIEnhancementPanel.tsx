@@ -26,7 +26,8 @@ export function AIEnhancementPanel({
 }: AIEnhancementPanelProps) {
   const [options, setOptions] = useState<AIEnhancementOptions>({
     ...defaultOptions,
-    content: initialContent || defaultOptions.content});
+    content: initialContent || defaultOptions.content,
+  });
   const [generatedContent, setGeneratedContent] = useState<string>('');
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
@@ -44,7 +45,8 @@ export function AIEnhancementPanel({
   ) => {
     setOptions({
       ...options,
-      [field]: e.target.value});
+      [field]: e.target.value,
+    });
   };
 
   const handleApply = () => {

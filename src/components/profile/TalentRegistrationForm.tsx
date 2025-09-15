@@ -16,7 +16,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage,
+} from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
@@ -32,9 +33,11 @@ const talentProfileSchema = z.object({
   location: z.string().min(2, "Location is required"),
   skills: z.string().min(2, "Enter at least one skill"),
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Hourly rate must be a number"}),
+    message: "Hourly rate must be a number",
+  }),
   availability: z.enum(["available", "limited", "unavailable"]),
-  enhancedProfile: z.boolean().default(true)});
+  enhancedProfile: z.boolean().default(true),
+});
 
 type TalentFormValues = z.infer<typeof talentProfileSchema>;
 
@@ -73,7 +76,9 @@ export function TalentRegistrationForm() {
       skills: "",
       hourlyRate: "",
       availability: "available",
-      enhancedProfile: true}});
+      enhancedProfile: true,
+    },
+  });
 
   // Handle adding skill tags
   const handleAddSkill = () => {
@@ -115,7 +120,8 @@ export function TalentRegistrationForm() {
     if (!formData.bio || formData.bio.length < 20) {
       toast({
         title: "More information needed",
-        description: "Please provide at least a detailed bio before generating enhanced content."});
+        description: "Please provide at least a detailed bio before generating enhanced content.",
+      });
       return;
     }
 
@@ -145,7 +151,8 @@ export function TalentRegistrationForm() {
         
         toast({
           title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional skills for your profile."});
+          description: "AI has created a professional bio and suggested additional skills for your profile.",
+        });
       } else {
         // Fallback for mock/development mode
         logWarn('Mock AI response - using fallback content');
@@ -162,7 +169,8 @@ export function TalentRegistrationForm() {
         
         toast({
           title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional skills for your profile."});
+          description: "AI has created a professional bio and suggested additional skills for your profile.",
+        });
       }
       
     } catch (error: any) {
@@ -170,7 +178,8 @@ export function TalentRegistrationForm() {
       toast({
         title: "Generation failed",
         description: error.message || "There was an error generating your enhanced profile. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     } finally {
       setIsGenerating(false);
     }
@@ -245,7 +254,8 @@ export function TalentRegistrationForm() {
       toast({
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       return;
     }
 
@@ -313,7 +323,8 @@ export function TalentRegistrationForm() {
       setTimeout(() => {
         toast({
           title: "Profile Created Successfully",
-          description: "Your talent profile has been published and is now visible in the directory."});
+          description: "Your talent profile has been published and is now visible in the directory.",
+        });
         
         // Send notification email if we have user email
         if (userEmail && values.enhancedProfile && user?.id) {
@@ -348,7 +359,8 @@ export function TalentRegistrationForm() {
       toast({
         title: "Error Creating Profile",
         description: error.message || "There was an error creating your profile. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       setIsSubmitting(false);
     }
   };

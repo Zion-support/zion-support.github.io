@@ -6,12 +6,16 @@
     "body": "Welcome to Zion! Learn how to create an account, set up your profile, and explore the marketplace.",
     "category": "Getting Started",
     "updatedAt": "2025-01-01T00:00:00.000Z",
+<<<<<<< HEAD
     "keywords": [
       "start",
       "account",
       "signup",
       "onboarding"
     ]
+=======
+    "keywords": ["start", "account", "signup", "onboarding"]
+>>>>>>> origin/auto/autonomy-17186719616
   },
   {
     "id": "hire-how-to",
@@ -20,11 +24,15 @@
     "body": "To hire, post a job from your dashboard, review proposals, and select your preferred talent. See pricing and contracts in the job flow.",
     "category": "Hiring",
     "updatedAt": "2025-01-05T00:00:00.000Z",
+<<<<<<< HEAD
     "keywords": [
       "hire",
       "post job",
       "contract"
     ]
+=======
+    "keywords": ["hire", "post job", "contract"]
+>>>>>>> origin/auto/autonomy-17186719616
   },
   {
     "id": "matching-flow",
@@ -33,11 +41,15 @@
     "body": "Tell us your project details and timeline. Our system recommends pre-vetted talent that match your requirements.",
     "category": "Hiring",
     "updatedAt": "2025-01-04T00:00:00.000Z",
+<<<<<<< HEAD
     "keywords": [
       "match",
       "matching",
       "recommend"
     ]
+=======
+    "keywords": ["match", "matching", "recommend"]
+>>>>>>> origin/auto/autonomy-17186719616
   },
   {
     "id": "billing-help",
@@ -46,12 +58,16 @@
     "body": "Manage payment methods in Settings → Billing. Invoices are issued monthly. For refunds or disputes, contact support.",
     "category": "Payments",
     "updatedAt": "2025-01-06T00:00:00.000Z",
+<<<<<<< HEAD
     "keywords": [
       "billing",
       "invoice",
       "payment",
       "refund"
     ]
+=======
+    "keywords": ["billing", "invoice", "payment", "refund"]
+>>>>>>> origin/auto/autonomy-17186719616
   },
   {
     "id": "login-troubleshoot",
@@ -60,6 +76,7 @@
     "body": "If you can't log in: 1) Reset your password. 2) Check email spam for verification. 3) Ensure correct 2FA code/time sync. 4) If locked out, contact support.",
     "category": "Getting Started",
     "updatedAt": "2025-01-03T00:00:00.000Z",
+<<<<<<< HEAD
     "keywords": [
       "login",
       "log in",
@@ -68,6 +85,9 @@
       "2fa",
       "otp"
     ]
+=======
+    "keywords": ["login", "log in", "sign in", "password", "2fa", "otp"]
+>>>>>>> origin/auto/autonomy-17186719616
   },
   {
     "id": "profile-setup",
@@ -76,12 +96,16 @@
     "body": "Complete your profile with bio, skills, and verified identity for higher visibility.",
     "category": "Profile Setup",
     "updatedAt": "2025-01-02T00:00:00.000Z",
+<<<<<<< HEAD
     "keywords": [
       "profile",
       "setup",
       "verification",
       "kyc"
     ]
+=======
+    "keywords": ["profile", "setup", "verification", "kyc"]
+>>>>>>> origin/auto/autonomy-17186719616
   },
   {
     "id": "disputes-guide",
@@ -90,11 +114,15 @@
     "body": "Open a dispute from the contract page within 14 days of delivery. Our team mediates and aims for a fair resolution.",
     "category": "Disputes",
     "updatedAt": "2025-01-07T00:00:00.000Z",
+<<<<<<< HEAD
     "keywords": [
       "dispute",
       "complaint",
       "issue",
       "chargeback"
     ]
+=======
+    "keywords": ["dispute", "complaint", "issue", "chargeback"]
+>>>>>>> origin/auto/autonomy-17186719616
   }
 ]

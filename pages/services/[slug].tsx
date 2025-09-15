@@ -1,14 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
-import Button from '../../components/ui/Button';
-import Card from '../../components/ui/Card';
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../../data/extra-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { newRealServices } from '../../data/new-real-services';
-import { marketReadyServices } from '../../data/market-ready-services';
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
+import Button from '../../components/ui/Button',
+import Card from '../../components/ui/Card',
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react',
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services',
+import { extraServices } from '../../data/extra-services',
+import { additionalEnhancedServices } from '../../data/additional-real-services',
+import { newRealServices } from '../../data/new-real-services',
+import { marketReadyServices } from '../../data/market-ready-services',
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
@@ -17,7 +17,7 @@ const contactInfo = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
 
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
@@ -26,69 +26,69 @@ function getAllServices(): Service[] {
 			additionalEnhancedServices as Service[],
 			newRealServices as Service[],
 			marketReadyServices as Service[]
-		);
+		),
 }
 
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
 }
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
-		const url = new URL(link);
-		const path = url.pathname.replace(/^\/+|\/+$/g, '');
+		const url = new URL(link),
+		const path = url.pathname.replace(/^\/+|\/+$/g, ''),
 		if (path.startsWith('services/')) {
-			return path.substring('services/'.length);
+			return path.substring('services/'.length),
 		}
-		return null;
+		return null,
 	} catch {
-		return null;
+		return null,
 	}
 }
 
 export async function getStaticPaths() {
-	const services = getAllServices();
-	const slugs = new Set<string>();
+	const services = getAllServices(),
+	const slugs = new Set<string>(),
 
 	for (const s of services) {
 		// Prefer explicit link under /services/* when available
-		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
+		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null,
 		if (fromLink) {
-			slugs.add(fromLink);
-			continue;
+			slugs.add(fromLink),
+			continue,
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*
-		if (s.id) slugs.add(toSlug(s.id));
-		else if (s.name) slugs.add(toSlug(s.name));
+		if (s.id) slugs.add(toSlug(s.id)),
+		else if (s.name) slugs.add(toSlug(s.name)),
 	}
 
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
 		fallback: false
-	};
+	},
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-	const services = getAllServices();
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+	const services = getAllServices(),
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),
 
 	let service: Service | undefined = services.find((s) => {
-		if (!s.link) return false;
-		const fromLink = extractServiceSlugFromLink(s.link);
-		return fromLink === incomingSlug;
-	});
+		if (!s.link) return false,
+		const fromLink = extractServiceSlugFromLink(s.link),
+		return fromLink === incomingSlug
+	}),
 
 	if (!service) {
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
 	}
 
 	if (!service) {
-		return { notFound: true };
+		return { notFound: true },
 	}
 
 	return {
 		props: { service }
-	};
+	},
 }
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
@@ -151,5 +151,5 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-	);
+	),
 }

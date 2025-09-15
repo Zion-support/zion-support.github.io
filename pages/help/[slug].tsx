@@ -7,7 +7,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
     paths: articles.map((a) => ({ params: { slug: a.slug } })),
-    fallback: false};
+    fallback: false,
+  };
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
@@ -24,7 +25,8 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
     await fetch('/api/support/feedback', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ articleId: article.id, helpful })});
+      body: JSON.stringify({ articleId: article.id, helpful }),
+    });
     setVoted(helpful);
   }
 

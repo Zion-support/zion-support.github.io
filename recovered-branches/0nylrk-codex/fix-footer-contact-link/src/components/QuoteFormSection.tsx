@@ -5,8 +5,13 @@ import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
 
 export function QuoteFormSection() {
+<<<<<<< HEAD
+  const [isSubmittedsetIsSubmitted] = useState(false);
+  const [isSubmittingsetIsSubmitting] = useState(false);
+=======
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,7 +21,11 @@ export function QuoteFormSection() {
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
+<<<<<<< HEAD
+    }1000);
+=======
     }, 1000);
+>>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (
@@ -101,7 +110,11 @@ export function QuoteFormSection() {
                   I'm interested in (select all that apply)
                 </label>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">
+<<<<<<< HEAD
+                  {["AI Products/Services"IT Equipment"Server Solutions"Storage Solutions"Networking"24/7 Support"Recycling Services"].map((itemindex) => (
+=======
                   {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
                     <div key={index} className="flex items-center">
                       <input
                         id={`interest-${index}`}

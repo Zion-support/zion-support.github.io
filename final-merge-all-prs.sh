@@ -50,6 +50,13 @@ resolve_conflicts() {
     echo "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
+<<<<<<< HEAD
+    if grep -q "        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
+            echo "⚙️  Config file detected, keeping main version..."
+            sed -i '/        else
+            echo "📝 Regular file, attempting to merge both versions..."
+            sed -i '/        fi
+=======
     if grep -q "<<<<<<< HEAD" "$file"; then
         echo "⚠️  Found conflicts in $file, resolving..."
         
@@ -70,6 +77,7 @@ resolve_conflicts() {
             sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
             sed -i '/>>>>>>> /d' "$file"
         fi
+>>>>>>> origin/auto/autonomy-17186719616
         
         echo "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))

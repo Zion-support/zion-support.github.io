@@ -1,30 +1,30 @@
-import EnhancedCard from '../../components/ui/EnhancedCard';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-import { useEffect, useState } from 'react';
+import EnhancedCard from '../../components/ui/EnhancedCard',
+import EnhancedButton from '../../components/ui/EnhancedButton',
+import { useEffect, useState } from 'react',
 
 const STEPS = [
   { key: 'job', label: 'Job posted' },
   { key: 'invite', label: 'First invite sent' },
-  { key: 'response', label: 'First response received' }] as const;
+  { key: 'response', label: 'First response received' }] as const,
 
-type StepKey = typeof STEPS[number]['key'];
+type StepKey = typeof STEPS[number]['key'],
 
 export default function ClientDashboard() {
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ job: false, invite: false, response: false });
+  const [completed, setCompleted] = useState<Record<StepKey boolean>>({ job: false, invite: false, response: false }),
 
   useEffect(() => {
     try {
-      const raw = window.localStorage.getItem('onboarding.client');
-      if (raw) setCompleted(JSON.parse(raw));
+      const raw = window.localStorage.getItem('onboarding.client'),
+      if (raw) setCompleted(JSON.parse(raw)),
     } catch {}
-  }, []);
+  }, []),
 
   useEffect(() => {
-    try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)); } catch {}
-  }, [completed]);
+    try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)), } catch {}
+  }, [completed]),
 
-  const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
-  const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
+  const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
+  const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
 
   return (
     <div className="space-y-4">
@@ -60,5 +60,5 @@ export default function ClientDashboard() {
         </ul>
       </EnhancedCard>
     </div>
-  );
+  ),
 }

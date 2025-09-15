@@ -8,6 +8,11 @@ export const certificationSchema = z.object({
   issue_date: z.string().optional(),
   expiration_date: z.string().optional(),
   credential_id: z.string().optional(),
+<<<<<<< HEAD
   credential_url: z.string().optional()});
+=======
+  credential_url: z.string().optional(),
+});
+>>>>>>> origin/auto/autonomy-17186719616
 
 export type CertificationFormValues = z.infer<typeof certificationSchema>;

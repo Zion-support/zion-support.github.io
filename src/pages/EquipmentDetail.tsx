@@ -154,7 +154,8 @@ export default function EquipmentDetail() {
       toast({
         title: "Authentication Required",
         description: "Please log in to add items to cart",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       return;
     }
 
@@ -166,16 +167,20 @@ export default function EquipmentDetail() {
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
-          quantity}});
+          quantity,
+        },
+      });
 
       toast({
         title: "Added to Cart",
-        description: `${equipment.name} has been added to your cart.`});
+        description: `${equipment.name} has been added to your cart.`,
+      });
     } catch (error) {
       toast({
         title: "Error",
         description: "Failed to add item to cart. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     } finally {
       setIsAdding(false);
     }

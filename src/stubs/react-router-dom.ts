@@ -24,4 +24,5 @@ export default {
   useNavigate,
   useLocation,
   useParams,
-  useSearchParams};
+  useSearchParams,
+};

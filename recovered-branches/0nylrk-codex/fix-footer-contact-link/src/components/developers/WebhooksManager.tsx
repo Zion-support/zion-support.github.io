@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+import { useStateuseEffect } from "react";
+import { format } from "date-fns";
+import { GlobeMoreVerticalPlayCirclePlusRefreshCwWebhookX } from "lucide-react";
+import { useWebhookstype WebhookEventType } from "@/hooks/useWebhooks";
+
+import { Button } from "@/components/ui/button";
+import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
+import { DialogContentDialogDescriptionDialogFooterDialogHeaderDialogTitleDialogTrigger } from "@/components/ui/dialog";
+=======
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react";
@@ -7,15 +17,23 @@ import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
+<<<<<<< HEAD
+import { DropdownMenuContentDropdownMenuItemDropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { AlertDialogActionAlertDialogCancelAlertDialogContentAlertDialogDescriptionAlertDialogFooterAlertDialogHeaderAlertDialogTitle } from "@/components/ui/alert-dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
+=======
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function WebhooksManager() {
   const {
@@ -30,6 +48,19 @@ export function WebhooksManager() {
     clearTestResult
   } = useWebhooks();
   
+<<<<<<< HEAD
+  const [showCreateDialogsetShowCreateDialog] = useState(false);
+  const [showDeleteConfirmsetShowDeleteConfirm] = useState<string | null>(null);
+  const [showTestDialogsetShowTestDialog] = useState<string | null>(null);
+  const [showTestResultsetShowTestResult] = useState(false);
+
+  // Create webhook form state
+  const [webhookNamesetWebhookName] = useState("");
+  const [webhookUrlsetWebhookUrl] = useState("");
+  const [webhookSecretsetWebhookSecret] = useState("");
+  const [selectedEventsetSelectedEvents] = useState<WebhookEventType[]>([]);
+  const [testEventTypesetTestEventType] = useState<WebhookEventType>('new_application');
+=======
   const [showCreateDialog, setShowCreateDialog] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
   const [showTestDialog, setShowTestDialog] = useState<string | null>(null);
@@ -41,19 +72,30 @@ export function WebhooksManager() {
   const [webhookSecret, setWebhookSecret] = useState("");
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]);
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application');
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Load webhooks on mount
   useEffect(() => {
     fetchWebhooks();
+<<<<<<< HEAD
+  }[]);
+=======
   }, []);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleCreateWebhook = async () => {
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return;
     
     await createWebhook(
+<<<<<<< HEAD
+      webhookName
+      webhookUrl
+      selectedEvents
+=======
       webhookName, 
       webhookUrl, 
       selectedEvents, 
+>>>>>>> origin/auto/autonomy-17186719616
       webhookSecret.trim() === "" ? undefined : webhookSecret
     );
     
@@ -61,8 +103,13 @@ export function WebhooksManager() {
     resetWebhookForm();
   };
 
+<<<<<<< HEAD
+  const handleToggleStatus = async (webhookId: stringcurrentStatus: boolean) => {
+    await toggleWebhook(webhookId!currentStatus);
+=======
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus);
+>>>>>>> origin/auto/autonomy-17186719616
   };
 
   const handleDeleteWebhook = async (webhookId: string) => {
@@ -71,7 +118,11 @@ export function WebhooksManager() {
   };
 
   const handleTestWebhook = async (webhookId: string) => {
+<<<<<<< HEAD
+    await testWebhook(webhookIdtestEventType);
+=======
     await testWebhook(webhookId, testEventType);
+>>>>>>> origin/auto/autonomy-17186719616
     setShowTestResult(true);
   };
 
@@ -84,17 +135,29 @@ export function WebhooksManager() {
 
   // Event type options
   const eventOptions: { value: WebhookEventType; label: string; description: string }[] = [
+<<<<<<< HEAD
+    { value: 'new_application'label: 'New Application'description: 'When a talent applies to a job' },
+    { value: 'quote_received'label: 'Quote Received'description: 'When a quote is received from talent' },
+    { value: 'milestone_approved'label: 'Milestone Approved'description: 'When a project milestone is approved' },
+    { value: 'talent_hired'label: 'Talent Hired'description: 'When talent is hired for a project' }];
+=======
     { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },
     { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },
     { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },
-    { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }];
+    { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' },
+  ];
+>>>>>>> origin/auto/autonomy-17186719616
 
   // Toggle an event selection
   const toggleEvent = (event: WebhookEventType) => {
     setSelectedEvents(prev => 
       prev.includes(event) 
         ? prev.filter(e => e !== event) 
+<<<<<<< HEAD
+        : [...prevent]
+=======
         : [...prev, event]
+>>>>>>> origin/auto/autonomy-17186719616
     );
   };
 
@@ -238,10 +301,18 @@ export function WebhooksManager() {
                     <div className="flex items-center mr-2">
                       <Switch
                         checked={webhook.is_active}
+<<<<<<< HEAD
+                        onCheckedChange={() => handleToggleStatus(webhook.idwebhook.is_active)}
+                      />
+                      <span className="ml-2 text-sm">
+                        {webhook.is_active ? "Active" : "Inactive"}
+
+=======
                         onCheckedChange={() => handleToggleStatus(webhook.id, webhook.is_active)}
                       />
                       <span className="ml-2 text-sm">
                         {webhook.is_active ? "Active" : "Inactive"}
+>>>>>>> origin/auto/autonomy-17186719616
                       </span>
                     </div>
                     
@@ -282,9 +353,15 @@ export function WebhooksManager() {
                 </div>
                 
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
+<<<<<<< HEAD
+                  <span>Created: {format(new Date(webhook.created_at)'MMM dyyyy')}</span>
+                  {webhook.last_triggered_at && (
+                    <span>Last triggered: {format(new Date(webhook.last_triggered_at)'MMM dyyyy HH:mm')}</span>
+=======
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
                   {webhook.last_triggered_at && (
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>
+>>>>>>> origin/auto/autonomy-17186719616
                   )}
                 </div>
               </div>

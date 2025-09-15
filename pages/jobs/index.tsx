@@ -1,16 +1,16 @@
-import Link from 'next/link';
-import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
-import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import { useEffect, useState } from 'react';
-import InteractiveSearch from '../../components/ui/InteractiveSearch';
+import Link from 'next/link',
+import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
+import EnhancedLoading from '../../components/ui/EnhancedLoading',
+import { useEffect, useState } from 'react',
+import InteractiveSearch from '../../components/ui/InteractiveSearch',
 
 export default function JobsListPage() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => { const t = setTimeout(() => setLoading(false), 500); return () => clearTimeout(t); }, []);
+  const [loading, setLoading] = useState(true),
+  useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t), }, []),
 
   const jobs = [
     { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
-    { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }];
+    { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
 
   return (
     <div className="space-y-4">
@@ -29,5 +29,5 @@ export default function JobsListPage() {
         </div>
       )}
     </div>
-  );
+  ),
 }

@@ -33,9 +33,9 @@ export function DisputeDetail() {
   const [adminNote, setAdminNote] = useState("");
   const [isSending, setIsSending] = useState(false);
   const [resolution, setResolution] = useState<{ summary: string; resolution_type: ResolutionType }>({
-  summary: "",
-  resolution_type: "compromise"});
-   
+    summary: "",
+    resolution_type: "compromise",
+  });
   const [activeTab, setActiveTab] = useState("overview");
 
   // Check if user is admin (placeholder - implement proper admin check)
@@ -88,15 +88,20 @@ export function DisputeDetail() {
       return;
     }
     
-    const success = await resolveDispute(disputeId, {
-      summary: resolution.summary,
-      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"});
+      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise",
+    });
     if (success && dispute) {
       setDispute({
         ...dispute,
+    const success = await resolveDispute(disputeId, { ...resolution, resolution_type: resolution.resolution_type || "compromise" });
+    if (success && dispute) {
+      setDispute({
+        ...dispute, 
+        status: "resolved", 
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,
-        resolved_at: new Date().toISOString()});
+        resolved_at: new Date().toISOString(),
+      });
     } else {
       toast.error("Failed to resolve dispute");
     }
@@ -417,7 +422,7 @@ export function DisputeDetail() {
                               <label className="text-sm font-medium mb-1 block">Resolution Type</label>
                               <select
                                 className="w-full p-2 border rounded"
-                                value={resolution.resolution_type || ""}
+                                value={resolution.resolution_type || "compromise"}
                                 onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
                               >
                                 <option value="client_favor">In Client's Favor</option>

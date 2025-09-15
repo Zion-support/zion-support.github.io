@@ -18,17 +18,28 @@ interface ContractPreviewProps {
 }
 
 export function ContractPreview({ 
+<<<<<<< HEAD
+  contractContent
+  generatedContract
+  status = 'ready'
+  onDeploy
+=======
   contractContent, 
   generatedContract, 
   status = 'ready', 
   onDeploy, 
+>>>>>>> origin/auto/autonomy-17186719616
   onSign,
   onClose,
   deployStatus,
   deploymentInfo
 }: ContractPreviewProps) {
   
+<<<<<<< HEAD
+  // Use either contractContent or generatedContractwhichever is provided
+=======
   // Use either contractContent or generatedContract, whichever is provided
+>>>>>>> origin/auto/autonomy-17186719616
   const displayContent = contractContent || generatedContract || "";
   
   return (

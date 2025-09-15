@@ -258,7 +258,8 @@ export default function Marketplace() {
       toast({
         title: "Admin Access Required",
         description: "Only administrators can add products to the marketplace. Please contact an administrator.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       return;
     }
 
@@ -361,7 +362,8 @@ export default function Marketplace() {
         toast({
           title: "Server Error", 
           description: "The marketplace is temporarily unavailable. Please try again later.",
-          variant: "destructive"});
+          variant: "destructive",
+        });
       } else {
         handleApiError(err); // This might show a toast or log to Sentry
       }
@@ -623,7 +625,8 @@ export default function Marketplace() {
                     toast({
                       title: "Navigation Error",
                       description: "Could not navigate to checkout. Please try again.",
-                      variant: "destructive"});
+                      variant: "destructive",
+                    });
                     // Re-throw to allow ProductCard's catch to also run if needed,
                     // though ProductCard will reset its state in .finally() regardless.
                     throw error;

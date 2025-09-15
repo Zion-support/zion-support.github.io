@@ -1,398 +1,307 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Send, 
-  Bot, 
-  User, 
-  Sparkles, 
-  Zap, 
-  Code, 
-  BarChart3,
-  Shield,
-  Search,
-  MessageSquare,
-  Play,
-  Pause,
-  RotateCcw,
-  Copy,
-  Check
+  Bot
+  MessageCircle
+  Send
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  Star,
+  Loader2,
+  CheckCircle,
+  AlertCircle,
+  Lightbulb,
+  Target,
+  TrendingUp
 } from 'lucide-react';
 
-interface DemoMessage {
-  id: string;
-  type: 'user' | 'ai';
-  content: string;
-  timestamp: Date;
-  isTyping?: boolean;
-}
-
-interface DemoFeature {
-  id: string;
-  name: string;
-  description: string;
-  icon: React.ReactNode;
-  demoPrompt: string;
-  category: string;
-}
-
-const demoFeatures: DemoFeature[] = [
-  {
-    id: '1',
-    name: 'Code Generation',
-    description: 'Generate code in any programming language with AI assistance',
-    icon: <Code className="w-6 h-6" />,
-    demoPrompt: 'Create a React component for a user profile card with TypeScript',
-    category: 'Development'
-  },
-  {
-    id: '2',
-    name: 'Data Analysis',
-    description: 'Analyze data and generate insights with advanced AI algorithms',
-    icon: <BarChart3 className="w-6 h-6" />,
-    demoPrompt: 'Analyze this sales data and provide insights for Q4 optimization',
-    category: 'Analytics'
-  },
-  {
-    id: '3',
-    name: 'Security Scan',
-    description: 'Scan code for vulnerabilities and security issues',
-    icon: <Shield className="w-6 h-6" />,
-    demoPrompt: 'Scan this authentication code for security vulnerabilities',
-    category: 'Security'
-  },
-  {
-    id: '4',
-    name: 'Content Search',
-    description: 'Intelligent search across documents and databases',
-    icon: <Search className="w-6 h-6" />,
-    demoPrompt: 'Find all documents related to machine learning best practices',
-    category: 'Search'
-  },
-  {
-    id: '5',
-    name: 'Chat Assistant',
-    description: 'Natural language conversation with contextual understanding',
-    icon: <MessageSquare className="w-6 h-6" />,
-    demoPrompt: 'Help me plan a marketing strategy for a new AI product launch',
-    category: 'Communication'
-  }
-];
-
-const categories = ['All', 'Development', 'Analytics', 'Security', 'Search', 'Communication'];
-
-export default function InteractiveAIDemo2025() {
-  const [selectedFeature, setSelectedFeature] = useState<DemoFeature | null>(null);
-  const [messages, setMessages] = useState<DemoMessage[]>([]);
-  const [inputValue, setInputValue] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [isVisible, setIsVisible] = useState(false);
-  const [copiedMessage, setCopiedMessage] = useState<string | null>(null);
+const InteractiveAIDemo2025 = () => {
+  const [messagesetMessages] = useState([
+    {
+      id: 1,
+      type: 'ai',
+      content: 'Hello! I\'m your AI assistant for 2025. I can help you explore revolutionary AI technologiesbusiness transformation strategiesand future predictions. What would you like to know?',
+      timestamp: new Date(),
+      features: ['Neural 'Interfaces', 'Quantum 'AI', 'Business Automation']
+    }
+  ]);
+  const [inputValuesetInputValue] = useState('');
+  const [isTypingsetIsTyping] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
-  const filteredFeatures = selectedCategory === 'All' 
-    ? demoFeatures 
-    : demoFeatures.filter(feature => feature.category === selectedCategory);
+  const aiResponses = [
+    {
+      content: "Neural interfaces represent the next frontier in human-AI interaction. Our 2025 breakthrough technology allows direct brain-computer communicationachieving 500% efficiency improvements in data processing and decision-making.",
+      features: ['Neural 'Interfaces', 'Brain-Computer 'Interface', 'Efficiency Boost'],
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      content: "Quantum AI fusion combines quantum computing with advanced AI algorithmsdelivering 1000x faster processing speeds. This revolutionary approach enables real-time analysis of complex datasets that would take traditional computers years to process.",
+      features: ['Quantum 'Computing', 'AI 'Algorithms', 'Real-time Processing'],
+      icon: Zap,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      content: "Enterprise automation in 2025 delivers unprecedented efficiency gains. Our AI-powered solutions achieve 90% cost reduction while maintaining 99.9% accuracy in business process optimization.",
+      features: ['Enterprise 'Automation', 'Cost 'Reduction', 'Process Optimization'],
+      icon: Target,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      content: "Future predictions powered by our advanced AI models show 95% accuracy in market forecasting. We predict a $50 trillion market opportunity in AI-driven technologies by 2030.",
+      features: ['Future 'Predictions', 'Market 'Forecasting', 'Market Opportunity'],
+      icon: TrendingUp,
+      color: 'from-orange-500 to-red-500'
+    }
+  ];
 
-  const handleSendMessage = async (content: string) => {
-    if (!content.trim()) return;
+  const handleSendMessage = async () => {
+    if (!inputValue.trim() || isTyping) return;
 
-    const userMessage: DemoMessage = {
-      id: Date.now().toString(),
+    const userMessage = {
+      id: messages.length + 1,
       type: 'user',
-      content,
+      content: inputValue,
       timestamp: new Date()
     };
 
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
+    setMessages(prev => [...prevuserMessage]);
+    setInputValue(', ');
     setIsTyping(true);
 
-    // Simulate AI response
+    // Simulate AI response delay
     setTimeout(() => {
-      const aiResponse: DemoMessage = {
-        id: (Date.now() + 1).toString(),
+      const randomResponse = aiResponses[Math.floor(Math.random() * aiResponses.length)];
+      const aiMessage = {
+        id: messages.length + 2,
         type: 'ai',
-        content: generateAIResponse(content),
-        timestamp: new Date()
+        content: randomResponse.content,
+        timestamp: new Date(),
+        features: randomResponse.features,
+        icon: randomResponse.icon,
+        color: randomResponse.color
       };
-
-      setMessages(prev => [...prev, aiResponse]);
+      setMessages(prev => [...prevaiMessage]);
       setIsTyping(false);
-    }, 1500);
+    }1500);
   };
 
-  const generateAIResponse = (userInput: string): string => {
-    const responses = [
-      "I've analyzed your request and here's what I found: This is a comprehensive solution that addresses all the key requirements you mentioned. The implementation follows best practices and includes proper error handling, type safety, and performance optimizations.",
-      "Based on the data provided, I can see several optimization opportunities. The main areas for improvement include performance bottlenecks in the data processing pipeline and potential security enhancements in the authentication flow.",
-      "Here's a detailed breakdown of the analysis: The current implementation shows strong performance metrics with 99.9% uptime and sub-100ms response times. However, there are opportunities to reduce memory usage by approximately 15% through code optimization.",
-      "I've identified the key patterns in your data that suggest the following recommendations: 1) Implement caching for frequently accessed data, 2) Add monitoring for performance metrics, 3) Consider implementing a microservices architecture for better scalability.",
-      "The security scan revealed 3 minor issues that can be easily resolved: 1) Update dependency versions, 2) Add input validation, 3) Implement rate limiting. All issues are low severity and can be addressed in the next deployment cycle."
-    ];
-
-    return responses[Math.floor(Math.random() * responses.length)];
-  };
-
-  const handleFeatureSelect = (feature: DemoFeature) => {
-    setSelectedFeature(feature);
-    setInputValue(feature.demoPrompt);
-  };
-
-  const handleCopyMessage = (messageId: string) => {
-    const message = messages.find(m => m.id === messageId);
-    if (message) {
-      navigator.clipboard.writeText(message.content);
-      setCopiedMessage(messageId);
-      setTimeout(() => setCopiedMessage(null), 2000);
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage();
     }
   };
 
-  const resetDemo = () => {
-    setMessages([]);
-    setSelectedFeature(null);
-    setInputValue('');
-    setIsTyping(false);
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.1
+      }
+    }
   };
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
+  if (!isVisible) return null;
+
   return (
-    <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-transparent to-blue-600/20"></div>
+      </div>
+
+      <motion.div
+        className="relative z-10 container mx-auto px-4 py-16"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Brain className="w-4 h-4" />
-            Interactive AI Demo
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Experience AI
-            <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              In Real-Time
+        <motion.div variants={itemVariants} className="text-center mb-12">
+          <motion.div
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"
+            whileHover={{ scale: 1.05 }}
+          >
+            <Bot className="w-5 h-5 text-purple-400" />
+            <span className="text-purple-300 font-medium">Interactive AI Demo 2025</span>
+          </motion.div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6">
+            Chat with the
+            <br />
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Future of AI
             </span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Try our AI capabilities firsthand. Ask questions, generate code, analyze data, 
-            and see how artificial intelligence can transform your workflow.
+          </h1>
+          
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            Experience our revolutionary AI technology firsthand. Ask questions about neural interfaces
+            quantum computingbusiness automationand future predictions.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Features Panel */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-1"
-          >
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-              <h3 className="text-xl font-bold text-white mb-4">AI Capabilities</h3>
-              
-              {/* Category Filter */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ${
-                      selectedCategory === category
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-
-              {/* Features List */}
-              <div className="space-y-3">
-                {filteredFeatures.map((feature) => (
-                  <button
-                    key={feature.id}
-                    onClick={() => handleFeatureSelect(feature)}
-                    className={`w-full text-left p-4 rounded-lg transition-all duration-300 ${
-                      selectedFeature?.id === feature.id
-                        ? 'bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/50'
-                        : 'bg-white/5 hover:bg-white/10 border border-transparent'
-                    }`}
-                  >
-                    <div className="flex items-start gap-3">
-                      <div className="text-purple-400 mt-1">
-                        {feature.icon}
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-white mb-1">{feature.name}</h4>
-                        <p className="text-sm text-gray-300">{feature.description}</p>
-                      </div>
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Chat Interface */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="lg:col-span-2"
-          >
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden h-[600px] flex flex-col">
-              {/* Chat Header */}
-              <div className="bg-white/10 p-4 border-b border-white/10">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                      <Bot className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-white">AI Assistant</h3>
-                      <p className="text-sm text-gray-300">Ready to help</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={resetDemo}
-                      className="p-2 text-gray-400 hover:text-white transition-colors duration-300"
-                    >
-                      <RotateCcw className="w-4 h-4" />
-                    </button>
-                    <button
-                      onClick={() => setIsPlaying(!isPlaying)}
-                      className="p-2 text-gray-400 hover:text-white transition-colors duration-300"
-                    >
-                      {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Messages */}
-              <div className="flex-1 overflow-y-auto p-4 space-y-4">
-                <AnimatePresence>
-                  {messages.map((message) => (
-                    <motion.div
-                      key={message.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                    >
-                      <div className={`flex gap-3 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                          message.type === 'user' 
-                            ? 'bg-blue-500' 
-                            : 'bg-gradient-to-r from-purple-500 to-pink-500'
-                        }`}>
-                          {message.type === 'user' ? <User className="w-4 h-4 text-white" /> : <Bot className="w-4 h-4 text-white" />}
-                        </div>
-                        <div className={`rounded-2xl p-4 ${
-                          message.type === 'user'
-                            ? 'bg-blue-500 text-white'
-                            : 'bg-white/10 text-gray-100'
-                        }`}>
-                          <p className="text-sm leading-relaxed">{message.content}</p>
-                          <div className="flex items-center justify-between mt-2">
-                            <span className="text-xs opacity-70">
-                              {message.timestamp.toLocaleTimeString()}
-                            </span>
-                            <button
-                              onClick={() => handleCopyMessage(message.id)}
-                              className="text-xs opacity-70 hover:opacity-100 transition-opacity duration-300"
-                            >
-                              {copiedMessage === message.id ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
-
-                {/* Typing Indicator */}
-                {isTyping && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="flex gap-3 justify-start"
-                  >
-                    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                      <Bot className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="bg-white/10 rounded-2xl p-4">
-                      <div className="flex gap-1">
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }} />
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </div>
-
-              {/* Input */}
-              <div className="p-4 border-t border-white/10">
-                <div className="flex gap-3">
-                  <input
-                    type="text"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
-                    onKeyPress={(e) => e.key === 'Enter' && handleSendMessage(inputValue)}
-                    placeholder="Ask me anything about AI, coding, data analysis..."
-                    className="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  />
-                  <button
-                    onClick={() => handleSendMessage(inputValue)}
-                    disabled={!inputValue.trim() || isTyping}
-                    className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-                  >
-                    <Send className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* CTA Section */}
+        {/* Chat Interface */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-16"
+          variants={itemVariants}
+          className="max-w-4xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl"
         >
-          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Integrate AI Into Your Workflow?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              This demo showcases just a fraction of our AI capabilities. 
-              Get started with a free trial and experience the full power of our platform.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300">
-                Start Free Trial
-              </button>
-              <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">
-                Schedule Demo
-              </button>
+          {/* Chat Header */}
+          <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-b border-white/10 p-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                <Bot className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white">AI Assistant 2025</h3>
+                <p className="text-purple-200 text-sm">Powered by Revolutionary Technology</p>
+              </div>
+              <div className="ml-auto flex items-center gap-2">
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-green-400 text-sm font-medium">Online</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Messages Container */}
+          <div className="h-96 overflow-y-auto p-6 space-y-6">
+            <AnimatePresence>
+              {messages.map((message) => (
+                <motion.div
+                  key={message.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                >
+                  <div className={`max-w-xs lg:max-w-md ${
+                    message.type === 'user' 
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white' 
+                      : 'bg-white/10 text-gray-100'
+                  } rounded-2xl p-4`}>
+                    <p className="text-sm leading-relaxed">{message.content}</p>
+                    
+                    {message.features && (
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {message.features.map((featureindex) => (
+                          <span
+                            key={index}
+                            className="text-xs px-2 py-1 bg-white/20 rounded-full"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    
+                    <div className="text-xs opacity-70 mt-2">
+                      {message.timestamp.toLocaleTimeString()}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+
+            {/* Typing Indicator */}
+            {isTyping && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex justify-start"
+              >
+                <div className="bg-white/10 text-gray-100 rounded-2xl p-4 flex items-center gap-2">
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  <span className="text-sm">AI is thinking...</span>
+                </div>
+              </motion.div>
+            )}
+          </div>
+
+          {/* Input Area */}
+          <div className="border-t border-white/10 p-6">
+            <div className="flex gap-4">
+              <div className="flex-1 relative">
+                <input
+                  type="text"
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  placeholder="Ask about AI breakthroughsbusiness automationor future predictions..."
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  disabled={isTyping}
+                />
+              </div>
+              <motion.button
+                onClick={handleSendMessage}
+                disabled={!inputValue.trim() || isTyping}
+                className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center gap-2"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {isTyping ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <Send className="w-4 h-4" />
+                )}
+                Send
+              </motion.button>
             </div>
           </div>
         </motion.div>
-      </div>
+
+        {/* Features Showcase */}
+        <motion.div
+          variants={itemVariants}
+          className="mt-16 grid md:grid-cols-4 gap-6"
+        >
+          {[
+            { icon: Braintitle: 'Neural 'Interfaces', 'description: '500% efficiency boost' },
+            { icon: Zaptitle: 'Quantum 'AI', 'description: '1000x faster processing' },
+            { icon: Targetitle: 'Business 'Automation', 'description: '90% cost reduction' },
+            { icon: TrendingUptitle: 'Future 'Predictions', 'description: '95% accuracy rate' }
+          ].map((featureindex) => {
+            const Icon = feature.icon;
+            return (
+              <motion.div
+                key={index}
+                className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"
+                whileHover={{ y: -5scale: 1.02 }}
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-purple-300 text-sm">{feature.description}</p>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </motion.div>
     </div>
   );
-}
+};
+
+export default InteractiveAIDemo2025;

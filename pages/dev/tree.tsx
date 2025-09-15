@@ -15,7 +15,8 @@ export default function DevTreePage() {
   const fetchTree = async (token?: string) => {
     try {
       const resp = await fetch("/api/dev/source-map", {
-        headers: token ? { "x-admin-token": token } : undefined});
+        headers: token ? { "x-admin-token": token } : undefined,
+      });
       if (!resp.ok) {
         const j = await resp.json().catch(() => ({}));
         throw new Error(j.error || `HTTP ${resp.status}`);
@@ -45,8 +46,10 @@ export default function DevTreePage() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-admin-token": adminToken},
-        body: JSON.stringify({ path: p })});
+          "x-admin-token": adminToken,
+        },
+        body: JSON.stringify({ path: p }),
+      });
       if (!resp.ok) {
         const j = await resp.json().catch(() => ({}));
         throw new Error(j.error || `HTTP ${resp.status}`);
