@@ -2,231 +2,186 @@ import React from 'react';
 
 const SyntheticBiologyRevolution2027: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-100">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full text-sm font-semibold mb-6">
-            🧬 SYNTHETIC BIOLOGY 2027
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
+            🧬 SYNTHETIC BIOLOGY • JANUARY 2027
           </div>
-          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-            Synthetic Biology Revolution
+          <h1 className="text-6xl font-bold text-gray-900 mb-6">
+            Synthetic Biology Revolution 2027
           </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Program the building blocks of life itself. From living factories to biological computers, 
-            synthetic biology is creating a new era of sustainable technology powered by nature.
+          <p className="text-2xl text-gray-600 max-w-4xl mx-auto mb-8">
+            Redesign life itself with programmable biology, synthetic organisms, and living machines that solve humanity's greatest challenges.
           </p>
         </div>
 
-        {/* Core Technologies */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">🏭</div>
-            <h2 className="text-2xl font-bold text-white mb-4">Living Factories</h2>
-            <p className="text-gray-300 mb-6">
-              Biological systems that manufacture complex materials, pharmaceuticals, 
-              and even electronics using programmed cellular machinery.
+        {/* Synthetic Biology Features */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-green-200">
+            <div className="text-6xl mb-6 text-center">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-green-800">Programmable Life</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Design and create synthetic organisms with custom DNA sequences that perform specific functions, from environmental cleanup to medical treatment.
             </p>
-            <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 p-4 rounded-lg">
-              <div className="text-white font-semibold">Self-Replicating Production</div>
-              <div className="text-gray-300 text-sm">Zero waste manufacturing</div>
-            </div>
+            <ul className="text-green-700 space-y-2 text-sm">
+              <li>• Custom DNA programming</li>
+              <li>• Synthetic organism design</li>
+              <li>• Biological circuit engineering</li>
+              <li>• Living material creation</li>
+            </ul>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">💻</div>
-            <h2 className="text-2xl font-bold text-white mb-4">DNA Computing</h2>
-            <p className="text-gray-300 mb-6">
-              Biological processors that solve complex problems impossible for 
-              traditional computers using the parallel processing power of DNA.
+          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-emerald-200">
+            <div className="text-6xl mb-6 text-center">🏭</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-emerald-800">Living Factories</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Synthetic organisms that function as biological factories, producing medicines, materials, and chemicals with unprecedented efficiency.
             </p>
-            <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 p-4 rounded-lg">
-              <div className="text-white font-semibold">Biological Supercomputers</div>
-              <div className="text-gray-300 text-sm">Nature's processing power</div>
-            </div>
+            <ul className="text-emerald-700 space-y-2 text-sm">
+              <li>• Biological manufacturing</li>
+              <li>• Sustainable production</li>
+              <li>• Self-replicating systems</li>
+              <li>• Zero-waste processes</li>
+            </ul>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">🔧</div>
-            <h2 className="text-2xl font-bold text-white mb-4">Self-Healing Materials</h2>
-            <p className="text-gray-300 mb-6">
-              Living materials that repair themselves, adapt to environmental changes, 
-              and evolve to become stronger over time.
+          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-teal-200">
+            <div className="text-6xl mb-6 text-center">🌱</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-teal-800">Environmental Healing</h3>
+            <p className="text-gray-600 mb-6 text-center">
+              Engineered organisms that clean up pollution, restore ecosystems, and reverse environmental damage through biological processes.
             </p>
-            <div className="bg-gradient-to-r from-yellow-600/20 to-orange-600/20 p-4 rounded-lg">
-              <div className="text-white font-semibold">Adaptive Infrastructure</div>
-              <div className="text-gray-300 text-sm">Self-maintaining systems</div>
-            </div>
+            <ul className="text-teal-700 space-y-2 text-sm">
+              <li>• Pollution remediation</li>
+              <li>• Carbon sequestration</li>
+              <li>• Ecosystem restoration</li>
+              <li>• Climate repair</li>
+            </ul>
           </div>
         </div>
 
-        {/* Breakthrough Applications */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
-            🚀 Breakthrough Applications
-          </h2>
+        {/* Revolutionary Applications */}
+        <div className="bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl p-12 mb-16 text-white">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6">🌍 Revolutionary Applications</h2>
+            <p className="text-xl opacity-90 max-w-4xl mx-auto">
+              Discover how synthetic biology is transforming medicine, industry, and environmental sustainability
+            </p>
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-lg rounded-xl p-8 border border-green-500/30">
-              <h3 className="text-2xl font-bold text-white mb-4">Biological Medicine</h3>
-              <p className="text-gray-300 mb-6">
-                Living drugs that adapt to individual patients, self-administering 
-                treatments, and monitoring health in real-time.
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-4">💊 Living Medicines</h3>
+              <p className="text-green-100 mb-6">
+                Synthetic organisms that live inside the human body, continuously monitoring health and producing therapeutic compounds on demand.
               </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span className="text-gray-300">Personalized treatment protocols</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span className="text-gray-300">Self-monitoring drug delivery</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span className="text-gray-300">Real-time health optimization</span>
-                </div>
-              </div>
+              <ul className="text-green-200 space-y-2 text-sm">
+                <li>• Continuous health monitoring</li>
+                <li>• On-demand drug production</li>
+                <li>• Personalized medicine</li>
+                <li>• Disease prevention</li>
+              </ul>
             </div>
-
-            <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-lg rounded-xl p-8 border border-teal-500/30">
-              <h3 className="text-2xl font-bold text-white mb-4">Environmental Solutions</h3>
-              <p className="text-gray-300 mb-6">
-                Living systems that clean pollution, capture carbon, and restore 
-                ecosystems through programmed biological processes.
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-4">🏗️ Living Architecture</h3>
+              <p className="text-green-100 mb-6">
+                Buildings and structures that grow, heal, and adapt using synthetic biology, creating truly living environments.
               </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full"></div>
-                  <span className="text-gray-300">Carbon capture organisms</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full"></div>
-                  <span className="text-gray-300">Pollution-eating bacteria</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full"></div>
-                  <span className="text-gray-300">Ecosystem restoration</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Living Technologies */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
-            🌱 Living Technologies
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-              <div className="text-3xl mb-4">🏠</div>
-              <h3 className="text-xl font-bold text-white mb-3">Living Architecture</h3>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>• Buildings that grow and adapt</li>
-                <li>• Self-repairing structures</li>
-                <li>• Climate-responsive materials</li>
-                <li>• Carbon-negative construction</li>
-              </ul>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-              <div className="text-3xl mb-4">🚗</div>
-              <h3 className="text-xl font-bold text-white mb-3">Biological Vehicles</h3>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>• Self-healing car bodies</li>
-                <li>• Living fuel systems</li>
-                <li>• Adaptive aerodynamics</li>
-                <li>• Zero-emission transportation</li>
-              </ul>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-              <div className="text-3xl mb-4">👕</div>
-              <h3 className="text-xl font-bold text-white mb-3">Smart Textiles</h3>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>• Self-cleaning fabrics</li>
-                <li>• Temperature-regulating clothing</li>
-                <li>• Health-monitoring garments</li>
-                <li>• Biodegradable fashion</li>
+              <ul className="text-green-200 space-y-2 text-sm">
+                <li>• Self-healing materials</li>
+                <li>• Adaptive structures</li>
+                <li>• Living insulation</li>
+                <li>• Biodegradable construction</li>
               </ul>
             </div>
           </div>
         </div>
 
-        {/* Future Impact */}
-        <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            🌍 Global Impact & Sustainability
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-white mb-4">Environmental Benefits</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• 100% biodegradable products</li>
-                <li>• Carbon-negative manufacturing</li>
-                <li>• Zero-waste production cycles</li>
-                <li>• Ecosystem restoration at scale</li>
-              </ul>
+        {/* Technical Specifications */}
+        <div className="bg-white rounded-2xl p-12 shadow-xl mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">🔬 Technical Specifications</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-5xl mb-4">🧬</div>
+              <h3 className="text-2xl font-bold mb-4 text-green-800">DNA Engineering</h3>
+              <div className="space-y-2 text-gray-600">
+                <p><strong>Base Pairs:</strong> 1 billion+ programmable</p>
+                <p><strong>Accuracy:</strong> 99.999% precision</p>
+                <p><strong>Speed:</strong> 1,000 genes/hour</p>
+                <p><strong>Complexity:</strong> Multi-organism systems</p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-xl font-bold text-white mb-4">Economic Revolution</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Self-replicating production systems</li>
-                <li>• Reduced resource dependency</li>
-                <li>• Local manufacturing capabilities</li>
-                <li>• Sustainable economic growth</li>
-              </ul>
+            
+            <div className="text-center">
+              <div className="text-5xl mb-4">⚗️</div>
+              <h3 className="text-2xl font-bold mb-4 text-emerald-800">Biological Production</h3>
+              <div className="space-y-2 text-gray-600">
+                <p><strong>Yield:</strong> 1000x traditional methods</p>
+                <p><strong>Purity:</strong> 99.99% pharmaceutical grade</p>
+                <p><strong>Cost:</strong> 90% reduction</p>
+                <p><strong>Scale:</strong> Industrial production</p>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-5xl mb-4">🌱</div>
+              <h3 className="text-2xl font-bold mb-4 text-teal-800">Environmental Impact</h3>
+              <div className="space-y-2 text-gray-600">
+                <p><strong>Carbon Negative:</strong> -1000 tons/year</p>
+                <p><strong>Pollution Cleanup:</strong> 99% efficiency</p>
+                <p><strong>Waste Reduction:</strong> Zero waste systems</p>
+                <p><strong>Biodiversity:</strong> Enhanced ecosystems</p>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Timeline */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
-            📅 Development Timeline
-          </h2>
-          <div className="space-y-8">
-            <div className="flex items-center space-x-6">
-              <div className="bg-green-500 text-white px-4 py-2 rounded-full font-semibold">2027</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-white mb-2">Foundation Phase</h3>
-                <p className="text-gray-300">First commercial living factories and basic DNA computing systems</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
-              <div className="bg-emerald-500 text-white px-4 py-2 rounded-full font-semibold">2028-2029</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-white mb-2">Expansion Phase</h3>
-                <p className="text-gray-300">Self-healing materials and biological medicine become mainstream</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
-              <div className="bg-teal-500 text-white px-4 py-2 rounded-full font-semibold">2030+</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-white mb-2">Transformation Phase</h3>
-                <p className="text-gray-300">Living cities, biological supercomputers, and complete ecosystem integration</p>
-              </div>
-            </div>
+        {/* Future Visions */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">🌿 Living Cities</h2>
+            <p className="text-gray-600 mb-6">
+              Imagine cities where buildings grow from the ground, streets self-repair, and the entire infrastructure is alive and responsive to its inhabitants' needs.
+            </p>
+            <ul className="text-gray-700 space-y-2">
+              <li>• Self-growing buildings</li>
+              <li>• Living transportation systems</li>
+              <li>• Adaptive urban planning</li>
+              <li>• Symbiotic human-city relationship</li>
+            </ul>
+          </div>
+          
+          <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">🧬 Human Enhancement</h2>
+            <p className="text-gray-600 mb-6">
+              Synthetic biology that enhances human capabilities, from improved immunity to extended lifespan, while maintaining our essential humanity.
+            </p>
+            <ul className="text-gray-700 space-y-2">
+              <li>• Enhanced immune systems</li>
+              <li>• Extended healthy lifespan</li>
+              <li>• Improved cognitive function</li>
+              <li>• Regenerative capabilities</li>
+            </ul>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Build the Living Future
-            </h2>
-            <p className="text-xl text-green-100 mb-6">
-              Join the synthetic biology revolution and help create a sustainable, living world
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
-                Explore Solutions
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-                Get Started
-              </button>
-            </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Join the Synthetic Biology Revolution</h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Be part of the most significant biological revolution in history. Help us redesign life itself for a better, more sustainable future.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Your Journey →
+            </a>
+            <a href="/pages/QuantumConsciousnessRevolution2027" className="border border-green-600 text-green-600 px-8 py-4 rounded-lg hover:bg-green-50 transition-colors font-semibold text-lg">
+              Explore Quantum Consciousness →
+            </a>
           </div>
         </div>
       </div>
