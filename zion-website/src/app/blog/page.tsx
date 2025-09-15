@@ -3,6 +3,62 @@ import Link from 'next/link'
 
 const posts = [
   {
+<<<<<<< HEAD
+    slug: 'ai-2026-trustworthy-model-routing-2026-preview',
+    title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
+    summary:
+      'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
+  },
+  {
+    slug: 'ai-2026-autonomous-workflow-architecture',
+    title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
+    summary:
+      'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
+  },
+  {
+    slug: 'ai-2026-production-agent-postmortems',
+    title: 'AI 2026: Production Agent Postmortems',
+    summary:
+      'Structured postmortems with causal graphs, objective signals, and remediation workflows.'
+  },
+  {
+    slug: 'ai-2026-real-time-model-routing-playbook',
+    title: 'AI 2026: Real-Time Model Routing — Playbook',
+    summary:
+      'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+    slug: 'ai-2026-agent-orchestration-enterprise-guide',
+    title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
+    summary:
+      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
+=======
+    slug: 'ai-2026-trustworthy-model-routing-2026-preview',
+    title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
+    summary:
+      'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
+  },
+  {
+    slug: 'ai-2026-autonomous-workflow-architecture',
+    title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
+    summary:
+      'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
+  },
+  {
+    slug: 'ai-2026-production-agent-postmortems',
+    title: 'AI 2026: Production Agent Postmortems',
+    summary:
+      'Structured postmortems with causal graphs, objective signals, and remediation workflows.'
+  },
+  {
+    slug: 'ai-2026-real-time-model-routing-playbook',
+    title: 'AI 2026: Real-Time Model Routing — Playbook',
+    summary:
+      'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+>>>>>>> cursor/create-and-deploy-new-content-8472
+  },
+  {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',
     title: 'AI 2026: Eval‑Ready AI Pipelines — Blueprint',
     summary:
@@ -99,6 +155,12 @@ const posts = [
       'End-to-end framework to evaluate autonomous agents with task suites, rubrics, and guardrails.'
   },
   {
+    slug: 'ai-2026-cost-transparency-for-agents',
+    title: 'AI 2026: Cost Transparency for Agentic Systems',
+    summary:
+      'Establishing SLOs, SLIs, and cost attribution for complex multi-agent workflows in production.'
+  },
+  {
     slug: 'ai-2026-multimodal-agents-enterprise-blueprint',
     title: 'AI 2026: Multimodal Agents Enterprise Blueprint',
     summary:
@@ -155,6 +217,12 @@ const posts = [
     slug: 'ai-2026-agent-orchestration-patterns',
     title: 'AI 2026: Agent Orchestration Patterns',
     summary: 'Plan-exec cycles, tool adapters, and policy-as-code guardrails that scale.'
+  }
+  ,
+  {
+    slug: 'ai-2026-cost-aware-agent-routing',
+    title: 'AI 2026: Cost‑Aware Agent Routing — Practical Guide',
+    summary: 'Balance quality, latency, and spend using eval signals and budget guardrails.'
   }
   ,
   {

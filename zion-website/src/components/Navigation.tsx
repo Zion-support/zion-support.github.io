@@ -1,14 +1,21 @@
-"use client"
-import { useState } from 'react'
+'use client'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react'
 
 const navigation = [
-  { name: 'Solutions', href: '/solutions' },
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
+<<<<<<< HEAD
+  { name: 'Solutions', href: '/solutions' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
-  { name: 'New', href: '/updates/production-rag-observability-2026' },
+  { name: 'Contact', href: '/contact' },
+=======
+  { name: 'Blog', href: '/blog' },
+  { name: 'Updates', href: '/updates' },
+>>>>>>> cursor/create-and-deploy-new-content-8472
 ]
 
 export default function Navigation() {
@@ -39,9 +46,11 @@ export default function Navigation() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5"
+              className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5 relative"
             >
-              {item.name}
+              <span className="inline-flex items-center gap-2">
+                {item.name}
+              </span>
             </a>
           ))}
         </div>
@@ -83,7 +92,9 @@ export default function Navigation() {
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800 transition-colors duration-200"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {item.name}
+                    <span className="inline-flex items-center gap-2">
+                      {item.name}
+                    </span>
                   </a>
                 ))}
               </div>

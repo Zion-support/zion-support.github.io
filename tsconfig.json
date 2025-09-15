@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -16,30 +15,39 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "removeComments": false,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@layout/*": ["src/layout/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@types/*": ["src/types/*"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/styles/*"],
+      "@data/*": ["src/data/*"],
+      "@services/*": ["src/services/*"],
+      "@context/*": ["src/context/*"],
+      "@constants/*": ["src/constants/*"]
     },
     "types": ["vite/client", "node"]
   },
   "include": [
-    "**/*",
+<<<<<<< HEAD
+    "**/*.ts",
+    "**/*.tsx",
+=======
+    "src/**/*",
+    "src/types/offline-shims.d.ts",
+=======
+    "baseUrl": "."
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+>>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
+>>>>>>> cursor/create-and-deploy-new-content-81d0
     "tailwind.config.js",
     "postcss.config.js"
   ],
@@ -47,13 +55,18 @@
     "node_modules",
     "dist",
     "build",
+<<<<<<< HEAD
+    "coverage"
+=======
+<<<<<<< HEAD
     "coverage",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx"
-  ],
-  "references": [
-    { "path": "./tsconfig.node.json" }
+=======
+    "coverage"
+>>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
+>>>>>>> cursor/create-and-deploy-new-content-81d0
   ]
 }
