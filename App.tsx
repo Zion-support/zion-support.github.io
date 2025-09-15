@@ -16,6 +16,9 @@ import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
 import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
 import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
+import AIRevolution2025 from './src/pages/AIRevolution2025';
+import QuantumComputingBreakthrough from './src/pages/QuantumComputingBreakthrough';
+import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 
 export default function App(): JSX.Element {
   // Initialize performance monitoring
@@ -447,6 +450,65 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
+                {/* NEW: Interactive Technology Preview Banner */}
+                <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+                  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+                  <div className="relative z-10">
+                    <div className="text-center mb-8">
+                      <div className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm rounded-full text-lg font-bold mb-6 animate-pulse">
+                        🚀 INTERACTIVE TECHNOLOGY SHOWCASE • LIVE DEMO
+                      </div>
+                      <h2 className="text-5xl font-bold mb-4">🌟 Experience the Future Now</h2>
+                      <p className="text-2xl opacity-95 max-w-5xl mx-auto">
+                        Interact with our revolutionary technologies through immersive demonstrations, 
+                        real-time simulations, and hands-on experiences with AI, Quantum Computing, and Neural Interfaces
+                      </p>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                      <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
+                        <div className="text-6xl mb-4">🤖</div>
+                        <h3 className="text-xl font-bold mb-3">AI Interactive Demo</h3>
+                        <p className="text-sm opacity-90 mb-4">
+                          Chat with advanced AI systems and experience autonomous decision-making in real-time
+                        </p>
+                        <a href="/pages/AIRevolution2025" className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+                          Try AI Demo →
+                        </a>
+                      </div>
+                      
+                      <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
+                        <div className="text-6xl mb-4">⚛️</div>
+                        <h3 className="text-xl font-bold mb-3">Quantum Simulator</h3>
+                        <p className="text-sm opacity-90 mb-4">
+                          Experience quantum computing power through interactive simulations and problem-solving
+                        </p>
+                        <a href="/pages/QuantumComputingBreakthrough" className="inline-block bg-white text-cyan-600 px-6 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
+                          Quantum Lab →
+                        </a>
+                      </div>
+                      
+                      <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
+                        <div className="text-6xl mb-4">🧬</div>
+                        <h3 className="text-xl font-bold mb-3">Neural Interface</h3>
+                        <p className="text-sm opacity-90 mb-4">
+                          Control digital systems with your thoughts using our neural interface technology
+                        </p>
+                        <a href="/pages/NeuralInterfaceFuture" className="inline-block bg-white text-emerald-600 px-6 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
+                          Mind Control →
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div className="text-center mt-8">
+                      <a href="/enhanced-showcase" className="inline-block bg-white text-purple-600 px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                        🚀 Enter Immersive Experience →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
                 {/* NEW: Ultra-Prominent 2026 Content Banner */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
@@ -592,6 +654,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
           <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
+          <Route path="/pages/AIRevolution2025" element={<AIRevolution2025 />} />
+          <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
+          <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
