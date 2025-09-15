@@ -77,3 +77,6 @@
 2025-09-15 15:32:57 - Merge conflicts detected in dependabot/npm_and_yarn/lucide-react-0.539.0
 2025-09-15 15:32:57 - Resolving conflicts in package-lock.json for branch dependabot/npm_and_yarn/lucide-react-0.539.0
 2025-09-15 15:32:57 - Resolving conflicts in package.json for branch dependabot/npm_and_yarn/lucide-react-0.539.0
+2025-09-15 15:33:01 - Merge conflicts detected in dependabot/npm_and_yarn/modelcontextprotocol/sdk-1.17.4
+2025-09-15 15:33:01 - Resolving conflicts in package-lock.json for branch dependabot/npm_and_yarn/modelcontextprotocol/sdk-1.17.4
+2025-09-15 15:33:01 - Resolving conflicts in package.json for branch dependabot/npm_and_yarn/modelcontextprotocol/sdk-1.17.4
