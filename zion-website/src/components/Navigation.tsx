@@ -8,7 +8,7 @@ const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
-  { name: 'New', href: '/updates/production-rag-observability-2026' },
+  { name: 'New', href: '/updates/ai-governance-readiness-2026' },
 ]
 
 export default function Navigation() {

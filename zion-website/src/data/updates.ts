@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Report: AI Governance Readiness 2026',
+    summary:
+      'Composite readiness index across governance, controls, data, and platform maturity with next steps.',
+    href: '/updates/ai-governance-readiness-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Launch: Agent Benchmark Suite v2',
+    summary:
+      'Expanded domain packs, richer rubrics, and native CI canaries to evaluate production agents.',
+    href: '/updates/agent-benchmark-suite-v2',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Feature: Agent Ops SLO Dashboards v2',
+    summary:
+      'Unified quality, latency, and safety SLOs with per-route budgets and evidence exports.',
+    href: '/updates/agent-ops-slo-dashboards-v2',
+    date: '2025-09-15',
+    tag: 'Feature'
+  },
+  {
     title: 'Launch: Autonomous Marketing Copilot v1.0',
     summary:
       'Plan, draft, and schedule multi-channel campaigns with brand-safe guardrails and live evals.',
