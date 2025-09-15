@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "operational-resilience-blueprint-2026",
+    title: "AI 2026: Operational Resilience Blueprint",
+    description:
+      "Progressive delivery, eval gates, and safe-mode fallbacks to withstand incidents.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-operational-resilience-blueprint",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "autonomous-ops-starter-kit-2026",
+    title: "AI 2026: Autonomous Ops Starter Kit",
+    description:
+      "Templates for SLOs, incident runbooks, policy-as-code, and evaluation harnesses.",
+    ctaLabel: "Get the Kit",
+    href: "/content/ai-2026-autonomous-ops-starter-kit",
+    emoji: "🧰",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "agent-slos-implementation-guide-2026",
     title: "AI 2026: Implementing Agent SLOs — Practical Guide",
     description:
