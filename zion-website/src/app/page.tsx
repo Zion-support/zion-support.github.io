@@ -1,4 +1,5 @@
 import React from 'react'
+import { getLatestUpdates } from '../data/updates'
 import {
   LightBulbIcon,
   CpuChipIcon,
@@ -119,25 +120,7 @@ export default function HomePage() {
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-            {[
-              {
-                title: 'Launch: Autonomous Research Assistant v2',
-                summary:
-                  'Multi-agent collaboration, grounded reasoning, and faster retrieval now live.',
-                href: '/updates'
-              },
-              {
-                title: 'New Course: Advanced Blockchain Development',
-                summary:
-                  'Smart contracts, DeFi, L2 scaling, and security audit practices.',
-                href: '/updates'
-              },
-              {
-                title: 'Community Challenge: Build a DApp',
-                summary: 'Compete to win $1000 in ZION tokens and mentorship.',
-                href: '/updates'
-              }
-            ].map((item) => (
+            {getLatestUpdates(3).map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
                 <h3 className="text-lg font-semibold leading-6 text-white">
                   <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">

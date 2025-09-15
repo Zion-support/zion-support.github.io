@@ -9,6 +9,15 @@ export interface UpdateItem {
 
 export const updates: UpdateItem[] = [
   {
+    id: 'autonomous-research-assistant-v2',
+    title: 'Launch: Autonomous Research Assistant v2',
+    summary:
+      'Major upgrade with multi-agent collaboration, document-grounded reasoning, and faster retrieval.',
+    href: '/updates/ai-research-assistant-2-0',
+    date: '2025-09-15',
+    tag: 'Release',
+  },
+  {
     id: 'advanced-blockchain-dev-course',
     title: 'New Course: Advanced Blockchain Development',
     summary:
