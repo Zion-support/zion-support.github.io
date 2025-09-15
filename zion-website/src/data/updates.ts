@@ -8,6 +8,22 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: AI Governance Toolkit (v2)',
+    summary:
+      'Policy-as-code templates, audit trails, and automated guardrails for enterprise AI programs.',
+    href: '/updates/ai-governance-toolkit',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: RAG Production Patterns (2025 Edition)',
+    summary:
+      'Battle-tested architectures for retrieval-augmented generation with observability and SLIs.',
+    href: '/updates/rag-production-patterns',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Agentic Evals Blueprint (v1)',
     summary:
       'End-to-end framework to evaluate autonomous agents with task suites, rubrics, and guardrails.',
