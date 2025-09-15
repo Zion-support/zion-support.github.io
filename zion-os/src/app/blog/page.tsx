@@ -19,14 +19,14 @@ export default function BlogPage() {
       featured: true
     },
     {
-      id: 'quantum-risk-modeling-2025',
-      title: 'Quantum Risk Modeling: Practical Impacts on Financial Services in 2025',
-      excerpt: 'Near-term quantum and hybrid methods that boost risk analytics and portfolio construction.',
-      category: 'Quantum Computing',
-      author: 'Dr. Sarah Chen',
-      date: '2025-09-10',
-      readTime: '10 min read',
-      image: '/blog/quantum-risk.jpg',
+      id: 'ai-supply-chain-orchestration-2025',
+      title: 'AI Supply Chain Orchestration: From Forecasting to Autonomous Fulfillment (2025)',
+      excerpt: 'Deploy AI-driven planning, routing, and fulfillment with measurable ROI and guardrails.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-supply-chain.jpg',
       featured: true
     },
     {
@@ -84,6 +84,26 @@ export default function BlogPage() {
       date: '2025-09-15',
       readTime: '9 min read',
       image: '/blog/sovereign-ai-commerce.jpg'
+    },
+    {
+      id: 'ai-supply-chain-orchestration-2025',
+      title: 'AI Supply Chain Orchestration: From Forecasting to Autonomous Fulfillment (2025)',
+      excerpt: 'From demand forecasting to exception automation with human-in-the-loop controls.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-supply-chain.jpg'
+    },
+    {
+      id: 'responsible-agent-governance',
+      title: 'Responsible Agent Governance: Policies, Controls, and Audit for AI Agents',
+      excerpt: 'Build enforceable controls with identity, permissions, policies, and verifiable audit.',
+      category: 'AI Ethics',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-12',
+      readTime: '6 min read',
+      image: '/blog/agent-governance.jpg'
     },
     {
       id: 'secure-agent-marketplaces',
@@ -158,13 +178,13 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 2, active: false },
+    { name: 'AI Solutions', count: 4, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
-    { name: 'AI Ethics', count: 1, active: false },
+    { name: 'AI Ethics', count: 2, active: false },
     { name: 'Infrastructure', count: 1, active: false },
     { name: 'Content Marketing', count: 1, active: false }
   ];
