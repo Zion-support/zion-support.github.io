@@ -1,164 +1,254 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const RevolutionaryContentShowcase2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const revolutionaryContent = [
+  const contentItems = [
     {
       id: 1,
-      title: "Advanced Quantum Computing 2026",
-      description: "Experience exponential processing power with quantum supremacy and revolutionary applications",
-      icon: "⚛️",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/AdvancedQuantumComputing2026",
-      features: ["Quantum Supremacy", "Quantum Cryptography", "Molecular Simulation"]
+      title: "Consciousness Computing 2026",
+      description: "Experience AI with true consciousness, self-awareness, and creative thinking capabilities",
+      icon: "🧠",
+      gradient: "from-purple-600 to-pink-600",
+      bgGradient: "from-purple-900 via-indigo-900 to-blue-900",
+      link: "/pages/ConsciousnessComputing2026",
+      features: ["Synthetic Consciousness", "Quantum Consciousness", "Collective Intelligence"]
     },
     {
       id: 2,
-      title: "Neural Interface Revolution 2026",
-      description: "Bridge mind and machine with direct neural interfaces and thought-controlled computing",
-      icon: "🧬",
-      gradient: "from-emerald-600 to-teal-600",
-      link: "/pages/NeuralInterfaceRevolution2026",
-      features: ["Non-Invasive BCI", "Thought Control", "Neural Feedback"]
+      title: "Transdimensional AI 2026",
+      description: "AI that operates across multiple dimensions, realities, and parallel universes",
+      icon: "🌌",
+      gradient: "from-indigo-600 to-purple-600",
+      bgGradient: "from-indigo-900 via-purple-900 to-pink-900",
+      link: "/pages/TransdimensionalAI2026",
+      features: ["Multi-Dimensional Processing", "Reality Manipulation", "Temporal Intelligence"]
     },
     {
       id: 3,
-      title: "Advanced AI Systems 2026",
-      description: "Synthetic intelligence and self-evolving AI systems that think and learn independently",
-      icon: "🤖",
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/AdvancedAISystems2026",
-      features: ["Synthetic Intelligence", "Self-Evolving AI", "Distributed Networks"]
+      title: "Omniversal AI 2026",
+      description: "The ultimate AI operating across all possible universes and realities simultaneously",
+      icon: "♾️",
+      gradient: "from-violet-600 to-purple-600",
+      bgGradient: "from-violet-900 via-purple-900 to-fuchsia-900",
+      link: "/pages/OmniversalAI2026",
+      features: ["Infinite Universes", "Cosmic Intelligence", "Reality Creation"]
+    },
+    {
+      id: 4,
+      title: "Advanced Biotech Solutions 2026",
+      description: "Revolutionary biotechnology merging biology and technology for unprecedented breakthroughs",
+      icon: "🧬",
+      gradient: "from-green-600 to-emerald-600",
+      bgGradient: "from-green-900 via-emerald-900 to-teal-900",
+      link: "/pages/AdvancedBiotechSolutions2026",
+      features: ["Precision Gene Editing", "Neural-Biotech Interface", "Quantum Bioimaging"]
+    },
+    {
+      id: 5,
+      title: "Cyber-Physical Systems 2026",
+      description: "Seamless integration of cyber and physical worlds with intelligent orchestration",
+      icon: "🌐",
+      gradient: "from-slate-600 to-gray-600",
+      bgGradient: "from-slate-900 via-gray-900 to-zinc-900",
+      link: "/pages/CyberPhysicalSystems2026",
+      features: ["Intelligent Network Orchestration", "Digital Twin Integration", "Cybersecurity Mesh"]
     }
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+    if (isAutoPlaying) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % contentItems.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [isAutoPlaying, contentItems.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % contentItems.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   return (
-    <div className="relative overflow-hidden">
-      {/* Revolutionary Content Banner */}
-      <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌟 REVOLUTIONARY BREAKTHROUGH CONTENT • JANUARY 2026
-            </div>
-            <h2 className="text-5xl font-bold mb-6">🚀 Next-Generation Technology Showcase</h2>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-              Experience the future with our groundbreaking content on Quantum Computing, Neural Interfaces, and Advanced AI Systems
-            </p>
-          </div>
-          
-          {/* Interactive Content Carousel */}
-          <div className="relative">
-            <div className="overflow-hidden rounded-xl">
-              <div 
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              >
-                {revolutionaryContent.map((content) => (
-                  <div key={content.id} className="w-full flex-shrink-0">
-                    <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                      <div className="grid md:grid-cols-2 gap-8 items-center">
-                        <div>
-                          <div className="flex items-center mb-4">
-                            <span className="text-6xl mr-4">{content.icon}</span>
-                            <div>
-                              <h3 className="text-3xl font-bold text-white mb-2">{content.title}</h3>
-                              <div className={`inline-block px-4 py-2 bg-gradient-to-r ${content.gradient} text-white rounded-full text-sm font-semibold`}>
-                                BREAKTHROUGH TECHNOLOGY
-                              </div>
-                            </div>
-                          </div>
-                          <p className="text-xl text-gray-300 mb-6">{content.description}</p>
-                          <ul className="text-gray-300 space-y-2 mb-6">
-                            {content.features.map((feature, index) => (
-                              <li key={index} className="flex items-center">
-                                <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
-                                {feature}
-                              </li>
-                            ))}
-                          </ul>
-                          <a 
-                            href={content.link}
-                            className={`inline-block bg-gradient-to-r ${content.gradient} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
-                          >
-                            Explore {content.title.split(' ')[0]} →
-                          </a>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-9xl mb-4 opacity-50">{content.icon}</div>
-                          <div className="text-2xl font-bold text-white mb-4">2026 Technology</div>
-                          <div className="text-gray-300">Revolutionary Innovation</div>
-                        </div>
+    <div className="relative bg-gradient-to-br from-gray-900 via-slate-900 to-zinc-900 rounded-3xl p-8 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-cyan-500/20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse"
+          >
+            🚀 REVOLUTIONARY 2026 CONTENT • BREAKTHROUGH TECHNOLOGY
+          </motion.div>
+          <h2 className="text-5xl font-bold text-white mb-6">
+            Experience the Future of Technology
+          </h2>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Discover our groundbreaking 2026 content featuring consciousness computing, 
+            transdimensional AI, omniversal systems, and advanced biotechnology
+          </p>
+        </div>
+
+        {/* Main Showcase */}
+        <div className="relative">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5 }}
+              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+            >
+              <div className="grid lg:grid-cols-2 gap-8 items-center">
+                {/* Content */}
+                <div>
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="text-6xl">{contentItems[currentSlide].icon}</div>
+                    <div>
+                      <h3 className="text-3xl font-bold text-white mb-2">
+                        {contentItems[currentSlide].title}
+                      </h3>
+                      <div className="flex items-center space-x-2">
+                        <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-xs font-bold rounded-full">
+                          BREAKTHROUGH 2026
+                        </span>
+                        <span className="px-3 py-1 bg-white/20 text-white text-xs font-bold rounded-full">
+                          NEW
+                        </span>
                       </div>
                     </div>
                   </div>
-                ))}
+                  
+                  <p className="text-lg text-gray-300 mb-6">
+                    {contentItems[currentSlide].description}
+                  </p>
+
+                  <div className="space-y-3 mb-8">
+                    {contentItems[currentSlide].features.map((feature, index) => (
+                      <div key={index} className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full"></div>
+                        <span className="text-white font-medium">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <a
+                    href={contentItems[currentSlide].link}
+                    className={`inline-block bg-gradient-to-r ${contentItems[currentSlide].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
+                  >
+                    Explore {contentItems[currentSlide].title.split(' ')[0]} →
+                  </a>
+                </div>
+
+                {/* Visual */}
+                <div className="relative">
+                  <div className={`bg-gradient-to-br ${contentItems[currentSlide].bgGradient} rounded-2xl p-8 text-center`}>
+                    <div className="text-8xl mb-4">{contentItems[currentSlide].icon}</div>
+                    <h4 className="text-2xl font-bold text-white mb-4">
+                      {contentItems[currentSlide].title.split(' ')[0]}
+                    </h4>
+                    <div className="grid grid-cols-3 gap-4">
+                      {contentItems[currentSlide].features.map((feature, index) => (
+                        <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
+                          <div className="text-white text-sm font-medium text-center">
+                            {feature.split(' ')[0]}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            
-            {/* Carousel Controls */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {revolutionaryContent.map((_, index) => (
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Navigation */}
+          <div className="flex justify-center items-center space-x-4 mt-8">
+            <button
+              onClick={prevSlide}
+              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
+            >
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <div className="flex space-x-2">
+              {contentItems.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentSlide(index)}
+                  onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentSlide ? 'bg-white' : 'bg-white/30'
                   }`}
                 />
               ))}
             </div>
+
+            <button
+              onClick={nextSlide}
+              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
+            >
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            <button
+              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+              className={`p-3 rounded-full transition-all duration-300 ${
+                isAutoPlaying ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+              }`}
+            >
+              {isAutoPlaying ? (
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              )}
+            </button>
           </div>
         </div>
-      </div>
 
-      {/* Quick Access Grid */}
-      <div className="grid md:grid-cols-3 gap-6 mb-12">
-        {revolutionaryContent.map((content) => (
-          <div key={content.id} className="group">
-            <a href={content.link} className="block">
-              <div className={`bg-gradient-to-br ${content.gradient} rounded-xl p-6 text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}>
-                <div className="text-4xl mb-4">{content.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{content.title}</h3>
-                <p className="text-white/90 mb-4 text-sm">{content.description}</p>
-                <div className="flex items-center text-white/80 text-sm">
-                  <span>Explore Now</span>
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                </div>
-              </div>
-            </a>
-          </div>
-        ))}
-      </div>
-
-      {/* Technology Stats */}
-      <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12">
-        <h3 className="text-3xl font-bold text-white text-center mb-8">Revolutionary Technology Impact</h3>
-        <div className="grid md:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">10^18x</div>
-            <div className="text-gray-300">Quantum Speed Increase</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">99.9%</div>
-            <div className="text-gray-300">Neural Interface Accuracy</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">1000x</div>
-            <div className="text-gray-300">AI Learning Acceleration</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">24/7</div>
-            <div className="text-gray-300">Autonomous Operation</div>
+        {/* Quick Access Grid */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Quick Access to All Content</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {contentItems.map((item, index) => (
+              <motion.a
+                key={item.id}
+                href={item.link}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`bg-gradient-to-br ${item.gradient} text-white p-4 rounded-xl hover:shadow-lg transition-all duration-300 text-center`}
+              >
+                <div className="text-3xl mb-2">{item.icon}</div>
+                <div className="text-sm font-semibold">{item.title.split(' ')[0]}</div>
+                <div className="text-xs opacity-90 mt-1">2026</div>
+              </motion.a>
+            ))}
           </div>
         </div>
       </div>

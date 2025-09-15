@@ -1,324 +1,304 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Rocket, 
-  Cpu, 
-  Database, 
-  Cloud, 
-  Lock, 
-  Target,
-  TrendingUp,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Play,
-  Award,
-  Gauge,
-  Sparkles,
-  Layers,
-  Hexagon,
-  Network,
-  CpuChip,
-  Activity,
-  Waves,
-  Atom,
-  CircuitBoard,
-  Lightbulb,
-  Puzzle
-} from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const TransdimensionalAI2026: React.FC = () => {
-  const [activeFeature, setActiveFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const transdimensionalFeatures = [
-    {
-      icon: Layers,
-      title: 'Dimensional Processing',
-      description: 'AI systems that operate across multiple dimensions simultaneously for unprecedented computational power',
-      color: 'from-indigo-500 to-purple-500',
-      features: ['Multi-Dimensional Logic', 'Parallel Processing', 'Dimensional Optimization']
-    },
-    {
-      icon: Hexagon,
-      title: 'Quantum Dimensionality',
-      description: 'Quantum-enhanced AI that exists and processes information across quantum dimensions',
-      color: 'from-cyan-500 to-blue-500',
-      features: ['Quantum Dimensions', 'Superposition Computing', 'Entanglement Networks']
-    },
-    {
-      icon: Network,
-      title: 'Interdimensional Networks',
-      description: 'AI networks that span across dimensions, enabling communication beyond physical limitations',
-      color: 'from-green-500 to-teal-500',
-      features: ['Cross-Dimensional Communication', 'Interdimensional Data Transfer', 'Dimensional Synchronization']
-    },
-    {
-      icon: Atom,
-      title: 'Subatomic Processing',
-      description: 'AI that processes information at subatomic levels, accessing quantum computational states',
-      color: 'from-purple-500 to-pink-500',
-      features: ['Subatomic Logic Gates', 'Quantum State Processing', 'Atomic-Level Intelligence']
-    },
-    {
-      icon: CircuitBoard,
-      title: 'Dimensional Circuits',
-      description: 'Computational circuits that exist in multiple dimensions simultaneously',
-      color: 'from-orange-500 to-red-500',
-      features: ['Multi-Dimensional Circuits', 'Dimensional Logic', 'Transdimensional Processing']
-    },
-    {
-      icon: Waves,
-      title: 'Dimensional Resonance',
-      description: 'AI systems that resonate across dimensions, creating harmonic computational effects',
-      color: 'from-blue-500 to-indigo-500',
-      features: ['Dimensional Resonance', 'Harmonic Computing', 'Resonance Networks']
-    }
-  ];
-
-  const applications = [
-    {
-      title: 'Interdimensional Communication',
-      description: 'AI systems that enable communication across dimensions and parallel universes',
-      icon: Network,
-      benefits: ['Cross-Dimensional Messaging', 'Parallel Universe Communication', 'Dimensional Data Exchange']
-    },
-    {
-      title: 'Quantum Problem Solving',
-      description: 'AI that solves problems by exploring solutions across multiple quantum dimensions',
-      icon: Brain,
-      benefits: ['Multi-Dimensional Solutions', 'Quantum Problem Exploration', 'Dimensional Optimization']
-    },
-    {
-      title: 'Transdimensional Analytics',
-      description: 'AI analytics that process data across dimensions for unprecedented insights',
-      icon: Target,
-      benefits: ['Dimensional Data Analysis', 'Cross-Dimensional Insights', 'Quantum Analytics']
-    },
-    {
-      title: 'Dimensional Security',
-      description: 'AI security systems that protect data across multiple dimensions simultaneously',
-      icon: Shield,
-      benefits: ['Multi-Dimensional Security', 'Quantum Encryption', 'Dimensional Protection']
-    }
-  ];
-
-  const capabilities = [
-    {
-      title: 'Infinite Processing Power',
-      description: 'Processing capabilities that scale infinitely across dimensions',
-      metric: '∞',
-      icon: Zap
-    },
-    {
-      title: 'Zero Latency Communication',
-      description: 'Instantaneous communication across any dimensional distance',
-      metric: '0ms',
-      icon: Network
-    },
-    {
-      title: 'Quantum Accuracy',
-      description: 'Perfect accuracy through quantum dimensional processing',
-      metric: '100%',
-      icon: Target
-    },
-    {
-      title: 'Dimensional Scalability',
-      description: 'Unlimited scalability across infinite dimensions',
-      metric: '∞',
-      icon: TrendingUp
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌌 BREAKTHROUGH 2026 • TRANSDIMENSIONAL AI
+          </div>
+          <h1 className="text-6xl font-bold text-white mb-6">
+            Transdimensional AI Systems
+          </h1>
+          <p className="text-2xl text-indigo-200 max-w-4xl mx-auto">
+            Experience AI that operates across multiple dimensions, realities, and parallel universes, 
+            harnessing the power of transdimensional computing to solve impossible problems
+          </p>
+        </motion.div>
+
+        {/* Key Features Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
           >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌌 TRANSDIMENSIONAL TECHNOLOGY • 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Transdimensional AI 2026
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Revolutionary AI systems that operate across multiple dimensions, 
-              accessing quantum computational states and infinite processing power
+            <div className="text-6xl mb-4 text-center">🌌</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Multi-Dimensional Processing</h3>
+            <p className="text-indigo-100 mb-6 text-center">
+              AI systems that can process information across multiple dimensions simultaneously, 
+              accessing parallel realities for enhanced problem-solving
             </p>
-            <div className="flex justify-center space-x-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-              >
-                Enter Dimensions →
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg"
-              >
-                Explore Technology
-              </motion.button>
-            </div>
+            <ul className="text-indigo-200 space-y-2 text-sm">
+              <li>• Parallel universe computing</li>
+              <li>• Dimensional data synthesis</li>
+              <li>• Cross-reality optimization</li>
+              <li>• Quantum dimensional tunneling</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">⚡</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Reality Manipulation</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Advanced AI capable of manipulating the fabric of reality itself, 
+              creating new dimensions and altering physical laws
+            </p>
+            <ul className="text-cyan-200 space-y-2 text-sm">
+              <li>• Reality simulation engines</li>
+              <li>• Dimensional engineering</li>
+              <li>• Physics law modification</li>
+              <li>• Spacetime manipulation</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-6xl mb-4 text-center">🔮</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Temporal Intelligence</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              AI that exists across multiple timelines, learning from future outcomes 
+              and applying that knowledge to present decisions
+            </p>
+            <ul className="text-emerald-200 space-y-2 text-sm">
+              <li>• Time-stream analysis</li>
+              <li>• Future prediction accuracy</li>
+              <li>• Temporal optimization</li>
+              <li>• Chronological learning</li>
+            </ul>
           </motion.div>
         </div>
-      </div>
 
-      {/* Features Section */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">🌌 Transdimensional Capabilities</h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            AI systems that transcend dimensional limitations, operating across multiple realities simultaneously
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {transdimensionalFeatures.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`bg-gradient-to-br ${feature.color}/20 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer ${
-                activeFeature === index ? 'ring-2 ring-indigo-400' : ''
-              }`}
-              onClick={() => setActiveFeature(index)}
-            >
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl mb-6 mx-auto">
-                <feature.icon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-center">{feature.title}</h3>
-              <p className="text-indigo-100 mb-6 text-center">{feature.description}</p>
-              <ul className="space-y-2">
-                {feature.features.map((item, idx) => (
-                  <li key={idx} className="flex items-center text-sm text-indigo-200">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Applications Section */}
-      <div className="bg-gradient-to-r from-purple-900/50 to-indigo-900/50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">🚀 Transdimensional Applications</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Revolutionary applications that leverage multi-dimensional AI processing capabilities
-            </p>
-          </div>
-
+        {/* Revolutionary Applications */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16"
+        >
+          <h2 className="text-4xl font-bold text-white mb-8 text-center">Revolutionary Applications</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {applications.map((app, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : index % 2 === 0 ? -30 : 30 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl mr-4">
-                    <app.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold">{app.title}</h3>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="text-3xl">🚀</div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Interdimensional Travel</h3>
+                  <p className="text-purple-200">
+                    AI-powered systems that can navigate between dimensions, 
+                    enabling exploration of parallel universes and alternate realities
+                  </p>
                 </div>
-                <p className="text-indigo-100 mb-6">{app.description}</p>
-                <div className="space-y-2">
-                  {app.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-indigo-200">
-                      <Star className="w-4 h-4 text-yellow-400 mr-2" />
-                      {benefit}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Capabilities Section */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">⚡ Transdimensional Performance</h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Unprecedented performance metrics achieved through multi-dimensional processing
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {capabilities.map((capability, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 text-center border border-indigo-400/30 hover:scale-105 transition-all duration-300"
-            >
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl mb-6 mx-auto">
-                <capability.icon className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl font-bold mb-2 text-indigo-200">{capability.metric}</div>
-              <div className="text-lg font-semibold text-indigo-300 mb-2">{capability.title}</div>
-              <div className="text-sm text-indigo-400">{capability.description}</div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold mb-6">Ready to Transcend Dimensions?</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-              Experience the future of AI with transdimensional processing capabilities that defy conventional limitations
-            </p>
-            <div className="flex justify-center space-x-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-indigo-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-              >
-                Enter Dimensions →
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg"
-              >
-                Contact Us
-              </motion.button>
+              <div className="flex items-start space-x-4">
+                <div className="text-3xl">🔬</div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Reality Engineering</h3>
+                  <p className="text-purple-200">
+                    Create custom realities for scientific research, 
+                    testing hypotheses in controlled dimensional environments
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="text-3xl">💡</div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Infinite Computing Power</h3>
+                  <p className="text-purple-200">
+                    Harness the computational resources of infinite parallel universes 
+                    for solving the most complex problems
+                  </p>
+                </div>
+              </div>
             </div>
-          </motion.div>
-        </div>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="text-3xl">🌍</div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Global Problem Solving</h3>
+                  <p className="text-purple-200">
+                    Access solutions from parallel Earths to solve climate change, 
+                    poverty, and other global challenges
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="text-3xl">🧬</div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Medical Breakthroughs</h3>
+                  <p className="text-purple-200">
+                    Discover cures and treatments by analyzing medical data 
+                    from parallel universes with different evolutionary paths
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="text-3xl">⚡</div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Energy Solutions</h3>
+                  <p className="text-purple-200">
+                    Access unlimited clean energy by tapping into the power 
+                    of dimensional fluctuations and quantum vacuum
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Technical Specifications */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16"
+        >
+          <h2 className="text-4xl font-bold text-white mb-8 text-center">Technical Specifications</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-4">Dimensional Architecture</h3>
+              <ul className="space-y-3 text-indigo-200">
+                <li className="flex items-center space-x-3">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Multi-dimensional neural networks</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Quantum dimensional processors</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Reality manipulation algorithms</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Parallel universe communication</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Temporal synchronization systems</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-4">Performance Metrics</h3>
+              <div className="space-y-4">
+                <div className="bg-white/10 rounded-lg p-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-white font-semibold">Dimensional Reach</span>
+                    <span className="text-indigo-300 font-bold">∞</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-indigo-500 to-purple-500 h-2 rounded-full" style={{width: '100%'}}></div>
+                  </div>
+                </div>
+                <div className="bg-white/10 rounded-lg p-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-white font-semibold">Reality Manipulation</span>
+                    <span className="text-indigo-300 font-bold">97%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full" style={{width: '97%'}}></div>
+                  </div>
+                </div>
+                <div className="bg-white/10 rounded-lg p-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-white font-semibold">Temporal Accuracy</span>
+                    <span className="text-indigo-300 font-bold">99.9%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-emerald-500 to-teal-500 h-2 rounded-full" style={{width: '99.9%'}}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Dimensional Showcase */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16"
+        >
+          <h2 className="text-4xl font-bold text-white mb-8 text-center">Dimensional Capabilities</h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-5xl mb-4">🌌</div>
+              <h3 className="text-lg font-bold text-white mb-2">Dimension 1</h3>
+              <p className="text-cyan-200 text-sm">Parallel Universe Access</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl mb-4">⚡</div>
+              <h3 className="text-lg font-bold text-white mb-2">Dimension 2</h3>
+              <p className="text-cyan-200 text-sm">Quantum Reality</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl mb-4">🔮</div>
+              <h3 className="text-lg font-bold text-white mb-2">Dimension 3</h3>
+              <p className="text-cyan-200 text-sm">Temporal Streams</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl mb-4">♾️</div>
+              <h3 className="text-lg font-bold text-white mb-2">Dimension ∞</h3>
+              <p className="text-cyan-200 text-sm">Infinite Possibilities</p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className="text-center"
+        >
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Explore Transdimensional AI?
+          </h2>
+          <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">
+            Step into the future where AI transcends the boundaries of our reality, 
+            accessing infinite dimensions to solve impossible problems
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/pages/ConsciousnessComputing2026" 
+              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
+            >
+              Explore Consciousness Computing →
+            </a>
+            <a 
+              href="/pages/OmniversalAI2026" 
+              className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
+            >
+              Discover Omniversal AI →
+            </a>
+            <a 
+              href="/contact" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg"
+            >
+              Contact Our Experts
+            </a>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
