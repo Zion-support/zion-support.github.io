@@ -18,13 +18,22 @@ const BlogPage = () => {
       image: "/images/agent-risk-maturity-2026.jpg"
     },
     {
-      title: "AI 2026: Eval-Ready AI Pipelines in Production",
-      description: "Design evaluation-first pipelines with governance gates, metrics, and progressive delivery.",
-      slug: "ai-2026-eval-ready-ai-pipelines-in-production",
-      category: "AI Governance",
+      title: "AI 2026: Real-Time Retrieval Architectures — Low-Latency, High-Trust RAG",
+      description: "Sub-200ms p95 retrieval with grounding, verification, and continuous evaluations.",
+      slug: "ai-2026-real-time-retrieval-architectures",
+      category: "AI Infrastructure",
       date: "2025-09-15",
       featured: true,
-      image: "/images/eval-ready-pipelines-2026.jpg"
+      image: "/images/real-time-rag-2026.jpg"
+    },
+    {
+      title: "AI 2026: Agents‑On‑Call Automation — Eval‑Gated Incident Response",
+      description: "Autonomous triage and guided mitigation with policy-as-code guardrails and SLOs.",
+      slug: "ai-2026-agents-oncall-automation",
+      category: "Operations",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/agents-oncall-2026.jpg"
     },
   ];
 

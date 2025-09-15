@@ -553,6 +553,35 @@ content_index:
         release_speed: "2x"
         rollback: "automatic"
         risk_reduction: "60%"
+    - id: "ai-2026-real-time-retrieval-architectures"
+      type: "blog"
+      title: "AI 2026: Real-Time Retrieval Architectures — Low-Latency, High-Trust RAG"
+      file_path: "/content/blog/ai-2026-real-time-retrieval-architectures.md"
+      url: "/blog/ai-2026-real-time-retrieval-architectures"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["RAG", "Real-time", "Retrieval", "AI Infrastructure", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        latency_p95: "< 200ms"
+        citation_density: "> 0.9"
+        rollback: "automatic"
+        risk_reduction: "40%"
+    - id: "ai-2026-agents-oncall-automation"
+      type: "blog"
+      title: "AI 2026: Agents‑On‑Call Automation — Eval‑Gated Incident Response"
+      file_path: "/content/blog/ai-2026-agents-oncall-automation.md"
+      url: "/blog/ai-2026-agents-oncall-automation"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Incident Response", "Reliability", "Evals", "Automation", "Agents", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        mttr_reduction: "45%"
+        audit_ready: true
+        rollback_time: "< 5 min"
     - id: "ai-2026-eval-ready-ai-pipelines-in-production"
       type: "blog"
       title: "AI 2026: Eval-Ready AI Pipelines in Production"
