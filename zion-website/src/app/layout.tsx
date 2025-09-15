@@ -53,6 +53,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-black text-white antialiased`}>
+        {/* Promo banner */}
+        <div className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center text-sm sm:text-base py-2 px-4">
+          <a href="/news" className="font-semibold hover:underline">
+            New: 2025 AI Innovation Showcase is live — explore what’s new →
+          </a>
+        </div>
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />
