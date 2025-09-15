@@ -3,9 +3,12 @@ import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveTechInsights2026: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-be96
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
   return (
     <>
       <Helmet>
@@ -252,6 +255,7 @@ const ComprehensiveTechInsights2026: React.FC = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -564,6 +568,8 @@ const ComprehensiveTechInsights2026: React.FC = () => {
     </div>
 >>>>>>> cursor/create-and-deploy-new-content-60ab
 >>>>>>> cursor/create-and-deploy-new-content-be96
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
   );
 };
 

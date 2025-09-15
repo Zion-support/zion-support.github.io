@@ -97,6 +97,7 @@ const EnhancedContentShowcase: React.FC = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -132,6 +133,8 @@ const EnhancedContentShowcase: React.FC = () => {
           {/* Main Showcase Display */}
           <div className="relative h-96 rounded-2xl overflow-hidden mb-8">
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
     <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -150,7 +153,10 @@ const EnhancedContentShowcase: React.FC = () => {
         {/* Main Showcase Carousel */}
         <div className="relative max-w-7xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl">
+<<<<<<< HEAD
 >>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -255,7 +261,10 @@ const EnhancedContentShowcase: React.FC = () => {
                         </ul>
                       </div>
                     </div>
+<<<<<<< HEAD
 >>>>>>> 3e300034bdd48cd59b35fa6cf75b67483babd4a1
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
                   </div>
                 </div>
               </motion.div>
@@ -319,6 +328,7 @@ const EnhancedContentShowcase: React.FC = () => {
                 </div>
               </motion.div>
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
 
@@ -397,6 +407,8 @@ const EnhancedContentShowcase: React.FC = () => {
               View All Innovations
             </a>
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f13
           </div>
         </div>
 

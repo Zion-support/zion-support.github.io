@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 const NewContentShowcase2026: React.FC = () => {
@@ -152,11 +153,123 @@ const NewContentShowcase2026: React.FC = () => {
           <div className="text-center">
             <div className="text-4xl font-bold text-white mb-2">3x</div>
             <div className="text-gray-300">Faster Innovation</div>
+=======
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const NewContentShowcase2026: React.FC = () => {
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const contentCategories = {
+    all: {
+      title: "All Content",
+      icon: "🌟"
+    },
+    ai: {
+      title: "AI Systems",
+      icon: "🧠"
+    },
+    quantum: {
+      title: "Quantum Tech",
+      icon: "⚛️"
+    },
+    neural: {
+      title: "Neural Interfaces",
+      icon: "🧬"
+    }
+  };
+
+  const contentItems = [
+    {
+      id: 1,
+      title: "Advanced AI Systems 2026",
+      description: "Revolutionary AI systems with synthetic consciousness and autonomous capabilities",
+      category: "ai",
+      image: "🧠",
+      gradient: "from-blue-500 to-indigo-600",
+      href: "/pages/AdvancedAISystems2026",
+      features: ["Synthetic Consciousness", "Autonomous Operation", "Self-Healing"],
+      badge: "NEW"
+    },
+    {
+      id: 2,
+      title: "Next-Gen Tech Showcase 2026",
+      description: "Interactive showcase of cutting-edge technologies reshaping industries",
+      category: "all",
+      image: "⚡",
+      gradient: "from-cyan-500 to-purple-600",
+      href: "/pages/NextGenTechShowcase2026",
+      features: ["Interactive Demos", "Technology Comparison", "Future Timeline"],
+      badge: "FEATURED"
+    },
+    {
+      id: 3,
+      title: "Advanced AI Transformation 2026",
+      description: "Transform your business with next-generation AI systems that adapt and evolve",
+      category: "ai",
+      image: "🤖",
+      gradient: "from-emerald-500 to-teal-600",
+      href: "/pages/AdvancedAITransformation2026",
+      features: ["Business Transformation", "Autonomous Agents", "Quantum AI"],
+      badge: "BREAKTHROUGH"
+    },
+    {
+      id: 4,
+      title: "Synthetic Intelligence 2026",
+      description: "AI systems with synthetic consciousness and creative capabilities",
+      category: "ai",
+      image: "🎨",
+      gradient: "from-purple-500 to-pink-600",
+      href: "/pages/SyntheticIntelligence2026",
+      features: ["Creative AI", "Conscious Systems", "Ethical Reasoning"],
+      badge: "REVOLUTIONARY"
+    },
+    {
+      id: 5,
+      title: "Quantum-Neural Fusion 2026",
+      description: "Revolutionary fusion of quantum computing and neural interface technology",
+      category: "quantum",
+      image: "⚛️",
+      gradient: "from-indigo-500 to-purple-600",
+      href: "/pages/QuantumNeuralFusion2026",
+      features: ["Quantum Processing", "Neural Networks", "Fusion Technology"],
+      badge: "BREAKTHROUGH"
+    },
+    {
+      id: 6,
+      title: "Neural Interface Revolution 2026",
+      description: "Direct brain-computer interfaces enabling thought-controlled technology",
+      category: "neural",
+      image: "🧬",
+      gradient: "from-teal-500 to-emerald-600",
+      href: "/pages/NeuralInterfaceRevolution2026",
+      features: ["Brain-Computer Interface", "Thought Control", "Medical Applications"],
+      badge: "FUTURE"
+    }
+  ];
+
+  const filteredContent = activeCategory === 'all' 
+    ? contentItems 
+    : contentItems.filter(item => item.category === activeCategory);
+
+  return (
+    <div className="py-16 px-4">
+      <div className="container mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white text-sm font-bold mb-6">
+            🚀 NEW CONTENT 2026
+>>>>>>> cursor/create-and-deploy-new-content-6f13
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-white mb-2">95%</div>
             <div className="text-gray-300">Accuracy Improvement</div>
           </div>
+<<<<<<< HEAD
           <div className="text-center">
             <div className="text-4xl font-bold text-white mb-2">50%</div>
             <div className="text-gray-300">Cost Reduction</div>
@@ -166,6 +279,9 @@ const NewContentShowcase2026: React.FC = () => {
             <div className="text-gray-300">Autonomous Operation</div>
           </div>
         </div>
+=======
+        </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-6f13
       </div>
     </div>
   );
