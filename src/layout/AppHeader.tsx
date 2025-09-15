@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Sparkles, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -47,6 +47,22 @@ export function AppHeader() {
   ];
 
   const services = [
+    { 
+      name: 'New Content Showcase', 
+      href: '/new-content-showcase',
+      icon: Sparkles, 
+      description: 'Latest AI Innovations & Services',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Innovation Hub', 
+      href: '/ai-innovation-hub',
+      icon: Brain, 
+      description: 'Cutting-edge AI Solutions',
+      featured: true,
+      color: 'from-purple-500 to-violet-500'
+    },
     { 
       name: '2025 Services Showcase', 
       href: '/services/showcase-2025',
