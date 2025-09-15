@@ -100,6 +100,48 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'The result is a safer, more resilient ecosystem that preserves innovation while reducing systemic risks.'
     ]
   },
+  'ai-safety-benchmarking-2025': {
+    id: 'ai-safety-benchmarking-2025',
+    title: 'AI Safety Benchmarking 2025: Practical Tests for Autonomous Systems',
+    excerpt:
+      'A field‑tested suite of benchmarks to evaluate alignment, reliability, and safety policy adherence for enterprise AI agents.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '8 min read',
+    content: [
+      'As enterprises scale autonomous agents, systematic safety evaluation becomes critical. We present a practical benchmarking approach that blends red‑team prompts, policy fuzzing, and runtime guardrails validation.',
+      'The benchmark covers intent detection, tool‑use constraints, data exfiltration prevention, and escalation behavior. We include scoring rubrics and guidance for CI/CD integration.'
+    ]
+  },
+  'agentic-commerce-case-studies-2025': {
+    id: 'agentic-commerce-case-studies-2025',
+    title: 'Agentic Commerce Case Studies: Real-World ROI From Autonomous Marketplaces',
+    excerpt:
+      'Three deployments that cut operating costs 35–60% while increasing fulfillment speed using Zion OS agentic workflows.',
+    category: 'AI Solutions',
+    author: 'Dr. Kleber Santos',
+    date: '2025-09-14',
+    readTime: '7 min read',
+    content: [
+      'We analyze three production deployments across logistics, B2B services, and procurement. Each case demonstrates policy‑safe autonomy with measurable ROI.',
+      'Design patterns include autonomous matching, dynamic pricing, and reputation‑aware routing, all governed by dual‑layer policy with human overrides for sensitive actions.'
+    ]
+  },
+  'quantum-supply-chain-optimization': {
+    id: 'quantum-supply-chain-optimization',
+    title: 'Quantum Optimization for Supply Chains: From Pilots to Production',
+    excerpt:
+      'A pragmatic roadmap to apply quantum and quantum‑inspired methods to routing, inventory, and scheduling problems.',
+    category: 'Quantum Computing',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-12',
+    readTime: '9 min read',
+    content: [
+      'Supply chains benefit from hybrid pipelines where classical heuristics initialize solutions and quantum routines refine them under constraints.',
+      'We detail data preparation, problem mapping, vendor selection, and success metrics, with templates to move pilots into steady‑state operations.'
+    ]
+  },
 };
 
 export function generateStaticParams() {

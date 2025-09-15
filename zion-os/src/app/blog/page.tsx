@@ -19,6 +19,17 @@ export default function BlogPage() {
       featured: true
     },
     {
+      id: 'ai-safety-benchmarking-2025',
+      title: 'AI Safety Benchmarking 2025: Practical Tests for Autonomous Systems',
+      excerpt: 'A field-tested suite to evaluate alignment, reliability, and safety for enterprise AI agents.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-safety-benchmarking.jpg',
+      featured: true
+    },
+    {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -85,6 +96,26 @@ export default function BlogPage() {
       date: '2025-09-14',
       readTime: '7 min read',
       image: '/blog/edge-ai-marketplaces.jpg'
+    },
+    {
+      id: 'agentic-commerce-case-studies-2025',
+      title: 'Agentic Commerce Case Studies: Real-World ROI From Autonomous Marketplaces',
+      excerpt: 'Three deployments that cut operating costs while increasing fulfillment speed.',
+      category: 'AI Solutions',
+      author: 'Dr. Kleber Santos',
+      date: '2025-09-14',
+      readTime: '7 min read',
+      image: '/blog/agentic-commerce-case-studies.jpg'
+    },
+    {
+      id: 'quantum-supply-chain-optimization',
+      title: 'Quantum Optimization for Supply Chains: From Pilots to Production',
+      excerpt: 'A pragmatic roadmap for routing, inventory, and scheduling with hybrid quantum methods.',
+      category: 'Quantum Computing',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-12',
+      readTime: '9 min read',
+      image: '/blog/quantum-supply-chain.jpg'
     },
     {
       id: 'autonomous-it-operations',
