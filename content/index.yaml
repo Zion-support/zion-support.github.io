@@ -1,6 +1,6 @@
 content_index:
-  last_updated: "2025-01-17"
-  total_content_pieces: 20
+  last_updated: "2025-09-15"
+  total_content_pieces: 23
   
   new_2025_content:
     - id: "edge-computing-revolution"
@@ -398,23 +398,6 @@ content_index:
         phases: "3 phases"
         payback: "3.8 months"
 
-  new_resources:
-    - id: "ai-transformation-checklist-2025"
-      type: "resource"
-      title: "AI Transformation Checklist 2025 - Complete Implementation Guide"
-      file_path: "/content/resources/ai-transformation-checklist-2025.md"
-      url: "/resources/ai-transformation-checklist-2025"
-      status: "published"
-      created: "2025-01-17"
-      tags: ["Resource", "AI Transformation", "Checklist", "Implementation", "Guide"]
-      featured: true
-      is_new: true
-      metrics:
-        downloads: "1000+"
-        success_rate: "95%"
-        implementation_time: "6-12 months"
-        roi: "300-500%"
-
   newly_added_september_2025:
     - id: "ai-2026-autonomous-enterprise-blueprint"
       type: "blueprint"
@@ -458,6 +441,48 @@ content_index:
         reliability: "99.9%"
         gated_releases: true
         audit_ready: true
+    - id: "ai-2026-agent-incident-response-playbook"
+      type: "playbook"
+      title: "AI 2026: Agent Incident Response Playbook"
+      file_path: "/content/blog/ai-2026-agent-incident-response-playbook.md"
+      url: "/content/ai-2026-agent-incident-response-playbook"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Operations", "Reliability", "Incident Response", "Agents", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        mttr_reduction: "45%"
+        automation: "eval-gated"
+        audit_ready: true
+    - id: "ai-2026-end-to-end-eval-pipelines"
+      type: "blog"
+      title: "AI 2026: End-to-End Evaluation Pipelines"
+      file_path: "/content/blog/ai-2026-end-to-end-eval-pipelines.md"
+      url: "/blog/ai-2026-end-to-end-eval-pipelines"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evaluation", "Pipelines", "Governance", "Reliability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        release_speed: "2x"
+        rollback: "automatic"
+        risk_reduction: "60%"
+    - id: "ai-2026-secure-tooling-permissions-blueprint"
+      type: "blueprint"
+      title: "AI 2026: Secure Tooling Permissions Blueprint"
+      file_path: "/content/pages/ai-2026-secure-tooling-permissions-blueprint.md"
+      url: "/content/ai-2026-secure-tooling-permissions-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Security", "Permissions", "Policy-as-Code", "Sandboxing", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incidents_reduction: "40%"
+        permissions: "time-boxed"
+        audits: "continuous"
 
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
@@ -524,22 +549,19 @@ content_index:
     component: "HomePage"
     file_path: "/app/page.tsx"
     changes:
-      - "Added NewContent2025UltimateBanner at top of homepage"
-      - "Added NewContentShowcase2025 in content promotion section"
-      - "Integrated new promotional components with existing banners"
-      - "Updated layout to prominently feature new content"
-      - "Added comprehensive content showcase with metrics"
-      - "Implemented interactive content discovery and filtering"
+      - "Added compact promos for Incident Response, Eval Pipelines, and Secure Tooling"
+      - "Integrated links to new blog and blueprint pages"
+      - "Updated last_updated and counts to reflect new content"
 
   metrics:
-    expected_roi_mentions: 45
+    expected_roi_mentions: 48
     success_stories: 8
     implementation_guides: 6
-    blog_posts: 10
-    total_word_count: "~85,000 words"
-    estimated_reading_time: "~340 minutes"
+    blog_posts: 12
+    total_word_count: "~86,000 words"
+    estimated_reading_time: "~345 minutes"
     new_content_roi_highlights: "600% ROI featured prominently across all content"
     promotional_components: 10
-    homepage_integration: "Complete with comprehensive showcase and advanced automation focus"
+    homepage_integration: "Complete with three new compact promos"
     new_2025_content_pieces: 3
     advanced_automation_focus: "Primary content theme with 600% ROI emphasis"
