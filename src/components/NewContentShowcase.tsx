@@ -116,9 +116,11 @@ const NewContentShowcase: React.FC = () => {
             <div className="text-emerald-100 text-sm">Autonomous Operation</div>
           </div>
         </div>
+>>>>>>> cursor/create-and-deploy-new-content-afc8
       </div>
     </div>
   );
 };
 
+>>>>>>> cursor/create-and-deploy-new-content-afc8
 export default NewContentShowcase;

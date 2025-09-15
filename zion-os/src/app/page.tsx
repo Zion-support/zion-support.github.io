@@ -117,17 +117,13 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
->>>>>>> cursor/create-and-deploy-new-content-634d
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
 =======
-<<<<<<< HEAD
->>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
       {/* Promo Banner - New Articles */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
@@ -137,19 +133,25 @@ export default function HomePage() {
             aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
           >
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3afb
 =======
 =======
->>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -358,8 +360,6 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
-<<<<<<< HEAD
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 =======
 >>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
@@ -394,37 +394,6 @@ export default function HomePage() {
           </a>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="hero-gradient absolute inset-0 -z-10"></div>
-          <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="gradient-text">Launch Sovereign</span>
-              <br />
-              <span className="text-white">AI-Powered Digital Economies</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
-              Built for the future of decentralized business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
-                🚀 Launch Your Economy
-              </a>
-              <a href="/admin/instances" className="btn-secondary hover-lift">
-                📊 View Instances
-              </a>
-              <a href="/blog/agent-safety-red-teaming-2025" className="btn-secondary hover-lift">
-                📰 New: Agent Safety Red Teaming 2025
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -440,26 +409,6 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-<<<<<<< HEAD
-              <FeatureCard
-                key={index}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-                features={feature.features}
-                gradient={feature.gradient}
-              />
-=======
-              <div key={index}>
-                <FeatureCard
-                  icon={feature.icon}
-                  title={feature.title}
-                  description={feature.description}
-                  features={feature.features}
-                  gradient={feature.gradient}
-                />
-              </div>
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
             ))}
           </div>
         </div>
@@ -482,14 +431,6 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Foundation Models 2025
@@ -497,8 +438,6 @@ export default function HomePage() {
               <a href="/blog/agent-safety-evaluation-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 ✅ Read: Agent Safety Evaluation 2025
               </a>
-<<<<<<< HEAD
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 =======
 >>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3

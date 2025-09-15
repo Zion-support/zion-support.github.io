@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+import { motion } from 'framer-motion';
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -174,7 +172,11 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       
       <Footer />
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
 import { motion } from 'framer-motion';
 
 const AdvancedQuantumComputing2026: React.FC = () => {
@@ -423,7 +425,11 @@ const AdvancedQuantumComputing2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> 989864ad5ef118804be96b17356deb0745379eba
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-f175
     </div>
   );
 };

@@ -33,4 +33,4 @@ export default function ResearchPage() {
 			</div>
 		</div>
 	)
-}
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
