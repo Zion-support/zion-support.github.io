@@ -10,6 +10,8 @@ import AIEnterpriseCopilot2025 from './pages/AIEnterpriseCopilot2025';
 import NeuralInterfaceFuture from './pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './components/DynamicContentCarousel';
 import InteractiveTechShowcase from './components/InteractiveTechShowcase';
+import InteractiveTechDemo2026 from './components/InteractiveTechDemo2026';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import './index.css';
 import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
 import InnovationShowcase2026 from './pages/InnovationShowcase2026';
@@ -30,6 +32,10 @@ import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard20
 import BiotechRevolution2026 from './pages/BiotechRevolution2026';
 import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
 import NewContentShowcase2026 from './components/NewContentShowcase2026';
+import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
+import AIInnovationHub2026 from './pages/AIInnovationHub2026';
+import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution2026';
+import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 
 export default function App(): JSX.Element {
   return (
@@ -37,6 +43,9 @@ export default function App(): JSX.Element {
       <div className="min-h-screen bg-white">
         <ScrollToTop />
         <Header />
+        
+        {/* Revolutionary Content Banner */}
+        <RevolutionaryContentBanner2026 />
         
         <Routes>
           <Route path="/" element={
@@ -86,8 +95,8 @@ export default function App(): JSX.Element {
                       <a href="/pages/QuantumNeuralFusion2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         ⚡ Quantum-Neural →
                       </a>
-                      <a href="/pages/EnhancedContentShowcase" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🌟 Enhanced Showcase →
+                      <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🌟 Ultimate Showcase →
                       </a>
                     </div>
                   </div>
@@ -168,6 +177,15 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/SpaceTechInnovation2026" className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🚀 Space Tech Innovation 2026
+                    </a>
+                    <a href="/pages/AIInnovationHub2026" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🧠 AI Innovation Hub 2026
+                    </a>
+                    <a href="/pages/QuantumComputingRevolution2026" className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      ⚛️ Quantum Revolution 2026
+                    </a>
+                    <a href="/pages/UltimateTechShowcase2026" className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🌟 Ultimate Tech Showcase
                     </a>
                   </div>
                 </div>
@@ -343,6 +361,11 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase />
                 </div>
 
+                {/* NEW: Interactive Tech Demos 2026 */}
+                <div className="mb-12">
+                  <InteractiveTechDemo2026 />
+                </div>
+
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Why Choose Zion Tech Group?
@@ -406,6 +429,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAnalyticsDashboard2026" element={<AdvancedAnalyticsDashboard2026 />} />
           <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
+          <Route path="/pages/AIInnovationHub2026" element={<AIInnovationHub2026 />} />
+          <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
+          <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">
@@ -431,6 +457,9 @@ export default function App(): JSX.Element {
         </Routes>
         
         <Footer />
+        
+        {/* Performance Optimizer */}
+        <PerformanceOptimizer />
       </div>
     </Router>
   );

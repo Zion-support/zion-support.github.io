@@ -12,50 +12,37 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check for existing authentication state
-    const checkAuthState = async () => {
-      try {
-        // Simulate checking auth state
-        setLoading(false);
-      } catch (error) {
-        console.error('Auth check failed:', error);
-        setLoading(false);
-      }
-    };
-
-    checkAuthState();
+    // Check for existing auth state
+    const savedUser = localStorage.getItem('user');
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+      setIsAuthenticated(true);
+    }
+    setLoading(false);
   }, []);
 
-  const login = async (credentials) => {
-    try {
-      // Simulate login process
-      setUser({ id: '1', email: credentials.email });
-      return { success: true };
-    } catch (error) {
-      console.error('Login failed:', error);
-      return { success: false, error: error.message };
-    }
+  const login = (userData) => {
+    setUser(userData);
+    setIsAuthenticated(true);
+    localStorage.setItem('user', JSON.stringify(userData));
   };
 
-  const logout = async () => {
-    try {
-      setUser(null);
-      return { success: true };
-    } catch (error) {
-      console.error('Logout failed:', error);
-      return { success: false, error: error.message };
-    }
+  const logout = () => {
+    setUser(null);
+    setIsAuthenticated(false);
+    localStorage.removeItem('user');
   };
 
   const value = {
     user,
+    isAuthenticated,
     loading,
     login,
-    logout,
-    isAuthenticated: !!user,
+    logout
   };
 
   return (
