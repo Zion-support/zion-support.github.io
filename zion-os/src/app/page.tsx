@@ -122,18 +122,13 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-e453
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-7720
+>>>>>>> cursor/create-and-deploy-new-content-2def
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -163,14 +158,12 @@ export default function HomePage() {
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+=======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-e453
-=======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-7720
+>>>>>>> cursor/create-and-deploy-new-content-2def
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">

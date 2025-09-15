@@ -2,14 +2,10 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e453
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-7720
+>>>>>>> cursor/create-and-deploy-new-content-2def
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -25,7 +21,7 @@
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-7720
+>>>>>>> cursor/create-and-deploy-new-content-2def
 const navigation = {
   main: [
     { name: 'About', href: '/about' },
@@ -64,7 +60,7 @@ const navigation = {
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-7720
+>>>>>>> cursor/create-and-deploy-new-content-2def
 
 <<<<<<< HEAD
 =======
@@ -73,23 +69,19 @@ const navigation = {
 >>>>>>> cursor/create-and-deploy-new-content-8472
 <<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-7720
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+=======
+=======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-e453
-=======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-7720
+>>>>>>> cursor/create-and-deploy-new-content-2def
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-white/10">

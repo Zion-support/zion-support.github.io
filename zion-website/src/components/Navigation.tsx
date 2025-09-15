@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e453
 'use client'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -11,6 +7,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   { name: 'Solutions', href: '/solutions' },
@@ -26,12 +23,6 @@ const navigation = [
 =======
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
-=======
->>>>>>> cursor/create-and-deploy-new-content-e453
 >>>>>>> cursor/create-and-deploy-new-content-8472
 <<<<<<< HEAD
 =======
@@ -41,17 +32,14 @@ const navigation = [
   { name: 'Updates', href: '/updates' },
   { name: 'Contact', href: '/contact' },
 >>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+  { name: 'Blog', href: '/blog' },
+  { name: 'Updates', href: '/updates' },
+  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
+>>>>>>> cursor/create-and-deploy-new-content-2def
 ]
 
-=======
->>>>>>> cursor/create-and-deploy-new-content-c934
-]
-
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-e453
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
