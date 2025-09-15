@@ -764,6 +764,32 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Guide'
   }
+  ,
+  // New content added 2025-09-15 (evening batch)
+  {
+    title: 'Launch: Autonomous Knowledge Base v1.0',
+    summary:
+      'Self-maintaining, policy-aware knowledge base with freshness checks and signed evidence.',
+    href: '/updates/autonomous-knowledge-base-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production Agent Runbooks (2026)',
+    summary:
+      'Standard runbooks, approval flows, and audit-ready checklists for safe agent operations.',
+    href: '/updates/production-agent-runbooks-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Feature: Real-Time Agent Shadow Testing',
+    summary:
+      'Validate changes with shadow traffic, guardrail signals, and automatic rollback rules.',
+    href: '/updates/real-time-agent-shadow-testing',
+    date: '2025-09-15',
+    tag: 'Feature'
+  }
 ]
 
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
