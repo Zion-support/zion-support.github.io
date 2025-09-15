@@ -30,13 +30,13 @@ export default function LatestContentShowcase2025() {
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="text-4xl mb-4">🔐</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Secure Agent Architecture 2026</h3>
+            <div className="text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Secure Agentic Data Pipelines 2026</h3>
             <p className="text-gray-600 mb-4">
-              Design zero-trust autonomous agents with isolation domains and runtime guards.
+              Zero-trust, policy-driven data flows with lineage and least-privilege for agents.
             </p>
             <Link 
-              href="/blog/ai-2026-secure-agent-architecture"
+              href="/content/secure-agentic-data-pipelines-2026"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
               Explore Architecture →
@@ -45,15 +45,15 @@ export default function LatestContentShowcase2025() {
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <div className="text-4xl mb-4">📏</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">AI Agents ROI Playbook</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Responsible AI Evaluation Ops 2026</h3>
             <p className="text-gray-600 mb-4">
-              A practical playbook to model, track, and realize ROI from enterprise AI agents.
+              Metrics, harnesses, and CI/CD promotion gates for trustworthy AI delivery.
             </p>
             <Link 
-              href="/content/ai-agents-roi-playbook-2026"
+              href="/content/responsible-ai-evaluation-ops-2026"
               className="text-purple-600 font-semibold hover:text-purple-800"
             >
-              Read Playbook →
+              Read Framework →
             </Link>
           </div>
         </div>
