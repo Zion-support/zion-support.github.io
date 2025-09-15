@@ -182,43 +182,53 @@ export default function AIInnovationHub() {
       
       <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 via-transparent to-zion-blue/10"></div>
-          <div className="relative max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
-                  <Brain className="w-4 h-4 mr-2" />
-                  AI INNOVATION HUB
-                </div>
-                <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                  The Future of
-                  <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent"> AI Innovation</span>
-                </h1>
-                <p className="text-xl text-gray-300 mb-8">
-                  Discover cutting-edge AI capabilities, explore emerging technologies, and learn how artificial intelligence can transform your business operations.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-                  >
-                    Start Your AI Journey
-                    <Rocket className="w-5 h-5 ml-2" />
-                  </Link>
-                  <Link
-                    to="/demo"
-                    className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300"
-                  >
-                    <Play className="w-5 h-5 mr-2" />
-                    Watch Demo
-                  </Link>
-                </div>
-              </motion.div>
+        <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+          <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30px_30px,rgba(255,255,255,0.03)_2px,transparent_2px)] bg-[length:60px_60px]"></div>
+          
+          <div className="relative max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-8">
+                <Sparkles className="w-4 h-4" />
+                AI Innovation Hub
+              </div>
+              
+              <h1 className="text-6xl md:text-7xl font-bold text-white mb-8">
+                The Future of
+                <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Artificial Intelligence
+                </span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12">
+                Explore our comprehensive suite of AI innovations, from healthcare diagnostics to quantum cybersecurity. 
+                Discover how artificial intelligence is revolutionizing every industry.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                >
+                  <Brain className="w-5 h-5 mr-2" />
+                  Explore AI Solutions
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link
+                  to="/demo"
+                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white text-lg font-semibold rounded-xl transition-all duration-300"
+                >
+                  <Rocket className="w-5 h-5 mr-2" />
+                  Request Demo
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
               <motion.div
                 initial={{ opacity: 0, x: 30 }}

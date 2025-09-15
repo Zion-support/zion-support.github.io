@@ -231,5 +231,27 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     emoji: "📱",
     date: "2025-09-15",
   },
+  {
+    id: "autonomous-agents-red-team-2026",
+    title: "AI 2026: Autonomous Agents Red-Team Scenarios",
+    description:
+      "Catalog of adversarial scenarios, pass criteria, and CI/CD integration to harden agents.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-autonomous-agents-red-team-scenarios",
+    emoji: "🧨",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "production-guardrails-playbook-2026",
+    title: "AI 2026: Production Guardrails Playbook",
+    description:
+      "Operational guardrails, policy-as-code, and runtime protections for safe AI scale.",
+    ctaLabel: "Explore Playbook",
+    href: "/blog/ai-2026-production-guardrails-playbook",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
 ];
 
