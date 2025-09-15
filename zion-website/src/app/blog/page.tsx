@@ -49,6 +49,12 @@ const posts = [
     summary:
       'Real-time cash, autonomous close, and policy-as-code guardrails.'
   }
+  ,
+  {
+    slug: 'ai-2026-enterprise-retrieval-observability',
+    title: 'AI 2026: Enterprise Retrieval Observability',
+    summary: 'Tracing, SLIs, and evals for reliable retrieval-augmented systems.'
+  }
 ]
 
 export default function BlogIndexPage() {

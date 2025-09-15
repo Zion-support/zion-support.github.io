@@ -205,9 +205,9 @@ export default function HomePage() {
                 href: '/blog/ai-2026-llm-evals-maturity-model'
               },
               {
-                title: 'Enterprise AI Security Blueprint (2025)',
-                summary: 'Layered controls across model, data, runtime, and supply chain.',
-                href: '/blog/ai-2025-enterprise-ai-security-blueprint'
+                title: 'AI 2026: Enterprise Retrieval Observability',
+                summary: 'Tracing, SLIs, and evals for reliable retrieval-augmented systems.',
+                href: '/blog/ai-2026-enterprise-retrieval-observability'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
