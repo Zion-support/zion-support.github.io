@@ -1,6 +1,6 @@
 "use client";
 import React{ useStateuseEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025DataRevolutionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true);
@@ -130,24 +130,24 @@ const NewContent2025DataRevolutionBanner = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
+                <a
                   href="/blog/ai-2025-enterprise-data-revolution-ultimate-guide"
                   className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   Read Complete Guide
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/case-studies/fortune-500-data-transformation-500-roi-success"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
                 >
                   View Success Stories
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/resources/ai-data-transformation-implementation-guide-2025"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
                 >
                   Download Implementation Guide
-                </Link>
+                </a>
               </div>
             </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function QuantumNeuralFusion2026PromotionBanner() {
   return (
@@ -61,24 +61,24 @@ export default function QuantumNeuralFusion2026PromotionBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Link 
+            <a 
               href="/ai-2026-ultimate-innovation-showcase"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-2xl animate-pulse"
             >
               🚀 Explore Revolutionary Innovations
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/blog/ai-2026-quantum-neural-fusion-revolutionary-breakthrough"
               className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               📖 Read Full Breakthrough Report
-            </Link>
+            </a>
           </div>
         </div>
         
         {/* Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <Link 
+          <a 
             href="/ai-2026-ultimate-innovation-showcase"
             className="group bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105"
           >
@@ -91,9 +91,9 @@ export default function QuantumNeuralFusion2026PromotionBanner() {
             <div className="text-purple-400 font-semibold group-hover:text-purple-300">
               Explore Innovation →
             </div>
-          </Link>
+          </a>
           
-          <Link 
+          <a 
             href="/case-studies/ai-2026-quantum-neural-fusion-enterprise-transformation-breakthrough"
             className="group bg-gradient-to-br from-blue-900/50 to-green-900/50 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/60 transition-all duration-300 hover:transform hover:scale-105"
           >
@@ -106,9 +106,9 @@ export default function QuantumNeuralFusion2026PromotionBanner() {
             <div className="text-blue-400 font-semibold group-hover:text-blue-300">
               View Case Study →
             </div>
-          </Link>
+          </a>
           
-          <Link 
+          <a 
             href="/resources/ai-2026-quantum-neural-fusion-ultimate-implementation-guide"
             className="group bg-gradient-to-br from-green-900/50 to-purple-900/50 backdrop-blur-sm border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 transition-all duration-300 hover:transform hover:scale-105"
           >
@@ -121,7 +121,7 @@ export default function QuantumNeuralFusion2026PromotionBanner() {
             <div className="text-green-400 font-semibold group-hover:text-green-300">
               Get Implementation Guide →
             </div>
-          </Link>
+          </a>
         </div>
         
         {/* Industry Impact */}
@@ -156,12 +156,12 @@ export default function QuantumNeuralFusion2026PromotionBanner() {
           <p className="text-lg text-gray-300 mb-6">
             'Don', 't miss out on the most significant technological breakthrough of 2026
           </p>
-          <Link 
+          <a 
             href="/contact"
             className="inline-flex items-center bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-lg text-lg font-bold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
           >
             🎯 Get Your Personalized Implementation Plan
-          </Link>
+          </a>
         </div>
       </div>
     </section>

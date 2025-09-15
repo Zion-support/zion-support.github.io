@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ShieldCloudZapTrendingUpCheckCircleArrowRightStar
 
 const ComprehensiveContentShowcase2025: React.FC = () => {
@@ -133,13 +133,13 @@ const ComprehensiveContentShowcase2025: React.FC = () => {
                     ))}
                   </div>
 
-                  <Link
+                  <a
                     href={content.url}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 inline-flex items-center justify-center group-hover:scale-105"
                   >
                     Read More
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             );
@@ -172,13 +172,13 @@ const ComprehensiveContentShowcase2025: React.FC = () => {
           </div>
 
           <div className="text-center mt-8">
-            <Link
+            <a
               href="/resources"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
             >
               Explore All Resources
               <ArrowRight className="h-5 w-5 ml-2" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

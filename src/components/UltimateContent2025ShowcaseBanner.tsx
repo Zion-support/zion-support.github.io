@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function UltimateContent2025ShowcaseBanner() {
   return (
@@ -36,9 +36,9 @@ export default function UltimateContent2025ShowcaseBanner() {
             <p className="text-gray-300 mb-4">
               Explore the revolutionary intersection of AI and quantum computing with 1000x processing power.
             </p>
-            <Link href="/ai-2026-future-predictions-revolutionary-breakthrough-ultimate-guide" className="text-blue-400 hover:text-blue-300">
+            <a href="/ai-2026-future-predictions-revolutionary-breakthrough-ultimate-guide" className="text-blue-400 hover:text-blue-300">
               Read More →
-            </Link>
+            </a>
           </div>
           
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
@@ -47,9 +47,9 @@ export default function UltimateContent2025ShowcaseBanner() {
             <p className="text-gray-300 mb-4">
               Discover Level 5 business autonomy with self-optimizing operations and predictive maintenance.
             </p>
-            <Link href="/quantum-ai-2026-business-transformation-ultimate-guide" className="text-blue-400 hover:text-blue-300">
+            <a href="/quantum-ai-2026-business-transformation-ultimate-guide" className="text-blue-400 hover:text-blue-300">
               Read More →
-            </Link>
+            </a>
           </div>
           
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
@@ -58,9 +58,9 @@ export default function UltimateContent2025ShowcaseBanner() {
             <p className="text-gray-300 mb-4">
               Achieve unprecedented returns with 90% operational efficiency gains and 300% revenue growth.
             </p>
-            <Link href="/services" className="text-blue-400 hover:text-blue-300">
+            <a href="/services" className="text-blue-400 hover:text-blue-300">
               Get Started →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -72,18 +72,18 @@ export default function UltimateContent2025ShowcaseBanner() {
               Join thousands of businesses already transforming with Zion Tech 'Group', 's cutting-edge AI solutions and expert guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
               >
                 Get Expert Consultation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 Explore Our Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

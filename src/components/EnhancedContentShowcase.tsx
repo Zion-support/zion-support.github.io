@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const EnhancedContentShowcase = () => {
   const [activeTab, setActiveTab] = useState('breakthroughs');
@@ -577,12 +577,12 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
               <p className="text-gray-600 mb-6">{item.description}</p>
-              <Link
+              <a
                 href={item.href}
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200"
               >
                 Explore Now →
-              </Link>
+              </a>
             </div>
           ))}
             
@@ -756,18 +756,18 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
               Join thousands of companies already achieving unprecedented success with our AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 View All Resources
-              </Link>
+              </a>
             </div>
           </div>
 <<<<<<< HEAD

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumNeuralFusionRevolutionBanner: React.FC = () => {
   return (
@@ -83,18 +83,18 @@ const QuantumNeuralFusionRevolutionBanner: React.FC = () => {
 
           {/* Revolutionary CTAs */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
+            <a
               href="/quantum-neural-fusion"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-cyan-600 hover:to-blue-700 transition-all transform hover:scale-105 shadow-2xl"
             >
               Experience the Revolution
-            </Link>
-            <Link
+            </a>
+            <a
               href="/quantum-demo"
               className="border-2 border-cyan-400 text-cyan-400 px-10 py-5 rounded-xl font-bold text-xl hover:bg-cyan-400 hover:text-black transition-all"
             >
               Watch Live Demo
-            </Link>
+            </a>
           </div>
 
           {/* Warning Notice */}

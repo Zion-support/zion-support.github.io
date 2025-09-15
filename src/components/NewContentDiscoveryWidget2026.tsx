@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   Search
   Filter
@@ -220,13 +220,13 @@ const NewContentDiscoveryWidget2026 = () => {
                         {item.stats.rating}
                       </div>
                     </div>
-                    <Link 
+                    <a 
                       href={item.url}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:translate-x-1 transition-all duration-200"
                     >
                       Read More
                       <ArrowRight className="h-4 w-4 ml-1" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -270,13 +270,13 @@ const NewContentDiscoveryWidget2026 = () => {
                           </span>
                         ))}
                       </div>
-                      <Link 
+                      <a 
                         href={item.url}
                         className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:translate-x-1 transition-all duration-200"
                       >
                         Read More
                         <ArrowRight className="h-4 w-4 ml-1" />
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -297,14 +297,14 @@ const NewContentDiscoveryWidget2026 = () => {
 
       {/* View All CTA */}
       <div className="mt-8 pt-6 border-t border-gray-200 text-center">
-        <Link 
+        <a 
           href="/content-showcase"
           className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
         >
           <Globe className="h-5 w-5 mr-2" />
           View All Content
           <ArrowRight className="h-4 w-4 ml-2" />
-        </Link>
+        </a>
       </div>
     </div>
   );

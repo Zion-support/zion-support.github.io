@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightPlayZapBrainTarget
 
 const InteractiveTechDemo2026PromotionBanner = () => {
@@ -38,19 +38,19 @@ const InteractiveTechDemo2026PromotionBanner = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/interactive-tech-demo-2026" 
               className="bg-white text-green-600 hover:bg-green-50 px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
             >
               Start Interactive Demo
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/contact" 
               className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
             >
               Book Personal Demo
-            </Link>
+            </a>
           </div>
           
           <div className="mt-8 text-blue-100">

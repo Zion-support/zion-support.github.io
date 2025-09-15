@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { X, ArrowRight, TrendingUp, DollarSign, Zap, Target } from 'lucide-react';
 
 const AI2025AdvancedAutomationRevolutionBanner = () => {
@@ -147,19 +147,19 @@ const AI2025AdvancedAutomationRevolutionBanner = () => {
 
               {/* Call to Action */}
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link
+                <a
                   href={currentContent.url}
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg"
                 >
                   Read Full {currentContent.type}
                   <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 border-2 border-white/30 hover:border-white/50 text-white font-semibold rounded-lg transition-all duration-200 hover:bg-white/10"
                 >
                   Get Implementation Guide
-                </Link>
+                </a>
               </div>
             </div>
 

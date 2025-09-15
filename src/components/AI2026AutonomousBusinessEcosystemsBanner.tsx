@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRightIcon, CogIcon, ChartBarIcon, RocketLaunchIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 
 const AI2026AutonomousBusinessEcosystemsBanner = () => {
@@ -57,19 +57,19 @@ const AI2026AutonomousBusinessEcosystemsBanner = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/blog/ai-2026-autonomous-business-ecosystems"
               className="inline-flex items-center bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Explore Autonomous Business
               <ArrowRightIcon className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/autonomous-business-systems"
               className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-emerald-900 px-8 py-4 rounded-xl font-semibold transition-all duration-300"
             >
               Get Implementation Guide
-            </Link>
+            </a>
           </div>
         </div>
         

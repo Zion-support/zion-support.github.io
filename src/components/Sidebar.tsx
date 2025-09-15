@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { useMemo } from 'react';
 import { 
   Home, Rocket, Brain, Atom, Monitor, Shield, 
@@ -116,7 +116,7 @@ export default function Sidebar() {
             </h3>
             <div className="space-y-1">
               {section.links.map((link, linkIndex) => (
-                <Link
+                <a
                   key={linkIndex}
                   href={link.href}
                   className="group flex items-center space-x-3 px-3 py-2 text-sm text-gray-300 rounded-lg hover:bg-slate-800/50 hover:text-white transition-all duration-200"
@@ -141,7 +141,7 @@ export default function Sidebar() {
                       <p className="text-xs text-gray-500 truncate">{link.description}</p>
                     )}
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -154,7 +154,7 @@ export default function Sidebar() {
           </h3>
           <div className="space-y-1">
             {utilityLinks.map((link, index) => (
-              <Link
+              <a
                 key={index}
                 href={link.href}
                 className="group flex items-center space-x-3 px-3 py-2 text-sm text-gray-300 rounded-lg hover:bg-slate-800/50 hover:text-white transition-all duration-200"
@@ -168,7 +168,7 @@ export default function Sidebar() {
                     <p className="text-xs text-gray-500 truncate">{link.description}</p>
                   )}
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -194,12 +194,12 @@ export default function Sidebar() {
                 <Zap className="w-3 h-3" />
                 <span>Get Started</span>
               </div>
-              <Link 
+              <a 
                 href="/contact" 
                 className="text-purple-400 hover:text-purple-300 transition-colors"
               >
                 Contact Us →
-              </Link>
+              </a>
             </div>
           </div>
         </div>

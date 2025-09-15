@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightCpuBrainZapShieldTrendingUp
 
 export default function QuantumAIRevolutionBanner() {
@@ -51,19 +51,19 @@ export default function QuantumAIRevolutionBanner() {
                 Read our exclusive case study about how a leading healthcare provider achieved $2.3B in value through quantum AI implementationrevolutionizing patient care and operational efficiency.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
+                <a
                   href="/case-studies/quantum-ai-healthcare-transformation-2025"
                   className="bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
                 >
                   Read Case Study
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/blog/ai-2025-quantum-computing-revolution"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors inline-flex items-center justify-center"
                 >
                   Learn More
-                </Link>
+                </a>
               </div>
             </div>
             <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl p-6 text-center">
@@ -110,18 +110,18 @@ export default function QuantumAIRevolutionBanner() {
             Ready to transform your enterprise with quantum AI?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Schedule Quantum AI Consultation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services/quantum-ai"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
             >
               Explore Quantum AI Services
-            </Link>
+            </a>
           </div>
         </div>
       </div>

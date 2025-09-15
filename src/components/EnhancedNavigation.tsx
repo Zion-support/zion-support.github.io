@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, 
@@ -55,14 +55,14 @@ const EnhancedNavigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3" onClick={closeAllDropdowns}>
+          <a href="/" className="flex items-center space-x-3" onClick={closeAllDropdowns}>
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Zion Tech Group
             </span>
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -93,7 +93,7 @@ const EnhancedNavigation: React.FC = () => {
                       </h3>
                       <div className="grid grid-cols-1 gap-2">
                         {services.map((service) => (
-                          <Link
+                          <a
                             key={service.name}
                             href={service.href}
                             onClick={closeAllDropdowns}
@@ -103,7 +103,7 @@ const EnhancedNavigation: React.FC = () => {
                               <service.icon className="w-4 h-4 text-cyan-400" />
                             </div>
                             <div className="text-sm text-white/60">{service.description}</div>
-                          </Link>
+                          </a>
                         ))}
                       </div>
                     </div>
@@ -132,7 +132,7 @@ const EnhancedNavigation: React.FC = () => {
                     </h3>
                     <div className="grid grid-cols-1 gap-2">
                       {company.map((item) => (
-                        <Link
+                        <a
                           key={item.name}
                           href={item.href}
                           onClick={closeAllDropdowns}
@@ -147,7 +147,7 @@ const EnhancedNavigation: React.FC = () => {
                             </div>
                             <div className="text-sm text-white/60">{item.description}</div>
                           </div>
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </div>
@@ -156,12 +156,12 @@ const EnhancedNavigation: React.FC = () => {
             </div>
 
             {/* Contact Button */}
-            <Link
+            <a
               href="mailto:kleber@ziontechgroup.com"
               className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
             >
               Get Started
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -188,14 +188,14 @@ const EnhancedNavigation: React.FC = () => {
                 </h3>
                 <div className="space-y-2">
                   {services.map((service) => (
-                    <Link
+                    <a
                       key={service.name}
                       href={service.href}
                       onClick={closeAllDropdowns}
                       className="block px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
                     >
                       {service.name}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -206,26 +206,26 @@ const EnhancedNavigation: React.FC = () => {
                 </h3>
                 <div className="space-y-2">
                   {company.map((item) => (
-                    <Link
+                    <a
                       key={item.name}
                       href={item.href}
                       onClick={closeAllDropdowns}
                       className="block px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
                     >
                       {item.name}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </div>
               
               <div className="pt-4 border-t border-white/10">
-                <Link
+                <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-lg transition-all duration-300"
                   onClick={closeAllDropdowns}
                 >
                   Get Started Today
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>

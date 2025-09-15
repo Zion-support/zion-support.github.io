@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const BusinessIntelligenceRevolutionBanner2025 = () => {
   return (
@@ -93,18 +93,18 @@ const BusinessIntelligenceRevolutionBanner2025 = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/blog/ai-2025-2026-ultimate-business-intelligence-revolution"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Discover BI Revolution
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources/ai-2025-2026-quantum-ml-implementation-ultimate-guide"
               className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105"
             >
               Get Implementation Guide
-            </Link>
+            </a>
           </div>
 
           {/* Success Metrics */}

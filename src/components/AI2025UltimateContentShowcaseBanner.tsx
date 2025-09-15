@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025UltimateContentShowcaseBanner() {
   return (
@@ -72,7 +72,7 @@ export default function AI2025UltimateContentShowcaseBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Link 
+            <a 
               href="/ai-innovation-hub-2025"
               className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/25 transform hover:-translate-y-1"
             >
@@ -85,9 +85,9 @@ export default function AI2025UltimateContentShowcaseBanner() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </span>
-            </Link>
+            </a>
             
-            <Link 
+            <a 
               href="/ai-tools-utilities-2025"
               className="group border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 backdrop-blur-sm"
             >
@@ -100,7 +100,7 @@ export default function AI2025UltimateContentShowcaseBanner() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </span>
-            </Link>
+            </a>
           </div>
 
           {/* Stats */}

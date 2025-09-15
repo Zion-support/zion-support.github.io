@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -66,11 +66,11 @@ export default function AI2030ContentShowcaseBanner() {
                       Explore how AI will revolutionize workplace collaboration by 2030
                       creating seamless human-AI partnerships that transform productivity.
                     </p>
-                    <Link href="/blog/ai-2030-future-workforce-autonomous-collaboration-revolution">
+                    <a href="/blog/ai-2030-future-workforce-autonomous-collaboration-revolution">
                       <Button variant="outline" size="sm" className="border-white text-white hover:bg-white hover:text-gray-900">
                         Read Article <ArrowRight className="h-4 w-4 ml-1" />
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </CardContent>
@@ -91,11 +91,11 @@ export default function AI2030ContentShowcaseBanner() {
                       Discover how AI will drive sustainable business transformation
                       enabling enterprises to achieve carbon neutrality while maximizing profitability.
                     </p>
-                    <Link href="/blog/ai-2030-sustainable-enterprise-transformation-ultimate-guide">
+                    <a href="/blog/ai-2030-sustainable-enterprise-transformation-ultimate-guide">
                       <Button variant="outline" size="sm" className="border-white text-white hover:bg-white hover:text-gray-900">
                         Read Article <ArrowRight className="h-4 w-4 ml-1" />
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </CardContent>
@@ -124,11 +124,11 @@ export default function AI2030ContentShowcaseBanner() {
                       Evaluate your 'organization', 's readiness for the AI-driven future. 
                       Get personalized recommendations and a comprehensive roadmap.
                     </p>
-                    <Link href="/tools/ai-2030-readiness-assessment">
+                    <a href="/tools/ai-2030-readiness-assessment">
                       <Button size="sm" className="bg-white text-purple-600 hover:bg-gray-100">
                         Take Assessment <ArrowRight className="h-4 w-4 ml-1" />
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </CardContent>
@@ -149,11 +149,11 @@ export default function AI2030ContentShowcaseBanner() {
                       Learn how a Fortune 500 company achieved net-zero emissions 
                       and 400% ROI through AI-powered sustainability transformation.
                     </p>
-                    <Link href="/case-studies/fortune-500-ai-2030-transformation-net-zero-success-story">
+                    <a href="/case-studies/fortune-500-ai-2030-transformation-net-zero-success-story">
                       <Button variant="outline" size="sm" className="border-white text-white hover:bg-white hover:text-gray-900">
                         Read Case Study <ArrowRight className="h-4 w-4 ml-1" />
                       </Button>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </CardContent>
@@ -202,16 +202,16 @@ export default function AI2030ContentShowcaseBanner() {
               Join the AI revolution and position your organization as a leader in the autonomous future
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
+              <a href="/contact">
                 <Button size="lg" className="bg-white text-purple-900 hover:bg-gray-100">
                   Start Your Transformation <Rocket className="h-5 w-5 ml-2" />
                 </Button>
-              </Link>
-              <Link href="/services">
+              </a>
+              <a href="/services">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
                   Explore Our Services
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

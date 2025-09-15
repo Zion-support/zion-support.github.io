@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveContentWidget = () => {
@@ -130,7 +130,7 @@ const InteractiveContentWidget = () => {
                 <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
                 <p className="text-gray-300 mb-6">{item.description}</p>
                 
-                <Link 
+                <a 
                   href={item.link}
                   className={`inline-flex items-center font-semibold transition-colors duration-300 ${
                     item.featured 
@@ -139,7 +139,7 @@ const InteractiveContentWidget = () => {
                   }`}
                 >
                   Explore Now →
-                </Link>
+                </a>
                 
                 {hoveredItem === item.title && (
                   <motion.div
@@ -160,12 +160,12 @@ const InteractiveContentWidget = () => {
           transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >
-          <Link 
+          <a 
             href="/content-library" 
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-full text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             🚀 Access Full Content Library
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 "use client";
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function RevolutionaryContentDiscoveryWidget() {
   const [activeTabsetActiveTab] = useState('breakthrough');
@@ -150,12 +150,12 @@ export default function RevolutionaryContentDiscoveryWidget() {
                 </div>
               </div>
               
-              <Link
+              <a
                 href={item.link}
                 className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-4 rounded-lg text-center hover:from-blue-500 hover:to-purple-500 transition-all duration-300"
               >
                 Explore Now →
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -168,18 +168,18 @@ export default function RevolutionaryContentDiscoveryWidget() {
               Join thousands of companies already achieving 10,000% ROI with our revolutionary AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold px-8 py-4 rounded-lg text-lg hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/ai-implementation-guide-2025"
                 className="border-2 border-white text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-white hover:text-black transition-all duration-300"
               >
                 View Implementation Guide
-              </Link>
+              </a>
             </div>
           </div>
         </div>

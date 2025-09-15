@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function DynamicContentShowcase() {
   const [currentSlidesetCurrentSlide] = useState(0);
@@ -159,18 +159,18 @@ export default function DynamicContentShowcase() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link 
+                  <a 
                     href={currentItem.link}
                     className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-lg text-xl font-bold hover:scale-105 transition-transform text-center"
                   >
                     Explore Solution
-                  </Link>
-                  <Link 
+                  </a>
+                  <a 
                     href="/contact"
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg text-xl font-bold hover:scale-105 transition-transform text-center"
                   >
                     Get Started
-                  </Link>
+                  </a>
                 </div>
               </div>
               
@@ -265,18 +265,18 @@ export default function DynamicContentShowcase() {
             Join thousands of businesses already experiencing unprecedented ROI with our revolutionary AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link 
+            <a 
               href="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-12 py-6 rounded-lg text-2xl font-bold hover:scale-105 transition-transform"
             >
               Get Started Today
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies" 
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-12 py-6 rounded-lg text-2xl font-bold hover:scale-105 transition-transform"
             >
               View Success Stories
-            </Link>
+            </a>
           </div>
         </div>
       </div>

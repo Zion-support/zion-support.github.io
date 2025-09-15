@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function ContentPromoBanner() {
   const [isVisiblesetIsVisible] = useState(false);
@@ -59,18 +59,18 @@ export default function ContentPromoBanner() {
           </div>
           
           <div className="flex gap-2">
-            <Link
+            <a
               href="/content-showcase"
               className="flex-1 bg-white text-purple-600 px-3 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center text-sm"
             >
               Explore Now
-            </Link>
-            <Link
+            </a>
+            <a
               href="/resources"
               className="flex-1 border border-white text-white px-3 py-2 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center text-sm"
             >
               Download Free
-            </Link>
+            </a>
           </div>
         </div>
       </div>

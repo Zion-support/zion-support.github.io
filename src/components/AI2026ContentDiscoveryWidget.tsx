@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026ContentDiscoveryWidget() {
   const featuredContent = [
@@ -51,7 +51,7 @@ export default function AI2026ContentDiscoveryWidget() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {featuredContent.map((contentindex) => (
-            <Link 
+            <a 
               key={index}
               href={content.href}
               className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200 transform hover:-translate-y-2"
@@ -79,13 +79,13 @@ export default function AI2026ContentDiscoveryWidget() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
         {/* Additional CTA */}
         <div className="text-center mt-12">
-          <Link 
+          <a 
             href="/content-showcase"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
@@ -93,7 +93,7 @@ export default function AI2026ContentDiscoveryWidget() {
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

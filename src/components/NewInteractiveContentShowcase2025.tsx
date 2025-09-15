@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewInteractiveContentShowcase2025 = () => {
   const [activeTab, setActiveTab] = useState('trends');
@@ -151,7 +151,7 @@ const NewInteractiveContentShowcase2025 = () => {
                 <p className="text-gray-600 mb-4">
                   {item.description}
                 </p>
-                <Link
+                <a
                   href="/contact"
                   className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                 >
@@ -159,7 +159,7 @@ const NewInteractiveContentShowcase2025 = () => {
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             ))}
           </div>
@@ -175,18 +175,18 @@ const NewInteractiveContentShowcase2025 = () => {
               Join thousands of companies already using our AI solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/services"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Explore Services
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Get Started Today
-              </Link>
+              </a>
             </div>
           </div>
         </div>

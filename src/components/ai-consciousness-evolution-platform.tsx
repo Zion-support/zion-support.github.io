@@ -393,7 +393,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 
 export default AIConsciousnessEvolutionPlatform;
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 import { 
   Brain, Atom, Shield, Zap, Sparkles, Star, ArrowRight, 
@@ -716,19 +716,19 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center"
               variants={itemVariants}
             >
-              <Link 
+              <a 
                 href="/contact"
                 className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
               >
                 <Sparkles className="w-5 h-5 mr-2" />
                 Start Research Partnership
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/services"
                 className="inline-flex items-center border border-purple-500 text-purple-400 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300"
               >
                 Explore All Services
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
         </section>

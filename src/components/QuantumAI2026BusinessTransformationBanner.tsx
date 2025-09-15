@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function QuantumAI2026BusinessTransformationBanner() {
   return (
@@ -169,18 +169,18 @@ export default function QuantumAI2026BusinessTransformationBanner() {
               with expert guidance from Zion Tech Group.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/quantum-ai-2026-business-transformation-ultimate-guide"
                 className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
                 Read Full Guide
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-900 transition-all duration-300"
               >
                 Get Quantum AI Consultation
-              </Link>
+              </a>
             </div>
           </div>
         </div>

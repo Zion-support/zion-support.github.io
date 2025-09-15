@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentItem {
   id: string;
@@ -148,12 +148,12 @@ export default function ContentDiscoveryWidget() {
                 <div className="text-sm font-semibold text-green-600">
                   {currentContent.roi}
                 </div>
-                <Link
+                <a
                   href={currentContent.link}
                   className="text-sm font-semibold text-purple-600 hover:text-purple-700 transition-colors"
                 >
                   Learn More →
-                </Link>
+                </a>
               </div>
             </div>
           </div>

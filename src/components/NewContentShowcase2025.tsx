@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContentShowcase2025 = () => {
   const [activeTab, setActiveTab] = useState('case-studies');
@@ -183,12 +183,12 @@ const NewContentShowcase2025 = () => {
                       </span>
                     )}
                   </div>
-                  <Link
+                  <a
                     href={item.link}
                     className="text-purple-600 hover:text-purple-800 font-semibold text-sm group-hover:underline"
                   >
                     Explore →
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
@@ -205,18 +205,18 @@ const NewContentShowcase2025 = () => {
               Join thousands of companies already seeing incredible results with our AI solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 View All Services
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025UltimateBusinessRevolutionBanner = () => {
   return (
@@ -126,24 +126,24 @@ const AI2025UltimateBusinessRevolutionBanner = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Link
+            <a
               href="/blog/ai-2025-ultimate-business-revolution-complete-guide"
               className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-500 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-2xl"
             >
               Read Complete Guide →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="bg-white text-purple-900 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-2xl"
             >
               Get Free Assessment
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/ai-roi-calculator"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-purple-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-300 shadow-2xl"
             >
               Calculate Your ROI
-            </Link>
+            </a>
           </div>
 
           {/* Trust Indicators */}

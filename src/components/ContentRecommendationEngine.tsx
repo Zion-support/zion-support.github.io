@@ -3,7 +3,7 @@
 
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function ContentRecommendationEngine() {
   const [recommendationsetRecommendations] = useState([]);
@@ -196,7 +196,7 @@ export default function ContentRecommendationEngine() {
       {/* Recommendations */}
       <div className="space-y-6">
         {recommendations.map((itemindex) => (
-          <Link key={item.id} href={item.url} className="group block">
+          <a key={item.id} href={item.url} className="group block">
             <div className="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all duration-300">
               <div className="flex items-start space-x-4">
                 <div className="text-3xl">{item.image}</div>
@@ -236,7 +236,7 @@ export default function ContentRecommendationEngine() {
                 </div>
               </div>
             </div>
-          </Link>
+          </a>
         ))}
       </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025AnalyticsRevolutionBanner = () => {
   return (
@@ -18,18 +18,18 @@ const NewContent2025AnalyticsRevolutionBanner = () => {
             and predictive intelligence that transforms raw data into actionable business strategies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/ai-2025-analytics-revolution"
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Analytics Revolution
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies/analytics-success"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
             >
               View Success Stories
-            </Link>
+            </a>
           </div>
         </div>
         

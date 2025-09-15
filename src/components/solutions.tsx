@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion } from 'framer-motion';
 import { 
   Heart, DollarSign, Factory, ShoppingCart, Building2, 
@@ -294,19 +294,19 @@ const SolutionsPage: React.FC = () => {
               Tailored technology solutions designed specifically for your industry's unique challenges and opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300"
               >
                 Get Started
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/demo"
                 className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10"
               >
                 Request Demo
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -365,12 +365,12 @@ const SolutionsPage: React.FC = () => {
                       </div>
                       <h4 className="text-xl font-bold text-white mb-3">{solution.name}</h4>
                       <p className="text-gray-300 mb-4 text-sm">{solution.description}</p>
-                      <Link
+                      <a
                         href={solution.href}
                         className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors text-sm font-medium"
                       >
                         Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                      </Link>
+                      </a>
                     </motion.div>
                   ))}
                 </div>
@@ -396,19 +396,19 @@ const SolutionsPage: React.FC = () => {
               Let's discuss how our industry-specific solutions can drive innovation and growth for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300"
               >
                 Start Your Transformation
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/services"
                 className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10"
               >
                 View All Services
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

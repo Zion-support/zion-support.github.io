@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NeuralInterfaces2025RevolutionBanner: React.FC = () => {
   return (
@@ -37,18 +37,18 @@ const NeuralInterfaces2025RevolutionBanner: React.FC = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <a
                 href="/blog/ai-2025-neural-interfaces-revolution-ultimate-guide"
                 className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Neural Interfaces →
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
                 Schedule Demo
-              </Link>
+              </a>
             </div>
           </div>
           

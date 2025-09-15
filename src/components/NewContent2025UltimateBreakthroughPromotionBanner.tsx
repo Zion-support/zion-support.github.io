@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025UltimateBreakthroughPromotionBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -120,12 +120,12 @@ const NewContent2025UltimateBreakthroughPromotionBanner: React.FC = () => {
               >
                 Explore New Content
               </button>
-              <Link
+              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
                 Get Started
-              </Link>
+              </a>
             </div>
 
             {/* Stats */}

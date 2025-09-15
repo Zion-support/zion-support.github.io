@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AutomationInsightsPage() {
   const automationTrends = [
@@ -125,12 +125,12 @@ export default function AutomationInsightsPage() {
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>
                     <p className="text-white/70 mb-4">{trend.description}</p>
-                    <Link 
+                    <a 
                       href={`/blog/${trend.id}`}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       Read More <span className="ml-1">→</span>
-                    </Link>
+                    </a>
                   </div>
                 ))}
               </div>
@@ -161,18 +161,18 @@ export default function AutomationInsightsPage() {
                 Let our experts help you build the automation systems of the future
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link 
+                <a 
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started
-                </Link>
-                <Link 
+                </a>
+                <a 
                   href="/case-studies"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
                 >
                   View Case Studies
-                </Link>
+                </a>
               </div>
             </div>
           </section>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AutonomousBusinessOperations2026Showcase = () => {
   return (
@@ -58,12 +58,12 @@ const AutonomousBusinessOperations2026Showcase = () => {
                 <span className="text-sm">Risk assessment & mitigation</span>
               </li>
             </ul>
-            <Link 
+            <a 
               href="/content/autonomous-decision-making-2026"
               className="inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
             >
               Learn More →
-            </Link>
+            </a>
           </div>
 
           {/* Self-Optimizing Operations */}
@@ -88,12 +88,12 @@ const AutonomousBusinessOperations2026Showcase = () => {
                 <span className="text-sm">Performance monitoring & tuning</span>
               </li>
             </ul>
-            <Link 
+            <a 
               href="/content/self-optimizing-operations-2026"
               className="inline-block bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
             >
               Learn More →
-            </Link>
+            </a>
           </div>
 
           {/* Autonomous Customer Service */}
@@ -118,12 +118,12 @@ const AutonomousBusinessOperations2026Showcase = () => {
                 <span className="text-sm">Proactive issue prevention</span>
               </li>
             </ul>
-            <Link 
+            <a 
               href="/content/autonomous-customer-service-2026"
               className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               Learn More →
-            </Link>
+            </a>
           </div>
 
           {/* Autonomous Financial Management */}
@@ -148,12 +148,12 @@ const AutonomousBusinessOperations2026Showcase = () => {
                 <span className="text-sm">Regulatory compliance automation</span>
               </li>
             </ul>
-            <Link 
+            <a 
               href="/content/autonomous-financial-management-2026"
               className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               Learn More →
-            </Link>
+            </a>
           </div>
 
           {/* Autonomous Supply Chain */}
@@ -178,12 +178,12 @@ const AutonomousBusinessOperations2026Showcase = () => {
                 <span className="text-sm">Vendor relationship management</span>
               </li>
             </ul>
-            <Link 
+            <a 
               href="/content/autonomous-supply-chain-2026"
               className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
             >
               Learn More →
-            </Link>
+            </a>
           </div>
 
           {/* Autonomous Human Resources */}
@@ -208,12 +208,12 @@ const AutonomousBusinessOperations2026Showcase = () => {
                 <span className="text-sm">Learning path optimization</span>
               </li>
             </ul>
-            <Link 
+            <a 
               href="/content/autonomous-hr-2026"
               className="inline-block bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors"
             >
               Learn More →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -277,18 +277,18 @@ const AutonomousBusinessOperations2026Showcase = () => {
               innovation, and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-emerald-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Transformation
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/content/autonomous-business-implementation-guide"
                 className="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-emerald-600 transition-all duration-300"
               >
                 Download Implementation Guide
-              </Link>
+              </a>
             </div>
           </div>
         </div>

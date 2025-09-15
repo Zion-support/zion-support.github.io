@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const InteractiveContentDiscovery2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -232,12 +232,12 @@ const InteractiveContentDiscovery2025 = () => {
 
               {/* Action Button */}
               <div className="p-6 pt-0">
-                <Link
+                <a
                   href={item.link}
                   className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r ${item.gradient} text-white hover:shadow-lg transform hover:scale-105`}
                 >
                   Explore Content
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -254,18 +254,18 @@ const InteractiveContentDiscovery2025 = () => {
               to achieve unprecedented growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 View All Resources
-              </Link>
+              </a>
             </div>
           </div>
         </div>

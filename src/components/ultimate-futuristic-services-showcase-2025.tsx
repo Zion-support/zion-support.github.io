@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star, TrendingUp, Users, Award, Clock, Heart, 
@@ -394,12 +394,12 @@ export default function UltimateFuturisticServicesShowcase2025() {
 
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
+                  <a
                     href={service.link}
                     className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg text-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
                   >
                     Get Started
-                  </Link>
+                  </a>
                   <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:border-purple-500/50 transition-colors">
                     <Eye className="w-5 h-5" />
                   </button>
@@ -462,18 +462,18 @@ export default function UltimateFuturisticServicesShowcase2025() {
               Get in touch with our experts to discuss your specific needs and implementation strategy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
               >
                 Contact Our Experts
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/pricing"
                 className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors"
               >
                 View Pricing
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

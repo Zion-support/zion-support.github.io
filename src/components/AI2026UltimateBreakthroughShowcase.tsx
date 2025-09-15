@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2026UltimateBreakthroughShowcase() {
   const breakthroughs = [
@@ -127,12 +127,12 @@ export default function AI2026UltimateBreakthroughShowcase() {
                 </div>
               </div>
               
-              <Link 
+              <a 
                 href={breakthrough.href}
                 className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${breakthrough.color} text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
               >
                 Explore Breakthrough →
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -147,18 +147,18 @@ export default function AI2026UltimateBreakthroughShowcase() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <a 
                 href="/case-studies/ai-2026-enterprise-transformation-15000-roi"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 📊 View Success Stories
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/resources/ai-2026-ultimate-implementation-guide"
                 className="px-8 py-4 bg-white text-purple-600 font-bold rounded-full hover:bg-purple-50 transition-all duration-300 border-2 border-purple-600"
               >
                 📚 Implementation Guide
-              </Link>
+              </a>
             </div>
           </div>
         </div>

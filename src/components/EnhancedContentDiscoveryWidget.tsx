@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 interface ContentItem {
   id: string;
@@ -235,12 +235,12 @@ export default function EnhancedContentDiscoveryWidget() {
                       {item.description}
                     </p>
                     
-                    <Link
+                    <a
                       href={item.link}
                       className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${item.color} text-white font-semibold rounded-lg text-sm transition-all duration-300 hover:scale-105`}
                     >
                       Explore Now →
-                    </Link>
+                    </a>
                   </div>
                 </div>
               ))}
@@ -292,12 +292,12 @@ export default function EnhancedContentDiscoveryWidget() {
                     {item.description}
                   </p>
                   
-                  <Link
+                  <a
                     href={item.link}
                     className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${item.color} text-white font-semibold rounded-lg text-sm transition-all duration-300 hover:scale-105`}
                   >
                     Read More →
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
@@ -316,18 +316,18 @@ export default function EnhancedContentDiscoveryWidget() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Get Personalized Recommendations
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/content-showcase"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300"
               >
                 Browse All Content
-              </Link>
+              </a>
             </div>
           </div>
         </div>

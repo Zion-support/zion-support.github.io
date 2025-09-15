@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightTrendingUpAwardUsersZapTarget
 
 const AI2025BreakthroughShowcase: React.FC = () => {
@@ -53,13 +53,13 @@ const AI2025BreakthroughShowcase: React.FC = () => {
                 <span>Published Jan 2025</span>
               </div>
               
-              <Link 
+              <a 
                 href="/blog/ai-2025-business-automation-revolution"
                 className="flex items-center text-purple-400 hover:text-purple-300 font-semibold text-sm group-hover:translate-x-1 transition-all"
               >
                 Read More
                 <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -90,13 +90,13 @@ const AI2025BreakthroughShowcase: React.FC = () => {
                 <span>Jan 2025</span>
               </div>
               
-              <Link 
+              <a 
                 href="/case-studies/enterprise-ai-transformation-2025-500-million-roi"
                 className="flex items-center text-emerald-400 hover:text-emerald-300 font-semibold text-sm group-hover:translate-x-1 transition-all"
               >
                 View Study
                 <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -127,13 +127,13 @@ const AI2025BreakthroughShowcase: React.FC = () => {
                 <span>Jan 2025</span>
               </div>
               
-              <Link 
+              <a 
                 href="/resources/ai-2025-implementation-guide"
                 className="flex items-center text-orange-400 hover:text-orange-300 font-semibold text-sm group-hover:translate-x-1 transition-all"
               >
                 Get Guide
                 <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -177,7 +177,7 @@ const AI2025BreakthroughShowcase: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/resources/ai-2025-implementation-guide"
               className="group bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
@@ -185,9 +185,9 @@ const AI2025BreakthroughShowcase: React.FC = () => {
                 Start Your Transformation
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </span>
-            </Link>
+            </a>
             
-            <Link 
+            <a 
               href="/contact"
               className="group bg-transparent border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
             >
@@ -195,7 +195,7 @@ const AI2025BreakthroughShowcase: React.FC = () => {
                 Speak with Expert
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

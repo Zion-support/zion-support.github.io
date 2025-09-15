@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const TechnologyTrends2025 = () => {
   const trends = [
@@ -108,7 +108,7 @@ const TechnologyTrends2025 = () => {
             <p className="text-xl opacity-90 mb-6">
               Be among the first to implement these breakthrough technologies and gain a competitive advantage
             </p>
-            <Link
+            <a
               href="/technology-trends"
               className="inline-flex items-center bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
@@ -116,7 +116,7 @@ const TechnologyTrends2025 = () => {
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

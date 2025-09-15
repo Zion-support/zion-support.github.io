@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025AutonomousOperationsPromotionBanner = () => {
   return (
@@ -89,18 +89,18 @@ const AI2025AutonomousOperationsPromotionBanner = () => {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/blog/ai-2025-autonomous-business-operations"
               className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
             >
               Explore Autonomous Operations →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-900 transition-all duration-300"
             >
               Start Your Transformation
-            </Link>
+            </a>
           </div>
           
           <div className="text-sm text-gray-300">

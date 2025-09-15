@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightCalendarTrendingUpBrainZapStarClock
 
 export default function AI2026FutureTrendsPredictionsPromotionBanner() {
@@ -57,19 +57,19 @@ export default function AI2026FutureTrendsPredictionsPromotionBanner() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
+              <a 
                 href="/ai-2026-future-trends-predictions"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 View Predictions
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-              <Link 
+              </a>
+              <a 
                 href="/ai-2026-breakthrough-predictions"
                 className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 Explore Trends
-              </Link>
+              </a>
             </div>
           </div>
 

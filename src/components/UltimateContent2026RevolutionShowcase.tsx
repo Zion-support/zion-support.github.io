@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContent2026RevolutionShowcase = () => {
   const contentItems = [
@@ -92,7 +92,7 @@ const UltimateContent2026RevolutionShowcase = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {item.description}
                 </p>
-                <Link
+                <a
                   href={item.href}
                   className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors group-hover:translate-x-1 transform duration-200"
                 >
@@ -100,14 +100,14 @@ const UltimateContent2026RevolutionShowcase = () => {
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-16">
-          <Link
+          <a
             href="/ai-2026-revolutionary-content"
             className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
@@ -115,7 +115,7 @@ const UltimateContent2026RevolutionShowcase = () => {
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

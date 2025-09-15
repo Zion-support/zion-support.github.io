@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const QuantumAIContentShowcase2026 = () => {
   const contentItems = [
@@ -64,7 +64,7 @@ const QuantumAIContentShowcase2026 = () => {
                 <div className="text-lg font-bold text-cyan-400">{item.impact}</div>
               </div>
               
-              <Link 
+              <a 
                 href={item.url}
                 className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-black px-6 py-3 rounded-lg font-bold hover:from-cyan-400 hover:to-purple-400 transition-all duration-300"
               >
@@ -72,7 +72,7 @@ const QuantumAIContentShowcase2026 = () => {
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -93,12 +93,12 @@ const QuantumAIContentShowcase2026 = () => {
             </div>
           </div>
           
-          <Link 
+          <a 
             href="/quantum-ai-2026-breakthrough"
             className="bg-gradient-to-r from-cyan-500 to-purple-500 text-black px-12 py-4 rounded-lg font-bold text-xl hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
           >
             Explore Quantum AI 2026
-          </Link>
+          </a>
         </div>
       </div>
     </div>

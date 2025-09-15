@@ -2,7 +2,7 @@
 'use client';
 
 import React{ useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   BookOpen
   FileText
@@ -311,13 +311,13 @@ const AI2025UltimateContentShowcase = () => {
                 </div>
 
                 {/* Action Button */}
-                <Link
+                <a
                   href={item.url}
                   className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
                 >
                   Read {item.type.replace('-' ')}
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -333,19 +333,19 @@ const AI2025UltimateContentShowcase = () => {
               Get personalized recommendations and a free AI readiness assessment to start your transformation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200"
               >
                 Get Free Consultation
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/resources"
                 className="inline-flex items-center justify-center px-8 py-3 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/20 transition-colors duration-200"
               >
                 Browse All Resources
-              </Link>
+              </a>
             </div>
           </div>
         </div>

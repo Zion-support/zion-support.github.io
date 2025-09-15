@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
@@ -336,13 +336,13 @@ const ComprehensiveServicesShowcase2025 = () => {
 
                 {/* CTA */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
+                  <a
                     href={currentService.href}
                     className={`inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r ${currentService.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300`}
                   >
                     <span>Explore Service</span>
                     <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
+                  </a>
                   <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
                     <Play className="w-5 h-5 mr-2" />
                     Watch Demo
@@ -431,13 +431,13 @@ const ComprehensiveServicesShowcase2025 = () => {
                   </div>
                 </div>
                 
-                <Link
+                <a
                   href={service.href}
                   className={`group/btn inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${service.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300`}
                 >
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                </Link>
+                </a>
               </div>
             </motion.div>
           ))}
@@ -459,19 +459,19 @@ const ComprehensiveServicesShowcase2025 = () => {
               efficiencyand growth in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-all duration-300"
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Get Started Today
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/pricing"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 View All Pricing
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>

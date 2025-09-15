@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainCpuDatabaseNetworkShieldZapTargetTrendingUpUsers
 
 const AI2025BreakthroughShowcaseBanner = () => {
@@ -174,19 +174,19 @@ const AI2025BreakthroughShowcaseBanner = () => {
             Join the AI revolution and transform your business with our cutting-edge 2025 breakthrough technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/ai-solutions"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Explore AI Solutions
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
               Schedule Demo
-            </Link>
+            </a>
           </div>
         </div>
       </div>

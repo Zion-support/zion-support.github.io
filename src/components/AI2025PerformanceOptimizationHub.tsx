@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025PerformanceOptimizationHub = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -346,18 +346,18 @@ const AI2025PerformanceOptimizationHub = () => {
             Get expert performance optimization and achieve peak efficiency for your AI systems.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
             >
               Get Optimization Help
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors"
             >
               View Services
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025UltimateBusinessAutomationRevolutionBanner = () => {
   return (
@@ -24,18 +24,18 @@ const AI2025UltimateBusinessAutomationRevolutionBanner = () => {
             Achieve unprecedented 2,500% ROI through cutting-edge automation solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/blog/ai-2025-ultimate-business-automation-revolution-complete-guide"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Read Complete Guide →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies/fortune-500-ai-automation-transformation-2500-roi-success-story"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
               View Success Story
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -60,32 +60,32 @@ const AI2025UltimateBusinessAutomationRevolutionBanner = () => {
 
         {/* Featured Content Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Link
+          <a
             href="/blog/ai-2025-ultimate-business-automation-revolution-complete-guide"
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105"
           >
             <div className="text-2xl mb-3">📚</div>
             <h4 className="text-lg font-bold mb-2">Complete Implementation Guide</h4>
             <p className="text-sm opacity-90">Step-by-step framework for achieving 2,500% ROI</p>
-          </Link>
+          </a>
           
-          <Link
+          <a
             href="/case-studies/fortune-500-ai-automation-transformation-2500-roi-success-story"
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105"
           >
             <div className="text-2xl mb-3">🏆</div>
             <h4 className="text-lg font-bold mb-2">Fortune 500 Success Story</h4>
             <p className="text-sm opacity-90">Real-world case study with proven results</p>
-          </Link>
+          </a>
           
-          <Link
+          <a
             href="/resources/ai-2025-implementation-ultimate-master-guide-2500-roi"
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105"
           >
             <div className="text-2xl mb-3">🛠️</div>
             <h4 className="text-lg font-bold mb-2">Master Implementation Guide</h4>
             <p className="text-sm opacity-90">Complete toolkit and resources for success</p>
-          </Link>
+          </a>
         </div>
 
         {/* Call to Action */}
@@ -93,13 +93,13 @@ const AI2025UltimateBusinessAutomationRevolutionBanner = () => {
           <p className="text-lg mb-6 opacity-90">
             Ready to transform your business with AI automation?
           </p>
-          <Link
+          <a
             href="/contact"
             className="inline-flex items-center bg-gradient-to-r from-green-400 to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Get Your Free Consultation
             <span className="ml-2">→</span>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

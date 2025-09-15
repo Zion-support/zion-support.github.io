@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2030ContentPromotionBanner: React.FC = () => {
   return (
@@ -71,24 +71,24 @@ const AI2030ContentPromotionBanner: React.FC = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/blog/ai-2030-next-generation-autonomous-enterprise-revolution"
               className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
             >
               Read Full Guide
-            </Link>
-            <Link
+            </a>
+            <a
               href="/case-studies/ai-2030-autonomous-enterprise-transformation-10000-roi-success-story"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors text-lg"
             >
               View Case Study
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-colors text-lg"
             >
               Start Transformation
-            </Link>
+            </a>
           </div>
         </div>
       </div>

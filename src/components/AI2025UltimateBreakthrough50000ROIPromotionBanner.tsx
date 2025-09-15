@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function AI2025UltimateBreakthrough50000ROIPromotionBanner() {
   return (
@@ -74,24 +74,24 @@ export default function AI2025UltimateBreakthrough50000ROIPromotionBanner() {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link 
+            <a 
               href="/ai-2025-revolutionary-breakthrough-ultimate"
               className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-10 py-5 rounded-full text-xl font-bold hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               🚀 EXPLORE BREAKTHROUGH
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/case-studies/ai-2025-ultimate-transformation-50000-roi"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-5 rounded-full text-xl font-bold hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               📊 VIEW CASE STUDY
-            </Link>
-            <Link 
+            </a>
+            <a 
               href="/webinars/ai-2025-ultimate-breakthrough-demo"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-10 py-5 rounded-full text-xl font-bold hover:from-blue-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               📺 WATCH DEMO
-            </Link>
+            </a>
           </div>
 
           {/* Trust indicators */}

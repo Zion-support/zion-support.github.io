@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
@@ -464,7 +464,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   <Twitter className="w-4 h-4" />;
                 </a>;
                 <a href="#" className="hover:text-blue-300">;
-                  <Linkedin className="w-4 h-4" />;
+                  <aedin className="w-4 h-4" />;
                 </a>;
                 <a href="#" className="hover:text-blue-300">;
                   <Instagram className="w-4 h-4" />;
@@ -511,7 +511,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   <Twitter className="w - 4 h - 4" />;
                 </a>;
                 <a href="#" className="hover:text - blue - 300">;
-                  <Linkedin className="w - 4 h - 4" />;
+                  <aedin className="w - 4 h - 4" />;
                 </a>;
                 <a href="#" className="hover:text - blue - 300">;
                   <Instagram className="w - 4 h - 4" />;
@@ -523,7 +523,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
         </div>;
       </div>;
 
-            <Link href="/" className="flex items-center space-x-2">;
+            <a href="/" className="flex items-center space-x-2">;
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
                 <span className="text-white font-bold text-xl">Z</span>;
               </div>;
@@ -537,7 +537,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
         <div className="container mx-auto px-4">;
           <div className="flex justify-between items-center py-4">;
             {/* Logo */}
-            <Link href="/" className="flex items - center space - x-2">;
+            <a href="/" className="flex items - center space - x-2">;
               <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center">;
                 <span className="text - white font - bold text - xl">Z</span>;
               </div>;
@@ -550,11 +550,11 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Technology Solutions;
                 </div>;
               </div>;
-            </Link>;
+            </a>;
 
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Home;
-              </Link>;
+              </a>;
 
 
               {/* Services Dropdown */}
@@ -582,12 +582,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           const IconComponent = service && service.icon;
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items - center space - x-8">;
-              <Link;
+              <a;
                 href="/";
                 className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
               >;
                 Home;
-              </Link>;
+              </a>;
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button;
@@ -612,7 +612,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                         {services.map ((service, index) => {
                           const IconComponent = service.icon;
                           return (
-                            <Link;
+                            <a;
                               key={index}
 
                 </AnimatePresence>;
@@ -654,17 +654,17 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                               <div className="text - sm text - gray - 500">;
                                 {service.description}
                               </div>;
-                            </Link>);
+                            </a>);
                         })}
                       </div>;
                       <div className="border - t border - gray - 200 mt - 4 pt - 4 px - 6">;
-                        <Link;
+                        <a;
                           href="/services";
                           className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium";
                         >;
                           View All Services;
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
-                        </Link>;
+                        </a>;
                       </div>;
                     </motion.div>)}
                 </AnimatePresence>;
@@ -693,7 +693,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                         {solutions.map ((solution, index) => {
                           const IconComponent = solution.icon;
                           return (
-                            <Link;
+                            <a;
                               key={index}
 
                 </AnimatePresence>;
@@ -722,7 +722,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                     >;
                       <div className="px-6">;
                         {industries && industries.map((industry, index) => (;
-                          <Link
+                          <a
                             key={index}
                             href={industry && industry.href}
                             className="block p-3 rounded-lg hover:bg-blue-50 transition-colors group">;
@@ -732,7 +732,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                             <div className="text-sm text-gray-500">;
                               {industry && industry.description}
                             </div>;
-                          </Link>;
+                          </a>;
                         ))}
                       </div>;
                     </motion && motion.div>;
@@ -764,7 +764,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                     >;
                       <div className="px-6">;
                         {resources && resources.map((resource, index) => (;
-                          <Link
+                          <a
                             key={index}
                             href={resource && resource.href}
                             className="block p-3 rounded-lg hover:bg-blue-50 transition-colors group">;
@@ -774,7 +774,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                             <div className="text-sm text-gray-500">;
                               {resource && resource.description}
                             </div>;
-                          </Link>;
+                          </a>;
                         ))}
                       </div>;
                     </motion && motion.div>;
@@ -782,12 +782,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
                 </AnimatePresence>
               </div>
-              <Link
+              <a
                 href="/pricing"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
                 Pricing
-              </Link>
+              </a>
             </div>
                 </AnimatePresence>;
               </div>;
@@ -803,13 +803,13 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               >;
                 <Search className="w-5 h-5" />;
               </button>;
-              <Link
+              <a
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
-              <Link
+              <a
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -818,7 +818,7 @@ origin/automation-improvements-final
 
               >
                 Get Started
-              </Link>
+              </a>
               <a
                 href="tel:+13024640950"
                 className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-medium transition-colors"
@@ -828,7 +828,7 @@ origin/automation-improvements-final
             </div>
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">;
                 Get Started;
-              </Link>;
+              </a>;
               <a
                 href="tel:+13024640950"
                 className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-medium transition-colors">;
@@ -860,14 +860,14 @@ origin/automation-improvements-final
                 exit={{ opacity: 0, height: 0 }}
                 className="lg:hidden border-t border-gray-200">;
                 <div className="py-4 space-y-2">;
-                  <Link
+                  <a
                     href="/"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
 
                   >;
                     Home;
-                  </Link>;
+                  </a>;
 
 
                   {/* Mobile Services */}
@@ -877,14 +877,14 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space-y-1 ml-4">;
                       {services && services.map((service, index) => (;
-                        <Link
+                        <a
                           key={index}
                           href={service && service.href}
                           className="block py-1 text-sm text-gray-600 hover:text-blue-600"
                           onClick={() => setIsMenuOpen(false)}
                         >;
                           {service && service.name}
-                        </Link>;
+                        </a>;
                       ))}
 
                     </div>;
@@ -898,14 +898,14 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space-y-1 ml-4">;
                       {solutions && solutions.map((solution, index) => (;
-                        <Link
+                        <a
                           key={index}
                           href={solution && solution.href}
                           className="block py-1 text-sm text-gray-600 hover:text-blue-600"
                           onClick={() => setIsMenuOpen(false)}
                         >;
                           {solution && solution.name}
-                        </Link>;
+                        </a>;
                       ))}
 
                     </div>;
@@ -919,14 +919,14 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space-y-1 ml-4">;
                       {industries && industries.map((industry, index) => (;
-                        <Link
+                        <a
                           key={index}
                           href={industry && industry.href}
                           className="block py-1 text-sm text-gray-600 hover:text-blue-600"
                           onClick={() => setIsMenuOpen(false)}
                         >;
                           {industry && industry.name}
-                        </Link>;
+                        </a>;
                       ))}
 
                     </div>;
@@ -940,37 +940,37 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space-y-1 ml-4">;
                       {resources && resources.map((resource, index) => (;
-                        <Link
+                        <a
                           key={index}
                           href={resource && resource.href}
                           className="block py-1 text-sm text-gray-600 hover:text-blue-600"
                           onClick={() => setIsMenuOpen(false)}
                         >;
                           {resource && resource.name}
-                        </Link>;
+                        </a>;
                       ))}
 
                     </div>;
                   </div>;
 
 
-                  <Link
+                  <a
                     href="/pricing"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
 
                   >;
                     Pricing;
-                  </Link>;
+                  </a>;
                   <div className="px-4 py-2 space-y-2">;
 
-                    <Link
+                    <a
                       href="/contact"
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
                       onClick={() => setIsMenuOpen(false)}
                     >;
                       Get Started;
-                    </Link>;
+                    </a>;
                     <a
                       href="tel:+13024640950"
                       className="block bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium text-center"
@@ -987,17 +987,17 @@ origin/automation-improvements-final
                               <div className="text - sm text - gray - 500">;
                                 {solution.description}
                               </div>;
-                            </Link>);
+                            </a>);
                         })}
                       </div>;
                       <div className="border - t border - gray - 200 mt - 4 pt - 4 px - 6">;
-                        <Link;
+                        <a;
                           href="/solutions";
                           className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium";
                         >;
                           View All Solutions;
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
-                        </Link>;
+                        </a>;
                       </div>;
                     </motion.div>)}
                 </AnimatePresence>;
@@ -1024,7 +1024,7 @@ origin/automation-improvements-final
                     >;
                       <div className="px - 6">;
                         {industries.map ((industry, index) => (
-                          <Link;
+                          <a;
                             key={index}
                             href={industry.href}
                             className="block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
@@ -1035,7 +1035,7 @@ origin/automation-improvements-final
                             <div className="text - sm text - gray - 500">;
                               {industry.description}
                             </div>;
-                          </Link>))}
+                          </a>))}
                       </div>;
                     </motion.div>)}
                 </AnimatePresence>;
@@ -1062,7 +1062,7 @@ origin/automation-improvements-final
                     >;
                       <div className="px - 6">;
                         {resources.map ((resource, index) => (
-                          <Link;
+                          <a;
                             key={index}
                             href={resource.href}
                             className="block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
@@ -1073,17 +1073,17 @@ origin/automation-improvements-final
                             <div className="text - sm text - gray - 500">;
                               {resource.description}
                             </div>;
-                          </Link>))}
+                          </a>))}
                       </div>;
                     </motion.div>)}
                 </AnimatePresence>;
               </div>;
-              <Link;
+              <a;
                 href="/pricing";
                 className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
               >;
                 Pricing;
-              </Link>;
+              </a>;
             </div>;
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items - center space - x-4">;
@@ -1094,12 +1094,12 @@ origin/automation-improvements-final
               >;
                 <Search className="w - 5 h - 5" />;
               </button>;
-              <Link;
+              <a;
                 href="/contact";
                 className="bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 2 rounded - lg font - medium transition - colors";
               >;
                 Get Started;
-              </Link>;
+              </a>;
               <a;
                 href="tel:+13024640950";
                 className="bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 6 py - 2 rounded - lg font - medium transition - colors";
@@ -1127,13 +1127,13 @@ origin/automation-improvements-final
                 className="lg:hidden border - t border - gray - 200";
               >;
                 <div className="py - 4 space - y-2">;
-                  <Link;
+                  <a;
                     href="/";
                     className="block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 rounded - lg";
                     on_click={() => setIsMenuOpen (false)}
                   >;
                     Home;
-                  </Link>;
+                  </a>;
                   {/* Mobile Services */}
                   <div className="px - 4 py - 2">;
                     <div className="font - medium text - gray - 900 mb - 2">;
@@ -1141,14 +1141,14 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space - y-1 ml - 4">;
                       {services.map ((service, index) => (
-                        <Link;
+                        <a;
                           key={index}
                           href={service.href}
                           className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600";
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {service.name}
-                        </Link>))}
+                        </a>))}
                     </div>;
                   </div>;
                   {/* Mobile Solutions */}
@@ -1158,14 +1158,14 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space - y-1 ml - 4">;
                       {solutions.map ((solution, index) => (
-                        <Link;
+                        <a;
                           key={index}
                           href={solution.href}
                           className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600";
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {solution.name}
-                        </Link>))}
+                        </a>))}
                     </div>;
                   </div>;
                   {/* Mobile Industries */}
@@ -1175,14 +1175,14 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space - y-1 ml - 4">;
                       {industries.map ((industry, index) => (
-                        <Link;
+                        <a;
                           key={index}
                           href={industry.href}
                           className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600";
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {industry.name}
-                        </Link>))}
+                        </a>))}
                     </div>;
                   </div>;
                   {/* Mobile Resources */}
@@ -1192,31 +1192,31 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space - y-1 ml - 4">;
                       {resources.map ((resource, index) => (
-                        <Link;
+                        <a;
                           key={index}
                           href={resource.href}
                           className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600";
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {resource.name}
-                        </Link>))}
+                        </a>))}
                     </div>;
                   </div>;
-                  <Link;
+                  <a;
                     href="/pricing";
                     className="block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 rounded - lg";
                     on_click={() => setIsMenuOpen (false)}
                   >;
                     Pricing;
-                  </Link>;
+                  </a>;
                   <div className="px - 4 py - 2 space - y-2">;
-                    <Link;
+                    <a;
                       href="/contact";
                       className="block bg - blue - 600 hover:bg - blue - 700 text - white px - 4 py - 2 rounded - lg font - medium text - center";
                       on_click={() => setIsMenuOpen (false)}
                     >;
                       Get Started;
-                    </Link>;
+                    </a>;
                     <a;
                       href="tel:+13024640950";
                       className="block bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 4 py - 2 rounded - lg font - medium text - center";

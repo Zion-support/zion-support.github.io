@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryTech2026Showcase = () => {
   const technologies = [
@@ -104,7 +104,7 @@ const RevolutionaryTech2026Showcase = () => {
                 </div>
               </div>
               
-              <Link
+              <a
                 href={tech.href}
                 className="inline-flex items-center text-purple-600 font-bold hover:text-purple-800 transition-colors group-hover:translate-x-2 transform duration-300"
               >
@@ -112,19 +112,19 @@ const RevolutionaryTech2026Showcase = () => {
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </Link>
+              </a>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-20">
           <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 p-1 rounded-2xl inline-block">
-            <Link
+            <a
               href="/revolutionary-tech-2026"
               className="block bg-white text-gray-900 px-12 py-6 rounded-xl font-bold text-xl hover:bg-gray-50 transition-colors"
             >
               🚀 Explore All 2026 Technologies
-            </Link>
+            </a>
           </div>
         </div>
       </div>

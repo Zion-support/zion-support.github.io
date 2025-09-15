@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightStarZapTrendingUpUsersAwardCheckCircleRocketBrainCpuTargetBarChart3SearchFilterClockEye
 
 export default function AnimatedContentDiscoveryWidget2025() {
@@ -114,13 +114,13 @@ export default function AnimatedContentDiscoveryWidget2025() {
                   </div>
                 </div>
                 <p className="text-white/90 mb-6 text-lg">{currentItem.description}</p>
-                <Link 
+                <a 
                   href={currentItem.href}
                   className="inline-flex items-center px-6 py-3 bg-white/20 text-white font-semibold rounded-lg hover:bg-white/30 transition-all duration-300 backdrop-blur-sm"
                 >
                   Explore Now
                   <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
+                </a>
               </div>
 
               {/* Content Indicators */}
@@ -193,9 +193,9 @@ export default function AnimatedContentDiscoveryWidget2025() {
             <p className="text-gray-600 mb-4">
               Find exactly what you need with our intelligent search that understands context and intent.
             </p>
-            <Link href="/search" className="text-purple-600 hover:text-purple-700 font-semibold">
+            <a href="/search" className="text-purple-600 hover:text-purple-700 font-semibold">
               Try Smart Search →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -211,9 +211,9 @@ export default function AnimatedContentDiscoveryWidget2025() {
             <p className="text-gray-600 mb-4">
               Filter content by ROIindustrytechnology typeand implementation timeline.
             </p>
-            <Link href="/filters" className="text-blue-600 hover:text-blue-700 font-semibold">
+            <a href="/filters" className="text-blue-600 hover:text-blue-700 font-semibold">
               Explore Filters →
-            </Link>
+            </a>
           </div>
 
           <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -229,9 +229,9 @@ export default function AnimatedContentDiscoveryWidget2025() {
             <p className="text-gray-600 mb-4">
               Get personalized content recommendations based on your industry and interests.
             </p>
-            <Link href="/recommendations" className="text-green-600 hover:text-green-700 font-semibold">
+            <a href="/recommendations" className="text-green-600 hover:text-green-700 font-semibold">
               Get Recommendations →
-            </Link>
+            </a>
           </div>
         </div>
       </div>

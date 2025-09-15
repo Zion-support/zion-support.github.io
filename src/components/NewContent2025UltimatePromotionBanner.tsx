@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const NewContent2025UltimatePromotionBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false);
@@ -69,12 +69,12 @@ const NewContent2025UltimatePromotionBanner: React.FC = () => {
                       <p className="text-xs opacity-90">{item.description}</p>
                     </div>
                   </div>
-                  <Link 
+                  <a 
                     href={item.link}
                     className="inline-block bg-white/20 hover:bg-white/30 text-white text-xs font-semibold px-3 py-1 rounded-lg transition-all duration-200"
                   >
                     Explore Now →
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}

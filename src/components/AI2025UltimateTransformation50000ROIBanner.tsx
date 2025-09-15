@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const AI2025UltimateTransformation50000ROIBanner = () => {
   return (
@@ -82,18 +82,18 @@ const AI2025UltimateTransformation50000ROIBanner = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/case-studies/ai-2025-ultimate-transformation-50000-roi-success-story"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transform hover:scale-105 transition-all duration-300 shadow-2xl"
             >
               Read Full Case Study →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="bg-white text-purple-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-2xl"
             >
               Start Your Transformation
-            </Link>
+            </a>
           </div>
 
           {/* Trust Indicators */}

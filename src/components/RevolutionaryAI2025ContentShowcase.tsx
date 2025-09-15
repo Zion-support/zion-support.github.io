@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const RevolutionaryAI2025ContentShowcase = () => {
   const contentItems = [
@@ -68,7 +68,7 @@ const RevolutionaryAI2025ContentShowcase = () => {
                   ))}
                 </div>
                 
-                <Link 
+                <a 
                   href={item.url}
                   className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium transition-colors duration-200"
                 >
@@ -76,19 +76,19 @@ const RevolutionaryAI2025ContentShowcase = () => {
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}
         </div>
         
         <div className="text-center mt-12">
-          <Link 
+          <a 
             href="/content"
             className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
           >
             View All Content
-          </Link>
+          </a>
         </div>
       </div>
     </div>
