@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'agentic-safety-patterns-2025',
+      title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
+      excerpt: 'Practical patterns like budget caps, sensitive-action handshakes, and reputation‑gated autonomy.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/agentic-safety.jpg',
+      featured: true
+    },
+    {
       id: 'ai-governance-blueprint-2025',
       title: 'AI Governance Blueprint 2025: Practical Guardrails for Autonomous Systems',
       excerpt: 'A field-tested framework for policy, oversight, and safety in autonomous AI deployments across the enterprise.',
@@ -72,19 +83,50 @@ export default function BlogPage() {
       readTime: '10 min read',
       image: '/blog/autonomous-ai.jpg',
       featured: true
+    },
+    {
+      id: 'agentic-supply-chains-2025',
+      title: 'Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents',
+      excerpt: 'Autonomous agents coordinating demand sensing, supplier negotiation, and dynamic routing with safety rails.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/agentic-supply-chains.jpg',
+      featured: true
     }
   ];
 
   const recentPosts = [
     {
-      id: 'ai-governance-blueprint-2025',
-      title: 'AI Governance Blueprint 2025: Practical Guardrails for Autonomous Systems',
-      excerpt: 'Implement layered guardrails and KPIs to scale responsible autonomy safely.',
-      category: 'AI Solutions',
+      id: 'genai-productivity-benchmarks-2025',
+      title: 'GenAI Productivity Benchmarks 2025: Measuring Real Business Impact',
+      excerpt: 'A benchmarking framework for time savings, quality lift, and ROI in GenAI workflows.',
+      category: 'Research & Development',
       author: 'Dr. Emily Watson',
-      date: '2025-09-15',
+      date: '2025-09-13',
       readTime: '8 min read',
-      image: '/blog/ai-governance-blueprint.jpg'
+      image: '/blog/genai-productivity-benchmarks.jpg'
+    },
+    {
+      id: 'edge-ai-marketplaces',
+      title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
+      excerpt: 'Architectures for edge-native agent marketplaces with local policy and cloud sync.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-14',
+      readTime: '7 min read',
+      image: '/blog/edge-ai-marketplaces.jpg'
+    },
+    {
+      id: 'multi-agent-supply-chains',
+      title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
+      excerpt: 'Agent-based orchestration to reduce latency and increase resilience across supply networks.',
+      category: 'AI Solutions',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-12',
+      readTime: '8 min read',
+      image: '/blog/multi-agent-supply-chains.jpg'
     },
     {
       id: 'autonomous-it-operations',
@@ -179,9 +221,10 @@ export default function BlogPage() {
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 2, active: false },
+    { name: 'AI Solutions', count: 3, active: false },
+    { name: 'AI Safety', count: 1, active: false },
     { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
@@ -193,7 +236,7 @@ export default function BlogPage() {
   const tags = [
     'AI Consciousness', 'Quantum Computing', 'Machine Learning', 'Cybersecurity',
     'Data Science', 'Autonomous Systems', 'Business Intelligence', 'Cloud Computing',
-    'AI Ethics', 'Research', 'Innovation', 'Technology Trends'
+    'AI Ethics', 'AI Safety', 'Supply Chain', 'Innovation', 'Technology Trends'
   ];
 
   return (
