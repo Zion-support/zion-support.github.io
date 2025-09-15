@@ -1,3 +1,4 @@
+import React from 'react';
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -78,32 +79,17 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Promo: New Article */}
-      <section className="bg-blue-50 border-b border-blue-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <a
-            href="/blog/generative-agents-enterprise-2025"
-            className="block w-full bg-white rounded-xl border border-blue-200 p-4 md:p-5 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Generative Agents for Enterprise: Safe, Productive, and Governed (2025)"
-          >
-            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                GA
-              </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Solutions</span>
-                  <span className="text-xs text-gray-500">New</span>
-                </div>
-                <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  Generative Agents for Enterprise: Safe, Productive, and Governed (2025)
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A pragmatic playbook to deploy governed autonomous agents with measurable ROI.
-                </p>
-              </div>
-              <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
+      {/* Promo Ribbon */}
+      <section className="py-3 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto">
+          <a href="/blog/autonomous-it-ops-2025" className="flex items-center justify-between gap-3 text-blue-900">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center justify-center w-8 h-8 rounded-md bg-blue-600 text-white text-sm font-bold">AO</span>
+              <p className="text-sm md:text-base">
+                New: Autonomous IT Operations in 2025 — self-healing, policy-driven, AI-orchestrated ops. <span className="underline">Read more</span>
+              </p>
             </div>
+            <span className="hidden md:block text-blue-700">→</span>
           </a>
         </div>
       </section>
@@ -176,8 +162,27 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-              <a href="/blog/quantum-risk-modeling-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: Quantum Risk Modeling 2025
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <a href="/blog/agentic-supply-chains-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Agentic Supply Chains 2025
+=======
+              <a href="/blog/enterprise-agent-safety-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Enterprise Agent Safety 2025
+>>>>>>> cursor/create-and-deploy-new-content-1633
+=======
+              <a href="/blog/agentic-safety-patterns-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Agentic Safety Patterns 2025
+=======
+              <a href="/blog/agent-safety-guardrails-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Agent Safety Guardrails 2025
+>>>>>>> cursor/create-and-deploy-new-content-4789
+=======
+              <a href="/blog/agentic-supply-chains-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Agentic Supply Chains 2025
+>>>>>>> 2445d7df832b351361c2d9a20e071d592355fcda
+>>>>>>> 7628bd3f9c6fdd87749ce79d345f9b0dcea6b009
               </a>
             </div>
           </div>
