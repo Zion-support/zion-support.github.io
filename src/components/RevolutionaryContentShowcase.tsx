@@ -1,173 +1,267 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const RevolutionaryContentShowcase: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
-  const contentItems = [
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const showcaseItems = [
     {
       id: 1,
-      title: "Business Automation Guide 2025",
-      description: "Complete 90-day roadmap to automate 80% of business operations and achieve exponential growth",
-      image: "📋",
+      title: "Advanced AI Transformation 2026",
+      description: "Experience the next evolution of artificial intelligence with our revolutionary transformation platform",
+      image: "🧠",
       gradient: "from-purple-600 to-pink-600",
-      link: "/pages/BusinessAutomationGuide2025",
-      category: "Business Strategy",
-      featured: true
+      link: "/pages/AdvancedAITransformation2026",
+      category: "AI Revolution",
+      features: ["Autonomous Decision Making", "Quantum-Enhanced Processing", "Predictive Intelligence"]
     },
     {
       id: 2,
-      title: "Advanced Tech Solutions 2026",
-      description: "Revolutionary technologies including Neural Networks 3.0, Quantum Computing, and Consciousness AI",
+      title: "Next-Gen Tech Showcase 2026",
+      description: "Explore cutting-edge technologies that are reshaping our world and defining the future",
       image: "⚡",
       gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/AdvancedTechSolutions2026",
-      category: "Advanced Technology",
-      featured: true
+      link: "/pages/NextGenTechShowcase2026",
+      category: "Technology Showcase",
+      features: ["Quantum Computing", "Neural Interfaces", "Space Technology"]
     },
     {
       id: 3,
-      title: "Innovation Showcase 2026",
-      description: "Breakthrough innovations like Consciousness AI, Quantum Internet, and Neural Interface Technology",
-      image: "🌟",
-      gradient: "from-violet-600 to-fuchsia-600",
-      link: "/pages/InnovationShowcase2026",
-      category: "Innovation",
-      featured: true
+      title: "Revolutionary Tech Blog 2026",
+      description: "Dive deep into breakthrough innovations and cutting-edge technologies shaping humanity's future",
+      image: "📚",
+      gradient: "from-emerald-600 to-teal-600",
+      link: "/pages/RevolutionaryTechBlog2026",
+      category: "Tech Insights",
+      features: ["Expert Analysis", "Industry Trends", "Future Predictions"]
     },
     {
       id: 4,
-      title: "Neural Interface Revolution 2026",
-      description: "Bridge mind and machine with direct neural interfaces and brain-computer communication",
-      image: "🧬",
-      gradient: "from-emerald-600 to-teal-600",
-      link: "/pages/NeuralInterfaceRevolution2026",
-      category: "Neural Technology",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Quantum Computing Revolution 2026",
-      description: "Unlock exponential computing power with quantum technology that solves impossible problems",
+      title: "Quantum Computing Revolution",
+      description: "Breakthrough quantum technology solving impossible problems in seconds",
       image: "⚛️",
       gradient: "from-indigo-600 to-purple-600",
       link: "/pages/QuantumComputingRevolution2026",
-      category: "Quantum Computing",
-      featured: false
+      category: "Quantum Tech",
+      features: ["Exponential Speed", "Quantum Cryptography", "Molecular Simulation"]
+    },
+    {
+      id: 5,
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer interfaces revolutionizing human-machine interaction",
+      image: "🧬",
+      gradient: "from-rose-600 to-pink-600",
+      link: "/pages/NeuralInterfaceRevolution2026",
+      category: "Neural Tech",
+      features: ["Non-Invasive BCI", "Thought Control", "Neural Feedback"]
+    },
+    {
+      id: 6,
+      title: "Comprehensive Tech Insights",
+      description: "Complete analysis of emerging technologies and their impact on society",
+      image: "🔍",
+      gradient: "from-orange-600 to-red-600",
+      link: "/pages/ComprehensiveTechInsights2026",
+      category: "Tech Analysis",
+      features: ["Market Analysis", "Technology Trends", "Future Outlook"]
     }
   ];
 
+  // Auto-play functionality
   useEffect(() => {
+    if (!isAutoPlaying) return;
+    
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentItems.length);
+      setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
     }, 5000);
+
     return () => clearInterval(interval);
-  }, [contentItems.length]);
+  }, [isAutoPlaying, showcaseItems.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY CONTENT • JANUARY 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6">🌟 Revolutionary Technology Showcase</h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Experience the future with our groundbreaking content on AI Revolution, Quantum Computing, and Neural Interfaces
-          </p>
-        </div>
+    <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl p-8 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full -translate-y-48 translate-x-48"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-emerald-500/20 to-teal-500/20 rounded-full translate-y-48 -translate-x-48"></div>
+      </div>
 
-        {/* Featured Content Carousel */}
-        <div className="relative mb-12">
-          <div className="overflow-hidden rounded-2xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+      <div className="relative z-10">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-semibold mb-4 text-white">
+            🌟 REVOLUTIONARY CONTENT 2026
+          </div>
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Experience the Future of Technology
+          </h2>
+          <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+            Discover groundbreaking content that showcases the most advanced technologies 
+            and innovations shaping our world.
+          </p>
+        </motion.div>
+
+        {/* Main Showcase */}
+        <div className="relative">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.5 }}
+              className="grid lg:grid-cols-2 gap-12 items-center"
             >
-              {contentItems.map((item) => (
-                <div key={item.id} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${item.gradient} rounded-2xl p-12 text-center`}>
-                    <div className="text-8xl mb-6 animate-bounce">{item.image}</div>
-                    <h3 className="text-4xl font-bold mb-4">{item.title}</h3>
-                    <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">{item.description}</p>
-                    <div className="flex justify-center space-x-4">
-                      <a 
-                        href={item.link}
-                        className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
-                      >
-                        Explore {item.category} →
-                      </a>
-                      <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
-                        Learn More
-                      </button>
+              {/* Content */}
+              <div>
+                <div className="flex items-center space-x-3 mb-4">
+                  <span className="text-6xl">{showcaseItems[currentSlide].image}</span>
+                  <div>
+                    <div className="text-purple-300 text-sm font-semibold">
+                      {showcaseItems[currentSlide].category}
                     </div>
+                    <div className="text-purple-400 text-xs">NEW 2026</div>
                   </div>
                 </div>
+                
+                <h3 className="text-3xl font-bold text-white mb-4">
+                  {showcaseItems[currentSlide].title}
+                </h3>
+                
+                <p className="text-lg text-purple-200 mb-6">
+                  {showcaseItems[currentSlide].description}
+                </p>
+
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {showcaseItems[currentSlide].features.map((feature, index) => (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                        className="flex items-center text-purple-200"
+                      >
+                        <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mr-3"></span>
+                        {feature}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href={showcaseItems[currentSlide].link}
+                    className={`bg-gradient-to-r ${showcaseItems[currentSlide].gradient} text-white px-8 py-3 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold`}
+                  >
+                    Explore Now →
+                  </a>
+                  <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+
+              {/* Visual */}
+              <div className="relative">
+                <div className={`w-full h-96 bg-gradient-to-br ${showcaseItems[currentSlide].gradient} rounded-2xl flex items-center justify-center relative overflow-hidden`}>
+                  <div className="text-8xl opacity-80">
+                    {showcaseItems[currentSlide].image}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-3">
+                    <span className="text-2xl">✨</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Navigation Controls */}
+          <div className="flex items-center justify-between mt-8">
+            <div className="flex space-x-2">
+              <button
+                onClick={prevSlide}
+                className="p-3 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 text-white"
+              >
+                ←
+              </button>
+              <button
+                onClick={nextSlide}
+                className="p-3 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 text-white"
+              >
+                →
+              </button>
+            </div>
+
+            <div className="flex space-x-2">
+              {showcaseItems.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide
+                      ? 'bg-white scale-125'
+                      : 'bg-white/40 hover:bg-white/60'
+                  }`}
+                />
               ))}
             </div>
+
+            <button
+              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+              className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                isAutoPlaying
+                  ? 'bg-purple-600 text-white'
+                  : 'bg-white/10 text-purple-200 hover:bg-white/20'
+              }`}
+            >
+              {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
+            </button>
           </div>
+        </div>
 
-          {/* Carousel Controls */}
-          <button
-            onClick={() => setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length)}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            ←
-          </button>
-          <button
-            onClick={() => setCurrentSlide((prev) => (prev + 1) % contentItems.length)}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            →
-          </button>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center space-x-2 mt-6">
-            {contentItems.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-white' : 'bg-white/30'
-                }`}
-              />
+        {/* Quick Access Grid */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">Quick Access</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {showcaseItems.map((item, index) => (
+              <motion.a
+                key={item.id}
+                href={item.link}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className={`bg-gradient-to-br ${item.gradient} p-4 rounded-lg hover:scale-105 transition-all duration-300 text-center group`}
+              >
+                <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                  {item.image}
+                </div>
+                <div className="text-white text-sm font-semibold">
+                  {item.title.split(' ').slice(0, 2).join(' ')}
+                </div>
+              </motion.a>
             ))}
-          </div>
-        </div>
-
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {contentItems.map((item) => (
-            <div key={item.id} className={`bg-gradient-to-br ${item.gradient} backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300`}>
-              <div className="text-4xl mb-4 text-center">{item.image}</div>
-              <h3 className="text-xl font-bold mb-2 text-center">{item.title}</h3>
-              <p className="text-white/90 mb-4 text-sm text-center">{item.description}</p>
-              <div className="flex items-center justify-between">
-                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{item.category}</span>
-                <a 
-                  href={item.link}
-                  className="text-white hover:text-white/80 transition-colors font-semibold text-sm"
-                >
-                  Explore →
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold mb-4">Ready to Explore the Future?</h3>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Dive into our revolutionary content and discover the technologies that are shaping tomorrow
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore All Content →
-            </button>
-            <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
-              Get Updates
-            </button>
           </div>
         </div>
       </div>
