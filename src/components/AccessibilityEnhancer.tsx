@@ -219,11 +219,9 @@ export function AccessibilityEnhancer() {
         skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-zion-blue focus:text-white focus:rounded focus:outline-none';
         skipLink.textContent = text;
         document.body.insertBefore(skipLink, document.body.firstChild);
->>>>>>> origin/performance-accessibility-improvements
       }
     });
 
-<<<<<<< HEAD
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [announce]);
