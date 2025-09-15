@@ -1,3 +1,4 @@
+import React from 'react';
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -120,12 +121,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <FeatureCard
-                key={index}
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
                 features={feature.features}
                 gradient={feature.gradient}
+                className=""
+                key={index}
               />
             ))}
           </div>
@@ -147,8 +149,8 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-              <a href="/blog/quantum-risk-modeling-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Governance Blueprint 2025
+              <a href="/blog/ai-safety-assurance-playbook-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Safety Assurance Playbook 2025
               </a>
             </div>
           </div>

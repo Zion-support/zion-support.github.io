@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 
 interface BlogPostMeta {
   id: string;
@@ -11,6 +12,22 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-safety-assurance-playbook-2025': {
+    id: 'ai-safety-assurance-playbook-2025',
+    title: 'AI Safety Assurance Playbook 2025: Testing, Monitoring, and Guardrails',
+    excerpt:
+      'A practical playbook for validating AI systems in production with test harnesses, policy guardrails, and continuous monitoring.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '11 min read',
+    content: [
+      'Safety assurance for production AI demands an end-to-end approach that starts before deployment and continues throughout the lifecycle.',
+      'This playbook details risk taxonomies, red-teaming patterns, synthetic test data generation, canary rollouts, and human-in-the-loop controls for high‑risk actions.',
+      'We provide reference architectures for policy enforcement (pre-, in-, and post-decision), coupled with telemetry that enables rapid detection and rollback.',
+      'Templates included: test harness checklist, model change control, incident playcards, and executive reporting metrics.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
