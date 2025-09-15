@@ -98,16 +98,12 @@ export default defineConfig({
   server: {
     hmr: true,
     port: 3000,
-    host: true
+    host: true,
+    open: true
   },
   preview: {
     port: 3000,
     host: true
-  },
-
-  server: {
-    port: 3000,
-    open: true,
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion'],
