@@ -96,12 +96,12 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
             <div>
               <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Secure Agents + Red-Team Scenarios</h2>
-              <p className="text-gray-600 mt-2">Zero-trust agent architecture and adversarial scenario testing to harden systems.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Real‑Time RAG + Agents‑On‑Call</h2>
+              <p className="text-gray-600 mt-2">Low‑latency retrieval architectures and autonomous incident handling with eval‑gated playbooks.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-secure-agent-architecture" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Secure Agents</Link>
-              <Link href="/blog/ai-2026-autonomous-agents-red-team-scenarios" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Red-Team Scenarios</Link>
+              <Link href="/blog/ai-2026-real-time-retrieval-architectures" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Real‑Time RAG</Link>
+              <Link href="/blog/ai-2026-agents-oncall-automation" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agents‑On‑Call</Link>
             </div>
           </div>
         </div>
@@ -111,6 +111,22 @@ export default function HomePage() {
       
       <div className='min-h-screen bg-white'>
         <WhatsNewStrip />
+        {/* New Promo: Policy-as-Code Kit + Reliability Engineering */}
+        <section className="py-8">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-gray-100">
+              <div>
+                <p className="text-sm font-semibold text-purple-700">New content</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">Policy-as-Code Starter Kit + Reliability for Agents</h2>
+                <p className="text-gray-600 mt-2">Ship safer agents with versioned controls and SLO-driven operations.</p>
+              </div>
+              <div className="flex gap-3">
+                <Link href="/content/ai-2026-policy-as-code-starter-kit" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Policy-as-Code Kit</Link>
+                <Link href="/blog/ai-2026-reliability-engineering-for-agents" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Reliability Guide</Link>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         {/* New Multimodal Agents 2025 Banner - NEW */}
@@ -122,12 +138,12 @@ export default function HomePage() {
               <div>
                 <p className="text-sm font-semibold text-purple-700">Just published</p>
                 <h2 className="text-2xl font-bold text-gray-900 mt-1">Explore our newest guides</h2>
-                <p className="text-gray-600 mt-2">Now featuring Evals Maturity Model 2026, Agent Safety Certification, and Policy-as-Code.</p>
+                <p className="text-gray-600 mt-2">Now featuring Agents‑On‑Call 2026, Evals Maturity Model, and Policy‑as‑Code.</p>
               </div>
               <div className="flex gap-3">
                 <Link href="/content/ai-2026-evals-maturity-model" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Evals Maturity</Link>
                 <Link href="/content/ai-2026-agent-safety-certification" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Safety Certification</Link>
-                <Link href="/content/ai-2026-agent-governance-policy-as-code" className="hidden md:inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Policy-as-Code</Link>
+                <Link href="/blog/ai-2026-agents-oncall-automation" className="hidden md:inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agents‑On‑Call</Link>
               </div>
             </div>
           </div>
@@ -215,17 +231,17 @@ export default function HomePage() {
         {/* Revolutionary AI Content 2026 Banner - NEW FEATURED */}
         <RevolutionaryAIContent2026Banner />
 
-        {/* Promo: New Article - Multimodal Agents Blueprint 2026 */}
+        {/* Promo: New Article - Agents-On-Call Automation 2026 */}
         <section className="py-12 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               <div>
                 <div className="text-sm font-semibold text-purple-700 mb-2">New on the blog</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Multimodal Agents Enterprise Blueprint</h3>
-                <p className="text-gray-600 max-w-2xl">A practical blueprint to design, deploy, and scale multimodal agents across your enterprise with measurable ROI.</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Agents‑On‑Call Automation</h3>
+                <p className="text-gray-600 max-w-2xl">Autonomous triage, mitigation, and escalation with eval‑gated playbooks and deep observability.</p>
               </div>
               <div className="shrink-0">
-                <Link href="/blog/ai-2026-multimodal-agents-enterprise-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
+                <Link href="/blog/ai-2026-agents-oncall-automation" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
               </div>
             </div>
           </div>

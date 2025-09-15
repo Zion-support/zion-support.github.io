@@ -49,10 +49,7 @@
       "@constants/*": ["src/constants/*"],
       "@/components/*": ["src/components/*"]
     },
-    "types": ["vite/client", "node"],
-    "plugins": [
-      { "name": "typescript-plugin-css-modules" }
-    ]
+    "types": ["vite/client", "node"]
   },
   "include": [
     "src/**/*",
