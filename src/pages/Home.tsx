@@ -1,50 +1,28 @@
-import React, { Suspense, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  BarChart3, 
-  Target, 
-  Lightbulb, 
-  Database, 
-  Network, 
-  Eye, 
-  Globe2, 
-  Smartphone, 
-  Monitor, 
-  Server, 
-  Atom, 
-  Car, 
-  Scale, 
-  Leaf, 
-  Factory, 
-  Building, 
-  Clock, 
-  Phone, 
-  Mail, 
-  TrendingUp 
-} from 'lucide-react';
-import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
+import { SEO } from "@/components/SEO";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { getRecentBlogPosts } from "@/data/blog-posts";
+import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Atom,
+  Brain,
+  Building,
+  Car,
+  CheckCircle,
+  Clock,
+  Cloud,
+  Cpu,
+  DollarSign,
+  Globe2,
+  Shield,
+  Target,
+  TrendingUp,
+  Users,
+  Zap
+} from 'lucide-react';
+import React, { Suspense, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Lazy load heavy components
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
@@ -547,6 +525,43 @@ export default function Home() {
                     </div>
                   </div>
                 </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Latest from the Blog */}
+        <motion.section 
+          className="py-20 px-4 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center justify-between mb-10">
+              <h2 className="text-4xl font-bold text-white">Latest from the Blog</h2>
+              <Link to="/blog" className="text-zion-cyan hover:text-zion-cyan-light">View all →</Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {getRecentBlogPosts(3).map((post) => (
+                <div key={post.id} className="bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300">
+                  <div className="w-full h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-t-xl border-b border-slate-600/50 flex items-center justify-center">
+                    <div className="text-center text-gray-400">
+                      <div className="text-3xl mb-2">📰</div>
+                      <div className="text-sm">Blog Image</div>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <span className="text-xs px-2 py-1 bg-slate-700/50 text-zion-cyan rounded">{post.category}</span>
+                    <h3 className="text-xl font-bold text-white mt-3 mb-2">{post.title}</h3>
+                    <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
+                    <div className="text-sm text-gray-400 mb-4">{new Date(post.publishDate).toLocaleDateString()} • {post.readTime}</div>
+                    <Link to={`/blog/${post.slug}`} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light">
+                      Read more <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    </Link>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
