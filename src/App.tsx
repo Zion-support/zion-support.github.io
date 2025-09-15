@@ -87,6 +87,13 @@ const Support = React.lazy(() => import('./pages/Support'));
 const Investors = React.lazy(() => import('./pages/Investors'));
 const Press = React.lazy(() => import('./pages/Press'));
 
+// Import new marketing components
+const NewFeaturesShowcase = React.lazy(() => import('./NewFeaturesShowcase'));
+const PromotionalBanner = React.lazy(() => import('./PromotionalBanner'));
+const MarketingSection = React.lazy(() => import('./MarketingSection'));
+const PromotionalLanding = React.lazy(() => import('./pages/PromotionalLanding'));
+const NewFeaturesBlogPost = React.lazy(() => import('./pages/blog/NewFeaturesBlogPost'));
+
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -189,6 +196,13 @@ function App() {
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                 <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnosticsPlatform />} />
                 <Route path="/services/blockchain-supply-chain-transparency" element={<BlockchainSupplyChainTransparency />} />
+
+                {/* New marketing and promotional routes */}
+                <Route path="/new-features" element={<NewFeaturesShowcase />} />
+                <Route path="/marketing" element={<MarketingSection />} />
+                <Route path="/promotional" element={<PromotionalBanner />} />
+                <Route path="/promotional-landing" element={<PromotionalLanding />} />
+                <Route path="/blog/new-features-launch" element={<NewFeaturesBlogPost />} />
 
                 {/* Enhanced 404 route */}
                 <Route path="*" element={

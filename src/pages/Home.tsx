@@ -45,6 +45,7 @@ import {
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import PromotionalBanner from "../PromotionalBanner";
 
 // Lazy load heavy components
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
@@ -324,6 +325,9 @@ export default function Home() {
       />
       
       <div className="min-h-screen bg-futuristic">
+        {/* Promotional Banner */}
+        <PromotionalBanner variant="limited-time" />
+        
         {/* Hero Section */}
         <HeroSection />
 
