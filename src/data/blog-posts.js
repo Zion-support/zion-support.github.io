@@ -16,6 +16,21 @@ export const blogPosts = [
   },
   // Newly added to match frontend promos and advertise fresh content
   {
+    id: 1004,
+    title: "Quantum-Neural Hybrid Computing: The Next Frontier",
+    excerpt: "Explore how quantum-neural fusion is revolutionizing computational capabilities and AI processing.",
+    content: "The convergence of quantum computing and neural networks represents a paradigm shift in computational science. This comprehensive guide explores how quantum-neural hybrid systems are solving previously intractable problems, from drug discovery to financial modeling, while maintaining the reliability and interpretability that enterprise applications demand.",
+    author: "Dr. Sarah Chen",
+    authorRole: "Chief Quantum Scientist",
+    publishDate: "2025-09-15",
+    readTime: "12 min read",
+    category: "Quantum Computing",
+    tags: ["Quantum", "Neural Networks", "Hybrid Computing", "AI"],
+    featured: true,
+    imageUrl: "/images/blog/quantum-neural-hybrid.jpg",
+    slug: "quantum-neural-hybrid-computing-next-frontier"
+  },
+  {
     id: 1005,
     title: "AI 2026: Trustworthy Model Routing — Eval‑Gated Decisions",
     excerpt: "Route tasks to the best model using evaluation gates with auditable evidence.",
@@ -914,6 +929,21 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/agent-platform-operations-2026.jpg",
     slug: "ai-2026-agent-platform-operations"
+  },
+  {
+    id: 1007,
+    title: "Synthetic Intelligence: Beyond Traditional AI Boundaries",
+    excerpt: "Discover how synthetic intelligence is creating new possibilities for human-AI collaboration and creativity.",
+    content: "Synthetic intelligence represents the next evolution in AI development, combining the best of human creativity with machine precision. This deep dive explores how synthetic intelligence systems are being deployed across industries, from creative arts to scientific research, and the ethical considerations that come with this powerful technology.",
+    author: "Dr. Marcus Rodriguez",
+    authorRole: "Director of Synthetic Intelligence Research",
+    publishDate: "2025-09-15",
+    readTime: "10 min read",
+    category: "Artificial Intelligence",
+    tags: ["Synthetic Intelligence", "AI Ethics", "Human-AI Collaboration", "Creativity"],
+    featured: true,
+    imageUrl: "/images/blog/synthetic-intelligence.jpg",
+    slug: "synthetic-intelligence-beyond-traditional-ai-boundaries"
   }
 ];
 
