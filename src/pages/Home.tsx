@@ -45,6 +45,8 @@ import {
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { PromotionalBanner, FeaturedPromotion } from "@/components/PromotionalBanner";
+import { CaseStudyShowcase } from "@/components/CaseStudyShowcase";
 
 // Lazy load heavy components
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
@@ -324,6 +326,9 @@ export default function Home() {
       />
       
       <div className="min-h-screen bg-futuristic">
+        {/* Promotional Banner */}
+        <PromotionalBanner variant="top" />
+        
         {/* Hero Section */}
         <HeroSection />
 
@@ -552,6 +557,12 @@ export default function Home() {
           </div>
         </motion.section>
 
+        {/* Featured Promotion */}
+        <FeaturedPromotion />
+
+        {/* Case Study Showcase */}
+        <CaseStudyShowcase />
+
         {/* Lazy Loaded Components */}
         <Suspense fallback={<div className="py-20 text-center"><LoadingSpinner /></div>}>
           <CategoriesSection />
@@ -577,6 +588,9 @@ export default function Home() {
           <InteractiveTestimonials />
           <ServicesShowcase />
         </Suspense>
+
+        {/* Floating Promotional Banner */}
+        <PromotionalBanner variant="floating" />
       </div>
     </>
   );
