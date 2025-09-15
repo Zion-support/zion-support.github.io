@@ -14,8 +14,8 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     id: "real-time-rag-2026",
     title: "AI 2026: Real-Time Retrieval Architectures",
     description:
-      "Blueprints for sub-200ms RAG: hybrid search, reranking, streaming UX, and SLOs.",
-    ctaLabel: "Read Article",
+      "Sub-100ms RAG with hybrid search, semantic caching, and streaming for production.",
+    ctaLabel: "Read Guide",
     href: "/blog/ai-2026-real-time-retrieval-architectures",
     emoji: "⚡",
     highlight: true,
@@ -25,10 +25,21 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     id: "autonomous-ops-playbook-2026",
     title: "AI 2026: Autonomous Ops Playbook",
     description:
-      "Event-driven incident automation, SRE patterns, and policy-as-code for AI systems.",
-    ctaLabel: "Open Playbook",
+      "A practical playbook to deploy autonomous, outcome-driven operations with guardrails.",
+    ctaLabel: "Explore Playbook",
     href: "/content/ai-2026-autonomous-ops-playbook",
     emoji: "🛠️",
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-observability-guide-2026",
+    title: "AI 2026: Enterprise Agent Observability Guide",
+    description:
+      "Traces, evals, and safety telemetry to operate autonomous agents in production.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-enterprise-agent-observability-guide",
+    emoji: "👀",
+    highlight: true,
     date: "2025-09-15",
   },
   {
