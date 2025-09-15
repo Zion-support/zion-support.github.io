@@ -72,10 +72,31 @@ export default function BlogPage() {
       readTime: '10 min read',
       image: '/blog/autonomous-ai.jpg',
       featured: true
+    },
+    {
+      id: 'agentic-supply-chains-2025',
+      title: 'Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents',
+      excerpt: 'Autonomous agents coordinating demand sensing, supplier negotiation, and dynamic routing with safety rails.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/agentic-supply-chains.jpg',
+      featured: true
     }
   ];
 
   const recentPosts = [
+    {
+      id: 'genai-productivity-benchmarks-2025',
+      title: 'GenAI Productivity Benchmarks 2025: Measuring Real Business Impact',
+      excerpt: 'A benchmarking framework for time savings, quality lift, and ROI in GenAI workflows.',
+      category: 'Research & Development',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-13',
+      readTime: '8 min read',
+      image: '/blog/genai-productivity-benchmarks.jpg'
+    },
     {
       id: 'edge-ai-marketplaces',
       title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
@@ -213,24 +234,24 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
-            href="/blog/ai-governance-blueprint-2025"
+            href="/blog/agentic-supply-chains-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy"
+            aria-label="Read: Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                AG
+                AS
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Governance</span>
+                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Solutions</span>
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-                  AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy
+                  Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A pragmatic framework for blending automated policy engines with human oversight for AI at scale.
+                  How autonomous agents coordinate forecasting, procurement, and fulfillment with measurable SLAs.
                 </p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
