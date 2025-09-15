@@ -7,21 +7,21 @@ const NewContentPromotionBanner: React.FC = () => {
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <div className="text-sm font-semibold text-purple-700 mb-2">Just published</div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">AI 2026: Evals Maturity Model</h2>
-            <p className="text-lg text-gray-600 max-w-2xl">A roadmap from ad-hoc checks to evaluation-first operations with risk-tiered gates.</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">AI 2026: Operational Excellence Blueprint</h2>
+            <p className="text-lg text-gray-600 max-w-2xl">Practical patterns to run reliable, efficient, and governed AI operations at scale.</p>
           </div>
           <div className="flex gap-3">
-            <a href="/content/ai-2026-evals-maturity-model" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read →</a>
-            <a href="/content/ai-2026-agentic-evaluation-checklists" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Checklists</a>
+            <a href="/content/ai-2026-operational-excellence-blueprint" className="shrink-0 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read →</a>
+            <a href="/blog/ai-2026-agent-posture-management" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Posture Guide</a>
           </div>
         </div>
         <div className="mt-6 bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <div className="text-sm font-semibold text-purple-700 mb-2">Also new</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Policy-as-Code for Agent Governance</h3>
-            <p className="text-lg text-gray-600 max-w-2xl">Codify guardrails and approvals to scale autonomous operations with confidence.</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">AI 2026: Agent Posture Hardening Guide</h3>
+            <p className="text-lg text-gray-600 max-w-2xl">Baseline controls, continuous posture checks, and remediation flows for agent systems.</p>
           </div>
-          <a href="/content/ai-2026-agent-governance-policy-as-code" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Read →</a>
+          <a href="/blog/ai-2026-agent-posture-management" className="shrink-0 inline-block border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">Read →</a>
         </div>
       </div>
     </div>
