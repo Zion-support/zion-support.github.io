@@ -7,6 +7,31 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (late night batch)
+  {
+    title: 'Launch: Autonomous Knowledge Ops Suite v1.0',
+    summary:
+      'Governed content lifecycle with eval-gated drafts, reviews, and audit-ready publishing.',
+    href: '/updates/autonomous-knowledge-ops-suite-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Agent Postmortems That Drive Reliability (2026)',
+    summary:
+      'Structured incident reviews with evidence bundles, causal graphs, and playbook updates.',
+    href: '/updates/agent-postmortems-reliability-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: State of Real-Time Agent Telemetry 2026',
+    summary:
+      'Signals that matter: budgets, guardrail events, eval IDs, and user outcomes.',
+    href: '/updates/state-of-real-time-agent-telemetry-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
   {
     title: 'Report: AI Governance Readiness 2026',
     summary:
