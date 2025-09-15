@@ -52,15 +52,11 @@ import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
-<<<<<<< HEAD
-=======
-import AdvancedAITransformation2026 from './src/pages/AdvancedAITransformation2026';
-import NextGenTechShowcase2026 from './src/pages/NextGenTechShowcase2026';
-import AdvancedAISystems2026 from './src/pages/AdvancedAISystems2026';
-import SpaceTechAI2025 from './src/pages/SpaceTechAI2025';
-import BiotechAIRevolution2025 from './src/pages/BiotechAIRevolution2025';
-import InnovationShowcase2026 from './src/components/InnovationShowcase2026';
->>>>>>> cursor/create-and-deploy-new-content-dc9e
+import AdvancedBiotechAI2026 from './src/pages/AdvancedBiotechAI2026';
+import AdvancedRobotics2026 from './src/pages/AdvancedRobotics2026';
+import AdvancedCybersecuritySuite2026 from './src/pages/AdvancedCybersecuritySuite2026';
+import ComprehensiveBlog2026 from './src/pages/ComprehensiveBlog2026';
+import RevolutionaryContentBanner2026 from './src/components/RevolutionaryContentBanner2026';
 
 export default function App(): JSX.Element {
   return (
@@ -74,6 +70,9 @@ export default function App(): JSX.Element {
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary Content Banner 2026 */}
+                <RevolutionaryContentBanner2026 />
+                
+                {/* NEW: Revolutionary Content Banner 2026 - Latest Technologies */}
                 <RevolutionaryContentBanner2026 />
                 
                 {/* Revolutionary New Content Banner */}
@@ -176,6 +175,18 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/RevolutionaryTechBlog2026" className="border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors text-center font-semibold">
                       📚 Tech Blog 2026
+                    </a>
+                    <a href="/pages/AdvancedBiotechAI2026" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🧬 Biotech AI 2026
+                    </a>
+                    <a href="/pages/AdvancedRobotics2026" className="bg-gradient-to-r from-slate-600 to-gray-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🤖 Robotics 2026
+                    </a>
+                    <a href="/pages/AdvancedCybersecuritySuite2026" className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      🛡️ Cybersecurity 2026
+                    </a>
+                    <a href="/pages/ComprehensiveBlog2026" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
+                      📰 Comprehensive Blog
                     </a>
                     <a href="/pages/TechnologyInsights2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center">
                       🔮 Tech Insights 2025
@@ -659,6 +670,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
+          <Route path="/pages/AdvancedBiotechAI2026" element={<AdvancedBiotechAI2026 />} />
+          <Route path="/pages/AdvancedRobotics2026" element={<AdvancedRobotics2026 />} />
+          <Route path="/pages/AdvancedCybersecuritySuite2026" element={<AdvancedCybersecuritySuite2026 />} />
+          <Route path="/pages/ComprehensiveBlog2026" element={<ComprehensiveBlog2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
