@@ -122,6 +122,38 @@ export const blogPosts = [
   }
   ,
   {
+    id: 1001,
+    title: "AI 2026: Agent Incident Response Playbook",
+    excerpt: "Eval‑gated triage, mitigation, and escalation with autonomous agents.",
+    content: "This playbook details agentic incident response: telemetry-driven detection, eval‑gated action selection, safe runbooks, human‑in‑the‑loop escalation for high‑risk steps, and rollback automation. Includes reference architectures, SLAs/SLOs, and implementation checklists.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-15",
+    readTime: "9 min read",
+    category: "Operations",
+    tags: ["AIOps", "Incident Response", "Agents", "Evals"],
+    featured: true,
+    imageUrl: "/images/blog/agent-incident-response-playbook-2026.jpg",
+    slug: "ai-2026-agent-incident-response-playbook"
+  }
+  ,
+  {
+    id: 1002,
+    title: "AI 2026: Safe Tool Use Blueprint",
+    excerpt: "Permissioned tool use with risk tiers, sandboxes, and runtime checks.",
+    content: "Enterprises need safe tool use patterns for agents. We cover permission models, task risk tiers, schema validation, sandboxed execution, policy‑as‑code guards, logging and audit, plus CI/CD checks and runtime tripwires to prevent abuse while keeping velocity high.",
+    author: "Morgan Reyes",
+    authorRole: "Head of Responsible AI Engineering",
+    publishDate: "2025-09-15",
+    readTime: "8 min read",
+    category: "Safety",
+    tags: ["Tool Use", "Policy-as-Code", "Safety", "Agents"],
+    featured: true,
+    imageUrl: "/images/blog/safe-tool-use-blueprint-2026.jpg",
+    slug: "ai-2026-safe-tool-use-blueprint"
+  }
+  ,
+  {
     id: 7,
     title: "Enterprise AI Security Blueprint (2025)",
     excerpt: "Layered controls for model, data, runtime, and supply chain risk.",
