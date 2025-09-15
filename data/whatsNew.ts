@@ -11,6 +11,28 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "llm-evals-maturity-model-2026-content",
+    title: "AI 2026: LLM Evals Maturity Model",
+    description:
+      "Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.",
+    ctaLabel: "Read Framework",
+    href: "/content/ai-2026-evals-maturity-model",
+    emoji: "📈",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agent-safety-certification-2026-content",
+    title: "AI 2026: Agent Safety Certification",
+    description:
+      "Structured certification to validate agent safety with scenario test suites and governance.",
+    ctaLabel: "Read Certification",
+    href: "/content/ai-2026-agent-safety-certification",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
     id: "autonomous-evals-blueprint-2026",
     title: "AI 2026: Autonomous Evals Blueprint",
     description:
