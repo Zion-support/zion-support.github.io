@@ -86,3 +86,15 @@
 2025-09-15 15:33:09 - Merge conflicts detected in dependabot/npm_and_yarn/next-15.4.7
 2025-09-15 15:33:10 - Resolving conflicts in package-lock.json for branch dependabot/npm_and_yarn/next-15.4.7
 2025-09-15 15:33:10 - Resolving conflicts in package.json for branch dependabot/npm_and_yarn/next-15.4.7
+2025-09-15 15:33:17 - Merge conflicts detected in dependabot/npm_and_yarn/next-themes-0.4.6
+2025-09-15 15:33:17 - Resolving conflicts in dist/index.html for branch dependabot/npm_and_yarn/next-themes-0.4.6
+2025-09-15 15:33:17 - Resolving conflicts in dist/reports/page-validation/index.html for branch dependabot/npm_and_yarn/next-themes-0.4.6
+2025-09-15 15:33:17 - Resolving conflicts in dist/reports/page-validation/latest.json for branch dependabot/npm_and_yarn/next-themes-0.4.6
+2025-09-15 15:33:17 - Resolving conflicts in index.html for branch dependabot/npm_and_yarn/next-themes-0.4.6
+2025-09-15 15:33:17 - Resolving conflicts in package-lock.json for branch dependabot/npm_and_yarn/next-themes-0.4.6
+2025-09-15 15:33:18 - Resolving conflicts in package.json for branch dependabot/npm_and_yarn/next-themes-0.4.6
+2025-09-15 15:33:18 - Resolving conflicts in src/App.tsx for branch dependabot/npm_and_yarn/next-themes-0.4.6
+2025-09-15 15:33:18 - Resolving conflicts in src/components/QuoteRequestForm.tsx for branch dependabot/npm_and_yarn/next-themes-0.4.6
+2025-09-15 15:33:18 - Resolving conflicts in src/pages/Blog.tsx for branch dependabot/npm_and_yarn/next-themes-0.4.6
+2025-09-15 15:33:18 - Resolving conflicts in src/pages/RequestQuote.tsx for branch dependabot/npm_and_yarn/next-themes-0.4.6
+2025-09-15 15:33:18 - Resolving conflicts in yarn.lock for branch dependabot/npm_and_yarn/next-themes-0.4.6
