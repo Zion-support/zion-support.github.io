@@ -179,3 +179,116 @@ zion-os/src/components/Navigation.tsx
 [2025-09-15 15:43:07] 🔧 Resolving conflicts in zion-os/src/components/Navigation.tsx for branch backup-main-20250915-070330...
 [2025-09-15 15:43:07] 🧩 Generic file: prefer main version
 [2025-09-15 15:43:07] ✅ Resolved conflicts in zion-os/src/components/Navigation.tsx
+[2025-09-15 15:43:08] ✅ Successfully resolved conflicts and merged backup-main-20250915-070330
+[2025-09-15 15:43:08] ✅ Branch backup-main-20250915-070330 processed successfully
+[2025-09-15 15:43:08] 📊 Batch progress: 12 successful, 0 failed
+[2025-09-15 15:43:08] 📊 Overall progress: 12 successful, 0 failed, 23 conflicts resolved
+[2025-09-15 15:43:08] 📋 Processing branch 13: backup-main-20250915-072006
+[2025-09-15 15:43:08] 🔄 Attempting to merge backup-main-20250915-072006...
+[2025-09-15 15:43:13] ⚠️  Merge conflicts detected in backup-main-20250915-072006, resolving...
+[2025-09-15 15:43:13] 📋 Conflicted files: public/robots-new.txt
+zion-os/.next/cache/webpack/edge-server-production/index.pack
+zion-os/.next/cache/webpack/server-production/0.pack
+zion-os/.next/cache/webpack/server-production/index.pack
+zion-os/.next/cache/webpack/server-production/index.pack.old
+zion-os/.next/server/app-paths-manifest.json
+zion-os/.next/server/app/about/page.js
+zion-os/.next/server/app/about/page.js.nft.json
+zion-os/.next/server/app/accessibility/page.js
+zion-os/.next/server/app/accessibility/page.js.nft.json
+zion-os/.next/server/app/admin/instances/page.js
+zion-os/.next/server/app/admin/instances/page.js.nft.json
+zion-os/.next/server/app/admin/os-deploy/page.js
+zion-os/.next/server/app/page.js
+zion-os/.next/server/app/services/page.js
+zion-os/.next/server/app/services/page.js.nft.json
+zion-os/.next/server/server-reference-manifest.js
+zion-os/.next/server/server-reference-manifest.json
+zion-os/.next/trace
+zion-os/src/app/about/page.tsx
+zion-os/src/app/accessibility/page.tsx
+zion-os/src/app/admin/deployments/page.tsx
+zion-os/src/app/admin/instances/page.tsx
+zion-os/src/app/admin/layout.tsx
+zion-os/src/app/blog/[id]/page.tsx
+zion-os/src/app/blog/page.tsx
+zion-os/src/app/page.tsx
+zion-os/src/components/Navigation.tsx
+zion-os/src/data/services.ts
+[2025-09-15 15:43:13] 🔧 Resolving conflicts in public/robots-new.txt for branch backup-main-20250915-072006...
+[2025-09-15 15:43:13] 🔧 Resolving conflicts in zion-os/.next/cache/webpack/edge-server-production/index.pack for branch backup-main-20250915-072006...
+[2025-09-15 15:43:13] 🔧 Resolving conflicts in zion-os/.next/cache/webpack/server-production/0.pack for branch backup-main-20250915-072006...
+[2025-09-15 15:43:13] 🔧 Resolving conflicts in zion-os/.next/cache/webpack/server-production/index.pack for branch backup-main-20250915-072006...
+[2025-09-15 15:43:13] 🔧 Resolving conflicts in zion-os/.next/cache/webpack/server-production/index.pack.old for branch backup-main-20250915-072006...
+[2025-09-15 15:43:13] 🔧 Resolving conflicts in zion-os/.next/server/app-paths-manifest.json for branch backup-main-20250915-072006...
+[2025-09-15 15:43:13] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:13] ✅ Resolved conflicts in zion-os/.next/server/app-paths-manifest.json
+[2025-09-15 15:43:13] 🔧 Resolving conflicts in zion-os/.next/server/app/about/page.js for branch backup-main-20250915-072006...
+[2025-09-15 15:43:13] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:14] ✅ Resolved conflicts in zion-os/.next/server/app/about/page.js
+[2025-09-15 15:43:14] 🔧 Resolving conflicts in zion-os/.next/server/app/about/page.js.nft.json for branch backup-main-20250915-072006...
+[2025-09-15 15:43:14] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:14] ✅ Resolved conflicts in zion-os/.next/server/app/about/page.js.nft.json
+[2025-09-15 15:43:14] 🔧 Resolving conflicts in zion-os/.next/server/app/accessibility/page.js for branch backup-main-20250915-072006...
+[2025-09-15 15:43:14] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:14] ✅ Resolved conflicts in zion-os/.next/server/app/accessibility/page.js
+[2025-09-15 15:43:14] 🔧 Resolving conflicts in zion-os/.next/server/app/accessibility/page.js.nft.json for branch backup-main-20250915-072006...
+[2025-09-15 15:43:14] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:14] ✅ Resolved conflicts in zion-os/.next/server/app/accessibility/page.js.nft.json
+[2025-09-15 15:43:14] 🔧 Resolving conflicts in zion-os/.next/server/app/admin/instances/page.js for branch backup-main-20250915-072006...
+[2025-09-15 15:43:14] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:14] ✅ Resolved conflicts in zion-os/.next/server/app/admin/instances/page.js
+[2025-09-15 15:43:14] 🔧 Resolving conflicts in zion-os/.next/server/app/admin/instances/page.js.nft.json for branch backup-main-20250915-072006...
+[2025-09-15 15:43:14] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:15] ✅ Resolved conflicts in zion-os/.next/server/app/admin/instances/page.js.nft.json
+[2025-09-15 15:43:15] 🔧 Resolving conflicts in zion-os/.next/server/app/admin/os-deploy/page.js for branch backup-main-20250915-072006...
+[2025-09-15 15:43:15] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:15] ✅ Resolved conflicts in zion-os/.next/server/app/admin/os-deploy/page.js
+[2025-09-15 15:43:15] 🔧 Resolving conflicts in zion-os/.next/server/app/page.js for branch backup-main-20250915-072006...
+[2025-09-15 15:43:15] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:15] ✅ Resolved conflicts in zion-os/.next/server/app/page.js
+[2025-09-15 15:43:15] 🔧 Resolving conflicts in zion-os/.next/server/app/services/page.js for branch backup-main-20250915-072006...
+[2025-09-15 15:43:15] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:15] ✅ Resolved conflicts in zion-os/.next/server/app/services/page.js
+[2025-09-15 15:43:15] 🔧 Resolving conflicts in zion-os/.next/server/app/services/page.js.nft.json for branch backup-main-20250915-072006...
+[2025-09-15 15:43:15] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:15] ✅ Resolved conflicts in zion-os/.next/server/app/services/page.js.nft.json
+[2025-09-15 15:43:15] 🔧 Resolving conflicts in zion-os/.next/server/server-reference-manifest.js for branch backup-main-20250915-072006...
+[2025-09-15 15:43:15] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:15] ✅ Resolved conflicts in zion-os/.next/server/server-reference-manifest.js
+[2025-09-15 15:43:15] 🔧 Resolving conflicts in zion-os/.next/server/server-reference-manifest.json for branch backup-main-20250915-072006...
+[2025-09-15 15:43:15] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:16] ✅ Resolved conflicts in zion-os/.next/server/server-reference-manifest.json
+[2025-09-15 15:43:16] 🔧 Resolving conflicts in zion-os/.next/trace for branch backup-main-20250915-072006...
+[2025-09-15 15:43:16] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:16] ✅ Resolved conflicts in zion-os/.next/trace
+[2025-09-15 15:43:16] 🔧 Resolving conflicts in zion-os/src/app/about/page.tsx for branch backup-main-20250915-072006...
+[2025-09-15 15:43:16] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:16] ✅ Resolved conflicts in zion-os/src/app/about/page.tsx
+[2025-09-15 15:43:16] 🔧 Resolving conflicts in zion-os/src/app/accessibility/page.tsx for branch backup-main-20250915-072006...
+[2025-09-15 15:43:16] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:16] ✅ Resolved conflicts in zion-os/src/app/accessibility/page.tsx
+[2025-09-15 15:43:16] 🔧 Resolving conflicts in zion-os/src/app/admin/deployments/page.tsx for branch backup-main-20250915-072006...
+[2025-09-15 15:43:16] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:16] ✅ Resolved conflicts in zion-os/src/app/admin/deployments/page.tsx
+[2025-09-15 15:43:16] 🔧 Resolving conflicts in zion-os/src/app/admin/instances/page.tsx for branch backup-main-20250915-072006...
+[2025-09-15 15:43:16] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:17] ✅ Resolved conflicts in zion-os/src/app/admin/instances/page.tsx
+[2025-09-15 15:43:17] 🔧 Resolving conflicts in zion-os/src/app/admin/layout.tsx for branch backup-main-20250915-072006...
+[2025-09-15 15:43:17] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:17] ✅ Resolved conflicts in zion-os/src/app/admin/layout.tsx
+[2025-09-15 15:43:17] 🔧 Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch backup-main-20250915-072006...
+[2025-09-15 15:43:17] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:17] ✅ Resolved conflicts in zion-os/src/app/blog/[id]/page.tsx
+[2025-09-15 15:43:17] 🔧 Resolving conflicts in zion-os/src/app/blog/page.tsx for branch backup-main-20250915-072006...
+[2025-09-15 15:43:17] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:17] ✅ Resolved conflicts in zion-os/src/app/blog/page.tsx
+[2025-09-15 15:43:17] 🔧 Resolving conflicts in zion-os/src/app/page.tsx for branch backup-main-20250915-072006...
+[2025-09-15 15:43:17] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:17] ✅ Resolved conflicts in zion-os/src/app/page.tsx
+[2025-09-15 15:43:17] 🔧 Resolving conflicts in zion-os/src/components/Navigation.tsx for branch backup-main-20250915-072006...
+[2025-09-15 15:43:17] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:17] ✅ Resolved conflicts in zion-os/src/components/Navigation.tsx
+[2025-09-15 15:43:17] 🔧 Resolving conflicts in zion-os/src/data/services.ts for branch backup-main-20250915-072006...
+[2025-09-15 15:43:17] 🧩 Generic file: prefer main version
+[2025-09-15 15:43:18] ✅ Resolved conflicts in zion-os/src/data/services.ts
