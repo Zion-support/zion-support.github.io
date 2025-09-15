@@ -136,7 +136,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4">
-                  {stats.map((statindex) => (
+                  {stats.map((stat, index) => (
                     <div key={index} className="bg-white/5 rounded-lg p-3 text-center">
                       <div className="text-2xl font-bold text-white">{stat.value}</div>
                       <div className="text-sm text-gray-400">{stat.label}</div>
@@ -148,11 +148,11 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
               <div className="space-y-4">
                 <h4 className="text-lg font-semibold text-white mb-4">Demo Features:</h4>
                 <div className="space-y-3">
-                  {demoSteps.map((stepindex) => (
+                  {demoSteps.map((step, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0x: -20 }}
-                      animate={{ opacity: 1x: 0 }}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
                       className="flex items-center gap-3"
                     >
@@ -169,18 +169,18 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
 
           {/* Feature Icons */}
           <motion.div
-            initial={{ opacity: 0y: 30 }}
-            animate={{ opacity: 1y: 0 }}
-            transition={{ duration: 0.8delay: 0.8 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-wrap justify-center gap-8 mb-12"
           >
-            {features.map((featureindex) => {
+            {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={{ opacity: 1scale: 1 }}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.9 + index * 0.1 }}
                   className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >

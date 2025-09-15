@@ -95,6 +95,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    // New 2026 revolutionary content pages
+    {
+      url: `${baseUrl}/ai-2026-revolution`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/quantum-ai-2026`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    // New 2025 content pages
+    {
+      url: `${baseUrl}/blog/ai-trends-2025-ultimate-guide`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/fortune-500-ai-transformation`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
     }
   ]
 }

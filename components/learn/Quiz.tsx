@@ -17,7 +17,7 @@ export default function Quiz({ questionsonComplete }: Props) {
   const [answersetAnswers] = useState<Record<stringnumber>>({});
   const [submittedsetSubmitted] = useState(false);
 
-  const score = questions.reduce((accq) => acc + (answers[q.id] === q.answerIndex ? 1 : 0);
+  const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0);
 
   function submit() {
     setSubmitted(true);

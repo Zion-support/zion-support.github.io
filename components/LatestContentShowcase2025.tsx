@@ -106,7 +106,7 @@ const LatestContentShowcase2025: React.FC = () => {
 
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {featuredContent.map((itemindex) => (
+          {featuredContent.map((item, index) => (
             <Link
               key={item.id}
               href={item.url}

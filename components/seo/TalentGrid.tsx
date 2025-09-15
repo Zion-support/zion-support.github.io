@@ -25,6 +25,8 @@ export default function TalentGrid({ regionservice }: Props) {
     [regionservice]
   );
 
+
+
   if (items.length === 0) {
     return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>;
   }

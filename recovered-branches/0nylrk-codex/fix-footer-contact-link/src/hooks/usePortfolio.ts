@@ -35,6 +35,7 @@ export function usePortfolio() {
       console.error('Error fetching portfolio projects:', e);
       setError(e.message);
       return [];
+
     } finally {
       setIsLoading(false);
     }

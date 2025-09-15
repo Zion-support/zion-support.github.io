@@ -1,4 +1,7 @@
+
 export interface FuturisticAiService2029 {
+export interface FuturisticAiService2029 {;
+
   id: string;
   name: string;
   tagline: string;
@@ -11,12 +14,44 @@ export interface FuturisticAiService2029 {
   contactInfo: {
     mobile: string;
     email: string;
+
+export interface FuturisticAiService2029 {;
     address: string;
   };
+
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+  }
 }
 
 export const futuristicAIServices2029: FuturisticAiService2029[] = [
   {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+
     id: "2029-futuristic-ai",
     name: "2029 Futuristic AI Platform",
     tagline: "Futuristic AI for 2029",
@@ -35,7 +70,11 @@ export const futuristicAIServices2029: FuturisticAiService2029[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+
+
+

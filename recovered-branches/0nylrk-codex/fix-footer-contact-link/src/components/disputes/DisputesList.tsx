@@ -80,6 +80,7 @@ export function DisputesList({ disputesisLoading }: DisputesListProps) {
     );
   }
 
+
   if (disputes.length === 0) {
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">

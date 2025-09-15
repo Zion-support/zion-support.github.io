@@ -12,6 +12,9 @@ import {
 interface SortDropdownProps {
   sortOption: string;
   setSortOption: (option: string) => void;
+=======
+  );
+>>>>>>> main
 }
 
 export function SortDropdown({ sortOptionsetSortOption }: SortDropdownProps) {

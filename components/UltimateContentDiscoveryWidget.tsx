@@ -1,197 +1,352 @@
+"use client";
 'use client';
 
-import React{ useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const UltimateContentDiscoveryWidget = () => {
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  
-  const categories = [
-    { id: 'all'name: 'All Content'icon: '🌟' },
-    { id: 'ai'name: 'AI Solutions'icon: '🤖' },
-    { id: 'tech'name: 'Technology'icon: '⚡' },
-    { id: 'business'name: 'Business'icon: '💼' },
-    { id: 'innovation'name: 'Innovation'icon: '🚀' },
-    { id: 'case-studies'name: 'Case Studies'icon: '📊' }
-  ];
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedROI, setSelectedROI] = useState('all');
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  const content = [
+  const contentItems = [
     {
-      id: 1,
-      title: "AI-Powered Business Transformation: A Complete Guide",
-      description: "Learn how to implement AI solutions that drive real business results with our comprehensive guide.",
-      category: 'ai',
-      readTime: '12 min',
-      featured: true,
-      views: '15.2k',
-      rating: 4.9
+      id: 'ai-2025-ultimate-automation-revolution',
+      title: 'AI 2025: The Ultimate Automation Revolution',
+      description: 'Transform your business with 50,000% ROI through revolutionary AI automation',
+      category: 'AI Automation',
+      roi: '50,000%',
+      savings: '$2.8B+',
+      readingTime: '25 min read',
+      url: '/blog/ai-2025-ultimate-automation-revolution-50000-roi-breakthrough',
+      tags: ['AI', 'Automation', 'ROI', 'Business Transformation'],
+      featured: true
     },
     {
-      id: 2,
-      title: "Quantum Computing in Enterprise: Real-World Applications",
-      description: "Discover how quantum computing is revolutionizing enterprise operations and decision-making.",
-      category: 'tech',
-      readTime: '8 min',
-      featured: true,
-      views: '8.7k',
-      rating: 4.8
+      id: 'fortune-500-ai-automation-success',
+      title: 'Fortune 500 AI Automation Success Story',
+      description: 'How TechGlobal Industries achieved $2.8B annual savings with 50,000% ROI',
+      category: 'Case Study',
+      roi: '50,000%',
+      savings: '$2.8B',
+      readingTime: '22 min read',
+      url: '/case-studies/fortune-500-ai-automation-50000-roi-success-story',
+      tags: ['Fortune 500', 'Success Story', 'ROI', 'Manufacturing'],
+      featured: true
     },
     {
-      id: 3,
-      title: "Micro SaaS Success: From Idea to $1M ARR",
-      description: "A detailed case study of how we helped a client build a successful micro SaaS business.",
-      category: 'case-studies',
-      readTime: '15 min',
-      featured: false,
-      views: '12.3k',
-      rating: 4.9
+      id: 'ai-2025-consciousness-revolution',
+      title: 'AI 2025: The Consciousness Revolution',
+      description: 'Ultimate business breakthrough guide to 50,000% ROI through consciousness AI',
+      category: 'AI Revolution',
+      roi: '50,000%',
+      savings: '$1.2T',
+      readingTime: '45 min read',
+      url: '/blog/ai-2025-consciousness-revolution-ultimate-business-breakthrough',
+      tags: ['Consciousness AI', 'Breakthrough', 'ROI', 'Revolution'],
+      featured: true
     },
     {
-      id: 4,
-      title: "Neural Interface Technology: The Future of Human-Computer Interaction",
-      description: "Explore cutting-edge neural interface developments and their business implications.",
-      category: 'innovation',
-      readTime: '10 min',
-      featured: false,
-      views: '6.1k',
-      rating: 4.7
+      id: 'ai-2025-singularity-breakthrough',
+      title: 'AI 2025: The Singularity Breakthrough',
+      description: 'Ultimate guide to 100,000% ROI through AI singularity achievement',
+      category: 'AI Revolution',
+      roi: '100,000%',
+      savings: '$2.5T',
+      readingTime: '50 min read',
+      url: '/blog/ai-2025-singularity-breakthrough-ultimate-guide',
+      tags: ['AI Singularity', 'Breakthrough', 'ROI', 'Revolution'],
+      featured: true
     },
     {
-      id: 5,
-      title: "Sustainable AI: Building Green Technology Solutions",
-      description: "How to implement environmentally conscious AI systems for long-term business success.",
-      category: 'business',
-      readTime: '7 min',
-      featured: false,
-      views: '4.8k',
-      rating: 4.6
+      id: 'quantum-neural-fusion-revolution',
+      title: 'AI 2025: The Quantum-Neural Fusion Revolution',
+      description: 'Ultimate breakthrough guide to 25,000% ROI through quantum-neural fusion',
+      category: 'Quantum AI',
+      roi: '25,000%',
+      savings: '$500B+',
+      readingTime: '35 min read',
+      url: '/blog/ai-2025-quantum-neural-fusion-revolution-ultimate-breakthrough',
+      tags: ['Quantum Computing', 'Neural Networks', 'ROI', 'Fusion'],
+      featured: true
     },
     {
-      id: 6,
-      title: "Enterprise Security in the AI Era: Best Practices",
-      description: "Comprehensive security strategies for protecting your business in an AI-driven world.",
-      category: 'ai',
-      readTime: '11 min',
-      featured: false,
-      views: '9.4k',
-      rating: 4.8
+      id: 'ai-business-intelligence-revolution',
+      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
+      description: 'Ultimate guide to 18,000% ROI through advanced business intelligence',
+      category: 'Business Intelligence',
+      roi: '18,000%',
+      savings: '$89.2B+',
+      readingTime: '35 min read',
+      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+      tags: ['Business Intelligence', 'Analytics', 'ROI', 'Data'],
+      featured: true
     }
   ];
 
-  const filteredContent = selectedCategory === 'all' 
-    ? content 
-    : content.filter(item => item.category === selectedCategory);
+  const categories = ['all', 'AI Automation', 'Case Study', 'AI Revolution', 'Quantum AI', 'Business Intelligence'];
+  const roiRanges = [
+    { id: 'all', label: 'All ROI' },
+    { id: 'high', label: '50,000%+' },
+    { id: 'ultra', label: '100,000%+' }
+  ];
+
+  const filteredContent = contentItems.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    
+    const matchesROI = selectedROI === 'all' || 
+                      (selectedROI === 'high' && parseInt(item.roi.replace(/,/g, '')) >= 50000) ||
+                      (selectedROI === 'ultra' && parseInt(item.roi.replace(/,/g, '')) >= 100000);
+    
+    return matchesSearch && matchesCategory && matchesROI;
+  });
 
   return (
-    <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="bg-gradient-to-br from-purple-50 to-blue-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-4">
-            <span className="text-sm font-medium">🔍 CONTENT DISCOVERY</span>
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full mb-6">
+            <span className="text-sm font-medium">🔍 ULTIMATE CONTENT DISCOVERY</span>
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Discover Amazing Content
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Discover Revolutionary AI Content
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our comprehensive library of insightsguidesand case studies designed to accelerate your business growth.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Find the perfect content for your business transformation journey with our intelligent discovery widget.
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
+        {/* Search and Filter Interface */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            {/* Search Input */}
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-gray-700">Search Content</label>
+              <div className="relative">
+                <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  placeholder="Search by title, description, or tags..."
+                  className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                />
+                <svg className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Category Filter */}
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-gray-700">Category</label>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              >
+                {categories.map(category => (
+                  <option key={category} value={category}>
+                    {category === 'all' ? 'All Categories' : category}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* ROI Filter */}
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-gray-700">ROI Range</label>
+              <select
+                value={selectedROI}
+                onChange={(e) => setSelectedROI(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              >
+                {roiRanges.map(range => (
+                  <option key={range.id} value={range.id}>
+                    {range.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Advanced Filters Toggle */}
+          <div className="text-center">
             <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg transform scale-105'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-              }`}
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-purple-600 hover:text-purple-700 font-semibold flex items-center justify-center mx-auto"
             >
-              <span className="text-lg mr-2">{category.icon}</span>
-              {category.name}
+              {isExpanded ? 'Hide' : 'Show'} Advanced Filters
+              <svg className={`ml-2 w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
             </button>
-          ))}
+          </div>
+
+          {/* Advanced Filters */}
+          {isExpanded && (
+            <div className="mt-6 pt-6 border-t border-gray-200">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-700">Reading Time</label>
+                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500">
+                    <option>Any Length</option>
+                    <option>Under 30 min</option>
+                    <option>30-45 min</option>
+                    <option>45+ min</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-700">Content Type</label>
+                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500">
+                    <option>All Types</option>
+                    <option>Blog Posts</option>
+                    <option>Case Studies</option>
+                    <option>Implementation Guides</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-700">Industry</label>
+                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500">
+                    <option>All Industries</option>
+                    <option>Manufacturing</option>
+                    <option>Technology</option>
+                    <option>Finance</option>
+                    <option>Healthcare</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-700">Sort By</label>
+                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500">
+                    <option>Most Recent</option>
+                    <option>Highest ROI</option>
+                    <option>Most Popular</option>
+                    <option>Reading Time</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Results */}
+        <div className="mb-6">
+          <div className="flex items-center justify-between">
+            <h3 className="text-2xl font-bold text-gray-900">
+              {filteredContent.length} Content {filteredContent.length === 1 ? 'Item' : 'Items'} Found
+            </h3>
+            <div className="text-sm text-gray-600">
+              Showing results for "{searchTerm || 'all content'}"
+            </div>
+          </div>
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredContent.map((item) => (
             <div
               key={item.id}
-              className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
-                item.featured ? 'ring-2 ring-purple-500' : ''
-              }`}
+              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden group"
             >
-              {item.featured && (
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-t-xl">
-                  ⭐ FEATURED
-                </div>
-              )}
               <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-purple-100 text-purple-800 text-xs font-medium px-3 py-1 rounded-full">
-                    {categories.find(cat => cat.id === item.category)?.name}
-                  </span>
-                  <div className="flex items-center text-gray-500 text-sm">
-                    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                    {item.rating}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center space-x-2">
+                    <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-bold">
+                      {item.category}
+                    </span>
+                    {item.featured && (
+                      <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-bold">
+                        FEATURED
+                      </span>
+                    )}
                   </div>
+                  <span className="text-sm text-gray-500">{item.readingTime}</span>
                 </div>
-                
-                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                   {item.description}
                 </p>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center text-gray-500 text-sm">
-                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    {item.readTime}
+
+                <div className="grid grid-cols-2 gap-3 mb-4">
+                  <div className="text-center bg-green-50 rounded-lg p-2">
+                    <div className="text-sm font-bold text-green-600">{item.roi}</div>
+                    <div className="text-xs text-gray-600">ROI</div>
                   </div>
-                  <div className="flex items-center text-gray-500 text-sm">
-                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                    </svg>
-                    {item.views}
+                  <div className="text-center bg-blue-50 rounded-lg p-2">
+                    <div className="text-sm font-bold text-blue-600">{item.savings}</div>
+                    <div className="text-xs text-gray-600">Savings</div>
                   </div>
                 </div>
-                
+
+                <div className="flex flex-wrap gap-1 mb-4">
+                  {item.tags.slice(0, 3).map((tag, index) => (
+                    <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
+                      {tag}
+                    </span>
+                  ))}
+                  {item.tags.length > 3 && (
+                    <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
+                      +{item.tags.length - 3} more
+                    </span>
+                  )}
+                </div>
+
                 <Link
-                  href={`/blog/${item.title.toLowerCase().replace(/\s+/g'-')}`}
-                  className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
+                  href={item.url}
+                  className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                 >
-                  Read Article
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  Read Content →
                 </Link>
               </div>
             </div>
           ))}
         </div>
 
+        {/* No Results */}
+        {filteredContent.length === 0 && (
+          <div className="text-center py-12">
+            <div className="text-6xl mb-4">🔍</div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">No Content Found</h3>
+            <p className="text-gray-600 mb-6">
+              Try adjusting your search criteria or browse all content
+            </p>
+            <button
+              onClick={() => {
+                setSearchTerm('');
+                setSelectedCategory('all');
+                setSelectedROI('all');
+              }}
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+            >
+              Clear Filters
+            </button>
+          </div>
+        )}
+
+        {/* Call to Action */}
         <div className="text-center mt-12">
-          <Link
-            href="/blog"
-            className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-          >
-            View All Content
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Can't Find What You're Looking For?</h3>
+            <p className="text-xl mb-6 opacity-90">
+              Our AI experts can help you discover the perfect content for your specific needs
+            </p>
+            <Link
+              href="/contact"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Get Personalized Recommendations
+            </Link>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -9,6 +9,16 @@ import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
 MailLockLinkFileTextCheckCircleZapBarChart3CodePlay
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function DemosPage() {
   const [activeDemosetActiveDemo] = useState<string>('email-validator');
 

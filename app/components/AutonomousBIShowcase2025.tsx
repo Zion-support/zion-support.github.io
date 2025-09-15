@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { TrendingUp, Brain, Zap, Clock, Users, ArrowRight, Star, ArrowRight, Brain } from 'lucide-react';
+import { TrendingUp, Brain, Zap, Clock, Users, ArrowRight, Star } from 'lucide-react';
 
 const AutonomousBIShowcase2025: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');

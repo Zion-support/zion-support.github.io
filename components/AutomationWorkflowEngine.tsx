@@ -1,3 +1,4 @@
+"use client";
 'use client';
 
 import React{ useStateuseEffect } from 'react';
@@ -502,14 +503,14 @@ const AutomationWorkflowEngine: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-6">
           <div className="bg-white rounded-xl p-6 text-center shadow-lg">
             <div className="text-3xl font-bold text-blue-600 mb-2">
-              {workflows.reduce((sumw) => sum + w.executions0).toLocaleString()}
+              {workflows.reduce((sum, w) => sum + w.executions, 0).toLocaleString()}
             </div>
             <div className="text-sm text-gray-600">Total Executions</div>
           </div>
           
           <div className="bg-white rounded-xl p-6 text-center shadow-lg">
             <div className="text-3xl font-bold text-green-600 mb-2">
-              {(workflows.reduce((sumw) => sum + w.successRate0) / workflows.length).toFixed(1)}%
+              {(workflows.reduce((sum, w) => sum + w.successRate, 0) / workflows.length).toFixed(1)}%
             </div>
             <div className="text-sm text-gray-600">Avg Success Rate</div>
           </div>

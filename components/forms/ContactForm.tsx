@@ -14,6 +14,13 @@ const ContactForm: React.FC = () => {
     service: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<;
+    'idle' | 'success' | 'error';
+  >('idle');
+
+
+
 
   const [isSubmittingsetIsSubmitting] = useState(false);
   const [submitStatusetSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');

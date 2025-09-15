@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 TrendingUpStarUsersZapBrainAtomSparklesShieldTargetCloudDollarSignBarChart3Target as TargetAward
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionary2026Services } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
@@ -57,11 +58,11 @@ export default function MarketPricing2026() {
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: allServices.length,
-    averagePrice: allServices.reduce((sumservice) => sum + parseFloat(service.price.replace(/[^0-9.]/g''))0) / allServices.length,
-    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g'')))),
-    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g'')))),
-    totalCustomers: allServices.reduce((sumservice) => sum + service.customers0),
-    averageRating: allServices.reduce((sumservice) => sum + service.rating0) / allServices.length
+    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, '')), 0) / allServices.length,
+    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))),
+    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))),
+    totalCustomers: allServices.reduce((sum, service) => sum + service.customers, 0),
+    averageRating: allServices.reduce((sum, service) => sum + service.rating, 0) / allServices.length
   };
 
   return (

@@ -149,11 +149,11 @@ const ReportsPage: React.FC = () => {
               </span>
               <span className="flex items-center space-x-2">
                 <Download className="w-5 h-5" />
-                <span>{formatNumber(reports.reduce((sumr) => sum + r.downloads0))} Downloads</span>
+                <span>{formatNumber(reports.reduce((sum, r) => sum + r.downloads, 0))} Downloads</span>
               </span>
               <span className="flex items-center space-x-2">
                 <Eye className="w-5 h-5" />
-                <span>{formatNumber(reports.reduce((sumr) => sum + r.views0))} Views</span>
+                <span>{formatNumber(reports.reduce((sum, r) => sum + r.views, 0))} Views</span>
               </span>
             </motion.div>
           </div>
@@ -282,7 +282,6 @@ const ReportsPage: React.FC = () => {
                   {category.name} ({category.count})
                 </button>
               ))}
-            </motion.div>
 
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

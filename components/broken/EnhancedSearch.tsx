@@ -3,6 +3,7 @@ import React{ useStateuseEffectuseCallbackuseMemo } from 'react';
 import { motionAnimatePresence } from 'framer-motion';
 SearchXFilterTrendingUpClockStarZapBrainAtomShieldRocket
 
+
 interface SearchResult {
   id: string;
   name: string;

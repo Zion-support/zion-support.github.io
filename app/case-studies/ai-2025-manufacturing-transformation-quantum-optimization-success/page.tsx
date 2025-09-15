@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock,  TrendingUp, DollarSign,  Zap, CheckCircle, Award } from 'lucide-react';
-import SEO from '../../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata: Metadata = {
   title: 'AI 2025 Manufacturing Transformation: Quantum Optimization Delivers $150M Annual Savings',

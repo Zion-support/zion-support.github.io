@@ -26,6 +26,7 @@ const defaultLanguageContext: LanguageContextType = {
   supportedLanguages
 };
 
+
 const LanguageContext = createContext(defaultLanguageContext);
 
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);

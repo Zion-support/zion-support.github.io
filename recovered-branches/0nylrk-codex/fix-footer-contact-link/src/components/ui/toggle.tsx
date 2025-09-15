@@ -31,6 +31,7 @@ const Toggle = React.forwardRef<ToggleRefToggleProps>(
       ref={ref}
       className={cn(toggleVariants({ variantsizeclassName }))}
       {...props}
+
     />
   )
 )

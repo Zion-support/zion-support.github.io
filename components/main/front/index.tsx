@@ -133,7 +133,14 @@ export default function MainFrontIndex() {
                 ))}
               </div>
               <div className="mt-4 flex justify-end">
-                <Link href="/automation"><a onClick={() => setMobileOpen(false)} className="rounded-lg bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-4 py-2 text-sm font-semibold">Launch Hub</a></Link>
+
+
+
+                <Link href="/automation"><a onClick={_() => setMobileOpen(false)} className="rounded-lg bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-4 py-2 text-sm font-semibold">Launch Hub</a></Link>
+
+
+
+
               </div>
             </motion.div>
           </motion.div>
@@ -660,6 +667,7 @@ export default function MainFrontIndex() {
         </section>
         {/* AUTO-GENERATED: FRONT_ADS_END */}
 
+
         {/* Outcome Benefits */}
         <motion.section
           initial={{ opacity: 0y: 24 }}
@@ -687,6 +695,7 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
+
 
         {/* Suites */}
         <motion.section
@@ -1741,6 +1750,7 @@ export default function MainFrontIndex() {
           </div>
         </motion.section>
 
+
         {/* Capabilities Matrix */}
         <motion.section
           id="capability-matrix"
@@ -1905,6 +1915,11 @@ export default function MainFrontIndex() {
     </div>
   );
 }
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 /* AUTO-GENERATED: FRONT_ACTIONS_START */
 <section className="mx-auto max-w-7xl px-6 pb-14">

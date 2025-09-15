@@ -1,5 +1,17 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+        </div>
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-yellow-400 rounded-full opacity-20 animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-16 h-16 bg-blue-400 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/2 left-5 w-12 h-12 bg-green-400 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '2s' }} />
+    </motion.section>
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -125,7 +137,7 @@ const NewContent2025UltimateBanner: React.FC = () => {
                 Read Full Guide →
               </Link>
 =======
-import { ArrowRight, Star, TrendingUp, Users, Zap, ArrowRight } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Users, Zap } from 'lucide-react';
 >>>>>>> cf2e8fd4f820d723a1dd9a365b571dabe768cfcc
 
 const NewContent2025UltimateBanner = () => {
@@ -408,7 +420,6 @@ const NewContent2025UltimateBanner = () => {
         </div>
       </div>
     </section>
+>>>>>>> cursor/create-and-deploy-new-content-040d
   );
-};
-
-export default NewContent2025UltimateBanner;
+}

@@ -4,6 +4,13 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 ActivityBarChart3AlertTriangleClockDatabaseGlobeLockShieldTrendingUpUsersZapArrowRightPlayCheckCircleStarServerCloudEyeBellSettingsCode
 
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -271,6 +278,13 @@ export default function CloudMonitoringPage() {
           </div>
         </div>
       </section>
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
       {/* Monitoring Capabilities */}
       <section className="py-24 bg-black relative overflow-hidden">

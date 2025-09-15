@@ -104,6 +104,7 @@ const Homepage2035: React.FC = () => {
     return <LoadingFallback />;
   }
 
+
   return (
     <Layout>
       <UltraFuturisticBackground2035>

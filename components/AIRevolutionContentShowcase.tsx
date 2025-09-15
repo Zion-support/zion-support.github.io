@@ -1,10 +1,11 @@
+"use client";
 'use client';
 
-import React{ useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 const AIRevolutionContentShowcase = () => {
-  const [activeCategorysetActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('all');
 
   const contentItems = [
     {
@@ -22,12 +23,12 @@ const AIRevolutionContentShowcase = () => {
       },
       readingTime: '45 min read',
       featured: true,
-      tags: ['AI Revolution'2025-2026'ROI'Fortune 500'Breakthrough']
+      tags: ['AI Revolution', '2025-2026', 'ROI', 'Fortune 500', 'Breakthrough']
     },
     {
       id: 'fortune-500-success',
       title: 'Fortune 500 AI Revolution Success: $50B Annual Savings',
-      description: 'How a Fortune 500 manufacturing conglomerate achieved unprecedented success through comprehensive AI revolution implementationdelivering 10,000% ROI and $50B in annual savings.',
+      description: 'How a Fortune 500 manufacturing conglomerate achieved unprecedented success through comprehensive AI revolution implementation, delivering 10,000% ROI and $50B in annual savings.',
       type: 'case-study',
       category: 'success-stories',
       url: '/case-studies/fortune-500-ai-revolution-10000-roi-success-story',
@@ -39,7 +40,7 @@ const AIRevolutionContentShowcase = () => {
       },
       readingTime: '25 min read',
       featured: true,
-      tags: ['Case Study'Fortune 500'AI Revolution'Success Story']
+      tags: ['Case Study', 'Fortune 500', 'AI Revolution', 'Success Story']
     },
     {
       id: 'implementation-guide',
@@ -56,7 +57,7 @@ const AIRevolutionContentShowcase = () => {
       },
       readingTime: '60 min read',
       featured: true,
-      tags: ['Implementation Guide'AI Revolution'ROI'Strategy']
+      tags: ['Implementation Guide', 'AI Revolution', 'ROI', 'Strategy']
     },
     {
       id: 'quantum-ai-breakthrough',
@@ -73,7 +74,7 @@ const AIRevolutionContentShowcase = () => {
       },
       readingTime: '22 min read',
       featured: false,
-      tags: ['Quantum AI'Business Revolution'ROI'Fortune 500']
+      tags: ['Quantum AI', 'Business Revolution', 'ROI', 'Fortune 500']
     },
     {
       id: 'autonomous-enterprise',
@@ -90,7 +91,7 @@ const AIRevolutionContentShowcase = () => {
       },
       readingTime: '28 min read',
       featured: false,
-      tags: ['Autonomous Systems'Enterprise AI'ROI'Revolution']
+      tags: ['Autonomous Systems', 'Enterprise AI', 'ROI', 'Revolution']
     },
     {
       id: 'multimodal-intelligence',

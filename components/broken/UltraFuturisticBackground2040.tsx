@@ -2,6 +2,7 @@
 import React{ useEffectuseRef } from 'react';
 import { motion } from 'framer-motion';
 
+
 const UltraFuturisticBackground2040: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -22,6 +23,9 @@ const UltraFuturisticBackground2040: React.FC = () => {
     const particles: Array<{
       x: number;
       y: number;
+
+
+
       vx: number;
       vy: number;
       size: number;
@@ -95,6 +99,11 @@ const UltraFuturisticBackground2040: React.FC = () => {
         }
       }
 
+
+        }
+      }
+
+
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6182120.05)';
       ctx.lineWidth = 0.5;
@@ -155,6 +164,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
       // Draw energy waves
       const waveCount = 3;
       for (let i = 0; i < waveCount; i++) {
+
         const waveOffset = (time * 100 + i * 200) % (canvas.width + 200);
         const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50;
         
@@ -193,6 +203,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
+
       {/* Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -240,6 +251,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
             scale: [1.21],
             opacity: [0.20.50.2]
           }}
+
           transition={{
             duration: 10,
             repeat: Infinity,

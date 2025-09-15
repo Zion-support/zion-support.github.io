@@ -1,6 +1,9 @@
 "use client";
 import React{ useState } from 'react';
 import Head from 'next/head';
+
+
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -76,7 +79,7 @@ export default function PricingPage() {
   };
 
   // Group services by category for better organization
-  const servicesByCategory = filteredServices.reduce((accservice) => {
+  const servicesByCategory = filteredServices.reduce((acc, service) => {
     const category = Array.isArray(service.category) ? service.category[0] : service.category;
     if (!acc[category]) {
       acc[category] = [];
@@ -178,6 +181,7 @@ export default function PricingPage() {
               
               <select
                 value={selectedPriceRange}
+
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
                 className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
               >

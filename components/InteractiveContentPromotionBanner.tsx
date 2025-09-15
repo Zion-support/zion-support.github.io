@@ -1,3 +1,4 @@
+"use client";
 'use client';
 
 import React{ useStateuseEffect } from 'react';
@@ -108,7 +109,7 @@ const InteractiveContentPromotionBanner = () => {
 
             {/* Slide Indicators */}
             <div className="flex justify-center space-x-3">
-              {slides.map((_index) => (
+              {slides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}

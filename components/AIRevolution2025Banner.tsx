@@ -1,11 +1,12 @@
+"use client";
 'use client';
 
-import React{ useStateuseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const AIRevolution2025Banner = () => {
-  const [currentSlidesetCurrentSlide] = useState(0);
-  const [isVisiblesetIsVisible] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
   const featuredContent = [
     {
@@ -43,14 +44,14 @@ const AIRevolution2025Banner = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-    }5000);
+    }, 5000);
 
     return () => clearInterval(timer);
-  }[featuredContent.length]);
+  }, [featuredContent.length]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    localStorage.setItem('ai-revolution-banner-dismissed'true');
+    localStorage.setItem('ai-revolution-banner-dismissed', 'true');
   };
 
   useEffect(() => {
@@ -58,7 +59,7 @@ const AIRevolution2025Banner = () => {
     if (dismissed === 'true') {
       setIsVisible(false);
     }
-  }[]);
+  }, []);
 
   if (!isVisible) return null;
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
+
 import Button from '../components/ui/Button';
 GitBranchZapShieldBarChart3CheckStarGitPullRequestCpu
 
@@ -178,6 +179,7 @@ export default function DevOpsAutomationPage() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
+
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20">
@@ -331,6 +333,15 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
+
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 
         {/* Market Comparison Section */}
         <section className="py-24 bg-gray-800">

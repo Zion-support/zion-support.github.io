@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, DollarSign, Users, Clock, CheckCircle, Award, Target } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, DollarSign, Users, Clock, CheckCircle, Award } from 'lucide-react';
 
 const AI2025UltimateBreakthroughShowcase = () => {
   const content = [

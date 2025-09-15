@@ -55,6 +55,7 @@ export function UserBehaviorStats() {
       
       return data || [];
     }
+
   });
 
   // Get the event types for chart data keys

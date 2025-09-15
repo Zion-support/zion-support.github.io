@@ -1,127 +1,227 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const NewContentShowcase2025 = () => {
-  const newContent = [
-    {
-      title: "AI-Powered Business Automation Revolution",
-      description: "Discover how our latest AI solutions are transforming enterprise operations with 500% efficiency gains.",
-      image: "🤖",
-      category: "AI Solutions",
-      readTime: "5 min read",
-      featured: true
+  const [activeTab, setActiveTab] = useState('case-studies');
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const contentSections = {
+    'case-studies': {
+      title: 'Success Stories & Case Studies',
+      description: 'Real-world transformations with measurable ROI',
+      items: [
+        {
+          title: 'Fortune 500 Manufacturing: 2,500% ROI',
+          description: 'Complete autonomous transformation of production lines',
+          roi: '2,500%',
+          industry: 'Manufacturing',
+          link: '/case-studies/fortune-500-manufacturing-2500-roi'
+        },
+        {
+          title: 'Healthcare Revolution: 1,200% ROI',
+          description: 'AI-powered diagnostic platform implementation',
+          roi: '1,200%',
+          industry: 'Healthcare',
+          link: '/case-studies/healthcare-revolution-1200-roi'
+        },
+        {
+          title: 'Financial Services: 1,500% ROI',
+          description: 'Advanced analytics and fraud detection systems',
+          roi: '1,500%',
+          industry: 'Finance',
+          link: '/case-studies/financial-services-1500-roi'
+        }
+      ]
     },
-    {
-      title: "Quantum Computing Breakthroughs in 2025",
-      description: "Explore the latest quantum computing innovations and their real-world business applications.",
-      image: "⚛️",
-      category: "Technology",
-      readTime: "7 min read",
-      featured: true
+    'blog': {
+      title: 'Latest AI Insights & Trends',
+      description: 'Cutting-edge research and industry analysis',
+      items: [
+        {
+          title: 'AI 2025: The Ultimate Automation Revolution',
+          description: 'Comprehensive guide to next-generation AI automation',
+          readTime: '8 min read',
+          category: 'Automation',
+          link: '/blog/ai-2025-ultimate-automation-revolution'
+        },
+        {
+          title: 'Quantum Computing Business Applications',
+          description: 'How quantum computing is transforming enterprise operations',
+          readTime: '12 min read',
+          category: 'Quantum Computing',
+          link: '/blog/quantum-computing-business-applications'
+        },
+        {
+          title: 'Neural Interface Revolution 2025',
+          description: 'The future of human-AI interaction in business',
+          readTime: '10 min read',
+          category: 'Neural Interfaces',
+          link: '/blog/neural-interface-revolution-2025'
+        }
+      ]
     },
-    {
-      title: "Neural Interface Technology: The Future is Now",
-      description: "Learn about cutting-edge neural interface developments that are reshaping human-computer interaction.",
-      image: "🧠",
-      category: "Innovation",
-      readTime: "6 min read",
-      featured: false
-    },
-    {
-      title: "Sustainable AI: Green Technology Solutions",
-      description: "How we're building environmentally conscious AI systems for a better tomorrow.",
-      image: "🌱",
-      category: "Sustainability",
-      readTime: "4 min read",
-      featured: false
-    },
-    {
-      title: "Enterprise Security in the AI Era",
-      description: "Comprehensive security strategies for protecting your business in an AI-driven world.",
-      image: "🔒",
-      category: "Security",
-      readTime: "8 min read",
-      featured: false
-    },
-    {
-      title: "Micro SaaS Success Stories",
-      description: "Real case studies of how micro SaaS solutions are driving business growth and innovation.",
-      image: "💼",
-      category: "Case Studies",
-      readTime: "6 min read",
-      featured: false
+    'tools': {
+      title: 'Interactive AI Tools & Calculators',
+      description: 'Hands-on tools to explore AI potential',
+      items: [
+        {
+          title: 'ROI Calculator',
+          description: 'Calculate potential returns from AI implementation',
+          type: 'Calculator',
+          link: '/tools/roi-calculator'
+        },
+        {
+          title: 'AI Readiness Assessment',
+          description: 'Evaluate your organization\'s AI readiness',
+          type: 'Assessment',
+          link: '/tools/ai-readiness-assessment'
+        },
+        {
+          title: 'Automation Opportunity Scanner',
+          description: 'Identify automation opportunities in your processes',
+          type: 'Scanner',
+          link: '/tools/automation-scanner'
+        }
+      ]
     }
-  ];
+  };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className={`py-16 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-2 mb-4">
-            <span className="text-sm font-medium">✨ NEW CONTENT 2025</span>
+            <span className="text-sm font-semibold">✨ NEW CONTENT 2025</span>
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Latest Insights & Innovations
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Explore Our Latest Content
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay ahead with our cutting-edge content covering AItechnology trendsand business transformation strategies.
+            Discover success stories, insights, and tools that are transforming businesses worldwide
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {newContent.map((itemindex) => (
-            <div
-              key={index}
-              className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
-                item.featured ? 'ring-2 ring-purple-500' : ''
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center mb-8">
+          {Object.entries(contentSections).map(([key, section]) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`px-6 py-3 m-2 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === key
+                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg transform scale-105'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md'
               }`}
             >
-              {item.featured && (
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-t-xl">
-                  FEATURED
-                </div>
-              )}
-              <div className="p-6">
-                <div className="text-4xl mb-4">{item.image}</div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-purple-100 text-purple-800 text-xs font-medium px-2 py-1 rounded-full">
-                    {item.category}
-                  </span>
-                  <span className="text-gray-500 text-sm">{item.readTime}</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {item.description}
-                </p>
-                <Link
-                  href={`/blog/${item.title.toLowerCase().replace(/\s+/g'-')}`}
-                  className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition-colors"
-                >
-                  Read More
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
+              {section.title}
+            </button>
           ))}
         </div>
 
+        {/* Content Display */}
+        <div className="bg-white rounded-2xl shadow-xl p-8">
+          <div className="mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              {contentSections[activeTab as keyof typeof contentSections].title}
+            </h3>
+            <p className="text-gray-600">
+              {contentSections[activeTab as keyof typeof contentSections].description}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {contentSections[activeTab as keyof typeof contentSections].items.map((item, index) => (
+              <div
+                key={index}
+                className="group bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-purple-300"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-600 text-sm mb-3">
+                      {item.description}
+                    </p>
+                  </div>
+                  {item.roi && (
+                    <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold ml-2">
+                      {item.roi} ROI
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    {item.industry && (
+                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">
+                        {item.industry}
+                      </span>
+                    )}
+                    {item.category && (
+                      <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium">
+                        {item.category}
+                      </span>
+                    )}
+                    {item.type && (
+                      <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs font-medium">
+                        {item.type}
+                      </span>
+                    )}
+                    {item.readTime && (
+                      <span className="text-gray-500 text-xs">
+                        {item.readTime}
+                      </span>
+                    )}
+                  </div>
+                  <Link
+                    href={item.link}
+                    className="text-purple-600 hover:text-purple-800 font-semibold text-sm group-hover:underline"
+                  >
+                    Explore →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Call to Action */}
         <div className="text-center mt-12">
-          <Link
-            href="/blog"
-            className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-          >
-            Explore All Content
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-lg opacity-90 mb-6">
+              Join thousands of companies already seeing incredible results with our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

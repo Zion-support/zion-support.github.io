@@ -254,6 +254,7 @@ export default function CuttingEdgePricing2025() {
                   transition={{ duration: 0.8delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative group ${
+
                     tier.popular ? 'scale-105' : ''
                   }`}
                 >

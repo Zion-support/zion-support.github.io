@@ -32,6 +32,7 @@ const contactInfo = {
 };
 
 const serviceCategories = [
+
   {
     id: 'financial-technology',
     title: '💰 Financial Technology',
@@ -206,7 +207,7 @@ export default function InnovativeServicesShowcase2025() {
           >
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                {serviceCategories.reduce((totalcategory) => total + category.services.length0)}+
+                {serviceCategories.reduce((total, category) => total + category.services.length, 0)}+
               </div>
               <div className="text-gray-400">Services</div>
             </div>
@@ -282,6 +283,7 @@ export default function InnovativeServicesShowcase2025() {
         </div>
       </section>
 
+
       {/* Services Grid */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -344,6 +346,7 @@ export default function InnovativeServicesShowcase2025() {
                     <div className="text-white font-semibold truncate">{service.targetAudience}</div>
                   </div>
                 </div>
+
 
                 {/* CTA */}
                 <div className="flex gap-3">
