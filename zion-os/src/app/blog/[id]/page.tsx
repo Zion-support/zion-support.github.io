@@ -11,6 +11,22 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'generative-agents-enterprise-2025': {
+    id: 'generative-agents-enterprise-2025',
+    title: 'Generative Agents for Enterprise: Safe, Productive, and Governed (2025)',
+    excerpt:
+      'A pragmatic playbook for deploying autonomous generative agents across enterprise workflows with policy, guardrails, and ROI tracking.',
+    category: 'AI Solutions',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '11 min read',
+    content: [
+      'Enterprises are moving from copilots to autonomous agents that take action across systems. The opportunity is massive, but so are the risks without strong governance.',
+      'This guide outlines the operating model for safe agent deployment: define allowed actions and data scopes, use policy engines and human-in-the-loop for sensitive tasks, and measure outcomes via clear KPIs.',
+      'We also cover architecture patterns for orchestration, memory, and tool use, plus blueprints for top use cases: sales outreach, IT ops remediation, finance reconciliation, and customer support.',
+      'With Zion OS, teams can roll out governed agent fleets that drive measurable productivity while preserving compliance and brand safety.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',

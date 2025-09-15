@@ -78,6 +78,35 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      {/* Promo: New Article */}
+      <section className="bg-blue-50 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <a
+            href="/blog/generative-agents-enterprise-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-4 md:p-5 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: Generative Agents for Enterprise: Safe, Productive, and Governed (2025)"
+          >
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+                GA
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Solutions</span>
+                  <span className="text-xs text-gray-500">New</span>
+                </div>
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900">
+                  Generative Agents for Enterprise: Safe, Productive, and Governed (2025)
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  A pragmatic playbook to deploy governed autonomous agents with measurable ROI.
+                </p>
+              </div>
+              <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>
+            </div>
+          </a>
+        </div>
+      </section>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

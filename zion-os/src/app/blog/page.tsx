@@ -8,6 +8,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'generative-agents-enterprise-2025',
+      title: 'Generative Agents for Enterprise: Safe, Productive, and Governed (2025)',
+      excerpt: 'Deploy autonomous agents with guardrails, policy, and measurable ROI across key workflows.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '11 min read',
+      image: '/blog/generative-agents-enterprise.jpg',
+      featured: true
+    },
+    {
       id: 'ai-consciousness-breakthrough',
       title: 'Breakthrough in AI Consciousness Research: What It Means for the Future',
       excerpt: 'Our research team has made significant progress in understanding artificial consciousness, opening new possibilities for human-AI collaboration.',
@@ -65,6 +76,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'generative-agents-enterprise-2025',
+      title: 'Generative Agents for Enterprise: Safe, Productive, and Governed (2025)',
+      excerpt: 'An actionable operating model to launch governed agent fleets across the enterprise.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '11 min read',
+      image: '/blog/generative-agents-enterprise.jpg'
+    },
     {
       id: 'autonomous-it-operations',
       title: 'Autonomous IT Operations: From Reactive Support to Self-Healing Systems',
