@@ -5,9 +5,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> main
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -24,9 +22,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> main
         </div>
       </div>
     </div>

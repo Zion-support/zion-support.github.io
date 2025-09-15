@@ -82,7 +82,7 @@ const AdvancedRobotics2026: React.FC = () => {
   const currentRobot = robotTypes.find(robot => robot.id === activeRobot) || robotTypes[0];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-zinc-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-500/20 to-gray-500/20 backdrop-blur-sm"></div>

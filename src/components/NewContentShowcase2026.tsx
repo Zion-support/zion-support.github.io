@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -319,13 +318,10 @@ const NewContentShowcase2026: React.FC = () => {
               <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
             </motion.div>
           ))}
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Call to Action */}
       <motion.div
@@ -351,8 +347,6 @@ const NewContentShowcase2026: React.FC = () => {
         </div>
       </motion.div>
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     </div>
   );
 };

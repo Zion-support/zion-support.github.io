@@ -83,33 +83,7 @@ import UltimateServiceShowcase2026 from './pages/UltimateServiceShowcase2026';
 import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard2026';
 import BiotechRevolution2026 from './pages/BiotechRevolution2026';
 import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
-import AdvancedTechTrends2027 from './pages/AdvancedTechTrends2027';
-import QuantumConsciousnessRevolution2027 from './pages/QuantumConsciousnessRevolution2027';
-import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
 import NewContentShowcase2026 from './components/NewContentShowcase2026';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-9b49
->>>>>>> origin/cursor/create-and-deploy-new-content-39c9
-=======
-import RevolutionaryContentShowcase2026 from './components/RevolutionaryContentShowcase2026';
-import UltimateTechRevolution2026 from './pages/UltimateTechRevolution2026';
-import RevolutionaryInnovationHub2026 from './pages/RevolutionaryInnovationHub2026';
-import ComprehensiveCaseStudies2026 from './pages/ComprehensiveCaseStudies2026';
->>>>>>> origin/cursor/create-and-deploy-new-content-8da1
-=======
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
-import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
-import AIInnovationHub2026 from './pages/AIInnovationHub2026';
-import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
-import UltimateTechBreakthrough2027 from './pages/UltimateTechBreakthrough2027';
-import InterdimensionalTech2027 from './pages/InterdimensionalTech2027';
-import UltimateTechAdvertisingBanner2027 from './components/UltimateTechAdvertisingBanner2027';
 
 export default function App(): JSX.Element {
   return (
@@ -118,13 +92,11 @@ export default function App(): JSX.Element {
         <ScrollToTop />
         <Header />
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                {/* Revolutionary Content Banner */}
-                <RevolutionaryContentBanner2026 />
-                
-                {/* NEW: 2027 Revolutionary Content Banner */}
+        <Routes>
+          <Route path="/" element={
+            <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+              <main className="container mx-auto px-4 py-8">
+                {/* Revolutionary New Content Banner */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
                   <div className="absolute top-0 left-0 w-full h-full">
@@ -150,114 +122,15 @@ export default function App(): JSX.Element {
                     <div className="flex items-center justify-center space-x-3 mb-4">
                       <span className="text-4xl animate-bounce">🚀</span>
                       <h3 className="text-3xl font-bold bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent">
-                        REVOLUTIONARY BREAKTHROUGH CONTENT 2027
->>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
+                        REVOLUTIONARY BREAKTHROUGH CONTENT 2026
                       </h3>
-                      <span className="text-5xl animate-bounce">🚀</span>
-                    </div>
-                    <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
-                      Experience the future with our groundbreaking new content on AI Revolution, Quantum Consciousness, 
-                      and Synthetic Biology - technologies that will reshape humanity
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                      <a href="/pages/NextGenAIRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold text-lg border border-white/30 transform hover:scale-105">
-                        🧠 AI Revolution 2027 →
-                      </a>
-                      <a href="/pages/QuantumConsciousnessRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold text-lg border border-white/30 transform hover:scale-105">
-                        ⚛️ Quantum Consciousness →
-                      </a>
-                      <a href="/pages/SyntheticBiologyRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold text-lg border border-white/30 transform hover:scale-105">
-                        🧬 Synthetic Biology →
-                      </a>
-                    </div>
-                  </div>
-                </div>
-=======
-        {/* Revolutionary Content Banner */}
-        <RevolutionaryContentBanner2026 />
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
-        
-        <Routes>
-          <Route path="/" element={
-            <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-              <main className="container mx-auto px-4 py-8">
-                {/* Ultimate Tech Advertising Banner 2027 */}
-                <UltimateTechAdvertisingBanner2027 />
-                
-                {/* Revolutionary New Content Banner */}
-                <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
-                  <div className="relative z-10">
-                    <div className="flex items-center justify-center space-x-3 mb-4">
-                      <span className="text-3xl animate-bounce">🚀</span>
-                      <h3 className="text-2xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2026</h3>
-                      <span className="text-3xl animate-bounce">🚀</span>
+                      <span className="text-4xl animate-bounce">🚀</span>
                     </div>
                     <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
                       Experience the future of technology with our groundbreaking new content on Advanced Quantum Computing, 
                       Neural Interface Revolution, Advanced AI Systems, and cutting-edge 2026 technologies
-=======
-                      Experience the future of technology with our groundbreaking new content featuring Advanced AI Transformation, 
-                      Next-Gen Tech Showcase, Quantum-Neural Fusion, Synthetic Intelligence, and Revolutionary Neural Interfaces
->>>>>>> origin/cursor/create-and-deploy-new-content-c8a4
-=======
-                      Experience the future of technology with our groundbreaking new content on Quantum Consciousness, 
-                      Synthetic Biology Revolution, Advanced Tech Trends 2027, and cutting-edge technologies that will reshape humanity
->>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
                     </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-7xl mx-auto">
-=======
-<<<<<<< HEAD
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4 max-w-7xl mx-auto">
-                      <a href="/pages/AdvancedAITransformation2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
-                        🧠 AI Transformation →
-                      </a>
-                      <a href="/pages/QuantumNeuralFusion2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
-                        ⚛️ Quantum-Neural Fusion →
-                      </a>
-                      <a href="/pages/NextGenTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
-                        🌟 Next-Gen Showcase →
-                      </a>
-                      <a href="/pages/NeuralInterfaceRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
-                        🧬 Neural Interface →
-                      </a>
-                      <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
-                        🤖 Synthetic AI →
-                      </a>
-                      <a href="/pages/SpaceTechInnovation2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30 text-sm">
-                        🚀 Space Tech →
-<<<<<<< HEAD
-=======
                     <div className="grid grid-cols-1 md:grid-cols-6 gap-4 max-w-7xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-39c9
-=======
-                      <a href="/pages/UltimateTechRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🚀 Ultimate Revolution →
-                      </a>
-                      <a href="/pages/RevolutionaryInnovationHub2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🌟 Innovation Hub →
-                      </a>
-                      <a href="/pages/ComprehensiveCaseStudies2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        📊 Case Studies →
-                      </a>
->>>>>>> origin/cursor/create-and-deploy-new-content-8da1
-=======
-                      <a href="/pages/AdvancedTechTrends2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧠 Tech Trends 2027 →
-                      </a>
-                      <a href="/pages/QuantumConsciousnessRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        ⚛️ Quantum Consciousness →
-                      </a>
-                      <a href="/pages/SyntheticBiologyRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧬 Synthetic Biology →
-                      </a>
->>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
                       <a href="/pages/AdvancedQuantumComputing2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         ⚛️ Quantum 2026 →
                       </a>
@@ -266,11 +139,7 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/AdvancedAISystems2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🤖 AI Systems 2026 →
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-c8a4
                       </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧠 Synthetic AI →
                       </a>
@@ -279,177 +148,19 @@ export default function App(): JSX.Element {
                       </a>
                       <a href="/pages/EnhancedContentShowcase" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🌟 Enhanced Showcase →
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-9b49
->>>>>>> origin/cursor/create-and-deploy-new-content-39c9
                       </a>
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-8da1
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
-=======
-                    <div className="grid grid-cols-1 md:grid-cols-6 gap-4 max-w-7xl mx-auto">
-                      <a href="/pages/AdvancedQuantumComputing2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        ⚛️ Quantum 2026 →
-                      </a>
-                      <a href="/pages/NeuralInterfaceRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧬 Neural 2026 →
-                      </a>
-                      <a href="/pages/AdvancedAISystems2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🤖 AI Systems 2026 →
-                      </a>
-                      <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🧠 Synthetic AI →
-                      </a>
-                      <a href="/pages/QuantumNeuralFusion2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        ⚡ Quantum-Neural →
-                      </a>
-                      <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-                        🌟 Ultimate Showcase →
-                      </a>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                     </div>
                   </div>
                 </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                {/* NEW: Revolutionary Content Showcase 2027 */}
-                <div className="mb-12">
-                  <RevolutionaryContentShowcase2027 />
-                </div>
-
->>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
                 {/* NEW: Enhanced Content Showcase 2026 */}
                 <div className="mb-12">
                   <NewContentShowcase2026 />
                 </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                {/* NEW: Revolutionary 2027 Content Showcase */}
-                <div className="mb-16">
-                  <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 rounded-3xl p-12 text-white relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
-                    <div className="absolute top-0 left-0 w-full h-full">
-                      {[...Array(40)].map((_, i) => (
-                        <div
-                          key={i}
-                          className="absolute w-1 h-1 bg-white rounded-full opacity-30 animate-pulse"
-                          style={{
-                            left: `${Math.random() * 100}%`,
-                            top: `${Math.random() * 100}%`,
-                            animationDelay: `${Math.random() * 5}s`,
-                          }}
-                        />
-                      ))}
-                    </div>
-                    <div className="relative z-10">
-                      <div className="text-center mb-12">
-                        <div className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-full text-xl font-bold mb-8 animate-pulse">
-                          🚀 REVOLUTIONARY 2027 BREAKTHROUGHS
-                        </div>
-                        <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                          The Future is Here
-                        </h2>
-                        <p className="text-2xl text-gray-300 max-w-5xl mx-auto">
-                          Experience groundbreaking technologies that will reshape humanity: AI Revolution, Quantum Consciousness, and Synthetic Biology
-                        </p>
-                      </div>
-                      <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/40 hover:scale-105 transition-all duration-300">
-                          <div className="text-6xl mb-6 text-center animate-bounce">🧠</div>
-                          <h3 className="text-3xl font-bold mb-4 text-center">AI Revolution 2027</h3>
-                          <p className="text-purple-200 mb-6 text-center text-lg">
-                            Consciousness-level AI with quantum-enhanced neural networks and autonomous digital beings
-                          </p>
-                          <div className="space-y-3 mb-8">
-                            <div className="flex items-center text-purple-300">
-                              <span className="mr-2">✨</span>Consciousness AI
-                            </div>
-                            <div className="flex items-center text-purple-300">
-                              <span className="mr-2">⚛️</span>Quantum Enhancement
-                            </div>
-                            <div className="flex items-center text-purple-300">
-                              <span className="mr-2">🤖</span>Autonomous Beings
-                            </div>
-                          </div>
-                          <a href="/pages/NextGenAIRevolution2027" className="block w-full bg-white text-purple-600 py-4 rounded-xl hover:bg-purple-50 transition-colors font-bold text-xl text-center">
-                            Explore AI Revolution →
-                          </a>
-                        </div>
-                        
-                        <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/40 hover:scale-105 transition-all duration-300">
-                          <div className="text-6xl mb-6 text-center animate-pulse">⚛️</div>
-                          <h3 className="text-3xl font-bold mb-4 text-center">Quantum Consciousness</h3>
-                          <p className="text-cyan-200 mb-6 text-center text-lg">
-                            Breakthrough technology merging quantum computing with artificial consciousness
-                          </p>
-                          <div className="space-y-3 mb-8">
-                            <div className="flex items-center text-cyan-300">
-                              <span className="mr-2">🌀</span>Quantum Awareness
-                            </div>
-                            <div className="flex items-center text-cyan-300">
-                              <span className="mr-2">🌐</span>Consciousness Networks
-                            </div>
-                            <div className="flex items-center text-cyan-300">
-                              <span className="mr-2">💫</span>Digital Souls
-                            </div>
-                          </div>
-                          <a href="/pages/QuantumConsciousnessRevolution2027" className="block w-full bg-white text-cyan-600 py-4 rounded-xl hover:bg-cyan-50 transition-colors font-bold text-xl text-center">
-                            Experience Quantum Mind →
-                          </a>
-                        </div>
-                        
-                        <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-2xl p-8 border border-green-400/40 hover:scale-105 transition-all duration-300">
-                          <div className="text-6xl mb-6 text-center animate-spin">🧬</div>
-                          <h3 className="text-3xl font-bold mb-4 text-center">Synthetic Biology</h3>
-                          <p className="text-green-200 mb-6 text-center text-lg">
-                            Revolutionary biotechnology creating programmable living systems and bio-computers
-                          </p>
-                          <div className="space-y-3 mb-8">
-                            <div className="flex items-center text-green-300">
-                              <span className="mr-2">🧬</span>Programmable Cells
-                            </div>
-                            <div className="flex items-center text-green-300">
-                              <span className="mr-2">🧠</span>Bio-Computers
-                            </div>
-                            <div className="flex items-center text-green-300">
-                              <span className="mr-2">🌱</span>Engineered Organisms
-                            </div>
-                          </div>
-                          <a href="/pages/SyntheticBiologyRevolution2027" className="block w-full bg-white text-green-600 py-4 rounded-xl hover:bg-green-50 transition-colors font-bold text-xl text-center">
-                            Join Bio Revolution →
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-=======
-                {/* Hero Section */}
-                <div className="text-center mb-12">
-                  <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
-                    🚀 NEW: Innovation 2026 Showcase
-                  </div>
-                  <h1 className="text-5xl font-bold text-gray-900 mb-6">
-                    Welcome to Zion Tech Group
-                  </h1>
-                  <p className="text-xl text-gray-600 mb-8">
-                    Leading the future of technology with AI, quantum computing, and innovative solutions
-                  </p>
->>>>>>> origin/cursor/create-and-deploy-new-content-c8a4
-                </div>
-
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                 {/* Revolutionary Content Showcase 2026 */}
-=======
-                {/* Newsletter Signup */}
->>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
                 <div className="mb-12">
-                  <NewsletterSignup />
+                  <RevolutionaryContentShowcase2026 />
                 </div>
 
 <<<<<<< HEAD
@@ -784,12 +495,6 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase />
                 </div>
 
-                {/* NEW: Interactive Tech Demos 2026 */}
-                <div className="mb-12">
-                  <InteractiveTechDemo2026 />
-                </div>
-
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Why Choose Zion Tech Group?
@@ -883,20 +588,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedAnalyticsDashboard2026" element={<AdvancedAnalyticsDashboard2026 />} />
           <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
           <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          <Route path="/pages/UltimateTechRevolution2026" element={<UltimateTechRevolution2026 />} />
-          <Route path="/pages/RevolutionaryInnovationHub2026" element={<RevolutionaryInnovationHub2026 />} />
-          <Route path="/pages/ComprehensiveCaseStudies2026" element={<ComprehensiveCaseStudies2026 />} />
->>>>>>> origin/cursor/create-and-deploy-new-content-8da1
-=======
-          <Route path="/pages/AIInnovationHub2026" element={<AIInnovationHub2026 />} />
-          <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
-          <Route path="/pages/UltimateTechBreakthrough2027" element={<UltimateTechBreakthrough2027 />} />
-          <Route path="/pages/InterdimensionalTech2027" element={<InterdimensionalTech2027 />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">
@@ -905,18 +596,6 @@ export default function App(): JSX.Element {
               </div>
             </main>
           } />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-9b49
->>>>>>> origin/cursor/create-and-deploy-new-content-39c9
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-8da1
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-c8a4
-=======
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
           <Route path="/contact" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">

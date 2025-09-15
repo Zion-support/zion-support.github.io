@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const UltimateContentShowcase2026: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const featuredContent = [
     {
       title: "Ultimate Tech Revolution",
@@ -378,8 +375,8 @@ const UltimateContentShowcase2026: React.FC = () => {
             <button className="bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white px-12 py-4 rounded-2xl text-xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
               Explore All Content →
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 px-12 py-4 rounded-2xl text-xl font-bold hover:bg-cyan-400/10 transition-all duration-300">
-              Get Updates
+            <button className="bg-gradient-to-r from-purple-500 to-pink-600 px-8 py-4 rounded-lg text-lg font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Subscribe for Updates
             </button>
           </div>
         </div>

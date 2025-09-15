@@ -96,7 +96,6 @@ const QuantumAIRevolution2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -333,13 +332,8 @@ const QuantumAIRevolution2026: React.FC = () => {
                 <div className="text-sm text-green-400 font-semibold">+{stat.improvement}</div>
               </motion.div>
             ))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8735
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+>>>>>>> main
           </div>
         </div>
       </div>
