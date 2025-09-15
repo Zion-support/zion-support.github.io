@@ -192,6 +192,30 @@ export default function HomePage() {
           </div>
         </section>
         
+        {/* New Blog Highlights - September 2025 */}
+        <section className="py-12 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-gray-900">New on the blog</h2>
+              <Link href="/blog" className="text-purple-600 font-semibold hover:text-purple-800">View all →</Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-gray-50 rounded-xl p-6 shadow hover:shadow-md transition">
+                <div className="text-sm font-semibold text-purple-700 mb-2">Governance & Risk</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2025: Agent Safety Engineering Blueprint</h3>
+                <p className="text-gray-600 mb-4">Guardrails, evaluations, and runtime controls to deploy safe, reliable enterprise AI agents.</p>
+                <Link href="/blog/ai-2025-agent-safety-engineering-blueprint" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-6 shadow hover:shadow-md transition">
+                <div className="text-sm font-semibold text-purple-700 mb-2">Data Platforms</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2025: Data Products for the AI Era</h3>
+                <p className="text-gray-600 mb-4">Build reliable, reusable, monetizable data products that power enterprise AI.</p>
+                <Link href="/blog/ai-2025-data-products-for-the-ai-era" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* AI 2026 Quantum Revolution Ultimate Banner - NEW FEATURED */}
         <AI2026QuantumRevolutionUltimateBanner />
         
