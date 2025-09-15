@@ -64,6 +64,8 @@ import WhatsNewStrip from './components/WhatsNewStrip';
 // Import new 2026 ultimate promotional components
 import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRevolutionUltimateBanner';
 import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
+import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
+import LatestAI2026ContentShowcase from './components/LatestAI2026ContentShowcase';
 
 // Import new 2025 advanced automation promotional components
 import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';
@@ -249,6 +251,9 @@ export default function HomePage() {
         
         {/* New Content 2026 Ultimate Banner - NEW FEATURED */}
         <NewContent2026UltimateBanner />
+        
+        {/* Latest AI 2026 Content Showcase - NEW FEATURED */}
+        <LatestAI2026ContentShowcase />
         
         {/* Ultimate Content Promotion 2026 - NEW FEATURED */}
         <UltimateContentPromotion2026 />
