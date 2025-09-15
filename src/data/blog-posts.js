@@ -1,5 +1,35 @@
 export const blogPosts = [
   {
+    id: 7,
+    title: "Generative AI in IT Operations: From Automation to Autonomy",
+    excerpt: "See how GenAI is cutting MTTR, preventing incidents, and automating routine ops at scale.",
+    content: "Generative AI is moving ITOps from reactive fire-fighting to proactive prevention. By blending LLMs with telemetry, change data, and runbooks, teams are reducing noise, accelerating triage, and automating resolutions across cloud and on‑prem estates...",
+    author: "Kleber Santos",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-14",
+    readTime: "6 min read",
+    category: "Technology Trends",
+    tags: ["GenAI", "ITOps", "SRE", "Automation"],
+    featured: true,
+    imageUrl: "/images/blog/genai-it-operations.jpg",
+    slug: "generative-ai-in-it-operations-automation-to-autonomy"
+  },
+  {
+    id: 8,
+    title: "Zero Trust in Practice: 30-60-90 Day Adoption Plan",
+    excerpt: "A practical blueprint to deploy zero trust quickly without breaking developer velocity.",
+    content: "Zero trust is a journey, but it doesn’t have to take years. This 30-60-90 day plan prioritizes identity, device posture, and least-privilege access with measurable milestones, rollout waves, and automation hooks for CI/CD and IaC...",
+    author: "Lisa Thompson",
+    authorRole: "Security Architect",
+    publishDate: "2025-09-12",
+    readTime: "7 min read",
+    category: "Security",
+    tags: ["Zero Trust", "IAM", "Policy-as-Code", "DevSecOps"],
+    featured: false,
+    imageUrl: "/images/blog/zero-trust-90-day-plan.jpg",
+    slug: "zero-trust-30-60-90-day-adoption-plan"
+  },
+  {
     id: 1,
     title: "The Future of IT Asset Management: AI-Powered Solutions",
     excerpt: "Discover how artificial intelligence is revolutionizing the way organizations track, manage, and optimize their IT assets.",
