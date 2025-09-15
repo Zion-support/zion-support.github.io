@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -24,25 +26,22 @@ const Header = () => {
             <Link to="/pages/InnovationLanding2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Innovation
             </Link>
-            <Link to="/pages/AdvancedTechSolutions2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Solutions
-            </Link>
             <Link to="/pages/ComprehensiveServices2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Services
             </Link>
-            <Link to="/pages/FutureTechTrends2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Trends
+            <Link to="/pages/BlogPost2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Blog
             </Link>
-            <Link to="/pages/TechnologyInsights2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Insights
+            <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Contact
             </Link>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link 
-              to="/pages/InnovationLanding2025" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+              to="/contact" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
             >
               Get Started
             </Link>
@@ -59,7 +58,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
@@ -69,27 +68,25 @@ const Header = () => {
               <Link to="/pages/InnovationLanding2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Innovation
               </Link>
-              <Link to="/pages/AdvancedTechSolutions2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                Solutions
-              </Link>
               <Link to="/pages/ComprehensiveServices2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 Services
               </Link>
-              <Link to="/pages/FutureTechTrends2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                Trends
+              <Link to="/pages/BlogPost2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                Blog
               </Link>
-              <Link to="/pages/TechnologyInsights2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                Insights
+              <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                Contact
               </Link>
               <Link 
-                to="/pages/InnovationLanding2025" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 text-center"
+                to="/contact" 
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center"
               >
                 Get Started
               </Link>
             </nav>
           </div>
         )}
+>>>>>>> cursor/create-and-deploy-new-content-c963
       </div>
     </header>
   );
