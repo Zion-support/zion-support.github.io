@@ -80,7 +80,7 @@ const QuantumAI2025BreakthroughPromotionBanner = () => {
             </Link>
           </div>
           <p className="text-sm opacity-70 mt-4">
-            Don't miss the quantum computing revolution that's transforming enterprise AI in 2025
+            'Don', 't miss the quantum computing revolution 'that', 's transforming enterprise AI in 2025
           </p>
         </div>
       </div>

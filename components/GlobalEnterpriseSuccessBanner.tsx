@@ -30,7 +30,7 @@ export default function GlobalEnterpriseSuccessBanner() {
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Fortune 500 company achieves 
-            <span className="text-green-400 font-bold"> 12,000% ROI</span> through revolutionary AI transformation, 
+            <span className="text-green-400 font-bold"> 12,000% ROI</span> through revolutionary AI transformation
             becoming the most efficient enterprise in their industry.
           </p>
 
@@ -73,11 +73,11 @@ export default function GlobalEnterpriseSuccessBanner() {
           {/* Testimonial */}
           <div className="mt-12 max-w-4xl mx-auto">
             <blockquote className="text-xl md:text-2xl text-gray-300 italic mb-4">
-              "The AI 2025 transformation was the most significant business decision in our company's history. 
+              "The AI 2025 transformation was the most significant business decision in our 'company', 's history. 
               We achieved results that were previously thought impossible."
             </blockquote>
             <div className="text-lg text-green-400 font-bold">
-              Sarah Johnson, CEO, Global Enterprise Solutions
+              Sarah JohnsonCEOGlobal Enterprise Solutions
             </div>
           </div>
         </div>

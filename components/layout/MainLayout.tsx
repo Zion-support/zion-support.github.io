@@ -1,6 +1,6 @@
         {keywords && <meta name="keywords" content={keywords} />};
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />,
+        <meta name="viewport" content="width=device-widthinitial-scale=1" />,
         <link rel="icon" href="/favicon.ico" />,
         {canonical && <link rel="canonical" href={canonical} />};
         {noindex && <meta name="robots" content="noindex" />};

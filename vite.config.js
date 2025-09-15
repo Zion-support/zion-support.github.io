@@ -6,13 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
   resolve: {
     alias: {
-      '@': '/workspace/src',
-      '@/components': '/workspace/src/components',
-      '@/hooks': '/workspace/src/hooks',
-      '@/utils': '/workspace/src/utils',
-      '@/pages': '/workspace/src/pages',
-      '@/data': '/workspace/src/data',
-      '@/styles': '/workspace/src/styles'
+      '@': '/workspace/src'
     }
   },
   plugins: [
@@ -104,7 +98,8 @@ export default defineConfig({
   server: {
     hmr: true,
     port: 3000,
-    host: true
+    host: true,
+    open: true
   },
   preview: {
     port: 3000,

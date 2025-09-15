@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Star, 
-  Zap, 
-  TrendingUp, 
-  ArrowRight, 
-  Play, 
+  Star
+  Zap
+  TrendingUp
+  ArrowRight
+  Play
   CheckCircle,
   Sparkles,
   Rocket,
@@ -19,16 +20,16 @@ import {
 } from 'lucide-react';
 
 const UltimateContentPromotionBanner2025_2026 = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }5000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const slides = [
     {
@@ -36,7 +37,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
       title: 'AI 2025 Revolutionary Breakthroughs',
       subtitle: 'Experience the Future of Artificial Intelligence',
       description: 'Discover cutting-edge AI solutions that will transform your business operations and unlock unprecedented growth opportunities.',
-      features: ['Neural Consciousness AI', 'Quantum-Neural Fusion', 'Autonomous Data Intelligence'],
+      features: ['Neural Consciousness 'AI', 'Quantum-Neural 'Fusion', 'Autonomous Data Intelligence'],
       cta: 'Explore AI 2025',
       gradient: 'from-blue-600 via-purple-600 to-pink-600',
       icon: Brain
@@ -46,7 +47,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
       title: 'AI 2026 Future Vision',
       subtitle: 'Prepare for the Next Decade of Innovation',
       description: 'Get ahead of the curve with our advanced AI technologies designed for the future of business and technology.',
-      features: ['Global AI Ecosystem', 'Space-Age Computing', 'Conscious AI Beings'],
+      features: ['Global AI 'Ecosystem', 'Space-Age 'Computing', 'Conscious AI Beings'],
       cta: 'Discover AI 2026',
       gradient: 'from-emerald-600 via-cyan-600 to-blue-600',
       icon: Globe
@@ -56,7 +57,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
       title: 'Quantum Computing Revolution',
       subtitle: 'Unlock Infinite Computational Power',
       description: 'Harness the power of quantum computing to solve complex problems and accelerate your digital transformation.',
-      features: ['Quantum Supremacy', 'Exponential Speed', 'Unlimited Scalability'],
+      features: ['Quantum 'Supremacy', 'Exponential 'Speed', 'Unlimited Scalability'],
       cta: 'Learn More',
       gradient: 'from-purple-600 via-pink-600 to-red-600',
       icon: Cpu
@@ -71,7 +72,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-pink-600/10" />
         <div className="absolute inset-0">
-          {[...Array(30)].map((_, i) => (
+          {[...Array(30)].map((_i) => (
             <motion.div
               key={i}
               className="absolute w-2 h-2 bg-white/20 rounded-full"
@@ -80,9 +81,9 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                 top: `${Math.random() * 100}%`,
               }}
               animate={{
-                opacity: [0, 1, 0],
-                scale: [0, 1, 0],
-                y: [0, -20, 0],
+                opacity: [010],
+                scale: [010],
+                y: [0-20],
               }}
               transition={{
                 duration: 4,
@@ -99,8 +100,8 @@ const UltimateContentPromotionBanner2025_2026 = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={isVisible ? { opacity: 1, x: 0 } : {}}
+              initial={{ opacity: 0x: -50 }}
+              animate={isVisible ? { opacity: 1x: 0 } : {}}
               transition={{ duration: 0.8 }}
               className="text-white"
             >
@@ -114,9 +115,9 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                 >
                   {/* Badge */}
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={isVisible ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                    initial={{ opacity: 0scale: 0.8 }}
+                    animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                    transition={{ duration: 0.6delay: 0.2 }}
                     className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20"
                   >
                     <Sparkles className="w-4 h-4 text-yellow-400" />
@@ -142,12 +143,12 @@ const UltimateContentPromotionBanner2025_2026 = () => {
 
                   {/* Features */}
                   <div className="space-y-3 mb-8">
-                    {currentSlideData.features.map((feature, index) => (
+                    {currentSlideData.features.map((featureindex) => (
                       <motion.div
                         key={feature}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={isVisible ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                        initial={{ opacity: 0x: -20 }}
+                        animate={isVisible ? { opacity: 1x: 0 } : {}}
+                        transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                         className="flex items-center gap-3"
                       >
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -183,24 +184,24 @@ const UltimateContentPromotionBanner2025_2026 = () => {
 
             {/* Visual */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={isVisible ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0x: 50 }}
+              animate={isVisible ? { opacity: 1x: 0 } : {}}
+              transition={{ duration: 0.8delay: 0.4 }}
               className="relative"
             >
               <div className="relative w-full h-96">
                 {/* Main Visual */}
                 <motion.div
                   key={currentSlide}
-                  initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
-                  animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+                  initial={{ opacity: 0scale: 0.8rotateY: 90 }}
+                  animate={{ opacity: 1scale: 1rotateY: 0 }}
                   transition={{ duration: 0.8 }}
                   className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl border border-white/20 flex items-center justify-center"
                 >
                   <div className="text-center">
                     <motion.div
                       animate={{ rotate: 360 }}
-                      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                      transition={{ duration: 20repeat: Infinityease: "linear" }}
                       className="w-32 h-32 mx-auto mb-6"
                     >
                       <currentSlideData.icon className="w-full h-full text-white/80" />
@@ -215,7 +216,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                 </motion.div>
 
                 {/* Floating Elements */}
-                {[...Array(6)].map((_, i) => (
+                {[...Array(6)].map((_i) => (
                   <motion.div
                     key={i}
                     className="absolute w-4 h-4 bg-white/20 rounded-full"
@@ -224,8 +225,8 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                       top: `${30 + (i * 10)}%`,
                     }}
                     animate={{
-                      y: [0, -20, 0],
-                      opacity: [0.3, 1, 0.3],
+                      y: [0-20],
+                      opacity: [0.310.3],
                     }}
                     transition={{
                       duration: 3,
@@ -242,7 +243,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
-        {slides.map((_, index) => (
+        {slides.map((_index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
@@ -261,7 +262,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
           className="h-full bg-gradient-to-r from-blue-600 to-purple-600"
           initial={{ width: '0%' }}
           animate={{ width: '100%' }}
-          transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 5repeat: Infinityease: "linear" }}
         />
       </div>
     </div>

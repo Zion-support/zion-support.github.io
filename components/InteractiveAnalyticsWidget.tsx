@@ -1,7 +1,8 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 
 const InteractiveAnalyticsWidget: React.FC = () => {
-  const [analytics, setAnalytics] = useState({
+  const [analyticsetAnalytics] = useState({
     pageViews: 0,
     uniqueVisitors: 0,
     bounceRate: 0,
@@ -19,10 +20,10 @@ const InteractiveAnalyticsWidget: React.FC = () => {
         avgSessionDuration: Math.random() * 300 + 120,
         conversionRate: Math.random() * 5 + 2
       });
-    }, 4000);
+    }4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const formatNumber = (num: number) => {
     return num.toLocaleString();
@@ -31,7 +32,7 @@ const InteractiveAnalyticsWidget: React.FC = () => {
   const formatDuration = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
+    return `${mins}:${secs.toString().padStart(2'0')}`;
   };
 
   return (
@@ -84,7 +85,7 @@ const InteractiveAnalyticsWidget: React.FC = () => {
           <div className="w-full bg-gray-700 rounded-full h-2">
             <div 
               className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-1000"
-              style={{ width: `${Math.min((analytics.avgSessionDuration / 600) * 100, 100)}%` }}
+              style={{ width: `${Math.min((analytics.avgSessionDuration / 600) * 100)}%` }}
             ></div>
           </div>
         </div>
@@ -97,7 +98,7 @@ const InteractiveAnalyticsWidget: React.FC = () => {
           <div className="w-full bg-gray-700 rounded-full h-2">
             <div 
               className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-1000"
-              style={{ width: `${Math.min((analytics.conversionRate / 10) * 100, 100)}%` }}
+              style={{ width: `${Math.min((analytics.conversionRate / 10) * 100)}%` }}
             ></div>
           </div>
         </div>

@@ -1,52 +1,47 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
-  size?: 'small' | 'medium' | 'large';
-  text?: string;
+  size?: 'sm' | 'md' | 'lg';
+  color?: string;
   className?: string;
 }
 
-const sizeClasses = {
-  sm: 'w-4 h-4',
-  md: 'w-6 h-6',
-  lg: 'w-8 h-8',
-  xl: 'w-12 h-12',
-};
-
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'medium', 
-  text = 'Loading...',
-  className = ''
+  size = 'md', 
+  color = 'text-blue-500',
+  className = '' 
 }) => {
   const sizeClasses = {
-    small: 'w-4 h-4',
-    medium: 'w-8 h-8',
-    large: 'w-12 h-12'
-  };
-
-  const textSizeClasses = {
-    small: 'text-sm',
-    medium: 'text-base',
-    large: 'text-lg'
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
   };
 
   return (
-    <div className={`loading-container ${className}`}>
-      <div className="loading-spinner-wrapper">
-        <div 
-          className={`loading-spinner ${sizeClasses[size]}`}
-          role="status"
-          aria-label="Loading"
-        >
-          <span className="sr-only">{text}</span>
-        </div>
-      </div>
-      {text && (
-        <p className={`loading-text ${textSizeClasses[size]}`}>
-          {text}
-        </p>
-      )}
-    </div>
+    <motion.div
+      className={`${sizeClasses[size]} ${color} ${className}`}
+      animate={{ rotate: 360 }}
+      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+    >
+      <svg
+        className="w-full h-full"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeDasharray="60 40"
+          strokeDashoffset="0"
+        />
+      </svg>
+    </motion.div>
   );
 };
 

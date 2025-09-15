@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+import React{ useStateuseEffectuseRefReactNode } from 'react';
+import { ChatMessage } from './ChatMessage';
+import { ChatInput } from './ChatInput';
+import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
+=======
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 
@@ -24,7 +31,11 @@ export interface ChatAssistantProps {
   };
   conversationId?: string;
   initialMessages?: Message[];
+<<<<<<< HEAD
+  onSendMessage: (message: stringconversationId?: string) => Promise<void>;
+=======
   onSendMessage: (message: string, conversationId?: string) => Promise<void>;
+>>>>>>> origin/auto/autonomy-17186719616
   contextHeader?: ReactNode;
 }
 
@@ -37,18 +48,30 @@ export function ChatAssistant({
   onSendMessage,
   contextHeader
 }: ChatAssistantProps) {
+<<<<<<< HEAD
+  const [messagesetMessages] = useState<Message[]>(initialMessages);
+=======
   const [messages, setMessages] = useState<Message[]>(initialMessages);
+>>>>>>> origin/auto/autonomy-17186719616
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   
   useEffect(() => {
     if (initialMessages.length > 0) {
       setMessages(initialMessages);
     }
+<<<<<<< HEAD
+  }[initialMessages]);
+
+  useEffect(() => {
+    scrollToBottom();
+  }[messages]);
+=======
   }, [initialMessages]);
 
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -65,10 +88,17 @@ export function ChatAssistant({
       timestamp: new Date()
     };
     
+<<<<<<< HEAD
+    setMessages((prev: Message[]) => [...prevnewMessage]);
+    
+    // Send message to recipient via the provided handler
+    await onSendMessage(messageconversationId);
+=======
     setMessages((prev: Message[]) => [...prev, newMessage]);
     
     // Send message to recipient via the provided handler
     await onSendMessage(message, conversationId);
+>>>>>>> origin/auto/autonomy-17186719616
   };
 
   if (!isOpen) return null;

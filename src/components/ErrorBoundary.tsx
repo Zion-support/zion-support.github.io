@@ -1,180 +1,98 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { motion } from 'framer-motion';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  error?: Error;
+  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null
-    };
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({
       error,
       errorInfo
     });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
   }
-
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // Here you would typically send the error to a service like Sentry, LogRocket, etc.
-    // For now, we'll just log it to console
-    console.error('Production error:', {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
-    });
-  };
-
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
-    });
-  };
-
-  private handleReload = () => {
-    window.location.reload();
-  };
 
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
-      // Default error UI
       return (
-        <div className="error-boundary">
-          <div className="error-content">
-            <div className="error-icon">⚠️</div>
-            <h2>Something went wrong</h2>
-            <p>
-              We're sorry, but something unexpected happened. 
-              Please try refreshing the page or contact support if the problem persists.
-            </p>
-            
-            <div className="error-actions">
-              <button 
-                className="btn btn-primary"
-                onClick={this.handleRetry}
-              >
-                Try Again
-              </button>
-              <button 
-                className="btn btn-secondary"
-                onClick={this.handleReload}
-              >
-                Reload Page
-              </button>
+        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-md w-full bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8 text-center"
+          >
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
+            
+            <h1 className="text-2xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-gray-300 mb-6">
+              We encountered an unexpected error. Please try refreshing the page or contact support if the problem persists.
+            </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="error-details">
-                <summary>Error Details (Development Only)</summary>
-                <div className="error-stack">
-                  <h4>Error:</h4>
-                  <pre>{this.state.error.message}</pre>
-                  
-                  <h4>Stack Trace:</h4>
-                  <pre>{this.state.error.stack}</pre>
-                  
-                  {this.state.errorInfo && (
-                    <>
-                      <h4>Component Stack:</h4>
-                      <pre>{this.state.errorInfo.componentStack}</pre>
-                    </>
-                  )}
-                </div>
+              <details className="text-left mb-6 p-4 bg-black/20 rounded-lg border border-red-500/20">
+                <summary className="text-red-400 cursor-pointer font-medium mb-2">
+                  Error Details (Development)
+                </summary>
+                <pre className="text-xs text-red-300 overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
               </details>
             )}
-          </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button
+                onClick={() => window.location.reload()}
+                className="inline-flex items-center px-4 py-2 bg-zion-cyan text-white font-medium rounded-lg hover:bg-zion-cyan-dark transition-colors"
+              >
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Refresh Page
+              </button>
+              
+              <Link
+                to="/"
+                className="inline-flex items-center px-4 py-2 border border-zion-cyan/30 text-zion-cyan font-medium rounded-lg hover:bg-zion-cyan/10 transition-colors"
+              >
+                <Home className="w-4 h-4 mr-2" />
+                Go Home
+              </Link>
+            </div>
+          </motion.div>
         </div>
       );
     }
 
     return this.props.children;
   }
-  }
-}
-
-export function ErrorDisplay({ 
-  error, 
-  onRetry, 
-  className 
-}: { 
-  error: string | Error;
-  onRetry?: () => void;
-  className?: string;
-}) {
-  const errorMessage = typeof error === 'string' ? error : error.message;
-
-  return (
-    <motion.div
-      className={`bg-red-500/10 border border-red-500/20 rounded-lg p-4 text-center ${className || ''}`}
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3 }}
-    >
-      <div className="flex items-center justify-center gap-2 mb-3">
-        <AlertTriangle className="w-5 h-5 text-red-400" />
-        <span className="text-red-400 font-medium">Error</span>
-      </div>
-      <p className="text-red-300 mb-3">{errorMessage}</p>
-      {onRetry && (
-        <Button
-          onClick={onRetry}
-          size="sm"
-          variant="outline"
-          className="border-red-500/30 text-red-400 hover:bg-red-500/20"
-        >
-          <RefreshCw className="w-4 h-4 mr-2" />
-          Try Again
-        </Button>
-      )}
-    </motion.div>
-  );
 }
 
 export default ErrorBoundary;

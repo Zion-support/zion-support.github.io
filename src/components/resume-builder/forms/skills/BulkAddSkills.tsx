@@ -39,7 +39,8 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
                 await addSkill(resumeId, {
                   name: skillName,
                   category: category,
-                  proficiency: 3});
+                  proficiency: 3,
+                });
               }
             }
           }

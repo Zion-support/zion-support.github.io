@@ -15,7 +15,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage,
+} from "@/components/ui/form";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import Link from "next/link";
 
@@ -24,7 +25,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters"),
-  rememberMe: z.boolean()});
+  rememberMe: z.boolean(),
+});
 
 
 type LoginFormValues = z.infer<typeof loginSchema>;
@@ -42,7 +44,9 @@ export function LoginForm() {
     defaultValues: {
       email: "",
       password: "",
-      rememberMe: false}});
+      rememberMe: false,
+    },
+  });
 
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return;

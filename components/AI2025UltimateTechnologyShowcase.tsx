@@ -1,16 +1,17 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Cpu, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Rocket, 
-  Database, 
+  Brain
+  Cpu
+  Zap
+  Shield
+  Globe
+  Rocket
+  Database
   Cloud,
   BarChart3,
   Users,
@@ -25,12 +26,12 @@ import {
 } from 'lucide-react';
 
 const AI2025UltimateTechnologyShowcase = () => {
-  const [activeTab, setActiveTab] = useState('ai-automation');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('ai-automation');
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const technologies = [
     {
@@ -47,7 +48,7 @@ const AI2025UltimateTechnologyShowcase = () => {
         'Autonomous Decision Making',
         'Real-time Optimization'
       ],
-      stats: { value: '95%', label: 'Efficiency Increase' },
+      stats: { value: '95%'label: 'Efficiency Increase' },
       link: '/ai-2025-advanced-automation-solutions'
     },
     {
@@ -64,7 +65,7 @@ const AI2025UltimateTechnologyShowcase = () => {
         'Molecular Simulation',
         'Financial Modeling'
       ],
-      stats: { value: '1000x', label: 'Processing Speed' },
+      stats: { value: '1000'x', 'label: 'Processing Speed' },
       link: '/quantum-computing-2025'
     },
     {
@@ -81,7 +82,7 @@ const AI2025UltimateTechnologyShowcase = () => {
         'Augmented Reality Integration',
         'Thought-Controlled Systems'
       ],
-      stats: { value: '99.9%', label: 'Accuracy Rate' },
+      stats: { value: '99.9%'label: 'Accuracy Rate' },
       link: '/neural-interface-revolution-2026'
     },
     {
@@ -98,7 +99,7 @@ const AI2025UltimateTechnologyShowcase = () => {
         'Incident Response Automation',
         'Compliance Management'
       ],
-      stats: { value: '99.99%', label: 'Threat Detection' },
+      stats: { value: '99.99%'label: 'Threat Detection' },
       link: '/advanced-security-solutions'
     }
   ];
@@ -141,7 +142,7 @@ const AI2025UltimateTechnologyShowcase = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -173,8 +174,8 @@ const AI2025UltimateTechnologyShowcase = () => {
         {/* Technology Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -201,8 +202,8 @@ const AI2025UltimateTechnologyShowcase = () => {
         {/* Active Technology Display */}
         <motion.div
           key={activeTab}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0x: 20 }}
+          animate={{ opacity: 1x: 0 }}
           transition={{ duration: 0.5 }}
           className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 mb-16 border border-white/10"
         >
@@ -241,7 +242,7 @@ const AI2025UltimateTechnologyShowcase = () => {
             <div>
               <h4 className="text-xl font-semibold text-white mb-6">Key Features</h4>
               <div className="grid grid-cols-1 gap-3">
-                {currentTech.features.map((feature, index) => (
+                {currentTech.features.map((featureindex) => (
                   <div key={index} className="flex items-center gap-3 text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span>{feature}</span>
@@ -255,15 +256,15 @@ const AI2025UltimateTechnologyShowcase = () => {
         {/* Success Stories */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Success Stories
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {successStories.map((story, index) => (
+            {successStories.map((storyindex) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
                 <div className="text-4xl mb-4">{story.logo}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{story.company}</h3>
@@ -278,8 +279,8 @@ const AI2025UltimateTechnologyShowcase = () => {
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl p-12 border border-white/10"
         >
           <h2 className="text-4xl font-bold text-white mb-6">

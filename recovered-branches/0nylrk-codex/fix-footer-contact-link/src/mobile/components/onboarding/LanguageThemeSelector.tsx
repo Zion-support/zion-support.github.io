@@ -1,9 +1,17 @@
 
+<<<<<<< HEAD
+import React{ useState } from "react";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "@/hooks/useTheme";
+import { MoonSunCheck } from "lucide-react";
+import { CardContent } from "@/components/ui/card";
+=======
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/useTheme";
 import { Moon, Sun, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface Language {
   code: string;
@@ -12,15 +20,28 @@ interface Language {
 }
 
 const languages: Language[] = [
+<<<<<<< HEAD
+  { code: "en"name: "English"flag: "🇺🇸" },
+  { code: "es"name: "Español"flag: "🇪🇸" },
+  { code: "fr"name: "Français"flag: "🇫🇷" },
+  { code: "de"name: "Deutsch"flag: "🇩🇪" },
+  { code: "zh"name: "中文"flag: "🇨🇳" }];
+
+export function LanguageThemeSelector() {
+  const { themesetTheme } = useTheme();
+  const [selectedLanguagesetSelectedLanguage] = useState<string>("en");
+=======
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "es", name: "Español", flag: "🇪🇸" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
-  { code: "zh", name: "中文", flag: "🇨🇳" }];
+  { code: "zh", name: "中文", flag: "🇨🇳" },
+];
 
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-8 px-4">
@@ -35,6 +56,10 @@ export function LanguageThemeSelector() {
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code 
                   ? "border-primary bg-primary/5" 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/auto/autonomy-17186719616
                   : "border-border hover:border-primary/40"
               }`}
               onClick={() => setSelectedLanguage(language.code)}

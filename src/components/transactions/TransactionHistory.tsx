@@ -76,7 +76,8 @@ export function TransactionHistory() {
       if (error) throw error;
       return data as Transaction[];
     },
-    enabled: !!user});
+    enabled: !!user,
+  });
 
   const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
     try {
@@ -88,7 +89,8 @@ export function TransactionHistory() {
       
       toast({
         title: "Success",
-        description: (data as any)?.message || "Transaction updated successfully"});
+        description: (data as any)?.message || "Transaction updated successfully",
+      });
       
       refetch();
     } catch (error) {
@@ -96,7 +98,8 @@ export function TransactionHistory() {
       toast({
         title: "Error",
         description: error instanceof Error ? error.message : "Failed to update transaction",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     }
   };
   

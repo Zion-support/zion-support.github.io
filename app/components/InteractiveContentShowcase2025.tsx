@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Download, FileText, TrendingUp, Users, Zap, Star, Award, Target, Clock, Eye, ThumbsUp } from 'lucide-react';
+import { ArrowRight, BookOpen, Download, FileText, TrendingUp, Users, Zap, Star, Award, Clock, Eye, ThumbsUp, ArrowRight } from 'lucide-react';
 
 const InteractiveContentShowcase2025 = () => {
   const [activeCategory, setActiveCategory] = useState('all');

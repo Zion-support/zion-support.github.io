@@ -88,7 +88,7 @@ export default function NewContentShowcaseBanner() {
 
       {/* Floating elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(8)].map((_, i) => (
+        {[...Array(8)].map((_i) => (
           <div
             key={i}
             className="absolute w-2 h-2 bg-white/20 rounded-full animate-ping"

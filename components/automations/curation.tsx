@@ -15,7 +15,11 @@ type Props = {
   items: Experiment[];
 };
 
+<<<<<<< HEAD
+export default function CurationPage({ updatedAtitems }: Props) {
+=======
 export default function CurationPage({ updatedAt, items }: Props) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">
       <h1 className="text-2xl font-bold text-gray-900">AI Curated Growth Experiments</h1>
@@ -24,9 +28,14 @@ export default function CurationPage({ updatedAt, items }: Props) {
       ) : (
         <p className="mt-2 text-sm text-gray-600">No curated output yet. It will appear here automatically after the next run.</p>
       )}
+<<<<<<< HEAD
+      <div className="mt-6 space-y-4">
+        {items.map((expidx) => (
+=======
 
       <div className="mt-6 space-y-4">
         {items.map((exp, idx) => (
+>>>>>>> origin/auto/autonomy-17186719616
           <div key={idx} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
             <div className="text-base font-semibold text-gray-900">{exp.title}</div>
             {(exp.hypothesis || exp.metric) && (
@@ -56,19 +65,38 @@ export default function CurationPage({ updatedAt, items }: Props) {
 
 export async function getStaticProps() {
   try {
+<<<<<<< HEAD
+    const filePath = path.join(process.cwd()"data"ai-curation"growth-experiments.json");
+    const raw = fs.readFileSync(filePath"utf8");
+=======
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
     const raw = fs.readFileSync(filePath, "utf8");
+>>>>>>> origin/auto/autonomy-17186719616
     const parsed = JSON.parse(raw);
     return {
       props: {
         updatedAt: parsed.updatedAt || null,
+<<<<<<< HEAD
         items: parsed.items || []},
       revalidate: 300};
+=======
+        items: parsed.items || [],
+      },
+      revalidate: 300,
+    };
+>>>>>>> origin/auto/autonomy-17186719616
   } catch {
     return {
       props: {
         updatedAt: null,
+<<<<<<< HEAD
         items: []},
       revalidate: 300};
+=======
+        items: [],
+      },
+      revalidate: 300,
+    };
+>>>>>>> origin/auto/autonomy-17186719616
   }
 }

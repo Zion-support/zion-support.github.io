@@ -1,16 +1,17 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Calendar, 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Globe, 
-  Rocket, 
-  Shield, 
-  Users, 
+  Calendar
+  TrendingUp
+  Brain
+  Zap
+  Globe
+  Rocket
+  Shield
+  Users
   Lightbulb,
   Target,
   Award,
@@ -28,12 +29,12 @@ import {
 } from 'lucide-react';
 
 const FuturePredictionsShowcase2025 = () => {
-  const [activeYear, setActiveYear] = useState('2025');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeYearsetActiveYear] = useState('2025');
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const predictions = {
     '2025': {
@@ -136,7 +137,7 @@ const FuturePredictionsShowcase2025 = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -145,7 +146,7 @@ const FuturePredictionsShowcase2025 = () => {
             <span className="block text-4xl md:text-6xl mt-2">Showcase 2025-2030</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Explore our expert predictions for the future of AI, technology, and human civilization 
+            Explore our expert predictions for the future of AItechnologyand human civilization 
             from 2025 to 2030 and beyond.
           </p>
         </motion.div>
@@ -153,8 +154,8 @@ const FuturePredictionsShowcase2025 = () => {
         {/* Year Navigation */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {years.map((year) => {
@@ -182,20 +183,20 @@ const FuturePredictionsShowcase2025 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeYear}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0x: 50 }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: -50 }}
             transition={{ duration: 0.5 }}
             className="grid md:grid-cols-3 gap-8"
           >
-            {predictions[activeYear].predictions.map((prediction, index) => {
+            {predictions[activeYear].predictions.map((predictionindex) => {
               const Icon = prediction.icon;
               return (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="group relative"
                 >
                   <div className="relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
@@ -240,8 +241,8 @@ const FuturePredictionsShowcase2025 = () => {
         {/* Timeline Visualization */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
           className="mt-16 bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">Technology Evolution Timeline</h3>
@@ -251,7 +252,7 @@ const FuturePredictionsShowcase2025 = () => {
             
             {/* Timeline Points */}
             <div className="flex justify-between items-center">
-              {years.map((year, index) => {
+              {years.map((yearindex) => {
                 const yearData = predictions[year];
                 const Icon = yearData.icon;
                 return (
@@ -273,8 +274,8 @@ const FuturePredictionsShowcase2025 = () => {
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >
           <div className="inline-flex items-center gap-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition-transform cursor-pointer shadow-2xl">

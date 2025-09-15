@@ -6,7 +6,7 @@ export default function AIContentPersonalizationEngine() {
 		<ServiceLanding
 			title="AI Content Personalization Engine"
 			slug="ai-content-personalization-engine"
-			description="Deliver tailored content, offers, and UX per user in real-time. Optimize journeys across web, email, and in-app to maximize engagement and conversions."
+			description="Deliver tailored contentoffersand UX per user in real-time. Optimize journeys across webemailand in-app to maximize engagement and conversions."
 			subtitle="Boost conversions 10–25% with context-aware personalization."
 			pricePerMonthUSD={1299}
 			implementationWeeks="Implementation: 2–4 weeks"
@@ -17,9 +17,9 @@ export default function AIContentPersonalizationEngine() {
 				"A/B/n and multi-armed bandit experimentation",
 				"Journey orchestration across channels",
 				"Privacy-safe profiling and consent management",
-				"Integrations: CDP, ESP, CMS, Web SDK"
+				"Integrations: CDPESPCMSWeb SDK"
 			]}
-			industries={["E‑commerce", "Media", "SaaS", "Education"]}
+			industries={["E‑commerce"Media"SaaS"Education"]}
 			canonical="https://ziontechgroup.com/ai-content-personalization-engine"
 		/>
 	);

@@ -1,13 +1,12 @@
+"use client";
 import React, { useState, useEffect } from 'react';
-import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Quantum AI Readiness Assessment 2026 | Zion Tech Group',
-  description: 'Assess your organization\'s readiness for quantum AI transformation. Get personalized recommendations and implementation roadmap.',
-  keywords: ['quantum AI', 'readiness assessment', 'quantum computing', 'AI transformation', 'business tool'],
-};
+<<<<<<< HEAD
+=======
+// Metadata moved to parent component
 
+>>>>>>> origin/new-content-and-promotional-components
 interface AssessmentResults {
   overallScore: number;
   readinessLevel: string;

@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Settings, 
-  Zap, 
-  Brain, 
-  Rocket, 
+  Play
+  Pause
+  RotateCcw
+  Settings
+  Zap
+  Brain
+  Rocket
   ArrowRight,
   X,
   ChevronRight,
@@ -22,13 +23,13 @@ import {
 } from 'lucide-react';
 
 const InteractiveTechDemo2027PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
-  const [currentDemo, setCurrentDemo] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentDemosetCurrentDemo] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const demos = [
     {
@@ -59,18 +60,18 @@ const InteractiveTechDemo2027PromotionBanner = () => {
   ];
 
   const stats = [
-    { value: '99.97%', label: 'Accuracy' },
-    { value: '2.3k hrs', label: 'Time Saved' },
-    { value: '0.02%', label: 'Error Rate' },
-    { value: '$1.2M', label: 'Cost Saved' }
+    { value: '99.97%'label: 'Accuracy' },
+    { value: '2.3k 'hrs', 'label: 'Time Saved' },
+    { value: '0.02%'label: 'Error Rate' },
+    { value: '$1.2'M', 'label: 'Cost Saved' }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }, 2500);
+    }2500);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   if (isDismissed) return null;
 
@@ -81,7 +82,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/30"
         >
           {/* Animated Background */}
@@ -90,13 +91,13 @@ const InteractiveTechDemo2027PromotionBanner = () => {
               className="absolute inset-0 opacity-30"
               animate={{
                 background: [
-                  'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
-                  'radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%)',
-                  'radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%)',
-                  'radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
+                  'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 40% 80%rgba(1202192550.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
                 ]
               }}
-              transition={{ duration: 6, repeat: Infinity }}
+              transition={{ duration: 6repeat: Infinity }}
             />
           </div>
 
@@ -123,7 +124,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {
                 
                 <p className="text-gray-300 text-sm lg:text-base mb-4 max-w-2xl">
                   Experience our cutting-edge technology in action! Watch real-time demonstrations 
-                  of AI processing, automation, and neural interfaces with interactive controls.
+                  of AI processingautomationand neural interfaces with interactive controls.
                 </p>
 
                 {/* Rotating Demo Features */}
@@ -131,9 +132,9 @@ const InteractiveTechDemo2027PromotionBanner = () => {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentDemo}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
                       transition={{ duration: 0.5 }}
                       className="flex items-center gap-2"
                     >
@@ -154,7 +155,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {
 
                 {/* Features */}
                 <div className="flex flex-wrap items-center gap-3 text-xs">
-                  {features.map((feature, index) => (
+                  {features.map((featureindex) => (
                     <div key={index} className="flex items-center gap-1 px-2 py-1 rounded-full bg-white/10">
                       <CheckCircle className="w-3 h-3 text-green-400" />
                       <span className="text-gray-300">{feature}</span>
@@ -206,7 +207,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {
 
             {/* Mobile Stats */}
             <div className="lg:hidden mt-4 grid grid-cols-4 gap-4">
-              {stats.map((stat, index) => (
+              {stats.map((statindex) => (
                 <div key={index} className="text-center p-2 rounded-lg bg-white/5">
                   <div className="text-lg font-bold text-white">{stat.value}</div>
                   <div className="text-xs text-gray-400">{stat.label}</div>

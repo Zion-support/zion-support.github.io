@@ -1,16 +1,17 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Calendar, 
-  Target, 
-  Brain, 
-  Zap, 
-  Globe, 
-  Shield, 
+  TrendingUp
+  Calendar
+  Target
+  Brain
+  Zap
+  Globe
+  Shield
   Database,
   ArrowRight,
   CheckCircle,
@@ -23,12 +24,12 @@ import {
 } from 'lucide-react';
 
 const AITrendsPredictions2025 = () => {
-  const [activeYear, setActiveYear] = useState('2025');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeYearsetActiveYear] = useState('2025');
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const trendsData = {
     '2025': {
@@ -56,7 +57,7 @@ const AITrendsPredictions2025 = () => {
         {
           id: 3,
           title: 'Multimodal AI Consciousness',
-          description: 'AI that seamlessly processes text, images, voice, and data simultaneously',
+          description: 'AI that seamlessly processes textimagesvoiceand data simultaneously',
           impact: 'Unified intelligence platform',
           confidence: 88,
           icon: Sparkles,
@@ -177,7 +178,7 @@ const AITrendsPredictions2025 = () => {
     }
   };
 
-  const years = ['2025', '2026', '2027'];
+  const years = ['2025'2026'2027'];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
@@ -185,7 +186,7 @@ const AITrendsPredictions2025 = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -198,15 +199,15 @@ const AITrendsPredictions2025 = () => {
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> 2025-2027</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our comprehensive predictions for the future of artificial intelligence, from quantum breakthroughs to synthetic consciousness.
+            Explore our comprehensive predictions for the future of artificial intelligencefrom quantum breakthroughs to synthetic consciousness.
           </p>
         </motion.div>
 
         {/* Year Selector */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.2 }}
           className="flex justify-center gap-4 mb-12"
         >
           {years.map((year) => (
@@ -228,9 +229,9 @@ const AITrendsPredictions2025 = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeYear}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0x: 20 }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: -20 }}
             transition={{ duration: 0.5 }}
           >
             {/* Year Header */}
@@ -245,14 +246,14 @@ const AITrendsPredictions2025 = () => {
 
             {/* Trends Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
-              {trendsData[activeYear].trends.map((trend, index) => {
+              {trendsData[activeYear].trends.map((trendindex) => {
                 const Icon = trend.icon;
                 return (
                   <motion.div
                     key={trend.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.6delay: index * 0.1 }}
                     className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 group"
                   >
                     <div className="flex items-start gap-4">
@@ -287,19 +288,19 @@ const AITrendsPredictions2025 = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6delay: 0.4 }}
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
             >
               <h3 className="text-2xl font-bold text-white mb-6 text-center">
                 Key Predictions for {activeYear}
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
-                {trendsData[activeYear].predictions.map((prediction, index) => (
+                {trendsData[activeYear].predictions.map((predictionindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                    initial={{ opacity: 0x: -20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.6delay: 0.5 + index * 0.1 }}
                     className="flex items-start gap-3"
                   >
                     <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
@@ -314,8 +315,8 @@ const AITrendsPredictions2025 = () => {
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">

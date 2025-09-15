@@ -16,7 +16,8 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -32,12 +33,14 @@ const productSchema = z.object({
   price: z
     .string()
     .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-      message: "Price must be a valid number"}),
+      message: "Price must be a valid number",
+    }),
   category: z.string().min(1, "Please select a category"),
   image: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
   video: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
   model: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
-  tags: z.string().optional()});
+  tags: z.string().optional(),
+});
 
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>;
@@ -60,7 +63,9 @@ export function ProductSubmissionForm() {
       category: "",
       video: undefined,
       model: undefined,
-      tags: ""}});
+      tags: "",
+    },
+  });
   
   // Handle image upload preview
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -108,7 +113,8 @@ export function ProductSubmissionForm() {
       toast({
         title: "Authentication Required",
         description: "You must be logged in to publish products",
-        variant: "destructive"});
+        variant: "destructive",
+      });
       return;
     }
 
@@ -125,8 +131,10 @@ export function ProductSubmissionForm() {
         tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],
         author: {
           name: user.displayName || "Anonymous Creator",
-          id: user.id},
-        createdAt: new Date().toISOString()};
+          id: user.id,
+        },
+        createdAt: new Date().toISOString(),
+      };
       
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
@@ -228,7 +236,8 @@ export function ProductSubmissionForm() {
             listingType: 'product',
             description: values.description,
             images: imagePublicUrl ? [imagePublicUrl] : [],
-            sellerId: user.id}
+            sellerId: user.id,
+          }
         });
       } catch (err) {
         logErrorToProduction('Error invoking moderation:', { data: err });
@@ -237,7 +246,8 @@ export function ProductSubmissionForm() {
       // Show success message
       toast({
         title: "Product Published!",
-        description: "Your product has been successfully published on Zion."});
+        description: "Your product has been successfully published on Zion.",
+      });
       
       // Redirect to product page
       router.push(`/marketplace/listing/${productRecord.id}`);
@@ -245,7 +255,8 @@ export function ProductSubmissionForm() {
       toast({
         title: "Publication Failed",
         description: error instanceof Error ? error.message : "An unknown error occurred",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }

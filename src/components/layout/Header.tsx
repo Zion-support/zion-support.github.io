@@ -1,4 +1,5 @@
 
+
   };
 ,
   return (,
@@ -6,7 +7,7 @@
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     } ${className}`}>,
       {/* Top Contact Bar */};
-      <div className="bg-blue-900 text-white py-2 px-4 hidden lg: block">,
+      <div className="bg-blue-900 text-white py-2 px-4 hidden: lg: block">,
         <div className="container mx-auto flex justify-between items-center text-sm">,
           <div className="flex items-center space-x-6">,
             <div className="flex items-center space-x-2">,
@@ -40,12 +41,12 @@
             </span>,
           </Link>,
           {/* Desktop Navigation */};
-          <div className="hidden lg: flex items-center space-x-8">,
+          <div className="hidden: lg: flex items-center space-x-8">,
             {navigationItems.map((item) => (,
               <div key={item.name} className="relative group">,
                 <Link,
                   href={item.href};
-                  className="flex items-center space-x-1 text-gray-700 hover: text-blue-600 transition-colors duration-200 font-medium",
+                  className="flex items-center space-x-1 text-gray-700: hover: text-blue-600 transition-colors duration-200 font-medium",
                   onMouseEnter={() => setActiveDropdown(item.name)};
                   onMouseLeave={() => setActiveDropdown(null)};
                 >,
@@ -57,9 +58,9 @@
                   <AnimatePresence>,
                     {activeDropdown === item.name && (,
                       <motion.div,
-                        initial={{ opacity: 0, y: 10 }};
-                        animate={{ opacity: 1, y: 0 }};
-                        exit={{ opacity: 0, y: 10 }};
+                        initial={{ opacit: y: 0, y: 10 }};
+                        animate={{ opacit: y: 1, y: 0 }};
+                        exit={{ opacit: y: 0, y: 10 }};
                         className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50",
                         onMouseEnter={() => setActiveDropdown(item.name)};
                         onMouseLeave={() => setActiveDropdown(null)};
@@ -70,13 +71,13 @@
                             <Link,
                               key={index};
                               href={subItem.href};
-                              className="flex items-start space-x-3 px-6 py-3 hover: bg-gray-50 transition-colors duration-200 group",
+                              className="flex items-start space-x-3 px-6 py-3: hover: bg-gray-50 transition-colors duration-200 group",
                             >,
                               <div className="flex-shrink-0">,
-                                <IconComponent className="w-5 h-5 text-blue-600 group-hover: text-purple-600 transition-colors" />,
+                                <IconComponent className="w-5 h-5 text-blue-600 group-hove: r: text-purple-600 transition-colors" />,
                               </div>,
                               <div>,
-                                <div className="font-medium text-gray-900 group-hover: text-blue-600 transition-colors">,
+                                <div className="font-medium text-gray-900 group-hove: r: text-blue-600 transition-colors">,
                                   {subItem.name};
                                 </div>,
                                 <div className="text-sm text-gray-500">,
@@ -90,10 +91,10 @@
             ))};
           </div>,
           {/* CTA Button */};
-          <div className="hidden lg: flex items-center space-x-4">,
+          <div className="hidden: lg: flex items-center space-x-4">,
             <Link,
               href="/contact",
-              className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300 font-semibold",
+              className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg: hover: shadow-lg transition-all duration-300 font-semibold",
             >,
               Get Quote,
             </Link>,
@@ -101,7 +102,7 @@
           {/* Mobile Menu Button */};
           <button,
             onClick={() => setIsOpen(!isOpen)};
-            className="lg: hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors",
+            className="l: g: hidden p-2 rounded-lg text-gray-700: hover:bg-gray-100 transition-colors",
           >,
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />};
           </button>,
@@ -110,17 +111,17 @@
         <AnimatePresence>,
           {isOpen && (,
             <motion.div,
-              initial={{ opacity: 0, height: 0 }};
-              animate={{ opacity: 1, height: 'auto' }};
-              exit={{ opacity: 0, height: 0 }};
-              className="lg: hidden mt-4 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden",
+              initial={{ opacit: y: 0, heigh: t: 0 }};
+              animate={{ opacit: y: 1, heigh: t: 'auto' }};
+              exit={{ opacit: y: 0, heigh: t: 0 }};
+              className="l: g: hidden mt-4 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden",
             >,
               <div className="py-4">,
                 {navigationItems.map((item, index) => (,
                   <div key={index}>,
                     <Link,
                       href={item.href};
-                      className="block px-6 py-3 text-gray-700 hover: bg-gray-50 hover:text-blue-600 transition-colors duration-200 font-medium",
+                      className="block px-6 py-3 text-gray-700: hover: bg-gray-50: hover:text-blue-600 transition-colors duration-200 font-medium",
                       onClick={() => setIsOpen(false)};
                     >,
                       {item.name};
@@ -133,7 +134,7 @@
                             <Link,
                               key={subIndex};
                               href={subItem.href};
-                              className="flex items-center space-x-3 px-6 py-2 text-sm text-gray-600 hover: bg-gray-50 hover:text-blue-600 transition-colors duration-200",
+                              className="flex items-center space-x-3 px-6 py-2 text-sm text-gray-600: hover: bg-gray-50: hover:text-blue-600 transition-colors duration-200",
                               onClick={() => setIsOpen(false)};
                             >,
                               <IconComponent className="w-4 h-4" />,
@@ -148,7 +149,7 @@
                 <div className="px-6 py-4 border-t border-gray-200">,
                   <Link,
                     href="/contact",
-                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300 font-semibold",
+                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg: hover: shadow-lg transition-all duration-300 font-semibold",
                     onClick={() => setIsOpen(false)};
                   >,
                     Get Quote,
@@ -160,5 +161,7 @@
         </AnimatePresence>,
       </nav>,
     </header>,
-  )
+  ),
+
 };
+

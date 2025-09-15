@@ -1,3 +1,9 @@
+"use client";
+'use client';
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect } from 'react';
 
 interface AnalyticsData {
@@ -31,21 +37,21 @@ interface ConversionFunnel {
 }
 
 const AdvancedAnalyticsEngine: React.FC = () => {
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData[]>([]);
-  const [userSegments, setUserSegments] = useState<UserSegment[]>([]);
-  const [conversionFunnel, setConversionFunnel] = useState<ConversionFunnel[]>([]);
-  const [selectedPeriod, setSelectedPeriod] = useState('30d');
-  const [selectedMetric, setSelectedMetric] = useState('all');
-  const [isLoading, setIsLoading] = useState(true);
+  const [analyticsDatasetAnalyticsData] = useState<AnalyticsData[]>([]);
+  const [userSegmentsetUserSegments] = useState<UserSegment[]>([]);
+  const [conversionFunnelsetConversionFunnel] = useState<ConversionFunnel[]>([]);
+  const [selectedPeriodsetSelectedPeriod] = useState('30d');
+  const [selectedMetricsetSelectedMetric] = useState('all');
+  const [isLoadingsetIsLoading] = useState(true);
 
   useEffect(() => {
     generateMockData();
-  }, [selectedPeriod]);
+  }[selectedPeriod]);
 
   const generateMockData = async () => {
     setIsLoading(true);
     
-    await new Promise(resolve => setTimeout(resolve, 1200));
+    await new Promise(resolve => setTimeout(resolve1200));
 
     const mockAnalytics: AnalyticsData[] = [
       {
@@ -136,7 +142,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         name: 'New Visitors',
         size: 523456,
         percentage: 58.7,
-        behavior: 'High bounce rate, short sessions',
+        behavior: 'High bounce rateshort sessions',
         conversionRate: 1.2,
         avgValue: 45,
         growth: 12.3
@@ -146,7 +152,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         name: 'Returning Visitors',
         size: 369000,
         percentage: 41.3,
-        behavior: 'Longer sessions, higher engagement',
+        behavior: 'Longer sessionshigher engagement',
         conversionRate: 6.8,
         avgValue: 125,
         growth: 8.9
@@ -156,7 +162,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         name: 'Mobile Users',
         size: 600234,
         percentage: 67.3,
-        behavior: 'Quick browsing, mobile-optimized',
+        behavior: 'Quick browsingmobile-optimized',
         conversionRate: 2.1,
         avgValue: 78,
         growth: 15.7
@@ -166,7 +172,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         name: 'Desktop Users',
         size: 292222,
         percentage: 32.7,
-        behavior: 'Detailed browsing, higher conversions',
+        behavior: 'Detailed browsinghigher conversions',
         conversionRate: 5.4,
         avgValue: 156,
         growth: 4.2
@@ -176,7 +182,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         name: 'High Value Users',
         size: 89234,
         percentage: 10.0,
-        behavior: 'Multiple purchases, brand loyal',
+        behavior: 'Multiple purchasesbrand loyal',
         conversionRate: 18.5,
         avgValue: 445,
         growth: 22.1
@@ -247,16 +253,16 @@ const AdvancedAnalyticsEngine: React.FC = () => {
     }
   };
 
-  const getTrendColor = (trend: string, metric: string) => {
+  const getTrendColor = (trend: stringmetric: string) => {
     if (metric.includes('bounce') || metric.includes('load time')) {
       return trend === 'down' ? 'text-green-600' : 'text-red-600';
     }
     return trend === 'up' ? 'text-green-600' : 'text-red-600';
   };
 
-  const formatValue = (value: number, unit: string) => {
+  const formatValue = (value: numberunit: string) => {
     if (unit === '$') {
-      return new Intl.NumberFormat('en-US', {
+      return new Intl.NumberFormat('en-US'{
         style: 'currency',
         currency: 'USD',
         minimumFractionDigits: 0,
@@ -282,7 +288,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
         <div className="animate-pulse">
           <div className="h-8 bg-gray-200 rounded w-1/3 mb-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map(i => (
+            {[12345678].map(i => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
                 <div className="h-8 bg-gray-200 rounded w-1/3 mb-2"></div>
@@ -350,14 +356,14 @@ const AdvancedAnalyticsEngine: React.FC = () => {
             
             <div className="flex items-baseline mb-4">
               <span className="text-3xl font-bold text-gray-900">
-                {formatValue(metric.value, metric.unit)}
+                {formatValue(metric.valuemetric.unit)}
               </span>
             </div>
             
             <div className="flex items-center justify-between">
               <div className="flex items-center text-sm">
                 <span className="mr-1">{getTrendIcon(metric.trend)}</span>
-                <span className={getTrendColor(metric.trend, metric.metric)}>
+                <span className={getTrendColor(metric.trendmetric.metric)}>
                   {metric.change > 0 ? '+' : ''}{metric.change.toFixed(1)}%
                 </span>
                 <span className="text-gray-500 ml-1">vs last period</span>
@@ -397,7 +403,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
                   <div className="w-full bg-gray-200 rounded-full h-2">
                     <div 
                       className="bg-blue-500 h-2 rounded-full"
-                      style={{ width: `${Math.min(100, segment.conversionRate * 5)}%` }}
+                      style={{ width: `${Math.min(100segment.conversionRate * 5)}%` }}
                     ></div>
                   </div>
                 </div>
@@ -418,7 +424,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-6">🎯 Conversion Funnel</h3>
           
           <div className="space-y-4">
-            {conversionFunnel.map((stage, index) => (
+            {conversionFunnel.map((stageindex) => (
               <div key={stage.stage} className="relative">
                 <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl">
                   <div className="flex items-center space-x-3">
@@ -466,7 +472,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {
             <ul className="space-y-2 text-sm text-gray-600">
               <li>• Improve mobile conversion rate (currently 2.1% vs 5.4% desktop)</li>
               <li>• Reduce checkout abandonment (40% dropoff at final stage)</li>
-              <li>• Enhance new visitor engagement (58.7% of traffic, 1.2% conversion)</li>
+              <li>• Enhance new visitor engagement (58.7% of traffic1.2% conversion)</li>
               <li>• Optimize page load times for mobile users</li>
             </ul>
           </div>

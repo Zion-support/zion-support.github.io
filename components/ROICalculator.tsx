@@ -11,7 +11,7 @@ const ROICalculator = () => {
     automationCost: '',
   });
 
-  const [results, setResults] = useState(null);
+  const [resultsetResults] = useState(null);
 
   const calculateROI = () => {
     const currentCost = parseFloat(inputs.currentCost) || 0;

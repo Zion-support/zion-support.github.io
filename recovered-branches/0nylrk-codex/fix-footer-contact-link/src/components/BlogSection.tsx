@@ -1,14 +1,24 @@
 
 import { GradientHeading } from "./GradientHeading";
+<<<<<<< HEAD
+import { CardContentCardFooter } from "@/components/ui/card";
+=======
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "@/data/blog-posts";
 
 // Get the 3 most recent blog posts
+<<<<<<< HEAD
+const recentPosts = [...BLOG_POSTS].sort((ab) => {
+  return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
+}).slice(03);
+=======
 const recentPosts = [...BLOG_POSTS].sort((a, b) => {
   return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
 }).slice(0, 3);
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function BlogSection() {
   return (
@@ -18,7 +28,11 @@ export function BlogSection() {
           <div>
             <GradientHeading>Latest Insights</GradientHeading>
             <p className="mt-2 text-zion-slate-light text-xl max-w-2xl">
+<<<<<<< HEAD
+              Stay updated with trends in AI technologymarketplace strategiesand IT services
+=======
               Stay updated with trends in AI technology, marketplace strategies, and IT services
+>>>>>>> origin/auto/autonomy-17186719616
             </p>
           </div>
           <Button 
@@ -31,7 +45,11 @@ export function BlogSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+          {recentPosts.map((postindex) => (
+=======
           {recentPosts.map((post, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
             <Card key={post.id} className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">
               <div className="h-48 bg-zion-blue-dark relative overflow-hidden">
                 <img 
@@ -39,7 +57,11 @@ export function BlogSection() {
                   alt={post.title}
                   className="object-cover w-full h-full opacity-60 hover:opacity-80 transition-opacity duration-300"
                   loading="lazy"
+<<<<<<< HEAD
+                  onError={(e: React.SyntheticEvent<HTMLImageElementEvent>) => {
+=======
                   onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+>>>>>>> origin/auto/autonomy-17186719616
                     const target = e.currentTarget as HTMLImageElement;
                     target.src =
                       "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";

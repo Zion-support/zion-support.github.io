@@ -5,27 +5,27 @@ export default function AutomationPage() {
   const automationFeatures = [
     {
       title: "Autonomous Cloud Management",
-      description: "Self-managing cloud infrastructure that monitors, scales, and optimizes automatically.",
+      description: "Self-managing cloud infrastructure that monitorscalesand optimizes automatically.",
       icon: "☁️",
-      benefits: ["24/7 monitoring", "Auto-scaling", "Cost optimization"]
+      benefits: ["24/7 monitoring"Auto-scaling"Cost optimization"]
     },
     {
       title: "AI Content Generation",
       description: "Automated content creation that learns from your brand and generates relevant material.",
       icon: "✍️",
-      benefits: ["SEO optimization", "Brand consistency", "Scalable content"]
+      benefits: ["SEO optimization"Brand consistency"Scalable content"]
     },
     {
       title: "Intelligent DevOps",
       description: "Self-healing CI/CD pipelines that detect and fix issues automatically.",
       icon: "🔄",
-      benefits: ["Error detection", "Auto-fixing", "Deployment optimization"]
+      benefits: ["Error detection"Auto-fixing"Deployment optimization"]
     },
     {
       title: "Smart Security",
       description: "Proactive security systems that identify and respond to threats in real-time.",
       icon: "🔒",
-      benefits: ["Threat detection", "Auto-response", "Vulnerability scanning"]
+      benefits: ["Threat detection"Auto-response"Vulnerability scanning"]
     }
   ];
 
@@ -44,7 +44,7 @@ export default function AutomationPage() {
               Autonomous Cloud Automation
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Systems that run themselves, learn from experience, and continuously improve without human intervention
+              Systems that run themselveslearn from experienceand continuously improve without human intervention
             </p>
           </div>
         </div>
@@ -52,13 +52,13 @@ export default function AutomationPage() {
         {/* Features Grid */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {automationFeatures.map((feature, index) => (
+            {automationFeatures.map((featureindex) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
                 <div className="text-6xl mb-4">{feature.icon}</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
                 <p className="text-gray-600 mb-6">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                  {feature.benefits.map((benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-700">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                       {benefit}

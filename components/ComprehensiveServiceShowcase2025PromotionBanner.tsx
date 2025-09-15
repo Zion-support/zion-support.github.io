@@ -1,19 +1,20 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Database, 
-  Cpu, 
-  Network, 
+  Brain
+  Zap
+  Shield
+  Globe
+  Database
+  Cpu
+  Network
   BarChart3,
   Users,
   Target,
-  ArrowRight, 
+  ArrowRight
   Sparkles,
   Star,
   CheckCircle,
@@ -24,16 +25,16 @@ import {
 } from 'lucide-react';
 
 export default function ComprehensiveServiceShowcase2025PromotionBanner() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentService, setCurrentService] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentServicesetCurrentService] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentService((prev) => (prev + 1) % 4);
-    }, 3000);
+    }3000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   const services = [
     {
@@ -47,7 +48,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
     },
     {
       title: "Machine Learning Implementation",
-      description: "End-to-end ML model development, training, and deployment",
+      description: "End-to-end ML model developmentrainingand deployment",
       icon: Cpu,
       color: "from-blue-500 to-cyan-500",
       price: "$8,000",
@@ -75,23 +76,23 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
   ];
 
   const categories = [
-    { name: "Consulting", icon: Brain, count: 2 },
-    { name: "Development", icon: Code, count: 3 },
-    { name: "Automation", icon: Zap, count: 2 },
-    { name: "Analytics", icon: BarChart3, count: 1 }
+    { name: "Consulting"icon: Braincount: 2 },
+    { name: "Development"icon: Codecount: 3 },
+    { name: "Automation"icon: Zapcount: 2 },
+    { name: "Analytics"icon: BarChart3count: 1 }
   ];
 
   const stats = [
-    { label: "Services Available", value: "8", icon: Target },
-    { label: "Average Rating", value: "4.7", icon: Star },
-    { label: "Total Reviews", value: "884", icon: Users },
-    { label: "Success Rate", value: "100%", icon: Award }
+    { label: "Services Available"value: "8"icon: Target },
+    { label: "Average Rating"value: "4.7"icon: Star },
+    { label: "Total Reviews"value: "884"icon: Users },
+    { label: "Success Rate"value: "100%"icon: Award }
   ];
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900"
     >
@@ -110,9 +111,9 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
           {/* Left Content */}
           <div className="space-y-8">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.2 }}
               className="space-y-4"
             >
               <div className="flex items-center space-x-2">
@@ -130,7 +131,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
               </h2>
               
               <p className="text-xl text-gray-300 leading-relaxed">
-                From strategy consulting to implementation, we offer a complete range of AI services 
+                From strategy consulting to implementationwe offer a complete range of AI services 
                 to transform your business and drive innovation across all industries.
               </p>
             </motion.div>
@@ -139,17 +140,17 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6delay: 0.4 }}
               className="space-y-4"
             >
               <h3 className="text-lg font-semibold text-white mb-4">Service Categories</h3>
               <div className="grid grid-cols-2 gap-4">
-                {categories.map((category, index) => (
+                {categories.map((categoryindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                    initial={{ opacity: 0scale: 0.9 }}
+                    animate={{ opacity: 1scale: 1 }}
+                    transition={{ duration: 0.5delay: 0.5 + index * 0.1 }}
                     className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-all duration-300"
                   >
                     <div className="flex items-center space-x-3">
@@ -170,7 +171,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.6delay: 0.6 }}
               className="space-y-3"
             >
               <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our Services</h3>
@@ -180,7 +181,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
                   "Proven track record with 100% success rate",
                   "Custom solutions tailored to your business needs",
                   "24/7 support and ongoing maintenance"
-                ].map((benefit, index) => (
+                ].map((benefitindex) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
@@ -193,7 +194,7 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              transition={{ duration: 0.6delay: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="group bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
@@ -214,9 +215,9 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
 
           {/* Right Content - Service Showcase */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={{ opacity: 0x: 30 }}
+            animate={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.6delay: 0.4 }}
             className="relative"
           >
             <div className="space-y-6">
@@ -259,12 +260,12 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
 
               {/* Service Grid */}
               <div className="grid grid-cols-2 gap-4">
-                {services.slice(0, 4).map((service, index) => (
+                {services.slice(04).map((serviceindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                    initial={{ opacity: 0scale: 0.9 }}
+                    animate={{ opacity: 1scale: 1 }}
+                    transition={{ duration: 0.5delay: 0.6 + index * 0.1 }}
                     className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-white/20 transition-all duration-300 ${
                       currentService === index ? 'ring-2 ring-purple-500' : ''
                     }`}
@@ -285,12 +286,12 @@ export default function ComprehensiveServiceShowcase2025PromotionBanner() {
 
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4">
-                {stats.map((stat, index) => (
+                {stats.map((statindex) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                    transition={{ duration: 0.5delay: 0.8 + index * 0.1 }}
                     className="bg-white/5 rounded-lg p-4 text-center"
                   >
                     <stat.icon className="h-6 w-6 text-purple-400 mx-auto mb-2" />

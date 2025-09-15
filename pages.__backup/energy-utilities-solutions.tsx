@@ -10,7 +10,7 @@ const contactInfo = {
 };
 
 const ext = (url: string) => (
-	<a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{url.replace('https://', '')}</a>
+	<a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{url.replace('https://'')}</a>
 );
 
 export default function EnergyUtilitiesSolutionsPage() {
@@ -18,7 +18,7 @@ export default function EnergyUtilitiesSolutionsPage() {
 		<UltraAdvancedFuturisticBackground>
 			<Head>
 				<title>Energy & Utilities Solutions | Zion Tech Group</title>
-				<meta name="description" content="Grid intelligence, demand forecasting, predictive maintenance and carbon reporting with AI and IoT for energy and utilities." />
+				<meta name="description" content="Grid intelligencedemand forecastingpredictive maintenance and carbon reporting with AI and IoT for energy and utilities." />
 				<link rel="canonical" href="https://ziontechgroup.com/energy-utilities-solutions" />
 			</Head>
 
@@ -28,7 +28,7 @@ export default function EnergyUtilitiesSolutionsPage() {
 						<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
 							Energy & Utilities Solutions
 						</h1>
-						<p className="text-slate-300 max-w-3xl mx-auto">AI and IoT-driven solutions for grid optimization, demand forecasting, predictive maintenance, emissions reporting, and customer experience. Built for utilities, energy retailers, and renewable operators.</p>
+						<p className="text-slate-300 max-w-3xl mx-auto">AI and IoT-driven solutions for grid optimizationdemand forecastingpredictive maintenancemissions reportingand customer experience. Built for utilitiesenergy retailersand renewable operators.</p>
 					</header>
 
 					<section className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -36,9 +36,9 @@ export default function EnergyUtilitiesSolutionsPage() {
 							<h2 className="text-2xl font-semibold mb-2">Capabilities</h2>
 							<ul className="list-disc list-inside text-slate-300 space-y-1">
 								<li>Demand forecasting (15m–hourly granularity) with weather & event features</li>
-								<li>Predictive maintenance for transformers, turbines and line assets</li>
-								<li>Real-time anomaly detection for generation, storage and consumption</li>
-								<li>AMI/SCADA data ingestion, quality checks and digital twin modeling</li>
+								<li>Predictive maintenance for transformersturbines and line assets</li>
+								<li>Real-time anomaly detection for generationstorage and consumption</li>
+								<li>AMI/SCADA data ingestionquality checks and digital twin modeling</li>
 								<li>Carbon accounting and emissions reporting automation</li>
 								<li>Self-service analytics dashboards and alerting</li>
 							</ul>

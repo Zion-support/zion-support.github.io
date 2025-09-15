@@ -28,20 +28,23 @@ const BUDGET_RANGES = [
   { label: "$5,000 - $10,000", value: "5000-10000" },
   { label: "$10,000 - $25,000", value: "10000-25000" },
   { label: "$25,000 - $50,000", value: "25000-50000" },
-  { label: "$50,000+", value: "50000+" }];
+  { label: "$50,000+", value: "50000+" },
+];
 
 const TIMELINE_OPTIONS = [
   { label: "Less than 1 month", value: "lt-1month" },
   { label: "1-3 months", value: "1-3months" },
   { label: "3-6 months", value: "3-6months" },
-  { label: "6+ months", value: "6+months" }];
+  { label: "6+ months", value: "6+months" },
+];
 
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
     description: '',
     email: '',
     budget: BUDGET_RANGES[0]?.value || '0-5000',
-    timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'});
+    timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month',
+  });
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
@@ -63,11 +66,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
           service: service ? {
             id: service.id,
             title: service.title,
-            category: service.category} : null,
+            category: service.category,
+          } : null,
           quoteDetails: {
             ...formData,
             startDate: startDate?.toISOString(),
-            endDate: endDate?.toISOString()}
+            endDate: endDate?.toISOString(),
+          }
         }
       });
 
@@ -76,7 +81,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       // Show success message
       toast({
         title: "Quote Request Submitted!",
-        description: "We've sent your request to the service provider. They will contact you soon."});
+        description: "We've sent your request to the service provider. They will contact you soon.",
+      });
 
       // Close the modal and reset form
       onOpenChange(false);
@@ -84,7 +90,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         description: '',
         email: '',
         budget: BUDGET_RANGES[0]?.value || '0-5000',
-        timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'});
+        timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month',
+      });
       setStartDate(new Date());
       setEndDate(undefined);
       setCurrentStep('details');
@@ -93,7 +100,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       toast({
         title: "Error",
         description: "There was an error submitting your quote request. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }

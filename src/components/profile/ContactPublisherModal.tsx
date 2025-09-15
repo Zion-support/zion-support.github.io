@@ -4,7 +4,8 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle} from '@/components/ui/dialog';
+  DialogTitle,
+} from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -14,7 +15,8 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage} from '@/components/ui/form';
+  FormMessage,
+} from '@/components/ui/form';
 import { useForm, type Resolver } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -46,7 +48,8 @@ const schema: yup.ObjectSchema<FormValues> = yup
     message: yup
       .string()
       .min(20, 'Message must be at least 20 characters')
-      .required('Message is required')})
+      .required('Message is required'),
+  })
   .required();
 
 export function ContactPublisherModal({
@@ -54,7 +57,8 @@ export function ContactPublisherModal({
   onClose,
   publisherName,
   publisherEmail,
-  productId}: ContactPublisherModalProps) {
+  productId,
+}: ContactPublisherModalProps) {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -63,7 +67,8 @@ export function ContactPublisherModal({
   const form = useForm<FormValues>({
     resolver: yupResolver(schema) as Resolver<FormValues>,
     mode: 'onChange',
-    defaultValues: { subject: '', message: '' }});
+    defaultValues: { subject: '', message: '' },
+  });
 
   const handleSend = async () => {
     if (!user) {
@@ -78,7 +83,8 @@ export function ContactPublisherModal({
         productId,
         subject: values.subject,
         body: values.message,
-        fromUser: user.id});
+        fromUser: user.id,
+      });
       toast.success('Message sent');
       form.reset();
       onClose();

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+// ESM polyfill for Next.js
+export const __esModule = true;
+export default {};
+=======
 /**
  * ESM Polyfill for Next.js 15 + React 19 build compatibility
  * Fixes "Module not found: ESM packages need to be imported" errors
@@ -73,3 +78,4 @@ if (typeof window !== 'undefined') {
 
 // Export empty object to satisfy module requirements
 export {};
+>>>>>>> origin/auto/autonomy-17186719616

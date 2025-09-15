@@ -254,6 +254,9 @@ class MergeConflictResolver:
         
         print("🎉 All merge conflicts resolved and changes pushed successfully!")
         return True
+    else:
+        print("❌ Failed to push to main branch")
+        return False
 
 def main():
     resolver = MergeConflictResolver()

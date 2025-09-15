@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Award, Target, TrendingUp, Users, Globe, CheckCircle, Zap } from 'lucide-react';
+ArrowRightAwardTargetTrendingUpUsersGlobeCheckCircleZap
 
 export default function AI2025ContentRevolution5000ROIBanner() {
   return (
@@ -22,7 +22,7 @@ export default function AI2025ContentRevolution5000ROIBanner() {
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
             Discover how a Fortune 500 technology leader achieved unprecedented 5,000% ROI 
-            through our revolutionary AI content optimization breakthrough, transforming their 
+            through our revolutionary AI content optimization breakthroughtransforming their 
             global marketing operations across 50+ markets.
           </p>
         </div>
@@ -62,12 +62,12 @@ export default function AI2025ContentRevolution5000ROIBanner() {
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">Sarah Chen</h3>
-              <p className="text-green-300">Chief Marketing Officer, Fortune 500 Technology Leader</p>
+              <p className="text-green-300">Chief Marketing OfficerFortune 500 Technology Leader</p>
             </div>
           </div>
           <blockquote className="text-lg text-gray-300 italic mb-6">
             "The AI 2025 Content Revolution breakthrough has completely transformed our global content operations. 
-            We've achieved unprecedented 5,000% ROI and reduced our content costs by 95% while dramatically 
+            'We', 've achieved unprecedented 5,000% ROI and reduced our content costs by 95% while dramatically 
             improving engagement across all markets. This is truly revolutionary technology."
           </blockquote>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

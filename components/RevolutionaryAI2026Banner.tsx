@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Zap, TrendingUp, Users, Award } from 'lucide-react';
+ArrowRightStarZapTrendingUpUsersAward
 
 const RevolutionaryAI2026Banner = () => {
   return (
@@ -32,7 +32,7 @@ const RevolutionaryAI2026Banner = () => {
           {/* Subheadline */}
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover the revolutionary AI breakthroughs of 2026 that are transforming industries worldwide. 
-            Complete guides, real success stories, and proven implementation strategies.
+            Complete guidesreal success storiesand proven implementation strategies.
           </p>
           
           {/* CTA Buttons */}
@@ -62,7 +62,7 @@ const RevolutionaryAI2026Banner = () => {
             <div className="text-3xl mb-4">🚀</div>
             <h3 className="text-xl font-bold mb-3">Revolutionary Breakthroughs</h3>
             <p className="text-gray-200">
-              Quantum-enhanced neural networks, autonomous AI systems, and predictive intelligence that's changing everything.
+              Quantum-enhanced neural networksautonomous AI systemsand predictive intelligence 'that', 's changing everything.
             </p>
           </div>
           
@@ -70,7 +70,7 @@ const RevolutionaryAI2026Banner = () => {
             <div className="text-3xl mb-4">📈</div>
             <h3 className="text-xl font-bold mb-3">Proven Results</h3>
             <p className="text-gray-200">
-              Real success stories with 500% ROI, 95% quality improvements, and 40% cost reductions across industries.
+              Real success stories with 500% ROI95% quality improvementsand 40% cost reductions across industries.
             </p>
           </div>
           
@@ -78,7 +78,7 @@ const RevolutionaryAI2026Banner = () => {
             <div className="text-3xl mb-4">🎯</div>
             <h3 className="text-xl font-bold mb-3">Complete Implementation</h3>
             <p className="text-gray-200">
-              Step-by-step guides, best practices, and proven methodologies for successful AI transformation.
+              Step-by-step guidesbest practicesand proven methodologies for successful AI transformation.
             </p>
           </div>
         </div>

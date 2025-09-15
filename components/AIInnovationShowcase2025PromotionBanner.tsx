@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Sparkles, 
-  ArrowRight, 
-  Brain, 
-  Zap, 
-  TrendingUp, 
+  Sparkles
+  ArrowRight
+  Brain
+  Zap
+  TrendingUp
   X,
   Star,
   Rocket,
@@ -16,8 +17,8 @@ import {
 } from 'lucide-react';
 
 const AIInnovationShowcase2025PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isDismissed, setIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
 
   useEffect(() => {
     // Check if banner was previously dismissed
@@ -25,11 +26,11 @@ const AIInnovationShowcase2025PromotionBanner = () => {
     if (!dismissed) {
       setIsVisible(true);
     }
-  }, []);
+  }[]);
 
   const handleDismiss = () => {
     setIsDismissed(true);
-    localStorage.setItem('ai-innovation-banner-dismissed', 'true');
+    localStorage.setItem('ai-innovation-banner-'dismissed', 'true');
   };
 
   if (isDismissed || !isVisible) return null;
@@ -40,7 +41,7 @@ const AIInnovationShowcase2025PromotionBanner = () => {
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.6ease: "easeOut" }}
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 border-b border-blue-400/30"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,8 +122,8 @@ const AIInnovationShowcase2025PromotionBanner = () => {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             animate={{
-              x: [0, 100, 0],
-              opacity: [0.3, 0.6, 0.3],
+              x: [0100],
+              opacity: [0.30.60.3],
             }}
             transition={{
               duration: 4,
@@ -133,8 +134,8 @@ const AIInnovationShowcase2025PromotionBanner = () => {
           />
           <motion.div
             animate={{
-              x: [0, -100, 0],
-              opacity: [0.2, 0.5, 0.2],
+              x: [0-100],
+              opacity: [0.20.50.2],
             }}
             transition={{
               duration: 6,

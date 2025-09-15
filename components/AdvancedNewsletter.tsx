@@ -1,24 +1,25 @@
+"use client";
 'use client';
 
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Send, CheckCircle } from 'lucide-react';
+MailSendCheckCircle
 
 export default function AdvancedNewsletter() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [emailsetEmail] = useState('');
+  const [isSubscribedsetIsSubscribed] = useState(false);
+  const [isLoadingsetIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve1000));
     
     setIsSubscribed(true);
     setIsLoading(false);
-    setEmail('');
+    setEmail(', ');
   };
 
   return (
@@ -37,7 +38,7 @@ export default function AdvancedNewsletter() {
           </div>
           
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Get the latest insights, updates, and exclusive content delivered to your inbox. 
+            Get the latest insightsupdatesand exclusive content delivered to your inbox. 
             Join thousands of professionals who trust us for cutting-edge AI knowledge.
           </p>
 
@@ -72,8 +73,8 @@ export default function AdvancedNewsletter() {
             </form>
           ) : (
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0scale: 0.8 }}
+              animate={{ opacity: 1scale: 1 }}
               transition={{ duration: 0.5 }}
               className="bg-green-500/20 border border-green-500/50 rounded-lg p-6 max-w-md mx-auto"
             >
@@ -82,14 +83,14 @@ export default function AdvancedNewsletter() {
                 Successfully Subscribed!
               </h3>
               <p className="text-white/80">
-                Thank you for subscribing. You'll receive our latest updates soon.
+                Thank you for subscribing. 'You', 'll receive our latest updates soon.
               </p>
             </motion.div>
           )}
 
           <div className="mt-8 text-white/60 text-sm">
             <p>
-              By subscribing, you agree to our privacy policy. Unsubscribe at any time.
+              By subscribingyou agree to our privacy policy. Unsubscribe at any time.
             </p>
           </div>
         </motion.div>

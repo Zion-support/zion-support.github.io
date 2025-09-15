@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+"use client";
+import React{ createContextuseCallbackuseContextuseMemouseState } from 'react'
+import { AnimatePresencemotion } from 'framer-motion'
+=======
 import React, { createContext, useCallback, useContext, useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+>>>>>>> origin/auto/autonomy-17186719616
 
 export type ToastVariant = 'default' | 'success' | 'error' | 'info'
 
@@ -15,7 +21,11 @@ export type Toast = {
 
 export type ToastContextValue = {
   toasts: Toast[]
+<<<<<<< HEAD
+  addToast: (toast: Omit<'Toast', 'id'>) => string
+=======
   addToast: (toast: Omit<Toast, 'id'>) => string
+>>>>>>> origin/auto/autonomy-17186719616
   removeToast: (id: string) => void
   clearToasts: () => void
 }
@@ -23,6 +33,27 @@ export type ToastContextValue = {
 const ToastContext = createContext<ToastContextValue | undefined>(undefined)
 
 export function ToastProvider({ children }: { children: React.ReactNode }) {
+<<<<<<< HEAD
+  const [toastsetToasts] = useState<Toast[]>([])
+
+  const removeToast = useCallback((id: string) => {
+    setToasts(prev => prev.filter(t => t.id !== id))
+  }[])
+
+  const addToast = useCallback((toast: Omit<'Toast', 'id'>) => {
+    const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`
+    const item: Toast = { idvariant: ''default', 'durationMs: 4000...toast }
+    setToasts(prev => [...previtem])
+    if (item.durationMs && item.durationMs > 0) {
+      setTimeout(() => removeToast(id)item.durationMs)
+    }
+    return id
+  }[removeToast])
+
+  const clearToasts = useCallback(() => setToasts([])
+
+  const value = useMemo(() => ({ toastsaddToastremoveToastclearToasts })[toastsaddToastremoveToastclearToasts])
+=======
   const [toasts, setToasts] = useState<Toast[]>([])
 
   const removeToast = useCallback((id: string) => {
@@ -42,6 +73,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
   const clearToasts = useCallback(() => setToasts([]), [])
 
   const value = useMemo(() => ({ toasts, addToast, removeToast, clearToasts }), [toasts, addToast, removeToast, clearToasts])
+>>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <ToastContext.Provider value={value}>
@@ -51,10 +83,17 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
           {toasts.map(t => (
             <motion.div
               key={t.id}
+<<<<<<< HEAD
+              initial={{ opacity: 0, y: 16scale: 0.98 }}
+              animate={{ opacity: 1, y: 0scale: 1 }}
+              exit={{ opacity: 0, y: 8scale: 0.98 }}
+              transition={{ type: ''spring', 'stiffness: 400damping: 30 }}
+=======
               initial={{ opacity: 0, y: 16, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 8, scale: 0.98 }}
               transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+>>>>>>> origin/auto/autonomy-17186719616
               className={`rounded-md border shadow-lg p-3 backdrop-blur bg-white/80 dark:bg-black/60 ${
                 t.variant === 'success' ? 'border-emerald-400/40' : t.variant === 'error' ? 'border-rose-400/40' : t.variant === 'info' ? 'border-sky-400/40' : 'border-gray-300/40 dark:border-gray-700/40'
               }`}

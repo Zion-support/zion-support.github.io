@@ -12,8 +12,13 @@ import url from 'url';
 
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+<<<<<<< HEAD
 // Two levels up from automation/auto-health-monitor is the repository root
 const projectRoot = path.resolve(__dirname, '../../');
+=======
+const repoRoot = path.resolve(__dirname, '../../');
+const projectRoot = path.resolve(__dirname, '../../..');
+>>>>>>> origin/auto/autonomy-17186719616
 
 const logsDir = path.join(projectRoot, 'automation', 'logs');
 const logFilePath = path.join(logsDir, 'auto-health-monitor.log');
@@ -136,7 +141,10 @@ function scanCodeForIssues() {
     path.join(projectRoot, 'app'),
     path.join(projectRoot, 'pages'),
     path.join(projectRoot, 'src'),
+<<<<<<< HEAD
     path.join(projectRoot, 'components'),
+=======
+>>>>>>> origin/auto/autonomy-17186719616
   ];
 
   const hrefRegex = /href\s*=\s*{?\s*["'`]([^"'`\s}]+)["'`]/g;

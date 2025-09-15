@@ -1,13 +1,14 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  ArrowRight, 
-  Star, 
-  Zap, 
-  Rocket, 
+  Brain
+  ArrowRight
+  Star
+  Zap
+  Rocket
   Shield,
   TrendingUp,
   Users,
@@ -20,31 +21,31 @@ import {
 } from 'lucide-react';
 
 const ComprehensiveAISolutions2026PromotionBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+  }[]);
 
   const solutions = [
-    { icon: Brain, title: 'Enterprise AI', color: 'from-blue-500 to-purple-500' },
-    { icon: Rocket, title: 'Quantum AI', color: 'from-purple-500 to-pink-500' },
-    { icon: Zap, title: 'Automation', color: 'from-green-500 to-blue-500' },
-    { icon: Shield, title: 'Security AI', color: 'from-red-500 to-orange-500' }
+    { icon: Braintitle: 'Enterprise 'AI', 'color: 'from-blue-500 to-purple-500' },
+    { icon: Rocketitle: 'Quantum 'AI', 'color: 'from-purple-500 to-pink-500' },
+    { icon: Zaptitle: ''Automation', 'color: 'from-green-500 to-blue-500' },
+    { icon: Shieldtitle: 'Security 'AI', 'color: 'from-red-500 to-orange-500' }
   ];
 
   const benefits = [
-    { icon: TrendingUp, text: '99.9% Uptime' },
-    { icon: Users, text: '1000+ Enterprises' },
-    { icon: Award, text: 'Industry Leading' },
-    { icon: BarChart3, text: '60% Cost Reduction' }
+    { icon: TrendingUptext: '99.9% Uptime' },
+    { icon: Userstext: '1000+ Enterprises' },
+    { icon: Awardtext: 'Industry Leading' },
+    { icon: BarChart3text: '60% Cost Reduction' }
   ];
 
   const stats = [
-    { value: '10,000+', label: 'AI Models' },
-    { value: '500+', label: 'Solutions' },
-    { value: '1,000+', label: 'Enterprises' },
-    { value: '99.9%', label: 'Uptime' }
+    { value: '10,000+'label: 'AI Models' },
+    { value: '500+'label: 'Solutions' },
+    { value: '1,000+'label: 'Enterprises' },
+    { value: '99.9%'label: 'Uptime' }
   ];
 
   return (
@@ -60,8 +61,8 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={isVisible ? { opacity: 1, x: 0 } : {}}
+              initial={{ opacity: 0x: -50 }}
+              animate={isVisible ? { opacity: 1x: 0 } : {}}
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
@@ -69,7 +70,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.6delay: 0.2 }}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold"
               >
                 <Brain className="w-4 h-4" />
@@ -80,7 +81,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                transition={{ duration: 0.6delay: 0.3 }}
                 className="text-4xl md:text-6xl font-bold text-white leading-tight"
               >
                 Complete AI
@@ -95,10 +96,10 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                transition={{ duration: 0.6delay: 0.4 }}
                 className="text-xl text-gray-300 leading-relaxed"
               >
-                Transform your business with our comprehensive suite of AI solutions, 
+                Transform your business with our comprehensive suite of AI solutions
                 from enterprise platforms to quantum computing integration.
               </motion.p>
 
@@ -106,10 +107,10 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.5 }}
+                transition={{ duration: 0.6delay: 0.5 }}
                 className="grid grid-cols-2 gap-4"
               >
-                {solutions.map((solution, index) => (
+                {solutions.map((solutionindex) => (
                   <div key={index} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                     <div className={`w-10 h-10 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center`}>
                       <solution.icon className="w-5 h-5 text-white" />
@@ -123,10 +124,10 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                transition={{ duration: 0.6delay: 0.6 }}
                 className="space-y-3"
               >
-                {benefits.map((benefit, index) => (
+                {benefits.map((benefitindex) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit.text}</span>
@@ -138,7 +139,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.7 }}
+                transition={{ duration: 0.6delay: 0.7 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <button className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2">
@@ -157,19 +158,19 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
 
             {/* Right Content - Stats & Visual */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={isVisible ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0x: 50 }}
+              animate={isVisible ? { opacity: 1x: 0 } : {}}
+              transition={{ duration: 0.8delay: 0.4 }}
               className="space-y-8"
             >
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
-                {stats.map((stat, index) => (
+                {stats.map((statindex) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={isVisible ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                    initial={{ opacity: 0scale: 0.8 }}
+                    animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                    transition={{ duration: 0.5delay: 0.5 + index * 0.1 }}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 hover:border-blue-400/50 transition-all duration-300"
                   >
                     <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
@@ -180,9 +181,9 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
 
               {/* Visual Element */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isVisible ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.8, delay: 0.7 }}
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                transition={{ duration: 0.8delay: 0.7 }}
                 className="relative"
               >
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-3xl p-8 border border-blue-400/30">

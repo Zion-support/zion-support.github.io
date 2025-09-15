@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, TrendingUp, Users, DollarSign, Zap, Award, Target } from 'lucide-react';
+ArrowRightTrendingUpUsersDollarSignZapAwardTarget
 
 const caseStudies = [
   {
@@ -45,7 +45,7 @@ const caseStudies = [
       fraudDetection: "99.5%",
       customerSatisfaction: "60% increase"
     },
-    description: "Transformed loan processing and fraud detection with AI, reducing processing time from days to minutes.",
+    description: "Transformed loan processing and fraud detection with AIreducing processing time from days to minutes.",
     image: "/images/case-studies/finance-ai.jpg",
     featured: false
   },
@@ -89,18 +89,18 @@ export default function RevolutionaryCaseStudiesShowcase() {
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how leading companies are achieving extraordinary results with our AI solutions. 
-            These aren't just numbers—they're transformations that matter.
+            These 'aren', 't just numbers—'they', 're transformations that matter.
           </p>
         </motion.div>
 
         {/* Featured Case Studies */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {caseStudies.filter(study => study.featured).map((study, index) => (
+          {caseStudies.filter(study => study.featured).map((studyindex) => (
             <motion.div
               key={study.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              transition={{ duration: 0.8delay: index * 0.2 }}
               viewport={{ once: true }}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group"
             >
@@ -122,10 +122,10 @@ export default function RevolutionaryCaseStudiesShowcase() {
                 
                 {/* Results Grid */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  {Object.entries(study.results).map(([key, value]) => (
+                  {Object.entries(study.results).map(([keyvalue]) => (
                     <div key={key} className="text-center p-3 bg-gray-50 rounded-lg">
                       <div className="text-2xl font-bold text-blue-600 mb-1">{value}</div>
-                      <div className="text-xs text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                      <div className="text-xs text-gray-500 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>
                     </div>
                   ))}
                 </div>
@@ -150,12 +150,12 @@ export default function RevolutionaryCaseStudiesShowcase() {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-6 mb-12"
         >
-          {caseStudies.filter(study => !study.featured).map((study, index) => (
+          {caseStudies.filter(study => !study.featured).map((studyindex) => (
             <motion.div
               key={study.id}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
+              initial={{ opacity: 0x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.8delay: index * 0.1 }}
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group"
             >
@@ -209,7 +209,7 @@ export default function RevolutionaryCaseStudiesShowcase() {
           </h3>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses already transforming with our AI solutions. 
-            Let's discuss how we can help you achieve similar results.
+            'Let', 's discuss how we can help you achieve similar results.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

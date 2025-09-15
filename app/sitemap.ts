@@ -61,31 +61,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // New blog posts
     {
 <<<<<<< HEAD
-      url: `${baseUrl}/blog/ai-2025-enterprise-transformation-complete-guide`,
+      url: `${baseUrl}/blog/ai-2025-ultimate-business-transformation-revolution`,
 =======
-      url: `${baseUrl}/blog/ai-2025-enterprise-integration-revolution`,
->>>>>>> origin/main
+      url: `${baseUrl}/blog/ai-2025-ultimate-breakthrough-revolutionary-autonomous-systems`,
+>>>>>>> origin/new-content-and-promotional-components
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
 <<<<<<< HEAD
-      url: `${baseUrl}/blog/quantum-ai-2026-business-revolution`,
-=======
-      url: `${baseUrl}/blog/ai-2025-smart-automation-breakthrough`,
->>>>>>> origin/main
+      url: `${baseUrl}/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     // New resources
     {
-<<<<<<< HEAD
-      url: `${baseUrl}/resources/ai-implementation-ultimate-guide-2026`,
-=======
-      url: `${baseUrl}/blog/ai-2025-data-intelligence-revolution`,
->>>>>>> origin/main
+      url: `${baseUrl}/resources/ai-2025-implementation-ultimate-roadmap`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -107,6 +100,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    // New 2026 revolutionary content pages
+    {
+      url: `${baseUrl}/ai-2026-revolution`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/quantum-ai-2026`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    // New 2025 content pages
+    {
+      url: `${baseUrl}/blog/ai-trends-2025-ultimate-guide`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/case-studies/fortune-500-ai-transformation`,
+=======
+      url: `${baseUrl}/case-studies/global-enterprise-ai-2025-autonomous-transformation-ultimate-success`,
+>>>>>>> origin/new-content-and-promotional-components
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
     }
   ]
 }

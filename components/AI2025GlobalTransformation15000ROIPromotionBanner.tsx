@@ -30,7 +30,7 @@ export default function AI2025GlobalTransformation15000ROIPromotionBanner() {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-4xl mx-auto leading-relaxed">
-            Discover how a global enterprise transformed their operations with our revolutionary AI solutions, 
+            Discover how a global enterprise transformed their operations with our revolutionary AI solutions
             achieving unprecedented results in just 6 months.
           </p>
 

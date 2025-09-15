@@ -53,9 +53,12 @@ const UltimateContent2025PromotionBanner = () => {
 
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+      {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 opacity-30"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
             <Star className="w-5 h-5 text-yellow-400 mr-2" />
@@ -70,6 +73,7 @@ const UltimateContent2025PromotionBanner = () => {
           </p>
         </div>
 
+        {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           {stats.map((stat, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
@@ -80,9 +84,11 @@ const UltimateContent2025PromotionBanner = () => {
           ))}
         </div>
 
+        {/* Content Showcase */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12">
           <h3 className="text-2xl font-bold text-center mb-8 text-white">Featured Content</h3>
           
+          {/* Auto-rotating content */}
           <div className="relative overflow-hidden">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
@@ -124,6 +130,7 @@ const UltimateContent2025PromotionBanner = () => {
               ))}
             </div>
             
+            {/* Slide indicators */}
             <div className="flex justify-center mt-6 space-x-2">
               {contentHighlights.map((_, index) => (
                 <button
@@ -138,6 +145,7 @@ const UltimateContent2025PromotionBanner = () => {
           </div>
         </div>
 
+        {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg mb-6 inline-block">
             🎯 Limited Time: Get Your Free AI Transformation Assessment
@@ -162,6 +170,7 @@ const UltimateContent2025PromotionBanner = () => {
           </div>
         </div>
 
+        {/* Dismiss Button */}
         <button
           onClick={() => setIsVisible(false)}
           className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"

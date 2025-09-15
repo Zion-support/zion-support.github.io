@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
+  description: 'Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions.',
 };
 
 function Header() {

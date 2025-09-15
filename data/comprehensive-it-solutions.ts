@@ -14,7 +14,10 @@ export interface ComprehensiveItSolution {
     address: string;
   };
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/auto/autonomy-17186719616
 export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
   {
     id: "full-stack-development",

@@ -1,12 +1,22 @@
 
+<<<<<<< HEAD
+import React{ useState } from "react";
+=======
 import React, { useState } from "react";
+>>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 export const MobileEmailCapture: React.FC = () => {
+<<<<<<< HEAD
+  const [emailsetEmail] = useState("");
+  const [isSubmittingsetIsSubmitting] = useState(false);
+  const [isSuccessetIsSuccess] = useState(false);
+=======
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,17 +25,29 @@ export const MobileEmailCapture: React.FC = () => {
     setIsSubmitting(true);
 
     try {
+<<<<<<< HEAD
+      // In a real implementationthis would connect to a backend service
+      // For nowe'll simulate a successful submission
+      await new Promise(resolve => setTimeout(resolve1000));
+=======
       // In a real implementation, this would connect to a backend service
       // For now, we'll simulate a successful submission
       await new Promise(resolve => setTimeout(resolve, 1000));
+>>>>>>> origin/auto/autonomy-17186719616
       setIsSuccess(true);
       setEmail("");
       
       setTimeout(() => {
         setIsSuccess(false);
+<<<<<<< HEAD
+      }5000);
+    } catch (error) {
+      console.error("Error subscribing:"error);
+=======
       }, 5000);
     } catch (error) {
       console.error("Error subscribing:", error);
+>>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsSubmitting(false);
     }

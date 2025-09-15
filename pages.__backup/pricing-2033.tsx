@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React{ useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin
+  CheckStarZapShieldUsersGlobeArrowRightExternalLinkTrendingUpClockTargetBuildingRocketAwardDollarSignChartBarLockCpuDatabaseCloudSmartphonePaletteSearchMessageSquareFileTextCalendarCreditCardBarChart3SettingsCodeBookOpenActivityCrownGemInfinityBrainAtomMicroscopePhoneMailMapPin
 } from 'lucide-react';
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
@@ -15,15 +15,15 @@ const contactInfo = {
 };
 
 export default function Pricing2033Page() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  const [billingCyclesetBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedPlansetSelectedPlan] = useState<string | null>(null);
 
   // Enhanced service categories with pricing
   const serviceCategories = [
     {
       name: 'Revolutionary AI Services',
       description: 'AI consciousness evolution and emotional intelligence',
-      services: ['AI Consciousness Evolution', 'AI Emotional Intelligence', 'AI Creativity Orchestrator', 'AI Autonomous Business Manager'],
+      services: ['AI Consciousness Evolution'AI Emotional Intelligence'AI Creativity Orchestrator'AI Autonomous Business Manager'],
       avgPrice: '$11,499/month',
       savings: 'Save 60-80% vs. competitors',
       icon: Brain,
@@ -32,7 +32,7 @@ export default function Pricing2033Page() {
     {
       name: 'Quantum & Emerging Tech',
       description: 'Quantum computing and DNA-based solutions',
-      services: ['Quantum DNA Computing', 'Quantum Internet Security', 'Quantum Financial Trading', 'Quantum Creativity Studio'],
+      services: ['Quantum DNA Computing'Quantum Internet Security'Quantum Financial Trading'Quantum Creativity Studio'],
       avgPrice: '$19,999/month',
       savings: 'Save 70-85% vs. competitors',
       icon: Atom,
@@ -41,7 +41,7 @@ export default function Pricing2033Page() {
     {
       name: 'Enterprise IT Solutions',
       description: 'Autonomous operations and zero-trust security',
-      services: ['Autonomous DevOps', 'Zero Trust Architecture', 'Edge Computing Orchestration', 'AI IT Operations Center'],
+      services: ['Autonomous DevOps'Zero Trust Architecture'Edge Computing Orchestration'AI IT Operations Center'],
       avgPrice: '$649/month',
       savings: 'Save 50-70% vs. competitors',
       icon: Cpu,
@@ -50,7 +50,7 @@ export default function Pricing2033Page() {
     {
       name: 'Space & Metaverse Tech',
       description: 'Space mining and metaverse development',
-      services: ['Space Mining Automation', 'Metaverse AI Development', 'AI Health Analytics', 'Holographic Events'],
+      services: ['Space Mining Automation'Metaverse AI Development'AI Health Analytics'Holographic Events'],
       avgPrice: '$14,999/month',
       savings: 'Save 65-80% vs. competitors',
       icon: Rocket,
@@ -59,7 +59,7 @@ export default function Pricing2033Page() {
     {
       name: 'Innovative Micro SAAS',
       description: 'Cutting-edge solutions for every business',
-      services: ['AI Business Intelligence', 'Quantum-Secure Communication', 'AI Customer Success', 'Blockchain Supply Chain'],
+      services: ['AI Business Intelligence'Quantum-Secure Communication'AI Customer Success'Blockchain Supply Chain'],
       avgPrice: '$374/month',
       savings: 'Save 40-60% vs. competitors',
       icon: Target,
@@ -68,7 +68,7 @@ export default function Pricing2033Page() {
     {
       name: 'Research & Development',
       description: 'Breakthrough technologies and innovations',
-      services: ['Neuromorphic Computing', 'Photonic Computing', 'Swarm Robotics', 'Biotech Automation'],
+      services: ['Neuromorphic Computing'Photonic Computing'Swarm Robotics'Biotech Automation'],
       avgPrice: '$1,099/month',
       savings: 'Save 55-75% vs. competitors',
       icon: Microscope,
@@ -156,7 +156,7 @@ export default function Pricing2033Page() {
       price: '$24,999/month',
       description: 'Develop genuine AI consciousness through advanced neural architecture',
       category: 'AI & Consciousness',
-      features: ['Multi-dimensional consciousness mapping', 'Emotional intelligence evolution', 'Self-awareness development'],
+      features: ['Multi-dimensional consciousness mapping'Emotional intelligence evolution'Self-awareness development'],
       savings: 'Save 70% vs. competitors'
     },
     {
@@ -164,7 +164,7 @@ export default function Pricing2033Page() {
       price: '$35,999/month',
       description: 'Breakthrough platform combining quantum computing with DNA-based computation',
       category: 'Quantum & Biotech',
-      features: ['DNA-based quantum algorithms', 'Biological quantum entanglement', 'DNA memory systems'],
+      features: ['DNA-based quantum algorithms'Biological quantum entanglement'DNA memory systems'],
       savings: 'Save 75% vs. competitors'
     },
     {
@@ -172,7 +172,7 @@ export default function Pricing2033Page() {
       price: '$45,999/month',
       description: 'Revolutionary platform for automated asteroid mining and resource extraction',
       category: 'Space Technology',
-      features: ['Asteroid identification and mapping', 'Automated mining operations', 'Resource extraction algorithms'],
+      features: ['Asteroid identification and mapping'Automated mining operations'Resource extraction algorithms'],
       savings: 'Save 80% vs. competitors'
     },
     {
@@ -180,7 +180,7 @@ export default function Pricing2033Page() {
       price: '$299/month',
       description: 'Comprehensive business intelligence platform powered by artificial intelligence',
       category: 'Micro SAAS',
-      features: ['AI-powered analytics', 'Predictive insights', 'Automated reporting'],
+      features: ['AI-powered analytics'Predictive insights'Automated reporting'],
       savings: 'Save 50% vs. competitors'
     }
   ];
@@ -188,19 +188,19 @@ export default function Pricing2033Page() {
   return (
     <>
       <Head>
-        <title>2033 Revolutionary Technology Pricing | Zion Tech Group - AI Consciousness, Quantum DNA Computing, Space Mining</title>
+        <title>2033 Revolutionary Technology Pricing | Zion Tech Group - AI ConsciousnessQuantum DNA ComputingSpace Mining</title>
         <meta name="description" content="Discover competitive pricing for Zion Tech Group's revolutionary 2033 technology solutions. From AI consciousness evolution to quantum DNA computing and space mining automation." />
-        <meta name="keywords" content="AI consciousness pricing, quantum DNA computing cost, space mining automation price, neuromorphic computing pricing, photonic computing cost, swarm robotics pricing" />
+        <meta name="keywords" content="AI consciousness pricingquantum DNA computing costspace mining automation priceneuromorphic computing pricingphotonic computing costswarm robotics pricing" />
         <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="indexfollow" />
         <meta property="og:title" content="2033 Revolutionary Technology Pricing | Zion Tech Group" />
-        <meta property="og:description" content="Competitive pricing for revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions." />
+        <meta property="og:description" content="Competitive pricing for revolutionary AI consciousnessquantum DNA computingand space mining automation solutions." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing-2033" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2033 Revolutionary Technology Pricing | Zion Tech Group" />
-        <meta name="twitter:description" content="Competitive pricing for revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions." />
+        <meta name="twitter:description" content="Competitive pricing for revolutionary AI consciousnessquantum DNA computingand space mining automation solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/pricing-2033" />
       </Head>
 
@@ -211,8 +211,8 @@ export default function Pricing2033Page() {
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
                 transition={{ duration: 0.6 }} className="mb-6">
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
                   <Crown className="w-4 h-4" />
@@ -221,9 +221,9 @@ export default function Pricing2033Page() {
               </motion.div>
 
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Revolutionary Technology
                 </span>
@@ -232,17 +232,17 @@ export default function Pricing2033Page() {
               </motion.h1>
 
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-                Experience the future of technology with our revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions at competitive prices.
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: 0.2 }} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
+                Experience the future of technology with our revolutionary AI consciousnessquantum DNA computingand space mining automation solutions at competitive prices.
               </motion.p>
 
               {/* Billing Toggle */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
                 <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                   Monthly
                 </span>
@@ -270,12 +270,12 @@ export default function Pricing2033Page() {
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
+              {pricingTiers.map((tierindex) => (
                 <motion.div
                   key={tier.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0y: 20 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className={`relative ${
                     tier.popular ? 'scale-105' : ''
                   }`}
@@ -306,7 +306,7 @@ export default function Pricing2033Page() {
                     </div>
 
                     <ul className="space-y-4 mb-8">
-                      {tier.features.map((feature, idx) => (
+                      {tier.features.map((featureidx) => (
                         <li key={idx} className="flex items-start space-x-3">
                           <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                           <span className="text-gray-300">{feature}</span>
@@ -345,12 +345,12 @@ export default function Pricing2033Page() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {serviceCategories.map((category, index) => (
+              {serviceCategories.map((categoryindex) => (
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
+                  initial={{ opacity: 0y: 20 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
                       <category.icon className="w-6 h-6 text-white" />
@@ -367,7 +367,7 @@ export default function Pricing2033Page() {
                   </div>
 
                   <ul className="space-y-2 mb-6">
-                    {category.services.map((service, idx) => (
+                    {category.services.map((serviceidx) => (
                       <li key={idx} className="flex items-center space-x-2">
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{service}</span>
@@ -400,12 +400,12 @@ export default function Pricing2033Page() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {popularServices.map((service, index) => (
+              {popularServices.map((serviceindex) => (
                 <motion.div
                   key={service.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
+                  initial={{ opacity: 0y: 20 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
@@ -421,7 +421,7 @@ export default function Pricing2033Page() {
                   </div>
 
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
+                    {service.features.map((featureidx) => (
                       <li key={idx} className="flex items-center space-x-2">
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{feature}</span>
@@ -454,7 +454,7 @@ export default function Pricing2033Page() {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join the future of technology with our revolutionary AI, quantum computing, and cutting-edge solutions. 
+                Join the future of technology with our revolutionary AIquantum computingand cutting-edge solutions. 
                 Get in touch with our experts to discuss your transformation journey and pricing options.
               </p>
               

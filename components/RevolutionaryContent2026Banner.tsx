@@ -21,7 +21,7 @@ const RevolutionaryContent2026Banner = () => {
           </h2>
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover the future of AI with our groundbreaking 2026 content series. 
-            From enterprise transformation to quantum AI revolution, explore the technologies that will reshape business.
+            From enterprise transformation to quantum AI revolutionexplore the technologies that will reshape business.
           </p>
         </div>
 
@@ -38,8 +38,8 @@ const RevolutionaryContent2026Banner = () => {
               </div>
             </div>
             <p className="text-sm opacity-90 mb-4">
-              Comprehensive roadmap for enterprise AI transformation in 2025. Learn implementation strategies, 
-              best practices, and real-world case studies.
+              Comprehensive roadmap for enterprise AI transformation in 2025. Learn implementation strategies
+              best practicesand real-world case studies.
             </p>
             <Link 
               href="/blog/ai-2025-enterprise-transformation-complete-guide"
@@ -61,8 +61,8 @@ const RevolutionaryContent2026Banner = () => {
               </div>
             </div>
             <p className="text-sm opacity-90 mb-4">
-              Explore the revolutionary impact of Quantum AI on business operations, 
-              competitive advantage, and market dynamics in 2026.
+              Explore the revolutionary impact of Quantum AI on business operations
+              competitive advantageand market dynamics in 2026.
             </p>
             <Link 
               href="/blog/quantum-ai-2026-business-revolution"
@@ -85,7 +85,7 @@ const RevolutionaryContent2026Banner = () => {
             </div>
             <p className="text-sm opacity-90 mb-4">
               The definitive guide to enterprise AI implementation in 2026. 
-              Complete strategy, execution framework, and best practices.
+              Complete strategyexecution frameworkand best practices.
             </p>
             <Link 
               href="/resources/ai-implementation-enterprise-guide-2026"

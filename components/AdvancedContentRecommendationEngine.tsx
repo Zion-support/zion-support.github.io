@@ -1,3 +1,9 @@
+"use client";
+'use client';
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/new-content-and-promotional-components
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -15,14 +21,14 @@ interface ContentItem {
 }
 
 const AdvancedContentRecommendationEngine: React.FC = () => {
-  const [userPreferences, setUserPreferences] = useState({
+  const [userPreferencesetUserPreferences] = useState({
     categories: [] as string[],
     difficulty: 'all' as 'all' | 'beginner' | 'intermediate' | 'advanced',
     readTime: 'any' as 'any' | 'quick' | 'medium' | 'long'
   });
   
-  const [recommendations, setRecommendations] = useState<ContentItem[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [recommendationsetRecommendations] = useState<ContentItem[]>([]);
+  const [isLoadingsetIsLoading] = useState(false);
 
   const sampleContent: ContentItem[] = [
     {
@@ -30,7 +36,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       title: 'AI & Machine Learning Revolution 2025',
       description: 'Comprehensive guide to the latest AI and ML breakthroughs transforming industries worldwide.',
       category: 'Artificial Intelligence',
-      tags: ['AI', 'Machine Learning', 'Automation', '2025'],
+      tags: [', 'AI', 'Machine 'Learning', 'Automation'2025'],
       readTime: 15,
       difficulty: 'advanced',
       popularity: 95,
@@ -42,7 +48,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       title: 'Quantum Computing Fundamentals',
       description: 'Understanding quantum mechanics and their applications in modern computing systems.',
       category: 'Quantum Computing',
-      tags: ['Quantum', 'Physics', 'Computing', 'Fundamentals'],
+      tags: [', 'Quantum', 'Physics', 'Computing', 'Fundamentals'],
       readTime: 12,
       difficulty: 'intermediate',
       popularity: 87,
@@ -53,7 +59,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       title: 'Enterprise Blockchain Solutions',
       description: 'How blockchain technology is revolutionizing enterprise operations and supply chains.',
       category: 'Blockchain',
-      tags: ['Blockchain', 'Enterprise', 'Supply Chain', 'Decentralization'],
+      tags: [', 'Blockchain', 'Enterprise'Supply 'Chain', 'Decentralization'],
       readTime: 18,
       difficulty: 'advanced',
       popularity: 82,
@@ -64,7 +70,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       title: 'Getting Started with Web3 Development',
       description: 'Complete beginner guide to building decentralized applications and smart contracts.',
       category: 'Web3',
-      tags: ['Web3', 'DApps', 'Smart Contracts', 'Beginner'],
+      tags: [', 'Web3', 'DApps'Smart 'Contracts', 'Beginner'],
       readTime: 8,
       difficulty: 'beginner',
       popularity: 91,
@@ -75,7 +81,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       title: 'IoT Security Best Practices',
       description: 'Essential security measures for Internet of Things devices and networks.',
       category: 'IoT',
-      tags: ['IoT', 'Security', 'Best Practices', 'Networking'],
+      tags: [', 'IoT', 'Security'Best 'Practices', 'Networking'],
       readTime: 10,
       difficulty: 'intermediate',
       popularity: 78,
@@ -83,17 +89,17 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
     }
   ];
 
-  const categories = ['Artificial Intelligence', 'Quantum Computing', 'Blockchain', 'Web3', 'IoT', 'Cybersecurity', 'Cloud Computing', 'Data Science'];
+  const categories = ['Artificial 'Intelligence', 'Quantum 'Computing', 'Blockchain', 'Web3', 'IoT', 'Cybersecurity', 'Cloud 'Computing', 'Data Science'];
 
   useEffect(() => {
     generateRecommendations();
-  }, [userPreferences]);
+  }[userPreferences]);
 
   const generateRecommendations = async () => {
     setIsLoading(true);
     
     // Simulate AI-powered recommendation generation
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve1000));
     
     let filtered = sampleContent;
     
@@ -122,7 +128,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
     }
     
     // Sort by popularity and relevance
-    filtered.sort((a, b) => b.popularity - a.popularity);
+    filtered.sort((ab) => b.popularity - a.popularity);
     
     setRecommendations(filtered);
     setIsLoading(false);
@@ -133,7 +139,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
       ...prev,
       categories: prev.categories.includes(category)
         ? prev.categories.filter(c => c !== category)
-        : [...prev.categories, category]
+        : [...prev.categoriescategory]
     }));
   };
 
@@ -159,7 +165,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
           🤖 Advanced Content Recommendation Engine
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Discover personalized content recommendations powered by AI. Tell us your preferences and we'll find the perfect content for you.
+          Discover personalized content recommendations powered by AI. Tell us your preferences and 'we', 'll find the perfect content for you.
         </p>
       </div>
 
@@ -195,7 +201,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
             </label>
             <select
               value={userPreferences.difficulty}
-              onChange={(e) => setUserPreferences(prev => ({ ...prev, difficulty: e.target.value as any }))}
+              onChange={(e) => setUserPreferences(prev => ({ ...prevdifficulty: e.target.value as any }))}
               className="w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             >
               <option value="all">All Levels</option>
@@ -212,7 +218,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
             </label>
             <select
               value={userPreferences.readTime}
-              onChange={(e) => setUserPreferences(prev => ({ ...prev, readTime: e.target.value as any }))}
+              onChange={(e) => setUserPreferences(prev => ({ ...prevreadTime: e.target.value as any }))}
               className="w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             >
               <option value="any">Any Length</option>
@@ -240,7 +246,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
 
         {isLoading ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map(i => (
+            {[123456].map(i => (
               <div key={i} className="bg-white rounded-xl p-6 animate-pulse">
                 <div className="h-4 bg-gray-200 rounded w-3/4 mb-3"></div>
                 <div className="h-3 bg-gray-200 rounded w-full mb-2"></div>
@@ -286,7 +292,7 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
                 </div>
                 
                 <div className="flex flex-wrap gap-1 mb-4">
-                  {item.tags.slice(0, 3).map(tag => (
+                  {item.tags.slice(03).map(tag => (
                     <span key={tag} className="inline-flex items-center px-2 py-1 rounded text-xs bg-gray-100 text-gray-700">
                       #{tag}
                     </span>

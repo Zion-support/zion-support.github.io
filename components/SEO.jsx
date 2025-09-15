@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import React from 'react';
 
 export default function SEO({ 
   title = 'Zion Tech Group - AI & Technology Solutions',
@@ -8,44 +8,39 @@ export default function SEO({
   url = 'https://zion.app',
   type = 'website'
 }) {
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": "https://zion.app",
-            "logo": "https://zion.app/logo.png",
-            "description": description,
-            "sameAs": [
-              "https://linkedin.com/company/zion-tech-group",
-              "https://twitter.com/ziontechgroup"
-            ]
-          })
-        }}
-      />
-    </Head>
-  );
+  React.useEffect(() => {
+    // Update document title
+    document.title = title;
+    
+    // Update meta tags
+    const updateMetaTag = (name, content) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.name = name;
+        document.head.appendChild(meta);
+      }
+      meta.content = content;
+    };
+    
+    const updatePropertyMetaTag = (property, content) => {
+      let meta = document.querySelector(`meta[property="${property}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        document.head.appendChild(meta);
+      }
+      meta.content = content;
+    };
+    
+    updateMetaTag('description', description);
+    updateMetaTag('keywords', keywords);
+    updatePropertyMetaTag('og:title', title);
+    updatePropertyMetaTag('og:description', description);
+    updatePropertyMetaTag('og:image', image);
+    updatePropertyMetaTag('og:url', url);
+    updatePropertyMetaTag('og:type', type);
+  }, [title, description, keywords, image, url, type]);
+
+  return null;
 }

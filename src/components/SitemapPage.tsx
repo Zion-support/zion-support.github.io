@@ -23,7 +23,8 @@ const pathMap: Record<string, string> = {
   '/messages': '/dashboard/messages',
   '/notifications': '/dashboard/notifications',
   '/project/:projectId/room': '/dashboard/project/:projectId/room',
-  '/post-job': '/marketplace/post-job'};
+  '/post-job': '/marketplace/post-job',
+};
 
 const resolvePath = (path: string): string => pathMap[path] ?? path;
 

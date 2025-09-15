@@ -7,7 +7,8 @@ function runNode(relPath, args = []) {
 }
 
 exports.config = {
-  schedule: '*/15 * * * *'};
+  schedule: '*/15 * * * *',
+};
 
 exports.handler = async () => {
   const logs = [];

@@ -26,7 +26,7 @@ export default function NeuralConsensusAIPromotionBanner() {
             </h2>
             <p className="text-lg text-emerald-100 mb-4 max-w-2xl">
               Experience the power of multiple AI systems working in perfect harmony. 
-              99.97% decision accuracy, 50ms response time, and 1000x faster than traditional AI.
+              99.97% decision accuracy50ms response timeand 1000x faster than traditional AI.
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
               <span className="flex items-center gap-1">

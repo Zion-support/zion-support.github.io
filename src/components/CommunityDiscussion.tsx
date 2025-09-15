@@ -22,13 +22,16 @@ const initialPosts: DiscussionPost[] = [
     author: "Anna Zhou",
     time: "2h ago",
     title: "What AI trends are you most excited for in 2025?",
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",
+  },
   {
     id: 2,
     author: "David Kim",
     time: "50m ago",
     title: "Quick tip: How to rank your Zion listing higher",
-    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}];
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",
+  },
+];
 
 export const CommunityDiscussion: React.FC = () => {
   const [posts, setPosts] = useState(initialPosts);
@@ -44,8 +47,10 @@ export const CommunityDiscussion: React.FC = () => {
         author: "You",
         time: "Now",
         title: newTitle,
-        body: newBody},
-      ...posts]);
+        body: newBody,
+      },
+      ...posts,
+    ]);
     setNewTitle("");
     setNewBody("");
     setShowNew(false);

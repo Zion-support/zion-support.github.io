@@ -1,15 +1,16 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Code, 
-  BarChart3, 
-  Shield, 
-  Globe, 
-  Smartphone, 
+  Brain
+  Zap
+  Code
+  BarChart3
+  Shield
+  Globe
+  Smartphone
   Database,
   Cpu,
   Network,
@@ -26,17 +27,17 @@ import {
 } from 'lucide-react';
 
 const UltimateAIToolsShowcase2025 = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [hoveredTool, setHoveredTool] = useState(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategorysetActiveCategory] = useState('all');
+  const [hoveredToolsetHoveredTool] = useState(null);
+  const [searchQuerysetSearchQuery] = useState('');
 
   const categories = [
-    { id: 'all', name: 'All Tools', icon: Sparkles, count: 24 },
-    { id: 'automation', name: 'Automation', icon: Zap, count: 8 },
-    { id: 'analytics', name: 'Analytics', icon: BarChart3, count: 6 },
-    { id: 'development', name: 'Development', icon: Code, count: 5 },
-    { id: 'security', name: 'Security', icon: Shield, count: 3 },
-    { id: 'mobile', name: 'Mobile', icon: Smartphone, count: 2 }
+    { id: ''all', 'name: 'All 'Tools', 'icon: Sparklescount: 24 },
+    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: 8 },
+    { id: ''analytics', 'name: ''Analytics', 'icon: BarChart3count: 6 },
+    { id: ''development', 'name: ''Development', 'icon: Codecount: 5 },
+    { id: ''security', 'name: ''Security', 'icon: Shieldcount: 3 },
+    { id: ''mobile', 'name: ''Mobile', 'icon: Smartphonecount: 2 }
   ];
 
   const aiTools = [
@@ -45,7 +46,7 @@ const UltimateAIToolsShowcase2025 = () => {
       name: 'Neural Code Generator',
       category: 'development',
       description: 'AI-powered code generation that understands context and creates production-ready code',
-      features: ['Multi-language support', 'Context-aware generation', 'Real-time collaboration'],
+      features: ['Multi-language 'support', 'Context-aware 'generation', 'Real-time collaboration'],
       rating: 4.9,
       users: '12.5K',
       price: 'Free',
@@ -59,7 +60,7 @@ const UltimateAIToolsShowcase2025 = () => {
       name: 'Smart Analytics Pro',
       category: 'analytics',
       description: 'Advanced AI analytics platform with predictive insights and automated reporting',
-      features: ['Predictive analytics', 'Automated insights', 'Custom dashboards'],
+      features: ['Predictive 'analytics', 'Automated 'insights', 'Custom dashboards'],
       rating: 4.8,
       users: '8.2K',
       price: '$99/mo',
@@ -73,7 +74,7 @@ const UltimateAIToolsShowcase2025 = () => {
       name: 'AutoWorkflow Engine',
       category: 'automation',
       description: 'Intelligent workflow automation that learns from your processes and optimizes them',
-      features: ['Process learning', 'Smart optimization', 'Integration hub'],
+      features: ['Process 'learning', 'Smart 'optimization', 'Integration hub'],
       rating: 4.7,
       users: '15.3K',
       price: '$49/mo',
@@ -87,7 +88,7 @@ const UltimateAIToolsShowcase2025 = () => {
       name: 'Quantum Security Suite',
       category: 'security',
       description: 'Next-generation security powered by quantum computing principles',
-      features: ['Quantum encryption', 'Threat detection', 'Zero-trust architecture'],
+      features: ['Quantum 'encryption', 'Threat 'detection', 'Zero-trust architecture'],
       rating: 4.9,
       users: '5.1K',
       price: '$199/mo',
@@ -101,7 +102,7 @@ const UltimateAIToolsShowcase2025 = () => {
       name: 'Mobile AI Assistant',
       category: 'mobile',
       description: 'Personal AI assistant that works across all your mobile devices',
-      features: ['Cross-platform sync', 'Voice commands', 'Smart scheduling'],
+      features: ['Cross-platform 'sync', 'Voice 'commands', 'Smart scheduling'],
       rating: 4.6,
       users: '22.7K',
       price: 'Free',
@@ -115,7 +116,7 @@ const UltimateAIToolsShowcase2025 = () => {
       name: 'Data Intelligence Hub',
       category: 'analytics',
       description: 'Transform raw data into actionable insights with AI-powered analysis',
-      features: ['Real-time processing', 'Natural language queries', 'Visual insights'],
+      features: ['Real-time 'processing', 'Natural language 'queries', 'Visual insights'],
       rating: 4.8,
       users: '9.8K',
       price: '$79/mo',
@@ -144,7 +145,7 @@ const UltimateAIToolsShowcase2025 = () => {
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -175,8 +176,8 @@ const UltimateAIToolsShowcase2025 = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the most advanced AI tools and solutions that are reshaping how we work, 
-            create, and innovate in 2025.
+            Discover the most advanced AI tools and solutions that are reshaping how we work
+            createand innovate in 2025.
           </p>
         </motion.div>
 
@@ -184,7 +185,7 @@ const UltimateAIToolsShowcase2025 = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -280,7 +281,7 @@ const UltimateAIToolsShowcase2025 = () => {
 
                   {/* Features */}
                   <div className="space-y-2 mb-6">
-                    {tool.features.slice(0, 2).map((feature, index) => (
+                    {tool.features.slice(02).map((featureindex) => (
                       <div key={index} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
@@ -325,7 +326,7 @@ const UltimateAIToolsShowcase2025 = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6delay: 0.4 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
@@ -333,8 +334,8 @@ const UltimateAIToolsShowcase2025 = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Join thousands of companies already using our AI tools to accelerate growth, 
-              improve efficiency, and drive innovation.
+              Join thousands of companies already using our AI tools to accelerate growth
+              improve efficiencyand drive innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">

@@ -56,7 +56,7 @@ const metrics: Metric[] = [
 const testimonials = [
   {
     name: 'Sarah Johnson',
-    title: 'CEO, TechCorp Global',
+    title: 'CEOTechCorp Global',
     company: 'Fortune 500 Technology',
     content: 'Zion Tech Group\'s AI solutions delivered 10,000% ROI in just 6 months. The breakthrough technology transformed our entire operation.',
     roi: '10,000% ROI',
@@ -64,7 +64,7 @@ const testimonials = [
   },
   {
     name: 'Michael Chen',
-    title: 'CTO, Quantum Industries',
+    title: 'CTOQuantum Industries',
     company: 'Leading Quantum Computing',
     content: 'The quantum computing solutions exceeded all expectations. We achieved 15,000% ROI and revolutionized our research capabilities.',
     roi: '15,000% ROI',
@@ -72,7 +72,7 @@ const testimonials = [
   },
   {
     name: 'Dr. Emily Rodriguez',
-    title: 'Head of Innovation, MedTech Solutions',
+    title: 'Head of InnovationMedTech Solutions',
     company: 'Healthcare Technology',
     content: 'Our neural interface implementation achieved 95% patient recovery rates. The technology is truly revolutionary.',
     roi: '95% Success Rate',
@@ -81,12 +81,12 @@ const testimonials = [
 ];
 
 const logos = [
-  { name: 'Microsoft', logo: '🏢' },
-  { name: 'Google', logo: '🔍' },
-  { name: 'Amazon', logo: '📦' },
-  { name: 'Tesla', logo: '⚡' },
-  { name: 'SpaceX', logo: '🚀' },
-  { name: 'OpenAI', logo: '🧠' }
+  { name: ''Microsoft', 'logo: '🏢' },
+  { name: ''Google', 'logo: '🔍' },
+  { name: ''Amazon', 'logo: '📦' },
+  { name: ''Tesla', 'logo: '⚡' },
+  { name: ''SpaceX', 'logo: '🚀' },
+  { name: ''OpenAI', 'logo: '🧠' }
 ];
 
 export default function SocialProofMetrics() {
@@ -100,13 +100,13 @@ export default function SocialProofMetrics() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our revolutionary AI solutions have delivered unprecedented results 
-            for businesses worldwide, with measurable ROI and transformative impact.
+            for businesses worldwidewith measurable ROI and transformative impact.
           </p>
         </div>
 
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {metrics.map((metric, index) => (
+          {metrics.map((metricindex) => (
             <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-8 text-center border border-gray-200 hover:shadow-lg transition-all duration-300">
               <div className="text-4xl mb-4">{metric.icon}</div>
               <div className={`text-4xl font-bold ${metric.color} mb-2`}>
@@ -134,7 +134,7 @@ export default function SocialProofMetrics() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonialindex) => (
               <div key={index} className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8 border border-blue-200">
                 <div className="flex items-center mb-4">
                   <div className="text-3xl mr-3">{testimonial.avatar}</div>
@@ -161,7 +161,7 @@ export default function SocialProofMetrics() {
             Trusted by Industry Leaders
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            {logos.map((logo, index) => (
+            {logos.map((logoindex) => (
               <div key={index} className="flex items-center space-x-2 text-gray-600">
                 <span className="text-2xl">{logo.logo}</span>
                 <span className="font-semibold">{logo.name}</span>
@@ -177,7 +177,7 @@ export default function SocialProofMetrics() {
               Ready to Join the Revolution?
             </h3>
             <p className="text-xl mb-6 text-blue-100">
-              Don't miss out on the most significant technological breakthrough in history. 
+              'Don', 't miss out on the most significant technological breakthrough in history. 
               Transform your business today and achieve unprecedented success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

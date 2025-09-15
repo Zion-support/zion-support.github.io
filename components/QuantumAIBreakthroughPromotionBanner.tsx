@@ -25,8 +25,8 @@ export default function QuantumAIBreakthroughPromotionBanner() {
               Quantum AI Breakthrough 2026
             </h2>
             <p className="text-lg text-purple-100 mb-4 max-w-2xl">
-              Experience the convergence of quantum computing and AI. 10,000x faster processing, 
-              99.99% accuracy rate, and 50x energy efficiency compared to classical computers.
+              Experience the convergence of quantum computing and AI. 10,000x faster processing
+              99.99% accuracy rateand 50x energy efficiency compared to classical computers.
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
               <span className="flex items-center gap-1">

@@ -1,132 +1,8 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-const NewContent2025UltimateBanner: React.FC = () => {
-  return (
-    <section className="bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white py-20 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M40 40c0-22.091-17.909-40-40-40v40h40z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
-        <div className="absolute top-0 right-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="1.5"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-bounce"></div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-full px-8 py-3 mb-8">
-            <span className="text-lg font-bold">🚀 NEW CONTENT 2025 - ULTIMATE COLLECTION</span>
-          </div>
-          
-          <h2 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-emerald-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
-            Revolutionary AI Content
-          </h2>
-          
-          <p className="text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
-            Discover our latest comprehensive guides, case studies, and resources covering 
-            Edge Computing, Blockchain Integration, IoT Revolution, and real-world success stories.
-          </p>
-        </div>
-
-        {/* New Content Showcase Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {/* Edge Computing Guide */}
-          <div className="bg-gradient-to-br from-emerald-800 to-teal-800 rounded-2xl p-8 border border-emerald-400 border-opacity-30">
-            <div className="text-5xl mb-6 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Edge Computing Revolution</h3>
-            <ul className="space-y-3 text-emerald-100">
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                500%+ ROI within 12 months
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                90% latency reduction
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                Real-time processing
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                Enterprise implementation guide
-              </li>
-            </ul>
-            <div className="mt-6 text-center">
-              <Link 
-                href="/blog/ai-2025-edge-computing-revolution-ultimate-guide"
-                className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Read Full Guide →
-              </Link>
-            </div>
-          </div>
-
-          {/* Blockchain Integration Guide */}
-          <div className="bg-gradient-to-br from-teal-800 to-cyan-800 rounded-2xl p-8 border border-teal-400 border-opacity-30">
-            <div className="text-5xl mb-6 text-center">🔗</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Blockchain Integration</h3>
-            <ul className="space-y-3 text-teal-100">
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                600%+ ROI within 12 months
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                89% cost reduction
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                Smart contract automation
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                Enterprise security solutions
-              </li>
-            </ul>
-            <div className="mt-6 text-center">
-              <Link 
-                href="/blog/ai-2025-blockchain-integration-enterprise-guide"
-                className="inline-flex items-center bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Read Full Guide →
-              </Link>
-            </div>
-          </div>
-
-          {/* IoT Revolution Guide */}
-          <div className="bg-gradient-to-br from-cyan-800 to-blue-800 rounded-2xl p-8 border border-cyan-400 border-opacity-30">
-            <div className="text-5xl mb-6 text-center">🌐</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">IoT Revolution</h3>
-            <ul className="space-y-3 text-cyan-100">
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                700%+ ROI within 12 months
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                95% efficiency improvement
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                Smart device management
-              </li>
-              <li className="flex items-center">
-                <span className="text-green-400 mr-3">✓</span>
-                Connected automation
-              </li>
-            </ul>
-            <div className="mt-6 text-center">
-              <Link 
-                href="/blog/ai-2025-iot-revolution-smart-enterprise-guide"
-                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Read Full Guide →
-              </Link>
-=======
 import { ArrowRight, Star, TrendingUp, Users, Zap } from 'lucide-react';
->>>>>>> cf2e8fd4f820d723a1dd9a365b571dabe768cfcc
 
 const NewContent2025UltimateBanner = () => {
   return (
@@ -162,7 +38,6 @@ const NewContent2025UltimateBanner = () => {
               Transform your data into actionable intelligence with AI-powered analytics. 
               Achieve 500%+ ROI through advanced business intelligence solutions.
             </p>
-<<<<<<< HEAD
             <div className="space-y-2 mb-6">
               <div className="flex items-center text-sm">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
@@ -176,12 +51,9 @@ const NewContent2025UltimateBanner = () => {
                 <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                 <span>Predictive Intelligence</span>
               </div>
-=======
             <div className="flex items-center text-sm text-green-400 mb-4">
               <TrendingUp className="w-4 h-4 mr-2" />
               <span>400% Average ROI Achieved</span>
->>>>>>> 7621c44dac5d00a075e94430640377c43fdedbb1
->>>>>>> cf2e8fd4f820d723a1dd9a365b571dabe768cfcc
             </div>
             <Link 
               href="/blog/ai-2025-data-analytics-revolution-enterprise-intelligence"
@@ -252,7 +124,6 @@ const NewContent2025UltimateBanner = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Additional Resources */}
         <div className="bg-white bg-opacity-5 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -274,8 +145,6 @@ const NewContent2025UltimateBanner = () => {
                   </div>
                 </div>
               </div>
-=======
-<<<<<<< HEAD
         {/* Case Studies Section */}
         <div className="bg-gradient-to-r from-emerald-800 to-cyan-800 rounded-2xl p-8 mb-16">
           <div className="text-center mb-8">
@@ -318,7 +187,6 @@ const NewContent2025UltimateBanner = () => {
                   Read Full Case Study →
                 </Link>
               </div>
-=======
         {/* Implementation Checklist */}
         <div className="bg-white bg-opacity-15 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
           <div className="flex items-center justify-between mb-6">
@@ -327,8 +195,6 @@ const NewContent2025UltimateBanner = () => {
               <p className="text-gray-200">
                 The definitive step-by-step guide to AI success. Don't miss any critical steps.
               </p>
->>>>>>> 7621c44dac5d00a075e94430640377c43fdedbb1
->>>>>>> cf2e8fd4f820d723a1dd9a365b571dabe768cfcc
             </div>
             <div className="flex flex-col justify-center">
               <div className="text-center">
@@ -347,7 +213,6 @@ const NewContent2025UltimateBanner = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Call to Action */}
         <div className="text-center mt-12">
           <p className="text-lg text-gray-300 mb-6">
@@ -366,8 +231,6 @@ const NewContent2025UltimateBanner = () => {
             >
               Explore Services
             </Link>
-=======
-<<<<<<< HEAD
         {/* Resources Section */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-8">Free Implementation Resources</h3>
@@ -393,7 +256,6 @@ const NewContent2025UltimateBanner = () => {
                 Schedule Consultation →
               </Link>
             </div>
-=======
         {/* Trust Indicators */}
         <div className="mt-12 text-center">
           <p className="text-gray-300 mb-4">Trusted by leading organizations worldwide</p>
@@ -402,13 +264,9 @@ const NewContent2025UltimateBanner = () => {
             <div className="text-2xl font-bold">Enterprise</div>
             <div className="text-2xl font-bold">Startups</div>
             <div className="text-2xl font-bold">Government</div>
->>>>>>> 7621c44dac5d00a075e94430640377c43fdedbb1
->>>>>>> cf2e8fd4f820d723a1dd9a365b571dabe768cfcc
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default NewContent2025UltimateBanner;
+}

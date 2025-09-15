@@ -7,7 +7,11 @@ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
+export function Sidebar({ classNamechildren...props }: SidebarProps) {
+=======
 export function Sidebar({ className, children, ...props }: SidebarProps) {
+>>>>>>> origin/auto/autonomy-17186719616
   return (
     <div
       className={cn(

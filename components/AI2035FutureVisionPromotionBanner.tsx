@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  Brain, 
-  Zap, 
-  Globe, 
-  Rocket, 
+  Brain
+  Zap
+  Globe
+  Rocket
   ArrowRight,
   Star,
   Sparkles
@@ -32,7 +32,7 @@ export default function AI2035FutureVisionPromotionBanner() {
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Discover the revolutionary technologies that will transform our world by 2035. 
-            From quantum consciousness to neural interfaces, witness the future of AI.
+            From quantum consciousness to neural interfaceswitness the future of AI.
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export default function AI2035FutureVisionPromotionBanner() {
             </div>
             <h3 className="text-xl font-bold text-white mb-3">Global AI Ecosystem</h3>
             <p className="text-gray-300 text-sm">
-              Unified planetary-scale intelligence solving humanity's greatest challenges.
+              Unified planetary-scale intelligence solving 'humanity', 's greatest challenges.
             </p>
           </div>
         </div>

@@ -1,14 +1,15 @@
+"use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Play, 
-  Zap, 
-  Brain, 
-  Code, 
-  Image, 
-  FileText, 
+  Play
+  Zap
+  Brain
+  Code
+  Image
+  FileText
   BarChart3,
   Video,
   Music,
@@ -22,16 +23,16 @@ import {
 } from 'lucide-react';
 
 const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
-  const [currentTool, setCurrentTool] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentToolsetCurrentTool] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
 
   const tools = [
-    { name: 'Text Generator', icon: <FileText className="w-6 h-6" />, color: 'from-blue-500 to-cyan-500' },
-    { name: 'Image Creator', icon: <Image className="w-6 h-6" />, color: 'from-purple-500 to-pink-500' },
-    { name: 'Code Assistant', icon: <Code className="w-6 h-6" />, color: 'from-green-500 to-emerald-500' },
-    { name: 'Data Analyzer', icon: <BarChart3 className="w-6 h-6" />, color: 'from-orange-500 to-red-500' },
-    { name: 'Video Creator', icon: <Video className="w-6 h-6" />, color: 'from-indigo-500 to-purple-500' },
-    { name: 'Music Composer', icon: <Music className="w-6 h-6" />, color: 'from-pink-500 to-rose-500' }
+    { name: 'Text 'Generator', 'icon: <FileText className="w-6 h-6" />color: 'from-blue-500 to-cyan-500' },
+    { name: 'Image 'Creator', 'icon: <Image className="w-6 h-6" />color: 'from-purple-500 to-pink-500' },
+    { name: 'Code 'Assistant', 'icon: <Code className="w-6 h-6" />color: 'from-green-500 to-emerald-500' },
+    { name: 'Data 'Analyzer', 'icon: <BarChart3 className="w-6 h-6" />color: 'from-orange-500 to-red-500' },
+    { name: 'Video 'Creator', 'icon: <Video className="w-6 h-6" />color: 'from-indigo-500 to-purple-500' },
+    { name: 'Music 'Composer', 'icon: <Music className="w-6 h-6" />color: 'from-pink-500 to-rose-500' }
   ];
 
   const benefits = [
@@ -42,25 +43,25 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
   ];
 
   const stats = [
-    { value: "50+", label: "AI Tools" },
-    { value: "98%", label: "Accuracy" },
-    { value: "2.3s", label: "Avg. Speed" },
-    { value: "10K+", label: "Users" }
+    { value: "50+"label: "AI Tools" },
+    { value: "98%"label: "Accuracy" },
+    { value: "2.3s"label: "Avg. Speed" },
+    { value: "10K+"label: "Users" }
   ];
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentTool((prev) => (prev + 1) % tools.length);
-    }, 2000);
+    }2000);
     return () => clearInterval(interval);
-  }, []);
+  }[]);
 
   return (
     <motion.div
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 py-20"
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
       transition={{ duration: 0.8 }}
     >
       {/* Animated Background */}
@@ -77,9 +78,9 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
             {/* Badge */}
             <motion.div
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/30"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0scale: 0.8 }}
+              animate={{ opacity: 1scale: 1 }}
+              transition={{ duration: 0.6delay: 0.2 }}
             >
               <Zap className="w-5 h-5 text-yellow-400 mr-2" />
               <span className="text-yellow-400 font-semibold">Interactive AI Demo</span>
@@ -89,7 +90,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              transition={{ duration: 0.8delay: 0.3 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Try AI Tools{' '}
@@ -98,7 +99,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 leading-relaxed">
-                Experience the power of AI firsthand. Generate content, create visuals, write code, and analyze data with our interactive demo. 
+                Experience the power of AI firsthand. Generate contentcreate visualswrite codeand analyze data with our interactive demo. 
                 No signup required - just click and create!
               </p>
             </motion.div>
@@ -106,9 +107,9 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
             {/* Rotating Tool Showcase */}
             <motion.div
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0x: -20 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.8delay: 0.4 }}
             >
               <div className="flex items-center mb-4">
                 <Brain className="w-6 h-6 text-yellow-400 mr-3" />
@@ -141,9 +142,9 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
               className="grid grid-cols-2 gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
+              transition={{ duration: 0.8delay: 0.5 }}
             >
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefitindex) => (
                 <div key={index} className="flex items-center p-3 bg-white/5 rounded-lg">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span className="text-white font-medium text-sm">{benefit}</span>
@@ -156,7 +157,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.8delay: 0.6 }}
             >
               <button className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-black py-4 px-8 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
@@ -174,9 +175,9 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
           <div className="relative">
             <motion.div
               className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/20 shadow-2xl"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0scale: 0.9 }}
+              animate={{ opacity: 1scale: 1 }}
+              transition={{ duration: 0.8delay: 0.4 }}
             >
               {/* Demo Interface */}
               <div className="space-y-6">
@@ -193,7 +194,7 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
                 <div className="space-y-3">
                   <h3 className="text-lg font-semibold text-white">Select AI Tool</h3>
                   <div className="grid grid-cols-3 gap-2">
-                    {tools.slice(0, 6).map((tool, index) => (
+                    {tools.slice(06).map((toolindex) => (
                       <motion.div
                         key={index}
                         className={`p-3 rounded-lg text-center cursor-pointer transition-all duration-300 ${
@@ -268,8 +269,8 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
             <motion.div
               className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg"
               animate={{ 
-                y: [0, -10, 0],
-                rotate: [0, 5, 0]
+                y: [0-10],
+                rotate: [050]
               }}
               transition={{ 
                 duration: 2,
@@ -283,8 +284,8 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
             <motion.div
               className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg"
               animate={{ 
-                y: [0, 10, 0],
-                rotate: [0, -5, 0]
+                y: [010],
+                rotate: [0-50]
               }}
               transition={{ 
                 duration: 2.5,
@@ -302,9 +303,9 @@ const InteractiveAIToolsDemo2025PromotionBanner: React.FC = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8delay: 0.8 }}
         >
-          {stats.map((stat, index) => (
+          {stats.map((statindex) => (
             <div key={index}>
               <div className="text-3xl font-bold text-yellow-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>

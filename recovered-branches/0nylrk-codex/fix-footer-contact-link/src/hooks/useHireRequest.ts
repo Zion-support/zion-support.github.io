@@ -43,7 +43,12 @@ export function useHireRequest() {
       // Show success message
       toast({
         title: "Request Submitted",
+<<<<<<< HEAD
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
+=======
+        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`,
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       
       return { success: true, requestId: response?.request_id };
     } catch (error) {
@@ -58,7 +63,12 @@ export function useHireRequest() {
       toast({
         title: "Error",
         description: errorMessage,
+<<<<<<< HEAD
         variant: "destructive"});
+=======
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       
       return { success: false, error: errorMessage };
     } finally {

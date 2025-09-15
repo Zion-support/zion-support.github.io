@@ -1,11 +1,19 @@
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
+import { AIMatchingResults } from "@/components/AIMatchingResults";
+import { findMatchesMatchResult } from "@/lib/ai-matchmaking";
+import { Textarea } from "@/components/ui/textarea";
+import { SparklesSearch } from "lucide-react";
+=======
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AIMatchingResults } from "@/components/AIMatchingResults";
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles, Search } from "lucide-react";
+>>>>>>> origin/auto/autonomy-17186719616
 
 interface AIMatchmakerProps {
   serviceType?: string;
@@ -13,18 +21,31 @@ interface AIMatchmakerProps {
   className?: string;
 }
 
+<<<<<<< HEAD
+export function AIMatchmaker({ serviceType = ""onMatchSelectclassName }: AIMatchmakerProps) {
+  const [querysetQuery] = useState("");
+  const [isMatchmakingsetIsMatchmaking] = useState(false);
+  const [matchesetMatches] = useState([] as MatchResult[]);
+  const [hasSearchedsetHasSearched] = useState(false);
+=======
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
+>>>>>>> origin/auto/autonomy-17186719616
 
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
+<<<<<<< HEAD
         variant: "destructive"});
+=======
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       return;
     }
 
@@ -32,7 +53,11 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     setHasSearched(true);
     
     try {
+<<<<<<< HEAD
+      console.log("Starting AI matching with query:"query"and service type:"serviceType);
+=======
       console.log("Starting AI matching with query:", query, "and service type:", serviceType);
+>>>>>>> origin/auto/autonomy-17186719616
       
       // Get AI matches
       const results = await findMatches(
@@ -41,18 +66,34 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         3
       );
       
+<<<<<<< HEAD
+      console.log("AI matching results:"results);
+=======
       console.log("AI matching results:", results);
+>>>>>>> origin/auto/autonomy-17186719616
       setMatches(results);
       
       toast({
         title: "Matches Found",
+<<<<<<< HEAD
         description: `Found ${results.length} matches based on your description.`});
+    } catch (error) {
+      console.error("Error during AI matching:"error);
+      toast({
+        title: "Matching Error",
+        description: "We couldn't find matches for your request. Please try again.",
+        variant: "destructive"});
+=======
+        description: `Found ${results.length} matches based on your description.`,
+      });
     } catch (error) {
       console.error("Error during AI matching:", error);
       toast({
         title: "Matching Error",
         description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive"});
+        variant: "destructive",
+      });
+>>>>>>> origin/auto/autonomy-17186719616
       // Set empty matches to show no results found UI
       setMatches([]);
     } finally {
@@ -88,7 +129,11 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         <div className="space-y-4">
           <div className="space-y-2">
             <Textarea
+<<<<<<< HEAD
+              placeholder="Describe what you need... (e.g.'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
+=======
               placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
+>>>>>>> origin/auto/autonomy-17186719616
               value={query}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e.target.value)}
               className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
