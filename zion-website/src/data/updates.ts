@@ -79,6 +79,7 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Report'
   },
+  {
     title: 'Guide: Real-Time Evals Starter Kit',
     summary:
       'A practical starter kit with metrics, harnesses, and examples to begin live evaluation in production.',
@@ -269,6 +270,23 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/rag-agents-case-study',
     date: '2025-09-15',
     tag: 'Case Study'
+  }
+  ,
+  {
+    title: 'Launch: Autonomous Finance OS v1.1',
+    summary:
+      'Enhanced financial automation with real-time risk scoring, audit trails, and policy-as-code.',
+    href: '/updates/autonomous-finance-os-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Report: AI Compliance Readiness 2026',
+    summary:
+      'A practical readiness checklist and maturity model for enterprise AI compliance in 2026.',
+    href: '/updates/ai-compliance-readiness-2026',
+    date: '2025-09-15',
+    tag: 'Report'
   }
 ]
 
