@@ -292,6 +292,11 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
+                title: 'Sovereign AI Commerce (2026): Autonomous Marketplaces',
+                summary: 'Reference architecture, safety gates, and rollout checklist for AI commerce.',
+                href: '/blog/ai-2026-sovereign-ai-commerce'
+              },
+              {
                 title: 'AI 2026: Safe Tool Use Blueprint',
                 summary: 'Permissioned tool use with risk tiers, sandboxes, policy-as-code, and runtime checks.',
                 href: '/blog/ai-2026-safe-tool-use-blueprint'
@@ -300,11 +305,6 @@ export default function HomePage() {
                 title: 'AI 2026: Enterprise Agent Observability Guide',
                 summary: 'Traces, evals, and safety telemetry to operate autonomous agents in production.',
                 href: '/blog/ai-2026-enterprise-agent-observability-guide'
-              },
-              {
-                title: 'Enterprise AI Security Blueprint (2025)',
-                summary: 'Layered controls across model, data, runtime, and supply chain.',
-                href: '/blog/ai-2025-enterprise-ai-security-blueprint'
               }
             ].map((item) => (
               <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
