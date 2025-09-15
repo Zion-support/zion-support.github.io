@@ -12,6 +12,7 @@ import BlogPost2025 from './src/pages/BlogPost2025';
 import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
 import FutureTechTrends2025 from './src/pages/FutureTechTrends2025';
 import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
+import AIInnovationPlaybook2025 from './src/pages/AIInnovationPlaybook2025';
 import './src/index.css';
 
 export default function App(): JSX.Element {
@@ -66,6 +67,9 @@ export default function App(): JSX.Element {
                     </a>
                     <a href="/pages/BlogPost2025" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                       📰 Latest Blog
+                    </a>
+                    <a href="/pages/AIInnovationPlaybook2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                      📘 AI Innovation Playbook
                     </a>
                   </div>
                 </div>
@@ -254,15 +258,15 @@ export default function App(): JSX.Element {
                 {/* New Content Promotion Banner */}
                 <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-12 text-white">
                   <div className="text-center mb-8">
-                    <h2 className="text-4xl font-bold mb-4">🌟 NEW: Future Technology Trends 2025</h2>
-                    <p className="text-xl opacity-90">Discover the revolutionary technologies that will shape tomorrow</p>
+                    <h2 className="text-4xl font-bold mb-4">🌟 NEW: AI Innovation Playbook 2025</h2>
+                    <p className="text-xl opacity-90">Practical guide to ideate, prototype, and scale AI with ROI</p>
                   </div>
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
                       <div className="text-4xl mb-3">🔮</div>
-                      <h3 className="text-xl font-semibold mb-2">Future Tech Trends</h3>
-                      <p className="text-sm opacity-90 mb-4">Expert predictions and emerging technologies</p>
-                      <a href="/pages/FutureTechTrends2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore Trends →</a>
+                      <h3 className="text-xl font-semibold mb-2">AI Playbook</h3>
+                      <p className="text-sm opacity-90 mb-4">Templates, KPIs, and guardrails</p>
+                      <a href="/pages/AIInnovationPlaybook2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Read Playbook →</a>
                     </div>
                     <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
                       <div className="text-4xl mb-3">⚡</div>
@@ -272,9 +276,9 @@ export default function App(): JSX.Element {
                     </div>
                     <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
                       <div className="text-4xl mb-3">🚀</div>
-                      <h3 className="text-xl font-semibold mb-2">Innovation 2025</h3>
-                      <p className="text-sm opacity-90 mb-4">Revolutionary services and breakthrough technologies</p>
-                      <a href="/pages/InnovationLanding2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore Now →</a>
+                      <h3 className="text-xl font-semibold mb-2">Future Trends</h3>
+                      <p className="text-sm opacity-90 mb-4">Expert predictions and breakthroughs</p>
+                      <a href="/pages/FutureTechTrends2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore Trends →</a>
                     </div>
                   </div>
                 </div>
@@ -336,6 +340,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedTechSolutions2025" element={<AdvancedTechSolutions2025 />} />
           <Route path="/pages/FutureTechTrends2025" element={<FutureTechTrends2025 />} />
           <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
+          <Route path="/pages/AIInnovationPlaybook2025" element={<AIInnovationPlaybook2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">

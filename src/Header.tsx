@@ -95,6 +95,10 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
       ]
     },
     {
+      name: 'Playbook 2025',
+      href: '/pages/AIInnovationPlaybook2025'
+    },
+    {
       name: 'Case Studies',
       href: '/case-studies'
     },
