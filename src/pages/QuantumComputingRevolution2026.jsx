@@ -1,13 +1,13 @@
 import React from 'react';
 
-const QuantumComputingBreakthrough = () => {
+const QuantumComputingRevolution2026 = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Quantum Computing Breakthrough</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Quantum Computing Revolution 2026</h1>
           <p className="text-xl text-gray-700">
-            Revolutionary quantum computing breakthroughs and applications
+            The quantum computing revolution that's changing everything
           </p>
         </div>
         
@@ -30,9 +30,9 @@ const QuantumComputingBreakthrough = () => {
           
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="text-4xl mb-4">🚀</div>
-            <h2 className="text-2xl font-bold mb-4">Applications</h2>
+            <h2 className="text-2xl font-bold mb-4">Revolutionary Applications</h2>
             <p className="text-gray-600">
-              Real-world quantum computing applications and use cases.
+              Revolutionary applications of quantum computing technology.
             </p>
           </div>
         </div>
@@ -41,4 +41,4 @@ const QuantumComputingBreakthrough = () => {
   );
 };
 
-export default QuantumComputingBreakthrough;
+export default QuantumComputingRevolution2026;
