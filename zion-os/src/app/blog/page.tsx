@@ -9,6 +9,17 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'agentic-supply-chains-2025',
+      title: 'Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents',
+      excerpt: 'How autonomous agents coordinate forecasting, procurement, and fulfillment across complex supply networks with measurable SLAs.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/agentic-supply-chains.jpg',
+      featured: true
+    },
+    {
 <<<<<<< HEAD
       id: 'agentic-safety-patterns-2025',
       title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -120,6 +131,16 @@ export default function BlogPage() {
   ];
 
   const recentPosts = [
+    {
+      id: 'agentic-supply-chains-2025',
+      title: 'Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents',
+      excerpt: 'Reference architecture and rollout path for agentic logistics with policy guardrails and KPIs.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/agentic-supply-chains.jpg'
+    },
     {
 <<<<<<< HEAD
 <<<<<<< HEAD

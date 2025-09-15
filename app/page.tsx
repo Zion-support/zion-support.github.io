@@ -73,6 +73,7 @@ import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2
 import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
 import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
+import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -166,6 +167,8 @@ export default function HomePage() {
         {/* Revolutionary AI Content 2026 Banner - NEW FEATURED */}
         <RevolutionaryAIContent2026Banner />
 
+        {/* Promo: Autonomous Analytics Platform 2025 - NEW */}
+        <AutonomousAnalytics2025PromoBanner />
         {/* Promo: New Article - Multimodal Agents Blueprint 2026 */}
         <section className="py-12 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
