@@ -1,294 +1,248 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
-"use client";
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { 
-  ArrowRight
-  Play
-  Star
-  TrendingUp
-  Users
-  Zap,
-  Brain,
-  Rocket,
-  Target,
-  Shield,
-  Globe,
-  Code,
-  Database,
-  Network,
-  Cloud
-} from 'lucide-react';
 
-const InteractiveContentShowcase2026 = () => {
-  const [activeTabsetActiveTab] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+const InteractiveContentShowcase2026: React.FC = () => {
+  const [activeTab, setActiveTab] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const contentCategories = [
+  const contentTabs = [
     {
-      title: 'AI Innovations',
-      description: 'Revolutionary breakthroughs in artificial intelligence',
-      icon: Brain,
+      id: 'ai-trends',
+      title: 'AI Trends 2026',
+      icon: '🤖',
       color: 'from-blue-500 to-cyan-500',
-      content: [
-        {
-          title: 'Quantum-Neural Fusion Computing',
-          description: 'Revolutionary quantum-classical hybrid systems delivering 10,000x processing speed improvements',
-          image: '🧠',
-          stats: '10,000x Faster',
-          link: '/ai-innovation-showcase-2026'
-        },
-        {
-          title: 'Autonomous Business Operations',
-          description: 'Self-managing AI systems that handle complex business processes without human intervention',
-          image: '🤖',
-          stats: '24/7 Operations',
-          link: '/ai-innovation-showcase-2026'
-        },
-        {
-          title: 'Neural Interface Technology',
-          description: 'Direct brain-computer interfaces enabling seamless human-AI collaboration',
-          image: '🧬',
-          stats: '98.7% Accuracy',
-          link: '/ai-innovation-showcase-2026'
-        }
-      ]
+      content: {
+        title: 'Revolutionary AI Breakthroughs',
+        description: 'Discover the latest AI trends that are reshaping industries and transforming how we work and live.',
+        features: [
+          'Quantum-Enhanced Machine Learning',
+          'Neural Interface Technology',
+          'Autonomous AI Systems',
+          'Emotional AI and Human-AI Collaboration'
+        ],
+        stats: [
+          { label: 'AI Adoption Rate', value: '87%', color: 'text-blue-600' },
+          { label: 'Productivity Increase', value: '340%', color: 'text-green-600' },
+          { label: 'Cost Reduction', value: '52%', color: 'text-purple-600' }
+        ]
+      }
     },
     {
-      title: 'AI Tools Suite',
-      description: 'Comprehensive collection of AI-powered tools and platforms',
-      icon: Code,
+      id: 'quantum-computing',
+      title: 'Quantum Computing',
+      icon: '⚛️',
       color: 'from-purple-500 to-pink-500',
-      content: [
-        {
-          title: 'Quantum Computing Suite',
-          description: 'Revolutionary quantum-classical hybrid computing tools',
-          image: '⚡',
-          stats: '60+ Tools',
-          link: '/ai-tools-comprehensive-showcase-2026'
-        },
-        {
-          title: 'Autonomous Operations Platform',
-          description: 'Self-managing AI systems for complete business automation',
-          image: '🚀',
-          stats: '85% Cost Reduction',
-          link: '/ai-tools-comprehensive-showcase-2026'
-        },
-        {
-          title: 'Neural Interface Toolkit',
-          description: 'Direct brain-computer interface development tools',
-          image: '🔗',
-          stats: '300% Improvement',
-          link: '/ai-tools-comprehensive-showcase-2026'
-        }
-      ]
+      content: {
+        title: 'Quantum Revolution 2026',
+        description: 'Experience the power of quantum computing and its transformative impact on cryptography, drug discovery, and optimization.',
+        features: [
+          '1000+ Qubit Processors',
+          'Quantum Error Correction',
+          'Quantum Internet Infrastructure',
+          'Quantum Machine Learning'
+        ],
+        stats: [
+          { label: 'Processing Speed', value: '1000x', color: 'text-purple-600' },
+          { label: 'Security Level', value: '99.9%', color: 'text-pink-600' },
+          { label: 'Energy Efficiency', value: '85%', color: 'text-indigo-600' }
+        ]
+      }
     },
     {
-      title: 'Success Stories',
-      description: 'Real-world implementations and transformative results',
-      icon: TrendingUp,
-      color: 'from-green-500 to-emerald-500',
-      content: [
-        {
-          title: 'TechCorp Transformation',
-          description: 'Quantum-neural fusion system revolutionized data processing capabilities',
-          image: '🏢',
-          stats: '10,000x Speed',
-          link: '/case-studies'
-        },
-        {
-          title: 'InnovateLabs Success',
-          description: 'Autonomous operations reduced costs by 85% while increasing efficiency by 400%',
-          image: '🔬',
-          stats: '85% Cost Reduction',
-          link: '/case-studies'
-        },
-        {
-          title: 'QuantumTech Breakthrough',
-          description: 'Neural interface technology opened up transformative possibilities',
-          image: '🔮',
-          stats: '98.7% Accuracy',
-          link: '/case-studies'
-        }
-      ]
-    }
-  ];
-
-  const features = [
-    {
-      title: 'Interactive Demos',
-      description: 'Try our AI tools in real-time',
-      icon: Play,
-      color: 'from-blue-500 to-cyan-500'
+      id: 'neural-interfaces',
+      title: 'Neural Interfaces',
+      icon: '🧠',
+      color: 'from-green-500 to-teal-500',
+      content: {
+        title: 'Brain-Computer Integration',
+        description: 'Explore the future of human-AI interaction through advanced neural interface technology.',
+        features: [
+          'Thought-to-Text Communication',
+          'Enhanced Learning Systems',
+          'Emotional AI Recognition',
+          'Memory Augmentation'
+        ],
+        stats: [
+          { label: 'Accuracy Rate', value: '95%', color: 'text-green-600' },
+          { label: 'Response Time', value: '200ms', color: 'text-teal-600' },
+          { label: 'User Satisfaction', value: '92%', color: 'text-emerald-600' }
+        ]
+      }
     },
     {
-      title: 'Live Analytics',
-      description: 'Real-time performance metrics',
-      icon: BarChart3,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Community Access',
-      description: 'Join 50,000+ AI practitioners',
-      icon: Users,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Expert Support',
-      description: '24/7 technical assistance',
-      icon: Shield,
-      color: 'from-orange-500 to-red-500'
+      id: 'space-tech',
+      title: 'Space Technology',
+      icon: '🚀',
+      color: 'from-orange-500 to-red-500',
+      content: {
+        title: 'Next-Gen Space Exploration',
+        description: 'Advancements in space technology are opening new frontiers in exploration and satellite communications.',
+        features: [
+          'Quantum Space Sensors',
+          'Autonomous Space Missions',
+          'Satellite Communication Networks',
+          'Dark Matter Detection'
+        ],
+        stats: [
+          { label: 'Mission Success', value: '98%', color: 'text-orange-600' },
+          { label: 'Data Accuracy', value: '99.7%', color: 'text-red-600' },
+          { label: 'Cost Reduction', value: '67%', color: 'text-yellow-600' }
+        ]
+      }
     }
   ];
 
   useEffect(() => {
-    setIsVisible(true);
-  }[]);
+    const interval = setInterval(() => {
+      setActiveTab((prev) => (prev + 1) % contentTabs.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
-  const currentCategory = contentCategories[activeTab];
+  const handleTabClick = (index: number) => {
+    setIsAnimating(true);
+    setActiveTab(index);
+    setTimeout(() => setIsAnimating(false), 300);
+  };
 
   return (
-    <div className={`relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-cyan-600/10"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className="bg-gradient-to-br from-slate-50 to-blue-50 py-16">
+      <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Star className="h-6 w-6 text-yellow-400" />
-            <span className="text-sm font-semibold text-yellow-400 uppercase tracking-wide">
-              Interactive Content Showcase 2026
-            </span>
+        <div className="text-center mb-12">
+          <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
+            🌟 INTERACTIVE SHOWCASE
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Explore the Future of
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-              AI Technology
-            </span>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Explore Revolutionary Technologies
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover revolutionary AI innovationscomprehensive tool suitesand real-world success stories. 
-            Interact with cutting-edge technology and see the future of business transformation.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Dive deep into the cutting-edge technologies that are shaping our future. 
+            Click on different tabs to explore various innovations.
           </p>
         </div>
 
-        {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {contentCategories.map((categoryindex) => {
-            const IconComponent = category.icon;
-            return (
+        {/* Interactive Tabs */}
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            {contentTabs.map((tab, index) => (
               <button
-                key={index}
-                onClick={() => setActiveTab(index)}
-                className={`flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                key={tab.id}
+                onClick={() => handleTabClick(index)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === index
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
+                    ? `bg-gradient-to-r ${tab.color} text-white shadow-lg transform scale-105`
+                    : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md'
                 }`}
               >
-                <IconComponent className="h-5 w-5" />
-                {category.title}
+                <span className="text-xl mr-2">{tab.icon}</span>
+                {tab.title}
               </button>
-            );
-          })}
-        </div>
-
-        {/* Content Display */}
-        <div className="mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-2">{currentCategory.title}</h3>
-            <p className="text-gray-300">{currentCategory.description}</p>
+            ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {currentCategory.content.map((itemindex) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                  {item.image}
+          {/* Content Display */}
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'}`}>
+              {/* Hero Section */}
+              <div className={`bg-gradient-to-r ${contentTabs[activeTab].color} p-8 text-white`}>
+                <div className="flex items-center mb-6">
+                  <div className="text-6xl mr-6">
+                    {contentTabs[activeTab].icon}
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold mb-2">
+                      {contentTabs[activeTab].content.title}
+                    </h3>
+                    <p className="text-xl opacity-90">
+                      {contentTabs[activeTab].content.description}
+                    </p>
+                  </div>
                 </div>
-                <h4 className="text-xl font-semibold text-white mb-3">{item.title}</h4>
-                <p className="text-gray-300 mb-4">{item.description}</p>
-                <div className="flex items-center justify-between">
-                  <div className="text-sm font-semibold text-green-400">{item.stats}</div>
-                  <Link
-                    href={item.link}
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold text-sm group-hover:translate-x-1 transition-transform"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </Link>
+              </div>
+
+              {/* Features and Stats */}
+              <div className="p-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {/* Features */}
+                  <div>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h4>
+                    <div className="space-y-4">
+                      {contentTabs[activeTab].content.features.map((feature, index) => (
+                        <div key={index} className="flex items-center">
+                          <div className={`w-8 h-8 bg-gradient-to-r ${contentTabs[activeTab].color} rounded-full flex items-center justify-center text-white text-sm font-bold mr-4`}>
+                            {index + 1}
+                          </div>
+                          <span className="text-gray-700 font-medium">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Stats */}
+                  <div>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-6">Performance Metrics</h4>
+                    <div className="space-y-6">
+                      {contentTabs[activeTab].content.stats.map((stat, index) => (
+                        <div key={index} className="bg-gray-50 rounded-lg p-4">
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-600 font-medium">{stat.label}</span>
+                            <span className={`text-3xl font-bold ${stat.color}`}>
+                              {stat.value}
+                            </span>
+                          </div>
+                          <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div 
+                              className={`h-2 bg-gradient-to-r ${contentTabs[activeTab].color} rounded-full transition-all duration-1000`}
+                              style={{ width: `${Math.min(100, (index + 1) * 25)}%` }}
+                            ></div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="mt-8 flex flex-wrap gap-4 justify-center">
+                  <button className={`bg-gradient-to-r ${contentTabs[activeTab].color} text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}>
+                    Learn More →
+                  </button>
+                  <button className="bg-white border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300">
+                    View Demo
+                  </button>
+                  <button className="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300">
+                    Get Started
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Content Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            {contentTabs.map((tab, index) => (
+              <div 
+                key={tab.id}
+                className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer ${
+                  activeTab === index ? 'ring-2 ring-blue-500' : ''
+                }`}
+                onClick={() => handleTabClick(index)}
+              >
+                <div className={`w-12 h-12 bg-gradient-to-r ${tab.color} rounded-full flex items-center justify-center text-white text-2xl mb-4`}>
+                  {tab.icon}
+                </div>
+                <h4 className="text-lg font-bold text-gray-900 mb-2">{tab.title}</h4>
+                <p className="text-gray-600 text-sm">
+                  {tab.content.description.substring(0, 100)}...
+                </p>
+                <div className="mt-4 text-sm text-gray-500">
+                  {tab.content.features.length} key features
                 </div>
               </div>
             ))}
           </div>
         </div>
-
-        {/* Features Grid */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">Interactive Features</h3>
-            <p className="text-xl text-gray-300">Experience AI technology like never before</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((featureindex) => {
-              const IconComponent = feature.icon;
-              return (
-                <div
-                  key={index}
-                  className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300"
-                >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${feature.color} rounded-full mb-4`}>
-                    <IconComponent className="h-8 w-8 text-white" />
-                  </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">{feature.title}</h4>
-                  <p className="text-gray-300 text-sm">{feature.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Experience the Future?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of innovators already transforming their businesses with AI
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/ai-innovation-showcase-2026"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
-              >
-                Explore Innovations
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                href="/ai-tools-comprehensive-showcase-2026"
-                className="inline-flex items-center px-8 py-3 border border-white/30 text-base font-medium rounded-md text-white hover:bg-white/10 transition-all duration-200"
-              >
-                Browse Tools
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-3 border border-white/30 text-base font-medium rounded-md text-white hover:bg-white/10 transition-all duration-200"
-              >
-                Schedule Demo
-              </Link>
-            </div>
-          </div>
-        </div>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       </div>
     </div>
   );
