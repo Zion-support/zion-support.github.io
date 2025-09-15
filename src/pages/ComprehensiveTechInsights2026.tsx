@@ -2,10 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveTechInsights2026: React.FC = () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-be96
   return (
     <>
       <Helmet>
