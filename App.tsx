@@ -49,6 +49,8 @@ import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevoluti
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
+import RevolutionaryPromoBanner2026 from './src/components/RevolutionaryPromoBanner2026';
+import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
 
 export default function App(): JSX.Element {
   return (
@@ -61,6 +63,9 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* Revolutionary Promotional Banner 2026 */}
+                <RevolutionaryPromoBanner2026 />
+                
                 {/* Revolutionary New Content Banner */}
                 <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
@@ -435,9 +440,18 @@ export default function App(): JSX.Element {
                           <li>• Neural Feedback</li>
                         <a href="/pages/NeuralInterfaceFuture" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
                 {/* Interactive Technology Showcase */}
+                <div className="mb-12">
+                  <div className="text-center mb-8">
                     <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 Interactive Technology Showcase</h2>
                     <p className="text-xl text-gray-600">Explore our cutting-edge technology solutions with interactive features</p>
+                  </div>
                   <InteractiveTechShowcase />
+                </div>
+
+                {/* Interactive Content Showcase 2026 */}
+                <div className="mb-12">
+                  <InteractiveContentShowcase2026 />
+                </div>
                 {/* Enhanced Content Showcase */}
                   <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 text-white relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
@@ -510,6 +524,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/revolutionary-showcase" element={<RevolutionaryContentShowcase />} />
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} />
+          <Route path="/pages/AdvancedQuantumComputing2026" element={<AdvancedQuantumComputing2026 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
