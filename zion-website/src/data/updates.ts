@@ -8,6 +8,14 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Ops and SRE for Agents',
+    summary:
+      'Operational framework for running autonomous agents with SLOs, guardrails, and runbooks.',
+    href: '/updates/autonomous-ops-sre-for-agents',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Launch: AI Agent Safety Certification (Beta)',
     summary:
       'New certification program validating safety practices for autonomous agents across design, evals, and operations.',

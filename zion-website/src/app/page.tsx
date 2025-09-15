@@ -107,10 +107,10 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
-                href="/updates/ai-agent-safety-certification-beta"
+                href="/updates/autonomous-ops-sre-for-agents"
                 className="inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-500/10 px-4 py-2 text-sm font-semibold text-green-200 hover:bg-green-500/20 transition-colors duration-200"
               >
-                New: Agent Safety Certification (Beta)
+                New: Autonomous Ops & SRE for Agents
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -181,9 +181,9 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
-                title: 'AI 2026: Multimodal Agents Enterprise Blueprint',
-                summary: 'Design, deploy, and scale multimodal agents with measurable ROI.',
-                href: '/blog/ai-2026-multimodal-agents-enterprise-blueprint'
+                title: 'AI 2026: Autonomous Ops and SRE for Agents',
+                summary: 'Run agentic systems with SLOs, guardrails, and incident runbooks.',
+                href: '/blog/ai-2026-autonomous-ops-sre-for-agents'
               },
               {
                 title: 'AI 2026: LLM Evals Maturity Model',
