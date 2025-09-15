@@ -11,6 +11,22 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-governance-blueprint-2025': {
+    id: 'ai-governance-blueprint-2025',
+    title: 'AI Governance Blueprint 2025: Practical Controls for Safe Autonomy',
+    excerpt:
+      'A concise, actionable framework to implement policy, oversight, and assurance for autonomous AI systems at scale.',
+    category: 'AI Solutions',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '7 min read',
+    content: [
+      'Enterprises are embracing autonomous agents to accelerate operations, but governance must evolve to keep pace. This blueprint provides a pragmatic structure to deploy safe autonomy without stifling innovation.',
+      'We recommend a layered control model: preventative policy (what is allowed), detective monitoring (what actually happened), and corrective actions (how we recover). Each layer is measurable and testable.',
+      'Key capabilities include: role- and risk-based permissions, human-in-the-loop for sensitive actions, red-team simulation, tamper-evident logs, and post-incident learning loops.',
+      'Adopt in phases: start with policy catalogs and identity, instrument critical actions with approvals, then automate low-risk actions and continuously raise autonomy confidence as evidence accumulates.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',

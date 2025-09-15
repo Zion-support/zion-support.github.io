@@ -99,8 +99,8 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </a>
-              <a href="/news" className="btn-secondary hover-lift">
-                📰 See what's new in 2025
+              <a href="/blog/ai-governance-blueprint-2025" className="btn-secondary hover-lift">
+                📰 New: AI Governance Blueprint 2025
               </a>
             </div>
           </div>
