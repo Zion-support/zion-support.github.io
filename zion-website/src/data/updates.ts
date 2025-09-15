@@ -42,6 +42,14 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
+    title: 'Launch: Autonomous Innovation Hub v1.0',
+    summary:
+      'Unified workspace with blueprints, live eval gates, and policy‑as‑code to accelerate safe AI launches.',
+    href: '/updates/autonomous-innovation-hub-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Report: AI 2026 Platform Readiness Checklist',
     summary:
       'Engineer-ready checklist across data, governance, evals, and observability to ship enterprise AI safely.',
