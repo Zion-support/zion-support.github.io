@@ -22,6 +22,27 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-15",
   },
   {
+    id: "agent-posture-management-2026",
+    title: "AI 2026: Agent Posture Management",
+    description:
+      "Continuously assess, harden, and govern autonomous agents with baselines and controls.",
+    ctaLabel: "Read Article",
+    href: "/blog/ai-2026-agent-posture-management",
+    emoji: "🧭",
+    highlight: true,
+    date: "2025-09-15",
+  },
+  {
+    id: "agentic-evaluation-checklists-2026",
+    title: "AI 2026: Agentic Evaluation Checklists",
+    description:
+      "Practical red-team, reliability, and safety checklists for agent releases.",
+    ctaLabel: "Use Checklists",
+    href: "/content/ai-2026-agentic-evaluation-checklists",
+    emoji: "✅",
+    date: "2025-09-15",
+  },
+  {
     id: "autonomous-ops-playbook-blog-2026",
     title: "AI 2026: Autonomous Ops Playbook",
     description:
