@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const LanguageDetectionPopup = () => {
-<<<<<<< HEAD
-  return null; // Placeholder component
-=======
   const { language, changeLanguage, isLanguageDetected, setIsLanguageDetected } = useLanguage();
   const [showPopup, setShowPopup] = useState(false);
 
@@ -53,7 +50,6 @@ const LanguageDetectionPopup = () => {
       </div>
     </div>
   );
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 };
 
 export { LanguageDetectionPopup };

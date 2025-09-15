@@ -1,11 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
-import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
-import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
-=======
 import {
   ArrowRight,
   Atom,
@@ -355,7 +349,6 @@ export default function Home() {
       </div>
     );
   }
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 
 const Home: React.FC = () => {
   return (
@@ -580,9 +573,6 @@ const Home: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-=======
         </motion.section>
 
         {/* Lazy Loaded Components */}
@@ -611,7 +601,6 @@ const Home: React.FC = () => {
           <ServicesShowcase />
           <RevolutionaryContentShowcase2027 />
         </React.Suspense>
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
       </div>
     </>
   );

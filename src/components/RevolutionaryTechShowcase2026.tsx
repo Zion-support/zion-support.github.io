@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f977
 import React from 'react';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {

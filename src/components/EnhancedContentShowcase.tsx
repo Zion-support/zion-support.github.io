@@ -1,22 +1,6 @@
 import React from 'react';
 
 const EnhancedContentShowcase: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ENHANCED CONTENT SHOWCASE • JANUARY 2025
-          </div>
-          <h2 className="text-5xl font-bold mb-6">Enhanced Technology Showcase</h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Discover our enhanced technology solutions and cutting-edge innovations
-          </p>
-        </div>
-        
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -244,7 +228,6 @@ const EnhancedContentShowcase: React.FC = () => {
           <p className="text-xl text-purple-200">Experience interactive technology exploration</p>
         </div>
 
->>>>>>> cursor/create-and-deploy-new-content-d3a3
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖</div>
@@ -271,8 +254,6 @@ const EnhancedContentShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20 text-center">
@@ -289,7 +270,6 @@ const EnhancedContentShowcase: React.FC = () => {
           </a>
         </div>
       </div>
->>>>>>> cursor/create-and-deploy-new-content-d3a3
     </div>
   );
 };

@@ -1,15 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-f977
 import Header from '../Header';
 import Footer from '../Footer';
 

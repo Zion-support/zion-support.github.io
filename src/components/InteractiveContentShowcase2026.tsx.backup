@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+=======
 import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveContentShowcase2026: React.FC = () => {
@@ -49,6 +51,7 @@ const InteractiveContentShowcase2026: React.FC = () => {
 =======
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 =======
 "use client";
 import React, { useState, useEffect } from 'react';
@@ -189,11 +192,16 @@ const InteractiveContentShowcase2026 = () => {
       description: '24/7 technical assistance',
       icon: Shield,
       color: 'from-orange-500 to-red-500'
+<<<<<<< HEAD
+=======
 >>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
     }
   ];
 
   useEffect(() => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     const interval = setInterval(() => {
       setActiveContent((prev) => (prev + 1) % contentItems.length);
@@ -390,6 +398,7 @@ const InteractiveContentShowcase2026 = () => {
           </div>
         </motion.div>
 =======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
     setIsVisible(true);
   }[]);
 
@@ -534,8 +543,12 @@ const InteractiveContentShowcase2026 = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+=======
 >>>>>>> cursor/create-and-deploy-new-content-abae
 >>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
       </div>
     </div>
   );

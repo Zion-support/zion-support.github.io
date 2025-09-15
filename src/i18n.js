@@ -8,10 +8,6 @@ const resources = {
   en: {
     translation: {
       welcome: 'Welcome',
-<<<<<<< HEAD
-      hello: 'Hello',
-      // Add more translations as needed
-=======
       home: 'Home',
       about: 'About',
       contact: 'Contact'
@@ -31,7 +27,6 @@ const resources = {
       home: 'Accueil',
       about: 'À propos',
       contact: 'Contact'
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     }
   }
 };
@@ -44,13 +39,8 @@ i18n
     fallbackLng: 'en',
     debug: false,
     interpolation: {
-<<<<<<< HEAD
-      escapeValue: false,
-    },
-=======
       escapeValue: false
     }
->>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
   });
 
 export default i18n;

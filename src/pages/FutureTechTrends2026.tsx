@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-f977
 
 const FutureTechTrends2026: React.FC = () => {
   return (

@@ -1,57 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-const DynamicContentCarousel: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-
-  const contentItems = [
-    {
-      id: 1,
-      title: "AI Revolution 2026",
-      description: "Experience the next evolution of artificial intelligence with autonomous reasoning and quantum-enhanced processing.",
-      icon: "🧠",
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/AIRevolution2025",
-      isNew: true,
-      isLive: false,
-      thumbnail: "🤖",
-      author: "Dr. Sarah Chen",
-      publishedAt: "2025-01-20",
-      tags: ["AI", "Machine Learning", "Quantum", "Innovation"],
-      stats: {
-        accuracy: "99.8%",
-        speed: "10x faster",
-        efficiency: "95%"
-      }
-    },
-    {
-      id: 2,
-      title: "Quantum Computing Breakthrough",
-      description: "Revolutionary quantum processors with 1000+ logical qubits and quantum supremacy capabilities.",
-      icon: "⚡",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/QuantumComputingBreakthrough",
-      isNew: false,
-      isLive: true,
-      thumbnail: "⚛️",
-      author: "Prof. Marcus Rodriguez",
-      publishedAt: "2025-01-18",
-      tags: ["Quantum", "Neural Networks", "Computing", "Tutorial"],
-      stats: {
-        qubits: "1000+",
-        coherence: "100ms",
-        fidelity: "99.99%"
-      }
-    },
-    {
-      id: 3,
-      title: "Neural Interface Future",
-      description: "Direct brain-computer communication with non-invasive neural interfaces and thought control.",
-      icon: "🧬",
-      gradient: "from-emerald-600 to-teal-600",
       link: "/pages/NeuralInterfaceFuture",
       isNew: true,
       isLive: false,
@@ -273,7 +219,6 @@ const DynamicContentCarousel: React.FC = () => {
               </motion.div>
             ))}
           </div>
-=======
 import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
@@ -283,7 +228,6 @@ const DynamicContentCarousel: React.FC = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">DynamicContentCarousel</h1>
           <p className="text-xl text-gray-600">Coming soon - DynamicContentCarousel content</p>
->>>>>>> cursor/create-and-deploy-new-content-7857
         </div>
       </div>
     </div>

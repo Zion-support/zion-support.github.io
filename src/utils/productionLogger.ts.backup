@@ -1,7 +1,26 @@
 <<<<<<< HEAD
 // Production logger utility
 =======
->>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Production-safe logging utility
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Production logger utility for handling logging in production environment
+
+=======
+// Production logger utility
+>>>>>>> main
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d3a3
+=======
+>>>>>>> cursor/create-and-deploy-new-content-8735
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -13,7 +32,69 @@ const LOG_LEVELS: LogLevel = {
   ERROR: 'error',
   WARN: 'warn',
   INFO: 'info',
+    }
+  }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  error(message: string, data?: any): void {
+    if (!this.shouldLog('ERROR')) return;
+
+    const formattedMessage = this.formatMessage('ERROR', message, data);
+    
+    if (this.options.enableConsole) {
+      console.error(formattedMessage);
+    }
+
+    if (!this.isDevelopment) {
+      this.sendToRemote('ERROR', message, data);
+    }
+  }
+
+  warn(message: string, data?: any): void {
+    if (!this.shouldLog('WARN')) return;
+
+    const formattedMessage = this.formatMessage('WARN', message, data);
+    
+    if (this.options.enableConsole) {
+      console.warn(formattedMessage);
+    }
+
+    if (!this.isDevelopment) {
+      this.sendToRemote('WARN', message, data);
+    }
+  }
+
+  info(message: string, data?: any): void {
+    if (!this.shouldLog('INFO')) return;
+
+    const formattedMessage = this.formatMessage('INFO', message, data);
+    
+    if (this.options.enableConsole) {
+      console.info(formattedMessage);
+    }
+
+    if (!this.isDevelopment) {
+      this.sendToRemote('INFO', message, data);
+    }
+  }
+
+  debug(message: string, data?: any): void {
+    if (!this.shouldLog('DEBUG')) return;
+
+    const formattedMessage = this.formatMessage('DEBUG', message, data);
+    
+    if (this.options.enableConsole) {
+      console.debug(formattedMessage);
+    }
+
+    if (!this.isDevelopment) {
+      this.sendToRemote('DEBUG', message, data);
+=======
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
   DEBUG: 'debug',
 };
 /**
@@ -164,9 +245,13 @@ export const exportLogs = (): string => {
 };
 
 export default logger;
-=======
-    }
-  }
 }
 
->>>>>>> 1c1f8106cc928757fa398a0a64bb34dc9dc9dfed
+}
+
+}
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f977
+>>>>>>> cbce003a6893117e37bc83ad56f67658329c232e
