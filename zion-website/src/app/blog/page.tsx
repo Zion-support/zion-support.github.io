@@ -25,6 +25,8 @@ const posts = [
     title: 'AI 2026: Real-Time Model Routing — Playbook',
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+  },
+  {
     slug: 'ai-2026-agent-orchestration-enterprise-guide',
     title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
     summary:
