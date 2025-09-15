@@ -5,7 +5,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-<<<<<<< HEAD
         <div className="text-center mb-20">
           <div className="inline-block px-10 py-5 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full text-xl font-bold mb-10 animate-pulse">
             🧬 SYNTHETIC BIOLOGY REVOLUTION • 2027
@@ -152,7 +151,10 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
                   <span className="text-white ml-2">Carbon Footprint</span>
                 </div>
               </div>
-=======
+            </div>
+          </div>
+        </div>
+
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full text-sm font-semibold mb-6">
             🧬 SYNTHETIC BIOLOGY BREAKTHROUGH
@@ -293,13 +295,11 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <div className="text-3xl font-bold text-yellow-400 mb-2">0%</div>
               <div className="text-white font-semibold mb-1">Waste</div>
               <div className="text-gray-400 text-sm">Production byproducts</div>
->>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
             </div>
           </div>
         </div>
 
         {/* Success Stories */}
-<<<<<<< HEAD
         <div className="grid md:grid-cols-2 gap-16 mb-24">
           <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-sm rounded-3xl p-12 border border-green-400/30">
             <h3 className="text-4xl font-bold text-white mb-8">🏥 Medical Breakthrough</h3>
@@ -375,7 +375,9 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-20 py-8 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-3xl transform hover:scale-105">
               🚀 Enter Bio Revolution
             </button>
-=======
+          </div>
+        </div>
+
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">🏆 Success Stories</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -450,12 +452,10 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
                 <li>• Interplanetary agriculture</li>
               </ul>
             </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
           </div>
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
         <div className="text-center bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-3xl p-20 border border-green-400/30">
           <h2 className="text-6xl font-bold text-white mb-8">
             Ready for the Bio Revolution?
@@ -470,7 +470,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <button className="border-2 border-green-400 text-green-400 px-20 py-8 rounded-2xl hover:bg-green-400/10 transition-all duration-300 font-bold text-3xl">
               📞 Bio Consultation
             </button>
-=======
         <div className="text-center">
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">Join the Biological Revolution</h2>
@@ -485,7 +484,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
                 Start Your Journey
               </button>
             </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-f4e5
           </div>
         </div>
       </div>
