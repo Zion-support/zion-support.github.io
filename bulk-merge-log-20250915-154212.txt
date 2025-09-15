@@ -1,0 +1,23 @@
+[2025-09-15 15:42:13] 🔄 Starting bulk processing...
+[2025-09-15 15:42:13] 📊 Batch size: 50
+[2025-09-15 15:42:13] 📊 Max conflicts per batch: 10
+[2025-09-15 15:42:13] ---
+[2025-09-15 15:42:15] 📊 Total branches to process: 227
+[2025-09-15 15:42:15] ---
+[2025-09-15 15:42:15] 🚀 Processing batch 1 (branches 1 to 50)
+[2025-09-15 15:42:15] ---
+[2025-09-15 15:42:15] 📋 Processing branch 1: aggressive-merge-backup-20250915-142930
+[2025-09-15 15:42:16] 🔄 Attempting to merge aggressive-merge-backup-20250915-142930...
+[2025-09-15 15:42:18] ⚠️  Merge conflicts detected in aggressive-merge-backup-20250915-142930, resolving...
+[2025-09-15 15:42:18] 📋 Conflicted files: content/blog/ai-2026-agent-benchmark-suite.md
+content/index.yaml
+data/whatsNew.ts
+[2025-09-15 15:42:18] 🔧 Resolving conflicts in content/blog/ai-2026-agent-benchmark-suite.md for branch aggressive-merge-backup-20250915-142930...
+[2025-09-15 15:42:18] 📝 Markdown: prefer main version
+[2025-09-15 15:42:18] ✅ Resolved conflicts in content/blog/ai-2026-agent-benchmark-suite.md
+[2025-09-15 15:42:18] 🔧 Resolving conflicts in content/index.yaml for branch aggressive-merge-backup-20250915-142930...
+[2025-09-15 15:42:18] 📋 YAML: prefer main version
+[2025-09-15 15:42:18] ✅ Resolved conflicts in content/index.yaml
+[2025-09-15 15:42:18] 🔧 Resolving conflicts in data/whatsNew.ts for branch aggressive-merge-backup-20250915-142930...
+[2025-09-15 15:42:18] 🧩 Generic file: prefer main version
+[2025-09-15 15:42:19] ✅ Resolved conflicts in data/whatsNew.ts
