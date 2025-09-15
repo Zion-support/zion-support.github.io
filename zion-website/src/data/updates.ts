@@ -8,6 +8,14 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Guide: AI 2026 Production Safety Checklist',
+    summary:
+      'Risk tiers, guardrails, evals, canaries, and audit evidence to ship safer AI.',
+    href: '/blog/ai-2026-production-safety-checklist',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: Autonomous Support Copilot v1.2',
     summary:
       'Faster triage, safer tool use, and improved retrieval observability with new eval gates.',

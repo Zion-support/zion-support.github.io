@@ -106,6 +106,13 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
+                href="/blog/ai-2026-production-safety-checklist"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                Guide: Production Safety Checklist
+                <span aria-hidden>→</span>
+              </a>
+              <a
                 href="/blog/ai-2026-sovereign-ai-commerce"
                 className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
               >
