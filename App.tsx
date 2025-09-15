@@ -30,10 +30,16 @@ import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import './src/index.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
+<<<<<<< HEAD
 import AdvancedAITransformation2025 from './src/pages/AdvancedAITransformation2025';
 import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
 import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
 import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
+=======
+import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
+import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
+import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 
 export default function App(): JSX.Element {
   return (
@@ -52,16 +58,28 @@ export default function App(): JSX.Element {
                   <div className="relative z-10">
                     <div className="flex items-center justify-center space-x-3 mb-4">
                       <span className="text-3xl animate-bounce">🚀</span>
-                      <h3 className="text-2xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2025</h3>
+                      <h3 className="text-2xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2026</h3>
                       <span className="text-3xl animate-bounce">🚀</span>
                     </div>
                     <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-                      Experience the future of technology with our groundbreaking new content on AI Revolution, 
-                      Quantum Computing Breakthroughs, and Neural Interface Technology
+                      Experience the future of technology with our groundbreaking new content on Synthetic Intelligence, 
+                      Quantum-Neural Fusion, AI Revolution, and Neural Interface Technology
                     </p>
+<<<<<<< HEAD
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
                       <a href="/pages/AIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧠 AI Revolution →
+=======
+                    <div className="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-7xl mx-auto">
+                      <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🧠 Synthetic Intelligence →
+                      </a>
+                      <a href="/pages/QuantumNeuralFusion2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        ⚛️ Quantum-Neural Fusion →
+                      </a>
+                      <a href="/pages/AIRevolution2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🤖 AI Revolution 2025 →
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
                       </a>
                       <a href="/pages/QuantumComputingBreakthrough" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         ⚡ Quantum Breakthrough →
@@ -69,6 +87,7 @@ export default function App(): JSX.Element {
                       <a href="/pages/NeuralInterfaceFuture" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧬 Neural Interface →
                       </a>
+<<<<<<< HEAD
                       <a href="/pages/AIEnterpriseCopilot2025" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                         🧭 Enterprise Copilot →
                       </a>
@@ -140,6 +159,8 @@ export default function App(): JSX.Element {
                           Explore Next-Gen Tech →
                         </a>
                       </div>
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
                     </div>
                   </div>
                 </div>
@@ -444,6 +465,17 @@ export default function App(): JSX.Element {
                   <InteractiveTechShowcase />
                 </div>
 
+                {/* Enhanced Content Showcase */}
+                <div className="mb-12">
+                  <div className="text-center mb-8">
+                    <h2 className="text-4xl font-bold text-gray-900 mb-4">🌟 Revolutionary Technology Experience</h2>
+                    <p className="text-xl text-gray-600">Experience our most advanced technologies with immersive interactive features</p>
+                    <a href="/enhanced-showcase" className="inline-block mt-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                      Explore Enhanced Showcase →
+                    </a>
+                  </div>
+                </div>
+
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Why Choose Zion Tech Group?
@@ -486,10 +518,16 @@ export default function App(): JSX.Element {
           <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
           <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
           <Route path="/pages/NewShowcase2025" element={<NewShowcase2025 />} />
+<<<<<<< HEAD
           <Route path="/pages/AdvancedAITransformation2025" element={<AdvancedAITransformation2025 />} />
           <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
           <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
           <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
+=======
+          <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
+          <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
+          <Route path="/enhanced-showcase" element={<EnhancedContentShowcase />} />
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">

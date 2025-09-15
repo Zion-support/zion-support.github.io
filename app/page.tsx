@@ -432,6 +432,7 @@ export default function HomePage() {
       </section>
       {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={8} />
+<<<<<<< HEAD
       {/* New Content Promo: Cost-Aware Routing + Secure Prompt Engineering + Evidence Hub */}
       <section className="py-8 bg-gradient-to-r from-amber-50 to-emerald-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -469,6 +470,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
       {/* New: Promote Trustworthy Model Routing + Agent Benchmark Suite */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -956,14 +959,22 @@ export default function HomePage() {
                 <Link href="/content/hyperautomation-blueprint-2026" className="text-purple-600 font-semibold hover:text-purple-800">Read Guide →</Link>
               </article>
               <article className="bg-white p-8 rounded-xl shadow-lg">
+<<<<<<< HEAD
                 <div className="text-sm font-semibold text-blue-700 mb-2">Article</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Edge AI Agents: Real-Time Autonomy</h3>
                 <p className="text-gray-600 mb-4">Unlock ultra-low-latency decisioning and control with edge-native agents.</p>
                 <Link href="/content/edge-ai-agents-2026" className="text-blue-600 font-semibold hover:text-blue-800">Read Article →</Link>
+=======
+                <div className="text-sm font-semibold text-blue-700 mb-2">Playbook</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AI Agents ROI Playbook 2026</h3>
+                <p className="text-gray-600 mb-4">A practical playbook to model, track, and realize ROI from enterprise AI agents.</p>
+                <Link href="/content/ai-agents-roi-playbook-2026" className="text-blue-600 font-semibold hover:text-blue-800">Read Playbook →</Link>
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
               </article>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Promo: New Blueprint - Enterprise AI Ops 2026 */}
         <section className="py-12 bg-gray-50">
@@ -980,6 +991,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 
         {/* Promo: New Blueprints */}
         <section className="py-10 bg-gradient-to-r from-purple-50 to-blue-50">

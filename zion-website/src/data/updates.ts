@@ -13,6 +13,31 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
+=======
+  // Added 2025-09-15 (new content for homepage promotion)
+  {
+    title: 'Launch: Autonomous Incident Simulation Toolkit v1.1',
+    summary:
+      'New real-time scenarios, eval-gated rollbacks, and signed evidence exports to drill agent safety.',
+    href: '/updates/incident-simulation-toolkit-1-1',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Evaluating Real-Time Retrieval in Production (2026)',
+    summary:
+      'Streaming metrics, budgeted latency, and rollout playbooks to harden real-time retrieval.',
+    href: '/updates/evaluating-real-time-retrieval-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  // Added 2025-09-15 (brand new content)
+  {
+    title: 'Launch: Autonomous Data Quality Copilot 1.0',
+    summary:
+      'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
+    href: '/updates/autonomous-data-quality-copilot-1-0',
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -732,6 +757,30 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Guide'
   },
   {
+    title: 'Launch: Autonomous Ops Control Center 2.0',
+    summary:
+      'Unified command center with live evals, guardrails, and automated incident workflows for agent ops.',
+    href: '/updates/autonomous-ops-control-center-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Compliance Auditor v1.0',
+    summary:
+      'Automated compliance checks for AI systems with policy-as-code and evidence collection.',
+    href: '/updates/compliance-auditor-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Autonomous Support Copilot v1.1',
+    summary:
+      'Upgraded support copilot with retrieval observability, safe tool use, and faster resolutions.',
+    href: '/updates/autonomous-support-copilot-1-1',
+    date: '2025-09-15',
+    tag: 'Product'
+  },
+  {
     title: 'Guide: Real-Time Evals Starter Kit',
     summary:
       'A practical starter kit with metrics, harnesses, and examples to begin live evaluation in production.',
@@ -842,6 +891,22 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-fundamentals-v2-1',
     date: '2025-09-14',
     tag: 'Course'
+  },
+  {
+    title: 'Report: State of AI Automation (2026 Preview)',
+    summary:
+      'Trends, metrics, and enterprise adoption patterns shaping the next wave of AI-led automation.',
+    href: '/insights/state-of-ai-automation-2025',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Case Study: Autonomous Retail Fulfillment at Scale',
+    summary:
+      'How autonomous agents improved OTIF by 11% and reduced costs across a global retailer.',
+    href: '/updates/autonomous-retail-fulfillment',
+    date: '2025-09-15',
+    tag: 'Case Study'
   },
   {
     title: 'Launch: Autonomous Ops Playbook (2026 Preview)',

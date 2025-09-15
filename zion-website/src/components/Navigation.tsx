@@ -1,16 +1,24 @@
 'use client'
+<<<<<<< HEAD
+=======
+import { useState } from 'react'
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useState } from 'react'
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Solutions', href: '/solutions' },
   { name: 'Services', href: '/services' },
+<<<<<<< HEAD
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
   { name: 'New', href: '/updates/real-time-agent-debugger-1-1' },
+=======
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Research', href: '/research', tag: 'New' },
+  { name: 'Contact', href: '/contact' },
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 ]
 
 export default function Navigation() {

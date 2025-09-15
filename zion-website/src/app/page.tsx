@@ -473,6 +473,13 @@ export default function HomePage() {
                 Launch: Autonomous Finance OS v1.1
                 <span aria-hidden>→</span>
               </a>
+              <a
+                href="/updates/autonomous-retail-fulfillment"
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
+              >
+                Case Study: Autonomous Retail Fulfillment
+                <span aria-hidden>→</span>
+              </a>
             </div>
           </div>
         </div>
@@ -506,7 +513,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Latest on the blog</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Just published</p>

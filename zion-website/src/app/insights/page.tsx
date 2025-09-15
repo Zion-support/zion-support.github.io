@@ -10,6 +10,14 @@ const articles = [
     date: '2025-09-10',
   },
   {
+    title: 'Measuring Agentic ROI',
+    description:
+      'A practical framework to quantify value and align cost with outcomes for multi-agent systems.',
+    href: '/insights/measuring-agentic-roi',
+    tag: 'Framework',
+    date: '2025-09-15',
+  },
+  {
     title: 'Designing Trustworthy AI Systems',
     description:
       'Frameworks and practices for security, governance, and human-in-the-loop control in production AI.',

@@ -1,5 +1,53 @@
 [
   {
+    "type": "page",
+    "title": "Synthetic Intelligence 2026",
+    "description": "Beyond Artificial Intelligence - Experience synthetic consciousness that transcends human limitations",
+    "link": "/pages/SyntheticIntelligence2026",
+    "tags": [
+      "breakthrough",
+      "synthetic-intelligence",
+      "consciousness",
+      "ai-2026"
+    ],
+    "createdAt": "2025-01-27T12:00:00.000Z",
+    "source": "Zion Tech Group",
+    "status": "Revolutionary",
+    "category": "Breakthrough Technology"
+  },
+  {
+    "type": "page",
+    "title": "Quantum-Neural Fusion 2026",
+    "description": "Consciousness Meets Quantum Computing - The ultimate convergence of mind, machine, and reality",
+    "link": "/pages/QuantumNeuralFusion2026",
+    "tags": [
+      "quantum",
+      "neural-fusion",
+      "consciousness",
+      "breakthrough"
+    ],
+    "createdAt": "2025-01-27T12:00:00.000Z",
+    "source": "Zion Tech Group",
+    "status": "Transcendent",
+    "category": "Quantum Technology"
+  },
+  {
+    "type": "showcase",
+    "title": "Enhanced Content Showcase",
+    "description": "Interactive showcase of revolutionary technologies with immersive features",
+    "link": "/enhanced-showcase",
+    "tags": [
+      "interactive",
+      "showcase",
+      "technology",
+      "experience"
+    ],
+    "createdAt": "2025-01-27T12:00:00.000Z",
+    "source": "Zion Tech Group",
+    "status": "Live Now",
+    "category": "Interactive Experience"
+  },
+  {
     "type": "report",
     "title": "Gentoo AI Policy",
     "description": "New AI/IT insight: Gentoo AI Policy",

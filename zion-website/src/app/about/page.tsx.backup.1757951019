@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 <<<<<<< HEAD
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a:zion-website/src/app/about/page.tsx
 import { LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const values = [
@@ -271,6 +274,9 @@ export default function AboutPage() {
   )
 <<<<<<< HEAD
 }
+<<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 =======
 }
 >>>>>>> origin/backup-main-20250915-074228
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a:zion-website/src/app/about/page.tsx
