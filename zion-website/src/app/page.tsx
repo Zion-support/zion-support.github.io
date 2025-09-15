@@ -84,7 +84,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-              Just in: AI Content Studio 2.2, Eval-Driven Release Mgmt, MTTR Case Study —
+              New: Autonomous Risk Dashboard v1.0 and LLM Guardrail Patterns (2026) —
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see all updates</a>
             </p>
           </div>
@@ -145,10 +145,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/real-time-agent-debugger-1-0"
+                href="/updates/autonomous-risk-dashboard-1-0"
                 className="inline-flex items-center gap-2 rounded-full border border-lime-400/30 bg-lime-500/10 px-4 py-2 text-sm font-semibold text-lime-200 hover:bg-lime-500/20 transition-colors duration-200"
               >
-                Launch: Agent Debugger v1.0
+                Launch: Risk Dashboard v1.0
                 <span aria-hidden>→</span>
               </a>
               <a
@@ -159,10 +159,10 @@ export default function HomePage() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/updates/agent-policy-as-code-starter-kit"
+                href="/updates/llm-guardrail-patterns-2026"
                 className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
               >
-                Launch: Policy-as-Code Starter Kit
+                Guide: LLM Guardrail Patterns 2026
                 <span aria-hidden>→</span>
               </a>
               <a

@@ -7,6 +7,23 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Added 2025-09-15 (evening batch)
+  {
+    title: 'Launch: Autonomous Risk Dashboard v1.0',
+    summary:
+      'Unified risk signals for AI systems: override rates, groundedness, violations, and incident MTTR at a glance.',
+    href: '/updates/autonomous-risk-dashboard-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: LLM Guardrail Patterns (2026)',
+    summary:
+      'Practical guardrail blueprints: policy checks, sandboxed tools, content filters, and live eval gates with evidence.',
+    href: '/updates/llm-guardrail-patterns-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
   // Fresh content added 2025-09-15
   // New content added 2025-09-15 (afternoon batch)
   {
