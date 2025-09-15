@@ -270,6 +270,30 @@ export function AppHeader() {
       description: 'Build Immersive Virtual Worlds',
       featured: true,
       color: 'from-purple-500 to-indigo-500'
+    },
+    { 
+      name: 'Quantum Computing Solutions', 
+      href: '/services/quantum-computing-solutions', 
+      icon: Atom, 
+      description: 'Revolutionary Quantum Computing',
+      featured: true,
+      color: 'from-purple-500 to-indigo-500'
+    },
+    { 
+      name: 'Ultimate Services Showcase 2025', 
+      href: '/ultimate-services-showcase-2025', 
+      icon: Star, 
+      description: 'Latest Technology Solutions',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'Innovative Tech Solutions 2025', 
+      href: '/innovative-tech-solutions-2025', 
+      icon: Rocket, 
+      description: 'Cutting-Edge Technology',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
@@ -359,6 +383,13 @@ export function AppHeader() {
       href: '/faq',
       icon: HelpCircle,
       description: 'Get help and answers',
+      featured: true
+    },
+    {
+      name: 'The Future of AI in Business 2025',
+      href: '/blog/the-future-of-ai-in-business-2025',
+      icon: Brain,
+      description: 'Latest AI insights and trends',
       featured: true
     }
   ];

@@ -71,6 +71,12 @@ const AIPoweredLegalDocumentGenerator = React.lazy(() => import('./pages/service
 const AIHealthcareDiagnosticsPlatform = React.lazy(() => import('./pages/services/AI-Healthcare-Diagnostics-Platform'));
 const BlockchainSupplyChainTransparency = React.lazy(() => import('./pages/services/Blockchain-Supply-Chain-Transparency'));
 
+// New content pages
+const InnovativeTechSolutions2025 = React.lazy(() => import('./pages/InnovativeTechSolutions2025'));
+const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
+const TheFutureOfAIInBusiness2025 = React.lazy(() => import('./pages/blog/TheFutureOfAIInBusiness2025'));
+const QuantumComputingSolutions = React.lazy(() => import('./pages/services/QuantumComputingSolutions'));
+
 // Additional pages from remote
 const Legal = React.lazy(() => import('./pages/Legal'));
 const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
@@ -189,6 +195,12 @@ function App() {
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                 <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnosticsPlatform />} />
                 <Route path="/services/blockchain-supply-chain-transparency" element={<BlockchainSupplyChainTransparency />} />
+                <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
+
+                {/* New content routes */}
+                <Route path="/innovative-tech-solutions-2025" element={<InnovativeTechSolutions2025 />} />
+                <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
+                <Route path="/blog/the-future-of-ai-in-business-2025" element={<TheFutureOfAIInBusiness2025 />} />
 
                 {/* Enhanced 404 route */}
                 <Route path="*" element={
