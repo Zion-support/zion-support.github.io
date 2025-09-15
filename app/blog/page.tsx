@@ -14,6 +14,24 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+      title: "AI 2026: Real-Time Retrieval Architectures",
+      description: "Low-latency retrieval patterns for RAG systems at enterprise scale.",
+      slug: "ai-2026-real-time-retrieval-architectures",
+      category: "Architecture",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/real-time-rag-architectures-2026.jpg"
+    },
+    {
+      title: "AI 2026: Autonomous Ops Playbook",
+      description: "Runbooks, guardrails, and evals for safe autonomous operations.",
+      slug: "ai-2026-autonomous-ops-playbook",
+      category: "Operations",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/autonomous-ops-playbook-2026.jpg"
+    },
+    {
       title: "AI 2026: LLM Evals Maturity Model",
       description: "Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI systems.",
       slug: "ai-2026-llm-evals-maturity-model",
