@@ -121,19 +121,20 @@ export default function HomePage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {[
               {
+                title: 'Launch: Autonomous Research Assistant v2',
+                summary:
+                  'Multi-agent collaboration, grounded reasoning, and faster retrieval now live.',
+                href: '/updates'
+              },
+              {
                 title: 'New Course: Advanced Blockchain Development',
                 summary:
-                  'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
+                  'Smart contracts, DeFi, L2 scaling, and security audit practices.',
                 href: '/updates'
               },
               {
                 title: 'Community Challenge: Build a DApp',
-                summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-                href: '/updates'
-              },
-              {
-                title: 'New Learning Path: Web3 Fundamentals',
-                summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
+                summary: 'Compete to win $1000 in ZION tokens and mentorship.',
                 href: '/updates'
               }
             ].map((item) => (
