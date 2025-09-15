@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Guide: Agent Platform Operations (2026)',
+    summary:
+      'SLOs, incident response, and eval-driven change management to run agent platforms at scale.',
+    href: '/updates/agent-platform-operations',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Production Guardrails Playbook',
+    summary:
+      'Operational guardrails, policy-as-code, and runtime protections for safe AI scale in production.',
+    href: '/updates/production-guardrails-playbook',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Enterprise Agent Observability',
+    summary:
+      'Traces, evals, and safety telemetry to operate autonomous agents in production environments.',
+    href: '/updates/enterprise-agent-observability',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: AI Governance Toolkit (v2)',
     summary:
       'Policy-as-code templates, audit trails, and automated guardrails for enterprise AI programs.',
