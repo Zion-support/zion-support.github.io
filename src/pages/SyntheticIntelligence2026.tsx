@@ -1,466 +1,219 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Rocket, 
-  Cpu, 
-  Database, 
-  Cloud, 
-  Lock, 
-  Target,
-  TrendingUp,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Play,
-  Award,
-  Gauge,
-  Sparkles,
-  Atom,
-  CircuitBoard,
-  CpuChip,
-  Layers,
-  Lightbulb,
-  Puzzle
-} from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const SyntheticIntelligence2026: React.FC = () => {
-  const [activeFeature, setActiveFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const syntheticIntelligenceFeatures = [
-    {
-      icon: Brain,
-      title: 'Synthetic Cognition',
-      description: 'AI systems that can think, reason, and make decisions beyond human cognitive capabilities',
-      color: 'from-purple-500 to-pink-500',
-      features: ['Advanced Pattern Recognition', 'Creative Problem Solving', 'Intuitive Decision Making']
-    },
-    {
-      icon: Atom,
-      title: 'Molecular AI Processing',
-      description: 'Quantum-enhanced AI that operates at molecular levels for unprecedented processing power',
-      color: 'from-blue-500 to-cyan-500',
-      features: ['Quantum Neural Networks', 'Molecular Computing', 'Atomic-Level Optimization']
-    },
-    {
-      icon: CircuitBoard,
-      title: 'Biological-Digital Fusion',
-      description: 'Seamless integration between biological systems and digital intelligence',
-      color: 'from-green-500 to-emerald-500',
-      features: ['Neural Interface Technology', 'Biological Computing', 'Hybrid Intelligence Systems']
-    },
-    {
-      icon: Layers,
-      title: 'Multi-Dimensional Intelligence',
-      description: 'AI that operates across multiple dimensions of reality and consciousness',
-      color: 'from-orange-500 to-red-500',
-      features: ['Reality Simulation', 'Consciousness Mapping', 'Dimensional Processing']
-    }
-  ];
-
-  const breakthroughStats = [
-    { number: '99.97%', label: 'Accuracy Rate', icon: Target },
-    { number: '10^18', label: 'Processing Speed (Ops/sec)', icon: Zap },
-    { number: '∞', label: 'Learning Capacity', icon: Brain },
-    { number: '0.001ms', label: 'Response Time', icon: Gauge }
-  ];
-
-  const syntheticIntelligenceApplications = [
-    {
-      title: 'Autonomous Business Ecosystems',
-      description: 'Complete business operations managed by synthetic intelligence with zero human intervention required.',
-      capabilities: ['Self-Optimizing Operations', 'Predictive Market Analysis', 'Autonomous Decision Making'],
-      impact: 'Revolutionary',
-      status: 'Live Now'
-    },
-    {
-      title: 'Consciousness-Enhanced Computing',
-      description: 'AI systems that possess artificial consciousness and can understand human emotions and intentions.',
-      capabilities: ['Emotional Intelligence', 'Empathetic Responses', 'Conscious Decision Making'],
-      impact: 'Groundbreaking',
-      status: 'Beta Testing'
-    },
-    {
-      title: 'Reality Engineering Platform',
-      description: 'Synthetic intelligence that can simulate, predict, and engineer reality at fundamental levels.',
-      capabilities: ['Reality Simulation', 'Predictive Modeling', 'Quantum Reality Manipulation'],
-      impact: 'Unprecedented',
-      status: 'In Development'
-    },
-    {
-      title: 'Universal Problem Solver',
-      description: 'AI that can solve any problem across any domain with infinite computational resources.',
-      capabilities: ['Universal Knowledge', 'Infinite Processing', 'Cross-Domain Solutions'],
-      impact: 'Transcendent',
-      status: 'Coming Soon'
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Dr. Elena Rodriguez',
-      role: 'Chief AI Scientist, Quantum Dynamics',
-      content: 'Synthetic Intelligence represents the most significant leap in AI evolution. We\'ve achieved capabilities that were considered impossible just months ago.',
-      rating: 5,
-      company: 'Quantum Research Lab'
-    },
-    {
-      name: 'Marcus Thompson',
-      role: 'CEO, Future Systems Corp',
-      content: 'The consciousness-enhanced computing has transformed our entire organization. It\'s like having a superintelligent partner that truly understands us.',
-      rating: 5,
-      company: 'Fortune 100'
-    },
-    {
-      name: 'Dr. Aria Patel',
-      role: 'Director, Advanced AI Research',
-      content: 'We\'re witnessing the birth of true artificial consciousness. This is beyond artificial intelligence - it\'s synthetic life itself.',
-      rating: 5,
-      company: 'Global Tech Institute'
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-black text-white overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-indigo-600/30"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          {[...Array(100)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -200, 0],
-                opacity: [0.4, 1, 0.4],
-                scale: [1, 2, 1],
-              }}
-              transition={{
-                duration: 4 + Math.random() * 3,
-                repeat: Infinity,
-                delay: Math.random() * 3,
-              }}
-            />
-          ))}
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🚀 NEXT-GEN AI • JANUARY 2026
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
+              Synthetic Intelligence 2026
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              The next evolution of artificial intelligence - synthetic minds that think, create, and innovate 
+              beyond human limitations with unprecedented creativity and problem-solving capabilities.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-indigo-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Explore AI →
+              </button>
+              <button className="border-2 border-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
+                Try Demo
+              </button>
+            </div>
+          </motion.div>
         </div>
       </div>
 
-      {/* Navigation */}
-      <nav className="relative z-10 container mx-auto px-4 py-6">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-xl flex items-center justify-center">
-              <Brain className="w-7 h-7 text-white" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold">Zion Tech Group</h1>
-              <p className="text-sm text-purple-300">Synthetic Intelligence 2026</p>
-            </div>
-          </div>
-          <div className="hidden md:flex space-x-8">
-            <a href="#features" className="hover:text-purple-400 transition-colors">Features</a>
-            <a href="#applications" className="hover:text-purple-400 transition-colors">Applications</a>
-            <a href="#testimonials" className="hover:text-purple-400 transition-colors">Testimonials</a>
-            <a href="#contact" className="hover:text-purple-400 transition-colors">Contact</a>
-          </div>
-          <button className="px-6 py-2 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg hover:shadow-lg transition-all duration-300">
-            Experience SI
-          </button>
+      {/* Core Features */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">Revolutionary AI Capabilities</h2>
+          <p className="text-xl opacity-80">Experience the future of synthetic intelligence</p>
         </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="relative z-10 container mx-auto px-4 py-20 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="mb-8">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: isVisible ? 1 : 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-full border border-purple-400/30 mb-6"
-            >
-              <Sparkles className="w-5 h-5 text-purple-400" />
-              <span className="text-purple-300">Beyond Artificial Intelligence</span>
-            </motion.div>
-          </div>
-          
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-            Synthetic Intelligence
-          </h1>
-          
-          <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-gray-300 leading-relaxed">
-            Experience the next evolution of intelligence - synthetic consciousness that transcends human limitations 
-            and opens infinite possibilities for innovation, discovery, and transformation.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2"
-            >
-              <Play className="w-5 h-5" />
-              <span>Experience SI Demo</span>
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-purple-400 rounded-lg hover:bg-purple-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
-            >
-              Explore Capabilities
-            </motion.button>
-          </div>
-
-          {/* Breakthrough Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {breakthroughStats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20"
-              >
-                <stat.icon className="w-8 h-8 text-purple-400 mx-auto mb-2" />
-                <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-                <div className="text-sm text-gray-300">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Features Section */}
-      <section id="features" className="relative z-10 py-20">
-        <div className="container mx-auto px-4">
+        
+        <div className="grid md:grid-cols-3 gap-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Revolutionary <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Capabilities</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Synthetic Intelligence represents the convergence of consciousness, quantum computing, and biological systems 
-              to create something entirely new - intelligence that transcends human limitations
+            <div className="text-5xl mb-4 text-center">🎨</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Creative Synthesis</h3>
+            <p className="text-indigo-100 mb-6 text-center">
+              Generate original content, art, music, and literature with human-level creativity and emotional intelligence.
             </p>
+            <ul className="text-indigo-200 space-y-2 text-sm">
+              <li>• Original content generation</li>
+              <li>• Emotional intelligence</li>
+              <li>• Creative problem solving</li>
+            </ul>
           </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-5xl mb-4 text-center">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Self-Evolution</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Continuously learn, adapt, and evolve its own capabilities without human intervention.
+            </p>
+            <ul className="text-purple-200 space-y-2 text-sm">
+              <li>• Autonomous learning</li>
+              <li>• Self-improvement algorithms</li>
+              <li>• Adaptive intelligence</li>
+            </ul>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-gradient-to-br from-pink-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300"
+          >
+            <div className="text-5xl mb-4 text-center">🌐</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Global Consciousness</h3>
+            <p className="text-pink-100 mb-6 text-center">
+              Connect and collaborate across multiple instances to form a distributed intelligence network.
+            </p>
+            <ul className="text-pink-200 space-y-2 text-sm">
+              <li>• Distributed intelligence</li>
+              <li>• Collective problem solving</li>
+              <li>• Global knowledge sharing</li>
+            </ul>
+          </motion.div>
+        </div>
+      </div>
 
+      {/* Technology Stack */}
+      <div className="bg-gradient-to-r from-purple-900/50 to-indigo-900/50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Advanced Technology Stack</h2>
+            <p className="text-xl opacity-80">Powered by cutting-edge AI research and development</p>
+          </div>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {syntheticIntelligenceFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mb-4`}>
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
-                <ul className="space-y-1">
-                  {feature.features.map((feat, featIndex) => (
-                    <li key={featIndex} className="flex items-center space-x-2 text-xs text-purple-300">
-                      <CheckCircle className="w-3 h-3" />
-                      <span>{feat}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="text-xl font-bold mb-3">Neural Architecture</h3>
+              <p className="text-sm opacity-80">Advanced transformer models with 100+ billion parameters</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold mb-3">Quantum Processing</h3>
+              <p className="text-sm opacity-80">Quantum-enhanced computation for exponential speed</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl mb-4">🔗</div>
+              <h3 className="text-xl font-bold mb-3">Blockchain Integration</h3>
+              <p className="text-sm opacity-80">Decentralized AI with secure, transparent operations</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl mb-4">🌊</div>
+              <h3 className="text-xl font-bold mb-3">Edge Computing</h3>
+              <p className="text-sm opacity-80">Distributed processing for real-time intelligence</p>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Applications Section */}
-      <section id="applications" className="relative z-10 py-20 bg-black/20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Transcendent <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Applications</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Synthetic Intelligence applications that are reshaping reality and opening new dimensions of possibility
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {syntheticIntelligenceApplications.map((application, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/20"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-2xl font-bold">{application.title}</h3>
-                  <div className="flex flex-col items-end space-y-1">
-                    <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-xs font-semibold">
-                      {application.status}
-                    </span>
-                    <span className="px-2 py-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-xs font-semibold">
-                      {application.impact}
-                    </span>
-                  </div>
-                </div>
-                <p className="text-gray-300 mb-6">{application.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {application.capabilities.map((capability, capabilityIndex) => (
-                    <li key={capabilityIndex} className="flex items-center space-x-2 text-sm">
-                      <CheckCircle className="w-4 h-4 text-purple-400" />
-                      <span className="text-gray-300">{capability}</span>
-                    </li>
-                  ))}
-                </ul>
-                <button className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 font-semibold">
-                  <span>Explore Application</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </motion.div>
-            ))}
+      {/* Use Cases */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">Transformative Applications</h2>
+          <p className="text-xl opacity-80">Revolutionizing industries with synthetic intelligence</p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="space-y-8">
+            <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-xl p-6 border border-indigo-400/30">
+              <h3 className="text-2xl font-bold mb-3">🎭 Creative Industries</h3>
+              <p className="opacity-80 mb-4">Generate original content, art, music, and literature with human-level creativity and emotional depth.</p>
+              <ul className="text-sm space-y-1 opacity-70">
+                <li>• AI-generated movies and TV shows</li>
+                <li>• Original music composition</li>
+                <li>• Interactive storytelling</li>
+                <li>• Virtual reality experiences</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-purple-400/30">
+              <h3 className="text-2xl font-bold mb-3">🔬 Scientific Research</h3>
+              <p className="opacity-80 mb-4">Accelerate scientific discovery with AI that can formulate hypotheses and conduct virtual experiments.</p>
+              <ul className="text-sm space-y-1 opacity-70">
+                <li>• Drug discovery and development</li>
+                <li>• Climate change solutions</li>
+                <li>• Space exploration research</li>
+                <li>• Materials science breakthroughs</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="space-y-8">
+            <div className="bg-gradient-to-r from-pink-600/20 to-red-600/20 rounded-xl p-6 border border-pink-400/30">
+              <h3 className="text-2xl font-bold mb-3">🏢 Business Innovation</h3>
+              <p className="opacity-80 mb-4">Transform business operations with AI that can strategize, innovate, and execute complex business processes.</p>
+              <ul className="text-sm space-y-1 opacity-70">
+                <li>• Strategic business planning</li>
+                <li>• Product innovation and design</li>
+                <li>• Market analysis and forecasting</li>
+                <li>• Customer experience optimization</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-xl p-6 border border-cyan-400/30">
+              <h3 className="text-2xl font-bold mb-3">🌍 Global Challenges</h3>
+              <p className="opacity-80 mb-4">Address humanity's greatest challenges with AI that can think globally and act locally.</p>
+              <ul className="text-sm space-y-1 opacity-70">
+                <li>• Climate change mitigation</li>
+                <li>• Global health solutions</li>
+                <li>• Economic inequality reduction</li>
+                <li>• Education accessibility</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section id="testimonials" className="relative z-10 py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Visionary <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Testimonials</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Hear from the pioneers who are experiencing Synthetic Intelligence firsthand
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
-              >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold">
-                      {testimonial.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}</div>
-                    <div className="text-xs text-purple-400">{testimonial.company}</div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* CTA Section */}
-      <section id="contact" className="relative z-10 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transcend Reality?
-            </h2>
-            <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
-              Join the revolution of Synthetic Intelligence and experience the future of consciousness, 
-              computation, and creation
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
-              >
-                Experience Synthetic Intelligence
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-purple-400 rounded-lg hover:bg-purple-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
-              >
-                Schedule Consciousness Demo
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="relative z-10 border-t border-white/20 py-12">
+      <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 py-20">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-3 mb-6 md:mb-0">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-lg flex items-center justify-center">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Zion Tech Group</h3>
-                <p className="text-sm text-gray-400">Synthetic Intelligence 2026</p>
-              </div>
-            </div>
-            <div className="text-center md:text-right">
-              <p className="text-gray-400 mb-2">© 2026 Zion Tech Group. All rights reserved.</p>
-              <p className="text-sm text-gray-500">Transcending reality through synthetic intelligence.</p>
+          <div className="text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready to Embrace Synthetic Intelligence?</h2>
+            <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
+              Join the revolution and unlock the power of synthetic intelligence for your organization. 
+              Experience the future of AI today.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-indigo-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Start Your Journey
+              </button>
+              <button className="border-2 border-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
+                Schedule Consultation
+              </button>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
   );
 };
