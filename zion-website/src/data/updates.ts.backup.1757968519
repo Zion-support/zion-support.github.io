@@ -10,29 +10,11 @@ export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (latest content)
   {
 <<<<<<< HEAD
-<<<<<<< HEAD
+    title: 'Launch: AI Governance Copilot v1.2',
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-2def
->>>>>>> cursor/create-and-deploy-new-content-7857
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-2def
->>>>>>> cursor/create-and-deploy-new-content-7857
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
+>>>>>>> origin/cursor/create-and-deploy-new-content-3743
     summary:
       'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
     href: '/updates/real-time-ai-analytics-dashboard-v3-0',
@@ -42,8 +24,10 @@ export const siteUpdates: SiteUpdate[] = [
   {
     title: 'Launch: AI Agent Orchestration Platform v2.0',
     summary:
+<<<<<<< HEAD
+      'Budgets, routing policies, and eval-driven safeguards to control spend without hurting quality.',
+    href: '/updates/production-agent-cost-controls-2026',
 =======
->>>>>>> cursor/create-and-deploy-new-content-45eb
       'Next-generation multi-agent coordination with intelligent routing, load balancing, and real-time monitoring for enterprise AI operations.',
     href: '/updates/ai-agent-orchestration-platform-2-0',
     date: '2025-09-15',
@@ -56,42 +40,12 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-testing-framework-1-0',
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-2def
->>>>>>> cursor/create-and-deploy-new-content-7857
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
->>>>>>> cursor/create-and-deploy-new-content-45eb
 =======
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8472
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-2def
->>>>>>> cursor/create-and-deploy-new-content-7857
-=======
->>>>>>> cursor/create-and-deploy-new-content-45eb
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -120,35 +74,16 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   },
-<<<<<<< HEAD
-  // Newly added 2025-09-15 (to advertise on homepage)
-  {
-    title: 'Report: Enterprise Retrieval Observability (2026)',
-    summary:
-      'Metrics, traces, and dashboards to monitor retrieval quality, drift, and SLIs at scale.',
-    href: '/updates/enterprise-retrieval-observability-2026',
-    date: '2025-09-15',
-    tag: 'Report'
-  },
-  {
-    title: 'Launch: AI Lab Open Benchmarks Portal',
-    summary:
-      'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
-    href: '/updates/ai-lab-open-benchmarks-portal',
-=======
   // Added 2025-09-15 (new content created now)
   {
     title: 'Launch: Autonomous Security Copilot v1.0',
     summary:
       'Proactive threat modeling, policy-aware detections, and incident evidence bundles for AI systems.',
     href: '/updates/autonomous-security-copilot-1-0',
->>>>>>> cursor/create-and-deploy-new-content-45eb
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
-<<<<<<< HEAD
-=======
     title: 'Guide: Production Guardrails for Tool Use (2026)',
     summary:
       'Design runtime policies, sandboxing, and least-privilege adapters with live eval gates.',
@@ -167,7 +102,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   // Added 2025-09-15 (brand new content)
   {
->>>>>>> cursor/create-and-deploy-new-content-45eb
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
       'Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.',
@@ -228,8 +162,6 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Unified runbooks, eval gates, and incident workflows for reliable agent operations.',
     href: '/updates/agentic-ops-control-center-1-0',
-<<<<<<< HEAD
-=======
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -294,7 +226,6 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Unified runbooks, eval gates, and incident workflows for reliable agent operations.',
     href: '/updates/agentic-ops-control-center-1-0',
->>>>>>> cursor/create-and-deploy-new-content-45eb
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -492,6 +423,7 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Hands-on techniques to hit sub-second latency with hybrid retrieval, caching, and routing.',
     href: '/updates/production-rag-latency-tuning-2026',
+>>>>>>> origin/cursor/create-and-deploy-new-content-3743
     date: '2025-09-15',
     tag: 'Guide'
   },

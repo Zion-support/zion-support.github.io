@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,10 @@
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+=======
+// Cart utilities for handling shopping cart operations
+
+>>>>>>> cursor/create-and-deploy-new-content-45eb
 export interface CartItem {
   id: string;
   name: string;
@@ -35,14 +40,17 @@ export interface CartItem {
   image?: string;
   description?: string;
   category?: string;
+  sku?: string;
 }
 
 export interface Cart {
   items: CartItem[];
   total: number;
   itemCount: number;
+  lastUpdated: Date;
 }
 
+<<<<<<< HEAD
 export const cartUtils = {
 <<<<<<< HEAD
 =======
@@ -61,20 +69,36 @@ export const cartUtils = {
     total: 0,
     itemCount: 0
   }),
-
-  // Add item to cart
-  addItem: (cart: Cart, item: Omit<CartItem, 'quantity'>): Cart => {
 =======
-  // Create a new empty cart
-  createEmptyCart(): Cart {
+export interface CartSummary {
+  subtotal: number;
+  tax: number;
+  shipping: number;
+  total: number;
+  itemCount: number;
+}
+
+class CartUtils {
+  // Calculate cart totals
+  calculateTotals(items: CartItem[]): CartSummary {
+    const subtotal = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const tax = subtotal * 0.08; // 8% tax rate
+    const shipping = subtotal > 100 ? 0 : 10; // Free shipping over $100
+    const total = subtotal + tax + shipping;
+    const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
+>>>>>>> cursor/create-and-deploy-new-content-45eb
+
     return {
-      items: [],
-      total: 0,
-      itemCount: 0,
+      subtotal,
+      tax,
+      shipping,
+      total,
+      itemCount,
     };
-  },
+  }
 
   // Add item to cart
+<<<<<<< HEAD
   addItem(cart: Cart, item: Omit<CartItem, 'quantity'>): Cart {
 >>>>>>> main
 =======
@@ -85,12 +109,22 @@ export const cartUtils = {
 >>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     const existingItem = cart.items.find(cartItem => cartItem.id === item.id);
+=======
+  addItem(cart: Cart, item: Omit<CartItem, 'quantity'>, quantity: number = 1): Cart {
+    const existingItemIndex = cart.items.findIndex(cartItem => cartItem.id === item.id);
+>>>>>>> cursor/create-and-deploy-new-content-45eb
     
-    if (existingItem) {
-      // Update quantity if item already exists
-      return cartUtils.updateItemQuantity(cart, item.id, existingItem.quantity + 1);
+    let newItems: CartItem[];
+    if (existingItemIndex >= 0) {
+      // Update existing item quantity
+      newItems = [...cart.items];
+      newItems[existingItemIndex] = {
+        ...newItems[existingItemIndex],
+        quantity: newItems[existingItemIndex].quantity + quantity,
+      };
     } else {
       // Add new item
+<<<<<<< HEAD
       const newItem: CartItem = { ...item, quantity: 1 };
       const newItems = [...cart.items, newItem];
       return cartUtils.calculateTotals({ ...cart, items: newItems });
@@ -162,16 +196,24 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
     if (item.id === itemId) {
       return { ...item, quantity };
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
-    }
-    return item;
-  });
-
-<<<<<<< HEAD
-  // Remove item from cart
-<<<<<<< HEAD
-  removeItem: (cart: Cart, itemId: string): Cart => {
 =======
+      newItems = [...cart.items, { ...item, quantity }];
+>>>>>>> cursor/create-and-deploy-new-content-45eb
+    }
+
+    const summary = this.calculateTotals(newItems);
+    
+    return {
+      items: newItems,
+      total: summary.total,
+      itemCount: summary.itemCount,
+      lastUpdated: new Date(),
+    };
+  }
+
+  // Remove item from cart
   removeItem(cart: Cart, itemId: string): Cart {
+<<<<<<< HEAD
 >>>>>>> main
 =======
 =======
@@ -193,11 +235,21 @@ export function updateItemQuantity(cart: Cart, itemId: string, quantity: number)
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+=======
+>>>>>>> cursor/create-and-deploy-new-content-45eb
     const newItems = cart.items.filter(item => item.id !== itemId);
-    return cartUtils.calculateTotals({ ...cart, items: newItems });
-  },
+    const summary = this.calculateTotals(newItems);
+    
+    return {
+      items: newItems,
+      total: summary.total,
+      itemCount: summary.itemCount,
+      lastUpdated: new Date(),
+    };
+  }
 
   // Update item quantity
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -249,12 +301,18 @@ export function calculateCartTotals(cart: Cart): Cart {
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
+=======
+  updateQuantity(cart: Cart, itemId: string, quantity: number): Cart {
+    if (quantity <= 0) {
+      return this.removeItem(cart, itemId);
+>>>>>>> cursor/create-and-deploy-new-content-45eb
     }
 
     const newItems = cart.items.map(item =>
       item.id === itemId ? { ...item, quantity } : item
     );
     
+<<<<<<< HEAD
     return cartUtils.calculateTotals({ ...cart, items: newItems });
   },
 
@@ -306,29 +364,32 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
       isValid: false,
       message: 'Discount code has expired',
 >>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+=======
+    const summary = this.calculateTotals(newItems);
+    
+    return {
+      items: newItems,
+      total: summary.total,
+      itemCount: summary.itemCount,
+      lastUpdated: new Date(),
+>>>>>>> cursor/create-and-deploy-new-content-45eb
     };
   }
 
-<<<<<<< HEAD
   // Clear cart
-<<<<<<< HEAD
-  clearCart: (): Cart => cartUtils.createEmptyCart(),
-
-  // Get item by ID
-  getItem: (cart: Cart, itemId: string): CartItem | undefined => {
-    return cart.items.find(item => item.id === itemId);
-  },
-
-  // Check if item exists in cart
-  hasItem: (cart: Cart, itemId: string): boolean => {
-=======
-  clearCart(cart: Cart): Cart {
-    return cartUtils.createEmptyCart();
-  },
+  clearCart(): Cart {
+    return {
+      items: [],
+      total: 0,
+      itemCount: 0,
+      lastUpdated: new Date(),
+    };
+  }
 
   // Get item by ID
   getItem(cart: Cart, itemId: string): CartItem | undefined {
     return cart.items.find(item => item.id === itemId);
+<<<<<<< HEAD
   },
 
   // Check if item is in cart
@@ -427,208 +488,39 @@ export default cartUtils;
     });
 
     return Array.from(mergedMap.values());
-  }
-};
-
-// Named exports for individual functions
-export const getCartKey = cartUtils.getCartKey;
-export const mergeCartItems = cartUtils.mergeCartItems;
-
 =======
-  getSummary(cart: Cart) {
-=======
-  // Check minimum amount
-  if (discount.minimumAmount && cart.subtotal < discount.minimumAmount) {
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
-    return {
-      cart,
-      isValid: false,
-      message: `Minimum order amount of $${discount.minimumAmount} required`,
-    };
+>>>>>>> cursor/create-and-deploy-new-content-45eb
   }
-
-  // Calculate discount amount
-  let discountAmount = 0;
-  if (discount.type === 'percentage') {
-    discountAmount = cart.subtotal * (discount.value / 100);
-  } else {
-    discountAmount = discount.value;
-  }
-
-  // Don't allow discount to exceed subtotal
-  discountAmount = Math.min(discountAmount, cart.subtotal);
-
-  const newCart = calculateCartTotals({
-    ...cart,
-    discount: Math.round(discountAmount * 100) / 100,
-  });
-
-  return {
-    cart: newCart,
-    isValid: true,
-    message: 'Discount applied successfully',
-  };
-}
-
-<<<<<<< HEAD
->>>>>>> main
-export default cartUtils;
-=======
-export function removeDiscount(cart: Cart): Cart {
-  return calculateCartTotals({
-    ...cart,
-    discount: 0,
-  });
-}
-
-export function getCartSummary(cart: Cart): string {
-  if (cart.itemCount === 0) {
-    return 'Your cart is empty';
-  }
-
-  const itemText = cart.itemCount === 1 ? 'item' : 'items';
-  return `${cart.itemCount} ${itemText} - $${cart.total.toFixed(2)}`;
-}
-
-export function getCartItemById(cart: Cart, itemId: string): CartItem | undefined {
-  return cart.items.find(item => item.id === itemId);
-}
-
-export function isItemInCart(cart: Cart, itemId: string): boolean {
-  return cart.items.some(item => item.id === itemId);
-}
-
-export function getCartItemsByCategory(cart: Cart, category: string): CartItem[] {
-  return cart.items.filter(item => item.category === category);
-}
-
-export function getCartTotalByCategory(cart: Cart, category: string): number {
-  return getCartItemsByCategory(cart, category).reduce(
-    (sum, item) => sum + (item.price * item.quantity),
-    0
-  );
-}
-
-export function validateCartItem(item: Partial<CartItem>): { isValid: boolean; errors: string[] } {
-  const errors: string[] = [];
-
-  if (!item.id) {
-    errors.push('Item ID is required');
-  }
-
-  if (!item.name) {
-    errors.push('Item name is required');
-  }
-
-  if (!item.price || item.price <= 0) {
-    errors.push('Valid price is required');
-  }
-
-  if (!item.quantity || item.quantity <= 0) {
-    errors.push('Valid quantity is required');
-  }
-
-  return {
-    isValid: errors.length === 0,
-    errors,
-  };
-}
-
-export function exportCart(cart: Cart): string {
-  return JSON.stringify(cart, null, 2);
-}
-
-export function importCart(cartData: string): { cart: Cart; isValid: boolean; errors: string[] } {
-  try {
-    const parsed = JSON.parse(cartData);
-    const cart = calculateCartTotals(parsed);
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-    
-    if (existingItemIndex > -1) {
-      // Item exists, increment quantity
-      const updatedItems = [...cart.items];
-      updatedItems[existingItemIndex].quantity += 1;
-      return cartUtils.calculateTotals({ ...cart, items: updatedItems });
-    } else {
-      // New item, add with quantity 1
-      const updatedItems = [...cart.items, { ...newItem, quantity: 1 }];
-      return cartUtils.calculateTotals({ ...cart, items: updatedItems });
-    }
-  },
-
-  // Remove item from cart
-  removeItem: (cart: Cart, itemId: string): Cart => {
-    const updatedItems = cart.items.filter(item => item.id !== itemId);
-    return cartUtils.calculateTotals({ ...cart, items: updatedItems });
-  },
-
-  // Update item quantity
-  updateQuantity: (cart: Cart, itemId: string, quantity: number): Cart => {
-    if (quantity <= 0) {
-      return cartUtils.removeItem(cart, itemId);
-    }
-
-    const updatedItems = cart.items.map(item =>
-      item.id === itemId ? { ...item, quantity } : item
-    );
-    return cartUtils.calculateTotals({ ...cart, items: updatedItems });
-  },
-
-  // Clear all items from cart
-  clearCart: (): Cart => cartUtils.createEmptyCart(),
-
-  // Calculate totals
-  calculateTotals: (cart: Cart): Cart => {
-    const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
-    
-    return {
-      ...cart,
-      total: Math.round(total * 100) / 100, // Round to 2 decimal places
-      itemCount,
-    };
-  },
-
-  // Get item by ID
-  getItem: (cart: Cart, itemId: string): CartItem | undefined => {
-    return cart.items.find(item => item.id === itemId);
-  },
 
   // Check if item exists in cart
-  hasItem: (cart: Cart, itemId: string): boolean => {
+  hasItem(cart: Cart, itemId: string): boolean {
     return cart.items.some(item => item.id === itemId);
-  },
+  }
 
   // Get cart summary
-  getSummary: (cart: Cart) => {
-    return {
-      itemCount: cart.itemCount,
-      total: cart.total,
-      isEmpty: cart.items.length === 0,
-      uniqueItems: cart.items.length,
-    };
-  },
+  getSummary(cart: Cart): CartSummary {
+    return this.calculateTotals(cart.items);
+  }
 
   // Validate cart
-  validateCart: (cart: Cart): { isValid: boolean; errors: string[] } => {
+  validateCart(cart: Cart): { isValid: boolean; errors: string[] } {
     const errors: string[] = [];
 
-    if (!Array.isArray(cart.items)) {
-      errors.push('Items must be an array');
-      return { isValid: false, errors };
+    if (cart.items.length === 0) {
+      errors.push('Cart is empty');
     }
 
     cart.items.forEach((item, index) => {
       if (!item.id) {
-        errors.push(`Item at index ${index} is missing ID`);
+        errors.push(`Item at index ${index} has no ID`);
       }
       if (!item.name) {
-        errors.push(`Item at index ${index} is missing name`);
+        errors.push(`Item at index ${index} has no name`);
       }
-      if (typeof item.price !== 'number' || item.price < 0) {
-        errors.push(`Item at index ${index} has invalid price`);
+      if (item.price < 0) {
+        errors.push(`Item at index ${index} has negative price`);
       }
-      if (typeof item.quantity !== 'number' || item.quantity <= 0) {
+      if (item.quantity <= 0) {
         errors.push(`Item at index ${index} has invalid quantity`);
       }
     });
@@ -637,58 +529,32 @@ export function importCart(cartData: string): { cart: Cart; isValid: boolean; er
       isValid: errors.length === 0,
       errors,
     };
-  },
+  }
 
-<<<<<<< HEAD
-  // Persist cart to localStorage
-  persistCart: (cart: Cart): boolean => {
-    try {
-      if (typeof window !== 'undefined' && window.localStorage) {
-        localStorage.setItem('cart', JSON.stringify(cart));
-        return true;
-      }
-      return false;
-    } catch (error) {
-      console.warn('Failed to persist cart:', error);
-      return false;
-    }
-  },
+  // Format price for display
+  formatPrice(price: number): string {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(price);
+  }
 
-  // Load cart from localStorage
-  loadCart: (): Cart => {
-    try {
-      if (typeof window !== 'undefined' && window.localStorage) {
-        const stored = localStorage.getItem('cart');
-        if (stored) {
-          const parsed = JSON.parse(stored);
-          const validation = cartUtils.validateCart(parsed);
-          if (validation.isValid) {
-            return cartUtils.calculateTotals(parsed);
-          }
-        }
-      }
-    } catch (error) {
-      console.warn('Failed to load cart:', error);
-    }
-    return cartUtils.createEmptyCart();
-  },
+  // Get cart size (number of unique items)
+  getCartSize(cart: Cart): number {
+    return cart.items.length;
+  }
 
-  // Clear persisted cart
-  clearPersistedCart: (): boolean => {
-    try {
-      if (typeof window !== 'undefined' && window.localStorage) {
-        localStorage.removeItem('cart');
-        return true;
-      }
-      return false;
-    } catch (error) {
-      console.warn('Failed to clear persisted cart:', error);
-      return false;
-    }
-  },
-};
+  // Check if cart is empty
+  isEmpty(cart: Cart): boolean {
+    return cart.items.length === 0;
+  }
+}
+
+// Create and export a singleton instance
+const cartUtils = new CartUtils();
 
 export default cartUtils;
+<<<<<<< HEAD
 =======
 export default {
   createEmptyCart,
@@ -720,3 +586,8 @@ export default cartUtils;
 export default cartUtils;
 >>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+=======
+
+// Export the class for testing purposes
+export { CartUtils };
+>>>>>>> cursor/create-and-deploy-new-content-45eb

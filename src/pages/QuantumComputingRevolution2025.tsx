@@ -18,9 +18,15 @@ const QuantumComputingRevolution2025: React.FC = () => {
           <h1 className="text-6xl font-bold text-white mb-6">
             Quantum Computing Revolution
           </h1>
+<<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
             Experience the next generation of quantum computing with unprecedented processing power, 
             quantum supremacy, and revolutionary applications that will transform industries.
+=======
+          <p className="text-2xl text-cyan-200 max-w-4xl mx-auto mb-8">
+            Experience the future of computing with quantum technology that solves impossible problems, 
+            breaks encryption, and revolutionizes industries across the globe.
+>>>>>>> cursor/create-and-deploy-new-content-45eb
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -120,6 +126,60 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </button>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-6">⚛️</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Superconducting Qubits</h3>
+              <p className="text-indigo-200 mb-4">High-fidelity quantum bits with improved coherence times and error rates</p>
+              <ul className="text-indigo-300 space-y-1 text-sm text-left">
+                <li>• 99.9% gate fidelity</li>
+                <li>• 100+ microsecond coherence</li>
+                <li>• Scalable architecture</li>
+                <li>• Error correction ready</li>
+              </ul>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-6">🔬</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Trapped Ion Systems</h3>
+              <p className="text-indigo-200 mb-4">Ultra-stable quantum systems with exceptional control and precision</p>
+              <ul className="text-indigo-300 space-y-1 text-sm text-left">
+                <li>• 99.99% gate fidelity</li>
+                <li>• 10+ second coherence</li>
+                <li>• All-to-all connectivity</li>
+                <li>• Optical qubit control</li>
+              </ul>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-6">💎</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Topological Qubits</h3>
+              <p className="text-indigo-200 mb-4">Fault-tolerant quantum bits with inherent error protection</p>
+              <ul className="text-indigo-300 space-y-1 text-sm text-left">
+                <li>• Inherent error protection</li>
+                <li>• Long coherence times</li>
+                <li>• Scalable design</li>
+                <li>• Fault-tolerant operation</li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Quantum Software Stack */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="bg-gradient-to-r from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-6">💻 Quantum Software Ecosystem</h2>
+            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+              Comprehensive software tools and frameworks for quantum algorithm development and deployment
+            </p>
+          </div>
+>>>>>>> cursor/create-and-deploy-new-content-45eb
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
@@ -202,9 +262,12 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
 =======
         </div>
 >>>>>>> cursor/create-and-deploy-new-content-7857
+=======
+>>>>>>> cursor/create-and-deploy-new-content-45eb
       </div>
     </div>
   );
