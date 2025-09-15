@@ -1,14 +1,16 @@
 'use client'
+import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useState } from 'react'
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Research', href: '/research', tag: 'New' },
+  { name: 'New', href: '/updates/real-time-ai-analytics-dashboard-v3-0' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export default function Navigation() {
@@ -39,10 +41,13 @@ export default function Navigation() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5 relative"
+              className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5"
             >
               <span className="inline-flex items-center gap-2">
                 {item.name}
+                {item.tag ? (
+                  <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-600/20 text-blue-300">{item.tag}</span>
+                ) : null}
               </span>
             </a>
           ))}
@@ -87,6 +92,9 @@ export default function Navigation() {
                   >
                     <span className="inline-flex items-center gap-2">
                       {item.name}
+                      {item.tag ? (
+                        <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-600/20 text-blue-300">{item.tag}</span>
+                      ) : null}
                     </span>
                   </a>
                 ))}
