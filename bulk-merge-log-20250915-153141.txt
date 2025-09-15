@@ -1,0 +1,31 @@
+[2025-09-15 15:31:43] 🔄 Starting bulk processing...
+[2025-09-15 15:31:43] 📊 Batch size: 50
+[2025-09-15 15:31:43] 📊 Max conflicts per batch: 10
+[2025-09-15 15:31:43] ---
+[2025-09-15 15:31:45] 📊 Total branches to process: 101
+[2025-09-15 15:31:45] ---
+[2025-09-15 15:31:45] 🚀 Processing batch 1 (branches 1 to 50)
+[2025-09-15 15:31:45] ---
+[2025-09-15 15:31:45] 📋 Processing branch 1: backup-main-20250914-231810
+[2025-09-15 15:31:46] 🔄 Attempting to merge backup-main-20250914-231810...
+[2025-09-15 15:31:48] ✅ Successfully merged backup-main-20250914-231810
+[2025-09-15 15:31:49] ✅ Branch backup-main-20250914-231810 processed successfully
+[2025-09-15 15:31:49] 📊 Batch progress: 1 successful, 0 failed
+[2025-09-15 15:31:49] 📊 Overall progress: 1 successful, 0 failed, 0 conflicts resolved
+[2025-09-15 15:31:49] 📋 Processing branch 2: backup-main-20250915-064742
+[2025-09-15 15:31:49] 🔄 Attempting to merge backup-main-20250915-064742...
+[2025-09-15 15:31:51] ✅ Successfully merged backup-main-20250915-064742
+[2025-09-15 15:31:52] ✅ Branch backup-main-20250915-064742 processed successfully
+[2025-09-15 15:31:52] 📊 Batch progress: 2 successful, 0 failed
+[2025-09-15 15:31:52] 📊 Overall progress: 2 successful, 0 failed, 0 conflicts resolved
+[2025-09-15 15:31:52] 📋 Processing branch 3: backup-main-20250915-070305
+[2025-09-15 15:31:52] 🔄 Attempting to merge backup-main-20250915-070305...
+[2025-09-15 15:31:55] ⚠️  Merge conflicts detected in backup-main-20250915-070305, resolving...
+[2025-09-15 15:31:55] 📋 Conflicted files: zion-os/src/app/blog/[id]/page.tsx
+zion-os/src/app/blog/page.tsx
+[2025-09-15 15:31:55] 🔧 Resolving conflicts in zion-os/src/app/blog/[id]/page.tsx for branch backup-main-20250915-070305...
+[2025-09-15 15:31:55] 🧩 Generic file: prefer main version
+[2025-09-15 15:31:55] ✅ Resolved conflicts in zion-os/src/app/blog/[id]/page.tsx
+[2025-09-15 15:31:55] 🔧 Resolving conflicts in zion-os/src/app/blog/page.tsx for branch backup-main-20250915-070305...
+[2025-09-15 15:31:55] 🧩 Generic file: prefer main version
+[2025-09-15 15:31:55] ✅ Resolved conflicts in zion-os/src/app/blog/page.tsx
