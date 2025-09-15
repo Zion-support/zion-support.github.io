@@ -1,6 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+'use client';
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import React from 'react';
+>>>>>>> 7b9c23595a15b394ecefdbe48e0b75bd32d1a505
 import Link from 'next/link';
 
 const UltimateContentShowcase2025 = () => {
@@ -283,3 +289,6 @@ const UltimateContentShowcase2025 = () => {
 };
 
 export default UltimateContentShowcase2025;
+export default UltimateContentShowcase2025;
+>>>>>>> cursor/create-and-deploy-new-content-040d
+>>>>>>> 7b9c23595a15b394ecefdbe48e0b75bd32d1a505
