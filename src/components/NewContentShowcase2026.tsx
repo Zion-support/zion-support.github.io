@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -119,6 +120,8 @@ const NewContentShowcase2026: React.FC = () => {
               Experience the future with our groundbreaking new content featuring cutting-edge AI, 
               Quantum Computing, Biotechnology, Space Technology, and Neural Interface innovations
             </motion.p>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4d2c
           </div>
           
           {/* Interactive Content Carousel */}
@@ -194,6 +197,7 @@ const NewContentShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Quick Access Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -253,10 +257,13 @@ const NewContentShowcase2026: React.FC = () => {
               <div className="text-5xl mb-4">{stat.icon}</div>
               <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4d2c
             </motion.div>
           ))}
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Call to Action */}
       <motion.div
@@ -281,6 +288,12 @@ const NewContentShowcase2026: React.FC = () => {
           </a>
         </div>
       </motion.div>
+=======
+=======
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
+=======
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+>>>>>>> cursor/create-and-deploy-new-content-4d2c
     </div>
   );
 };
