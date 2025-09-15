@@ -1,222 +1,163 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-  const [isAnimating, setIsAnimating] = useState(false);
 
   const technologies = [
     {
-      id: 1,
-      name: "AI Revolution",
+      id: 0,
+      name: "AI Innovation Hub 2026",
+      description: "Revolutionary AI technologies with consciousness and emotional intelligence",
       icon: "🧠",
-      description: "Next-generation artificial intelligence with autonomous reasoning and quantum-enhanced processing",
-      features: [
-        "Autonomous Decision Making",
-        "Quantum Neural Networks",
-        "Predictive Analytics",
-        "Natural Language Processing"
-      ],
-      color: "from-blue-500 to-purple-600"
+      color: "from-purple-600 to-pink-600",
+      features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
+      demo: "Try AI Consciousness Demo",
+      link: "/pages/AIInnovationHub2026"
+    },
+    {
+      id: 1,
+      name: "Quantum Computing Revolution",
+      description: "Exponential computing power solving impossible problems with quantum supremacy",
+      icon: "⚡",
+      color: "from-cyan-600 to-blue-600",
+      features: ["Quantum Supremacy", "Molecular Simulation", "Unbreakable Encryption", "Climate Modeling"],
+      demo: "Experience Quantum Power",
+      link: "/pages/QuantumComputingRevolution2026"
     },
     {
       id: 2,
-      name: "Quantum Computing",
-      icon: "⚛️",
-      description: "Revolutionary quantum processing power that solves complex problems in seconds",
-      features: [
-        "Quantum Supremacy",
-        "Cryptographic Security",
-        "Molecular Simulation",
-        "Optimization Algorithms"
-      ],
-      color: "from-purple-500 to-pink-600"
+      name: "Neural Interface Technology",
+      description: "Direct brain-computer communication enabling thought control and memory enhancement",
+      icon: "🧬",
+      color: "from-emerald-600 to-teal-600",
+      features: ["Thought Control", "Memory Enhancement", "Neural Networking", "Medical Applications"],
+      demo: "Test Neural Interface",
+      link: "/pages/NeuralInterfaceRevolution2026"
     },
     {
       id: 3,
-      name: "Neural Interfaces",
-      icon: "🧬",
-      description: "Direct brain-computer interfaces enabling seamless human-machine interaction",
-      features: [
-        "Thought Control",
-        "Memory Enhancement",
-        "Sensory Augmentation",
-        "Cognitive Amplification"
-      ],
-      color: "from-green-500 to-teal-600"
-    },
-    {
-      id: 4,
-      name: "Biotech Revolution",
-      icon: "🧪",
-      description: "Advanced biotechnology transforming healthcare and human capabilities",
-      features: [
-        "Gene Therapy",
-        "Regenerative Medicine",
-        "Synthetic Biology",
-        "Personalized Treatment"
-      ],
-      color: "from-orange-500 to-red-600"
+      name: "Synthetic Intelligence",
+      description: "AI systems with synthetic consciousness and autonomous creative capabilities",
+      icon: "🤖",
+      color: "from-orange-600 to-red-600",
+      features: ["Synthetic Consciousness", "Creative AI", "Autonomous Systems", "Human-AI Collaboration"],
+      demo: "Meet Synthetic AI",
+      link: "/pages/SyntheticIntelligence2026"
     }
   ];
 
-  const stats = [
-    { label: "Processing Power", value: "10^18 FLOPS", icon: "⚡" },
-    { label: "Data Processing", value: "1 Zettabyte/s", icon: "📊" },
-    { label: "Neural Connections", value: "1 Trillion", icon: "🔗" },
-    { label: "Success Rate", value: "99.9%", icon: "✅" }
-  ];
+  const handleTechClick = (techId: number) => {
+    setActiveTech(techId);
+  };
 
   return (
-    <div className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <div className="container mx-auto px-6">
+    <div className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4">
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-6">
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Showcase
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience the future of technology through our revolutionary innovations
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Experience the future of technology with our interactive demonstrations. 
+            Click on any technology to explore its capabilities and see it in action.
           </p>
         </motion.div>
 
-        {/* Technology Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {technologies.map((tech, index) => (
-            <motion.div
-              key={tech.id}
-              className={`relative group cursor-pointer transition-all duration-300 ${
-                activeTech === index ? 'transform scale-105' : ''
-              }`}
-              onMouseEnter={() => setHoveredCard(index)}
-              onMouseLeave={() => setHoveredCard(null)}
-              onClick={() => setActiveTech(index)}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className={`bg-gradient-to-br ${tech.color} rounded-2xl p-8 h-full shadow-2xl border-2 ${
-                activeTech === index ? 'border-white' : 'border-transparent'
-              } transition-all duration-300`}>
-                <div className="text-center">
-                  <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                    {tech.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{tech.name}</h3>
-                  <p className="text-gray-200 text-sm leading-relaxed">{tech.description}</p>
-                </div>
-                
-                {/* Hover Effect */}
-                <motion.div
-                  className="absolute inset-0 bg-white/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: hoveredCard === index ? 0.1 : 0 }}
-                />
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Active Technology Details */}
-        <motion.div
-          className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 mb-16"
-          key={activeTech}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-3xl font-bold text-white mb-4 flex items-center">
-                <span className="text-4xl mr-4">{technologies[activeTech].icon}</span>
-                {technologies[activeTech].name}
-              </h3>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                {technologies[activeTech].description}
-              </p>
+        {/* Main Showcase Area */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Technology Display */}
+          <motion.div
+            key={activeTech}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className={`bg-gradient-to-br ${technologies[activeTech].color} p-12 rounded-2xl relative overflow-hidden`}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
+            <div className="relative z-10">
+              <div className="text-8xl mb-6 text-center">{technologies[activeTech].icon}</div>
+              <h3 className="text-4xl font-bold mb-6 text-center">{technologies[activeTech].name}</h3>
+              <p className="text-xl opacity-90 mb-8 text-center">{technologies[activeTech].description}</p>
               
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 mb-8">
                 {technologies[activeTech].features.map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-white/10 rounded-lg p-4 text-center"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.1, duration: 0.4 }}
-                  >
-                    <div className="text-white font-semibold">{feature}</div>
-                  </motion.div>
+                  <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
+                    <span className="text-sm font-semibold">{feature}</span>
+                  </div>
                 ))}
               </div>
-            </div>
-            
-            <div className="flex items-center justify-center">
-              <div className="relative">
-                <div className="w-64 h-64 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center border-2 border-white/20">
-                  <div className="text-8xl animate-pulse">
-                    {technologies[activeTech].icon}
-                  </div>
-                </div>
-                <motion.div
-                  className="absolute inset-0 border-2 border-blue-400 rounded-full"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                />
+              
+              <div className="text-center">
+                <a
+                  href={technologies[activeTech].link}
+                  className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-block mr-4"
+                >
+                  {technologies[activeTech].demo} →
+                </a>
+                <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  Learn More
+                </button>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              className="text-center bg-white/10 backdrop-blur-lg rounded-2xl p-6"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="text-4xl mb-4">{stat.icon}</div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
-            </motion.div>
-          ))}
+          {/* Technology Selector */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold mb-6">Choose a Technology to Explore</h3>
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={tech.id}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${
+                  activeTech === tech.id
+                    ? `bg-gradient-to-r ${tech.color} scale-105`
+                    : 'bg-white/10 backdrop-blur-sm hover:bg-white/20'
+                }`}
+                onClick={() => handleTechClick(tech.id)}
+                onMouseEnter={() => setHoveredCard(tech.id)}
+                onMouseLeave={() => setHoveredCard(null)}
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="text-4xl">{tech.icon}</div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-2">{tech.name}</h4>
+                    <p className="text-sm opacity-90">{tech.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Interactive Features */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
-          >
-            <div className="text-4xl mb-4">🧪</div>
-            <h4 className="text-xl font-bold mb-3">Live Simulation</h4>
-            <p className="text-sm opacity-90 mb-4">Watch real-time simulations of our technologies in action</p>
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              Start Simulation
-            </button>
-          </motion.div>
-
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
-          >
-            <div className="text-4xl mb-4">📊</div>
-            <h4 className="text-xl font-bold mb-3">Performance Analytics</h4>
-            <p className="text-sm opacity-90 mb-4">View detailed performance metrics and analytics</p>
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              View Analytics
-            </button>
-          </motion.div>
-        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+          <h3 className="text-3xl font-bold text-center mb-8">Interactive Features</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-4xl mb-4">🎮</div>
+              <h4 className="text-xl font-bold mb-2">Live Demos</h4>
+              <p className="text-sm opacity-80">Experience technologies in real-time with interactive demonstrations</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🔬</div>
+              <h4 className="text-xl font-bold mb-2">Hands-on Testing</h4>
+              <p className="text-sm opacity-80">Test and experiment with cutting-edge technologies yourself</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">📊</div>
+              <h4 className="text-xl font-bold mb-2">Real-time Data</h4>
+              <p className="text-sm opacity-80">See live performance metrics and real-world applications</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
