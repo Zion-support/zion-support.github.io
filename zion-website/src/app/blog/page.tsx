@@ -2,6 +2,12 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-agentic-evals-blueprint',
+    title: 'AI 2026: Agentic Evals Blueprint',
+    summary:
+      'End-to-end framework to evaluate autonomous agents with task suites, rubrics, and guardrails.'
+  },
+  {
     slug: 'ai-2026-multimodal-agents-enterprise-blueprint',
     title: 'AI 2026: Multimodal Agents Enterprise Blueprint',
     summary:
