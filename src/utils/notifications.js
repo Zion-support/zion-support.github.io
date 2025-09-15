@@ -58,6 +58,14 @@ export const notifications = {
     });
   },
   
+  // Show warning notification
+  warning: (message, title = 'Warning') => {
+    return notifications.show(title, {
+      body: message,
+      icon: '/favicon.ico'
+    });
+  },
+  
   // Show info notification
   info: (message, title = 'Info') => {
     return notifications.show(title, {

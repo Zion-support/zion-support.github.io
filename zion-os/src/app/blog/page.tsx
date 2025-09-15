@@ -10,6 +10,28 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+      id: 'agentic-safety-patterns-2025',
+      title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
+      excerpt: 'A catalog of pragmatic safety patterns for deploying autonomous agents with measurable risk controls and human override.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/agentic-safety-patterns.jpg',
+      featured: true
+    },
+    {
+      id: 'multi-agent-supply-chains',
+      title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
+      excerpt: 'How agent-based orchestration reduces latency and increases resilience across complex, multi-party supply chains.',
+      category: 'AI Solutions',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-12',
+      readTime: '8 min read',
+      image: '/blog/multi-agent-supply-chains.jpg',
+      featured: true
+    },
+    {
       id: 'ai-foundation-models-2025',
       title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
       excerpt: 'Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.',
