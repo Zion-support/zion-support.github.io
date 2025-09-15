@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -6,6 +7,34 @@ const NewContentShowcase2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const newContent = [
+=======
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const NewContentShowcase2026: React.FC = () => {
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const contentCategories = {
+    all: {
+      title: "All Content",
+      icon: "🌟"
+    },
+    ai: {
+      title: "AI Systems",
+      icon: "🧠"
+    },
+    quantum: {
+      title: "Quantum Tech",
+      icon: "⚛️"
+    },
+    neural: {
+      title: "Neural Interfaces",
+      icon: "🧬"
+    }
+  };
+
+  const contentItems = [
+>>>>>>> cursor/create-and-deploy-new-content-8da1
     {
       id: 1,
       title: "Advanced Analytics Dashboard 2026",
@@ -251,12 +280,105 @@ const NewContentShowcase2026: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center"
             >
+<<<<<<< HEAD
               <div className="text-5xl mb-4">{stat.icon}</div>
               <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
             </motion.div>
           ))}
         </div>
+=======
+              <span className="mr-2">{category.icon}</span>
+              {category.title}
+            </button>
+          ))}
+        </div>
+
+        {/* Content Grid */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {filteredContent.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden group"
+              >
+                <div className={`bg-gradient-to-r ${item.gradient} p-6 text-white relative overflow-hidden`}>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-4xl">{item.image}</span>
+                      <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                        item.badge === 'NEW' ? 'bg-green-500' :
+                        item.badge === 'FEATURED' ? 'bg-blue-500' :
+                        item.badge === 'BREAKTHROUGH' ? 'bg-purple-500' :
+                        'bg-orange-500'
+                      }`}>
+                        {item.badge}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                    <p className="text-white/90 text-sm">{item.description}</p>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {item.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-600 text-sm">
+                          <span className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-3"></span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <a
+                    href={item.href}
+                    className={`block w-full bg-gradient-to-r ${item.gradient} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center group-hover:scale-105`}
+                  >
+                    Explore Content →
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 text-white">
+            <h3 className="text-3xl font-bold mb-4">🌟 Experience the Future Today</h3>
+            <p className="text-xl opacity-90 mb-6 max-w-2xl mx-auto">
+              Join thousands of innovators exploring revolutionary technologies that are reshaping our world
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                View All Content →
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold">
+                Subscribe for Updates
+              </button>
+            </div>
+          </div>
+        </motion.div>
+>>>>>>> cursor/create-and-deploy-new-content-8da1
       </div>
 
       {/* Call to Action */}
