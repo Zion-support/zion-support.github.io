@@ -5,7 +5,7 @@ import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
-import { WebhooksManager } from "@/components/developers/WebhooksManager";
+// import { WebhooksManager } from "@/components/developers/WebhooksManager";
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
 import { ApiLogs } from "@/components/developers/ApiLogs";
 
@@ -66,7 +66,7 @@ export function DeveloperPortal() {
       <div>
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
-        {activeTab === "webhooks" && <WebhooksManager />}
+        {activeTab === "webhooks" && <div className="text-white">Webhooks functionality coming soon...</div>}
         {activeTab === "logs" && <ApiLogs />}
       </div>
     </div>

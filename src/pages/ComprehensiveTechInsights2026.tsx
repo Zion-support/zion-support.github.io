@@ -1,305 +1,308 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
+import Header from '../Header';
+import Footer from '../Footer';
 
 const ComprehensiveTechInsights2026: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const categories = [
-    'All', 'AI & Machine Learning', 'Quantum Computing', 'Neural Technology', 
-    'Edge Computing', 'Blockchain', 'Cybersecurity', 'Future Tech'
-  ];
-
-  const articles = [
+  const insights = [
     {
-      id: 1,
-      title: "The Complete Guide to Next-Generation AI: From Theory to Implementation",
-      excerpt: "A comprehensive exploration of advanced AI systems, their capabilities, and real-world applications across industries.",
-      author: "Dr. Sarah Chen",
-      date: "January 25, 2026",
-      readTime: "15 min read",
-      category: "AI & Machine Learning",
-      image: "🧠",
-      featured: true,
-      content: "Artificial Intelligence has evolved beyond simple pattern recognition to become a truly transformative force. This comprehensive guide explores the latest developments in AI technology, from autonomous reasoning systems to quantum-enhanced neural networks. We'll examine how these technologies are being implemented across various industries and what the future holds for AI development.",
-      tags: ["AI", "Machine Learning", "Neural Networks", "Automation"]
+      category: "Artificial Intelligence",
+      title: "The Evolution of Synthetic Intelligence",
+      description: "How AI is transcending human cognitive limitations and creating new forms of reasoning",
+      impact: "High",
+      timeline: "2026-2028",
+      icon: "🧠"
     },
     {
-      id: 2,
-      title: "Quantum Computing Breakthrough: Solving the Impossible",
-      excerpt: "Deep dive into quantum computing advances that are enabling solutions to problems previously thought impossible.",
-      author: "Prof. Michael Rodriguez",
-      date: "January 23, 2026",
-      readTime: "18 min read",
       category: "Quantum Computing",
-      image: "⚡",
-      featured: true,
-      content: "Quantum computing represents a paradigm shift in computational power. This article explores the latest breakthroughs in quantum technology, from quantum supremacy achievements to practical applications in drug discovery, climate modeling, and cryptography. We'll examine the challenges and opportunities in this rapidly evolving field.",
-      tags: ["Quantum Computing", "Cryptography", "Drug Discovery", "Climate Modeling"]
+      title: "Quantum Neural Fusion Breakthrough",
+      description: "The convergence of quantum computing and neural networks unlocking unprecedented power",
+      impact: "Revolutionary",
+      timeline: "2026-2027",
+      icon: "⚡"
     },
     {
-      id: 3,
-      title: "Neural Interfaces: Bridging the Gap Between Mind and Machine",
-      excerpt: "Exploring the revolutionary technology that enables direct brain-computer communication and its implications.",
-      author: "Dr. Elena Volkov",
-      date: "January 21, 2026",
-      readTime: "12 min read",
-      category: "Neural Technology",
-      image: "🧬",
-      featured: false,
-      content: "Neural interface technology is revolutionizing how humans interact with computers. This comprehensive analysis covers the latest developments in brain-computer interfaces, from medical applications to consumer devices. We'll explore the technical challenges, ethical considerations, and future possibilities of this groundbreaking technology.",
-      tags: ["Neural Interfaces", "BCI", "Medical Technology", "Human-Computer Interaction"]
+      category: "Neural Interfaces",
+      title: "Direct Brain-Computer Integration",
+      description: "Technologies enabling seamless communication between human minds and AI systems",
+      impact: "High",
+      timeline: "2026-2029",
+      icon: "🧬"
     },
     {
-      id: 4,
-      title: "Edge AI Revolution: Bringing Intelligence to Every Device",
-      excerpt: "How edge AI is transforming IoT by bringing powerful AI capabilities directly to devices for real-time processing.",
-      author: "Alex Thompson",
-      date: "January 19, 2026",
-      readTime: "10 min read",
-      category: "Edge Computing",
-      image: "🌐",
-      featured: false,
-      content: "Edge AI is bringing artificial intelligence to the edge of networks, enabling real-time processing and decision-making on devices. This article explores the latest developments in edge AI technology, its applications across industries, and the challenges of implementing AI at the edge.",
-      tags: ["Edge AI", "IoT", "Real-time Processing", "Distributed Computing"]
+      category: "Climate Technology",
+      title: "AI-Powered Climate Solutions",
+      description: "Advanced AI systems combating climate change and creating sustainable solutions",
+      impact: "Critical",
+      timeline: "2026-2030",
+      icon: "🌍"
     },
     {
-      id: 5,
-      title: "Blockchain 3.0: The Next Evolution of Decentralized Technology",
-      excerpt: "Exploring the latest developments in blockchain technology and their potential to transform digital economies.",
-      author: "Maria Santos",
-      date: "January 17, 2026",
-      readTime: "14 min read",
-      category: "Blockchain",
-      image: "🔗",
-      featured: false,
-      content: "Blockchain technology continues to evolve, with new innovations addressing scalability, sustainability, and interoperability challenges. This comprehensive analysis covers the latest developments in blockchain technology, from Layer 2 solutions to cross-chain protocols and their potential impact on various industries.",
-      tags: ["Blockchain", "DeFi", "Web3", "Decentralization"]
+      category: "Automation",
+      title: "Autonomous AI Agents",
+      description: "Self-governing AI systems transforming industries and human-AI collaboration",
+      impact: "High",
+      timeline: "2026-2028",
+      icon: "🤖"
     },
     {
-      id: 6,
-      title: "Cybersecurity in the Age of AI: Protecting Against Intelligent Threats",
-      excerpt: "How AI-powered defense systems are protecting against increasingly sophisticated cyber threats.",
-      author: "James Wilson",
-      date: "January 15, 2026",
-      readTime: "16 min read",
-      category: "Cybersecurity",
-      image: "🛡️",
-      featured: false,
-      content: "As cyber threats become more sophisticated, traditional security measures are no longer sufficient. This article explores how AI and machine learning are being used to enhance cybersecurity, from threat detection to automated response systems. We'll examine the latest developments in AI-powered security solutions and their effectiveness.",
-      tags: ["Cybersecurity", "AI Security", "Threat Detection", "Automated Response"]
-    },
-    {
-      id: 7,
-      title: "The Future of Work: How Technology is Reshaping Industries",
-      excerpt: "Comprehensive analysis of how emerging technologies are transforming the workplace and creating new opportunities.",
-      author: "Dr. Lisa Park",
-      date: "January 13, 2026",
-      readTime: "13 min read",
-      category: "Future Tech",
-      image: "🚀",
-      featured: false,
-      content: "The workplace is undergoing a dramatic transformation driven by emerging technologies. This article explores how AI, automation, and other technologies are reshaping industries, creating new job opportunities, and changing the nature of work. We'll examine the skills needed for the future workforce and how organizations can adapt.",
-      tags: ["Future of Work", "Automation", "Digital Transformation", "Skills Development"]
-    },
-    {
-      id: 8,
-      title: "Sustainable Technology: Building a Greener Future",
-      excerpt: "How technology companies are addressing environmental challenges and building sustainable solutions.",
-      author: "Dr. Robert Green",
-      date: "January 11, 2026",
-      readTime: "11 min read",
-      category: "Future Tech",
-      image: "🌱",
-      featured: false,
-      content: "Sustainability is becoming a key focus for technology companies as they work to reduce their environmental impact. This article explores the latest developments in sustainable technology, from green computing to renewable energy solutions and their potential to address climate change.",
-      tags: ["Sustainability", "Green Technology", "Climate Change", "Renewable Energy"]
+      category: "Biotechnology",
+      title: "AI-Enhanced Biomedical Research",
+      description: "Accelerating drug discovery and personalized medicine through AI",
+      impact: "High",
+      timeline: "2026-2029",
+      icon: "🔬"
     }
   ];
 
-  const filteredArticles = selectedCategory === 'All' 
-    ? articles 
-    : articles.filter(article => article.category === selectedCategory);
+  const trends = [
+    { name: "Synthetic Intelligence", growth: "+300%", status: "Rising" },
+    { name: "Quantum Computing", growth: "+250%", status: "Rising" },
+    { name: "Neural Interfaces", growth: "+200%", status: "Rising" },
+    { name: "Climate AI", growth: "+400%", status: "Explosive" },
+    { name: "Autonomous Systems", growth: "+180%", status: "Rising" },
+    { name: "Biotech AI", growth: "+220%", status: "Rising" }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              📚 COMPREHENSIVE TECH INSIGHTS • 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Technology Insights & Analysis
-            </h1>
-            <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
-              Stay ahead of the curve with in-depth analysis, expert insights, and comprehensive coverage 
-              of the latest technological breakthroughs and industry trends.
-            </p>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Category Filter */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === category 
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white' 
-                  : 'bg-white/10 text-white hover:bg-white/20'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Featured Articles */}
-      <div className="container mx-auto px-4 py-8">
-        <h2 className="text-4xl font-bold mb-8 text-center">🌟 Featured Articles</h2>
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {filteredArticles.filter(article => article.featured).map((article, index) => (
-            <motion.article
-              key={article.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-            >
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="text-5xl">{article.image}</div>
-                <div>
-                  <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs font-semibold">
-                    {article.category}
-                  </span>
-                </div>
-              </div>
-              <h3 className="text-3xl font-bold mb-4">{article.title}</h3>
-              <p className="text-purple-100 mb-6 text-lg">{article.excerpt}</p>
-              <div className="mb-6">
-                <p className="text-purple-200 text-sm leading-relaxed">{article.content}</p>
-              </div>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {article.tags.map((tag, tagIndex) => (
-                  <span key={tagIndex} className="px-3 py-1 bg-white/20 rounded-full text-xs">
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-              <div className="flex items-center justify-between text-sm text-purple-200 mb-6">
-                <div>
-                  <span className="font-semibold">{article.author}</span>
-                  <span className="mx-2">•</span>
-                  <span>{article.date}</span>
-                </div>
-                <span>{article.readTime}</span>
-              </div>
-              <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Read Full Article →
-              </button>
-            </motion.article>
-          ))}
-        </div>
-      </div>
-
-      {/* All Articles Grid */}
-      <div className="container mx-auto px-4 py-8">
-        <h2 className="text-4xl font-bold mb-8 text-center">📖 All Articles</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredArticles.map((article, index) => (
-            <motion.article
-              key={article.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-white/10 transition-all duration-300"
-            >
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="text-4xl">{article.image}</div>
-                <span className="px-3 py-1 bg-blue-500/30 rounded-full text-xs font-semibold">
-                  {article.category}
-                </span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">{article.title}</h3>
-              <p className="text-gray-300 mb-4 text-sm">{article.excerpt}</p>
-              <div className="flex flex-wrap gap-1 mb-4">
-                {article.tags.slice(0, 3).map((tag, tagIndex) => (
-                  <span key={tagIndex} className="px-2 py-1 bg-white/10 rounded text-xs">
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-              <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
-                <div>
-                  <span className="font-semibold">{article.author}</span>
-                  <span className="mx-1">•</span>
-                  <span>{article.date}</span>
-                </div>
-                <span>{article.readTime}</span>
-              </div>
-              <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
-                Read Article →
-              </button>
-            </motion.article>
-          ))}
-        </div>
-      </div>
-
-      {/* Newsletter Signup */}
-      <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 py-20 mt-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold mb-4">Stay Updated with Latest Insights</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Get the latest articles, insights, and breakthrough technologies delivered 
-              directly to your inbox. Join thousands of tech professionals and enthusiasts.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-              />
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Subscribe
-              </button>
-            </div>
-            <p className="text-sm text-gray-400 mt-4">
-              No spam, unsubscribe at any time. We respect your privacy.
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+      <Header />
+      
+      <main className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
+            🔍 COMPREHENSIVE INSIGHTS • JANUARY 2026
           </div>
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Don't just read about the future – be part of it. Let our revolutionary 
-            technologies transform your business and unlock unprecedented possibilities.
+          <h1 className="text-6xl font-bold text-white mb-6">
+            Comprehensive Tech Insights 2026
+          </h1>
+          <p className="text-2xl text-indigo-200 max-w-4xl mx-auto mb-8">
+            Deep analysis and insights into the technologies that will define the next decade
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Transformation
-            </button>
-            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Schedule Consultation
-            </button>
+          <div className="flex justify-center space-x-4">
+            <a href="#insights" className="bg-white text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
+              View Insights
+            </a>
+            <a href="#trends" className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors font-semibold">
+              Analyze Trends
+            </a>
           </div>
         </div>
-      </div>
+
+        {/* Key Insights */}
+        <section id="insights" className="mb-16">
+          <h2 className="text-4xl font-bold text-white mb-8 text-center">Key Technology Insights</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {insights.map((insight, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-3 mb-4">
+                  <span className="text-3xl">{insight.icon}</span>
+                  <div>
+                    <div className="text-sm text-indigo-300">{insight.category}</div>
+                    <div className="text-xs text-indigo-400">{insight.timeline}</div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
+                <p className="text-indigo-200 mb-4">{insight.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                    insight.impact === 'Revolutionary' ? 'bg-red-500/20 text-red-300' :
+                    insight.impact === 'Critical' ? 'bg-orange-500/20 text-orange-300' :
+                    'bg-green-500/20 text-green-300'
+                  }`}>
+                    {insight.impact} Impact
+                  </span>
+                  <a href="#" className="text-indigo-400 hover:text-indigo-300 font-semibold text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Market Trends */}
+        <section id="trends" className="mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h2 className="text-4xl font-bold text-white mb-8 text-center">Market Trends & Growth</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {trends.map((trend, index) => (
+                <div key={index} className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 rounded-xl p-6 border border-indigo-400/30">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-bold text-white">{trend.name}</h3>
+                    <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
+                      trend.status === 'Explosive' ? 'bg-red-500/20 text-red-300' : 'bg-green-500/20 text-green-300'
+                    }`}>
+                      {trend.status}
+                    </span>
+                  </div>
+                  <div className="text-3xl font-bold text-indigo-400 mb-2">{trend.growth}</div>
+                  <div className="text-indigo-300 text-sm">Year-over-year growth</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Technology Roadmap */}
+        <section className="mb-16">
+          <h2 className="text-4xl font-bold text-white mb-8 text-center">Technology Roadmap 2026-2030</h2>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="space-y-8">
+              <div className="flex items-center space-x-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
+                  2026
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Synthetic Intelligence Launch</h3>
+                  <p className="text-indigo-200">First commercial synthetic intelligence systems become available</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
+                  2027
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Quantum Neural Fusion</h3>
+                  <p className="text-indigo-200">Quantum-enhanced neural networks achieve commercial viability</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
+                  2028
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">AGI Achievement</h3>
+                  <p className="text-indigo-200">Artificial General Intelligence reaches human-level capabilities</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
+                  2029
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Neural Interface Revolution</h3>
+                  <p className="text-indigo-200">Direct brain-computer interfaces become mainstream</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
+                  2030
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Superintelligence Era</h3>
+                  <p className="text-indigo-200">AI surpasses human intelligence across all domains</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Industry Analysis */}
+        <section className="mb-16">
+          <h2 className="text-4xl font-bold text-white mb-8 text-center">Industry Impact Analysis</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
+              <h3 className="text-2xl font-bold text-white mb-4">Most Impacted Industries</h3>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-indigo-200">Healthcare & Medicine</span>
+                  <span className="text-white font-bold">95%</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-indigo-200">Financial Services</span>
+                  <span className="text-white font-bold">90%</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-indigo-200">Manufacturing</span>
+                  <span className="text-white font-bold">85%</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-indigo-200">Transportation</span>
+                  <span className="text-white font-bold">80%</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-indigo-200">Education</span>
+                  <span className="text-white font-bold">75%</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
+              <h3 className="text-2xl font-bold text-white mb-4">Investment Priorities</h3>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-purple-200">Synthetic Intelligence R&D</span>
+                  <span className="text-white font-bold">$50B</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-purple-200">Quantum Computing</span>
+                  <span className="text-white font-bold">$30B</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-purple-200">Neural Interfaces</span>
+                  <span className="text-white font-bold">$25B</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-purple-200">Climate AI Solutions</span>
+                  <span className="text-white font-bold">$40B</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-purple-200">Biotech AI</span>
+                  <span className="text-white font-bold">$20B</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Future Predictions */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">Future Predictions</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-bold text-white mb-4">By 2027</h3>
+                <ul className="space-y-2 text-indigo-100">
+                  <li>• Synthetic intelligence becomes mainstream in enterprise</li>
+                  <li>• Quantum computers solve previously impossible problems</li>
+                  <li>• Neural interfaces enable thought-controlled devices</li>
+                  <li>• AI achieves human-level creativity in arts and sciences</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-4">By 2030</h3>
+                <ul className="space-y-2 text-indigo-100">
+                  <li>• Superintelligent AI surpasses human capabilities</li>
+                  <li>• Brain-computer interfaces are as common as smartphones</li>
+                  <li>• Climate change is significantly mitigated by AI solutions</li>
+                  <li>• Human-AI collaboration becomes the norm in all industries</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="text-center">
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-4">Stay Ahead of the Curve</h2>
+            <p className="text-xl text-indigo-100 mb-6">
+              Get comprehensive insights and analysis on the technologies shaping our future
+            </p>
+            <div className="flex justify-center space-x-4">
+              <a href="/contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
+                Get Insights
+              </a>
+              <a href="/pages/RevolutionaryTechBlog2026" className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors font-semibold">
+                Read Blog
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
     </div>
   );
 };
