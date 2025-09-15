@@ -79,8 +79,19 @@ const solutions = [
 export default function HomePage() {
   return (
     <div className="bg-black">
+      {/* Promo banner */}
+      <div className="relative isolate px-6 pt-24 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
+            <p className="text-sm sm:text-base font-semibold text-blue-200">
+              New today: Autonomous Sales Copilot v1.0, AI Vendor Risk Guide, and more —
+              <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see all updates</a>
+            </p>
+          </div>
+        </div>
+      </div>
       {/* Hero section */}
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div className="relative isolate px-6 pt-8 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">

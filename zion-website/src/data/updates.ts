@@ -7,6 +7,47 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
+  // Fresh content added 2025-09-15
+  {
+    title: 'Launch: Autonomous Sales Copilot v1.0',
+    summary:
+      'Pipeline insights, meeting prep, and safe CRM automation with policy-as-code and live evals.',
+    href: '/updates/autonomous-sales-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Vendor Risk Management for AI (2026 Preview)',
+    summary:
+      'Templates, control mapping, and evidence bundles to assess AI vendors responsibly.',
+    href: '/updates/ai-vendor-risk-management-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: State of Production Agent Incidents (2026 Preview)',
+    summary:
+      'Incident typologies, common root causes, and prevention controls across autonomous agents.',
+    href: '/updates/state-of-agent-incidents-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Blueprint: Evaluation-Driven FinOps for AI',
+    summary:
+      'Unify cost, quality, and latency with eval signals to drive model routing and budgets.',
+    href: '/updates/evaluation-driven-finops',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Feature: Audit-Ready Evidence Bundles',
+    summary:
+      'One-click export of evals, guardrail events, and policy checks for audits and reviews.',
+    href: '/updates/audit-ready-evidence-bundles',
+    date: '2025-09-15',
+    tag: 'Feature'
+  },
   {
     title: 'Guide: Production Guardrails for Multimodal Agents (2026)',
     summary:
