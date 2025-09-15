@@ -84,8 +84,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-              New: AI Incident Simulator v1.1 —
-              <a href="/updates/ai-incident-simulator-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read launch</a>
+              New: Autonomous Vendor Risk Copilot v1.0 —
+              <a href="/updates/autonomous-vendor-risk-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
@@ -119,10 +119,10 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
-                href="/updates/autonomous-knowledge-base-copilot-1-0"
+                href="/updates/autonomous-vendor-risk-copilot-1-0"
                 className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-200 hover:bg-emerald-500/20 transition-colors duration-200"
               >
-                Launch: KB Copilot v1.0
+                Launch: Vendor Risk Copilot v1.0
                 <span aria-hidden>→</span>
               </a>
               <a

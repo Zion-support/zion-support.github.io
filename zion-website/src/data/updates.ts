@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Autonomous Vendor Risk Copilot v1.0',
+    summary:
+      'Automates third‑party AI vendor assessments with policy‑as‑code, evidence capture, and risk scoring.',
+    href: '/updates/autonomous-vendor-risk-copilot-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production Agent Shadow Testing (2026)',
+    summary:
+      'Implement shadow traffic, guardrail signals, and automatic rollback to de‑risk changes.',
+    href: '/updates/production-agent-shadow-testing-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Report: State of Real‑Time Agent Debugging 2026',
+    summary:
+      'Evolving tools for live traces, prompt diffs, and tool‑call visibility across stacks.',
+    href: '/updates/state-of-real-time-agent-debugging-2026',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
     title: 'Launch: AI Incident Simulator v1.1',
     summary:
       'New scenarios, live eval gates, and evidence exports to harden agent systems.',
