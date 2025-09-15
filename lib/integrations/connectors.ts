@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -76,33 +70,6 @@ export const crm = {
 
 // ATS actions
 export const ats = {
-<<<<<<< HEAD
-
-  async updateStatus(
-    connection: ProviderConnection
-    status: Record<string, any>
-  ) {
-    connection: ProviderConnection,
-    status: Record<string, any>,
-  ) {;
-    return mockProviderCall(connection, "update_status", { status });
-  }
-}
-
-
-  async createCandidate(
-    connection: ProviderConnection,
-    candidate: Record<string, any>
-  ) {
-    return executeProviderAction(connection, 'createCandidate', { candidate });
-  },
-};
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
