@@ -13,6 +13,9 @@ import AdvancedTechSolutions2025 from './src/pages/AdvancedTechSolutions2025';
 import FutureTechTrends2025 from './src/pages/FutureTechTrends2025';
 import ComprehensiveServices2025 from './src/pages/ComprehensiveServices2025';
 import AIInnovationPlaybook2025 from './src/pages/AIInnovationPlaybook2025';
+import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
+import EnterpriseAISolutions2025 from './src/pages/EnterpriseAISolutions2025';
+import DigitalTransformationHub2025 from './src/pages/DigitalTransformationHub2025';
 import './src/index.css';
 
 export default function App(): JSX.Element {
@@ -26,18 +29,41 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
-                {/* Promotional Banner */}
-                <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 mb-8 text-white text-center">
+                {/* Enhanced Promotional Banner */}
+                <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 animate-pulse"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-center space-x-2 mb-3">
+                      <span className="text-3xl animate-bounce">🎉</span>
+                      <h3 className="text-2xl font-bold">NEW: Next-Gen Tech Showcase 2025</h3>
+                      <span className="text-3xl animate-bounce">🚀</span>
+                    </div>
+                    <p className="text-xl opacity-90 mb-6">
+                      Experience revolutionary technologies: Neural Interfaces, Quantum Computing, Autonomous AI, and more!
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4">
+                      <a href="/pages/NextGenTechShowcase2025" className="inline-block bg-white text-green-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                        🚀 Explore Next-Gen Tech →
+                      </a>
+                      <a href="/pages/EnterpriseAISolutions2025" className="inline-block bg-white/20 backdrop-blur-sm text-white border-2 border-white px-8 py-3 rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                        🏢 Enterprise AI →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Secondary Promotional Banner */}
+                <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-6 mb-8 text-white text-center">
                   <div className="flex items-center justify-center space-x-2 mb-2">
-                    <span className="text-2xl">🎉</span>
-                    <h3 className="text-xl font-bold">NEW: Comprehensive Services 2025</h3>
-                    <span className="text-2xl">🎉</span>
+                    <span className="text-2xl">🔄</span>
+                    <h3 className="text-xl font-bold">Digital Transformation Hub 2025</h3>
+                    <span className="text-2xl">⚡</span>
                   </div>
                   <p className="text-lg opacity-90 mb-4">
-                    Discover our complete suite of cutting-edge technology solutions
+                    Accelerate your digital transformation with our proven 5-step methodology
                   </p>
-                  <a href="/pages/ComprehensiveServices2025" className="inline-block bg-white text-green-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                    Explore Now →
+                  <a href="/pages/DigitalTransformationHub2025" className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                    Start Transformation →
                   </a>
                 </div>
 
@@ -52,12 +78,18 @@ export default function App(): JSX.Element {
                   <p className="text-xl text-gray-600 mb-8">
                     Leading the future of technology with AI, blockchain, and innovative solutions
                   </p>
-                  <div className="flex flex-col sm:flex-row justify-center space-x-4 space-y-4 sm:space-y-0">
-                    <a href="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                      🚀 View All Services
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <a href="/pages/NextGenTechShowcase2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                      🚀 Next-Gen Tech
                     </a>
-                    <a href="/pages/InnovationLanding2025" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                      Explore Innovation 2025
+                    <a href="/pages/EnterpriseAISolutions2025" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                      🏢 Enterprise AI
+                    </a>
+                    <a href="/pages/DigitalTransformationHub2025" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                      🔄 Digital Transformation
+                    </a>
+                    <a href="/pages/ComprehensiveServices2025" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                      📋 All Services
                     </a>
                     <a href="/pages/AdvancedTechSolutions2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                       ⚡ Advanced Solutions
@@ -65,11 +97,11 @@ export default function App(): JSX.Element {
                     <a href="/pages/FutureTechTrends2025" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                       🔮 Future Trends
                     </a>
+                    <a href="/pages/AIInnovationPlaybook2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                      📘 AI Playbook
+                    </a>
                     <a href="/pages/BlogPost2025" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                       📰 Latest Blog
-                    </a>
-                    <a href="/pages/AIInnovationPlaybook2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                      📘 AI Innovation Playbook
                     </a>
                   </div>
                 </div>
@@ -81,23 +113,23 @@ export default function App(): JSX.Element {
                     <p className="text-lg opacity-90">Discover our latest innovations that are reshaping industries</p>
                   </div>
                   <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 hover:bg-white/30 transition-all duration-300">
                       <div className="text-3xl mb-3">🧠</div>
-                      <h3 className="text-xl font-semibold mb-2">AI Autonomous Agents</h3>
-                      <p className="text-sm opacity-90 mb-4">Self-learning AI systems that handle complex business processes</p>
-                      <a href="/pages/InnovativeServicesShowcase2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn More →</a>
+                      <h3 className="text-xl font-semibold mb-2">Neural Interface AI</h3>
+                      <p className="text-sm opacity-90 mb-4">Direct brain-computer interfaces enabling thought-controlled applications</p>
+                      <a href="/pages/NextGenTechShowcase2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore Next-Gen →</a>
                     </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6">
-                      <div className="text-3xl mb-3">⚡</div>
-                      <h3 className="text-xl font-semibold mb-2">Quantum Security</h3>
-                      <p className="text-sm opacity-90 mb-4">Next-generation encryption using quantum computing principles</p>
-                      <a href="/pages/InnovationLanding2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore →</a>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 hover:bg-white/30 transition-all duration-300">
+                      <div className="text-3xl mb-3">🏢</div>
+                      <h3 className="text-xl font-semibold mb-2">Enterprise AI Suite</h3>
+                      <p className="text-sm opacity-90 mb-4">Comprehensive AI solutions for Fortune 500 companies</p>
+                      <a href="/pages/EnterpriseAISolutions2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">View Enterprise →</a>
                     </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6">
-                      <div className="text-3xl mb-3">🌐</div>
-                      <h3 className="text-xl font-semibold mb-2">Global IoT Network</h3>
-                      <p className="text-sm opacity-90 mb-4">Worldwide connected devices for seamless data exchange</p>
-                      <a href="/pages/BlogPost2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Read More →</a>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 hover:bg-white/30 transition-all duration-300">
+                      <div className="text-3xl mb-3">🔄</div>
+                      <h3 className="text-xl font-semibold mb-2">Digital Transformation</h3>
+                      <p className="text-sm opacity-90 mb-4">Proven 5-step methodology for digital success</p>
+                      <a href="/pages/DigitalTransformationHub2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Start Journey →</a>
                     </div>
                   </div>
                 </div>
@@ -255,30 +287,36 @@ export default function App(): JSX.Element {
                   </div>
                 </div>
 
-                {/* New Content Promotion Banner */}
+                {/* Enhanced Content Promotion Banner */}
                 <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-12 text-white">
                   <div className="text-center mb-8">
-                    <h2 className="text-4xl font-bold mb-4">🌟 NEW: AI Innovation Playbook 2025</h2>
-                    <p className="text-xl opacity-90">Practical guide to ideate, prototype, and scale AI with ROI</p>
+                    <h2 className="text-4xl font-bold mb-4">🌟 NEW: Complete Technology Suite 2025</h2>
+                    <p className="text-xl opacity-90">Comprehensive solutions from next-gen tech to enterprise AI and digital transformation</p>
                   </div>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
+                  <div className="grid md:grid-cols-4 gap-6">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/30 transition-all duration-300">
+                      <div className="text-4xl mb-3">🚀</div>
+                      <h3 className="text-xl font-semibold mb-2">Next-Gen Tech</h3>
+                      <p className="text-sm opacity-90 mb-4">Neural interfaces, quantum computing, autonomous AI</p>
+                      <a href="/pages/NextGenTechShowcase2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore →</a>
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/30 transition-all duration-300">
+                      <div className="text-4xl mb-3">🏢</div>
+                      <h3 className="text-xl font-semibold mb-2">Enterprise AI</h3>
+                      <p className="text-sm opacity-90 mb-4">Fortune 500-grade AI solutions and security</p>
+                      <a href="/pages/EnterpriseAISolutions2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">View Suite →</a>
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/30 transition-all duration-300">
+                      <div className="text-4xl mb-3">🔄</div>
+                      <h3 className="text-xl font-semibold mb-2">Digital Transformation</h3>
+                      <p className="text-sm opacity-90 mb-4">Proven 5-step methodology for success</p>
+                      <a href="/pages/DigitalTransformationHub2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Start Journey →</a>
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/30 transition-all duration-300">
                       <div className="text-4xl mb-3">🔮</div>
                       <h3 className="text-xl font-semibold mb-2">AI Playbook</h3>
                       <p className="text-sm opacity-90 mb-4">Templates, KPIs, and guardrails</p>
-                      <a href="/pages/AIInnovationPlaybook2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Read Playbook →</a>
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
-                      <div className="text-4xl mb-3">⚡</div>
-                      <h3 className="text-xl font-semibold mb-2">Advanced Solutions</h3>
-                      <p className="text-sm opacity-90 mb-4">Next-generation AI and quantum technologies</p>
-                      <a href="/pages/AdvancedTechSolutions2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">View Solutions →</a>
-                    </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
-                      <div className="text-4xl mb-3">🚀</div>
-                      <h3 className="text-xl font-semibold mb-2">Future Trends</h3>
-                      <p className="text-sm opacity-90 mb-4">Expert predictions and breakthroughs</p>
-                      <a href="/pages/FutureTechTrends2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Explore Trends →</a>
+                      <a href="/pages/AIInnovationPlaybook2025" className="text-cyan-300 hover:text-cyan-200 font-semibold">Read Guide →</a>
                     </div>
                   </div>
                 </div>
@@ -341,6 +379,9 @@ export default function App(): JSX.Element {
           <Route path="/pages/FutureTechTrends2025" element={<FutureTechTrends2025 />} />
           <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
           <Route path="/pages/AIInnovationPlaybook2025" element={<AIInnovationPlaybook2025 />} />
+          <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
+          <Route path="/pages/EnterpriseAISolutions2025" element={<EnterpriseAISolutions2025 />} />
+          <Route path="/pages/DigitalTransformationHub2025" element={<DigitalTransformationHub2025 />} />
           <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
