@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 'use client'
 
 import { useState } from 'react'
@@ -15,21 +12,31 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Research', href: '/research' },
-  { name: 'Contact', href: '/contact' },
-]
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+  { name: 'Contact', href: '/contact' },
+=======
+  { name: 'Blog', href: '/blog' },
+  { name: 'Updates', href: '/updates' },
+>>>>>>> cursor/create-and-deploy-new-content-8472
+=======
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Updates', href: '/updates' },
+  { name: 'Contact', href: '/contact' },
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+]
+
+>>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-cc9d
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 

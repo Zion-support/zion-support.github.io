@@ -2,318 +2,410 @@ import React from 'react';
 
 const UltimateServiceShowcase2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ULTIMATE SERVICE SHOWCASE • 2026
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            ⭐ ULTIMATE SERVICES • JANUARY 2026
           </div>
           <h1 className="text-6xl font-bold text-white mb-6">
-            🚀 Ultimate Service Showcase 2026
+            Ultimate Service Showcase 2026
           </h1>
           <p className="text-2xl text-indigo-200 max-w-4xl mx-auto mb-8">
-            Discover our complete suite of revolutionary technology services that will transform 
-            your business with AI, quantum computing, neural networks, and advanced automation
+            Experience our comprehensive suite of cutting-edge services that combine 
+            artificial intelligence, quantum computing, biotechnology, and space technology 
+            to deliver unprecedented value and transformation.
           </p>
           <div className="flex justify-center space-x-4">
-            <a href="#services" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              Explore Services
-            </a>
-            <a href="#pricing" className="border border-indigo-400 text-indigo-300 px-8 py-3 rounded-lg hover:bg-indigo-50 hover:text-indigo-600 transition-colors">
-              View Pricing
-            </a>
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Explore Services →
+            </button>
+            <button className="border-2 border-indigo-400 text-indigo-200 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-indigo-900 transition-colors font-semibold text-lg">
+              Get Quote
+            </button>
           </div>
         </div>
 
-        {/* Revolutionary Services Grid */}
-        <section id="services" className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">🌟 Revolutionary Technology Services</h2>
-            <p className="text-xl text-indigo-200">Complete suite of next-generation technology solutions</p>
+        {/* Service Categories */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🤖</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">AI & Machine Learning</h3>
+            <p className="text-indigo-100 mb-6 text-center">
+              Comprehensive AI solutions from autonomous systems to generative AI and predictive analytics.
+            </p>
+            <ul className="text-indigo-200 space-y-2 text-sm">
+              <li>• Autonomous AI systems</li>
+              <li>• Generative AI platforms</li>
+              <li>• Predictive analytics</li>
+              <li>• Natural language processing</li>
+              <li>• Computer vision solutions</li>
+              <li>• AI consulting & strategy</li>
+            </ul>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* AI Solutions */}
-            <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4 text-center">🧠</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">AI Solutions 2026</h3>
-              <p className="text-purple-100 mb-6 text-center">
-                Consciousness-level AI with self-awareness, emotional intelligence, and autonomous decision-making
-              </p>
-              <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-                <li>• Consciousness AI Systems</li>
-                <li>• Predictive Intelligence</li>
-                <li>• Autonomous Agents</li>
-                <li>• Emotional AI Processing</li>
-              </ul>
-              <div className="text-center mb-4">
-                <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold">
-                  AVAILABLE NOW
-                </span>
-              </div>
-              <a href="/pages/AISolutions2026" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-                Explore AI Solutions →
-              </a>
-            </div>
-
-            {/* Quantum Computing */}
-            <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4 text-center">⚡</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum Breakthroughs</h3>
-              <p className="text-cyan-100 mb-6 text-center">
-                Revolutionary quantum computing with exponential processing power and unbreakable security
-              </p>
-              <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-                <li>• 10,000x Speed Increase</li>
-                <li>• Quantum Cryptography</li>
-                <li>• Molecular Simulation</li>
-                <li>• Quantum Machine Learning</li>
-              </ul>
-              <div className="text-center mb-4">
-                <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold">
-                  COMING Q2 2026
-                </span>
-              </div>
-              <a href="/pages/QuantumBreakthroughs2026" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-                Go Quantum →
-              </a>
-            </div>
-
-            {/* Neural Networks */}
-            <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4 text-center">🧬</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">Neural Networks 2026</h3>
-              <p className="text-emerald-100 mb-6 text-center">
-                Self-evolving neural architectures with consciousness-level intelligence and creative capabilities
-              </p>
-              <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-                <li>• Consciousness Networks</li>
-                <li>• Evolving Architectures</li>
-                <li>• Distributed Intelligence</li>
-                <li>• Creative AI Systems</li>
-              </ul>
-              <div className="text-center mb-4">
-                <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold">
-                  AVAILABLE NOW
-                </span>
-              </div>
-              <a href="/pages/NeuralNetworks2026" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-                Connect Neural Future →
-              </a>
-            </div>
-
-            {/* Business Automation */}
-            <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4 text-center">🤖</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">Business Automation</h3>
-              <p className="text-green-100 mb-6 text-center">
-                Complete automation solutions that transform your business operations and drive exponential growth
-              </p>
-              <ul className="text-green-200 space-y-2 mb-6 text-sm">
-                <li>• 90-Day Implementation</li>
-                <li>• 300% Productivity Gains</li>
-                <li>• ROI Optimization</li>
-                <li>• Process Intelligence</li>
-              </ul>
-              <div className="text-center mb-4">
-                <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold">
-                  AVAILABLE NOW
-                </span>
-              </div>
-              <a href="/pages/BusinessAutomationGuide2025" className="block w-full bg-white text-green-600 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold text-center">
-                Start Automation →
-              </a>
-            </div>
-
-            {/* Enterprise Copilot */}
-            <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4 text-center">🧭</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">Enterprise Copilot</h3>
-              <p className="text-orange-100 mb-6 text-center">
-                AI-powered enterprise assistant that revolutionizes how teams work and collaborate
-              </p>
-              <ul className="text-orange-200 space-y-2 mb-6 text-sm">
-                <li>• Intelligent Decision Support</li>
-                <li>• Automated Workflows</li>
-                <li>• Real-time Collaboration</li>
-                <li>• Predictive Analytics</li>
-              </ul>
-              <div className="text-center mb-4">
-                <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold">
-                  AVAILABLE NOW
-                </span>
-              </div>
-              <a href="/pages/AIEnterpriseCopilot2025" className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
-                Explore Copilot →
-              </a>
-            </div>
-
-            {/* Advanced Tech Solutions */}
-            <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-6xl mb-4 text-center">🔮</div>
-              <h3 className="text-2xl font-bold mb-4 text-center text-white">Advanced Tech Solutions</h3>
-              <p className="text-indigo-100 mb-6 text-center">
-                Next-generation technologies that will define the next decade of business innovation
-              </p>
-              <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
-                <li>• Neural Networks 3.0</li>
-                <li>• Quantum Integration</li>
-                <li>• Bio-Integration</li>
-                <li>• Consciousness Computing</li>
-              </ul>
-              <div className="text-center mb-4">
-                <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold">
-                  COMING Q3 2026
-                </span>
-              </div>
-              <a href="/pages/AdvancedTechSolutions2026" className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
-                Explore Future Tech →
-              </a>
-            </div>
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum Computing</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Revolutionary quantum computing services for optimization, simulation, and cryptography.
+            </p>
+            <ul className="text-cyan-200 space-y-2 text-sm">
+              <li>• Quantum algorithm development</li>
+              <li>• Quantum simulation services</li>
+              <li>• Quantum cryptography</li>
+              <li>• Optimization solutions</li>
+              <li>• Quantum machine learning</li>
+              <li>• Quantum consulting</li>
+            </ul>
           </div>
-        </section>
+          
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Biotechnology</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Advanced biotech services for healthcare, agriculture, and human enhancement.
+            </p>
+            <ul className="text-emerald-200 space-y-2 text-sm">
+              <li>• Gene editing services</li>
+              <li>• Personalized medicine</li>
+              <li>• Synthetic biology</li>
+              <li>• Agricultural biotech</li>
+              <li>• Neurotechnology</li>
+              <li>• Microbiome engineering</li>
+            </ul>
+          </div>
+          
+          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🚀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Space Technology</h3>
+            <p className="text-orange-100 mb-6 text-center">
+              Cutting-edge space services for communication, exploration, and commercial applications.
+            </p>
+            <ul className="text-orange-200 space-y-2 text-sm">
+              <li>• Satellite constellation deployment</li>
+              <li>• Space manufacturing</li>
+              <li>• Asteroid mining</li>
+              <li>• Space tourism</li>
+              <li>• Interplanetary communication</li>
+              <li>• Space-based solar power</li>
+            </ul>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌐</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Digital Transformation</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Complete digital transformation services for modern businesses and organizations.
+            </p>
+            <ul className="text-purple-200 space-y-2 text-sm">
+              <li>• Cloud migration</li>
+              <li>• Digital strategy consulting</li>
+              <li>• IoT solutions</li>
+              <li>• Blockchain implementation</li>
+              <li>• Cybersecurity services</li>
+              <li>• Data analytics platforms</li>
+            </ul>
+          </div>
+          
+          <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🔬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">Research & Development</h3>
+            <p className="text-rose-100 mb-6 text-center">
+              Advanced R&D services for breakthrough innovations and technology development.
+            </p>
+            <ul className="text-rose-200 space-y-2 text-sm">
+              <li>• Technology research</li>
+              <li>• Prototype development</li>
+              <li>• Patent consulting</li>
+              <li>• Innovation labs</li>
+              <li>• Technology transfer</li>
+              <li>• Collaborative research</li>
+            </ul>
+          </div>
+        </div>
 
-        {/* Service Categories */}
-        <section className="mb-16">
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-12 backdrop-blur-sm border border-indigo-400/30">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">🎯 Service Categories</h2>
-              <p className="text-xl text-indigo-200">Comprehensive technology solutions across all domains</p>
+        {/* Service Implementation Process */}
+        <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Service Implementation Process</h2>
+            <p className="text-xl text-gray-300">How we deliver exceptional results</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-4">
+                1
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Discovery & Analysis</h3>
+              <p className="text-gray-300 text-sm">
+                Comprehensive analysis of your needs, challenges, and opportunities to design the perfect solution.
+              </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl mb-4">🧠</div>
-                <h3 className="text-xl font-bold text-white mb-4">Artificial Intelligence</h3>
-                <ul className="text-indigo-200 space-y-2 text-sm">
-                  <li>• Consciousness AI</li>
-                  <li>• Predictive Analytics</li>
-                  <li>• Autonomous Agents</li>
-                  <li>• Machine Learning</li>
-                </ul>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-4">
+                2
               </div>
-              <div className="text-center">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold text-white mb-4">Quantum Computing</h3>
-                <ul className="text-indigo-200 space-y-2 text-sm">
-                  <li>• Quantum Algorithms</li>
-                  <li>• Cryptography</li>
-                  <li>• Simulation</li>
-                  <li>• Optimization</li>
-                </ul>
+              <h3 className="text-xl font-semibold text-white mb-2">Strategy & Planning</h3>
+              <p className="text-gray-300 text-sm">
+                Develop a detailed implementation strategy with clear milestones, timelines, and success metrics.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-4">
+                3
               </div>
-              <div className="text-center">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-xl font-bold text-white mb-4">Automation</h3>
-                <ul className="text-indigo-200 space-y-2 text-sm">
-                  <li>• Process Automation</li>
-                  <li>• Workflow Optimization</li>
-                  <li>• Intelligent Systems</li>
-                  <li>• Business Intelligence</li>
-                </ul>
+              <h3 className="text-xl font-semibold text-white mb-2">Implementation</h3>
+              <p className="text-gray-300 text-sm">
+                Execute the solution with our expert team, ensuring quality, security, and performance at every step.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-4">
+                4
               </div>
-              <div className="text-center">
-                <div className="text-4xl mb-4">🔮</div>
-                <h3 className="text-xl font-bold text-white mb-4">Future Tech</h3>
-                <ul className="text-indigo-200 space-y-2 text-sm">
-                  <li>• Neural Networks 3.0</li>
-                  <li>• Bio-Integration</li>
-                  <li>• Consciousness Computing</li>
-                  <li>• Advanced Analytics</li>
-                </ul>
-              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Optimization & Support</h3>
+              <p className="text-gray-300 text-sm">
+                Continuous monitoring, optimization, and support to ensure maximum value and performance.
+              </p>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Success Metrics */}
-        <section className="mb-16">
+        {/* Success Stories */}
+        <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">📊 Proven Success Metrics</h2>
-            <p className="text-xl text-indigo-200">Real results from our technology implementations</p>
+            <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
+            <p className="text-xl text-indigo-200">Real results from our service implementations</p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-green-400/30">
-              <div className="text-4xl font-bold text-white mb-2">500%</div>
-              <div className="text-green-200">Productivity Increase</div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-lg p-6 border border-indigo-400/30">
+                <h3 className="text-xl font-semibold text-white mb-3">Fortune 500 AI Transformation</h3>
+                <p className="text-gray-300 mb-4">
+                  Implemented comprehensive AI solutions for a global manufacturing company, 
+                  resulting in 40% cost reduction and 300% productivity increase.
+                </p>
+                <div className="flex items-center space-x-4 text-sm">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-indigo-400">40%</div>
+                    <div className="text-gray-400">Cost Reduction</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-purple-400">300%</div>
+                    <div className="text-gray-400">Productivity Increase</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-lg p-6 border border-cyan-400/30">
+                <h3 className="text-xl font-semibold text-white mb-3">Quantum Computing Breakthrough</h3>
+                <p className="text-gray-300 mb-4">
+                  Developed quantum algorithms for a pharmaceutical company, 
+                  accelerating drug discovery by 1000x and reducing R&D costs by 60%.
+                </p>
+                <div className="flex items-center space-x-4 text-sm">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-cyan-400">1000x</div>
+                    <div className="text-gray-400">Faster Discovery</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-400">60%</div>
+                    <div className="text-gray-400">Cost Reduction</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-blue-400/30">
-              <div className="text-4xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-blue-200">Accuracy Rate</div>
-            </div>
-            <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-purple-400/30">
-              <div className="text-4xl font-bold text-white mb-2">$100M+</div>
-              <div className="text-purple-200">Cost Savings</div>
-            </div>
-            <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-orange-400/30">
-              <div className="text-4xl font-bold text-white mb-2">24/7</div>
-              <div className="text-orange-200">Autonomous Operation</div>
+            
+            <div className="space-y-6">
+              <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 rounded-lg p-6 border border-emerald-400/30">
+                <h3 className="text-xl font-semibold text-white mb-3">Biotech Innovation</h3>
+                <p className="text-gray-300 mb-4">
+                  Created personalized medicine platform for a healthcare network, 
+                  improving patient outcomes by 85% and reducing treatment costs by 50%.
+                </p>
+                <div className="flex items-center space-x-4 text-sm">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-emerald-400">85%</div>
+                    <div className="text-gray-400">Better Outcomes</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-teal-400">50%</div>
+                    <div className="text-gray-400">Cost Reduction</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-lg p-6 border border-orange-400/30">
+                <h3 className="text-xl font-semibold text-white mb-3">Space Technology Deployment</h3>
+                <p className="text-gray-300 mb-4">
+                  Launched satellite constellation for global internet coverage, 
+                  connecting 2 billion people and generating $5B in revenue.
+                </p>
+                <div className="flex items-center space-x-4 text-sm">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-orange-400">2B</div>
+                    <div className="text-gray-400">People Connected</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-red-400">$5B</div>
+                    <div className="text-gray-400">Revenue Generated</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Implementation Timeline */}
-        <section id="pricing" className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">🚀 Implementation Timeline</h2>
-            <p className="text-xl text-indigo-200">Get started with our technology solutions in 30 days</p>
+        {/* Service Metrics */}
+        <div className="grid md:grid-cols-4 gap-8 mb-16">
+          <div className="text-center">
+            <div className="text-6xl font-bold text-indigo-400 mb-2">1000+</div>
+            <div className="text-xl text-white mb-2">Projects Completed</div>
+            <div className="text-gray-400">Successful implementations</div>
           </div>
           
-          <div className="bg-gradient-to-r from-purple-900/50 to-indigo-900/50 rounded-2xl p-12 backdrop-blur-sm border border-purple-400/30">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-4xl mb-4">📋</div>
-                <h3 className="text-xl font-bold text-white mb-4">Week 1-2: Assessment</h3>
-                <ul className="text-purple-200 space-y-2 text-sm">
-                  <li>• Business process analysis</li>
-                  <li>• Technology readiness assessment</li>
-                  <li>• Custom solution design</li>
-                  <li>• Integration planning</li>
-                </ul>
+          <div className="text-center">
+            <div className="text-6xl font-bold text-cyan-400 mb-2">99.9%</div>
+            <div className="text-xl text-white mb-2">Success Rate</div>
+            <div className="text-gray-400">Project delivery success</div>
+          </div>
+          
+          <div className="text-center">
+            <div className="text-6xl font-bold text-emerald-400 mb-2">500+</div>
+            <div className="text-xl text-white mb-2">Expert Team</div>
+            <div className="text-gray-400">World-class professionals</div>
+          </div>
+          
+          <div className="text-center">
+            <div className="text-6xl font-bold text-orange-400 mb-2">24/7</div>
+            <div className="text-xl text-white mb-2">Support</div>
+            <div className="text-gray-400">Round-the-clock assistance</div>
+          </div>
+        </div>
+
+        {/* Pricing Tiers */}
+        <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Service Tiers</h2>
+            <p className="text-xl text-indigo-200">Choose the perfect service level for your needs</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-xl p-8 border border-gray-600/30">
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Starter</h3>
+              <div className="text-4xl font-bold text-indigo-400 mb-6 text-center">$10K</div>
+              <ul className="space-y-3 text-gray-300 mb-8">
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Basic AI consultation</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Technology assessment</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Implementation roadmap</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>30-day support</span>
+                </li>
+              </ul>
+              <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Get Started
+              </button>
+            </div>
+            
+            <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 rounded-xl p-8 border border-indigo-400/30 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  Most Popular
+                </span>
               </div>
-              <div className="text-center">
-                <div className="text-4xl mb-4">⚙️</div>
-                <h3 className="text-xl font-bold text-white mb-4">Week 3-4: Implementation</h3>
-                <ul className="text-purple-200 space-y-2 text-sm">
-                  <li>• Technology deployment</li>
-                  <li>• Data integration</li>
-                  <li>• Custom training</li>
-                  <li>• Performance optimization</li>
-                </ul>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold text-white mb-4">Week 5+: Optimization</h3>
-                <ul className="text-purple-200 space-y-2 text-sm">
-                  <li>• Continuous monitoring</li>
-                  <li>• Performance tuning</li>
-                  <li>• Feature expansion</li>
-                  <li>• ROI optimization</li>
-                </ul>
-              </div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Professional</h3>
+              <div className="text-4xl font-bold text-indigo-400 mb-6 text-center">$50K</div>
+              <ul className="space-y-3 text-gray-300 mb-8">
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Full service implementation</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Custom solution development</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Training and onboarding</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>6-month support</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Performance optimization</span>
+                </li>
+              </ul>
+              <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Choose Plan
+              </button>
+            </div>
+            
+            <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-xl p-8 border border-gray-600/30">
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Enterprise</h3>
+              <div className="text-4xl font-bold text-indigo-400 mb-6 text-center">Custom</div>
+              <ul className="space-y-3 text-gray-300 mb-8">
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Multi-technology integration</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Dedicated expert team</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Priority support</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Unlimited consultations</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
+                  <span>Custom pricing</span>
+                </li>
+              </ul>
+              <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Contact Sales
+              </button>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* CTA Section */}
-        <section className="text-center">
-          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-              Join 1000+ companies already using our revolutionary technology solutions to achieve unprecedented growth and efficiency
-            </p>
-            <div className="flex justify-center space-x-4">
-              <a href="/contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
-                Start Your Journey
-              </a>
-              <a href="/pages/AISolutions2026" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors">
-                Explore AI Solutions
-              </a>
-            </div>
+        <div className="text-center bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">
+            Join thousands of organizations that have already transformed their operations 
+            with our cutting-edge services. Let's build the future together.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+              Start Your Transformation
+            </button>
+            <button className="border-2 border-indigo-400 text-indigo-200 px-12 py-4 rounded-lg hover:bg-indigo-400 hover:text-indigo-900 transition-colors font-semibold text-xl">
+              Schedule Consultation
+            </button>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
-import { createRoot, hydrateRoot } from 'react-dom/client';
-import App from './App';
+>>>>>>> cursor/create-and-deploy-new-content-6f13
 import './index.css';
 
 const rootElement = document.getElementById('root');
@@ -39,4 +38,4 @@ try {
 window.addEventListener('error', (e) => {
     console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
-});
+>>>>>>> cursor/create-and-deploy-new-content-6f13
