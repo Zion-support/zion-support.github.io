@@ -23,6 +23,15 @@ const BlogPage = () => {
       image: "/images/generative-ai-enterprise-2025.jpg"
     },
     {
+      title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
+      description: "How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.",
+      slug: "ai-2025-enterprise-ai-agents-breakthrough",
+      category: "Enterprise AI",
+      date: "2025-09-15",
+      featured: true,
+      image: "/images/enterprise-ai-agents-2025.jpg"
+    },
+    {
       title: "Quantum Computing Breakthrough 2025: Enterprise Applications",
       description: "Explore how quantum computing is revolutionizing enterprise operations in 2025 with unprecedented processing power and breakthrough applications.",
       slug: "ai-2025-quantum-computing-breakthrough",

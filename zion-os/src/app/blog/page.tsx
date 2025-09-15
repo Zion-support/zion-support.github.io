@@ -86,6 +86,16 @@ export default function BlogPage() {
       image: '/blog/sovereign-ai-commerce.jpg'
     },
     {
+      id: 'secure-agent-marketplaces',
+      title: 'Building Secure Agent Marketplaces: Identity, Reputation, and Policy',
+      excerpt: 'Trust frameworks for multi-agent ecosystems with identity, reputation, and safety.',
+      category: 'Cybersecurity',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-02',
+      readTime: '8 min read',
+      image: '/blog/secure-agent-marketplaces.jpg'
+    },
+    {
       id: 'cybersecurity-ai-trends',
       title: 'AI-Powered Cybersecurity: Trends and Best Practices for 2024',
       excerpt: 'Stay ahead of evolving cyber threats with the latest AI-powered security solutions and best practices.',
