@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Launch: Realtime Agent Observatory v1.0',
+    summary:
+      'Unified tracing, metrics, evals, and safety signals to debug and improve autonomous agents in production.',
+    href: '/updates/realtime-agent-observatory-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Shipping Eval-Ready AI Pipelines',
+    summary:
+      'Practical steps and templates to bake evals, canaries, and guardrails into your CI/CD for AI.',
+    href: '/updates/eval-ready-ai-pipelines-guide',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: 27% Latency Reduction with Hybrid Retrieval',
+    summary:
+      'How hybrid dense+symbolic retrieval cut P95 latency while improving answer faithfulness.',
+    href: '/updates/hybrid-retrieval-latency-case-study',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
     title: 'Launch: Autonomous Ops Control Center 2.0',
     summary:
       'Unified command center with live evals, guardrails, and automated incident workflows for agent ops.',
@@ -55,6 +79,7 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Report'
   },
+  {
     title: 'Guide: Real-Time Evals Starter Kit',
     summary:
       'A practical starter kit with metrics, harnesses, and examples to begin live evaluation in production.',

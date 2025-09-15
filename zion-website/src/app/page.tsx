@@ -106,6 +106,27 @@ export default function HomePage() {
             </div>
             <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
               <a
+                href="/updates/realtime-agent-observatory-1-0"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-200 hover:bg-cyan-500/20 transition-colors duration-200"
+              >
+                Launch: Agent Observatory v1.0
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/eval-ready-ai-pipelines-guide"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+              >
+                Guide: Eval-Ready Pipelines
+                <span aria-hidden>→</span>
+              </a>
+              <a
+                href="/updates/hybrid-retrieval-latency-case-study"
+                className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-200 hover:bg-amber-500/20 transition-colors duration-200"
+              >
+                Case Study: Hybrid Retrieval
+                <span aria-hidden>→</span>
+              </a>
+              <a
                 href="/updates/ai-content-studio-2-1"
                 className="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-200 hover:bg-fuchsia-500/20 transition-colors duration-200"
               >
