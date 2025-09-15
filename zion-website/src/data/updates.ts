@@ -8,6 +8,30 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    title: 'Guide: AI Governance Field Guide (2026)',
+    summary:
+      'Practical, audit-ready patterns to operationalize AI governance with policy-as-code and live evidence.',
+    href: '/updates/ai-governance-field-guide-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Real-Time Agent Metrics Widgets v1.0',
+    summary:
+      'Drop-in dashboards for traces, guardrail events, and eval signals to monitor agent reliability.',
+    href: '/updates/real-time-agent-metrics-widgets-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Production RAG Latency Tuning (2026)',
+    summary:
+      'Hands-on techniques to hit sub-second latency with hybrid retrieval, caching, and routing.',
+    href: '/updates/production-rag-latency-tuning-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
     title: 'Launch: AI Incident Simulator v1.1',
     summary:
       'New scenarios, live eval gates, and evidence exports to harden agent systems.',

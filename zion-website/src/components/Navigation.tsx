@@ -1,7 +1,7 @@
 "use client"
-import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react'
 
 const navigation = [
   { name: 'Solutions', href: '/solutions' },
@@ -38,9 +38,12 @@ export default function Navigation() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5"
+              className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5 relative"
             >
               {item.name}
+              {item.name === 'Updates' && (
+                <span className="ml-2 align-super text-[10px] px-1.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">New</span>
+              )}
             </a>
           ))}
         </div>
@@ -82,7 +85,12 @@ export default function Navigation() {
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800 transition-colors duration-200"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {item.name}
+                    <span className="inline-flex items-center gap-2">
+                      <span>{item.name}</span>
+                      {item.name === 'Updates' && (
+                        <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">New</span>
+                      )}
+                    </span>
                   </a>
                 ))}
               </div>
