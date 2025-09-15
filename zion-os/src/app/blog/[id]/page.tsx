@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 
 interface BlogPostMeta {
   id: string;
@@ -11,6 +12,21 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-safety-benchmarks-2025': {
+    id: 'ai-safety-benchmarks-2025',
+    title: 'AI Safety Benchmarks 2025: Measuring Reliability Across Autonomous Systems',
+    excerpt:
+      'A practical benchmarking suite covering robustness, alignment, policy adherence, and red-teaming for enterprise AI.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '9 min read',
+    content: [
+      'As autonomy increases, enterprises require objective safety benchmarks to evaluate AI behaviors in real-world contexts. We propose a pragmatic suite spanning robustness to distribution shift, policy adherence under pressure, and controllability.',
+      'The framework includes graded scenarios, reproducible seeds, and audit artifacts. It emphasizes measurable outcomes, such as intervention rates and policy violation severity, enabling consistent comparison and continuous improvement.',
+      'We also outline governance rhythms, integrating red-teaming, incident postmortems, and feedback loops between policy and product teams.'
+    ]
+  },
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
