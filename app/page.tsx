@@ -47,6 +47,7 @@ import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner202
 import AI2025BreakthroughBanner from './components/AI2025BreakthroughBanner';
 import NewContent2025PromotionBanner from './components/NewContent2025PromotionBanner';
 import RevolutionaryAIContentBanner from './components/RevolutionaryAIContentBanner';
+import NewContent2026AdvancedBanner from './components/NewContent2026AdvancedBanner';
 
 // Import new AI 2026 promotional components
 import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsBanner';
@@ -101,6 +102,9 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+      {/* New Advanced Content 2026 Banner */}
+      <NewContent2026AdvancedBanner />
+      
       {/* New Promo: Agent Platform SLOs (Sept 2025) */}
       {/* New Promo: Agent Evaluation Playground (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-cyan-50">
@@ -432,6 +436,46 @@ export default function HomePage() {
       </section>
       {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={8} />
+<<<<<<< HEAD
+      {/* New Content Promo: Cost-Aware Routing + Secure Prompt Engineering + Evidence Hub */}
+      <section className="py-8 bg-gradient-to-r from-amber-50 to-emerald-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white p-6 rounded-xl shadow-md border border-amber-100 flex flex-col justify-between">
+              <div>
+                <div className="text-xs font-semibold text-amber-700">New • Blueprint</div>
+                <h3 className="text-lg font-bold text-gray-900 mt-1">AI 2026: Cost‑Aware Model Routing</h3>
+                <p className="text-gray-600 text-sm mt-2">Route by quality, latency, and cost with eval‑gated policies.</p>
+              </div>
+              <div className="mt-4">
+                <Link href="/blog/ai-2026-cost-aware-model-routing-blueprint" className="inline-block bg-amber-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-amber-700">Read</Link>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-md border border-emerald-100 flex flex-col justify-between">
+              <div>
+                <div className="text-xs font-semibold text-emerald-700">New • Guide</div>
+                <h3 className="text-lg font-bold text-gray-900 mt-1">AI 2026: Secure Prompt Engineering</h3>
+                <p className="text-gray-600 text-sm mt-2">Enterprise patterns with policy‑as‑code and review automation.</p>
+              </div>
+              <div className="mt-4">
+                <Link href="/resources/ai-2026-secure-prompt-engineering" className="inline-block border border-emerald-600 text-emerald-700 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50">Explore</Link>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-md border border-cyan-100 flex flex-col justify-between">
+              <div>
+                <div className="text-xs font-semibold text-cyan-700">New • Starter Kit</div>
+                <h3 className="text-lg font-bold text-gray-900 mt-1">AI 2026: Agent Evidence Hub</h3>
+                <p className="text-gray-600 text-sm mt-2">Centralize evals, incidents, and approvals for audit‑readiness.</p>
+              </div>
+              <div className="mt-4">
+                <Link href="/resources/ai-2026-agent-evidence-hub-starter" className="inline-block border border-cyan-600 text-cyan-700 px-4 py-2 rounded-lg font-semibold hover:bg-cyan-50">Get Starter</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
       {/* New: Promote Trustworthy Model Routing + Agent Benchmark Suite */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -820,6 +864,16 @@ export default function HomePage() {
                   <Link href="/blog/ai-2026-autonomous-finance-operating-system" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
                 </div>
               </div>
+              <div className="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
+                <div>
+                  <div className="text-sm font-semibold text-emerald-700 mb-2">Cost Ops</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Foundational Models Cost Optimization</h3>
+                  <p className="text-gray-600">Routing, caching, and distillation to cut AI infra costs 30–70%.</p>
+                </div>
+                <div className="mt-4">
+                  <Link href="/blog/ai-2026-foundational-models-cost-optimization-playbook" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -919,14 +973,40 @@ export default function HomePage() {
                 <Link href="/content/hyperautomation-blueprint-2026" className="text-purple-600 font-semibold hover:text-purple-800">Read Guide →</Link>
               </article>
               <article className="bg-white p-8 rounded-xl shadow-lg">
+<<<<<<< HEAD
+                <div className="text-sm font-semibold text-blue-700 mb-2">Article</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Edge AI Agents: Real-Time Autonomy</h3>
+                <p className="text-gray-600 mb-4">Unlock ultra-low-latency decisioning and control with edge-native agents.</p>
+                <Link href="/content/edge-ai-agents-2026" className="text-blue-600 font-semibold hover:text-blue-800">Read Article →</Link>
+=======
                 <div className="text-sm font-semibold text-blue-700 mb-2">Playbook</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">AI Agents ROI Playbook 2026</h3>
                 <p className="text-gray-600 mb-4">A practical playbook to model, track, and realize ROI from enterprise AI agents.</p>
                 <Link href="/content/ai-agents-roi-playbook-2026" className="text-blue-600 font-semibold hover:text-blue-800">Read Playbook →</Link>
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
               </article>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+
+        {/* Promo: New Blueprint - Enterprise AI Ops 2026 */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="text-sm font-semibold text-purple-700 mb-2">New Blueprint</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise AI Ops Blueprint (2026)</h3>
+                <p className="text-gray-600 max-w-2xl">A practical operating model for reliable, governed, and cost-efficient AI at scale.</p>
+              </div>
+              <div className="shrink-0">
+                <Link href="/content/enterprise-ai-ops-2026" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Blueprint</Link>
+              </div>
+            </div>
+          </div>
+        </section>
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 
         {/* Promo: New Blueprints */}
         <section className="py-10 bg-gradient-to-r from-purple-50 to-blue-50">
@@ -1028,6 +1108,23 @@ export default function HomePage() {
         <ComprehensiveContentShowcase2026 />
         <FeaturedContentShowcase2026 />
         <NewContentPromotionBanner />
+        {/* Inline promo for new September 2025 posts */}
+        <section className="py-6 bg-gradient-to-r from-indigo-50 to-purple-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
+              <div>
+                <p className="text-sm font-semibold text-indigo-700">New Guides</p>
+                <h2 className="text-2xl font-bold text-gray-900 mt-1">Responsible AI Ops + Cost Optimization</h2>
+                <p className="text-gray-600 mt-2">Operational guardrails and 30–70% AI infra savings.
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <Link href="/blog/ai-2026-responsible-ai-operations-blueprint" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700">Responsible AI Ops</Link>
+                <Link href="/blog/ai-2026-foundational-models-cost-optimization-playbook" className="inline-block border border-indigo-600 text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50">Cost Optimization</Link>
+              </div>
+            </div>
+          </div>
+        </section>
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
         <NewContent2026Showcase />

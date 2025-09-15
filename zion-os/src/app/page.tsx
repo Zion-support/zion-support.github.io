@@ -114,6 +114,19 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Promo Banner - New Articles */}
+      <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
+          <a
+            href="/blog/agent-safety-red-teaming-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
+          >
+=======
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -316,20 +329,40 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
+>>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-sm font-bold">SA</div>
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">AR</div>
               <div className="flex-1">
-                <div className="flex items-center gap-2 mb-0.5">
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-800">AI Solutions</span>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">AI Safety</span>
                   <span className="text-xs text-gray-500">New</span>
                 </div>
-                <p className="text-sm md:text-base text-gray-900">Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025</p>
+                <p className="text-gray-900 font-medium">Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems</p>
               </div>
-              <div className="text-blue-600 text-sm font-medium whitespace-nowrap">Read →</div>
+              <div className="text-blue-600 font-medium whitespace-nowrap">Read →</div>
+            </div>
+          </a>
+          <a
+            href="/blog/sovereign-ai-commerce-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 text-white flex items-center justify-center text-xl font-bold">SC</div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-xs px-2 py-1 rounded-full bg-purple-100 text-purple-800">AI Solutions</span>
+                  <span className="text-xs text-gray-500">New</span>
+                </div>
+                <p className="text-gray-900 font-medium">Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025</p>
+              </div>
+              <div className="text-purple-600 font-medium whitespace-nowrap">Read →</div>
             </div>
           </a>
         </div>
       </section>
+<<<<<<< HEAD
+=======
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -358,28 +391,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          {/* What's New Teaser */}
-          <div className="mb-16">
-            <div className="glass-effect rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-              <div>
-                <p className="text-sm text-white/60 mb-1">What's New</p>
-                <h3 className="text-2xl font-bold text-white mb-2">Agent Safety Eval Suite 2025</h3>
-                <p className="text-white/70 max-w-2xl">
-                  New evaluation framework for multi-agent safety with CI integration and policy gating.
-                </p>
-              </div>
-              <div className="flex gap-3">
-                <a href="/blog/agent-safety-eval-suite-2025" className="btn-primary hover-lift">Read Article</a>
-                <a href="/news" className="btn-secondary hover-lift">More Updates</a>
-              </div>
-            </div>
-          </div>
           <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Everything You Need to Build the Future</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Everything You Need to Build the Future
+            </h2>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
               From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
               for launching sovereign digital economies.
@@ -387,6 +407,16 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+<<<<<<< HEAD
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                features={feature.features}
+                gradient={feature.gradient}
+              />
+=======
               <div key={index}>
                 <FeatureCard
                   icon={feature.icon}
@@ -396,34 +426,9 @@ export default function HomePage() {
                   gradient={feature.gradient}
                 />
               </div>
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Promo: New Blog Article */}
-      <section className="py-6 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <a href="/blog/ai-safety-eval-suite-2025" className="block w-full bg-white/10 border border-white/15 rounded-xl p-5 md:p-6 hover:bg-white/15 transition-colors">
-            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                SE
-              </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100/20 text-blue-200">AI Safety</span>
-                  <span className="text-xs text-white/70">New</span>
-                </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white">
-                  AI Safety Eval Suite 2025: Practical Tests for Autonomous Agents
-                </h3>
-                <p className="text-white/70 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A reproducible evaluation battery for jailbreak resistance, prompt injection, and tool-use safety.
-                </p>
-              </div>
-              <div className="text-blue-300 font-medium whitespace-nowrap">Read now →</div>
-            </div>
-          </a>
         </div>
       </section>
 
@@ -431,7 +436,9 @@ export default function HomePage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-effect rounded-2xl p-12 animate-slide-up">
-            <h2 className="text-4xl font-bold mb-6">Ready to Build the Future?</h2>
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Build the Future?
+            </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
             </p>
@@ -442,12 +449,18 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Foundation Models 2025
               </a>
               <a href="/blog/agent-safety-evaluation-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 ✅ Read: Agent Safety Evaluation 2025
               </a>
+>>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
             </div>
           </div>
         </div>
@@ -473,6 +486,35 @@ export default function HomePage() {
               <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
               <div className="text-white/70">Scalability</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest from the Blog */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Latest from the Blog</h2>
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">Fresh insights from our team across AI, data, and quantum.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { id: 'edge-ai-on-device-inference', title: 'Edge AI: On-Device Inference for Privacy and Speed' },
+              { id: 'autonomous-agents-in-enterprise', title: 'Autonomous Agents in the Enterprise: Patterns and Pitfalls' },
+              { id: 'post-quantum-cryptography-roadmap', title: 'Post-Quantum Cryptography: A Practical Migration Roadmap' },
+              { id: 'llm-evals-in-production', title: 'LLM Evals in Production: From Offline Benchmarks to Live Metrics' }
+            ].map((post) => (
+              <a key={post.id} href={`/blog/${post.id}`} className="glass-effect rounded-xl p-6 hover-lift block">
+                <div className="h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-white text-2xl font-bold">{post.title.split(' ').slice(0, 2).map((w) => w[0]).join('')}</span>
+                </div>
+                <h3 className="text-lg font-semibold">{post.title}</h3>
+                <span className="text-sm text-white/70">Read more →</span>
+              </a>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <a href="/blog" className="btn-secondary hover-lift">View all articles</a>
           </div>
         </div>
       </section>

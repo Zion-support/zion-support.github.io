@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+import Link from 'next/link';
+
+=======
+"use client";
+>>>>>>> origin/chore/content-updates-and-news-ads
+export default function Footer() {
+  return <div />;
+}

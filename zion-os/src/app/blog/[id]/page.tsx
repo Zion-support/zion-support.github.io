@@ -12,6 +12,39 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+<<<<<<< HEAD
+  'agent-safety-red-teaming-2025': {
+    id: 'agent-safety-red-teaming-2025',
+    title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
+    excerpt:
+      'Scenarios and mitigations to probe and harden multi-agent systems in production.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-15',
+    readTime: '11 min read',
+    content: [
+      'Red teaming for AI agents requires scenario-driven probes that chain tools, memory, and coordination under realistic constraints.',
+      'This playbook includes test harnesses for tool-use abuse, prompt-injection chains, identity spoofing, data exfiltration, and policy evasion.',
+      'Mitigations span capability bounding, typed tool adapters, output filters, allow/deny lists, and human approval for high-impact actions.'
+    ]
+  },
+  'ai-automation-case-studies-2025': {
+    id: 'ai-automation-case-studies-2025',
+    title: 'AI Automation Case Studies 2025: From MTTR to Margin Uplift',
+    excerpt:
+      'Five deployments with measurable KPIs and lessons learned across ops, CX, and finance.',
+    category: 'Case Studies',
+    author: 'Michael Rodriguez',
+    date: '2025-09-12',
+    readTime: '9 min read',
+    content: [
+      'We summarize five production deployments covering incident response, customer support, finance reconciliations, and supply chain routing.',
+      'Each case breaks down the business objective, design, controls, and the measurable outcome (MTTR, CSAT, margin, error rates).',
+      'A common thread: tight eval loops, policy guardrails, and incremental rollout with clear kill-switches.'
+    ]
+  },
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
   'ai-foundation-models-2025': {
     id: 'ai-foundation-models-2025',
     title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',

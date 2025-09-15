@@ -15,7 +15,37 @@ export default function ContentIndexPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* New items added September 2025 */}
         <article className="bg-white p-6 rounded-xl shadow">
+<<<<<<< HEAD
           <div className="text-sm font-semibold text-emerald-700 mb-2">Security</div>
+=======
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Blueprint</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-responsible-ai-operations-blueprint" className="hover:underline">
+              Responsible AI Operations Blueprint (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Implement policy-as-code, evals, and incident playbooks to ship reliable AI at scale.
+          </p>
+          <Link href="/blog/ai-2026-responsible-ai-operations-blueprint" className="text-indigo-700 font-semibold">Read Blueprint →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Playbook</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-foundational-models-cost-optimization-playbook" className="hover:underline">
+              Foundational Models Cost Optimization (2026)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Reduce AI infra costs 30–70% with routing, caching, and distillation strategies.
+          </p>
+          <Link href="/blog/ai-2026-foundational-models-cost-optimization-playbook" className="text-emerald-700 font-semibold">Read Playbook →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Guide</div>
+>>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/secure-agentic-data-pipelines-2026" className="hover:underline">
               Secure Agentic Data Pipelines (2026)
@@ -177,6 +207,32 @@ export default function ContentIndexPage() {
             Structure teams, processes, and platforms to deliver sustained AI outcomes.
           </p>
           <Link href="/content/ai-operating-model-2026" className="text-orange-600 font-semibold">Read Guide →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-autonomous-operations-framework" className="hover:underline">
+              AI 2026: Autonomous Operations Framework
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Build self-healing, self-optimizing systems that reduce manual intervention by 90% and achieve 99.9% uptime.
+          </p>
+          <Link href="/blog/ai-2026-autonomous-operations-framework" className="text-indigo-700 font-semibold">Read Framework →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-emerald-700 mb-2">Revolution</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-predictive-maintenance-revolution" className="hover:underline">
+              AI 2026: Predictive Maintenance Revolution
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Revolutionize maintenance operations with AI-powered analytics that reduce downtime by 85% and costs by 60%.
+          </p>
+          <Link href="/blog/ai-2026-predictive-maintenance-revolution" className="text-emerald-700 font-semibold">Read Revolution →</Link>
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
