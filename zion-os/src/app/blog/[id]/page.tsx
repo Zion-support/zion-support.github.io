@@ -11,6 +11,36 @@ interface BlogPostMeta {
 }
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+  'ai-governance-blueprint-2025': {
+    id: 'ai-governance-blueprint-2025',
+    title: 'AI Governance Blueprint 2025: Practical Controls for Autonomous Systems',
+    excerpt:
+      'A field guide for standing up measurable AI governance with policy engines, audit trails, and human-in-the-loop controls.',
+    category: 'AI Solutions',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-14',
+    readTime: '11 min read',
+    content: [
+      'Organizations are accelerating autonomous workflows, but governance is often bolted on late. This blueprint sequences controls alongside capability unlocks so that safety scales with autonomy.',
+      'We cover policy modeling, graded permissions, exception handling, observability for decisions, and immutable audit trails. We include reference policies and rollout templates for regulated industries.',
+      'The goal is measurable, reversible progress: every new autonomous action ships with a policy, a fallback, and a KPI tied to risk reduction and business value.'
+    ],
+  },
+  'agent-safety-tooling': {
+    id: 'agent-safety-tooling',
+    title: 'Agent Safety Tooling: Defense-in-Depth for Multi-Agent Systems',
+    excerpt:
+      'Techniques and tools to harden autonomous agent ecosystems: policy guards, reputation, red-teaming, and runtime monitors.',
+    category: 'Cybersecurity',
+    author: 'Dr. James Wilson',
+    date: '2025-09-12',
+    readTime: '9 min read',
+    content: [
+      'As multi-agent ecosystems proliferate, safety must be enforced at design-time and runtime. We outline a layered approach spanning policy checks, capability scoping, and behavioral reputation.',
+      'We demonstrate runtime monitors that catch emergent misbehavior, plus continuous red-teaming pipelines that probe for policy gaps without impacting customers.',
+      'Finally, we show how to wire telemetry into SIEM and incident response workflows so agent incidents are handled as first-class security events.'
+    ]
+  },
   'sovereign-ai-commerce-2025': {
     id: 'sovereign-ai-commerce-2025',
     title: 'Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025',
